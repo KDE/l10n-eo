@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs\n"
-"POT-Creation-Date: 2004-12-11 01:18+0100\n"
+"POT-Creation-Date: 2005-02-02 01:23+0100\n"
 "PO-Revision-Date: 2002-09-29 21:13+0200\n"
 "Last-Translator: Heiko Evermann <heiko@evermann.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -29,15 +29,15 @@ msgstr "Postskript-presilo"
 msgid "PostScript file generator"
 msgstr "Postskript-dosierkreilo"
 
-#: kpgeneralpage.cpp:87 lpd/lpdtools.cpp:28
+#: kpgeneralpage.cpp:88 lpd/lpdtools.cpp:28
 msgid "Ledger"
 msgstr "Ledger"
 
-#: kpgeneralpage.cpp:86 lpd/lpdtools.cpp:29
+#: kpgeneralpage.cpp:87 lpd/lpdtools.cpp:29
 msgid "US Legal"
 msgstr "US Legal"
 
-#: kpgeneralpage.cpp:85 lpd/lpdtools.cpp:30
+#: kpgeneralpage.cpp:86 lpd/lpdtools.cpp:30
 msgid "US Letter"
 msgstr "US Letter"
 
@@ -57,11 +57,11 @@ msgstr "B4"
 msgid "B5"
 msgstr "B5"
 
-#: kpgeneralpage.cpp:253 lpd/lpdtools.cpp:39 lpr/editentrydialog.cpp:50
+#: kpgeneralpage.cpp:416 lpd/lpdtools.cpp:39 lpr/editentrydialog.cpp:50
 msgid "Enabled"
 msgstr "Ŝaltita"
 
-#: kpgeneralpage.cpp:252 lpd/lpdtools.cpp:40 management/kmconfiggeneral.cpp:52
+#: kpgeneralpage.cpp:415 lpd/lpdtools.cpp:40 management/kmconfiggeneral.cpp:52
 msgid "Disabled"
 msgstr "Malŝaltita"
 
@@ -86,7 +86,7 @@ msgstr "Kolorbitoj"
 msgid "Additional GS options"
 msgstr "Aldonaj GS-opcioj"
 
-#: driver.cpp:377 kpgeneralpage.cpp:120 lpd/lpdtools.cpp:307
+#: driver.cpp:377 kpgeneralpage.cpp:260 lpd/lpdtools.cpp:307
 #: management/kmconfiggeneral.cpp:44 management/kmpropgeneral.cpp:54
 #: management/kmwend.cpp:49
 msgid "General"
@@ -475,91 +475,113 @@ msgstr "Ero de dosiero \"printcap\": %1"
 
 #: kprintdialog.cpp:97
 msgid ""
-" <qt> The <em>Location</em> may describe where the selected printer is "
-"located. The Location description is created by the administrator of the "
-"print system (or may be left empty). </qt>"
+" <qt><b>Printer Location:</b> The <em>Location</em> may describe where the "
+"selected printer is located. The Location description is created by the "
+"administrator of the print system (or may be left empty). </qt>"
 msgstr ""
 
 #: kprintdialog.cpp:102
-msgid " <qt> The <em>Type</em> indicates your printer type. </qt>"
+msgid ""
+" <qt><b>Printer Type:</b>  The <em>Type</em> indicates your printer type. "
+"</qt>"
 msgstr ""
 
 #: kprintdialog.cpp:104
 msgid ""
-" <qt> The <em>State</em>"
-" indicates the state of the print queue on the print server (which could be "
-"your localhost). The state may be 'Idle', 'Processing', 'Stopped', 'Paused' "
-"or similar. </qt>"
+" <qt><b>Printer State:</b>  The <em>State</em> indicates the state of the "
+"print queue on the print server (which could be your localhost). The state "
+"may be 'Idle', 'Processing', 'Stopped', 'Paused' or similar. </qt>"
 msgstr ""
 
 #: kprintdialog.cpp:108
 msgid ""
-" <qt> The <em>Comment</em> may describe the selected printer. This comment "
-"is created by the administrator of the print system (or may be left empty). "
-"</qt>"
+" <qt><b>Printer Comment:</b>  The <em>Comment</em>"
+" may describe the selected printer. This comment is created by the "
+"administrator of the print system (or may be left empty). </qt>"
 msgstr ""
 
 #: kprintdialog.cpp:112
 msgid ""
-" <qt>"
-"Use this combo box to select the printer to which you want to print. If you "
-"only find the <em>KDE special printers</em> -- which save jobs to disk (as "
-"PostScript- or PDF-files), or deliver jobs via email (as a PDF attachment) "
-"-- but are missing a real printer, you need to... "
+" <qt><b>Printer Selection Menu:</b>  "
+"<p>Use this combo box to select the printer to which you want to print. "
+"Initially (if you run KDEPrint for the first time), you may only find the   "
+"<em>KDE special printers</em> (which save jobs to disk [as PostScript- or "
+"PDF-files], or deliver jobs via email (as a PDF attachment). If you are "
+"missing a real printer, you need to... "
 "<ul> "
 "<li>...either create a local printer with the help of the <em>KDE Add "
-"Printer Wizard</em> which is available for the CUPS and RLPR printing "
-"systems (click button to the left of the 'Properties' button),</li> "
-"<li>...or you can try to connect to a remote CUPS print server by clicking "
-"the <em>System Options</em> button below. A new dialog opens: click on the "
-"<em>CUPS server</em> icon and fill in the information required to use the "
-"remote server.</li> </ul> </qt>"
+"Printer Wizard</em>. The Wizard is available for the CUPS and RLPR printing "
+"systems (click button to the left of the <em>'Properties'</em> button),</li>"
+" "
+"<li>...or try to connect to an existing remote CUPS print server. You can "
+"connect by clicking the <em>'System Options'</em>"
+" button below. A new dialog opens: click on the <em>'CUPS server'</em>"
+" icon: Fill in the information required to use the remote server. </li>  "
+"</ul> "
+"<p><b>Note:</b> It may happen that you successfully connected to a remote "
+"CUPS  server and still do not get a printer list. If this happens: force "
+"KDEPrint to  re-load its configuration files. To reload the configuration "
+"files, either start kprinter again, or use the  switch the print system away "
+"from CUPS and back again once. The print system switch  can be made through "
+"a selection in the drop-down menu at bottom of this dialog when  fully "
+"expanded). </p>  </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:128
+#: kprintdialog.cpp:137
 msgid ""
-" <qt> This button takes you to where you can make decisions regarding all "
+" <qt><b>Print Job Properties:</b>  "
+"<p>This button opens a dialog where you can make decisions regarding all "
 "supported print job options. </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:131
+#: kprintdialog.cpp:141
 msgid ""
-" <qt>"
+" <qt><b>Selective View on List of Printers:</b> "
 "<p> This button reduces the list of visible printers to a shorter, more "
 "convenient, pre-defined list.</p> "
 "<p>This is particularly useful in enterprise environments with lots of "
 "printers. The default is to show <b>all</b> printers.</p> "
-"<p>To create a personal filter list, click on the <em>\"System "
-"Options</em>"
-"\" button at the bottom of this dialog. Then, in the new dialog, select "
-"<em>\"Filter\"</em> (left column in the <em>KDE Print Configuration</em> "
-"dialog).</p> </qt>"
+"<p>To create a personal <em>'selective view list'</em>, click on the "
+"<em>'System Options'</em> button at the bottom of this dialog. Then, in the "
+"new dialog, select <em>'Filter'</em> (left column in the <em>KDE Print "
+"Configuration</em> dialog) and setup your selection..</p> "
+"<p><b>Warning:</b>"
+" Clicking this button without prior creation of a personal  <em>'selective "
+"view list'</em> will make all printers dissappear from the  view. (To "
+"re-enable all printers, just click this button again.) </p>  </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:140
+#: kprintdialog.cpp:154
 msgid ""
-"<qt> This button starts the <em>KDE Add Printer Wizard</em>. (<b>NOT</b> if "
-"you use <em>\"Generic LPD</em>\" or <em>\"LPRng\"</em>, or <em>\"Print "
-"Through an External Program</em>\".) Use the Wizard (with <em>\"CUPS\"</em> "
-"or <em>\"RLPR\"</em>) to add locally defined printers to your system. </qt>"
+"<qt><b>KDE Add Printer Wizard</b> "
+"<p>This button starts the <em>KDE Add Printer Wizard</em>.</p> "
+"<p>Use the Wizard (with <em>\"CUPS\"</em> or <em>\"RLPR\"</em>) to add "
+"locally defined printers to your system. </p> "
+"<p><b>Note:</b> The <em>KDE Add Printer Wizard</em> does <b>not</b> work,  "
+"and this button is disabled if you use  <em>\"Generic LPD</em>\", "
+"<em>\"LPRng\"</em>, or <em>\"Print Through  an External Program</em>\".) "
+"</p>  </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:146
+#: kprintdialog.cpp:163
 msgid ""
-" <qt> You can enter any command that would also print for you in a "
-"<em>konsole</em> window. "
-"<br> <b>Example:</b> "
+" <qt><b>External Print Command</b> "
+"<p>Here you can enter any command that would also print for you in  a "
+"<em>konsole</em> window. </p> <b>Example:</b> "
 "<pre>a2ps -P &lt;printername&gt; --medium=A3</pre>. </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:150
-msgid " <qt>This button shows or hides additional printing options.</qt>"
+#: kprintdialog.cpp:168
+msgid ""
+" <qt><b>Additional Print Job Options</b> "
+"<p>This button shows or hides additional printing options.</qt>"
 msgstr ""
 
-#: kprintdialog.cpp:151
+#: kprintdialog.cpp:170
 msgid ""
-" <qt> This button starts a new dialog where you can adjust various settings "
-"of your printing system. Amongst them: "
+" <qt><b>System Options:</b>  "
+"<p>This button starts a new dialog where you can adjust various settings of "
+"your printing system. Amongst them: "
 "<ul>"
 "<li> Should KDE applications embed all fonts into the PostScript they "
 "generate for printing? "
@@ -569,25 +591,30 @@ msgid ""
 "more....  </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:162
-msgid " <qt> This button takes you to the complete <em>KDEPrint Manual</em>. </qt>"
-msgstr ""
-
-#: kprintdialog.cpp:166
-msgid " <qt> This button cancels your print job and quits the kprinter dialog. </qt>"
-msgstr ""
-
-#: kprintdialog.cpp:170
+#: kprintdialog.cpp:182
 msgid ""
-" <qt> This button sends the job to the printing process. If you are sending "
+" <qt><b>Help:</b> This button takes you to the complete <em>KDEPrint "
+"Manual</em>. </qt>"
+msgstr ""
+
+#: kprintdialog.cpp:186
+msgid ""
+" <qt><b>Cancel:</b> This button cancels your print job and quits the "
+"kprinter dialog. </qt>"
+msgstr ""
+
+#: kprintdialog.cpp:190
+msgid ""
+" <qt><b>Print:</b>"
+" This button sends the job to the printing process. If you are sending "
 "non-PostScript files, you may be asked if you want KDE to convert the files "
 "into PostScript, or if you want your print subsystem (like CUPS) to do this. "
 "</qt>"
 msgstr ""
 
-#: kprintdialog.cpp:176
+#: kprintdialog.cpp:196
 msgid ""
-" <qt>"
+" <qt><b>Keep Printing Dialog Open</b>"
 "<p>"
 "If you enable this checkbox, the printing dialog stays open after you hit "
 "the <em>Print</em> button.</p> "
@@ -597,32 +624,35 @@ msgid ""
 "quickly.</p> </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:185
+#: kprintdialog.cpp:206
 msgid ""
-" <qt> The \"Output file:\" shows you where your file will be saved if you "
-"decide to \"Print to File\" your job, using one of the KDE <em>Special "
+" <qt><b>Output File Name and Path:</b>"
+" The \"Output file:\" shows  you where your file will be saved if you decide "
+"to \"Print to File\" your job, using one of the KDE <em>Special "
 "Printers</em> named \"Print to File (PostScript)\" or \"Print to File "
-"(PDF)\". Choose a name and location that suits you by using the button "
+"(PDF)\". Choose a name and location that suits your need by using the button "
 "and/or editing the line on the right. </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:192
+#: kprintdialog.cpp:214
 msgid ""
-" <qt> Edit this line to create a path and filename that suits you. (Only "
+" <qt><b>Output File Name and Path:</b> Edit this line to create a  path and "
+"filename that suits your needs. (Button and Lineedit field are only "
 "available if you \"Print to File\") </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:196
+#: kprintdialog.cpp:219
 msgid ""
-" <qt> This button calls the \"File Open\" dialog to let you choose a "
-"directory and file name where your \"Print-to-File\" job should be saved. "
-"</qt>"
+" <qt><b>Browse Directories button:<b> This button calls  the \"File Open / "
+"Browsed Directories\" dialog to let you choose a directory and file name "
+"where your \"Print-to-File\" job should be saved. </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:201
+#: kprintdialog.cpp:225
 msgid ""
-" <qt> This button calls the \"File Open\" dialog to allow you to select a "
-"file for printing. Note, that  "
+" <qt><b>Add File to Job</b> "
+"<p>This button calls the \"File Open / Browse Directories\" dialog to allow "
+"you to select a file for printing. Note, that  "
 "<ul>"
 "<li>"
 "you can select ASCII or International Text, PDF, PostScript, JPEG, TIFF, "
@@ -631,186 +661,175 @@ msgid ""
 "\"multi-file job\" to the printing system. </ul> </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:212
+#: kprintdialog.cpp:237
 msgid ""
-" <qt> This button removes the highlighted file from the list of files to be "
-"printed. </qt>"
+" <qt><b>Print Preview</b> Enable this checkbox if you want to see a preview "
+"of your printout. A preview lets you check if, for instance, your intended "
+"\"poster\" or \"pamphlet\" layout looks like you expected, without wasting "
+"paper first. It also lets you cancel the job if something looks wrong.  "
+"<p><b>Note:</b> The preview feature (and therefore this checkbox)  is only "
+"visible for printjobs created from inside KDE applications.  If you start "
+"kprinter from the commandline, or if you use kprinter  as a print command "
+"for non-KDE applications (like Acrobat Reader,  Firefox or OpenOffice), "
+"print preview is not available here.  </qt>"
 msgstr ""
 
-#: kprintdialog.cpp:216
+#: kprintdialog.cpp:250
 msgid ""
-" <qt> This button tries to open the highlighted file, so you can view or "
-"edit it before you send it to the printing system. </qt>"
+" <qt><b>Set as Default Printer</b> This button sets the current printer as "
+"the user's default.  "
+"<p><b>Note:</b> (Button is only visible if the checkbox for  <em>System "
+"Options</em> --> <em>General</em> --> <em>Miscellaneous</em>: <em>"
+"\"Defaults to the last printer used in the application\"</em> is disabled.) "
+"</qt>"
 msgstr ""
 
-#: kprintdialog.cpp:221
-msgid ""
-" <qt> This button moves the highlighted file up in the list of files to be "
-"printed. (In effect, this changes the order of the files' printout.) </qt>"
-msgstr ""
-
-#: kprintdialog.cpp:226
-msgid ""
-" <qt>"
-" This button moves the highlighted file down in the list of files to be "
-"printed. (In effect, this changes the order of the files' printout.) </qt>"
-msgstr ""
-
-#: kprintdialog.cpp:231
-msgid ""
-" <qt> Enable this checkbox if you want to see a preview of your printout. A "
-"preview lets you check if, for instance, your intended \"poster\" or "
-"\"pamphlet\" layout looks like you intended, without wasting paper first. It "
-"also lets you cancel the job if something looks wrong.  </qt>"
-msgstr ""
-
-#: kprintdialog.cpp:238
-msgid ""
-" <qt>"
-" This button sets the current printer as the user's default. (Button is only "
-"visible if the <em>System Options</em> --> <em>General</em> --> "
-"<em>Miscellaneous</em>: <em>\"Defaults to the last printer used in the "
-"application\"</em> is disabled.) </qt>"
-msgstr ""
-
-#: kprintdialog.cpp:251 management/kmmainview.cpp:290 management/kmwend.cpp:90
+#: kprintdialog.cpp:265 management/kmmainview.cpp:290 management/kmwend.cpp:90
 #: management/smbview.cpp:37
 msgid "Printer"
 msgstr "Presilo"
 
-#: kprintdialog.cpp:264 management/kmspecialprinterdlg.cpp:56
+#: kprintdialog.cpp:278 management/kmspecialprinterdlg.cpp:56
 #: management/kxmlcommanddlg.cpp:114
 msgid "&Name:"
 msgstr "&Nomo:"
 
-#: kprintdialog.cpp:266 management/kminfopage.cpp:50
+#: kprintdialog.cpp:280 management/kminfopage.cpp:50
 msgid ""
 "_: Status\n"
 "State:"
 msgstr "Stato:"
 
-#: kprintdialog.cpp:268 management/kminfopage.cpp:48
+#: kprintdialog.cpp:282 management/kminfopage.cpp:48
 msgid "Type:"
 msgstr "Tipo:"
 
-#: kprintdialog.cpp:270 management/kmwname.cpp:40
+#: kprintdialog.cpp:284 management/kmwname.cpp:40
 msgid "Location:"
 msgstr "Situo:"
 
-#: kprintdialog.cpp:272 management/kxmlcommanddlg.cpp:175
+#: kprintdialog.cpp:286 management/kxmlcommanddlg.cpp:175
 msgid "Comment:"
 msgstr "Komento:"
 
-#: kprintdialog.cpp:275
+#: kprintdialog.cpp:289
 #, fuzzy
 msgid "P&roperties"
 msgstr "Ecoj"
 
-#: kprintdialog.cpp:277
+#: kprintdialog.cpp:291
 #, fuzzy
 msgid "System Op&tions"
 msgstr "Sistem-&Opcioj..."
 
-#: kprintdialog.cpp:279
+#: kprintdialog.cpp:293
 msgid "Set as &Default"
 msgstr "Uzu kiel &apriora"
 
-#: kprintdialog.cpp:286
+#: kprintdialog.cpp:300
 #, fuzzy
-msgid "Toggle printer filtering"
-msgstr "Komutu preskonvertadon"
+msgid "Toggle selective view on printer list"
+msgstr "Ne eblas krei presilon."
 
-#: kprintdialog.cpp:291
+#: kprintdialog.cpp:305
 msgid "Add printer..."
 msgstr "Aldonu presilon..."
 
-#: cups/ippreportdlg.cpp:34 cups/ippreportdlg.cpp:41 kprintdialog.cpp:293
+#: cups/ippreportdlg.cpp:34 cups/ippreportdlg.cpp:41 kprintdialog.cpp:307
 msgid "&Print"
 msgstr "&Presu"
 
-#: kprintdialog.cpp:299
+#: kprintdialog.cpp:313
 #, fuzzy
 msgid "Previe&w"
 msgstr "Antaŭrigardo"
 
-#: kprintdialog.cpp:301
+#: kprintdialog.cpp:315
 msgid "O&utput file:"
 msgstr "&Eligdosiero:"
 
-#: kprintdialog.cpp:307
+#: kprintdialog.cpp:321
 msgid "Print co&mmand:"
 msgstr "Pres-&komando:"
 
-#: kprintdialog.cpp:316
+#: kprintdialog.cpp:330
 #, fuzzy
 msgid "Show/hide advanced options"
 msgstr "(Mal)montru pliajn opciojn"
 
-#: kprintdialog.cpp:318
+#: kprintdialog.cpp:332
 msgid "&Keep this dialog open after printing"
 msgstr "&Tenu tiun dialogon malfermita post presado."
 
-#: kprintdialog.cpp:537 kprintdialog.cpp:925
+#: kprintdialog.cpp:551 kprintdialog.cpp:939
 msgid "An error occurred while retrieving the printer list:"
 msgstr "Okazis eraro dum prenado de la presilolisto:"
 
-#: kprintdialog.cpp:701
+#: kprintdialog.cpp:715
 #, fuzzy
 msgid "The output filename is empty."
 msgstr "La eligdosiernomo estas malplena."
 
-#: kprintdialog.cpp:740
+#: kprintdialog.cpp:754
 msgid "You don't have write permissions to this file."
 msgstr "Vi ne havas skribpermeson por tiu dosiero."
 
-#: kprintdialog.cpp:746
+#: kprintdialog.cpp:760
 #, fuzzy
 msgid "The output directory does not exist."
 msgstr "La dosiero aŭ dosierujo %1 ne ekzistas."
 
-#: kprintdialog.cpp:748
+#: kprintdialog.cpp:762
 msgid "You don't have write permissions in that directory."
 msgstr "Vi ne havas skribpermeson por tiu dosierujo."
 
-#: kprintdialog.cpp:860
+#: kprintdialog.cpp:874
 #, fuzzy
 msgid "&Options <<"
 msgstr "&Opcioj"
 
-#: kprintdialog.cpp:873
+#: kprintdialog.cpp:887
 #, fuzzy
 msgid "&Options >>"
 msgstr "&Opcioj"
 
-#: kprintdialog.cpp:915
+#: kprintdialog.cpp:929
 msgid "Initializing printing system..."
 msgstr ""
 
-#: kprintdialog.cpp:951
+#: kprintdialog.cpp:965
 #, fuzzy
 msgid "Print to File"
 msgstr "Presu al dosiero"
 
-#: kmprinter.cpp:197 kprintdialog.cpp:969
+#: kmprinter.cpp:197 kprintdialog.cpp:983
 msgid "All Files"
 msgstr "Ĉiuj dosieroj"
 
-#: cups/kpschedulepage.cpp:39
+#: cups/kpschedulepage.cpp:40
 msgid ""
 " <qt> "
+"<p><b>Print Job Billing and Accounting</b></p>  "
 "<p>"
 "Insert a meaningful string here to associate the current print job with a "
 "certain account. This string will appear in the CUPS \"page_log\" to help "
-"with the print accounting in your organization. (Leave it empty if you don't "
-"need it.) "
+"with the print accounting in your organization. (Leave it empty if you do "
+"not need it.) "
 "<p> It is useful for people who print on behalf of different \"customers\", "
 "like print service bureaux, letter shops, press and prepress companies, or "
-"secretaries who serve different bosses, etc. </qt>"
+"secretaries who serve different bosses, etc.</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o job-billing=...         # example: \"Marketing_Department\" or "
+"\"Joe_Doe\"  </pre> </p>  </qt>"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:50
+#: cups/kpschedulepage.cpp:60
 msgid ""
 " <qt> "
+"<p><b>Scheduled Printing</b></p>  "
 "<p>Scheduled printing lets you control the time of the actual printout, "
 "while you can still send away your job <b>now</b> and have it out of your "
 "way. "
@@ -824,91 +843,113 @@ msgid ""
 "send jobs to the queue which is under the control of the operators (who, "
 "after all, need to make sure that the 10,000 sheets of pink paper which is "
 "required by the Marketing Department for a particular job are available and "
-"loaded into the paper trays). </qt>"
+"loaded into the paper trays).</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>"
+"    -o job-hold-until=...      # example: \"indefinite\" or \"no-hold\"  "
+"</pre> </p>  </qt>"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:68
+#: cups/kpschedulepage.cpp:87
 msgid ""
 " <qt> "
+"<p><b>Page Labels</b></p>  "
 "<p>Page Labels are printed by CUPS at the top and bottom of each page. They "
 "appear on the pages surrounded by a little frame box. "
-"<p>They contain any string you type into the line edit field. </qt>"
+"<p>They contain any string you type into the line edit field.</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o page-label=\"...\"      # example: \"Company Confidential\"  "
+"</pre> </p>  </qt>"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:74
+#: cups/kpschedulepage.cpp:102
 msgid ""
 " <qt> "
+"<p><b>Job Priority</b></p>  "
 "<p>Usually CUPS prints all jobs per queue according to the \"FIFO\" "
-"priniciple: <em>First In, First Out</em>. "
+"principle: <em>First In, First Out</em>. "
 "<p> The job priority option allows you to re-order the queue according to "
 "your needs. "
 "<p> It works in both directions: you can increase as well as decrease "
 "priorities. (Usually you can only control your <b>own</b> jobs). "
 "<p> Since the default job priority is \"50\", any job sent with, for "
 "example, \"49\" will be printed only after all those others have finished. "
-"Conversely, a \"51\" or higher priority job will go right at the top of a "
-"populated queue (if no other, higher prioritized one is present). </qt>"
+"Conversely, a \"51\" or higher priority job will go right to the top of a "
+"populated queue (if no other, higher prioritized one is present).</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o job-priority=...   # example: \"10\" or \"66\" or \"99\"  </pre>"
+" </p>  </qt>"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:89
+#: cups/kpschedulepage.cpp:126
 msgid "Advanced Options"
 msgstr "Pliaj opcioj"
 
-#: cups/kpschedulepage.cpp:100
+#: cups/kpschedulepage.cpp:137
 msgid "Immediately"
 msgstr "Tuj"
 
-#: cups/kpschedulepage.cpp:101
+#: cups/kpschedulepage.cpp:138
 msgid "Never (hold indefinitely)"
 msgstr "Neniam (tenu senĉese)"
 
-#: cups/kpschedulepage.cpp:102
+#: cups/kpschedulepage.cpp:139
 msgid "Daytime (6 am - 6 pm)"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:103
+#: cups/kpschedulepage.cpp:140
 msgid "Evening (6 pm - 6 am)"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:104
+#: cups/kpschedulepage.cpp:141
 msgid "Night (6 pm - 6 am)"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:105
+#: cups/kpschedulepage.cpp:142
 msgid "Weekend"
 msgstr "Semajnfino"
 
-#: cups/kpschedulepage.cpp:106
+#: cups/kpschedulepage.cpp:143
 msgid "Second Shift (4 pm - 12 am)"
 msgstr ""
 
-#: cups/kpschedulepage.cpp:107
+#: cups/kpschedulepage.cpp:144
 #, fuzzy
 msgid "Third Shift (12 am - 8 am)"
 msgstr "Tria skipo (post noktomezo)"
 
-#: cups/kpschedulepage.cpp:108
+#: cups/kpschedulepage.cpp:145
 #, fuzzy
 msgid "Specified Time"
 msgstr "Donita tempo"
 
-#: cups/kpschedulepage.cpp:123
-msgid "&Schedule printing:"
+#: cups/kpschedulepage.cpp:160
+#, fuzzy
+msgid "&Scheduled printing:"
 msgstr "&Planu presadon"
 
-#: cups/kpschedulepage.cpp:126
+#: cups/kpschedulepage.cpp:163
 msgid "&Billing information:"
 msgstr "&Paginformo:"
 
-#: cups/kpschedulepage.cpp:129
+#: cups/kpschedulepage.cpp:166
 msgid "T&op/Bottom page label:"
 msgstr "&Supra/malsupra paĝetikedo:"
 
-#: cups/kpschedulepage.cpp:132
+#: cups/kpschedulepage.cpp:169
 msgid "&Job priority:"
 msgstr "&Taskoprioritato:"
 
-#: cups/kpschedulepage.cpp:163
+#: cups/kpschedulepage.cpp:200
 msgid "The time specified is not valid."
 msgstr "La donita tempindiko ne estas valida."
 
@@ -1239,7 +1280,7 @@ msgstr "Malĝusta pordnumero!"
 msgid "<nobr>Unable to connect to <b>%1</b> on port <b>%2</b> .</nobr>"
 msgstr "<nobr>Ne eblis kontakti al <b>%1</b> ĉe la pordo <b>%2</b>!</nobr>"
 
-#: cups/kmpropbanners.cpp:49 kpgeneralpage.cpp:138
+#: cups/kmpropbanners.cpp:49 kpgeneralpage.cpp:297
 msgid "Banners"
 msgstr "Standardoj"
 
@@ -1283,40 +1324,190 @@ msgstr "Tie ĉi donu grupon de permesitaj/nepermesitaj uzantoj por tiu ĉi presi
 msgid "&Type:"
 msgstr "&Tipo:"
 
-#: cups/kptextpage.cpp:39
+#: cups/kptextpage.cpp:41
+msgid ""
+" <qt>  "
+"<p><b>Characters Per Inch</b></p>  "
+"<p>This setting controls the horizontal size of characters when printing a "
+"text file. </p> "
+"<p>"
+"The default value is 10, meaning that the font is scaled in a way that 10 "
+"characters  per inch will be printed. </p>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o cpi=...          # example: \"8\" or \"12\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:55
+msgid ""
+" <qt>  "
+"<p><b>Lines Per Inch</b></p>  "
+"<p>This setting controls the vertical size of characters when printing a "
+"text file. </p> "
+"<p>The default value is 6, meaning that the font is scaled in a way that 6 "
+"lines  per inch will be printed. </p>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o lpi=...         # example \"5\" or \"7\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:69
+msgid ""
+" <qt>  "
+"<p><b>Columns</b></p>  "
+"<p>This setting controls how many columns of text will be printed on each "
+"page when. printing text files. </p>  "
+"<p>The default value is 1, meaning that only one column of text per page  "
+"will be printed. </p>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o columns=...     # example: \"2\" or \"4\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:84
+msgid " <qt>  Preview icon changes when you turn on or off prettyprint.  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:87
+msgid ""
+" <qt>  "
+"<p><b>Text Formats</b></p>  "
+"<p>"
+"These settings control the appearance of text on printouts. They are only "
+"valid for  printing text files or input directly through kprinter. </p>  "
+"<p><b>Note:</b> These settings have no effect whatsoever for other input "
+"formats than  text, or for printing from applications such as the KDE "
+"Advanced Text Editor. (Applications  in general send PostScript to the print "
+"system, and 'kate' in particular has its own  knobs to control the print "
+"output. </p>. "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o cpi=...         # example: \"8\" or \"12\"  "
+"<br>     -o lpi=...         # example: \"5\" or \"7\"  "
+"<br>     -o columns=...     # example: \"2\" or \"4\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:108
+msgid ""
+" <qt>  "
+"<p><b>Margins</b></p>  "
+"<p>These settings control the margins of printouts on the paper. They are "
+"not valid for  jobs originating from applications which define their own "
+"page layout internally and  send PostScript to KDEPrint (such as KOffice or "
+"OpenOffice.org). </p>  "
+"<p>When printing from KDE applications, such as KMail and Konqueror, or "
+"printing an ASCII text  file through kprinter, you can choose your preferred "
+"margin settings here. </p>  "
+"<p>"
+"Margins may be set individually for each edge of the paper. The combo box at "
+"the bottom lets you change  the units of measurement between Pixels, "
+"Millimeters, Centimeters, and Inches. </p>  "
+"<p>"
+"You can even use the mouse to grab one margin and drag it to the intended "
+"position (see the  preview picture on the right side). </p>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o page-top=...      # example: \"72\"  "
+"<br>     -o page-bottom=...   # example: \"24\"  "
+"<br>     -o page-left=...     # example: \"36\"  "
+"<br>     -o page-right=...    # example: \"12\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:134
+msgid ""
+" <qt>  "
+"<p><b>Turn Text Printing with Syntax Highlighting (Prettyprint) On!</b></p>"
+"  "
+"<p>"
+"ASCII text file printouts can be 'prettyfied' by enabling this option. If "
+"you do so,  a header is printed at the top of each page. The header contains "
+" the page number, job title (usually the filename), and the date. In "
+"addition, C and  C++ keywords are highlighted, and comment lines are "
+"italicized.</p> "
+"<p>This prettyprint option is handled by CUPS.</p>  "
+"<p>If you prefer another 'plaintext-to-prettyprint' converter, look for the "
+"<em>enscript</em>  pre-filter on the <em>Filters</em> tab. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o prettyprint=true.  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:153
+msgid ""
+" <qt>  "
+"<p><b>Turn Text Printing with Syntax Highlighting (Prettyprint) Off! "
+"</b></p>  "
+"<p>ASCII text file printing with this option turned off are appearing "
+"without a page  header and without syntax highlighting. (You can still set "
+"the page margins, though.) </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o prettyprint=false  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:167
+msgid ""
+" <qt>  "
+"<p><b>Print Text with Syntax Highlighting (Prettyprint)</b></p>  "
+"<p>ASCII file printouts can be 'prettyfied' by enabling this option. If you "
+"do so,  a header is printed at the top of each page. The header contains  "
+"the page number, job title (usually the filename), and the date. In "
+"addition, C and  C++ keywords are highlighted, and comment lines are "
+"italicized.</p> "
+"<p>This prettyprint option is handled by CUPS.</p>  "
+"<p>If you prefer another 'plaintext-to-prettyprint' converter, look for the "
+"<em>enscript</em>  pre-filter on the <em>Filters</em> tab. </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o prettyprint=true.  "
+"<br>     -o prettyprint=false  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kptextpage.cpp:188
 msgid "Text"
 msgstr "Teksto"
 
-#: cups/kptextpage.cpp:42
+#: cups/kptextpage.cpp:191
 msgid "Text Format"
 msgstr "Tekstformato"
 
-#: cups/kptextpage.cpp:43
+#: cups/kptextpage.cpp:193
 msgid "Syntax Highlighting"
 msgstr "Sintaksemfazo"
 
-#: cups/kptextpage.cpp:44 kpmarginpage.cpp:42 kpmarginpage.cpp:45
+#: cups/kptextpage.cpp:195 kpmarginpage.cpp:42 kpmarginpage.cpp:45
 msgid "Margins"
 msgstr "Marĝenoj"
 
-#: cups/kptextpage.cpp:47
+#: cups/kptextpage.cpp:200
 msgid "&Chars per inch:"
 msgstr "&Sigoj en colo:"
 
-#: cups/kptextpage.cpp:50
+#: cups/kptextpage.cpp:204
 msgid "&Lines per inch:"
 msgstr "&Linioj en colo:"
 
-#: cups/kptextpage.cpp:53
+#: cups/kptextpage.cpp:208
 #, fuzzy
 msgid "C&olumns:"
 msgstr "&Kolumnoj"
 
-#: cups/kptextpage.cpp:60
+#: cups/kptextpage.cpp:216
 msgid "&Disabled"
 msgstr "&Malŝaltita"
 
-#: cups/kptextpage.cpp:61
+#: cups/kptextpage.cpp:218
 msgid "&Enabled"
 msgstr "Ŝ&altita"
 
@@ -1339,46 +1530,81 @@ msgstr "Instaldosierujo"
 msgid "Standard installation (/)"
 msgstr "Normala instalo (/)"
 
-#: cups/kptagspage.cpp:35
+#: cups/kptagspage.cpp:36
 msgid ""
 " <qt>"
-"<p>You may send additional messages to the operator(s) of your production "
-"printers (e.g. in your <em>Central Repro Department</p>) Your messages can "
-"be read by the operator(s) (or yourself) by viewing the <em>\"Job IPP "
-"Report\"</em> for the respective job.</p> <b>Examples:</b>"
-"<br>"
-"<pre> <em>Call_after_completion</em> (Name) -- <em>"
-"Joe User, phone extension 1234</em> (Value)"
-"<br> <em>Mail_after_completion</em> (Name) -- <em>Jill User "
-"&lt;juser@somecompany.com&gt;</em> (Value)"
-"<br> <em>Deliver_after_completion</em> (Name) -- <em>to Marketing "
-"Department</em> (Value) </pre> "
-"<p><b>Note:</b> the \"Name\" field must not include spaces or tabs. </qt>"
+"<p><b>Additional Tags</b></p> You may send additional commands to the CUPS "
+"server via this editable list.  There are 3 purposes for this: "
+"<ul> "
+"<li>"
+"Use any current or future standard CUPS job option not supported by the  "
+"KDEPrint GUI. </li> "
+"<li>Control any custom job option you may want to support in custom CUPS "
+"filters  and backends plugged into the CUPS filtering chain.</li>  "
+"<li>"
+"Send short messages to the operators of your production printers in your  "
+"<em>Central Repro Department</em>. </ul>  "
+"<p><b>Standard CUPS job options:</b> A complete list of standard CUPS job  "
+"options is in the <a href=\"http://localhost:631/sum.html\">CUPS User "
+"Manual</a>.  Mappings of the kprinter user interface widgets to respective "
+"CUPS job option  names are named in the various <em>WhatsThis</em> help "
+"items..</p> "
+"<p><b>Custom CUPS job options:</b>"
+" CUPS print servers may be customized with additional  print filters and "
+"backends which understand custom job options. You can specify such  custom "
+"job options here. If in doubt, ask your system administrator..</p> "
+"<p><b> </b></p> "
+"<p><b>Operator Messages:</b> You may send additional messages to the "
+"operator(s) of your production printers (e.g. in your <em>Central Repro "
+"Department</p>) Messages can be read by the operator(s) (or yourself) by "
+"viewing the <em>\"Job IPP Report\"</em> for the job.</p> "
+"<b>Examples:</b>"
+"<br> "
+"<pre> A standard CUPS job option:"
+"<br>    <em>(Name) number-up</em>                -- <em>(Value) 9</em>"
+"                     "
+"<br> "
+"<br> A job option for custom CUPS filters or backends:"
+"<br>    <em>(Name) DANKA_watermark</em>          -- <em>(Value) "
+"Company_Confidential</em>   "
+"<br> "
+"<br> A message to the operator(s):"
+"<br>    <em>(Name) Deliver_after_completion</em> -- <em>(Value) "
+"to_Marketing_Departm.</em>"
+"<br> </pre> "
+"<p><b>Note:</b> the fields must not include spaces, tabs or quotes. You may "
+"need to  double-click on a field to edit it. "
+"<p><b>Warning:</b>"
+" Do not use such standard CUPS option names which also can be used  through "
+"the KDEPrint GUI. Results may be  unpredictable if they conflict,  or if "
+"they are sent multiple times. For all options supported by the GUI, please "
+"do use  the GUI. (Each GUI element's  'WhatsThis' names the related CUPS "
+"option name.) </p>  </qt>"
 msgstr ""
 
-#: cups/kptagspage.cpp:46
+#: cups/kptagspage.cpp:77
 #, fuzzy
 msgid "Additional Tags"
 msgstr "Aldonaj GS-opcioj"
 
-#: cups/kptagspage.cpp:51 kfilelist.cpp:93 kpfilterpage.cpp:309
+#: cups/kptagspage.cpp:82 kfilelist.cpp:101 kpfilterpage.cpp:406
 #: management/kmjobviewer.cpp:237 management/kmwend.cpp:51
 #: management/kxmlcommanddlg.cpp:141 management/kxmlcommanddlg.cpp:544
 msgid "Name"
 msgstr "Nomo"
 
-#: cups/kptagspage.cpp:52
+#: cups/kptagspage.cpp:83
 msgid "Value"
 msgstr "Valoro"
 
-#: cups/kptagspage.cpp:61
+#: cups/kptagspage.cpp:92
 #, fuzzy
 msgid "Read-Only"
 msgstr "Nurlege"
 
-#: cups/kptagspage.cpp:84
+#: cups/kptagspage.cpp:115
 #, fuzzy
-msgid "The tag name must not contain any spaces: <b>%1</b>."
+msgid "The tag name must not contain any spaces, tabs or quotes: <b>%1</b>."
 msgstr "Instanconomo ne enhavu spacsignojn!"
 
 #: cups/kmcupsuimanager.cpp:85
@@ -1537,18 +1763,95 @@ msgid "host not found"
 msgstr "Presilo ne trovita."
 
 #: cups/kphpgl2page.cpp:33
+msgid ""
+" <qt>  <b>Print in Black Only (Blackplot)</b>  "
+"<p>"
+"The 'blackplot' option specifies that all pens should plot in black-only: "
+"The default is to use the colors defined in the plot file, or the standard  "
+"pen colors defined in the HP-GL/2 reference manual from Hewlett Packard. "
+"</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o blackplot=true  </pre>  </p>  </qt>"
+msgstr ""
+
+#: cups/kphpgl2page.cpp:48
+msgid ""
+" <qt>  <b>Scale Print Image to Page Size</b>  "
+"<p>The 'fitplot' option specifies that the HP-GL image should be scaled to "
+"fill  exactly the page with the (elsewhere selected) media size. </p>  "
+"<p>The default is 'fitplot is disabled'. The default will therefore use the "
+"absolute  distances specified in the plot file. (You should be aware that "
+"HP-GL files are very  often CAD drawings intended for large format plotters. "
+"On standard office printers  they will therefore lead to the drawing "
+"printout being spread across multiple pages.) </p>  "
+"<p><b>Note:</b>This feature depends upon an accurate plot size (PS) command "
+"in the  HP-GL/2 file. If no plot size is given in the file the filter "
+"converting the HP-GL  to PostScript assumes the plot is ANSI E size. </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o fitplot=true   </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kphpgl2page.cpp:68
+msgid ""
+" <qt>  <b>Set Pen Width for HP-GL (if not defined in file)</b>.  "
+"<p>The pen width value can be set here in case the original HP-GL file does "
+"not have it  set. The pen width specifies the value in micrometers. The "
+"default value of 1000 produces  lines that are 1000 micrometers == 1 "
+"millimeter in width. Specifying a pen width of 0  produces lines that are "
+"exactly 1 pixel wide. </p>  "
+"<p><b>Note:</b> The penwidth option set here is ignored if the pen widths "
+"are set inside  the plot file itself..</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o penwidth=...   # example: \"2000\" or \"500\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kphpgl2page.cpp:85
+msgid ""
+" <qt>  <b>HP-GL Print Options</b>  "
+"<p>All options on this page are only applicable if you use KDEPrint to send "
+"HP-GL and  HP-GL/2 files to one of your printers. </p>  "
+"<p>HP-GL and HP-GL/2 are page description languages developed by "
+"Hewlett-Packard to drive  Pen Plotting devices. </p>  "
+"<p>KDEPrint can (with the help of CUPS) convert the HP-GL file format and "
+"print it  on any installed printer. </p>  "
+"<p><b>Note 1:</b>"
+" To print HP-GL files, start 'kprinter' and simply load the file into  the "
+"running kprinter.</p> "
+"<p><b>Note 2:</b> The 'fitplot' parameter provided on this dialog does also "
+"work for  printing PDF files (if your CUPS version is more recent than "
+"1.1.22).</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> These KDEPrint GUI elements "
+"match with CUPS commandline job option parameters:</em>  "
+"<pre>     -o blackplot=...  # examples: \"true\" or \"false\"  "
+"<br>     -o fitplot=...    # examples: \"true\" or \"false\"  "
+"<br>     -o penwidth=...   # examples: \"true\" or \"false\"  </pre> </p>  "
+"</qt>"
+msgstr ""
+
+#: cups/kphpgl2page.cpp:113
 msgid "HP-GL/2 Options"
 msgstr "Opcioj por HP-GL/2"
 
-#: cups/kphpgl2page.cpp:35
+#: cups/kphpgl2page.cpp:115
 msgid "&Use only black pen"
 msgstr "&Uzu nur nigran krajonon"
 
-#: cups/kphpgl2page.cpp:36
+#: cups/kphpgl2page.cpp:118
 msgid "&Fit plot to page"
 msgstr "&Adaptu al paĝograndeco"
 
-#: cups/kphpgl2page.cpp:38
+#: cups/kphpgl2page.cpp:122
 msgid "&Pen width:"
 msgstr "&Krajonlarĝeco:"
 
@@ -1769,65 +2072,282 @@ msgstr "Permesitaj uzantoj"
 msgid "All users allowed"
 msgstr "Ĉiuj uzantoj estas permesitaj"
 
-#: cups/kpimagepage.cpp:42
+#: cups/kpimagepage.cpp:44
+msgid ""
+" <qt>  "
+"<p><b>Brightness:</b> Slider to control the brightness value of all colors "
+"used.</p> "
+"<p> The brightness value can range from 0 to 200. Values greater than 100 "
+"will  lighten the print. Values less than 100 will darken the print. </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o brightness=...      # use range from \"0\" to \"200\"  </pre>  "
+"</p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:58
+msgid ""
+" <qt>  "
+"<p><b>Hue (Tint):</b> Slider to control the hue value for color "
+"rotation.</p> "
+"<p> The hue value is a number from -360 to 360 and represents the color hue "
+"rotation.  The following table summarizes the change you will see for the "
+"base colors:  "
+"<center>  <table border=\"1\" width=\"70%\">  "
+"<tr>"
+"<th><b>Original</b></th> "
+"<th><b>hue=-45</b></th> "
+"<th><b>hue=45</b></th>   </tr>  "
+"<tr>"
+"<td>Red</td>             "
+"<td>Purple</td>         "
+"<td>Yellow-orange</td>   </tr>  "
+"<tr>"
+"<td>Green</td>           "
+"<td>Yellow-green</td>   "
+"<td>Blue-green</td>      </tr>  "
+"<tr>"
+"<td>Yellow</td>          "
+"<td>Orange</td>         "
+"<td>Green-yellow</td>    </tr>  "
+"<tr>"
+"<td>Blue</td>            "
+"<td>Sky-blue</td>       "
+"<td>Purple</td>          </tr>  "
+"<tr>"
+"<td>Magenta</td>         "
+"<td>Indigo</td>         "
+"<td>Crimson</td>         </tr>  "
+"<tr>"
+"<td>Cyan</td>            "
+"<td>Blue-green</td>     "
+"<td>Light-navy-blue</td> </tr>  </table>  </center>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o hue=...     # use range from \"-360\" to \"360\"  </pre> </p>  "
+"</qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:83
+msgid ""
+" <qt>  "
+"<p><b>Saturation:</b> Slider to control the saturation value for all colors "
+"used.</p> "
+"<p> The saturation value adjusts the saturation of the colors in an image, "
+"similar to  the color knob on your television. The color saturation "
+"value.can range from 0 to 200. On inkjet printers, a higher saturation value "
+"uses more ink. On laserjet printers, a  higher saturation uses more toner.  "
+"A color saturation of 0 produces a black-and-white print, while a value of "
+"200 will  make the colors extremely intense. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o saturation=...      # use range from \"0\" to \"200\"  </pre> "
+"</p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:101
+msgid ""
+" <qt>  "
+"<p><b>Gamma:</b> Slider to control the gamma value for color correction.</p>"
+" "
+"<p> The gamma value can range from 1 to 3000.  A gamma values greater than "
+"1000 lightens the print. A gamma value less than 1000  darken the print. The "
+"default gamma is 1000. </p> "
+"<p><b>Note:</b></p> the gamma value adjustment is not visible in the "
+"thumbnail  preview. </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o gamma=...      # use range from \"1\" to \"3000\"  </pre> </p>  "
+"</qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:118
+msgid ""
+" <qt>  "
+"<p><b>Image Printing Options</b></p>  "
+"<p>All options controlled on this page only apply to printing images.  Most "
+"image file formats are supported. To name a few: JPEG, TIFF, PNG, GIF,  PNM "
+"(PBM/PGM/PNM/PPM), Sun Raster, SGI RGB, Windows BMP. Options to influence "
+"color output of image printouts are:  "
+"<ul>  "
+"<li> Brightness  </li> "
+"<li> Hue         </li> "
+"<li> Saturation  </li> "
+"<li> Gamma       </li> </ul>  "
+"<p>For a more detailed explanation about Brightness, Hue, Saturation and "
+"Gamma settings, please  look at the 'WhatsThis' items provided for these "
+"controls.  </p>  </p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:136
+msgid ""
+" <qt>  "
+"<p><b>Coloration Preview Thumbnail</b></p>  "
+"<p>The coloration preview thumbnail indicates change of image coloration by "
+"different settings.  Options to influence output are:  "
+"<ul>  "
+"<li> Brightness  </li> "
+"<li> Hue (Tint)  </li> "
+"<li> Saturation  </li> "
+"<li> Gamma       </li> </ul>  </p>  "
+"<p>For a more detailed explanation about Brightness, Hue, Saturation and "
+"Gamma settings, please  look at the 'WhatsThis' items provided for these "
+"controls.  </p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:152
+msgid ""
+" <qt>  "
+"<p><b>Image Size:</b>"
+" Dropdown menu to control the image size on the printed paper. Dropdown  "
+"works in conjunction with slider below. Dropdown options are:.</p> "
+"<ul>  "
+"<li> <b>Natural Image Size:</b> Image prints in its natural image size. If "
+"it does not fit onto  one sheet, the printout will be spread across multiple "
+"sheets. Note, that the slider is disabled  when selecting 'natural image "
+"size' in the dropdown menu. </li> "
+"<li> <b>Resolution (ppi):</b> The resolution value slider covers a number "
+"range from 1 to 1200.  It specifies the resolution of the image in Pixels "
+"Per Inch (PPI). An image that is 3000x2400 pixels  will print 10x8 inches at "
+"300 pixels per inch, for example, but 5x4 inches at 600 pixels per inch. If "
+"the specified resolution makes the image larger than the page, multiple "
+"pages will be printed.  Resolution defaults to 72 ppi.  </li> "
+"<li> <b>% of Page Size:</b> The percent value slider covers numbers from 1 "
+"to 800. It specifies the size  in relation to the page (not the image). A "
+"scaling of 100 percent will fill the page as completely  as the image aspect "
+"ratio allows (doing auto-rotation of the image as needed).  A scaling of "
+"more than 100 will print the image across multiple  sheets. A scaling of 200 "
+"percent will print on up to 4 pages. </li> Scaling in % of page size "
+"defaults to 100 %.  "
+"<li> <b>% of Natural Image Size:</b> The percent value slider moves from 1 "
+"to 800. It specifies  the printout size in relation  to the natural image "
+"size. A scaling of 100 percent will print the image at its natural size, "
+"while a  scaling of 50 percent will print the image at half its natural "
+"size. If the specified scaling makes  the image larger than the page, "
+"multiple pages will be printed.  Scaling in % of natural image size defaults "
+"to 100 %.  </ul>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o natural-scaling=...     # range in  %  is 1....800  "
+"<br>     -o scaling=...             # range in  %  is 1....800  "
+"<br>     -o ppi=...                 # range in ppi is 1...1200  </pre> </p>"
+"  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:192
+msgid ""
+" <qt>  "
+"<p><b>Position Preview Thumbnail</b></p>  "
+"<p>This position preview thumbnail indicates the position of the image on "
+"the paper sheet.  "
+"<p>"
+"Click on horizontal and vertical radio buttons to move image alignment on "
+"paper around. Options are:  "
+"<ul>  "
+"<li> center      </li> "
+"<li> top         </li> "
+"<li> top-left    </li> "
+"<li> left        </li> "
+"<li> bottom-left </li> "
+"<li> bottom      </li> "
+"<li> bottom-right</li> "
+"<li> right       </li> <li> top-right   </li> </ul>  </p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:210
+msgid ""
+" <qt>  "
+"<p><b>Reset to Default Values</b> </p>  "
+"<p> Reset all coloration settings to default values. Default values are:  "
+"<ul>  "
+"<li> Brightness: 100 </li> "
+"<li> Hue (Tint).   0 </li> "
+"<li> Saturation: 100 </li> <li> Gamma:     1000 </li> </ul>  </p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:222
+msgid ""
+" <qt>  "
+"<p><b>Image Positioning:</b></p>  "
+"<p>Select a pair of radiobuttons to  move image to the position you want on "
+"the paper printout. Default  is 'center'. </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o position=...       # examples: \"top-left\" or \"bottom\"  "
+"</pre> </p>  </qt>"
+msgstr ""
+
+#: cups/kpimagepage.cpp:237
 msgid "Image"
 msgstr "Bildo"
 
-#: cups/kpimagepage.cpp:44
+#: cups/kpimagepage.cpp:239
 msgid "Color Settings"
 msgstr "Koloragordo"
 
-#: cups/kpimagepage.cpp:45
+#: cups/kpimagepage.cpp:241
 msgid "Image Size"
 msgstr "Bildograndeco"
 
-#: cups/kpimagepage.cpp:46
+#: cups/kpimagepage.cpp:243
 msgid "Image Position"
 msgstr "Bildopozicio"
 
-#: cups/kpimagepage.cpp:49
+#: cups/kpimagepage.cpp:247
 #, fuzzy
 msgid "&Brightness:"
 msgstr "&Heleco"
 
-#: cups/kpimagepage.cpp:52
+#: cups/kpimagepage.cpp:252
 #, fuzzy
 msgid "&Hue (Color rotation):"
 msgstr "&Kolorvaloro (rotacio)"
 
-#: cups/kpimagepage.cpp:55
+#: cups/kpimagepage.cpp:257
 #, fuzzy
 msgid "&Saturation:"
 msgstr "&Koloreco"
 
-#: cups/kpimagepage.cpp:58
+#: cups/kpimagepage.cpp:262
 #, fuzzy
 msgid "&Gamma (Color correction):"
 msgstr "&Gamovaloro (kolorkorekto)"
 
-#: cups/kpimagepage.cpp:74
+#: cups/kpimagepage.cpp:283
 msgid "&Default Settings"
 msgstr "&Apriora agordo"
 
-#: cups/kpimagepage.cpp:79
+#: cups/kpimagepage.cpp:289
 msgid "Natural Image Size"
 msgstr "Propra bildograndeco"
 
-#: cups/kpimagepage.cpp:80
+#: cups/kpimagepage.cpp:290
 msgid "Resolution (ppi)"
 msgstr "Difino (punktoj/colo)"
 
-#: cups/kpimagepage.cpp:82
+#: cups/kpimagepage.cpp:292
 #, no-c-format
 msgid "% of Page"
 msgstr "% de la paĝo"
 
-#: cups/kpimagepage.cpp:84
+#: cups/kpimagepage.cpp:294
 #, no-c-format
 msgid "% of Natural Image Size"
 msgstr "% de la normala bildorandeco"
 
-#: cups/kpimagepage.cpp:91
+#: cups/kpimagepage.cpp:304
 #, fuzzy
 msgid "&Image size type:"
 msgstr "Tipo de &bildgrandeco"
@@ -2040,7 +2560,7 @@ msgstr "Interna eraro: ne eblas lanĉi procezon de \"Epson-pres-utilaĵo\"."
 msgid "Operation terminated with errors."
 msgstr "Operacio haltigita kun eraroj."
 
-#: kpfilterpage.cpp:312 tools/escputil/escpwidget.cpp:214
+#: kpfilterpage.cpp:409 tools/escputil/escpwidget.cpp:214
 msgid "Output"
 msgstr "Eligo:"
 
@@ -2399,8 +2919,10 @@ msgstr ""
 "la malsupra kampo.</p>"
 
 #: management/kmwlocal.cpp:78
-msgid "Empty URI."
-msgstr "Malplena URI."
+msgid ""
+"_: The URI is empty\n"
+"Empty URI."
+msgstr ""
 
 #: management/kmwlocal.cpp:83
 msgid "The local URI doesn't correspond to a detected port. Continue?"
@@ -3067,7 +3589,7 @@ msgstr "Komento"
 msgid "Confirmation"
 msgstr "Konfirmo"
 
-#: kfilelist.cpp:94 management/kmwend.cpp:50 management/kmwend.cpp:106
+#: kfilelist.cpp:102 management/kmwend.cpp:50 management/kmwend.cpp:106
 #: management/kmwend.cpp:109
 msgid "Type"
 msgstr "Tipo"
@@ -3306,12 +3828,12 @@ msgstr "Pliaj opcioj"
 msgid "Delete item"
 msgstr "Forigu dosieron"
 
-#: kfilelist.cpp:127 management/kxmlcommanddlg.cpp:157
+#: kfilelist.cpp:135 management/kxmlcommanddlg.cpp:157
 #, fuzzy
 msgid "Move up"
 msgstr "Movu supren"
 
-#: kfilelist.cpp:134 management/kxmlcommanddlg.cpp:158
+#: kfilelist.cpp:142 management/kxmlcommanddlg.cpp:158
 #, fuzzy
 msgid "Move down"
 msgstr "Movu malsupren"
@@ -3452,7 +3974,7 @@ msgstr "&Konservu agordon"
 msgid "Supported &Input Formats"
 msgstr ""
 
-#: kpfilterpage.cpp:310 management/kxmlcommanddlg.cpp:839
+#: kpfilterpage.cpp:407 management/kxmlcommanddlg.cpp:839
 msgid "Requirements"
 msgstr "Bezonaĵoj:"
 
@@ -3788,7 +4310,7 @@ msgstr ""
 msgid "Strip"
 msgstr "Jes, forigu"
 
-#: kprinterimpl.cpp:503 management/kmwname.cpp:62
+#: kprinterimpl.cpp:510 management/kmwname.cpp:62
 msgid "Keep"
 msgstr "Tenu"
 
@@ -4047,10 +4569,11 @@ msgstr "Nevalida agordo. %1."
 msgid "Configuring %1"
 msgstr "Agordante %1n"
 
-#: kfilelist.cpp:41
+#: kfilelist.cpp:42
 msgid ""
-" <qt> This button calls the \"File Open\" dialog to let you select a file "
-"for printing. Note, that  "
+" <qt> <b>Add File button</b> "
+"<p>This button calls the <em>'File Open'</em> dialog to let you select a "
+"file for printing. Note, that  "
 "<ul>"
 "<li>"
 "you can select ASCII or International Text, PDF, PostScript, JPEG, TIFF, "
@@ -4059,45 +4582,48 @@ msgid ""
 "\"multi-file job\" to the printing system. </ul> </qt>"
 msgstr ""
 
-#: kfilelist.cpp:52
+#: kfilelist.cpp:54
 msgid ""
-" <qt> This button removes the highlighted file from the list of "
-"to-be-printed files. </qt>"
+" <qt> <b>Remove File button</b> "
+"<p>This button removes the highlighted file from the list of to-be-printed "
+"files. </qt>"
 msgstr ""
 
-#: kfilelist.cpp:56
+#: kfilelist.cpp:59
 msgid ""
-" <qt> "
+" <qt> <b>Move File Up button</b> "
 "<p>This button moves the highlighted file up in the list of files to be "
 "printed.</p> "
 "<p>In effect, this changes the order of the files' printout.</p> </qt>"
 msgstr ""
 
-#: kfilelist.cpp:62
+#: kfilelist.cpp:66
 msgid ""
-" <qt> "
+" <qt> <b>Move File Down button</b> "
 "<p>This button moves the highlighted file down in the list of files to be "
 "printed.</p> "
 "<p>In effect, this changes the order of the files' printout.</p> </qt>"
 msgstr ""
 
-#: kfilelist.cpp:68
+#: kfilelist.cpp:73
 msgid ""
-" <qt> "
+" <qt> <b>File Open button</b> "
 "<p>This button tries to open the highlighted file, so you can view or edit "
 "it before you send it to the printing system.</p> "
 "<p>If you open files, KDEPrint will use the application matching the MIME "
 "type of the file.</p> </qt>"
 msgstr ""
 
-#: kfilelist.cpp:76
+#: kfilelist.cpp:82
 msgid ""
-" <qt>"
+" <qt> <b>File List view</b> "
 "<p>This list displays all the files you selected for printing. You can see "
 "the file name(s), file path(s) and the file (MIME) type(s) as determined by "
-"KDEPrint. The initial order of the list is the order of your initial "
-"selection.</p> "
-"<p>The list will be printed in the same order as displayed finally.</p> "
+"KDEPrint. You may re-arrange the  initial order of the list  with the help "
+"of the arrow buttons on the right.</p> "
+"<p>"
+"The files will be printed as a single job, in the same order as displayed in "
+"the list.</p> "
 "<p><b>Note:</b> You can select multiple files. The files may be in multiple "
 "locations. The files may be of multiple MIME types. The buttons on the right "
 "side let you add more files, remove already selected files from the list,  "
@@ -4106,26 +4632,26 @@ msgid ""
 "file.</p> </qt>"
 msgstr ""
 
-#: kfilelist.cpp:95
+#: kfilelist.cpp:103
 msgid "Path"
 msgstr "Pado"
 
-#: kfilelist.cpp:107
+#: kfilelist.cpp:115
 #, fuzzy
 msgid "Add file"
 msgstr "Aldonu filtrilon"
 
-#: kfilelist.cpp:113
+#: kfilelist.cpp:121
 #, fuzzy
 msgid "Remove file"
 msgstr "Forigu filtrilon"
 
-#: kfilelist.cpp:120
+#: kfilelist.cpp:128
 #, fuzzy
 msgid "Open file"
 msgstr "Malfermu dosieron"
 
-#: kfilelist.cpp:141
+#: kfilelist.cpp:149
 msgid ""
 "Drag file(s) here or use the button to open a file dialog. Leave empty for "
 "<b>&lt;STDIN&gt;</b>."
@@ -4140,39 +4666,95 @@ msgstr "Alĝustigoj"
 
 #: plugincombobox.cpp:33
 msgid ""
-" <qt> This combo box shows (and lets you select)  a print subsystem to be "
-"used by KDEPrint. (This print subsystem must, of course, be installed inside "
-"your Operating System.) KDEPrint usually auto-detects it. Most Linux "
-"distributions have \"CUPS\", the <em>Common Unix Printing System</em>. </qt>"
+" <qt><b>Print Subsystem Selection</b> "
+"<p>This combo box shows (and lets you select) a print subsystem to be used "
+"by KDEPrint. (This print subsystem must, of course, be installed inside your "
+"Operating System.) KDEPrint usually auto-detects the correct print subsystem "
+"by itself upon first startup. Most Linux distributions have \"CUPS\", the "
+"<em>Common UNIX Printing System</em>. </qt>"
 msgstr ""
 
-#: plugincombobox.cpp:43
+#: plugincombobox.cpp:45
 msgid "Print s&ystem currently used:"
 msgstr "Momente uzata &presosistemo:"
 
-#: plugincombobox.cpp:89
+#: plugincombobox.cpp:91
 msgid ""
-" <qt> This line shows to which CUPS server your PC currently is connected "
-"for printing and retrieving printer info. To switch to a different CUPS "
-"server, click \"System Options\", then select \"Cups server\" and fill in "
-"the required info. </qt>"
+" <qt><b>Current Connection</b> "
+"<p>This line shows which CUPS server your PC is currently connected to for "
+"printing and retrieving printer info. To switch to a different CUPS server, "
+"click \"System Options\", then select \"Cups server\" and fill in the "
+"required info. </qt>"
+msgstr ""
+
+#: driverview.cpp:46
+msgid ""
+" <qt>  <b>List of Driver Options (from PPD)</b>.  "
+"<p>"
+"The upper pane of this dialog page contains all printjob options as laid  "
+"down in the printer's description file (PostScript Printer Description == "
+"'PPD') </p> "
+"<p>Click on any item in the list and watch the lower pane of this dialog "
+"page  display the available values. </p>  "
+"<p>Set the values as needed. Then use one of the pushbuttons below to "
+"proceed:</p>  "
+"<ul>  "
+"<li><em>'Save'</em> your settings if you want to re-use  them in your next "
+"job(s) too. <em>'Save'</em> will store your settings permanently until  you "
+"change them again. </li>. "
+"<li>Click <em>'OK'</em> (without a prior click on <em>'Save'</em>, if you "
+"want to use  your selected settings just once, for the next print job. "
+"<em>'OK'</em>  will forget your current settings when kprinter is closed "
+"again, and will start next time  with the previously saved defaults. </li> "
+"<li><em>'Cancel'</em> will not change anything. If you proceed to print "
+"after clicking  <em>'Cancel'</em>, the job will print with the default "
+"settings of this queue.  </ul> "
+"<p><b>Note.</b> The number of available job options depends strongly on the "
+"actual  driver used for your print queue. <em>'Raw'</em> queues do not have "
+"a driver or a   PPD. For raw queues this tab page is not loaded by KDEPrint, "
+"and thus is not present  in the kprinter dialog.</p>  </qt>"
+msgstr ""
+
+#: driverview.cpp:70
+msgid ""
+" <qt>  <b>List of Possible Values for given Option (from PPD)</b>.  "
+"<p>The lower pane of this dialog page contains all possible values of the "
+"printoption  highlighted above, as laid  down in the printer's description "
+"file (PostScript Printer Description == 'PPD') </p> "
+"<p>Select the value you want and proceed. </p>  "
+"<p>Then use one of the pushbuttons below to leave this dialog:</p>  "
+"<ul>  "
+"<li><em>'Save'</em> your settings if you want to re-use  them in your next "
+"job(s) too. <em>'Save'</em> will store your settings permanently until  you "
+"change them again. </li>. "
+"<li>Click <em>'OK'</em>"
+" if you want to use your selected settings just once, for the  next print "
+"job. <em>'OK'</em>  will forget your current settings when kprinter is "
+"closed again, and will start next time  with your previous defaults. </li> "
+"<li><em>'Cancel'</em> will not change anything. If you proceed to print "
+"after clicking  <em>'Cancel'</em>, the job will print with the default "
+"settings of this queue.  </ul> "
+"<p><b>Note.</b> The number of available job options depends strongly on the "
+"actual  driver used for your print queue. <em>'Raw'</em> queues do not have "
+"a driver or a   PPD. For raw queues this tab page is not loaded by KDEPrint, "
+"and thus is not present  in the kprinter dialog.</p>  </qt>"
 msgstr ""
 
 #: kprinter.cpp:280
 msgid "Initialization..."
 msgstr ""
 
-#: kprinter.cpp:283 kprinter.cpp:903
+#: kprinter.cpp:283 kprinter.cpp:916
 #, c-format
 msgid "Generating print data: page %1"
 msgstr ""
 
-#: kprinter.cpp:416
+#: kprinter.cpp:429
 #, fuzzy
 msgid "Previewing..."
 msgstr "Antaŭrigardo..."
 
-#: kdeprintd.cpp:158 kprinter.cpp:684
+#: kdeprintd.cpp:158 kprinter.cpp:697
 #, fuzzy, c-format
 msgid ""
 "<p><nobr>A print error occurred. Error message received from "
@@ -4331,7 +4913,7 @@ msgstr ""
 "ne-postskripta dosiero. Ĉu KDE konvertu la dosieron al subtenata "
 "dosierformo?</p>"
 
-#: kprinterimpl.cpp:389 kprinterimpl.cpp:502
+#: kprinterimpl.cpp:389 kprinterimpl.cpp:509
 msgid "Convert"
 msgstr "Konvertu"
 
@@ -4373,159 +4955,319 @@ msgid "<qt>The print file is empty and will be ignored:<p>%1</p></qt>"
 msgstr ""
 
 #: kprinterimpl.cpp:497
+#, fuzzy
 msgid ""
-"The file format %1 is not directly supported by the current print system. "
-"KDE can try to convert this file automatically to a supported format. But "
-"you can still try to send the file to the printer without any conversion. Do "
-"you want KDE to try to convert this file to %2?"
+"<qt>The file format <em> %1 </em> is not directly supported by the current "
+"print system. You now have 3 options: "
+"<ul> "
+"<li> KDE can attempt to convert this file automatically to a supported "
+"format. (Select <em>Convert</em>) </li>"
+"<li> You can try to send the file to the printer without any conversion. "
+"(Select <em>Keep</em>) </li>"
+"<li> You can cancel the printjob. (Select <em>Cancel</em>) </li></ul>"
+" Do you want KDE to attempt and convert this file to %2?</qt>"
 msgstr ""
 "La dosieroformo %1 ne estas rekte subtenata de la nuna presosistemo. KDE "
 "povas provi aŭtomatan konvertadon de tiu dosiero al subtenata formo. Sed vi "
 "povus ankaŭ prove sendi la dosieron al la sendilo sen antaŭa konverto. Ĉu "
 "KDE provu konverton de la dosiero al %2?"
 
-#: kprinterimpl.cpp:511
+#: kprinterimpl.cpp:518
 msgid ""
-"No appropriate filter was found to convert the file format %1 into %2. Do "
-"you want to print the file using its original format?"
+"<qt>No appropriate filter was found to convert the file format %1 into "
+"%2."
+"<br>"
+"<ul>"
+"<li>Go to <i>System Options -> Commands</i> to look through the list of "
+"possible filters. Each filter executes an external program.</li>"
+"<li> See if the required external program is available.on your "
+"system.</li></ul></qt>"
 msgstr ""
-"Ne troviĝis konvena filtrilo por konverti la dosieron el la formo %1 al %2. "
-"Ĉu vi volas presi la dosieron en la origina formo?"
 
-#: kprinterimpl.cpp:516
-msgid "Skip"
-msgstr "Lasu"
-
-#: kpgeneralpage.cpp:84
+#: kpgeneralpage.cpp:85
 msgid "ISO A4"
 msgstr "ISO A4"
 
-#: kpgeneralpage.cpp:88
+#: kpgeneralpage.cpp:89
 msgid "Folio"
 msgstr "Folio"
 
-#: kpgeneralpage.cpp:89
+#: kpgeneralpage.cpp:90
 msgid "US #10 Envelope"
 msgstr "US #10 Koverto"
 
-#: kpgeneralpage.cpp:90
+#: kpgeneralpage.cpp:91
 msgid "ISO DL Envelope"
 msgstr "ISO DL Koverto"
 
-#: kpgeneralpage.cpp:91
+#: kpgeneralpage.cpp:92
 msgid "Tabloid"
 msgstr "Tabloid"
 
-#: kpgeneralpage.cpp:92
+#: kpgeneralpage.cpp:93
 #, fuzzy
 msgid "ISO A3"
 msgstr "ISO A4"
 
-#: kpgeneralpage.cpp:93
+#: kpgeneralpage.cpp:94
 #, fuzzy
 msgid "ISO A2"
 msgstr "ISO A4"
 
-#: kpgeneralpage.cpp:94
+#: kpgeneralpage.cpp:95
 #, fuzzy
 msgid "ISO A1"
 msgstr "ISO A4"
 
-#: kpgeneralpage.cpp:95
+#: kpgeneralpage.cpp:96
 #, fuzzy
 msgid "ISO A0"
 msgstr "ISO A4"
 
-#: kpgeneralpage.cpp:104
+#: kpgeneralpage.cpp:106
 #, fuzzy
 msgid "Upper Tray"
 msgstr "Supra kesto"
 
-#: kpgeneralpage.cpp:105
+#: kpgeneralpage.cpp:107
 #, fuzzy
 msgid "Lower Tray"
 msgstr "Malsupra kesto"
 
-#: kpgeneralpage.cpp:106
+#: kpgeneralpage.cpp:108
 #, fuzzy
 msgid "Multi-Purpose Tray"
 msgstr "Pluruza kesto"
 
-#: kpgeneralpage.cpp:107
+#: kpgeneralpage.cpp:109
 #, fuzzy
 msgid "Large Capacity Tray"
 msgstr "Grandkapacita kesto"
 
-#: kpgeneralpage.cpp:111
+#: kpgeneralpage.cpp:113
 msgid "Normal"
 msgstr "Normala"
 
-#: kpgeneralpage.cpp:112
+#: kpgeneralpage.cpp:114
 msgid "Transparency"
 msgstr "Travidebleco"
 
-#: kpgeneralpage.cpp:123 kpqtpage.cpp:72
+#: kpgeneralpage.cpp:123
+msgid ""
+" <qt>  "
+"<p><b>\"General\"</b> </p>  "
+"<p>This dialog page contains <em>general</em> print job settings. General "
+"settings are applicable to most printers, most jobs  and most job file "
+"types.  "
+"<p>To get more specific help, enable the \"WhatsThis\" cursor and click on "
+"any of the  text labels or GUI elements of this dialog.  </qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:131
+msgid ""
+" <qt>  "
+"<p><b>Page size:</b> Select paper size to be printed on from  the drop-down "
+"menu. </p> "
+"<p>The exact list of choices depends on the printer driver (\"PPD\") you "
+"have installed.</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o PageSize=...         # examples: \"A4\" or \"Letter\"  </pre> "
+"</p>  </qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:144
+msgid ""
+" <qt>  "
+"<p><b>Paper type:</b>"
+" Select paper type to be printed on from  the drop-down menu. </p> "
+"<p>The exact list of choices depends on the printer driver (\"PPD\") you "
+"have installed. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o MediaType=...        # example: \"Transparency\"  </pre> </p>  "
+"</qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:157
+msgid ""
+" <qt>  "
+"<p><b>Paper source:</b>"
+" Select paper source tray for the paper to be printed on from the drop-down "
+"menu.  "
+"<p>The exact list of choices depends on the printer driver (\"PPD\") you "
+"have installed. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>"
+"    -o InputSlot=...        # examples: \"Lower\" or \"LargeCapacity\"  "
+"</pre> </p>  </qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:170
+msgid ""
+" <qt>  "
+"<p><b>Image Orientation:</b> Orientation of the printed  page image on your "
+"paper is controlled by the radio buttons. By default,  the orientation is "
+"<em>Portrait</em>  "
+"<p>You can select 4 alternatives:  "
+"<ul>  "
+"<li> <b>Portrait.</b>.Portrait is the default setting. </li>  "
+"<li> <b>Landscape.</b> </li>  "
+"<li> <b>Reverse Landscape.</b> Reverse Landscape prints the images upside "
+"down. </li>  "
+"<li> <b>Reverse Portrait.</b> Reverse Portrait prints the image upside "
+"down.</li>  </ul>  The icon changes according to your selection.</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o orientation-requested=...       # examples: \"landscape\" or "
+"\"reverse-portrait\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:191
+msgid ""
+" <qt>  "
+"<p><b>Duplex Printing:</b>"
+" These controls may be grayed out if your printer  does not support "
+"<em>duplex printing</em> (i.e. printing on both sides of the sheet).  These "
+"controls are active if your printer supports duplex printing.  "
+"<p>  You can choose from 3 alternatives: </p> "
+"<ul>  "
+"<li> <b>None.</b>"
+" This prints each page of the job on one side of the sheets only. </li>  "
+"<li> <b>Long Side.</b> This prints the job on both sides of the paper "
+"sheets.  It prints the job in a way so that the backside has the same "
+"orientation as the front  side if you turn the paper over the long edge. "
+"(Some printer drivers name this mode  <em>duplex-non-tumbled</em>).  </li>  "
+"<li> <b>Short Side.</b> This prints the job on both sides of the paper "
+"sheets.  It prints the job so that the backside has the reverse orientation "
+"from the front  side if you turn the paper over the long edge, but the same "
+"orientation, if you turn it over  the short edge. (Some printer drivers name "
+"this mode  <em>duplex-tumbled</em>).  </li>  </ul>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o duplex=...       # examples: \"tumble\" or "
+"\"two-sided-short-edge\"  </pre> </p>  </qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:217
+msgid ""
+" <qt>  "
+"<p><b>Banner Page(s):</b> Select banner(s) to print one or two special "
+"sheets  of paper just before or after your main job. </p> "
+"<p>Banners may contain some pieces of job information, such as user name, "
+"time of printing, job title and more. </p> "
+"<p>Banner pages are useful to separate different jobs more easily, "
+"especially in a multi-user  environment. </p> "
+"<p><em><b>Hint:</em></b> You can design your own banner pages. To make use "
+"of them, just put the banner  file into the standard CUPS <em>banners</em> "
+"directory (This is usually <em>\"/usr/share/cups/banner/\"</em>"
+"  Your custom banner(s) must have one of the supported printable formats.  "
+"Supported formats are ASCII text, PostScript, PDF and nearly any image "
+"format such as PNG, JPEG or  GIF. Your added banner pages will appear in the "
+"drop down menu after a restart of CUPS. </p> "
+"<p>CUPS comes with a selection of banner pages. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o job-sheets=...       # examples: \"standard\" or \"topsecret\"  "
+"</pre> </p>  </qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:239
+msgid ""
+" <qt>  "
+"<p><b>Pages per Sheet:</b>  You can choose to print more than one page onto "
+"each sheet of paper.  This is sometimes useful to save paper. </p> "
+"<p><b>Note 1:</b> the page images get scaled down accordingly to print 2 or "
+"4 pages per sheet.  The page image does not get scaled if you print 1 page "
+"per sheet (the default setting.).  "
+"<p><b>Note 2:</b> If you select multiple pages per sheet here, the scaling "
+"and re-arranging is done  by your printing system. Be aware, that some "
+"printers can by themselves print multiple pages per sheet.  In this case you "
+"find the option in the printer driver settings. Be careful: if you enable "
+"multiple  pages per sheet in both places, your printout will not look as you "
+"intended. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o number-up=...        # examples: \"2\" or \"4\"  </pre> </p>  "
+"</qt>"
+msgstr ""
+
+#: kpgeneralpage.cpp:263 kpqtpage.cpp:118
 msgid "Page s&ize:"
 msgstr "Paĝ&formato:"
 
-#: kpgeneralpage.cpp:125
+#: kpgeneralpage.cpp:267
 msgid "Paper t&ype:"
 msgstr "Papero&speco:"
 
-#: kpgeneralpage.cpp:127
+#: kpgeneralpage.cpp:271
 msgid "Paper so&urce:"
 msgstr "Papero&fonto:"
 
-#: kpgeneralpage.cpp:136
+#: kpgeneralpage.cpp:291
 #, fuzzy
 msgid "Duplex Printing"
 msgstr "Duflanka presado"
 
-#: kpgeneralpage.cpp:137 kpqtpage.cpp:85
+#: kpgeneralpage.cpp:294 kpqtpage.cpp:143
 #, fuzzy
 msgid "Pages per Sheet"
 msgstr "Paĝoj sur unu folio"
 
-#: kpgeneralpage.cpp:139 kpqtpage.cpp:77
+#: kpgeneralpage.cpp:300 kpqtpage.cpp:125
 msgid "&Portrait"
 msgstr "&Vertikale"
 
-#: kpgeneralpage.cpp:140 kpqtpage.cpp:78
+#: kpgeneralpage.cpp:301 kpqtpage.cpp:128
 msgid "&Landscape"
 msgstr "&Horizontale"
 
-#: kpgeneralpage.cpp:141
+#: kpgeneralpage.cpp:302
 msgid "&Reverse landscape"
 msgstr "&Renversite horizontale"
 
-#: kpgeneralpage.cpp:142
+#: kpgeneralpage.cpp:303
 msgid "R&everse portrait"
 msgstr "&Renversite vertikale"
 
-#: kpgeneralpage.cpp:146
+#: kpgeneralpage.cpp:308
 #, fuzzy
 msgid ""
 "_: duplex orientation\n"
 "&None"
 msgstr "&Longaj flankoj apude"
 
-#: kpgeneralpage.cpp:147
+#: kpgeneralpage.cpp:309
 msgid ""
 "_: duplex orientation\n"
 "Lon&g side"
 msgstr "&Longaj flankoj apude"
 
-#: kpgeneralpage.cpp:148
+#: kpgeneralpage.cpp:310
 msgid ""
 "_: duplex orientation\n"
 "S&hort side"
 msgstr "&Mallongaj flankoj apude"
 
-#: kpgeneralpage.cpp:160
+#: kpgeneralpage.cpp:322
 msgid "S&tart:"
 msgstr "&Komenco:"
 
-#: kpgeneralpage.cpp:161
+#: kpgeneralpage.cpp:323
 msgid "En&d:"
 msgstr "&Fino:"
 
@@ -4611,151 +5353,198 @@ msgstr "&Paĝmarkoj"
 
 #: kpcopiespage.cpp:46
 msgid ""
-" <qt>Here you can determine to print a certain selection only out of all "
-"pages from the complete document.</qt>"
-msgstr ""
-
-#: kpcopiespage.cpp:48
-msgid ""
-" <qt>Select \"All\" to print the complete document. Since this is the "
-"default, it is pre-selected.</qt>"
-msgstr ""
-
-#: kpcopiespage.cpp:50
-msgid ""
 " <qt>"
-"<p>Select <em>\"Current\"</em> if you want to print the page currently "
-"visible in your KDE application.</p> "
+"<p><b>Page Selection</b></p>  "
+"<p>"
+"Here you can control if you print a certain selection only out of all the "
+"pages from the complete document. </p> </qt>"
+msgstr ""
+
+#: kpcopiespage.cpp:51
+msgid ""
+" <qt><b>All Pages:</b> Select \"All\" to print the complete document. Since "
+"this is the default, it is pre-selected. </p> </qt>"
+msgstr ""
+
+#: kpcopiespage.cpp:55
+msgid ""
+" <qt><b>Current Page:</b> Select <em>\"Current\"</em> if you want  to print "
+"the page currently visible in your KDE application.</p> "
 "<p><b>Note:</b> this field is disabled if you print from non-KDE "
 "applications like Mozilla or OpenOffice.org, since here KDEPrint has no "
 "means to determine which document page you are currently viewing.</p></qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:55
+#: kpcopiespage.cpp:60
 msgid ""
-" <qt>"
-"<p>"
-"Choose a \"Page Range\" to select a subset of the complete document pages to "
-"be printed. The format is <em>\"n,m,o-p,q,r,s-t, u\"</em>.</p> "
+" <qt><b>Page Range:</b> Choose a \"Page Range\" to select a subset of the "
+"complete document pages to be printed. The format is <em>\"n,m,o-p,q,r,s-t, "
+"u\"</em>.</p> "
 "<p><b>Example:</b> <em>\"4,6,10-13,17,20,23-25\"</em> will print the pages "
-"4, 6, 10, 11, 12, 13, 17, 20, 23, 24, 25 of your document.</p></qt>"
+"4, 6, 10, 11, 12, 13, 17, 20, 23, 24, 25 of your document.</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o page-ranges=...     # example: \"4,6,10-13,17,20,23-25\"  </pre>"
+" </p> </qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:59
+#: kpcopiespage.cpp:74
 msgid ""
-" <qt>Choose <em>\"All Pages\"</em>, <em>\"Even Pages\"</em> or <em>\"Odd "
+" <qt><b>Page Set:</b> "
+"<p>Choose <em>\"All Pages\"</em>, <em>\"Even Pages\"</em> or <em>\"Odd "
 "Pages\"</em> if you want to print a page selection matching one of these "
 "terms. The default is <em>\"All Pages\"</em>.</p> "
 "<p><b>Note:</b> If you combine a selection of a <em>\"Page Range\"</em>"
 " with a <em>\"Page Set\"</em> of <em>\"Odd\"</em> or <em>\"Even\"</em>, you "
 "will only get the odd or even pages from the originally selected page range. "
-"This is useful if you want to print a page range in duplex on a simplex-only "
-"printer. In this case you can feed the paper to the printer twice; in the "
-"first pass, select \"Odd\" or \"Even\" (depending on your printer model), in "
-"second pass select the other option. You may need to <em>\"Reverse\"</em> "
-"the output in one of the passes (depending on your printer model).</p>  </qt>"
+"This is useful if you odd or even pages from the originally selected page "
+"range. This is useful if you want to print a page range in duplex on a "
+"simplex-only printer. In this case you can feed the paper to the printer "
+"twice; in the first pass, select \"Odd\" or \"Even\" (depending on your "
+"printer model), in second pass select the other option. You may need to "
+"<em>\"Reverse\"</em> the output in one of the passes (depending on your "
+"printer model).</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o page-set=...        # example: \"odd\" or \"even\"  </pre> </p>"
+"  </qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:71
+#: kpcopiespage.cpp:97
 msgid ""
-" <qt>Here you can determine the number of copies, the output order and the "
-"collate mode of your printjob.</qt>"
+" <qt><b>Output Settings:</b> Here you can determine the number of copies, "
+"the output order and the collate mode for the pages of your printjob. (Note, "
+"that the maximum number of copies  allowed to print may be restricted by "
+"your print subsystem.)</p> "
+"<p>The 'Copies' setting defaults to 1. </p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o copies=...            # examples: \"5\" or \"42\"  "
+"<br>     -o outputorder=...       # example:  \"reverse\" "
+"<br>     -o Collate=...           # example:  \"true\" or \"false\"  </pre> "
+"</p> .</qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:73
+#: kpcopiespage.cpp:115
 msgid ""
-" <qt>Determine the number of requested copies here. You can increase or "
-"decrease the number by clicking on the up and down arrows. You can also type "
-"the figure directly into the box.</qt>"
+" <qt><b>Number of Copies:</b>"
+" Determine the number of requested copies here. You can increase or decrease "
+"the number of printed copies by clicking on the up and down arrows. You can "
+"also type the figure directly into the box. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>     -o copies=...            # examples: \"5\" or \"42\"  </pre> </p>"
+"  </qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:76
+#: kpcopiespage.cpp:128
 msgid ""
-" <qt>"
+" <qt><b>Collate Copies</b> "
 "<p>If the <em>\"Collate\"</em> checkbox is enabled (default), the output "
-"order of a multi-page document will be \"1-2-3-..., 1-2-3-..., "
-"1-2-3-...\".</p> "
-"<p>If the <em>\"Collate\"</em> checkbox is disabled, the output order of a "
-"multi-page document will be \"1-1-1-..., 2-2-2-..., 3-3-3-...\".</p></qt>"
+"order for multiple copies of a multi-page document will be \"1-2-3-..., "
+"1-2-3-..., 1-2-3-...\".</p> "
+"<p>If the <em>\"Collate\"</em> checkbox is disabled, the output order for "
+"multiple copies of a multi-page document will be \"1-1-1-..., 2-2-2-..., "
+"3-3-3-...\".</p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o Collate=...           # example:  \"true\" or \"false\"  </pre> "
+"</p>  </qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:80
+#: kpcopiespage.cpp:142
 msgid ""
-" <qt>"
-"<p>If the <em>\"Reverse\"</em> checkbox is enabled, the output order of a "
-"multi-page document will be \"...-3-2-1, ...-3-2-1, ...-3-2-1\", if you also "
-"have <em>en</em>abled the <em>\"Collate\"</em> checkbox at the same time "
-"(the usual usecase).</p> "
-"<p>If the <em>\"Reverse\"</em> checkbox is enabled, the output order of a "
-"multi-page document will be \"...-3-3-3, ...-2-2-2, ...-1-1-1\", if you have "
-"<em>dis</em>abled the <em>\"Collate\"</em> checkbox at the same "
-"time.</p></qt>"
+" <qt><b>Reverse Order</b> "
+"<p> If the <em>\"Reverse\"</em> checkbox is enabled, the output order for "
+"multiple copies of a multi-page document will be \"...-3-2-1, ...-3-2-1, "
+"...-3-2-1\", if you also have <em>en</em>abled the <em>\"Collate\"</em> "
+"checkbox at the same time (the usual usecase).</p> "
+"<p>If the <em>\"Reverse\"</em> checkbox is enabled, the output order for "
+"multiple copies of a multi-page document will be \"...-3-3-3, ...-2-2-2, "
+"...-1-1-1\", if you have <em>dis</em>abled the <em>\"Collate\"</em>"
+" checkbox at the same time. </p> "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o outputorder=...       # example:  \"reverse\"  </pre> </p>  </qt>"
 msgstr ""
 
-#: kpcopiespage.cpp:91
+#: kpcopiespage.cpp:163
 #, fuzzy
 msgid "C&opies"
 msgstr "Kopioj"
 
-#: kpcopiespage.cpp:95
+#: kpcopiespage.cpp:167
 #, fuzzy
 msgid "Page Selection"
 msgstr "Paĝelekto"
 
-#: kpcopiespage.cpp:97
+#: kpcopiespage.cpp:169
 msgid "&All"
 msgstr "Ĉ&iuj"
 
-#: kpcopiespage.cpp:99
+#: kpcopiespage.cpp:171
 msgid "Cu&rrent"
 msgstr "&Nuna"
 
-#: kpcopiespage.cpp:101
+#: kpcopiespage.cpp:173
 msgid "Ran&ge"
 msgstr "&Regiono"
 
-#: kpcopiespage.cpp:106
+#: kpcopiespage.cpp:178
 msgid "<p>Enter pages or group of pages to print separated by commas (1,2-5,8).</p>"
 msgstr ""
 "<p>Donu nombrojn de unuopaj paĝoj aŭ sinsekvoj de paĝoj apartigitaj per "
 "komoj (ekz. 1, 2-5, 8).</p>"
 
-#: kpcopiespage.cpp:110
-msgid "Copies"
-msgstr "Kopioj"
+#: kpcopiespage.cpp:182
+#, fuzzy
+msgid "Output Settings"
+msgstr "Agordo pri eligdosiero"
 
-#: kpcopiespage.cpp:112
+#: kpcopiespage.cpp:184
 msgid "Co&llate"
 msgstr "&Kolekto"
 
-#: kpcopiespage.cpp:114
+#: kpcopiespage.cpp:186
 msgid "Re&verse"
 msgstr "&Inverse"
 
-#: kpcopiespage.cpp:119
+#: kpcopiespage.cpp:191
 msgid "Cop&ies:"
 msgstr "&Kopioj:"
 
-#: kpcopiespage.cpp:126
+#: kpcopiespage.cpp:198
 #, fuzzy
 msgid "All Pages"
 msgstr "Ĉiuj paĝoj"
 
-#: kpcopiespage.cpp:127
+#: kpcopiespage.cpp:199
 #, fuzzy
 msgid "Odd Pages"
 msgstr "Neparaj paĝoj"
 
-#: kpcopiespage.cpp:128
+#: kpcopiespage.cpp:200
 #, fuzzy
 msgid "Even Pages"
 msgstr "Paraj paĝoj"
 
-#: kpcopiespage.cpp:130
+#: kpcopiespage.cpp:202
 msgid "Page &set:"
 msgstr "&Paĝaro:"
 
-#: kpcopiespage.cpp:185
+#: kpcopiespage.cpp:257
 #, fuzzy
 msgid "Pages"
 msgstr "Paĝo"
@@ -4840,39 +5629,166 @@ msgstr "Antaŭrigardo ne haveblas"
 msgid "&Files"
 msgstr "Dosieroj"
 
-#: marginwidget.cpp:40
+#: marginwidget.cpp:37
+msgid ""
+" <qt>  "
+"<p><b>Top Margin</b></p>.  "
+"<p>This spinbox/text edit field lets you control the top margin of your "
+"printout if the printing  application does not define its margins "
+"internally. </p>  "
+"<p>The setting works for instance for ASCII text file printing, or for "
+"printing from KMail and  and Konqueror.. </p> "
+"<p><b>Note:</b></p>This margin setting is not intended for KOffice or "
+"OpenOffice.org printing,  because these applications (or rather their users) "
+"are expected to do it by themselves.  It also does not work for PostScript "
+"or PDF file, which in most cases have their margins hardcoded  "
+"internally.</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o page-top=...      # use values from \"0\" or higher. \"72\" is "
+"equal to 1 inch.  </pre> </p>  </qt>"
+msgstr ""
+
+#: marginwidget.cpp:57
+msgid ""
+" <qt>  "
+"<p><b>Bottom Margin</b></p>.  "
+"<p>This spinbox/text edit field lets you control the bottom margin of your "
+"printout if the printing  application does not define its margins "
+"internally. </p>  "
+"<p>The setting works for instance for ASCII text file printing, or for "
+"printing from KMail and  and Konqueror. </p> "
+"<p><b>Note:</b></p>This margin setting is not intended for KOffice or "
+"OpenOffice.org printing,  because these applications (or rather their users) "
+"are expected to do it by themselves.  It also does not work for PostScript "
+"or PDF file, which in most cases have their margins hardcoded  "
+"internally.</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o page-bottom=...      # use values from \"0\" or higher. \"72\" "
+"is equal to 1 inch.  </pre> </qt>"
+msgstr ""
+
+#: marginwidget.cpp:76
+msgid ""
+" <qt>  "
+"<p><b>Left Margin</b></p>.  "
+"<p>This spinbox/text edit field lets you control the left margin of your "
+"printout if the printing  application does not define its margins "
+"internally. </p>  "
+"<p>The setting works for instance for ASCII text file printing, or for "
+"printing from KMail and  and Konqueror. </p> "
+"<p><b>Note:</b></p>This margin setting is not intended for KOffice or "
+"OpenOffice.org printing,  because these applications (or rather their users) "
+"are expected to do it by themselves.  It also does not work for PostScript "
+"or PDF file, which in most cases have their margins hardcoded  "
+"internally.</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>    -o page-left=...      # use values from \"0\" or higher. \"72\" is "
+"equal to 1 inch.  </pre> </qt>"
+msgstr ""
+
+#: marginwidget.cpp:95
+msgid ""
+" <qt>  "
+"<p><b>Right Margin</b></p>.  "
+"<p>This spinbox/text edit field lets you control the right margin of your "
+"printout if the printing  application does not define its margins "
+"internally. </p>  "
+"<p>The setting works for instance for ASCII text file printing, or for "
+"printing from KMail and  and Konqueror. </p> "
+"<p><b>Note:</b></p>This margin setting is not intended for KOffice or "
+"OpenOffice.org printing,  because these applications (or rather their users) "
+"are expected to do it by themselves.  It also does not work for PostScript "
+"or PDF file, which in most cases have their margins hardcoded  "
+"internally.</p>  "
+"<br>  "
+"<hr>  "
+"<p><em><b>Additional hint for power users:</b> This KDEPrint GUI element "
+"matches  with the CUPS commandline job option parameter:</em>  "
+"<pre>"
+"    -o page-right=...      # use values from \"0\" or higher. \"72\" is "
+"equal to 1 inch.  </pre> </qt>"
+msgstr ""
+
+#: marginwidget.cpp:114
+msgid ""
+" <qt>  "
+"<p><b>Change Measurement Unit<b></p>.  "
+"<p>"
+"You can change the units of measurement for the page margins here. Select "
+"from Millimeter, Centimeter, Inch or Pixels (1 pixel == 1/72 inch).  </p>  "
+"</qt>"
+msgstr ""
+
+#: marginwidget.cpp:121
+msgid ""
+" <qt>  "
+"<p><b>Custom Margins Checkbox</b></p>.  "
+"<p>"
+"Enable this checkbox if you want to modify the margins of your printouts  "
+"<p>You can change margin settings in 4 ways:  "
+"<ul>  "
+"<li>Edit the text fields. </li>  "
+"<li>Click spinbox arrows. </li>  "
+"<li>Scroll wheel of wheelmouses. </li>  "
+"<li>Drag margins in preview frame with mouse. </li>  </ul>  <b>Note:</b>"
+" The margin setting does not work if you load such files directly into  "
+"kprinter, which have their print margins hardcoded internally, like as most  "
+"PDF or PostScript files. It works for all ASCII text files however. It also "
+"may not  work with non-KDE applications which fail to  fully utilize the "
+"KDEPrint framework, such as OpenOffice.org. </p>  </qt>"
+msgstr ""
+
+#: marginwidget.cpp:138
+msgid ""
+" <qt>  "
+"<p><b>\"Drag-your-Margins\" </p>.  "
+"<p>"
+"Use your mouse to drag and set each margin on this little preview window. "
+"</p>  </qt>"
+msgstr ""
+
+#: marginwidget.cpp:148
 msgid "&Use custom margins"
 msgstr "&Uzu proprajn marĝenojn"
 
-#: marginwidget.cpp:45
+#: marginwidget.cpp:158
 msgid "&Top:"
 msgstr "&Supre:"
 
-#: marginwidget.cpp:46
+#: marginwidget.cpp:159
 msgid "&Bottom:"
 msgstr "&Malsupre:"
 
-#: marginwidget.cpp:47
+#: marginwidget.cpp:160
 msgid "Le&ft:"
 msgstr "Ma&ldekstre:"
 
-#: marginwidget.cpp:48
+#: marginwidget.cpp:161
 msgid "&Right:"
 msgstr "&Dekstre:"
 
-#: marginwidget.cpp:50
+#: marginwidget.cpp:164
 msgid "Pixels (1/72nd in)"
 msgstr ""
 
-#: marginwidget.cpp:53
+#: marginwidget.cpp:167
 msgid "Inches (in)"
 msgstr "Coloj (in)"
 
-#: marginwidget.cpp:54
+#: marginwidget.cpp:168
 msgid "Centimeters (cm)"
 msgstr "Centimetroj (cm)"
 
-#: marginwidget.cpp:55
+#: marginwidget.cpp:169
 #, fuzzy
 msgid "Millimeters (mm)"
 msgstr "Centimetroj (cm)"
@@ -4890,53 +5806,187 @@ msgid ""
 "normally. Do you really want to set <b>%1</b> as your personal default?</qt>"
 msgstr ""
 
-#: kpposterpage.cpp:40
+#: kpposterpage.cpp:42
+msgid " <qt>  5.  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:46
+msgid ""
+" <qt>  <b>Print Poster</b> (enabled or disabled).  "
+"<p>If you enable this option, you can print posters of different sizes  The "
+"printout will happen in the form <em>'tiles'</em> printed on smaller  paper "
+"sizes, which you can stitch together later. <em>If you enable this  option "
+"here, the <em>'Poster Printing' filter</em> will be auto-loaded in  the "
+"'Filters' tab of this dialog. </p> "
+"<p>This tab is only visible if the external <em>'poster'</em> utility is  "
+"discovered by KDEPrint on your system. [<em>'poster'</em> is a commandline  "
+"utility that enables you to convert PostScript files into tiled printouts  "
+"which allow for oversized appearance of the stitched-together tiles.] </p> "
+"<p><b>Note:</b>"
+" The standard version of 'poster' will not work. Your system  must use a "
+"patched version of 'poster'. Ask your operating system vendor to  provide a "
+"patched version of 'poster' if he does not already. </p> "
+"<p><b>Additional hint for power users:</b>"
+" A patched version of 'poster' is  available from the <a "
+"href=\"http://printing.kde.org/\">KDEPrint Website</a>  at <a "
+"href=\"http://printing.kde.org/downloads/\">"
+"http://printing.kde.org/downloads/</a>.  The direct link to the patched "
+"source tarball is  <a "
+"href=\"ftp://ftp.kde.org/pub/kde/printing/poster.tar.bz2\">"
+"ftp://ftp.kde.org/pub/kde/printing/poster.tar.bz2</a>  </p>  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:68
+msgid ""
+" <qt>  <b>Tile Selection widget</b>  "
+"<p>This GUI element is <em>not only for viewing</em> your selections: it "
+"also  lets you interactively select the tile(s) you want to print.  </p> "
+"<p><b>Hints</b>  "
+"<ul>  "
+"<li>Click any tile to select it for printing.</li>  "
+"<li>To select multiple tiles to be printed  at once, <em>'shift-click'</em> "
+"on the tiles ('shift-click' means: hold down the  [SHIFT]-key on your "
+"keyboard and click with the mouse while [SHIFT]-key is held.)   <em>Be "
+"aware</em>"
+" that the order  of your clicking is also significant to the order of "
+"printing the different tiles. </li> </ul>  <b>Note 1:</b> The order of your "
+"selection (and the order for printout of the tiles)  is indicated by the "
+"contents of the text field below,  labelled as <em>'Tile pages (to be "
+"printed):'</em>"
+"<p> <b>Note 2:</b> By default no tile is selected. Before you can print (a "
+"part  of) your poster, you must select at least one tile. </p>  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:89
+msgid ""
+" <qt>  <b>Poster Size</b>  "
+"<p>Select the poster size you want from the dropdown list. </p>  Available "
+"sizes are all standard paper sizes up to  'A0'. [A0 is the same size as 16 "
+"sheets of A4, or '84cm x 118.2cm'.] </p>  "
+"<p><b>Notice</b>, how the little preview window below changes with your "
+"change of poster  size. It indicates to you how many tiles need to be "
+"printed to make the poster,  given the selected paper size.</p>   "
+"<p><b>Hint:</b> The little preview window below is not just a passive icon. "
+"You can click  on its individual tiles to select them for printing. To "
+"select multiple tiles to be printed  at once, you need to "
+"<em>'shift-click'</em> on the tiles ('shift-click' means: hold down the  "
+"[SHIFT]-key on your keyboard and click with the mouse while [SHIFT]-key is "
+"held.) The order  of your clicking is significant to the order of printing "
+"the different tiles. The order of  your selection (and for the printed "
+"tiles) is indicated by the contents of the text field  labelled as <em>"
+"'Tile pages (to be printed):'</em>"
+"<p> <b>Note:</b> By default no tile is selected. Before you can print (a "
+"part  of) your poster, you must select at least one tile. </p>  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:108
+msgid ""
+" <qt>  <b>Paper Size</b>  "
+"<p>"
+"This field indicates the paper size the poster tiles will be printed on.  To "
+"select a different paper size for your poster tiles, go to the 'General' tab "
+" of this dialog and select one from the dropdown list. </p>"
+"  Available sizes are most standard paper sizes supported by your printer. "
+"Your printer's  supported paper sizes are read from the printer driver info "
+"(as laid down in the <em>'PPD'</em>,  the printer description file). <em>Be "
+"aware that the 'Paper Size' selected may not be supported  by 'poster' "
+"(example: 'HalfLetter') while it may well be supported by your printer.</em>"
+"  If  you hit that obstacle, simply use another, supported Paper Size, like "
+"'A4' or 'Letter'.  "
+"<p><b>Notice</b>, how the little preview window below changes with your "
+"change of paper  size. It indicates how many tiles need to be printed to "
+"make up the poster,  given the selected paper and poster size.</p>   "
+"<p><b>Hint:</b> The little preview window below is not just a passive icon. "
+"You can click  on its individual tiles to select them for printing. To "
+"select multiple tiles to be printed  at once, you need to "
+"<em>'shift-click'</em> on the tiles ('shift-click' means: hold down the  "
+"[SHIFT]-key on your keyboard and click with the mouse while [SHIFT]-key is "
+"held.) The order  of your clicking is significant to the order of printing "
+"the different tiles. The order of  your selection (and for the printed "
+"tiles) is indicated by the contents of the text field  labelled as <em>"
+"'Tile pages (to be printed):'</em>"
+"<p> <b>Note:</b> By default no tile is selected. Before you can print (a "
+"part  of) your poster, you must select at least one tile. </p>  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:132
+msgid ""
+" <qt>  <b>Cut Margin selection</b>  "
+"<p>Slider and spinbox let you determine a <em>'cut margin'</em> which will "
+"be printed onto  each tile of your poster to help you cut the pieces as "
+"needed. </p> "
+"<p><b>Notice</b>, how the little preview window above changes with your "
+"change of cut  margins. It indicates to you how much space the cut margins "
+"will take away from each tile.  "
+"<p><b>Be aware</b>, that your cut margins need to be equal to or greater "
+"than the margins your  printer uses. The printer's capabilities are "
+"described in the <em>'ImageableArea'</em>  keywords of its driver PPD file. "
+"</p>  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:143
+msgid ""
+" <qt>  <b>Order and number of tile pages to be printed</b>  "
+"<p>This field displays and sets the individual tiles to be printed, as well "
+"as the order  for their printout. </p>  You can file the field with 2 "
+"different methods:  "
+"<ul>  "
+"<li>Either use the interactive thumbnail preview above and '[SHIFT]-click' "
+"on the tiles. </li>  "
+"<li>Or edit this text field accordingly. </li>  </ul>  "
+"<p>When editing the field, you can use a '3-7' syntax instead of a "
+"'3,4,5,6,7' one. </p>  "
+"<p><b>Examples:</b></p>  "
+"<pre>    \"2,3,7,9,3\"  <br>    \"1-3,6,8-11\"  </qt>"
+msgstr ""
+
+#: kpposterpage.cpp:160
 #, fuzzy
 msgid "Poster"
 msgstr "Enmetu"
 
-#: kpposterpage.cpp:42
+#: kpposterpage.cpp:162
 #, fuzzy
 msgid "&Print poster"
 msgstr "Presosistemo"
 
-#: kpposterpage.cpp:50
+#: kpposterpage.cpp:176
 #, fuzzy
 msgid "Poste&r size:"
 msgstr "Paĝ&formato:"
 
-#: kpposterpage.cpp:51
+#: kpposterpage.cpp:178
 #, fuzzy
 msgid "Media size:"
 msgstr "Paĝ&formato:"
 
-#: kpposterpage.cpp:52
+#: kpposterpage.cpp:180
 #, fuzzy
 msgid "Pri&nt size:"
 msgstr "Presilo"
 
-#: kpposterpage.cpp:57
+#: kpposterpage.cpp:187
 #, no-c-format
 msgid "C&ut margin (% of media):"
 msgstr ""
 
-#: kpposterpage.cpp:60
+#: kpposterpage.cpp:191
 msgid "&Tile pages (to be printed):"
 msgstr ""
 
-#: kpposterpage.cpp:66
+#: kpposterpage.cpp:198
 msgid "Link/unlink poster and print size"
 msgstr ""
 
-#: kpposterpage.cpp:131
+#: kpposterpage.cpp:263
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: kxmlcommand.cpp:785
+#: kxmlcommand.cpp:789
 msgid "One of the command object's requirements is not met."
 msgstr "Unu el la postuloj de la programobjekto ne plenumiĝis."
 
-#: kxmlcommand.cpp:793 kxmlcommand.cpp:798
+#: kxmlcommand.cpp:797 kxmlcommand.cpp:802
 #, c-format
 msgid "The command does not contain the required tag %1."
 msgstr "La komando ne enhavas necesan etikedon %1."
@@ -4945,35 +5995,131 @@ msgstr "La komando ne enhavas necesan etikedon %1."
 msgid "&Export..."
 msgstr "&Eksportu..."
 
-#: kpfilterpage.cpp:40
+#: kpfilterpage.cpp:42
+msgid ""
+" <qt> <b>Add Filter button</b> "
+"<p>This button calls a little dialog to let you select a filter here. </p> "
+"<p><b>Note 1:</b> You can chain different filters as long as you make  sure "
+"that the output of one fits as input of the next. (KDEPrint  checks your "
+"filtering chain and will warn you if you fail to do so.</p>  "
+"<p><b>Note 2:</b> The filters you define here are applied to your jobfile  "
+"<em><b>before</b></em> it is handed downstream to your spooler and print  "
+"subsystem (e.g. CUPS, LPRng, LPD).</p> </ul> </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:54
+msgid ""
+" <qt> <b>Remove Filter button</b> "
+"<p>This button removes the highlighted filter from the list of filters. </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:59
+msgid ""
+" <qt> <b>Move Filter Up button</b> "
+"<p>This button moves the highlighted filter up in the list of filters, "
+"towards the front of the filtering chain. </p> </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:64
+msgid ""
+" <qt> <b>Move Filter Down button</b> "
+"<p>This button moves the highlighted filter down in the list of filters, "
+"towards the end of the filtering chain..</p> </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:69
+msgid ""
+" <qt> <b>Configure Filter button</b> "
+"<p>"
+"This button lets you configure the currently highlighted filter. It opens a "
+"separate dialog.  </p> </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:75
+msgid ""
+" <qt> <b>Filter Info Pane</b> "
+"<p>This field shows some general info about the selected filter.  Amongst "
+"them are:  "
+"<ul>  "
+"<li>the <em>filter name</em> (as displayed in the KDEPrint user interface); "
+"</li>  "
+"<li>the <em>filter requirements</em> (that is the external program that "
+"needs  to present and executable on this system); </li>  "
+"<li>the <em>filter input format</em> (in the form of one or several <em>"
+"MIME types</em> accepted by the filter); </li>  "
+"<li>the <em>filter output format</em> (in the form of a <em>MIME type</em>  "
+"generated by the filter); </li>  "
+"<li>a more or less verbose text describing the filter's operation.</li>  "
+"</ul>  </p> </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:91
+msgid ""
+" <qt> <b>Filtering Chain</b> (if enabled, is run <em>before</em>"
+" actual  job submission to print system) "
+"<p>This field shows which filters are currently selected to act as "
+"'pre-filters'  for KDEPrint. Pre-filters are processing the print files "
+"<em>before</em> they are  send downstream to your real print subsystem. </p>"
+"  "
+"<p>The list shown in this field may be empty (default). </p>  "
+"<p>The pre-filters act on the printjob in the order they are listed (from "
+"top to bottom).  This is done by acting as a <em>filtering chain</em> where "
+"the output of one filter  acts as input to the next. By putting the filters "
+"into a correct order, you can make the filtering chain fail. For example: if "
+"your file is ASCII text, and you want the  output being processed by the "
+"'Multipage per Sheet' filter, the first filter must be  one that processes "
+"ASCII into PostScript. </p>  "
+"<p>KDEPrint can utilize <em>any</em> external filtering program which you "
+"may find useful  through this interface. </p>  "
+"<p>KDEPrint ships preconfigured with support for a selection of common "
+"filters. These  filters however need to be  installed independently from "
+"KDEPrint. These pre-filters work <em>for all</em>"
+" print subsystems supported by KDEPrint (such as CUPS, LPRng and LPD), "
+"because they are not depending on these.</p> ."
+"<p> Amongst the pre-configured filters shipping with KDEPrint are: </p>  "
+"<ul>  "
+"<li>the <em>Enscript text filter</em>  </li>  "
+"<li>a <em>Multiple Pages per Sheet filter</em </li>  "
+"<li>a <em>PostScript to PDF converter</em>.</li>  "
+"<li>a <em>Page Selection/Ordering filter</em>.</li>  "
+"<li>a <em>Poster Printing filter</em>.</li>  "
+"<li>and some more..</li>  </ul>  To insert a filter into this list, simply "
+"click on the <em>funnel</em> icon (topmost on  the right icon column group) "
+"and proceed. </p> "
+"<p>"
+"Please click on the other elements of this dialog to learn more about the "
+"KDEPrint  pre-filters.  </p> </qt>"
+msgstr ""
+
+#: kpfilterpage.cpp:125
 msgid "Filters"
 msgstr "Filtriloj"
 
-#: kpfilterpage.cpp:54
+#: kpfilterpage.cpp:141
 msgid "Add filter"
 msgstr "Aldonu filtrilon"
 
-#: kpfilterpage.cpp:57
+#: kpfilterpage.cpp:146
 msgid "Remove filter"
 msgstr "Forigu filtrilon"
 
-#: kpfilterpage.cpp:60
+#: kpfilterpage.cpp:151
 msgid "Move filter up"
 msgstr "Movu filtrilon supren"
 
-#: kpfilterpage.cpp:63
+#: kpfilterpage.cpp:156
 msgid "Move filter down"
 msgstr "Movu filtrilon malsupren"
 
-#: kpfilterpage.cpp:66
+#: kpfilterpage.cpp:161
 msgid "Configure filter"
 msgstr "Agordu filtrilon"
 
-#: kpfilterpage.cpp:182
+#: kpfilterpage.cpp:279
 msgid "Internal error: unable to load filter."
 msgstr "Interna eraro: ne eblas ŝargi filtrilon."
 
-#: kpfilterpage.cpp:297
+#: kpfilterpage.cpp:394
 msgid ""
 "<p>The filter chain is wrong. The output format of at least one filter is "
 "not supported by its follower. See <b>Filters</b> tab for more "
@@ -4983,31 +6129,100 @@ msgstr ""
 "ne esta subtenata de la sekva. Vidu la paĝon <b>Filtriloj</b> pri pliaj "
 "informoj.</p>"
 
-#: kpfilterpage.cpp:311
+#: kpfilterpage.cpp:408
 msgid "Input"
 msgstr "Enigo"
 
-#: kpqtpage.cpp:68
+#: kpqtpage.cpp:70
+msgid ""
+" <qt>  <b>Selection of color mode:</b> You can choose between 2 options:  "
+"<ul>"
+"<li><b>Color</b> and</li>  "
+"<li><b>Grayscale</b></li></ul>  <b>Note:</b> This selection field may be "
+"grayed out and made inactive.  This happens if KDEPrint can not retrieve  "
+"enough information about your print file. In this case the embedded color- "
+"or grayscale information  of your printfile, and the default handling of the "
+"printer take precedence.  </qt>"
+msgstr ""
+
+#: kpqtpage.cpp:79
+msgid ""
+" <qt>  <b>Selection of page size:</b> Select paper size to be printed on "
+"from  the drop-down menu.  "
+"<p>The exact list of choices depends on the printer driver (\"PPD\") you "
+"have installed.  </qt>"
+msgstr ""
+
+#: kpqtpage.cpp:84
+msgid ""
+" <qt>  <b>Selection of pages per sheet:</b>  You can choose to print more "
+"than one page onto each sheet of paper.  This is sometimes useful to save "
+"paper.  "
+"<p><b>Note 1:</b> the page images get scaled down accordingly to print 2 or "
+"4 pages per sheet.  The page image does not get scaled if you print 1 page "
+"per sheet (the default setting.).  "
+"<p><b>Note 2:</b> If you select multiple pages per sheet here, the scaling "
+"and re-arranging is done  by your printing system.  "
+"<p><b>Note 3, regarding \"Other\":</b> You cannot really select "
+"<em>Other</em> as the number of  pages to print on one sheet.\"Other\" is "
+"checkmarked here for information purposes only.  "
+"<p>To select 8, 9, 16 or other numbers of  pages per sheet:  "
+"<ul>  "
+"<li> go to the tab headlined \"Filter\"</li> "
+"<li> enable the <em>Multiple Pages per Sheet</em> filter </li> "
+"<li> and configure it (bottom-most button on the right of the \"Filters\" "
+"tab). </li> </ul> </qt>"
+msgstr ""
+
+#: kpqtpage.cpp:102
+msgid ""
+" <qt>  <b>Selection of image orientation:</b> Orientation of the printed  "
+"pageimage on your paper is controlled by the radio buttons. By default,  the "
+"orientation is <em>Portrait</em>  "
+"<p>You can select 2 alternatives:  "
+"<ul>  "
+"<li> <b>Portrait.</b>.Portrait is the default setting. </li>  "
+"<li> <b>Landscape.</b> </li>  </ul>  The icon changes according to your "
+"selection. </qt>"
+msgstr ""
+
+#: kpqtpage.cpp:113
 msgid "Print Format"
 msgstr "Presformato"
 
-#: kpqtpage.cpp:76
+#: kpqtpage.cpp:123
 #, fuzzy
 msgid "Color Mode"
 msgstr "Kolormoduso"
 
-#: kpqtpage.cpp:81
+#: kpqtpage.cpp:135
 msgid "Colo&r"
 msgstr "&Koloro"
 
-#: kpqtpage.cpp:82
+#: kpqtpage.cpp:138
 msgid "&Grayscale"
 msgstr "&Grize"
 
-#: kpqtpage.cpp:89
+#: kpqtpage.cpp:151
 #, fuzzy
 msgid "Ot&her"
 msgstr "Alia"
+
+#, fuzzy
+#~ msgid "Toggle printer filtering"
+#~ msgstr "Komutu preskonvertadon"
+
+#~ msgid "Copies"
+#~ msgstr "Kopioj"
+
+#~ msgid "No appropriate filter was found to convert the file format %1 into %2. Do you want to print the file using its original format?"
+#~ msgstr "Ne troviĝis konvena filtrilo por konverti la dosieron el la formo %1 al %2. Ĉu vi volas presi la dosieron en la origina formo?"
+
+#~ msgid "Skip"
+#~ msgstr "Lasu"
+
+#~ msgid "Empty URI."
+#~ msgstr "Malplena URI."
 
 #~ msgid "Collaps&e"
 #~ msgstr "&Faldu"
@@ -13004,9 +14219,6 @@ msgstr "Alia"
 
 #~ msgid "Please check that the bug you are about to report is not already listed at "
 #~ msgstr "Bonvolu certigi, ke la eraro kiun vi volas raporti ne jam estas listigita ĉe "
-
-#~ msgid "Output File Settings"
-#~ msgstr "Agordo pri eligdosiero"
 
 #, fuzzy
 #~ msgid "Always use &file-extension:"
