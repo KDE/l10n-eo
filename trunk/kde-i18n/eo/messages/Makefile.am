@@ -1,10 +1,4 @@
 
-SUBDIRS = kdeadmin kdebase kdegames kdegraphics kdemultimedia \
-	kdenetwork kdetoys kdeutils koffice others
+TOPLEVEL_LANG = eo
 
-POFILES = AUTO
-
-install-data-local:
-	$(mkinstalldirs) $(kde_localedir)/de
-	$(INSTALL_DATA) charset $(kde_localedir)/de/charset
-
+SUBDIRS = $(AUTODIRS)
