@@ -1,4 +1,4 @@
-# e-aj ms¯ de kfmclient
+# e-aj msƒù de kfmclient
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1999.
 #
@@ -6,15 +6,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfmclient\n"
-"POT-Creation-Date: 1999-11-09 02:22+0100\n"
-"PO-Revision-Date: 1999-12-15 20:00+0100\n"
+"POT-Creation-Date: 2000-08-06 23:45+0200\n"
+"PO-Revision-Date: 2000-08-07 21:57GMT\n"
 "Last-Translator: Wolfram Diestel <wolfram@steloj.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-3\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.5.2\n"
 
-#: kfmclient.cc:50
+#: kfmclient.cc:52
+msgid "KDE tool for opening URLs from the command line"
+msgstr "KDE-programo por malfermi URLojn de la komandlinio"
+
+#: kfmclient.cc:58
+msgid "Show available commands."
+msgstr "Montras uzeblajn komandojn."
+
+#: kfmclient.cc:59
+msgid "Command (see --commands)."
+msgstr "Komando (vd. --commands)."
+
+#: kfmclient.cc:60
+msgid "Arguments for command."
+msgstr "Argumentoj por komando."
+
+#: kfmclient.cc:74
 msgid ""
 "\n"
 "Syntax:\n"
@@ -22,35 +39,37 @@ msgstr ""
 "\n"
 "Sintakso:\n"
 
-#: kfmclient.cc:51
-msgid ""
-"  kfmclient openURL\n"
-"            # Opens a dialog to ask you for the URL\n"
-"\n"
-msgstr ""
-"  kfmclient openURL\n"
-"            # malfermas dialogon por entajpi URLon\n"
-"\n"
-
-#: kfmclient.cc:53
+#: kfmclient.cc:75
 msgid ""
 "  kfmclient openURL 'url'\n"
-"            # Opens a window showing 'url'. If such a window\n"
+"            # Opens a window showing 'url'.\n"
+"            #  'url' may be a relative path\n"
+"            #   or file name, such as . or subdir/\n"
+"            #   If 'url' is omitted, $HOME is used instead.\n"
+"\n"
 msgstr ""
-"  kfmclient openURL \"url\"\n"
-"            # malfermas fenestron montrantan la dokumenton sub la URL\n"
+"  kfmclient openURL 'url'\n"
+"            # malfermas fenestron montrante 'url'.\n"
+"            # 'url' povas esti relativa pado\n"
+"            # a≈≠ dosiernomo, ekz. '.' a≈≠ subdosierujo/\n"
+"            # Se 'url' estas forlasata, HOME estas uzata.\n"
+"\n"
 
-#: kfmclient.cc:55
+#: kfmclient.cc:80
 msgid ""
-"            #   exists, it is shown. 'url' may be \"trash:/\"\n"
-"            #   to open the trash bin.\n"
+"  kfmclient openProfile 'profile'\n"
+"            # Opens a window using the given profile.\n"
+"            #   'profile' is a file under "
+"~/.kde/share/apps/konqueror/profiles.\n"
 "\n"
 msgstr ""
-"            # se jam ekzistas tia fenstro, ¯i estas montrata. Kiel\n"
-"            # URL vi povas indiki \"trash:/\" por malfermi la rubujon.\n"
+"  kfmclient openProfile 'agordodosiero'\n"
+"            # Malfermas fenestron uzante la donitan agordodosieron.\n"
+"            #   'agordodosiero' estas dosiero sub "
+"~/.kde/share/apps/konqueror/profiles.\n"
 "\n"
 
-#: kfmclient.cc:57
+#: kfmclient.cc:83
 msgid ""
 "  kfmclient openProperties 'url'\n"
 "            # Opens a properties menu\n"
@@ -60,7 +79,7 @@ msgstr ""
 "            # malfermas la eco-menuon\n"
 "\n"
 
-#: kfmclient.cc:59
+#: kfmclient.cc:85
 msgid ""
 "  kfmclient exec ['url' ['binding']]\n"
 "            # Tries to execute 'url'. 'url' may be a usual\n"
@@ -68,49 +87,39 @@ msgid ""
 "            #   'binding'. In this case the default binding\n"
 msgstr ""
 "  kfmclient exec [\"url\" [\"binding\"]}\n"
-"            # provas lanÊi URLon, kiu povas esti normala URLo\n"
+"            # provas lanƒâi URLon, kiu povas esti normala URLo\n"
 "            # Se vi forlasas \"binding\" la implicita estas uzata\n"
 
-#: kfmclient.cc:63
+#: kfmclient.cc:89
 msgid ""
 "            #   is tried. Of course URL may be the URL of a\n"
 "            #   document, or it may be a *.desktop file.\n"
 msgstr ""
-"            # La URL povas referenci kompreneble al dokumento a˝\n"
+"            # La URL povas referenci kompreneble al dokumento a≈≠\n"
 "            # al *.desktop-dosiero.\n"
 
-#: kfmclient.cc:65
+#: kfmclient.cc:91
 msgid ""
 "            #   This way you could for example mount a device\n"
 "            #   by passing 'Mount default' as binding to \n"
 "            #   'cdrom.desktop'\n"
 "\n"
 msgstr ""
-"            # Tiel vi ekzemple povus kroÊi aparaton tajpante ekz.\n"
+"            # Tiel vi ekzemple povus kroƒâi aparaton tajpante ekz.\n"
 "            # exec \"cdrom.desktop\" \"Mount default\".\n"
 "\n"
 
-#: kfmclient.cc:68
+#: kfmclient.cc:94
 msgid ""
 "  kfmclient move 'src' 'dest'\n"
 "            # Moves the URL 'src' to 'dest'.\n"
 "            #   'src' may be a list of URLs.\n"
 msgstr ""
 "  kfmclient move \"src\" \"dest\"\n"
-"            # ˛ovas la URL on \"src\" al \"dest\".\n"
+"            # ≈ùovas la URL on \"src\" al \"dest\".\n"
 "            # \"src\" povas esti listo de URLoj.\n"
 
-#: kfmclient.cc:71
-msgid ""
-"            #   'dest' may be \"trash:/\" to move the files\n"
-"            #   in the trash bin.\n"
-"\n"
-msgstr ""
-"            # \"dest\" povas esti \"trash:/\" por ˛ovi dosierojn\n"
-"            # en la rubujon.\n"
-"\n"
-
-#: kfmclient.cc:73
+#: kfmclient.cc:99
 msgid ""
 "  kfmclient copy 'src' 'dest'\n"
 "            # Copies the URL 'src' to 'dest'.\n"
@@ -121,17 +130,17 @@ msgstr ""
 "            # kopias la URLo(j)n \"src\" al \"dest\"\n"
 "\n"
 
-#: kfmclient.cc:76
+#: kfmclient.cc:102
 msgid ""
 "  kfmclient sortDesktop\n"
 "            # Rearranges all icons on the desktop.\n"
 "\n"
 msgstr ""
 "  kfmclient sortDesktop\n"
-"            # rearan¯as la piktogramojn sur la labortabulo.\n"
+"            # rearanƒùas la piktogramojn sur la tabulo.\n"
 "\n"
 
-#: kfmclient.cc:78
+#: kfmclient.cc:104
 msgid ""
 "  kfmclient selectDesktopIcons x y w h add\n"
 "            # Selects the icons on the desktop in the given rectangle\n"
@@ -139,32 +148,31 @@ msgid ""
 "\n"
 msgstr ""
 "  kfmclient selectDesktopIcons x y w h add\n"
-"            # elektas la piktogramojn sur la labortabulo en la donita\n"
+"            # elektas la piktogramojn sur la tabulo en la donita\n"
 "            # rektangulo, sed add estas 1, tiam la elekto estas aldonita\n"
 "            # al la jama.\n"
 "\n"
 
-
-#: kfmclient.cc:81
+#: kfmclient.cc:107
 msgid ""
 "  kfmclient configure\n"
 "            # Re-read konqueror's configuration.\n"
 "\n"
 msgstr ""
 "  kfmclient configure\n"
-"            # Relegas la agordaºon de Konkeranto.\n"
+"            # Relegas la agordaƒµon de Konkeranto.\n"
 
-#: kfmclient.cc:83
+#: kfmclient.cc:109
 msgid ""
 "  kfmclient configureDesktop\n"
 "            # Re-read kdesktop's configuration.\n"
 "\n"
 msgstr ""
 "  kfmclient configureDesktop\n"
-"            # relegas la agordaºon de KDesktop.\n"
+"            # relegas la agordaƒµon de KDesktop.\n"
 "\n"
 
-#: kfmclient.cc:86
+#: kfmclient.cc:112
 msgid ""
 "*** Examples:\n"
 "  kfmclient exec file:/root/Desktop/cdrom.desktop \"Mount default\"\n"
@@ -173,20 +181,20 @@ msgid ""
 msgstr ""
 "*** Ekzemploj:\n"
 "  kfmclient exec file:/root/Desktop/cdrom.desktop \"Mount default\"\n"
-"             // kroÊas la lumdiskon\n"
+"             // kroƒâas la lumdiskon\n"
 "\n"
 
-#: kfmclient.cc:89
+#: kfmclient.cc:115
 msgid ""
 "  kfmclient exec file:/home/weis/data/test.html\n"
 "             // Opens the file with default binding\n"
 "\n"
 msgstr ""
 "  kfmclient exec file:/home/weis/data/test.html\n"
-"             // malfermas la dosieron kun la implicita aplikaºo\n"
+"             // malfermas la dosieron kun la implicita aplikaƒµo\n"
 "\n"
 
-#: kfmclient.cc:91
+#: kfmclient.cc:117
 msgid ""
 "  kfmclient exec file:/home/weis/data/test.html Netscape\n"
 "             // Opens the file with netscape\n"
@@ -196,7 +204,7 @@ msgstr ""
 "             // malfermas la doserion kun Netscape\n"
 "\n"
 
-#: kfmclient.cc:93
+#: kfmclient.cc:119
 msgid ""
 "  kfmclient exec ftp://localhost/\n"
 "             // Opens new window with URL\n"
@@ -206,41 +214,48 @@ msgstr ""
 "             // malfermas novan fenestron kun la URLo\n"
 "\n"
 
-#: kfmclient.cc:95
+#: kfmclient.cc:121
 msgid ""
 "  kfmclient exec file:/root/Desktop/emacs.desktop\n"
 "             // Starts emacs\n"
 "\n"
 msgstr ""
 "  kfmclient exec file:/root/Desktop/emacs.desktop\n"
-"             // LanÊas Emacs\n"
+"             // Lanƒâas Emacs\n"
 "\n"
 
-#: kfmclient.cc:97
+#: kfmclient.cc:123
 msgid ""
 "  kfmclient exec file:/root/Desktop/cdrom.desktop\n"
 "             // Opens the CD-ROM's mount directory\n"
 "\n"
 msgstr ""
 "  kfmclient exec file:/root/Desktop/cdrom.desktop\n"
-"             // malfermas la kroÊdosierujon de la lumdisko\n"
+"             // malfermas la kroƒâdosierujon de la lumdisko\n"
 "\n"
 
-#: kfmclient.cc:130 kfmclient.cc:198 kfmclient.cc:217
-msgid "Syntax Error: Too few arguments\n"
+#: kfmclient.cc:125
+msgid ""
+"  kfmclient exec .\n"
+"             // Opens the current directory. Very convenient.\n"
+"\n"
+msgstr ""
+"  kfmclient exec .\n"
+"             // malfermas la aktualan dosierujon. Tre konvena.\n"
+"\n"
+
+#: kfmclient.cc:171
+msgid "Profile %1 not found\n"
+msgstr "Agordodosiero %1 ne trovita\n"
+
+#: kfmclient.cc:222
+msgid "Syntax Error: Not enough arguments\n"
 msgstr "Sintakseraro: Mankas argumento(j)\n"
 
-#: kfmclient.cc:146 kfmclient.cc:236 kfmclient.cc:267 kfmclient.cc:277
+#: kfmclient.cc:227
 msgid "Syntax Error: Too many arguments\n"
 msgstr "Sintakseraro: Tro multaj argumentoj\n"
 
-#: kfmclient.cc:160 kfmclient.cc:190 kfmclient.cc:259
-msgid "Syntax Error: Wrong number of arguments\n"
-msgstr "Sintakseraro: Mal¯usta nombro de argumentoj\n"
-
-#: kfmclient.cc:286
-#, c-format
-msgid "Syntax Error: Unknown command '%s'\n"
-msgstr "Sintakseraro: Nekonata komando \"%s\"\n"
-
-
+#: kfmclient.cc:348
+msgid "Syntax Error: Unknown command '%1'\n"
+msgstr "Sintakseraro: Nekonata komando '%1'\n"
