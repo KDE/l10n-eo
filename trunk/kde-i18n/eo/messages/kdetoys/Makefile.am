@@ -1,0 +1,2 @@
+POFILES = AUTO
+KDE_LANG = eo
