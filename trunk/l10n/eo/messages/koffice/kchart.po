@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2006-01-15 09:00+0100\n"
+"POT-Creation-Date: 2006-01-16 09:03+0100\n"
 "PO-Revision-Date: 2002-09-16 20:24GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -33,7 +33,7 @@ msgid "Types"
 msgstr ""
 
 #. i18n: file csvimportdialogui.ui line 67
-#: kchartBackgroundPixmapConfigPage.cc:191 rc.cpp:21
+#: kchartBackgroundPixmapConfigPage.cc:191 kchartWizard.cc:35 rc.cpp:21
 #, no-c-format
 msgid "Data"
 msgstr "datumoj"
@@ -596,8 +596,9 @@ msgid "Icap"
 msgstr "Icap"
 
 #: kchartConfigDialog.cc:79
-msgid "Chart Config Dialog"
-msgstr "Agordodialogo por la diagramo"
+#, fuzzy
+msgid "Chart Setup"
+msgstr "Diagramo-subtipo"
 
 #: kchartConfigDialog.cc:83 kchartConfigDialog.cc:111
 #, fuzzy
@@ -620,7 +621,7 @@ msgstr "&Tiparo"
 msgid "&Background"
 msgstr "&Fonkoloro"
 
-#: kchartConfigDialog.cc:119 kchartWizardSelectChartTypePage.cc:67
+#: kchartConfigDialog.cc:119 kchartWizardSelectChartTypePage.cc:60
 msgid "Bar"
 msgstr "Trabo"
 
@@ -651,7 +652,7 @@ msgstr "&Aksoj"
 msgid "Chart &Sub-type"
 msgstr "Diagram-&subtipo"
 
-#: kchartDataConfigPage.cc:62 kchartWizardSelectDataFormatPage.cc:35
+#: kchartDataConfigPage.cc:62 kchartWizardSelectDataFormatPage.cc:51
 #, fuzzy
 msgid "Data Format"
 msgstr "Y-etikedo-formo: "
@@ -662,7 +663,7 @@ msgid ""
 "columns."
 msgstr ""
 
-#: kchartDataConfigPage.cc:66 kchartWizardSelectDataFormatPage.cc:39
+#: kchartDataConfigPage.cc:66 kchartWizardSelectDataFormatPage.cc:56
 #, fuzzy
 msgid "Data in rows"
 msgstr "Datumoj estas en:"
@@ -673,7 +674,7 @@ msgid ""
 "individual values of the data series. This sets the data in rows on your chart."
 msgstr ""
 
-#: kchartDataConfigPage.cc:71 kchartWizardSelectDataFormatPage.cc:43
+#: kchartDataConfigPage.cc:71 kchartWizardSelectDataFormatPage.cc:59
 #, fuzzy
 msgid "Data in columns"
 msgstr "Datumoj estas en:"
@@ -689,35 +690,54 @@ msgstr ""
 #: kchartHeaderFooterConfigPage.cc:92 kchartWizardLabelsLegendPage.cc:54
 #: kchartWizardLabelsLegendPage.cc:73 kchartWizardLabelsLegendPage.cc:97
 #: kchartWizardLabelsLegendPage.cc:121 kchartWizardLabelsLegendPage.cc:147
-#: kchartWizardLabelsLegendPage.cc:162 kchartWizardSetupAxesPage.cc:158
+#: kchartWizardLabelsLegendPage.cc:162 kchartWizardSetupAxesPage.cc:164
 msgid "Font..."
 msgstr "Tiparo..."
 
-#: kchartDataEditor.cc:159
+#: kchartDataEditor.cc:160
 msgid "KChart Data Editor"
 msgstr "Diagram-datumredaktilo"
 
-#: kchartDataEditor.cc:176
+#: kchartDataEditor.cc:177
 msgid "# Rows:"
 msgstr "# da linioj: "
 
-#: kchartDataEditor.cc:183
+#: kchartDataEditor.cc:184
 #, fuzzy
 msgid "# Columns:"
 msgstr "# da kolumnoj: "
 
-#: kchartDataEditor.cc:241
+#: kchartDataEditor.cc:191
+#, fuzzy
+msgid "Insert Row"
+msgstr "Plej ena regiono"
+
+#: kchartDataEditor.cc:194
+#, fuzzy
+msgid "Insert Column"
+msgstr "# da kolumnoj: "
+
+#: kchartDataEditor.cc:197
+msgid "Remove Row"
+msgstr ""
+
+#: kchartDataEditor.cc:200
+#, fuzzy
+msgid "Remove Column"
+msgstr "# da kolumnoj: "
+
+#: kchartDataEditor.cc:312
 msgid ""
 "<p><b>Sets the number of rows in the data table.</b>"
 "<br>"
 "<br>Each row represents one data set.</p>"
 msgstr ""
 
-#: kchartDataEditor.cc:243
+#: kchartDataEditor.cc:314
 msgid "Number of active data rows"
 msgstr ""
 
-#: kchartDataEditor.cc:248
+#: kchartDataEditor.cc:319
 msgid ""
 "<p><b>Sets the number of columns in the data table.</b>"
 "<br>"
@@ -725,52 +745,21 @@ msgid ""
 "(row).</p>"
 msgstr ""
 
-#: kchartDataEditor.cc:250
+#: kchartDataEditor.cc:321
 msgid "Number of active data columns"
 msgstr ""
 
-#: kchartDataEditor.cc:255
-msgid ""
-"Chart data, each row is a data set. Headers can be changed by clicking on them."
-msgstr ""
+#: kchartDataEditor.cc:326
+#, fuzzy
+msgid "Chart data table."
+msgstr "Diagram-datumredaktilo"
 
-#: kchartDataEditor.cc:257
-msgid ""
-"<p>This table represents the complete data for the chart."
-"<br>"
-"<br> Each row is one data set of values. The name of such a data set can be "
-"changed in the column header (on the left) of the table. In a line diagram each "
-"row is one line. In a ring diagram each row is one slice. "
-"<br>"
-"<br> Each column represents one value of each data set. Just like rows you can "
-"also change the name of each value in the column headers (at the top) of the "
-"table.  In a bar diagram the number of columns defines the number of value "
-"sets.  In a ring diagram each column is one ring.</p>"
-msgstr ""
-
-#: kchartDataEditor.cc:493
+#: kchartDataEditor.cc:588
 msgid ""
 "You are about to shrink the data table and remove some values. This will lead "
 "to loss of existing data in the table and/or the headers.\n"
 "\n"
 "This message will not be shown again if you click Continue"
-msgstr ""
-
-#: kchartDataEditor.cc:620
-#, fuzzy
-msgid "Column Name"
-msgstr "Kolumno aktiva:"
-
-#: kchartDataEditor.cc:621
-msgid "Type a new column name:"
-msgstr ""
-
-#: kchartDataEditor.cc:638
-msgid "Row Name"
-msgstr ""
-
-#: kchartDataEditor.cc:639
-msgid "Type a new row name:"
 msgstr ""
 
 #: kchartFontConfigPage.cc:99
@@ -1200,7 +1189,7 @@ msgid ""
 "precision. The range is 0 to 15; 2 being the default."
 msgstr ""
 
-#: kchartParameterConfigPage.cc:138 kchartWizardSetupAxesPage.cc:146
+#: kchartParameterConfigPage.cc:138 kchartWizardSetupAxesPage.cc:152
 msgid "Y-label format:"
 msgstr "Y-etikedo-formo:"
 
@@ -1336,15 +1325,15 @@ msgstr ""
 
 #: kchartSubTypeChartPage.cc:50 kchartSubTypeChartPage.cc:129
 #: kchartSubTypeChartPage.cc:210 kchartSubTypeChartPage.cc:289
-#: kchartSubTypeChartPage.cc:368 kchartWizardSelectChartSubTypePage.cc:42
+#: kchartSubTypeChartPage.cc:368 kchartWizardSelectChartSubTypePage.cc:49
 msgid "Normal"
 msgstr "Normala"
 
-#: kchartSubTypeChartPage.cc:52 kchartWizardSelectChartSubTypePage.cc:167
+#: kchartSubTypeChartPage.cc:52 kchartWizardSelectChartSubTypePage.cc:179
 msgid "HiLoClose"
 msgstr "'HiLo'-Fermo"
 
-#: kchartSubTypeChartPage.cc:54 kchartWizardSelectChartSubTypePage.cc:168
+#: kchartSubTypeChartPage.cc:54 kchartWizardSelectChartSubTypePage.cc:180
 msgid "HiLoOpenClose"
 msgstr "'HiLo'-MalfermoFermo"
 
@@ -1362,22 +1351,17 @@ msgstr ""
 
 #: kchartSubTypeChartPage.cc:131 kchartSubTypeChartPage.cc:212
 #: kchartSubTypeChartPage.cc:291 kchartSubTypeChartPage.cc:370
-#: kchartWizardSelectChartSubTypePage.cc:43
-#: kchartWizardSelectChartSubTypePage.cc:172
+#: kchartWizardSelectChartSubTypePage.cc:50
+#: kchartWizardSelectChartSubTypePage.cc:184
 msgid "Stacked"
 msgstr "Stakigita"
 
 #: kchartSubTypeChartPage.cc:133 kchartSubTypeChartPage.cc:214
 #: kchartSubTypeChartPage.cc:293 kchartSubTypeChartPage.cc:372
-#: kchartWizardSelectChartSubTypePage.cc:44
-#: kchartWizardSelectChartSubTypePage.cc:173
+#: kchartWizardSelectChartSubTypePage.cc:51
+#: kchartWizardSelectChartSubTypePage.cc:185
 msgid "Percent"
 msgstr "Procentoj"
-
-#: kchartWizard.cc:35
-#, fuzzy
-msgid "Select Data Format"
-msgstr "Y-etikedo-formo: "
 
 #: kchartWizard.cc:41
 msgid "Select Chart Type"
@@ -1405,68 +1389,116 @@ msgstr "Legendo-titolo:"
 msgid "Legend text:"
 msgstr "Legendo teksto:"
 
-#: kchartWizardSelectChartSubTypePage.cc:38
+#: kchartWizardSelectChartSubTypePage.cc:45
 msgid "Chart Sub Type"
 msgstr "Diagramo-subtipo"
 
-#: kchartWizardSelectChartTypePage.cc:68
+#: kchartWizardSelectChartSubTypePage.cc:54
+msgid "Number of lines: "
+msgstr ""
+
+#: kchartWizardSelectChartTypePage.cc:61
 msgid "Lines"
 msgstr "Linioj"
 
-#: kchartWizardSelectChartTypePage.cc:69
+#: kchartWizardSelectChartTypePage.cc:62
 msgid "Area"
 msgstr "Areo"
 
-#: kchartWizardSelectChartTypePage.cc:70
+#: kchartWizardSelectChartTypePage.cc:63
+msgid "Bars and Lines"
+msgstr ""
+
+#: kchartWizardSelectChartTypePage.cc:65
 msgid "Hi-Lo-Close"
 msgstr "Intervalo"
 
-#: kchartWizardSelectChartTypePage.cc:71
+#: kchartWizardSelectChartTypePage.cc:66
 msgid "Box & Whisker "
 msgstr ""
 
-#: kchartWizardSelectChartTypePage.cc:72
+#: kchartWizardSelectChartTypePage.cc:70
 msgid "Pie"
 msgstr "Torto"
 
-#: kchartWizardSelectChartTypePage.cc:73
+#: kchartWizardSelectChartTypePage.cc:71
 msgid "Ring"
 msgstr "Ringo"
 
-#: kchartWizardSelectChartTypePage.cc:74
+#: kchartWizardSelectChartTypePage.cc:72
 msgid "Polar"
 msgstr "Polaj"
 
-#: kchartWizardSetupAxesPage.cc:42
-msgid "Has grid:"
-msgstr "Havas kradon:"
+#: kchartWizardSelectDataFormatPage.cc:39
+#, fuzzy
+msgid "Data Area"
+msgstr "Y-etikedo-formo: "
 
-#: kchartWizardSetupAxesPage.cc:53
+#: kchartWizardSelectDataFormatPage.cc:42
+#, fuzzy
+msgid "Area: "
+msgstr "Areo"
+
+#: kchartWizardSelectDataFormatPage.cc:47
+msgid "First row as label"
+msgstr ""
+
+#: kchartWizardSelectDataFormatPage.cc:48
+#, fuzzy
+msgid "First column as label"
+msgstr "Uzu unuan kolumnon kiel priskribon"
+
+#: kchartWizardSelectDataFormatPage.cc:65
+msgid ""
+"\n"
+"If the selected data area do not match the data you want,\n"
+"then select the data now.\n"
+"\n"
+"Include cells that you want to use as row and column labels\n"
+"if you want them in the chart.\n"
+msgstr ""
+
+#: kchartWizardSetupAxesPage.cc:44
+#, fuzzy
+msgid "Grid Lines"
+msgstr "Linioj"
+
+#: kchartWizardSetupAxesPage.cc:45
+#, fuzzy
+msgid "X axis:"
+msgstr "X-akso"
+
+#: kchartWizardSetupAxesPage.cc:46
+#, fuzzy
+msgid "Y axis:"
+msgstr "Y-akso"
+
+#: kchartWizardSetupAxesPage.cc:59
 msgid "Border:"
 msgstr "Marĝeno:"
 
-#: kchartWizardSetupAxesPage.cc:76
+#: kchartWizardSetupAxesPage.cc:82
 msgid "Angle 3D:"
 msgstr "3D-angulo:"
 
-#: kchartWizardSetupAxesPage.cc:83
+#: kchartWizardSetupAxesPage.cc:89
 msgid "Depth 3D:"
 msgstr "3D-profundeco:"
 
-#: kchartWizardSetupAxesPage.cc:106
+#: kchartWizardSetupAxesPage.cc:112
 #, fuzzy
 msgid "Y interval:"
 msgstr "Y-intervalo:"
 
-#: kchartWizardSetupAxesPage.cc:118
+#: kchartWizardSetupAxesPage.cc:124
 msgid "Y min:"
 msgstr "Y min:"
 
-#: kchartWizardSetupAxesPage.cc:128
+#: kchartWizardSetupAxesPage.cc:134
 msgid "Y max:"
 msgstr "Y max:"
 
-#: kchartWizardSetupAxesPage.cc:170
+#: kchartWizardSetupAxesPage.cc:176
 msgid "Y-label 2 format:"
 msgstr "Y-etikedo-formo:"
 
@@ -1662,6 +1694,20 @@ msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your emails"
 msgstr "<wolfram@steloj.de>"
+
+#~ msgid "Chart Config Dialog"
+#~ msgstr "Agordodialogo por la diagramo"
+
+#, fuzzy
+#~ msgid "Column Name"
+#~ msgstr "Kolumno aktiva:"
+
+#, fuzzy
+#~ msgid "Select Data Format"
+#~ msgstr "Y-etikedo-formo: "
+
+#~ msgid "Has grid:"
+#~ msgstr "Havas kradon:"
 
 #, fuzzy
 #~ msgid "&Configure Chart..."
