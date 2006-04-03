@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: umbrello\n"
-"POT-Creation-Date: 2006-03-27 03:56+0200\n"
+"POT-Creation-Date: 2006-04-03 03:58+0200\n"
 "PO-Revision-Date: 2005-07-09 01:32+0200\n"
 "Last-Translator: Oliver M. Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -243,7 +243,7 @@ msgstr "Nomo de aktiveco:"
 #: dialogs/classgenpage.cpp:357 dialogs/classifierlistpage.cpp:98
 #: dialogs/notedialog.cpp:33 dialogs/parmpropdlg.cpp:99
 #: dialogs/statedialog.cpp:107 docwindow.cpp:30 rc.cpp:24 rc.cpp:146
-#: rc.cpp:203 rc.cpp:450 rc.cpp:462
+#: rc.cpp:203 rc.cpp:450 rc.cpp:502
 #, no-c-format
 msgid "Documentation"
 msgstr "Dokumentaro"
@@ -287,7 +287,7 @@ msgstr ""
 msgid "&Apply to all remaining files"
 msgstr "&Apliki al ĉiuj ceteraj dosieroj"
 
-#: dialogs/overwritedialogue.cpp:36 umlview.cpp:1561
+#: dialogs/overwritedialogue.cpp:36 umlviewimageexporter.cpp:67
 msgid "&Overwrite"
 msgstr "&Superskribi"
 
@@ -316,12 +316,12 @@ msgid "New Activity"
 msgstr "Nova Aktiveco"
 
 #: activitywidget.cpp:129 dialogs/activitypage.cpp:116 statewidget.cpp:170
-#: toolbarstateother.cpp:136 umlview.cpp:2985
+#: toolbarstateother.cpp:136 umlview.cpp:2748
 msgid "Enter the name of the new activity:"
 msgstr "Enigu la nomon de la nova aktiveco:"
 
 #: dialogs/activitypage.cpp:117 statewidget.cpp:170 toolbarstateother.cpp:136
-#: umlview.cpp:2986
+#: umlview.cpp:2749
 msgid "new activity"
 msgstr "nova aktiveco"
 
@@ -476,8 +476,8 @@ msgstr "Nevalida Nomo"
 msgid "The name you have entered is not unique."
 msgstr "La nomo kiun vi enigis ne estas unika."
 
-#: dialogs/umlviewdialog.cpp:169 umldoc.cpp:1217 umllistview.cpp:2258
-#: umllistview.cpp:2265 umllistview.cpp:2474
+#: dialogs/umlviewdialog.cpp:169 umldoc.cpp:1217 umllistview.cpp:2259
+#: umllistview.cpp:2266 umllistview.cpp:2475
 msgid "Name Not Unique"
 msgstr "Nomo Ne Unika"
 
@@ -530,12 +530,12 @@ msgid "N&ew Entity Attribute..."
 msgstr "N&ova Ento-Atributo..."
 
 #: dialogs/classifierlistpage.cpp:93 dialogs/umloperationdialog.cpp:142
-#: uml.cpp:261
+#: uml.cpp:267
 msgid "&Properties"
 msgstr "&Trajtoj"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 36
-#: dialogs/umlroledialog.cpp:28 rc.cpp:453
+#: dialogs/umlroledialog.cpp:28 rc.cpp:493
 #, no-c-format
 msgid "Role Properties"
 msgstr "Roltrajtoj"
@@ -1012,13 +1012,13 @@ msgid "Role B Changeability"
 msgstr "Ŝanĝeblo de Rolo B"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 59
-#: dialogs/assocrolepage.cpp:102 dialogs/assocrolepage.cpp:161 rc.cpp:456
+#: dialogs/assocrolepage.cpp:102 dialogs/assocrolepage.cpp:161 rc.cpp:496
 #, no-c-format
 msgid "Rolename:"
 msgstr "Rolnomo:"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 77
-#: dialogs/assocrolepage.cpp:108 dialogs/assocrolepage.cpp:167 rc.cpp:459
+#: dialogs/assocrolepage.cpp:108 dialogs/assocrolepage.cpp:167 rc.cpp:499
 #, no-c-format
 msgid "Multiplicity:"
 msgstr "Multeco:"
@@ -1026,7 +1026,7 @@ msgstr "Multeco:"
 #. i18n: file codegenerators/javacodegenerationformbase.ui line 129
 #: dialogs/assocrolepage.cpp:115 dialogs/assocrolepage.cpp:175
 #: dialogs/settingsdlg.cpp:250 dialogs/settingsdlg.cpp:257 rc.cpp:116
-#: rc.cpp:134 rc.cpp:173 rc.cpp:191 rc.cpp:480
+#: rc.cpp:134 rc.cpp:173 rc.cpp:191 rc.cpp:520
 #, no-c-format
 msgid "Public"
 msgstr "Publika"
@@ -1034,7 +1034,7 @@ msgstr "Publika"
 #. i18n: file codegenerators/javacodegenerationformbase.ui line 134
 #: dialogs/assocrolepage.cpp:118 dialogs/assocrolepage.cpp:178
 #: dialogs/settingsdlg.cpp:251 dialogs/settingsdlg.cpp:258 rc.cpp:119
-#: rc.cpp:137 rc.cpp:176 rc.cpp:194 rc.cpp:483
+#: rc.cpp:137 rc.cpp:176 rc.cpp:194 rc.cpp:523
 #, no-c-format
 msgid "Private"
 msgstr "Privata"
@@ -1042,31 +1042,31 @@ msgstr "Privata"
 #. i18n: file codegenerators/javacodegenerationformbase.ui line 139
 #: dialogs/assocrolepage.cpp:121 dialogs/assocrolepage.cpp:181
 #: dialogs/settingsdlg.cpp:252 dialogs/settingsdlg.cpp:259 rc.cpp:122
-#: rc.cpp:140 rc.cpp:179 rc.cpp:197 rc.cpp:486
+#: rc.cpp:140 rc.cpp:179 rc.cpp:197 rc.cpp:526
 #, no-c-format
 msgid "Protected"
 msgstr "Protektita"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 194
-#: dialogs/assocrolepage.cpp:124 dialogs/assocrolepage.cpp:184 rc.cpp:489
+#: dialogs/assocrolepage.cpp:124 dialogs/assocrolepage.cpp:184 rc.cpp:529
 #, fuzzy, no-c-format
 msgid "Implementation"
 msgstr "Dokumentaro"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 141
-#: dialogs/assocrolepage.cpp:141 dialogs/assocrolepage.cpp:201 rc.cpp:474
+#: dialogs/assocrolepage.cpp:141 dialogs/assocrolepage.cpp:201 rc.cpp:514
 #, no-c-format
 msgid "Changeable"
 msgstr "Ŝanĝebla"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 133
-#: dialogs/assocrolepage.cpp:144 dialogs/assocrolepage.cpp:204 rc.cpp:471
+#: dialogs/assocrolepage.cpp:144 dialogs/assocrolepage.cpp:204 rc.cpp:511
 #, no-c-format
 msgid "Frozen"
 msgstr "Frostita"
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 125
-#: dialogs/assocrolepage.cpp:147 dialogs/assocrolepage.cpp:207 rc.cpp:468
+#: dialogs/assocrolepage.cpp:147 dialogs/assocrolepage.cpp:207 rc.cpp:508
 #, no-c-format
 msgid "Add only"
 msgstr "Nur aldoni"
@@ -1109,6 +1109,12 @@ msgstr ""
 #: dialogs/umltemplatedialog.cpp:136
 msgid "Template Name Not Unique"
 msgstr "Ŝablononomo Ne Unika"
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 90
+#: dialogs/exportallviewsdialog.cpp:42 rc.cpp:468
+#, no-c-format
+msgid "The format that the images will be exported to"
+msgstr ""
 
 #: dialogs/selectopdlg.cpp:33 dialogs/selectopdlg.cpp:38
 msgid "Select Operation"
@@ -1401,51 +1407,51 @@ msgstr "Nomo:"
 msgid "Type:"
 msgstr "Tipo:"
 
-#: umllistview.cpp:115
+#: umllistview.cpp:116
 msgid "Views"
 msgstr "Perspektivoj"
 
-#: umllistview.cpp:116
+#: umllistview.cpp:117
 msgid "Use Case View"
 msgstr "Uzkaza Perspektivo"
 
-#: umllistview.cpp:117
+#: umllistview.cpp:118
 msgid "Logical View"
 msgstr "Logika  Perspektivo"
 
-#: umllistview.cpp:118
+#: umllistview.cpp:119
 msgid "Component View"
 msgstr "Komponanta Perspektivo"
 
-#: umllistview.cpp:119
+#: umllistview.cpp:120
 msgid "Deployment View"
 msgstr "Sterna Perspektivo"
 
-#: umllistview.cpp:120
+#: umllistview.cpp:121
 msgid "Entity Relationship Model"
 msgstr "Ento-Rilata Perspektivo"
 
-#: umllistview.cpp:121 umllistview.cpp:2948
+#: umllistview.cpp:122 umllistview.cpp:2965
 msgid "Datatypes"
 msgstr "Datumtipoj"
 
-#: umllistview.cpp:388
+#: umllistview.cpp:389
 msgid "Externalize Folder"
 msgstr "Eksterigi Tekon"
 
-#: umllistview.cpp:427
+#: umllistview.cpp:428
 msgid "Enter Model Name"
 msgstr "Enigi Modelnomon"
 
-#: umllistview.cpp:428
+#: umllistview.cpp:429
 msgid "Enter the new name of the model:"
 msgstr "Enigu la novan nomon de la modelo:"
 
-#: umllistview.cpp:2053
+#: umllistview.cpp:2054
 msgid "folder"
 msgstr "teko"
 
-#: umllistview.cpp:2243
+#: umllistview.cpp:2244
 msgid ""
 "The name you entered was invalid.\n"
 "Creation process has been canceled."
@@ -1453,11 +1459,11 @@ msgstr ""
 "La nomo kiun vi enigis estis nevalida.\n"
 "Kreadprocedo nuligita."
 
-#: umllistview.cpp:2244 umllistviewitem.cpp:528
+#: umllistview.cpp:2245 umllistviewitem.cpp:528
 msgid "Name Not Valid"
 msgstr "Nomo Ne Valida"
 
-#: umldoc.cpp:1216 umllistview.cpp:2257
+#: umldoc.cpp:1216 umllistview.cpp:2258
 msgid ""
 "The name you entered was not unique.\n"
 "Is this what you wanted?"
@@ -1465,17 +1471,17 @@ msgstr ""
 "La nomo kiun vi enigis estis neunika.\n"
 "Ĉu tion vi intencis?"
 
-#: umldoc.cpp:1217 umllistview.cpp:2258
+#: umldoc.cpp:1217 umllistview.cpp:2259
 #, fuzzy
 msgid "Use Name"
 msgstr "Uzkazo"
 
-#: umldoc.cpp:1217 umllistview.cpp:2258
+#: umldoc.cpp:1217 umllistview.cpp:2259
 #, fuzzy
 msgid "Enter New Name"
 msgstr "Enigi Modelnomon"
 
-#: umllistview.cpp:2264 umllistview.cpp:2473
+#: umllistview.cpp:2265 umllistview.cpp:2474
 msgid ""
 "The name you entered was not unique!\n"
 "Creation process has been canceled."
@@ -1483,19 +1489,19 @@ msgstr ""
 "La nomo kiun vi enigis ne estis unika!\n"
 "Kreadprocedo nuligita."
 
-#: umllistview.cpp:2431 umllistview.cpp:2446 umllistview.cpp:2463
+#: umllistview.cpp:2432 umllistview.cpp:2447 umllistview.cpp:2464
 msgid "Creation canceled"
 msgstr "Kreado Nuligita"
 
-#: umllistview.cpp:2630
+#: umllistview.cpp:2631
 msgid "Loading listview..."
 msgstr "Ŝarĝanta Listoperspektivon..."
 
-#: umllistview.cpp:2972
+#: umllistview.cpp:2989
 msgid "The folder must be emptied before it can be deleted."
 msgstr "La teko devas esti maplena antaŭ ĝia forigo."
 
-#: umllistview.cpp:2973
+#: umllistview.cpp:2990
 msgid "Folder Not Empty"
 msgstr "Teko Ne Malplena"
 
@@ -1524,12 +1530,33 @@ msgstr ""
 msgid "Cannot Create Folder"
 msgstr ""
 
-#: exportviewaction.cpp:24 exportviewaction.cpp:37
-msgid "Export All Diagrams as Images"
+#: umlviewimageexporter.cpp:42
+#, fuzzy
+msgid "Exporting view..."
+msgstr "Eliĝanta..."
+
+#: umlviewimageexporter.cpp:46
+msgid ""
+"An error happened when exporting the image:\n"
 msgstr ""
 
-#: exportviewaction.cpp:59
-msgid "To extension:"
+#: classimport.cpp:38 uml.cpp:370 uml.cpp:476 uml.cpp:677 uml.cpp:706
+#: uml.cpp:729 uml.cpp:739 uml.cpp:779 uml.cpp:784 uml.cpp:809 uml.cpp:819
+#: uml.cpp:824 uml.cpp:829 uml.cpp:842 uml.cpp:849 uml.cpp:863 uml.cpp:884
+#: uml.cpp:897 umlviewimageexporter.cpp:48 umlviewimageexporterall.cpp:69
+msgid "Ready."
+msgstr "Preta."
+
+#: umlviewimageexporter.cpp:66
+msgid ""
+"The selected file %1 exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"La selektita dosiero %1 jam ekzistas.\n"
+"Ĉu vi volas superskribi ĝin?"
+
+#: umlviewimageexporter.cpp:67
+msgid "File Already Exists"
 msgstr ""
 
 #: aligntoolbar.cpp:34
@@ -1597,16 +1624,29 @@ msgstr "Tiu nomo estas jam uzata."
 msgid "Not a Unique Name"
 msgstr "Nomo Ne Unika"
 
+#: umlviewimageexportermodel.cpp:121
+#, c-format
+msgid "Can not create directory: %1"
+msgstr ""
+
+#: umlviewimageexportermodel.cpp:140
+msgid "Can not save an empty diagram"
+msgstr ""
+
+#: umlviewimageexportermodel.cpp:146
+#, c-format
+msgid "A problem occured while saving diagram in %1"
+msgstr ""
+
+#: umldoc.cpp:627 umldoc.cpp:636 umldoc.cpp:656 umldoc.cpp:693 umldoc.cpp:714
+#: umllistviewitem.cpp:695 umlviewimageexportermodel.cpp:157
+#, c-format
+msgid "There was a problem saving file: %1"
+msgstr "Problemo dum la savado de la dosiero: %1"
+
 #: classimport.cpp:33
 msgid "Importing file: %1 Progress: %2/%3"
 msgstr ""
-
-#: classimport.cpp:38 uml.cpp:365 uml.cpp:471 uml.cpp:670 uml.cpp:699
-#: uml.cpp:722 uml.cpp:732 uml.cpp:772 uml.cpp:777 uml.cpp:802 uml.cpp:812
-#: uml.cpp:817 uml.cpp:822 uml.cpp:835 uml.cpp:842 uml.cpp:856 uml.cpp:877
-#: uml.cpp:890
-msgid "Ready."
-msgstr "Preta."
 
 #: model_utils.cpp:231
 msgid "new_actor"
@@ -1692,24 +1732,38 @@ msgid ""
 "Your emails"
 msgstr "okellogg@users.sourceforge.net"
 
-#: main.cpp:33 main.cpp:46
+#: main.cpp:31 main.cpp:52
 msgid "Umbrello UML Modeller"
 msgstr "Umbrello UML Modeller"
 
-#: main.cpp:39
+#: main.cpp:37
 msgid "File to open"
 msgstr "Dosiero malfermenda"
 
-#: main.cpp:40
+#: main.cpp:38
 msgid "export diagrams to extension and exit"
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:39
+msgid "the local directory to save the exported diagrams in"
+msgstr ""
+
+#: main.cpp:39
+msgid "the directory of the file"
+msgstr ""
+
+#: main.cpp:40
+msgid ""
+"keep the tree structure used to store the views in the document in the target "
+"directory"
+msgstr ""
+
+#: main.cpp:54
 #, fuzzy
 msgid "(c) 2001 Paul Hensgen, (c) 2002-2006 Umbrello UML Modeller Authors"
 msgstr "(k) 2001 Paul Hensgen, (k) 2002-2005 Aŭtoroj de Umbrello UML Modeller"
 
-#: main.cpp:51
+#: main.cpp:57
 msgid "Umbrello UML Modeller Authors"
 msgstr "Aŭtoroj de Umbrello UML Modeller"
 
@@ -1787,13 +1841,7 @@ msgid "There was a problem loading file: %1"
 msgstr "Problemo dum la ŝarĝado de la dosiero: %1"
 
 #: umldoc.cpp:627 umldoc.cpp:636 umldoc.cpp:656 umldoc.cpp:693 umldoc.cpp:714
-#: umllistviewitem.cpp:695 umlview.cpp:1614
-#, c-format
-msgid "There was a problem saving file: %1"
-msgstr "Problemo dum la savado de la dosiero: %1"
-
-#: umldoc.cpp:627 umldoc.cpp:636 umldoc.cpp:656 umldoc.cpp:693 umldoc.cpp:714
-#: umldoc.cpp:722 umllistviewitem.cpp:696 umlview.cpp:1615
+#: umldoc.cpp:722 umllistviewitem.cpp:696
 msgid "Save Error"
 msgstr "Savo-Eraro"
 
@@ -1957,271 +2005,276 @@ msgstr "nova_literalo"
 msgid "new_field"
 msgstr "nova_kampo"
 
-#: uml.cpp:174
+#: uml.cpp:178
 msgid "&New Class Wizard..."
 msgstr "&Nova Klas-Sorĉisto..."
 
-#: uml.cpp:176
+#: uml.cpp:180
 msgid "&Add Default Datatypes for Active Language"
 msgstr "&Almeti normajn datumtipojn por la Aktiva Programlingvo"
 
-#: uml.cpp:181
+#: uml.cpp:185
 msgid "&Code Generation Wizard..."
 msgstr "&Kodgenera Sorĉisto..."
 
-#: uml.cpp:183
+#: uml.cpp:187
 msgid "&Generate All Code"
 msgstr "&Generi Tutan Kodon"
 
-#: uml.cpp:186
+#: uml.cpp:190
 msgid "&Import Classes..."
 msgstr "&Importi Klasojn..."
 
-#: uml.cpp:189
+#: uml.cpp:193
 msgid "Creates a new document"
 msgstr "Kreas novan dokumenton"
 
-#: uml.cpp:190
+#: uml.cpp:194
 msgid "Opens an existing document"
 msgstr "Malfermas ekzistantan dokumenton"
 
-#: uml.cpp:191
+#: uml.cpp:195
 msgid "Opens a recently used file"
 msgstr "Malfermas lastatempe uzatan dokumenton"
 
-#: uml.cpp:192
+#: uml.cpp:196
 msgid "Saves the document"
 msgstr "Savas la dokumenton"
 
-#: uml.cpp:193
+#: uml.cpp:197
 msgid "Saves the document as..."
 msgstr "Savas la dokumenton kiel..."
 
-#: uml.cpp:194
+#: uml.cpp:198
 msgid "Closes the document"
 msgstr "Fermas la dokumenton"
 
-#: uml.cpp:195
+#: uml.cpp:199
 msgid "Prints out the document"
 msgstr "Elprintas la dokumenton"
 
-#: uml.cpp:196
+#: uml.cpp:200
 msgid "Quits the application"
 msgstr "Forlasas la aplikaĵon"
 
-#: uml.cpp:197
+#: uml.cpp:201
 msgid "Cuts the selected section and puts it to the clipboard"
 msgstr ""
 
-#: uml.cpp:198
+#: uml.cpp:202
 msgid "Copies the selected section to the clipboard"
 msgstr ""
 
-#: uml.cpp:199
+#: uml.cpp:203
 msgid "Pastes the contents of the clipboard"
 msgstr ""
 
-#: uml.cpp:201
+#: uml.cpp:205
 msgid "Enables/disables the toolbar"
 msgstr ""
 
-#: uml.cpp:202
+#: uml.cpp:206
 msgid "Enables/disables the statusbar"
 msgstr ""
 
-#: uml.cpp:204
+#: uml.cpp:208
 msgid "Set the default program preferences"
 msgstr ""
 
-#: uml.cpp:206
+#: uml.cpp:210
 msgid "Delete &Selected"
 msgstr "Forigi &Selektaĵon"
 
-#: uml.cpp:214
+#: uml.cpp:218
 msgid "&Class Diagram..."
 msgstr "&Klasdiagramo..."
 
-#: uml.cpp:218
+#: uml.cpp:222
 msgid "&Autolayout..."
 msgstr ""
 
-#: uml.cpp:221
+#: uml.cpp:225
 msgid "&Sequence Diagram..."
 msgstr "&Sekvencdiagramo..."
 
-#: uml.cpp:224
+#: uml.cpp:228
 msgid "C&ollaboration Diagram..."
 msgstr "Kunlab&ordiagramo..."
 
-#: uml.cpp:227
+#: uml.cpp:231
 msgid "&Use Case Diagram..."
 msgstr "&Uzkazdiagramo..."
 
-#: uml.cpp:230
+#: uml.cpp:234
 msgid "S&tate Diagram..."
 msgstr "S&tatodiagramo..."
 
-#: uml.cpp:233
+#: uml.cpp:237
 msgid "&Activity Diagram..."
 msgstr "&Aktivecdiagramo..."
 
-#: uml.cpp:236
+#: uml.cpp:240
 msgid "Co&mponent Diagram..."
 msgstr "Ko&mponantdiagramo..."
 
-#: uml.cpp:240
+#: uml.cpp:244
 msgid "&Deployment Diagram..."
 msgstr "Stern&diagramo..."
 
-#: uml.cpp:244
+#: uml.cpp:248
 msgid "&Entity Relationship Diagram..."
 msgstr "&Ento-Rilato Diagramo..."
 
-#: uml.cpp:248
+#: uml.cpp:252
 msgid "&Clear Diagram"
 msgstr "&Viŝi Diagramon"
 
-#: uml.cpp:250
+#: uml.cpp:254
 msgid "&Snap to Grid"
 msgstr "Vicigi al Krado"
 
-#: uml.cpp:252
+#: uml.cpp:256
 msgid "S&how Grid"
 msgstr "Montri Kradon"
 
-#: uml.cpp:255
+#: uml.cpp:259
 msgid "&Hide Grid"
 msgstr "Kaŝi Kradon"
 
-#: uml.cpp:259
+#: uml.cpp:263
 msgid "&Export as Picture..."
 msgstr "&Eksporti kiel Bildon..."
 
-#: uml.cpp:275
+#: uml.cpp:265
+#, fuzzy
+msgid "Export &All Diagrams as Pictures..."
+msgstr "Eksporti kiel Bildon..."
+
+#: uml.cpp:280
 msgid "&Zoom Slider"
 msgstr ""
 
-#: uml.cpp:278
+#: uml.cpp:283
 #, c-format
 msgid "Z&oom to 100%"
 msgstr ""
 
-#: uml.cpp:284
+#: uml.cpp:289
 msgid "&Move Tab Left"
 msgstr ""
 
-#: uml.cpp:285
+#: uml.cpp:290
 msgid "&Move Tab Right"
 msgstr ""
 
-#: uml.cpp:297
+#: uml.cpp:302
 msgid "Select Diagram on Left"
 msgstr ""
 
-#: uml.cpp:298
+#: uml.cpp:303
 msgid "Select Diagram on Right"
 msgstr ""
 
-#: uml.cpp:316
+#: uml.cpp:321
 msgid "&Windows"
-msgstr ""
-
-#: uml.cpp:336
-#, c-format
-msgid " &33%"
-msgstr ""
-
-#: uml.cpp:337
-#, c-format
-msgid " &50%"
-msgstr ""
-
-#: uml.cpp:338
-#, c-format
-msgid " &75%"
-msgstr ""
-
-#: uml.cpp:339
-#, c-format
-msgid "&100%"
-msgstr ""
-
-#: uml.cpp:340
-#, c-format
-msgid "1&50%"
 msgstr ""
 
 #: uml.cpp:341
 #, c-format
-msgid "&200%"
+msgid " &33%"
 msgstr ""
 
 #: uml.cpp:342
 #, c-format
+msgid " &50%"
+msgstr ""
+
+#: uml.cpp:343
+#, c-format
+msgid " &75%"
+msgstr ""
+
+#: uml.cpp:344
+#, c-format
+msgid "&100%"
+msgstr ""
+
+#: uml.cpp:345
+#, c-format
+msgid "1&50%"
+msgstr ""
+
+#: uml.cpp:346
+#, c-format
+msgid "&200%"
+msgstr ""
+
+#: uml.cpp:347
+#, c-format
 msgid "3&00%"
 msgstr ""
 
-#: uml.cpp:383
+#: uml.cpp:388
 msgid "Diagram Toolbar"
 msgstr "Diagrama Ilpanelo"
 
-#: uml.cpp:387
+#: uml.cpp:392
 msgid "Alignment Toolbar"
 msgstr "Formĝustiga Ilpanelo"
 
-#: listpopupmenu.cpp:601 uml.cpp:409
+#: listpopupmenu.cpp:601 uml.cpp:414
 msgid "Class Diagram..."
 msgstr "Klasdiagramo..."
 
-#: listpopupmenu.cpp:604 uml.cpp:410
+#: listpopupmenu.cpp:604 uml.cpp:415
 msgid "Sequence Diagram..."
 msgstr "Sekvencdiagramo..."
 
-#: listpopupmenu.cpp:605 uml.cpp:411
+#: listpopupmenu.cpp:605 uml.cpp:416
 msgid "Collaboration Diagram..."
 msgstr "Kunlabordiagramo..."
 
-#: listpopupmenu.cpp:537 uml.cpp:412
+#: listpopupmenu.cpp:537 uml.cpp:417
 msgid "Use Case Diagram..."
 msgstr "Uzkazdiagramo..."
 
-#: listpopupmenu.cpp:602 uml.cpp:413
+#: listpopupmenu.cpp:602 uml.cpp:418
 msgid "State Diagram..."
 msgstr "Statodiagramo..."
 
-#: listpopupmenu.cpp:603 uml.cpp:414
+#: listpopupmenu.cpp:603 uml.cpp:419
 msgid "Activity Diagram..."
 msgstr "Aktivecdiagramo..."
 
-#: listpopupmenu.cpp:507 uml.cpp:415
+#: listpopupmenu.cpp:507 uml.cpp:420
 msgid "Component Diagram..."
 msgstr "Komponantdiagramo..."
 
-#: listpopupmenu.cpp:514 uml.cpp:416
+#: listpopupmenu.cpp:514 uml.cpp:421
 msgid "Deployment Diagram..."
 msgstr "Sterndiagramo..."
 
-#: listpopupmenu.cpp:527 uml.cpp:417
+#: listpopupmenu.cpp:527 uml.cpp:422
 msgid "Entity Relationship Diagram..."
 msgstr "Ento-Rilata Diagramo..."
 
-#: uml.cpp:448
+#: uml.cpp:453
 msgid "&Tree View"
 msgstr "Arboperspek&tivo"
 
-#: uml.cpp:454
+#: uml.cpp:459
 msgid "&Documentation"
 msgstr "&Dokumentaro"
 
-#: uml.cpp:467 uml.cpp:674 uml.cpp:703
+#: uml.cpp:472 uml.cpp:681 uml.cpp:710
 msgid "Opening file..."
 msgstr "Malfermanta dosieron..."
 
-#: uml.cpp:659
+#: uml.cpp:666
 msgid "Creating new document..."
 msgstr "Kreanta novan dokumenton..."
 
-#: uml.cpp:683
+#: uml.cpp:690
 msgid ""
 "*.xmi *.xmi.tgz *.xmi.tar.bz2 *.mdl|All Supported Files (*.xmi, *.xmi.tgz, "
 "*.xmi.tar.bz2, *.mdl)\n"
@@ -2231,19 +2284,19 @@ msgid ""
 "*.mdl|Rose model files"
 msgstr ""
 
-#: uml.cpp:687
+#: uml.cpp:694
 msgid "Open File"
 msgstr "Malfermanta Dosieron"
 
-#: uml.cpp:726
+#: uml.cpp:733
 msgid "Saving file..."
 msgstr "Savanta dosieron..."
 
-#: uml.cpp:737
+#: uml.cpp:744
 msgid "Saving file with a new filename..."
 msgstr "Savanta dosieron kun nova dosiernomo..."
 
-#: uml.cpp:742
+#: uml.cpp:749
 msgid ""
 "*.xmi|XMI File\n"
 "*.xmi.tgz|Gzip Compressed XMI File\n"
@@ -2251,7 +2304,7 @@ msgid ""
 "*|All Files"
 msgstr ""
 
-#: uml.cpp:759
+#: uml.cpp:766
 msgid ""
 "The file %1 exists.\n"
 "Do you wish to overwrite it?"
@@ -2259,113 +2312,113 @@ msgstr ""
 "La dosiero %1 ekzistas.\n"
 "Ĉu vi volas superskribi ĝin?"
 
-#: uml.cpp:759
+#: uml.cpp:766
 #, fuzzy
 msgid "Overwrite"
 msgstr "&Superskribi"
 
-#: uml.cpp:783
+#: uml.cpp:790
 msgid "Closing file..."
 msgstr "Fermanta dosieron..."
 
-#: uml.cpp:791
+#: uml.cpp:798
 msgid "Printing..."
 msgstr "Presado..."
 
-#: uml.cpp:798
+#: uml.cpp:805
 #, c-format
 msgid "Print %1"
 msgstr "Presi %1"
 
-#: uml.cpp:806
+#: uml.cpp:813
 msgid "Exiting..."
 msgstr "Eliĝanta..."
 
-#: uml.cpp:826
+#: uml.cpp:833
 msgid "Cutting selection..."
 msgstr ""
 
-#: uml.cpp:839
+#: uml.cpp:846
 msgid "Copying selection to clipboard..."
 msgstr ""
 
-#: uml.cpp:847
+#: uml.cpp:854
 msgid "Inserting clipboard contents..."
 msgstr ""
 
-#: uml.cpp:852
+#: uml.cpp:859
 msgid ""
 "Umbrello could not paste the clipboard contents.  The objects in the clipboard "
 "may be of the wrong type to be pasted here."
 msgstr ""
 
-#: clipboard/umlclipboard.cpp:675 uml.cpp:854
+#: clipboard/umlclipboard.cpp:675 uml.cpp:861
 msgid "Paste Error"
 msgstr ""
 
-#: uml.cpp:866
+#: uml.cpp:873
 msgid "Toggling toolbar..."
 msgstr ""
 
-#: uml.cpp:881
+#: uml.cpp:888
 msgid "Toggle the statusbar..."
 msgstr ""
 
-#: uml.cpp:1177
+#: uml.cpp:1184
 msgid "Cannot view code until you generate some first."
 msgstr ""
 
-#: uml.cpp:1177 uml.cpp:1180
+#: uml.cpp:1184 uml.cpp:1187
 msgid "Cannot View Code"
 msgstr ""
 
-#: uml.cpp:1180
+#: uml.cpp:1187
 msgid "Cannot view code from simple code writer."
 msgstr ""
 
-#: uml.cpp:1198
+#: uml.cpp:1205
 msgid "Could not find a code generator."
 msgstr ""
 
-#: uml.cpp:1199
+#: uml.cpp:1206
 msgid "No Code Generator"
 msgstr ""
 
-#: uml.cpp:1238
+#: uml.cpp:1245
 msgid ""
 "There is no active language defined.\n"
 "Please select one of the installed languages to generate the code with."
 msgstr ""
 
-#: uml.cpp:1240
+#: uml.cpp:1247
 msgid "No Language Selected"
 msgstr ""
 
-#: uml.cpp:1411
+#: uml.cpp:1422
 msgid "*.idl|IDL Files (*.idl)"
 msgstr ""
 
-#: uml.cpp:1413
+#: uml.cpp:1424
 msgid "*.py|Python Files (*.py)"
 msgstr ""
 
-#: uml.cpp:1415
+#: uml.cpp:1426
 msgid "*.java|Java Files (*.java)"
 msgstr ""
 
-#: uml.cpp:1417
+#: uml.cpp:1428
 msgid "*.ads *.ada|Ada Files (*.ads *.ada)"
 msgstr ""
 
-#: uml.cpp:1419
+#: uml.cpp:1430
 msgid "*.h *.hh *.hpp *.hxx *.H|Header Files (*.h *.hh *.hpp *.hxx *.H)"
 msgstr ""
 
-#: uml.cpp:1421
+#: uml.cpp:1432
 msgid "All Files"
 msgstr ""
 
-#: uml.cpp:1423
+#: uml.cpp:1434
 msgid "Select Code to Import"
 msgstr "Selekti Kodon por Importado"
 
@@ -3003,14 +3056,69 @@ msgstr ""
 msgid "Line width:  "
 msgstr ""
 
-#. i18n: file dialogs/umlrolepropertiesbase.ui line 106
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 16
+#: rc.cpp:453
+#, fuzzy, no-c-format
+msgid "Export all views"
+msgstr "Eksporti kiel Bildon..."
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 49
+#: rc.cpp:456
+#, no-c-format
+msgid "&Directory to save the diagrams in:"
+msgstr ""
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 55
+#: rc.cpp:459 rc.cpp:462
+#, no-c-format
+msgid "The base directory used to save the images"
+msgstr ""
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 84
 #: rc.cpp:465
+#, fuzzy, no-c-format
+msgid "&Image type:"
+msgstr "Statotipo:"
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 100
+#: rc.cpp:471
+#, fuzzy, no-c-format
+msgid "Use &folders"
+msgstr "teko"
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 103
+#: rc.cpp:474
+#, no-c-format
+msgid "Alt+F"
+msgstr ""
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 107
+#: rc.cpp:477
+#, no-c-format
+msgid ""
+"Create in the target directory the same tree structure used\n"
+"in the document to store the views"
+msgstr ""
+
+#. i18n: file dialogs/exportallviewsdialogbase.ui line 111
+#: rc.cpp:481
+#, no-c-format
+msgid ""
+"The views are stored in folders in the document. The same tree structure used "
+"in the document to store the views can be created in the selected base "
+"directory with this option.\n"
+"Only the folders made by the user are created in the base directory (Logical "
+"view, use case view and so on aren't created)."
+msgstr ""
+
+#. i18n: file dialogs/umlrolepropertiesbase.ui line 106
+#: rc.cpp:505
 #, no-c-format
 msgid "Role Changeability"
 msgstr ""
 
 #. i18n: file dialogs/umlrolepropertiesbase.ui line 156
-#: rc.cpp:477
+#: rc.cpp:517
 #, no-c-format
 msgid "Role Visibility"
 msgstr ""
@@ -3023,19 +3131,19 @@ msgstr ""
 "Operacio kun la sama nomo kaj signaturo jam ekzistas. Vi ne povas aldoni ĝin "
 "refoje."
 
-#: activitywidget.cpp:129 toolbarstateother.cpp:135 umlview.cpp:2984
+#: activitywidget.cpp:129 toolbarstateother.cpp:135 umlview.cpp:2747
 msgid "Enter Activity Name"
 msgstr "Enigi Nomon de Aktiveco"
 
-#: statewidget.cpp:159 toolbarstateother.cpp:139 umlview.cpp:2948
+#: statewidget.cpp:159 toolbarstateother.cpp:139 umlview.cpp:2711
 msgid "Enter State Name"
 msgstr "Enigi Nomon de Stato"
 
-#: statewidget.cpp:159 toolbarstateother.cpp:140 umlview.cpp:2949
+#: statewidget.cpp:159 toolbarstateother.cpp:140 umlview.cpp:2712
 msgid "Enter the name of the new state:"
 msgstr "Enigi nomon de nova stato"
 
-#: toolbarstateother.cpp:140 umlview.cpp:2950
+#: toolbarstateother.cpp:140 umlview.cpp:2713
 msgid "new state"
 msgstr "nova stato"
 
@@ -3079,53 +3187,33 @@ msgstr "Rolnomo"
 msgid "Enter role name:"
 msgstr "Enigi nomon de rolo:"
 
-#: umlview.cpp:290 umlview.cpp:350
+#: umlview.cpp:296 umlview.cpp:356
 msgid "Diagram: %2 Page %1"
 msgstr "Diagramo: %2 Paĝo %1"
 
-#: umlview.cpp:1560
-msgid ""
-"The selected file %1 exists.\n"
-"Do you want to overwrite it?"
-msgstr ""
-"La selektita dosiero %1 jam ekzistas.\n"
-"Ĉu vi volas superskribi ĝin?"
-
-#: umlview.cpp:1561
-msgid "File Already Exists"
-msgstr ""
-
-#: umlview.cpp:1572
-msgid "Can not save an empty diagram"
-msgstr ""
-
-#: umlview.cpp:1573
-msgid "Diagram Save Error."
-msgstr ""
-
-#: umlview.cpp:2099 umlview.cpp:2165
+#: umlview.cpp:1862 umlview.cpp:1928
 msgid "Incorrect use of associations."
 msgstr ""
 
-#: umlview.cpp:2099 umlview.cpp:2165
+#: umlview.cpp:1862 umlview.cpp:1928
 msgid "Association Error"
 msgstr ""
 
-#: umlview.cpp:3017
+#: umlview.cpp:2780
 msgid "Enter Diagram Name"
 msgstr "Enigi Nomon de Diagramo"
 
-#: umlview.cpp:3018
+#: umlview.cpp:2781
 msgid "Enter the new name of the diagram:"
 msgstr ""
 
-#: umlview.cpp:3175
+#: umlview.cpp:2938
 msgid ""
 "You are about to delete the entire diagram.\n"
 "Are you sure?"
 msgstr ""
 
-#: umlview.cpp:3177
+#: umlview.cpp:2940
 msgid "Delete Diagram?"
 msgstr "Forigi Diagramon?"
 
@@ -3367,6 +3455,15 @@ msgid ""
 msgstr ""
 "<p>Vi povas krei kaj pritrakti novan klason en la Sorĉisto por Nova Klaso de la "
 "menuo Kodo.</p>\n"
+
+#: umlviewimageexporterall.cpp:54
+#, fuzzy
+msgid "Exporting all views..."
+msgstr "Eksporti kiel Bildon..."
+
+#: umlviewimageexporterall.cpp:60 umlviewimageexporterall.cpp:66
+msgid "Some errors happened when exporting the images:"
+msgstr ""
 
 #: statewidget.cpp:170
 msgid "Enter Activity"
