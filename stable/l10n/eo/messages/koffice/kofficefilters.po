@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2006-05-26 04:08+0200\n"
+"POT-Creation-Date: 2006-07-13 03:35+0200\n"
 "PO-Revision-Date: 2002-09-16 20:18GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -40,6 +40,20 @@ msgstr ""
 msgid "Malformed XML data."
 msgstr ""
 
+#: krita/pdf/kis_pdf_import.cpp:101
+msgid "A password is required to read that pdf"
+msgstr ""
+
+#: krita/pdf/kis_pdf_import.cpp:111
+#, fuzzy
+msgid "PDF Import Options"
+msgstr "Eksportu tabelojn:"
+
+#: krita/pdf/kis_pdf_import.cpp:144
+#, fuzzy, c-format
+msgid "Page %1"
+msgstr "Tabeloj"
+
 #: krita/png/kis_png_export.cc:58
 msgid "PNG Export Options"
 msgstr ""
@@ -47,8 +61,7 @@ msgstr ""
 #: krita/jpeg/kis_jpeg_converter.cc:76 krita/png/kis_png_converter.cc:65
 #: krita/tiff/kis_tiff_writer_visitor.cpp:59
 msgid ""
-"The selected image format does not support the colorspace of the image (%1)\n"
-"Please choose another format or convert to a different colorspace"
+"Cannot export images in %1.\n"
 msgstr ""
 
 #: krita/raw/kis_raw_import.cpp:427
@@ -60,33 +73,36 @@ msgstr ""
 msgid "JPEG Export Options"
 msgstr ""
 
-#: krita/tiff/kis_ycbcr_u16_colorspace.cpp:36
-#: krita/tiff/kis_ycbcr_u8_colorspace.cpp:35
-msgid "Alpha"
-msgstr ""
-
 #: krita/tiff/kis_dlg_options_tiff.cpp:34
 msgid "TIFF Export Options"
 msgstr ""
 
-#: krita/magick/kis_image_magick_converter.cc:367
+#: krita/gmagick/kis_image_magick_converter.cc:411
+#: krita/magick/kis_image_magick_converter.cc:363
 #, fuzzy
 msgid "Importing..."
 msgstr "Eksportu tabelojn:"
 
-#: krita/magick/kis_image_magick_converter.cc:849
+#: krita/gmagick/kis_image_magick_converter.cc:891
+#: krita/magick/kis_image_magick_converter.cc:843
 msgid "Saving..."
 msgstr ""
 
-#: krita/magick/kis_image_magick_converter.cc:876
+#: krita/gmagick/kis_image_magick_converter.cc:918
+#: krita/gmagick/kis_image_magick_converter.cc:942
+#: krita/gmagick/kis_image_magick_converter.cc:948
+#: krita/gmagick/kis_image_magick_converter.cc:968
+#: krita/magick/kis_image_magick_converter.cc:870
+#: krita/magick/kis_image_magick_converter.cc:894
 #: krita/magick/kis_image_magick_converter.cc:900
-#: krita/magick/kis_image_magick_converter.cc:906
-#: krita/magick/kis_image_magick_converter.cc:926
+#: krita/magick/kis_image_magick_converter.cc:920
 msgid "Loading..."
 msgstr ""
 
-#: krita/magick/kis_image_magick_converter.cc:1006
-#: krita/magick/kis_image_magick_converter.cc:1086
+#: krita/gmagick/kis_image_magick_converter.cc:1048
+#: krita/gmagick/kis_image_magick_converter.cc:1128
+#: krita/magick/kis_image_magick_converter.cc:1000
+#: krita/magick/kis_image_magick_converter.cc:1080
 msgid "All Images"
 msgstr ""
 
@@ -289,26 +305,26 @@ msgid "Latex Import Filter Parameters"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 82
-#: kword/latex/import/lateximportdia.cc:68 rc.cpp:446 rc.cpp:796
+#: kword/latex/import/lateximportdia.cc:68 rc.cpp:514 rc.cpp:864
 #, no-c-format
 msgid "Document Style"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 116
-#: kword/latex/import/lateximportdia.cc:74 rc.cpp:452 rc.cpp:802
+#: kword/latex/import/lateximportdia.cc:74 rc.cpp:520 rc.cpp:870
 #, no-c-format
 msgid "Latex style"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 97
-#: kword/latex/import/lateximportdia.cc:77 rc.cpp:449 rc.cpp:799
+#: kword/latex/import/lateximportdia.cc:77 rc.cpp:517 rc.cpp:867
 #, no-c-format
 msgid "KWord style"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 332
-#: kword/latex/import/lateximportdia.cc:90 rc.cpp:503 rc.cpp:509 rc.cpp:853
-#: rc.cpp:859
+#: kword/latex/import/lateximportdia.cc:90 rc.cpp:571 rc.cpp:577 rc.cpp:921
+#: rc.cpp:927
 #, no-c-format
 msgid "Language"
 msgstr ""
@@ -322,7 +338,7 @@ msgid "latin1"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 84
-#: kword/latex/import/lateximportdia.cc:112 rc.cpp:362 rc.cpp:455 rc.cpp:805
+#: kword/latex/import/lateximportdia.cc:112 rc.cpp:430 rc.cpp:523 rc.cpp:873
 #, no-c-format
 msgid "Document Type"
 msgstr ""
@@ -513,7 +529,7 @@ msgid "Decimal Point Number"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 71
-#: kspread/csv/csvdialog.cpp:500 rc.cpp:200 rc.cpp:230 rc.cpp:706
+#: kspread/csv/csvdialog.cpp:500 rc.cpp:268 rc.cpp:298 rc.cpp:774
 #, no-c-format
 msgid "None"
 msgstr "Neniu"
@@ -672,13 +688,13 @@ msgid "Custom size (in pixels):"
 msgstr ""
 
 #. i18n: file ./kivio/imageexport/kivio_imageexportwidget.ui line 108
-#: libdialogfilter/exportsizedia.cpp:90 rc.cpp:18
+#: libdialogfilter/exportsizedia.cpp:90 rc.cpp:18 rc.cpp:54
 #, no-c-format
 msgid "Height:"
 msgstr ""
 
 #. i18n: file ./kivio/imageexport/kivio_imageexportwidget.ui line 119
-#: libdialogfilter/exportsizedia.cpp:87 rc.cpp:21
+#: libdialogfilter/exportsizedia.cpp:87 rc.cpp:21 rc.cpp:51
 #, no-c-format
 msgid "Width:"
 msgstr ""
@@ -689,26 +705,110 @@ msgstr ""
 msgid "Margin:"
 msgstr ""
 
-#. i18n: file ./krita/png/kis_wdg_options_png.ui line 16
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 16
 #: rc.cpp:27
+#, fuzzy, no-c-format
+msgid "PDFImportWidget"
+msgstr "Eksportu tabelojn:"
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 27
+#: rc.cpp:30
+#, no-c-format
+msgid "Dimensions:"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 38
+#: rc.cpp:33
+#, no-c-format
+msgid "Resolution:"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 79
+#: rc.cpp:36
+#, fuzzy, no-c-format
+msgid "Vertical:"
+msgstr "Innlegg"
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 85
+#: rc.cpp:39 rc.cpp:45
+#, no-c-format
+msgid "Dots/inch"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 119
+#: rc.cpp:42
+#, no-c-format
+msgid "Horizontal:"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 158
+#: rc.cpp:48
+#, no-c-format
+msgid "Size:"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 254
+#: rc.cpp:57
+#, no-c-format
+msgid "Pages:"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 265
+#: rc.cpp:60
+#, no-c-format
+msgid "&All pages"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 268
+#: rc.cpp:63
+#, fuzzy, no-c-format
+msgid "Alt+A"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 276
+#: rc.cpp:66
+#, no-c-format
+msgid "&First page"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 279
+#: rc.cpp:69
+#, fuzzy, no-c-format
+msgid "Alt+F"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 290
+#: rc.cpp:72
+#, no-c-format
+msgid "&Selection of page"
+msgstr ""
+
+#. i18n: file ./krita/pdf/pdfimportwidgetbase.ui line 293
+#: rc.cpp:75
+#, no-c-format
+msgid "Alt+S"
+msgstr "Alt+S"
+
+#. i18n: file ./krita/png/kis_wdg_options_png.ui line 16
+#: rc.cpp:78
 #, no-c-format
 msgid "Options of Your PNG"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 38
-#: rc.cpp:30 rc.cpp:276 rc.cpp:325
+#: rc.cpp:81 rc.cpp:344 rc.cpp:393
 #, no-c-format
 msgid "Compress:"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 44
-#: rc.cpp:33 rc.cpp:279 rc.cpp:328
+#: rc.cpp:84 rc.cpp:347 rc.cpp:396
 #, no-c-format
 msgid "Note: the compression level does not change the quality of the result"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 48
-#: rc.cpp:36 rc.cpp:282 rc.cpp:331
+#: rc.cpp:87 rc.cpp:350 rc.cpp:399
 #, no-c-format
 msgid ""
 "<p>Adjust the compression time. Better compression takes longer.\n"
@@ -716,14 +816,14 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 82
-#: rc.cpp:40 rc.cpp:286 rc.cpp:335
+#: rc.cpp:91 rc.cpp:354 rc.cpp:403
 #, no-c-format
 msgid "Note: the compression level doesn't change the quality of the result"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 86
-#: rc.cpp:43 rc.cpp:50 rc.cpp:57 rc.cpp:289 rc.cpp:296 rc.cpp:303 rc.cpp:338
-#: rc.cpp:345 rc.cpp:352
+#: rc.cpp:94 rc.cpp:101 rc.cpp:108 rc.cpp:357 rc.cpp:364 rc.cpp:371 rc.cpp:406
+#: rc.cpp:413 rc.cpp:420
 #, no-c-format
 msgid ""
 "<p>Adjust the compression time. Better compression takes longer.\n"
@@ -731,31 +831,31 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 102
-#: rc.cpp:47 rc.cpp:293 rc.cpp:342
+#: rc.cpp:98 rc.cpp:361 rc.cpp:410
 #, no-c-format
 msgid "Fast"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 114
-#: rc.cpp:54 rc.cpp:300 rc.cpp:349
+#: rc.cpp:105 rc.cpp:368 rc.cpp:417
 #, no-c-format
 msgid "Small"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 152
-#: rc.cpp:61
+#: rc.cpp:112
 #, no-c-format
 msgid "Interlacing"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 155
-#: rc.cpp:64
+#: rc.cpp:115
 #, no-c-format
 msgid "Use interlacing when publishing on the Internet"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 159
-#: rc.cpp:67
+#: rc.cpp:118
 #, no-c-format
 msgid ""
 "<p>Interlacing is useful if you intend to publish your image on the Internet."
@@ -765,19 +865,19 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 167
-#: rc.cpp:71
+#: rc.cpp:122
 #, no-c-format
 msgid "Store alpha channel (transparency)"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 173
-#: rc.cpp:74 rc.cpp:245
+#: rc.cpp:125 rc.cpp:313
 #, no-c-format
 msgid "Disable to get smaller files if your image has no transparancy"
 msgstr ""
 
 #. i18n: file ./krita/png/kis_wdg_options_png.ui line 177
-#: rc.cpp:77 rc.cpp:248
+#: rc.cpp:128 rc.cpp:316
 #, no-c-format
 msgid ""
 "<p>The Portable Network Graphics (PNG) file format allows transparancy in your "
@@ -787,114 +887,88 @@ msgid ""
 "<br>Always saving the alpha channel is recommended.</p>"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 24
-#: rc.cpp:81
+#. i18n: file ./krita/raw/wdgrawimport.ui line 16
+#: rc.cpp:132
 #, no-c-format
-msgid "Colorspace"
+msgid "WdgRawImport"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 38
-#: rc.cpp:84
-#, no-c-format
-msgid "&Document mode"
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 46
-#: rc.cpp:87
-#, no-c-format
-msgid "&RGB"
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 59
-#: rc.cpp:90
-#, no-c-format
-msgid "Channel Depth"
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 79
-#: rc.cpp:93
-#, no-c-format
-msgid "&16 bits per channel"
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 82
-#: rc.cpp:96
-#, fuzzy, no-c-format
-msgid "Alt+1"
-msgstr "Alt+A"
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 93
-#: rc.cpp:99
-#, no-c-format
-msgid "&8 bits per channel"
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 96
-#: rc.cpp:102
-#, fuzzy, no-c-format
-msgid "Alt+8"
-msgstr "Alt+A"
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 109
-#: rc.cpp:105
-#, no-c-format
-msgid "&Interpolate RGB as four colors"
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 112
-#: rc.cpp:108
-#, no-c-format
-msgid ""
-"Interpolate RGB as four colors. This blurs the image a little, but it "
-"eliminates false 2x2 mesh patterns. "
-msgstr ""
-
-#. i18n: file ./krita/raw/wdgrawimport.ui line 139
-#: rc.cpp:111
+#. i18n: file ./krita/raw/wdgrawimport.ui line 27
+#: rc.cpp:135
 #, no-c-format
 msgid "&Update Preview"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 164
-#: rc.cpp:114
+#. i18n: file ./krita/raw/wdgrawimport.ui line 30
+#: rc.cpp:138
+#, fuzzy, no-c-format
+msgid "Alt+U"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 65
+#: rc.cpp:141
 #, no-c-format
 msgid "Color Settings"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 175
-#: rc.cpp:117
+#. i18n: file ./krita/raw/wdgrawimport.ui line 76
+#: rc.cpp:144
+#, no-c-format
+msgid "Blackpoint:"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 84
+#: rc.cpp:147
+#, no-c-format
+msgid "Red multiplier:"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 103
+#: rc.cpp:150
+#, no-c-format
+msgid "Blue multiplier:"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 133
+#: rc.cpp:153
+#, no-c-format
+msgid "Brightness. 1.0 is default"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 141
+#: rc.cpp:156
 #, no-c-format
 msgid "&White Balance"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 189
-#: rc.cpp:120
+#. i18n: file ./krita/raw/wdgrawimport.ui line 155
+#: rc.cpp:159
 #, no-c-format
 msgid "White card in sunlight"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 200
-#: rc.cpp:123
+#. i18n: file ./krita/raw/wdgrawimport.ui line 166
+#: rc.cpp:162
 #, no-c-format
-msgid "Automatic white balance"
+msgid "Automatic"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 209
-#: rc.cpp:127
+#. i18n: file ./krita/raw/wdgrawimport.ui line 175
+#: rc.cpp:166
 #, no-c-format
 msgid ""
 "Automatic color balance. The default is to use a fixed color balance based on a "
 "white card photographed in sunlight."
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 217
-#: rc.cpp:130
+#. i18n: file ./krita/raw/wdgrawimport.ui line 183
+#: rc.cpp:169
 #, no-c-format
-msgid "Camera white balance"
+msgid "From Camera"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 224
-#: rc.cpp:134
+#. i18n: file ./krita/raw/wdgrawimport.ui line 190
+#: rc.cpp:173
 #, no-c-format
 msgid ""
 "\n"
@@ -902,95 +976,163 @@ msgid ""
 "prints a warning and reverts to the default. "
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 242
-#: rc.cpp:139
+#. i18n: file ./krita/raw/wdgrawimport.ui line 200
+#: rc.cpp:177
 #, no-c-format
 msgid "Brightness:"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 261
-#: rc.cpp:143
+#. i18n: file ./krita/raw/wdgrawimport.ui line 210
+#: rc.cpp:180
 #, no-c-format
-msgid "Blackpoint:"
+msgid "Colorspace"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 280
-#: rc.cpp:147
+#. i18n: file ./krita/raw/wdgrawimport.ui line 224
+#: rc.cpp:183
 #, no-c-format
-msgid "Red multiplier:"
+msgid "&Document mode"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 310
-#: rc.cpp:151
+#. i18n: file ./krita/raw/wdgrawimport.ui line 227
+#: rc.cpp:186
+#, fuzzy, no-c-format
+msgid "Alt+D"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 235
+#: rc.cpp:189
 #, no-c-format
-msgid "Blue multiplier:"
+msgid "&RGB"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 343
-#: rc.cpp:154
+#. i18n: file ./krita/raw/wdgrawimport.ui line 238
+#: rc.cpp:192
+#, fuzzy, no-c-format
+msgid "Alt+R"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 251
+#: rc.cpp:195
 #, no-c-format
-msgid "Brightness. 1.0 is default"
+msgid "Channel Depth"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 370
-#: rc.cpp:157
+#. i18n: file ./krita/raw/wdgrawimport.ui line 271
+#: rc.cpp:198
+#, no-c-format
+msgid "&16 bits per channel"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 274
+#: rc.cpp:201
+#, fuzzy, no-c-format
+msgid "Alt+1"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 285
+#: rc.cpp:204
+#, no-c-format
+msgid "&8 bits per channel"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 288
+#: rc.cpp:207
+#, fuzzy, no-c-format
+msgid "Alt+8"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 301
+#: rc.cpp:210
+#, no-c-format
+msgid "&Interpolate RGB as four colors"
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 304
+#: rc.cpp:213
+#, fuzzy, no-c-format
+msgid "Alt+I"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 307
+#: rc.cpp:216
+#, no-c-format
+msgid ""
+"Interpolate RGB as four colors. This blurs the image a little, but it "
+"eliminates false 2x2 mesh patterns. "
+msgstr ""
+
+#. i18n: file ./krita/raw/wdgrawimport.ui line 359
+#: rc.cpp:219
 #, no-c-format
 msgid "Clip colors to prevent pink highlights"
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 379
-#: rc.cpp:161
+#. i18n: file ./krita/raw/wdgrawimport.ui line 368
+#: rc.cpp:223
 #, no-c-format
 msgid ""
 "By default, dcraw clips all colors to prevent pink hues in the highlights. "
 "Combine this option with -b 0.25 to leave the image data completely unclipped."
 msgstr ""
 
-#. i18n: file ./krita/raw/wdgrawimport.ui line 387
-#: rc.cpp:164
+#. i18n: file ./krita/raw/wdgrawimport.ui line 413
+#: rc.cpp:228
 #, no-c-format
 msgid "Use camera raw colors, not sRGB"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 32
-#: rc.cpp:169 rc.cpp:261 rc.cpp:479 rc.cpp:829
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 16
+#: rc.cpp:231
+#, no-c-format
+msgid "KisWdgOptionsJPEG"
+msgstr ""
+
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 38
+#: rc.cpp:234 rc.cpp:329 rc.cpp:547 rc.cpp:897
 #, no-c-format
 msgid "Quality:"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 75
-#: rc.cpp:172 rc.cpp:264
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 81
+#: rc.cpp:237 rc.cpp:332
 #, no-c-format
 msgid ""
 "These settings determine how much information is lost during compression"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 91
-#: rc.cpp:175 rc.cpp:267
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 97
+#: rc.cpp:240 rc.cpp:335
 #, no-c-format
 msgid "Smallest"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 99
-#: rc.cpp:178 rc.cpp:270
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 105
+#: rc.cpp:243 rc.cpp:338
 #, no-c-format
 msgid "Best"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 116
-#: rc.cpp:181
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 122
+#: rc.cpp:246
 #, no-c-format
 msgid "Pr&ogressive"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 119
-#: rc.cpp:184
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 125
+#: rc.cpp:249
+#, fuzzy, no-c-format
+msgid "Alt+O"
+msgstr "Alt+A"
+
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 128
+#: rc.cpp:252
 #, no-c-format
 msgid "Use progressive when publishing on the Internet"
 msgstr ""
 
-#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 123
-#: rc.cpp:187
+#. i18n: file ./krita/jpeg/kis_wdg_options_jpeg.ui line 132
+#: rc.cpp:255
 #, no-c-format
 msgid ""
 "<p>Progressive is useful if you intend to publish your image on the Internet."
@@ -1000,110 +1142,110 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 24
-#: rc.cpp:191
+#: rc.cpp:259
 #, no-c-format
 msgid "Options of Your TIFF"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 46
-#: rc.cpp:194
+#: rc.cpp:262
 #, no-c-format
 msgid "TIFF Options"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 65
-#: rc.cpp:197
+#: rc.cpp:265
 #, no-c-format
 msgid "Compression type:"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 76
-#: rc.cpp:203
+#: rc.cpp:271
 #, no-c-format
 msgid "JPEG DCT Compression"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 81
-#: rc.cpp:206
+#: rc.cpp:274
 #, no-c-format
 msgid "Deflate (ZIP)"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 86
-#: rc.cpp:209
+#: rc.cpp:277
 #, no-c-format
 msgid "Lempel-Ziv & Welch (LZW)"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 91
-#: rc.cpp:212
+#: rc.cpp:280
 #, no-c-format
 msgid "Leadtools JPEG2000"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 96
-#: rc.cpp:215
+#: rc.cpp:283
 #, no-c-format
 msgid "CCITT Modified Huffman RLE"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 101
-#: rc.cpp:218
+#: rc.cpp:286
 #, no-c-format
 msgid "CCITT Group 3 Fax Encoding"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 106
-#: rc.cpp:221
+#: rc.cpp:289
 #, no-c-format
 msgid "CCITT Group 4 Fax Encoding"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 111
-#: rc.cpp:224
+#: rc.cpp:292
 #, no-c-format
 msgid "Pixar Log"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 133
-#: rc.cpp:227
+#: rc.cpp:295
 #, no-c-format
 msgid "Predictor:"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 144
-#: rc.cpp:233
+#: rc.cpp:301
 #, no-c-format
 msgid "Horizontal Differencing"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 149
-#: rc.cpp:236
+#: rc.cpp:304
 #, no-c-format
 msgid "Floating Point Horizontal Differencing"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 159
-#: rc.cpp:239
+#: rc.cpp:307
 #, no-c-format
 msgid ""
 "Using a predictor can improve the compression (mostly for LZW and deflate)"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 169
-#: rc.cpp:242
+#: rc.cpp:310
 #, no-c-format
 msgid "Store alpha &channel (transparency)"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 195
-#: rc.cpp:252
+#: rc.cpp:320
 #, no-c-format
 msgid "Flatten the &image"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 201
-#: rc.cpp:255
+#: rc.cpp:323
 #, no-c-format
 msgid ""
 "This option will merge all layers. It is advisable to check this option, "
@@ -1111,103 +1253,103 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 273
-#: rc.cpp:258
+#: rc.cpp:326
 #, no-c-format
 msgid "JPEG Compression Options"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 395
-#: rc.cpp:273
+#: rc.cpp:341
 #, no-c-format
 msgid "Deflate Compression Options"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 530
-#: rc.cpp:307
+#: rc.cpp:375
 #, no-c-format
 msgid "CCITT Group 3 fax encoding Options"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 541
-#: rc.cpp:310
+#: rc.cpp:378
 #, no-c-format
 msgid "Fax mode:"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 547
-#: rc.cpp:313
+#: rc.cpp:381
 #, no-c-format
 msgid "Classic"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 552
-#: rc.cpp:316
+#: rc.cpp:384
 #, no-c-format
 msgid "No RTC"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 557
-#: rc.cpp:319
+#: rc.cpp:387
 #, no-c-format
 msgid "No EOL"
 msgstr ""
 
 #. i18n: file ./krita/tiff/kis_wdg_options_tiff.ui line 598
-#: rc.cpp:322
+#: rc.cpp:390
 #, no-c-format
 msgid "Pixar Log Compression Options"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 18
-#: rc.cpp:356
+#: rc.cpp:424
 #, no-c-format
 msgid "HTML Export Dialog"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 43
-#: rc.cpp:359 rc.cpp:407 rc.cpp:425 rc.cpp:591 rc.cpp:667
+#: rc.cpp:427 rc.cpp:475 rc.cpp:493 rc.cpp:659 rc.cpp:735
 #, no-c-format
 msgid "E&ncoding:"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 104
-#: rc.cpp:365
+#: rc.cpp:433
 #, no-c-format
 msgid "&HTML 4.01"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 110
-#: rc.cpp:368
+#: rc.cpp:436
 #, no-c-format
 msgid "HTML 4.01 (For older HTML user agents) "
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 118
-#: rc.cpp:371
+#: rc.cpp:439
 #, no-c-format
 msgid "&XHTML 1.0"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 124
-#: rc.cpp:374
+#: rc.cpp:442
 #, no-c-format
 msgid "XHTML 1.0"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 134
-#: rc.cpp:377
+#: rc.cpp:445
 #, no-c-format
 msgid "Mode"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 157
-#: rc.cpp:380
+#: rc.cpp:448
 #, no-c-format
 msgid "L&ight: Convert to strict (X)HTML"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 160
-#: rc.cpp:383
+#: rc.cpp:451
 #, no-c-format
 msgid ""
 "Convert mainly the document structure (Recommended for exporting to browsers "
@@ -1215,13 +1357,13 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 174
-#: rc.cpp:386
+#: rc.cpp:454
 #, no-c-format
 msgid "&Basic: Convert to transitional (X)HTML"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 180
-#: rc.cpp:389
+#: rc.cpp:457
 #, no-c-format
 msgid ""
 "Convert most of the document (Recommended for re-importing in KWord or for "
@@ -1229,13 +1371,13 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 188
-#: rc.cpp:392
+#: rc.cpp:460
 #, no-c-format
 msgid "&Enhanced: Convert to (X)HTML with CSS"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 194
-#: rc.cpp:395
+#: rc.cpp:463
 #, no-c-format
 msgid ""
 "Convert as much as possible of the KWord document (Recommended for exporting to "
@@ -1243,103 +1385,103 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 235
-#: rc.cpp:398
+#: rc.cpp:466
 #, no-c-format
 msgid "Use external CSS sheet:"
 msgstr ""
 
 #. i18n: file ./kword/html/export/ExportDialogUI.ui line 246
-#: rc.cpp:401
+#: rc.cpp:469
 #, no-c-format
 msgid "Enter the location of the CSS file in this field"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ExportDialogUI.ui line 18
-#: rc.cpp:404
+#: rc.cpp:472
 #, no-c-format
 msgid "Plain Text Export Dialog"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ExportDialogUI.ui line 84
-#: rc.cpp:410 rc.cpp:594
+#: rc.cpp:478 rc.cpp:662
 #, no-c-format
 msgid "End of Line"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ExportDialogUI.ui line 101
-#: rc.cpp:413 rc.cpp:597
+#: rc.cpp:481 rc.cpp:665
 #, no-c-format
 msgid "&UNIX style (recommended; line feed only)"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ExportDialogUI.ui line 112
-#: rc.cpp:416 rc.cpp:600
+#: rc.cpp:484 rc.cpp:668
 #, no-c-format
 msgid "&Windows style (carriage return and line feed)"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ExportDialogUI.ui line 123
-#: rc.cpp:419 rc.cpp:603
+#: rc.cpp:487 rc.cpp:671
 #, no-c-format
 msgid "&MacOS style (carriage return only)"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ImportDialogUI.ui line 18
-#: rc.cpp:422
+#: rc.cpp:490
 #, no-c-format
 msgid "Plain Text Import Dialog"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ImportDialogUI.ui line 84
-#: rc.cpp:428
+#: rc.cpp:496
 #, no-c-format
 msgid "End of Paragraph"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ImportDialogUI.ui line 101
-#: rc.cpp:431
+#: rc.cpp:499
 #, no-c-format
 msgid "&As is: At the end of line"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ImportDialogUI.ui line 112
-#: rc.cpp:434
+#: rc.cpp:502
 #, no-c-format
 msgid "&Sentence: If the end of line is the end of a sentence"
 msgstr ""
 
 #. i18n: file ./kword/ascii/ImportDialogUI.ui line 120
-#: rc.cpp:437
+#: rc.cpp:505
 #, no-c-format
 msgid "Old &method: If the line is empty or has less than 40 characters"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 18
-#: rc.cpp:440 rc.cpp:790
+#: rc.cpp:508 rc.cpp:858
 #, no-c-format
 msgid "Latex Export Filter Configuration"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 45
-#: rc.cpp:443 rc.cpp:793
+#: rc.cpp:511 rc.cpp:861
 #, no-c-format
 msgid "Document"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 148
-#: rc.cpp:458 rc.cpp:808
+#: rc.cpp:526 rc.cpp:876
 #, no-c-format
 msgid "Independent document"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 154
-#: rc.cpp:461 rc.cpp:811
+#: rc.cpp:529 rc.cpp:879
 #, no-c-format
 msgid "The document will be able to be compiled alone."
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 157
-#: rc.cpp:464 rc.cpp:814
+#: rc.cpp:532 rc.cpp:882
 #, no-c-format
 msgid ""
 "The document will be generated as a full latex document since all the include "
@@ -1347,19 +1489,19 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 173
-#: rc.cpp:467 rc.cpp:817
+#: rc.cpp:535 rc.cpp:885
 #, no-c-format
 msgid "Document to include"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 176
-#: rc.cpp:470 rc.cpp:820
+#: rc.cpp:538 rc.cpp:888
 #, no-c-format
 msgid "Do not generate either the latex header or the document environment."
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 179
-#: rc.cpp:473 rc.cpp:823
+#: rc.cpp:541 rc.cpp:891
 #, no-c-format
 msgid ""
 "The document will be generated as a latex document which will have to be "
@@ -1368,115 +1510,115 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 196
-#: rc.cpp:476 rc.cpp:826
+#: rc.cpp:544 rc.cpp:894
 #, no-c-format
 msgid "Document class:"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 228
-#: rc.cpp:482 rc.cpp:832
+#: rc.cpp:550 rc.cpp:900
 #, no-c-format
 msgid "Default font size:"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 247
-#: rc.cpp:485 rc.cpp:835
+#: rc.cpp:553 rc.cpp:903
 #, no-c-format
 msgid "Final"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 252
-#: rc.cpp:488 rc.cpp:838
+#: rc.cpp:556 rc.cpp:906
 #, fuzzy, no-c-format
 msgid "Draft"
 msgstr "Dato"
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 273
-#: rc.cpp:491 rc.cpp:841
+#: rc.cpp:559 rc.cpp:909
 #, no-c-format
 msgid "Pictures"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 288
-#: rc.cpp:494 rc.cpp:844
+#: rc.cpp:562 rc.cpp:912
 #, no-c-format
 msgid "This directory will contains the eps pictures of your document."
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 304
-#: rc.cpp:497 rc.cpp:847
+#: rc.cpp:565 rc.cpp:915
 #, no-c-format
 msgid "Convert the pictures"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 323
-#: rc.cpp:500 rc.cpp:850
+#: rc.cpp:568 rc.cpp:918
 #, no-c-format
 msgid "Pictures directory:"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 347
-#: rc.cpp:506 rc.cpp:588 rc.cpp:664 rc.cpp:856
+#: rc.cpp:574 rc.cpp:656 rc.cpp:732 rc.cpp:924
 #, no-c-format
 msgid "Encoding"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 464
-#: rc.cpp:521 rc.cpp:871
+#: rc.cpp:589 rc.cpp:939
 #, no-c-format
 msgid "Export informations about author"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 486
-#: rc.cpp:524 rc.cpp:874
+#: rc.cpp:592 rc.cpp:942
 #, no-c-format
 msgid "Add a table of content"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 505
-#: rc.cpp:527 rc.cpp:877
+#: rc.cpp:595 rc.cpp:945
 #, fuzzy, no-c-format
 msgid "Notes"
 msgstr "Citiloj:"
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 520
-#: rc.cpp:530 rc.cpp:880
+#: rc.cpp:598 rc.cpp:948
 #, no-c-format
 msgid "Don't export"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 536
-#: rc.cpp:533 rc.cpp:883
+#: rc.cpp:601 rc.cpp:951
 #, no-c-format
 msgid "Export notes in comments"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 552
-#: rc.cpp:536 rc.cpp:886
+#: rc.cpp:604 rc.cpp:954
 #, no-c-format
 msgid "Export notes in margin notes"
 msgstr ""
 
 #. i18n: file ./kword/latex/export/latexexportdia.ui line 580
-#: rc.cpp:542 rc.cpp:892
+#: rc.cpp:610 rc.cpp:960
 #, fuzzy, no-c-format
 msgid "F1"
 msgstr "1"
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 18
-#: rc.cpp:551
+#: rc.cpp:619
 #, no-c-format
 msgid "MS Write Import Dialog"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 43
-#: rc.cpp:554
+#: rc.cpp:622
 #, no-c-format
 msgid "&Encoding"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 46
-#: rc.cpp:557
+#: rc.cpp:625
 #, no-c-format
 msgid ""
 "Select the encoding of the Write document."
@@ -1485,19 +1627,19 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 76
-#: rc.cpp:560
+#: rc.cpp:628
 #, no-c-format
 msgid "&Other encoding:"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 107
-#: rc.cpp:563
+#: rc.cpp:631
 #, no-c-format
 msgid "&Default encoding (CP 1252)"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 116
-#: rc.cpp:566
+#: rc.cpp:634
 #, no-c-format
 msgid ""
 "Most Write documents are stored using this encoding (also known as "
@@ -1507,13 +1649,13 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 143
-#: rc.cpp:569
+#: rc.cpp:637
 #, no-c-format
 msgid "&Advanced"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 146
-#: rc.cpp:572
+#: rc.cpp:640
 #, no-c-format
 msgid ""
 "These advanced options allow you to fine-tune the importing of formatting "
@@ -1525,13 +1667,13 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 171
-#: rc.cpp:575
+#: rc.cpp:643
 #, no-c-format
 msgid "Compensate for &linespacing differences"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 177
-#: rc.cpp:579
+#: rc.cpp:647
 #, no-c-format
 msgid ""
 "Try to simulate Write's linespacing by adding some spaces before each "
@@ -1539,193 +1681,193 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 202
-#: rc.cpp:582
+#: rc.cpp:650
 #, no-c-format
 msgid "Enable &image positioning"
 msgstr ""
 
 #. i18n: file ./kword/mswrite/ImportDialogUI.ui line 208
-#: rc.cpp:585
+#: rc.cpp:653
 #, no-c-format
 msgid "Use paragraph indentation to position images."
 msgstr ""
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 173
-#: rc.cpp:606
+#: rc.cpp:674
 #, no-c-format
 msgid "Sheets"
 msgstr ""
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 188
-#: rc.cpp:609
+#: rc.cpp:677
 #, fuzzy, no-c-format
 msgid "Available Sheets"
 msgstr "Haveblaj tabeloj:"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 206
-#: rc.cpp:612
+#: rc.cpp:680
 #, no-c-format
 msgid "Select sheets to export:"
 msgstr ""
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 222
-#: rc.cpp:615
+#: rc.cpp:683
 #, fuzzy, no-c-format
 msgid "Delimiter Line"
 msgstr "Dividlinio"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 239
-#: rc.cpp:618
+#: rc.cpp:686
 #, fuzzy, no-c-format
 msgid "********<SHEETNAME>********"
 msgstr "********<TABLENAME>********"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 255
-#: rc.cpp:621
+#: rc.cpp:689
 #, fuzzy, no-c-format
 msgid "<SHEETNAME> gets replaced by the name of the next sheet."
 msgstr "<TABLENAME> estas anstataŭigata per la nomo de la sekvonta tabelo."
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 274
-#: rc.cpp:624
+#: rc.cpp:692
 #, fuzzy, no-c-format
 msgid "Print delimiter line above every sheet"
 msgstr "Presu dividlinion super ĉiu tabelo"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 286
-#: rc.cpp:627 rc.cpp:648
+#: rc.cpp:695 rc.cpp:716
 #, no-c-format
 msgid "Cells"
 msgstr "Ĉeloj"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 311
-#: rc.cpp:630 rc.cpp:673
+#: rc.cpp:698 rc.cpp:741
 #, no-c-format
 msgid "Delimiter"
 msgstr "Dividsigno"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 328
-#: rc.cpp:633 rc.cpp:676
+#: rc.cpp:701 rc.cpp:744
 #, no-c-format
 msgid "Comma"
 msgstr "Komo"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 339
-#: rc.cpp:636 rc.cpp:679
+#: rc.cpp:704 rc.cpp:747
 #, no-c-format
 msgid "Semicolon"
 msgstr "Punktokomo"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 347
-#: rc.cpp:639 rc.cpp:682
+#: rc.cpp:707 rc.cpp:750
 #, no-c-format
 msgid "Tabulator"
 msgstr "Tabulilo"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 355
-#: rc.cpp:642 rc.cpp:685
+#: rc.cpp:710 rc.cpp:753
 #, no-c-format
 msgid "Space"
 msgstr "Spaco"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 363
-#: rc.cpp:645
+#: rc.cpp:713
 #, fuzzy, no-c-format
 msgid "Other:"
 msgstr "Aliaj"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 431
-#: rc.cpp:651
+#: rc.cpp:719
 #, no-c-format
 msgid "Quotes:"
 msgstr "Citiloj:"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 437
-#: rc.cpp:654 rc.cpp:700
+#: rc.cpp:722 rc.cpp:768
 #, no-c-format
 msgid "\""
 msgstr "\""
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 442
-#: rc.cpp:657 rc.cpp:703
+#: rc.cpp:725 rc.cpp:771
 #, no-c-format
 msgid "'"
 msgstr "'"
 
 #. i18n: file ./kspread/csv/exportdialogui.ui line 498
-#: rc.cpp:661
+#: rc.cpp:729
 #, no-c-format
 msgid "Export selection only"
 msgstr ""
 
 #. i18n: file ./kspread/csv/dialogui.ui line 140
-#: rc.cpp:670
+#: rc.cpp:738
 #, fuzzy, no-c-format
 msgid "Common"
 msgstr "Komo"
 
 #. i18n: file ./kspread/csv/dialogui.ui line 211
-#: rc.cpp:688
+#: rc.cpp:756
 #, no-c-format
 msgid "Other"
 msgstr "Aliaj"
 
 #. i18n: file ./kspread/csv/dialogui.ui line 240
-#: rc.cpp:691
+#: rc.cpp:759
 #, no-c-format
 msgid "Ignore duplicate delimiters"
 msgstr "Ignoru duoblan dividigilon"
 
 #. i18n: file ./kspread/csv/dialogui.ui line 256
-#: rc.cpp:694
+#: rc.cpp:762
 #, fuzzy, no-c-format
 msgid "Text&quote:"
 msgstr "Citilo:"
 
 #. i18n: file ./kspread/csv/dialogui.ui line 267
-#: rc.cpp:697
+#: rc.cpp:765
 #, fuzzy, no-c-format
 msgid "&Format:"
 msgstr "Formato"
 
 #. i18n: file ./kspread/csv/dialogui.ui line 347
-#: rc.cpp:709
+#: rc.cpp:777
 #, no-c-format
 msgid "Ranges"
 msgstr ""
 
 #. i18n: file ./kspread/csv/dialogui.ui line 377
-#: rc.cpp:712 rc.cpp:718
+#: rc.cpp:780 rc.cpp:786
 #, no-c-format
 msgid "to"
 msgstr ""
 
 #. i18n: file ./kspread/csv/dialogui.ui line 405
-#: rc.cpp:715
+#: rc.cpp:783
 #, fuzzy, no-c-format
 msgid "Import lines:"
 msgstr "Eksportu tabelojn:"
 
 #. i18n: file ./kspread/csv/dialogui.ui line 462
-#: rc.cpp:721
+#: rc.cpp:789
 #, no-c-format
 msgid "Import columns:"
 msgstr ""
 
 #. i18n: file ./kspread/csv/dialogui.ui line 538
-#: rc.cpp:724
+#: rc.cpp:792
 #, fuzzy, no-c-format
 msgid "Update"
 msgstr "Dato"
 
 #. i18n: file ./kspread/html/exportwidget.ui line 35
-#: rc.cpp:727
+#: rc.cpp:795
 #, no-c-format
 msgid "En&coding:"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 46
-#: rc.cpp:730
+#: rc.cpp:798
 #, no-c-format
 msgid ""
 "With this option you can define the encoding of the HTML file. The recommended "
@@ -1733,37 +1875,37 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 73
-#: rc.cpp:733
+#: rc.cpp:801
 #, no-c-format
 msgid "Sheet Selection"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 100
-#: rc.cpp:736
+#: rc.cpp:804
 #, no-c-format
 msgid "Select &All"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 103
-#: rc.cpp:739 rc.cpp:745
+#: rc.cpp:807 rc.cpp:813
 #, no-c-format
 msgid "Click here to select all sheets in the list."
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 111
-#: rc.cpp:742
+#: rc.cpp:810
 #, no-c-format
 msgid "Desele&ct All"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 141
-#: rc.cpp:748
+#: rc.cpp:816
 #, no-c-format
 msgid "Use &separate files for each table"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 144
-#: rc.cpp:751
+#: rc.cpp:819
 #, no-c-format
 msgid ""
 "This option will make the HTML export filter generate a new page for each "
@@ -1771,32 +1913,32 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 154
-#: rc.cpp:754
+#: rc.cpp:822
 #, no-c-format
 msgid "Style"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 165
-#: rc.cpp:757
+#: rc.cpp:825
 #, no-c-format
 msgid "Use &default style"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 171
-#: rc.cpp:760
+#: rc.cpp:828
 #, no-c-format
 msgid ""
 "Select this option to use the default fonts and colors for the HTML page."
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 179
-#: rc.cpp:763
+#: rc.cpp:831
 #, no-c-format
 msgid "Use &external stylesheet:"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 182
-#: rc.cpp:766
+#: rc.cpp:834
 #, no-c-format
 msgid ""
 "Select this option to specify a separate stylesheet for the HTML page. You can "
@@ -1804,7 +1946,7 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 193
-#: rc.cpp:769
+#: rc.cpp:837
 #, no-c-format
 msgid ""
 "In this field you can enter an URL for your stylesheet. It is possible to point "
@@ -1812,31 +1954,31 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 203
-#: rc.cpp:772
+#: rc.cpp:840
 #, no-c-format
 msgid "Layout"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 214
-#: rc.cpp:775
+#: rc.cpp:843
 #, no-c-format
 msgid "Use &borders"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 220
-#: rc.cpp:778
+#: rc.cpp:846
 #, no-c-format
 msgid "Use this option to enable or disable borders around the cells."
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 236
-#: rc.cpp:781
+#: rc.cpp:849
 #, no-c-format
 msgid "Pi&xels between cells:"
 msgstr ""
 
 #. i18n: file ./kspread/html/exportwidget.ui line 242
-#: rc.cpp:784 rc.cpp:787
+#: rc.cpp:852 rc.cpp:855
 #, no-c-format
 msgid ""
 "Use this option to define how many pixels there should be between the cells. "
@@ -1844,25 +1986,25 @@ msgid ""
 msgstr ""
 
 #. i18n: file ./xsltfilter/export/xsltdialog.ui line 16
-#: rc.cpp:901 rc.cpp:919 xsltfilter/export/xsltexportdia.cc:57
+#: rc.cpp:969 rc.cpp:987 xsltfilter/export/xsltexportdia.cc:57
 #, no-c-format
 msgid "Export XSLT Configuration"
 msgstr ""
 
 #. i18n: file ./xsltfilter/export/xsltdialog.ui line 36
-#: rc.cpp:904 rc.cpp:922
+#: rc.cpp:972 rc.cpp:990
 #, no-c-format
 msgid "Common xslt Files"
 msgstr ""
 
 #. i18n: file ./xsltfilter/export/xsltdialog.ui line 72
-#: rc.cpp:907 rc.cpp:925
+#: rc.cpp:975 rc.cpp:993
 #, no-c-format
 msgid "Personal xslt Files"
 msgstr ""
 
 #. i18n: file ./xsltfilter/export/xsltdialog.ui line 119
-#: rc.cpp:910 rc.cpp:928
+#: rc.cpp:978 rc.cpp:996
 #, no-c-format
 msgid "Choose..."
 msgstr ""
@@ -2069,18 +2211,12 @@ msgstr ""
 #~ msgid "This document was created with OpenOffice.org version '%1'. This filter was written for version for 1.0. Reading this file could cause strange behavior, crashes or incorrect display of the data. Do you want to continue converting the document?"
 #~ msgstr "See dokument on salvestatud OpenOffice.org versiooniga '%1'. Käesolev filter on kirjutatud versiooni 1.0 jaoks. Faili avamisel võib esineda programmi tõrkeid, andmete ebakorrektset kuva või muid anomaaliaid. Tahad sa dokumendi konverteerimist jätkata?"
 
-#~ msgid "Alt+S"
-#~ msgstr "Alt+S"
-
 #~ msgid "This document was created with the OpenOffice version '%1'. This filter was written for version for 1.0. Reading this file could cause strange behavior, crashes or incorrect display of the data. Do you want to continue converting the document?"
 #~ msgstr "See dokument on salvestatud OpenOffice versiooniga '%1'. Käesolev filter on kirjutatud versiooni 1.0 jaoks. Faili avamisel võib esineda programmi tõrkeid, andmete ebakorrektset kuva või muid anomaaliaid. Tahad sa dokumendi konverteerimist jätkata?"
 
 #, fuzzy
 #~ msgid "Alt+C"
 #~ msgstr "Alt+A"
-
-#~ msgid "Article"
-#~ msgstr "Innlegg"
 
 #~ msgid "Book"
 #~ msgstr "Bok"
@@ -2241,14 +2377,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Alt+X"
-#~ msgstr "Alt+A"
-
-#, fuzzy
-#~ msgid "Alt+I"
-#~ msgstr "Alt+A"
-
-#, fuzzy
-#~ msgid "Alt+U"
 #~ msgstr "Alt+A"
 
 #, fuzzy
