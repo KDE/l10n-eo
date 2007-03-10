@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2006-11-09 08:06+0100\n"
+"POT-Creation-Date: 2007-02-20 08:27+0100\n"
 "PO-Revision-Date: 2002-03-10 21:09GMT\n"
 "Last-Translator: Wolfram Diestel <wolfram@steloj.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -16,29 +16,29 @@ msgstr ""
 "X-Generator: KBabel 0.9beta4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: bookmarkList.cpp:45 dataModel.cpp:209 marklist.cpp:282
+#: bookmarkList.cpp:44 dataModel.cpp:207 marklist.cpp:321
 #, fuzzy, qt-format
 msgid "Page %1"
 msgstr "Paĝo %1 el %2"
 
-#: bookmarkList.cpp:85
+#: bookmarkList.cpp:84
 msgid "Label"
 msgstr ""
 
-#: bookmarkList.cpp:206 documentWidget.cpp:1134 marklist.cpp:801
-#: marklist.cpp:837
+#: bookmarkList.cpp:205 documentWidget.cpp:1134 marklist.cpp:1010
+#: marklist.cpp:1046
 msgid "Add &Bookmark"
 msgstr ""
 
-#: bookmarkList.cpp:207
+#: bookmarkList.cpp:206
 msgid "&Rename Bookmark"
 msgstr ""
 
-#: bookmarkList.cpp:208
+#: bookmarkList.cpp:207
 msgid "&Clear Bookmark"
 msgstr ""
 
-#: bookmarkList.cpp:209
+#: bookmarkList.cpp:208
 msgid "Clear &All Bookmarks"
 msgstr ""
 
@@ -61,7 +61,10 @@ msgstr ""
 msgid "px"
 msgstr ""
 
-#: documentWidget.cpp:1015
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 53
+#: documentWidget.cpp:1015 rc.cpp:261
+#, no-c-format
 msgid "inch"
 msgstr ""
 
@@ -73,23 +76,34 @@ msgstr ""
 msgid "bigPoint"
 msgstr ""
 
-#: documentWidget.cpp:1030
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 68
+#: documentWidget.cpp:1030 rc.cpp:273
+#, no-c-format
 msgid "pica"
 msgstr ""
 
-#: documentWidget.cpp:1035
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 73
+#: documentWidget.cpp:1035 rc.cpp:277
+#, no-c-format
 msgid "didot"
 msgstr ""
 
-#: documentWidget.cpp:1040
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 78
+#: documentWidget.cpp:1040 rc.cpp:281
+#, no-c-format
 msgid "cicero"
 msgstr ""
 
 #. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 48
+#. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 137
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 157
-#: documentWidget.cpp:1045 rc.cpp:110 rc.cpp:122
+#: documentWidget.cpp:1045 rc.cpp:257 rc.cpp:374 rc.cpp:386
 #, no-c-format
 msgid "cm"
 msgstr ""
@@ -99,9 +113,9 @@ msgid "Image copied to clipboard"
 msgstr ""
 
 #: documentWidget.cpp:1113
-#, c-format
+#, qt-format
 msgid "Copy text to Clipboard (1 character)"
-msgid_plural "Copy text to Clipboard (%n characters)"
+msgid_plural "Copy text to Clipboard (%1 characters)"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -110,7 +124,7 @@ msgstr[1] ""
 msgid "Copy image to Clipboard (%1 by %2 pixels)"
 msgstr ""
 
-#: documentWidget.cpp:1135 marklist.cpp:832
+#: documentWidget.cpp:1135 marklist.cpp:1041
 msgid "Remove &Bookmark"
 msgstr ""
 
@@ -128,33 +142,34 @@ msgstr ""
 "La dosiero %1\n"
 "ekzistas. Ĉu anstataŭigi ĝin?"
 
-#: exportDialog.cpp:69 kviewpart.cpp:1840
+#: exportDialog.cpp:69 ligaturepart.cpp:1851
 #, fuzzy
 msgid "Overwrite File"
 msgstr "Anstataŭigu dosieron"
 
-#: exportDialog.cpp:69 kviewpart.cpp:1840
+#: exportDialog.cpp:69 ligaturepart.cpp:1851
 #, fuzzy
 msgid "Overwrite"
 msgstr "Montru &antaŭrigardon"
 
-#: kmultipage.cpp:92
+#: kmultipage.cpp:92 ligaturePluginGUI.cpp:92
 msgid ""
 "<qt>Could not start the <strong>cp</strong> copy command. The document is "
 "<strong>not</strong> saved.</qt>"
 msgstr ""
 
-#: kmultipage.cpp:93 kmultipage.cpp:99
+#: kmultipage.cpp:93 kmultipage.cpp:99 ligaturePluginGUI.cpp:93
+#: ligaturePluginGUI.cpp:99
 msgid "Error saving document"
 msgstr ""
 
-#: kmultipage.cpp:98
+#: kmultipage.cpp:98 ligaturePluginGUI.cpp:98
 msgid ""
 "<qt>Error saving the document. The document is <strong>not</strong> saved.</"
 "qt>"
 msgstr ""
 
-#: kmultipage.cpp:173
+#: kmultipage.cpp:173 ligaturePluginGUI.cpp:173
 #, qt-format
 msgid "Print %1"
 msgstr ""
@@ -239,241 +254,277 @@ msgid ""
 "might be expanded by different scaling factors.</p></qt>"
 msgstr ""
 
-#: kviewpart.cpp:151
+#: ligature.cpp:84
+msgid ""
+"<qt>A fatal error ocurred. An important library could not be found. Ligature "
+"will not work.</qt>"
+msgstr ""
+
+#: ligature.cpp:85
+msgid ""
+"<qt><p>The Ligature application uses the <strong>ligaturepart</strong> "
+"library internally. This  library was not found on your computer.</p><p>The "
+"problem is most likely a broken installation of the Ligature application. "
+"You could try to uninstall all instances of Ligature and then re-install the "
+"latest version.</p></qt>"
+msgstr ""
+
+#: ligature.cpp:89 ligature.cpp:111
+msgid "Ligature - Critical Error"
+msgstr ""
+
+#: ligature.cpp:102
+msgid ""
+"<qt>A fatal error ocurred. An incompatible version of an important library "
+"was found. Ligature will not work.</qt>"
+msgstr ""
+
+#: ligature.cpp:103
+#, qt-format
+msgid ""
+"<qt><p>The Ligature application uses the <strong>ligaturepart</strong> "
+"library internally. A version of this library was found, but this version is "
+"<strong>not</strong> compatible with the current version of the Ligature "
+"application.</p><p>Version found: <strong>%1</strong></p><p>Version "
+"required: <strong>%2</strong></p><p>The problem is most likely that two "
+"incompatible versions of Ligature are simultaneously installed on your "
+"computer. You could try to uninstall all instances of Ligature and then re-"
+"install the latest version.</p></qt>"
+msgstr ""
+
+#: ligature.cpp:127
+msgid "Reload"
+msgstr ""
+
+#: ligature.cpp:341
+#, qt-format
+msgid "Could not create temporary file: %1"
+msgstr ""
+
+#: ligature.cpp:358
+#, qt-format
+msgid "Could not open standard input stream: %1"
+msgstr ""
+
+#: ligature.cpp:390
+msgid "Use the Escape key to leave the fullscreen mode."
+msgstr ""
+
+#: ligature.cpp:390
+msgid "Entering Fullscreen Mode"
+msgstr ""
+
+#: ligaturepart.cpp:153
 msgid "Contents"
 msgstr ""
 
-#: kviewpart.cpp:169
+#: ligaturepart.cpp:171
 msgid "Bookmarks"
 msgstr ""
 
-#: kviewpart.cpp:178
+#: ligaturepart.cpp:180
 msgid "Thumbnails"
 msgstr ""
 
-#: kviewpart.cpp:222
+#: ligaturepart.cpp:222
 msgid "Text..."
 msgstr ""
 
-#: kviewpart.cpp:249
+#: ligaturepart.cpp:251
 msgid "Single Page"
 msgstr ""
 
-#: kviewpart.cpp:250
+#: ligaturepart.cpp:252
 msgid "Continuous"
 msgstr ""
 
-#: kviewpart.cpp:251
+#: ligaturepart.cpp:253
 msgid "Continuous - Facing"
 msgstr ""
 
-#: kviewpart.cpp:252
+#: ligaturepart.cpp:254
 #, fuzzy
 msgid "Overview"
 msgstr "Montru &antaŭrigardon"
 
-#: kviewpart.cpp:253
+#: ligaturepart.cpp:256
 msgid "View Mode"
 msgstr ""
 
-#: kviewpart.cpp:261
-msgid "Custom Size..."
+#: ligaturepart.cpp:262
+msgid "Set Default Paper &Size..."
 msgstr ""
 
-#: kviewpart.cpp:262
-#, fuzzy
-msgid "Preferred Paper &Size"
-msgstr "Paper&formato"
-
-#. i18n: tag string
-#. i18n: file pageSizeWidget_base.ui line 73
-#: kviewpart.cpp:267 rc.cpp:86
-#, no-c-format
-msgid "Portrait"
+#: ligaturepart.cpp:266
+msgid "&Guess View Mode When Opening A New File"
 msgstr ""
 
-#. i18n: tag string
-#. i18n: file pageSizeWidget_base.ui line 78
-#: kviewpart.cpp:268 rc.cpp:90
-#, no-c-format
-msgid "Landscape"
-msgstr ""
-
-#: kviewpart.cpp:269
-#, fuzzy
-msgid "Preferred &Orientation"
-msgstr "&Rotacio"
-
-#: kviewpart.cpp:273
-msgid "&Use Document Specified Paper Size"
-msgstr ""
-
-#: kviewpart.cpp:280
+#: ligaturepart.cpp:273
 #, fuzzy
 msgid "&Fit to Page"
 msgstr "Iru al paĝo"
 
-#: kviewpart.cpp:284
+#: ligaturepart.cpp:279
 msgid "Fit to Page &Width"
 msgstr ""
 
-#: kviewpart.cpp:288
+#: ligaturepart.cpp:285
 msgid "Fit to Page &Height"
 msgstr ""
 
-#: kviewpart.cpp:298
+#: ligaturepart.cpp:297
 msgid "Rotate right"
 msgstr ""
 
-#: kviewpart.cpp:301
+#: ligaturepart.cpp:302
 msgid "Rotate left"
 msgstr ""
 
-#: kviewpart.cpp:305
+#: ligaturepart.cpp:308
 #, fuzzy
 msgid "&Presentation"
 msgstr "&Rotacio"
 
-#: kviewpart.cpp:319
+#: ligaturepart.cpp:324
 #, fuzzy
 msgid "Read Up Document"
 msgstr "Iom antaŭen"
 
-#: kviewpart.cpp:322
+#: ligaturepart.cpp:329
 #, fuzzy
 msgid "Read Down Document"
 msgstr "Iom antaŭen"
 
-#: kviewpart.cpp:326
+#: ligaturepart.cpp:335
 msgid "&Back"
 msgstr ""
 
-#: kviewpart.cpp:331
+#: ligaturepart.cpp:342
 msgid "&Forward"
 msgstr ""
 
-#: kviewpart.cpp:337
+#: ligaturepart.cpp:350
 msgid "&Move Tool"
 msgstr ""
 
-#: kviewpart.cpp:341
+#: ligaturepart.cpp:356
 msgid "&Selection Tool"
 msgstr ""
 
-#: kviewpart.cpp:345
+#: ligaturepart.cpp:362
 msgid "&Rectangle Selection"
 msgstr ""
 
-#: kviewpart.cpp:349
+#: ligaturepart.cpp:368
 msgid "Measuring &Tool"
 msgstr ""
 
-#: kviewpart.cpp:361
+#: ligaturepart.cpp:382
 #, fuzzy
 msgid "Show &Sidebar"
 msgstr "Ŝovu supren"
 
-#: kviewpart.cpp:363
+#: ligaturepart.cpp:384
 #, fuzzy
 msgid "Hide &Sidebar"
 msgstr "Ŝovu supren"
 
-#: kviewpart.cpp:365
+#: ligaturepart.cpp:387
 #, fuzzy
 msgid "Show Scrollbars"
 msgstr "Ŝovu supren"
 
-#: kviewpart.cpp:366
+#: ligaturepart.cpp:388
 #, fuzzy
 msgid "Hide Scrollbars"
 msgstr "Ŝovu supren"
 
-#: kviewpart.cpp:368
+#: ligaturepart.cpp:391
 msgid "&Watch File"
 msgstr "&Observu dosieron"
 
-#: kviewpart.cpp:373
+#: ligaturepart.cpp:397
 msgid "&Zoom"
 msgstr ""
 
-#: kviewpart.cpp:384
+#: ligaturepart.cpp:409
 msgid "Scroll Up"
 msgstr "Ŝovu supren"
 
-#: kviewpart.cpp:389
+#: ligaturepart.cpp:415
 msgid "Scroll Down"
 msgstr "Ŝovu malsupren"
 
-#: kviewpart.cpp:394
+#: ligaturepart.cpp:421
 msgid "Scroll Left"
 msgstr "Ŝovu maldekstren"
 
-#: kviewpart.cpp:399
+#: ligaturepart.cpp:427
 msgid "Scroll Right"
 msgstr "Ŝovu dekstren"
 
-#: kviewpart.cpp:404
+#: ligaturepart.cpp:433
 msgid "Scroll Up Page"
 msgstr "Ŝovu supren je unu paĝo"
 
-#: kviewpart.cpp:409
+#: ligaturepart.cpp:439
 msgid "Scroll Down Page"
 msgstr "Ŝovu malsupren je unu paĝo"
 
-#: kviewpart.cpp:414
+#: ligaturepart.cpp:445
 msgid "Scroll Left Page"
 msgstr "Ŝovu maldekstren je unu paĝo"
 
-#: kviewpart.cpp:419
+#: ligaturepart.cpp:451
 msgid "Scroll Right Page"
 msgstr "Ŝovu dekstren je unu paĝo"
 
-#: kviewpart.cpp:424
+#: ligaturepart.cpp:457
 msgid "Next View Mode"
 msgstr ""
 
-#: kviewpart.cpp:429
+#: ligaturepart.cpp:463
 msgid "Previous View Mode"
 msgstr ""
 
-#: kviewpart.cpp:517
+#: ligaturepart.cpp:545
 msgid ""
 "Your document has been modified. Do you really want to open another document?"
 msgstr ""
 
-#: kviewpart.cpp:518
+#: ligaturepart.cpp:546
 msgid "Warning - Document Was Modified"
 msgstr ""
 
-#: kviewpart.cpp:719
+#: ligaturepart.cpp:749
 #, qt-format
 msgid "<qt>File <nobr><strong>%1</strong></nobr> does not exist.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:728
+#: ligaturepart.cpp:758
 #, qt-format
 msgid "Loading '%1'..."
 msgstr ""
 
-#: kviewpart.cpp:746
+#: ligaturepart.cpp:776
 msgid "<qt><strong>File Error</strong> Could not create temporary file.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:756
+#: ligaturepart.cpp:786
 #, qt-format
 msgid ""
 "<qt><strong>File Error</strong> Could not create temporary file "
 "<nobr><strong>%1</strong></nobr>.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:777
+#: ligaturepart.cpp:807
 #, qt-format
 msgid ""
 "<qt><strong>File Error</strong> Could not open the file <nobr><strong>%1</"
 "strong></nobr> for uncompression. The file will not be loaded.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:780
+#: ligaturepart.cpp:810
 msgid ""
 "<qt>This error typically occurs if you do not have enough permissions to "
 "read the file. You can check ownership and permissions if you right-click on "
@@ -481,72 +532,72 @@ msgid ""
 "</qt>"
 msgstr ""
 
-#: kviewpart.cpp:790
+#: ligaturepart.cpp:820
 msgid "Uncompressing..."
 msgstr ""
 
-#: kviewpart.cpp:791
+#: ligaturepart.cpp:821
 #, qt-format
 msgid ""
 "<qt>Uncompressing the file <nobr><strong>%1</strong></nobr>. Please wait.</"
 "qt>"
 msgstr ""
 
-#: kviewpart.cpp:821
+#: ligaturepart.cpp:851
 #, qt-format
 msgid ""
 "<qt><strong>File Error</strong> Could not uncompress the file <nobr><strong>%"
 "1</strong></nobr>. The file will not be loaded.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:823
+#: ligaturepart.cpp:853
 msgid ""
 "<qt>This error typically occurs if the file is corrupt. If you want to be "
 "sure, try to decompress the file manually using command-line tools.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:880
+#: ligaturepart.cpp:910
 #, qt-format
 msgid ""
 "<qt>The document <b>%1</b> cannot be shown because its file type is not "
 "supported.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:882
+#: ligaturepart.cpp:912
 #, qt-format
 msgid ""
 "<qt>The file has mime type <b>%1</b> which is not supported by any of the "
-"installed KViewShell plugins.</qt>"
+"installed Ligature plugins.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:911
+#: ligaturepart.cpp:941
 msgid ""
 "<qt>No service implementing the given mimetype and fullfilling the given "
 "constraint expression can be found.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:914
+#: ligaturepart.cpp:944
 msgid "<qt>The specified service provides no shared library.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:917
+#: ligaturepart.cpp:947
 #, qt-format
 msgid ""
 "<qt><p>The specified library <b>%1</b> could not be loaded. The error "
 "message returned was:</p> <p><b>%2</b></p></qt>"
 msgstr ""
 
-#: kviewpart.cpp:920
+#: ligaturepart.cpp:950
 msgid "<qt>The library does not export a factory for creating components.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:923
+#: ligaturepart.cpp:953
 msgid ""
 "<qt>The factory does not support creating components of the specified type.</"
 "qt>"
 msgstr ""
 
-#: kviewpart.cpp:927
+#: ligaturepart.cpp:957
 #, qt-format
 msgid ""
 "<qt><p><b>Problem:</b> The document <b>%1</b> cannot be shown.</"
@@ -561,101 +612,101 @@ msgid ""
 "programmers.</p></qt>"
 msgstr ""
 
-#: kviewpart.cpp:937
+#: ligaturepart.cpp:967
 msgid "Error Initializing Software Component"
 msgstr ""
 
-#: kviewpart.cpp:1017
+#: ligaturepart.cpp:1045
 #, qt-format
 msgid "Loading file %1"
 msgstr ""
 
-#: kviewpart.cpp:1162
+#: ligaturepart.cpp:1199
 msgid "Go to Page"
 msgstr "Iru al paĝo"
 
-#: kviewpart.cpp:1162
+#: ligaturepart.cpp:1199
 msgid "Page:"
 msgstr ""
 
-#: kviewpart.cpp:1333 zoom.cpp:23 zoom.cpp:117
+#: ligaturepart.cpp:1370 zoom.cpp:23 zoom.cpp:117
 #, fuzzy
 msgid "Fit to Page Width"
 msgstr "Iru al paĝo"
 
-#: kviewpart.cpp:1338 zoom.cpp:24 zoom.cpp:118
+#: ligaturepart.cpp:1375 zoom.cpp:24 zoom.cpp:118
 #, fuzzy
 msgid "Fit to Page Height"
 msgstr "Iru al paĝo"
 
-#: kviewpart.cpp:1343 zoom.cpp:25 zoom.cpp:119
+#: ligaturepart.cpp:1380 zoom.cpp:25 zoom.cpp:119
 #, fuzzy
 msgid "Fit to Page"
 msgstr "Iru al paĝo"
 
-#: kviewpart.cpp:1599 kviewpart.cpp:1978
+#: ligaturepart.cpp:1616 ligaturepart.cpp:1989
 #, qt-format
 msgid "Page %1 of %2"
 msgstr "Paĝo %1 el %2"
 
-#: kviewpart.cpp:1609
+#: ligaturepart.cpp:1626
 msgid "Document Viewer Part"
 msgstr ""
 
-#: kviewpart.cpp:1612
+#: ligaturepart.cpp:1629
 msgid "Copyright (c) 2005 Wilfried Huss"
 msgstr ""
 
-#: kviewpart.cpp:1624
+#: ligaturepart.cpp:1641
 msgid "User Interface"
 msgstr ""
 
-#: kviewpart.cpp:1624
+#: ligaturepart.cpp:1641
 msgid "User Interface Options"
 msgstr ""
 
-#: kviewpart.cpp:1627
+#: ligaturepart.cpp:1644
 msgid "Accessibility"
 msgstr ""
 
-#: kviewpart.cpp:1627
+#: ligaturepart.cpp:1644
 msgid "Options for Accessibilty Mode"
 msgstr ""
 
-#: kviewpart.cpp:1630
+#: ligaturepart.cpp:1647
 #, fuzzy
 msgid "Presentation"
 msgstr "&Rotacio"
 
-#: kviewpart.cpp:1630
+#: ligaturepart.cpp:1647
 msgid "Options for Presentation Mode"
 msgstr ""
 
-#: kviewpart.cpp:1836
+#: ligaturepart.cpp:1847
 msgid "Save File As"
 msgstr "Konservu dosieron kiel"
 
-#: kviewpart.cpp:1839
+#: ligaturepart.cpp:1850
 #, fuzzy, qt-format
 msgid "<qt>The file %1 exists. Do you want to overwrite that file?</qt>"
 msgstr ""
 "La dosiero %1\n"
 "ekzistas. Ĉu anstataŭigi ĝin?"
 
-#: kviewpart.cpp:2013
+#: ligaturepart.cpp:2024
 msgid "*.txt|Plain Text (Latin 1) (*.txt)"
 msgstr ""
 
-#: kviewpart.cpp:2122 kviewpart.cpp:2265
+#: ligaturepart.cpp:2133 ligaturepart.cpp:2276
 msgid "Search interrupted"
 msgstr ""
 
-#: kviewpart.cpp:2130 kviewpart.cpp:2273
+#: ligaturepart.cpp:2141 ligaturepart.cpp:2284
 #, fuzzy, qt-format
 msgid "Search page %1 of %2"
 msgstr "Paĝo %1 el %2"
 
-#: kviewpart.cpp:2171
+#: ligaturepart.cpp:2182
 #, qt-format
 msgid ""
 "<qt>The search string <strong>%1</strong> could not be found by the end of "
@@ -663,16 +714,16 @@ msgid ""
 "document?</qt>"
 msgstr ""
 
-#: kviewpart.cpp:2174 kviewpart.cpp:2318
+#: ligaturepart.cpp:2185 ligaturepart.cpp:2329
 msgid "Text Not Found"
 msgstr ""
 
-#: kviewpart.cpp:2198 kviewpart.cpp:2342
+#: ligaturepart.cpp:2209 ligaturepart.cpp:2353
 #, qt-format
 msgid "<qt>The search string <strong>%1</strong> could not be found.</qt>"
 msgstr ""
 
-#: kviewpart.cpp:2315
+#: ligaturepart.cpp:2326
 #, qt-format
 msgid ""
 "<qt>The search string <strong>%1</strong> could not be found by the "
@@ -680,84 +731,24 @@ msgid ""
 "the document?</qt>"
 msgstr ""
 
-#: kviewpart.cpp:2456
+#: ligaturepart.cpp:2467
 #, qt-format
 msgid "Reloading file %1"
 msgstr ""
 
-#: kviewpart.cpp:2508
+#: ligaturepart.cpp:2519
 msgid "Exporting to text..."
 msgstr ""
 
-#: kviewpart.cpp:2508
+#: ligaturepart.cpp:2519
 msgid "Abort"
-msgstr ""
-
-#: kviewshell.cpp:83
-msgid ""
-"<qt>A fatal error ocurred. An important library could not be found. "
-"KViewShell will not work.</qt>"
-msgstr ""
-
-#: kviewshell.cpp:84
-msgid ""
-"<qt><p>The KViewShell application uses the <strong>kviewerpart</strong> "
-"library internally. This  library was not found on your computer.</p><p>The "
-"problem is most likely a broken installation of the KViewShell application. "
-"You could try to uninstall all instances of KViewShell and then re-install "
-"the latest version.</p></qt>"
-msgstr ""
-
-#: kviewshell.cpp:88 kviewshell.cpp:110
-msgid "KViewShell - Critical Error"
-msgstr ""
-
-#: kviewshell.cpp:101
-msgid ""
-"<qt>A fatal error ocurred. An incompatible version of an important library "
-"was found. KViewShell will not work.</qt>"
-msgstr ""
-
-#: kviewshell.cpp:102
-#, qt-format
-msgid ""
-"<qt><p>The KViewShell application uses the <strong>kviewerpart</strong> "
-"library internally. A version of this library was found, but this version is "
-"<strong>not</strong> compatible with the current version of the KViewShell "
-"application.</p><p>Version found: <strong>%1</strong></p><p>Version "
-"required: <strong>%2</strong></p><p>The problem is most likely that two "
-"incompatible versions of KViewShell are simultaneously installed on your "
-"computer. You could try to uninstall all instances of KViewShell and then re-"
-"install the latest version.</p></qt>"
-msgstr ""
-
-#: kviewshell.cpp:124
-msgid "Reload"
-msgstr ""
-
-#: kviewshell.cpp:344
-#, qt-format
-msgid "Could not create temporary file: %1"
-msgstr ""
-
-#: kviewshell.cpp:361
-#, qt-format
-msgid "Could not open standard input stream: %1"
-msgstr ""
-
-#: kviewshell.cpp:393
-msgid "Use the Escape key to leave the fullscreen mode."
-msgstr ""
-
-#: kviewshell.cpp:393
-msgid "Entering Fullscreen Mode"
 msgstr ""
 
 #: main.cpp:22
 #, fuzzy
 msgid ""
-"Check if the file is loaded in another kviewshell.\n"
-"If it is, bring up the other kviewshell. Otherwise, load the file."
+"Check if the file is loaded in another ligature.\n"
+"If it is, bring up the other ligature. Otherwise, load the file."
 msgstr ""
 "Kontrolu ĉu la dosiero estas ŝargita en alia Rigardilo. Se jes, aperigu ĝin. "
 "Aliokaze, legu la dosieron."
@@ -783,8 +774,8 @@ msgid "Generic framework for viewer applications"
 msgstr "Kadraĵo por rigardiloj."
 
 #: main.cpp:37
-msgid "KViewShell"
-msgstr "Rigardilo"
+msgid "Ligature"
+msgstr ""
 
 #: main.cpp:41
 msgid ""
@@ -849,44 +840,44 @@ msgid ""
 "You can not read from standard input if you are using the '--unique' option."
 msgstr ""
 
-#: marklist.cpp:203
+#: marklist.cpp:214
 #, fuzzy
 msgid "Select for printing"
 msgstr "Elektu nunan paĝon"
 
-#: marklist.cpp:794
+#: marklist.cpp:1003
 #, fuzzy
 msgid "Select &Current Page"
 msgstr "Elektu nunan paĝon"
 
-#: marklist.cpp:795
+#: marklist.cpp:1004
 #, fuzzy
 msgid "Select &All Pages"
 msgstr "Elektu ĉiujn paĝojn"
 
-#: marklist.cpp:796
+#: marklist.cpp:1005
 #, fuzzy
 msgid "Select &Even Pages"
 msgstr "Elektu parajn paĝojn"
 
-#: marklist.cpp:797
+#: marklist.cpp:1006
 #, fuzzy
 msgid "Select &Odd Pages"
 msgstr "Elektu malparajn paĝojn"
 
-#: marklist.cpp:798
+#: marklist.cpp:1007
 msgid "&Invert Selection"
 msgstr ""
 
-#: marklist.cpp:799
+#: marklist.cpp:1008
 msgid "&Deselect All Pages"
 msgstr ""
 
-#: pageSize.cpp:325
+#: pageSize.cpp:339
 msgid "portrait"
 msgstr ""
 
-#: pageSize.cpp:327
+#: pageSize.cpp:341
 msgid "landscape"
 msgstr ""
 
@@ -899,90 +890,262 @@ msgstr "Paper&formato"
 msgid "Custom Size"
 msgstr ""
 
-#: presentationwidget.cpp:86
+#: presentationwidget.cpp:87
 msgid ""
 "There are two ways of exiting presentation mode, you can press either ESC "
 "key or click with the quit button that appears when placing the mouse in the "
 "top-right corner. Of course you can cycle windows (Alt+TAB by default)"
 msgstr ""
 
-#: presentationwidget.cpp:160
+#: presentationwidget.cpp:161
 #, fuzzy, qt-format
 msgid "Pages: %1"
 msgstr "Paĝo %1 el %2"
 
-#: presentationwidget.cpp:161
+#: presentationwidget.cpp:162
 msgid "Click to begin"
 msgstr ""
 
-#: presentationwidget.cpp:293
+#: presentationwidget.cpp:294
 msgid "Previous Page"
 msgstr ""
 
-#: presentationwidget.cpp:294
+#: presentationwidget.cpp:295
 #, fuzzy
 msgid "Next Page"
 msgstr "Iru al paĝo"
 
-#: presentationwidget.cpp:298
+#: presentationwidget.cpp:299
 msgid "Exit Presentation Mode"
 msgstr ""
 
-#. i18n: tag text
-#. i18n: file kviewerpart.rc line 4
-#. i18n: tag text
-#. i18n: file kviewshell.rc line 4
-#: rc.cpp:4 rc.cpp:45
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 33
+#: rc.cpp:4
 #, fuzzy, no-c-format
-msgid "&File"
-msgstr "&Observu dosieron"
+msgid "Navigation"
+msgstr "Navigiloj"
 
-#. i18n: tag text
-#. i18n: file kviewerpart.rc line 11
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 48
 #: rc.cpp:8
 #, no-c-format
-msgid "Export As"
+msgid "Advance every:"
 msgstr ""
 
-#. i18n: tag text
-#. i18n: file kviewerpart.rc line 17
-#. i18n: tag text
-#. i18n: file kviewshell.rc line 10
-#: rc.cpp:12 rc.cpp:49
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 55
+#: rc.cpp:12
 #, no-c-format
-msgid "&Edit"
+msgid "Loop after last page"
 msgstr ""
 
-#. i18n: tag text
-#. i18n: file kviewerpart.rc line 27
-#. i18n: tag text
-#. i18n: file kviewshell.rc line 13
-#: rc.cpp:16 rc.cpp:53
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 73
+#: rc.cpp:16
 #, no-c-format
-msgid "&View"
+msgid " sec."
 msgstr ""
 
-#. i18n: tag text
-#. i18n: file kviewerpart.rc line 47
-#. i18n: tag text
-#. i18n: file kviewshell.rc line 16
-#: rc.cpp:20 rc.cpp:57
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 94
+#: rc.cpp:20
 #, no-c-format
-msgid "&Go"
-msgstr "&Navigo"
+msgid "Appearance"
+msgstr ""
 
-#. i18n: tag text
-#. i18n: file kviewerpart.rc line 62
-#. i18n: tag text
-#. i18n: file kviewshell.rc line 19
-#: rc.cpp:24 rc.cpp:61
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 109
+#: rc.cpp:24
 #, no-c-format
-msgid "&Tools"
+msgid "Default transition:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 116
+#: rc.cpp:28
+#, no-c-format
+msgid "Mouse cursor:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 123
+#: rc.cpp:32
+#, no-c-format
+msgid "Background color:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 138
+#: rc.cpp:36
+#, no-c-format
+msgid "Show s&ummary page"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 141
+#: rc.cpp:40
+#, no-c-format
+msgid "Alt+U"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 149
+#: rc.cpp:44
+#, no-c-format
+msgid "Hidden After Delay"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 154
+#: rc.cpp:48
+#, no-c-format
+msgid "Always Visible"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 159
+#: rc.cpp:52
+#, no-c-format
+msgid "Always Hidden"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 168
+#: rc.cpp:56
+#, no-c-format
+msgid "Blinds Vertical"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 173
+#: rc.cpp:60
+#, no-c-format
+msgid "Blinds Horizontal"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 178
+#: rc.cpp:64
+#, no-c-format
+msgid "Box In"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 183
+#: rc.cpp:68
+#, no-c-format
+msgid "Box Out"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 188
+#: rc.cpp:72
+#, no-c-format
+msgid "Dissolve"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 193
+#: rc.cpp:76
+#, no-c-format
+msgid "Glitter Down"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 198
+#: rc.cpp:80
+#, no-c-format
+msgid "Glitter Right"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 203
+#: rc.cpp:84
+#, no-c-format
+msgid "Glitter Right-Down"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 208
+#: rc.cpp:88
+#, no-c-format
+msgid "Random Transition"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 213
+#: rc.cpp:92
+#, no-c-format
+msgid "Replace"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 218
+#: rc.cpp:96
+#, no-c-format
+msgid "Split Horizontal In"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 223
+#: rc.cpp:100
+#, no-c-format
+msgid "Split Horizontal Out"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 228
+#: rc.cpp:104
+#, no-c-format
+msgid "Split Vertical In"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 233
+#: rc.cpp:108
+#, no-c-format
+msgid "Split Vertical Out"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 238
+#: rc.cpp:112
+#, no-c-format
+msgid "Wipe Down"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 243
+#: rc.cpp:116
+#, no-c-format
+msgid "Wipe Right"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 248
+#: rc.cpp:120
+#, no-c-format
+msgid "Wipe Left"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 253
+#: rc.cpp:124
+#, no-c-format
+msgid "Wipe Up"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file dlgpresentation.ui line 273
+#: rc.cpp:128
+#, no-c-format
+msgid "Show &progress indicator"
 msgstr ""
 
 #. i18n: tag whatsthis
-#. i18n: file kviewshell.kcfg line 75
-#: rc.cpp:28
+#. i18n: file ligature.kcfg line 75
+#: rc.cpp:132
 #, no-c-format
 msgid ""
 "\n"
@@ -999,71 +1162,340 @@ msgid ""
 msgstr ""
 
 #. i18n: tag label
-#. i18n: file kviewshell.kcfg line 81
-#: rc.cpp:41
+#. i18n: file ligature.kcfg line 81
+#: rc.cpp:145
 #, no-c-format
 msgid "Index of the active sidebar widget."
 msgstr ""
 
 #. i18n: tag text
-#. i18n: file kviewshell.rc line 23
-#: rc.cpp:65
+#. i18n: file ligature.rc line 4
+#. i18n: tag text
+#. i18n: file ligaturepart.rc line 4
+#: rc.cpp:149 rc.cpp:177
+#, fuzzy, no-c-format
+msgid "&File"
+msgstr "&Observu dosieron"
+
+#. i18n: tag text
+#. i18n: file ligature.rc line 10
+#. i18n: tag text
+#. i18n: file ligaturepart.rc line 17
+#: rc.cpp:153 rc.cpp:185
+#, no-c-format
+msgid "&Edit"
+msgstr ""
+
+#. i18n: tag text
+#. i18n: file ligature.rc line 13
+#. i18n: tag text
+#. i18n: file ligaturepart.rc line 27
+#: rc.cpp:157 rc.cpp:189
+#, no-c-format
+msgid "&View"
+msgstr ""
+
+#. i18n: tag text
+#. i18n: file ligature.rc line 16
+#. i18n: tag text
+#. i18n: file ligaturepart.rc line 45
+#: rc.cpp:161 rc.cpp:193
+#, no-c-format
+msgid "&Go"
+msgstr "&Navigo"
+
+#. i18n: tag text
+#. i18n: file ligature.rc line 19
+#. i18n: tag text
+#. i18n: file ligaturepart.rc line 60
+#: rc.cpp:165 rc.cpp:197
+#, no-c-format
+msgid "&Tools"
+msgstr ""
+
+#. i18n: tag text
+#. i18n: file ligature.rc line 23
+#: rc.cpp:169
 #, no-c-format
 msgid "&Settings"
 msgstr ""
 
 #. i18n: tag text
-#. i18n: file kviewshell.rc line 30
-#: rc.cpp:69
+#. i18n: file ligature.rc line 30
+#: rc.cpp:173
 #, no-c-format
 msgid "&Help"
 msgstr ""
 
+#. i18n: tag text
+#. i18n: file ligaturepart.rc line 11
+#: rc.cpp:181
+#, no-c-format
+msgid "Export As"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 28
+#: rc.cpp:201
+#, no-c-format
+msgid "Change &Colors"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 46
+#: rc.cpp:205
+#, no-c-format
+msgid "Warning: these options can badly affect drawing spped."
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 74
+#: rc.cpp:209
+#, no-c-format
+msgid "&Invert colors"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 84
+#: rc.cpp:213
+#, no-c-format
+msgid "Change &paper color"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 115
+#: rc.cpp:217
+#, no-c-format
+msgid "Paper color:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 130
+#: rc.cpp:221
+#, no-c-format
+msgid "&Change dark and light colors"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 161
+#: rc.cpp:225
+#, no-c-format
+msgid "Dark color:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 197
+#: rc.cpp:229
+#, no-c-format
+msgid "Light color:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 209
+#: rc.cpp:233
+#, no-c-format
+msgid "Convert to &black and white"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 224
+#: rc.cpp:237
+#, no-c-format
+msgid "Contrast:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogAccessibilityWidget.ui line 299
+#: rc.cpp:241
+#, no-c-format
+msgid "Threshold:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 13
+#: rc.cpp:245
+#, no-c-format
+msgid "optionDialogGUIWidget"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 33
+#: rc.cpp:249
+#, no-c-format
+msgid "Mark Hyperlinks:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 40
+#: rc.cpp:253
+#, no-c-format
+msgid "Measuring unit:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 58
+#: rc.cpp:265
+#, no-c-format
+msgid "TeX point"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 63
+#: rc.cpp:269
+#, no-c-format
+msgid "big point"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 83
+#: rc.cpp:285
+#, no-c-format
+msgid "pixel"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 95
+#: rc.cpp:289
+#, no-c-format
+msgid ""
+"<qt>Some documents specify how hyperlinks are marked on screen. For other "
+"documents, this field controls how hyperlinks are underlined.\n"
+"<ul>\n"
+"<li><b>Enabled</b>: Always underline links</li>\n"
+"<li><b>Disabled</b>: Never underline links</li>\n"
+"<li><b>Only on Hover</b>: Underline when the mouse is moved over the link</"
+"li></ul></qt>"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 99
+#: rc.cpp:297
+#, no-c-format
+msgid "Underline hyperlinks"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 104
+#: rc.cpp:301
+#, no-c-format
+msgid "Do not mark hyperlinks"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 109
+#: rc.cpp:305
+#, no-c-format
+msgid "Underline hyperlinks only on hover"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 117
+#: rc.cpp:309
+#, fuzzy, no-c-format
+msgid "Show &thumbnail previews"
+msgstr "Montru &antaŭrigardon"
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 120
+#: rc.cpp:313
+#, no-c-format
+msgid "Alt+T"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 127
+#: rc.cpp:317
+#, fuzzy, no-c-format
+msgid "Overview Mode"
+msgstr "Montru &antaŭrigardon"
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 150
+#: rc.cpp:321
+#, no-c-format
+msgid "Rows:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 185
+#: rc.cpp:325
+#, no-c-format
+msgid "Columns:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 195
+#: rc.cpp:329
+#, no-c-format
+msgid "&Smooth Scrolling"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file optionDialogGUIWidget.ui line 198
+#: rc.cpp:333
+#, no-c-format
+msgid "Alt+S"
+msgstr ""
+
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 24
-#: rc.cpp:73
+#: rc.cpp:337
 #, no-c-format
 msgid "pageSizeWidget_base"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 50
-#: rc.cpp:78
+#: rc.cpp:342
 #, no-c-format
 msgid "Page Format"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 67
-#: rc.cpp:82
+#: rc.cpp:346
 #, no-c-format
 msgid "Format:"
 msgstr ""
 
 #. i18n: tag string
+#. i18n: file pageSizeWidget_base.ui line 73
+#: rc.cpp:350
+#, no-c-format
+msgid "Portrait"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file pageSizeWidget_base.ui line 78
+#: rc.cpp:354
+#, no-c-format
+msgid "Landscape"
+msgstr ""
+
+#. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 107
-#: rc.cpp:94
+#: rc.cpp:358
 #, no-c-format
 msgid "Width:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 115
-#: rc.cpp:98
+#: rc.cpp:362
 #, no-c-format
 msgid "Height:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 123
-#: rc.cpp:102
+#: rc.cpp:366
 #, no-c-format
 msgid "Width of the chosen paper size in portrait orientation"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 131
-#: rc.cpp:106
+#: rc.cpp:370
 #, no-c-format
 msgid "Height of the chosen paper size in portrait orientation"
 msgstr ""
@@ -1072,7 +1504,7 @@ msgstr ""
 #. i18n: file pageSizeWidget_base.ui line 142
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 162
-#: rc.cpp:114 rc.cpp:126
+#: rc.cpp:378 rc.cpp:390
 #, no-c-format
 msgid "mm"
 msgstr ""
@@ -1081,31 +1513,31 @@ msgstr ""
 #. i18n: file pageSizeWidget_base.ui line 147
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 167
-#: rc.cpp:118 rc.cpp:130
+#: rc.cpp:382 rc.cpp:394
 #, no-c-format
 msgid "in"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 201
-#: rc.cpp:134
+#: rc.cpp:398
 #, fuzzy, no-c-format
 msgid "Orientation:"
 msgstr "&Rotacio"
 
 #. i18n: tag string
 #. i18n: file pageSizeWidget_base.ui line 225
-#: rc.cpp:138
+#: rc.cpp:402
 #, fuzzy, no-c-format
 msgid "Page Preview"
 msgstr "Montru &antaŭrigardon"
 
-#: rc.cpp:139
+#: rc.cpp:403
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Wolfram Diestel"
 
-#: rc.cpp:140
+#: rc.cpp:404
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "<wolfram@steloj.de>"
@@ -1126,14 +1558,25 @@ msgstr ""
 msgid "Case sensitive"
 msgstr ""
 
-#: tableOfContents.cpp:55
+#: tableOfContents.cpp:54
 msgid "Topic"
 msgstr ""
 
-#: tableOfContents.cpp:56
+#: tableOfContents.cpp:55
 #, fuzzy
 msgid "Page"
 msgstr "Paper&formato"
+
+#, fuzzy
+#~ msgid "Preferred Paper &Size"
+#~ msgstr "Paper&formato"
+
+#, fuzzy
+#~ msgid "Preferred &Orientation"
+#~ msgstr "&Rotacio"
+
+#~ msgid "KViewShell"
+#~ msgstr "Rigardilo"
 
 #~ msgid ""
 #~ "The file %1\n"
@@ -1153,7 +1596,3 @@ msgstr "Paper&formato"
 #, fuzzy
 #~ msgid "Interface enhancements"
 #~ msgstr "DCOP-interfaco, gravaj plibonigoj"
-
-#, fuzzy
-#~ msgid "Show &thumbnail previews"
-#~ msgstr "Montru &antaŭrigardon"
