@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2007-07-14 05:36+0200\n"
+"POT-Creation-Date: 2007-07-15 05:35+0200\n"
 "PO-Revision-Date: 2002-09-16 21:55GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -2756,10 +2756,11 @@ msgstr "pli granda ol"
 msgid "Header1"
 msgstr ""
 
-#: StyleManager.cpp:382 dialogs/StylesDialog.cpp:117
-#: dialogs/StylesDialog.cpp:161 dialogs/StylesDialog.cpp:204
-#: dialogs/StylesDialog.cpp:220 dialogs/StylesDialog.cpp:263
-#: dialogs/StylesDialog.cpp:285 dialogs/StylesDialog.cpp:308 ui/View.cpp:541
+#: StyleManager.cpp:382 dialogs/StyleManagerDialog.cpp:100
+#: dialogs/StyleManagerDialog.cpp:144 dialogs/StyleManagerDialog.cpp:182
+#: dialogs/StyleManagerDialog.cpp:196 dialogs/StyleManagerDialog.cpp:239
+#: dialogs/StyleManagerDialog.cpp:259 dialogs/StyleManagerDialog.cpp:280
+#: ui/View.cpp:541
 #, fuzzy
 msgid "Default"
 msgstr "Rezulto"
@@ -4471,6 +4472,18 @@ msgstr "Malligu ĉelojn"
 msgid "Merging of columns or rows is not supported."
 msgstr ""
 
+#: commands/NamedAreaCommand.cpp:33 commands/NamedAreaCommand.cpp:49
+#: dialogs/AddNamedAreaDialog.cpp:49
+#, fuzzy
+#| msgid "Edit Area"
+msgid "Add Named Area"
+msgstr "Redakta areo"
+
+#: commands/NamedAreaCommand.cpp:51 dialogs/NamedAreaDialog.cpp:191
+#, fuzzy
+msgid "Remove Named Area"
+msgstr "Forigu ĉelon"
+
 #: commands/RowColumnManipulators.cpp:42 dialogs/Resize2Dialog.cpp:124
 msgid "Resize Column"
 msgstr "Ŝanĝu grandecon de kolumno"
@@ -4600,27 +4613,27 @@ msgstr "Egipto"
 msgid "Non-empty"
 msgstr "Neniu"
 
-#: dialogs/AngleDialog.cpp:62
-msgid "Angle:"
-msgstr "Angulo:"
-
-#: dialogs/AreaDialog.cpp:46
-msgid "Area Name"
-msgstr "Areonomo"
-
-#: dialogs/AreaDialog.cpp:60
+#: dialogs/AddNamedAreaDialog.cpp:58
 #, fuzzy
 msgid "Enter the area name:"
 msgstr "Donu nomon:"
 
-#: dialogs/AreaDialog.cpp:95 ui/View.cpp:6591
-msgid "This name is already used."
-msgstr "Tiu nomo jam estas uzata."
+#: dialogs/AddNamedAreaDialog.cpp:91
+#, qt-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
 
-#: dialogs/AreaDialog.cpp:99
+#: dialogs/AddNamedAreaDialog.cpp:93 dialogs/AddNamedAreaDialog.cpp:99
+#: dialogs/NamedAreaDialog.cpp:309
 #, fuzzy
-msgid "Area text is empty."
-msgstr "Areoteksto estas malplena!"
+msgid "Replace Named Area"
+msgstr "Forigu ĉelon"
+
+#: dialogs/AngleDialog.cpp:62
+msgid "Angle:"
+msgstr "Angulo:"
 
 #: dialogs/CSVDialog.cpp:73 dialogs/CSVDialog.cpp:170
 msgid "Inserting From Clipboard"
@@ -4806,7 +4819,7 @@ msgid "&Add"
 msgstr "&Aldonu"
 
 #: dialogs/ConsolidateDialog.cpp:125 dialogs/ListDialog.cpp:76
-#: dialogs/NamedAreaDialog.cpp:68
+#: dialogs/NamedAreaDialog.cpp:70
 #, fuzzy
 msgid "&Remove"
 msgstr "&Forigu komenton"
@@ -5315,7 +5328,7 @@ msgstr "Forigu liniojn"
 msgid "Remove columns"
 msgstr "Forigu kolumnojn"
 
-#: dialogs/LayoutDialog.cpp:173
+#: dialogs/LayoutDialog.cpp:173 dialogs/StyleManagerDialog.cpp:60
 #, fuzzy
 msgid "Style"
 msgstr "Stilo:"
@@ -5747,76 +5760,60 @@ msgstr ""
 "Ero-areo ne estas malplena.\n"
 "Ĉu vi volas daŭrigi?"
 
-#: dialogs/NamedAreaDialog.cpp:67
+#: dialogs/NamedAreaDialog.cpp:69
 #, fuzzy
 #| msgid "&Sheet"
 msgid "&Select"
 msgstr "&Tabelo"
 
-#: dialogs/NamedAreaDialog.cpp:69
+#: dialogs/NamedAreaDialog.cpp:71
 #, fuzzy
 msgid "&Edit..."
 msgstr "Valideco..."
 
-#: dialogs/NamedAreaDialog.cpp:70 dialogs/StylesDialog.cpp:80
+#: dialogs/NamedAreaDialog.cpp:72 dialogs/StyleManagerDialog.cpp:48
 #, fuzzy
 msgid "&New..."
 msgstr "&Nova"
 
-#: dialogs/NamedAreaDialog.cpp:71
+#: dialogs/NamedAreaDialog.cpp:73
 #, fuzzy
 msgid "Named Areas"
 msgstr "Forigu ĉelon"
 
-#: dialogs/NamedAreaDialog.cpp:87 dialogs/NamedAreaDialog.cpp:115
+#: dialogs/NamedAreaDialog.cpp:89 dialogs/NamedAreaDialog.cpp:117
 #, qt-format
 msgid "Area: %1"
 msgstr "Areo: %1"
 
-#: dialogs/NamedAreaDialog.cpp:150
+#: dialogs/NamedAreaDialog.cpp:152
 #, fuzzy
 msgid "New Named Area"
 msgstr "Forigu ĉelon"
 
-#: dialogs/NamedAreaDialog.cpp:176
+#: dialogs/NamedAreaDialog.cpp:178
 #, fuzzy
 #| msgid "Edit Area"
 msgid "Edit Named Area"
 msgstr "Redakta areo"
 
-#: dialogs/NamedAreaDialog.cpp:188
+#: dialogs/NamedAreaDialog.cpp:190
 #, fuzzy
 #| msgid "Do you really want to remove this area name?"
 msgid "Do you really want to remove this named area?"
 msgstr "Ĉi vere vi volas forigi tiun areonomon?"
 
-#: dialogs/NamedAreaDialog.cpp:189
-#, fuzzy
-msgid "Remove Named Area"
-msgstr "Forigu ĉelon"
-
-#: dialogs/NamedAreaDialog.cpp:233
+#: dialogs/NamedAreaDialog.cpp:239
 msgid "Cells:"
 msgstr "Ĉeloj:"
 
-#: dialogs/NamedAreaDialog.cpp:240
+#: dialogs/NamedAreaDialog.cpp:246
 msgid "Sheet:"
 msgstr "Tabelo:"
 
-#: dialogs/NamedAreaDialog.cpp:247
+#: dialogs/NamedAreaDialog.cpp:253
 msgid "Area name:"
 msgstr "Areonomo:"
-
-#: dialogs/NamedAreaDialog.cpp:304
-#, fuzzy
-#| msgid "Do you really want to remove this area name?"
-msgid "Do you really want to replace this named area?"
-msgstr "Ĉi vere vi volas forigi tiun areonomon?"
-
-#: dialogs/NamedAreaDialog.cpp:305
-#, fuzzy
-msgid "Replace Named Area"
-msgstr "Forigu ĉelon"
 
 #: dialogs/PaperLayoutDialog.cpp:83
 msgid "&Apply to all sheets"
@@ -6509,46 +6506,36 @@ msgstr "&Unua linio estas kapo"
 msgid "Special Paste"
 msgstr "Aparta enŝovo"
 
-#: dialogs/StylesDialog.cpp:49 dialogs/StylesDialog.cpp:56
-#, fuzzy
-msgid "Styles"
-msgstr "Stilo:"
-
-#: dialogs/StylesDialog.cpp:58
-#, fuzzy
-msgid "All Styles"
-msgstr "Stilo:"
-
-#: dialogs/StylesDialog.cpp:59
-#, fuzzy
-msgid "Applied Styles"
-msgstr "Stilo:"
-
-#: dialogs/StylesDialog.cpp:60
-#, fuzzy
-msgid "Custom Styles"
-msgstr "Propraj listoj"
-
-#: dialogs/StylesDialog.cpp:61
-#, fuzzy
-msgid "Hierarchical"
-msgstr "Financo"
-
-#: dialogs/StylesDialog.cpp:78 ui/View.cpp:1189
-msgid "Style Manager"
-msgstr ""
-
-#: dialogs/StylesDialog.cpp:81
+#: dialogs/StyleManagerDialog.cpp:49
 #, fuzzy
 msgid "&Modify..."
 msgstr "&Aldonu/ŝanĝu komenton..."
 
-#: dialogs/StylesDialog.cpp:82
+#: dialogs/StyleManagerDialog.cpp:50
 #, fuzzy
 msgid "&Delete..."
 msgstr "&Ripeta rekalkulo ĝis..."
 
-#: dialogs/StylesDialog.cpp:229 dialogs/StylesDialog.cpp:233
+#: dialogs/StyleManagerDialog.cpp:52 ui/View.cpp:1189
+msgid "Style Manager"
+msgstr ""
+
+#: dialogs/StyleManagerDialog.cpp:64
+#, fuzzy
+msgid "All Styles"
+msgstr "Stilo:"
+
+#: dialogs/StyleManagerDialog.cpp:65
+#, fuzzy
+msgid "Custom Styles"
+msgstr "Propraj listoj"
+
+#: dialogs/StyleManagerDialog.cpp:66
+#, fuzzy
+msgid "Hierarchical"
+msgstr "Financo"
+
+#: dialogs/StyleManagerDialog.cpp:205 dialogs/StyleManagerDialog.cpp:209
 #, fuzzy, qt-format
 msgid "style%1"
 msgstr "Stilo:"
@@ -6968,12 +6955,12 @@ msgstr "Malfermu ligon?"
 msgid "Cell Tool"
 msgstr "Ĉelo estas"
 
-#: ui/Editors.cpp:1715
+#: ui/Editors.cpp:1710
 #, fuzzy
 msgid "Select Single Cell"
 msgstr "Rekalkulu tabelon"
 
-#: ui/Editors.cpp:1719
+#: ui/Editors.cpp:1714
 #, fuzzy
 msgid "Select Multiple Cells"
 msgstr "Elektu plurajn ĉelojn."
@@ -8277,6 +8264,10 @@ msgstr "Ŝanĝu tabelnomon"
 msgid "Sheet name cannot be empty."
 msgstr "Tabelnomo ne estu malplena."
 
+#: ui/View.cpp:6591
+msgid "This name is already used."
+msgstr "Tiu nomo jam estas uzata."
+
 #: ui/View.cpp:6835
 #, fuzzy
 msgid "Sum: "
@@ -8306,6 +8297,26 @@ msgstr "Nombro: %1"
 #, fuzzy
 msgid "CountA: "
 msgstr "Nombro: %1"
+
+#~ msgid "Area Name"
+#~ msgstr "Areonomo"
+
+#, fuzzy
+#~ msgid "Area text is empty."
+#~ msgstr "Areoteksto estas malplena!"
+
+#, fuzzy
+#~| msgid "Do you really want to remove this area name?"
+#~ msgid "Do you really want to replace this named area?"
+#~ msgstr "Ĉi vere vi volas forigi tiun areonomon?"
+
+#, fuzzy
+#~ msgid "Styles"
+#~ msgstr "Stilo:"
+
+#, fuzzy
+#~ msgid "Applied Styles"
+#~ msgstr "Stilo:"
 
 #~ msgid "Show Page Borders"
 #~ msgstr "Montru paĝmarĝenojn"
