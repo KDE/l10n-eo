@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2007-09-01 05:37+0200\n"
+"POT-Creation-Date: 2007-09-02 05:41+0200\n"
 "PO-Revision-Date: 2004-12-03 22:01+0100\n"
 "Last-Translator: Matthias Peick <matthias@peick.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -2371,8 +2371,8 @@ msgid "This option requires dirmngr >= 0.9.0"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 187
-#: configuredialog.cpp:4617 rc.cpp:579
+#. i18n: file smimeconfiguration.ui line 205
+#: configuredialog.cpp:4617 rc.cpp:594
 msgid "no proxy"
 msgstr ""
 
@@ -4472,16 +4472,16 @@ msgstr "Grava eraro: Ne eblas kolekti retpoŝtaĵojn: "
 msgid "Failed to add message:\n"
 msgstr "Ne eblis aldoni mesaĝon:\n"
 
-#: kmacctimap.cpp:290
+#: kmacctimap.cpp:291
 #, fuzzy, qt-format
 msgid "Checking account: %1"
 msgstr "Rigardu je nova poŝto: "
 
-#: kmacctimap.cpp:387 kmfolderimap.cpp:884
+#: kmacctimap.cpp:388 kmfolderimap.cpp:884
 msgid " completed"
 msgstr " finigita"
 
-#: kmacctimap.cpp:592 kmheaders.cpp:1321
+#: kmacctimap.cpp:593 kmheaders.cpp:1321
 msgid "Unable to process messages: "
 msgstr "Ne eblis trakti mesaĝojn: "
 
@@ -5491,6 +5491,7 @@ msgstr ""
 
 #: kmcomposewin.cpp:3087
 #, fuzzy
+msgctxt "don't compress"
 msgid "Keep"
 msgstr "&Pepu"
 
@@ -6931,13 +6932,9 @@ msgid_plural "Creating index file: %1 messages done"
 msgstr[0] "Kreante indeksdosieron: unu mesaĝo traktita"
 msgstr[1] "Kreante indeksdosieron: %1 mesaĝoj traktitaj"
 
-#: kmfoldermbox.cpp:1065
+#: kmfoldermbox.cpp:1065 kmfoldermbox.cpp:1157
 msgid "Could not add message to folder: "
 msgstr "Ne eblas aldoni mesaĝon al leterujo: "
-
-#: kmfoldermbox.cpp:1157
-msgid "Could not add message to folder:"
-msgstr "Ne eblas aldoni mesaĝon al leterujo:"
 
 #: kmfoldermbox.cpp:1160
 msgid "Could not add message to folder (No space left on device?)"
@@ -6984,7 +6981,7 @@ msgstr ""
 
 #: kmfoldermgr.cpp:198
 msgid ""
-"A folder with the same name has been deleted since the last mail check.You "
+"A folder with the same name has been deleted since the last mail check. You "
 "need to check mails first before creating another folder with the same name."
 msgstr ""
 
@@ -11365,14 +11362,8 @@ msgid "HTML Toolbar"
 msgstr "HTMLa illistelo"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 19
+#. i18n: file smimeconfiguration.ui line 16
 #: rc.cpp:525
-msgid "Validate certificates using CRLs"
-msgstr "Validigu atestilojn per ANVLoj"
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 25
-#: rc.cpp:528
 msgid ""
 "If this option is selected, S/MIME certificates are validated using "
 "Certificate Revocation Lists (CRLs)."
@@ -11380,14 +11371,14 @@ msgstr ""
 "Se la opcio estas elektita, S/MIME-atestiloj estas validigataj per ANVLoj."
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 32
-#: rc.cpp:531
-msgid "Validate certificates online (OCSP)"
-msgstr "Kontrolu rete atestilojn"
+#. i18n: file smimeconfiguration.ui line 19
+#: rc.cpp:528
+msgid "Validate certificates using CRLs"
+msgstr "Validigu atestilojn per ANVLoj"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 35
-#: rc.cpp:534
+#. i18n: file smimeconfiguration.ui line 29
+#: rc.cpp:531
 msgid ""
 "If this option is selected, S/MIME certificates are validated online using "
 "the Online Certificates Status Protocol (OCSP). Fill in the URL of the OCSP "
@@ -11398,20 +11389,32 @@ msgstr ""
 "respondilo."
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 42
+#. i18n: file smimeconfiguration.ui line 32
+#: rc.cpp:534
+msgid "Validate certificates online (OCSP)"
+msgstr "Kontrolu rete atestilojn"
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 39
 #: rc.cpp:537
 msgid "Online Certificate Validation"
 msgstr "Reta atestilkontrolo"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 56
+#. i18n: file smimeconfiguration.ui line 49
 #: rc.cpp:540
 msgid "OCSP responder URL:"
 msgstr "RASPa respondila URLo:"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 66
+#. i18n: file smimeconfiguration.ui line 59
 #: rc.cpp:543
+msgid "OCSP responder signature:"
+msgstr "RASPa resondilsubskribo:"
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 73
+#: rc.cpp:546
 msgid ""
 "Enter here the address of the server for online validation of certificates "
 "(OCSP responder). The URL is usually starting with http://."
@@ -11420,27 +11423,15 @@ msgstr ""
 "URLo normale komencas kun http://."
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 80
-#: rc.cpp:546
-msgid "OCSP responder signature:"
-msgstr "RASPa resondilsubskribo:"
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 111
+#. i18n: file smimeconfiguration.ui line 87
 #: rc.cpp:549
 #, fuzzy
 msgid "Ignore service URL of certificates"
 msgstr "Por radikaj atestiloj:"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 121
+#. i18n: file smimeconfiguration.ui line 97
 #: rc.cpp:552
-msgid "Do not check certificate policies"
-msgstr "Ne kontrolu atestilajn direktivojn"
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 124
-#: rc.cpp:555
 msgid ""
 "By default GnuPG uses the file ~/.gnupg/policies.txt to check if a "
 "certificate policy is allowed. If this option is selected, policies are not "
@@ -11451,14 +11442,14 @@ msgstr ""
 "ne estas kontrolataj-"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 131
-#: rc.cpp:558
-msgid "Never consult a CRL"
-msgstr "Neniam konsideru ANVLon"
+#. i18n: file smimeconfiguration.ui line 100
+#: rc.cpp:555
+msgid "Do not check certificate policies"
+msgstr "Ne kontrolu atestilajn direktivojn"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 134
-#: rc.cpp:561
+#. i18n: file smimeconfiguration.ui line 107
+#: rc.cpp:558
 msgid ""
 "If this option is checked, Certificate Revocation Lists are never used to "
 "validate S/MIME certificates."
@@ -11467,14 +11458,14 @@ msgstr ""
 "kontroli S/MIME-atestilojn."
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 141
-#: rc.cpp:564
-msgid "Fetch missing issuer certificates"
-msgstr "Prenu mankajn donatulajn atestilojn"
+#. i18n: file smimeconfiguration.ui line 110
+#: rc.cpp:561
+msgid "Never consult a CRL"
+msgstr "Neniam konsideru ANVLon"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 144
-#: rc.cpp:567
+#. i18n: file smimeconfiguration.ui line 117
+#: rc.cpp:564
 msgid ""
 "If this option is checked, missing issuer certificates are fetched when "
 "necessary (this applies to both validation methods, CRLs and OCSP)"
@@ -11483,63 +11474,32 @@ msgstr ""
 "necesas (Tio funkcias kun ambaŭ kontrolmanieroj, ANVLo kaj RASPo.)"
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 151
+#. i18n: file smimeconfiguration.ui line 120
+#: rc.cpp:567
+msgid "Fetch missing issuer certificates"
+msgstr "Prenu mankajn donatulajn atestilojn"
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 127
 #: rc.cpp:570
 msgid "HTTP Requests"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 160
+#. i18n: file smimeconfiguration.ui line 133
 #: rc.cpp:573
-msgid "Do not perform any HTTP requests"
-msgstr ""
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 163
-#: rc.cpp:576
 msgid "Entirely disables the use of HTTP for S/MIME."
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 197
-#: rc.cpp:582
-msgid "Use this proxy for HTTP requests: "
+#. i18n: file smimeconfiguration.ui line 136
+#: rc.cpp:576
+msgid "Do not perform any HTTP requests"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 204
-#: rc.cpp:585
-msgid "Use system HTTP proxy:"
-msgstr ""
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 207
-#: rc.cpp:588
-msgid ""
-"If this option is selected, the value of the HTTP proxy shown on the right "
-"(which comes from the environment variable http_proxy) will be used for any "
-"HTTP request."
-msgstr ""
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 214
-#: rc.cpp:591
-msgid ""
-"Enter here the location of your HTTP Proxy, which will be used for all HTTP "
-"requests relating to S/MIME. The syntax is host:port, for instance myproxy."
-"nowhere.com:3128."
-msgstr ""
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 223
-#: rc.cpp:594
-#, fuzzy
-msgid "Ignore HTTP CRL distribution point of certificates"
-msgstr "Por radikaj atestiloj:"
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 226
-#: rc.cpp:597
+#. i18n: file smimeconfiguration.ui line 170
+#: rc.cpp:579
 msgid ""
 "When looking for the location of a CRL, the to-be-tested certificate usually "
 "contains what are known as \"CRL Distribution Point\" (DP) entries, which "
@@ -11549,33 +11509,63 @@ msgid ""
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 239
+#. i18n: file smimeconfiguration.ui line 173
+#: rc.cpp:582
+#, fuzzy
+msgid "Ignore HTTP CRL distribution point of certificates"
+msgstr "Por radikaj atestiloj:"
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 184
+#: rc.cpp:585
+msgid ""
+"If this option is selected, the value of the HTTP proxy shown on the right "
+"(which comes from the environment variable http_proxy) will be used for any "
+"HTTP request."
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 187
+#: rc.cpp:588
+msgid "Use system HTTP proxy:"
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 194
+#: rc.cpp:591
+msgid "Use this proxy for HTTP requests: "
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 215
+#: rc.cpp:597
+msgid ""
+"Enter here the location of your HTTP Proxy, which will be used for all HTTP "
+"requests relating to S/MIME. The syntax is host:port, for instance myproxy."
+"nowhere.com:3128."
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 232
 #: rc.cpp:600
 msgid "LDAP Requests"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 248
+#. i18n: file smimeconfiguration.ui line 238
 #: rc.cpp:603
-msgid "Do not perform any LDAP requests"
-msgstr ""
-
-#. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 251
-#: rc.cpp:606
 msgid "Entirely disables the use of LDAP for S/MIME."
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 270
-#: rc.cpp:609
-#, fuzzy
-msgid "Ignore LDAP CRL distribution point of certificates"
-msgstr "Por radikaj atestiloj:"
+#. i18n: file smimeconfiguration.ui line 241
+#: rc.cpp:606
+msgid "Do not perform any LDAP requests"
+msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 273
-#: rc.cpp:612
+#. i18n: file smimeconfiguration.ui line 275
+#: rc.cpp:609
 msgid ""
 "When looking for the location of a CRL, the to-be-tested certificate usually "
 "contains what are known as \"CRL Distribution Point\" (DP) entries, which "
@@ -11585,13 +11575,20 @@ msgid ""
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 285
+#. i18n: file smimeconfiguration.ui line 278
+#: rc.cpp:612
+#, fuzzy
+msgid "Ignore LDAP CRL distribution point of certificates"
+msgstr "Por radikaj atestiloj:"
+
+#. i18n: tag string
+#. i18n: file smimeconfiguration.ui line 287
 #: rc.cpp:615
 msgid "Primary host for LDAP requests:"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file smimeconfiguration.ui line 296
+#. i18n: file smimeconfiguration.ui line 298
 #: rc.cpp:618
 msgid ""
 "Entering a LDAP server here will make all LDAP requests go to that server "
@@ -13269,6 +13266,9 @@ msgstr "Faronta"
 #, fuzzy
 msgid "Has Attachment"
 msgstr "Kun kunsendaĵo"
+
+#~ msgid "Could not add message to folder:"
+#~ msgstr "Ne eblas aldoni mesaĝon al leterujo:"
 
 #~ msgid ""
 #~ "There is no Address Book entry for this email address. Add them to the "
