@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-01-15 09:45+0100\n"
+"POT-Creation-Date: 2008-01-16 08:09+0100\n"
 "PO-Revision-Date: 2008-01-10 19:46+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: meta/file/File_p.h:257 Statistics.cpp:398 Statistics.cpp:399
 #: Statistics.cpp:432 Statistics.cpp:433 Statistics.cpp:466 Statistics.cpp:498
 #: Statistics.cpp:513 Statistics.cpp:515 Statistics.cpp:552 Statistics.cpp:580
-#: Statistics.cpp:593 Statistics.cpp:594 MediaDevicePluginManager.cpp:528
+#: Statistics.cpp:593 Statistics.cpp:594 MediaDevicePluginManager.cpp:534
 #: tagdialog.cpp:621 tagdialog.cpp:648 querybuilder.cpp:389
 #: querybuilder.cpp:445 querybuilder.cpp:479 querybuilder.cpp:528
 #: querybuilder.cpp:582 querybuilder.cpp:611 querybuilder.cpp:663
@@ -650,12 +650,12 @@ msgid "Media Devices"
 msgstr "Mediodisponaĵoj"
 
 #: configdialog/dialogs/MediadeviceConfig.cpp:52
-#: MediaDevicePluginManager.cpp:81
+#: MediaDevicePluginManager.cpp:82
 msgid "Generic Devices and Volumes..."
 msgstr "Ĝeneralaj disponaĵoj kaj volumoj..."
 
 #: configdialog/dialogs/MediadeviceConfig.cpp:55
-#: MediaDevicePluginManager.cpp:85
+#: MediaDevicePluginManager.cpp:86
 msgid "Add Device..."
 msgstr "Aldoni aparaton..."
 
@@ -1753,7 +1753,7 @@ msgstr "Agordi"
 msgid "Disable"
 msgstr "Malŝalti"
 
-#: mediabrowser.cpp:225 mediabrowser.cpp:226 MediaDevicePluginManager.cpp:542
+#: mediabrowser.cpp:225 mediabrowser.cpp:226 MediaDevicePluginManager.cpp:548
 #: history/mediabrowser.cpp:292 history/mediabrowser.cpp:293
 msgid "Do not handle"
 msgstr "Ne trakti"
@@ -2137,15 +2137,15 @@ msgstr "Vadim Petrunin"
 msgid "Whitehawk Stormchaser"
 msgstr "Whitehawk Stormchaser"
 
-#: MediaDevicePluginManager.cpp:65
+#: MediaDevicePluginManager.cpp:66
 msgid "Manage Devices and Plugins"
 msgstr "Agordi la disponaĵojn kaj kromaĵojn"
 
-#: MediaDevicePluginManager.cpp:73 MainWindow.cpp:270
+#: MediaDevicePluginManager.cpp:74 MainWindow.cpp:270
 msgid "Devices"
 msgstr "Disponaĵoj"
 
-#: MediaDevicePluginManager.cpp:288
+#: MediaDevicePluginManager.cpp:289
 msgid ""
 "Sorry, you cannot define two devices\n"
 "with the same name and mountpoint!"
@@ -2153,44 +2153,44 @@ msgstr ""
 "Pardonu, vi ne povas difini du aparatojn\n"
 "kun sama nomo kaj sama kroĉpunkto!"
 
-#: MediaDevicePluginManager.cpp:316
+#: MediaDevicePluginManager.cpp:317
 msgid "Add New Device"
 msgstr "Aldoni novan disponaĵon"
 
-#: MediaDevicePluginManager.cpp:324
+#: MediaDevicePluginManager.cpp:325
 msgid "Select the plugin to use with this device:"
 msgstr "Elektu la kromaĵon uzotan kun tiu disponaĵo:"
 
-#: MediaDevicePluginManager.cpp:336
+#: MediaDevicePluginManager.cpp:337
 msgid "Enter a &name for this device (required):"
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:339
+#: MediaDevicePluginManager.cpp:340
 msgid "Example: My_Ipod"
 msgstr "Ekzemple: Mia_Ipod"
 
-#: MediaDevicePluginManager.cpp:340
+#: MediaDevicePluginManager.cpp:341
 msgid ""
 "Enter a name for the device.  The name must be unique across all manually "
 "added devices.  It must not contain the pipe ( | ) character."
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:344
+#: MediaDevicePluginManager.cpp:345
 msgid "Enter the &mount point of the device, if applicable:"
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:347
+#: MediaDevicePluginManager.cpp:348
 msgid "Example: /mnt/ipod"
 msgstr "Ekzemple: /mnt/ipod"
 
-#: MediaDevicePluginManager.cpp:348
+#: MediaDevicePluginManager.cpp:349
 msgid ""
 "Enter the device's mount point.  Some devices (such as MTP devices) may not "
 "have a mount point and this can be ignored.  All other devices (iPods, UMS/"
 "VFAT devices) should enter the mount point here."
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:379
+#: MediaDevicePluginManager.cpp:380
 msgid ""
 "Sorry, every device must have a name and\n"
 "you cannot define two devices with the\n"
@@ -2198,13 +2198,9 @@ msgid ""
 "across autodetected devices as well.\n"
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:438
+#: MediaDevicePluginManager.cpp:439
 msgid "The device name cannot contain the '|' character"
 msgstr "La disponaĵa nomo ne povas enhavi la '|' signon"
-
-#: MediaDevicePluginManager.cpp:472
-msgid "(none)"
-msgstr "(nenio)"
 
 #: MediaDevicePluginManager.cpp:476
 msgid "Autodetected:"
@@ -2230,54 +2226,60 @@ msgstr "Vendisto:"
 msgid "Product:"
 msgstr "Produkto:"
 
-#: MediaDevicePluginManager.cpp:506
+#: MediaDevicePluginManager.cpp:504 MediaDevicePluginManager.cpp:628
+msgid "Mount Point:"
+msgstr "Kroĉpunkto:"
+
+#: MediaDevicePluginManager.cpp:507
+#, fuzzy
+#| msgid "Not rated"
+msgid "Not Mounted"
+msgstr "Sennota"
+
+#: MediaDevicePluginManager.cpp:512
 msgid "Device information for "
 msgstr "Aparata informo pri"
 
-#: MediaDevicePluginManager.cpp:509
+#: MediaDevicePluginManager.cpp:515
 msgid "Name: "
 msgstr "Nomo:"
 
-#: MediaDevicePluginManager.cpp:513
+#: MediaDevicePluginManager.cpp:519
 msgid "Details"
 msgstr "Detaloj"
 
-#: MediaDevicePluginManager.cpp:517
+#: MediaDevicePluginManager.cpp:523
 msgid "Plugin:"
 msgstr "Kromaĵo:"
 
-#: MediaDevicePluginManager.cpp:538
+#: MediaDevicePluginManager.cpp:544
 #: mediadevice/generic/genericmediadevice.cpp:278
 msgid "Generic Audio Player"
 msgstr "Ĝenerala sonorludilo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 100
-#: MediaDevicePluginManager.cpp:553 rc.cpp:1937
+#: MediaDevicePluginManager.cpp:559 rc.cpp:1937
 msgid "Remove"
 msgstr "Forigi"
 
-#: MediaDevicePluginManager.cpp:555
+#: MediaDevicePluginManager.cpp:561
 msgid "Remove entries corresponding to this device from configuration file"
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:613
+#: MediaDevicePluginManager.cpp:619
 msgid "Mark Volumes as Media Devices"
 msgstr "Marki la volumojn kiel medioaparatojn"
 
-#: MediaDevicePluginManager.cpp:622
-msgid "Mount Point:"
-msgstr "Kroĉpunkto:"
-
-#: MediaDevicePluginManager.cpp:622
+#: MediaDevicePluginManager.cpp:628
 msgid "Mark?"
 msgstr "Ĉu marki?"
 
-#: MediaDevicePluginManager.cpp:685 MediaDevicePluginManager.cpp:697
+#: MediaDevicePluginManager.cpp:691 MediaDevicePluginManager.cpp:703
 msgid "Well, we tried..."
 msgstr "Nu, ni provis..."
 
-#: MediaDevicePluginManager.cpp:686
+#: MediaDevicePluginManager.cpp:692
 #, kde-format
 msgid ""
 "Could not create the marking file at %1.\n"
@@ -2285,7 +2287,7 @@ msgid ""
 "to create that file."
 msgstr ""
 
-#: MediaDevicePluginManager.cpp:698
+#: MediaDevicePluginManager.cpp:704
 #, kde-format
 msgid ""
 "Could not remove the marking file at %1.\n"
@@ -11091,6 +11093,9 @@ msgstr ""
 #: konquisidebar/universalamarok.cpp:317
 msgid "Build Collection..."
 msgstr "Krei kolekton..."
+
+#~ msgid "(none)"
+#~ msgstr "(nenio)"
 
 #~ msgid "Configure last.fm Support"
 #~ msgstr "Agordi la subtenon de last.fm"
