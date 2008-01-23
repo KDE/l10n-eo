@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-01-22 07:57+0100\n"
+"POT-Creation-Date: 2008-01-23 08:58+0100\n"
 "PO-Revision-Date: 2007-11-04 19:29+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -28,52 +28,62 @@ msgstr ""
 msgid "C&opy"
 msgstr "&Kopii"
 
-#: debugger.cpp:92
-#, fuzzy
-#| msgid "Done."
-msgctxt "debugging finished"
-msgid "Done."
-msgstr "Preta."
+#: debugger.cpp:83
+#, c-format
+msgid "Application: %progname (%execname), signal %signame"
+msgstr ""
 
-#: debugger.cpp:117
-#, kde-format
-msgid "Backtrace saved to %1"
-msgstr "Konservis retrospuraĵon al %1"
+#: debugger.cpp:96
+#, fuzzy
+#| msgid "Backtrace"
+msgctxt "debugging finished"
+msgid "Backtrace loaded."
+msgstr "Retrospuraĵo"
 
 #: debugger.cpp:121
+#, fuzzy, kde-format
+#| msgid "Backtrace saved to %1"
+msgid "Backtrace saved to <filename>%1</filename>."
+msgstr "Konservis retrospuraĵon al %1"
+
+#: debugger.cpp:125
 msgid "Cannot create a file to save the backtrace in"
 msgstr "Ne eblis krei dosieron por konservi la retrospuraĵon."
 
-#: debugger.cpp:126
+#: debugger.cpp:133
 msgid "Select Filename"
 msgstr "Elektu dosiernomon"
 
-#: debugger.cpp:134
-#, kde-format
+#: debugger.cpp:141
+#, fuzzy, kde-format
+#| msgid ""
+#| "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
 msgid ""
-"A file named \"%1\" already exists. Are you sure you want to overwrite it?"
+"A file named <filename>%1</filename> already exists. Are you sure you want "
+"to overwrite it?"
 msgstr ""
 "Dosiero kun la nomo \"%1\" jam ekzistas. Ĉu vi certas, ke vi volas "
 "anstataŭigi ĝin?"
 
-#: debugger.cpp:136
+#: debugger.cpp:143
 msgid "Overwrite File?"
 msgstr "Ĉu anstataŭigi la dosieron?"
 
-#: debugger.cpp:137
+#: debugger.cpp:144
 msgid "&Overwrite"
 msgstr "&Anstataŭigi"
 
-#: debugger.cpp:149
-#, kde-format
-msgid "Cannot open file %1 for writing"
+#: debugger.cpp:156
+#, fuzzy, kde-format
+#| msgid "Cannot open file %1 for writing"
+msgid "Cannot open file <filename>%1</filename> for writing."
 msgstr "Ne eblas malfermi la dosieron %1 por skribado"
 
-#: debugger.cpp:157
+#: debugger.cpp:164
 msgid "Unable to create a valid backtrace."
 msgstr "Ne eblas krei validan retrospuraĵon."
 
-#: debugger.cpp:158
+#: debugger.cpp:165
 msgid ""
 "This backtrace appears to be of no use.\n"
 "This is probably because your packages are built in a way which prevents "
@@ -86,11 +96,11 @@ msgstr ""
 "malpermesas la kreon de propraj retrospuraĵoj aŭ la stako serioze estis "
 "damaĝita ĉe la kraŝo.\n"
 
-#: debugger.cpp:167
+#: debugger.cpp:174
 msgid "Loading backtrace..."
 msgstr "Legante retrospuraĵon..."
 
-#: debugger.cpp:190
+#: debugger.cpp:197
 msgid ""
 "The following options are enabled:\n"
 "\n"
@@ -98,7 +108,7 @@ msgstr ""
 "La sekvontaj opcioj estas ebligitaj:\n"
 "\n"
 
-#: debugger.cpp:192
+#: debugger.cpp:199
 msgid ""
 "\n"
 "As the usage of these options is not recommended - because they can, in rare "
@@ -112,15 +122,15 @@ msgstr ""
 "Vi necesas neaktivigi la opciojn kaj denove refarigi la problemon por akiri "
 "retrospuraĵon.\n"
 
-#: debugger.cpp:197
+#: debugger.cpp:204
 msgid "Backtrace will not be created."
 msgstr "Reŝpurado ne estos kreata."
 
-#: debugger.cpp:205
+#: debugger.cpp:212
 msgid "Loading symbols..."
 msgstr "Legante simbolojn..."
 
-#: debugger.cpp:226
+#: debugger.cpp:233
 msgid "System configuration startup check disabled.\n"
 msgstr "Sistemagorda lanĉkontrolo malaktivigita.\n"
 
@@ -134,6 +144,21 @@ msgstr "Vi devas redakti la priskribon antaŭ forsendo de la raporto."
 msgctxt "unknown application"
 msgid "unknown"
 msgstr "nekonata"
+
+#: krashconf.cpp:159
+#, kde-format
+msgid "<application>%1</application>"
+msgstr ""
+
+#: krashconf.cpp:164 krashconf.cpp:171
+#, kde-format
+msgid "<command>%1</command>"
+msgstr ""
+
+#: krashconf.cpp:177
+#, kde-format
+msgid "<filename>%1</filename>"
+msgstr ""
 
 #: main.cpp:43
 msgid "KDE crash handler gives the user feedback if a program crashed"
@@ -211,26 +236,28 @@ msgstr "&Cimraporto"
 msgid "&Debugger"
 msgstr "&Cimserĉilo"
 
-#: toplevel.cpp:88
-msgid "Please attach the following backtrace to your bugreport."
+#: toplevel.cpp:96
+msgid "Please attach the following backtrace to your bug report:"
 msgstr ""
 
-#: toplevel.cpp:130
+#: toplevel.cpp:138
 msgid "A Fatal Error Occurred"
 msgstr ""
 
-#: toplevel.cpp:134
+#: toplevel.cpp:142
 msgid "What can I do?"
 msgstr ""
 
-#: toplevel.cpp:139
+#: toplevel.cpp:147
 #, fuzzy, c-format
 #| msgid ""
 #| "<p><b>Application crashed</b></p><p>The program %appname crashed.</p>"
-msgid "<p>Application crashed</p><p>The program %appname crashed.</p>"
+msgid ""
+"<p style=\"margin-bottom: 6px;\"><b>Application crashed</b></p><p>The "
+"program %appname crashed.</p>"
 msgstr "<p><b>Aplikaĵo kolapsis</b></p><p>La programo %appname kolapsis.</p>"
 
-#: toplevel.cpp:158
+#: toplevel.cpp:166
 msgid ""
 "<p>Do you want to generate a backtrace? This will help the developers to "
 "figure out what went wrong.</p>\n"
@@ -245,31 +272,34 @@ msgstr ""
 "p><p><b>Atentu: Retroŝpuraĵo ne povas anstataŭi priskribon de la eraro kaj "
 "kiel reprodukti ĝin. Ne eblas forigi eraron sen taŭga priskribo.</b></p>"
 
-#: toplevel.cpp:170
+#: toplevel.cpp:178
 msgid "Include Backtrace"
 msgstr "Enmeti retroŝpuraĵon"
 
-#: toplevel.cpp:170
+#: toplevel.cpp:178
 msgid "Generate"
 msgstr "Krei"
 
-#: toplevel.cpp:170
+#: toplevel.cpp:178
 msgid "Do Not Generate"
 msgstr "Ne krei"
 
-#: toplevel.cpp:237
+#: toplevel.cpp:245
 msgid "It was not possible to generate a backtrace."
 msgstr "Ne eblis krei retrospuraĵon."
 
-#: toplevel.cpp:238
+#: toplevel.cpp:246
 msgid "Backtrace Not Possible"
 msgstr "Retroŝpuraĵo ne kreebla"
 
+#, fuzzy
+#~| msgid "Done."
+#~ msgctxt "debugging finished"
+#~ msgid "Done."
+#~ msgstr "Preta."
+
 #~ msgid "General"
 #~ msgstr "Ĝeneralo"
-
-#~ msgid "Backtrace"
-#~ msgstr "Retrospuraĵo"
 
 #~ msgid "<p><b>Short description</b></p><p>%1</p>"
 #~ msgstr "<p><b>Mallonga priskribo</b></p><p>%1</p>"
