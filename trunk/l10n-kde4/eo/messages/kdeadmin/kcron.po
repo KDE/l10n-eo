@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcron\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-02-27 15:05+0100\n"
+"POT-Creation-Date: 2008-02-29 14:37+0100\n"
 "PO-Revision-Date: 2003-11-13 23:54+0100\n"
 "Last-Translator: Heiko Evermann <heiko@evermann.de>\n"
 "Language-Team: Esperanto <kde-i18n-eo@mail.kde.org>\n"
@@ -15,22 +15,26 @@ msgstr ""
 "X-Generator: KBabel 1.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/crontabWidget.cpp:129
+#: src/crontabWidget.cpp:138
 msgid "Show the following Cron:"
 msgstr ""
 
-#: src/crontabWidget.cpp:133
+#: src/crontabWidget.cpp:142
 msgid "Personal Cron"
 msgstr ""
 
-#: src/crontabWidget.cpp:138
+#: src/crontabWidget.cpp:147
 #, fuzzy
 #| msgid "(System Crontab)"
 msgid "System Cron"
 msgstr "(Sistema \"Cron\"-tabelo)"
 
-#: src/crontabWidget.cpp:142
+#: src/crontabWidget.cpp:151
 msgid "Cron of User:"
+msgstr ""
+
+#: src/crontabWidget.cpp:174
+msgid "Show All Personal Crons"
 msgstr ""
 
 #: src/crontablib/cthost.cpp:53
@@ -41,87 +45,89 @@ msgid ""
 "Check the crontab man page for further details."
 msgstr ""
 
-#: src/crontablib/cttask.cpp:231
+#: src/crontablib/cttask.cpp:233
 msgid "At system startup"
 msgstr ""
 
-#: src/crontablib/cttask.cpp:238
+#: src/crontablib/cttask.cpp:240
 #, kde-format
 msgctxt "1:Time Description, 2:Date Description"
 msgid "%1, %2"
 msgstr ""
 
-#: src/crontablib/cttask.cpp:242
+#: src/crontablib/cttask.cpp:244
 #, fuzzy, kde-format
 #| msgid "every day "
 msgctxt "Every 'days of week'"
 msgid "every %1"
 msgstr "ĉiutage"
 
-#: src/crontablib/cttask.cpp:246
+#: src/crontablib/cttask.cpp:248
 #, kde-format
 msgctxt "'Days of month' of 'Months'"
 msgid "%1 of %2"
 msgstr ""
 
-#: src/crontablib/cttask.cpp:257 src/crontablib/ctdom.cpp:23
+#: src/crontablib/cttask.cpp:259 src/crontablib/ctdom.cpp:23
 #: src/crontablib/ctdow.cpp:44
 msgid "every day "
 msgstr "ĉiutage"
 
-#: src/crontablib/cttask.cpp:268
+#: src/crontablib/cttask.cpp:270
 #, kde-format
 msgctxt "1:Day of month, 2:Day of week"
 msgid "%1 as well as %2"
 msgstr ""
 
-#: src/crontablib/cttask.cpp:298
+#: src/crontablib/cttask.cpp:300
 #, fuzzy, kde-format
 #| msgid "%H:%M"
 msgctxt "1:Hour, 2:Minute"
 msgid "%1:%2"
 msgstr "%H:%M"
 
-#: src/crontablib/cttask.cpp:307
+#: src/crontablib/cttask.cpp:309
 msgid ", and "
 msgstr ", kaj "
 
-#: src/crontablib/cttask.cpp:309 src/crontablib/ctunit.cpp:171
+#: src/crontablib/cttask.cpp:311 src/crontablib/ctunit.cpp:171
 msgid " and "
 msgstr " kaj "
 
-#: src/crontablib/cttask.cpp:312 src/crontablib/ctunit.cpp:174
+#: src/crontablib/cttask.cpp:314 src/crontablib/ctunit.cpp:174
 msgid ", "
 msgstr ","
 
-#: src/crontablib/cttask.cpp:320
+#: src/crontablib/cttask.cpp:322
 #, kde-format
 msgctxt "Hour::Minute list"
 msgid "At %1"
 msgstr ""
 
-#: src/crontablib/cttask.cpp:328
+#: src/crontablib/cttask.cpp:330
 #, fuzzy
 #| msgid "the minutes"
 msgid "Every minutes"
 msgstr "la minutoj"
 
-#: src/crontablib/cttask.cpp:330
+#: src/crontablib/cttask.cpp:332
 #, fuzzy, kde-format
 #| msgid "the minutes"
 msgid "Every %1 minutes"
 msgstr "la minutoj"
 
-#: src/crontablib/ctcron.cpp:124
-msgid "(System Crontab)"
+#: src/crontablib/ctcron.cpp:130 src/crontabPrinter.cpp:182
+#, fuzzy
+#| msgid "(System Crontab)"
+msgid "System Crontab"
 msgstr "(Sistema \"Cron\"-tabelo)"
 
-#: src/crontablib/ctcron.cpp:186
+#: src/crontablib/ctcron.cpp:193
 #, kde-format
 msgid "No password entry found for uid '%1'"
 msgstr "Neniu pasvortero trovita por uid '%1'"
 
-#: src/crontablib/ctcron.cpp:333
+#: src/crontablib/ctcron.cpp:352
 msgid "An error occurred while updating crontab."
 msgstr "Okazis eraro dum aktualigado la  \"Cron\"-tabelo"
 
@@ -182,6 +188,12 @@ msgstr "Novembro"
 #: src/crontablib/ctmonth.cpp:33
 msgid "December"
 msgstr "Decembro"
+
+#: src/crontablib/ctGlobalCron.cpp:31
+#, fuzzy
+#| msgid "Print &all users"
+msgid "All users"
+msgstr "Presu &de ĉiuj uzantoj"
 
 #: src/crontablib/ctunit.cpp:170
 #, fuzzy
@@ -378,56 +390,86 @@ msgstr "Dim"
 msgid "<b>Scheduled Tasks</b>"
 msgstr "Planitaj taskoj"
 
-#: src/tasksWidget.cpp:87
-msgid "Modify Task"
-msgstr "Ŝanĝu taskon"
-
-#: src/tasksWidget.cpp:133
+#: src/tasksWidget.cpp:89
 msgctxt "Do not use any quote characters (') in this string"
 msgid "End of script execution. Type Enter or Ctrl+C to exit."
 msgstr ""
 
-#: src/tasksWidget.cpp:166
+#: src/tasksWidget.cpp:122
 #, fuzzy
 #| msgid "Tasks"
 msgid "New Task"
 msgstr "Taskoj"
 
-#: src/tasksWidget.cpp:211 src/crontabPrinter.cpp:135
-msgid "Scheduling"
-msgstr ""
+#: src/tasksWidget.cpp:153
+msgid "Modify Task"
+msgstr "Ŝanĝu taskon"
 
-#: src/tasksWidget.cpp:214
+#: src/tasksWidget.cpp:202 src/variablesWidget.cpp:156
 msgid "User"
 msgstr ""
 
-#: src/tasksWidget.cpp:217 src/crontabPrinter.cpp:135
+#: src/tasksWidget.cpp:205 src/crontabPrinter.cpp:135
+msgid "Scheduling"
+msgstr ""
+
+#: src/tasksWidget.cpp:207 src/crontabPrinter.cpp:135
 #, fuzzy
 #| msgid "Modify Task"
 msgid "Command"
 msgstr "Ŝanĝu taskon"
 
-#: src/tasksWidget.cpp:218 src/variablesWidget.cpp:153
+#: src/tasksWidget.cpp:208 src/variablesWidget.cpp:161
 #, fuzzy
 #| msgid "Sat"
 msgid "Status"
 msgstr "Sab"
 
-#: src/tasksWidget.cpp:219 src/crontabPrinter.cpp:135
+#: src/tasksWidget.cpp:209 src/crontabPrinter.cpp:135
 msgid "Description"
 msgstr "Priskribo"
 
-#: src/tasksWidget.cpp:220
+#: src/tasksWidget.cpp:210
 #, fuzzy
 #| msgid "Scheduled Tasks"
 msgid "Scheduling Details"
 msgstr "Planitaj taskoj"
 
-#: src/kcron.cpp:87 src/kcron.cpp:312
+#: src/kcmCron.cpp:104
 msgid "Task Scheduler"
 msgstr "Taskolancilo"
 
-#: src/kcron.cpp:115
+#: src/kcmCron.cpp:105
+msgid "KDE Task Scheduler"
+msgstr "KDEa Taskolanĉilo"
+
+#: src/kcmCron.cpp:105
+msgid ""
+"(c) 2008, Nicolas Ternisien\n"
+"(c) 1999-2000, Gary Meyer"
+msgstr ""
+
+#: src/kcmCron.cpp:107
+msgid "Nicolas Ternisien"
+msgstr ""
+
+#: src/kcmCron.cpp:108
+msgid "Gary Meyer"
+msgstr ""
+
+#: src/kcmCron.cpp:109
+msgid "Robert Berry"
+msgstr ""
+
+#: src/kcmCron.cpp:110
+msgid "James Ots"
+msgstr ""
+
+#: src/kcmCron.cpp:111
+msgid "Alberto G. Hierro"
+msgstr ""
+
+#: src/kcmCron.cpp:184
 #, kde-format
 msgid ""
 "The following error occurred while initializing KCron:\n"
@@ -437,7 +479,7 @@ msgid ""
 "KCron will now exit.\n"
 msgstr ""
 
-#: src/kcron.cpp:130
+#: src/kcmCron.cpp:199
 msgid ""
 "You can use this application to schedule programs to run in the background.\n"
 "To schedule a new task now, click on the Tasks folder and select Edit/New "
@@ -447,44 +489,37 @@ msgstr ""
 "Por tuj plani taskon, klaku sur la taskujon kaj elektu Redaktu/Nova en la "
 "menuo."
 
-#: src/kcron.cpp:130
+#: src/kcmCron.cpp:199
 msgid "Welcome to the Task Scheduler"
 msgstr "Bonvenon ĉe la Taskolanĉilo"
 
-#: src/kcron.cpp:166
+#: src/kcmCron.cpp:264
 #, fuzzy
 #| msgid "No tasks..."
 msgctxt "Adds a new task"
 msgid "New &Task..."
 msgstr "Neniuj taskoj..."
 
-#: src/kcron.cpp:171
+#: src/kcmCron.cpp:269
 #, fuzzy
 #| msgid "No variables..."
 msgctxt "Adds a new variable"
 msgid "New &Variable..."
 msgstr "Neniuj variabloj..."
 
-#: src/kcron.cpp:175
+#: src/kcmCron.cpp:273
 msgid "M&odify..."
 msgstr "Ŝ&anĝu..."
 
-#: src/kcron.cpp:181
+#: src/kcmCron.cpp:279
 msgid "&Delete"
 msgstr ""
 
-#: src/kcron.cpp:187
+#: src/kcmCron.cpp:285
 msgid "&Run Now"
 msgstr "&Lanĉu nun"
 
-#: src/kcron.cpp:244
-#, fuzzy
-#| msgid "Ready."
-msgctxt "Ready for user input"
-msgid " Ready."
-msgstr "Preta."
-
-#: src/kcron.cpp:265
+#: src/kcmCron.cpp:365
 msgid ""
 "Scheduled tasks have been modified.\n"
 "Do you want to save changes?"
@@ -492,77 +527,43 @@ msgstr ""
 "Taskoplano ŝangiĝis.\n"
 "Ĉu vi volas sekurigi la ŝanĝojn?"
 
-#: src/kcron.cpp:297
+#: src/kcmCron.cpp:398
 #, fuzzy
 #| msgid "Saving..."
 msgctxt "Saving the file to the hard drive"
 msgid "Saving..."
 msgstr "Konservante..."
 
-#: src/kcron.cpp:299
+#: src/kcmCron.cpp:400
 #, fuzzy
 #| msgid "Ready."
 msgctxt "Ready for user input"
 msgid "Ready."
 msgstr "Preta."
 
-#: src/kcron.cpp:322
+#: src/kcmCron.cpp:423
 #, fuzzy
 #| msgid "Create a new task or variable."
 msgid "Create a new task."
 msgstr "Kreas novan taskon aŭ variablon."
 
-#: src/kcron.cpp:325
+#: src/kcmCron.cpp:426
 #, fuzzy
 #| msgid "Create a new task or variable."
 msgid "Create a new variable."
 msgstr "Kreas novan taskon aŭ variablon."
 
-#: src/kcron.cpp:328
+#: src/kcmCron.cpp:429
 msgid "Edit the selected task or variable."
 msgstr "Redaktas la elektitan taskon aŭ variablon."
 
-#: src/kcron.cpp:331
+#: src/kcmCron.cpp:432
 msgid "Delete the selected task or variable."
 msgstr "Forigas la elektitan taskon aŭ variablon."
 
-#: src/kcron.cpp:334
+#: src/kcmCron.cpp:435
 msgid "Run the selected task now."
 msgstr "Lanĉas la elektitan taskon nun."
-
-#: src/main.cpp:20
-msgid "KDE Task Scheduler"
-msgstr "KDEa Taskolanĉilo"
-
-#: src/main.cpp:22
-msgid "KCron"
-msgstr "KCron"
-
-#: src/main.cpp:23
-msgid ""
-"(c) 2008, Nicolas Ternisien\n"
-"(c) 1999-2000, Gary Meyer"
-msgstr ""
-
-#: src/main.cpp:25
-msgid "Nicolas Ternisien"
-msgstr ""
-
-#: src/main.cpp:26
-msgid "Gary Meyer"
-msgstr ""
-
-#: src/main.cpp:27
-msgid "Robert Berry"
-msgstr ""
-
-#: src/main.cpp:28
-msgid "James Ots"
-msgstr ""
-
-#: src/main.cpp:29
-msgid "Alberto G. Hierro"
-msgstr ""
 
 #: src/variablesWidget.cpp:36
 #, fuzzy
@@ -570,220 +571,220 @@ msgstr ""
 msgid "<b>Environment Variables</b>"
 msgstr "Variabloj"
 
-#: src/variablesWidget.cpp:57
+#: src/variablesWidget.cpp:58
 msgid "Modify Variable"
 msgstr "Ŝanĝu variablon"
 
-#: src/variablesWidget.cpp:113
+#: src/variablesWidget.cpp:123
 #, fuzzy
 #| msgid "Variables"
 msgid "New Variable"
 msgstr "Variabloj"
 
-#: src/variablesWidget.cpp:151
+#: src/variablesWidget.cpp:159
 #, fuzzy
 #| msgid "Variables"
 msgid "Variable"
 msgstr "Variabloj"
 
-#: src/variablesWidget.cpp:152
+#: src/variablesWidget.cpp:160
 msgid "Value"
 msgstr "Valoro"
 
-#: src/variablesWidget.cpp:154
+#: src/variablesWidget.cpp:162
 #, fuzzy
 #| msgid "Co&mment:"
 msgid "Comment"
 msgstr "&Komento:"
 
-#: src/taskWidget.cpp:46 src/variableWidget.cpp:35
+#: src/taskWidget.cpp:49 src/variableWidget.cpp:44
 #, fuzzy
 #| msgid "&Enabled"
 msgid "Enabled"
 msgstr "&Enŝaltita"
 
-#: src/taskWidget.cpp:49 src/variableWidget.cpp:39
+#: src/taskWidget.cpp:52 src/variableWidget.cpp:48
 #, fuzzy
 #| msgid "Disabled"
 msgid "Disabled"
 msgstr "Elŝaltita"
 
-#: src/taskEditorDialog.cpp:63
-msgid "Set All"
-msgstr ""
-
-#: src/taskEditorDialog.cpp:65
-msgid "Clear All"
-msgstr ""
-
-#: src/taskEditorDialog.cpp:140
+#: src/taskEditorDialog.cpp:75
 #, fuzzy
 #| msgid "Modify Variable"
 msgid "Add or modify a scheduled task"
 msgstr "Ŝanĝu variablon"
 
-#: src/taskEditorDialog.cpp:141 src/taskEditorDialog.cpp:829
+#: src/taskEditorDialog.cpp:76 src/taskEditorDialog.cpp:738
 msgid "<i>This task will be executed at the specified intervals.</i>"
 msgstr ""
 
-#: src/taskEditorDialog.cpp:149
+#: src/taskEditorDialog.cpp:84
 msgid "&Program:"
 msgstr "&Programo:"
 
-#: src/taskEditorDialog.cpp:166
+#: src/taskEditorDialog.cpp:104 src/variableEditorDialog.cpp:102
 msgid "&Run as:"
 msgstr "&Lanĉu kiel:"
 
-#: src/taskEditorDialog.cpp:197
+#: src/taskEditorDialog.cpp:121
 msgid "&Comment:"
 msgstr "&Komento:"
 
-#: src/taskEditorDialog.cpp:210
-msgid "&Enabled"
-msgstr "&Enŝaltita"
+#: src/taskEditorDialog.cpp:134
+msgid "&Enable this task"
+msgstr ""
 
-#: src/taskEditorDialog.cpp:215
+#: src/taskEditorDialog.cpp:139
 msgid "Run at system &bootup"
 msgstr ""
 
-#: src/taskEditorDialog.cpp:220
+#: src/taskEditorDialog.cpp:144
 #, fuzzy
 #| msgid "Run every day"
 msgid "Run &every day"
 msgstr "Lanĉu ĉiutage"
 
-#: src/taskEditorDialog.cpp:337
+#: src/taskEditorDialog.cpp:248
 msgid "Days of Month"
 msgstr "Tagoj de monato"
 
-#: src/taskEditorDialog.cpp:372
+#: src/taskEditorDialog.cpp:283
 msgid "Months"
 msgstr "Monatoj"
 
-#: src/taskEditorDialog.cpp:409
+#: src/taskEditorDialog.cpp:320
 msgid "Days of Week"
 msgstr "Tagoj de semajno"
 
-#: src/taskEditorDialog.cpp:444
+#: src/taskEditorDialog.cpp:355
 msgid "Minutes"
 msgstr "Minutoj"
 
-#: src/taskEditorDialog.cpp:486
+#: src/taskEditorDialog.cpp:397
 msgid "Hours"
 msgstr "Horoj"
 
-#: src/taskEditorDialog.cpp:489
+#: src/taskEditorDialog.cpp:400
 msgid "AM"
 msgstr "AM"
 
-#: src/taskEditorDialog.cpp:515
+#: src/taskEditorDialog.cpp:426
 msgid "PM"
 msgstr "PM"
 
-#: src/taskEditorDialog.cpp:705
+#: src/taskEditorDialog.cpp:614
 msgid "<i>This task is disabled.</i>"
 msgstr ""
 
-#: src/taskEditorDialog.cpp:712
+#: src/taskEditorDialog.cpp:621
 msgid "<i>This task will be run on system bootup.</i>"
 msgstr ""
 
-#: src/taskEditorDialog.cpp:718 src/taskEditorDialog.cpp:760
+#: src/taskEditorDialog.cpp:627 src/taskEditorDialog.cpp:669
 msgid "<i>Please browse for a program to execute...</i>"
 msgstr ""
 
-#: src/taskEditorDialog.cpp:752
+#: src/taskEditorDialog.cpp:661
 #, fuzzy
 #| msgid "Please enter the variable name."
 msgid "<i>Please select an executable program...</i>"
 msgstr "Bonvolu retajpi la variablonomon."
 
-#: src/taskEditorDialog.cpp:775
+#: src/taskEditorDialog.cpp:684
 #, fuzzy
 #| msgid "Please enter the variable name."
 msgid "<i>Please select from the 'Months' section...</i>"
 msgstr "Bonvolu retajpi la variablonomon."
 
-#: src/taskEditorDialog.cpp:793
+#: src/taskEditorDialog.cpp:702
 msgid ""
 "<i>Please select from either the 'Days of Month' or the 'Days of Week' "
 "section...</i>"
 msgstr ""
 
-#: src/taskEditorDialog.cpp:807
+#: src/taskEditorDialog.cpp:716
 #, fuzzy
 #| msgid "Please enter the variable name."
 msgid "<i>Please select from the 'Hours' section...</i>"
 msgstr "Bonvolu retajpi la variablonomon."
 
-#: src/taskEditorDialog.cpp:821
+#: src/taskEditorDialog.cpp:730
 #, fuzzy
 #| msgid "Please enter the variable name."
 msgid "<i>Please select from the 'Minutes' section...</i>"
 msgstr "Bonvolu retajpi la variablonomon."
 
-#: src/variableEditorDialog.cpp:53
+#: src/taskEditorDialog.cpp:910
+msgid "Set All"
+msgstr ""
+
+#: src/taskEditorDialog.cpp:912
+msgid "Clear All"
+msgstr ""
+
+#: src/variableEditorDialog.cpp:61
 #, fuzzy
 #| msgid "Modify Variable"
 msgid "Add or modify a variable"
 msgstr "Ŝanĝu variablon"
 
-#: src/variableEditorDialog.cpp:57
+#: src/variableEditorDialog.cpp:65
 #, fuzzy
 #| msgid "&Variable:"
 msgctxt "The environmental variable name ie HOME, MAILTO etc"
 msgid "&Variable:"
 msgstr "&Variablo:"
 
-#: src/variableEditorDialog.cpp:85
+#: src/variableEditorDialog.cpp:93
 msgid "Va&lue:"
 msgstr "V&aloro:"
 
-#: src/variableEditorDialog.cpp:94
+#: src/variableEditorDialog.cpp:120
 msgid "Co&mment:"
 msgstr "&Komento:"
 
-#: src/variableEditorDialog.cpp:102
-msgid "&Enable this environment variable"
+#: src/variableEditorDialog.cpp:128
+msgid "&Enable this variable"
 msgstr ""
 
-#: src/variableEditorDialog.cpp:129
+#: src/variableEditorDialog.cpp:155
 msgid "<i>This variable will be used by scheduled tasks.</i>"
 msgstr ""
 
-#: src/variableEditorDialog.cpp:160
+#: src/variableEditorDialog.cpp:193
 msgid "Override default home folder."
 msgstr "Anstataŭigu aprioran hejmdosierujon."
 
-#: src/variableEditorDialog.cpp:164
+#: src/variableEditorDialog.cpp:197
 msgid "Email output to specified account."
 msgstr "Retpoŝtu komandeligaĵon al indikita uzanto."
 
-#: src/variableEditorDialog.cpp:168
+#: src/variableEditorDialog.cpp:201
 msgid "Override default shell."
 msgstr "Anstataŭigu implicitan komandinterpretilon."
 
-#: src/variableEditorDialog.cpp:172
+#: src/variableEditorDialog.cpp:205
 msgid "Folders to search for program files."
 msgstr "Dosierujoj traserĉendaj je programdosieroj."
 
-#: src/variableEditorDialog.cpp:176
+#: src/variableEditorDialog.cpp:209
 #, fuzzy
 #| msgid "Variables"
 msgid "Local Variable"
 msgstr "Variabloj"
 
-#: src/variableEditorDialog.cpp:182
+#: src/variableEditorDialog.cpp:215
 msgid "<i>This variable is disabled.</i>"
 msgstr ""
 
-#: src/variableEditorDialog.cpp:189
+#: src/variableEditorDialog.cpp:222
 #, fuzzy
 #| msgid "Please enter the variable name."
 msgid "<i>Please enter the variable name...</i>"
 msgstr "Bonvolu retajpi la variablonomon."
 
-#: src/variableEditorDialog.cpp:196
+#: src/variableEditorDialog.cpp:229
 #, fuzzy
 #| msgid "Please enter the variable value."
 msgid "<i>Please enter the variable value ...</i>"
@@ -801,13 +802,13 @@ msgstr "Planitaj taskoj"
 msgid "Environment Variables"
 msgstr "Variabloj"
 
-#: src/crontabPrinter.cpp:182
+#: src/crontabPrinter.cpp:184
 #, fuzzy
 #| msgid "(System Crontab)"
-msgid "System Crontab"
+msgid "All Users Crontabs"
 msgstr "(Sistema \"Cron\"-tabelo)"
 
-#: src/crontabPrinter.cpp:184
+#: src/crontabPrinter.cpp:186
 #, kde-format
 msgctxt "Crontab of user login"
 msgid "Crontab of user %1"
@@ -834,6 +835,21 @@ msgstr "Wolfram Diestel,Steffen Pietsch"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "<wolfram@steloj.de>,<Steffen.Pietsch@BerlinOnline.de>"
+
+#~ msgid "(System Crontab)"
+#~ msgstr "(Sistema \"Cron\"-tabelo)"
+
+#, fuzzy
+#~| msgid "Ready."
+#~ msgctxt "Ready for user input"
+#~ msgid " Ready."
+#~ msgstr "Preta."
+
+#~ msgid "KCron"
+#~ msgstr "KCron"
+
+#~ msgid "&Enabled"
+#~ msgstr "&Enŝaltita"
 
 #~ msgid "Printing..."
 #~ msgstr "Presante..."
