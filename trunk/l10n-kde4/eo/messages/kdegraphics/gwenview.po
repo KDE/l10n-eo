@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwenview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-03-20 08:07+0100\n"
+"POT-Creation-Date: 2008-03-21 13:24+0100\n"
 "PO-Revision-Date: 2007-11-27 20:43+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -67,6 +67,35 @@ msgstr "Enmetu la nomon de la kreota dosierujo:"
 #: app/nepomukcontextmanageritem.cpp:75 app/imagemetainfodialog.cpp:76
 msgid "Meta Information"
 msgstr "Meta-informo"
+
+#: app/gvcore.cpp:67
+#, fuzzy
+#| msgid "Saving..."
+msgctxt "@info:progress saving all image changes"
+msgid "Saving..."
+msgstr "Konservante..."
+
+#: app/gvcore.cpp:68
+msgid "&Stop"
+msgstr "&Halti"
+
+#: app/gvcore.cpp:105
+msgid "Save using another format"
+msgstr "Konservi per alia formato"
+
+#: app/gvcore.cpp:108
+#, fuzzy, kde-format
+#| msgid "Gwenview can't save images in '%1' format."
+msgid "Gwenview cannot save images in '%1' format."
+msgstr "Gwenview ne kapablas konservi bildojn per la '%1' formato."
+
+#: app/gvcore.cpp:139
+#, kde-format
+msgctxt "@info"
+msgid ""
+"A file named <filename>%1</filename> already exists.\n"
+"Are you sure you want to overwrite it?"
+msgstr ""
 
 #: app/main.cpp:37
 msgid "Gwenview"
@@ -158,123 +187,145 @@ msgstr "Ligi tie"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: app/fileopscontextmanageritem.cpp:72
+#: app/fileopscontextmanageritem.cpp:82
 #, fuzzy
 #| msgid "Copy To"
 msgctxt "Verb"
 msgid "Copy To..."
 msgstr "Kopii al"
 
-#: app/fileopscontextmanageritem.cpp:77
+#: app/fileopscontextmanageritem.cpp:87
 #, fuzzy
 #| msgid "Move To"
 msgctxt "Verb"
 msgid "Move To..."
 msgstr "Movi al"
 
-#: app/fileopscontextmanageritem.cpp:82
+#: app/fileopscontextmanageritem.cpp:92
 #, fuzzy
 #| msgid "Link To"
 msgctxt "Verb"
 msgid "Link To..."
 msgstr "Ligi al"
 
-#: app/fileopscontextmanageritem.cpp:87
+#: app/fileopscontextmanageritem.cpp:97
 msgctxt "Verb"
 msgid "Trash"
 msgstr "Rubigi"
 
-#: app/fileopscontextmanageritem.cpp:94
+#: app/fileopscontextmanageritem.cpp:104
 msgid "Delete"
 msgstr "Forigi"
 
-#: app/fileopscontextmanageritem.cpp:101
+#: app/fileopscontextmanageritem.cpp:111
 msgid "Properties"
 msgstr "Ecoj"
 
-#: app/fileopscontextmanageritem.cpp:107
+#: app/fileopscontextmanageritem.cpp:117
 #, fuzzy
 #| msgid "Create Folder"
 msgid "Create Folder..."
 msgstr "Krei dosierujon"
 
-#: app/fileopscontextmanageritem.cpp:124
+#: app/fileopscontextmanageritem.cpp:134
 msgid "File Operations"
 msgstr "Dosieraj operacioj"
 
-#: app/savebar.cpp:136
+#: app/savebar.cpp:134
 msgid "Current image modified"
 msgstr "Nuna bildo ŝanĝiĝis"
 
-#: app/savebar.cpp:139
+#: app/savebar.cpp:137
 msgid "Previous modified image"
 msgstr "Antaŭa ŝanĝita bildo"
 
-#: app/savebar.cpp:140
+#: app/savebar.cpp:138
 msgid "Next modified image"
 msgstr "Sekva ŝanĝita bildo"
 
-#: app/savebar.cpp:153
+#: app/savebar.cpp:151
 #, kde-format
 msgid "One image modified"
 msgid_plural "%1 images modified"
 msgstr[0] "Unu bildo ŝanĝiĝis"
 msgstr[1] "%1 bildoj ŝanĝiĝis"
 
-#: app/savebar.cpp:155
+#: app/savebar.cpp:153
 msgid "Go to first modified image"
 msgstr "Iri al la unua ŝanĝita bildo"
 
-#: app/savebar.cpp:157
+#: app/savebar.cpp:155
 msgid "Go to it"
 msgstr "Iri al ĝi"
 
-#: app/savebar.cpp:162
+#: app/savebar.cpp:160
 msgid "Save"
 msgstr "Konservi"
 
-#: app/savebar.cpp:165
+#: app/savebar.cpp:163
 msgid "Save All"
 msgstr "Konservi ĉion"
 
-#: app/savebar.cpp:209
-#, fuzzy
-#| msgid "Saving..."
-msgctxt "@info:progress saving all image changes"
-msgid "Saving..."
-msgstr "Konservante..."
+#: app/imageopscontextmanageritem.cpp:73 lib/transformimageoperation.cpp:47
+msgid "Rotate Left"
+msgstr "Turni maldekstre"
 
-#: app/savebar.cpp:210
-msgid "&Stop"
-msgstr "&Halti"
+#: app/imageopscontextmanageritem.cpp:80 lib/transformimageoperation.cpp:44
+msgid "Rotate Right"
+msgstr "Turni dekstre"
 
-#: app/imageopscontextmanageritem.cpp:71
+#: app/imageopscontextmanageritem.cpp:87 lib/transformimageoperation.cpp:50
+msgid "Mirror"
+msgstr "Speguli"
+
+#: app/imageopscontextmanageritem.cpp:92 lib/transformimageoperation.cpp:53
+msgid "Flip"
+msgstr "Renversi"
+
+#: app/imageopscontextmanageritem.cpp:97 lib/resizeimageoperation.cpp:45
+msgid "Resize"
+msgstr "Regrandigi"
+
+#: app/imageopscontextmanageritem.cpp:102 lib/cropimageoperation.cpp:46
+#: lib/cropsidebar.cpp:74
+msgid "Crop"
+msgstr "Stuci"
+
+#: app/imageopscontextmanageritem.cpp:154
 msgid "Image Operations"
 msgstr "Bildaj operacioj"
 
-#: app/mainwindow.cpp:289
+#: app/imageopscontextmanageritem.cpp:238
+msgid "Image Resizing"
+msgstr "Bilda regrandigo"
+
+#: app/imageopscontextmanageritem.cpp:239
+msgid "Enter the new size of the image:"
+msgstr "Enmetu la novan grandecon de la bildo:"
+
+#: app/mainwindow.cpp:282
 msgid "Enter search terms here"
 msgstr ""
 
-#: app/mainwindow.cpp:292
+#: app/mainwindow.cpp:285
 msgid "Enter space-separated terms to search in the thumbnail view."
 msgstr ""
 
-#: app/mainwindow.cpp:296
+#: app/mainwindow.cpp:289
 #, fuzzy
 #| msgid "&View"
 msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "&Vidi"
 
-#: app/mainwindow.cpp:302
+#: app/mainwindow.cpp:295
 #, fuzzy
 #| msgid "Hide Side Bar"
 msgctxt "@info:tooltip"
 msgid "Hide Filter Bar"
 msgstr "Kaŝi la flankobreton"
 
-#: app/mainwindow.cpp:322
+#: app/mainwindow.cpp:315
 #, fuzzy
 #| msgid "Reload"
 msgctxt "@action reload the currently viewed image"
@@ -283,159 +334,109 @@ msgstr "Reŝargi"
 
 #. i18n: tag string
 #. i18n: file ./app/configdialog.ui line 212
-#: app/mainwindow.cpp:328 rc.cpp:36
+#: app/mainwindow.cpp:321 rc.cpp:36
 msgid "Browse"
 msgstr "Foliumi"
 
-#: app/mainwindow.cpp:333
+#: app/mainwindow.cpp:326
 msgid "Preview"
 msgstr "Antaŭrigardo"
 
-#: app/mainwindow.cpp:338
+#: app/mainwindow.cpp:331
 msgid "View"
 msgstr "Vidi"
 
-#: app/mainwindow.cpp:358
+#: app/mainwindow.cpp:351
 #, fuzzy
 #| msgid "Previous"
 msgctxt "@action Go to previous image"
 msgid "Previous"
 msgstr "Antaŭa"
 
-#: app/mainwindow.cpp:359
+#: app/mainwindow.cpp:352
 #, fuzzy
 #| msgid "Previous modified image"
 msgid "Go to Previous Image"
 msgstr "Antaŭa ŝanĝita bildo"
 
-#: app/mainwindow.cpp:363
+#: app/mainwindow.cpp:356
 #, fuzzy
 #| msgid "Next"
 msgctxt "@action Go to next image"
 msgid "Next"
 msgstr "Sekva"
 
-#: app/mainwindow.cpp:364
+#: app/mainwindow.cpp:357
 msgid "Go to Next Image"
 msgstr ""
 
-#: app/mainwindow.cpp:370 lib/transformimageoperation.cpp:47
-msgid "Rotate Left"
-msgstr "Turni maldekstre"
-
-#: app/mainwindow.cpp:377 lib/transformimageoperation.cpp:44
-msgid "Rotate Right"
-msgstr "Turni dekstre"
-
-#: app/mainwindow.cpp:384 lib/transformimageoperation.cpp:50
-msgid "Mirror"
-msgstr "Speguli"
-
-#: app/mainwindow.cpp:389 lib/transformimageoperation.cpp:53
-msgid "Flip"
-msgstr "Renversi"
-
-#: app/mainwindow.cpp:394 lib/resizeimageoperation.cpp:45
-msgid "Resize"
-msgstr "Regrandigi"
-
-#: app/mainwindow.cpp:399 lib/cropimageoperation.cpp:46 lib/cropsidebar.cpp:74
-msgid "Crop"
-msgstr "Stuci"
-
-#: app/mainwindow.cpp:419
+#: app/mainwindow.cpp:378
 #, fuzzy
 #| msgid "Show Side Bar"
 msgctxt "@action:inmenu Tools"
 msgid "Show Filter Bar"
 msgstr "Montri la flankobreton"
 
-#: app/mainwindow.cpp:433
+#: app/mainwindow.cpp:392
 msgctxt "@action:inmenu Navigation Bar"
 msgid "Edit Location"
 msgstr ""
 
-#: app/mainwindow.cpp:449
+#: app/mainwindow.cpp:408
 msgid "Redo"
 msgstr ""
 
-#: app/mainwindow.cpp:456
+#: app/mainwindow.cpp:415
 msgid "Undo"
 msgstr ""
 
-#: app/mainwindow.cpp:504
+#: app/mainwindow.cpp:461
 #, fuzzy
 #| msgid "Hide Side Bar"
 msgid "Hide Sidebar"
 msgstr "Kaŝi la flankobreton"
 
-#: app/mainwindow.cpp:506
+#: app/mainwindow.cpp:463
 #, fuzzy
 #| msgid "Show Side Bar"
 msgid "Show Sidebar"
 msgstr "Montri la flankobreton"
 
-#: app/mainwindow.cpp:1167
-msgid "Save using another format"
-msgstr "Konservi per alia formato"
-
-#: app/mainwindow.cpp:1170
-#, fuzzy, kde-format
-#| msgid "Gwenview can't save images in '%1' format."
-msgid "Gwenview cannot save images in '%1' format."
-msgstr "Gwenview ne kapablas konservi bildojn per la '%1' formato."
-
-#: app/mainwindow.cpp:1199
-#, kde-format
-msgctxt "@info"
-msgid ""
-"A file named <filename>%1</filename> already exists.\n"
-"Are you sure you want to overwrite it?"
-msgstr ""
-
-#: app/mainwindow.cpp:1222
+#: app/mainwindow.cpp:1101
 #, fuzzy
 #| msgid "Print Image"
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Printi bildon"
 
-#: app/mainwindow.cpp:1294
-msgid "Image Resizing"
-msgstr "Bilda regrandigo"
-
-#: app/mainwindow.cpp:1295
-msgid "Enter the new size of the image:"
-msgstr "Enmetu la novan grandecon de la bildo:"
-
-#: app/mainwindow.cpp:1344
+#: app/mainwindow.cpp:1141
 #, fuzzy
 #| msgid "Stop slideshow"
 msgid "Stop Slideshow"
 msgstr "Halti la lumbildon"
 
-#: app/mainwindow.cpp:1347
+#: app/mainwindow.cpp:1144
 #, fuzzy
 #| msgid "Start slideshow"
 msgid "Start Slideshow"
 msgstr "Starti la lumbildon"
 
-#: app/mainwindow.cpp:1383
+#: app/mainwindow.cpp:1180
 msgid "Save All Changes"
 msgstr "Konservi ĉiujn ŝanĝojn"
 
-#: app/mainwindow.cpp:1384
+#: app/mainwindow.cpp:1181
 msgid "Discard Changes"
 msgstr "Nuligi ĉiujn ŝanĝojn"
 
-#: app/mainwindow.cpp:1386
+#: app/mainwindow.cpp:1183
 #, kde-format
 msgid "One image has been modified."
 msgid_plural "%1 images have been modified."
 msgstr[0] "Unu bildo ŝanĝiĝis."
 msgstr[1] "%1 bildoj ŝanĝiĝis."
 
-#: app/mainwindow.cpp:1388
+#: app/mainwindow.cpp:1185
 msgid "If you quit now, your changes will be lost."
 msgstr "Se vi finas nun, la ŝanĝoj perdiĝos."
 
@@ -683,13 +684,13 @@ msgid ""
 msgstr ""
 
 #. i18n: tag text
-#. i18n: file ./app/gwenviewui.rc line 46
+#. i18n: file ./app/gwenviewui.rc line 54
 #: rc.cpp:56
 msgid "&Settings"
 msgstr "&Agordo"
 
 #. i18n: tag text
-#. i18n: file ./app/gwenviewui.rc line 59
+#. i18n: file ./app/gwenviewui.rc line 67
 #: rc.cpp:59
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
