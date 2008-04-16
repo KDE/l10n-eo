@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-04-14 19:03+0200\n"
+"POT-Creation-Date: 2008-04-16 16:14+0200\n"
 "PO-Revision-Date: 2008-01-10 13:22-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -91,7 +91,7 @@ msgstr "Legas datumon de <b>%1</b> :"
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 112
 #: ktorrent/spinboxdelegate.cpp:39 rc.cpp:401 rc.cpp:410 rc.cpp:641 rc.cpp:650
-#: rc.cpp:878 rc.cpp:890 rc.cpp:2188 rc.cpp:2197
+#: rc.cpp:878 rc.cpp:890 rc.cpp:2194 rc.cpp:2203
 msgid " KB/s"
 msgstr " KB/s"
 
@@ -179,7 +179,7 @@ msgstr " KB/s"
 #: ktorrent/speedlimitsmodel.cpp:142 rc.cpp:398 rc.cpp:407 rc.cpp:416
 #: rc.cpp:425 rc.cpp:481 rc.cpp:490 rc.cpp:563 rc.cpp:572 rc.cpp:638
 #: rc.cpp:647 rc.cpp:857 rc.cpp:866 rc.cpp:875 rc.cpp:887 rc.cpp:1422
-#: rc.cpp:1428 rc.cpp:2185 rc.cpp:2194 rc.cpp:2209 rc.cpp:2215
+#: rc.cpp:1428 rc.cpp:2191 rc.cpp:2200 rc.cpp:2215 rc.cpp:2221
 #: plugins/infowidget/statustab.cpp:55
 msgid "No limit"
 msgstr "Neniu limigo"
@@ -226,8 +226,8 @@ msgid "Cannot load the torrent file : %1"
 msgstr "Ne povas ŝargi la torentdosieron : %1"
 
 #: ktorrent/importdialog.cpp:275 plugins/ipfilter/convertthread.cpp:98
-#: plugins/ipfilter/convertthread.cpp:143 libbtcore/util/fileops.cpp:300
-#: libbtcore/util/fileops.cpp:329 libbtcore/util/fileops.cpp:388
+#: plugins/ipfilter/convertthread.cpp:143 libbtcore/util/fileops.cpp:290
+#: libbtcore/util/fileops.cpp:319 libbtcore/util/fileops.cpp:378
 #: libbtcore/diskio/cachefile.cpp:90
 #, kde-format
 msgid "Cannot open %1 : %2"
@@ -256,6 +256,8 @@ msgid "Start"
 msgstr "Komenci"
 
 #: ktorrent/viewmanager.cpp:395 ktorrent/gui.cpp:453
+#: plugins/mediaplayer/videowidget.cpp:55
+#: plugins/mediaplayer/mediaplayerplugin.cpp:81
 msgid "Stop"
 msgstr "Ĉesi"
 
@@ -989,7 +991,8 @@ msgstr "Ĉesigi ĉiujn"
 msgid "Open URL"
 msgstr "Malfermi retadreson"
 
-#: ktorrent/gui.cpp:483
+#: ktorrent/gui.cpp:483 plugins/mediaplayer/videowidget.cpp:54
+#: plugins/mediaplayer/mediaplayerplugin.cpp:77
 msgid "Pause"
 msgstr "Paŭzita"
 
@@ -1167,7 +1170,7 @@ msgid "Running"
 msgstr "Ruliĝas"
 
 #: ktorrent/queuemanagermodel.cpp:136
-#: libbtcore/torrent/torrentcontrol.cpp:1445
+#: libbtcore/torrent/torrentcontrol.cpp:1450
 msgid "Queued"
 msgstr "Envicigita"
 
@@ -2918,7 +2921,7 @@ msgstr "Trovi enkursigilojn"
 
 #. i18n: tag string
 #. i18n: file ./ktorrent/qmpref.ui line 182
-#: rc.cpp:540 libbtcore/torrent/torrentcontrol.cpp:1433
+#: rc.cpp:540 libbtcore/torrent/torrentcontrol.cpp:1438
 msgid "Seeding"
 msgstr "Fontsendas"
 
@@ -3671,7 +3674,7 @@ msgstr "Malfermi retadreson"
 #. i18n: file ./plugins/infowidget/trackerview.ui line 20
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 140
-#: rc.cpp:817 rc.cpp:1299 rc.cpp:2131
+#: rc.cpp:817 rc.cpp:1299 rc.cpp:2137
 msgid "URL:"
 msgstr "Retadreso:"
 
@@ -3792,7 +3795,7 @@ msgstr ""
 #. i18n: file ./ktorrent/networkpref.ui line 84
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 140
-#: rc.cpp:851 rc.cpp:2206
+#: rc.cpp:851 rc.cpp:2212
 msgid "Maximum connections per torrent:"
 msgstr "Maksimumaj konektoj por ĉiu torento:"
 
@@ -3810,7 +3813,7 @@ msgstr "Maksimuma nombro de konektoj por ĉiu torento."
 #. i18n: file ./ktorrent/networkpref.ui line 104
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 157
-#: rc.cpp:860 rc.cpp:2212
+#: rc.cpp:860 rc.cpp:2218
 msgid "Global connection limit:"
 msgstr "Ĉiea konekta limigo:"
 
@@ -4762,7 +4765,7 @@ msgstr ""
 #. i18n: file ./plugins/webinterface/webinterfaceprefwidget.ui line 25
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 25
-#: rc.cpp:1208 rc.cpp:2110
+#: rc.cpp:1208 rc.cpp:2116
 msgid "Search Preferences"
 msgstr "Serĉa agordo"
 
@@ -6278,105 +6281,119 @@ msgstr ""
 msgid "Use rich text for logging output"
 msgstr "Uzi riĉan tekston por protokolo"
 
+#. i18n: tag text
+#. i18n: file ./plugins/mediaplayer/ktmediaplayerpluginui.rc line 3
+#: rc.cpp:2110
+msgid "Media Player Menu"
+msgstr ""
+
+#. i18n: tag text
+#. i18n: file ./plugins/mediaplayer/ktmediaplayerpluginui.rc line 11
+#: rc.cpp:2113
+#, fuzzy
+#| msgid "Search Toolbar"
+msgid "Media Player Toolbar"
+msgstr "Serĉa ilobreto"
+
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 33
-#: rc.cpp:2113
+#: rc.cpp:2119
 msgid "Clear Search History"
 msgstr "Viŝi serĉan historion"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 55
-#: rc.cpp:2116
+#: rc.cpp:2122
 msgid "Open searches in external browser"
 msgstr "Malfermi serĉojn en ekstera retumilo"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 62
-#: rc.cpp:2119
+#: rc.cpp:2125
 msgid "Use default browser"
 msgstr "Uzi defaŭltan retumilon"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 74
-#: rc.cpp:2122
+#: rc.cpp:2128
 msgid "Custom browser path:"
 msgstr "Difinita vojo al retumilo:"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 105
-#: rc.cpp:2125
+#: rc.cpp:2131
 msgid "Search Engines"
 msgstr "Serĉiloj"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 123
-#: rc.cpp:2128
+#: rc.cpp:2134
 msgid "Search engine name:"
 msgstr "Serĉila nomo:"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 159
-#: rc.cpp:2134
+#: rc.cpp:2140
 msgid "&Add"
 msgstr "&Aldoni"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 184
-#: rc.cpp:2137
+#: rc.cpp:2143
 msgid "Engine"
 msgstr "Serĉilo"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 189
-#: rc.cpp:2140 plugins/infowidget/webseedsmodel.cpp:124
+#: rc.cpp:2146 plugins/infowidget/webseedsmodel.cpp:124
 msgid "URL"
 msgstr "Retadreso"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 199
-#: rc.cpp:2143
+#: rc.cpp:2149
 msgid "&Remove"
 msgstr "&Forpreni"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 206
-#: rc.cpp:2146
+#: rc.cpp:2152
 msgid "R&emove All"
 msgstr "&Forpreni ĉiujn"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 229
-#: rc.cpp:2149
+#: rc.cpp:2155
 msgid "Add Defau&lt"
 msgstr "Aldoni defaŭ&ltan"
 
 #. i18n: tag string
 #. i18n: file ./plugins/search/searchpref.ui line 236
-#: rc.cpp:2152
+#: rc.cpp:2158
 msgid "Update From Internet"
 msgstr "Ĝisdatigi de interreto"
 
 #. i18n: tag text
 #. i18n: file ./plugins/search/ktsearchpluginui.rc line 3
-#: rc.cpp:2155
+#: rc.cpp:2161
 msgid "Search Toolbar"
 msgstr "Serĉa ilobreto"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 13
-#: rc.cpp:2158
+#: rc.cpp:2164
 msgid "Add a new item to the schedule"
 msgstr "Aldoni novan eron al la horaro"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 19
-#: rc.cpp:2161
+#: rc.cpp:2167
 msgid "Time"
 msgstr "Tempo"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 27
-#: rc.cpp:2164
+#: rc.cpp:2170
 msgid "From:"
 msgstr "De:"
 
@@ -6388,49 +6405,49 @@ msgstr "De:"
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 34
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 48
-#: rc.cpp:2167 rc.cpp:2173
+#: rc.cpp:2173 rc.cpp:2179
 msgid "hh:mm"
 msgstr "hh:mm"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 41
-#: rc.cpp:2170
+#: rc.cpp:2176
 msgid "To:"
 msgstr "Al:"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 59
-#: rc.cpp:2176
+#: rc.cpp:2182
 msgid "Day:"
 msgstr "Tago:"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 74
-#: rc.cpp:2179
+#: rc.cpp:2185
 msgid "Limits"
 msgstr "Limigoj"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 82
-#: rc.cpp:2182
+#: rc.cpp:2188
 msgid "Download limit:"
 msgstr "Elŝuta limigo"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 102
-#: rc.cpp:2191
+#: rc.cpp:2197
 msgid "Upload limit:"
 msgstr "Alŝuta limigo"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 124
-#: rc.cpp:2200
+#: rc.cpp:2206
 msgid "Stop all torrents"
 msgstr "Ĉesigi ĉiujn torentojn"
 
 #. i18n: tag string
 #. i18n: file ./plugins/bwscheduler/additemdlg.ui line 131
-#: rc.cpp:2203
+#: rc.cpp:2209
 #, fuzzy
 #| msgid "Global connection limit:"
 msgid "Set connection limits"
@@ -6791,6 +6808,37 @@ msgstr "Protokolorigardilo"
 msgid "Displays ktorrent logging output"
 msgstr "Montras la KTorrent-protokoladan eligon"
 
+#: plugins/mediaplayer/videowidget.cpp:53
+#: plugins/mediaplayer/mediaplayerplugin.cpp:73
+msgid "Play"
+msgstr ""
+
+#: plugins/mediaplayer/videowidget.cpp:56
+msgid "Toggle Fullscreen"
+msgstr ""
+
+#: plugins/mediaplayer/mediaplayerplugin.cpp:51
+msgid "MediaPlayer"
+msgstr ""
+
+#: plugins/mediaplayer/mediaplayerplugin.cpp:51
+msgid "Phonon based media player plugin for KTorrent"
+msgstr ""
+
+#: plugins/mediaplayer/mediaplayerplugin.cpp:85
+#, fuzzy
+#| msgid "Preview"
+msgid "Previous"
+msgstr "Antaŭvido"
+
+#: plugins/mediaplayer/mediaplayerplugin.cpp:89
+msgid "Next"
+msgstr ""
+
+#: plugins/mediaplayer/mediaplayerplugin.cpp:108
+msgid "Media Player"
+msgstr ""
+
 #: plugins/search/searchprefpage.cpp:55 plugins/search/searchwidget.cpp:69
 #: plugins/search/searchtoolbar.cpp:72 plugins/search/searchplugin.cpp:54
 msgid "Search"
@@ -7087,39 +7135,39 @@ msgstr "Ne povas movi %1 al %2: %3"
 msgid "Cannot copy %1 to %2: %3"
 msgstr "Ne povas kopii %1 al %2: %3"
 
-#: libbtcore/util/fileops.cpp:218
+#: libbtcore/util/fileops.cpp:208
 #, kde-format
 msgid "Cannot delete %1: %2"
 msgstr "Ne povas forigi %1: %2"
 
-#: libbtcore/util/fileops.cpp:237
+#: libbtcore/util/fileops.cpp:227
 #, kde-format
 msgid "Cannot create %1: %2"
 msgstr "Ne povas krei %1: %2"
 
-#: libbtcore/util/fileops.cpp:256
+#: libbtcore/util/fileops.cpp:246
 #, kde-format
 msgid "Cannot calculate the filesize of %1: %2"
 msgstr "Ne povas kalkuli la dosiergrandecon de %1: %2"
 
-#: libbtcore/util/fileops.cpp:272
+#: libbtcore/util/fileops.cpp:262
 #, kde-format
 msgid "Cannot calculate the filesize : %1"
 msgstr "Ne povas kalkuli la dosiergrandecon : %1"
 
-#: libbtcore/util/fileops.cpp:350 libbtcore/util/fileops.cpp:356
-#: libbtcore/util/fileops.cpp:359
+#: libbtcore/util/fileops.cpp:340 libbtcore/util/fileops.cpp:346
+#: libbtcore/util/fileops.cpp:349
 #, kde-format
 msgid "Cannot expand file : %1"
 msgstr "Ne povas malpaki dosieron: %1"
 
-#: libbtcore/util/fileops.cpp:374 libbtcore/util/fileops.cpp:376
+#: libbtcore/util/fileops.cpp:364 libbtcore/util/fileops.cpp:366
 #, fuzzy, kde-format
 #| msgid "Cannot expand file : %1"
 msgid "Cannot expand file: %1"
 msgstr "Ne povas malpaki dosieron: %1"
 
-#: libbtcore/util/fileops.cpp:409
+#: libbtcore/util/fileops.cpp:399
 #, kde-format
 msgid "Cannot seek in file : %1"
 msgstr "Ne povas serĉi dosieron: %1"
@@ -7367,7 +7415,7 @@ msgstr "Vi jam elŝutas la torenton %1"
 msgid "Cannot migrate %1 : %2"
 msgstr "Ne povas enmigri %1 : %2"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1334
+#: libbtcore/torrent/torrentcontrol.cpp:1339
 #, kde-format
 msgid ""
 "The torrent %1 was started with a previous version of KTorrent. To make sure "
@@ -7380,48 +7428,48 @@ msgstr ""
 "torenton. Vi ricevos peton elekti konservan lokon por la torento. Se vi "
 "depremas rezigni, ni elektos vian hejman dosierujon."
 
-#: libbtcore/torrent/torrentcontrol.cpp:1339
+#: libbtcore/torrent/torrentcontrol.cpp:1344
 msgid "Select Folder to Save To"
 msgstr "Elektu dosierujon al kiu vi volas konservi"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1427
+#: libbtcore/torrent/torrentcontrol.cpp:1432
 msgid "Not started"
 msgstr "Ne lanĉiĝis"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1429
+#: libbtcore/torrent/torrentcontrol.cpp:1434
 msgid "Download completed"
 msgstr "Elŝuto finiĝis"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1431
+#: libbtcore/torrent/torrentcontrol.cpp:1436
 msgid "Seeding completed"
 msgstr "Finis la fontsendon"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1435
+#: libbtcore/torrent/torrentcontrol.cpp:1440
 msgid "Downloading"
 msgstr "Elŝutas"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1437
+#: libbtcore/torrent/torrentcontrol.cpp:1442
 msgid "Stalled"
 msgstr "Paraliziĝis"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1439
+#: libbtcore/torrent/torrentcontrol.cpp:1444
 #: libbtcore/torrent/peersourcemanager.cpp:158
 msgid "Stopped"
 msgstr "Ĉesis"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1441
+#: libbtcore/torrent/torrentcontrol.cpp:1446
 msgid "Error: "
 msgstr "Eraro: "
 
-#: libbtcore/torrent/torrentcontrol.cpp:1443
+#: libbtcore/torrent/torrentcontrol.cpp:1448
 msgid "Allocating diskspace"
 msgstr "Disponigas diskspacon"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1447
+#: libbtcore/torrent/torrentcontrol.cpp:1452
 msgid "Checking data"
 msgstr "Kontrolas datumojn"
 
-#: libbtcore/torrent/torrentcontrol.cpp:1449
+#: libbtcore/torrent/torrentcontrol.cpp:1454
 msgid "Stopped. No space left on device."
 msgstr "Ĉesis: disponaĵo estas plenplena."
 
