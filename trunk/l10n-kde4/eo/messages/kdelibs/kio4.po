@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-04-28 18:44+0200\n"
+"POT-Creation-Date: 2008-05-03 09:05+0200\n"
 "PO-Revision-Date: 2008-01-02 09:44-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -35,11 +35,11 @@ msgctxt "@title job"
 msgid "Moving"
 msgstr "Ŝovante"
 
-#: kio/job.cpp:132 kio/job.cpp:139 kio/job.cpp:164
+#: kio/job.cpp:132 kio/job.cpp:139 kio/job.cpp:164 kio/fileundomanager.cpp:120
 msgid "Source"
 msgstr "Fonto"
 
-#: kio/job.cpp:133 kio/job.cpp:140
+#: kio/job.cpp:133 kio/job.cpp:140 kio/fileundomanager.cpp:121
 msgid "Destination"
 msgstr "Celo"
 
@@ -53,7 +53,7 @@ msgctxt "@title job"
 msgid "Creating directory"
 msgstr "Kreante dosierujon"
 
-#: kio/job.cpp:146
+#: kio/job.cpp:146 kio/fileundomanager.cpp:117
 msgid "Directory"
 msgstr "Dosierujo"
 
@@ -62,7 +62,7 @@ msgctxt "@title job"
 msgid "Deleting"
 msgstr "Foriganta"
 
-#: kio/job.cpp:152 kio/job.cpp:158
+#: kio/job.cpp:152 kio/job.cpp:158 kio/fileundomanager.cpp:124
 msgid "File"
 msgstr "Dosiero"
 
@@ -94,7 +94,7 @@ msgctxt "@title job"
 msgid "Unmounting"
 msgstr "Malkroĉanta"
 
-#: kio/job.cpp:1954 kio/paste.cpp:63 kio/copyjob.cpp:1170 kio/copyjob.cpp:1698
+#: kio/job.cpp:1954 kio/paste.cpp:63 kio/copyjob.cpp:1170 kio/copyjob.cpp:1699
 #: kio/global.cpp:677
 msgid "File Already Exists"
 msgstr "Dosiero jam ekzistas"
@@ -472,7 +472,7 @@ msgstr "Aŭtom. preterlasi"
 msgid "Folder Already Exists"
 msgstr "Dosierujo jam ekzistas"
 
-#: kio/copyjob.cpp:1170 kio/copyjob.cpp:1698
+#: kio/copyjob.cpp:1170 kio/copyjob.cpp:1699
 msgid "Already Exists as Folder"
 msgstr "Jam ekzistas kiel dosierujo"
 
@@ -2444,6 +2444,77 @@ msgstr "Permesoj:"
 #, kde-format
 msgid "No service implementing %1"
 msgstr "Neniu servo uzas %1"
+
+#: kio/fileundomanager.cpp:116
+#, fuzzy
+#| msgctxt "@title job"
+#| msgid "Creating directory"
+msgid "Creating directory"
+msgstr "Kreante dosierujon"
+
+#: kio/fileundomanager.cpp:119
+#, fuzzy
+#| msgctxt "@title job"
+#| msgid "Moving"
+msgid "Moving"
+msgstr "Ŝovante"
+
+#: kio/fileundomanager.cpp:123
+#, fuzzy
+#| msgctxt "@title job"
+#| msgid "Deleting"
+msgid "Deleting"
+msgstr "Foriganta"
+
+#: kio/fileundomanager.cpp:276
+msgid "Und&o"
+msgstr ""
+
+#: kio/fileundomanager.cpp:280
+msgid "Und&o: Copy"
+msgstr ""
+
+#: kio/fileundomanager.cpp:282
+msgid "Und&o: Link"
+msgstr ""
+
+#: kio/fileundomanager.cpp:284
+msgid "Und&o: Move"
+msgstr ""
+
+#: kio/fileundomanager.cpp:286
+#, fuzzy
+#| msgid "&Rename"
+msgid "Und&o: Rename"
+msgstr "&Renomu"
+
+#: kio/fileundomanager.cpp:288
+#, fuzzy
+#| msgctxt "to trash"
+#| msgid "&Trash"
+msgid "Und&o: Trash"
+msgstr "&Rubujen"
+
+#: kio/fileundomanager.cpp:290
+#, fuzzy
+#| msgid "Could Not Create Folder"
+msgid "Und&o: Create Folder"
+msgstr "Ne Eblis Krei Dosierujon"
+
+#: kio/fileundomanager.cpp:756
+#, kde-format
+msgid ""
+"The file %1 was copied from %2, but since then it has apparently been "
+"modified at %3.\n"
+"Undoing the copy will delete the file, and all modifications will be lost.\n"
+"Are you sure you want to delete %4?"
+msgstr ""
+
+#: kio/fileundomanager.cpp:759
+#, fuzzy
+#| msgid "Updating System Configuration"
+msgid "Undo File Copy Confirmation"
+msgstr "Aktualigante sistemagordon"
 
 #: kio/slave.cpp:406
 #, kde-format
@@ -5552,24 +5623,46 @@ msgstr "kio_metainformo"
 msgid "No metainfo for %1"
 msgstr "Neniu metainformo por %1"
 
-#: ../kfile/kfileplacesview.cpp:403
+#: ../kfile/kfileplacesview.cpp:408
+#, fuzzy
+#| msgid "Trash"
+msgctxt "@action:inmenu"
+msgid "Empty Trash"
+msgstr "Rubujo"
+
+#: ../kfile/kfileplacesview.cpp:414
 #, kde-format
 msgid "&Edit '%1'..."
 msgstr "&Redakti '%1'..."
 
-#: ../kfile/kfileplacesview.cpp:406
+#: ../kfile/kfileplacesview.cpp:417
 #, kde-format
 msgid "&Hide '%1'"
 msgstr "&Kaŝi '%1'"
 
-#: ../kfile/kfileplacesview.cpp:413
+#: ../kfile/kfileplacesview.cpp:424
 msgid "&Show All Entries"
 msgstr "Montri ĉiujn erojn"
 
-#: ../kfile/kfileplacesview.cpp:423
+#: ../kfile/kfileplacesview.cpp:434
 #, kde-format
 msgid "&Remove '%1'"
 msgstr "&Forigi '%1'"
+
+#: ../kfile/kfileplacesview.cpp:450
+#, fuzzy
+#| msgid "Do you really want to delete this item?"
+#| msgid_plural "Do you really want to delete these %1 items?"
+msgctxt "@info"
+msgid "Do you really want to empty the Trash? All items will be deleted."
+msgstr "Ĉu vi vere volas forigi ĉi tiun eron?"
+
+#: ../kfile/kfileplacesview.cpp:454
+#, fuzzy
+#| msgid "Trash"
+msgctxt "@action:button"
+msgid "Empty Trash"
+msgstr "Rubujo"
 
 #: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1479
 msgid "*|All Files"
