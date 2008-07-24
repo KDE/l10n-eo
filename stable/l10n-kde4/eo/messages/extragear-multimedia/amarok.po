@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-07-23 06:22+0200\n"
+"POT-Creation-Date: 2008-07-24 05:26+0200\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -250,7 +250,7 @@ msgstr "Esplorante la muzikaron"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 91
-#: collection/sqlcollection/SqlMeta.cpp:225 rc.cpp:1911
+#: collection/sqlcollection/SqlMeta.cpp:225 rc.cpp:1914
 msgid "Stream"
 msgstr "Fluo"
 
@@ -297,6 +297,24 @@ msgstr ""
 #| msgid "Add applet"
 msgid "Add Applets"
 msgstr "Aldoni apleton"
+
+#: context/engines/current/CurrentEngine.cpp:192
+#: context/applets/albums/Albums.cpp:118 dialogs/Statistics.cpp:350
+#: dialogs/Statistics.cpp:351 dialogs/Statistics.cpp:384
+#: dialogs/Statistics.cpp:385 dialogs/Statistics.cpp:418
+#: dialogs/Statistics.cpp:450 dialogs/Statistics.cpp:465
+#: dialogs/Statistics.cpp:467 dialogs/Statistics.cpp:504
+#: dialogs/Statistics.cpp:532 dialogs/Statistics.cpp:545
+#: dialogs/Statistics.cpp:546 App.cpp:626 MediaDevicePluginManager.cpp:535
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: context/engines/current/CurrentEngine.cpp:195 dialogs/Statistics.cpp:228
+#, kde-format
+msgid "%1 track"
+msgid_plural "%1 tracks"
+msgstr[0] "1 trako"
+msgstr[1] "%1 trakoj"
 
 #: context/engines/lastfm/LastFmEngine.cpp:51
 #: context/engines/lastfm/LastFmEngine.cpp:69
@@ -753,23 +771,6 @@ msgstr "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 msgid "Remove %1"
 msgstr "Forigi"
 
-#: context/applets/albums/Albums.cpp:109 dialogs/Statistics.cpp:350
-#: dialogs/Statistics.cpp:351 dialogs/Statistics.cpp:384
-#: dialogs/Statistics.cpp:385 dialogs/Statistics.cpp:418
-#: dialogs/Statistics.cpp:450 dialogs/Statistics.cpp:465
-#: dialogs/Statistics.cpp:467 dialogs/Statistics.cpp:504
-#: dialogs/Statistics.cpp:532 dialogs/Statistics.cpp:545
-#: dialogs/Statistics.cpp:546 App.cpp:626 MediaDevicePluginManager.cpp:535
-msgid "Unknown"
-msgstr "Nekonata"
-
-#: context/applets/albums/Albums.cpp:113 dialogs/Statistics.cpp:228
-#, kde-format
-msgid "%1 track"
-msgid_plural "%1 tracks"
-msgstr[0] "1 trako"
-msgstr[1] "%1 trakoj"
-
 #: context/applets/lyrics/LyricsApplet.cpp:49
 msgid "Hello, World"
 msgstr ""
@@ -886,7 +887,7 @@ msgstr "&Trako"
 msgid "&Album"
 msgstr "&Albumo"
 
-#: ActionClasses.cpp:360 MainWindow.cpp:915
+#: ActionClasses.cpp:360 MainWindow.cpp:885
 msgid "&Playlist"
 msgstr "&Ludlisto"
 
@@ -1224,6 +1225,19 @@ msgstr ""
 msgid "Filename Layout Chooser"
 msgstr ""
 
+#: dialogs/FilenameLayoutDialog.cpp:86 dialogs/FilenameLayoutDialog.cpp:159
+msgid "&Basic..."
+msgstr ""
+
+#. i18n: tag string
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 73
+#: dialogs/FilenameLayoutDialog.cpp:157 dialogs/FilenameLayoutDialog.cpp:166
+#: rc.cpp:971
+#, fuzzy
+#| msgid "Add Device..."
+msgid "&Advanced..."
+msgstr "Aldoni aparaton..."
+
 #: dialogs/Statistics.cpp:70
 msgid "Collection Statistics"
 msgstr "Kolektaj statistikoj"
@@ -1367,6 +1381,12 @@ msgctxt "[only-singular]"
 msgid "Edit Track &Information..."
 msgstr "Redakti la trakan &informon..."
 
+#: dialogs/ScriptSelector.cpp:33
+#, fuzzy
+#| msgid "Scripts"
+msgid "Search Scripts"
+msgstr "Skriptoj"
+
 #: dialogs/TagDialog.cpp:459
 msgid "Generating audio fingerprint..."
 msgstr ""
@@ -1393,7 +1413,7 @@ msgstr "Etikedoj"
 msgid "Lyrics"
 msgstr "Paroloj"
 
-#: dialogs/TagDialog.cpp:547 MainWindow.cpp:699
+#: dialogs/TagDialog.cpp:547 MainWindow.cpp:669
 msgid "Statistics"
 msgstr "Statistikoj"
 
@@ -1448,13 +1468,13 @@ msgstr "Formato:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 527
-#: dialogs/TagDialog.cpp:826 rc.cpp:1064
+#: dialogs/TagDialog.cpp:826 rc.cpp:1067
 msgid "Score:"
 msgstr "Poentoj:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 556
-#: dialogs/TagDialog.cpp:828 rc.cpp:1067
+#: dialogs/TagDialog.cpp:828 rc.cpp:1070
 msgid "Rating:"
 msgstr "Noto:"
 
@@ -1886,8 +1906,8 @@ msgid "None"
 msgstr "Neniu"
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 79
-#: dialogs/transferdialog.cpp:116 rc.cpp:971
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 93
+#: dialogs/transferdialog.cpp:116 rc.cpp:974
 msgid "Options"
 msgstr "Opcioj"
 
@@ -1895,67 +1915,58 @@ msgstr "Opcioj"
 msgid "Convert spaces to underscores"
 msgstr "Konverti la spacsignojn al substrekoj"
 
-#: dialogs/ScriptManager.cpp:129 MainWindow.cpp:677
+#: dialogs/ScriptManager.cpp:130 MainWindow.cpp:647
 msgid "Script Manager"
 msgstr "Skripta administrilo"
 
-#: dialogs/ScriptManager.cpp:271
+#: dialogs/ScriptManager.cpp:277
 msgid ""
 "Script Packages (*.amarokscript.tar, *.amarokscript.tar.bz2, *.amarokscript."
 "tar.gz)"
 msgstr ""
 
-#: dialogs/ScriptManager.cpp:279
+#: dialogs/ScriptManager.cpp:285
 msgid "Could not read this package."
 msgstr "Ne eblis legi la pakaĵon."
 
-#: dialogs/ScriptManager.cpp:290
+#: dialogs/ScriptManager.cpp:296
 #, kde-format
 msgid ""
 "A script with the name '%1' is already installed. Please uninstall it first."
 msgstr ""
 
-#: dialogs/ScriptManager.cpp:301
+#: dialogs/ScriptManager.cpp:307
 msgid "Script successfully installed."
 msgstr ""
 
-#: dialogs/ScriptManager.cpp:306
+#: dialogs/ScriptManager.cpp:312
 msgid ""
 "<p>Script installation failed.</p><p>The package did not contain an "
 "executable file. Please inform the package maintainer about this error.</p>"
 msgstr ""
 
-#: dialogs/ScriptManager.cpp:367
+#: dialogs/ScriptManager.cpp:376
 #, kde-format
 msgid "Are you sure you want to uninstall the script '%1'?"
 msgstr "Ĉu vi vere volas malinstali la skripton '%1'?"
 
-#: dialogs/ScriptManager.cpp:367
+#: dialogs/ScriptManager.cpp:376
 msgid "Uninstall Script"
 msgstr "Malinstali la skripton"
 
-#: dialogs/ScriptManager.cpp:367
+#: dialogs/ScriptManager.cpp:376
 msgid "Uninstall"
 msgstr "Malinstali"
 
-#: dialogs/ScriptManager.cpp:379
+#: dialogs/ScriptManager.cpp:385
 msgid ""
 "<p>Could not uninstall this script.</p><p>The ScriptManager can only "
 "uninstall scripts which have been installed as packages.</p>"
 msgstr ""
 
-#: dialogs/ScriptManager.cpp:424
+#: dialogs/ScriptManager.cpp:422
 msgid "There are exceptions caught in the script. Please refer to the log!"
 msgstr ""
-
-#: dialogs/ScriptManager.cpp:470
-msgid "There is no information available for this script."
-msgstr "Estas neniu informo pri tiu skripto."
-
-#: dialogs/ScriptManager.cpp:481
-#, kde-format
-msgid "About %1"
-msgstr "Pri %1"
 
 #: refreshimages.cpp:101 refreshimages.cpp:156
 #: covermanager/CoverFetcher.cpp:306
@@ -2204,11 +2215,11 @@ msgstr "A&ligi kaj ludi"
 #. i18n: file ./dialogs/tagdialogbase.ui line 770
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneRedownloadDialogBase.ui line 36
-#: Systray.cpp:129 rc.cpp:1094 rc.cpp:1935
+#: Systray.cpp:129 rc.cpp:1097 rc.cpp:1938
 msgid "&Cancel"
 msgstr "&Rezigni"
 
-#: queuemanager/QueueManager.cpp:51 MainWindow.cpp:681
+#: queuemanager/QueueManager.cpp:51 MainWindow.cpp:651
 msgid "Queue Manager"
 msgstr "Vica administrilo"
 
@@ -2885,7 +2896,7 @@ msgstr "Ĝenerala sonorludilo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 104
-#: MediaDevicePluginManager.cpp:561 rc.cpp:1995
+#: MediaDevicePluginManager.cpp:561 rc.cpp:1998
 msgid "Remove"
 msgstr "Forigi"
 
@@ -2963,7 +2974,7 @@ msgstr "Ne eblas eniri la dosierujon: '%1'"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 96
-#: mediadevice/ifp/ifpmediadevice.cpp:654 rc.cpp:1914
+#: mediadevice/ifp/ifpmediadevice.cpp:654 rc.cpp:1917
 #: servicebrowser/jamendo/JamendoService.cpp:105
 msgid "Download"
 msgstr "Elŝuti"
@@ -3605,166 +3616,166 @@ msgstr "Aldoni fluon"
 msgid "Enter Stream URL:"
 msgstr "Enmetu la fluan URLon:"
 
-#: MainWindow.cpp:621
+#: MainWindow.cpp:591
 msgid "&Add Media..."
 msgstr "&Aldoni medion..."
 
-#: MainWindow.cpp:627
+#: MainWindow.cpp:597
 #, fuzzy
 #| msgid "Smart Playlist"
 msgctxt "clear playlist"
 msgid "&Clear Playlist"
 msgstr "Lerta ludlisto"
 
-#: MainWindow.cpp:631
+#: MainWindow.cpp:601
 msgid "&Add Stream..."
 msgstr "&Aldoni fluon..."
 
-#: MainWindow.cpp:635
+#: MainWindow.cpp:605
 #, fuzzy
 #| msgid "&Save Playlist As..."
 msgid "&Export Playlist As..."
 msgstr "Kon&servi la ludliston kiel..."
 
-#: MainWindow.cpp:639
+#: MainWindow.cpp:609
 #, fuzzy
 #| msgid "&Save Playlist As..."
 msgid "&Save Playlist"
 msgstr "Kon&servi la ludliston kiel..."
 
-#: MainWindow.cpp:650 covermanager/CoverManager.cpp:121
+#: MainWindow.cpp:620 covermanager/CoverManager.cpp:121
 msgid "Cover Manager"
 msgstr "Jaketa administrilo"
 
-#: MainWindow.cpp:654 widgets/AnalyzerWidget.cpp:67
+#: MainWindow.cpp:624 widgets/AnalyzerWidget.cpp:67
 msgid "&Visualizations"
 msgstr ""
 
-#: MainWindow.cpp:658
+#: MainWindow.cpp:628
 msgid "E&qualizer"
 msgstr "E&galizilo"
 
-#: MainWindow.cpp:669
+#: MainWindow.cpp:639
 msgid "Play Media..."
 msgstr "Ludi medion..."
 
-#: MainWindow.cpp:673
+#: MainWindow.cpp:643
 msgid "Play Audio CD"
 msgstr "Ludi sonan KD"
 
-#: MainWindow.cpp:685
+#: MainWindow.cpp:655
 msgid "&Seek Forward"
 msgstr ""
 
-#: MainWindow.cpp:692
+#: MainWindow.cpp:662
 msgid "&Seek Backward"
 msgstr ""
 
-#: MainWindow.cpp:704
+#: MainWindow.cpp:674
 msgid "Update Collection"
 msgstr "Aktualigi la kolekton"
 
-#: MainWindow.cpp:709
+#: MainWindow.cpp:679
 msgid "Rescan Collection"
 msgstr "Reesplori la kolekton"
 
-#: MainWindow.cpp:721 MainWindow.cpp:730
+#: MainWindow.cpp:691 MainWindow.cpp:700
 msgid "Global Tag Radio"
 msgstr ""
 
-#: MainWindow.cpp:738
+#: MainWindow.cpp:708
 msgid "Play las&t.fm Stream"
 msgstr "Ludi la&st.fm fluon"
 
-#: MainWindow.cpp:740 MainWindow.cpp:748
+#: MainWindow.cpp:710 MainWindow.cpp:718
 msgid "Personal Radio"
 msgstr "Persona radio"
 
-#: MainWindow.cpp:741 MainWindow.cpp:749
+#: MainWindow.cpp:711 MainWindow.cpp:719
 msgid "Neighbor Radio"
 msgstr "Najbara radio"
 
-#: MainWindow.cpp:742 MainWindow.cpp:750
+#: MainWindow.cpp:712 MainWindow.cpp:720
 msgid "Custom Station"
 msgstr "Propra stacio"
 
-#: MainWindow.cpp:746
+#: MainWindow.cpp:716
 msgid "Add las&t.fm Stream"
 msgstr "Aldoni la&st.fm fluon"
 
-#: MainWindow.cpp:757
+#: MainWindow.cpp:727
 msgid "Previous Track"
 msgstr "Antaŭa trako"
 
-#: MainWindow.cpp:767
+#: MainWindow.cpp:737
 msgid "Next Track"
 msgstr "Sekva trako"
 
-#: MainWindow.cpp:771
+#: MainWindow.cpp:741
 msgid "Toggle Focus"
 msgstr "Komuti la fokuson"
 
-#: MainWindow.cpp:775
+#: MainWindow.cpp:745
 msgid "Increase Volume"
 msgstr "Pliigi la laŭtecon"
 
-#: MainWindow.cpp:782
+#: MainWindow.cpp:752
 msgid "Decrease Volume"
 msgstr "Malpliigi la laŭtecon"
 
-#: MainWindow.cpp:789
+#: MainWindow.cpp:759
 msgid "Toggle Main Window"
 msgstr ""
 
-#: MainWindow.cpp:795
+#: MainWindow.cpp:765
 #, fuzzy
 #| msgid "&Use On-Screen-Display"
 msgid "Show On Screen Display"
 msgstr "&Uzi la vidigilon"
 
-#: MainWindow.cpp:801
+#: MainWindow.cpp:771
 msgid "Mute Volume"
 msgstr "Mutigi la laŭtecon"
 
-#: MainWindow.cpp:807
+#: MainWindow.cpp:777
 #, fuzzy
 #| msgid "After Current Track"
 msgid "Love Current Track"
 msgstr "Post la nuna trako"
 
-#: MainWindow.cpp:813
+#: MainWindow.cpp:783
 msgid "Rate Current Track: 1"
 msgstr "Noti la aktualan trakon: 1"
 
-#: MainWindow.cpp:819
+#: MainWindow.cpp:789
 msgid "Rate Current Track: 2"
 msgstr "Noti la aktualan trakon: 2"
 
-#: MainWindow.cpp:825
+#: MainWindow.cpp:795
 msgid "Rate Current Track: 3"
 msgstr "Noti la aktualan trakon: 3"
 
-#: MainWindow.cpp:831
+#: MainWindow.cpp:801
 msgid "Rate Current Track: 4"
 msgstr "Noti la aktualan trakon: 4"
 
-#: MainWindow.cpp:837
+#: MainWindow.cpp:807
 msgid "Rate Current Track: 5"
 msgstr "Noti la aktualan trakon: 5"
 
-#: MainWindow.cpp:891
+#: MainWindow.cpp:861
 msgid "&Music"
 msgstr ""
 
-#: MainWindow.cpp:895
+#: MainWindow.cpp:865
 msgid "&Amarok"
 msgstr "&Amarok"
 
-#: MainWindow.cpp:947
+#: MainWindow.cpp:917
 msgid "&Tools"
 msgstr "&Iloj"
 
-#: MainWindow.cpp:969
+#: MainWindow.cpp:939
 msgid "&Settings"
 msgstr "A&gordo"
 
@@ -3955,7 +3966,7 @@ msgstr "Nekonata"
 #. i18n: file amarok.kcfg line 13
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 13
-#: rc.cpp:3 rc.cpp:1163
+#: rc.cpp:3 rc.cpp:1166
 msgid "Amarok Version"
 msgstr "Versio de Amarok"
 
@@ -3963,7 +3974,7 @@ msgstr "Versio de Amarok"
 #. i18n: file amarok.kcfg line 14
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 14
-#: rc.cpp:6 rc.cpp:1166
+#: rc.cpp:6 rc.cpp:1169
 msgid "Amarok version string, used to restart aRts in new installations."
 msgstr ""
 
@@ -3971,7 +3982,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 18
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 18
-#: rc.cpp:9 rc.cpp:1169
+#: rc.cpp:9 rc.cpp:1172
 msgid "Whether to save playlist on quit"
 msgstr ""
 
@@ -3979,7 +3990,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 19
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 19
-#: rc.cpp:12 rc.cpp:1172
+#: rc.cpp:12 rc.cpp:1175
 msgid ""
 "If set, Amarok saves the current playlist on quit and restores it when "
 "restarted."
@@ -3989,7 +4000,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 23
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 23
-#: rc.cpp:15 rc.cpp:1175
+#: rc.cpp:15 rc.cpp:1178
 msgid "Whether to follow symlinks while adding items to playlist recursively"
 msgstr ""
 
@@ -3997,7 +4008,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 24
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 24
-#: rc.cpp:18 rc.cpp:1178
+#: rc.cpp:18 rc.cpp:1181
 msgid ""
 "If set, amarok follows symlinks when adding files or directories to the "
 "playlist."
@@ -4007,7 +4018,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 28
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 28
-#: rc.cpp:21 rc.cpp:1181
+#: rc.cpp:21 rc.cpp:1184
 msgid "Whether to display a second, left time label."
 msgstr ""
 
@@ -4015,7 +4026,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 29
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 29
-#: rc.cpp:24 rc.cpp:1184
+#: rc.cpp:24 rc.cpp:1187
 msgid ""
 "Set this to display a second time label to the left of the seek slider in "
 "the player window."
@@ -4025,7 +4036,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 33
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 33
-#: rc.cpp:27 rc.cpp:1187
+#: rc.cpp:27 rc.cpp:1190
 msgid "Whether to display remaining track time in the left time label."
 msgstr ""
 
@@ -4033,7 +4044,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 34
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 34
-#: rc.cpp:30 rc.cpp:1190
+#: rc.cpp:30 rc.cpp:1193
 msgid ""
 "Set this to display remaining track time instead of past track time in the "
 "player window."
@@ -4043,7 +4054,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 38
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 38
-#: rc.cpp:33 rc.cpp:1193
+#: rc.cpp:33 rc.cpp:1196
 msgid "Whether to show scores for tracks"
 msgstr ""
 
@@ -4051,7 +4062,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 39
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 39
-#: rc.cpp:36 rc.cpp:1196
+#: rc.cpp:36 rc.cpp:1199
 msgid ""
 "A score is a number from 0 to 100, determined automatically by Amarok based "
 "on how often you listen to a track and how much of it you listen to."
@@ -4061,7 +4072,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 43
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 43
-#: rc.cpp:39 rc.cpp:1199
+#: rc.cpp:39 rc.cpp:1202
 msgid "Whether to show ratings for tracks"
 msgstr ""
 
@@ -4069,7 +4080,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 44
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 44
-#: rc.cpp:42 rc.cpp:1202
+#: rc.cpp:42 rc.cpp:1205
 msgid ""
 "A rating is 1 to 5 stars, set manually by you to describe how well you like "
 "a given track."
@@ -4079,7 +4090,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 48
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 48
-#: rc.cpp:45 rc.cpp:1205
+#: rc.cpp:45 rc.cpp:1208
 msgid "Which track(s) to play repeatedly"
 msgstr ""
 
@@ -4087,7 +4098,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 49
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 49
-#: rc.cpp:48 rc.cpp:1208
+#: rc.cpp:48 rc.cpp:1211
 msgid ""
 "Whether to repeat the current track, the current album, or the current "
 "playlist indefinitely, or neither."
@@ -4097,7 +4108,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 52
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 52
-#: rc.cpp:51 rc.cpp:1211
+#: rc.cpp:51 rc.cpp:1214
 msgid "Do not Repeat"
 msgstr "Ne ripeti"
 
@@ -4105,7 +4116,7 @@ msgstr "Ne ripeti"
 #. i18n: file amarok.kcfg line 55
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 55
-#: rc.cpp:54 rc.cpp:1214
+#: rc.cpp:54 rc.cpp:1217
 msgid "Repeat Track"
 msgstr "Ripeti la trakon"
 
@@ -4113,7 +4124,7 @@ msgstr "Ripeti la trakon"
 #. i18n: file amarok.kcfg line 58
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 58
-#: rc.cpp:57 rc.cpp:1217
+#: rc.cpp:57 rc.cpp:1220
 msgid "Repeat Album"
 msgstr "Ripeti la albumon"
 
@@ -4121,7 +4132,7 @@ msgstr "Ripeti la albumon"
 #. i18n: file amarok.kcfg line 61
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 61
-#: rc.cpp:60 rc.cpp:1220
+#: rc.cpp:60 rc.cpp:1223
 msgid "Repeat Playlist"
 msgstr "Ripeti la ludliston"
 
@@ -4129,7 +4140,7 @@ msgstr "Ripeti la ludliston"
 #. i18n: file amarok.kcfg line 67
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 67
-#: rc.cpp:63 rc.cpp:1223
+#: rc.cpp:63 rc.cpp:1226
 msgid "Which tracks or albums to favor in Random Mode"
 msgstr ""
 
@@ -4137,7 +4148,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 68
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 68
-#: rc.cpp:66 rc.cpp:1226
+#: rc.cpp:66 rc.cpp:1229
 msgid ""
 "Tracks or albums with the chosen property will be more likely to be chosen "
 "in Random Mode."
@@ -4147,7 +4158,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 78
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 78
-#: rc.cpp:69 rc.cpp:1229
+#: rc.cpp:69 rc.cpp:1232
 msgid "Whether to play tracks or albums in random order"
 msgstr ""
 
@@ -4155,7 +4166,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 79
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 79
-#: rc.cpp:72 rc.cpp:1232
+#: rc.cpp:72 rc.cpp:1235
 msgid ""
 "If set, Amarok plays the tracks or albums in the playlist in a random order."
 msgstr ""
@@ -4164,7 +4175,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 88
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 88
-#: rc.cpp:75 rc.cpp:1235
+#: rc.cpp:75 rc.cpp:1238
 msgid "The status of dynamic mode."
 msgstr ""
 
@@ -4172,7 +4183,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 89
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 89
-#: rc.cpp:78 rc.cpp:1238
+#: rc.cpp:78 rc.cpp:1241
 msgid ""
 "If set, dynamic mode will be on, and tracks will be added according to the "
 "dynamic playlist specified."
@@ -4182,7 +4193,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 93
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 93
-#: rc.cpp:81 rc.cpp:1241
+#: rc.cpp:81 rc.cpp:1244
 msgid "The most recently used Dynamic Mode"
 msgstr ""
 
@@ -4190,7 +4201,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 94
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 94
-#: rc.cpp:84 rc.cpp:1244
+#: rc.cpp:84 rc.cpp:1247
 msgid ""
 "The title of the Dynamic Mode that was most recently loaded in the playlist"
 msgstr ""
@@ -4199,7 +4210,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 98
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 98
-#: rc.cpp:87 rc.cpp:1247
+#: rc.cpp:87 rc.cpp:1250
 msgid "The most recently used scoring script"
 msgstr ""
 
@@ -4207,7 +4218,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 99
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 99
-#: rc.cpp:90 rc.cpp:1250
+#: rc.cpp:90 rc.cpp:1253
 msgid "The name of the custom scoring script which was most recently loaded"
 msgstr ""
 
@@ -4215,7 +4226,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 103
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 103
-#: rc.cpp:93 rc.cpp:1253
+#: rc.cpp:93 rc.cpp:1256
 msgid "Whether to show icon in system tray"
 msgstr ""
 
@@ -4223,7 +4234,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 104
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 104
-#: rc.cpp:96 rc.cpp:1256
+#: rc.cpp:96 rc.cpp:1259
 msgid "Enable/Disable tray icon for Amarok."
 msgstr ""
 
@@ -4231,7 +4242,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 108
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 108
-#: rc.cpp:99 rc.cpp:1259
+#: rc.cpp:99 rc.cpp:1262
 msgid "Whether to animate the systray icon"
 msgstr ""
 
@@ -4239,7 +4250,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 109
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 109
-#: rc.cpp:102 rc.cpp:1262
+#: rc.cpp:102 rc.cpp:1265
 msgid "Enable/Disable tray icon animation."
 msgstr ""
 
@@ -4251,7 +4262,7 @@ msgstr ""
 #. i18n: file ./amarok.kcfg line 113
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 114
-#: rc.cpp:105 rc.cpp:108 rc.cpp:1265 rc.cpp:1268
+#: rc.cpp:105 rc.cpp:108 rc.cpp:1268 rc.cpp:1271
 msgid "Size of the cover previews in Contextbrowser and Covermanager"
 msgstr ""
 
@@ -4259,7 +4270,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 118
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 118
-#: rc.cpp:111 rc.cpp:1271
+#: rc.cpp:111 rc.cpp:1274
 msgid "Whether to add directories to playlist recursively"
 msgstr ""
 
@@ -4267,7 +4278,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 119
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 119
-#: rc.cpp:114 rc.cpp:1274
+#: rc.cpp:114 rc.cpp:1277
 msgid "Enable/Disable recursive directory adding to the playlist."
 msgstr ""
 
@@ -4275,7 +4286,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 123
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 123
-#: rc.cpp:117 rc.cpp:1277
+#: rc.cpp:117 rc.cpp:1280
 msgid "Delay between tracks, in milliseconds"
 msgstr ""
 
@@ -4283,7 +4294,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 124
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 124
-#: rc.cpp:120 rc.cpp:1280
+#: rc.cpp:120 rc.cpp:1283
 msgid "Delay between tracks, in milliseconds."
 msgstr ""
 
@@ -4291,7 +4302,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 128
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 128
-#: rc.cpp:123 rc.cpp:1283
+#: rc.cpp:123 rc.cpp:1286
 msgid "Number of undo levels in playlist"
 msgstr ""
 
@@ -4299,7 +4310,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 129
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 129
-#: rc.cpp:126 rc.cpp:1286
+#: rc.cpp:126 rc.cpp:1289
 msgid "The number of undo levels in the playlist."
 msgstr ""
 
@@ -4307,7 +4318,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 133
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 133
-#: rc.cpp:129 rc.cpp:1289
+#: rc.cpp:129 rc.cpp:1292
 msgid "Index of current visual analyzer"
 msgstr ""
 
@@ -4315,7 +4326,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 134
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 134
-#: rc.cpp:132 rc.cpp:1292
+#: rc.cpp:132 rc.cpp:1295
 msgid "The ID of the visual analyzer to display."
 msgstr ""
 
@@ -4323,7 +4334,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 138
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 138
-#: rc.cpp:135 rc.cpp:1295
+#: rc.cpp:135 rc.cpp:1298
 msgid "Whether a splash-screen should be displayed on startup"
 msgstr ""
 
@@ -4331,7 +4342,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 139
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 139
-#: rc.cpp:138 rc.cpp:1298
+#: rc.cpp:138 rc.cpp:1301
 msgid "Enable/Disable splashscreen during Amarok startup."
 msgstr ""
 
@@ -4339,7 +4350,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 143
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 143
-#: rc.cpp:141 rc.cpp:1301
+#: rc.cpp:141 rc.cpp:1304
 msgid "Whether playlists store relative path"
 msgstr ""
 
@@ -4347,7 +4358,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 144
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 144
-#: rc.cpp:144 rc.cpp:1304
+#: rc.cpp:144 rc.cpp:1307
 msgid ""
 "If set, Amarok's manually saved playlists will contain a relative path to "
 "each track, not an absolute path."
@@ -4357,7 +4368,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 148
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 148
-#: rc.cpp:147 rc.cpp:1307
+#: rc.cpp:147 rc.cpp:1310
 msgid "Whether organize files will overwrite existing files."
 msgstr ""
 
@@ -4365,7 +4376,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 149
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 149
-#: rc.cpp:150 rc.cpp:1310
+#: rc.cpp:150 rc.cpp:1313
 msgid "If set, Organize files will overwrite any existing destination."
 msgstr ""
 
@@ -4373,7 +4384,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 153
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 153
-#: rc.cpp:153 rc.cpp:1313
+#: rc.cpp:153 rc.cpp:1316
 msgid ""
 "Whether organize files will group directories according to their filetype."
 msgstr ""
@@ -4382,7 +4393,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 154
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 154
-#: rc.cpp:156 rc.cpp:1316
+#: rc.cpp:156 rc.cpp:1319
 msgid ""
 "If set, Organize files will group directories containing the same filetype."
 msgstr ""
@@ -4391,7 +4402,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 158
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 158
-#: rc.cpp:159 rc.cpp:1319
+#: rc.cpp:159 rc.cpp:1322
 msgid ""
 "Whether organize files will group artist starting in the same character."
 msgstr ""
@@ -4400,7 +4411,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 159
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 159
-#: rc.cpp:162 rc.cpp:1322
+#: rc.cpp:162 rc.cpp:1325
 msgid ""
 "If set, Organize files will group artist starting in the same character."
 msgstr ""
@@ -4409,7 +4420,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 163
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 163
-#: rc.cpp:165 rc.cpp:1325
+#: rc.cpp:165 rc.cpp:1328
 msgid "Whether organize files will ignore The in artist names."
 msgstr ""
 
@@ -4417,7 +4428,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 164
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 164
-#: rc.cpp:168 rc.cpp:1328
+#: rc.cpp:168 rc.cpp:1331
 msgid "If set, Organize files will ignore The in artist names."
 msgstr ""
 
@@ -4425,7 +4436,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 168
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 168
-#: rc.cpp:171 rc.cpp:1331
+#: rc.cpp:171 rc.cpp:1334
 msgid ""
 "Whether organize files will replace spaces in filenames by an underscore."
 msgstr ""
@@ -4434,7 +4445,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 169
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 169
-#: rc.cpp:174 rc.cpp:1334
+#: rc.cpp:174 rc.cpp:1337
 msgid ""
 "If set, Organize files will replace spaces in filenames by an underscore."
 msgstr ""
@@ -4443,7 +4454,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 173
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 173
-#: rc.cpp:177 rc.cpp:1337
+#: rc.cpp:177 rc.cpp:1340
 msgid "Whether organize files will use cover art as folder icons."
 msgstr ""
 
@@ -4451,7 +4462,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 174
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 174
-#: rc.cpp:180 rc.cpp:1340
+#: rc.cpp:180 rc.cpp:1343
 msgid "If set, Organize files will use cover art as folder icons."
 msgstr ""
 
@@ -4459,7 +4470,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 178
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 178
-#: rc.cpp:183 rc.cpp:1343
+#: rc.cpp:183 rc.cpp:1346
 msgid "Index of collection folder destination for Organize files."
 msgstr ""
 
@@ -4467,7 +4478,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 179
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 179
-#: rc.cpp:186 rc.cpp:1346
+#: rc.cpp:186 rc.cpp:1349
 msgid "The ID of the collection folder destination for Organize files."
 msgstr ""
 
@@ -4475,7 +4486,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 183
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 183
-#: rc.cpp:189 rc.cpp:1349
+#: rc.cpp:189 rc.cpp:1352
 msgid ""
 "Whether organize files will rename files in a manner compatible with vfat "
 "filesystems."
@@ -4485,7 +4496,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 184
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 184
-#: rc.cpp:192 rc.cpp:1352
+#: rc.cpp:192 rc.cpp:1355
 msgid ""
 "If set, Organize files will replace characters that are not compatible with "
 "vfat filesystems (such as ':', '*' and '?')."
@@ -4495,7 +4506,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 188
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 188
-#: rc.cpp:195 rc.cpp:1355
+#: rc.cpp:195 rc.cpp:1358
 msgid ""
 "Whether organize files will rename files such that they only contain 7-bit "
 "ASCII characters."
@@ -4505,7 +4516,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 189
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 189
-#: rc.cpp:198 rc.cpp:1358
+#: rc.cpp:198 rc.cpp:1361
 msgid ""
 "If set, Organize files will replace characters that are not compatible with "
 "the 7-bit ASCII character set."
@@ -4515,7 +4526,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 193
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 193
-#: rc.cpp:201 rc.cpp:1361
+#: rc.cpp:201 rc.cpp:1364
 msgid "Whether organize files will use a custom file naming scheme."
 msgstr ""
 
@@ -4523,7 +4534,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 194
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 194
-#: rc.cpp:204 rc.cpp:1364
+#: rc.cpp:204 rc.cpp:1367
 msgid ""
 "If set, Organize files will rename files according to a custom format string."
 msgstr ""
@@ -4532,7 +4543,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 198
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 198
-#: rc.cpp:207 rc.cpp:1367
+#: rc.cpp:207 rc.cpp:1370
 msgid "Format string for Organize files, if a custom naming scheme is used."
 msgstr ""
 
@@ -4540,7 +4551,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 199
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 199
-#: rc.cpp:210 rc.cpp:1370
+#: rc.cpp:210 rc.cpp:1373
 msgid ""
 "If the custom filename scheme is enabled, then Organize files will rename "
 "files according to this format string."
@@ -4550,7 +4561,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 203
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 203
-#: rc.cpp:213 rc.cpp:1373
+#: rc.cpp:213 rc.cpp:1376
 msgid "Regular expression that is to be replaced."
 msgstr ""
 
@@ -4558,7 +4569,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 204
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 204
-#: rc.cpp:216 rc.cpp:1376
+#: rc.cpp:216 rc.cpp:1379
 msgid ""
 "Organize files will replace substrings matching this regular expression."
 msgstr ""
@@ -4567,7 +4578,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 208
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 208
-#: rc.cpp:219 rc.cpp:1379
+#: rc.cpp:219 rc.cpp:1382
 msgid "Replacing string."
 msgstr ""
 
@@ -4575,7 +4586,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 209
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 209
-#: rc.cpp:222 rc.cpp:1382
+#: rc.cpp:222 rc.cpp:1385
 msgid "Organize files will replace matching substrings with this string."
 msgstr ""
 
@@ -4583,7 +4594,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 213
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 213
-#: rc.cpp:225 rc.cpp:1385
+#: rc.cpp:225 rc.cpp:1388
 msgid "Filename of the external web browser to be invoked by Amarok."
 msgstr ""
 
@@ -4591,7 +4602,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 217
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 217
-#: rc.cpp:228 rc.cpp:1388
+#: rc.cpp:228 rc.cpp:1391
 msgid "Whether the collection view is in the flat or tree view mode"
 msgstr ""
 
@@ -4599,7 +4610,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 221
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 221
-#: rc.cpp:231 rc.cpp:1391
+#: rc.cpp:231 rc.cpp:1394
 msgid "Whether to use the CoverBling album art visualization."
 msgstr ""
 
@@ -4607,7 +4618,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 228
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 228
-#: rc.cpp:234 rc.cpp:1394
+#: rc.cpp:234 rc.cpp:1397
 msgid "Master volume"
 msgstr "Ĉefa laŭteco"
 
@@ -4615,7 +4626,7 @@ msgstr "Ĉefa laŭteco"
 #. i18n: file amarok.kcfg line 229
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 229
-#: rc.cpp:237 rc.cpp:1397
+#: rc.cpp:237 rc.cpp:1400
 msgid "The Amarok master volume, a value between 0 (muted) and 100."
 msgstr "La ĉefa laŭteco de Amarok, valoro inter 0 (mutigita) kaj 100."
 
@@ -4623,7 +4634,7 @@ msgstr "La ĉefa laŭteco de Amarok, valoro inter 0 (mutigita) kaj 100."
 #. i18n: file amarok.kcfg line 235
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 235
-#: rc.cpp:240 rc.cpp:1400
+#: rc.cpp:240 rc.cpp:1403
 msgid "Whether to crossfade between tracks"
 msgstr ""
 
@@ -4631,7 +4642,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 236
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 236
-#: rc.cpp:243 rc.cpp:1403
+#: rc.cpp:243 rc.cpp:1406
 msgid "Enable/Disable crossfading between track changes."
 msgstr ""
 
@@ -4639,7 +4650,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 240
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 240
-#: rc.cpp:246 rc.cpp:1406
+#: rc.cpp:246 rc.cpp:1409
 msgid "Length of crossfade, in milliseconds"
 msgstr ""
 
@@ -4647,7 +4658,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 241
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 241
-#: rc.cpp:249 rc.cpp:1409
+#: rc.cpp:249 rc.cpp:1412
 msgid "The length of the crossfade between tracks in milliseconds."
 msgstr ""
 
@@ -4655,7 +4666,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 246
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 246
-#: rc.cpp:252 rc.cpp:1412
+#: rc.cpp:252 rc.cpp:1415
 msgid "When to Crossfade"
 msgstr ""
 
@@ -4663,7 +4674,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 247
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 247
-#: rc.cpp:255 rc.cpp:1415
+#: rc.cpp:255 rc.cpp:1418
 msgid ""
 "Determines whether to crossfade always, or on automatic/manual track changes "
 "only."
@@ -4673,7 +4684,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 251
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 251
-#: rc.cpp:258 rc.cpp:1418
+#: rc.cpp:258 rc.cpp:1421
 msgid "Whether to fade out tracks when pressing stop."
 msgstr ""
 
@@ -4681,7 +4692,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 252
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 252
-#: rc.cpp:261 rc.cpp:1421
+#: rc.cpp:261 rc.cpp:1424
 msgid "Enable/Disable fadeout."
 msgstr ""
 
@@ -4689,7 +4700,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 256
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 256
-#: rc.cpp:264 rc.cpp:1424
+#: rc.cpp:264 rc.cpp:1427
 msgid "Length of fadeout, in milliseconds"
 msgstr ""
 
@@ -4697,7 +4708,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 257
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 257
-#: rc.cpp:267 rc.cpp:1427
+#: rc.cpp:267 rc.cpp:1430
 msgid "The length of the fadeout in milliseconds."
 msgstr ""
 
@@ -4705,7 +4716,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 262
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 262
-#: rc.cpp:270 rc.cpp:1430
+#: rc.cpp:270 rc.cpp:1433
 msgid "Whether to fade out when exiting the program."
 msgstr ""
 
@@ -4713,7 +4724,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 266
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 266
-#: rc.cpp:273 rc.cpp:1433
+#: rc.cpp:273 rc.cpp:1436
 msgid "Enables the equalizer plugin"
 msgstr "Ŝaltas la egalizilan kromaĵon"
 
@@ -4721,7 +4732,7 @@ msgstr "Ŝaltas la egalizilan kromaĵon"
 #. i18n: file amarok.kcfg line 267
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 267
-#: rc.cpp:276 rc.cpp:1436
+#: rc.cpp:276 rc.cpp:1439
 msgid "When enabled, an equalizer plugin filters the audio stream."
 msgstr ""
 
@@ -4729,7 +4740,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 271
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 271
-#: rc.cpp:279 rc.cpp:1439
+#: rc.cpp:279 rc.cpp:1442
 msgid "Equalizer pre-amplification value, range -100..100, 0 is normal."
 msgstr ""
 
@@ -4737,7 +4748,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 277
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 277
-#: rc.cpp:282 rc.cpp:1442
+#: rc.cpp:282 rc.cpp:1445
 msgid "Band gains for equalizer, 10 values, range -100..100, 0 is normal."
 msgstr ""
 
@@ -4745,7 +4756,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 281
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 281
-#: rc.cpp:285 rc.cpp:1445
+#: rc.cpp:285 rc.cpp:1448
 msgid "Equalizer preset name."
 msgstr "Egalizila antaŭagorda nomo."
 
@@ -4753,7 +4764,7 @@ msgstr "Egalizila antaŭagorda nomo."
 #. i18n: file amarok.kcfg line 288
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 288
-#: rc.cpp:288 rc.cpp:1448
+#: rc.cpp:288 rc.cpp:1451
 msgid "Amazon locale for cover retrieval"
 msgstr "Lokaĵaro de Amazon por la jaketpeto"
 
@@ -4761,7 +4772,7 @@ msgstr "Lokaĵaro de Amazon por la jaketpeto"
 #. i18n: file amarok.kcfg line 289
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 289
-#: rc.cpp:291 rc.cpp:1451
+#: rc.cpp:291 rc.cpp:1454
 msgid "Determines which Amazon server cover images should be retrieved from."
 msgstr ""
 
@@ -4769,7 +4780,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 296
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 296
-#: rc.cpp:294 rc.cpp:1454
+#: rc.cpp:294 rc.cpp:1457
 msgid "Wikipedia locale for information retrieval"
 msgstr "Lokaĵaro de Vikipedio por la informpeto"
 
@@ -4777,7 +4788,7 @@ msgstr "Lokaĵaro de Vikipedio por la informpeto"
 #. i18n: file amarok.kcfg line 297
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 297
-#: rc.cpp:297 rc.cpp:1457
+#: rc.cpp:297 rc.cpp:1460
 msgid ""
 "Determines in which language the information is retrieved from Wikipedia."
 msgstr ""
@@ -4786,7 +4797,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 304
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 304
-#: rc.cpp:300 rc.cpp:1460
+#: rc.cpp:300 rc.cpp:1463
 msgid "Use On-Screen Display"
 msgstr ""
 
@@ -4794,7 +4805,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 305
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 305
-#: rc.cpp:303 rc.cpp:1463
+#: rc.cpp:303 rc.cpp:1466
 msgid "Enable/Disable the On-Screen Display."
 msgstr ""
 
@@ -4802,7 +4813,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 309
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 309
-#: rc.cpp:306 rc.cpp:1466
+#: rc.cpp:306 rc.cpp:1469
 msgid "Display the same information in the OSD as in the playlist columns."
 msgstr ""
 
@@ -4810,7 +4821,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 310
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 310
-#: rc.cpp:309 rc.cpp:1469
+#: rc.cpp:309 rc.cpp:1472
 msgid ""
 "If enabled, the OSD will display the same information and in the same order "
 "as the columns in the playlist."
@@ -4820,7 +4831,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 314
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 314
-#: rc.cpp:312 rc.cpp:1472
+#: rc.cpp:312 rc.cpp:1475
 msgid "The OSD text to show"
 msgstr "La montrota vidigila teksto"
 
@@ -4828,7 +4839,7 @@ msgstr "La montrota vidigila teksto"
 #. i18n: file amarok.kcfg line 315
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 315
-#: rc.cpp:315 rc.cpp:1475
+#: rc.cpp:315 rc.cpp:1478
 msgid "Customize the OSD display text."
 msgstr ""
 
@@ -4836,7 +4847,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 319
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 319
-#: rc.cpp:318 rc.cpp:1478
+#: rc.cpp:318 rc.cpp:1481
 msgid "Font for On-Screen Display"
 msgstr "Tiparo por la vidigilo"
 
@@ -4844,7 +4855,7 @@ msgstr "Tiparo por la vidigilo"
 #. i18n: file amarok.kcfg line 320
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 320
-#: rc.cpp:321 rc.cpp:1481
+#: rc.cpp:321 rc.cpp:1484
 msgid "The font to use for the On-Screen Display."
 msgstr ""
 
@@ -4852,7 +4863,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 324
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 324
-#: rc.cpp:324 rc.cpp:1484
+#: rc.cpp:324 rc.cpp:1487
 msgid "Draw a shadow around the text."
 msgstr ""
 
@@ -4860,7 +4871,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 325
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 325
-#: rc.cpp:327 rc.cpp:1487
+#: rc.cpp:327 rc.cpp:1490
 msgid "Draws a shadow around the OSD-text."
 msgstr ""
 
@@ -4868,7 +4879,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 329
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 329
-#: rc.cpp:330 rc.cpp:1490
+#: rc.cpp:330 rc.cpp:1493
 msgid "Translucency Toggle"
 msgstr ""
 
@@ -4876,7 +4887,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 330
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 330
-#: rc.cpp:333 rc.cpp:1493
+#: rc.cpp:333 rc.cpp:1496
 #, fuzzy
 #| msgid "Make the background of the OSD transparent."
 msgid "Make the background of the OSD translucent."
@@ -4886,7 +4897,7 @@ msgstr "Travidebligi la vidigilan fonon."
 #. i18n: file amarok.kcfg line 334
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 334
-#: rc.cpp:336 rc.cpp:1496
+#: rc.cpp:336 rc.cpp:1499
 msgid "Whether to use custom colors for the OSD"
 msgstr ""
 
@@ -4894,7 +4905,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 335
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 335
-#: rc.cpp:339 rc.cpp:1499
+#: rc.cpp:339 rc.cpp:1502
 msgid "You can use custom colors for the OSD if you set this true."
 msgstr ""
 
@@ -4902,7 +4913,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 339
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 339
-#: rc.cpp:342 rc.cpp:1502
+#: rc.cpp:342 rc.cpp:1505
 msgid "Font Color for On-Screen Display"
 msgstr ""
 
@@ -4910,7 +4921,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 340
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 340
-#: rc.cpp:345 rc.cpp:1505
+#: rc.cpp:345 rc.cpp:1508
 msgid ""
 "The color of the OSD text. The color is specified in RGB, a comma-separated "
 "list containing three integers between 0 and 255."
@@ -4920,7 +4931,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 344
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 344
-#: rc.cpp:348 rc.cpp:1508
+#: rc.cpp:348 rc.cpp:1511
 msgid "Background Color for On-Screen Display"
 msgstr ""
 
@@ -4928,7 +4939,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 345
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 345
-#: rc.cpp:351 rc.cpp:1511
+#: rc.cpp:351 rc.cpp:1514
 msgid ""
 "The color of the OSD background. The color is specified in RGB, a comma-"
 "separated list containing three integers between 0 and 255."
@@ -4938,7 +4949,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 349
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 349
-#: rc.cpp:354 rc.cpp:1514
+#: rc.cpp:354 rc.cpp:1517
 msgid "How many milliseconds the text should be displayed"
 msgstr ""
 
@@ -4946,7 +4957,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 350
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 350
-#: rc.cpp:357 rc.cpp:1517
+#: rc.cpp:357 rc.cpp:1520
 msgid ""
 "The time in milliseconds to show the OSD. A value of 0 means never hide. The "
 "default value is 5000 ms."
@@ -4956,7 +4967,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 355
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 355
-#: rc.cpp:360 rc.cpp:1520
+#: rc.cpp:360 rc.cpp:1523
 msgid "Y position offset"
 msgstr ""
 
@@ -4964,7 +4975,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 356
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 356
-#: rc.cpp:363 rc.cpp:1523
+#: rc.cpp:363 rc.cpp:1526
 msgid ""
 "The Y position of the OSD relative to the chosen screen and  OSD alignment. "
 "If Top alignment is chosen the Y offset is the space between the upper part "
@@ -4977,7 +4988,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 362
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 362
-#: rc.cpp:366 rc.cpp:1526
+#: rc.cpp:366 rc.cpp:1529
 msgid "OSD screen"
 msgstr ""
 
@@ -4985,7 +4996,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 363
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 363
-#: rc.cpp:369 rc.cpp:1529
+#: rc.cpp:369 rc.cpp:1532
 msgid ""
 "The screen that should display the OSD. For single-headed environments this "
 "setting should be 0."
@@ -4995,7 +5006,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 367
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 367
-#: rc.cpp:372 rc.cpp:1532
+#: rc.cpp:372 rc.cpp:1535
 msgid "Whether the album cover should be shown"
 msgstr "Ĉu montri la albuman jaketon"
 
@@ -5003,7 +5014,7 @@ msgstr "Ĉu montri la albuman jaketon"
 #. i18n: file amarok.kcfg line 368
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 368
-#: rc.cpp:375 rc.cpp:1535
+#: rc.cpp:375 rc.cpp:1538
 msgid "If enabled, shows the album cover in the OSD."
 msgstr ""
 
@@ -5011,7 +5022,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 372
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 372
-#: rc.cpp:378 rc.cpp:1538
+#: rc.cpp:378 rc.cpp:1541
 msgid "Align OSD to"
 msgstr ""
 
@@ -5019,7 +5030,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 373
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 373
-#: rc.cpp:381 rc.cpp:1541
+#: rc.cpp:381 rc.cpp:1544
 msgid ""
 "The relative position of the OSD. Possible choices are Left, Middle, Right "
 "and Center."
@@ -5029,7 +5040,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 387
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 387
-#: rc.cpp:384 rc.cpp:1544
+#: rc.cpp:384 rc.cpp:1547
 msgid "Resume playback of last played track on startup"
 msgstr ""
 
@@ -5037,7 +5048,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 388
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 388
-#: rc.cpp:387 rc.cpp:1547
+#: rc.cpp:387 rc.cpp:1550
 msgid "If set, Amarok resumes playback of the last played track on startup."
 msgstr ""
 
@@ -5045,7 +5056,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 392
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 392
-#: rc.cpp:390 rc.cpp:1550
+#: rc.cpp:390 rc.cpp:1553
 msgid "Track URL to resume upon startup"
 msgstr ""
 
@@ -5053,7 +5064,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 393
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 393
-#: rc.cpp:393 rc.cpp:1553
+#: rc.cpp:393 rc.cpp:1556
 msgid "Internal: URL of the track to resume on startup."
 msgstr ""
 
@@ -5061,7 +5072,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 396
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 396
-#: rc.cpp:396 rc.cpp:1556
+#: rc.cpp:396 rc.cpp:1559
 msgid "Time to resume at, in milliseconds"
 msgstr ""
 
@@ -5069,7 +5080,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 397
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 397
-#: rc.cpp:399 rc.cpp:1559
+#: rc.cpp:399 rc.cpp:1562
 msgid "Internal: Playback position in the track to resume on startup."
 msgstr ""
 
@@ -5077,7 +5088,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 403
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 403
-#: rc.cpp:402 rc.cpp:1562
+#: rc.cpp:402 rc.cpp:1565
 msgid "Database Engine"
 msgstr "Datumbaza motoro"
 
@@ -5085,7 +5096,7 @@ msgstr "Datumbaza motoro"
 #. i18n: file amarok.kcfg line 404
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 404
-#: rc.cpp:405 rc.cpp:1565
+#: rc.cpp:405 rc.cpp:1568
 msgid "The database engine used to store collection"
 msgstr ""
 
@@ -5093,7 +5104,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 408
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 408
-#: rc.cpp:408 rc.cpp:1568
+#: rc.cpp:408 rc.cpp:1571
 msgid "Whether Collections folders are scanned recursively"
 msgstr ""
 
@@ -5101,7 +5112,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 412
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 412
-#: rc.cpp:411 rc.cpp:1571
+#: rc.cpp:411 rc.cpp:1574
 msgid "Whether Collection folders are rescanned on change"
 msgstr ""
 
@@ -5109,7 +5120,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 416
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 416
-#: rc.cpp:414 rc.cpp:1574
+#: rc.cpp:414 rc.cpp:1577
 msgid "List of folders in the Collection"
 msgstr "Listo de dosierujoj en la kolekto"
 
@@ -5117,7 +5128,7 @@ msgstr "Listo de dosierujoj en la kolekto"
 #. i18n: file amarok.kcfg line 422
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 422
-#: rc.cpp:417 rc.cpp:1577
+#: rc.cpp:417 rc.cpp:1580
 msgid "Host"
 msgstr "Gastiganto"
 
@@ -5125,7 +5136,7 @@ msgstr "Gastiganto"
 #. i18n: file amarok.kcfg line 423
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 423
-#: rc.cpp:420 rc.cpp:1580
+#: rc.cpp:420 rc.cpp:1583
 msgid "The host MySql server is running on"
 msgstr "La gastiganto ĉe kiu la MySql servilo ruliĝas"
 
@@ -5133,7 +5144,7 @@ msgstr "La gastiganto ĉe kiu la MySql servilo ruliĝas"
 #. i18n: file amarok.kcfg line 427
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 427
-#: rc.cpp:423 rc.cpp:1583
+#: rc.cpp:423 rc.cpp:1586
 msgid "Port"
 msgstr "Pordo"
 
@@ -5141,7 +5152,7 @@ msgstr "Pordo"
 #. i18n: file amarok.kcfg line 428
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 428
-#: rc.cpp:426 rc.cpp:1586
+#: rc.cpp:426 rc.cpp:1589
 msgid "The port MySql server is listening"
 msgstr "La pordo al kiu la MySql servilo estas aŭskultanta"
 
@@ -5149,7 +5160,7 @@ msgstr "La pordo al kiu la MySql servilo estas aŭskultanta"
 #. i18n: file amarok.kcfg line 432
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 432
-#: rc.cpp:429 rc.cpp:1589
+#: rc.cpp:429 rc.cpp:1592
 msgid "Database name"
 msgstr "Datumbaza nomo"
 
@@ -5157,7 +5168,7 @@ msgstr "Datumbaza nomo"
 #. i18n: file amarok.kcfg line 433
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 433
-#: rc.cpp:432 rc.cpp:1592
+#: rc.cpp:432 rc.cpp:1595
 msgid "The database's name"
 msgstr ""
 
@@ -5165,7 +5176,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 437
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 437
-#: rc.cpp:435 rc.cpp:1595
+#: rc.cpp:435 rc.cpp:1598
 msgid "User"
 msgstr "Uzanto"
 
@@ -5173,7 +5184,7 @@ msgstr "Uzanto"
 #. i18n: file amarok.kcfg line 438
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 438
-#: rc.cpp:438 rc.cpp:1598
+#: rc.cpp:438 rc.cpp:1601
 msgid "The user's name to use for connecting MySql"
 msgstr ""
 
@@ -5189,7 +5200,7 @@ msgstr ""
 #. i18n: file ./amarok.kcfg line 445
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 462
-#: rc.cpp:441 rc.cpp:447 rc.cpp:465 rc.cpp:1601 rc.cpp:1607 rc.cpp:1625
+#: rc.cpp:441 rc.cpp:447 rc.cpp:465 rc.cpp:1604 rc.cpp:1610 rc.cpp:1628
 msgid "Password"
 msgstr "Pasvorto"
 
@@ -5201,7 +5212,7 @@ msgstr "Pasvorto"
 #. i18n: file ./amarok.kcfg line 442
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 446
-#: rc.cpp:444 rc.cpp:450 rc.cpp:1604 rc.cpp:1610
+#: rc.cpp:444 rc.cpp:450 rc.cpp:1607 rc.cpp:1613
 msgid "The user's password"
 msgstr ""
 
@@ -5209,7 +5220,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 452
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 452
-#: rc.cpp:453 rc.cpp:1613
+#: rc.cpp:453 rc.cpp:1616
 msgid "Submit played songs"
 msgstr ""
 
@@ -5217,7 +5228,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 453
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 453
-#: rc.cpp:456 rc.cpp:1616
+#: rc.cpp:456 rc.cpp:1619
 msgid "Whether played songs are submitted to Audioscrobbler"
 msgstr ""
 
@@ -5225,7 +5236,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 457
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 457
-#: rc.cpp:459 rc.cpp:1619
+#: rc.cpp:459 rc.cpp:1622
 msgctxt "Username for audioscrobbler login"
 msgid "Username"
 msgstr "Uzantnomo"
@@ -5234,7 +5245,7 @@ msgstr "Uzantnomo"
 #. i18n: file amarok.kcfg line 458
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 458
-#: rc.cpp:462 rc.cpp:1622
+#: rc.cpp:462 rc.cpp:1625
 msgid "The username to use for connecting to Audioscrobbler"
 msgstr ""
 
@@ -5242,7 +5253,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 463
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 463
-#: rc.cpp:468 rc.cpp:1628
+#: rc.cpp:468 rc.cpp:1631
 msgid "The password to use for connecting to Audioscrobbler"
 msgstr ""
 
@@ -5250,7 +5261,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 467
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 467
-#: rc.cpp:471 rc.cpp:1631
+#: rc.cpp:471 rc.cpp:1634
 msgid "Retrieve similar artists"
 msgstr ""
 
@@ -5258,7 +5269,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 468
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 468
-#: rc.cpp:474 rc.cpp:1634
+#: rc.cpp:474 rc.cpp:1637
 msgid "Whether similar songs are retrieved from Audioscrobbler"
 msgstr ""
 
@@ -5266,7 +5277,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 475
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 475
-#: rc.cpp:477 rc.cpp:1637
+#: rc.cpp:477 rc.cpp:1640
 msgid "Device type"
 msgstr ""
 
@@ -5274,7 +5285,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 476
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 476
-#: rc.cpp:480 rc.cpp:1640
+#: rc.cpp:480 rc.cpp:1643
 msgid "The type of media device."
 msgstr ""
 
@@ -5282,7 +5293,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 479
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 479
-#: rc.cpp:483 rc.cpp:1643
+#: rc.cpp:483 rc.cpp:1646
 msgid "Mount point"
 msgstr ""
 
@@ -5290,7 +5301,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 480
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 480
-#: rc.cpp:486 rc.cpp:1646
+#: rc.cpp:486 rc.cpp:1649
 msgid "The mount point used for the media device connection."
 msgstr ""
 
@@ -5298,7 +5309,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 483
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 483
-#: rc.cpp:489 rc.cpp:1649
+#: rc.cpp:489 rc.cpp:1652
 msgid "Mount command"
 msgstr ""
 
@@ -5306,7 +5317,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 484
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 484
-#: rc.cpp:492 rc.cpp:1652
+#: rc.cpp:492 rc.cpp:1655
 msgid "The mount command used for the media device connection."
 msgstr ""
 
@@ -5314,7 +5325,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 487
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 487
-#: rc.cpp:495 rc.cpp:1655
+#: rc.cpp:495 rc.cpp:1658
 msgid "UmountCommand"
 msgstr ""
 
@@ -5322,7 +5333,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 488
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 488
-#: rc.cpp:498 rc.cpp:1658
+#: rc.cpp:498 rc.cpp:1661
 msgid "The umount command used for the media device connection."
 msgstr ""
 
@@ -5330,7 +5341,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 491
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 491
-#: rc.cpp:501 rc.cpp:1661
+#: rc.cpp:501 rc.cpp:1664
 msgid "Auto delete podcasts"
 msgstr "Aŭtomate forigi la podkastojn"
 
@@ -5338,7 +5349,7 @@ msgstr "Aŭtomate forigi la podkastojn"
 #. i18n: file amarok.kcfg line 492
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 492
-#: rc.cpp:504 rc.cpp:1664
+#: rc.cpp:504 rc.cpp:1667
 msgid ""
 "Whether podcasts shows already played are automatically deleted when media "
 "device is connected."
@@ -5348,7 +5359,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 495
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 495
-#: rc.cpp:507 rc.cpp:1667
+#: rc.cpp:507 rc.cpp:1670
 msgid "Sync stats"
 msgstr ""
 
@@ -5356,7 +5367,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 496
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 496
-#: rc.cpp:510 rc.cpp:1670
+#: rc.cpp:510 rc.cpp:1673
 msgid ""
 "Whether Amarok statistics should be synchronized with play count/ratings on "
 "device and whether tracks played should be submitted to last.fm."
@@ -5366,7 +5377,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 502
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 502
-#: rc.cpp:513 rc.cpp:1673
+#: rc.cpp:513 rc.cpp:1676
 msgid "Manually added servers"
 msgstr ""
 
@@ -5374,7 +5385,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 503
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 503
-#: rc.cpp:516 rc.cpp:1676
+#: rc.cpp:516 rc.cpp:1679
 msgid "Music Sharing servers added by the user."
 msgstr ""
 
@@ -5382,7 +5393,7 @@ msgstr ""
 #. i18n: file amarok.kcfg line 507
 #. i18n: tag label
 #. i18n: file ./amarok.kcfg line 507
-#: rc.cpp:519 rc.cpp:1679
+#: rc.cpp:519 rc.cpp:1682
 msgid "Server passwords"
 msgstr "Servilaj pasvortoj"
 
@@ -5390,7 +5401,7 @@ msgstr "Servilaj pasvortoj"
 #. i18n: file amarok.kcfg line 508
 #. i18n: tag whatsthis
 #. i18n: file ./amarok.kcfg line 508
-#: rc.cpp:522 rc.cpp:1682
+#: rc.cpp:522 rc.cpp:1685
 msgid "Passwords stored by hostname."
 msgstr ""
 
@@ -5398,7 +5409,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 24
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 24
-#: rc.cpp:525 rc.cpp:1097
+#: rc.cpp:525 rc.cpp:1100
 msgid "Podcast Configuration"
 msgstr "Podkasta agordo"
 
@@ -5406,7 +5417,7 @@ msgstr "Podkasta agordo"
 #. i18n: file podcastsettingsbase.ui line 39
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 39
-#: rc.cpp:528 rc.cpp:1100
+#: rc.cpp:528 rc.cpp:1103
 msgid "Media Download"
 msgstr "Media elŝuto"
 
@@ -5414,7 +5425,7 @@ msgstr "Media elŝuto"
 #. i18n: file podcastsettingsbase.ui line 45
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 45
-#: rc.cpp:531 rc.cpp:1103
+#: rc.cpp:531 rc.cpp:1106
 msgid "Stream or download on re&quest"
 msgstr ""
 
@@ -5426,7 +5437,7 @@ msgstr ""
 #. i18n: file ./podcastsettingsbase.ui line 48
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 51
-#: rc.cpp:534 rc.cpp:537 rc.cpp:1106 rc.cpp:1109
+#: rc.cpp:534 rc.cpp:537 rc.cpp:1109 rc.cpp:1112
 msgid ""
 "Media must be explicitly downloaded, otherwise the podcast will be played "
 "from the remote server."
@@ -5436,7 +5447,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 58
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 58
-#: rc.cpp:540 rc.cpp:1112
+#: rc.cpp:540 rc.cpp:1115
 msgid "Download when a&vailable"
 msgstr ""
 
@@ -5448,7 +5459,7 @@ msgstr ""
 #. i18n: file ./podcastsettingsbase.ui line 61
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 64
-#: rc.cpp:543 rc.cpp:546 rc.cpp:1115 rc.cpp:1118
+#: rc.cpp:543 rc.cpp:546 rc.cpp:1118 rc.cpp:1121
 msgid "Download media as soon as it becomes available"
 msgstr ""
 
@@ -5456,7 +5467,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 71
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 71
-#: rc.cpp:549 rc.cpp:1121
+#: rc.cpp:549 rc.cpp:1124
 msgid "Add to media device &transfer queue"
 msgstr ""
 
@@ -5468,7 +5479,7 @@ msgstr ""
 #. i18n: file ./podcastsettingsbase.ui line 74
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 77
-#: rc.cpp:552 rc.cpp:555 rc.cpp:1124 rc.cpp:1127
+#: rc.cpp:552 rc.cpp:555 rc.cpp:1127 rc.cpp:1130
 msgid ""
 "When checked, Amarok will automatically add newly downloaded podcast shows "
 "to the media device transfer queue"
@@ -5478,7 +5489,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 87
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 87
-#: rc.cpp:558 rc.cpp:1130
+#: rc.cpp:558 rc.cpp:1133
 msgid "Limit &number of episodes"
 msgstr ""
 
@@ -5490,7 +5501,7 @@ msgstr ""
 #. i18n: file ./podcastsettingsbase.ui line 90
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 93
-#: rc.cpp:561 rc.cpp:564 rc.cpp:1133 rc.cpp:1136
+#: rc.cpp:561 rc.cpp:564 rc.cpp:1136 rc.cpp:1139
 msgid "If checked, Amarok will throw away old podcast episodes"
 msgstr "Se ŝaltita, Amarok forĵetos la malnovajn podkastaĵojn"
 
@@ -5498,7 +5509,7 @@ msgstr "Se ŝaltita, Amarok forĵetos la malnovajn podkastaĵojn"
 #. i18n: file podcastsettingsbase.ui line 116
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 116
-#: rc.cpp:567 rc.cpp:1139
+#: rc.cpp:567 rc.cpp:1142
 msgid "Keep maximum of:"
 msgstr ""
 
@@ -5506,7 +5517,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 126
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 126
-#: rc.cpp:570 rc.cpp:1142
+#: rc.cpp:570 rc.cpp:1145
 msgid " Items"
 msgstr " Eroj"
 
@@ -5518,7 +5529,7 @@ msgstr " Eroj"
 #. i18n: file ./podcastsettingsbase.ui line 132
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 135
-#: rc.cpp:573 rc.cpp:576 rc.cpp:1145 rc.cpp:1148
+#: rc.cpp:573 rc.cpp:576 rc.cpp:1148 rc.cpp:1151
 msgid "The maximum number of podcast items to store"
 msgstr ""
 
@@ -5526,7 +5537,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 142
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 142
-#: rc.cpp:579 rc.cpp:1151
+#: rc.cpp:579 rc.cpp:1154
 msgid "Automatically scan for updates"
 msgstr "Aŭtomate esplori pri ĝisdatigaĵoj"
 
@@ -5538,7 +5549,7 @@ msgstr "Aŭtomate esplori pri ĝisdatigaĵoj"
 #. i18n: file ./podcastsettingsbase.ui line 145
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 148
-#: rc.cpp:582 rc.cpp:585 rc.cpp:1154 rc.cpp:1157
+#: rc.cpp:582 rc.cpp:585 rc.cpp:1157 rc.cpp:1160
 msgid "When checked, Amarok will automatically scan the podcast for updates"
 msgstr ""
 
@@ -5546,7 +5557,7 @@ msgstr ""
 #. i18n: file podcastsettingsbase.ui line 155
 #. i18n: tag string
 #. i18n: file ./podcastsettingsbase.ui line 155
-#: rc.cpp:588 rc.cpp:1160
+#: rc.cpp:588 rc.cpp:1163
 msgid "Save location:"
 msgstr ""
 
@@ -6261,94 +6272,94 @@ msgid "Filename Scheme"
 msgstr "Do&siernomaj skemoj"
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 97
-#: rc.cpp:974
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 111
+#: rc.cpp:977
 msgid "Edit &case"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 134
-#: rc.cpp:977
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 148
+#: rc.cpp:980
 #, fuzzy
 #| msgid "Title"
 msgid "&Title case"
 msgstr "Titolo"
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 156
-#: rc.cpp:980
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 170
+#: rc.cpp:983
 msgid "&First letter of every word uppercase"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 175
-#: rc.cpp:983
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 189
+#: rc.cpp:986
 #, fuzzy
 #| msgid "P&urchase"
 msgid "All &uppercase"
 msgstr "Aĉ&eti"
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 194
-#: rc.cpp:986
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 208
+#: rc.cpp:989
 msgid "All &lowercase"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 216
-#: rc.cpp:989
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 230
+#: rc.cpp:992
 msgid "Remove trailing &spaces in tags"
 msgstr ""
 
 #. i18n: tag string
-#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 226
-#: rc.cpp:992
+#. i18n: file ./dialogs/FilenameLayoutDialog.ui line 240
+#: rc.cpp:995
 #, fuzzy
 #| msgid "&Replace Spaces with Underscores"
 msgid "Replace &underscores with spaces"
 msgstr "Anstataŭigi spacsignojn per subst&rekoj"
 
 #. i18n: tag string
-#. i18n: file ./dialogs/ScriptManagerBase.ui line 13
-#: rc.cpp:995
+#. i18n: file ./dialogs/ScriptManagerBase.ui line 14
+#: rc.cpp:998
 msgid "DirectoryListBase"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./dialogs/ScriptManagerBase.ui line 25
-#: rc.cpp:998
-msgid "&Uninstall"
-msgstr "&Malinstali"
-
-#. i18n: tag string
-#. i18n: file ./dialogs/ScriptManagerBase.ui line 38
 #: rc.cpp:1001
-msgid "&Install Script"
-msgstr "&Instali skripton"
-
-#. i18n: tag string
-#. i18n: file ./dialogs/ScriptManagerBase.ui line 51
-#: rc.cpp:1004
-msgid "&Get More Scripts"
-msgstr "&Akiri pli da skriptoj"
-
-#. i18n: tag string
-#. i18n: file ./dialogs/ScriptManagerBase.ui line 79
-#: rc.cpp:1007
 #, fuzzy
 #| msgid "&Install Script"
 msgid "Installed Amarok Scripts:"
 msgstr "&Instali skripton"
 
 #. i18n: tag string
-#. i18n: file ./dialogs/tagdialogbase.ui line 13
+#. i18n: file ./dialogs/ScriptManagerBase.ui line 44
+#: rc.cpp:1004
+msgid "&Install Script"
+msgstr "&Instali skripton"
+
+#. i18n: tag string
+#. i18n: file ./dialogs/ScriptManagerBase.ui line 51
+#: rc.cpp:1007
+msgid "&Uninstall"
+msgstr "&Malinstali"
+
+#. i18n: tag string
+#. i18n: file ./dialogs/ScriptManagerBase.ui line 58
 #: rc.cpp:1010
+msgid "&Get More Scripts"
+msgstr "&Akiri pli da skriptoj"
+
+#. i18n: tag string
+#. i18n: file ./dialogs/tagdialogbase.ui line 13
+#: rc.cpp:1013
 msgid "Track Information"
 msgstr "Traka informo"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 36
-#: rc.cpp:1013
+#: rc.cpp:1016
 #, fuzzy
 #| msgid "Summary"
 msgid "S&ummary"
@@ -6358,13 +6369,13 @@ msgstr "Resumo"
 #. i18n: file ./dialogs/tagdialogbase.ui line 69
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 499
-#: rc.cpp:1016 rc.cpp:1061
+#: rc.cpp:1019 rc.cpp:1064
 msgid "Track by Artist on Album"
 msgstr "Trako laŭ artisto en albumo"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 146
-#: rc.cpp:1019
+#: rc.cpp:1022
 #, fuzzy
 #| msgid "Tags"
 msgid "Ta&gs"
@@ -6372,73 +6383,73 @@ msgstr "Etikedoj"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 154
-#: rc.cpp:1022
+#: rc.cpp:1025
 msgid "T&itle:"
 msgstr "T&itolo:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 170
-#: rc.cpp:1025
+#: rc.cpp:1028
 msgid "&Artist:"
 msgstr "&Artisto:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 199
-#: rc.cpp:1028
+#: rc.cpp:1031
 msgid "&Composer:"
 msgstr "&Komponisto:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 225
-#: rc.cpp:1031
+#: rc.cpp:1034
 msgid "Al&bum:"
 msgstr "Al&bumo:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 256
-#: rc.cpp:1034
+#: rc.cpp:1037
 msgid "&Disc Number:"
 msgstr "&Diska numero:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 302
-#: rc.cpp:1037
+#: rc.cpp:1040
 msgid "&Genre:"
 msgstr "&Ĝenro:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 331
-#: rc.cpp:1040
+#: rc.cpp:1043
 msgid "Trac&k:"
 msgstr "Tra&ko:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 368
-#: rc.cpp:1043
+#: rc.cpp:1046
 msgid "&Year:"
 msgstr "&Jaro:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 402
-#: rc.cpp:1046
+#: rc.cpp:1049
 msgid "Co&mment:"
 msgstr "Ko&mento:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 430
-#: rc.cpp:1049
+#: rc.cpp:1052
 msgid "Fill-In Tags Using MusicBrain&z"
 msgstr "Plenigi la etikedojn per MusicBrain&z"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 437
-#: rc.cpp:1052
+#: rc.cpp:1055
 msgid "Guess Tags From &Filename"
 msgstr "Diveni la etikedojn per &dosiernomo"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 457
-#: rc.cpp:1055
+#: rc.cpp:1058
 #, fuzzy
 #| msgid "Lyrics"
 msgid "L&yrics"
@@ -6446,7 +6457,7 @@ msgstr "Paroloj"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 482
-#: rc.cpp:1058
+#: rc.cpp:1061
 #, fuzzy
 #| msgid "Statistics"
 msgid "St&atistics"
@@ -6454,7 +6465,7 @@ msgstr "Statistikoj"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 625
-#: rc.cpp:1070
+#: rc.cpp:1073
 #, fuzzy
 #| msgid "Labels"
 msgid "La&bels"
@@ -6462,13 +6473,13 @@ msgstr "Etikedoj"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 640
-#: rc.cpp:1073
+#: rc.cpp:1076
 msgid "Your favorite labels:"
 msgstr "Viaj favorataj etikedoj:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 663
-#: rc.cpp:1076
+#: rc.cpp:1079
 msgid ""
 "Edit the assigned labels below (multiple labels are separated by commas), or "
 "select a label from above."
@@ -6476,196 +6487,196 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 683
-#: rc.cpp:1079
+#: rc.cpp:1082
 msgid "Location:"
 msgstr "Loko:"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 720
-#: rc.cpp:1082
+#: rc.cpp:1085
 msgid "&Previous"
 msgstr "An&taŭa"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 727
-#: rc.cpp:1085
+#: rc.cpp:1088
 msgid "&Next"
 msgstr "Sek&va"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 734
-#: rc.cpp:1088
+#: rc.cpp:1091
 msgid "Per Trac&k"
 msgstr "Je Tra&ko"
 
 #. i18n: tag string
 #. i18n: file ./dialogs/tagdialogbase.ui line 757
-#: rc.cpp:1091
+#: rc.cpp:1094
 msgid "Sa&ve && Close"
 msgstr "Konser&vi kaj fermi"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 24
-#: rc.cpp:1685
+#: rc.cpp:1688
 msgid "GenericMediaDeviceConfigDialog1"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 66
-#: rc.cpp:1688
+#: rc.cpp:1691
 msgid "Transferring files to media device"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 86
-#: rc.cpp:1691
+#: rc.cpp:1694
 msgid "The following formats will be transferred directly:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 113
-#: rc.cpp:1694
+#: rc.cpp:1697
 msgid "The formats supported by the generic media device."
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 129
-#: rc.cpp:1697
+#: rc.cpp:1700
 msgid "Other formats will be converted to:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 147
-#: rc.cpp:1700
+#: rc.cpp:1703
 msgid "&Add format..."
 msgstr "&Aldoni formaton..."
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 150
-#: rc.cpp:1703
+#: rc.cpp:1706
 msgid "Add the above format to the list."
 msgstr "Aldoni la supran formaton al la listo."
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 158
-#: rc.cpp:1706
+#: rc.cpp:1709
 msgid "Remove selected"
 msgstr "Forigi la elektitan"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 161
-#: rc.cpp:1709
+#: rc.cpp:1712
 msgid "Remove the selected formats from the list."
 msgstr "Forigi la elektitan formaton el la listo."
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 194
-#: rc.cpp:1712
+#: rc.cpp:1715
 msgid "The preferred format for transcoding files."
 msgstr "La preferata formato por transkodi dosierojn."
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 216
-#: rc.cpp:1715
+#: rc.cpp:1718
 msgid "Transfered files locations"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 243
-#: rc.cpp:1718
+#: rc.cpp:1721
 msgid "Ig&nore \"The\""
 msgstr "Ig&nori \"La\""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 251
-#: rc.cpp:1721
+#: rc.cpp:1724
 msgid "Convert spaces"
 msgstr "Konverti la spacsignojn"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 262
-#: rc.cpp:1725
+#: rc.cpp:1728
 msgid "ASCII te&xt"
 msgstr "Askia te&ksto"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 270
-#: rc.cpp:1728
+#: rc.cpp:1731
 msgid "Always use &VFAT-safe names"
 msgstr "Ĉiam uzi &VFAT-taŭgajn nomojn"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 273
-#: rc.cpp:1731
+#: rc.cpp:1734
 msgid "Always use VFAT-safe names even on devices with non-VFAT filesystems."
 msgstr ""
 "Ĉiam uzi VFAT-taŭgajn nomojn eĉ ĉe disponaĵoj kun ne-VFAT dosiersistemoj."
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 291
-#: rc.cpp:1734
+#: rc.cpp:1737
 msgid "Song location:"
 msgstr "Kantaĵa loko:"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 310
-#: rc.cpp:1738
+#: rc.cpp:1741
 msgid ""
 "The location of the transfered songs relative to the device mount point."
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 326
-#: rc.cpp:1741
+#: rc.cpp:1744
 msgid "<p align=\"center\">(help)</p>"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 336
-#: rc.cpp:1744
+#: rc.cpp:1747
 msgid "Example song location:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 369
-#: rc.cpp:1748
+#: rc.cpp:1751
 msgid "Podcast location:"
 msgstr "Podkasta loko:"
 
 #. i18n: tag string
 #. i18n: file ./mediadevice/generic/genericmediadeviceconfigdialog.ui line 380
-#: rc.cpp:1752
+#: rc.cpp:1755
 msgid ""
 "The location of the transfered podcasts relative to the device mount point."
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 13
-#: rc.cpp:1755
+#: rc.cpp:1758
 msgid "Magnatune.com Album Download"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 19
-#: rc.cpp:1758
+#: rc.cpp:1761
 msgid "Download options"
 msgstr "Elŝutaj opcioj"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 25
-#: rc.cpp:1761
+#: rc.cpp:1764
 msgid "Select Format:"
 msgstr "Elektu formaton:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 38
-#: rc.cpp:1764
+#: rc.cpp:1767
 msgid "Download to:"
 msgstr "Elŝuti en:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 51
-#: rc.cpp:1767
+#: rc.cpp:1770
 msgid ""
 "If you download to a location that is already being monitored by Amarok, the "
 "album will automatically be added to your collection."
@@ -6673,13 +6684,13 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 67
-#: rc.cpp:1770
+#: rc.cpp:1773
 msgid "Magnatune info"
 msgstr "Magnatune informo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneDownloadDialogBase.ui line 83
-#: rc.cpp:1773 servicebrowser/jamendo/JamendoMeta.cpp:134
+#: rc.cpp:1776 servicebrowser/jamendo/JamendoMeta.cpp:134
 #: servicebrowser/jamendo/JamendoMeta.cpp:361
 #: playlistbrowser/PodcastCategory.cpp:352
 msgid "&Download"
@@ -6687,213 +6698,213 @@ msgstr "&Elŝuti"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 22
-#: rc.cpp:1776
+#: rc.cpp:1779
 msgid "Purchase Album from Magnatune.com"
 msgstr "Aĉeti albumon ĉe Magnatune.com"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 28
-#: rc.cpp:1779
+#: rc.cpp:1782
 msgid "Info"
 msgstr "Informo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 34
-#: rc.cpp:1782
+#: rc.cpp:1785
 msgid "You have chosen to purchase the following album from Magnatune.com"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 90
-#: rc.cpp:1785
+#: rc.cpp:1788
 msgid "Album:"
 msgstr "Albumo:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 110
-#: rc.cpp:1788
+#: rc.cpp:1791
 msgid "Artist:"
 msgstr "Artisto:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 130
-#: rc.cpp:1791
+#: rc.cpp:1794
 msgid "Genre:"
 msgstr "Ĝenro:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 150
-#: rc.cpp:1794
+#: rc.cpp:1797
 msgid "Launch Year:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 176
-#: rc.cpp:1797
+#: rc.cpp:1800
 msgid "Payment"
 msgstr "Pagado"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 182
-#: rc.cpp:1800
+#: rc.cpp:1803
 msgctxt "The name of the person buying songs from magnatune"
 msgid "Name:"
 msgstr "Nomo:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 195
-#: rc.cpp:1803
+#: rc.cpp:1806
 msgctxt "The e-mail address of the user"
 msgid "E-mail:"
 msgstr "Retadreso:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 208
-#: rc.cpp:1806
+#: rc.cpp:1809
 msgid "Pay using:"
 msgstr "Pagi per:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 231
-#: rc.cpp:1809
+#: rc.cpp:1812
 msgid "credit card"
 msgstr "kreditkarto"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 238
-#: rc.cpp:1812
+#: rc.cpp:1815
 msgid "Magnatune gift card"
 msgstr "Magnatune donackarto"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 727
-#: rc.cpp:1815
+#: rc.cpp:1818
 msgid "VISA and Mastercard accepted."
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 737
-#: rc.cpp:1818
+#: rc.cpp:1821
 msgid "Credit card number:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 757
-#: rc.cpp:1821
+#: rc.cpp:1824
 msgid "Expiration date:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 783
-#: rc.cpp:1824
+#: rc.cpp:1827
 msgid "Month (xx):"
 msgstr "Monato (xx):"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 803
-#: rc.cpp:1827
+#: rc.cpp:1830
 msgid "Year (xx):"
 msgstr "Jaro (xx):"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 835
-#: rc.cpp:1830
+#: rc.cpp:1833
 msgid "Gift card code:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 852
-#: rc.cpp:1833
+#: rc.cpp:1836
 msgid "Amount to pay (USD):"
 msgstr "Pagota kvanto (USD):"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 866
-#: rc.cpp:1836
+#: rc.cpp:1839
 msgid "5"
 msgstr "5"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 871
-#: rc.cpp:1839
+#: rc.cpp:1842
 msgid "6"
 msgstr "6"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 876
-#: rc.cpp:1842
+#: rc.cpp:1845
 msgid "7"
 msgstr "7"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 881
-#: rc.cpp:1845
+#: rc.cpp:1848
 msgid "8"
 msgstr "8"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 886
-#: rc.cpp:1848
+#: rc.cpp:1851
 msgid "9"
 msgstr "9"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 891
-#: rc.cpp:1851
+#: rc.cpp:1854
 msgid "10"
 msgstr "10"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 896
-#: rc.cpp:1854
+#: rc.cpp:1857
 msgid "11"
 msgstr "11"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 901
-#: rc.cpp:1857
+#: rc.cpp:1860
 msgid "12"
 msgstr "12"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 906
-#: rc.cpp:1860
+#: rc.cpp:1863
 msgid "13"
 msgstr "13"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 911
-#: rc.cpp:1863
+#: rc.cpp:1866
 msgid "14"
 msgstr "14"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 916
-#: rc.cpp:1866
+#: rc.cpp:1869
 msgid "15"
 msgstr "15"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 921
-#: rc.cpp:1869
+#: rc.cpp:1872
 msgid "16"
 msgstr "16"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 926
-#: rc.cpp:1872
+#: rc.cpp:1875
 msgid "17"
 msgstr "17"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 931
-#: rc.cpp:1875
+#: rc.cpp:1878
 msgid "18"
 msgstr "18"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 939
-#: rc.cpp:1878
+#: rc.cpp:1881
 msgid ""
 "The amount you choose to pay will be split 50/50 between the artist and "
 "Magnatune.com. Your personal and credit card information is sent securely to "
@@ -6903,67 +6914,67 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 979
-#: rc.cpp:1881
+#: rc.cpp:1884
 msgid "P&urchase"
 msgstr "Aĉ&eti"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatunePurchaseDialogBase.ui line 986
-#: rc.cpp:1884
+#: rc.cpp:1887
 msgid "Ca&ncel"
 msgstr "Rezig&ni"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 22
-#: rc.cpp:1887
+#: rc.cpp:1890
 msgid "Stream options"
 msgstr "Fluaj opcioj"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 28
-#: rc.cpp:1890
+#: rc.cpp:1893
 msgid "Preview stream type:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 36
-#: rc.cpp:1893
+#: rc.cpp:1896
 msgid "Ogg"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 41
-#: rc.cpp:1896
+#: rc.cpp:1899
 msgid "Mp3"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 46
-#: rc.cpp:1899
+#: rc.cpp:1902
 msgid "Lofi mp3"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 57
-#: rc.cpp:1902
+#: rc.cpp:1905
 msgid "Membership options"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 63
-#: rc.cpp:1905
+#: rc.cpp:1908
 msgid "I am a member"
 msgstr "Mi estas membro"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 83
-#: rc.cpp:1908
+#: rc.cpp:1911
 msgid "Membership type:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 104
-#: rc.cpp:1917
+#: rc.cpp:1920
 msgctxt "Username for logins to Magnatune"
 msgid "Username:"
 msgstr "Uzantnomo:"
@@ -6972,13 +6983,13 @@ msgstr "Uzantnomo:"
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 114
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 61
-#: rc.cpp:1920 rc.cpp:1983
+#: rc.cpp:1923 rc.cpp:1986
 msgid "Password:"
 msgstr "Pasvorto:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneConfigWidget.ui line 124
-#: rc.cpp:1923
+#: rc.cpp:1926
 msgid ""
 "For more information about the Magnatune.com memberships, and to sign up, go "
 "to <a href=\"http://magnatune.com/compare_plans\">http://magnatune.com/"
@@ -6987,31 +6998,31 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneRedownloadDialogBase.ui line 13
-#: rc.cpp:1926
+#: rc.cpp:1929
 msgid "Redownload manager"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneRedownloadDialogBase.ui line 19
-#: rc.cpp:1929
+#: rc.cpp:1932
 msgid "These are the albums that you have previously downloaded:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneRedownloadDialogBase.ui line 29
-#: rc.cpp:1932
+#: rc.cpp:1935
 msgid "Re&download"
 msgstr "Reelŝ&uti"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/magnatunestore/MagnatuneRedownloadDialogBase.ui line 60
-#: rc.cpp:1938
+#: rc.cpp:1941
 msgid "Artist - Album"
 msgstr "Artisto - Albumo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 37
-#: rc.cpp:1941
+#: rc.cpp:1944
 #, fuzzy
 #| msgid ""
 #| "Amarok can send the name of every song you play to last.fm. The system "
@@ -7031,7 +7042,7 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 47
-#: rc.cpp:1944
+#: rc.cpp:1947
 #, fuzzy
 #| msgid "last.fm Profile"
 msgid "Last.fm Profile"
@@ -7039,7 +7050,7 @@ msgstr "last.fm profilo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 53
-#: rc.cpp:1947
+#: rc.cpp:1950
 #, fuzzy
 #| msgid ""
 #| "<P>To use last.fm with Amarok, you need a <A href='http://www.last.fm:80/"
@@ -7053,19 +7064,19 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 63
-#: rc.cpp:1950
+#: rc.cpp:1953
 msgid "&Username:"
 msgstr "&Uzantonomo:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 79
-#: rc.cpp:1953
+#: rc.cpp:1956
 msgid "&Password:"
 msgstr "&Pasvorto:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 102
-#: rc.cpp:1956
+#: rc.cpp:1959
 #, fuzzy
 #| msgid "last.fm Services"
 msgid "Last.fm Services"
@@ -7073,7 +7084,7 @@ msgstr "last.fm servoj"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 108
-#: rc.cpp:1959
+#: rc.cpp:1962
 msgid ""
 "Once registered, Amarok can tell the last.fm service about your listening "
 "habits; your profile can then provide statistics and recommendations. A "
@@ -7083,19 +7094,19 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 121
-#: rc.cpp:1962
+#: rc.cpp:1965
 msgid "Improve m&y profile by submitting the tracks I play"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 128
-#: rc.cpp:1965
+#: rc.cpp:1968
 msgid "&Retrieve similar artists"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/lastfm/LastFmConfigWidget.ui line 138
-#: rc.cpp:1968
+#: rc.cpp:1971
 msgid ""
 "Why not join the <a href=\"http://www.last.fm:80/group/Amarok+Users\">Amarok "
 "last.fm group</a> and share your musical tastes with other Amarok users?"
@@ -7103,71 +7114,71 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 25
-#: rc.cpp:1971
+#: rc.cpp:1974
 msgid "Server"
 msgstr "Servilo"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 31
-#: rc.cpp:1974
+#: rc.cpp:1977
 msgctxt "The user-definable name of an Ampache server"
 msgid "Name:"
 msgstr "Nomo:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 41
-#: rc.cpp:1977
+#: rc.cpp:1980
 msgid "Server:"
 msgstr "Servilo:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 51
-#: rc.cpp:1980
+#: rc.cpp:1983
 msgctxt "The username to use for logins to an Amapche server"
 msgid "Username:"
 msgstr "Uzantnomo:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 75
-#: rc.cpp:1986
+#: rc.cpp:1989
 msgctxt "Establish a connection to the Ampache server"
 msgid "Active"
 msgstr "Aktiva"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 91
-#: rc.cpp:1989
+#: rc.cpp:1992
 msgid "Edit"
 msgstr "Redakti"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 97
-#: rc.cpp:1992
+#: rc.cpp:1995
 msgid "Add"
 msgstr "Aldoni"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/ampache/AmpacheConfigWidget.ui line 111
-#: rc.cpp:1998
+#: rc.cpp:2001
 msgid "Modify"
 msgstr "Modifi"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 16
-#: rc.cpp:2001
+#: rc.cpp:2004
 msgid "Mp3tunes login"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 22
-#: rc.cpp:2004
+#: rc.cpp:2007
 msgctxt "The e-mail address for Mp3Tunes logins"
 msgid "E-Mail:"
 msgstr "Retadreso:"
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 32
-#: rc.cpp:2007
+#: rc.cpp:2010
 msgctxt "The Mp3Tunes password"
 msgid "Password:"
 msgstr "Pasvorto:"
@@ -7176,7 +7187,7 @@ msgstr "Pasvorto:"
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 42
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 49
-#: rc.cpp:2010 rc.cpp:2013
+#: rc.cpp:2013 rc.cpp:2016
 msgid ""
 "AutoSync is a feature from MP3tunes which allows you to automatically move "
 "your music between computers and devices."
@@ -7184,7 +7195,7 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 52
-#: rc.cpp:2016
+#: rc.cpp:2019
 msgid ""
 "AutoSync is a feature from MP3tunes which allows you to automatically move "
 "your music between computers and devices. You can upload music from one "
@@ -7193,32 +7204,32 @@ msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 55
-#: rc.cpp:2019
+#: rc.cpp:2022
 msgctxt "Enable harmony"
 msgid "Enable Auto Sync"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./servicebrowser/mp3tunes/Mp3tunesConfigWidget.ui line 62
-#: rc.cpp:2022
+#: rc.cpp:2025
 msgid " PIN Code:"
 msgstr ""
 
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 24
-#: rc.cpp:2025
+#: rc.cpp:2028
 msgid "Add Podcast..."
 msgstr "Aldoni podkaston..."
 
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 27
-#: rc.cpp:2028
+#: rc.cpp:2031
 msgid "add podcast..."
 msgstr "aldoni podkaston..."
 
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 50
-#: rc.cpp:2031
+#: rc.cpp:2034
 msgid "Refresh All Podcasts"
 msgstr "Refreŝigi ĉiujn podkastojn"
 
@@ -7226,13 +7237,13 @@ msgstr "Refreŝigi ĉiujn podkastojn"
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 73
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 76
-#: rc.cpp:2034 rc.cpp:2037
+#: rc.cpp:2037 rc.cpp:2040
 msgid "Configure Podcasts..."
 msgstr "Agordi podkastojn..."
 
 #. i18n: tag string
 #. i18n: file ./playlistbrowser/PodcastCategoryBase.ui line 99
-#: rc.cpp:2040
+#: rc.cpp:2043
 msgid "Scan Interval..."
 msgstr ""
 
@@ -9096,6 +9107,12 @@ msgstr "Jaroj"
 msgid "Hours"
 msgstr "Horoj"
 
+#~ msgid "There is no information available for this script."
+#~ msgstr "Estas neniu informo pri tiu skripto."
+
+#~ msgid "About %1"
+#~ msgstr "Pri %1"
+
 #~ msgid "General"
 #~ msgstr "Ĝeneralo"
 
@@ -9113,9 +9130,6 @@ msgstr "Horoj"
 
 #~ msgid "Output Log for %1"
 #~ msgstr "Eliga raporto por %1"
-
-#~ msgid "Scripts"
-#~ msgstr "Skriptoj"
 
 #~ msgid "&Run"
 #~ msgstr "&Ruli"
