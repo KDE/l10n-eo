@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-09-12 09:43+0200\n"
+"POT-Creation-Date: 2008-09-17 10:20+0200\n"
 "PO-Revision-Date: 2007-11-07 01:57+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,19 +16,11 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: componentchooser.cpp:182
-msgid "Select preferred email client:"
-msgstr "Elektu la preferatan poŝtilon:"
-
-#: componentchooser.cpp:310
-msgid "Select preferred Web browser application:"
-msgstr "Elektu la preferatan retumilan programon:"
-
-#: componentchooser.cpp:336
+#: componentchooser.cpp:146
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: componentchooser.cpp:351
+#: componentchooser.cpp:161
 msgid ""
 "<qt>You changed the default component of your choice, do want to save that "
 "change now ?</qt>"
@@ -36,11 +28,11 @@ msgstr ""
 "<qt>Vi ŝanĝis la normajn komponanton de via elekto. Ĉu vi nun volas konservi "
 "la ŝanĝon?</qt>"
 
-#: componentchooser.cpp:355
+#: componentchooser.cpp:165
 msgid "No description available"
 msgstr "Neniu priskribo uzebla"
 
-#: componentchooser.cpp:366 componentchooser.cpp:371
+#: componentchooser.cpp:176 componentchooser.cpp:181
 #, kde-format
 msgid ""
 "Choose from the list below which component should be used by default for the "
@@ -49,67 +41,75 @@ msgstr ""
 "Elektu el la malsupra listo, la komponanton kiu defaŭlte estu uzata por la "
 "servo %1."
 
-#: componentchooserterminal.cpp:94
+#: componentchooserbrowser.cpp:102
+msgid "Select preferred Web browser application:"
+msgstr "Elektu la preferatan retumilan programon:"
+
+#: componentchooseremail.cpp:77
+msgid "Select preferred email client:"
+msgstr "Elektu la preferatan poŝtilon:"
+
+#: componentchooserterminal.cpp:97
 msgid "Select preferred terminal application:"
 msgstr "Elektu la preferatan terminalaplikaĵon:"
 
-#: componentchooserwm.cpp:87
+#: componentchooserwm.cpp:89
 msgid "The new window manager will be used when KDE is started the next time."
 msgstr ""
 
-#: componentchooserwm.cpp:88 componentchooserwm.cpp:141
+#: componentchooserwm.cpp:90 componentchooserwm.cpp:143
 msgid "Window manager change"
 msgstr ""
 
-#: componentchooserwm.cpp:101
+#: componentchooserwm.cpp:103
 msgid ""
 "A new window manager is running.\n"
 "It is still recommended to restart this KDE session to make sure all running "
 "applications adjust for this change."
 msgstr ""
 
-#: componentchooserwm.cpp:104
+#: componentchooserwm.cpp:106
 msgid "Window Manager Replaced"
 msgstr ""
 
-#: componentchooserwm.cpp:140
+#: componentchooserwm.cpp:142
 msgid ""
 "Your running window manager will be now replaced with the configured one."
 msgstr ""
 
-#: componentchooserwm.cpp:149
+#: componentchooserwm.cpp:151
 msgid "Config Window Manager Change"
 msgstr ""
 
-#: componentchooserwm.cpp:151
+#: componentchooserwm.cpp:153
 msgid "&Accept Change"
 msgstr ""
 
-#: componentchooserwm.cpp:152
+#: componentchooserwm.cpp:154
 msgid "&Revert to Previous"
 msgstr ""
 
-#: componentchooserwm.cpp:154
+#: componentchooserwm.cpp:156
 msgid ""
 "The configured window manager is being launched.\n"
 "Please check it has started properly and confirm the change.\n"
 "The launch will be automatically reverted in 20 seconds."
 msgstr ""
 
-#: componentchooserwm.cpp:169
+#: componentchooserwm.cpp:171
 msgid ""
 "The running window manager has been reverted to the default KDE window "
 "manager KWin."
 msgstr ""
 
-#: componentchooserwm.cpp:176
+#: componentchooserwm.cpp:178
 msgid ""
 "The new window manager has failed to start.\n"
 "The running window manager has been reverted to the default KDE window "
 "manager KWin."
 msgstr ""
 
-#: componentchooserwm.cpp:297
+#: componentchooserwm.cpp:299
 msgid "Running the configuration tool failed"
 msgstr ""
 
@@ -158,9 +158,11 @@ msgstr "en la sekvonta foliumilo:"
 #. i18n: ectx: property (text), widget (QToolButton, btnSelectBrowser)
 #. i18n: file: emailclientconfig_ui.ui:82
 #. i18n: ectx: property (text), widget (QToolButton, btnSelectEmail)
+#. i18n: file: filemanagerconfig_ui.ui:93
+#. i18n: ectx: property (text), widget (QToolButton, btnSelectFileManager)
 #. i18n: file: terminalemulatorconfig_ui.ui:128
 #. i18n: ectx: property (text), widget (QToolButton, btnSelectTerminal)
-#: rc.cpp:12 rc.cpp:44 rc.cpp:77
+#: rc.cpp:12 rc.cpp:44 rc.cpp:71 rc.cpp:86
 msgid "..."
 msgstr "..."
 
@@ -318,21 +320,33 @@ msgstr "Marku la opcion, se vi volas uzi iun alian poŝtilon."
 msgid "Use a different &email client:"
 msgstr "Uzi alian &poŝtilon:"
 
+#. i18n: file: filemanagerconfig_ui.ui:30
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:65
+msgid "Browse directories using the following file manager "
+msgstr ""
+
+#. i18n: file: filemanagerconfig_ui.ui:64
+#. i18n: ectx: property (text), widget (QRadioButton, radioExec)
+#: rc.cpp:68
+msgid "Other: click Add... in the dialog shown here:"
+msgstr ""
+
 #. i18n: file: terminalemulatorconfig_ui.ui:50
 #. i18n: ectx: property (text), widget (QRadioButton, otherCB)
-#: rc.cpp:65
+#: rc.cpp:74
 msgid "Use a different &terminal program:"
 msgstr "Uzi alian &terminalprogramon:"
 
 #. i18n: file: terminalemulatorconfig_ui.ui:73
 #. i18n: ectx: property (text), widget (QRadioButton, terminalCB)
-#: rc.cpp:68
+#: rc.cpp:77
 msgid "&Use Konsole as terminal application"
 msgstr "&Uzi Konzolon kiel terminalaplikaĵon"
 
 #. i18n: file: terminalemulatorconfig_ui.ui:109
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, terminalLE)
-#: rc.cpp:71
+#: rc.cpp:80
 #, fuzzy
 #| msgid ""
 #| "Press this button to select your favorite terminal client. Please note "
@@ -353,13 +367,13 @@ msgstr ""
 
 #. i18n: file: terminalemulatorconfig_ui.ui:125
 #. i18n: ectx: property (whatsThis), widget (QToolButton, btnSelectTerminal)
-#: rc.cpp:74
+#: rc.cpp:83
 msgid "Click here to browse for terminal program."
 msgstr "Klaku ĉi tie por serĉi la terminalan programon."
 
 #. i18n: file: wmconfig_ui.ui:41
 #. i18n: ectx: property (text), widget (QRadioButton, differentRB)
-#: rc.cpp:80
+#: rc.cpp:89
 #, fuzzy
 #| msgid "Use a different &terminal program:"
 msgid "Use a different &window manager:"
@@ -367,30 +381,30 @@ msgstr "Uzi alian &terminalprogramon:"
 
 #. i18n: file: wmconfig_ui.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, kwinRB)
-#: rc.cpp:83
+#: rc.cpp:92
 msgid "&Use the default KDE window manager (KWin)"
 msgstr ""
 
 #. i18n: file: wmconfig_ui.ui:76
 #. i18n: ectx: property (text), widget (QPushButton, configureButton)
-#: rc.cpp:86
+#: rc.cpp:95
 msgid "Configure"
 msgstr ""
 
 #. i18n: file: wmconfig_ui.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:89
+#: rc.cpp:98
 msgid ""
 "Note: Most window managers have their own configuration and do not follow "
 "KDE settings."
 msgstr ""
 
-#: rc.cpp:90
+#: rc.cpp:99
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Matthias Peick"
 
-#: rc.cpp:91
+#: rc.cpp:100
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matthias@peick.de"
