@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-13 10:15+0100\n"
+"POT-Creation-Date: 2008-11-14 10:11+0100\n"
 "PO-Revision-Date: 2008-01-10 13:22-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -14,18 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: ktorrent/dbus/dbustorrent.cpp:321
-#, fuzzy
-#| msgid "Maximum share ratio limit reached."
-msgid "Maximum share ratio reached !"
-msgstr "Atingis maksimuman kundividan rejŝon."
-
-#: ktorrent/dbus/dbustorrent.cpp:324
-#, fuzzy
-#| msgid "Maximum seed time:"
-msgid "Maximum seed time reached !"
-msgstr "Maksimuma fontsenda tempo:"
 
 #: ktorrent/groupview.cpp:129
 msgid "Custom Groups"
@@ -51,11 +39,11 @@ msgstr "Malfermi langeton"
 msgid "Group Policy"
 msgstr ""
 
-#: ktorrent/groupview.cpp:327
+#: ktorrent/groupview.cpp:331
 msgid "Please enter the group name."
 msgstr "Bonvolu entajpi la nomon de grupo."
 
-#: ktorrent/groupview.cpp:334 ktorrent/groupview.cpp:459
+#: ktorrent/groupview.cpp:338 ktorrent/groupview.cpp:463
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "La grupo %1 jam ekzistas."
@@ -300,7 +288,7 @@ msgstr "Por konservi, elektu dosiernomon"
 msgid "Torrent files"
 msgstr "Torentdosieroj"
 
-#: ktorrent/importdialog.cpp:52 plugins/scripting/scriptingplugin.cpp:196
+#: ktorrent/importdialog.cpp:52 plugins/scripting/scriptingplugin.cpp:197
 #: plugins/bwscheduler/scheduleeditor.cpp:115
 msgid "All files"
 msgstr "Ĉiuj dosieroj"
@@ -1672,6 +1660,18 @@ msgstr "Elpreni torenton"
 msgid "Select a directory to move the data to."
 msgstr "Elektu dosierujon al kie vi volas movi la datumojn."
 
+#: libktcore/dbus/dbustorrent.cpp:321
+#, fuzzy
+#| msgid "Maximum share ratio limit reached."
+msgid "Maximum share ratio reached !"
+msgstr "Atingis maksimuman kundividan rejŝon."
+
+#: libktcore/dbus/dbustorrent.cpp:324
+#, fuzzy
+#| msgid "Maximum seed time:"
+msgid "Maximum seed time reached !"
+msgstr "Maksimuma fontsenda tempo:"
+
 #: libktcore/util/mmapfile.cpp:163
 msgid "Cannot write beyond end of the mmap buffer!"
 msgstr "Ne povas skribi preter la fino de la mmap bufro!"
@@ -1901,35 +1901,30 @@ msgstr "La UPnP-testa aplikaĵo de KTorrent"
 msgid "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 msgstr "(C) 2005 - 2007 Joris Guisson and Ivan Vasic"
 
-#: plasma/applet/applet.cpp:139 plasma/applet/applet.cpp:318
-#: plasma/applet/applet.cpp:403
-#, fuzzy, kde-format
-#| msgid "%1 KB/s"
-msgid "Up: %1 KB/s"
-msgstr "%1 KB/s"
-
-#: plasma/applet/applet.cpp:140 plasma/applet/applet.cpp:319
-#: plasma/applet/applet.cpp:405
-#, fuzzy, kde-format
-#| msgid "%1 KB/s"
-msgid "Down: %1 KB/s"
-msgstr "%1 KB/s"
-
-#: plasma/applet/applet.cpp:175 plasma/applet/applet.cpp:298
+#: plasma/applet/applet.cpp:151 plasma/applet/applet.cpp:274
 #, fuzzy
 #| msgid "Torrent is incomplete!"
 msgid "KTorrent is not running !"
 msgstr "Torento estas nekompleta!"
 
-#: plasma/applet/applet.cpp:177 plasma/applet/applet.cpp:290
+#: plasma/applet/applet.cpp:153 plasma/applet/applet.cpp:266
 #, fuzzy
 #| msgid "Copy torrent files to:"
 msgid "No torrents loaded !"
 msgstr "Kopii torentdosierojn al:"
 
-#: plasma/applet/applet.cpp:347
+#: plasma/applet/applet.cpp:299 plasma/applet/applet.cpp:372
 #, kde-format
-msgid "Downloaded: %1 / %2 Uploaded: %3"
+msgid ""
+"<table>\t\t\t\t<tr><td>Download Speed:</td><td>%5 KB/s </td><td>Seeders: </"
+"td><td>%1 (%2)</td></tr>\t\t\t\t<tr><td>Upload Speed:</td><td>%6 KB/s </"
+"td><td>Leechers: </td><td>%3 (%4)</td></tr>\t\t\t\t<tr><td>Downloaded:</"
+"td><td>%7 / %8 </td><td>Uploaded: </td><td>%9</td></tr>\t\t\t\t</table>"
+msgstr ""
+
+#: plasma/applet/applet.cpp:309
+#, kde-format
+msgid "<b>%1</b><br/>%2 (Share Ratio: <font color=\"%4\">%3</font>)"
 msgstr ""
 
 #: rc.cpp:1
@@ -7707,7 +7702,7 @@ msgstr ""
 
 #. i18n: file: plugins/scripting/scriptproperties.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScriptProperties)
-#: rc.cpp:2137 plugins/scripting/scriptingplugin.cpp:292
+#: rc.cpp:2137 plugins/scripting/scriptingplugin.cpp:293
 msgid "Script Properties"
 msgstr ""
 
@@ -8909,16 +8904,22 @@ msgid "Add New Filter"
 msgstr "Aldoni dosierujon"
 
 #: plugins/syndication/feedlist.cpp:112
-#, kde-format
-msgid "<b>%1</b><br/>1 active filter"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Active torrents"
+msgid ""
+"%1\n"
+"1 active filter"
+msgstr "Aktivaj torentoj"
 
 #: plugins/syndication/feedlist.cpp:114
-#, kde-format
-msgid "<b>%1</b><br/>%2 active filters"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Active torrents"
+msgid ""
+"%1\n"
+"%2 active filters"
+msgstr "Aktivaj torentoj"
 
-#: plugins/syndication/feedlist.cpp:120
+#: plugins/syndication/feedlist.cpp:120 plugins/scripting/scriptmodel.cpp:95
 #, kde-format
 msgid "<b>%1</b><br/><br/>%2"
 msgstr ""
@@ -9018,61 +9019,61 @@ msgstr "Ĉu vi volas elŝuti aŭ konservi la fontan torenton?"
 msgid "Download Torrent"
 msgstr "Elŝuti torenton"
 
-#: plugins/scripting/scriptingplugin.cpp:70
+#: plugins/scripting/scriptingplugin.cpp:71
 #, fuzzy
 #| msgid "Add Tracker"
 msgid "Add Script"
 msgstr "Aldoni kunordigan servilon"
 
-#: plugins/scripting/scriptingplugin.cpp:74
+#: plugins/scripting/scriptingplugin.cpp:75
 #, fuzzy
 #| msgid "Remove Group"
 msgid "Remove Script"
 msgstr "Elpreni grupon"
 
-#: plugins/scripting/scriptingplugin.cpp:78
+#: plugins/scripting/scriptingplugin.cpp:79
 #, fuzzy
 #| msgid "Scrape"
 msgid "Run Script"
 msgstr "Informpeti"
 
-#: plugins/scripting/scriptingplugin.cpp:82
+#: plugins/scripting/scriptingplugin.cpp:83
 #, fuzzy
 #| msgid "Add Tracker"
 msgid "Stop Script"
 msgstr "Aldoni kunordigan servilon"
 
-#: plugins/scripting/scriptingplugin.cpp:86
+#: plugins/scripting/scriptingplugin.cpp:87
 #, fuzzy
 #| msgid "Add Tracker"
 msgid "Edit Script"
 msgstr "Aldoni kunordigan servilon"
 
-#: plugins/scripting/scriptingplugin.cpp:90
+#: plugins/scripting/scriptingplugin.cpp:91
 #, fuzzy
 #| msgid "Progress"
 msgid "Properties"
 msgstr "Progreso"
 
-#: plugins/scripting/scriptingplugin.cpp:94
+#: plugins/scripting/scriptingplugin.cpp:95
 msgid "Configure"
 msgstr ""
 
-#: plugins/scripting/scriptingplugin.cpp:101
-#: plugins/scripting/scriptingplugin.cpp:121
+#: plugins/scripting/scriptingplugin.cpp:102
+#: plugins/scripting/scriptingplugin.cpp:122
 #, fuzzy
 #| msgid "Scrape"
 msgid "Scripting"
 msgstr "Informpeti"
 
-#: plugins/scripting/scriptingplugin.cpp:115
-#: plugins/scripting/scriptingplugin.cpp:196
+#: plugins/scripting/scriptingplugin.cpp:116
+#: plugins/scripting/scriptingplugin.cpp:197
 #, fuzzy
 #| msgid "Scrape"
 msgid "Scripts"
 msgstr "Informpeti"
 
-#: plugins/scripting/scriptingplugin.cpp:116
+#: plugins/scripting/scriptingplugin.cpp:117
 msgid "Widget to start,stop and manage scripts"
 msgstr ""
 
@@ -9806,6 +9807,16 @@ msgstr "Nevalida servila retadreso"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "Ne povas malfermi dosieron : %1 : %2"
+
+#, fuzzy
+#~| msgid "%1 KB/s"
+#~ msgid "Up: %1 KB/s"
+#~ msgstr "%1 KB/s"
+
+#, fuzzy
+#~| msgid "%1 KB/s"
+#~ msgid "Down: %1 KB/s"
+#~ msgstr "%1 KB/s"
 
 #, fuzzy
 #~| msgid ""
