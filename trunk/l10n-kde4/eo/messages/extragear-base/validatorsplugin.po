@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: validatorsplugin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-12-29 10:24+0100\n"
+"POT-Creation-Date: 2008-12-30 10:03+0100\n"
 "PO-Revision-Date: 2002-03-04 23:35GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@berlinonline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -16,66 +16,114 @@ msgstr ""
 "X-Generator: KBabel 0.9.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: plugin_validators.cpp:45
+#: plugin_validators.cpp:57
 #, fuzzy
 msgid "Validate Web Page"
 msgstr "&Kontrolu TTT-paĝon"
 
-#: plugin_validators.cpp:54
+#: plugin_validators.cpp:68
 msgid "&Validate Web Page"
 msgstr "&Kontrolu TTT-paĝon"
 
-#: plugin_validators.cpp:59
+#: plugin_validators.cpp:74
 #, fuzzy
-msgid "Validate &HTML"
+msgid "Validate HTML (by URI)"
 msgstr "&Kontrolu HTML-on"
 
-#: plugin_validators.cpp:62
+#: plugin_validators.cpp:78
 #, fuzzy
-msgid "Validate &CSS"
+msgid "Validate HTML (by Upload)"
+msgstr "&Kontrolu HTML-on"
+
+#: plugin_validators.cpp:82
+#, fuzzy
+msgid "Validate CSS (by URI)"
 msgstr "&Kontrolu CSS-on"
 
-#: plugin_validators.cpp:65
+#: plugin_validators.cpp:86
+#, fuzzy
+msgid "Validate CSS (by Upload)"
+msgstr "&Kontrolu CSS-on"
+
+#: plugin_validators.cpp:89
 #, fuzzy
 msgid "Validate &Links"
 msgstr "&Kontrolu HTML-on"
 
-#: plugin_validators.cpp:71
+#: plugin_validators.cpp:95
+#, fuzzy
+msgid "Validate Page"
+msgstr "&Kontrolu TTT-paĝon"
+
+#: plugin_validators.cpp:99
+#, fuzzy
+msgid "View Validator Report"
+msgstr "CSS Kontrolilo"
+
+#: plugin_validators.cpp:107
 #, fuzzy
 msgid "C&onfigure Validator..."
 msgstr "&Agordu Kontrolilon..."
 
-#: plugin_validators.cpp:139
-msgid "Cannot Validate Source"
-msgstr "Ne eblas kontroli la fonton"
+#: plugin_validators.cpp:238
+#, fuzzy
+#| msgid "CSS Validator"
+msgid "Remote Validation"
+msgstr "CSS Kontrolilo"
 
-#: plugin_validators.cpp:140
-msgid "You cannot validate anything except web pages with this plugin."
-msgstr "Vi ne povas kontroli iun ajn krom TTT-paĝojn per tiu ĉi kromaĵo."
+#: plugin_validators.cpp:245
+#, fuzzy
+msgid "Local Validation"
+msgstr "CSS Kontrolilo"
 
-#: plugin_validators.cpp:153
-msgid "Malformed URL"
+#: plugin_validators.cpp:263
+#, kde-format
+msgid "1 error"
+msgid_plural "%1 errors"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin_validators.cpp:264
+#, kde-format
+msgid "1 warning"
+msgid_plural "%1 warning"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin_validators.cpp:266
+#, kde-format
+msgctxt "%1 is the error count string, %2 the warning count one"
+msgid "%1, %2"
 msgstr ""
 
-#: plugin_validators.cpp:154
-msgid "The URL you entered is not valid, please correct it and try again."
-msgstr "La URL donita de vi ne estas valida, bonvolu korekti ĝin kaj reprovi."
-
-#: plugin_validators.cpp:163
-msgid "Upload Not Possible"
-msgstr ""
-
-#: plugin_validators.cpp:164
-msgid "Validating links is not possible for local files."
-msgstr ""
-
-#: plugin_validators.cpp:177
+#: plugin_validators.cpp:301
 #, kde-format
 msgid ""
 "<qt>The selected URL cannot be verified because it contains a password. "
 "Sending this URL to <b>%1</b> would put the security of <b>%2</b> at risk.</"
 "qt>"
 msgstr ""
+
+#: plugin_validators.cpp:361
+msgid "Cannot Validate Source"
+msgstr "Ne eblas kontroli la fonton"
+
+#: plugin_validators.cpp:362
+msgid "You cannot validate anything except web pages with this plugin."
+msgstr "Vi ne povas kontroli iun ajn krom TTT-paĝojn per tiu ĉi kromaĵo."
+
+#: plugin_validators.cpp:373
+msgid "Malformed URL"
+msgstr ""
+
+#: plugin_validators.cpp:374
+msgid "The URL you entered is not valid, please correct it and try again."
+msgstr "La URL donita de vi ne estas valida, bonvolu korekti ĝin kaj reprovi."
+
+#: plugin_validators.cpp:401
+#, fuzzy
+msgid "Validation"
+msgstr "&Kontrolu HTML-on"
 
 #. i18n: file: plugin_validators.rc:4
 #. i18n: ectx: Menu (tools)
@@ -89,42 +137,78 @@ msgstr ""
 msgid "Extra Toolbar"
 msgstr ""
 
-#: rc.cpp:7
+#. i18n: file: remotevalidators.ui:19
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:9
+msgid "HTML/XML Validator"
+msgstr "HTML/XML Kontrolilo"
+
+#. i18n: file: remotevalidators.ui:25
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: remotevalidators.ui:74
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: remotevalidators.ui:123
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:12 rc.cpp:21 rc.cpp:30
+msgid "URL:"
+msgstr "URL:"
+
+#. i18n: file: remotevalidators.ui:45
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: remotevalidators.ui:94
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:15 rc.cpp:24
+msgid "Upload:"
+msgstr "Alŝuto:"
+
+#. i18n: file: remotevalidators.ui:68
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:18
+msgid "CSS Validator"
+msgstr "CSS Kontrolilo"
+
+#. i18n: file: remotevalidators.ui:117
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: rc.cpp:27
+#, fuzzy
+msgid "Link Validator"
+msgstr "CSS Kontrolilo"
+
+#. i18n: file: reportwidget.ui:37
+#. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
+#: rc.cpp:33
+msgid "Row"
+msgstr ""
+
+#. i18n: file: reportwidget.ui:42
+#. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
+#: rc.cpp:36
+msgid "Column"
+msgstr ""
+
+#. i18n: file: reportwidget.ui:47
+#. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
+#: rc.cpp:39
+msgid "Message"
+msgstr ""
+
+#: rc.cpp:40
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.cpp:8
+#: rc.cpp:41
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: validatorsdialog.cpp:37
-msgid "Configure"
-msgstr ""
+#: reportdialog.cpp:43
+#, fuzzy
+#| msgid "CSS Validator"
+msgid "Validation Report"
+msgstr "CSS Kontrolilo"
 
-#: validatorsdialog.cpp:42
+#: validatorsdialog.cpp:34
 #, fuzzy
 msgid "Configure Validating Servers"
 msgstr "Agordu la kontrolo-servilojn"
-
-#: validatorsdialog.cpp:48
-msgid "HTML/XML Validator"
-msgstr "HTML/XML Kontrolilo"
-
-#: validatorsdialog.cpp:52 validatorsdialog.cpp:72 validatorsdialog.cpp:92
-msgid "URL:"
-msgstr "URL:"
-
-#: validatorsdialog.cpp:59 validatorsdialog.cpp:79
-msgid "Upload:"
-msgstr "Alŝuto:"
-
-#: validatorsdialog.cpp:68
-msgid "CSS Validator"
-msgstr "CSS Kontrolilo"
-
-#: validatorsdialog.cpp:88
-#, fuzzy
-msgid "Link Validator"
-msgstr "CSS Kontrolilo"
