@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: validatorsplugin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-12-30 10:03+0100\n"
+"POT-Creation-Date: 2008-12-31 11:15+0100\n"
 "PO-Revision-Date: 2002-03-04 23:35GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@berlinonline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -16,87 +16,100 @@ msgstr ""
 "X-Generator: KBabel 0.9.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: plugin_validators.cpp:57
+#: plugin_validators.cpp:58
 #, fuzzy
 msgid "Validate Web Page"
 msgstr "&Kontrolu TTT-paĝon"
 
-#: plugin_validators.cpp:68
+#: plugin_validators.cpp:88
 msgid "&Validate Web Page"
 msgstr "&Kontrolu TTT-paĝon"
 
-#: plugin_validators.cpp:74
+#: plugin_validators.cpp:94
 #, fuzzy
 msgid "Validate HTML (by URI)"
 msgstr "&Kontrolu HTML-on"
 
-#: plugin_validators.cpp:78
+#: plugin_validators.cpp:98
 #, fuzzy
 msgid "Validate HTML (by Upload)"
 msgstr "&Kontrolu HTML-on"
 
-#: plugin_validators.cpp:82
+#: plugin_validators.cpp:102
 #, fuzzy
 msgid "Validate CSS (by URI)"
 msgstr "&Kontrolu CSS-on"
 
-#: plugin_validators.cpp:86
+#: plugin_validators.cpp:106
 #, fuzzy
 msgid "Validate CSS (by Upload)"
 msgstr "&Kontrolu CSS-on"
 
-#: plugin_validators.cpp:89
+#: plugin_validators.cpp:111
 #, fuzzy
 msgid "Validate &Links"
 msgstr "&Kontrolu HTML-on"
 
-#: plugin_validators.cpp:95
+#: plugin_validators.cpp:117
 #, fuzzy
 msgid "Validate Page"
 msgstr "&Kontrolu TTT-paĝon"
 
-#: plugin_validators.cpp:99
+#: plugin_validators.cpp:121
 #, fuzzy
 msgid "View Validator Report"
 msgstr "CSS Kontrolilo"
 
-#: plugin_validators.cpp:107
+#: plugin_validators.cpp:129
 #, fuzzy
 msgid "C&onfigure Validator..."
 msgstr "&Agordu Kontrolilon..."
 
-#: plugin_validators.cpp:238
+#: plugin_validators.cpp:275 validatorsdialog.cpp:49
 #, fuzzy
 #| msgid "CSS Validator"
 msgid "Remote Validation"
 msgstr "CSS Kontrolilo"
 
-#: plugin_validators.cpp:245
+#: plugin_validators.cpp:282
 #, fuzzy
 msgid "Local Validation"
 msgstr "CSS Kontrolilo"
 
-#: plugin_validators.cpp:263
+#: plugin_validators.cpp:299
 #, kde-format
 msgid "1 error"
 msgid_plural "%1 errors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugin_validators.cpp:264
+#: plugin_validators.cpp:300
 #, kde-format
+#| msgid "1 warning"
+#| msgid_plural "%1 warning"
 msgid "1 warning"
-msgid_plural "%1 warning"
+msgid_plural "%1 warnings"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugin_validators.cpp:266
+#: plugin_validators.cpp:301
+#, kde-format
+msgid "1 accessibility warning"
+msgid_plural "%1 accessibility warnings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin_validators.cpp:303
 #, kde-format
 msgctxt "%1 is the error count string, %2 the warning count one"
 msgid "%1, %2"
 msgstr ""
 
-#: plugin_validators.cpp:301
+#: plugin_validators.cpp:305
+msgid "HTML tidy results:"
+msgstr ""
+
+#: plugin_validators.cpp:357
 #, kde-format
 msgid ""
 "<qt>The selected URL cannot be verified because it contains a password. "
@@ -104,100 +117,144 @@ msgid ""
 "qt>"
 msgstr ""
 
-#: plugin_validators.cpp:361
+#: plugin_validators.cpp:430
 msgid "Cannot Validate Source"
 msgstr "Ne eblas kontroli la fonton"
 
-#: plugin_validators.cpp:362
+#: plugin_validators.cpp:431
 msgid "You cannot validate anything except web pages with this plugin."
 msgstr "Vi ne povas kontroli iun ajn krom TTT-paĝojn per tiu ĉi kromaĵo."
 
-#: plugin_validators.cpp:373
+#: plugin_validators.cpp:442
 msgid "Malformed URL"
 msgstr ""
 
-#: plugin_validators.cpp:374
+#: plugin_validators.cpp:443
 msgid "The URL you entered is not valid, please correct it and try again."
 msgstr "La URL donita de vi ne estas valida, bonvolu korekti ĝin kaj reprovi."
 
-#: plugin_validators.cpp:401
+#: plugin_validators.cpp:469
 #, fuzzy
 msgid "Validation"
 msgstr "&Kontrolu HTML-on"
 
+#. i18n: file: internalvalidator.ui:18
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:3
+msgid "Accessibility validation level:"
+msgstr ""
+
+#. i18n: file: internalvalidator.ui:26
+#. i18n: ectx: property (text), item, widget (KComboBox, accessibilityLevel)
+#: rc.cpp:6
+msgid "0 (No check)"
+msgstr ""
+
+#. i18n: file: internalvalidator.ui:31
+#. i18n: ectx: property (text), item, widget (KComboBox, accessibilityLevel)
+#: rc.cpp:9
+msgid "1"
+msgstr ""
+
+#. i18n: file: internalvalidator.ui:36
+#. i18n: ectx: property (text), item, widget (KComboBox, accessibilityLevel)
+#: rc.cpp:12
+msgid "2"
+msgstr ""
+
+#. i18n: file: internalvalidator.ui:41
+#. i18n: ectx: property (text), item, widget (KComboBox, accessibilityLevel)
+#: rc.cpp:15
+msgid "3"
+msgstr ""
+
+#. i18n: file: internalvalidator.ui:49
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, runAfterLoading)
+#: rc.cpp:18
+msgid ""
+"If this option is enabled, the internal HTML validator is executed after a "
+"webpage has been loaded."
+msgstr ""
+
+#. i18n: file: internalvalidator.ui:52
+#. i18n: ectx: property (text), widget (QCheckBox, runAfterLoading)
+#: rc.cpp:21
+msgid "Run after loading"
+msgstr ""
+
 #. i18n: file: plugin_validators.rc:4
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:3
+#: rc.cpp:24
 msgid "&Tools"
 msgstr ""
 
 #. i18n: file: plugin_validators.rc:8
 #. i18n: ectx: ToolBar (extraToolBar)
-#: rc.cpp:6
+#: rc.cpp:27
 msgid "Extra Toolbar"
 msgstr ""
 
-#. i18n: file: remotevalidators.ui:19
+#. i18n: file: remotevalidators.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:9
+#: rc.cpp:30
 msgid "HTML/XML Validator"
 msgstr "HTML/XML Kontrolilo"
 
-#. i18n: file: remotevalidators.ui:25
+#. i18n: file: remotevalidators.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: remotevalidators.ui:74
+#. i18n: file: remotevalidators.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: file: remotevalidators.ui:123
+#. i18n: file: remotevalidators.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:12 rc.cpp:21 rc.cpp:30
+#: rc.cpp:33 rc.cpp:42 rc.cpp:51
 msgid "URL:"
 msgstr "URL:"
 
-#. i18n: file: remotevalidators.ui:45
+#. i18n: file: remotevalidators.ui:42
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: remotevalidators.ui:94
+#. i18n: file: remotevalidators.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:15 rc.cpp:24
+#: rc.cpp:36 rc.cpp:45
 msgid "Upload:"
 msgstr "Alŝuto:"
 
-#. i18n: file: remotevalidators.ui:68
+#. i18n: file: remotevalidators.ui:65
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:18
+#: rc.cpp:39
 msgid "CSS Validator"
 msgstr "CSS Kontrolilo"
 
-#. i18n: file: remotevalidators.ui:117
+#. i18n: file: remotevalidators.ui:114
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:27
+#: rc.cpp:48
 #, fuzzy
 msgid "Link Validator"
 msgstr "CSS Kontrolilo"
 
-#. i18n: file: reportwidget.ui:37
+#. i18n: file: reportwidget.ui:34
 #. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
-#: rc.cpp:33
+#: rc.cpp:54
 msgid "Row"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:42
+#. i18n: file: reportwidget.ui:39
 #. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
-#: rc.cpp:36
+#: rc.cpp:57
 msgid "Column"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:47
+#. i18n: file: reportwidget.ui:44
 #. i18n: ectx: property (text), widget (QTreeWidget, reportsView)
-#: rc.cpp:39
+#: rc.cpp:60
 msgid "Message"
 msgstr ""
 
-#: rc.cpp:40
+#: rc.cpp:61
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.cpp:41
+#: rc.cpp:62
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
@@ -208,7 +265,31 @@ msgstr ""
 msgid "Validation Report"
 msgstr "CSS Kontrolilo"
 
-#: validatorsdialog.cpp:34
+#: reportdialog.cpp:60
+msgctxt "Validation status"
+msgid "Error"
+msgstr ""
+
+#: reportdialog.cpp:71
+msgctxt "Validation status"
+msgid "Warning"
+msgstr ""
+
+#: reportdialog.cpp:82
+msgctxt "Validation status"
+msgid "Accessibility warning"
+msgstr ""
+
+#: validatorsdialog.cpp:35
 #, fuzzy
-msgid "Configure Validating Servers"
-msgstr "Agordu la kontrolo-servilojn"
+msgid "Configure Validator Plugin"
+msgstr "&Agordu Kontrolilon..."
+
+#: validatorsdialog.cpp:42
+#, fuzzy
+msgid "Internal Validation"
+msgstr "CSS Kontrolilo"
+
+#, fuzzy
+#~ msgid "Configure Validating Servers"
+#~ msgstr "Agordu la kontrolo-servilojn"
