@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-14 11:20+0100\n"
+"POT-Creation-Date: 2009-01-15 10:50+0100\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -798,6 +798,7 @@ msgstr "Ludfojo:"
 #: browsers/filebrowser/MyDirOperator.cpp:261
 #: browsers/playlistbrowser/PodcastCategory.cpp:465
 #: browsers/playlistbrowser/UserPlaylistTreeView.cpp:167
+#: services/lastfm/LastFmTreeView.cpp:95
 #, fuzzy
 #| msgid "&Append to Playlist"
 #| msgid_plural "&Append Selected Albums to Playlist"
@@ -809,6 +810,7 @@ msgstr "&Aligi al la ludlisto"
 #: browsers/filebrowser/MyDirOperator.cpp:262
 #: browsers/playlistbrowser/PodcastCategory.cpp:478
 #: browsers/playlistbrowser/UserPlaylistTreeView.cpp:173
+#: services/lastfm/LastFmTreeView.cpp:103
 msgctxt "Replace the currently loaded tracks with these"
 msgid "&Load"
 msgstr "&Ŝargi"
@@ -1316,6 +1318,7 @@ msgstr "Titolo"
 #: browsers/collectionbrowser/CollectionWidget.cpp:108
 #: browsers/collectionbrowser/CollectionWidget.cpp:140
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:245 rc.cpp:906
+#: services/lastfm/LastFmService.cpp:402
 #: services/magnatune/MagnatuneStore.cpp:190
 #: services/jamendo/JamendoInfoParser.cpp:54 playlist/PlaylistDefines.h:67
 #: playlist/PlaylistHeader.cpp:42 playlist/PlaylistModel.cpp:665
@@ -6387,15 +6390,15 @@ msgstr ""
 msgid "Peak acceleration: "
 msgstr ""
 
-#: services/ServiceBase.cpp:171
+#: services/ServiceBase.cpp:173
 msgid "Group By"
 msgstr "Grupigi laŭ"
 
-#: services/ServiceBase.cpp:367
+#: services/ServiceBase.cpp:403
 msgid "This service does not accept any messages"
 msgstr "Tiu servo ne akceptas ian ajn mesaĝon"
 
-#: services/ServiceBase.cpp:374
+#: services/ServiceBase.cpp:410
 msgid "ERROR: unknown message"
 msgstr "ERARO: nekonata mesaĝo"
 
@@ -6540,33 +6543,122 @@ msgstr "Artista radio"
 msgid "Last.fm is cool..."
 msgstr "Last.fm estas mojosa..."
 
+#: services/lastfm/LastFmTreeModel.cpp:105
+msgid "Personal Radio"
+msgstr "Persona radio"
+
+#: services/lastfm/LastFmTreeModel.cpp:106
+#, fuzzy
+#| msgid "Recently Loved Tracks"
+msgid "Loved Tracks"
+msgstr "Freŝdate ŝatitaj trakoj"
+
+#: services/lastfm/LastFmTreeModel.cpp:107
+#, fuzzy
+#| msgid "Neighbor Radio"
+msgid "Neighborhood"
+msgstr "Najbara radio"
+
+#: services/lastfm/LastFmTreeModel.cpp:269
+#, fuzzy
+#| msgid "%1's Loved Radio"
+msgid "My Recommendations"
+msgstr "%1-es Ŝatata Radio"
+
+#: services/lastfm/LastFmTreeModel.cpp:271
+#, fuzzy
+#| msgid "Custom Station"
+msgid "My Radio Station"
+msgstr "Propra stacio"
+
+#: services/lastfm/LastFmTreeModel.cpp:273
+#, fuzzy
+#| msgid "Recently Loved Tracks"
+msgid "My Loved Tracks"
+msgstr "Freŝdate ŝatitaj trakoj"
+
+#: services/lastfm/LastFmTreeModel.cpp:275
+#, fuzzy
+#| msgid "Neighbor Radio"
+msgid "My Neighborhood"
+msgstr "Najbara radio"
+
+#: services/lastfm/LastFmTreeModel.cpp:280
+#, fuzzy
+#| msgid "Tags"
+msgid "My Tags"
+msgstr "Etikedoj"
+
+#: services/lastfm/LastFmTreeModel.cpp:282
+#, fuzzy
+#| msgid "Files"
+msgid "Friends"
+msgstr "Dosieroj"
+
+#: services/lastfm/LastFmTreeModel.cpp:284
+#, fuzzy
+#| msgid "Neighbor Radio"
+msgid "Neighbors"
+msgstr "Najbara radio"
+
 #: services/lastfm/AudioController.cpp:93
 msgid "Radio playlist has ended."
 msgstr "La radioludlisto finiĝis."
 
-#: services/lastfm/LastFmService.cpp:132
+#: services/lastfm/LastFmService.cpp:143
 msgid "Last.fm: The social music revolution."
 msgstr "Last.fm: La revolucio pri socia muziko."
 
-#: services/lastfm/LastFmService.cpp:202
+#: services/lastfm/LastFmService.cpp:300
+#, fuzzy
+#| msgid "Enter artist name"
+msgid "Enter an artist name"
+msgstr "Tajpu la artistan nomon"
+
+#: services/lastfm/LastFmService.cpp:303
+#, fuzzy
+#| msgid "Enter artist name"
+msgid "Enter a tag"
+msgstr "Tajpu la artistan nomon"
+
+#: services/lastfm/LastFmService.cpp:306
+#, fuzzy
+#| msgid "Enter artist name"
+msgid "Enter a last.fm user name"
+msgstr "Tajpu la artistan nomon"
+
+#: services/lastfm/LastFmService.cpp:323
+#, fuzzy
+#| msgid "%1 play"
+#| msgid_plural "%1 plays"
+msgid " plays"
+msgstr "%1 legofojo"
+
+#: services/lastfm/LastFmService.cpp:347
 msgid "Love"
 msgstr "Amo"
 
-#: services/lastfm/LastFmService.cpp:209
+#: services/lastfm/LastFmService.cpp:354
 msgid "Ban"
 msgstr "Forbari"
 
-#: services/lastfm/LastFmService.cpp:216
+#: services/lastfm/LastFmService.cpp:361
 msgid "Skip"
 msgstr "Pasigi"
 
-#: services/lastfm/LastFmService.cpp:225
-msgid "Enter artist name"
-msgstr "Tajpu la artistan nomon"
+#: services/lastfm/LastFmService.cpp:402
+#, fuzzy
+#| msgid "Tags"
+msgid "Tag"
+msgstr "Etikedoj"
 
-#: services/lastfm/LastFmService.cpp:227
-msgid "Go"
-msgstr "Ek"
+#: services/lastfm/LastFmService.cpp:402
+msgid "User"
+msgstr "Uzanto"
+
+#: services/lastfm/LastFmService.cpp:407
+msgid "Start New Station"
+msgstr ""
 
 #: services/lastfm/LastFmServiceSettings.cpp:84
 #, fuzzy
@@ -8174,6 +8266,9 @@ msgstr "Jaketa bildo"
 msgid "No Artist"
 msgstr "Nenia artisto"
 
+#~ msgid "Go"
+#~ msgstr "Ek"
+
 #, fuzzy
 #~| msgctxt "track on album"
 #~| msgid "<b>%1</b> on <b>%2</b>"
@@ -8376,9 +8471,6 @@ msgstr "Nenia artisto"
 #~| msgid "Could not resolve %1."
 #~ msgid "Could not reach server"
 #~ msgstr "Ne eblis trovi adreson por %1."
-
-#~ msgid "Recently Loved Tracks"
-#~ msgstr "Freŝdate ŝatitaj trakoj"
 
 #~ msgid "Recently Played Tracks"
 #~ msgstr "Freŝdate luditaj trakoj"
@@ -8926,15 +9018,6 @@ msgstr "Nenia artisto"
 #~ msgid "Play las&t.fm Stream"
 #~ msgstr "Ludi la&st.fm fluon"
 
-#~ msgid "Personal Radio"
-#~ msgstr "Persona radio"
-
-#~ msgid "Neighbor Radio"
-#~ msgstr "Najbara radio"
-
-#~ msgid "Custom Station"
-#~ msgstr "Propra stacio"
-
 #~ msgid "Add las&t.fm Stream"
 #~ msgstr "Aldoni la&st.fm fluon"
 
@@ -8957,9 +9040,6 @@ msgstr "Nenia artisto"
 
 #~ msgid "The port MySql server is listening"
 #~ msgstr "La pordo al kiu la MySql servilo estas aŭskultanta"
-
-#~ msgid "User"
-#~ msgstr "Uzanto"
 
 #, fuzzy
 #~| msgctxt "Replace current playlist with this"
@@ -9038,11 +9118,6 @@ msgstr "Nenia artisto"
 
 #~ msgid "Most Played Tracks"
 #~ msgstr "Plej luditaj trakoj"
-
-#~ msgid "%1 play"
-#~ msgid_plural "%1 plays"
-#~ msgstr[0] "%1 legofojo"
-#~ msgstr[1] "%1 legofojo"
 
 #~ msgid "Favorite Artists"
 #~ msgstr "Favorataj artistoj"
