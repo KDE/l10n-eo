@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-23 10:19+0100\n"
+"POT-Creation-Date: 2009-01-24 10:24+0100\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -813,7 +813,7 @@ msgstr "Ludfojo:"
 #: context/applets/albums/AlbumsView.cpp:105 Systray.cpp:216
 #: browsers/collectionbrowser/CollectionTreeView.cpp:595
 #: browsers/filebrowser/MyDirOperator.cpp:261
-#: browsers/playlistbrowser/PodcastCategory.cpp:465
+#: browsers/playlistbrowser/PodcastModel.cpp:601
 #: browsers/playlistbrowser/UserPlaylistTreeView.cpp:166
 #: services/lastfm/LastFmTreeView.cpp:116
 #, fuzzy
@@ -825,7 +825,7 @@ msgstr "&Aligi al la ludlisto"
 #: context/applets/albums/AlbumsView.cpp:106
 #: browsers/collectionbrowser/CollectionTreeView.cpp:603
 #: browsers/filebrowser/MyDirOperator.cpp:262
-#: browsers/playlistbrowser/PodcastCategory.cpp:478
+#: browsers/playlistbrowser/PodcastModel.cpp:614
 #: browsers/playlistbrowser/UserPlaylistTreeView.cpp:172
 #: services/lastfm/LastFmTreeView.cpp:124
 msgctxt "Replace the currently loaded tracks with these"
@@ -1443,7 +1443,7 @@ msgstr ""
 msgid "Filename Layout Chooser"
 msgstr ""
 
-#: dialogs/TagDialog.cpp:551 browsers/playlistbrowser/PodcastModel.cpp:247
+#: dialogs/TagDialog.cpp:551 browsers/playlistbrowser/PodcastModel.cpp:270
 msgid "Summary"
 msgstr "Resumo"
 
@@ -1671,8 +1671,8 @@ msgid "Select third grouping:\n"
 msgstr "Elektu la trian grupaĵon:\n"
 
 #: dialogs/transferdialog.cpp:88
-#: browsers/collectionbrowser/CollectionWidget.cpp:105
-#: browsers/collectionbrowser/CollectionWidget.cpp:137
+#: browsers/collectionbrowser/CollectionWidget.cpp:106
+#: browsers/collectionbrowser/CollectionWidget.cpp:138
 msgid "None"
 msgstr "Neniu"
 
@@ -1680,12 +1680,12 @@ msgstr "Neniu"
 #. i18n: ectx: property (text), item, widget (KComboBox, keywordCombo)
 #: dialogs/transferdialog.cpp:89
 #: browsers/collectionbrowser/CollectionTreeItemModelBase.cpp:701
-#: browsers/collectionbrowser/CollectionWidget.cpp:79
-#: browsers/collectionbrowser/CollectionWidget.cpp:108
-#: browsers/collectionbrowser/CollectionWidget.cpp:140
+#: browsers/collectionbrowser/CollectionWidget.cpp:80
+#: browsers/collectionbrowser/CollectionWidget.cpp:109
+#: browsers/collectionbrowser/CollectionWidget.cpp:141
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:245 rc.cpp:906
 #: services/lastfm/LastFmService.cpp:415
-#: services/magnatune/MagnatuneStore.cpp:190
+#: services/magnatune/MagnatuneStore.cpp:194
 #: services/jamendo/JamendoInfoParser.cpp:54 playlist/PlaylistDefines.h:67
 #: playlist/PlaylistHeader.cpp:42 playlist/PlaylistModel.cpp:665
 #: widgets/Token.cpp:123 widgets/SmartPlaylistEditor.cpp:184
@@ -1697,11 +1697,11 @@ msgstr "Artisto"
 #. i18n: ectx: property (text), item, widget (KComboBox, keywordCombo)
 #: dialogs/transferdialog.cpp:90
 #: browsers/collectionbrowser/CollectionTreeItemModelBase.cpp:700
-#: browsers/collectionbrowser/CollectionWidget.cpp:82
-#: browsers/collectionbrowser/CollectionWidget.cpp:111
-#: browsers/collectionbrowser/CollectionWidget.cpp:143
+#: browsers/collectionbrowser/CollectionWidget.cpp:83
+#: browsers/collectionbrowser/CollectionWidget.cpp:112
+#: browsers/collectionbrowser/CollectionWidget.cpp:144
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:247 rc.cpp:903
-#: services/magnatune/MagnatuneStore.cpp:198
+#: services/magnatune/MagnatuneStore.cpp:200
 #: services/jamendo/JamendoInfoParser.cpp:86 playlist/PlaylistDefines.h:65
 #: playlist/PlaylistHeader.cpp:42 playlist/PlaylistModel.cpp:669
 #: widgets/Token.cpp:129 widgets/SmartPlaylistEditor.cpp:184
@@ -1713,9 +1713,9 @@ msgstr "Albumo"
 #. i18n: ectx: property (text), item, widget (KComboBox, keywordCombo)
 #: dialogs/transferdialog.cpp:91
 #: browsers/collectionbrowser/CollectionTreeItemModelBase.cpp:703
-#: browsers/collectionbrowser/CollectionWidget.cpp:85
-#: browsers/collectionbrowser/CollectionWidget.cpp:114
-#: browsers/collectionbrowser/CollectionWidget.cpp:146
+#: browsers/collectionbrowser/CollectionWidget.cpp:86
+#: browsers/collectionbrowser/CollectionWidget.cpp:115
+#: browsers/collectionbrowser/CollectionWidget.cpp:147
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:249 rc.cpp:912
 #: playlist/PlaylistDefines.h:77 playlist/PlaylistModel.cpp:673
 #: widgets/Token.cpp:133 widgets/ProgressiveSearchWidget.cpp:95
@@ -1794,7 +1794,7 @@ msgstr ""
 msgid "There are exceptions caught in the script. Please refer to the log!"
 msgstr ""
 
-#: App.cpp:81 browsers/playlistbrowser/PodcastModel.cpp:372
+#: App.cpp:81 browsers/playlistbrowser/PodcastModel.cpp:395
 msgid "Amarok"
 msgstr "Amarok"
 
@@ -2018,27 +2018,47 @@ msgstr "Dinamikaj ludlistoj"
 msgid "Smart Playlist"
 msgstr "Lerta ludlisto"
 
-#: podcasts/sql/SqlPodcastProvider.cpp:161
+#: podcasts/sql/SqlPodcastProvider.cpp:171
 #, kde-format
 msgid "Already subscribed to %1."
 msgstr ""
 
+#: podcasts/sql/SqlPodcastProvider.cpp:311
+msgid "&Delete Downloaded Episode"
+msgstr ""
+
+#: podcasts/sql/SqlPodcastProvider.cpp:339
+#, fuzzy
+#| msgid "Download file"
+msgid "&Download Episode"
+msgstr "Elŝuti dosieron"
+
 #: podcasts/sql/SqlPodcastProvider.cpp:362
+msgid "&Configure"
+msgstr "&Agordi"
+
+#: podcasts/sql/SqlPodcastProvider.cpp:375
+#, fuzzy
+#| msgid "&Duration:"
+msgid "&Remove Subscription"
+msgstr "&Daŭro:"
+
+#: podcasts/sql/SqlPodcastProvider.cpp:518
 msgid "Downloading Podcast Media"
 msgstr "Elŝutante podkastan medion"
 
-#: podcasts/sql/SqlPodcastProvider.cpp:362
+#: podcasts/sql/SqlPodcastProvider.cpp:518
 #, kde-format
 msgid "Downloading Podcast \"%1\""
 msgstr "Elŝutante podkaston \"%1\""
 
-#: podcasts/sql/SqlPodcastProvider.cpp:456
+#: podcasts/sql/SqlPodcastProvider.cpp:612
 #, kde-format
 msgid "Unable to save podcast episode file to %1"
 msgstr "Ne eblis konservi la podkastaĵon al %1"
 
 #: podcasts/sql/SqlPodcastProvider.h:46
-#: browsers/playlistbrowser/PodcastModel.cpp:559
+#: browsers/playlistbrowser/PodcastModel.cpp:685
 #: services/opmldirectory/OpmlDirectoryService.cpp:240
 msgid "Local Podcasts"
 msgstr "Lokaj podkastoj"
@@ -2685,9 +2705,9 @@ msgstr "Artisto / Jaro - Albumo"
 #. i18n: file: dialogs/EditFilterDialog.ui:89
 #. i18n: ectx: property (text), item, widget (KComboBox, keywordCombo)
 #: browsers/collectionbrowser/CollectionTreeItemModelBase.cpp:702
-#: browsers/collectionbrowser/CollectionWidget.cpp:88
-#: browsers/collectionbrowser/CollectionWidget.cpp:117
-#: browsers/collectionbrowser/CollectionWidget.cpp:149
+#: browsers/collectionbrowser/CollectionWidget.cpp:89
+#: browsers/collectionbrowser/CollectionWidget.cpp:118
+#: browsers/collectionbrowser/CollectionWidget.cpp:150
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:246 rc.cpp:909
 #: playlist/PlaylistDefines.h:71 playlist/PlaylistModel.cpp:667
 #: widgets/Token.cpp:125 widgets/SmartPlaylistEditor.cpp:184
@@ -2706,46 +2726,47 @@ msgstr "Komponisto"
 msgid "Year"
 msgstr "Jaro"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:63
-#: services/magnatune/MagnatuneStore.cpp:194
+#: browsers/collectionbrowser/CollectionWidget.cpp:64
+#: services/magnatune/MagnatuneStore.cpp:197
 msgid "Artist / Album"
 msgstr "Artisto / Albumo"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:67
-#: services/magnatune/MagnatuneStore.cpp:202
+#: browsers/collectionbrowser/CollectionWidget.cpp:68
+#: services/magnatune/MagnatuneStore.cpp:203
 #: services/jamendo/JamendoService.cpp:144
 msgid "Genre / Artist"
 msgstr "Ĝenro / Artisto"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:71
+#: browsers/collectionbrowser/CollectionWidget.cpp:72
 #: services/magnatune/MagnatuneStore.cpp:206
 #: services/jamendo/JamendoService.cpp:148
 msgid "Genre / Artist / Album"
 msgstr "Ĝenro / Artisto / Albumo"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:77
+#: browsers/collectionbrowser/CollectionWidget.cpp:78
 #, fuzzy
 #| msgid "First Played:"
 msgid "First Level"
 msgstr "Unue ludita:"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:104
+#: browsers/collectionbrowser/CollectionWidget.cpp:105
 #, fuzzy
 #| msgid "Seconds"
 msgid "Second Level"
 msgstr "Sekundoj"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:136
+#: browsers/collectionbrowser/CollectionWidget.cpp:137
 msgid "Third Level"
 msgstr ""
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:169
+#: browsers/collectionbrowser/CollectionWidget.cpp:170
 #, fuzzy
 #| msgid "Show details"
 msgid "Show Years"
 msgstr "Montri detalojn"
 
-#: browsers/collectionbrowser/CollectionWidget.cpp:241
+#: browsers/collectionbrowser/CollectionWidget.cpp:244
+#: services/magnatune/MagnatuneStore.cpp:209
 #: widgets/ProgressiveSearchWidget.cpp:128
 msgid "Search Preferences"
 msgstr ""
@@ -2836,7 +2857,7 @@ msgstr ""
 #. i18n: file: dialogs/EditFilterDialog.ui:99
 #. i18n: ectx: property (text), item, widget (KComboBox, keywordCombo)
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:248
-#: browsers/playlistbrowser/PodcastModel.cpp:246 rc.cpp:915
+#: browsers/playlistbrowser/PodcastModel.cpp:269 rc.cpp:915
 #: playlist/PlaylistDefines.h:87 playlist/PlaylistModel.cpp:664
 #: widgets/Token.cpp:121 widgets/SmartPlaylistEditor.cpp:184
 msgid "Title"
@@ -2905,12 +2926,12 @@ msgstr ""
 msgid "Strictness:"
 msgstr ""
 
-#: browsers/playlistbrowser/PodcastModel.cpp:245 playlist/PlaylistDefines.h:90
+#: browsers/playlistbrowser/PodcastModel.cpp:268 playlist/PlaylistDefines.h:90
 #: playlist/PlaylistModel.cpp:676
 msgid "Type"
 msgstr "Tipo"
 
-#: browsers/playlistbrowser/PodcastModel.cpp:372
+#: browsers/playlistbrowser/PodcastModel.cpp:395
 msgid "Enter Podcast URL:"
 msgstr "Enmetu podkastan URLon:"
 
@@ -2930,33 +2951,13 @@ msgstr ""
 msgid "Loosely match the playlist to an approximate value."
 msgstr ""
 
-#: browsers/playlistbrowser/PodcastCategory.cpp:76
+#: browsers/playlistbrowser/PodcastCategory.cpp:101
 msgid "&Add Podcast"
 msgstr "&Aldoni podkaston..."
 
-#: browsers/playlistbrowser/PodcastCategory.cpp:81
+#: browsers/playlistbrowser/PodcastCategory.cpp:106
 msgid "&Update All"
 msgstr "Akt&ualigi ĉion"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:517
-#, fuzzy
-#| msgid "&Duration:"
-msgid "&Remove Subscription"
-msgstr "&Daŭro:"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:543
-msgid "&Configure"
-msgstr "&Agordi"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:568
-msgid "&Delete Downloaded Episode"
-msgstr ""
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:580
-#, fuzzy
-#| msgid "Download file"
-msgid "&Download Episode"
-msgstr "Elŝuti dosieron"
 
 #: browsers/playlistbrowser/DynamicCategory.cpp:56
 msgid "On"
@@ -6868,39 +6869,41 @@ msgstr "Ne eblis reelŝuti albumon"
 msgid "There seems to be a problem with the selected redownload info file."
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:98
+#: services/magnatune/MagnatuneStore.cpp:100
 msgid "The friendly record company with the motto \"We are not evil!\""
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:211
-msgid "Actions"
-msgstr "Agoj"
-
-#: services/magnatune/MagnatuneStore.cpp:212
+#: services/magnatune/MagnatuneStore.cpp:221
 msgid "Redownload"
 msgstr "Reelŝuti"
 
-#: services/magnatune/MagnatuneStore.cpp:216
+#: services/magnatune/MagnatuneStore.cpp:224
 msgid "Update Database"
 msgstr "Ĝisdatigi la datumbazon"
 
-#: services/magnatune/MagnatuneStore.cpp:233
+#: services/magnatune/MagnatuneStore.cpp:227
+#, fuzzy
+#| msgid "&Tools"
+msgid "Tools"
+msgstr "&Iloj"
+
+#: services/magnatune/MagnatuneStore.cpp:247
 msgid "Download Album"
 msgstr "Elŝuti albumon"
 
-#: services/magnatune/MagnatuneStore.cpp:235
+#: services/magnatune/MagnatuneStore.cpp:249
 msgid "Purchase Album"
 msgstr "Aĉeti albumon"
 
-#: services/magnatune/MagnatuneStore.cpp:272
+#: services/magnatune/MagnatuneStore.cpp:286
 msgid "Downloading Magnatune.com Database"
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:303
+#: services/magnatune/MagnatuneStore.cpp:317
 msgid "Updating the local Magnatune database."
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:588
+#: services/magnatune/MagnatuneStore.cpp:602
 #, c-format
 msgid ""
 "The Magnatune.com service accepts the following messages: \n"
@@ -6910,23 +6913,23 @@ msgid ""
 "with %%20"
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:599
+#: services/magnatune/MagnatuneStore.cpp:613
 msgid "ERROR: No arguments supplied"
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:604
+#: services/magnatune/MagnatuneStore.cpp:618
 msgid "ERROR: Wrong number of arguments for addMoodyTracks"
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:614
+#: services/magnatune/MagnatuneStore.cpp:628
 msgid "ERROR: Parse error for argument 2 ( count )"
 msgstr ""
 
-#: services/magnatune/MagnatuneStore.cpp:618
+#: services/magnatune/MagnatuneStore.cpp:632
 msgid "ok"
 msgstr "bone"
 
-#: services/magnatune/MagnatuneStore.cpp:621
+#: services/magnatune/MagnatuneStore.cpp:635
 msgid "ERROR: Unknown argument."
 msgstr "ERARO: Nekonata argumento."
 
@@ -7768,23 +7771,19 @@ msgstr "Jaroj"
 msgid "Show only matches"
 msgstr ""
 
-#: widgets/SearchWidget.cpp:61 covermanager/CoverManager.cpp:172
+#: widgets/SearchWidget.cpp:62 covermanager/CoverManager.cpp:172
 msgid "Enter search terms here"
 msgstr "Enmetu la serĉaĵon ĉi tie"
 
-#: widgets/SearchWidget.cpp:65
+#: widgets/SearchWidget.cpp:66
 msgid "Enter space-separated terms to search in the playlist."
 msgstr ""
 
-#: widgets/SearchWidget.cpp:72
+#: widgets/SearchWidget.cpp:75
 #, fuzzy
-#| msgid "Add Device..."
-msgid "Advanced"
-msgstr "Aldoni aparaton..."
-
-#: widgets/SearchWidget.cpp:76
-msgid "Click to edit playlist filter"
-msgstr ""
+#| msgid "Playlist Files"
+msgid "Edit playlist filter"
+msgstr "Ludlistaj dosieroj"
 
 #: widgets/BookmarkTriangle.cpp:32
 #, fuzzy, kde-format
@@ -8302,6 +8301,14 @@ msgstr "Jaketa bildo"
 #: covermanager/CoverManager.cpp:890
 msgid "No Artist"
 msgstr "Nenia artisto"
+
+#~ msgid "Actions"
+#~ msgstr "Agoj"
+
+#, fuzzy
+#~| msgid "Add Device..."
+#~ msgid "Advanced"
+#~ msgstr "Aldoni aparaton..."
 
 #~ msgid "Love this track on Last.fm"
 #~ msgstr "Priŝati tiun trakon ĉe Last.fm"
