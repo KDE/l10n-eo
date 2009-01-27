@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2008-11-18 09:56+0100\n"
+"POT-Creation-Date: 2009-01-27 08:25+0100\n"
 "PO-Revision-Date: 2007-12-06 18:22+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Fotografas zonon"
 msgid "Captures a part of windows"
 msgstr "Fotografas parton de fenestro"
 
-#: kbackgroundsnapshot.cpp:91 ksnapshot.cpp:164
+#: kbackgroundsnapshot.cpp:91 ksnapshot.cpp:151
 msgid "snapshot"
 msgstr "ekranfoto"
 
@@ -48,11 +48,11 @@ msgstr "KBackgroundSnapshot"
 msgid "(c) 2007, Montel Laurent"
 msgstr "(c) 2007, Montel Laurent"
 
-#: ksnapshot.cpp:178
+#: ksnapshot.cpp:165
 msgid "Quick Save Snapshot &As..."
 msgstr "Rapide konservi la ekr&anfoton kiel..."
 
-#: ksnapshot.cpp:179
+#: ksnapshot.cpp:166
 msgid ""
 "Save the snapshot to the file specified by the user without showing the file "
 "dialog."
@@ -60,27 +60,27 @@ msgstr ""
 "Konservi la ekranfoton al la dosiero donita de la uzanto sen montri la "
 "dialogon."
 
-#: ksnapshot.cpp:181
+#: ksnapshot.cpp:168
 msgid "Save Snapshot &As..."
 msgstr "Konservi la ekr&anfoton kiel..."
 
-#: ksnapshot.cpp:182
+#: ksnapshot.cpp:169
 msgid "Save the snapshot to the file specified by the user."
 msgstr "Konservi la ekranfoton al la dosiero donita de la uzanto."
 
-#: ksnapshot.cpp:231
+#: ksnapshot.cpp:218
 msgid "Save As"
 msgstr "Konservi kiel"
 
-#: ksnapshot.cpp:370
+#: ksnapshot.cpp:358
 msgid "Other Application..."
 msgstr "Alia aplikaĵo..."
 
-#: ksnapshot.cpp:450
+#: ksnapshot.cpp:438
 msgid "The screen has been successfully grabbed."
 msgstr "La ekrano sukcese fotiĝis."
 
-#: ksnapshot.cpp:569
+#: ksnapshot.cpp:536
 #, kde-format
 msgid "Preview of the snapshot image (%1 x %2)"
 msgstr "Antaŭrigardo de la ekranfota bildo (%1 x %2)"
@@ -98,13 +98,13 @@ msgstr "<qt>Ĉu vi vere volas anstataŭigi <b>%1</b>?</qt>"
 msgid "Overwrite"
 msgstr "Anstataŭigi"
 
-#: ksnapshotobject.cpp:147
+#: ksnapshotobject.cpp:151
 #, fuzzy
 #| msgid "Unable to save image"
 msgid "Unable to Save Image"
 msgstr "Ne eblas konservi la bildon"
 
-#: ksnapshotobject.cpp:148
+#: ksnapshotobject.cpp:152
 #, kde-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -112,14 +112,6 @@ msgid ""
 msgstr ""
 "KSnapshot ne povis konservi la bildon al\n"
 "%1."
-
-#: ksnapshotobject.cpp:170
-msgid "Title"
-msgstr ""
-
-#: ksnapshotobject.cpp:172
-msgid "Window Class"
-msgstr ""
 
 #: main.cpp:34
 msgid "KDE Screenshot Utility"
@@ -242,17 +234,17 @@ msgstr " sek"
 
 #. i18n: file: ksnapshotwidget.ui:75
 #. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: rc.cpp:29
+#: rc.cpp:29 snapshottimer.cpp:89
 msgid "Snapshot &delay:"
 msgstr "Ek&ranfota prokrasto:"
 
-#. i18n: file: ksnapshotwidget.ui:88
+#. i18n: file: ksnapshotwidget.ui:85
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: rc.cpp:32
 msgid "Cap&ture mode:"
 msgstr "Fo&ta moduso:"
 
-#. i18n: file: ksnapshotwidget.ui:117
+#. i18n: file: ksnapshotwidget.ui:111
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, cbIncludeDecorations)
 #: rc.cpp:35
 msgid ""
@@ -260,13 +252,13 @@ msgid ""
 msgstr ""
 "Kiam ŝaltita, ekranfoto de fenestro ankaŭ havas la fenestrajn ornamaĵojn"
 
-#. i18n: file: ksnapshotwidget.ui:120
+#. i18n: file: ksnapshotwidget.ui:114
 #. i18n: ectx: property (text), widget (QCheckBox, cbIncludeDecorations)
 #: rc.cpp:38
 msgid "Include &window decorations"
 msgstr "Inkludi la fenestra&jn ornamaĵojn"
 
-#. i18n: file: ksnapshotwidget.ui:137
+#. i18n: file: ksnapshotwidget.ui:129
 #. i18n: ectx: property (whatsThis), widget (QComboBox, comboMode)
 #: rc.cpp:41
 #, fuzzy
@@ -284,20 +276,17 @@ msgstr "Inkludi la fenestra&jn ornamaĵojn"
 #| "taking a new snapshot in this mode you will be able to select any child "
 #| "window by moving the mouse over it.</p></qt>"
 msgid ""
-"<qt>Using this menu, you can select from the five following snapshot modes:\n"
+"<qt>Using this menu, you can select from the four following snapshot modes:\n"
 "<p>\n"
 "<b>Full Screen</b> - captures the entire desktop.<br>\n"
 "<b>Window Under Cursor</b> - captures only the window (or menu) that is "
 "under the mouse cursor when the snapshot is taken.<br>\n"
 "<b>Region</b> - captures only the region of the desktop that you specify. "
 "When taking a new snapshot in this mode you will be able to select any area "
-"of the screen by clicking and dragging the mouse.<br>\n"
+"of the screen by clicking and dragging the mouse.</p>\n"
 "<b>Section of Window</b> - captures only a section of the window. When "
 "taking a new snapshot in this mode you will be able to select any child "
-"window by moving the mouse over it.<br>\n"
-"<b>Current Screen</b> - if you have multiple screens, this captures the "
-"screen containing the mouse cursor when the snapshot is taken.\n"
-"</p></qt>"
+"window by moving the mouse over it.</p></qt>"
 msgstr ""
 "<qt>Per tiu menuo, vi povas elekti unu el la kvar jenaj ekranfotaj modusoj:\n"
 "<p>\n"
@@ -310,53 +299,45 @@ msgstr ""
 "moduso, vi povos elekti iun ajn idan fenestron per movado de la muso sur ĝi."
 "</p></qt>"
 
-#. i18n: file: ksnapshotwidget.ui:141
+#. i18n: file: ksnapshotwidget.ui:133
 #. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: rc.cpp:51
+#: rc.cpp:49
 msgid "Full Screen"
 msgstr "Plenekrano"
 
-#. i18n: file: ksnapshotwidget.ui:146
+#. i18n: file: ksnapshotwidget.ui:138
 #. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: rc.cpp:54
+#: rc.cpp:52
 msgid "Window Under Cursor"
 msgstr "Fenestro sub la kursoro"
 
-#. i18n: file: ksnapshotwidget.ui:151
+#. i18n: file: ksnapshotwidget.ui:143
 #. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: rc.cpp:57
+#: rc.cpp:55
 msgid "Region"
 msgstr "Zono"
 
-#. i18n: file: ksnapshotwidget.ui:156
+#. i18n: file: ksnapshotwidget.ui:148
 #. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: rc.cpp:60
+#: rc.cpp:58
 msgid "Section of Window"
 msgstr "Sekcio de fenestro"
 
-#. i18n: file: ksnapshotwidget.ui:161
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: rc.cpp:63
-#, fuzzy
-#| msgid "Full Screen"
-msgid "Current Screen"
-msgstr "Plenekrano"
-
-#. i18n: file: ksnapshotwidget.ui:177
+#. i18n: file: ksnapshotwidget.ui:164
 #. i18n: ectx: property (whatsThis), widget (KPushButton, btnNew)
-#: rc.cpp:66
+#: rc.cpp:61
 msgid "Click this button to take a new snapshot."
 msgstr "Klaku tiun butonon por preni novan ekranfoton."
 
-#. i18n: file: ksnapshotwidget.ui:180
+#. i18n: file: ksnapshotwidget.ui:167
 #. i18n: ectx: property (text), widget (KPushButton, btnNew)
-#: rc.cpp:69
+#: rc.cpp:64
 msgid "&New Snapshot"
 msgstr "&Nova ekranfoto"
 
-#. i18n: file: ksnapshotwidget.ui:203
+#. i18n: file: ksnapshotwidget.ui:190
 #. i18n: ectx: property (whatsThis), widget (KPushButton, btnSave)
-#: rc.cpp:72
+#: rc.cpp:67
 msgid ""
 "Click this button to save the current snapshot. To quickly save the snapshot "
 "without showing the file dialog, press Ctrl+Shift+S. The filename is "
@@ -366,44 +347,44 @@ msgstr ""
 "sen montri la dialogon, premu Ktrl+Maj+S. La dosiernomo aŭtomate pliviciĝis "
 "post ĉiu konservado."
 
-#. i18n: file: ksnapshotwidget.ui:206
+#. i18n: file: ksnapshotwidget.ui:193
 #. i18n: ectx: property (text), widget (KPushButton, btnSave)
-#: rc.cpp:75
+#: rc.cpp:70
 msgid "&Save As..."
 msgstr "Kon&servi kiel..."
 
-#. i18n: file: ksnapshotwidget.ui:213
+#. i18n: file: ksnapshotwidget.ui:200
 #. i18n: ectx: property (whatsThis), widget (KPushButton, btnOpen)
-#: rc.cpp:78
+#: rc.cpp:73
 #, fuzzy
 #| msgid "Click this button to open the snapshot with an other application"
 msgid "Click this button to open the snapshot with another application."
 msgstr "Klaku tiun butonon por malfermi la ekranfoton per alia programo"
 
-#. i18n: file: ksnapshotwidget.ui:216
+#. i18n: file: ksnapshotwidget.ui:203
 #. i18n: ectx: property (text), widget (KPushButton, btnOpen)
-#: rc.cpp:81
+#: rc.cpp:76
 msgid "&Open With"
 msgstr "Mal&fermi per"
 
-#. i18n: file: ksnapshotwidget.ui:223
+#. i18n: file: ksnapshotwidget.ui:210
 #. i18n: ectx: property (whatsThis), widget (KPushButton, btnCopy)
-#: rc.cpp:84
+#: rc.cpp:79
 msgid "Click this button to copy the current snapshot to the clipboard."
 msgstr "Klaku tiun butonon por kopii la nunan ekranfoton al la poŝo."
 
-#. i18n: file: ksnapshotwidget.ui:226
+#. i18n: file: ksnapshotwidget.ui:213
 #. i18n: ectx: property (text), widget (KPushButton, btnCopy)
-#: rc.cpp:87
+#: rc.cpp:82
 msgid "&Copy to Clipboard"
 msgstr "&Kopii al la poŝo"
 
-#: rc.cpp:88
+#: rc.cpp:83
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Wolfram Diestel"
 
-#: rc.cpp:89
+#: rc.cpp:84
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "<wolfram@steloj.de>"
@@ -419,10 +400,14 @@ msgid ""
 msgstr ""
 "Elektu zonon per la muso. Premu la enen-klavon por fotografi kaj Esk por fini"
 
-#: snapshottimer.cpp:87
-#, fuzzy, kde-format
-#| msgid "Snapshot delay in seconds"
-msgid "Snapshot will be taken in 1 second"
-msgid_plural "Snapshot will be taken in %1 seconds"
-msgstr[0] "Fota prokrasto je sekundoj"
-msgstr[1] "Fota prokrasto je sekundoj"
+#, fuzzy
+#~| msgid "Full Screen"
+#~ msgid "Current Screen"
+#~ msgstr "Plenekrano"
+
+#, fuzzy
+#~| msgid "Snapshot delay in seconds"
+#~ msgid "Snapshot will be taken in 1 second"
+#~ msgid_plural "Snapshot will be taken in %1 seconds"
+#~ msgstr[0] "Fota prokrasto je sekundoj"
+#~ msgstr[1] "Fota prokrasto je sekundoj"

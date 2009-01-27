@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akregator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-26 10:21+0100\n"
+"POT-Creation-Date: 2009-01-27 08:26+0100\n"
 "PO-Revision-Date: 2007-03-03 10:34+0100\n"
 "Last-Translator: Felix Zesch <post@felix-zesch.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: src/old/feedlistview.cpp:280 src/akregator_part.cpp:308
-#: plugins/onlinesync/ui/configurationwidget.cpp:45
+#: src/subscriptionlistmodel.cpp:218
+#: plugins/onlinesync/ui/configurationwidget.cpp:21
 msgid "Feeds"
 msgstr "Fluoj"
 
@@ -46,13 +47,13 @@ msgstr "Ĉesitas ŝarĝado"
 msgid "Loading completed"
 msgstr "Ŝarĝado sukcese finita"
 
-#: src/articlelistview.cpp:178 src/subscriptionlistview.cpp:181
+#: src/articlelistview.cpp:198 src/subscriptionlistview.cpp:167
 #, fuzzy
 #| msgid "Comments"
 msgid "Columns"
 msgstr "Komentoj"
 
-#: src/articlelistview.cpp:287
+#: src/articlelistview.cpp:323
 msgid ""
 "<h2>Article list</h2>Here you can browse articles from the currently "
 "selected feed. You can also manage articles, as marking them as persistent "
@@ -67,7 +68,7 @@ msgstr ""
 "malfermi la artikolon interne en tabula marko aŭ en ekstera retumila "
 "fenestro."
 
-#: src/articlelistview.cpp:354
+#: src/articlelistview.cpp:385
 msgid ""
 "<div align=center><h3>No matches</h3>Filter does not match any articles, "
 "please change your criteria and try again.</div>"
@@ -75,7 +76,7 @@ msgstr ""
 "<div align=center><h3>Neniu kongruo</h3>Filtro ne kongruas kun ajnaj "
 "artikoloj, bonvolu ŝanĝi la kriteriojn kaj reprovu.</div>"
 
-#: src/articlelistview.cpp:365
+#: src/articlelistview.cpp:396
 msgid ""
 "<div align=center><h3>No feed selected</h3>This area is article list. Select "
 "a feed from the feed list and you will see its articles here.</div>"
@@ -91,25 +92,24 @@ msgstr "Aldonu dosierujon"
 msgid "Folder name:"
 msgstr "Dosieruja nomo:"
 
-#: src/pageviewer.cpp:101 src/actionmanagerimpl.cpp:543
+#: src/pageviewer.cpp:101 src/actionmanagerimpl.cpp:539
 msgctxt "Go back in browser history"
 msgid "Back"
 msgstr ""
 
-#: src/pageviewer.cpp:109 src/actionmanagerimpl.cpp:536
+#: src/pageviewer.cpp:109 src/actionmanagerimpl.cpp:532
 msgctxt "Go forward in browser history"
 msgid "Forward"
 msgstr ""
 
-#: src/pageviewer.cpp:116 src/actionmanagerimpl.cpp:552
+#: src/pageviewer.cpp:116 src/actionmanagerimpl.cpp:548
 #, fuzzy
-msgctxt "Reload current page"
 msgid "Reload"
 msgstr ""
 "_: as in: signu kiel legitaj\n"
 "&Legitaj"
 
-#: src/pageviewer.cpp:119 src/actionmanagerimpl.cpp:557
+#: src/pageviewer.cpp:119 src/actionmanagerimpl.cpp:553
 msgid "Stop"
 msgstr ""
 
@@ -183,42 +183,36 @@ msgstr ""
 #: src/pluginmanager.cpp:171
 #, fuzzy
 #| msgid "Name"
-msgctxt "Name of the plugin"
 msgid "Name"
 msgstr "Nomo"
 
 #: src/pluginmanager.cpp:172
 #, fuzzy
 #| msgid "Library"
-msgctxt "Library name"
 msgid "Library"
 msgstr "Biblioteko"
 
 #: src/pluginmanager.cpp:173
 #, fuzzy
 #| msgid "Authors"
-msgctxt "Plugin authors"
 msgid "Authors"
 msgstr "Aŭtoroj"
 
 #: src/pluginmanager.cpp:174
 #, fuzzy
 #| msgid "Email"
-msgctxt "Plugin authors' emaila addresses"
 msgid "Email"
 msgstr "Retpoŝto"
 
 #: src/pluginmanager.cpp:175
 #, fuzzy
 #| msgid "Version"
-msgctxt "Plugin version"
 msgid "Version"
 msgstr "Versiono"
 
 #: src/pluginmanager.cpp:176
 #, fuzzy
 #| msgid "Framework Version"
-msgctxt "Framework version plugin requires"
 msgid "Framework Version"
 msgstr "Bibliotekara versio"
 
@@ -234,45 +228,45 @@ msgstr "Vi povas rigardi plurajn artikolojn en pluraj malfermitaj traboj."
 msgid "Articles list."
 msgstr "Artikola listo"
 
-#: src/mainwidget.cpp:239
+#: src/mainwidget.cpp:237
 msgid "Browsing area."
 msgstr "Retumejo"
 
-#: src/mainwidget.cpp:243 src/mainwidget.cpp:643
+#: src/mainwidget.cpp:241 src/mainwidget.cpp:657
 msgid "Articles"
 msgstr "Artikoloj"
 
-#: src/mainwidget.cpp:260
+#: src/mainwidget.cpp:258
 msgid "About"
 msgstr ""
 
-#: src/mainwidget.cpp:404 src/main.cpp:67
+#: src/mainwidget.cpp:413 src/main.cpp:67
 msgid "Imported Folder"
 msgstr "Importitaj dosierujoj"
 
-#: src/mainwidget.cpp:407
+#: src/mainwidget.cpp:416
 msgid "Add Imported Folder"
 msgstr "Aldonu importitan dosierujon"
 
-#: src/mainwidget.cpp:408
+#: src/mainwidget.cpp:417
 msgid "Imported folder name:"
 msgstr "Nomo de la importita dosierujo:"
 
-#: src/mainwidget.cpp:813
+#: src/mainwidget.cpp:822
 msgid "Fetching Feeds..."
 msgstr "Kolektante fluojn..."
 
-#: src/mainwidget.cpp:1012
+#: src/mainwidget.cpp:1021
 #, kde-format
 msgid "<qt>Are you sure you want to delete article <b>%1</b>?</qt>"
 msgstr "<qt>Ĉu vi certas voli forviŝi la artikolon <b>%1</b>?</qt>"
 
-#: src/mainwidget.cpp:1015
+#: src/mainwidget.cpp:1024
 #, fuzzy, kde-format
 msgid "<qt>Are you sure you want to delete the %1 selected articles?</qt>"
 msgstr "_n: <qt>Ĉu vi certas voli forviŝi la elektitan artikolon?</qt>"
 
-#: src/mainwidget.cpp:1019
+#: src/mainwidget.cpp:1028
 msgid "Delete Article"
 msgstr "Forviŝi artikolon"
 
@@ -316,7 +310,7 @@ msgstr "&Supreniru"
 msgid "&Scroll Down"
 msgstr "S&ubeniru"
 
-#: src/articleviewer.cpp:653
+#: src/articleviewer.cpp:645
 #, fuzzy, kde-format
 msgctxt "%1: Akregator version; %2: homepage URL; --- end of comment ---"
 msgid ""
@@ -346,29 +340,29 @@ msgstr ""
 "<p>Dankon,</p>\n"
 "<p style='margin-bottom: 0px'>&nbsp; &nbsp; La teamo de Akregator</p>\n"
 
-#: src/articleviewer.cpp:669 src/aboutdata.cpp:35
+#: src/articleviewer.cpp:661 src/aboutdata.cpp:35
 msgid "Akregator"
 msgstr "Akregator"
 
-#: src/articleviewer.cpp:671
+#: src/articleviewer.cpp:663
 msgid "An RSS feed reader for the K Desktop Environment."
 msgstr "RSS-flu-legilo por KDE"
 
-#: src/articleviewer.cpp:708
-msgid "Keep Enabled"
-msgstr "Konservu kiel funkcianta"
-
-#: src/articleviewer.cpp:710
-msgid "Disable"
-msgstr "Malfunkciigu"
-
-#: src/articleviewer.cpp:711
+#: src/articleviewer.cpp:699
 msgid "Are you sure you want to disable this introduction page?"
 msgstr "Ĉu vi certas, ke vi volas malfunkciigi tiun ĉi enkondukan paĝon?"
 
-#: src/articleviewer.cpp:711
+#: src/articleviewer.cpp:699
 msgid "Disable Introduction Page"
 msgstr "Malfunkciigu enkondukan paĝon"
+
+#: src/articleviewer.cpp:699
+msgid "Disable"
+msgstr "Malfunkciigu"
+
+#: src/articleviewer.cpp:699
+msgid "Keep Enabled"
+msgstr "Konservu kiel funkcianta"
 
 #. i18n: file: src/addfeedwidgetbase.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::AddFeedWidgetBase)
@@ -390,78 +384,60 @@ msgstr "Fluo ne trovita de %1"
 msgid "Feed found, downloading..."
 msgstr "Fluo trovita, elŝutanta..."
 
-#: src/tabwidget.cpp:112
+#: src/tabwidget.cpp:111
 msgid "Close the current tab"
 msgstr "Fermu la aktualan trabon"
 
-#: src/articleformatter.cpp:57
-#, kde-format
-msgid "(%1, %2)"
-msgstr ""
-
-#: src/articleformatter.cpp:62
-#, fuzzy, kde-format
-#| msgid "<b>Homepage:</b> <a href=\"%1\">%2</a>"
-msgid "<a href=\"%1\">%2</a> %3"
-msgstr "<b>Retpaĝo:</b> <a href=\"%1\">%2</a>"
-
-#: src/articleformatter.cpp:108 src/articleformatter.cpp:150
+#: src/articleformatter.cpp:86 src/articleformatter.cpp:128
 msgid " (no unread articles)"
 msgstr " (neniu nelegita artikolo)"
 
-#: src/articleformatter.cpp:110 src/articleformatter.cpp:152
+#: src/articleformatter.cpp:88 src/articleformatter.cpp:130
 #, fuzzy, kde-format
 msgid " (1 unread article)"
 msgid_plural " (%1 unread articles)"
 msgstr[0] "_n:  (1 nelegita artikolo)"
 msgstr[1] " (%1 nelegitaj artikoloj)"
 
-#: src/articleformatter.cpp:128
+#: src/articleformatter.cpp:106
 #, fuzzy, kde-format
 #| msgid "<b>Description:</b> %1<br><br>"
 msgid "<b>Description:</b> %1<br /><br />"
 msgstr "<b>Priskribo:</b> %1<br><br>"
 
-#: src/articleformatter.cpp:135
+#: src/articleformatter.cpp:113
 #, kde-format
 msgid "<b>Homepage:</b> <a href=\"%1\">%2</a>"
 msgstr "<b>Retpaĝo:</b> <a href=\"%1\">%2</a>"
 
-#: src/articleformatter.cpp:188 src/articleformatter.cpp:189
-#: src/articleformatter.cpp:381 src/articleformatter.cpp:382
+#: src/articleformatter.cpp:165 src/articleformatter.cpp:166
+#: src/articleformatter.cpp:355 src/articleformatter.cpp:356
+#: src/articlemodel.cpp:110
 msgid "Date"
 msgstr "Dato"
 
-#: src/articleformatter.cpp:196 src/articleformatter.cpp:197
-#: src/articleformatter.cpp:390 src/articleformatter.cpp:391
+#: src/articleformatter.cpp:173 src/articleformatter.cpp:174
+#: src/articleformatter.cpp:364 src/articleformatter.cpp:365
+#: src/articlemodel.cpp:112
 msgid "Author"
 msgstr "Aŭtoro"
 
-#: src/articleformatter.cpp:204 src/articleformatter.cpp:205
-#: src/articleformatter.cpp:398 src/articleformatter.cpp:399
-msgid "Enclosure"
-msgstr ""
-
-#: src/articleformatter.cpp:236 src/articleformatter.cpp:430
+#: src/articleformatter.cpp:204 src/articleformatter.cpp:396
 msgid "Comments"
 msgstr "Komentoj"
 
-#: src/articleformatter.cpp:245 src/articleformatter.cpp:440
-msgid "Enclosure:"
-msgstr ""
-
-#: src/articleformatter.cpp:259 src/articleformatter.cpp:454
+#: src/articleformatter.cpp:224 src/articleformatter.cpp:416
 msgid "Complete Story"
 msgstr "Tuta historio"
 
-#: src/akregator_part.cpp:135
+#: src/akregator_part.cpp:132
 #, kde-format
 msgid "Unable to load storage backend plugin \"%1\". No feeds are archived."
 msgstr ""
 "Ne eblis ŝarĝi arkivan fonan kromprogramon \"%1\". Neniu fluo estos "
 "enarkivigita."
 
-#: src/akregator_part.cpp:135
+#: src/akregator_part.cpp:132
 msgid "Plugin error"
 msgstr "Kromprograma eraro"
 
@@ -493,7 +469,7 @@ msgstr "KDE aspekto"
 msgid "Opening Feed List..."
 msgstr "Malfermane fluliston..."
 
-#: src/akregator_part.cpp:387
+#: src/akregator_part.cpp:388
 #, fuzzy, kde-format
 msgid ""
 "<qt>The standard feed list is corrupted (invalid XML). A backup was created:"
@@ -502,60 +478,39 @@ msgstr ""
 "<qt>La normala flulisto estas rompita (nevalida XML). Rezerva kopio estis "
 "kreita: <p><b>%2</b></p></qt>"
 
-#: src/akregator_part.cpp:387 src/akregator_part.cpp:389
+#: src/akregator_part.cpp:388
 msgid "XML Parsing Error"
 msgstr "XML foliuma eraro"
-
-#: src/akregator_part.cpp:389
-#, fuzzy
-msgid ""
-"<qt>The standard feed list is corrupted (invalid XML). Could not create a "
-"backup!</p></qt>"
-msgstr ""
-"<qt>La normala flulisto estas rompita (nevalida XML). Rezerva kopio estis "
-"kreita: <p><b>%2</b></p></qt>"
 
 #: src/akregator_part.cpp:403
 #, fuzzy, kde-format
 msgid ""
-"<qt>The standard feed list is corrupted (no valid OPML). A backup of the "
-"previous list was created:<p><b>%1</b></p></qt>"
+"<qt>The standard feed list is corrupted (no valid OPML). A backup was "
+"created:<p><b>%1</b></p></qt>"
 msgstr ""
-"<qt>La kutima flulisto estas rompita (nevalida OPML). Rezerva kopio estis "
-"kreita:<p><b>%2</b></p></qt>"
+"<qt>La normala flulisto estas rompita (nevalida XML). Rezerva kopio estis "
+"kreita: <p><b>%2</b></p></qt>"
 
-#: src/akregator_part.cpp:403 src/akregator_part.cpp:405
-#: src/akregator_part.cpp:511
+#: src/akregator_part.cpp:403 src/akregator_part.cpp:532
 msgid "OPML Parsing Error"
 msgstr "OPML foliuma eraro"
 
-#: src/akregator_part.cpp:405
-#, fuzzy
-msgid ""
-"<qt>The standard feed list is corrupted (no valid OPML). Could not create a "
-"backup!></p></qt>"
-msgstr ""
-"<qt>La kutima flulisto estas rompita (nevalida OPML). Rezerva kopio estis "
-"kreita:<p><b>%2</b></p></qt>"
-
-#: src/akregator_part.cpp:452
+#: src/akregator_part.cpp:442
 #, fuzzy, kde-format
 #| msgid "Access denied: cannot save feed list (%1)"
-msgid ""
-"Access denied: Cannot save feed list to <b>%1</b>. Please check your "
-"permissions."
+msgid "Access denied: cannot save feed list (%1)"
 msgstr "Aliro ne permesita: ne eblas konservi fluliston (%1)"
 
-#: src/akregator_part.cpp:453
+#: src/akregator_part.cpp:442
 msgid "Write error"
 msgstr "Skriba eraro"
 
-#: src/akregator_part.cpp:511
+#: src/akregator_part.cpp:532
 #, kde-format
 msgid "Could not import the file %1 (no valid OPML)"
 msgstr "Ne eblis importi la dosieron %1 (nevalida OPML)"
 
-#: src/akregator_part.cpp:514
+#: src/akregator_part.cpp:535
 #, kde-format
 msgid ""
 "The file %1 could not be read, check if it exists or if it is readable for "
@@ -564,34 +519,38 @@ msgstr ""
 "Ne eblis legi la dosieron %1 , kontrolu ĉu ĝi ekzistas aŭ ĉu ĝi estas "
 "legebla por la aktuala uzanto."
 
-#: src/akregator_part.cpp:514
+#: src/akregator_part.cpp:535
 msgid "Read Error"
 msgstr "Lega eraro"
 
-#: src/akregator_part.cpp:528
+#: src/akregator_part.cpp:549
 #, kde-format
 msgid "The file %1 already exists; do you want to overwrite it?"
 msgstr "La dosiero %1 jam ekzistas, ĉu vi volas anstataŭigi ĝin?"
 
-#: src/akregator_part.cpp:529
+#: src/akregator_part.cpp:550
 msgid "Export"
 msgstr ""
 
-#: src/akregator_part.cpp:535
+#: src/akregator_part.cpp:551
+msgid "Overwrite"
+msgstr "Anstataŭigu"
+
+#: src/akregator_part.cpp:557
 #, fuzzy, kde-format
 #| msgid "Access denied: cannot write to file %1"
-msgid "Access denied: cannot write to file %1. Please check your permissions."
+msgid "Access denied: cannot write to file %1"
 msgstr "Aliro malpermesita: ne eblas skribi en dosiero %1"
 
-#: src/akregator_part.cpp:535
+#: src/akregator_part.cpp:557
 msgid "Write Error"
 msgstr "Skriba eraro"
 
-#: src/akregator_part.cpp:558 src/akregator_part.cpp:568
+#: src/akregator_part.cpp:586 src/akregator_part.cpp:596
 msgid "OPML Outlines (*.opml, *.xml)"
 msgstr "OPML priskriboj (*.opml, *.xml)"
 
-#: src/akregator_part.cpp:559 src/akregator_part.cpp:569
+#: src/akregator_part.cpp:587 src/akregator_part.cpp:597
 msgid "All Files"
 msgstr "Ĉiuj dosieroj"
 
@@ -613,59 +572,50 @@ msgstr ""
 "Fluoj aldonitaj:\n"
 " %1"
 
-#: src/subscriptionlistmodel.cpp:61
+#: src/subscriptionlistmodel.cpp:60
 msgid "Timeout on remote server"
 msgstr ""
 
-#: src/subscriptionlistmodel.cpp:63
+#: src/subscriptionlistmodel.cpp:62
 msgid "Unknown host"
 msgstr ""
 
-#: src/subscriptionlistmodel.cpp:65
+#: src/subscriptionlistmodel.cpp:64
 #, fuzzy
 #| msgid "Feed not found from %1."
 msgid "Feed file not found on remote server"
 msgstr "Fluo ne trovita de %1"
 
-#: src/subscriptionlistmodel.cpp:67
+#: src/subscriptionlistmodel.cpp:66
 #, fuzzy
 #| msgid "Could not import the file %1 (no valid OPML)"
 msgid "Could not read feed (invalid XML)"
 msgstr "Ne eblis importi la dosieron %1 (nevalida OPML)"
 
-#: src/subscriptionlistmodel.cpp:69
+#: src/subscriptionlistmodel.cpp:68
 msgid "Could not read feed (unknown format)"
 msgstr ""
 
-#: src/subscriptionlistmodel.cpp:71
+#: src/subscriptionlistmodel.cpp:70
 #, fuzzy
 #| msgid "Could not import the file %1 (no valid OPML)"
 msgid "Could not read feed (invalid feed)"
 msgstr "Ne eblis importi la dosieron %1 (nevalida OPML)"
 
-#: src/subscriptionlistmodel.cpp:167
+#: src/subscriptionlistmodel.cpp:165
 #, kde-format
 msgid "Could not fetch feed: %1"
 msgstr ""
 
-#: src/subscriptionlistmodel.cpp:219
-#, fuzzy
-#| msgid "Feeds"
-msgctxt "Feedlist's column header"
-msgid "Feeds"
-msgstr "Fluoj"
-
-#: src/subscriptionlistmodel.cpp:221
+#: src/subscriptionlistmodel.cpp:220 src/searchbar.cpp:98
 #, fuzzy
 #| msgid "Unread"
-msgctxt "Feedlist's column header"
 msgid "Unread"
 msgstr "Nelegita"
 
-#: src/subscriptionlistmodel.cpp:223
+#: src/subscriptionlistmodel.cpp:222
 #, fuzzy
 #| msgid "Title:"
-msgctxt "Feedlist's column header"
 msgid "Total"
 msgstr "Titolo:"
 
@@ -678,7 +628,7 @@ msgstr "Flukolektilo de KDE"
 #: src/aboutdata.cpp:36
 #, fuzzy
 #| msgid "(C) 2004, 2005 Akregator developers"
-msgid "(C) 2004-2008 Akregator developers"
+msgid "(C) 2004, 2005 Akregator developers"
 msgstr "(C) 2004, 2005 Akregator-programintoj"
 
 #: src/aboutdata.cpp:40 configuration/akregator_config_advanced.cpp:53
@@ -805,19 +755,19 @@ msgstr ""
 msgid "Cannot move folder %1 to its own subfolder %2"
 msgstr ""
 
-#: src/actionmanagerimpl.cpp:76 src/actionmanagerimpl.cpp:264
+#: src/actionmanagerimpl.cpp:76 src/actionmanagerimpl.cpp:260
 msgid "&Fetch Feed"
 msgstr "&Kolektu fluon"
 
-#: src/actionmanagerimpl.cpp:77 src/actionmanagerimpl.cpp:219
+#: src/actionmanagerimpl.cpp:77 src/actionmanagerimpl.cpp:215
 msgid "&Delete Feed"
 msgstr "&Forviŝu fluon"
 
-#: src/actionmanagerimpl.cpp:78 src/actionmanagerimpl.cpp:225
+#: src/actionmanagerimpl.cpp:78 src/actionmanagerimpl.cpp:221
 msgid "&Edit Feed..."
 msgstr "&Prilaboru fluon"
 
-#: src/actionmanagerimpl.cpp:79 src/actionmanagerimpl.cpp:283
+#: src/actionmanagerimpl.cpp:79 src/actionmanagerimpl.cpp:279
 msgid "&Mark Feed as Read"
 msgstr "&Signu fluon kiel legita"
 
@@ -845,55 +795,55 @@ msgstr "&Importu fluojn..."
 msgid "&Export Feeds..."
 msgstr "&Eksportu fluojn..."
 
-#: src/actionmanagerimpl.cpp:180
+#: src/actionmanagerimpl.cpp:182
 #, fuzzy
 #| msgid "Configure &Akregator..."
-msgid "&Configure Akregator..."
+msgid "Configure &Akregator..."
 msgstr "Administru &Akregator..."
 
-#: src/actionmanagerimpl.cpp:201
+#: src/actionmanagerimpl.cpp:197
 msgid "&Open Homepage"
 msgstr "&Malfermu retpaĝon"
 
-#: src/actionmanagerimpl.cpp:207
+#: src/actionmanagerimpl.cpp:203
 msgid "&Add Feed..."
 msgstr "&Aldonu fluon"
 
-#: src/actionmanagerimpl.cpp:213
+#: src/actionmanagerimpl.cpp:209
 msgid "Ne&w Folder..."
 msgstr "&Nova dosierujo"
 
-#: src/actionmanagerimpl.cpp:230
+#: src/actionmanagerimpl.cpp:226
 msgid "&View Mode"
 msgstr "&Spekta moduso"
 
-#: src/actionmanagerimpl.cpp:236
+#: src/actionmanagerimpl.cpp:232
 msgid "&Normal View"
 msgstr "&Normala aspekto"
 
-#: src/actionmanagerimpl.cpp:245
+#: src/actionmanagerimpl.cpp:241
 msgid "&Widescreen View"
 msgstr "&Larĝekrana aspekto"
 
-#: src/actionmanagerimpl.cpp:254
+#: src/actionmanagerimpl.cpp:250
 msgid "C&ombined View"
 msgstr "K&ombinita aspekto"
 
-#: src/actionmanagerimpl.cpp:270
+#: src/actionmanagerimpl.cpp:266
 msgid "Fe&tch All Feeds"
 msgstr "Kole&ktu ĉiujn fluojn"
 
-#: src/actionmanagerimpl.cpp:276
+#: src/actionmanagerimpl.cpp:272
 msgid "&Abort Fetches"
 msgstr "&Ĉesu kolektadon"
 
-#: src/actionmanagerimpl.cpp:289
+#: src/actionmanagerimpl.cpp:285
 msgid "Ma&rk All Feeds as Read"
 msgstr "Signu ĉi&ujn fluojn kiel legitaj"
 
 #. i18n: file: interfaces/akregator.kcfg:9
 #. i18n: ectx: label, entry, group (View)
-#: src/actionmanagerimpl.cpp:295 rc.cpp:149
+#: src/actionmanagerimpl.cpp:291 rc.cpp:146
 msgid "Show Quick Filter"
 msgstr "Montru rapidfiltrilon"
 
@@ -901,7 +851,7 @@ msgstr "Montru rapidfiltrilon"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LMBBehaviour)
 #. i18n: file: configuration/settings_browser.ui:125
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MMBBehaviour)
-#: src/actionmanagerimpl.cpp:301 rc.cpp:433 rc.cpp:448
+#: src/actionmanagerimpl.cpp:297 rc.cpp:427 rc.cpp:442
 msgid "Open in Tab"
 msgstr "Malfermu en trabo"
 
@@ -909,32 +859,32 @@ msgstr "Malfermu en trabo"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LMBBehaviour)
 #. i18n: file: configuration/settings_browser.ui:135
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MMBBehaviour)
-#: src/actionmanagerimpl.cpp:307 rc.cpp:439 rc.cpp:454
+#: src/actionmanagerimpl.cpp:303 rc.cpp:433 rc.cpp:448
 msgid "Open in External Browser"
 msgstr "Malfermu en ekstera retumilo"
 
-#: src/actionmanagerimpl.cpp:312 src/actionmanagerimpl.cpp:519
+#: src/actionmanagerimpl.cpp:308 src/actionmanagerimpl.cpp:515
 msgid "Copy Link Address"
 msgstr "Kopiu adreson de la ligilo"
 
-#: src/actionmanagerimpl.cpp:316
+#: src/actionmanagerimpl.cpp:312
 msgid "Pre&vious Unread Article"
 msgstr "Antaŭa nelegita artikolo"
 
-#: src/actionmanagerimpl.cpp:321
+#: src/actionmanagerimpl.cpp:317
 msgid "Ne&xt Unread Article"
 msgstr "Sekvonta nelegita artikolo"
 
-#: src/actionmanagerimpl.cpp:327
+#: src/actionmanagerimpl.cpp:323
 #, fuzzy
 msgid "&Delete"
 msgstr "&Forviŝu etikedon"
 
-#: src/actionmanagerimpl.cpp:332
+#: src/actionmanagerimpl.cpp:328
 msgid "&Mark As"
 msgstr "&Signu kiel"
 
-#: src/actionmanagerimpl.cpp:346
+#: src/actionmanagerimpl.cpp:342
 #, fuzzy
 msgctxt "as in: mark as read"
 msgid "&Read"
@@ -942,125 +892,123 @@ msgstr ""
 "_: as in: signu kiel legitaj\n"
 "&Legitaj"
 
-#: src/actionmanagerimpl.cpp:348
+#: src/actionmanagerimpl.cpp:344
 msgid "Mark selected article as read"
 msgstr "Signu elektitajn artikolojn kiel legitaj"
 
-#: src/actionmanagerimpl.cpp:354
+#: src/actionmanagerimpl.cpp:350
 #, fuzzy
 #| msgid "&New"
-msgctxt "as in: mark as new"
 msgid "&New"
 msgstr "&Nova"
 
-#: src/actionmanagerimpl.cpp:357
+#: src/actionmanagerimpl.cpp:353
 msgid "Mark selected article as new"
 msgstr "Signu elektitajn artikolojn kiel novaj"
 
-#: src/actionmanagerimpl.cpp:363
+#: src/actionmanagerimpl.cpp:359
 #, fuzzy
 #| msgid "&Unread"
-msgctxt "as in: mark as unread"
 msgid "&Unread"
 msgstr "&Nelegita"
 
-#: src/actionmanagerimpl.cpp:365
+#: src/actionmanagerimpl.cpp:361
 msgid "Mark selected article as unread"
 msgstr "Signu elektitan artikolon kiel nelegita"
 
-#: src/actionmanagerimpl.cpp:371
+#: src/actionmanagerimpl.cpp:367
 msgid "&Mark as Important"
 msgstr "&Signu kiel grava"
 
-#: src/actionmanagerimpl.cpp:374
+#: src/actionmanagerimpl.cpp:370
 msgid "Remove &Important Mark"
 msgstr "Forigu signon &grava"
 
-#: src/actionmanagerimpl.cpp:378
+#: src/actionmanagerimpl.cpp:374
 msgid "Move Node Up"
 msgstr "Movu nodon supren"
 
-#: src/actionmanagerimpl.cpp:383
+#: src/actionmanagerimpl.cpp:379
 msgid "Move Node Down"
 msgstr "Movu nodon suben"
 
-#: src/actionmanagerimpl.cpp:387 src/actionmanagerimpl.cpp:388
+#: src/actionmanagerimpl.cpp:383 src/actionmanagerimpl.cpp:384
 msgid "Move Node Left"
 msgstr "Movu nodon maldekstren"
 
-#: src/actionmanagerimpl.cpp:393
+#: src/actionmanagerimpl.cpp:389
 msgid "Move Node Right"
 msgstr "Movu nodon dekstren"
 
-#: src/actionmanagerimpl.cpp:399
+#: src/actionmanagerimpl.cpp:395
 msgid "Send &Link Address..."
 msgstr "Sendu &ligilan adreson"
 
-#: src/actionmanagerimpl.cpp:404
+#: src/actionmanagerimpl.cpp:400
 msgid "Send &File..."
 msgstr "Sendu &dosieron"
 
-#: src/actionmanagerimpl.cpp:424
+#: src/actionmanagerimpl.cpp:420
 msgid "&Previous Article"
 msgstr "&Antaŭa artikolo"
 
-#: src/actionmanagerimpl.cpp:428
+#: src/actionmanagerimpl.cpp:424
 msgid "&Next Article"
 msgstr "&Sekvonta artikolo"
 
-#: src/actionmanagerimpl.cpp:443
+#: src/actionmanagerimpl.cpp:439
 msgid "&Previous Feed"
 msgstr "&Antaŭa fluo"
 
-#: src/actionmanagerimpl.cpp:448
+#: src/actionmanagerimpl.cpp:444
 msgid "&Next Feed"
 msgstr "&Sekvonta fluo"
 
-#: src/actionmanagerimpl.cpp:453
+#: src/actionmanagerimpl.cpp:449
 msgid "N&ext Unread Feed"
 msgstr "Sekvonta &nelegita fluo"
 
-#: src/actionmanagerimpl.cpp:458
+#: src/actionmanagerimpl.cpp:454
 msgid "Prev&ious Unread Feed"
 msgstr "Antaŭa ne&legita fluo"
 
-#: src/actionmanagerimpl.cpp:463
+#: src/actionmanagerimpl.cpp:459
 msgid "Go to Top of Tree"
 msgstr "Iru al la pinto de la arbo"
 
-#: src/actionmanagerimpl.cpp:468
+#: src/actionmanagerimpl.cpp:464
 msgid "Go to Bottom of Tree"
 msgstr "Iru al la subo de la arbo"
 
-#: src/actionmanagerimpl.cpp:473
+#: src/actionmanagerimpl.cpp:469
 msgid "Go Left in Tree"
 msgstr "Iru maldekstren en arbo"
 
-#: src/actionmanagerimpl.cpp:478
+#: src/actionmanagerimpl.cpp:474
 msgid "Go Right in Tree"
 msgstr "Iru dekstren en arbo"
 
-#: src/actionmanagerimpl.cpp:483
+#: src/actionmanagerimpl.cpp:479
 msgid "Go Up in Tree"
 msgstr "Iru supren en arbo"
 
-#: src/actionmanagerimpl.cpp:488
+#: src/actionmanagerimpl.cpp:484
 msgid "Go Down in Tree"
 msgstr "Iru suben en arbo"
 
-#: src/actionmanagerimpl.cpp:503
+#: src/actionmanagerimpl.cpp:499
 msgid "Select Next Tab"
 msgstr "Elektu sekvontan trabon"
 
-#: src/actionmanagerimpl.cpp:508
+#: src/actionmanagerimpl.cpp:504
 msgid "Select Previous Tab"
 msgstr "Elektu antaŭan trabon"
 
-#: src/actionmanagerimpl.cpp:514
+#: src/actionmanagerimpl.cpp:510
 msgid "Detach Tab"
 msgstr "Malfiksigu trabon"
 
-#: src/actionmanagerimpl.cpp:524
+#: src/actionmanagerimpl.cpp:520
 msgid "&Close Tab"
 msgstr "&Fermu trabon"
 
@@ -1095,47 +1043,30 @@ msgstr "Neniu arĥivo"
 #: src/articlemodel.cpp:106
 #, fuzzy
 #| msgid "Title:"
-msgctxt "Articlelist's column header"
 msgid "Title"
 msgstr "Titolo:"
 
 #: src/articlemodel.cpp:108
 #, fuzzy
 #| msgid "Feed"
-msgctxt "Articlelist's column header"
 msgid "Feed"
 msgstr "Fluo"
 
-#: src/articlemodel.cpp:110
-#, fuzzy
-#| msgid "Date"
-msgctxt "Articlelist's column header"
-msgid "Date"
-msgstr "Dato"
-
-#: src/articlemodel.cpp:112
-#, fuzzy
-#| msgid "Author"
-msgctxt "Articlelist's column header"
-msgid "Author"
-msgstr "Aŭtoro"
-
-#: src/articlemodel.cpp:114
-msgctxt "Articlelist's column header"
+#. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:41
+#. i18n: ectx: property (text), widget (QTreeWidget, list_readerList)
+#: src/articlemodel.cpp:114 rc.cpp:515
 msgid "Description"
 msgstr ""
 
 #: src/articlemodel.cpp:116
 #, fuzzy
 #| msgid "Comments"
-msgctxt "Articlelist's column header"
 msgid "Content"
 msgstr "Komentoj"
 
 #: src/searchbar.cpp:77
 #, fuzzy
 #| msgid "S&earch:"
-msgctxt "Title of article searchbar"
 msgid "S&earch:"
 msgstr "Serĉo:"
 
@@ -1147,24 +1078,15 @@ msgstr "Stato:"
 msgid "All Articles"
 msgstr "Ĉiuj artikoloj"
 
-#: src/searchbar.cpp:98
-#, fuzzy
-#| msgid "Unread"
-msgctxt "Unread articles filter"
-msgid "Unread"
-msgstr "Nelegita"
-
 #: src/searchbar.cpp:99
 #, fuzzy
 #| msgid "New"
-msgctxt "New articles filter"
 msgid "New"
 msgstr "Nova"
 
 #: src/searchbar.cpp:100
 #, fuzzy
 #| msgid "Important"
-msgctxt "Important articles filter"
 msgid "Important"
 msgstr "Grava"
 
@@ -1176,11 +1098,11 @@ msgstr "Skribu per spaco disigitajn vortojn por filtri la artikololiston"
 msgid "Choose what kind of articles to show in article list"
 msgstr "Elektu kiu speco de artikoloj montrendas en la artikola listo"
 
-#: src/mainwindow.cpp:99
+#: src/mainwindow.cpp:130
 msgid "Could not find the Akregator part; please check your installation."
 msgstr "Ne eblis trovi la parton Akregator, bonvolu kontroli vian instalon."
 
-#: src/mainwindow.cpp:222
+#: src/mainwindow.cpp:262
 #, fuzzy
 #| msgid ""
 #| "<qt><p>Closing the main window will keep Akregator running in the system "
@@ -1195,23 +1117,9 @@ msgstr ""
 "sistemfako. Uzu 'Ĉesu' de la 'Dosiero'-menuo por ĉesigi la programon.</"
 "p><p><center><img source=\"systray_shot\"></center></p></qt>"
 
-#: src/mainwindow.cpp:222 src/mainwindow.cpp:224
+#: src/mainwindow.cpp:262
 msgid "Docking in System Tray"
 msgstr "Fiksigu en sistemfako"
-
-#: src/mainwindow.cpp:224
-#, fuzzy
-#| msgid ""
-#| "<qt><p>Closing the main window will keep Akregator running in the system "
-#| "tray. Use 'Quit' from the 'File' menu to quit the application.</"
-#| "p><p><center><img source=\"systray_shot\"></center></p></qt>"
-msgid ""
-"<qt><p>Closing the main window will keep Akregator running in the system "
-"tray. Use 'Quit' from the 'File' menu to quit the application.</p></qt>"
-msgstr ""
-"<qt><p>Post fermo de la ĉefa fenestro Akregator daŭre aktivas en la "
-"sistemfako. Uzu 'Ĉesu' de la 'Dosiero'-menuo por ĉesigi la programon.</"
-"p><p><center><img source=\"systray_shot\"></center></p></qt>"
 
 #: src/feedlist.cpp:166
 msgid "All Feeds"
@@ -1297,7 +1205,7 @@ msgstr "&Iru"
 #. i18n: ectx: Menu (file)
 #. i18n: file: plugins/onlinesync/akregator_onlinesync_plugin.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:8 rc.cpp:542
+#: rc.cpp:8 rc.cpp:536
 #, fuzzy
 msgid "&File"
 msgstr "&Artikolo"
@@ -1333,39 +1241,37 @@ msgstr "&Fluo"
 msgid "&Article"
 msgstr "&Artikolo"
 
-#. i18n: file: src/akregator_shell.rc:36
+#. i18n: file: src/akregator_shell.rc:35
 #. i18n: ectx: Menu (settings)
-#. i18n: file: src/akregator_part.rc:73
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:26 rc.cpp:137
+#: rc.cpp:26
 #, fuzzy
 msgid "&Settings"
 msgstr "&Funkciigu etikedojn"
 
-#. i18n: file: src/akregator_shell.rc:47
+#. i18n: file: src/akregator_shell.rc:48
 #. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: src/akregator_part.rc:83
+#. i18n: file: src/akregator_part.rc:82
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:29 rc.cpp:140
+#: rc.cpp:29 rc.cpp:137
 #, fuzzy
 msgid "Main Toolbar"
 msgstr "Laŭtlega ilaro"
 
-#. i18n: file: src/akregator_shell.rc:51
+#. i18n: file: src/akregator_shell.rc:52
 #. i18n: ectx: ToolBar (browserToolBar)
-#. i18n: file: src/akregator_part.rc:93
+#. i18n: file: src/akregator_part.rc:92
 #. i18n: ectx: ToolBar (browserToolBar)
-#: rc.cpp:32 rc.cpp:143
+#: rc.cpp:32 rc.cpp:140
 #, fuzzy
 #| msgid "Browser"
 msgid "Browser Toolbar"
 msgstr "Retumilo"
 
-#. i18n: file: src/akregator_shell.rc:54
+#. i18n: file: src/akregator_shell.rc:55
 #. i18n: ectx: ToolBar (textToSpeechToolBar)
-#. i18n: file: src/akregator_part.rc:101
+#. i18n: file: src/akregator_part.rc:100
 #. i18n: ectx: ToolBar (textToSpeechToolBar)
-#: rc.cpp:35 rc.cpp:146
+#: rc.cpp:35 rc.cpp:143
 msgid "Speech Toolbar"
 msgstr "Laŭtlega ilaro"
 
@@ -1475,7 +1381,7 @@ msgstr "Limigu arĥivon je:"
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, sb_maxArticleNumber)
 #. i18n: file: configuration/settings_archive.ui:70
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_MaxArticleNumber)
-#: rc.cpp:95 rc.cpp:485
+#: rc.cpp:95 rc.cpp:479
 msgid "1 article"
 msgstr "1 artikolo"
 
@@ -1483,7 +1389,7 @@ msgstr "1 artikolo"
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, sb_maxArticleNumber)
 #. i18n: file: configuration/settings_archive.ui:73
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_MaxArticleNumber)
-#: rc.cpp:98 rc.cpp:488
+#: rc.cpp:98 rc.cpp:482
 msgid " articles"
 msgstr "artikoloj"
 
@@ -1497,7 +1403,7 @@ msgstr "&Forviŝu artikolojn pli malnovajn ol:"
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, sb_maxArticleAge)
 #. i18n: file: configuration/settings_archive.ui:106
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_MaxArticleAge)
-#: rc.cpp:104 rc.cpp:494
+#: rc.cpp:104 rc.cpp:488
 msgid "1 day"
 msgstr "1 tago"
 
@@ -1505,7 +1411,7 @@ msgstr "1 tago"
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, sb_maxArticleAge)
 #. i18n: file: configuration/settings_archive.ui:109
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_MaxArticleAge)
-#: rc.cpp:107 rc.cpp:497
+#: rc.cpp:107 rc.cpp:491
 msgid " days"
 msgstr "tagoj"
 
@@ -1541,157 +1447,157 @@ msgstr "F&luo"
 
 #. i18n: file: interfaces/akregator.kcfg:10
 #. i18n: ectx: whatsthis, entry, group (View)
-#: rc.cpp:152
+#: rc.cpp:149
 msgid "Show Quick Filter Bar"
 msgstr "Montru rapidfiltrilotrabon"
 
 #. i18n: file: interfaces/akregator.kcfg:14
 #. i18n: ectx: label, entry, group (View)
-#: rc.cpp:155
+#: rc.cpp:152
 msgid "Status Filter"
 msgstr "Statofiltro"
 
 #. i18n: file: interfaces/akregator.kcfg:15
 #. i18n: ectx: whatsthis, entry, group (View)
-#: rc.cpp:158
+#: rc.cpp:155
 msgid "Stores the last status filter setting"
 msgstr "Konservas la lastan konfiguracion de la statofiltro"
 
 #. i18n: file: interfaces/akregator.kcfg:19
 #. i18n: ectx: label, entry, group (View)
-#: rc.cpp:161
+#: rc.cpp:158
 msgid "Text Filter"
 msgstr "Teksta filtro"
 
 #. i18n: file: interfaces/akregator.kcfg:20
 #. i18n: ectx: whatsthis, entry, group (View)
-#: rc.cpp:164
+#: rc.cpp:161
 msgid "Stores the last search line text"
 msgstr "Konservas la lastan serĉtekston"
 
 #. i18n: file: interfaces/akregator.kcfg:23
 #. i18n: ectx: label, entry, group (View)
-#: rc.cpp:167
+#: rc.cpp:164
 msgid "View Mode"
 msgstr "Spekta moduso"
 
 #. i18n: file: interfaces/akregator.kcfg:24
 #. i18n: ectx: whatsthis, entry, group (View)
-#: rc.cpp:170
+#: rc.cpp:167
 msgid "Article display mode."
 msgstr "Artikolmontra moduso"
 
 #. i18n: file: interfaces/akregator.kcfg:28
 #. i18n: ectx: label, entry, group (View)
-#: rc.cpp:173
+#: rc.cpp:170
 msgid "Sizes for first splitter"
 msgstr "Grandecoj por la unua disigilo"
 
 #. i18n: file: interfaces/akregator.kcfg:29
 #. i18n: ectx: whatsthis, entry, group (View)
-#: rc.cpp:176
+#: rc.cpp:173
 msgid "First (usually vertical) splitter widget sizes."
 msgstr "Grandeco de la unua (kutima vertikala) fenestraĵa disigilo."
 
 #. i18n: file: interfaces/akregator.kcfg:33
 #. i18n: ectx: label, entry, group (View)
-#: rc.cpp:179
+#: rc.cpp:176
 msgid "Sizes for second splitter"
 msgstr "Grandecoj por dua disigilo"
 
 #. i18n: file: interfaces/akregator.kcfg:34
 #. i18n: ectx: whatsthis, entry, group (View)
-#: rc.cpp:182
+#: rc.cpp:179
 msgid "Second (usually horizontal) splitter widget sizes."
 msgstr "Grandeco de la dua (kutime horizontala) fenestraĵa disigilo."
 
-#. i18n: file: interfaces/akregator.kcfg:64
+#. i18n: file: interfaces/akregator.kcfg:66
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:185
+#: rc.cpp:182
 msgid "Archive Mode"
 msgstr "Arĥiva moduso"
 
-#. i18n: file: interfaces/akregator.kcfg:68
+#. i18n: file: interfaces/akregator.kcfg:70
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:188
+#: rc.cpp:185
 msgid "Keep All Articles"
 msgstr "Konservu ĉiujn artikolojn"
 
-#. i18n: file: interfaces/akregator.kcfg:69
+#. i18n: file: interfaces/akregator.kcfg:71
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:191
+#: rc.cpp:188
 msgid "Save an unlimited number of articles."
 msgstr "Konservu nelimigitan nombron de artikoloj"
 
-#. i18n: file: interfaces/akregator.kcfg:72
+#. i18n: file: interfaces/akregator.kcfg:74
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:194
+#: rc.cpp:191
 msgid "Limit Number of Articles"
 msgstr "Limigu nombron de artikoloj"
 
-#. i18n: file: interfaces/akregator.kcfg:73
+#. i18n: file: interfaces/akregator.kcfg:75
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:197
+#: rc.cpp:194
 msgid "Limit the number of articles in a feed"
 msgstr "Limigu la nombron de la artikoloj en fluo"
 
-#. i18n: file: interfaces/akregator.kcfg:76
+#. i18n: file: interfaces/akregator.kcfg:78
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:200
+#: rc.cpp:197
 msgid "Delete Expired Articles"
 msgstr "Forviŝu malaktualajn artikolojn"
 
-#. i18n: file: interfaces/akregator.kcfg:77
+#. i18n: file: interfaces/akregator.kcfg:79
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:203
+#: rc.cpp:200
 msgid "Delete expired articles"
 msgstr "Forviŝu malaktualajn artikolojn"
 
-#. i18n: file: interfaces/akregator.kcfg:80
+#. i18n: file: interfaces/akregator.kcfg:82
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:206
+#: rc.cpp:203
 msgid "Disable Archiving"
 msgstr "Malfunkciigu enarkivigon"
 
-#. i18n: file: interfaces/akregator.kcfg:81
+#. i18n: file: interfaces/akregator.kcfg:83
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:209
+#: rc.cpp:206
 msgid "Do not save any articles"
 msgstr "Ne konservu ajnajn artikolojn"
 
-#. i18n: file: interfaces/akregator.kcfg:86
+#. i18n: file: interfaces/akregator.kcfg:88
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:212
+#: rc.cpp:209
 msgid "Expiry Age"
 msgstr "Malaktualiĝa aĝo"
 
-#. i18n: file: interfaces/akregator.kcfg:87
+#. i18n: file: interfaces/akregator.kcfg:89
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:215
+#: rc.cpp:212
 msgid "Default expiry age for articles in days."
 msgstr "Kutima malaktualiĝa aĝo de artikoloj en tagoj"
 
-#. i18n: file: interfaces/akregator.kcfg:91
+#. i18n: file: interfaces/akregator.kcfg:93
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:218
+#: rc.cpp:215
 msgid "Article Limit"
 msgstr "Artikola limo"
 
-#. i18n: file: interfaces/akregator.kcfg:92
+#. i18n: file: interfaces/akregator.kcfg:94
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:221
+#: rc.cpp:218
 msgid "Number of articles to keep per feed."
 msgstr "Nombro de artikoloj konservendaj po fluo."
 
-#. i18n: file: interfaces/akregator.kcfg:96
+#. i18n: file: interfaces/akregator.kcfg:98
 #. i18n: ectx: label, entry, group (Archive)
-#: rc.cpp:224
+#: rc.cpp:221
 msgid "Do Not Expire Important Articles"
 msgstr "Ne malvalidigu gravajn artikolojn"
 
-#. i18n: file: interfaces/akregator.kcfg:97
+#. i18n: file: interfaces/akregator.kcfg:99
 #. i18n: ectx: whatsthis, entry, group (Archive)
-#: rc.cpp:227
+#: rc.cpp:224
 msgid ""
 "When this option is enabled, articles you marked as important will not be "
 "removed when limit the archive size by either age or number of the articles."
@@ -1700,27 +1606,27 @@ msgstr ""
 "estos forigitaj kiam la limo de la arĥivo estas atingita ĉu pro aĝo ĉu pro "
 "nombro de artikoloj."
 
-#. i18n: file: interfaces/akregator.kcfg:103
+#. i18n: file: interfaces/akregator.kcfg:105
 #. i18n: ectx: label, entry, group (Network)
-#: rc.cpp:230
+#: rc.cpp:227
 msgid "Concurrent Fetches"
 msgstr "Samtempaj kolektoj"
 
-#. i18n: file: interfaces/akregator.kcfg:104
+#. i18n: file: interfaces/akregator.kcfg:106
 #. i18n: ectx: whatsthis, entry, group (Network)
-#: rc.cpp:233
+#: rc.cpp:230
 msgid "Number of concurrent fetches"
 msgstr "Nombro de samtempaj kolektoj"
 
-#. i18n: file: interfaces/akregator.kcfg:108
+#. i18n: file: interfaces/akregator.kcfg:110
 #. i18n: ectx: label, entry, group (Network)
-#: rc.cpp:236
+#: rc.cpp:233
 msgid "Use HTML Cache"
 msgstr "Uzu HTML-staplo"
 
-#. i18n: file: interfaces/akregator.kcfg:109
+#. i18n: file: interfaces/akregator.kcfg:111
 #. i18n: ectx: whatsthis, entry, group (Network)
-#: rc.cpp:239
+#: rc.cpp:236
 msgid ""
 "Use the KDE-wide HTML cache settings when downloading feeds, to avoid "
 "unnecessary traffic. Disable only when necessary."
@@ -1728,162 +1634,164 @@ msgstr ""
 "Uzu KDE-skalan HTML-staplokonfiguracion elŝutante fluojn por eviti nenecesan "
 "trafikon. Malfunkciigu nur se necesas."
 
-#. i18n: file: interfaces/akregator.kcfg:113
+#. i18n: file: interfaces/akregator.kcfg:115
 #. i18n: ectx: whatsthis, entry, group (Network)
-#: rc.cpp:242
+#: rc.cpp:239
 msgid ""
 "This option allows user to specify custom user-agent string instead of using "
 "the default one. This is here because some proxies may interrupt the "
 "connection because of having \"gator\" in the name."
 msgstr ""
 
-#. i18n: file: interfaces/akregator.kcfg:119
+#. i18n: file: interfaces/akregator.kcfg:121
 #. i18n: ectx: label, entry, group (General)
-#: rc.cpp:245
+#: rc.cpp:242
 msgid "Fetch on startup"
 msgstr "Kolektu je ekigo."
 
-#. i18n: file: interfaces/akregator.kcfg:120
+#. i18n: file: interfaces/akregator.kcfg:122
 #. i18n: ectx: whatsthis, entry, group (General)
-#: rc.cpp:248
+#: rc.cpp:245
 msgid "Fetch feedlist on startup."
 msgstr "Kolektu fluliston je programekigo."
 
-#. i18n: file: interfaces/akregator.kcfg:124
+#. i18n: file: interfaces/akregator.kcfg:126
 #. i18n: ectx: label, entry, group (General)
-#: rc.cpp:251
+#: rc.cpp:248
 msgid "Mark all feeds as read on startup"
 msgstr "Signu ĉiujn fluojn kiel legitaj je programekigo."
 
-#. i18n: file: interfaces/akregator.kcfg:125
+#. i18n: file: interfaces/akregator.kcfg:127
 #. i18n: ectx: whatsthis, entry, group (General)
-#: rc.cpp:254
+#: rc.cpp:251
 msgid "Mark all feeds as read on startup."
 msgstr "Signu ĉiujn fluojn kiel legitaj je programekigo."
 
-#. i18n: file: interfaces/akregator.kcfg:129
+#. i18n: file: interfaces/akregator.kcfg:131
 #. i18n: ectx: label, entry, group (General)
-#: rc.cpp:257
+#: rc.cpp:254
 msgid "Use interval fetching"
 msgstr "Uzu intervalan kolektadon"
 
-#. i18n: file: interfaces/akregator.kcfg:130
+#. i18n: file: interfaces/akregator.kcfg:132
 #. i18n: ectx: whatsthis, entry, group (General)
-#: rc.cpp:261
+#: rc.cpp:258
 #, no-c-format, kde-format
 msgid "Fetch all feeds every %1 minutes."
 msgstr "Kolektu ĉiujn fluojn ĉiujn %1 minutojn."
 
-#. i18n: file: interfaces/akregator.kcfg:134
+#. i18n: file: interfaces/akregator.kcfg:136
 #. i18n: ectx: label, entry, group (General)
-#: rc.cpp:264
+#: rc.cpp:261
 msgid "Interval for autofetching"
 msgstr "Intervalo por aŭtomata kolektado"
 
-#. i18n: file: interfaces/akregator.kcfg:135
+#. i18n: file: interfaces/akregator.kcfg:137
 #. i18n: ectx: whatsthis, entry, group (General)
-#: rc.cpp:267
+#: rc.cpp:264
 msgid "Interval for autofetching in minutes."
 msgstr "Intervalo por aŭtomata kolektado en minutoj."
 
-#. i18n: file: interfaces/akregator.kcfg:139
+#. i18n: file: interfaces/akregator.kcfg:141
 #. i18n: ectx: label, entry, group (General)
-#: rc.cpp:270
+#: rc.cpp:267
 msgid "Use notifications"
 msgstr "Uzu anoncojn"
 
-#. i18n: file: interfaces/akregator.kcfg:140
+#. i18n: file: interfaces/akregator.kcfg:142
 #. i18n: ectx: whatsthis, entry, group (General)
-#: rc.cpp:273
+#: rc.cpp:270
 msgid "Specifies if the balloon notifications are used or not."
 msgstr "Agordas, ĉu la balonaj informoj uzatas aŭ ne."
 
-#. i18n: file: interfaces/akregator.kcfg:144
+#. i18n: file: interfaces/akregator.kcfg:146
 #. i18n: ectx: label, entry, group (General)
-#: rc.cpp:276
+#: rc.cpp:273
 msgid "Show tray icon"
 msgstr "Montru agordotraban piktogramon"
 
-#. i18n: file: interfaces/akregator.kcfg:145
+#. i18n: file: interfaces/akregator.kcfg:147
 #. i18n: ectx: whatsthis, entry, group (General)
-#: rc.cpp:279
+#: rc.cpp:276
 msgid "Specifies if the tray icon is shown or not."
 msgstr "Agordas, ĉu la agordotraba piktogramo estas videbla aŭ ne"
 
-#. i18n: file: interfaces/akregator.kcfg:151
+#. i18n: file: interfaces/akregator.kcfg:153
 #. i18n: ectx: label, entry, group (Browser)
-#: rc.cpp:282
+#: rc.cpp:279
 msgid "Show close buttons on tabs"
 msgstr "Montru fermobutonon sur langetoj"
 
-#. i18n: file: interfaces/akregator.kcfg:152
+#. i18n: file: interfaces/akregator.kcfg:154
 #. i18n: ectx: whatsthis, entry, group (Browser)
-#: rc.cpp:285
+#: rc.cpp:282
 msgid "Show close buttons on tabs instead of icons"
 msgstr "Montru fermobutonojn sur langetoj anstataŭ piktogramoj"
 
-#. i18n: file: interfaces/akregator.kcfg:157
+#. i18n: file: interfaces/akregator.kcfg:159
 #. i18n: ectx: label, entry, group (Browser)
-#: rc.cpp:288
+#. i18n: file: configuration/settings_browser.ui:174
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExternalBrowserUseKdeDefault)
+#: rc.cpp:285 rc.cpp:461
 msgid "Use default KDE web browser"
 msgstr "Uzu normalan KDE-retumilon"
 
-#. i18n: file: interfaces/akregator.kcfg:158
+#. i18n: file: interfaces/akregator.kcfg:160
 #. i18n: ectx: whatsthis, entry, group (Browser)
-#: rc.cpp:291
+#: rc.cpp:288
 msgid "Use KDE web browser when opening in external browser."
 msgstr "Uzu KDE-retumilon malfermante per ekstera retumilo."
 
-#. i18n: file: interfaces/akregator.kcfg:162
+#. i18n: file: interfaces/akregator.kcfg:164
 #. i18n: ectx: label, entry, group (Browser)
 #. i18n: file: configuration/settings_browser.ui:167
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExternalBrowserUseCustomCommand)
-#: rc.cpp:294 rc.cpp:464
+#: rc.cpp:291 rc.cpp:458
 msgid "Use this command:"
 msgstr "Uzu tiun ĉi komandon:"
 
-#. i18n: file: interfaces/akregator.kcfg:163
+#. i18n: file: interfaces/akregator.kcfg:165
 #. i18n: ectx: whatsthis, entry, group (Browser)
-#: rc.cpp:297
+#: rc.cpp:294
 msgid "Use the specified command when opening in external browser."
 msgstr "Uzu la donitan komandon malfermante per ekstera retumilo"
 
-#. i18n: file: interfaces/akregator.kcfg:167
+#. i18n: file: interfaces/akregator.kcfg:169
 #. i18n: ectx: whatsthis, entry, group (Browser)
-#: rc.cpp:301
+#: rc.cpp:298
 #, fuzzy, no-c-format
 #| msgid "Command to launch external browser.  URL will substitute for %u."
 msgid "Command to launch external browser.  URL will substitute for %u."
 msgstr "Komando por ekigi eksteran retumilon. URL estos anstataŭigita per &u."
 
-#. i18n: file: interfaces/akregator.kcfg:171
+#. i18n: file: interfaces/akregator.kcfg:173
 #. i18n: ectx: whatsthis, entry, group (Browser)
-#: rc.cpp:304
+#: rc.cpp:301
 msgid "What the click with left mouse button should do."
 msgstr "Kion faru premo de la maldekstra musbutono."
 
-#. i18n: file: interfaces/akregator.kcfg:180
+#. i18n: file: interfaces/akregator.kcfg:182
 #. i18n: ectx: whatsthis, entry, group (Browser)
-#: rc.cpp:307
+#: rc.cpp:304
 msgid "What the click with middle mouse button should do."
 msgstr "Kion faru premo de la meza musbutono."
 
-#. i18n: file: interfaces/akregator.kcfg:205
+#. i18n: file: interfaces/akregator.kcfg:207
 #. i18n: ectx: label, entry, group (Advanced)
-#: rc.cpp:310
+#: rc.cpp:307
 msgid "Archive Backend"
 msgstr "Arĥiva malantaŭprogramo"
 
-#. i18n: file: interfaces/akregator.kcfg:209
+#. i18n: file: interfaces/akregator.kcfg:211
 #. i18n: ectx: whatsthis, entry (UseMarkReadDelay), group (Advanced)
-#: rc.cpp:313
+#: rc.cpp:310
 msgid "Whether to delay before marking an article as read upon selecting it."
 msgstr ""
 "Ĉu prokrasti la signadon de artikolo kiel legita, kiam ĝi estas elektita."
 
-#. i18n: file: interfaces/akregator.kcfg:213
+#. i18n: file: interfaces/akregator.kcfg:215
 #. i18n: ectx: whatsthis, entry (MarkReadDelay), group (Advanced)
-#: rc.cpp:316
+#: rc.cpp:313
 #, fuzzy
 #| msgid ""
 #| "Configurable delay between selecting and article and it being marked as "
@@ -1893,9 +1801,9 @@ msgid ""
 msgstr ""
 "Konfiguraciebla prokrasto inter elekto de artikolo kaj ties signo kiel legita"
 
-#. i18n: file: interfaces/akregator.kcfg:217
+#. i18n: file: interfaces/akregator.kcfg:219
 #. i18n: ectx: whatsthis, entry, group (Advanced)
-#: rc.cpp:319
+#: rc.cpp:316
 msgid "Resets the quick filter when changing feeds."
 msgstr "Nuligi la rapidfiltron post fluŝanĝo."
 
@@ -1903,224 +1811,218 @@ msgstr "Nuligi la rapidfiltron post fluŝanĝo."
 #. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::SettingsGeneral)
 #. i18n: file: configuration/settings_appearance.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::SettingsAppearance)
-#: rc.cpp:322 rc.cpp:364
+#: rc.cpp:319 rc.cpp:361
 msgid "General"
 msgstr "Ĝenerale"
 
 #. i18n: file: configuration/settings_general.ui:54
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:325
+#: rc.cpp:322
 msgid "Global"
 msgstr "Ĉie"
 
 #. i18n: file: configuration/settings_general.ui:78
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowTrayIcon)
-#: rc.cpp:328
+#: rc.cpp:325
 msgid "Show tra&y icon"
 msgstr "Montru agordotraban piktogramon"
 
 #. i18n: file: configuration/settings_general.ui:101
 #. i18n: ectx: property (text), widget (QLabel, autoFetchIntervalLabel)
-#: rc.cpp:331
+#: rc.cpp:328
 msgid "Fetch feeds every:"
 msgstr "Kolektu fluojn ĉiujn:"
 
 #. i18n: file: configuration/settings_general.ui:111
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseNotifications)
-#: rc.cpp:334
+#: rc.cpp:331
 msgid "Select this if you want to get notified when there are new articles."
 msgstr "Elektu tion, se vi volas esti informata kiam alvenas novaj artikoloj."
 
 #. i18n: file: configuration/settings_general.ui:114
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseNotifications)
-#: rc.cpp:337
+#: rc.cpp:334
 msgid "Use &notifications for all feeds"
 msgstr "Uzu &anoncojn por ĉiuj fluoj"
 
 #. i18n: file: configuration/settings_general.ui:121
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseIntervalFetch)
-#: rc.cpp:340
+#: rc.cpp:337
 msgid "&Use interval fetching"
 msgstr "&Uzu intervalan kolektadon"
 
 #. i18n: file: configuration/settings_general.ui:131
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, kcfg_AutoFetchInterval)
-#: rc.cpp:343
+#: rc.cpp:340
 msgid "1 minute"
 msgstr "1 minuto"
 
 #. i18n: file: configuration/settings_general.ui:134
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_AutoFetchInterval)
-#: rc.cpp:346
+#: rc.cpp:343
 msgid " minutes"
 msgstr "minutoj"
 
 #. i18n: file: configuration/settings_general.ui:153
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:349
+#: rc.cpp:346
 msgid "Startup"
 msgstr "Programekigo"
 
 #. i18n: file: configuration/settings_general.ui:177
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_FetchOnStartup)
-#: rc.cpp:352
+#: rc.cpp:349
 msgid "Fetch all fee&ds on startup"
 msgstr "Kolektu ĉiujn fluon je programekigo"
 
 #. i18n: file: configuration/settings_general.ui:184
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_MarkAllFeedsReadOnStartup)
-#: rc.cpp:355
+#: rc.cpp:352
 msgid "Mark &all feeds as read on startup"
 msgstr "Signu ĉ&iujn fluojn kiel legitaj je programekigo"
 
 #. i18n: file: configuration/settings_general.ui:194
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:358
+#: rc.cpp:355
 msgid "Network"
 msgstr "komputilreto"
 
 #. i18n: file: configuration/settings_general.ui:218
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseHTMLCache)
-#: rc.cpp:361
+#: rc.cpp:358
 msgid "Use the &browser cache (less network traffic)"
 msgstr "Uzu &retumilan staplon (malpli da reta trafiko)"
 
 #. i18n: file: configuration/settings_appearance.ui:38
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:367
+#: rc.cpp:364
 #, fuzzy
 msgid "Article List Colors"
 msgstr "Artikola listo"
 
 #. i18n: file: configuration/settings_appearance.ui:98
 #. i18n: ectx: property (text), widget (QLabel, lbl_newArticles)
-#: rc.cpp:370
+#: rc.cpp:367
 #, fuzzy
 msgid "New articles:"
 msgstr "artikoloj"
 
 #. i18n: file: configuration/settings_appearance.ui:122
 #. i18n: ectx: property (text), widget (QLabel, lbl_unreadArticles)
-#: rc.cpp:373
+#: rc.cpp:370
 #, fuzzy
 msgid "Unread articles:"
 msgstr " (neniu nelegita artikolo)"
 
 #. i18n: file: configuration/settings_appearance.ui:131
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseCustomColors)
-#: rc.cpp:376
+#: rc.cpp:373
 msgid "Use custom colors"
 msgstr ""
 
 #. i18n: file: configuration/settings_appearance.ui:141
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:379
+#: rc.cpp:376
 #, fuzzy
 msgid "Font Size"
 msgstr "&Pligrandigu la skribaĵon"
 
 #. i18n: file: configuration/settings_appearance.ui:255
 #. i18n: ectx: property (text), widget (QLabel, lbl_MinimumFontSize)
-#: rc.cpp:382
+#: rc.cpp:379
 msgid "Minimum font size:"
 msgstr "Minimuma skribaĵgrandeco"
 
 #. i18n: file: configuration/settings_appearance.ui:262
 #. i18n: ectx: property (text), widget (QLabel, lbl_MediumFontSize)
-#: rc.cpp:385
+#: rc.cpp:382
 msgid "Medium font size:"
 msgstr "Averaĝa skribaĵgrandeco:"
 
 #. i18n: file: configuration/settings_appearance.ui:272
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:388
+#: rc.cpp:385
 #, fuzzy
 msgid "Fonts"
 msgstr "Komentoj"
 
 #. i18n: file: configuration/settings_appearance.ui:313
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:391
+#: rc.cpp:388
 msgid "Standard font:"
 msgstr "Kutima skribaĵo:"
 
 #. i18n: file: configuration/settings_appearance.ui:320
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:394
+#: rc.cpp:391
 msgid "Fixed font:"
 msgstr "Fiksa skribaĵo"
 
 #. i18n: file: configuration/settings_appearance.ui:327
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:397
+#: rc.cpp:394
 msgid "Serif font:"
 msgstr "Serifa skribaĵo:"
 
 #. i18n: file: configuration/settings_appearance.ui:334
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:400
+#: rc.cpp:397
 msgid "Sans serif font:"
 msgstr "Senserifa skribaĵo:"
 
 #. i18n: file: configuration/settings_appearance.ui:393
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UnderlineLinks)
-#: rc.cpp:403
+#: rc.cpp:400
 msgid "&Underline links"
 msgstr "&Substrekigu ligilojn"
 
-#. i18n: file: configuration/settings_advancedbase.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#. i18n: file: configuration/settings_archive.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::SettingsArchive)
-#: rc.cpp:406 rc.cpp:470
-msgid "Archive"
-msgstr "Arĥivo"
-
-#. i18n: file: configuration/settings_advancedbase.ui:28
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:409
-msgid "Archive backend:"
-msgstr "Arĥiva fonprogramo"
-
-#. i18n: file: configuration/settings_advancedbase.ui:38
-#. i18n: ectx: property (text), widget (QPushButton, pbBackendConfigure)
-#: rc.cpp:412
-msgid "&Configure..."
-msgstr "&Konfiguraciu..."
-
-#. i18n: file: configuration/settings_advancedbase.ui:50
+#. i18n: file: configuration/settings_advancedbase.ui:25
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:415
+#: rc.cpp:403
 msgid "Article List"
 msgstr "Artikola listo"
 
-#. i18n: file: configuration/settings_advancedbase.ui:58
+#. i18n: file: configuration/settings_advancedbase.ui:45
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMarkReadDelay)
-#: rc.cpp:418
+#: rc.cpp:406
 msgid "Mar&k selected article read after"
 msgstr "&Signu elektitajn artikolojn kiel legitaj post"
 
-#. i18n: file: configuration/settings_advancedbase.ui:71
+#. i18n: file: configuration/settings_advancedbase.ui:58
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MarkReadDelay)
-#: rc.cpp:421
+#: rc.cpp:409
 msgid " sec"
 msgstr " sek"
 
-#. i18n: file: configuration/settings_advancedbase.ui:99
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ResetQuickFilterOnNodeChange)
-#: rc.cpp:424
-msgid "Reset search bar when changing feeds"
-msgstr "Malplenigu serĉilejo ŝanĝante fluon"
+#. i18n: file: configuration/settings_advancedbase.ui:89
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: file: configuration/settings_archive.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::SettingsArchive)
+#: rc.cpp:412 rc.cpp:464
+msgid "Archive"
+msgstr "Arĥivo"
+
+#. i18n: file: configuration/settings_advancedbase.ui:109
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:415
+msgid "Archive backend:"
+msgstr "Arĥiva fonprogramo"
+
+#. i18n: file: configuration/settings_advancedbase.ui:119
+#. i18n: ectx: property (text), widget (QPushButton, pbBackendConfigure)
+#: rc.cpp:418
+msgid "&Configure..."
+msgstr "&Konfiguraciu..."
 
 #. i18n: file: configuration/settings_browser.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::SettingsBrowser)
-#: rc.cpp:427
+#: rc.cpp:421
 msgid "ExternalBrowser"
 msgstr "Ekstera retumilo"
 
 #. i18n: file: configuration/settings_browser.ui:28
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CloseButtonOnTabs)
-#: rc.cpp:430
+#: rc.cpp:424
 msgid "Show tab close button on hover"
 msgstr "Montru butonon por fermi la trabon je superŝvebo"
 
@@ -2128,125 +2030,111 @@ msgstr "Montru butonon por fermi la trabon je superŝvebo"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LMBBehaviour)
 #. i18n: file: configuration/settings_browser.ui:130
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MMBBehaviour)
-#: rc.cpp:436 rc.cpp:451
+#: rc.cpp:430 rc.cpp:445
 msgid "Open in Background Tab"
 msgstr "Malfermu en fona trabo"
 
 #. i18n: file: configuration/settings_browser.ui:94
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:442
+#: rc.cpp:436
 msgid "Middle mouse click:"
 msgstr "Mezmusbutona klako"
 
 #. i18n: file: configuration/settings_browser.ui:109
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:445
+#: rc.cpp:439
 msgid "Left mouse click:"
 msgstr "Maldekstromusbutona klako"
 
 #. i18n: file: configuration/settings_browser.ui:145
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:457
+#: rc.cpp:451
 msgid "For External Browsing"
 msgstr "Por ekstera retumado"
 
 #. i18n: file: configuration/settings_browser.ui:160
 #. i18n: ectx: property (text), widget (QLineEdit, kcfg_ExternalBrowserCustomCommand)
-#: rc.cpp:461
+#: rc.cpp:455
 #, no-c-format
 msgid "firefox %u"
 msgstr "firefox %u"
 
-#. i18n: file: configuration/settings_browser.ui:174
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExternalBrowserUseKdeDefault)
-#: rc.cpp:467
-#, fuzzy
-#| msgid "Use default KDE web browser"
-msgid "Use default web browser"
-msgstr "Uzu normalan KDE-retumilon"
-
 #. i18n: file: configuration/settings_archive.ui:26
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:473
+#: rc.cpp:467
 msgid "Default Archive Settings"
 msgstr "Normala arĥiva konfiguracio"
 
 #. i18n: file: configuration/settings_archive.ui:38
 #. i18n: ectx: property (text), widget (QRadioButton, rb_DisableArchiving)
-#: rc.cpp:476
+#: rc.cpp:470
 msgid "Disable archiving"
 msgstr "Malfunkciigu enarĥivigon"
 
 #. i18n: file: configuration/settings_archive.ui:45
 #. i18n: ectx: property (text), widget (QRadioButton, rb_KeepAllArticles)
-#: rc.cpp:479
+#: rc.cpp:473
 msgid "Keep all articles"
 msgstr "Konservu ĉiujn artikolojn"
 
 #. i18n: file: configuration/settings_archive.ui:60
 #. i18n: ectx: property (text), widget (QRadioButton, rb_LimitArticleNumber)
-#: rc.cpp:482
+#: rc.cpp:476
 msgid "Limit feed archive size to:"
 msgstr "Limigu grandecon de la fluarĥivo al:"
 
 #. i18n: file: configuration/settings_archive.ui:96
 #. i18n: ectx: property (text), widget (QRadioButton, rb_LimitArticleAge)
-#: rc.cpp:491
+#: rc.cpp:485
 msgid "Delete articles older than: "
 msgstr "Forviŝu artikolojn pli malnovajn ol: "
 
 #. i18n: file: configuration/settings_archive.ui:127
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DoNotExpireImportantArticles)
-#: rc.cpp:500
+#: rc.cpp:494
 msgid "Do not expire important articles"
 msgstr "Ne forviŝu malnovajn gravajn artikolojn"
 
 #. i18n: file: plugins/onlinesync/ui/configurationdialogadd.ui:27
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:503
+#: rc.cpp:497
 msgid "Type:"
 msgstr ""
 
 #. i18n: file: plugins/onlinesync/ui/configurationdialogadd.ui:52
 #. i18n: ectx: property (text), widget (QLabel, lAccountGoogleReader)
-#: rc.cpp:506
+#: rc.cpp:500
 msgid "Login:"
 msgstr ""
 
 #. i18n: file: plugins/onlinesync/ui/configurationdialogadd.ui:69
 #. i18n: ectx: property (text), widget (QLabel, lPasswordGoogleReader)
-#: rc.cpp:509
+#: rc.cpp:503
 msgid "Password:"
 msgstr ""
 
 #. i18n: file: plugins/onlinesync/ui/configurationdialogadd.ui:87
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:512
+#: rc.cpp:506
 #, fuzzy
 msgid "File:"
 msgstr "&Artikolo"
 
 #. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:18
 #. i18n: ectx: property (text), widget (QLabel, lConfigName)
-#: rc.cpp:515
+#: rc.cpp:509
 msgid "Online reader accounts:"
 msgstr ""
 
 #. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:36
 #. i18n: ectx: property (text), widget (QTreeWidget, list_readerList)
-#: rc.cpp:518
+#: rc.cpp:512
 msgid "Type"
-msgstr ""
-
-#. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:41
-#. i18n: ectx: property (text), widget (QTreeWidget, list_readerList)
-#: rc.cpp:521
-msgid "Description"
 msgstr ""
 
 #. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:51
 #. i18n: ectx: property (text), widget (QPushButton, b_add)
-#: rc.cpp:524
+#: rc.cpp:518
 #, fuzzy
 #| msgid "&Add Feed..."
 msgid "Add..."
@@ -2254,7 +2142,7 @@ msgstr "&Aldonu fluon"
 
 #. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:58
 #. i18n: ectx: property (text), widget (QPushButton, b_update)
-#: rc.cpp:527
+#: rc.cpp:521
 #, fuzzy
 #| msgid "Loading..."
 msgid "Modify..."
@@ -2262,13 +2150,13 @@ msgstr "Ŝarĝante..."
 
 #. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:65
 #. i18n: ectx: property (text), widget (QPushButton, b_remove)
-#: rc.cpp:530
+#: rc.cpp:524
 msgid "Remove"
 msgstr ""
 
 #. i18n: file: plugins/onlinesync/ui/configurationwidget.ui:94
 #. i18n: ectx: property (text), widget (QLabel, lDeletePolicy)
-#: rc.cpp:533
+#: rc.cpp:527
 #, fuzzy
 #| msgid "Delete Feed"
 msgid "Delete feeds"
@@ -2276,64 +2164,64 @@ msgstr "Forviŝi fluon"
 
 #. i18n: file: plugins/onlinesync/onlinesyncsettings.kcfg:9
 #. i18n: ectx: label, entry, group (Foo)
-#: rc.cpp:536
+#: rc.cpp:530
 #, fuzzy
 msgid "Bar Settings"
 msgstr "&Funkciigu etikedojn"
 
 #. i18n: file: plugins/onlinesync/onlinesyncsettings.kcfg:10
 #. i18n: ectx: whatsthis, entry, group (Foo)
-#: rc.cpp:539
+#: rc.cpp:533
 msgid "Bar!"
 msgstr ""
 
-#: plugins/onlinesync/ui/configurationwidget.cpp:43
+#: plugins/onlinesync/ui/configurationwidget.cpp:19
 msgid "Nothing"
 msgstr ""
 
-#: plugins/onlinesync/ui/configurationwidget.cpp:44
+#: plugins/onlinesync/ui/configurationwidget.cpp:20
 msgid "Categories"
 msgstr ""
 
-#: plugins/onlinesync/ui/configurationwidget.cpp:46
+#: plugins/onlinesync/ui/configurationwidget.cpp:22
 msgid "Ask"
 msgstr ""
 
-#: plugins/onlinesync/ui/configurationdialog.cpp:37
+#: plugins/onlinesync/ui/configurationdialog.cpp:13
 msgid "Online Reader Configuration"
 msgstr ""
 
-#: plugins/onlinesync/ui/configurationdialogadd.cpp:43
+#: plugins/onlinesync/ui/configurationdialogadd.cpp:19
 msgid "Modify Online Reader Account"
 msgstr ""
 
-#: plugins/onlinesync/ui/configurationdialogadd.cpp:44
+#: plugins/onlinesync/ui/configurationdialogadd.cpp:20
 msgid "Google Reader"
 msgstr ""
 
-#: plugins/onlinesync/sync/googlereader.cpp:275
+#: plugins/onlinesync/sync/googlereader.cpp:265
 msgid "Authentication failed, synchronization aborted."
 msgstr ""
 
-#: plugins/onlinesync/sync/feedsync.cpp:161
+#: plugins/onlinesync/sync/feedsync.cpp:137
 msgid ""
 "Some categories and feeds have been marked for removal. Do you want to "
 "delete them?"
 msgstr ""
 
-#: plugins/onlinesync/sync/feedsync.cpp:163
+#: plugins/onlinesync/sync/feedsync.cpp:139
 msgid "Remove nothing"
 msgstr ""
 
-#: plugins/onlinesync/sync/feedsync.cpp:164
+#: plugins/onlinesync/sync/feedsync.cpp:140
 msgid "Remove only categories"
 msgstr ""
 
-#: plugins/onlinesync/sync/feedsync.cpp:165
+#: plugins/onlinesync/sync/feedsync.cpp:141
 msgid "Remove feeds"
 msgstr ""
 
-#: plugins/onlinesync/sync/feedsync.cpp:217
+#: plugins/onlinesync/sync/feedsync.cpp:193
 msgid "An error occurred, synchronization aborted."
 msgstr ""
 
@@ -2379,8 +2267,79 @@ msgstr "Ŝarĝante..."
 msgid "Metakit"
 msgstr "Metakit-konfiguracio"
 
-#~ msgid "Overwrite"
-#~ msgstr "Anstataŭigu"
+#, fuzzy
+#~| msgid "<b>Homepage:</b> <a href=\"%1\">%2</a>"
+#~ msgid "<a href=\"%1\">%2</a> %3"
+#~ msgstr "<b>Retpaĝo:</b> <a href=\"%1\">%2</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>The standard feed list is corrupted (invalid XML). Could not create a "
+#~ "backup!</p></qt>"
+#~ msgstr ""
+#~ "<qt>La normala flulisto estas rompita (nevalida XML). Rezerva kopio estis "
+#~ "kreita: <p><b>%2</b></p></qt>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>The standard feed list is corrupted (no valid OPML). A backup of the "
+#~ "previous list was created:<p><b>%1</b></p></qt>"
+#~ msgstr ""
+#~ "<qt>La kutima flulisto estas rompita (nevalida OPML). Rezerva kopio estis "
+#~ "kreita:<p><b>%2</b></p></qt>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>The standard feed list is corrupted (no valid OPML). Could not create "
+#~ "a backup!></p></qt>"
+#~ msgstr ""
+#~ "<qt>La kutima flulisto estas rompita (nevalida OPML). Rezerva kopio estis "
+#~ "kreita:<p><b>%2</b></p></qt>"
+
+#, fuzzy
+#~| msgid "Feeds"
+#~ msgctxt "Feedlist's column header"
+#~ msgid "Feeds"
+#~ msgstr "Fluoj"
+
+#, fuzzy
+#~| msgid "Date"
+#~ msgctxt "Articlelist's column header"
+#~ msgid "Date"
+#~ msgstr "Dato"
+
+#, fuzzy
+#~| msgid "Author"
+#~ msgctxt "Articlelist's column header"
+#~ msgid "Author"
+#~ msgstr "Aŭtoro"
+
+#, fuzzy
+#~| msgid "Unread"
+#~ msgctxt "Unread articles filter"
+#~ msgid "Unread"
+#~ msgstr "Nelegita"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt><p>Closing the main window will keep Akregator running in the system "
+#~| "tray. Use 'Quit' from the 'File' menu to quit the application.</"
+#~| "p><p><center><img source=\"systray_shot\"></center></p></qt>"
+#~ msgid ""
+#~ "<qt><p>Closing the main window will keep Akregator running in the system "
+#~ "tray. Use 'Quit' from the 'File' menu to quit the application.</p></qt>"
+#~ msgstr ""
+#~ "<qt><p>Post fermo de la ĉefa fenestro Akregator daŭre aktivas en la "
+#~ "sistemfako. Uzu 'Ĉesu' de la 'Dosiero'-menuo por ĉesigi la programon.</"
+#~ "p><p><center><img source=\"systray_shot\"></center></p></qt>"
+
+#~ msgid "Reset search bar when changing feeds"
+#~ msgstr "Malplenigu serĉilejo ŝanĝante fluon"
+
+#, fuzzy
+#~| msgid "Use default KDE web browser"
+#~ msgid "Use default web browser"
+#~ msgstr "Uzu normalan KDE-retumilon"
 
 #~ msgid "Article"
 #~ msgstr "Artikolo"
