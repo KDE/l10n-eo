@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwenview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-01-23 10:14+0100\n"
+"POT-Creation-Date: 2009-01-28 09:14+0100\n"
 "PO-Revision-Date: 2007-11-27 20:43+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -263,18 +263,32 @@ msgctxt "@action:inmenu"
 msgid "Filter by Tag"
 msgstr "&Vidi"
 
-#: app/gvcore.cpp:134
+#: app/gvcore.cpp:77
+#, fuzzy
+#| msgid "No document selected"
+msgctxt "@info"
+msgid "No image format selected."
+msgstr "Neniu dokumento elektita"
+
+#: app/gvcore.cpp:90
+#, fuzzy, kde-format
+#| msgid "Gwenview can't save images in '%1' format."
+msgctxt "@info"
+msgid "Gwenview cannot save images as %1."
+msgstr "Gwenview ne kapablas konservi bildojn per la '%1' formato."
+
+#: app/gvcore.cpp:174
 #, fuzzy
 #| msgid "Saving..."
 msgctxt "@info:progress saving all image changes"
 msgid "Saving..."
 msgstr "Konservante..."
 
-#: app/gvcore.cpp:135
+#: app/gvcore.cpp:175
 msgid "&Stop"
 msgstr "&Halti"
 
-#: app/gvcore.cpp:168
+#: app/gvcore.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid "One document could not be saved:"
@@ -282,7 +296,7 @@ msgid_plural "%1 documents could not be saved:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/gvcore.cpp:175
+#: app/gvcore.cpp:215
 #, kde-format
 msgctxt ""
 "@info %1 is the name of the document which failed to save, %2 is the reason "
@@ -290,37 +304,23 @@ msgctxt ""
 msgid "<filename>%1</filename>: %2"
 msgstr ""
 
-#: app/gvcore.cpp:193
+#: app/gvcore.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "<b>Saving <filename>%1</filename> failed:</b><br>%2"
 msgstr ""
 
-#: app/gvcore.cpp:203
+#: app/gvcore.cpp:243
 msgid "Save using another format"
 msgstr "Konservi per alia formato"
 
-#: app/gvcore.cpp:206
+#: app/gvcore.cpp:246
 #, fuzzy, kde-format
 #| msgid "Gwenview can't save images in '%1' format."
 msgid "Gwenview cannot save images in '%1' format."
 msgstr "Gwenview ne kapablas konservi bildojn per la '%1' formato."
 
-#: app/gvcore.cpp:236
-#, fuzzy
-#| msgid "No document selected"
-msgctxt "@info"
-msgid "No image format selected."
-msgstr "Neniu dokumento elektita"
-
-#: app/gvcore.cpp:249
-#, fuzzy, kde-format
-#| msgid "Gwenview can't save images in '%1' format."
-msgctxt "@info"
-msgid "Gwenview cannot save images as %1."
-msgstr "Gwenview ne kapablas konservi bildojn per la '%1' formato."
-
-#: app/gvcore.cpp:259
+#: app/gvcore.cpp:268
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -328,7 +328,7 @@ msgid ""
 "Are you sure you want to overwrite it?"
 msgstr ""
 
-#: app/gvcore.cpp:316
+#: app/gvcore.cpp:325
 #, fuzzy
 #| msgid "Gwenview can't save images in '%1' format."
 msgctxt "@info"
@@ -396,23 +396,39 @@ msgstr "Meta-informo"
 #, fuzzy, kde-format
 #| msgid "%1 files selected"
 msgctxt "@label"
-msgid "%1 files selected"
-msgstr "%1 dosieroj elektitaj"
+msgid "%1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "%1 dosieroj elektitaj"
+msgstr[1] "%1 dosieroj elektitaj"
 
 #: app/infocontextmanageritem.cpp:220
 #, fuzzy, kde-format
 #| msgid "%1 folders selected"
 msgctxt "@label"
-msgid "One folder selected"
+msgid "%1 folder selected"
 msgid_plural "%1 folders selected"
 msgstr[0] "%1 dosierujoj elektitaj"
 msgstr[1] "%1 dosierujoj elektitaj"
 
-#: app/infocontextmanageritem.cpp:222
+#: app/infocontextmanageritem.cpp:223
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: app/infocontextmanageritem.cpp:223
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: app/infocontextmanageritem.cpp:223
 #, fuzzy, kde-format
 #| msgid "%1 folders and %2 files selected"
-msgctxt "@label"
-msgid "%1 folders and %2 files selected"
+msgctxt "@label. The two parameters are strings like '2 folders' and '1 file'."
+msgid "%1 and %2 selected"
 msgstr "%1 dosierujoj kaj %2 dosieroj elektitaj"
 
 #: app/imagemetainfodialog.cpp:75
@@ -845,12 +861,12 @@ msgctxt "@info"
 msgid "Gwenview cannot display documents of type %1."
 msgstr "Gwenview ne kapablas konservi bildojn per la '%1' formato."
 
-#: lib/document/loadingdocumentimpl.cpp:331
+#: lib/document/loadingdocumentimpl.cpp:333
 msgctxt "@info"
 msgid "Loading meta information failed."
 msgstr ""
 
-#: lib/document/loadingdocumentimpl.cpp:358
+#: lib/document/loadingdocumentimpl.cpp:360
 #, fuzzy
 #| msgid "One image modified"
 #| msgid_plural "%1 images modified"
