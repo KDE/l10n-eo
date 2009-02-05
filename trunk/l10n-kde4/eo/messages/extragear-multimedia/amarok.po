@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-02-04 12:11+0100\n"
+"POT-Creation-Date: 2009-02-05 11:21+0100\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -258,7 +258,7 @@ msgstr "Loka kolekto"
 #: browsers/collectionbrowser/CollectionTreeItem.cpp:153
 #: playlist/view/graphic/PlaylistGraphicsItem.cpp:343
 #: collectionscanner/CollectionScanner.cpp:663
-#: covermanager/CoverViewDialog.h:45 covermanager/CoverManager.cpp:869
+#: covermanager/CoverViewDialog.h:45 covermanager/CoverManager.cpp:852
 msgid "Various Artists"
 msgstr "Diversaj artistoj"
 
@@ -324,7 +324,7 @@ msgstr "Fluo"
 
 #: collection/sqlcollection/SqlMeta.cpp:371
 #: services/lastfm/meta/LastFmMeta.cpp:149 covermanager/CoverViewDialog.h:44
-#: covermanager/CoverManager.cpp:869
+#: covermanager/CoverManager.cpp:852
 #, kde-format
 msgid "%1 - %2"
 msgstr "%1 - %2"
@@ -497,6 +497,7 @@ msgstr "Envi&cigi la trakon"
 
 #: context/applets/albums/AlbumsView.cpp:112
 #: browsers/filebrowser/MyDirOperator.cpp:263
+#: playlist/view/listview/PrettyListView.cpp:436
 #: playlist/view/PlaylistViewCommon.cpp:81
 #, fuzzy
 #| msgid "Edit Track Information"
@@ -6431,6 +6432,13 @@ msgstr "Etikedoj"
 msgid "User"
 msgstr "Uzanto"
 
+#: services/lastfm/LastFmService.cpp:442 services/lastfm/LastFmService.cpp:455
+#, fuzzy, kde-format
+#| msgid "Recently Loved Tracks"
+msgctxt "As in, lastfm"
+msgid "Loved Track: %1"
+msgstr "Freŝdate ŝatitaj trakoj"
+
 #: services/lastfm/LastFmServiceSettings.cpp:84
 #, fuzzy
 #| msgid "Connecting..."
@@ -6973,29 +6981,44 @@ msgid ""
 "artists"
 msgstr ""
 
-#: playlist/view/listview/LayoutManager.cpp:356
+#: playlist/view/listview/LayoutManager.cpp:357
 #, kde-format
 msgid "The layout '%1' is one of the default layouts and cannot be deleted."
 msgstr ""
 
-#: playlist/view/listview/LayoutManager.cpp:356
+#: playlist/view/listview/LayoutManager.cpp:357
 msgid "Cannot Delete Default Layouts"
 msgstr ""
 
+#: playlist/view/listview/PrettyListView.cpp:404
 #: playlist/view/PlaylistViewCommon.cpp:54
 #: playlist/view/PlaylistViewCommon.cpp:63
 msgid "&Play"
 msgstr "&Ludi"
 
+#: playlist/view/listview/PrettyListView.cpp:407
 #: playlist/view/PlaylistViewCommon.cpp:54
 #, fuzzy
 #| msgid "Pause"
 msgid "&Pause"
 msgstr "Paŭzi"
 
+#: playlist/view/listview/PrettyListView.cpp:416
+#: playlist/view/listview/PrettyListView.cpp:419
 #: playlist/view/PlaylistViewCommon.cpp:72
 msgid "Queue Track"
 msgstr "Envicigi trakon"
+
+#: playlist/view/listview/PrettyListView.cpp:428
+#, fuzzy
+#| msgid "Stop Playing After Track"
+msgid "Stop Playing After This Track"
+msgstr "Halti la ludadon post la trako"
+
+#: playlist/view/listview/PrettyListView.cpp:432
+#: playlist/view/PlaylistViewCommon.cpp:79
+msgid "Remove From Playlist"
+msgstr "Forigi el la ludlisto"
 
 #: playlist/view/PlaylistViewCommon.cpp:74
 #, fuzzy
@@ -7006,10 +7029,6 @@ msgstr "&Malvicigi trakon"
 #: playlist/view/PlaylistViewCommon.cpp:76
 msgid "Stop Playing After Track"
 msgstr "Halti la ludadon post la trako"
-
-#: playlist/view/PlaylistViewCommon.cpp:79
-msgid "Remove From Playlist"
-msgstr "Forigi el la ludlisto"
 
 #: playlist/PlaylistDefines.h:68
 msgid "placeholder"
@@ -7327,7 +7346,7 @@ msgstr[1] "%1 trakoj"
 
 #: statusbar/ProgressBar.cpp:45 statusbar/CompoundProgressBar.cpp:72
 #: statusbar/CompoundProgressBar.cpp:144 statusbar/CompoundProgressBar.cpp:179
-#: covermanager/CoverManager.cpp:261
+#: covermanager/CoverManager.cpp:260
 msgid "Abort"
 msgstr "Ĉesigi"
 
@@ -8010,7 +8029,7 @@ msgstr ""
 msgid "Albums By"
 msgstr "Albumoj de"
 
-#: covermanager/CoverManager.cpp:113 covermanager/CoverManager.cpp:358
+#: covermanager/CoverManager.cpp:113 covermanager/CoverManager.cpp:357
 msgid "All Artists"
 msgstr "Ĉiuj artistoj"
 
@@ -8048,89 +8067,89 @@ msgstr "Lokaĵaro de Amazon"
 msgid "Fetch Missing Covers"
 msgstr "Elpreni la mankantajn jaketojn"
 
-#: covermanager/CoverManager.cpp:434
+#: covermanager/CoverManager.cpp:433
 msgid "Loading Thumbnails..."
 msgstr "Ŝargante la miniaturojn..."
 
-#: covermanager/CoverManager.cpp:713
+#: covermanager/CoverManager.cpp:696
 msgctxt "The fetching is done."
 msgid "Finished."
 msgstr "Finiĝis."
 
-#: covermanager/CoverManager.cpp:715
+#: covermanager/CoverManager.cpp:698
 #, kde-format
 msgid " Cover not found"
 msgid_plural " <b>%1</b> covers not found"
 msgstr[0] " Kovrilo ne trovita"
 msgstr[1] " <b>%1</b> kovriloj ne trovitaj"
 
-#: covermanager/CoverManager.cpp:728
+#: covermanager/CoverManager.cpp:711
 #, kde-format
 msgid "Fetching cover for %1..."
 msgstr "Elprenante jaketon por %1..."
 
-#: covermanager/CoverManager.cpp:730
+#: covermanager/CoverManager.cpp:713
 #, kde-format
 msgid "Fetching cover for %1 - %2..."
 msgstr "Elprenante jaketon por %1 - %2..."
 
-#: covermanager/CoverManager.cpp:737
+#: covermanager/CoverManager.cpp:720
 #, kde-format
 msgid "Fetching 1 cover: "
 msgid_plural "Fetching <b>%1</b> covers... : "
 msgstr[0] "Elprenante 1 jaketon:"
 msgstr[1] "Elprenante <b>%1</b> jaketojn... :"
 
-#: covermanager/CoverManager.cpp:739
+#: covermanager/CoverManager.cpp:722
 #, kde-format
 msgid "1 fetched"
 msgid_plural "%1 fetched"
 msgstr[0] "%1 venigita"
 msgstr[1] "%1 venigitaj"
 
-#: covermanager/CoverManager.cpp:743
+#: covermanager/CoverManager.cpp:726
 msgid " - "
 msgstr " - "
 
-#: covermanager/CoverManager.cpp:744
+#: covermanager/CoverManager.cpp:727
 #, kde-format
 msgid "1 not found"
 msgid_plural "%1 not found"
 msgstr[0] "1 ne trovita"
 msgstr[1] "%1 ne trovitaj"
 
-#: covermanager/CoverManager.cpp:747
+#: covermanager/CoverManager.cpp:730
 msgid "Connecting..."
 msgstr "Konektante..."
 
-#: covermanager/CoverManager.cpp:772
+#: covermanager/CoverManager.cpp:755
 #, kde-format
 msgid "1 result for \"%2\""
 msgid_plural "%1 results for \"%2\""
 msgstr[0] "1 rezulto por \"%2\""
 msgstr[1] "%1 rezultoj por \"%2\""
 
-#: covermanager/CoverManager.cpp:775
+#: covermanager/CoverManager.cpp:758
 #, kde-format
 msgid "1 album"
 msgid_plural "%1 albums"
 msgstr[0] "%1 albumo"
 msgstr[1] "%1 albumoj"
 
-#: covermanager/CoverManager.cpp:781
+#: covermanager/CoverManager.cpp:764
 msgid " by "
 msgstr " de"
 
-#: covermanager/CoverManager.cpp:786
+#: covermanager/CoverManager.cpp:769
 #, kde-format
 msgid " - ( <b>%1</b> without cover )"
 msgstr " - ( <b>%1</b> sen jaketo )"
 
-#: covermanager/CoverManager.cpp:832
+#: covermanager/CoverManager.cpp:815
 msgid "Cover Image"
 msgstr "Jaketa bildo"
 
-#: covermanager/CoverManager.cpp:890
+#: covermanager/CoverManager.cpp:873
 msgid "No Artist"
 msgstr "Nenia artisto"
 
