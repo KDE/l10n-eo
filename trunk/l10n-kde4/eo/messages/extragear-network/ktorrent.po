@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-23 10:28+0100\n"
+"POT-Creation-Date: 2009-03-24 11:03+0100\n"
 "PO-Revision-Date: 2008-01-10 13:22-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -5536,13 +5536,13 @@ msgstr ""
 
 #. i18n: file: ktorrent/advancedpref.ui:229
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1180
+#: rc.cpp:1180 plugins/stats/SpdTabPage.cc:63 plugins/stats/SpdTabPage.cc:64
 msgid "Current speed"
 msgstr "Nuna rapido"
 
 #. i18n: file: ktorrent/advancedpref.ui:234
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: rc.cpp:1183
+#: rc.cpp:1183 plugins/stats/SpdTabPage.cc:66 plugins/stats/SpdTabPage.cc:67
 msgid "Average speed"
 msgstr "Averaĝa rapido"
 
@@ -6834,49 +6834,50 @@ msgstr "Limigo"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:1680
+#: rc.cpp:1680 plugins/stats/SpdTabPage.cc:72
 msgid "Average from leechers"
 msgstr "Averaĝa de ricevantoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:207
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: rc.cpp:1683
+#: rc.cpp:1683 plugins/stats/SpdTabPage.cc:73
 msgid "Average to leechers"
 msgstr "Averaĝa al ricevantoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:242
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:1686
+#: rc.cpp:1686 plugins/stats/SpdTabPage.cc:74
 msgid "Average from seeds"
 msgstr "Averaĝa de fontoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:277
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: rc.cpp:1689
+#: rc.cpp:1689 plugins/stats/SpdTabPage.cc:75
 msgid "From leechers"
 msgstr "De ricevantoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:312
 #. i18n: ectx: property (text), widget (QLabel, label_22)
-#: rc.cpp:1692
+#: rc.cpp:1692 plugins/stats/SpdTabPage.cc:76
 msgid "From seeds"
 msgstr "De fontoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:512
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: rc.cpp:1710
+#: rc.cpp:1710 plugins/stats/ConnsTabPage.cc:57
 msgid "Leechers connected"
 msgstr "Ricevantoj konektitaj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:547
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: rc.cpp:1713
+#: rc.cpp:1713 plugins/stats/ConnsTabPage.cc:61
+#: plugins/stats/ConnsTabPage.cc:106
 msgid "Leechers in swarms"
 msgstr "Ricevantoj en torentaroj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:582
 #. i18n: ectx: property (text), widget (QLabel, label_25)
-#: rc.cpp:1716
+#: rc.cpp:1716 plugins/stats/ConnsTabPage.cc:64
 msgid "Seeds connected"
 msgstr "Fontoj konektitaj"
 
@@ -6888,13 +6889,13 @@ msgstr "Fontoj en torentaroj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:652
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: rc.cpp:1722
+#: rc.cpp:1722 plugins/stats/ConnsTabPage.cc:71
 msgid "Average leechers connected per torrent"
 msgstr "Averaĝaj ricevantoj konektitaj por ĉiu torento:"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:687
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: rc.cpp:1725
+#: rc.cpp:1725 plugins/stats/ConnsTabPage.cc:73
 msgid "Average seeds connected per torrent"
 msgstr "Averaĝaj fontoj konektitaj por ĉiu torento:"
 
@@ -6912,19 +6913,19 @@ msgstr "Averaĝaj fontoj konektitaj por ĉiu aktiva torento"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:805
 #. i18n: ectx: property (text), widget (QLabel, label_31)
-#: rc.cpp:1737
+#: rc.cpp:1737 plugins/stats/ConnsTabPage.cc:83
 msgid "Nodes"
 msgstr "Nodoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:844
 #. i18n: ectx: property (text), widget (QLabel, label_32)
-#: rc.cpp:1740
+#: rc.cpp:1740 plugins/stats/ConnsTabPage.cc:84
 msgid "Tasks"
 msgstr "Taskoj"
 
 #. i18n: file: plugins/stats/DisplaySettings.ui:903
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:1743
+#: rc.cpp:1743 plugins/stats/DisplaySettingsPage.cc:28
 msgid "Display"
 msgstr "Montri"
 
@@ -8523,6 +8524,114 @@ msgstr "Ŝargas txt-dosieron..."
 msgid "There are no IP addresses to convert in %1"
 msgstr ""
 
+#: plugins/stats/SpdTabPage.cc:69 plugins/stats/SpdTabPage.cc:70
+#, fuzzy
+#| msgid "Speed Limits"
+msgid "Speed limit"
+msgstr "Limigo de rapido"
+
+#: plugins/stats/SettingsPage.cc:27
+#, fuzzy
+#| msgid "Statistics Plugin"
+msgid "Statistics"
+msgstr "Statistika kromprogrameto"
+
+#: plugins/stats/SettingsPage.cc:48
+#, fuzzy, kde-format
+#| msgid "%1 KB/s"
+msgid "(= %1 ms)"
+msgstr "%1 KB/s"
+
+#: plugins/stats/drawer/ChartDrawerData.cc:25
+#, fuzzy
+#| msgid "Unknown client"
+msgid "Unknown"
+msgstr "Nekonata kliento"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:323
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:383
+msgid "Save as image…"
+msgstr ""
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:327
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:387
+#, fuzzy
+#| msgid "Rescan"
+msgid "Rescale"
+msgstr "Reserĉi"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:331
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:391
+#, fuzzy
+#| msgid "Resume"
+msgid "Reset"
+msgstr "Daŭrigi"
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:343
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:403
+msgid "Select path to save image…"
+msgstr ""
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:530
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:340
+msgid ""
+"<h1 align='center' style='font-size: large; text-decoration: "
+"underline'>Legend:</h1><ul type='square'>"
+msgstr ""
+
+#: plugins/stats/drawer/PlainChartDrawer.cc:534
+#: plugins/stats/drawer/KPlotWgtDrawer.cc:344
+#, kde-format
+msgid ""
+"<li><span style='background-color: %1; font-size: 14px; font-family: "
+"monospace'>&nbsp;&nbsp;</span>&nbsp;—&nbsp;%2</li>"
+msgstr ""
+
+#: plugins/stats/drawer/ChartDrawer.cc:26
+#, fuzzy
+#| msgid " KB/s"
+msgid "KiB/s"
+msgstr " KB/s"
+
+#: plugins/stats/StatsPlugin.cc:51
+#, fuzzy
+#| msgid "Speed Limits"
+msgid "Speed charts"
+msgstr "Limigo de rapido"
+
+#: plugins/stats/StatsPlugin.cc:51
+msgid "Displays charts about download and upload speed"
+msgstr ""
+
+#: plugins/stats/StatsPlugin.cc:52
+#, fuzzy
+#| msgid "Connections"
+msgid "Connections charts"
+msgstr "Konektoj"
+
+#: plugins/stats/StatsPlugin.cc:52
+msgid "Displays charts about connections"
+msgstr ""
+
+#: plugins/stats/ConnsTabPage.cc:68 plugins/stats/ConnsTabPage.cc:120
+#: plugins/stats/ConnsTabPage.cc:122
+#, fuzzy
+#| msgid "Seeds  in swarms"
+msgid "Seeds in swarms"
+msgstr "Fontoj en torentaroj"
+
+#: plugins/stats/ConnsTabPage.cc:75
+#, fuzzy
+#| msgid "Average leechers connected per torrent"
+msgid "Average leechers connected per running torrent"
+msgstr "Averaĝaj ricevantoj konektitaj por ĉiu torento:"
+
+#: plugins/stats/ConnsTabPage.cc:77
+#, fuzzy
+#| msgid "Avg. seeds connected per running torrent"
+msgid "Average seeds connected per running torrent"
+msgstr "Averaĝaj fontoj konektitaj por ĉiu aktiva torento"
+
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
 #: plugins/shutdown/shutdowntorrentmodel.cpp:235
 #, fuzzy
@@ -9359,7 +9468,7 @@ msgstr "Diska en/eligo:"
 msgid "Not connected"
 msgstr "Fontoj konektitaj"
 
-#: libbtcore/download/webseed.cpp:301 libbtcore/download/webseed.cpp:512
+#: libbtcore/download/webseed.cpp:301 libbtcore/download/webseed.cpp:515
 #, fuzzy
 #| msgid "Notice"
 msgid "Not in use"
@@ -9914,9 +10023,6 @@ msgstr "Ne povas malfermi dosieron : %1 : %2"
 
 #~ msgid "Select interface:"
 #~ msgstr "Elekti interfacon:"
-
-#~ msgid "Resume"
-#~ msgstr "Daŭrigi"
 
 #~ msgid "Php executable path:"
 #~ msgstr "Php-plenumebla vojo:"
