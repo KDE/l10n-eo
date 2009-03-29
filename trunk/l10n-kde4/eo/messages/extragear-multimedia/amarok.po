@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-03-28 11:16+0100\n"
+"POT-Creation-Date: 2009-03-29 11:44+0200\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #: mac/GrowlInterface.cpp:34 context/engines/current/CurrentEngine.cpp:112
-#: context/applets/currenttrack/CurrentTrack.cpp:129 widgets/Osd.cpp:558
+#: context/applets/currenttrack/CurrentTrack.cpp:91 widgets/Osd.cpp:558
 msgid "No track playing"
 msgstr "Neniu trako legata"
 
@@ -438,32 +438,44 @@ msgstr "Aldoni apleton"
 msgid "Lyrics data could not be parsed"
 msgstr "Tiu objekto ne kreeblis."
 
-#. i18n: file: dialogs/TagDialogBase.ui:502
-#. i18n: ectx: property (text), widget (QLabel, scoreLabel)
-#: context/applets/currenttrack/CurrentTrack.cpp:86
-#: context/applets/currenttrack/CurrentTrack.cpp:90
-#: context/applets/currenttrack/CurrentTrack.cpp:400
-#: context/applets/currenttrack/CurrentTrack.cpp:404 dialogs/TagDialog.cpp:901
-#: rc.cpp:828
-msgid "Score:"
-msgstr "Poentoj:"
-
-#: context/applets/currenttrack/CurrentTrack.cpp:87
-#: context/applets/currenttrack/CurrentTrack.cpp:91 dialogs/TagDialog.cpp:905
+#: context/applets/currenttrack/CurrentTrack.cpp:70
 #, fuzzy
-#| msgid "Play Count"
-msgid "Play Count:"
-msgstr "Luda fojo"
+#| msgid "Modify"
+msgctxt "What artist is this track by"
+msgid "By"
+msgstr "Modifi"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:88
-#: context/applets/currenttrack/CurrentTrack.cpp:92
-#: context/applets/currenttrack/CurrentTrack.cpp:402
-#: context/applets/currenttrack/CurrentTrack.cpp:406 dialogs/TagDialog.cpp:910
-msgctxt "a single item (singular)"
-msgid "Last Played:"
-msgstr "Laste ludita:"
+#: context/applets/currenttrack/CurrentTrack.cpp:71
+msgctxt "What album is this track on"
+msgid "On"
+msgstr ""
 
-#: context/applets/currenttrack/CurrentTrack.cpp:139
+#: context/applets/currenttrack/CurrentTrack.cpp:98
+#: playlist/PlaylistDefines.h:88
+#, fuzzy
+#| msgid "Playcount"
+msgid "Play count"
+msgstr "Ludfojo"
+
+#: context/applets/currenttrack/CurrentTrack.cpp:99
+#: context/widgets/TrackWidget.cpp:38 Systray.cpp:147
+#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:253
+#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:697
+#: playlist/PlaylistDefines.h:91 playlist/PlaylistModel.cpp:702
+#: widgets/SmartPlaylistEditor.cpp:186
+msgid "Score"
+msgstr "Poentoj"
+
+#: context/applets/currenttrack/CurrentTrack.cpp:100 Systray.cpp:177
+#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:258
+#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:702
+#, fuzzy
+#| msgctxt "Column name"
+#| msgid "Last Played"
+msgid "Last Played"
+msgstr "Lasta ludita"
+
+#: context/applets/currenttrack/CurrentTrack.cpp:106
 #: playlist/PlaylistDefines.h:85
 #, fuzzy
 #| msgctxt "Column name"
@@ -471,16 +483,11 @@ msgstr "Laste ludita:"
 msgid "Last played"
 msgstr "Lasta ludita"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:140
+#: context/applets/currenttrack/CurrentTrack.cpp:107
 #, fuzzy
 #| msgid "Favorite Tracks"
 msgid "Favorite tracks"
 msgstr "Favorataj trakoj"
-
-#: context/applets/currenttrack/CurrentTrack.cpp:401
-#: context/applets/currenttrack/CurrentTrack.cpp:405
-msgid "Playcount:"
-msgstr "Ludfojo:"
 
 #: context/applets/albums/AlbumsView.cpp:109 Systray.cpp:219
 #: browsers/CollectionTreeView.cpp:589
@@ -495,7 +502,6 @@ msgid "&Append to Playlist"
 msgstr "&Aligi al la ludlisto"
 
 #: context/applets/albums/AlbumsView.cpp:110
-#: browsers/CollectionTreeView.cpp:597
 #: browsers/filebrowser/MyDirOperator.cpp:274
 #: browsers/playlistbrowser/UserPlaylistModel.cpp:388
 #: browsers/playlistbrowser/PodcastModel.cpp:705
@@ -632,14 +638,6 @@ msgstr ""
 #| msgid "&Install Script"
 msgid "Install Applets"
 msgstr "&Instali skripton"
-
-#: context/widgets/TrackWidget.cpp:38 Systray.cpp:147
-#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:253
-#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:697
-#: playlist/PlaylistDefines.h:91 playlist/PlaylistModel.cpp:702
-#: widgets/SmartPlaylistEditor.cpp:186
-msgid "Score"
-msgstr "Poentoj"
 
 #: context/widgets/TrackWidget.cpp:117
 #, fuzzy, kde-format
@@ -1459,11 +1457,23 @@ msgstr "Grandeco:"
 msgid "Format:"
 msgstr "Formato:"
 
+#. i18n: file: dialogs/TagDialogBase.ui:502
+#. i18n: ectx: property (text), widget (QLabel, scoreLabel)
+#: dialogs/TagDialog.cpp:901 rc.cpp:828
+msgid "Score:"
+msgstr "Poentoj:"
+
 #. i18n: file: dialogs/TagDialogBase.ui:531
 #. i18n: ectx: property (text), widget (QLabel, ratingLabel)
 #: dialogs/TagDialog.cpp:903 rc.cpp:831
 msgid "Rating:"
 msgstr "Noto:"
+
+#: dialogs/TagDialog.cpp:905
+#, fuzzy
+#| msgid "Play Count"
+msgid "Play Count:"
+msgstr "Luda fojo"
 
 #: dialogs/TagDialog.cpp:908
 msgid "First Played:"
@@ -1473,6 +1483,11 @@ msgstr "Unue ludita:"
 msgctxt "When this track was first played"
 msgid "Never"
 msgstr "Neniam"
+
+#: dialogs/TagDialog.cpp:910
+msgctxt "a single item (singular)"
+msgid "Last Played:"
+msgstr "Laste ludita:"
 
 #: dialogs/TagDialog.cpp:911
 msgctxt "When this track was last played"
@@ -2079,14 +2094,6 @@ msgstr "Noto"
 msgid "Play Count"
 msgstr "Luda fojo"
 
-#: Systray.cpp:177 browsers/playlistbrowser/DynamicBiasWidgets.cpp:258
-#: browsers/playlistbrowser/DynamicBiasWidgets.cpp:702
-#, fuzzy
-#| msgctxt "Column name"
-#| msgid "Last Played"
-msgid "Last Played"
-msgstr "Lasta ludita"
-
 #: Systray.cpp:182 browsers/playlistbrowser/DynamicBiasWidgets.cpp:254
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:698
 #: playlist/PlaylistDefines.h:86 playlist/PlaylistHeader.cpp:42
@@ -2578,6 +2585,13 @@ msgstr "Kolekto"
 #| msgid "Configure..."
 msgid "More..."
 msgstr "Agordi..."
+
+#: browsers/CollectionTreeView.cpp:597
+#, fuzzy
+#| msgid "&Save Playlist As..."
+msgctxt "Replace the currently loaded tracks with these"
+msgid "&Overwrite Playlist"
+msgstr "Kon&servi la ludliston kiel..."
 
 #: browsers/CollectionTreeView.cpp:623
 #, fuzzy
@@ -7491,12 +7505,6 @@ msgstr "trakoj"
 msgid "Mood"
 msgstr "Humoro"
 
-#: playlist/PlaylistDefines.h:88
-#, fuzzy
-#| msgid "Playcount"
-msgid "Play count"
-msgstr "Ludfojo"
-
 #: playlist/PlaylistDefines.h:90
 #, fuzzy
 #| msgid "Samplerate:"
@@ -8534,6 +8542,9 @@ msgstr "Jaketa bildo"
 #: covermanager/CoverManager.cpp:873
 msgid "No Artist"
 msgstr "Nenia artisto"
+
+#~ msgid "Playcount:"
+#~ msgstr "Ludfojo:"
 
 #, fuzzy
 #~| msgctxt "The amount of tracks being edited"
