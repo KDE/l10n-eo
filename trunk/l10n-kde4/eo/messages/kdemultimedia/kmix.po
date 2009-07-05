@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmix 1.0pre2\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-06-20 12:15+0200\n"
+"POT-Creation-Date: 2009-07-05 11:43+0200\n"
 "PO-Revision-Date: 2002-07-12 13:11GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -36,21 +36,24 @@ msgstr "Elektu miksilon"
 msgid "Select the channel representing the master volume:"
 msgstr ""
 
-#: dialogviewconfiguration.cpp:42 kmixprefdlg.cpp:41
+#: dialogviewconfiguration.cpp:152 kmixprefdlg.cpp:41
 msgid "Configure"
 msgstr ""
 
-#: dialogviewconfiguration.cpp:58
+#: dialogviewconfiguration.cpp:167
 msgid "Configuration of the channels."
 msgstr ""
 
-#: dialogviewconfiguration.cpp:73
-msgid "Show/Hide"
-msgstr ""
+#: dialogviewconfiguration.cpp:228
+#, fuzzy
+#| msgid "Available mixers:"
+msgid "Available channels"
+msgstr "Uzeblaj miksiloj:"
 
-#: dialogviewconfiguration.cpp:75
-msgid "Split"
-msgstr ""
+#: dialogviewconfiguration.cpp:232
+#, fuzzy
+msgid "Visible channels"
+msgstr "&Dividu kanalojn"
 
 #: kmixapplet.cpp:94
 msgid "Configure - Mixer Applet"
@@ -92,46 +95,51 @@ msgstr "Uzeblaj miksiloj:"
 msgid "Invalid mixer entered."
 msgstr "Nevalida miksilo donita."
 
-#: kmix.cpp:119
+#: kmix.cpp:120
 msgid "Hardware &Information"
 msgstr ""
 
-#: kmix.cpp:122 kmixdockwidget.cpp:382
+#: kmix.cpp:123 kmixdockwidget.cpp:380
 msgid "Hide Mixer Window"
 msgstr ""
 
-#: kmix.cpp:126
+#: kmix.cpp:127
 #, fuzzy
 msgid "Configure &Channels..."
 msgstr "&Dividu kanalojn"
 
-#: kmix.cpp:130 mdwslider.cpp:111
+#: kmix.cpp:130 kmixdockwidget.cpp:103
+#, fuzzy
+msgid "Select Master Channel..."
+msgstr "&Dividu kanalojn"
+
+#: kmix.cpp:134 mdwslider.cpp:111
 #, fuzzy
 msgid "Increase Volume"
 msgstr "Laŭtigu"
 
-#: kmix.cpp:135 mdwslider.cpp:122
+#: kmix.cpp:139 mdwslider.cpp:122
 #, fuzzy
 msgid "Decrease Volume"
 msgstr "Mallaŭtigu"
 
-#: kmix.cpp:140 mdwslider.cpp:365
+#: kmix.cpp:144 mdwslider.cpp:365
 #, fuzzy
 msgid "Mute"
 msgstr "Mallaŭtigite"
 
-#: kmix.cpp:493
+#: kmix.cpp:503
 #, kde-format
 msgid ""
 "The soundcard containing the master device was unplugged. Changing to "
 "control %1 on card %2."
 msgstr ""
 
-#: kmix.cpp:502
+#: kmix.cpp:512
 msgid "The last soundcard was unplugged."
 msgstr ""
 
-#: kmix.cpp:777
+#: kmix.cpp:789
 msgid "Mixer Hardware Information"
 msgstr ""
 
@@ -163,25 +171,20 @@ msgstr "Restarigu la apriorajn laŭtecojn"
 msgid "M&ute"
 msgstr "&Mallaŭtigite"
 
-#: kmixdockwidget.cpp:104
-#, fuzzy
-msgid "Select Master Channel..."
-msgstr "&Dividu kanalojn"
-
-#: kmixdockwidget.cpp:193
+#: kmixdockwidget.cpp:191
 msgid "Mixer cannot be found"
 msgstr ""
 
-#: kmixdockwidget.cpp:213
+#: kmixdockwidget.cpp:211
 #, fuzzy, kde-format
 msgid "Volume at %1%"
 msgstr "Laŭteco je %1%"
 
-#: kmixdockwidget.cpp:215
+#: kmixdockwidget.cpp:213
 msgid " (Muted)"
 msgstr " (Mallaŭtigite)"
 
-#: kmixdockwidget.cpp:386
+#: kmixdockwidget.cpp:384
 msgid "Show Mixer Window"
 msgstr ""
 
@@ -450,6 +453,36 @@ msgstr ""
 msgid "kmix: Unknown error. Please report how you produced this error."
 msgstr "Miksilo: Nekonata eraro. Bonvolu raporti, kiel vi kaŭzis la eraron."
 
+#: mixer_oss4.cpp:349 mixer_oss.cpp:230
+msgid ""
+"kmix: You do not have permission to access the mixer device.\n"
+"Login as root and do a 'chmod a+rw /dev/mixer*' to allow the access."
+msgstr ""
+"Miksilo: Vi ne havas permeson aliri la miksaparaton.\n"
+"Salutu kiel sistemestro kaj komandu 'chmod a+rw /dev/mixer*' por akiri "
+"permeson."
+
+#: mixer_oss4.cpp:353
+#, fuzzy
+#| msgid ""
+#| "kmix: Mixer cannot be found.\n"
+#| "Please check that the soundcard is installed and the\n"
+#| "soundcard driver is loaded.\n"
+#| "On Linux you might need to use 'insmod' to load the driver.\n"
+#| "Use 'soundon' when using commercial OSS."
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+"On Linux you might need to use 'insmod' to load the driver.\n"
+"Use 'soundon' when using OSS4 from 4front."
+msgstr ""
+"Miksilo: Miksilaparato ne trovita.\n"
+"Bonvolu kontroli, ke la sonorkarto estas instalita kaj la\n"
+"sonorkarta pelilo estas ŝargita.\n"
+"Sur Linukso eble necesas 'insmod' por ŝargi la pelilon.\n"
+"Uzu 'soundon' se vi uzas komercan OSS."
+
 #: mixer_oss.cpp:58
 msgid "Volume"
 msgstr "Laŭteco"
@@ -562,15 +595,6 @@ msgstr "3D-centro"
 msgid "unused"
 msgstr "neuzata"
 
-#: mixer_oss.cpp:230
-msgid ""
-"kmix: You do not have permission to access the mixer device.\n"
-"Login as root and do a 'chmod a+rw /dev/mixer*' to allow the access."
-msgstr ""
-"Miksilo: Vi ne havas permeson aliri la miksaparaton.\n"
-"Salutu kiel sistemestro kaj komandu 'chmod a+rw /dev/mixer*' por akiri "
-"permeson."
-
 #: mixer_oss.cpp:234
 msgid ""
 "kmix: Mixer cannot be found.\n"
@@ -617,11 +641,11 @@ msgstr ""
 "Miksilo: Vi ne havas permeson aliri la miksaparaton.\n"
 "Demandu vian sistemestron por permesi aliron tra /dev/audioctl."
 
-#: mixertoolbox.cpp:198
+#: mixertoolbox.cpp:199
 msgid "Sound drivers supported:"
 msgstr ""
 
-#: mixertoolbox.cpp:199
+#: mixertoolbox.cpp:200
 msgid "Sound drivers used:"
 msgstr ""
 
@@ -693,7 +717,7 @@ msgstr "Silenta:"
 msgid "&File"
 msgstr "Silenta:"
 
-#. i18n: file: kmixui.rc:19
+#. i18n: file: kmixui.rc:20
 #. i18n: ectx: Menu (help)
 #: rc.cpp:33
 #, fuzzy
@@ -715,11 +739,11 @@ msgstr "<wolfram@steloj.de>,<Steffen.Pietsch@BerlinOnline.de>"
 msgid "&Channels"
 msgstr "&Dividu kanalojn"
 
-#: viewbase.cpp:146
+#: viewbase.cpp:182
 msgid "Device Settings"
 msgstr "Aparatoagordo"
 
-#: viewdockareapopup.cpp:112
+#: viewdockareapopup.cpp:115
 #, fuzzy
 msgid "Mixer"
 msgstr "Miksiloj"
@@ -745,10 +769,6 @@ msgstr "Miksiloj"
 
 #, fuzzy
 #~ msgid "Toggle Mute of Master Channel"
-#~ msgstr "&Dividu kanalojn"
-
-#, fuzzy
-#~ msgid "Select Channel"
 #~ msgstr "&Dividu kanalojn"
 
 #, fuzzy
