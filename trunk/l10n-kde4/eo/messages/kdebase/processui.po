@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: processui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-07-05 11:40+0200\n"
+"POT-Creation-Date: 2009-07-15 13:05+0200\n"
 "PO-Revision-Date: 2007-12-21 07:01-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1030,19 +1030,19 @@ msgstr "Malalta prioritato"
 msgid "High Priority"
 msgstr "Alta prioritato"
 
-#: ProcessModel.cc:240
+#: ProcessModel.cc:242
 #, fuzzy
 #| msgid "- Process is doing some work"
 msgid "- Process is doing some work."
 msgstr "- Procezo laboras"
 
-#: ProcessModel.cc:242
+#: ProcessModel.cc:244
 #, fuzzy
 #| msgid "- Process is waiting for something to happen"
 msgid "- Process is waiting for something to happen."
 msgstr "- Procezo atendas"
 
-#: ProcessModel.cc:244
+#: ProcessModel.cc:246
 #, fuzzy
 #| msgid ""
 #| "- Process has been stopped. It will not respond to user input at the "
@@ -1051,7 +1051,7 @@ msgid ""
 "- Process has been stopped. It will not respond to user input at the moment."
 msgstr "- Procezo ĉesas, kaj ne respondos al via enigo ĉi-momente"
 
-#: ProcessModel.cc:246
+#: ProcessModel.cc:248
 #, fuzzy
 #| msgid ""
 #| "- Process has finished and is now dead, but the parent process has not "
@@ -1063,25 +1063,25 @@ msgstr ""
 "- Proceso finiĝis kaj formortis, sed la patra procezo ankoraŭ ne purigis la "
 "taskmedion"
 
-#: ProcessModel.cc:544
+#: ProcessModel.cc:546
 #, fuzzy
 #| msgid "The process name"
 msgid "The process name."
 msgstr "La proceza nomo"
 
-#: ProcessModel.cc:546
+#: ProcessModel.cc:548
 #, fuzzy
 #| msgid "The user that owns this process"
 msgid "The user who owns this process."
 msgstr "La posedanto de ĉi tiu procezo"
 
-#: ProcessModel.cc:548
+#: ProcessModel.cc:550
 #, fuzzy
 #| msgid "The controlling terminal that this process is running on."
 msgid "The controlling terminal on which this process is running."
 msgstr "La reganta terminalo de ĉi tiu procezo."
 
-#: ProcessModel.cc:550
+#: ProcessModel.cc:552
 #, fuzzy
 #| msgid ""
 #| "The priority that this process is being run with. Ranges from 19 (very "
@@ -1093,11 +1093,11 @@ msgstr ""
 "La prioritato de ĉi tiu procezo. Etendiĝas de 19, kiu estas tre afabla "
 "(malavara), al -19, kiu havas la plej altan prioritaton"
 
-#: ProcessModel.cc:553
+#: ProcessModel.cc:555
 msgid "The current CPU usage of the process."
 msgstr "La nuna posedanto de ĉi tiu procezo."
 
-#: ProcessModel.cc:558
+#: ProcessModel.cc:560
 #, fuzzy, kde-format
 #| msgid ""
 #| "The current CPU usage of the process, divided by the %1 process core in "
@@ -1118,13 +1118,13 @@ msgstr[1] ""
 "La nuna CPU-uzado de la procezo, dividita per la %1 procesoraj kernoj en la "
 "maŝino."
 
-#: ProcessModel.cc:560
+#: ProcessModel.cc:562
 #, fuzzy
 #| msgid "The current CPU usage of the process."
 msgid "The current total CPU usage of the process."
 msgstr "La nuna posedanto de ĉi tiu procezo."
 
-#: ProcessModel.cc:563
+#: ProcessModel.cc:565
 msgid ""
 "<qt>This is the amount of virtual memory space that the process is using, "
 "included shared libraries, graphics memory, files on disk, and so on. This "
@@ -1134,7 +1134,7 @@ msgstr ""
 "inkluzivante komunajn bibliotekojn, grafikan memoron, surdiskajn dosierojn, "
 "ktp. Ĉi tiu nombro estas preskaŭ sensignifa.</qt>"
 
-#: ProcessModel.cc:565
+#: ProcessModel.cc:567
 #, fuzzy
 #| msgid ""
 #| "<qt>This is the amount of real physical memory that this process is using "
@@ -1152,7 +1152,7 @@ msgstr ""
 "bibliotekoj. Ofte, ĉi tiu nombro estas la plej bona indiko de la memoruzado "
 "de programo.</qt>"
 
-#: ProcessModel.cc:567
+#: ProcessModel.cc:569
 #, fuzzy
 #| msgid ""
 #| "<qt>This is the amount of real physical memory that this process's shared "
@@ -1167,120 +1167,191 @@ msgstr ""
 "tiu procezo uzas. Ĉi tiu memoro estas dividita inter ĉiuj procezoj kiuj uzas "
 "ĉi tiun bibliotekon</qt>"
 
-#: ProcessModel.cc:569
+#: ProcessModel.cc:571
 #, fuzzy
 #| msgid "<qt>The command that this process was launched with</qt>"
 msgid "<qt>The command with which this process was launched.</qt>"
 msgstr "<qt>La komando kiu lanĉis ĉi tiun procezon</qt>"
 
-#: ProcessModel.cc:571
+#: ProcessModel.cc:573
 #, fuzzy
 #| msgid "<qt>The title of any windows that this process is showing</qt>"
 msgid "<qt>The title of any windows that this process is showing.</qt>"
 msgstr "<qt>La titolo de fenestroj kiujn ĉi tiu procezo montras.</qt>"
 
-#: ProcessModel.cc:573
+#: ProcessModel.cc:575
 #, fuzzy
 #| msgid "The unique Process ID that identifies this process"
 msgid "The unique Process ID that identifies this process."
 msgstr "La unika proceza identigilo de ĉi tiu procezo"
 
-#: ProcessModel.cc:653
+#: ProcessModel.cc:584
+msgid ""
+"<qt><i>Technical information: </i>The kernel process name is a maximum of 8 "
+"characters long, so the full command is examined.  If the first word in the "
+"full command line starts with the process name, the first word of the "
+"command line is shown, otherwise the process name is used."
+msgstr ""
+
+#: ProcessModel.cc:586
+msgid ""
+"<qt>The user who owns this process.  If the effective, setuid etc user is "
+"different, the user who owns the process will be shown, followed by the "
+"effective user.  The ToolTip contains the full information.  "
+"<p><table><tr><td>Login Name/Group</td><td>The username of the Real User/"
+"Group who created this process</td></tr><tr><td>Effective User/Group</"
+"td><td>The process is running with privileges of the Effective User/Group.  "
+"This is shown if different from the real user.</td></tr><tr><td>Setuid User/"
+"Group</td><td>The saved username of the binary.  The process can escalate "
+"its Effective User/Group to the Setuid User/Group.</td></tr><tr><td>File "
+"System User/Group</td><td>Accesses to the filesystem are checked with the "
+"File System User/Group.  This is a Linux specific call. See setfsuid(2) for "
+"more information.</td></tr></table>"
+msgstr ""
+
+#: ProcessModel.cc:596
+msgid ""
+"<qt>This is the size of allocated address space - not memory, but address "
+"space. This value in practice means next to nothing. When a process requests "
+"a large memory block from the system but uses only a small part of it, the "
+"real usage will be low, VIRT will be high. <p><i>Technical information: </"
+"i>This is VmSize in proc/*/status and VIRT in top."
+msgstr ""
+
+#: ProcessModel.cc:598
+msgid ""
+"<qt><i>Technical information: </i>This is the URSS - Unique Resident Set "
+"Size, calculated as VmRSS - Shared, from /proc/*/statm.  This tends to "
+"underestimate the 'true' memory usage of a process (by not including i/o "
+"backed memory pages, but is the best estimation that is fast to determine."
+msgstr ""
+
+#: ProcessModel.cc:600
+msgid "The CPU usage of a process and all of its threads."
+msgstr ""
+
+#: ProcessModel.cc:602
+msgid ""
+"<qt><i>Technical information: </i>This is the Shared memory, called SHR in "
+"top.  It is the number of pages that are backed by a file (see kernel "
+"Documentation/filesystems/proc.txt)"
+msgstr ""
+
+#: ProcessModel.cc:604
+msgid "<qt><i>Technical information: </i>This is from /proc/*/cmdline"
+msgstr ""
+
+#: ProcessModel.cc:606
+msgid ""
+"<qt><i>Technical information: </i>For each X11 window, the X11 property "
+"_NET_WM_PID is used to map the window to a PID.  If a process's windows are "
+"not shown, then that application incorrectly is not setting _NET_WM_PID."
+msgstr ""
+
+#: ProcessModel.cc:608
+msgid ""
+"<qt><i>Technical information: </i>This is the Process ID.  A multi-threaded "
+"application is treated a single process, with all threads sharing the same "
+"PID.  The CPU usage etc will be the total, accumulated, CPU usage of all the "
+"threads."
+msgstr ""
+
+#: ProcessModel.cc:688
 #, kde-format
 msgid "Login Name: %1<br/>"
 msgstr "Salutnomo: %1<br/>"
 
-#: ProcessModel.cc:657
+#: ProcessModel.cc:692
 #, fuzzy
 #| msgid "This user is not recognised for some reason"
 msgid "This user is not recognized for some reason."
 msgstr "Por nekonata kialo la sistemo ne rekonas ĉi tiun uzanton"
 
-#: ProcessModel.cc:660
+#: ProcessModel.cc:695
 #, kde-format
 msgid "<b>%1</b><br/>"
 msgstr "<b>%1</b><br/>"
 
-#: ProcessModel.cc:661
+#: ProcessModel.cc:696
 #, kde-format
 msgid "Login Name: %1 (uid: %2)<br/>"
 msgstr "Salutnomo: %1 (uid: %2)<br/>"
 
-#: ProcessModel.cc:663
+#: ProcessModel.cc:698
 #, kde-format
 msgid "  Room Number: %1<br/>"
 msgstr "  Ĉambronumero: %1<br/>"
 
-#: ProcessModel.cc:665
+#: ProcessModel.cc:700
 #, kde-format
 msgid "  Work Phone: %1<br/>"
 msgstr "  Telefononumero ĉe laborejo: %1<br/>"
 
-#: ProcessModel.cc:672
+#: ProcessModel.cc:707
 #, kde-format
 msgid "Effective User: %1<br/>"
 msgstr "Fakta uzanto: %1<br/>"
 
-#: ProcessModel.cc:674
+#: ProcessModel.cc:709
 #, kde-format
 msgid "Setuid User: %1<br/>"
 msgstr "Setuid-uzanto: %1<br/>"
 
-#: ProcessModel.cc:676
+#: ProcessModel.cc:711
 #, kde-format
 msgid "File System User: %1<br/>"
 msgstr "Dosiersistema uzanto: %1<br/>"
 
-#: ProcessModel.cc:680
+#: ProcessModel.cc:715
 #, kde-format
 msgid "Group: %1"
 msgstr "Grupo: %1"
 
-#: ProcessModel.cc:685
+#: ProcessModel.cc:720
 #, kde-format
 msgid "<br/>Effective Group: %1"
 msgstr "<br/>Fakta grupo: %1"
 
-#: ProcessModel.cc:687
+#: ProcessModel.cc:722
 #, kde-format
 msgid "<br/>Setuid Group: %1"
 msgstr "<br/>Setuid-grupo: %1"
 
-#: ProcessModel.cc:689
+#: ProcessModel.cc:724
 #, kde-format
 msgid "<br/>File System Group: %1"
 msgstr "<br/>Dosiersistema grupo: %1"
 
-#: ProcessModel.cc:696
+#: ProcessModel.cc:731
 #, kde-format
 msgctxt "Short description of a process. PID, name, user"
 msgid "<numid>%1</numid>: %2, owned by user %3"
 msgstr "<numid>%1</numid>: %2, posedita de uzanto %3"
 
-#: ProcessModel.cc:703
+#: ProcessModel.cc:738
 #, kde-format
 msgid "%1 (gid: <numid>%2</numid>)"
 msgstr "%1 (gid: <numid>%2</numid>)"
 
-#: ProcessModel.cc:724
+#: ProcessModel.cc:759
 #, kde-format
 msgid "%1 (uid: %2)"
 msgstr "%1 (uid: %2)"
 
-#: ProcessModel.cc:827
+#: ProcessModel.cc:862
 #, kde-format
 msgctxt "tooltip. name,pid "
 msgid "This process is being debugged by %1 (<numid>%2</numid>)"
 msgstr "%1 nun sencimigas ĉi tiun procezon (<numid>%2</numid>)"
 
-#: ProcessModel.cc:849
+#: ProcessModel.cc:884
 msgid ""
 "<b>Init</b> is the parent of all other processes and cannot be killed.<br/>"
 msgstr ""
 "<b>Init</b> estas la patro de ĉiuj aliaj procezoj, ne povas esti mortigita."
 "<br/>"
 
-#: ProcessModel.cc:851
+#: ProcessModel.cc:886
 #, fuzzy
 #| msgid ""
 #| "<b>KThreadd</b> manages kernel threads. The children processes run in the "
@@ -1292,13 +1363,13 @@ msgstr ""
 "<b>KThreadd</b> direktas kernajn fadenojn. La idaj procezoj ruliĝas en la "
 "kerno, kaj direktas diskan aliron, ktp.<br/>"
 
-#: ProcessModel.cc:853
+#: ProcessModel.cc:888
 #, kde-format
 msgctxt "name column tooltip. first item is the name"
 msgid "<b>%1</b><br />Process ID: <numid>%2</numid>"
 msgstr "<b>%1</b><br />Proceza ID: <numid>%2</numid>"
 
-#: ProcessModel.cc:858
+#: ProcessModel.cc:893
 #, kde-format
 msgctxt "name column tooltip. first item is the name"
 msgid ""
@@ -1308,7 +1379,7 @@ msgstr ""
 "<b>%1</b><br />Proceza ID: <numid>%2</numid><br />ID de patro: %3<br />ID de "
 "patro: <numid>%4</numid>"
 
-#: ProcessModel.cc:860
+#: ProcessModel.cc:895
 #, kde-format
 msgctxt "name column tooltip. first item is the name"
 msgid ""
@@ -1318,54 +1389,54 @@ msgstr ""
 "<b>%1</b><br />Proceza ID: <numid>%2</numid><br />ID de patro: <numid>%3</"
 "numid>"
 
-#: ProcessModel.cc:864
+#: ProcessModel.cc:899
 #, kde-format
 msgid "<br/>Command: %1"
 msgstr "<br/>Komando: %1"
 
-#: ProcessModel.cc:867
+#: ProcessModel.cc:902
 #, kde-format
 msgid "<br />Running on: %1"
 msgstr "<br />Ruliĝas sur: %1"
 
-#: ProcessModel.cc:875
+#: ProcessModel.cc:910
 #, kde-format
 msgid "<qt>This process was run with the following command:<br />%1"
 msgstr "<qt>La procezo lanĉiĝis per la sekva komando:<br/>%1"
 
-#: ProcessModel.cc:877
+#: ProcessModel.cc:912
 #, kde-format
 msgid "<br /><br />Running on: %1"
 msgstr "<br /><br />Ruliĝas sur: %1"
 
-#: ProcessModel.cc:891
+#: ProcessModel.cc:926
 #, fuzzy, kde-format
 #| msgid "<qt>Nice level: %1 (%2)"
 msgid "Nice level: %1 (%2)"
 msgstr "<qt>Prioritata afableco: %1 (%2)"
 
-#: ProcessModel.cc:895
+#: ProcessModel.cc:930
 #, fuzzy, kde-format
 #| msgid "<qt>Scheduler priority: %1"
 msgid "Scheduler priority: %1"
 msgstr "<qt>Vicigila prioritato: %1"
 
-#: ProcessModel.cc:899
+#: ProcessModel.cc:934
 #, kde-format
 msgid "<br/>Scheduler: %1"
 msgstr "<br/>Vicigilo: %1"
 
-#: ProcessModel.cc:903 ProcessModel.cc:942
+#: ProcessModel.cc:938 ProcessModel.cc:977
 #, kde-format
 msgid "<br/>I/O Nice level: %1 (%2)"
 msgstr "<br/>Legskriba prioritata afableco: %1 (%2)"
 
-#: ProcessModel.cc:904 ProcessModel.cc:943
+#: ProcessModel.cc:939 ProcessModel.cc:978
 #, kde-format
 msgid "<br/>I/O Class: %1"
 msgstr "<br/>Legskriba tipo: %1"
 
-#: ProcessModel.cc:911
+#: ProcessModel.cc:946
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>Process status: %1 %2<br />User CPU usage: %3%<br />System CPU usage: "
@@ -1377,7 +1448,7 @@ msgstr ""
 "<qt>Stato de procezo: %1 %2<br />CPU-uzado de uzanto: %3%<br />CPU-uzado de "
 "sistemo: %4%</qt>"
 
-#: ProcessModel.cc:922
+#: ProcessModel.cc:957
 #, kde-format
 msgid ""
 "<br />Number of children: %1<br />Total User CPU usage: %2%<br />Total "
@@ -1386,42 +1457,42 @@ msgstr ""
 "<br />Nombro de idoj: %1<br />Sumo de CPU-uzado de uzanto: %2%<br />Sumo de "
 "CPU-uzado de sistemo: %3%<br />Sumo de CPU-uzado: %4%"
 
-#: ProcessModel.cc:931
+#: ProcessModel.cc:966
 #, kde-format
 msgid "<br /><br />CPU time spent running as user: %1 seconds"
 msgstr "<br /><br />CPU-tempo dum rulado kiel uzanto: %1 sekundoj"
 
-#: ProcessModel.cc:935
+#: ProcessModel.cc:970
 #, kde-format
 msgid "<br />CPU time spent running in kernel: %1 seconds"
 msgstr "<br />CPU-tempo dum rulado en kerno: %1 sekundoj"
 
-#: ProcessModel.cc:939
+#: ProcessModel.cc:974
 #, kde-format
 msgid "<br />Nice level: %1 (%2)"
 msgstr "<br />Prioritata afableco: %1 (%2)"
 
-#: ProcessModel.cc:958
+#: ProcessModel.cc:993
 #, kde-format
 msgid "Memory usage: %1 out of %2  (%3 %)<br />"
 msgstr "Memoruzado: %1 el %2  (%3 %)<br />"
 
-#: ProcessModel.cc:960
+#: ProcessModel.cc:995
 #, kde-format
 msgid "Memory usage: %1<br />"
 msgstr "Memoruzado: %1<br />"
 
-#: ProcessModel.cc:963
+#: ProcessModel.cc:998
 #, kde-format
 msgid "RSS Memory usage: %1 out of %2  (%3 %)"
 msgstr "RSS-memoruzado: %1 el %2  (%3 %)"
 
-#: ProcessModel.cc:965
+#: ProcessModel.cc:1000
 #, kde-format
 msgid "RSS Memory usage: %1"
 msgstr "RSS-memoruzado: %1"
 
-#: ProcessModel.cc:971
+#: ProcessModel.cc:1006
 #, fuzzy
 #| msgid ""
 #| "<qt>Your system does not seem to have this information for us to read, "
@@ -1431,22 +1502,22 @@ msgid ""
 "</qt>"
 msgstr "<qt>Pardonu, via sistemo ne havas ĉi tiujn informojn</qt>"
 
-#: ProcessModel.cc:975
+#: ProcessModel.cc:1010
 #, kde-format
 msgid "Shared library memory usage: %1 out of %2  (%3 %)"
 msgstr "Komuna biblioteka memoruzado: %1 el %2  (%3 %)"
 
-#: ProcessModel.cc:977
+#: ProcessModel.cc:1012
 #, kde-format
 msgid "Shared library memory usage: %1"
 msgstr "Komuna biblioteka memoruzado: %1"
 
-#: ProcessModel.cc:1239
+#: ProcessModel.cc:1274
 msgctxt "process heading"
 msgid "Name"
 msgstr "Nomo"
 
-#: ProcessModel.cc:1240
+#: ProcessModel.cc:1275
 #, fuzzy
 #| msgctxt "process heading"
 #| msgid "User Name"
@@ -1454,71 +1525,71 @@ msgctxt "process heading"
 msgid "Username"
 msgstr "Uzantnomo"
 
-#: ProcessModel.cc:1241
+#: ProcessModel.cc:1276
 msgctxt "process heading"
 msgid "PID"
 msgstr ""
 
-#: ProcessModel.cc:1242
+#: ProcessModel.cc:1277
 msgctxt "process heading"
 msgid "TTY"
 msgstr ""
 
-#: ProcessModel.cc:1243
+#: ProcessModel.cc:1278
 msgctxt "process heading"
 msgid "Niceness"
 msgstr "Prioritata afableco"
 
-#: ProcessModel.cc:1245
+#: ProcessModel.cc:1280
 #, no-c-format
 msgctxt "process heading"
 msgid "CPU %"
 msgstr "CPU %"
 
-#: ProcessModel.cc:1246
+#: ProcessModel.cc:1281
 msgctxt "process heading"
 msgid "Virtual Size"
 msgstr "Virtuala grando"
 
-#: ProcessModel.cc:1247
+#: ProcessModel.cc:1282
 msgctxt "process heading"
 msgid "Memory"
 msgstr "Memoro"
 
-#: ProcessModel.cc:1248
+#: ProcessModel.cc:1283
 msgctxt "process heading"
 msgid "Shared Mem"
 msgstr "Dividita memoro"
 
-#: ProcessModel.cc:1249
+#: ProcessModel.cc:1284
 msgctxt "process heading"
 msgid "Command"
 msgstr "Komando"
 
-#: ProcessModel.cc:1251
+#: ProcessModel.cc:1286
 msgctxt "process heading"
 msgid "Window Title"
 msgstr "Titolo de fenestro"
 
-#: ProcessModel.cc:1318
+#: ProcessModel.cc:1353
 #, fuzzy, kde-format
 #| msgid "%1 k"
 msgid "%1 K"
 msgstr "%1 k"
 
-#: ProcessModel.cc:1319
+#: ProcessModel.cc:1354
 #, fuzzy, kde-format
 #| msgid "%1 k"
 msgid "%1 M"
 msgstr "%1 k"
 
-#: ProcessModel.cc:1320
+#: ProcessModel.cc:1355
 #, fuzzy, kde-format
 #| msgid "%1 k"
 msgid "%1 G"
 msgstr "%1 k"
 
-#: ProcessModel.cc:1321
+#: ProcessModel.cc:1356
 #, kde-format
 msgid "%1%"
 msgstr ""
