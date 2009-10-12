@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-10-06 06:08+0200\n"
+"POT-Creation-Date: 2009-10-12 06:56+0200\n"
 "PO-Revision-Date: 2008-01-10 13:22-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -657,7 +657,7 @@ msgstr ""
 
 #. i18n: file: ktorrent/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: ktorrent/main.cpp:84 rc.cpp:1209
+#: ktorrent/main.cpp:84 rc.cpp:1209 plugins/search/homepage.cpp:118
 msgid "KTorrent"
 msgstr "KTorrent"
 
@@ -1027,7 +1027,7 @@ msgstr "La datumdosiero ne troviĝas en la elektita loko !"
 msgid "Create A Torrent"
 msgstr "Krei fontan torenton"
 
-#: ktorrent/torrentcreatordlg.cpp:113 ktorrent/fileselectdlg.cpp:328
+#: ktorrent/torrentcreatordlg.cpp:113 ktorrent/fileselectdlg.cpp:350
 #: libktcore/groups/allgroup.cpp:26
 msgid "All Torrents"
 msgstr "Ĉiuj torentoj"
@@ -1369,19 +1369,39 @@ msgstr "IPFiltrilo"
 msgid "Opening %1"
 msgstr ""
 
-#: ktorrent/fileselectdlg.cpp:187
+#: ktorrent/fileselectdlg.cpp:202
 msgid ""
-"Files of the torrent have been found in the completed downloads directory. "
-"Do you want to use them, and download to the completed downloads directory?"
+"Some files of this torrent have been found in the completed downloads "
+"directory. Do you want to import these files and use the completed downloads "
+"directory as the location ?"
 msgstr ""
 
-#: ktorrent/fileselectdlg.cpp:204
+#: ktorrent/fileselectdlg.cpp:205
+msgid ""
+"All files of this torrent have been found in the completed downloads "
+"directory. Do you want to import these files and use the completed downloads "
+"directory as the location ?"
+msgstr ""
+
+#: ktorrent/fileselectdlg.cpp:209
+#, fuzzy, kde-format
+#| msgid ""
+#| "The torrent <b>%1</b> has not finished downloading, do you want to delete "
+#| "the incomplete data, too?"
+msgid ""
+"The file <b>%1</b> was found in the completed downloads directory. Do you "
+"want to import this file ?"
+msgstr ""
+"Torento <b>%1</b> ne finas la elŝuton, ĉu vi volas forigi ties nekompletajn "
+"datumojn?"
+
+#: ktorrent/fileselectdlg.cpp:226
 #, fuzzy, kde-format
 #| msgid "The directory %1 does not exist"
 msgid "The directory %1 does not exist, do you want to create it?"
 msgstr "La dosierujo %1 ne ekzistas"
 
-#: ktorrent/fileselectdlg.cpp:237
+#: ktorrent/fileselectdlg.cpp:259
 #, fuzzy
 #| msgid ""
 #| "You have deselected the following existing files. You will lose all data "
@@ -1393,39 +1413,39 @@ msgstr ""
 "Vi malelektis la sekvantajn dosierojn. Vi perdos ĉiujn datumojn en tiuj ĉi "
 "dosieroj, ĉu vi certas ke vi volas tion?"
 
-#: ktorrent/fileselectdlg.cpp:241
+#: ktorrent/fileselectdlg.cpp:263
 msgid "Yes, delete the files"
 msgstr "Jes, forigu la dosierojn"
 
-#: ktorrent/fileselectdlg.cpp:242
+#: ktorrent/fileselectdlg.cpp:264
 msgid "No, keep the files"
 msgstr "Ne, konservu la dosierojn"
 
-#: ktorrent/fileselectdlg.cpp:393
+#: ktorrent/fileselectdlg.cpp:415
 #, fuzzy, kde-format
 #| msgid "%1 short!"
 msgctxt "We are %1 bytes short of what we need"
 msgid "%1 short"
 msgstr "%1 ne atingis!"
 
-#: ktorrent/fileselectdlg.cpp:412
+#: ktorrent/fileselectdlg.cpp:434
 msgid "Existing files: <b>None</b>"
 msgstr ""
 
-#: ktorrent/fileselectdlg.cpp:414
+#: ktorrent/fileselectdlg.cpp:436
 msgid "Existing files: <b>All</b>"
 msgstr ""
 
-#: ktorrent/fileselectdlg.cpp:416
+#: ktorrent/fileselectdlg.cpp:438
 #, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
 msgstr ""
 
-#: ktorrent/fileselectdlg.cpp:422
+#: ktorrent/fileselectdlg.cpp:444
 msgid "Existing file: <b>No</b>"
 msgstr ""
 
-#: ktorrent/fileselectdlg.cpp:424
+#: ktorrent/fileselectdlg.cpp:446
 msgid "Existing file: <b>Yes</b>"
 msgstr ""
 
@@ -7267,7 +7287,7 @@ msgstr "Rapido"
 #. i18n: file: plugins/syndication/feedwidget.ui:125
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
 #: rc.cpp:1826 rc.cpp:1838 rc.cpp:1841 rc.cpp:2060 rc.cpp:2195
-#: plugins/search/htmlpart.cpp:182
+#: plugins/search/htmlpart.cpp:196
 msgid "Download"
 msgstr "Elŝuti"
 
@@ -10065,9 +10085,10 @@ msgstr[1] "Aktivaj torentoj"
 msgid "<b>%1</b><br/><br/>%2"
 msgstr ""
 
-#: plugins/search/searchprefpage.cpp:58 plugins/search/searchactivity.cpp:35
-#: plugins/search/searchtoolbar.cpp:72 plugins/search/searchplugin.cpp:67
-#: plugins/search/searchplugin.cpp:89 plugins/search/searchplugin.cpp:144
+#: plugins/search/searchprefpage.cpp:58 plugins/search/homepage.cpp:121
+#: plugins/search/searchactivity.cpp:35 plugins/search/searchtoolbar.cpp:72
+#: plugins/search/searchplugin.cpp:67 plugins/search/searchplugin.cpp:89
+#: plugins/search/searchplugin.cpp:144
 msgid "Search"
 msgstr "Serĉi"
 
@@ -10094,6 +10115,21 @@ msgstr ""
 msgid "The URL %1 does not contain {searchTerms}."
 msgstr ""
 
+#: plugins/search/homepage.cpp:117
+msgid "Home"
+msgstr ""
+
+#: plugins/search/homepage.cpp:119
+msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
+msgid "Be free."
+msgstr ""
+
+#: plugins/search/homepage.cpp:120
+#, fuzzy
+#| msgid "Folders to scan for torrents:"
+msgid "Search the web for torrents."
+msgstr "Dosierujoj en kiuj vi volas serĉi torentojn:"
+
 #: plugins/search/searchenginelist.cpp:216
 #, fuzzy, kde-format
 #| msgid "Failed to open %1 : %2"
@@ -10106,34 +10142,30 @@ msgstr "Ne povas malfermi %1 : %2"
 msgid "Url: <b>%1</b>"
 msgstr "Legas datumon de <b>%1</b> :"
 
-#: plugins/search/searchwidget.cpp:77
+#: plugins/search/searchwidget.cpp:78
 msgid " Engine:"
 msgstr "Serĉilo:"
 
-#: plugins/search/searchwidget.cpp:90
+#: plugins/search/searchwidget.cpp:91
 #, fuzzy
 #| msgid "Open Tab"
 msgid "Open in New Tab"
 msgstr "Malfermi langeton"
 
-#: plugins/search/searchwidget.cpp:199
+#: plugins/search/searchwidget.cpp:198
 #, kde-format
 msgid "Searching for %1..."
 msgstr "Serĉas %1..."
 
-#: plugins/search/searchwidget.cpp:227
+#: plugins/search/searchwidget.cpp:232
 msgid "torrent files"
 msgstr "Torentdosieroj"
 
-#: plugins/search/searchwidget.cpp:295
+#: plugins/search/searchwidget.cpp:300
 msgid "Search finished"
 msgstr "Finis la serĉon"
 
-#: plugins/search/searchwidget.cpp:333
-msgid "Home"
-msgstr ""
-
-#: plugins/search/searchactivity.cpp:215
+#: plugins/search/searchactivity.cpp:212
 #, fuzzy, kde-format
 #| msgid "Searching for %1..."
 msgid "Search for %1"
@@ -10155,11 +10187,11 @@ msgstr "Titoleto por serĉilo"
 msgid " Engine: "
 msgstr " Serĉilo: "
 
-#: plugins/search/htmlpart.cpp:180
+#: plugins/search/htmlpart.cpp:194
 msgid "Do you want to download or save the torrent?"
 msgstr "Ĉu vi volas elŝuti aŭ konservi la fontan torenton?"
 
-#: plugins/search/htmlpart.cpp:181
+#: plugins/search/htmlpart.cpp:195
 msgid "Download Torrent"
 msgstr "Elŝuti torenton"
 
