@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audex\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-05 06:45+0100\n"
+"POT-Creation-Date: 2009-11-15 06:08+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -15,13 +15,14 @@ msgstr ""
 "X-Generator: pology\n"
 
 #: core/audex.cpp:117
-msgid "No profile selected. Operation abort."
+msgid "No profile selected. Operation aborted."
 msgstr ""
 
 #: core/audex.cpp:131
 #, kde-format
 msgid ""
-"Unable to create temporary directory \"%1\". Please check. Abort operation."
+"Operation aborted: unable to create temporary directory \"%1\". Please check "
+"whether it is possible."
 msgstr ""
 
 #: core/audex.cpp:143
@@ -31,7 +32,7 @@ msgstr ""
 
 #: core/audex.cpp:451
 #, kde-format
-msgid "Cant find path \"%1\"."
+msgid "Cannot find path \"%1\"."
 msgstr ""
 
 #: core/audex.cpp:451 core/audex.cpp:460
@@ -61,13 +62,13 @@ msgstr ""
 
 #: core/audex.cpp:479
 #, kde-format
-msgid "Warning! File \"%1\" already exists. Overwriting."
+msgid "Warning: file \"%1\" already exists. Overwriting."
 msgstr ""
 
 #: core/audex.cpp:481 core/audex.cpp:583 core/audex.cpp:615 core/audex.cpp:663
 #: core/audex.cpp:702 core/audex.cpp:739
 #, kde-format
-msgid "Warning! File \"%1\" already exists. Skipping."
+msgid "Warning: file \"%1\" already exists. Skipping."
 msgstr ""
 
 #: core/audex.cpp:502
@@ -81,7 +82,7 @@ msgstr ""
 
 #: core/audex.cpp:508
 #, kde-format
-msgid "Temporary directory \"%1\" does not exists."
+msgid "Temporary directory \"%1\" does not exist."
 msgstr ""
 
 #: core/audex.cpp:508
@@ -156,8 +157,10 @@ msgstr ""
 
 #: dialogs/coverbrowserdialog.cpp:77
 #, kde-format
-msgid "Found %1 Covers"
-msgstr ""
+msgid "Found %1 Cover"
+msgid_plural "Found %1 Covers"
+msgstr[0] ""
+msgstr[1] ""
 
 #: dialogs/coverbrowserdialog.cpp:82
 msgid "No Covers Found"
@@ -217,7 +220,7 @@ msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:186
 #: dialogs/extractingprogressdialog.cpp:193
-#, kde-format, c-format
+#, c-format, kde-format
 msgid "Speed: %1x"
 msgstr ""
 
@@ -227,7 +230,7 @@ msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:209
 #: dialogs/extractingprogressdialog.cpp:210
-msgid "Finished!"
+msgid "Finished."
 msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:214
@@ -236,7 +239,7 @@ msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:218
 #: dialogs/extractingprogressdialog.cpp:219
-msgid "Failed!"
+msgid "Failed."
 msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:227
@@ -249,13 +252,14 @@ msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:268
 msgid ""
-"Ripping speed is extremely slow for the last 5 minutes by now.\n"
-"Due to extraction quality, audex is so configured, never skip any detected "
-"error. So if your disc is really broken extracting maybe never ends.\n"
-"In some cases only this drive can't rip audio data from this disc. Maybe try "
-"another one.\n"
+"Ripping speed has been extremely slow for the last 5 minutes.\n"
+"To preserve extraction quality, audex is configured to never skip any "
+"detected errors. As such, if your disc is really broken, extracting might "
+"never finish.\n"
+"In some cases, only this drive cannot rip audio data from the disc, so "
+"perhaps try another one.\n"
 "\n"
-"However, do you want to continue extraction?"
+"Do you want to continue extraction?"
 msgstr ""
 
 #: dialogs/extractingprogressdialog.cpp:271
@@ -308,213 +312,75 @@ msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\"><html><head><style type=\"text/css\">p, li { white-"
 "space: pre-wrap; }</style></head><body>Variables will be replaced by a "
-"special value and can even contain attributes.<br />"
-"For example the variable<div style=\"font-family:monospace; background: "
-"#b3c1d6; color: black\">"
-"<pre>$artist</pre>"
-"</div>or the equivalent<br />"
-"<div style=\"font-family:monospace; background: #b3c1d6; color: black\">"
-"<pre>${artist}</pre>"
-"</div>will be replaced by the relevant artist of the cd.<br />"
-"Also variables can have attributes. See this example:<div style=\"font-"
-"family:monospace; background: #b3c1d6; color: black\">"
-"<pre>${today format=\"yyyy-MM-dd\" }</pre>"
-"</div>This means, that the current date is printed. To define how this is "
-"done, you can set a format. The examplewould result to the output 2008-10-"
-"07, as this would be the current date. See below for more details.<br />"
-"<br />"
-"You can make use of the following variables:<br />"
-"<table border=1><thead>"
-"<tr>"
-"<th>Tag</th>"
-"<th>Variable</th>"
-"<th>Description</th>"
-"<th>Example</th>"
-"</tr>"
-"</thead><tbody>"
-"<tr>"
-"<td>$artist</td>"
-"<td></td>"
-"<td>Prints the relevant artist of the extracted cd.</td>"
-"<td>${artist }</td>"
-"</tr>"
-"<tr>"
-"<td>$title</td>"
-"<td></td>"
-"<td>Prints the relevant title of the extracted cd.</td>"
-"<td></td>"
-"</tr>"
-"<tr>"
-"<td>$date</td>"
-"<td></td>"
-"<td>Prints the relevant date (usually release year) of the extracted cd.</td>"
-"<td></td>"
-"</tr>"
-"<tr>"
-"<td>$genre;</td>"
-"<td></td>"
-"<td>Prints the relevant genre of the extracted cd.</td>"
-"<td></td>"
-"</tr>"
-"<tr>"
-"<td>$size</td>"
-"<td>iec,precision</td>"
-"<td>Prints the overall size of all extracted (compressed) music files (incl. "
-"the cover). The attribute iec can be one of the following: b, k, m, g. b "
-"means byte, k KiB, m MiB and g GiB. The attribute precision gives the number "
-"of decimal places. Default attributes are iec=\"m\" and precision=\"2\"</td>"
-"<td>${size iec=\"k\" precision=\"2\"}</td>"
-"</tr>"
-"<tr>"
-"<td>$length</td>"
-"<td></td>"
-"<td>Prints the relevant overall length of all extracted tracks. The format "
-"is min:sec.</td>"
-"<td></td>"
-"</tr>"
-"<tr>"
-"<td>$nooftracks</td>"
-"<td></td>"
-"<td>Prints the total number of extracted tracks.</td>"
-"<td></td>"
-"</tr>"
-"<tr>"
-"<td>$discid</td>"
-"<td>base</td>"
-"<td>Prints the discid of the current cd. The attribute base is the base of "
-"the number. The default is 16 (hexadecimal).</td>"
-"<td>${discid base=\"16\"}</td>"
-"</tr>"
-"<tr>"
-"<td>$today</td>"
-"<td>format</td>"
-"<td>Prints the current date. The attribute format specifies the output (*).</"
-"td>"
-"<td>${today format=\"yyyy-MM-dddd\"}</td>"
-"</tr>"
-"<tr>"
-"<td>$now</td>"
-"<td>format</td>"
-"<td>Prints the current date and/or time. The attribute format specifies the "
-"output (*).</td>"
-"<td>${now format=\"yyyy-MM-dddd hh:mm:ss\"}</td>"
-"</tr>"
-"<tr>"
-"<td>$br</td>"
-"<td></td>"
-"<td>Prints a linebreak.</td>"
-"<td></td>"
-"</tr>"
-"</tbody></table>"
-"<br />"
-"<br />"
-"(* date/time format expressions)"
-"<table cellpadding=\"2\" cellspacing=\"1\" border=\"1\"><thead>"
-"<tr valign=\"top\">"
-"<th>Expression</th>"
-"<th>Output</th>"
-"</tr>"
-"</thead>"
-"<tr valign=\"top\">"
-"<td>d</td>"
-"<td>The day as a number without a leading zero (1 to 31).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>dd</td>"
-"<td>The day as a number with a leading zero (01 to 31).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>ddd</td>"
-"<td>The abbreviated localized day name (e.g&#x2e; 'Mon' to 'Sun').</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>dddd</td>"
-"<td>The long localized day name (e.g&#x2e; 'Monday' to 'Sunday').</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>M</td>"
-"<td>The month as a number without a leading zero (1 to 12).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>MM</td>"
-"<td>The month as a number with a leading zero (01 to 12).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>MMM</td>"
-"<td>The abbreviated localized month name (e.g&#x2e; 'Jan' to 'Dec').</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>MMMM</td>"
-"<td>The long localized month name (e.g&#x2e; 'January' to 'December').</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>yy</td>"
-"<td>The year as two digit number (00 to 99).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>yyyy</td>"
-"<td>The year as four digit number.</td>"
-"</tr>"
-"</table>"
-"<br />"
-"<table cellpadding=\"2\" cellspacing=\"1\" border=\"1\"><thead>"
-"<tr valign=\"top\">"
-"<th>Expression</th>"
-"<th>Output</th>"
-"</tr>"
-"</thead>"
-"<tr valign=\"top\">"
-"<td>h</td>"
-"<td>The hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display).</"
-"td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>hh</td>"
-"<td>The hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display).</"
-"td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>H</td>"
-"<td>The hour without a leading zero (0 to 23, even with AM/PM display).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>HH</td>"
-"<td>The hour with a leading zero (00 to 23, even with AM/PM display).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>m</td>"
-"<td>The minute without a leading zero (0 to 59).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>mm</td>"
-"<td>The minute with a leading zero (00 to 59).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>s</td>"
-"<td>The second without a leading zero (0 to 59).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>ss</td>"
-"<td>The second with a leading zero (00 to 59).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>z</td>"
-"<td>The milliseconds without leading zeroes (0 to 999).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>zz</td>"
-"<td>The milliseconds with leading zeroes (000 to 999).</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>AP or A</td>"
-"<td>Interpret as an AM/PM time. AP must be either 'AM' or 'PM'.</td>"
-"</tr>"
-"<tr valign=\"top\">"
-"<td>ap or a</td>"
-"<td>Interpret as an AM/PM time. ap must be either 'am' or 'pm'.</td>"
-"</tr>"
-"</table>"
-"</body></html>"
+"special value and can even contain attributes.<br />For example the "
+"variable<div style=\"font-family:monospace; background: #b3c1d6; color: black"
+"\"><pre>$artist</pre></div>or the equivalent<br /><div style=\"font-family:"
+"monospace; background: #b3c1d6; color: black\"><pre>${artist}</pre></"
+"div>will be replaced by the relevant artist of the CD.<br />Also, variables "
+"can have attributes. For instance:<div style=\"font-family:monospace; "
+"background: #b3c1d6; color: black\"><pre>${today format=\"yyyy-MM-dd\" }</"
+"pre></div>This means that the current date is printed. To define how this is "
+"done, you can set a format. The example given would result in output of the "
+"form 2008-10-07. See below for more details.<br /><br />You can make use of "
+"the following variables:<br /><table border=1><thead><tr><th>Tag</"
+"th><th>Variable</th><th>Description</th><th>Example</th></tr></"
+"thead><tbody><tr><td>$artist</td><td></td><td>Prints the relevant artist of "
+"the extracted CD.</td><td>${artist }</td></tr><tr><td>$title</td><td></"
+"td><td>Prints the relevant title of the extracted CD.</td><td></td></"
+"tr><tr><td>$date</td><td></td><td>Prints the relevant date (usually release "
+"year) of the extracted CD.</td><td></td></tr><tr><td>$genre;</td><td></"
+"td><td>Prints the relevant genre of the extracted CD.</td><td></td></"
+"tr><tr><td>$size</td><td>iec,precision</td><td>Prints the overall size of "
+"all extracted (compressed) music files (incl. the cover). The attribute iec "
+"can be one of the following: b, k, m, g. b means byte, k KiB, m MiB and g "
+"GiB. The attribute precision gives the number of decimal places. Default "
+"attributes are iec=\"m\" and precision=\"2\"</td><td>${size iec=\"k\" "
+"precision=\"2\"}</td></tr><tr><td>$length</td><td></td><td>Prints the "
+"relevant overall length of all extracted tracks. The format is min:sec.</"
+"td><td></td></tr><tr><td>$nooftracks</td><td></td><td>Prints the total "
+"number of extracted tracks.</td><td></td></tr><tr><td>$discid</td><td>base</"
+"td><td>Prints the disc ID of the current CD. The base attribute specifies "
+"the base of the number. The default is 16 (hexadecimal).</td><td>${discid "
+"base=\"16\"}</td></tr><tr><td>$today</td><td>format</td><td>Prints the "
+"current date. The attribute format specifies the output (*).</td><td>${today "
+"format=\"yyyy-MM-dddd\"}</td></tr><tr><td>$now</td><td>format</td><td>Prints "
+"the current date and/or time. The attribute format specifies the output (*)."
+"</td><td>${now format=\"yyyy-MM-dddd hh:mm:ss\"}</td></tr><tr><td>$br</"
+"td><td></td><td>Prints a linebreak.</td><td></td></tr></tbody></table><br /"
+"><br />(* date/time format expressions)<table cellpadding=\"2\" cellspacing="
+"\"1\" border=\"1\"><thead><tr valign=\"top\"><th>Expression</th><th>Output</"
+"th></tr></thead><tr valign=\"top\"><td>d</td><td>The day as a number, "
+"without a leading zero (1 to 31).</td></tr><tr valign=\"top\"><td>dd</"
+"td><td>The day as a number, with a leading zero (01 to 31).</td></tr><tr "
+"valign=\"top\"><td>ddd</td><td>The abbreviated localized day name (e.g&#x2e; "
+"'Mon' to 'Sun').</td></tr><tr valign=\"top\"><td>dddd</td><td>The long "
+"localized day name (e.g&#x2e; 'Monday' to 'Sunday').</td></tr><tr valign="
+"\"top\"><td>M</td><td>The month as a number, without a leading zero (1 to "
+"12).</td></tr><tr valign=\"top\"><td>MM</td><td>The month as a number, with "
+"a leading zero (01 to 12).</td></tr><tr valign=\"top\"><td>MMM</td><td>The "
+"abbreviated localized month name (e.g&#x2e; 'Jan' to 'Dec').</td></tr><tr "
+"valign=\"top\"><td>MMMM</td><td>The long localized month name (e.g&#x2e; "
+"'January' to 'December').</td></tr><tr valign=\"top\"><td>yy</td><td>The "
+"year as a two-digit number (00 to 99).</td></tr><tr valign=\"top\"><td>yyyy</"
+"td><td>The year as four-digit number.</td></tr></table><br /><table "
+"cellpadding=\"2\" cellspacing=\"1\" border=\"1\"><thead><tr valign=\"top"
+"\"><th>Expression</th><th>Output</th></tr></thead><tr valign=\"top\"><td>h</"
+"td><td>The hour without a leading zero (0 to 23, or 1 to 12 if AM/PM "
+"display).</td></tr><tr valign=\"top\"><td>hh</td><td>The hour with a leading "
+"zero (00 to 23, or 01 to 12 if AM/PM display).</td></tr><tr valign=\"top"
+"\"><td>H</td><td>The hour without a leading zero (0 to 23, even with AM/PM "
+"display).</td></tr><tr valign=\"top\"><td>HH</td><td>The hour with a leading "
+"zero (00 to 23, even with AM/PM display).</td></tr><tr valign=\"top\"><td>m</"
+"td><td>The minute without a leading zero (0 to 59).</td></tr><tr valign=\"top"
+"\"><td>mm</td><td>The minute with a leading zero (00 to 59).</td></tr><tr "
+"valign=\"top\"><td>s</td><td>The second without a leading zero (0 to 59).</"
+"td></tr><tr valign=\"top\"><td>ss</td><td>The second with a leading zero (00 "
+"to 59).</td></tr><tr valign=\"top\"><td>z</td><td>The milliseconds without "
+"leading zeroes (0 to 999).</td></tr><tr valign=\"top\"><td>zz</td><td>The "
+"milliseconds with leading zeroes (000 to 999).</td></tr><tr valign=\"top"
+"\"><td>AP or A</td><td>Interpret as an AM/PM time. AP must be either 'AM' or "
+"'PM'.</td></tr><tr valign=\"top\"><td>ap or a</td><td>Interpret as an AM/PM "
+"time. ap must be either 'am' or 'pm'.</td></tr></table></body></html>"
 msgstr ""
 
 #: dialogs/profiledatainfodialog.cpp:218
@@ -564,8 +430,10 @@ msgstr ""
 
 #: utils/cddaextractthread.cpp:98
 #, kde-format
-msgid "Start reading track %1 with %2 sectors"
-msgstr ""
+msgid "Start reading track %2 with %1 sector"
+msgid_plural "Start reading track %2 with %1 sectors"
+msgstr[0] ""
+msgstr[1] ""
 
 #: utils/cddaextractthread.cpp:136
 msgid "User canceled extracting."
@@ -588,15 +456,15 @@ msgstr ""
 #: utils/cddaextractthread.cpp:187
 #, kde-format
 msgid ""
-"Fixed edge jitter (absolute sector %1, relative sector %2, track time pos %"
-"3:%4)"
+"Fixed edge jitter (absolute sector %1, relative sector %2, track time pos %3:"
+"%4)"
 msgstr ""
 
 #: utils/cddaextractthread.cpp:191
 #, kde-format
 msgid ""
-"Fixed atom jitter (absolute sector %1, relative sector %2, track time pos %"
-"3:%4)"
+"Fixed atom jitter (absolute sector %1, relative sector %2, track time pos %3:"
+"%4)"
 msgstr ""
 
 #: utils/cddaextractthread.cpp:196
@@ -684,11 +552,11 @@ msgid "Please check if the file really exists."
 msgstr ""
 
 #: utils/cachedimage.cpp:151
-msgid "Can't open file."
+msgid "Cannot open file."
 msgstr ""
 
 #: utils/cachedimage.cpp:151
-msgid "Please check your file. Maybe you don't have proper permissions."
+msgid "Please check your file. Maybe you do not have proper permissions."
 msgstr ""
 
 #: utils/cachedimage.cpp:157 utils/cachedimage.cpp:204
@@ -702,7 +570,7 @@ msgid ""
 msgstr ""
 
 #: utils/cachedimage.cpp:174
-msgid "Can't open file"
+msgid "Cannot open file"
 msgstr ""
 
 #: utils/cachedimage.cpp:174
@@ -710,7 +578,7 @@ msgid "Please check your permissions."
 msgstr ""
 
 #: utils/cachedimage.cpp:181
-msgid "Can't save file"
+msgid "Cannot save file"
 msgstr ""
 
 #: utils/cachedimage.cpp:181
@@ -724,7 +592,7 @@ msgid ""
 msgstr ""
 
 #: utils/cachedimage.cpp:212
-msgid "Can't write on device"
+msgid "Cannot write to device"
 msgstr ""
 
 #: utils/cachedimage.cpp:212
@@ -955,7 +823,7 @@ msgid "Profile name must not be empty."
 msgstr ""
 
 #: models/profilemodel.cpp:119
-msgid "You've given no name for the profile. Please set one."
+msgid "You have not given a name for the profile, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:128
@@ -963,7 +831,7 @@ msgid "Profile encoder is not defined."
 msgstr ""
 
 #: models/profilemodel.cpp:129
-msgid "You've given no encoder for the profile. Please set one."
+msgid "You have not specified an encoder for the profile, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:138
@@ -971,7 +839,7 @@ msgid "Profile filename pattern is not defined."
 msgstr ""
 
 #: models/profilemodel.cpp:139
-msgid "You've given no filename pattern for the profile. Please set one."
+msgid "You have not given a filename pattern for the profile, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:153
@@ -980,7 +848,7 @@ msgstr ""
 
 #: models/profilemodel.cpp:154
 msgid ""
-"Your given image file format is unknown. Please choose on of these formats: "
+"The given image file format is unknown. Please choose one of these formats: "
 "JPG/JPEG, PNG or BMP."
 msgstr ""
 
@@ -989,7 +857,7 @@ msgid "Cover name must not be empty."
 msgstr ""
 
 #: models/profilemodel.cpp:164
-msgid "You've given no name for the cover. Please set one."
+msgid "You have not given a name for the cover, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:174
@@ -998,7 +866,7 @@ msgstr ""
 
 #: models/profilemodel.cpp:175
 msgid ""
-"Your given playlist file format is unknown. Please choose on of these "
+"The given playlist file format is unknown. Please choose one of these "
 "formats: M3U, PLS or XSPF."
 msgstr ""
 
@@ -1007,7 +875,7 @@ msgid "Playlist name must not be empty."
 msgstr ""
 
 #: models/profilemodel.cpp:185
-msgid "You've given no name for the playlist. Please set one."
+msgid "You have not given a name for the playlist, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:197
@@ -1015,7 +883,7 @@ msgid "Info text name must not be empty."
 msgstr ""
 
 #: models/profilemodel.cpp:198
-msgid "You've given no name for the info text file. Please set one."
+msgid "You have not given a name for the info text file, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:207
@@ -1023,7 +891,7 @@ msgid "Info text file name suffix must not be empty."
 msgstr ""
 
 #: models/profilemodel.cpp:208
-msgid "You've given no suffix for the info text file. Please set one."
+msgid "You have not given a suffix for the info text file, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:218
@@ -1031,9 +899,7 @@ msgid "The hashlist file format is unknown."
 msgstr ""
 
 #: models/profilemodel.cpp:219
-msgid ""
-"Your given hashlist file format is unknown. Please choose on of these "
-"formats: SFV."
+msgid "The given hashlist file format is unknown: it must be SFV."
 msgstr ""
 
 #: models/profilemodel.cpp:228
@@ -1041,7 +907,7 @@ msgid "Hashlist name must not be empty."
 msgstr ""
 
 #: models/profilemodel.cpp:229
-msgid "You've given no name for the hashlist. Please set one."
+msgid "You have not given a name for the hashlist, please set one."
 msgstr ""
 
 #: models/profilemodel.cpp:253
@@ -1051,7 +917,7 @@ msgstr ""
 #: models/profilemodel.cpp:254
 #, kde-format
 msgid ""
-"Your profile name %1 already exists in the set of profiles. Please choose an "
+"The profile name %1 already exists in the set of profiles. Please choose a "
 "unique one."
 msgstr ""
 
@@ -1062,8 +928,8 @@ msgstr ""
 #: models/profilemodel.cpp:271
 #, kde-format
 msgid ""
-"Your profile index %1 already exists in the set of profiles. Please choose "
-"an unique one."
+"The profile index %1 already exists in the set of profiles. Please choose a "
+"unique one."
 msgstr ""
 
 #: models/profilemodel.cpp:321
@@ -1080,8 +946,8 @@ msgstr ""
 
 #: models/cddamodel.cpp:26 models/cddamodel.cpp:38
 msgid ""
-"This is an internal error. Check your hardware. If all okay please make bug "
-"report."
+"This is an internal error. Check your hardware, and if it is all okay, "
+"please make a bug report."
 msgstr ""
 
 #: models/cddamodel.cpp:38
@@ -1167,9 +1033,9 @@ msgid ""
 "administrator of the cddb server."
 msgstr ""
 
-#: models/cddamodel.cpp:759 models/cddamodel.cpp:889
+#: models/cddamodel.cpp:759
 msgid ""
-"Can't find the cddb server. Check your network. Maybe the cddb server is "
+"Cannot find the cddb server. Check your network. Maybe the cddb server is "
 "offline."
 msgstr ""
 
@@ -1191,14 +1057,20 @@ msgstr ""
 msgid "Please make a bug report and contact the cddb server administrator."
 msgstr ""
 
+#: models/cddamodel.cpp:889
+msgid ""
+"Can't find the cddb server. Check your network. Maybe the cddb server is "
+"offline."
+msgstr ""
+
 #: models/cddamodel.cpp:897
 msgid ""
-"This means no data found in the CDDB database. Please enter the data "
-"manually. Maybe try another CDDB server."
+"This means no data was found in the CDDB database. Please enter the data "
+"manually, or maybe try another CDDB server."
 msgstr ""
 
 #: models/cddamodel.cpp:899
-msgid "This means no data found in the CDDB database."
+msgid "This means no data was found in the CDDB database."
 msgstr ""
 
 #: models/cddamodel.cpp:917
@@ -1349,10 +1221,8 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (KPushButton, kpushbutton_albumartist)
 #: rc.cpp:62 rc.cpp:166 rc.cpp:333
 msgid ""
-"<p>This tag will be replaced with artist of the whole CD.</p>"
-"\n"
-"<hr />"
-"\n"
+"<p>This tag will be replaced with artist of the whole CD.</p>\n"
+"<hr />\n"
 "<p>If your CD is a compilation, then this tag represents the title in most "
 "cases.</p>"
 msgstr ""
@@ -1375,10 +1245,8 @@ msgstr "Albuma artisto"
 #. i18n: ectx: property (toolTip), widget (KPushButton, kpushbutton_albumtitle)
 #: rc.cpp:70 rc.cpp:174 rc.cpp:341
 msgid ""
-"<p>This tag will be replaced with the title of the whole CD.</p>"
-"\n"
-"<hr />"
-"\n"
+"<p>This tag will be replaced with the title of the whole CD.</p>\n"
+"<hr />\n"
 "<p>If your CD is a compilation, then this tag represents the subtitle in "
 "most cases.</p>"
 msgstr ""
@@ -1399,9 +1267,8 @@ msgstr "Albuma titolo"
 #. i18n: ectx: property (toolTip), widget (KPushButton, kpushbutton_trackartist)
 #: rc.cpp:78 rc.cpp:349
 msgid ""
-"<p>This tag will be replaced with the artist of the individual track."
-"<p></p>"
-"It is especially useful on compilation CDs.</p>"
+"<p>This tag will be replaced with the artist of the individual track.<p></"
+"p>It is especially useful on compilation CDs.</p>"
 msgstr ""
 
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:209
@@ -1437,19 +1304,13 @@ msgstr "Traka titolo"
 #: rc.cpp:90 rc.cpp:361
 msgid ""
 "<p>This tag will be replaced with the track number of the individual track.</"
-"p>"
-"\n"
-"<hr />"
-"\n"
+"p>\n"
+"<hr />\n"
 "<p>This tag has two properties:\n"
-"<ul>"
-"<li><i>length</i> defines how many digits the number should consist of at "
-"least (Default: 2).</li>"
-"<li><i>fillchar</i> sets the character usedto fill the free spaces in front "
-"of the number, if it has less digits than defined by <i>length</i>. "
-"(Default: 0).</li>"
-"</ul>"
-"</p>"
+"<ul><li><i>length</i> defines how many digits the number should at least "
+"consist of (Default: 2).</li><li><i>fillchar</i> sets the character used to "
+"fill the free spaces in front of the number, if it has fewer digits than "
+"<i>length</i>. (Default: 0).</li></ul></p>"
 msgstr ""
 
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:244
@@ -1469,23 +1330,15 @@ msgstr "Trako #"
 #: rc.cpp:99 rc.cpp:182 rc.cpp:370
 msgid ""
 "<p>This tag will be replaced with the CD number of a multi-CD album. Often "
-"compilations consist of several CDs.</p>"
-"\n"
-"<hr />"
-"\n"
+"compilations consist of several CDs.</p>\n"
+"<hr />\n"
 "<p>This tag has two properties:\n"
-"<ul>"
-"<li><i>length</i> defines how many digits the number should consist of at "
-"least (Default: 2).</li>"
-"\n"
+"<ul><li><i>length</i> defines how many digits the number should at least "
+"consist of (Default: 2).</li>\n"
 "<li><i>fillchar</i> sets the char taken to fill the free spaces in front of "
-"the number, if it has less digits than defined by <i>length</i>. (Default: "
-"0).</li>"
-"</ul>"
-"</p>"
-"\n"
-"<hr />"
-"\n"
+"the number, if it has fewer digits than <i>length</i>. (Default: 0).</li></"
+"ul></p>\n"
+"<hr />\n"
 "<p>Note: This tag will only be replaced if the multi-CD flag is enabled for "
 "the CD.</p>"
 msgstr ""
@@ -1548,43 +1401,29 @@ msgstr "Ĝenro"
 msgid ""
 "<p>This tag will be replaced with the temporary filename of the cover, e.g. "
 "to insert the cover in the id3 v2.3 tag with LAME. The cover file will be "
-"created automatically by Audex.</p>"
-"\n"
-"<hr />"
-"\n"
-"<p>This tag has six properties:"
-"<ul>\n"
+"created automatically by Audex.</p>\n"
+"<hr />\n"
+"<p>This tag has six properties:<ul>\n"
 "<li><i>format</i> defines the image format. Possible values are \"PNG\", "
-"\"JPG\" and \"GIF\" (Default: \"JPG\"). </li>"
-"\n"
+"\"JPG\" and \"GIF\" (Default: \"JPG\"). </li>\n"
 "<li><i>x</i> (width) and <i>y</i> (height) can be used to resize the cover "
-"image. If these are not set, then size of the cover image won't be changed.</"
-"li>"
-"\n"
+"image. If these are not set, then size of the cover image will not be "
+"changed.</li>\n"
 "<li><i>usenocover</i> if this is set to <i>true</i> then the image which is "
 "shown if no cover for the current album is set will be used. (Default: "
-"false).</li>"
-"\n"
+"false.)</li>\n"
 "<li><i>preparam</i> and <i>postparam</i> define parameters inserted before "
-"(pre) or behind (post) the filename of the temporary cover. </li>"
-"</ul>"
-"\n"
+"(pre) or behind (post) the filename of the temporary cover. </li></ul>\n"
 "<i>These values are <b>only</b> shown if a cover set, or \"usenocover\" is "
-"set to \"true\".</i></p>"
-"\n"
-"<hr />"
-"\n"
-"<p>Examples:</p>"
-"\n"
+"set to \"true\".</i></p>\n"
+"<hr />\n"
+"<p>Examples:</p>\n"
 "<p><code>${cover format=\"JPG\" x=\"300\" y=\"300\" preparam=\"-ti \"}</"
-"code></p>"
-"\n"
+"code></p>\n"
 "<p>A filename of an JPG image with the size of 300x300 will be inserted. If "
 "no cover is set, this variable will be replaced by nothing, otherwise "
-"something like <i>/tmp/cover.123.jpg</i> will be inserted.</p>"
-"\n"
-"<hr />"
-"\n"
+"something like <i>/tmp/cover.123.jpg</i> will be inserted.</p>\n"
+"<hr />\n"
 "<p><i><b>Note:</b> LAME discards cover files larger than 128 KiB. Please "
 "bear this in mind, if you set the format and size.</i></p>"
 msgstr ""
@@ -1644,7 +1483,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_suffix)
 #. i18n: file: widgets/customwidgetUI.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label_suffix)
-#: rc.cpp:157 rc.cpp:468 rc.cpp:484 rc.cpp:521 rc.cpp:573 rc.cpp:607 rc.cpp:658
+#: rc.cpp:157 rc.cpp:468 rc.cpp:484 rc.cpp:521 rc.cpp:573 rc.cpp:607
+#: rc.cpp:658
 msgid "Suffix:"
 msgstr ""
 
@@ -1886,8 +1726,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (KPushButton, kpushbutton_suffix)
 #: rc.cpp:394
 msgid ""
-"<p>This tag will be replaced with the file suffix.</p>"
-"\n"
+"<p>This tag will be replaced with the file suffix.</p>\n"
 "<p>It is defined by the profile. In most cases it will be either \"mp3\" or "
 "\"ogg\".</p>"
 msgstr ""
@@ -1910,15 +1749,14 @@ msgstr "TextLabel"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
 "weight:400; font-style:italic;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-"
 "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">No "
-"settings are needed for wave files.</p>"
-"</body></html>"
+"settings are needed for wave files.</p></body></html>"
 msgstr ""
 
 #. i18n: file: widgets/faacwidgetUI.ui:29
@@ -1953,15 +1791,14 @@ msgstr "Plej malalta"
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
 "weight:400; font-style:normal;\">\n"
 "<p align=\"right\" style=\" margin-top:0px; margin-bottom:0px; margin-"
 "left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Highest</"
-"p>"
-"</body></html>"
+"p></body></html>"
 msgstr ""
 
 #. i18n: file: widgets/profilewidgetUI.ui:21
@@ -1990,7 +1827,7 @@ msgstr "Kopii"
 
 #. i18n: file: widgets/profilewidgetUI.ui:65
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_init)
-#: rc.cpp:499 widgets/profilewidget.cpp:139 widgets/profilewidget.cpp:149
+#: rc.cpp:499 widgets/profilewidget.cpp:139 widgets/profilewidget.cpp:147
 msgid "Codec Scan"
 msgstr ""
 
@@ -2203,23 +2040,20 @@ msgstr ""
 #: widgets/profilewidget.cpp:137
 msgid ""
 "<p>Do you wish to rescan your system for codecs (Lame, Ogg Vorbis, Flac, "
-"etc.)?</p>"
-"<p><font style=\"font-style:italic;\">This will attempt to create some "
-"sample profiles based upon any found codecs.</font></p>"
+"etc.)?</p><p><font style=\"font-style:italic;\">This will attempt to create "
+"some sample profiles based upon any found codecs.</font></p>"
 msgstr ""
 
 #: widgets/profilewidget.cpp:145
 msgid "No new codecs found"
 msgstr ""
 
-#: widgets/profilewidget.cpp:147
-msgid "1 new profile added"
-msgstr ""
-
-#: widgets/profilewidget.cpp:148
+#: widgets/profilewidget.cpp:146
 #, kde-format
-msgid "%1 new profiles added"
-msgstr ""
+msgid "%1 new profile added"
+msgid_plural "%1 new profiles added"
+msgstr[0] ""
+msgstr[1] ""
 
 #: widgets/generalsettingswidget.cpp:24
 msgid "English"
@@ -2328,7 +2162,8 @@ msgstr ""
 
 #: mainwindow.cpp:26 mainwindow.cpp:39
 msgid ""
-"Internal error. Check your hardware. If all okay please make bug report."
+"Internal error. Check your hardware, and if it is all okay, please make a "
+"bug report."
 msgstr ""
 
 #: mainwindow.cpp:39
