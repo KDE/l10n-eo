@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-20 06:18+0100\n"
+"POT-Creation-Date: 2009-11-22 06:22+0100\n"
 "PO-Revision-Date: 2009-11-17 11:13+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -333,7 +333,7 @@ msgstr "Nuna rapido"
 msgid "IP Filter List"
 msgstr "IPFiltrilo"
 
-#: ktorrent/ipfilterwidget.cpp:101
+#: ktorrent/ipfilterwidget.cpp:103
 #, fuzzy, kde-format
 #| msgid ""
 #| "You must enter IP in format 'XXX.XXX.XXX.XXX'. You can also use wildcards "
@@ -345,11 +345,11 @@ msgstr ""
 "Vi devas entajpi retadreson en formo 'XXX.XXX.XXX.XXX'. Vi povas uzi "
 "ĵokerojn por intervaloj, ekz. '127.0.0.*'."
 
-#: ktorrent/ipfilterwidget.cpp:132
+#: ktorrent/ipfilterwidget.cpp:134
 msgid "Choose a file"
 msgstr "Elekti dosieron"
 
-#: ktorrent/ipfilterwidget.cpp:144
+#: ktorrent/ipfilterwidget.cpp:146
 msgid "Choose a filename to save under"
 msgstr "Por konservi, elektu dosiernomon"
 
@@ -383,7 +383,7 @@ msgstr "Ne povas malfermi %1 : %2"
 
 #: ktorrent/importdialog.cpp:385 ktorrent/importdialog.cpp:402
 #: libbtcore/diskio/singlefilecache.cpp:83
-#: libbtcore/diskio/multifilecache.cpp:133
+#: libbtcore/diskio/multifilecache.cpp:134
 #, kde-format
 msgid "Failed to create %1 : %2"
 msgstr "Ne povas krei %1 : %2"
@@ -410,10 +410,10 @@ msgstr ""
 msgid "Open an URL"
 msgstr "Malfermi retadreson"
 
-#: ktorrent/pastedialog.cpp:59
-#, fuzzy
+#: ktorrent/pastedialog.cpp:59 ktorrent/gui.cpp:314
+#, fuzzy, kde-format
 #| msgid "Invalid tracker URL"
-msgid "Invalid URL: "
+msgid "Invalid URL: %1"
 msgstr "Nevalida servila retadreso"
 
 #: ktorrent/viewmanager.cpp:533
@@ -425,7 +425,7 @@ msgid "Start all selected torrents in the current tab"
 msgstr ""
 
 #: ktorrent/viewmanager.cpp:539
-#: plugins/mediaplayer/mediaplayeractivity.cpp:105
+#: plugins/mediaplayer/mediaplayeractivity.cpp:106
 #: plugins/mediaplayer/videowidget.cpp:60
 msgid "Stop"
 msgstr "Ĉesi"
@@ -525,8 +525,7 @@ msgstr "Permana konekto"
 msgid "Scrape"
 msgstr "Informpeti"
 
-#: ktorrent/viewmanager.cpp:596 plugins/infowidget/iwfilelistmodel.cpp:78
-#: plugins/infowidget/iwfiletreemodel.cpp:90
+#: ktorrent/viewmanager.cpp:596
 msgid "Preview"
 msgstr "Antaŭvido"
 
@@ -596,13 +595,13 @@ msgstr ""
 msgid "Torrents (*.torrent)"
 msgstr "Fontaj torentoj (*.torrent)"
 
-#: ktorrent/ipfilterlist.cpp:95
+#: ktorrent/ipfilterlist.cpp:159
 #, fuzzy, kde-format
 #| msgid "Invalid tracker URL"
 msgid "Invalid IP address %1"
 msgstr "Nevalida servila retadreso"
 
-#: ktorrent/ipfilterlist.cpp:100
+#: ktorrent/ipfilterlist.cpp:164
 #, fuzzy, kde-format
 #| msgid "Invalid tracker URL"
 msgid "Duplicate IP address %1"
@@ -963,11 +962,19 @@ msgstr "Amichai Rothman"
 msgid "Patch to make the plasma applet a popup applet"
 msgstr ""
 
-#: ktorrent/main.cpp:136
+#: ktorrent/main.cpp:133
+msgid "Leo Trubach"
+msgstr ""
+
+#: ktorrent/main.cpp:133
+msgid "Patch to add support for IP ranges in IP filter dialog"
+msgstr ""
+
+#: ktorrent/main.cpp:137
 msgid "Document to open"
 msgstr "La dosiero malfermiĝi"
 
-#: ktorrent/main.cpp:137
+#: ktorrent/main.cpp:138
 #, fuzzy
 #| msgid " Unable to open torrent file %1 : %2"
 msgid "Silently open torrent given on URL"
@@ -1067,7 +1074,6 @@ msgid "Name"
 msgstr "Nomo"
 
 #: ktorrent/viewmodel.cpp:433 ktorrent/queuemanagermodel.cpp:120
-#: plugins/infowidget/infowidgetplugin.cpp:83
 #: plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
@@ -1454,12 +1460,6 @@ msgstr "Ĉiuj dosieroj"
 #: ktorrent/gui.cpp:230 ktorrent/gui.cpp:245
 msgid "Open Location"
 msgstr "Malfermi lokon"
-
-#: ktorrent/gui.cpp:314
-#, fuzzy, kde-format
-#| msgid "Invalid tracker URL"
-msgid "Invalid URL: %1"
-msgstr "Nevalida servila retadreso"
 
 #: ktorrent/gui.cpp:375
 #, fuzzy
@@ -7142,7 +7142,10 @@ msgstr "Konektoj"
 
 #. i18n: file: plugins/stats/Spd.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpdWgt)
-#: rc.cpp:1805 plugins/infowidget/webseedsmodel.cpp:125
+#: rc.cpp:1805
+#, fuzzy
+#| msgid "Speed"
+msgctxt "@title:window"
 msgid "Speed"
 msgstr "Rapido"
 
@@ -9099,12 +9102,21 @@ msgstr ""
 msgid "Info Widget"
 msgstr "InformaFenestraĵo"
 
+#: plugins/infowidget/infowidgetplugin.cpp:83
+#, fuzzy
+#| msgid "Status"
+msgctxt "@title:tab"
+msgid "Status"
+msgstr "Stato"
+
 #: plugins/infowidget/infowidgetplugin.cpp:84
 msgid "Displays status information about a torrent"
 msgstr ""
 
 #: plugins/infowidget/infowidgetplugin.cpp:85
-#: plugins/infowidget/chunkdownloadmodel.cpp:214
+#, fuzzy
+#| msgid "Files"
+msgctxt "@title:tab"
 msgid "Files"
 msgstr "Dosieroj"
 
@@ -9169,6 +9181,10 @@ msgstr "Ĝisdatigos post:"
 msgid "URL"
 msgstr "Retadreso"
 
+#: plugins/infowidget/webseedsmodel.cpp:125
+msgid "Speed"
+msgstr "Rapido"
+
 #: plugins/infowidget/webseedstab.cpp:96
 #, kde-format
 msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
@@ -9209,6 +9225,14 @@ msgstr ""
 "<img src=\"available_color\">&nbsp; - Disponeblaj pecoj<br><img src="
 "\"unavailable_color\">&nbsp; - Nedisponeblaj pecoj<br><img src="
 "\"excluded_color\">&nbsp; - Ekskluzivitaj pecoj"
+
+#: plugins/infowidget/iwfilelistmodel.cpp:78
+#: plugins/infowidget/iwfiletreemodel.cpp:90
+#, fuzzy
+#| msgid "Preview"
+msgctxt "@title:column"
+msgid "Preview"
+msgstr "Antaŭvido"
 
 #: plugins/infowidget/iwfilelistmodel.cpp:80
 #: plugins/infowidget/iwfiletreemodel.cpp:92
@@ -9279,6 +9303,10 @@ msgstr "Progreso"
 #: plugins/infowidget/chunkdownloadmodel.cpp:212
 msgid "Peer"
 msgstr "Kundividanto"
+
+#: plugins/infowidget/chunkdownloadmodel.cpp:214
+msgid "Files"
+msgstr "Dosieroj"
 
 #: plugins/infowidget/chunkdownloadmodel.cpp:222
 #, fuzzy
@@ -9356,19 +9384,19 @@ msgstr "Servilo:"
 msgid "Cannot open zip file %1."
 msgstr "Ne povas malfermi dosieron %1: %2"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:157
+#: plugins/ipfilter/downloadandconvertjob.cpp:158
 #, fuzzy, kde-format
 #| msgid "Cannot deselect missing files: %1"
 msgid "Cannot find blocklist in zip file %1."
 msgstr "Ne povas malelekti mankantajn dosierojn: %1"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:228
+#: plugins/ipfilter/downloadandconvertjob.cpp:229
 msgid ""
 "Filter file (level1.dat) already exists, do you want to convert it again?"
 msgstr ""
 "Filtrila dosiero (level1.dat) jam ekzistas, ĉu vi volas konverti ĝin ree?"
 
-#: plugins/ipfilter/downloadandconvertjob.cpp:229
+#: plugins/ipfilter/downloadandconvertjob.cpp:230
 msgid "File Exists"
 msgstr "Dosiero ekzistas"
 
@@ -9508,7 +9536,7 @@ msgstr "Evento"
 msgid "Shutdown Enabled"
 msgstr ""
 
-#: plugins/shutdown/shutdownplugin.cpp:49 plugins/shutdown/shutdowndlg.cpp:29
+#: plugins/shutdown/shutdownplugin.cpp:49
 msgid "Configure Shutdown"
 msgstr ""
 
@@ -9527,6 +9555,13 @@ msgstr "Dormi (halteti al RAM)"
 #: plugins/shutdown/shutdownplugin.cpp:164 plugins/shutdown/shutdowndlg.cpp:42
 msgid "Hibernate (suspend to disk)"
 msgstr "Pasivumigi (halteti al disko)"
+
+#: plugins/shutdown/shutdowndlg.cpp:29
+#, fuzzy
+#| msgid "Configure"
+msgctxt "@title:window"
+msgid "Configure Shutdown"
+msgstr "Agordi"
 
 #: plugins/shutdown/shutdowndlg.cpp:44
 #, fuzzy
@@ -9610,56 +9645,56 @@ msgid "File download order for <b>%1</b>:"
 msgstr "Legas datumon de <b>%1</b> :"
 
 #: plugins/mediaplayer/mediaplayeractivity.cpp:47
-#: plugins/mediaplayer/mediaplayeractivity.cpp:150
+#: plugins/mediaplayer/mediaplayeractivity.cpp:151
 #: plugins/mediaplayer/mediaplayerplugin.cpp:49
 #: plugins/mediaplayer/mediaplayerplugin.cpp:61
 msgid "Media Player"
 msgstr "Medioludilo"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:73
+#: plugins/mediaplayer/mediaplayeractivity.cpp:74
 #, fuzzy
 #| msgid "IP Filter"
 msgid "Play List"
 msgstr "IPFiltrilo"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:97
+#: plugins/mediaplayer/mediaplayeractivity.cpp:98
 #: plugins/mediaplayer/videowidget.cpp:58
 msgid "Play"
 msgstr "Ludi"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:101
+#: plugins/mediaplayer/mediaplayeractivity.cpp:102
 #: plugins/mediaplayer/videowidget.cpp:59
 msgid "Pause"
 msgstr "Paŭzita"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:109
+#: plugins/mediaplayer/mediaplayeractivity.cpp:110
 #, fuzzy
 #| msgid "Preview"
 msgid "Previous"
 msgstr "Antaŭvido"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:113
+#: plugins/mediaplayer/mediaplayeractivity.cpp:114
 msgid "Next"
 msgstr "Sekva"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:117
+#: plugins/mediaplayer/mediaplayeractivity.cpp:118
 msgid "Show Video"
 msgstr ""
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:121
+#: plugins/mediaplayer/mediaplayeractivity.cpp:122
 #: plugins/mediaplayer/playlistwidget.cpp:109
 #, fuzzy
 #| msgid "Seeders"
 msgid "Add Media"
 msgstr "Fontoj"
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:125
+#: plugins/mediaplayer/mediaplayeractivity.cpp:126
 #: plugins/mediaplayer/playlistwidget.cpp:110
 msgid "Clear Playlist"
 msgstr ""
 
-#: plugins/mediaplayer/mediaplayeractivity.cpp:164
-#: plugins/mediaplayer/mediaplayeractivity.cpp:366
+#: plugins/mediaplayer/mediaplayeractivity.cpp:165
+#: plugins/mediaplayer/mediaplayeractivity.cpp:367
 #, fuzzy
 #| msgid "Move File"
 msgid "Movie player"
@@ -10524,7 +10559,7 @@ msgid "Torrent is incomplete."
 msgstr "Torento estas nekompleta!"
 
 #: libbtcore/diskio/singlefilecache.cpp:72
-#: libbtcore/diskio/multifilecache.cpp:106
+#: libbtcore/diskio/multifilecache.cpp:107
 #, kde-format
 msgid "Failed to open %1 : %2"
 msgstr "Ne povas malfermi %1 : %2"
@@ -10582,32 +10617,32 @@ msgstr "Eraro okazis dum legado de %1"
 msgid "Failed to write to file %1 : %2"
 msgstr "Ne povas krei %1 : %2"
 
-#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:794
+#: libbtcore/diskio/cachefile.cpp:523 libbtcore/diskio/multifilecache.cpp:795
 #, kde-format
 msgid "Cannot preallocate diskspace : %1"
 msgstr "Ne povas antaŭdisponigi diskspacon : %1"
 
-#: libbtcore/diskio/multifilecache.cpp:738
-#: libbtcore/diskio/multifilecache.cpp:802
+#: libbtcore/diskio/multifilecache.cpp:739
+#: libbtcore/diskio/multifilecache.cpp:803
 #, kde-format
 msgid "Cannot open file %1 : %2"
 msgstr "Ne povas malfermi dosieron %1 : %2"
 
-#: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:154
-#: libbtcore/torrent/torrent.cpp:182 libbtcore/torrent/torrent.cpp:189
-#: libbtcore/torrent/torrent.cpp:197 libbtcore/torrent/torrent.cpp:201
-#: libbtcore/torrent/torrent.cpp:222 libbtcore/torrent/torrent.cpp:293
+#: libbtcore/torrent/torrent.cpp:83 libbtcore/torrent/torrent.cpp:155
+#: libbtcore/torrent/torrent.cpp:183 libbtcore/torrent/torrent.cpp:190
+#: libbtcore/torrent/torrent.cpp:198 libbtcore/torrent/torrent.cpp:202
+#: libbtcore/torrent/torrent.cpp:223 libbtcore/torrent/torrent.cpp:294
 #, fuzzy
 #| msgid "Corrupted torrent!"
 msgid "Corrupted torrent."
 msgstr "Malbona torento!"
 
-#: libbtcore/torrent/torrent.cpp:145
+#: libbtcore/torrent/torrent.cpp:146
 #, kde-format
 msgid " Unable to open torrent file %1 : %2"
 msgstr "Ne povas malfermi torentan dosieron %1 : %2"
 
-#: libbtcore/torrent/torrent.cpp:275
+#: libbtcore/torrent/torrent.cpp:276
 msgid "Parse Error"
 msgstr "Sintaksa eraro"
 
@@ -10754,6 +10789,11 @@ msgstr "Nevalida servila retadreso"
 #, kde-format
 msgid "Cannot open file : %1 : %2"
 msgstr "Ne povas malfermi dosieron : %1 : %2"
+
+#, fuzzy
+#~| msgid "Invalid tracker URL"
+#~ msgid "Invalid URL: "
+#~ msgstr "Nevalida servila retadreso"
 
 #, fuzzy
 #~| msgid ""
