@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-11-17 06:04+0100\n"
+"POT-Creation-Date: 2009-11-24 06:20+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -45,68 +45,148 @@ msgstr ""
 msgid "Automount on attach"
 msgstr ""
 
-#: DeviceModel.cpp:227
-msgid "Yes"
-msgstr "Jes"
+#: DeviceModel.cpp:202 DeviceModel.cpp:234
+#, kde-format
+msgid "UDI: %1"
+msgstr ""
 
-#: DeviceModel.cpp:227
-msgid "No"
-msgstr "Ne"
+#: DeviceModel.cpp:212 DeviceModel.cpp:244
+msgid "This device will be automatically mounted at login."
+msgstr ""
 
-#: DeviceModel.cpp:233
+#: DeviceModel.cpp:213 DeviceModel.cpp:245
+msgid "This device will not be automatically mounted at login."
+msgstr ""
+
+#: DeviceModel.cpp:221 DeviceModel.cpp:253
+msgid "This device will be automatically mounted when attached."
+msgstr ""
+
+#: DeviceModel.cpp:222 DeviceModel.cpp:254
+msgid "This device will not be automatically mounted when attached."
+msgstr ""
+
+#: DeviceModel.cpp:261
 #, fuzzy
 #| msgid "Add Device..."
 msgid "Attached Devices"
 msgstr "Aldoni aparaton..."
 
-#: DeviceModel.cpp:235
+#: DeviceModel.cpp:263
 msgid "Disconnected Devices"
 msgstr ""
 
 #. i18n: file: DeviceAutomounterKCM.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, automountEnabled)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, automountEnabled)
 #: rc.cpp:3
+msgid ""
+"When this is unchecked, no device automounting of any kind will happen, "
+"regardless of anything selected in the \"Device Overrides\" section."
+msgstr ""
+
+#. i18n: file: DeviceAutomounterKCM.ui:20
+#. i18n: ectx: property (text), widget (QCheckBox, automountEnabled)
+#: rc.cpp:6
 msgid "Enable automatic mounting of removable media"
 msgstr ""
 
-#. i18n: file: DeviceAutomounterKCM.ui:42
+#. i18n: file: DeviceAutomounterKCM.ui:45
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, automountUnknownDevices)
+#: rc.cpp:9
+msgid ""
+"When this is checked, KDE will only automatically mount devices it "
+"remembers. A device is 'remembered' if it has ever been mounted before. i.e. "
+"plugging in a USB media player to charge, but never accessing the files on "
+"the device will not cause KDE to automatically mount the player next time it "
+"is seen. However, once you access the files, KDE will remember to "
+"automatically make the contents accessible to your system."
+msgstr ""
+
+#. i18n: file: DeviceAutomounterKCM.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, automountUnknownDevices)
-#: rc.cpp:6
+#: rc.cpp:12
 msgid ""
 "Only automatically mount removable media that has been manually mounted "
 "before"
 msgstr ""
 
-#. i18n: file: DeviceAutomounterKCM.ui:49
+#. i18n: file: DeviceAutomounterKCM.ui:55
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, automountOnLogin)
+#: rc.cpp:15
+msgid ""
+"If any removable storage devices are connected to your system when you login "
+"to your desktop, KDE will automatically make the contents available to your "
+"system for other programs to read."
+msgstr ""
+
+#. i18n: file: DeviceAutomounterKCM.ui:58
 #. i18n: ectx: property (text), widget (QCheckBox, automountOnLogin)
-#: rc.cpp:9
+#: rc.cpp:18
 msgid "Mount all removable media at login"
 msgstr ""
 
-#. i18n: file: DeviceAutomounterKCM.ui:56
+#. i18n: file: DeviceAutomounterKCM.ui:65
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, automountOnPlugin)
+#: rc.cpp:21
+msgid ""
+"When this is checked, KDE will automatically make the contents of any "
+"storage device available to the system when it is plugged in or attached."
+msgstr ""
+
+#. i18n: file: DeviceAutomounterKCM.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, automountOnPlugin)
-#: rc.cpp:12
+#: rc.cpp:24
 msgid "Automatically mount removable media when attached"
 msgstr ""
 
-#. i18n: file: DeviceAutomounterKCM.ui:78
+#. i18n: file: DeviceAutomounterKCM.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:15
+#: rc.cpp:27
 msgid "Device Overrides"
 msgstr ""
 
-#. i18n: file: DeviceAutomounterKCM.ui:117
+#. i18n: file: DeviceAutomounterKCM.ui:98
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: rc.cpp:30
+msgid ""
+"This list contains the storage devices known to KDE. If \"Automount on Login"
+"\" is checked, the device will be automatically mounted even though \"Mount "
+"all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\".\n"
+"\n"
+"If \"Enable automatic mounting of removable media\" is unchecked, the "
+"overrides do not apply and no devices will be automatically mounted."
+msgstr ""
+
+#. i18n: file: DeviceAutomounterKCM.ui:134
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: rc.cpp:35
+msgid ""
+"Clicking this button causes KDE to 'forget' that the selected devices ever "
+"existed. This is only useful if \"Only automatically mount removable media "
+"that has been manually mounted before\" is checked. Once a device is "
+"forgotten and KDE is set to only automatically mount familiar devices, the "
+"device will not be automatically mounted."
+msgstr ""
+
+#. i18n: file: DeviceAutomounterKCM.ui:137
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: rc.cpp:18
+#: rc.cpp:38
 msgid "Forget Device"
 msgstr ""
 
-#: rc.cpp:19
+#: rc.cpp:39
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Axel Rousseau"
 
-#: rc.cpp:20
+#: rc.cpp:40
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
+
+#~ msgid "Yes"
+#~ msgstr "Jes"
+
+#~ msgid "No"
+#~ msgstr "Ne"
