@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-12-16 06:46+0100\n"
+"POT-Creation-Date: 2009-12-19 05:50+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -324,19 +324,19 @@ msgstr ""
 msgid "Import &Missing Signatures From Keyserver"
 msgstr ""
 
-#: keysmanager.cpp:304 model/kgpgitemmodel.cpp:281
+#: keysmanager.cpp:304 model/kgpgitemmodel.cpp:284
 msgid "Trust"
 msgstr ""
 
-#: keysmanager.cpp:307 model/kgpgitemmodel.cpp:282
+#: keysmanager.cpp:307 model/kgpgitemmodel.cpp:285
 msgid "Size"
 msgstr "Grandeco"
 
-#: keysmanager.cpp:310 model/kgpgitemmodel.cpp:284
+#: keysmanager.cpp:310 model/kgpgitemmodel.cpp:287
 msgid "Creation"
 msgstr ""
 
-#: keysmanager.cpp:313 model/kgpgitemmodel.cpp:283
+#: keysmanager.cpp:313 model/kgpgitemmodel.cpp:286
 msgid "Expiration"
 msgstr ""
 
@@ -1424,7 +1424,7 @@ msgstr ""
 msgid "Enter passphrase (symmetrical encryption)"
 msgstr ""
 
-#: kgpgtextinterface.cpp:106 model/kgpgitemnode.cpp:1086
+#: kgpgtextinterface.cpp:106 core/KGpgRefNode.cpp:126
 #: transactions/kgpgtransaction.cpp:260
 msgid "[No user id found]"
 msgstr ""
@@ -2059,7 +2059,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTableView, availableKeys)
 #. i18n: file: groupedit.ui:135
 #. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:253 rc.cpp:265 model/kgpgitemmodel.cpp:279
+#: rc.cpp:253 rc.cpp:265 model/kgpgitemmodel.cpp:282
 #: model/kgpgsearchresultmodel.cpp:323
 msgid "Name"
 msgstr "Nomo"
@@ -2068,7 +2068,7 @@ msgstr "Nomo"
 #. i18n: ectx: property (text), widget (QTableView, availableKeys)
 #. i18n: file: groupedit.ui:140
 #. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:256 rc.cpp:268 model/kgpgitemmodel.cpp:280
+#: rc.cpp:256 rc.cpp:268 model/kgpgitemmodel.cpp:283
 #: model/kgpgsearchresultmodel.cpp:325
 msgctxt "@title:column Title of a column of emails"
 msgid "Email"
@@ -3011,9 +3011,49 @@ msgctxt "Unknown trust in key"
 msgid "Unknown"
 msgstr ""
 
-#: core/kgpgkey.cpp:512
+#: core/KGpgGroupNode.cpp:68
+#, kde-format
+msgid "1 key"
+msgid_plural "%1 keys"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/kgpgkey.cpp:504
 msgctxt "Unlimited key lifetime"
 msgid "Unlimited"
+msgstr ""
+
+#: core/KGpgKeyNode.cpp:76
+#, kde-format
+msgctxt "size of signing key / size of encryption key"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: core/KGpgKeyNode.cpp:182 core/KGpgSignableNode.cpp:48
+#, kde-format
+msgid "1 signature"
+msgid_plural "%1 signatures"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/KGpgNode.cpp:48
+#, kde-format
+msgctxt "Name of uid (comment)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: core/KGpgSignNode.cpp:63
+#, kde-format
+msgid "%1 [local signature]"
+msgstr ""
+
+#: core/KGpgSubkeyNode.cpp:74
+#, kde-format
+msgid "%1 subkey"
+msgstr ""
+
+#: core/KGpgUatNode.cpp:43
+msgid "Photo id"
 msgstr ""
 
 #: editor/kgpgeditor.cpp:89 editor/kgpgeditor.cpp:246
@@ -3213,63 +3253,30 @@ msgctxt "Name <Email>: ID"
 msgid "%1 &lt;%2&gt;: %3"
 msgstr "%1 &lt;%2&gt;: %3"
 
-#: model/kgpgitemmodel.cpp:193
+#: model/kgpgitemmodel.cpp:199
 #, kde-format
 msgid "1 Key"
 msgid_plural "%1 Keys"
 msgstr[0] ""
 msgstr[1] ""
 
-#: model/kgpgitemmodel.cpp:198
+#: model/kgpgitemmodel.cpp:201
 #, kde-format
-msgid "1 Group"
-msgid_plural "%1 Groups"
+msgid "1 Key, 1 Group"
+msgid_plural "%1 Keys, 1 Group"
 msgstr[0] ""
 msgstr[1] ""
 
-#: model/kgpgitemmodel.cpp:285
+#: model/kgpgitemmodel.cpp:203
+#, kde-format
+msgid "1 Key, %2 Groups"
+msgid_plural "%1 Keys, %2 Groups"
+msgstr[0] ""
+msgstr[1] ""
+
+#: model/kgpgitemmodel.cpp:288
 msgid "ID"
 msgstr "ID"
-
-#: model/kgpgitemnode.cpp:51
-#, kde-format
-msgctxt "Name of uid (comment)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: model/kgpgitemnode.cpp:307 model/kgpgitemnode.cpp:627
-#, kde-format
-msgid "1 signature"
-msgid_plural "%1 signatures"
-msgstr[0] ""
-msgstr[1] ""
-
-#: model/kgpgitemnode.cpp:535
-#, kde-format
-msgctxt "size of signing key / size of encryption key"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: model/kgpgitemnode.cpp:859
-#, kde-format
-msgid "%1 [local signature]"
-msgstr ""
-
-#: model/kgpgitemnode.cpp:890
-#, kde-format
-msgid "%1 subkey"
-msgstr ""
-
-#: model/kgpgitemnode.cpp:918
-msgid "Photo id"
-msgstr ""
-
-#: model/kgpgitemnode.cpp:972
-#, kde-format
-msgid "1 key"
-msgid_plural "%1 keys"
-msgstr[0] ""
-msgstr[1] ""
 
 #: model/kgpgsearchresultmodel.cpp:217
 #, kde-format
