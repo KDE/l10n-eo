@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-01-10 06:19+0100\n"
+"POT-Creation-Date: 2010-01-12 07:01+0100\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -3936,7 +3936,7 @@ msgstr "&Bone"
 #. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
 #. i18n: file: plugins/extensions/dockers/defaultdockers/wdgpalettechooser.ui:74
 #. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
-#: rc.cpp:1169 rc.cpp:2464 plugins/tools/tool_polyline/kis_tool_polyline.cc:63
+#: rc.cpp:1169 rc.cpp:2464 ui/tool/kis_tool_polyline_base.cpp:42
 #, fuzzy
 msgid "&Cancel"
 msgstr "Kanaloj"
@@ -8613,6 +8613,11 @@ msgstr ""
 msgid "Selection"
 msgstr "Elekto"
 
+#: ui/tool/kis_tool_polyline_base.cpp:39
+#, fuzzy
+msgid "&Finish"
+msgstr "&Poligonilo"
+
 #: ui/tool/kis_tool.cc:103
 #, fuzzy
 #| msgid "Foreground Color"
@@ -8630,7 +8635,7 @@ msgstr "Malfona Koloro"
 msgid "No options"
 msgstr "Alfo"
 
-#: ui/tool/kis_tool_freehand.cc:409 ui/tool/kis_tool_freehand.cc:418
+#: ui/tool/kis_tool_freehand.cc:415 ui/tool/kis_tool_freehand.cc:424
 msgid "Freehand tool"
 msgstr ""
 
@@ -8917,58 +8922,62 @@ msgid "Lukáš Tvrdý"
 msgstr "Lukáš Tvrdý"
 
 #: ui/kis_aboutdata.h:58
+msgid "Marc Pegon"
+msgstr ""
+
+#: ui/kis_aboutdata.h:59
 msgid "Matthias Elter"
 msgstr "Matthias Elter"
 
-#: ui/kis_aboutdata.h:59
+#: ui/kis_aboutdata.h:60
 msgid "Melchior Franz"
 msgstr "Melchior Franz"
 
-#: ui/kis_aboutdata.h:60
+#: ui/kis_aboutdata.h:61
 msgid "Michael Koch"
 msgstr "Michael Koch"
 
-#: ui/kis_aboutdata.h:61
+#: ui/kis_aboutdata.h:62
 msgid "Michael Thaler"
 msgstr "Michael Thaler"
 
-#: ui/kis_aboutdata.h:62
+#: ui/kis_aboutdata.h:63
 msgid "Patrick Julien"
 msgstr "Patrick Julien"
 
-#: ui/kis_aboutdata.h:63
+#: ui/kis_aboutdata.h:64
 msgid "Roger Larsson"
 msgstr "Roger Larsson"
 
-#: ui/kis_aboutdata.h:64
+#: ui/kis_aboutdata.h:65
 msgid "Samy Lange"
 msgstr "Samy Lange"
 
-#: ui/kis_aboutdata.h:65
+#: ui/kis_aboutdata.h:66
 msgid "Sven Langkamp"
 msgstr "Sven Langkamp"
 
-#: ui/kis_aboutdata.h:66
+#: ui/kis_aboutdata.h:67
 msgid "Toshitaka Fujioka"
 msgstr "Toshitaka Fujioka"
 
-#: ui/kis_aboutdata.h:67
+#: ui/kis_aboutdata.h:68
 msgid "Thomas Zander"
 msgstr "Thomas Zander"
 
-#: ui/kis_aboutdata.h:68
+#: ui/kis_aboutdata.h:69
 msgid "Tom Burdick"
 msgstr "Tom Burdick"
 
-#: ui/kis_aboutdata.h:69
+#: ui/kis_aboutdata.h:70
 msgid "Vera Lukman"
 msgstr "Vera Lukman"
 
-#: ui/kis_aboutdata.h:70
+#: ui/kis_aboutdata.h:71
 msgid "Sander Koning"
 msgstr "Sander Koning"
 
-#: ui/kis_aboutdata.h:71
+#: ui/kis_aboutdata.h:72
 msgid "Andreas Lundin"
 msgstr "Andreas Lundin"
 
@@ -10112,20 +10121,11 @@ msgstr "Perspektivtransformo"
 msgid "Draw a polygon. Shift-mouseclick ends the polygon."
 msgstr ""
 
-#: plugins/tools/tool_polyline/kis_tool_polyline.cc:60
-#, fuzzy
-msgid "&Finish Polyline"
-msgstr "&Poligonilo"
-
-#: plugins/tools/tool_polyline/kis_tool_polyline.cc:118
+#: plugins/tools/tool_polyline/kis_tool_polyline.cc:55
 msgid "Polyline"
 msgstr "Plurlinio"
 
-#: plugins/tools/tool_polyline/kis_tool_polyline.cc:317
-msgid "Press shift-mouseclick to end the polyline."
-msgstr ""
-
-#: plugins/tools/tool_polyline/kis_tool_polyline.h:81
+#: plugins/tools/tool_polyline/kis_tool_polyline.h:54
 msgid "Draw a polyline. Shift-mouseclick ends the polyline."
 msgstr ""
 
@@ -10280,8 +10280,8 @@ msgstr "Elektu nenion"
 msgid "Select similar colors"
 msgstr "Elekti similajn kolorojn"
 
-#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:71
-#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:82
+#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:72
+#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:83
 msgid "Polygonal Selection"
 msgstr "Poligona Elekto"
 
@@ -11461,16 +11461,16 @@ msgstr "Ebeno"
 msgid "JPEG 2000 Export Options"
 msgstr "Geometriaj opcioj"
 
+#: plugins/formats/pdf/kis_pdf_import.cpp:100
 #: plugins/formats/pdf/kis_pdf_import.cpp:101
-#: plugins/formats/pdf/kis_pdf_import.cpp:102
 msgid "A password is required to read that pdf"
 msgstr ""
 
-#: plugins/formats/pdf/kis_pdf_import.cpp:111
+#: plugins/formats/pdf/kis_pdf_import.cpp:110
 msgid "PDF Import Options"
 msgstr "Opcioj por PDF-importo"
 
-#: plugins/formats/pdf/kis_pdf_import.cpp:142
+#: plugins/formats/pdf/kis_pdf_import.cpp:141
 #, fuzzy, kde-format
 #| msgid "Layer %1"
 msgid "Page %1"
@@ -12155,6 +12155,10 @@ msgid "Ruler assistant editor tool"
 msgstr "Distanco:"
 
 #, fuzzy
+#~ msgid "&Finish Polyline"
+#~ msgstr "&Poligonilo"
+
+#, fuzzy
 #~ msgid "Add"
 #~ msgstr "Aldonu %1..."
 
@@ -12190,10 +12194,6 @@ msgstr "Distanco:"
 #, fuzzy
 #~ msgid "Contiguous Fill"
 #~ msgstr "&Najbareca elekto"
-
-#, fuzzy
-#~ msgid "&Finish Polygon"
-#~ msgstr "&Poligonilo"
 
 #, fuzzy
 #~ msgid "Example curves tool"
