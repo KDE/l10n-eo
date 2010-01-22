@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-01-21 06:18+0100\n"
+"POT-Creation-Date: 2010-01-22 06:50+0100\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -556,11 +556,11 @@ msgstr "&Kopii dosierojn al la kolekto..."
 msgid "Nepomuk Collection (slow, Redland)"
 msgstr "&Kopii dosierojn al la kolekto..."
 
-#: collection/sqlcollection/CapabilityDelegate.cpp:348
+#: collection/sqlcollection/CapabilityDelegate.cpp:386
 msgid "Do not show under Various Artists"
 msgstr "Ne klasigi kiel diversajn artistojn"
 
-#: collection/sqlcollection/CapabilityDelegate.cpp:350
+#: collection/sqlcollection/CapabilityDelegate.cpp:388
 msgid "Show under Various Artists"
 msgstr "Klasigi kiel diversajn artistojn"
 
@@ -627,7 +627,7 @@ msgstr "Esplorante la muzikaron"
 
 #: collection/sqlcollection/ScanManager.cpp:742
 #: dialogs/OrganizeCollectionDialog.cpp:144
-#: browsers/CollectionTreeItem.cpp:201 covermanager/CoverFoundDialog.cpp:209
+#: browsers/CollectionTreeItem.cpp:198 covermanager/CoverFoundDialog.cpp:209
 #: covermanager/CoverViewDialog.h:45 covermanager/CoverManager.cpp:853
 msgid "Various Artists"
 msgstr "Diversaj artistoj"
@@ -1184,7 +1184,7 @@ msgstr "Ripeti la ludliston"
 
 #: context/applets/albums/AlbumsView.cpp:115
 #: browsers/filebrowser/MyDirOperator.cpp:317
-#: playlist/view/PlaylistViewCommon.cpp:203
+#: playlist/view/PlaylistViewCommon.cpp:242
 #, fuzzy
 #| msgid "Edit Track Information"
 msgid "Edit Track Details"
@@ -1384,7 +1384,7 @@ msgstr "Artisto"
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:250 rc.cpp:1237
 #: services/magnatune/MagnatuneStore.cpp:211
 #: services/jamendo/JamendoInfoParser.cpp:83
-#: playlist/view/PlaylistViewCommon.cpp:52 playlist/PlaylistHeader.cpp:40
+#: playlist/view/PlaylistViewCommon.cpp:66 playlist/PlaylistHeader.cpp:40
 #: playlist/PlaylistModel.cpp:704 widgets/SmartPlaylistEditor.cpp:183
 #: widgets/SmartPlaylistEditor.cpp:197 covermanager/CoverFoundDialog.cpp:93
 msgid "Album"
@@ -4388,7 +4388,7 @@ msgstr "Unu minuto antaŭe"
 msgid "Year - Album"
 msgstr "Artisto / Jaro - Albumo"
 
-#: browsers/collectionbrowser/CollectionTreeItemDelegate.cpp:143
+#: browsers/collectionbrowser/CollectionTreeItemDelegate.cpp:144
 #, kde-format
 msgid "%1% used"
 msgstr ""
@@ -4760,7 +4760,7 @@ msgid "By"
 msgstr "Modifi"
 
 #: browsers/playlistbrowser/PodcastCategory.cpp:243
-#: browsers/playlistbrowser/DynamicCategory.cpp:70
+msgctxt "Podcast published on"
 msgid "On"
 msgstr ""
 
@@ -4800,6 +4800,11 @@ msgstr ""
 msgid ""
 "With a dynamic playlist, Amarok becomes your own personal dj, automatically "
 "selecting tracks for you, based on a number of parameters that you select."
+msgstr ""
+
+#: browsers/playlistbrowser/DynamicCategory.cpp:70
+msgctxt "Turn dynamic mode on"
+msgid "On"
 msgstr ""
 
 #: browsers/playlistbrowser/DynamicCategory.cpp:71
@@ -4883,18 +4888,18 @@ msgstr "Ne eblas skribi la ludliston (%1)."
 msgid "Add Folder"
 msgstr "Aldoni komputilon"
 
-#: browsers/CollectionTreeItem.cpp:183
+#: browsers/CollectionTreeItem.cpp:180
 msgctxt "The Name is not known"
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: browsers/CollectionTreeItem.cpp:212
+#: browsers/CollectionTreeItem.cpp:209
 #, fuzzy
 #| msgid "Connect"
 msgid "Counting"
 msgstr "Konekti"
 
-#: browsers/CollectionTreeItem.cpp:230
+#: browsers/CollectionTreeItem.cpp:227
 #: playlist/proxymodels/GroupingProxy.cpp:100
 #, fuzzy, kde-format
 #| msgid "%1 track"
@@ -5139,7 +5144,7 @@ msgstr "Post la nuna trako"
 msgid "Last.fm: Skip Current Track"
 msgstr "Post la nuna trako"
 
-#: MainWindow.cpp:876 playlist/view/PlaylistViewCommon.cpp:111
+#: MainWindow.cpp:876 playlist/view/PlaylistViewCommon.cpp:128
 msgid "Queue Track"
 msgstr "Envicigi trakon"
 
@@ -8168,8 +8173,8 @@ msgstr "Magnatune informo"
 
 #. i18n: file: services/magnatune/MagnatuneDownloadDialogBase.ui:83
 #. i18n: ectx: property (text), widget (QPushButton, downloadButton)
-#: rc.cpp:1504 services/jamendo/JamendoMeta.cpp:137
-#: services/jamendo/JamendoMeta.cpp:377
+#: rc.cpp:1504 services/jamendo/JamendoMeta.cpp:135
+#: services/jamendo/JamendoMeta.cpp:371
 msgid "&Download"
 msgstr "&Elŝuti"
 
@@ -9201,11 +9206,6 @@ msgstr "%1-es Persona Radio"
 msgid "last.fm"
 msgstr "last.fm"
 
-#: services/ShowInServiceAction.cpp:27
-#, kde-format
-msgid "Go to artist in %1 service"
-msgstr ""
-
 #: services/magnatune/MagnatuneInfoParser.cpp:31
 #, fuzzy
 #| msgid "Loading Thumbnails..."
@@ -9271,37 +9271,37 @@ msgid ""
 "buy using Amarok, you support the Amarok project with 10%."
 msgstr ""
 
-#: services/magnatune/MagnatuneMeta.cpp:219
-#: services/magnatune/MagnatuneMeta.cpp:441
+#: services/magnatune/MagnatuneMeta.cpp:217
+#: services/magnatune/MagnatuneMeta.cpp:430
 #, fuzzy
 #| msgid "Purchase Album"
 msgid "&Purchase Album"
 msgstr "Aĉeti albumon"
 
-#: services/magnatune/MagnatuneMeta.cpp:221
-#: services/magnatune/MagnatuneMeta.cpp:443
+#: services/magnatune/MagnatuneMeta.cpp:219
+#: services/magnatune/MagnatuneMeta.cpp:432
 #, fuzzy
 #| msgid "Download Album"
 msgid "&Download Album"
 msgstr "Elŝuti albumon"
 
-#: services/magnatune/MagnatuneMeta.cpp:244
+#: services/magnatune/MagnatuneMeta.cpp:242
 #, fuzzy
 #| msgid "Magnatune.com: &Buy"
 msgid "Magnatune.com: &Purchase Album"
 msgstr "Magnatune.com: &Aĉeti"
 
-#: services/magnatune/MagnatuneMeta.cpp:246
+#: services/magnatune/MagnatuneMeta.cpp:244
 #, fuzzy
 #| msgid "Magnatune.com: &Download"
 msgid "Magnatune.com: &Download Album"
 msgstr "Magnatune.com: &Elŝuti"
 
-#: services/magnatune/MagnatuneMeta.cpp:277
+#: services/magnatune/MagnatuneMeta.cpp:266
 msgid "The non evil record label that is fair to artists and customers alike"
 msgstr ""
 
-#: services/magnatune/MagnatuneMeta.cpp:449
+#: services/magnatune/MagnatuneMeta.cpp:438
 #, fuzzy
 #| msgid "Purchase Album from Magnatune.com"
 msgid "Add to Magnatune.com &favorites"
@@ -9690,11 +9690,11 @@ msgstr ""
 msgid "Uploading Track %1/%2"
 msgstr "Venontaj trakoj:"
 
-#: services/jamendo/JamendoMeta.cpp:155
+#: services/jamendo/JamendoMeta.cpp:153
 msgid "Jamendo.com: &Download"
 msgstr "Jamendo.com: &Elŝuti"
 
-#: services/jamendo/JamendoMeta.cpp:178
+#: services/jamendo/JamendoMeta.cpp:172
 msgid "A site where artists can freely share their music"
 msgstr ""
 
@@ -9775,23 +9775,29 @@ msgstr "Neniu informo havebla pri tiu trako"
 msgid "Ok"
 msgstr "Jesa"
 
-#: playlist/view/PlaylistViewCommon.cpp:104
+#: playlist/view/PlaylistViewCommon.cpp:120
 #, fuzzy
 #| msgid "Stop Playing After Track"
 msgid "Stop Playing After This Track"
 msgstr "Halti la ludadon post la trako"
 
-#: playlist/view/PlaylistViewCommon.cpp:111
+#: playlist/view/PlaylistViewCommon.cpp:128
 #, fuzzy
 #| msgid "&Dequeue Track"
 msgid "Dequeue Track"
 msgstr "&Malvicigi trakon"
 
-#: playlist/view/PlaylistViewCommon.cpp:122
+#: playlist/view/PlaylistViewCommon.cpp:150
 msgid "Remove From Playlist"
 msgstr "Forigi el la ludlisto"
 
-#: playlist/view/PlaylistViewCommon.cpp:186
+#: playlist/view/PlaylistViewCommon.cpp:182
+#, fuzzy
+#| msgid "Select Format:"
+msgid "Find in Source"
+msgstr "Elektu formaton:"
+
+#: playlist/view/PlaylistViewCommon.cpp:225
 #, fuzzy
 #| msgid "Select Format:"
 msgid "Select Source"
