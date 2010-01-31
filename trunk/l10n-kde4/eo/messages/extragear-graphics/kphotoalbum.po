@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-01-27 07:04+0100\n"
+"POT-Creation-Date: 2010-01-31 07:10+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -184,9 +184,9 @@ msgstr ""
 msgid ""
 "<p>There was an error while executing the SQL backend command. The error is "
 "likely due to a broken database file.</p><p>To fix this problem run "
-"Maintainance->Rebuild EXIF database.</p><hr/><p>For debugging: the command "
-"that was attempted to be executed was:<br/>%1</p><p>The error message "
-"obtained was:<br/>%2</p>"
+"Maintainance->Recreate Exif Search database.</p><hr/><p>For debugging: the "
+"command that was attempted to be executed was:<br/>%1</p><p>The error "
+"message obtained was:<br/>%2</p>"
 msgstr ""
 
 #: Exif/Database.cpp:85
@@ -201,7 +201,7 @@ msgstr ""
 msgid "EXIF Search"
 msgstr ""
 
-#: Exif/SearchDialog.cpp:42 Settings/SettingsDialog.cpp:91
+#: Exif/SearchDialog.cpp:42 Settings/SettingsDialog.cpp:94
 msgid "Settings"
 msgstr "Agordo"
 
@@ -1879,37 +1879,93 @@ msgstr ""
 msgid "Character set for image metadata:"
 msgstr ""
 
-#: Settings/SettingsDialog.cpp:64 MainWindow/Window.cpp:1158
+#: Settings/FileVersionDetectionPage.cpp:19
+msgid "File Version Detection Settings"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:22
+msgid "Try to detect multiple versions of files"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:24
+msgid "File versions search regexp:"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:27
+msgid "Original file replacement text:"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:30
+msgid "Move meta-data (i.e. delete tags from the original):"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:32
+msgid "Auto-stack new files on top of old:"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:34
+msgid "Copy file search regexp:"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:37
+msgid "Copy file replacement text:"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:41
+msgid ""
+"<p>When KPhotoAlbum searches for new files and finds a file that matches the "
+"<i>modified file search regexp</i> it is assumed that an original version of "
+"the image may exist.  The regexp pattern will be replaced with the "
+"<i>original file string</i> text and if that file exists, all associated "
+"metadata (category information, ratings, etc) will be copied from the "
+"original file to the new one.</p>"
+msgstr ""
+
+#: Settings/FileVersionDetectionPage.cpp:50
+msgid ""
+"<p>KPhotoAlbum can make a copy of an image before opening it with an "
+"external program.  These settings set the original regexp to search for and "
+"contents to replace it with when deciding what the new filename should be.</"
+"p>"
+msgstr ""
+
+#: Settings/SettingsDialog.cpp:66 MainWindow/Window.cpp:1158
 msgid "General"
 msgstr "Ĝeneralo"
 
-#: Settings/SettingsDialog.cpp:65
+#: Settings/SettingsDialog.cpp:67
+#, fuzzy
+#| msgid "Version %1"
+msgid "File Versions"
+msgstr "Versio %1"
+
+#: Settings/SettingsDialog.cpp:68
 msgid "Thumbnail View"
 msgstr ""
 
-#: Settings/SettingsDialog.cpp:66
+#: Settings/SettingsDialog.cpp:69
 msgid "Categories"
 msgstr "Kategorioj"
 
-#: Settings/SettingsDialog.cpp:67
+#: Settings/SettingsDialog.cpp:70
 msgid "Subcategories"
 msgstr ""
 
-#: Settings/SettingsDialog.cpp:68 MainWindow/Window.cpp:1159
+#: Settings/SettingsDialog.cpp:71 MainWindow/Window.cpp:1159
 msgid "Viewer"
 msgstr "Rigardilo"
 
 #. i18n: file: kphotoalbumui.rc:66
 #. i18n: ectx: Menu (plugins)
-#: Settings/SettingsDialog.cpp:70 rc.cpp:12
+#: Settings/SettingsDialog.cpp:73 rc.cpp:12
 msgid "Plugins"
 msgstr "Kromaĵoj"
 
-#: Settings/SettingsDialog.cpp:74
+#: Settings/SettingsDialog.cpp:77
 msgid "EXIF/IPTC Information"
 msgstr ""
 
-#: Settings/SettingsDialog.cpp:76
+#: Settings/SettingsDialog.cpp:79
 msgid "Database backend"
 msgstr ""
 
@@ -2185,54 +2241,22 @@ msgid "Required size for the thumbnail:"
 msgstr ""
 
 #: Settings/GeneralPage.cpp:70
-msgid "Directories to exclude from search:"
+msgid "Directories to exclude from new file search:"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:75
-msgid "Modified File Detection Settings"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:78
-msgid "Try to detect modified files"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:80
-msgid "Modified file search regexp:"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:83
-msgid "Original file replacement text:"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:86
-msgid "Move meta-data (i.e. delete tags from the original):"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:88
-msgid "Auto-stack new files on top of old:"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:90
-msgid "Copy file search regexp:"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:93
-msgid "Copy file replacement text:"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:101
+#: Settings/GeneralPage.cpp:79
 msgid "Size of histogram columns in date bar:"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:116
+#: Settings/GeneralPage.cpp:94
 msgid "Show splash screen"
 msgstr "Montri la lanĉprogreson"
 
-#: Settings/GeneralPage.cpp:120
+#: Settings/GeneralPage.cpp:98
 msgid "Category for virtual albums:"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:141
+#: Settings/GeneralPage.cpp:119
 msgid ""
 "<p>KPhotoAlbum will try to read the image date from EXIF information in the "
 "image. If that fails it will try to get the date from the file's time stamp."
@@ -2244,7 +2268,7 @@ msgid ""
 "images are from the scanner or the camera, from session to session.</p>"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:152
+#: Settings/GeneralPage.cpp:130
 msgid ""
 "<p>JPEG images may contain information about rotation. If you have a reason "
 "for not using this information to get a default rotation of your images, "
@@ -2252,13 +2276,13 @@ msgid ""
 "information into the images at all.</p>"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:158
+#: Settings/GeneralPage.cpp:136
 msgid ""
 "<p>JPEG images may contain a description. Check this checkbox to specify if "
 "you want to use this as a default description for your images.</p>"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:163
+#: Settings/GeneralPage.cpp:141
 msgid ""
 "<p>KPhotoAlbum is capable of searching for new images and videos when "
 "started, this does, however, take some time, so instead you may wish to "
@@ -2266,7 +2290,7 @@ msgid ""
 ">Rescan for new images</b></p>"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:168
+#: Settings/GeneralPage.cpp:146
 msgid ""
 "<p>KPhotoAlbum is capable of reading certain kinds of RAW images.  Some "
 "cameras store both a RAW image and a matching JPEG or TIFF image.  This "
@@ -2275,7 +2299,7 @@ msgid ""
 "for which matching image files also exist.</p>"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:174
+#: Settings/GeneralPage.cpp:152
 msgid ""
 "<p>KPhotoAlbum shares plugins with other imaging applications, some of which "
 "have the concept of albums. KPhotoAlbum does not have this concept; "
@@ -2293,26 +2317,8 @@ msgid ""
 "p><p>Most users would probably want to specify Events here.</p>"
 msgstr ""
 
-#: Settings/GeneralPage.cpp:190
+#: Settings/GeneralPage.cpp:168
 msgid "Show the KPhotoAlbum splash screen on start up"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:193
-msgid ""
-"<p>When KPhotoAlbum searches for new files and finds a file that matches the "
-"<i>modified file search regexp</i> it is assumed that an original version of "
-"the image may exist.  The regexp pattern will be replaced with the "
-"<i>original file string</i> text and if that file exists, all associated "
-"metadata (category information, ratings, etc) will be copied from the "
-"original file to the new one.</p>"
-msgstr ""
-
-#: Settings/GeneralPage.cpp:202
-msgid ""
-"<p>KPhotoAlbum can make a copy of an image before opening it with an "
-"external program.  These settings set the original regexp to search for and "
-"contents to replace it with when deciding what the new filename should be.</"
-"p>"
 msgstr ""
 
 #: Settings/PluginsPage.cpp:18
@@ -2323,7 +2329,7 @@ msgstr ""
 msgid "Delay loading plugins until the plugin menu is opened"
 msgstr ""
 
-#: Settings/SettingsData.cpp:205
+#: Settings/SettingsData.cpp:198
 msgid ""
 "When reading time information of images, their EXIF info is used. Exif info "
 "may, however, not be supported by your KPhotoAlbum installation, or no valid "
@@ -2333,7 +2339,7 @@ msgid ""
 "on your images?"
 msgstr ""
 
-#: Settings/SettingsData.cpp:211
+#: Settings/SettingsData.cpp:204
 msgid "Trust Time Stamps?"
 msgstr ""
 
