@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi_davcalendar_resource\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-19 07:08+0100\n"
+"POT-Creation-Date: 2010-02-21 07:01+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -15,82 +15,73 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: davcalendarresource.cpp:125 davcalendarresource.cpp:527
-#: davcalendarresource.cpp:531
-msgid "Using GroupDAV"
+#: configdialog.cpp:40
+msgid "Protocol"
 msgstr ""
 
-#: davcalendarresource.cpp:129 davcalendarresource.cpp:532
-msgid "Using CalDAV"
+#: configdialog.cpp:40 urlconfigurationdialog.cpp:33
+msgid "URL"
 msgstr ""
 
-#: davcalendarresource.cpp:133
-msgid "Using CardDAV"
-msgstr ""
-
-#: davcalendarresource.cpp:136 davcalendarresource.cpp:535
-msgid "No protocol configured"
-msgstr ""
-
-#: davcalendarresource.cpp:157 davcalendarresource.cpp:158
-#: davcalendarresource.cpp:174 davcalendarresource.cpp:175
-#: davcalendarresource.cpp:193 davcalendarresource.cpp:194
-#: davcalendarresource.cpp:218 davcalendarresource.cpp:219
-#: davcalendarresource.cpp:292 davcalendarresource.cpp:293
-#: davcalendarresource.cpp:333 davcalendarresource.cpp:334
+#: davcalendarresource.cpp:123 davcalendarresource.cpp:124
+#: davcalendarresource.cpp:140 davcalendarresource.cpp:141
+#: davcalendarresource.cpp:158 davcalendarresource.cpp:159
+#: davcalendarresource.cpp:185 davcalendarresource.cpp:186
+#: davcalendarresource.cpp:260 davcalendarresource.cpp:261
+#: davcalendarresource.cpp:304 davcalendarresource.cpp:305
 msgid "The resource is not configured yet"
 msgstr ""
 
-#: davcalendarresource.cpp:162
+#: davcalendarresource.cpp:128
 msgid "Fetching collections"
 msgstr ""
 
-#: davcalendarresource.cpp:226
+#: davcalendarresource.cpp:193
 #, kde-format
 msgid "Invalid collection for item %1."
 msgstr ""
 
-#: davcalendarresource.cpp:240 davcalendarresource.cpp:255
+#: davcalendarresource.cpp:207 davcalendarresource.cpp:223
 #, kde-format
 msgid "Client did not create a UID for item %1."
 msgstr ""
 
-#: davcalendarresource.cpp:266 davcalendarresource.cpp:314
+#: davcalendarresource.cpp:234 davcalendarresource.cpp:283
 #, kde-format
 msgid "Unable to retrieve added item %1."
 msgstr ""
 
-#: davcalendarresource.cpp:350
+#: davcalendarresource.cpp:323
 #, kde-format
 msgid "Unable to retrieve collections: %1"
 msgstr ""
 
-#: davcalendarresource.cpp:400
+#: davcalendarresource.cpp:376
 #, kde-format
 msgid "Unable to retrieve items: %1"
 msgstr ""
 
-#: davcalendarresource.cpp:437
+#: davcalendarresource.cpp:413
 #, kde-format
 msgid "Unable to retrieve item: %1"
 msgstr ""
 
-#: davcalendarresource.cpp:475
+#: davcalendarresource.cpp:451
 #, kde-format
 msgid "Unable to add item: %1"
 msgstr ""
 
-#: davcalendarresource.cpp:493
+#: davcalendarresource.cpp:469
 #, kde-format
 msgid "Unable to change item: %1"
 msgstr ""
 
-#: davcalendarresource.cpp:510
+#: davcalendarresource.cpp:486
 #, kde-format
 msgid "Unable to remove item: %1"
 msgstr ""
 
-#: davcalendarresource.cpp:520
+#: davcalendarresource.cpp:496
 msgid "Resource not configured"
 msgstr ""
 
@@ -104,7 +95,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: file: davcalendarresource.kcfg:10
 #. i18n: ectx: label, entry (displayName), group (General)
-#: rc.cpp:6 rc.cpp:48
+#: rc.cpp:6 rc.cpp:27 urlconfigurationdialog.cpp:33
 msgid "Display name"
 msgstr ""
 
@@ -112,7 +103,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: davcalendarresource.kcfg:14
 #. i18n: ectx: label, entry (refreshInterval), group (General)
-#: rc.cpp:9 rc.cpp:51
+#: rc.cpp:9 rc.cpp:30
 msgid "Refresh every"
 msgstr ""
 
@@ -123,105 +114,122 @@ msgid "minutes"
 msgstr "minutoj"
 
 #. i18n: file: configdialog.ui:97
-#. i18n: ectx: property (title), widget (KButtonGroup, kcfg_remoteProtocol)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:15
+msgid "Servers configuration"
+msgstr ""
+
+#. i18n: file: configdialog.ui:110
+#. i18n: ectx: property (text), widget (KPushButton, addButton)
+#: rc.cpp:18
+msgid "Add"
+msgstr ""
+
+#. i18n: file: configdialog.ui:117
+#. i18n: ectx: property (text), widget (KPushButton, removeButton)
+#: rc.cpp:21
+msgid "Remove"
+msgstr ""
+
+#. i18n: file: configdialog.ui:124
+#. i18n: ectx: property (text), widget (KPushButton, editButton)
+#: rc.cpp:24
+msgid "Edit"
+msgstr ""
+
+#. i18n: file: davcalendarresource.kcfg:18
+#. i18n: ectx: label, entry (remoteUrls), group (General)
+#: rc.cpp:33
+msgid "Remote URLs"
+msgstr ""
+
+#. i18n: file: davcalendarresource.kcfg:22
+#. i18n: ectx: label, entry (readOnly), group (General)
+#: rc.cpp:36
+msgid "Do not change the actual backend data."
+msgstr ""
+
+#. i18n: file: urlconfigurationdialog.ui:29
+#. i18n: ectx: property (title), widget (KButtonGroup, remoteProtocol)
+#: rc.cpp:39
 msgid "Remote calendar access protocol"
 msgstr ""
 
-#. i18n: file: configdialog.ui:103
+#. i18n: file: urlconfigurationdialog.ui:38
 #. i18n: ectx: property (text), widget (QRadioButton, caldav)
-#. i18n: file: davcalendarresource.kcfg:21
-#. i18n: ectx: label, entry (remoteProtocol), group (General)
-#: rc.cpp:18 rc.cpp:57
+#: rc.cpp:42
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#. i18n: file: configdialog.ui:113
+#. i18n: file: urlconfigurationdialog.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, carddav)
-#. i18n: file: davcalendarresource.kcfg:24
-#. i18n: ectx: label, entry (remoteProtocol), group (General)
-#: rc.cpp:21 rc.cpp:60
+#: rc.cpp:45
 #, fuzzy
 #| msgid "CalDAV"
 msgid "CardDAV"
 msgstr "CalDAV"
 
-#. i18n: file: configdialog.ui:120
+#. i18n: file: urlconfigurationdialog.ui:55
 #. i18n: ectx: property (text), widget (QRadioButton, groupdav)
-#. i18n: file: davcalendarresource.kcfg:27
-#. i18n: ectx: label, entry (remoteProtocol), group (General)
-#: rc.cpp:24 rc.cpp:63
+#: rc.cpp:48
 msgid "GroupDAV"
 msgstr "GroupDAV"
 
-#. i18n: file: configdialog.ui:133
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:27
-msgid "Server configuration"
-msgstr ""
-
-#. i18n: file: configdialog.ui:144
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: davcalendarresource.kcfg:33
-#. i18n: ectx: label, entry (remoteUrls), group (General)
-#: rc.cpp:30 rc.cpp:66
-msgid "Remote URLs"
-msgstr ""
-
-#. i18n: file: configdialog.ui:162
+#. i18n: file: urlconfigurationdialog.ui:68
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:33
-msgid "Authentication"
-msgstr "Aŭtentigo"
+#: rc.cpp:51
+msgid "Remote calendar access"
+msgstr ""
 
-#. i18n: file: configdialog.ui:171
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_authenticationRequired)
-#: rc.cpp:36
+#. i18n: file: urlconfigurationdialog.ui:76
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:54
+msgid "Remote URL"
+msgstr ""
+
+#. i18n: file: urlconfigurationdialog.ui:102
+#. i18n: ectx: property (text), widget (QCheckBox, authenticationRequired)
+#: rc.cpp:57
 msgid "The server requires to be authenticated"
 msgstr ""
 
-#. i18n: file: configdialog.ui:188
+#. i18n: file: urlconfigurationdialog.ui:117
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:39
+#: rc.cpp:60
 msgid "Password"
 msgstr "Pasvorto"
 
-#. i18n: file: configdialog.ui:205
+#. i18n: file: urlconfigurationdialog.ui:140
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#. i18n: file: davcalendarresource.kcfg:41
-#. i18n: ectx: label, entry (username), group (General)
-#: rc.cpp:42 rc.cpp:72
+#: rc.cpp:63
 #, fuzzy
 #| msgctxt "Username for audioscrobbler login"
 #| msgid "Username"
 msgid "Username"
 msgstr "Uzantnomo"
 
-#. i18n: file: configdialog.ui:239
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useKWallet)
-#: rc.cpp:45
+#. i18n: file: urlconfigurationdialog.ui:165
+#. i18n: ectx: property (text), widget (QCheckBox, useKWallet)
+#: rc.cpp:66
 msgid "Store the password in KWallet"
 msgstr ""
 
-#. i18n: file: davcalendarresource.kcfg:18
-#. i18n: ectx: label, entry (remoteProtocol), group (General)
-#: rc.cpp:54
-msgid "Remote access protocol"
-msgstr ""
-
-#. i18n: file: davcalendarresource.kcfg:37
-#. i18n: ectx: label, entry (authenticationRequired), group (General)
+#. i18n: file: urlconfigurationdialog.ui:198
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:69
-msgid "Backend requires authentication"
+msgid "Discovered collections"
 msgstr ""
 
-#. i18n: file: davcalendarresource.kcfg:48
-#. i18n: ectx: label, entry (readOnly), group (General)
-#: rc.cpp:75
-msgid "Do not change the actual backend data."
+#. i18n: file: urlconfigurationdialog.ui:219
+#. i18n: ectx: property (text), widget (KPushButton, fetchButton)
+#: rc.cpp:72
+msgid "Fetch !"
 msgstr ""
 
-#: settings.cpp:134
+#: settings.cpp:329
 #, kde-format
-msgid "Please enter the password for %1"
+msgid "Please enter the password for %1 at %2"
 msgstr ""
+
+#~ msgid "Authentication"
+#~ msgstr "Aŭtentigo"
