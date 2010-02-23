@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-16 07:01+0100\n"
+"POT-Creation-Date: 2010-02-23 07:04+0100\n"
 "PO-Revision-Date: 2009-12-11 15:48+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -494,7 +494,7 @@ msgid ""
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
 
-#: backtracewidget.cpp:115 reportassistantpages_bugzilla_duplicates.cpp:549
+#: backtracewidget.cpp:115 reportassistantpages_bugzilla_duplicates.cpp:552
 msgctxt "@info:status"
 msgid "Loading..."
 msgstr "Legante..."
@@ -1076,11 +1076,13 @@ msgstr ""
 msgid "<a href=\"#\">Examples</a>"
 msgstr ""
 
-#. i18n: file: ui/assistantpage_bugzilla_duplicates_dialog.ui:67
-#. i18n: ectx: property (text), widget (QLabel, m_backtraceTitleLabel)
+#. i18n: file: ui/assistantpage_bugzilla_duplicates_dialog.ui:81
+#. i18n: ectx: property (text), widget (QCheckBox, m_showOwnBacktraceCheckBox)
 #: rc.cpp:67
-msgctxt "@label:textbox"
-msgid "Backtrace of the crash I am sending:"
+msgctxt ""
+"@option:check user must check this to preview the own backtrace (in order to "
+"compare it with the one in the showed report)"
+msgid "Show the backtrace of the crash I experienced to compare (advanced)"
 msgstr ""
 
 #. i18n: file: ui/assistantpage_bugzilla_duplicates.ui:17
@@ -1129,7 +1131,7 @@ msgctxt "@label:textbox"
 msgid "<strong>Title of the bug report:</strong> (<a href=\"#\">examples</a>)"
 msgstr ""
 
-#. i18n: file: ui/assistantpage_bugzilla_information.ui:37
+#. i18n: file: ui/assistantpage_bugzilla_information.ui:39
 #. i18n: ectx: property (text), widget (QLabel, m_detailsLabel)
 #: rc.cpp:88
 #, fuzzy
@@ -1139,14 +1141,14 @@ msgctxt "@label:textbox"
 msgid "<strong>Information about the crash:</strong>"
 msgstr "Jes, Mi povas doni informojn pri la kolapso."
 
-#. i18n: file: ui/assistantpage_bugzilla_information.ui:51
+#. i18n: file: ui/assistantpage_bugzilla_information.ui:55
 #. i18n: ectx: property (title), widget (QGroupBox, m_distributionGroupBox)
 #: rc.cpp:91
 msgctxt "@title:group"
 msgid "Distribution method:"
 msgstr ""
 
-#. i18n: file: ui/assistantpage_bugzilla_information.ui:62
+#. i18n: file: ui/assistantpage_bugzilla_information.ui:66
 #. i18n: ectx: property (text), widget (QCheckBox, m_compiledSourcesCheckBox)
 #: rc.cpp:94
 #, fuzzy
@@ -1156,7 +1158,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from sources"
 msgstr "KDE Enkompilita el fontoj"
 
-#. i18n: file: ui/assistantpage_bugzilla_information.ui:90
+#. i18n: file: ui/assistantpage_bugzilla_information.ui:94
 #. i18n: ectx: property (text), widget (QLabel, m_crashInfoLabel)
 #: rc.cpp:97
 msgctxt "@info/rich"
@@ -1366,12 +1368,12 @@ msgctxt "@label examples about information the user can provide"
 msgid "Examples: %1"
 msgstr "Ekzemploj: %1"
 
-#: reportassistantpages_base.cpp:216 reportassistantpages_bugzilla.cpp:516
+#: reportassistantpages_base.cpp:216 reportassistantpages_bugzilla.cpp:549
 msgctxt "@action:button"
 msgid "Sho&w Contents of the Report"
 msgstr "Montri enhavon de la raporto"
 
-#: reportassistantpages_base.cpp:218 reportassistantpages_bugzilla.cpp:518
+#: reportassistantpages_base.cpp:218 reportassistantpages_bugzilla.cpp:551
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to show the generated report information about this crash."
@@ -1513,25 +1515,25 @@ msgstr ""
 "Uzi tiun butonon por konservi la kolapsan raporton en dosieron. Vi povas uzi "
 "tiun opcion por raporti cimon poste."
 
-#: reportassistantpages_bugzilla.cpp:60
+#: reportassistantpages_bugzilla.cpp:61
 #, kde-format
 msgctxt "@info:status '1' is replaced with \"bugs.kde.org\""
 msgid "You need to login with your %1 account in order to proceed."
 msgstr "Vi bezonas ensaluti per via %1 konto por daŭri."
 
-#: reportassistantpages_bugzilla.cpp:63
+#: reportassistantpages_bugzilla.cpp:64
 msgctxt "@action:button"
 msgid "Login"
 msgstr "Ensaluto"
 
-#: reportassistantpages_bugzilla.cpp:65
+#: reportassistantpages_bugzilla.cpp:66
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "username and password."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:74
+#: reportassistantpages_bugzilla.cpp:75
 #, kde-format
 msgctxt "@info/rich"
 msgid ""
@@ -1541,155 +1543,168 @@ msgid ""
 "freely <link url='%2'>create one here</link>.</note>"
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:91
+#: reportassistantpages_bugzilla.cpp:92
 #, kde-format
 msgctxt "@info:status"
 msgid "Error when trying to login: <message>%1.</message>"
 msgstr "Eraro ensalutante : <message>%1.</message>"
 
-#: reportassistantpages_bugzilla.cpp:117
+#: reportassistantpages_bugzilla.cpp:118
 #, kde-format
 msgctxt "@info:status the user is logged at the bugtracker site as USERNAME"
 msgid "Logged in at the KDE bug tracking system (%1) as: %2."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:232
+#: reportassistantpages_bugzilla.cpp:233
 #, kde-format
 msgctxt "@info:status '1' is a url, '2' the username"
 msgid "Performing login at %1 as %2..."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:256
+#: reportassistantpages_bugzilla.cpp:257
 msgctxt "@info:status/rich"
 msgid "<b>Error: Invalid username or password</b>"
 msgstr "<br>Eraro : Nevalida salutnomo aŭ pasvorto</b>"
 
-#: reportassistantpages_bugzilla.cpp:309
+#: reportassistantpages_bugzilla.cpp:312
 msgctxt "@label:listbox KDE distribution method"
 msgid "Unspecified"
 msgstr "Nespecifa"
 
-#: reportassistantpages_bugzilla.cpp:311
+#: reportassistantpages_bugzilla.cpp:314
 msgctxt "@label:listbox KDE distribution method"
 msgid "Debian stable"
 msgstr "Debian stable"
 
-#: reportassistantpages_bugzilla.cpp:313
+#: reportassistantpages_bugzilla.cpp:316
 msgctxt "@label:listbox KDE distribution method"
 msgid "Debian testing"
 msgstr "Debian testing"
 
-#: reportassistantpages_bugzilla.cpp:315
+#: reportassistantpages_bugzilla.cpp:318
 msgctxt "@label:listbox KDE distribution method"
 msgid "Debian unstable"
 msgstr "Debian unstable"
 
-#: reportassistantpages_bugzilla.cpp:317
+#: reportassistantpages_bugzilla.cpp:320
 msgctxt "@label:listbox KDE distribution method"
 msgid "Exherbo"
 msgstr "Exherbo"
 
-#: reportassistantpages_bugzilla.cpp:319
+#: reportassistantpages_bugzilla.cpp:322
 msgctxt "@label:listbox KDE distribution method"
 msgid "Gentoo"
 msgstr "Gentoo"
 
-#: reportassistantpages_bugzilla.cpp:321
+#: reportassistantpages_bugzilla.cpp:324
 msgctxt "@label:listbox KDE distribution method"
 msgid "Mandriva"
 msgstr "Mandriva"
 
-#: reportassistantpages_bugzilla.cpp:323
+#: reportassistantpages_bugzilla.cpp:326
 msgctxt "@label:listbox KDE distribution method"
 msgid "Slackware"
 msgstr "Slackware"
 
-#: reportassistantpages_bugzilla.cpp:325
+#: reportassistantpages_bugzilla.cpp:328
 msgctxt "@label:listbox KDE distribution method"
 msgid "SuSE/OpenSUSE"
 msgstr "SuSE/OpenSUSE"
 
-#: reportassistantpages_bugzilla.cpp:327
+#: reportassistantpages_bugzilla.cpp:330
 msgctxt "@label:listbox KDE distribution method"
 msgid "RedHat"
 msgstr "RedHat"
 
-#: reportassistantpages_bugzilla.cpp:329
+#: reportassistantpages_bugzilla.cpp:332
 msgctxt "@label:listbox KDE distribution method"
 msgid "Fedora"
 msgstr "Fedora"
 
-#: reportassistantpages_bugzilla.cpp:331
+#: reportassistantpages_bugzilla.cpp:334
 msgctxt "@label:listbox KDE distribution method"
 msgid "Kubuntu/Ubuntu (and derivatives)"
 msgstr "Kubuntu/Ubuntu (kaj derivaj versioj)"
 
-#: reportassistantpages_bugzilla.cpp:334
+#: reportassistantpages_bugzilla.cpp:337
 msgctxt "@label:listbox KDE distribution method"
 msgid "Pardus"
 msgstr "Pardus"
 
-#: reportassistantpages_bugzilla.cpp:336
+#: reportassistantpages_bugzilla.cpp:339
 msgctxt "@label:listbox KDE distribution method"
 msgid "Archlinux"
 msgstr "Archlinux"
 
-#: reportassistantpages_bugzilla.cpp:338
+#: reportassistantpages_bugzilla.cpp:341
 msgctxt "@label:listbox KDE distribution method"
 msgid "FreeBSD (Ports)"
 msgstr "FreeBSD (Ports)"
 
-#: reportassistantpages_bugzilla.cpp:340
+#: reportassistantpages_bugzilla.cpp:343
 msgctxt "@label:listbox KDE distribution method"
 msgid "NetBSD (pkgsrc)"
 msgstr "NetBSD (pkgsrc)"
 
-#: reportassistantpages_bugzilla.cpp:342
+#: reportassistantpages_bugzilla.cpp:345
 msgctxt "@label:listbox KDE distribution method"
 msgid "OpenBSD"
 msgstr "OpenBSD"
 
-#: reportassistantpages_bugzilla.cpp:344
+#: reportassistantpages_bugzilla.cpp:347
 msgctxt "@label:listbox KDE distribution method"
 msgid "Mac OS X"
 msgstr "Mac OS X"
 
-#: reportassistantpages_bugzilla.cpp:346
+#: reportassistantpages_bugzilla.cpp:349
 msgctxt "@label:listbox KDE distribution method"
 msgid "Solaris"
 msgstr "Solaris"
 
-#: reportassistantpages_bugzilla.cpp:413
+#: reportassistantpages_bugzilla.cpp:418
+msgctxt "the minimum required lenght of a text was reached"
+msgid "Minimum length reached"
+msgstr ""
+
+#: reportassistantpages_bugzilla.cpp:421
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "We need more information"
+msgctxt "the minimum required lenght of a text wasn't reached yet"
+msgid "Provide more information"
+msgstr "Ni bezonas pliajn informojn"
+
+#: reportassistantpages_bugzilla.cpp:446
 msgctxt "@info"
 msgid "The title does not provide enough information."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:415
+#: reportassistantpages_bugzilla.cpp:448
 msgctxt "@info"
 msgid ""
 "The description about the crash details does not provide enough information."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:418
+#: reportassistantpages_bugzilla.cpp:451
 msgctxt "@info"
 msgid ""
 "Both the title and the description about the crash details do not provide "
 "enough information."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:422
+#: reportassistantpages_bugzilla.cpp:455
 msgctxt "@info"
 msgid ""
 "If you cannot provide enough information, your report will probably waste "
 "developers' time. Can you tell us more?"
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:432
+#: reportassistantpages_bugzilla.cpp:465
 msgctxt "@title:window"
 msgid "We need more information"
 msgstr "Ni bezonas pliajn informojn"
 
-#: reportassistantpages_bugzilla.cpp:474
+#: reportassistantpages_bugzilla.cpp:507
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<strong>Examples of good titles:</strong><nl />\"Plasma crashed after adding "
@@ -1699,23 +1714,23 @@ msgid ""
 "log file and pressing the Delete key a couple of times\""
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:510
-#: reportassistantpages_bugzilla_duplicates.cpp:491
+#: reportassistantpages_bugzilla.cpp:543
+#: reportassistantpages_bugzilla_duplicates.cpp:492
 msgctxt "@action:button"
 msgid "Retry..."
 msgstr "Reprovu..."
 
-#: reportassistantpages_bugzilla.cpp:512
+#: reportassistantpages_bugzilla.cpp:545
 msgctxt "@info:tooltip"
 msgid "Use this button to retry sending the crash report if it failed before."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:539
+#: reportassistantpages_bugzilla.cpp:572
 msgctxt "@info:status"
 msgid "Sending crash report... (please wait)"
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:556
+#: reportassistantpages_bugzilla.cpp:589
 #, kde-format
 msgctxt "@info/rich"
 msgid ""
@@ -1723,13 +1738,13 @@ msgid ""
 "KDE. You can now close this window."
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:566
+#: reportassistantpages_bugzilla.cpp:599
 #, kde-format
 msgctxt "@info:status"
 msgid "Error sending the crash report:  <message>%1.</message>"
 msgstr ""
 
-#: reportassistantpages_bugzilla.cpp:588
+#: reportassistantpages_bugzilla.cpp:621
 #, kde-format
 msgctxt "@info/plain report to KDE bugtracker address"
 msgid "Report to %1"
@@ -1849,11 +1864,11 @@ msgstr "[Ne reproduktebla]"
 
 #: reportassistantpages_bugzilla_duplicates.cpp:303
 #, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Already reported"
+#| msgctxt "@action:button"
+#| msgid "Open selected report"
 msgctxt "@info/plain bug resolution"
-msgid "[Already reported]"
-msgstr "Jam estas raportita."
+msgid "[Duplicate report]"
+msgstr "Malfermi elektitan eraroraporton"
 
 #: reportassistantpages_bugzilla_duplicates.cpp:305
 msgctxt "@info/plain bug resolution"
@@ -1906,12 +1921,12 @@ msgid ""
 "numid>. <a href=\"#\">Cancel</a>"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:485
+#: reportassistantpages_bugzilla_duplicates.cpp:486
 msgctxt "@title:window"
 msgid "Bug Description"
 msgstr "Priskribo de la cimo"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:493
+#: reportassistantpages_bugzilla_duplicates.cpp:494
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Use this button to restart the crashed application."
@@ -1919,12 +1934,12 @@ msgctxt "@info:tooltip"
 msgid "Use this button to retry loading the bug report."
 msgstr "Uzi tiun butonon por reŝarĝi la kolapsita aplikaĵo"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:498
+#: reportassistantpages_bugzilla_duplicates.cpp:499
 msgctxt "@action:button"
 msgid "Add as a possible duplicate"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:499
+#: reportassistantpages_bugzilla_duplicates.cpp:500
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to mark your crash as related to the currently shown bug "
@@ -1932,41 +1947,48 @@ msgid ""
 "duplicates or not."
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:505
+#: reportassistantpages_bugzilla_duplicates.cpp:506
 msgctxt "@action:button"
 msgid "Attach to this report (Advanced)"
 msgstr "Alkroĉi al la raporto (Plie)"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:506
+#: reportassistantpages_bugzilla_duplicates.cpp:507
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to attach your crash information to this report; only if you "
 "are really sure this is the same crash."
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:552
+#: reportassistantpages_bugzilla_duplicates.cpp:555
 #, kde-format
 msgctxt "@info"
-msgid "<link url='%1'>Bug report page at the KDE bug tracking system</link>"
+msgid "<link url='%1'>Report's webpage</link>"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:556
+#: reportassistantpages_bugzilla_duplicates.cpp:558
 #, kde-format
 msgctxt "@info:status"
 msgid "Loading information about bug <numid>%1</numid> from %2...."
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:580
+#: reportassistantpages_bugzilla_duplicates.cpp:564
+msgctxt "@info/plain"
+msgid ""
+"Backtrace of the crash I experienced:\n"
+"\n"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:592
 msgctxt "@action:button let the user to choose to read the main report"
 msgid "Yes, read the main report"
 msgstr "Jes, legi la ĉefan raporton"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:584
+#: reportassistantpages_bugzilla_duplicates.cpp:596
 msgctxt "@action:button let the user choose to read the original report"
 msgid "No, let me read the report I selected"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:587
+#: reportassistantpages_bugzilla_duplicates.cpp:599
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1975,110 +1997,145 @@ msgid ""
 "(recommended)"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:591
+#: reportassistantpages_bugzilla_duplicates.cpp:603
 msgctxt "@title:window"
 msgid "Nested duplicate detected"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:614
-msgctxt "@info bug status"
-msgid "Opened"
-msgstr "Malfermita"
+#: reportassistantpages_bugzilla_duplicates.cpp:617
+#, kde-format
+msgctxt "comment $number to use as subtitle"
+msgid "<h4>Comment %1:</h4>"
+msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:620
+#: reportassistantpages_bugzilla_duplicates.cpp:627
+msgctxt "@info bug status"
+msgid "Opened (Unconfirmed)"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:631
+msgctxt "@info bug status"
+msgid "Opened (Unfixed)"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:637
 msgctxt "@info bug resolution"
 msgid "Fixed"
 msgstr "Fiksita"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:621
+#: reportassistantpages_bugzilla_duplicates.cpp:638
 msgctxt "@info bug resolution"
 msgid "the bug was fixed by KDE developers"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:623
+#: reportassistantpages_bugzilla_duplicates.cpp:640
 msgctxt "@info bug resolution"
 msgid "Non-reproducible"
 msgstr "Ne reproduktebla"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:625
+#: reportassistantpages_bugzilla_duplicates.cpp:642
 msgctxt "@info bug resolution"
-msgid "Already reported"
-msgstr "Jam estas raportita."
+msgid "Duplicate report (Already reported before)"
+msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:627
+#: reportassistantpages_bugzilla_duplicates.cpp:645
 msgctxt "@info bug resolution"
 msgid "Not a valid report/crash"
 msgstr "Ne valida raporto/kolapso"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:630
+#: reportassistantpages_bugzilla_duplicates.cpp:648
 msgctxt "@info bug resolution"
 msgid "Not caused by a problem in the KDE's Applications or libraries"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:632
+#: reportassistantpages_bugzilla_duplicates.cpp:650
 msgctxt "@info bug resolution"
 msgid ""
 "the bug is caused by a problem in an external application or library, or by "
 "a distribution or packaging issue."
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:639
+#: reportassistantpages_bugzilla_duplicates.cpp:657
 #, kde-format
 msgctxt "@info bug status, %1 is the resolution"
 msgid "Closed (%1)"
 msgstr "Fermita (%1)"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:642
+#: reportassistantpages_bugzilla_duplicates.cpp:660
 msgctxt "@info bug status"
 msgid "Temporarily closed, because of a lack of information"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:650
+#: reportassistantpages_bugzilla_duplicates.cpp:667
+msgid ""
+"<p><note>The bug report's title is oftenly written by its reporterand it may "
+"not reflect the bug nature, root cause or other visiblesymptoms you could "
+"use to compare to your crash. Please read thecomplete report and all the "
+"comments below.</note></p>"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:673
 #, kde-format
-msgctxt "@info bug report label and value"
-msgid "<h2>%1</h2>"
+msgid ""
+"<p><note>This bug report has %1 duplicate reports. That means this probably "
+"is a <strong>common crash</strong>. <i>Please consider only adding a comment "
+"or a note if you can provide new valuable information which wasn't already "
+"mentioned.</i></note></p>"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:682
+#, fuzzy, kde-format
+#| msgctxt "@info bug report label and value"
+#| msgid "<h2>%1</h2>"
+msgctxt "@info bug report title (quoted)"
+msgid "<h3>\"%1\"</h3>"
 msgstr "<h2>%1</h2>"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:652
-#, kde-format
-msgctxt "@info bug report label and value"
-msgid "<h3>Bug Report Status: %1</h3>"
+#: reportassistantpages_bugzilla_duplicates.cpp:685
+#, fuzzy, kde-format
+#| msgctxt "@info bug report label and value"
+#| msgid "<h3>Bug Report Status: %1</h3>"
+msgctxt "@info bug report status"
+msgid "<h4>Bug Report Status: %1</h4>"
 msgstr "<h3>Cim-raporta Stato : %1</h3>"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:654
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox bug report label and value"
-#| msgid "<strong>Product:</strong> %1 (%2)<br />"
-msgctxt "@info bug report label and value"
-msgid "<p><strong>Product:</strong> %1 (%2)</p>"
-msgstr "<strong>Produkto:</strong> %1 (%2)<br />"
-
-#: reportassistantpages_bugzilla_duplicates.cpp:657
+#: reportassistantpages_bugzilla_duplicates.cpp:687
 #, kde-format
-msgctxt "@info bug report label and value"
-msgid "<h2>Description of the bug</h2><p>%1</p>"
+msgctxt "@info bug report product and component"
+msgid "<h4>Affected Component: %1 (%2)</h4>"
 msgstr ""
-
-#: reportassistantpages_bugzilla_duplicates.cpp:662
-#, kde-format
-msgctxt "@label:textbox bug report label and value"
-msgid "<h2>Additional Comments</h2>%1"
-msgstr "<h2>Kromaj Komentoj</h2>%1"
-
-#: reportassistantpages_bugzilla_duplicates.cpp:671
-#, kde-format
-msgctxt "@info:status"
-msgid "Showing report <numid>%1</numid>"
-msgstr ""
-
-#: reportassistantpages_bugzilla_duplicates.cpp:674
-msgctxt "@info"
-msgid "Invalid report data"
-msgstr "Nevalidaj datumoj de raporto"
 
 #: reportassistantpages_bugzilla_duplicates.cpp:690
 #, kde-format
-msgctxt "@info messagebox question. %1 is the close state explanation"
+msgctxt "@info bug report description"
+msgid "<h3>Description of the bug</h3><p>%1</p>"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:695
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox bug report label and value"
+#| msgid "<h2>Additional Comments</h2>%1"
+msgctxt "@label:textbox bug report comments (already formatted)"
+msgid "<h2>Additional Comments</h2>%1"
+msgstr "<h2>Kromaj Komentoj</h2>%1"
+
+#: reportassistantpages_bugzilla_duplicates.cpp:704
+#, kde-format
+msgctxt "@info:status"
+msgid "Showing bug <numid>%1</numid>"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:707
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Invalid bug report: corrupted data"
+msgctxt "@info"
+msgid "Invalid report information (malformed data)"
+msgstr "Ne valida cim-raporto : difektitaj datumoj"
+
+#: reportassistantpages_bugzilla_duplicates.cpp:723
+#, kde-format
+msgctxt "@info messagebox question. %1 is the state explanation"
 msgid ""
 "This report is marked as \"closed\" because %1. If you are sure your crash "
 "is the same, then adding further details or creating a new report will be "
@@ -2086,12 +2143,28 @@ msgid ""
 "your crash?"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:694
+#: reportassistantpages_bugzilla_duplicates.cpp:727
 msgctxt "@title:window"
 msgid "This report is already closed"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:734
+#: reportassistantpages_bugzilla_duplicates.cpp:737
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This bug report has %1 duplicate reports, which means it is probably a "
+"<strong>common crash</strong>, and a lot of different cases' details may "
+"have been provided already. <i>Please consider proceeding only if you can "
+"add new information which was not already mentioned.</i> Otherwise, we "
+"suggest you to cancel the bug reporting process.</note></p>"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:742
+msgctxt "@title:window"
+msgid "This is a common crash"
+msgstr ""
+
+#: reportassistantpages_bugzilla_duplicates.cpp:781
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2103,13 +2176,13 @@ msgstr ""
 "certiĝi ke temas pri la sama kolapso.<nl />Ĉu vi certas deziri aldoni vian "
 "raporton al la cimo <numid>%1</numid> ?"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:737
+#: reportassistantpages_bugzilla_duplicates.cpp:784
 #, kde-format
 msgctxt "@title:window"
 msgid "Attach the information to bug <numid>%1</numid>"
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:748
+#: reportassistantpages_bugzilla_duplicates.cpp:802
 #, kde-format
 msgctxt "@info/rich"
 msgid ""
@@ -2117,12 +2190,12 @@ msgid ""
 "some time and try again."
 msgstr ""
 
-#: reportassistantpages_bugzilla_duplicates.cpp:753
+#: reportassistantpages_bugzilla_duplicates.cpp:807
 msgctxt "@info"
 msgid "Error fetching the bug report"
 msgstr "Eraro ricevante la cim-raporton"
 
-#: reportassistantpages_bugzilla_duplicates.cpp:754
+#: reportassistantpages_bugzilla_duplicates.cpp:808
 msgctxt "@info:status"
 msgid "Error fetching the bug report"
 msgstr "Eraro ricevante la cim-raporton"
@@ -2133,6 +2206,32 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@info bug resolution"
+#~| msgid "Already reported"
+#~ msgctxt "@info/plain bug resolution"
+#~ msgid "[Already reported]"
+#~ msgstr "Jam estas raportita."
+
+#~ msgctxt "@info bug status"
+#~ msgid "Opened"
+#~ msgstr "Malfermita"
+
+#~ msgctxt "@info bug resolution"
+#~ msgid "Already reported"
+#~ msgstr "Jam estas raportita."
+
+#, fuzzy
+#~| msgctxt "@label:textbox bug report label and value"
+#~| msgid "<strong>Product:</strong> %1 (%2)<br />"
+#~ msgctxt "@info bug report label and value"
+#~ msgid "<p><strong>Product:</strong> %1 (%2)</p>"
+#~ msgstr "<strong>Produkto:</strong> %1 (%2)<br />"
+
+#~ msgctxt "@info"
+#~ msgid "Invalid report data"
+#~ msgstr "Nevalidaj datumoj de raporto"
 
 #~ msgctxt "@title:window"
 #~ msgid "Are you sure?"
