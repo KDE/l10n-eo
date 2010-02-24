@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TextShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-22 07:08+0100\n"
+"POT-Creation-Date: 2010-02-24 07:23+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: TextShapeFactory.cpp:40 TextShapeFactory.cpp:47
-#: commands/DeleteCommand.cpp:266
+#: commands/ChangeTrackedDeleteCommand.cpp:268 commands/DeleteCommand.cpp:199
 msgid "Text"
 msgstr "Teksto"
 
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Text Shape"
 msgstr ""
 
-#: dialogs/StyleManagerDialog.cpp:29 TextTool.cpp:386
+#: dialogs/StyleManagerDialog.cpp:29 TextTool.cpp:387
 msgid "Style Manager"
 msgstr ""
 
@@ -229,7 +229,7 @@ msgstr ""
 msgid "Change List"
 msgstr ""
 
-#: commands/TextCutCommand.cpp:33
+#: commands/TextCutCommand.cpp:34
 msgid "Cut"
 msgstr "Eltondi"
 
@@ -237,7 +237,7 @@ msgstr "Eltondi"
 msgid "Change List Level"
 msgstr ""
 
-#: commands/TextPasteCommand.cpp:49
+#: commands/TextPasteCommand.cpp:50
 msgid "Paste"
 msgstr "Alglui"
 
@@ -247,7 +247,15 @@ msgstr "Alglui"
 msgid "Reject change"
 msgstr "Dua"
 
-#: commands/ShowChangesCommand.cpp:46 TextTool.cpp:372
+#. i18n: file: dialogs/StyleManager.ui:57
+#. i18n: ectx: property (text), widget (QPushButton, bDelete)
+#: commands/ChangeTrackedDeleteCommand.cpp:47
+#: commands/ChangeTrackedDeleteCommand.cpp:218 commands/DeleteCommand.cpp:40
+#: rc.cpp:265 TextTool.cpp:1722
+msgid "Delete"
+msgstr "Forigi"
+
+#: commands/ShowChangesCommand.cpp:46 TextTool.cpp:373
 msgid "Show Changes"
 msgstr ""
 
@@ -262,13 +270,6 @@ msgstr ""
 #: commands/AcceptChangeCommand.cpp:45
 msgid "Accept change"
 msgstr ""
-
-#. i18n: file: dialogs/StyleManager.ui:57
-#. i18n: ectx: property (text), widget (QPushButton, bDelete)
-#: commands/DeleteCommand.cpp:47 commands/DeleteCommand.cpp:216 rc.cpp:265
-#: TextTool.cpp:1721
-msgid "Delete"
-msgstr "Forigi"
 
 #: ChangeTrackingTool.cpp:62
 msgid "Tracked change manager"
@@ -460,13 +461,13 @@ msgstr "Normala"
 
 #. i18n: file: dialogs/FontLayoutTab.ui:108
 #. i18n: ectx: property (text), widget (QRadioButton, superscript)
-#: rc.cpp:81 TextTool.cpp:162
+#: rc.cpp:81 TextTool.cpp:163
 msgid "Superscript"
 msgstr "Superskribo"
 
 #. i18n: file: dialogs/FontLayoutTab.ui:115
 #. i18n: ectx: property (text), widget (QRadioButton, subscript)
-#: rc.cpp:84 TextTool.cpp:167
+#: rc.cpp:84 TextTool.cpp:168
 msgid "Subscript"
 msgstr "Subskribo"
 
@@ -669,7 +670,7 @@ msgstr ""
 
 #. i18n: file: dialogs/ParagraphDecorations.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:223 TextTool.cpp:306
+#: rc.cpp:223 TextTool.cpp:307
 msgid "Background"
 msgstr "Fono"
 
@@ -811,7 +812,7 @@ msgstr ""
 
 #. i18n: file: dialogs/ChangeConfigureDialog.ui:17
 #. i18n: ectx: property (windowTitle), widget (QDialog, ChangeConfigureDialog)
-#: rc.cpp:303 TextTool.cpp:382
+#: rc.cpp:303 TextTool.cpp:383
 msgid "Configure Change Tracking"
 msgstr ""
 
@@ -1024,132 +1025,132 @@ msgstr ""
 msgid "ArabicAlphabet"
 msgstr ""
 
-#: TextTool.cpp:110
+#: TextTool.cpp:111
 msgid "Bold"
 msgstr "Grasa"
 
-#: TextTool.cpp:116
+#: TextTool.cpp:117
 msgid "Italic"
 msgstr "Kursiva"
 
-#: TextTool.cpp:122
+#: TextTool.cpp:123
 msgctxt "Text formatting"
 msgid "Underline"
 msgstr ""
 
-#: TextTool.cpp:128
+#: TextTool.cpp:129
 msgid "Strike Out"
 msgstr "Trastreko"
 
-#: TextTool.cpp:134
+#: TextTool.cpp:135
 msgid "Align Left"
 msgstr "Aranĝi maldekstre"
 
-#: TextTool.cpp:141
+#: TextTool.cpp:142
 msgid "Align Right"
 msgstr "Aranĝi dekstre"
 
-#: TextTool.cpp:148
+#: TextTool.cpp:149
 msgid "Align Center"
 msgstr "Aranĝi meze"
 
-#: TextTool.cpp:155
+#: TextTool.cpp:156
 #, fuzzy
 msgid "Align Block"
 msgstr "Alĝustigu &ambaŭflanke"
 
-#: TextTool.cpp:174
+#: TextTool.cpp:175
 msgid "Increase Indent"
 msgstr "Pligrandigi Deŝovon"
 
-#: TextTool.cpp:180
+#: TextTool.cpp:181
 msgid "Decrease Indent"
 msgstr "Malpligrandigi Deŝovon"
 
-#: TextTool.cpp:184
+#: TextTool.cpp:185
 msgid "Increase Font Size"
 msgstr "Pligrandigi tiparon"
 
-#: TextTool.cpp:189
+#: TextTool.cpp:190
 msgid "Decrease Font Size"
 msgstr "Malpligrandigi tiparon"
 
-#: TextTool.cpp:261
+#: TextTool.cpp:262
 msgid "Insert Non-Breaking Space"
 msgstr ""
 
-#: TextTool.cpp:266
+#: TextTool.cpp:267
 msgid "Insert Non-Breaking Hyphen"
 msgstr ""
 
-#: TextTool.cpp:271
+#: TextTool.cpp:272
 msgid "Insert Index"
 msgstr "Enmeti Indekson"
 
-#: TextTool.cpp:276
+#: TextTool.cpp:277
 msgid "Insert Soft Hyphen"
 msgstr ""
 
-#: TextTool.cpp:281
+#: TextTool.cpp:282
 #, fuzzy
 #| msgid "Line Border"
 msgid "Line Break"
 msgstr "Linirando"
 
-#: TextTool.cpp:286
+#: TextTool.cpp:287
 msgid "Font..."
 msgstr ""
 
-#: TextTool.cpp:289
+#: TextTool.cpp:290
 msgid "Change character size, font, boldface, italics etc."
 msgstr ""
 
-#: TextTool.cpp:290
+#: TextTool.cpp:291
 msgid "Change the attributes of the currently selected characters."
 msgstr ""
 
-#: TextTool.cpp:293
+#: TextTool.cpp:294
 msgid "Font Size"
 msgstr "Tiparogrando"
 
-#: TextTool.cpp:299
+#: TextTool.cpp:300
 msgid "Text Color..."
 msgstr "Tekstkoloro..."
 
-#: TextTool.cpp:305
+#: TextTool.cpp:306
 msgid "Background Color..."
 msgstr ""
 
-#: TextTool.cpp:310
+#: TextTool.cpp:311
 msgid "Default Format"
 msgstr ""
 
-#: TextTool.cpp:312
+#: TextTool.cpp:313
 msgid "Change text attributes to their default values"
 msgstr ""
 
-#: TextTool.cpp:349
+#: TextTool.cpp:350
 #, kde-format
 msgid "Apply %1"
 msgstr ""
 
-#: TextTool.cpp:359
+#: TextTool.cpp:360
 msgid "Table..."
 msgstr ""
 
-#: TextTool.cpp:362
+#: TextTool.cpp:363
 msgid "Insert a table into the document."
 msgstr ""
 
-#: TextTool.cpp:365
+#: TextTool.cpp:366
 msgid "Paragraph..."
 msgstr ""
 
-#: TextTool.cpp:368
+#: TextTool.cpp:369
 msgid "Change paragraph margins, text flow, borders, bullets, numbering etc."
 msgstr ""
 
-#: TextTool.cpp:369
+#: TextTool.cpp:370
 msgid ""
 "Change paragraph margins, text flow, borders, bullets, numbering etc."
 "<p>Select text in multiple paragraphs to change the formatting of all "
@@ -1157,51 +1158,51 @@ msgid ""
 "cursor is located will be changed.</p>"
 msgstr ""
 
-#: TextTool.cpp:377
+#: TextTool.cpp:378
 #, fuzzy
 #| msgid "Second"
 msgid "Record Changes"
 msgstr "Dua"
 
-#: TextTool.cpp:388
+#: TextTool.cpp:389
 msgid "Change attributes of styles"
 msgstr ""
 
-#: TextTool.cpp:389
+#: TextTool.cpp:390
 msgid ""
 "Change font and paragraph attributes of styles.<p>Multiple styles can be "
 "changed using the dialog box."
 msgstr ""
 
-#: TextTool.cpp:396
+#: TextTool.cpp:397
 msgid "Special Character..."
 msgstr ""
 
-#: TextTool.cpp:400
+#: TextTool.cpp:401
 msgid "Insert one or more symbols or characters not found on the keyboard"
 msgstr ""
 
-#: TextTool.cpp:401
+#: TextTool.cpp:402
 msgid "Insert one or more symbols or characters not found on the keyboard."
 msgstr ""
 
-#: TextTool.cpp:466
+#: TextTool.cpp:467
 #, fuzzy
 #| msgid "Insert"
 msgid "Insertion"
 msgstr "Enmeti"
 
-#: TextTool.cpp:468
+#: TextTool.cpp:469
 #, fuzzy
 #| msgid "Delete"
 msgid "Deletion"
 msgstr "Forigi"
 
-#: TextTool.cpp:470
+#: TextTool.cpp:471
 msgid "Formatting"
 msgstr "Formatado"
 
-#: TextTool.cpp:881
+#: TextTool.cpp:882
 #, kde-format
 msgid ""
 "This link points to the program or script '%1'.\n"
@@ -1209,23 +1210,23 @@ msgid ""
 "this program?"
 msgstr ""
 
-#: TextTool.cpp:886
+#: TextTool.cpp:887
 msgid "Open Link?"
 msgstr "Ĉu malfermi ligon?"
 
-#: TextTool.cpp:1378
+#: TextTool.cpp:1379
 msgid "Abc"
 msgstr "Abc"
 
-#: TextTool.cpp:1380
+#: TextTool.cpp:1381
 msgid "Styles"
 msgstr "Stiloj"
 
-#: TextTool.cpp:1716
+#: TextTool.cpp:1717
 msgid "Key Press"
 msgstr ""
 
-#: TextTool.cpp:1716 TextTool.cpp:1721
+#: TextTool.cpp:1717 TextTool.cpp:1722
 msgid "Autocorrection"
 msgstr "Aŭtokorektado"
 
