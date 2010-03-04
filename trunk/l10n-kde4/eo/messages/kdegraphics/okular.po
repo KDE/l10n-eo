@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-02-21 06:45+0100\n"
+"POT-Creation-Date: 2010-03-04 04:12+0100\n"
 "PO-Revision-Date: 2010-01-03 11:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -18,29 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: conf/dlgperformance.cpp:43
-msgid ""
-"Keeps used memory as low as possible. Do not reuse anything. (For systems "
-"with low memory.)"
-msgstr ""
-"Gardas la memoruzon la plej malalte eble. Ne reuzas ion. (Por sistemoj kun "
-"malgranda memoro.)"
+#: conf/dlgpresentation.cpp:28
+#, fuzzy
+#| msgid "Default transition:"
+msgctxt "@label:listbox The current screen, for the presentation mode"
+msgid "Current Screen"
+msgstr "Defaŭlta transpaso:"
 
-#: conf/dlgperformance.cpp:46
-msgid ""
-"A good compromise between memory usage and speed gain. Preload next page and "
-"boost searches. (For systems with 256MB of memory, typically.)"
-msgstr ""
-"Bona kompromiso inter memoruzo kaj rapideco. Antaŭŝargas la sekvan paĝon kaj "
-"plirapidigas la serĉadon. (Por sistemoj kun 256MB da memoro, komune.)"
+#: conf/dlgpresentation.cpp:29
+msgctxt "@label:listbox The default screen for the presentation mode"
+msgid "Default Screen"
+msgstr "Apriora Ekrano"
 
-#: conf/dlgperformance.cpp:49
-msgid ""
-"Keeps everything in memory. Preload next pages. Boost searches. (For systems "
-"with more than 512MB of memory.)"
-msgstr ""
-"Gardas ĉion en memoro. Antaŭŝargas la sekvajn paĝojn. Plirapidigas la "
-"serĉadon. (Por sistemoj kun pli ol 512MB da memoro.)"
+#: conf/dlgpresentation.cpp:33
+#, kde-format
+msgctxt "@label:listbox %1 is the screen number (0, 1, ...)"
+msgid "Screen %1"
+msgstr "Ekrano %1"
+
+#: conf/dlgpresentation.cpp:48
+#, fuzzy
+#| msgid " sec."
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " sek."
+msgstr[1] " sek."
 
 #: conf/dlgeditor.cpp:28
 msgctxt "Text editor"
@@ -120,7 +122,7 @@ msgstr "Opcioj por la prezenta moduso"
 
 #. i18n: file: conf/dlgidentitybase.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: conf/preferencesdialog.cpp:42 rc.cpp:215
+#: conf/preferencesdialog.cpp:42 rc.cpp:122
 msgid "Identity"
 msgstr "Identeco"
 
@@ -130,7 +132,7 @@ msgstr "Identeca agordo"
 
 #. i18n: file: conf/dlgeditorbase.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: conf/preferencesdialog.cpp:44 rc.cpp:224
+#: conf/preferencesdialog.cpp:44 rc.cpp:68
 msgid "Editor"
 msgstr "Editor"
 
@@ -140,31 +142,29 @@ msgstr "Editor"
 msgid "Editor Options"
 msgstr "Filtrila agordo"
 
-#: conf/dlgpresentation.cpp:28
-#, fuzzy
-#| msgid "Default transition:"
-msgctxt "@label:listbox The current screen, for the presentation mode"
-msgid "Current Screen"
-msgstr "Defaŭlta transpaso:"
+#: conf/dlgperformance.cpp:43
+msgid ""
+"Keeps used memory as low as possible. Do not reuse anything. (For systems "
+"with low memory.)"
+msgstr ""
+"Gardas la memoruzon la plej malalte eble. Ne reuzas ion. (Por sistemoj kun "
+"malgranda memoro.)"
 
-#: conf/dlgpresentation.cpp:29
-msgctxt "@label:listbox The default screen for the presentation mode"
-msgid "Default Screen"
-msgstr "Apriora Ekrano"
+#: conf/dlgperformance.cpp:46
+msgid ""
+"A good compromise between memory usage and speed gain. Preload next page and "
+"boost searches. (For systems with 256MB of memory, typically.)"
+msgstr ""
+"Bona kompromiso inter memoruzo kaj rapideco. Antaŭŝargas la sekvan paĝon kaj "
+"plirapidigas la serĉadon. (Por sistemoj kun 256MB da memoro, komune.)"
 
-#: conf/dlgpresentation.cpp:33
-#, kde-format
-msgctxt "@label:listbox %1 is the screen number (0, 1, ...)"
-msgid "Screen %1"
-msgstr "Ekrano %1"
-
-#: conf/dlgpresentation.cpp:48
-#, fuzzy
-#| msgid " sec."
-msgid " second"
-msgid_plural " seconds"
-msgstr[0] " sek."
-msgstr[1] " sek."
+#: conf/dlgperformance.cpp:49
+msgid ""
+"Keeps everything in memory. Preload next pages. Boost searches. (For systems "
+"with more than 512MB of memory.)"
+msgstr ""
+"Gardas ĉion en memoro. Antaŭŝargas la sekvajn paĝojn. Plirapidigas la "
+"serĉadon. (Por sistemoj kun pli ol 512MB da memoro.)"
 
 #: core/action.cpp:91
 #, kde-format
@@ -235,6 +235,13 @@ msgstr "Ĝavoskripta Skripto"
 #: core/action.cpp:429
 msgid "Play movie..."
 msgstr "Ludi filmon..."
+
+#: core/sourcereference.cpp:91
+#, fuzzy, kde-format
+#| msgid "&Size:"
+msgctxt "'source' is a source file"
+msgid "Source: %1"
+msgstr "&Grandeco:"
 
 #: core/document.cpp:163
 #, kde-format
@@ -368,6 +375,19 @@ msgstr "Dosiera grandeco"
 msgid "Page Size"
 msgstr "Paĝgrandeco"
 
+#: core/chooseenginedialog.cpp:22
+msgid "Backend Selection"
+msgstr "Interna elekto"
+
+#: core/chooseenginedialog.cpp:33
+#, kde-format
+msgid ""
+"<qt>More than one backend found for the MIME type:<br /><b>%1</b> (%2).<br /"
+"><br />Please select which one to use:</qt>"
+msgstr ""
+"<qt>Pli ol unu interno troviĝis por la mime-tipo:<br /><b>%1</b> (%2).<br /"
+"><br />Bonvolu elekti la unu uzendan:</qt>"
+
 #: core/generator.cpp:552
 msgid "Plain &Text..."
 msgstr "Plata &teksto..."
@@ -387,58 +407,6 @@ msgstr "Malfermi dokumenton"
 msgctxt "This is the document format"
 msgid "HTML"
 msgstr "HTML"
-
-#: core/sourcereference.cpp:91
-#, fuzzy, kde-format
-#| msgid "&Size:"
-msgctxt "'source' is a source file"
-msgid "Source: %1"
-msgstr "&Grandeco:"
-
-#: core/chooseenginedialog.cpp:22
-msgid "Backend Selection"
-msgstr "Interna elekto"
-
-#: core/chooseenginedialog.cpp:33
-#, kde-format
-msgid ""
-"<qt>More than one backend found for the MIME type:<br /><b>%1</b> (%2).<br /"
-"><br />Please select which one to use:</qt>"
-msgstr ""
-"<qt>Pli ol unu interno troviĝis por la mime-tipo:<br /><b>%1</b> (%2).<br /"
-"><br />Bonvolu elekti la unu uzendan:</qt>"
-
-#: ui/toolaction.cpp:21
-msgid "Selection Tools"
-msgstr "Elektiloj"
-
-#: ui/toolaction.cpp:71 ui/toolaction.cpp:83
-msgid ""
-"Click to use the current selection tool\n"
-"Click and hold to choose another selection tool"
-msgstr ""
-"Klaku por uzi la nunan elektilon\n"
-"Klaku kaj tenu por elekti alian elektilon"
-
-#: ui/pageviewannotator.cpp:159
-msgid "Text of the new note:"
-msgstr "Teksto de la nova noto:"
-
-#: ui/pageviewannotator.cpp:161
-msgid "New Text Note"
-msgstr "Nova teksta noto"
-
-#: ui/pageviewannotator.cpp:700
-msgid "Please insert your name or initials:"
-msgstr "Bonvolu enmeti vian nomon aŭ viajn inicialojn"
-
-#: ui/pageviewannotator.cpp:701
-msgid "You must set this name:"
-msgstr "Vi devas indiki tiun nomon:"
-
-#: ui/pageviewannotator.cpp:702
-msgid "Annotations author"
-msgstr "Komenta aŭtoro"
 
 #: ui/findbar.cpp:36 ui/presentationsearchbar.cpp:64
 msgid "Close"
@@ -490,350 +458,6 @@ msgstr "Usklecodistinga"
 #: ui/findbar.cpp:68
 msgid "From current page"
 msgstr "El nuna paĝo"
-
-#: ui/presentationwidget.cpp:142
-#, fuzzy, kde-format
-#| msgid "Presentation"
-msgctxt "[document title/filename] – Presentation"
-msgid "%1 – Presentation"
-msgstr "Prezento"
-
-#: ui/presentationwidget.cpp:184
-msgid "Switch Screen"
-msgstr "Ŝalti ekranon"
-
-#: ui/presentationwidget.cpp:191
-#, kde-format
-msgctxt "%1 is the screen number (0, 1, ...)"
-msgid "Screen %1"
-msgstr "Ekrano %1"
-
-#: ui/presentationwidget.cpp:198
-msgid "Exit Presentation Mode"
-msgstr "Foriri el la prezenta moduso"
-
-#: ui/presentationwidget.cpp:318
-#, kde-format
-msgid "Title: %1"
-msgstr "Titolo: %1"
-
-#: ui/presentationwidget.cpp:320 ui/guiutils.cpp:156
-#, kde-format
-msgid "Author: %1"
-msgstr "Aŭtoro: %1"
-
-#: ui/presentationwidget.cpp:322
-#, kde-format
-msgid "Pages: %1"
-msgstr "Paĝoj: %1"
-
-#: ui/presentationwidget.cpp:323
-msgid "Click to begin"
-msgstr "Klaku por komenci"
-
-#: ui/presentationwidget.cpp:1277
-msgid ""
-"There are two ways of exiting presentation mode, you can press either ESC "
-"key or click with the quit button that appears when placing the mouse in the "
-"top-right corner. Of course you can cycle windows (Alt+TAB by default)"
-msgstr ""
-"Estas du maniere forlasi la prezentan moduson, vi povas aŭ premi la eskapan "
-"klavon aŭ klaki la Forlasi butonon kiu aperas kiam vi metas la muson en la "
-"supra dekstra angulo. Kompreneble vi povas rotacii la fenestrojn (Alt+Tab "
-"defaŭlte)"
-
-#: ui/presentationwidget.cpp:1399
-#, fuzzy
-#| msgid "End Presentation"
-msgctxt ""
-"Reason for inhibiting the screensaver activation, when the presentation mode "
-"is active"
-msgid "Giving a presentation"
-msgstr "Fini prezenton"
-
-#: ui/thumbnaillist.cpp:870
-msgid "Show bookmarked pages only"
-msgstr "Montri nur la legosignajn paĝojn"
-
-#: ui/annotationmodel.cpp:297 part.cpp:1731
-#, kde-format
-msgid "Page %1"
-msgstr "Paĝo %1"
-
-#: ui/minibar.cpp:87
-msgctxt "Layouted like: '5 [pages] of 10'"
-msgid "of"
-msgstr "el"
-
-#: ui/annotationpropertiesdialog.cpp:58
-msgid "&Appearance"
-msgstr "&Apero"
-
-#: ui/annotationpropertiesdialog.cpp:61
-msgid "&Color:"
-msgstr "&Koloro:"
-
-#: ui/annotationpropertiesdialog.cpp:69
-msgid "&Opacity:"
-msgstr "Maldiafanec&o:"
-
-#: ui/annotationpropertiesdialog.cpp:74
-msgctxt "Suffix for the opacity level, eg '80 %'"
-msgid " %"
-msgstr " %"
-
-#: ui/annotationpropertiesdialog.cpp:91
-msgid "&General"
-msgstr "&Ĝenerale"
-
-#. i18n: file: conf/dlgidentitybase.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/annotationpropertiesdialog.cpp:94 rc.cpp:218
-msgid "&Author:"
-msgstr "&Aŭtoro:"
-
-#: ui/annotationpropertiesdialog.cpp:102
-#, kde-format
-msgid "Created: %1"
-msgstr "Kreita: %1"
-
-#: ui/annotationpropertiesdialog.cpp:107 ui/annotationpropertiesdialog.cpp:211
-#, kde-format
-msgid "Modified: %1"
-msgstr "Ŝanĝita: %1"
-
-#: ui/annotationpropertiesdialog.cpp:152
-msgid "Note Properties"
-msgstr "Notaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:154
-msgid "Inline Note Properties"
-msgstr "Surliniaj notaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:157
-msgid "Line Properties"
-msgstr "Liniaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:160
-msgid "Geometry Properties"
-msgstr "Geometriaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:163
-msgid "Highlight Properties"
-msgstr "Emfazaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:166
-msgid "Stamp Properties"
-msgstr "Stampaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:169
-msgid "Ink Properties"
-msgstr "Inkaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:172
-#, fuzzy
-#| msgid "Note Properties"
-msgid "Caret Properties"
-msgstr "Notaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:175
-#, fuzzy
-#| msgid "Inline Note Properties"
-msgid "File Attachment Properties"
-msgstr "Surliniaj notaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:178
-msgid "Sound Properties"
-msgstr "Sonaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:181
-msgid "Movie Properties"
-msgstr "Filmaj ecoj"
-
-#: ui/annotationpropertiesdialog.cpp:184
-msgid "Annotation Properties"
-msgstr "Notaj ecoj"
-
-#. i18n: tag tool attribute name
-#. i18n: file: ui/data/tools.xml:20
-#: ui/guiutils.cpp:72 ui/annotationwidgets.cpp:218 rc.cpp:305
-msgid "Note"
-msgstr "Noto"
-
-#. i18n: tag tool attribute name
-#. i18n: file: ui/data/tools.xml:27
-#: ui/guiutils.cpp:74 rc.cpp:308
-msgid "Inline Note"
-msgstr "Surlinia noto"
-
-#: ui/guiutils.cpp:77
-msgid "Line"
-msgstr "Linio"
-
-#: ui/guiutils.cpp:80
-msgid "Geometry"
-msgstr "Geometrio"
-
-#: ui/guiutils.cpp:83 ui/annotationwidgets.cpp:397
-msgid "Highlight"
-msgstr "Emfazi"
-
-#. i18n: tag tool attribute name
-#. i18n: file: ui/data/tools.xml:62
-#: ui/guiutils.cpp:86 rc.cpp:323
-msgid "Stamp"
-msgstr "Stampo"
-
-#: ui/guiutils.cpp:89
-msgid "Ink"
-msgstr "Inko"
-
-#: ui/guiutils.cpp:92
-#, fuzzy
-#| msgid "Creator"
-msgid "Caret"
-msgstr "Kreinto"
-
-#: ui/guiutils.cpp:95
-msgid "File Attachment"
-msgstr ""
-
-#: ui/guiutils.cpp:98
-msgid "Sound"
-msgstr "Sono"
-
-#: ui/guiutils.cpp:101
-msgid "Movie"
-msgstr "Filmo"
-
-#: ui/guiutils.cpp:113
-msgctxt "Unknown author"
-msgid "Unknown"
-msgstr "Nekonata"
-
-#: ui/guiutils.cpp:202 ui/propertiesdialog.cpp:261
-#, kde-format
-msgid "Where do you want to save %1?"
-msgstr "Kie vi volas konservi %1?"
-
-#: ui/guiutils.cpp:211 ui/propertiesdialog.cpp:274
-#, kde-format
-msgid "Could not open \"%1\" for writing. File was not saved."
-msgstr ""
-
-#: ui/presentationsearchbar.cpp:78
-msgid "Find Next"
-msgstr "Trovi la sekvan"
-
-#: ui/side_reviews.cpp:61
-msgid ""
-"<div align=center><h3>No annotations</h3>To create new annotations press F6 "
-"or select <i>Tools -&gt; Review</i> from the menu.</div>"
-msgstr ""
-"<div align=center><h3>Neniu noto</h3>Por krei novajn notojn, premu F6 aŭ "
-"elektu <i>Iloj -> Recenzoj</i> el la menuo.</div>"
-
-#: ui/side_reviews.cpp:128
-msgid "Group by Page"
-msgstr "Grupi laŭ paĝo"
-
-#: ui/side_reviews.cpp:133
-msgid "Group by Author"
-msgstr "Grupi laŭ aŭtoro"
-
-#: ui/side_reviews.cpp:141
-msgid "Show reviews for current page only"
-msgstr "Montri la recenzojn nur por la nuna paĝo"
-
-#: ui/ktreeviewsearchline.cpp:461
-#, fuzzy
-#| msgid "Search Columns"
-msgid "Search Options"
-msgstr "Serĉi kolumnojn"
-
-#: ui/ktreeviewsearchline.cpp:462
-#, fuzzy
-#| msgid "Case Sensitive"
-msgctxt "Enable case sensitive search in the side navigation panels"
-msgid "Case Sensitive"
-msgstr "Usklecodistinga"
-
-#: ui/ktreeviewsearchline.cpp:465
-msgctxt "Enable regular expression search in the side navigation panels"
-msgid "Regular Expression"
-msgstr ""
-
-#: ui/ktreeviewsearchline.cpp:471
-msgid "Search Columns"
-msgstr "Serĉi kolumnojn"
-
-#: ui/ktreeviewsearchline.cpp:473
-msgid "All Visible Columns"
-msgstr "Ĉiuj videblaj kolumnoj"
-
-#: ui/ktreeviewsearchline.cpp:630
-msgid "S&earch:"
-msgstr "S&erĉi:"
-
-#: ui/searchwidget.cpp:40
-msgid "Enter at least 3 letters to filter pages"
-msgstr "Enmetu almenaŭ 3 literojn por filtri la paĝojn"
-
-#: ui/searchwidget.cpp:50
-msgid "Case Sensitive"
-msgstr "Usklecodistinga"
-
-#: ui/searchwidget.cpp:52
-msgid "Match Phrase"
-msgstr "Kongrui frazon"
-
-#: ui/searchwidget.cpp:53
-msgid "Match All Words"
-msgstr "Kongrui ĉiujn vortojn"
-
-#: ui/searchwidget.cpp:54
-msgid "Match Any Word"
-msgstr "Kongrui iun vorton"
-
-#: ui/searchwidget.cpp:73
-msgid "Filter Options"
-msgstr "Filtrila agordo"
-
-#: ui/sidebar.cpp:659 ui/annotationwidgets.cpp:268 shell/main.cpp:39
-#: part.cpp:149
-msgid "Okular"
-msgstr "Okular"
-
-#: ui/sidebar.cpp:660
-msgid "Show Text"
-msgstr "Montri la tekston"
-
-#: ui/sidebar.cpp:676
-msgid "Small Icons"
-msgstr "Malgrandaj piktogramoj"
-
-#: ui/sidebar.cpp:677
-msgid "Normal Icons"
-msgstr "Normalaj piktogramoj"
-
-#: ui/sidebar.cpp:678
-msgid "Large Icons"
-msgstr "Grandaj piktogramoj"
-
-#: ui/videowidget.cpp:115
-msgctxt "start the movie playback"
-msgid "Play"
-msgstr "Ludi"
-
-#: ui/videowidget.cpp:120
-msgctxt "pause the movie playback"
-msgid "Pause"
-msgstr "Paŭzi"
-
-#: ui/videowidget.cpp:185
-msgctxt "stop the movie playback"
-msgid "Stop"
-msgstr "Ĉesigi"
 
 #: ui/pageview.cpp:339
 msgid "Zoom"
@@ -1062,14 +686,83 @@ msgstr "Tiru rektangulon ĉirkaŭ la teksto/grafikaĵoj kopiendaj."
 msgid "Select text"
 msgstr "Elekti tekston"
 
-#: ui/pageviewutils.cpp:380
-msgid "Close this message"
-msgstr "Fermi tiun mesaĝon"
+#: ui/videowidget.cpp:115
+msgctxt "start the movie playback"
+msgid "Play"
+msgstr "Ludi"
 
-#: ui/tts.cpp:52
-#, kde-format
-msgid "Starting KTTSD Failed: %1"
-msgstr "Lanĉo de KTTSD fiaskis: %1"
+#: ui/videowidget.cpp:120
+msgctxt "pause the movie playback"
+msgid "Pause"
+msgstr "Paŭzi"
+
+#: ui/videowidget.cpp:185
+msgctxt "stop the movie playback"
+msgid "Stop"
+msgstr "Ĉesigi"
+
+#: ui/toolaction.cpp:21
+msgid "Selection Tools"
+msgstr "Elektiloj"
+
+#: ui/toolaction.cpp:71 ui/toolaction.cpp:83
+msgid ""
+"Click to use the current selection tool\n"
+"Click and hold to choose another selection tool"
+msgstr ""
+"Klaku por uzi la nunan elektilon\n"
+"Klaku kaj tenu por elekti alian elektilon"
+
+#: ui/thumbnaillist.cpp:870
+msgid "Show bookmarked pages only"
+msgstr "Montri nur la legosignajn paĝojn"
+
+#: ui/embeddedfilesdialog.cpp:35
+msgctxt "Unknown date"
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: ui/embeddedfilesdialog.cpp:40
+#, fuzzy
+#| msgid "Embedded Files"
+msgctxt "@title:window"
+msgid "Embedded Files"
+msgstr "Enkorpigitaj dosieroj"
+
+#: ui/embeddedfilesdialog.cpp:49
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Nomo"
+
+#: ui/embeddedfilesdialog.cpp:50
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Priskribo"
+
+#: ui/embeddedfilesdialog.cpp:51
+msgctxt "@title:column"
+msgid "Size"
+msgstr "Grandeco"
+
+#: ui/embeddedfilesdialog.cpp:52
+msgctxt "@title:column"
+msgid "Created"
+msgstr "Kreita"
+
+#: ui/embeddedfilesdialog.cpp:53
+msgctxt "@title:column"
+msgid "Modified"
+msgstr "Ŝanĝita"
+
+#: ui/embeddedfilesdialog.cpp:69 ui/annotationwidgets.cpp:518
+msgctxt "Not available size"
+msgid "N/A"
+msgstr "N/A"
+
+#: ui/embeddedfilesdialog.cpp:114
+msgctxt "@action:inmenu"
+msgid "&Save As..."
+msgstr "Kon&servi kiel..."
 
 #: ui/fileprinterpreview.cpp:114
 msgid "Could not load print preview part"
@@ -1078,6 +771,234 @@ msgstr "Ne eblis ŝargi la printan antaŭrigardan komponanton"
 #: ui/fileprinterpreview.cpp:129
 msgid "Print Preview"
 msgstr "Printa antaŭrigardo"
+
+#: ui/side_reviews.cpp:61
+msgid ""
+"<div align=center><h3>No annotations</h3>To create new annotations press F6 "
+"or select <i>Tools -&gt; Review</i> from the menu.</div>"
+msgstr ""
+"<div align=center><h3>Neniu noto</h3>Por krei novajn notojn, premu F6 aŭ "
+"elektu <i>Iloj -> Recenzoj</i> el la menuo.</div>"
+
+#: ui/side_reviews.cpp:128
+msgid "Group by Page"
+msgstr "Grupi laŭ paĝo"
+
+#: ui/side_reviews.cpp:133
+msgid "Group by Author"
+msgstr "Grupi laŭ aŭtoro"
+
+#: ui/side_reviews.cpp:141
+msgid "Show reviews for current page only"
+msgstr "Montri la recenzojn nur por la nuna paĝo"
+
+#: ui/formwidgets.cpp:350 shell/shell.cpp:242
+msgid "*|All Files"
+msgstr "*|Ĉiuj dosieroj"
+
+#: ui/bookmarklist.cpp:111
+#, kde-format
+msgctxt "%1 is the file name"
+msgid ""
+"%1\n"
+"\n"
+"One bookmark"
+msgid_plural ""
+"%1\n"
+"\n"
+"%2 bookmarks"
+msgstr[0] ""
+"%1\n"
+"\n"
+"Unu legosigno"
+msgstr[1] ""
+"%1\n"
+"\n"
+"%2 legosignoj"
+
+#: ui/bookmarklist.cpp:156
+msgid "Current document only"
+msgstr "Nur la aktuala dokumento"
+
+#: ui/bookmarklist.cpp:246
+msgid "Go to This Bookmark"
+msgstr "Iri al ĉi tiu legosigno"
+
+#: ui/bookmarklist.cpp:247
+msgid "Rename Bookmark"
+msgstr "Alinomi la legosignon"
+
+#: ui/bookmarklist.cpp:248 part.cpp:1270 part.cpp:1733
+msgid "Remove Bookmark"
+msgstr "Forigi la legosignon"
+
+#: ui/bookmarklist.cpp:273
+#, fuzzy
+#| msgid "Open a document"
+msgctxt "Opens the selected document"
+msgid "Open Document"
+msgstr "Malfermi dokumenton"
+
+#: ui/bookmarklist.cpp:274
+#, fuzzy
+#| msgid "Remove Bookmark"
+msgid "Remove Bookmarks"
+msgstr "Forigi la legosignon"
+
+#: ui/annotationmodel.cpp:297 part.cpp:1731
+#, kde-format
+msgid "Page %1"
+msgstr "Paĝo %1"
+
+#. i18n: tag tool attribute name
+#. i18n: file: ui/data/tools.xml:20
+#: ui/guiutils.cpp:72 ui/annotationwidgets.cpp:218 rc.cpp:305
+msgid "Note"
+msgstr "Noto"
+
+#. i18n: tag tool attribute name
+#. i18n: file: ui/data/tools.xml:27
+#: ui/guiutils.cpp:74 rc.cpp:308
+msgid "Inline Note"
+msgstr "Surlinia noto"
+
+#: ui/guiutils.cpp:77
+msgid "Line"
+msgstr "Linio"
+
+#: ui/guiutils.cpp:80
+msgid "Geometry"
+msgstr "Geometrio"
+
+#: ui/guiutils.cpp:83 ui/annotationwidgets.cpp:397
+msgid "Highlight"
+msgstr "Emfazi"
+
+#. i18n: tag tool attribute name
+#. i18n: file: ui/data/tools.xml:62
+#: ui/guiutils.cpp:86 rc.cpp:323
+msgid "Stamp"
+msgstr "Stampo"
+
+#: ui/guiutils.cpp:89
+msgid "Ink"
+msgstr "Inko"
+
+#: ui/guiutils.cpp:92
+#, fuzzy
+#| msgid "Creator"
+msgid "Caret"
+msgstr "Kreinto"
+
+#: ui/guiutils.cpp:95
+msgid "File Attachment"
+msgstr ""
+
+#: ui/guiutils.cpp:98
+msgid "Sound"
+msgstr "Sono"
+
+#: ui/guiutils.cpp:101
+msgid "Movie"
+msgstr "Filmo"
+
+#: ui/guiutils.cpp:113
+msgctxt "Unknown author"
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: ui/guiutils.cpp:156 ui/presentationwidget.cpp:320
+#, kde-format
+msgid "Author: %1"
+msgstr "Aŭtoro: %1"
+
+#: ui/guiutils.cpp:202 ui/propertiesdialog.cpp:261
+#, kde-format
+msgid "Where do you want to save %1?"
+msgstr "Kie vi volas konservi %1?"
+
+#: ui/guiutils.cpp:211 ui/propertiesdialog.cpp:274
+#, kde-format
+msgid "Could not open \"%1\" for writing. File was not saved."
+msgstr ""
+
+#: ui/sidebar.cpp:659 ui/annotationwidgets.cpp:268 shell/main.cpp:39
+#: part.cpp:149
+msgid "Okular"
+msgstr "Okular"
+
+#: ui/sidebar.cpp:660
+msgid "Show Text"
+msgstr "Montri la tekston"
+
+#: ui/sidebar.cpp:676
+msgid "Small Icons"
+msgstr "Malgrandaj piktogramoj"
+
+#: ui/sidebar.cpp:677
+msgid "Normal Icons"
+msgstr "Normalaj piktogramoj"
+
+#: ui/sidebar.cpp:678
+msgid "Large Icons"
+msgstr "Grandaj piktogramoj"
+
+#: ui/pageviewutils.cpp:380
+msgid "Close this message"
+msgstr "Fermi tiun mesaĝon"
+
+#: ui/minibar.cpp:87
+msgctxt "Layouted like: '5 [pages] of 10'"
+msgid "of"
+msgstr "el"
+
+#: ui/pageviewannotator.cpp:159
+msgid "Text of the new note:"
+msgstr "Teksto de la nova noto:"
+
+#: ui/pageviewannotator.cpp:161
+msgid "New Text Note"
+msgstr "Nova teksta noto"
+
+#: ui/pageviewannotator.cpp:700
+msgid "Please insert your name or initials:"
+msgstr "Bonvolu enmeti vian nomon aŭ viajn inicialojn"
+
+#: ui/pageviewannotator.cpp:701
+msgid "You must set this name:"
+msgstr "Vi devas indiki tiun nomon:"
+
+#: ui/pageviewannotator.cpp:702
+msgid "Annotations author"
+msgstr "Komenta aŭtoro"
+
+#: ui/annotationpopup.cpp:49
+#, fuzzy, kde-format
+#| msgid "Annotation"
+#| msgid_plural "%1 Annotations"
+msgid "Annotation"
+msgid_plural "%1 Annotations"
+msgstr[0] "Komentado"
+msgstr[1] "Komentadoj"
+
+#: ui/annotationpopup.cpp:50
+msgid "&Open Pop-up Note"
+msgstr "&Malfermi ŝprucnoton"
+
+#: ui/annotationpopup.cpp:52
+msgid "&Delete"
+msgstr "&Forigi"
+
+#: ui/annotationpopup.cpp:58 ui/propertiesdialog.cpp:49 part.cpp:521
+msgid "&Properties"
+msgstr "&Ecoj"
+
+#: ui/annotationpopup.cpp:65
+#, fuzzy, kde-format
+#| msgid "Save As..."
+msgctxt "%1 is the name of the file to save"
+msgid "&Save '%1'..."
+msgstr "Kon&servi '%1'..."
 
 #: ui/annotationwidgets.cpp:208
 msgid "Icon"
@@ -1264,11 +1185,6 @@ msgctxt "'File' as normal file, that can be opened, saved, etc.."
 msgid "File"
 msgstr "Dosiero"
 
-#: ui/annotationwidgets.cpp:518 ui/embeddedfilesdialog.cpp:68
-msgctxt "Not available size"
-msgid "N/A"
-msgstr "N/A"
-
 #: ui/annotationwidgets.cpp:519
 msgid "No description available."
 msgstr "Neniu priskribo havebla."
@@ -1304,96 +1220,35 @@ msgctxt "Symbol for caret annotations"
 msgid "P"
 msgstr "P"
 
-#: ui/bookmarklist.cpp:111
-#, kde-format
-msgctxt "%1 is the file name"
-msgid ""
-"%1\n"
-"\n"
-"One bookmark"
-msgid_plural ""
-"%1\n"
-"\n"
-"%2 bookmarks"
-msgstr[0] ""
-"%1\n"
-"\n"
-"Unu legosigno"
-msgstr[1] ""
-"%1\n"
-"\n"
-"%2 legosignoj"
-
-#: ui/bookmarklist.cpp:156
-msgid "Current document only"
-msgstr "Nur la aktuala dokumento"
-
-#: ui/bookmarklist.cpp:246
-msgid "Go to This Bookmark"
-msgstr "Iri al ĉi tiu legosigno"
-
-#: ui/bookmarklist.cpp:247
-msgid "Rename Bookmark"
-msgstr "Alinomi la legosignon"
-
-#: ui/bookmarklist.cpp:248 part.cpp:1270 part.cpp:1733
-msgid "Remove Bookmark"
-msgstr "Forigi la legosignon"
-
-#: ui/bookmarklist.cpp:273
+#: ui/ktreeviewsearchline.cpp:461
 #, fuzzy
-#| msgid "Open a document"
-msgctxt "Opens the selected document"
-msgid "Open Document"
-msgstr "Malfermi dokumenton"
+#| msgid "Search Columns"
+msgid "Search Options"
+msgstr "Serĉi kolumnojn"
 
-#: ui/bookmarklist.cpp:274
+#: ui/ktreeviewsearchline.cpp:462
 #, fuzzy
-#| msgid "Remove Bookmark"
-msgid "Remove Bookmarks"
-msgstr "Forigi la legosignon"
+#| msgid "Case Sensitive"
+msgctxt "Enable case sensitive search in the side navigation panels"
+msgid "Case Sensitive"
+msgstr "Usklecodistinga"
 
-#: ui/embeddedfilesdialog.cpp:35
-msgctxt "Unknown date"
-msgid "Unknown"
-msgstr "Nekonata"
+#: ui/ktreeviewsearchline.cpp:465
+msgctxt "Enable regular expression search in the side navigation panels"
+msgid "Regular Expression"
+msgstr ""
 
-#: ui/embeddedfilesdialog.cpp:40
-#, fuzzy
-#| msgid "Embedded Files"
-msgctxt "@title:window"
-msgid "Embedded Files"
-msgstr "Enkorpigitaj dosieroj"
+#: ui/ktreeviewsearchline.cpp:471
+msgid "Search Columns"
+msgstr "Serĉi kolumnojn"
 
-#: ui/embeddedfilesdialog.cpp:48
-msgctxt "@title:column"
-msgid "Name"
-msgstr "Nomo"
+#: ui/ktreeviewsearchline.cpp:473
+msgid "All Visible Columns"
+msgstr "Ĉiuj videblaj kolumnoj"
 
-#: ui/embeddedfilesdialog.cpp:49
-msgctxt "@title:column"
-msgid "Description"
-msgstr "Priskribo"
-
-#: ui/embeddedfilesdialog.cpp:50
-msgctxt "@title:column"
-msgid "Size"
-msgstr "Grandeco"
-
-#: ui/embeddedfilesdialog.cpp:51
-msgctxt "@title:column"
-msgid "Created"
-msgstr "Kreita"
-
-#: ui/embeddedfilesdialog.cpp:52
-msgctxt "@title:column"
-msgid "Modified"
-msgstr "Ŝanĝita"
-
-#: ui/embeddedfilesdialog.cpp:106
-msgctxt "@action:inmenu"
-msgid "&Save As..."
-msgstr "Kon&servi kiel..."
+#: ui/ktreeviewsearchline.cpp:630
+msgid "S&earch:"
+msgstr "S&erĉi:"
 
 #: ui/annotwindow.cpp:48
 #, fuzzy
@@ -1401,17 +1256,127 @@ msgstr "Kon&servi kiel..."
 msgid "Close this note"
 msgstr "Fermi tiun mesaĝon"
 
-#: ui/formwidgets.cpp:350 shell/shell.cpp:242
-msgid "*|All Files"
-msgstr "*|Ĉiuj dosieroj"
+#: ui/annotationpropertiesdialog.cpp:58
+msgid "&Appearance"
+msgstr "&Apero"
+
+#: ui/annotationpropertiesdialog.cpp:61
+msgid "&Color:"
+msgstr "&Koloro:"
+
+#: ui/annotationpropertiesdialog.cpp:69
+msgid "&Opacity:"
+msgstr "Maldiafanec&o:"
+
+#: ui/annotationpropertiesdialog.cpp:74
+msgctxt "Suffix for the opacity level, eg '80 %'"
+msgid " %"
+msgstr " %"
+
+#: ui/annotationpropertiesdialog.cpp:91
+msgid "&General"
+msgstr "&Ĝenerale"
+
+#. i18n: file: conf/dlgidentitybase.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/annotationpropertiesdialog.cpp:94 rc.cpp:125
+msgid "&Author:"
+msgstr "&Aŭtoro:"
+
+#: ui/annotationpropertiesdialog.cpp:102
+#, kde-format
+msgid "Created: %1"
+msgstr "Kreita: %1"
+
+#: ui/annotationpropertiesdialog.cpp:107 ui/annotationpropertiesdialog.cpp:211
+#, kde-format
+msgid "Modified: %1"
+msgstr "Ŝanĝita: %1"
+
+#: ui/annotationpropertiesdialog.cpp:152
+msgid "Note Properties"
+msgstr "Notaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:154
+msgid "Inline Note Properties"
+msgstr "Surliniaj notaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:157
+msgid "Line Properties"
+msgstr "Liniaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:160
+msgid "Geometry Properties"
+msgstr "Geometriaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:163
+msgid "Highlight Properties"
+msgstr "Emfazaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:166
+msgid "Stamp Properties"
+msgstr "Stampaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:169
+msgid "Ink Properties"
+msgstr "Inkaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:172
+#, fuzzy
+#| msgid "Note Properties"
+msgid "Caret Properties"
+msgstr "Notaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:175
+#, fuzzy
+#| msgid "Inline Note Properties"
+msgid "File Attachment Properties"
+msgstr "Surliniaj notaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:178
+msgid "Sound Properties"
+msgstr "Sonaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:181
+msgid "Movie Properties"
+msgstr "Filmaj ecoj"
+
+#: ui/annotationpropertiesdialog.cpp:184
+msgid "Annotation Properties"
+msgstr "Notaj ecoj"
+
+#: ui/searchwidget.cpp:40
+msgid "Enter at least 3 letters to filter pages"
+msgstr "Enmetu almenaŭ 3 literojn por filtri la paĝojn"
+
+#: ui/searchwidget.cpp:50
+msgid "Case Sensitive"
+msgstr "Usklecodistinga"
+
+#: ui/searchwidget.cpp:52
+msgid "Match Phrase"
+msgstr "Kongrui frazon"
+
+#: ui/searchwidget.cpp:53
+msgid "Match All Words"
+msgstr "Kongrui ĉiujn vortojn"
+
+#: ui/searchwidget.cpp:54
+msgid "Match Any Word"
+msgstr "Kongrui iun vorton"
+
+#: ui/searchwidget.cpp:73
+msgid "Filter Options"
+msgstr "Filtrila agordo"
+
+#: ui/tts.cpp:52
+#, kde-format
+msgid "Starting KTTSD Failed: %1"
+msgstr "Lanĉo de KTTSD fiaskis: %1"
 
 #: ui/propertiesdialog.cpp:44
 msgid "Unknown File"
 msgstr "Nekonata dosiero"
-
-#: ui/propertiesdialog.cpp:49 ui/annotationpopup.cpp:58 part.cpp:521
-msgid "&Properties"
-msgstr "&Ecoj"
 
 #: ui/propertiesdialog.cpp:58
 msgid "No document opened."
@@ -1579,29 +1544,64 @@ msgstr "Tipo"
 msgid "File"
 msgstr "Dosiero"
 
-#: ui/annotationpopup.cpp:49
+#: ui/presentationsearchbar.cpp:78
+msgid "Find Next"
+msgstr "Trovi la sekvan"
+
+#: ui/presentationwidget.cpp:142
 #, fuzzy, kde-format
-#| msgid "Annotation"
-#| msgid_plural "%1 Annotations"
-msgid "Annotation"
-msgid_plural "%1 Annotations"
-msgstr[0] "Komentado"
-msgstr[1] "Komentadoj"
+#| msgid "Presentation"
+msgctxt "[document title/filename] – Presentation"
+msgid "%1 – Presentation"
+msgstr "Prezento"
 
-#: ui/annotationpopup.cpp:50
-msgid "&Open Pop-up Note"
-msgstr "&Malfermi ŝprucnoton"
+#: ui/presentationwidget.cpp:184
+msgid "Switch Screen"
+msgstr "Ŝalti ekranon"
 
-#: ui/annotationpopup.cpp:52
-msgid "&Delete"
-msgstr "&Forigi"
+#: ui/presentationwidget.cpp:191
+#, kde-format
+msgctxt "%1 is the screen number (0, 1, ...)"
+msgid "Screen %1"
+msgstr "Ekrano %1"
 
-#: ui/annotationpopup.cpp:65
-#, fuzzy, kde-format
-#| msgid "Save As..."
-msgctxt "%1 is the name of the file to save"
-msgid "&Save '%1'..."
-msgstr "Kon&servi '%1'..."
+#: ui/presentationwidget.cpp:198
+msgid "Exit Presentation Mode"
+msgstr "Foriri el la prezenta moduso"
+
+#: ui/presentationwidget.cpp:318
+#, kde-format
+msgid "Title: %1"
+msgstr "Titolo: %1"
+
+#: ui/presentationwidget.cpp:322
+#, kde-format
+msgid "Pages: %1"
+msgstr "Paĝoj: %1"
+
+#: ui/presentationwidget.cpp:323
+msgid "Click to begin"
+msgstr "Klaku por komenci"
+
+#: ui/presentationwidget.cpp:1277
+msgid ""
+"There are two ways of exiting presentation mode, you can press either ESC "
+"key or click with the quit button that appears when placing the mouse in the "
+"top-right corner. Of course you can cycle windows (Alt+TAB by default)"
+msgstr ""
+"Estas du maniere forlasi la prezentan moduson, vi povas aŭ premi la eskapan "
+"klavon aŭ klaki la Forlasi butonon kiu aperas kiam vi metas la muson en la "
+"supra dekstra angulo. Kompreneble vi povas rotacii la fenestrojn (Alt+Tab "
+"defaŭlte)"
+
+#: ui/presentationwidget.cpp:1399
+#, fuzzy
+#| msgid "End Presentation"
+msgctxt ""
+"Reason for inhibiting the screensaver activation, when the presentation mode "
+"is active"
+msgid "Giving a presentation"
+msgstr "Fini prezenton"
 
 #: shell/main.cpp:45
 msgid "Page of the document to be shown"
@@ -2087,331 +2087,15 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pedrotpmx@wanadoo.fr"
 
-#. i18n: file: conf/dlgaccessibilitybase.ui:28
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightImages)
-#: rc.cpp:68
-msgid "Draw border around &Images"
-msgstr "Streki borderon ĉirkaŭ la b&ildoj"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:35
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightLinks)
-#: rc.cpp:71
-msgid "Draw border around &Links"
-msgstr "Streki borderon ĉirkaŭ la &ligoj"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:45
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChangeColors)
-#: rc.cpp:74
-#, fuzzy
-#| msgid "Change &Colors"
-msgid "Change &colors"
-msgstr "Ŝanĝi la &kolorojn"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:63
-#. i18n: ectx: property (text), widget (QLabel, warn)
-#: rc.cpp:77
-msgid "Warning: these options can badly affect drawing speed."
-msgstr "Averto: tiuj opcioj povas ege aflikti la rapidecon de desegno"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:80
-#, fuzzy
-#| msgid "Color Mode:"
-msgid "Color mode:"
-msgstr "Kolora moduso:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:89
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:83
-msgid "Invert Colors"
-msgstr "Inversigi la kolorojn"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:94
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:86
-#, fuzzy
-#| msgid "Change paper color"
-msgid "Change Paper Color"
-msgstr "Ŝanĝi la paperan koloron"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:99
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:89
-#, fuzzy
-#| msgid "Change dark and light colors"
-msgid "Change Dark & Light Colors"
-msgstr "Ŝanĝi la malhelan kaj helan kolorojn"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:104
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:92
-msgid "Convert to Black & White"
-msgstr "Konverti al nigra-blanka"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:165
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:95
-msgid "Paper color:"
-msgstr "Papera koloro:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:218
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:98
-msgid "Dark color:"
-msgstr "Malhela koloro:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:250
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
-#: rc.cpp:101
-msgid "Light color:"
-msgstr "Hela koloro:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:291
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:104
-msgid "Threshold:"
-msgstr "Sojlo:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:323
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:107
-msgid "Contrast:"
-msgstr "Kontrasto:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:19
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:110
-msgid "Navigation"
-msgstr "Navigado"
-
-#. i18n: file: conf/dlgpresentationbase.ui:39
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesAdvance)
-#: rc.cpp:113
-msgid "Advance every:"
-msgstr "Antaŭeniri ĉiu:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:49
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_SlidesAdvanceTime)
-#: rc.cpp:116
-msgid " sec."
-msgstr " sek."
-
-#. i18n: file: conf/dlgpresentationbase.ui:61
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesLoop)
-#: rc.cpp:119
-msgid "Loop after last page"
-msgstr "Bukli post la lasta paĝo"
-
-#. i18n: file: conf/dlgpresentationbase.ui:71
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#. i18n: file: conf/dlggeneralbase.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:122 rc.cpp:236
-msgid "Appearance"
-msgstr "Apero"
-
-#. i18n: file: conf/dlgpresentationbase.ui:79
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:125
-msgid "Background color:"
-msgstr "Fona koloro:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:92
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:128
-msgid "Pencil color:"
-msgstr "Krajona koloro:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:105
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:131
-msgid "Mouse cursor:"
-msgstr "Musa kursoro:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:116
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
-#: rc.cpp:134
-msgid "Hidden After Delay"
-msgstr "Kaŝita post prokrasto"
-
-#. i18n: file: conf/dlgpresentationbase.ui:121
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
-#: rc.cpp:137
-msgid "Always Visible"
-msgstr "Ĉiam videbla"
-
-#. i18n: file: conf/dlgpresentationbase.ui:126
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
-#: rc.cpp:140
-msgid "Always Hidden"
-msgstr "Ĉiam kaŝita"
-
-#. i18n: file: conf/dlgpresentationbase.ui:136
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesShowProgress)
-#: rc.cpp:143
-msgid "Show &progress indicator"
-msgstr "Montri &progresan indikilon"
-
-#. i18n: file: conf/dlgpresentationbase.ui:143
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesShowSummary)
-#: rc.cpp:146
-msgid "Show s&ummary page"
-msgstr "Montri res&uman paĝon"
-
-#. i18n: file: conf/dlgpresentationbase.ui:153
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_SlidesTransitionsEnabled)
-#: rc.cpp:149
-#, fuzzy
-#| msgid "Default transition:"
-msgid "Enable transitions"
-msgstr "Defaŭlta transpaso:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:165
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:152
-msgid "Default transition:"
-msgstr "Defaŭlta transpaso:"
-
-#. i18n: file: conf/dlgpresentationbase.ui:176
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:155
-msgid "Blinds Vertical"
-msgstr "Malgrandigi vertikale"
-
-#. i18n: file: conf/dlgpresentationbase.ui:181
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:158
-msgid "Blinds Horizontal"
-msgstr "Malgrandigi horizontale"
-
-#. i18n: file: conf/dlgpresentationbase.ui:186
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:161
-msgid "Box In"
-msgstr "Enskatoli"
-
-#. i18n: file: conf/dlgpresentationbase.ui:191
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:164
-msgid "Box Out"
-msgstr "Elskatoli"
-
-#. i18n: file: conf/dlgpresentationbase.ui:196
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:167
-msgid "Dissolve"
-msgstr "Dissolvi"
-
-#. i18n: file: conf/dlgpresentationbase.ui:201
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:170
-msgid "Glitter Down"
-msgstr "Trembrili malsupre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:206
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:173
-msgid "Glitter Right"
-msgstr "Trembrili dekstre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:211
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:176
-msgid "Glitter Right-Down"
-msgstr "Trembrili dekstre-malsupre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:216
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:179
-msgid "Random Transition"
-msgstr "Hazarada transpaso"
-
-#. i18n: file: conf/dlgpresentationbase.ui:221
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:182
-msgid "Replace"
-msgstr "Anstataŭigi"
-
-#. i18n: file: conf/dlgpresentationbase.ui:226
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:185
-msgid "Split Horizontal In"
-msgstr "Endisigi horizontale"
-
-#. i18n: file: conf/dlgpresentationbase.ui:231
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:188
-msgid "Split Horizontal Out"
-msgstr "Eldisigi horizontale"
-
-#. i18n: file: conf/dlgpresentationbase.ui:236
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:191
-msgid "Split Vertical In"
-msgstr "Endisigi vertikale"
-
-#. i18n: file: conf/dlgpresentationbase.ui:241
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:194
-msgid "Split Vertical Out"
-msgstr "Eldisigi vertikale"
-
-#. i18n: file: conf/dlgpresentationbase.ui:246
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:197
-msgid "Wipe Down"
-msgstr "Forviŝi malsupre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:251
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:200
-msgid "Wipe Right"
-msgstr "Forviŝi dekstre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:256
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:203
-msgid "Wipe Left"
-msgstr "Forviŝi maldekstre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:261
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:206
-msgid "Wipe Up"
-msgstr "Forviŝi supre"
-
-#. i18n: file: conf/dlgpresentationbase.ui:272
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: rc.cpp:209
-msgid "Placement"
-msgstr "Enlokigo"
-
-#. i18n: file: conf/dlgpresentationbase.ui:278
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:212
-msgid "Screen:"
-msgstr "Ekrano:"
-
-#. i18n: file: conf/dlgidentitybase.ui:71
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:221
-msgid ""
-"<b>Note</b>: the information here is used only for comments and reviews. "
-"Information inserted here will not be transmitted without your knowledge."
-msgstr ""
-"<b>Noto:</b> La jena informo estas uzata nur por komentoj kaj recenzoj. "
-"Enmetita informo ne estas komunikita sen ke vi scias."
-
 #. i18n: file: conf/dlgeditorbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:227
+#: rc.cpp:71
 msgid "Editor:"
 msgstr "Editor:"
 
 #. i18n: file: conf/dlgeditorbase.ui:32
 #. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_ExternalEditor)
-#: rc.cpp:230
+#: rc.cpp:74
 msgctxt "@info:whatsthis"
 msgid ""
 "Choose the editor you want to launch when Okular wants to open a source file."
@@ -2419,107 +2103,423 @@ msgstr ""
 
 #. i18n: file: conf/dlgeditorbase.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:233
+#: rc.cpp:77
 #, fuzzy
 #| msgid "Comment"
 msgid "Command:"
 msgstr "Komento"
 
-#. i18n: file: conf/dlggeneralbase.ui:40
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowScrollBars)
-#: rc.cpp:239
-msgid "Show scroll&bars"
-msgstr "Montri la ru&lumskalojn"
+#. i18n: file: conf/dlgaccessibilitybase.ui:28
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightImages)
+#: rc.cpp:80
+msgid "Draw border around &Images"
+msgstr "Streki borderon ĉirkaŭ la b&ildoj"
 
-#. i18n: file: conf/dlggeneralbase.ui:50
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncThumbnailsViewport)
-#: rc.cpp:242
-msgid "Link the &thumbnails with the page"
-msgstr "Ligi la minia&turojn kun la paĝo"
+#. i18n: file: conf/dlgaccessibilitybase.ui:35
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightLinks)
+#: rc.cpp:83
+msgid "Draw border around &Links"
+msgstr "Streki borderon ĉirkaŭ la &ligoj"
 
-#. i18n: file: conf/dlggeneralbase.ui:57
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowOSD)
-#: rc.cpp:245
-msgid "Show &hints and info messages"
-msgstr "Montri la &indikojn kaj informomesaĝojn"
+#. i18n: file: conf/dlgaccessibilitybase.ui:45
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChangeColors)
+#: rc.cpp:86
+#, fuzzy
+#| msgid "Change &Colors"
+msgid "Change &colors"
+msgstr "Ŝanĝi la &kolorojn"
 
-#. i18n: file: conf/dlggeneralbase.ui:105
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:248
-msgid "Program Features"
-msgstr "Programaj ebloj"
+#. i18n: file: conf/dlgaccessibilitybase.ui:63
+#. i18n: ectx: property (text), widget (QLabel, warn)
+#: rc.cpp:89
+msgid "Warning: these options can badly affect drawing speed."
+msgstr "Averto: tiuj opcioj povas ege aflikti la rapidecon de desegno"
 
-#. i18n: file: conf/dlggeneralbase.ui:125
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ObeyDRM)
-#: rc.cpp:251
-msgid "&Obey DRM limitations"
-msgstr "&Obei la DRM limigaĵojn"
+#. i18n: file: conf/dlgaccessibilitybase.ui:78
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:92
+#, fuzzy
+#| msgid "Color Mode:"
+msgid "Color mode:"
+msgstr "Kolora moduso:"
 
-#. i18n: file: conf/dlggeneralbase.ui:132
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_WatchFile)
-#: rc.cpp:254
-msgid "&Reload document on file change"
-msgstr "&Reŝargi la dokumenton dum dosiera ŝanĝo"
+#. i18n: file: conf/dlgaccessibilitybase.ui:89
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:95
+msgid "Invert Colors"
+msgstr "Inversigi la kolorojn"
 
-#. i18n: file: conf/dlggeneralbase.ui:139
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ChooseGenerators)
-#: rc.cpp:257
-msgid "Show backend selection dialog"
-msgstr "Montri la internan elektofenestron"
+#. i18n: file: conf/dlgaccessibilitybase.ui:94
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:98
+#, fuzzy
+#| msgid "Change paper color"
+msgid "Change Paper Color"
+msgstr "Ŝanĝi la paperan koloron"
 
-#. i18n: file: conf/dlggeneralbase.ui:187
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:260
-msgid "View Options"
-msgstr "Vidopcioj"
+#. i18n: file: conf/dlgaccessibilitybase.ui:99
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:101
+#, fuzzy
+#| msgid "Change dark and light colors"
+msgid "Change Dark & Light Colors"
+msgstr "Ŝanĝi la malhelan kaj helan kolorojn"
 
-#. i18n: file: conf/dlggeneralbase.ui:201
-#. i18n: ectx: property (text), widget (QLabel, columnLabel)
-#: rc.cpp:263
-msgid "Overview columns:"
-msgstr "Superrigardaj kolumnoj:"
+#. i18n: file: conf/dlgaccessibilitybase.ui:104
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:104
+msgid "Convert to Black & White"
+msgstr "Konverti al nigra-blanka"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:165
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:107
+msgid "Paper color:"
+msgstr "Papera koloro:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:218
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:110
+msgid "Dark color:"
+msgstr "Malhela koloro:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:250
+#. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
+#: rc.cpp:113
+msgid "Light color:"
+msgstr "Hela koloro:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:291
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:116
+msgid "Threshold:"
+msgstr "Sojlo:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:323
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#: rc.cpp:119
+msgid "Contrast:"
+msgstr "Kontrasto:"
+
+#. i18n: file: conf/dlgidentitybase.ui:71
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:128
+msgid ""
+"<b>Note</b>: the information here is used only for comments and reviews. "
+"Information inserted here will not be transmitted without your knowledge."
+msgstr ""
+"<b>Noto:</b> La jena informo estas uzata nur por komentoj kaj recenzoj. "
+"Enmetita informo ne estas komunikita sen ke vi scias."
 
 #. i18n: file: conf/dlgperformancebase.ui:22
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:266
+#: rc.cpp:131
 msgid "CPU Usage"
 msgstr "Procezila uzo"
 
 #. i18n: file: conf/dlgperformancebase.ui:50
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableCompositing)
-#: rc.cpp:269
+#: rc.cpp:134
 msgid "Enable &transparency effects"
 msgstr "Aktivigi la &travideblecajn efektojn"
 
 #. i18n: file: conf/dlgperformancebase.ui:57
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableThreading)
-#: rc.cpp:272
+#: rc.cpp:137
 msgid "Enable &background generation"
 msgstr "Aktivigi la &fonan generadon"
 
 #. i18n: file: conf/dlgperformancebase.ui:109
 #. i18n: ectx: property (title), widget (KButtonGroup, kcfg_MemoryLevel)
-#: rc.cpp:275
+#: rc.cpp:140
 msgid "Memory Usage"
 msgstr "Memoruzo"
 
 #. i18n: file: conf/dlgperformancebase.ui:137
 #. i18n: ectx: property (text), widget (QRadioButton, lowRadio)
-#: rc.cpp:278
+#: rc.cpp:143
 msgid "&Low"
 msgstr "Ma&lalta"
 
 #. i18n: file: conf/dlgperformancebase.ui:144
 #. i18n: ectx: property (text), widget (QRadioButton, normalRadio)
-#: rc.cpp:281
+#: rc.cpp:146
 msgid "&Normal (default)"
 msgstr "&Normala (defaŭlte)"
 
 #. i18n: file: conf/dlgperformancebase.ui:151
 #. i18n: ectx: property (text), widget (QRadioButton, aggressiveRadio)
-#: rc.cpp:284
+#: rc.cpp:149
 msgid "&Aggressive"
 msgstr "Perfort&a"
+
+#. i18n: file: conf/dlgpresentationbase.ui:19
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:152
+msgid "Navigation"
+msgstr "Navigado"
+
+#. i18n: file: conf/dlgpresentationbase.ui:39
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesAdvance)
+#: rc.cpp:155
+msgid "Advance every:"
+msgstr "Antaŭeniri ĉiu:"
+
+#. i18n: file: conf/dlgpresentationbase.ui:49
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_SlidesAdvanceTime)
+#: rc.cpp:158
+msgid " sec."
+msgstr " sek."
+
+#. i18n: file: conf/dlgpresentationbase.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesLoop)
+#: rc.cpp:161
+msgid "Loop after last page"
+msgstr "Bukli post la lasta paĝo"
+
+#. i18n: file: conf/dlgpresentationbase.ui:71
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: file: conf/dlggeneralbase.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:164 rc.cpp:257
+msgid "Appearance"
+msgstr "Apero"
+
+#. i18n: file: conf/dlgpresentationbase.ui:79
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:167
+msgid "Background color:"
+msgstr "Fona koloro:"
+
+#. i18n: file: conf/dlgpresentationbase.ui:92
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:170
+msgid "Pencil color:"
+msgstr "Krajona koloro:"
+
+#. i18n: file: conf/dlgpresentationbase.ui:105
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:173
+msgid "Mouse cursor:"
+msgstr "Musa kursoro:"
+
+#. i18n: file: conf/dlgpresentationbase.ui:116
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
+#: rc.cpp:176
+msgid "Hidden After Delay"
+msgstr "Kaŝita post prokrasto"
+
+#. i18n: file: conf/dlgpresentationbase.ui:121
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
+#: rc.cpp:179
+msgid "Always Visible"
+msgstr "Ĉiam videbla"
+
+#. i18n: file: conf/dlgpresentationbase.ui:126
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
+#: rc.cpp:182
+msgid "Always Hidden"
+msgstr "Ĉiam kaŝita"
+
+#. i18n: file: conf/dlgpresentationbase.ui:136
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesShowProgress)
+#: rc.cpp:185
+msgid "Show &progress indicator"
+msgstr "Montri &progresan indikilon"
+
+#. i18n: file: conf/dlgpresentationbase.ui:143
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesShowSummary)
+#: rc.cpp:188
+msgid "Show s&ummary page"
+msgstr "Montri res&uman paĝon"
+
+#. i18n: file: conf/dlgpresentationbase.ui:153
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_SlidesTransitionsEnabled)
+#: rc.cpp:191
+#, fuzzy
+#| msgid "Default transition:"
+msgid "Enable transitions"
+msgstr "Defaŭlta transpaso:"
+
+#. i18n: file: conf/dlgpresentationbase.ui:165
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:194
+msgid "Default transition:"
+msgstr "Defaŭlta transpaso:"
+
+#. i18n: file: conf/dlgpresentationbase.ui:176
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:197
+msgid "Blinds Vertical"
+msgstr "Malgrandigi vertikale"
+
+#. i18n: file: conf/dlgpresentationbase.ui:181
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:200
+msgid "Blinds Horizontal"
+msgstr "Malgrandigi horizontale"
+
+#. i18n: file: conf/dlgpresentationbase.ui:186
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:203
+msgid "Box In"
+msgstr "Enskatoli"
+
+#. i18n: file: conf/dlgpresentationbase.ui:191
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:206
+msgid "Box Out"
+msgstr "Elskatoli"
+
+#. i18n: file: conf/dlgpresentationbase.ui:196
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:209
+msgid "Dissolve"
+msgstr "Dissolvi"
+
+#. i18n: file: conf/dlgpresentationbase.ui:201
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:212
+msgid "Glitter Down"
+msgstr "Trembrili malsupre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:206
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:215
+msgid "Glitter Right"
+msgstr "Trembrili dekstre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:211
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:218
+msgid "Glitter Right-Down"
+msgstr "Trembrili dekstre-malsupre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:216
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:221
+msgid "Random Transition"
+msgstr "Hazarada transpaso"
+
+#. i18n: file: conf/dlgpresentationbase.ui:221
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:224
+msgid "Replace"
+msgstr "Anstataŭigi"
+
+#. i18n: file: conf/dlgpresentationbase.ui:226
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:227
+msgid "Split Horizontal In"
+msgstr "Endisigi horizontale"
+
+#. i18n: file: conf/dlgpresentationbase.ui:231
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:230
+msgid "Split Horizontal Out"
+msgstr "Eldisigi horizontale"
+
+#. i18n: file: conf/dlgpresentationbase.ui:236
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:233
+msgid "Split Vertical In"
+msgstr "Endisigi vertikale"
+
+#. i18n: file: conf/dlgpresentationbase.ui:241
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:236
+msgid "Split Vertical Out"
+msgstr "Eldisigi vertikale"
+
+#. i18n: file: conf/dlgpresentationbase.ui:246
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:239
+msgid "Wipe Down"
+msgstr "Forviŝi malsupre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:251
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:242
+msgid "Wipe Right"
+msgstr "Forviŝi dekstre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:256
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:245
+msgid "Wipe Left"
+msgstr "Forviŝi maldekstre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:261
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
+#: rc.cpp:248
+msgid "Wipe Up"
+msgstr "Forviŝi supre"
+
+#. i18n: file: conf/dlgpresentationbase.ui:272
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: rc.cpp:251
+msgid "Placement"
+msgstr "Enlokigo"
+
+#. i18n: file: conf/dlgpresentationbase.ui:278
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:254
+msgid "Screen:"
+msgstr "Ekrano:"
+
+#. i18n: file: conf/dlggeneralbase.ui:40
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowScrollBars)
+#: rc.cpp:260
+msgid "Show scroll&bars"
+msgstr "Montri la ru&lumskalojn"
+
+#. i18n: file: conf/dlggeneralbase.ui:50
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncThumbnailsViewport)
+#: rc.cpp:263
+msgid "Link the &thumbnails with the page"
+msgstr "Ligi la minia&turojn kun la paĝo"
+
+#. i18n: file: conf/dlggeneralbase.ui:57
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowOSD)
+#: rc.cpp:266
+msgid "Show &hints and info messages"
+msgstr "Montri la &indikojn kaj informomesaĝojn"
+
+#. i18n: file: conf/dlggeneralbase.ui:105
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:269
+msgid "Program Features"
+msgstr "Programaj ebloj"
+
+#. i18n: file: conf/dlggeneralbase.ui:125
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ObeyDRM)
+#: rc.cpp:272
+msgid "&Obey DRM limitations"
+msgstr "&Obei la DRM limigaĵojn"
+
+#. i18n: file: conf/dlggeneralbase.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_WatchFile)
+#: rc.cpp:275
+msgid "&Reload document on file change"
+msgstr "&Reŝargi la dokumenton dum dosiera ŝanĝo"
+
+#. i18n: file: conf/dlggeneralbase.ui:139
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ChooseGenerators)
+#: rc.cpp:278
+msgid "Show backend selection dialog"
+msgstr "Montri la internan elektofenestron"
+
+#. i18n: file: conf/dlggeneralbase.ui:187
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: rc.cpp:281
+msgid "View Options"
+msgstr "Vidopcioj"
+
+#. i18n: file: conf/dlggeneralbase.ui:201
+#. i18n: ectx: property (text), widget (QLabel, columnLabel)
+#: rc.cpp:284
+msgid "Overview columns:"
+msgstr "Superrigardaj kolumnoj:"
 
 #. i18n: file: ui/data/tools.xml:21
 #: rc.cpp:286

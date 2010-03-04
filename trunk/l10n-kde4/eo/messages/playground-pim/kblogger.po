@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kblogger\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2009-04-13 11:15+0200\n"
+"POT-Creation-Date: 2010-02-28 14:19+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -14,6 +14,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: pology\n"
+
+#: backend/bloglist.cpp:40
+msgid ""
+"We have detected a Blogspot.com site. Blogspot uses GData API nowadays and "
+"you still cannot upload files to Blogspot.com itself. This means that you "
+"cannot use the media management to upload files."
+msgstr ""
+
+#: backend/bloglist.cpp:66
+msgid "We have detected your Wordpress.com site."
+msgstr ""
+
+#: backend/bloglist.cpp:92
+msgid "We have detected your LiveJournal.com site."
+msgstr ""
+
+#: backend/bloglist.cpp:118
+msgid "We have detected your personal Drupal installation."
+msgstr ""
+
+#: backend/bloglist.cpp:144
+msgid "We have detected your personal Wordpress installation."
+msgstr ""
+
+#: backend/bloglist.cpp:171
+msgid ""
+"For autoconfigure to work correctly you need to insert the URL to your "
+"blog's homepage and not the XML-RPC gateway.\n"
+"Otherwise, this is your personal undetectable XML-RPC installation.\n"
+"We assume Blogger API 1.0 for now. If you are confident that your server "
+"supports more than that, choose Wordpress as type."
+msgstr ""
 
 #: backend/blogjobqueue.cpp:63
 msgid "The job queue is already running."
@@ -88,6 +120,10 @@ msgstr ""
 msgid "Unknown Error type: %1"
 msgstr ""
 
+#: backend/waitdialog.cpp:36
+msgid "Running jobs."
+msgstr ""
+
 #: backend/backend.cpp:217 backend/backend.cpp:274
 msgid "This post cannot be uploaded. Upload its media first."
 msgstr ""
@@ -123,42 +159,6 @@ msgstr ""
 
 #: backend/backend.cpp:379
 msgid "All Jobs Done."
-msgstr ""
-
-#: backend/bloglist.cpp:40
-msgid ""
-"We have detected a Blogspot.com site. Blogspot uses GData API nowadays and "
-"you still cannot upload files to Blogspot.com itself. This means that you "
-"cannot use the media management to upload files."
-msgstr ""
-
-#: backend/bloglist.cpp:66
-msgid "We have detected your Wordpress.com site."
-msgstr ""
-
-#: backend/bloglist.cpp:92
-msgid "We have detected your LiveJournal.com site."
-msgstr ""
-
-#: backend/bloglist.cpp:118
-msgid "We have detected your personal Drupal installation."
-msgstr ""
-
-#: backend/bloglist.cpp:144
-msgid "We have detected your personal Wordpress installation."
-msgstr ""
-
-#: backend/bloglist.cpp:171
-msgid ""
-"For autoconfigure to work correctly you need to insert the URL to your "
-"blog's homepage and not the XML-RPC gateway.\n"
-"Otherwise, this is your personal undetectable XML-RPC installation.\n"
-"We assume Blogger API 1.0 for now. If you are confident that your server "
-"supports more than that, choose Wordpress as type."
-msgstr ""
-
-#: backend/waitdialog.cpp:36
-msgid "Running jobs."
 msgstr ""
 
 #: composer/composereditor.cpp:118
@@ -238,8 +238,12 @@ msgstr "teksto"
 
 #. i18n: file: composer/composereditorbase.ui:107
 #. i18n: ectx: attribute (title), widget (QWidget, previewPageWidget)
-#: composer/composereditor.cpp:450 composer/composereditor.cpp:468 rc.cpp:41
+#: composer/composereditor.cpp:450 composer/composereditor.cpp:468 rc.cpp:86
 msgid "Post Preview"
+msgstr ""
+
+#: composer/blogchooser.cpp:49
+msgid "Select a blog"
 msgstr ""
 
 #: composer/weblogstylegetter.cpp:136
@@ -250,10 +254,6 @@ msgstr ""
 #: composer/weblogstylegetter.cpp:163
 #, kde-format
 msgid "Impossible to write data to file %1"
-msgstr ""
-
-#: composer/blogchooser.cpp:49
-msgid "Select a blog"
 msgstr ""
 
 #: composer/composer.cpp:82
@@ -303,31 +303,33 @@ msgstr[1] ""
 msgid "Categories are not supported on this blog."
 msgstr ""
 
-#: media/medialistwidget.cpp:76
-msgctxt "a list of the local posts in a tree view"
-msgid "Local"
+#: media/uploadmediadialog.cpp:138
+msgid "Please select a blog profile first."
 msgstr ""
 
-#: media/medialistwidget.cpp:84
-msgid "Uploaded"
-msgstr "Alŝutis"
-
-#: media/medialistwidget.cpp:88
-msgid "Error"
-msgstr "Eraro"
-
-#: media/medialistwidget.cpp:408
+#: media/uploadmediadialog.cpp:171
 msgid ""
-"You are deleting a cached file.\n"
-"KBlogger can not remove the file on the server"
+"KBlogger is unable to create Thumbnails. This feature will be added soon."
 msgstr ""
 
-#: media/medialistwidget.cpp:413
-msgid "Impossible remove the cached file"
+#: media/uploadmediadialog.cpp:253
+msgid "<font color='red'>This file is not valid</font>"
 msgstr ""
 
-#: media/medialistwidget.cpp:471 post/postslist.cpp:321
-msgid "Post menu"
+#: media/uploadmediadialog.cpp:257 media/uploadmediadialog.cpp:262
+msgid "File size: "
+msgstr ""
+
+#: media/uploadmediadialog.cpp:257 media/uploadmediadialog.cpp:262
+msgid " Kb"
+msgstr ""
+
+#: media/uploadmediadialog.cpp:258
+msgid "This file is too big to be uploaded."
+msgstr ""
+
+#: media/medialistview.cpp:47
+msgid "Insert Media"
 msgstr ""
 
 #: media/imagemanager.cpp:61
@@ -391,33 +393,31 @@ msgstr ""
 msgid "CacheFile writing Error"
 msgstr ""
 
-#: media/uploadmediadialog.cpp:138
-msgid "Please select a blog profile first."
+#: media/medialistwidget.cpp:76
+msgctxt "a list of the local posts in a tree view"
+msgid "Local"
 msgstr ""
 
-#: media/uploadmediadialog.cpp:171
+#: media/medialistwidget.cpp:84
+msgid "Uploaded"
+msgstr "Alŝutis"
+
+#: media/medialistwidget.cpp:88
+msgid "Error"
+msgstr "Eraro"
+
+#: media/medialistwidget.cpp:408
 msgid ""
-"KBlogger is unable to create Thumbnails. This feature will be added soon."
+"You are deleting a cached file.\n"
+"KBlogger can not remove the file on the server"
 msgstr ""
 
-#: media/uploadmediadialog.cpp:253
-msgid "<font color='red'>This file is not valid</font>"
+#: media/medialistwidget.cpp:413
+msgid "Impossible remove the cached file"
 msgstr ""
 
-#: media/uploadmediadialog.cpp:257 media/uploadmediadialog.cpp:262
-msgid "File size: "
-msgstr ""
-
-#: media/uploadmediadialog.cpp:257 media/uploadmediadialog.cpp:262
-msgid " Kb"
-msgstr ""
-
-#: media/uploadmediadialog.cpp:258
-msgid "This file is too big to be uploaded."
-msgstr ""
-
-#: media/medialistview.cpp:47
-msgid "Insert Media"
+#: media/medialistwidget.cpp:471 post/postslist.cpp:321
+msgid "Post menu"
 msgstr ""
 
 #: media/importmediadialog.cpp:47
@@ -563,7 +563,7 @@ msgstr ""
 
 #. i18n: file: profiles/profilelistbase.ui:56
 #. i18n: ectx: property (text), widget (KPushButton, modifyButton)
-#: mainwindow.cpp:143 rc.cpp:276
+#: mainwindow.cpp:143 rc.cpp:242
 msgid "Modify"
 msgstr "Modifi"
 
@@ -654,7 +654,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, listTree)
 #. i18n: file: kbloggerui.rc:50
 #. i18n: ectx: ToolBar (blogToolBar)
-#: rc.cpp:24 rc.cpp:167 rc.cpp:212 rc.cpp:300
+#: rc.cpp:24 rc.cpp:179 rc.cpp:212 rc.cpp:300
 msgid "Blog"
 msgstr ""
 
@@ -680,27 +680,9 @@ msgstr "axel@esperanto-jeunes.org"
 msgid "Please Wait..."
 msgstr ""
 
-#. i18n: file: composer/composereditorbase.ui:50
-#. i18n: ectx: attribute (title), widget (QWidget, visualPageWidget)
-#: rc.cpp:35
-msgid "Visual Editor"
-msgstr ""
-
-#. i18n: file: composer/composereditorbase.ui:75
-#. i18n: ectx: attribute (title), widget (QWidget, htmlPageWidget)
-#: rc.cpp:38
-msgid "HTML editor"
-msgstr ""
-
-#. i18n: file: composer/composereditorbase.ui:155
-#. i18n: ectx: property (text), widget (QPushButton, getStyleButton)
-#: rc.cpp:44
-msgid "Get Style"
-msgstr ""
-
 #. i18n: file: composer/linkdialogbase.ui:16
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:47
+#: rc.cpp:35
 msgid ""
 "Enter the Link Target and the Name that will be displayed, then press OK to "
 "add the new link to your post."
@@ -708,19 +690,19 @@ msgstr ""
 
 #. i18n: file: composer/linkdialogbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:50
+#: rc.cpp:38
 msgid "Target:"
 msgstr "Celo:"
 
 #. i18n: file: composer/linkdialogbase.ui:41
 #. i18n: ectx: property (toolTip), widget (KLineEdit, targetLineEdit)
-#: rc.cpp:53
+#: rc.cpp:41
 msgid "http://, ftp://, mailto://, irc://, ed2k://, ecc..."
 msgstr ""
 
 #. i18n: file: composer/linkdialogbase.ui:44
 #. i18n: ectx: property (text), widget (KLineEdit, targetLineEdit)
-#: rc.cpp:56
+#: rc.cpp:44
 msgid "http://"
 msgstr "http://"
 
@@ -728,69 +710,87 @@ msgstr "http://"
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: file: media/importmediawidgetbase.ui:33
 #. i18n: ectx: property (text), widget (QTreeWidget, mediaTreeWidget)
-#: rc.cpp:59 rc.cpp:161
+#: rc.cpp:47 rc.cpp:173
 msgid "Name"
 msgstr "Nomo"
 
 #. i18n: file: composer/composerbase.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, ComposerBase)
-#: rc.cpp:62
+#: rc.cpp:50
 msgid "Composer"
 msgstr "Komponisto"
 
 #. i18n: file: composer/composerbase.ui:59
 #. i18n: ectx: property (text), widget (QLabel, TitleLabel)
-#: rc.cpp:65
+#: rc.cpp:53
 msgctxt "@label"
 msgid "Title:"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:68
+#: rc.cpp:56
 msgid "Set Publish Date:"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:180
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:71
+#: rc.cpp:59
 msgid "Blog Entry Options"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:234
 #. i18n: ectx: property (text), widget (QLabel, CategoriesLabel)
-#: rc.cpp:74
+#: rc.cpp:62
 msgid "First Category:"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:256
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:77
+#: rc.cpp:65
 msgid "Other Categories:"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:294
 #. i18n: ectx: property (text), widget (QPushButton, refreshCategoriesButton)
-#: rc.cpp:80
+#: rc.cpp:68
 msgid "Refresh"
 msgstr "Refreŝigi"
 
 #. i18n: file: composer/composerbase.ui:329
 #. i18n: ectx: property (text), widget (QCheckBox, publishCheckBox)
-#: rc.cpp:83
+#: rc.cpp:71
 msgid "P&ublish"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:345
 #. i18n: ectx: property (text), widget (QCheckBox, commentCheckBox)
-#: rc.cpp:86
+#: rc.cpp:74
 msgid "Allow Comment"
 msgstr ""
 
 #. i18n: file: composer/composerbase.ui:361
 #. i18n: ectx: property (text), widget (QCheckBox, trackbackCheckBox)
-#: rc.cpp:89
+#: rc.cpp:77
 msgid "Allow Ping/Trackback"
+msgstr ""
+
+#. i18n: file: composer/composereditorbase.ui:50
+#. i18n: ectx: attribute (title), widget (QWidget, visualPageWidget)
+#: rc.cpp:80
+msgid "Visual Editor"
+msgstr ""
+
+#. i18n: file: composer/composereditorbase.ui:75
+#. i18n: ectx: attribute (title), widget (QWidget, htmlPageWidget)
+#: rc.cpp:83
+msgid "HTML editor"
+msgstr ""
+
+#. i18n: file: composer/composereditorbase.ui:155
+#. i18n: ectx: property (text), widget (QPushButton, getStyleButton)
+#: rc.cpp:89
+msgid "Get Style"
 msgstr ""
 
 #. i18n: file: composer/blogchooserbase.ui:39
@@ -799,46 +799,73 @@ msgstr ""
 msgid "Blog:"
 msgstr ""
 
+#. i18n: file: media/medialistbase.ui:68
+#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
+#: rc.cpp:95
+msgctxt "@column"
+msgid "Name"
+msgstr ""
+
+#. i18n: file: media/medialistbase.ui:73
+#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
+#: rc.cpp:98
+msgctxt "@column"
+msgid "Created"
+msgstr ""
+
+#. i18n: file: media/medialistbase.ui:78
+#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
+#: rc.cpp:101
+msgctxt "@column"
+msgid "Size"
+msgstr ""
+
+#. i18n: file: media/medialistbase.ui:83
+#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
+#: rc.cpp:104
+msgid "Status"
+msgstr "Stato"
+
 #. i18n: file: media/imagemanagerbase.ui:48
 #. i18n: ectx: property (text), widget (QLabel, imagePreviewLabel)
-#: rc.cpp:95
+#: rc.cpp:107
 msgid "Image Preview"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:61
 #. i18n: ectx: property (title), widget (Q3GroupBox, groupBox1)
-#: rc.cpp:98
+#: rc.cpp:110
 msgid "Image info"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:91
 #. i18n: ectx: property (text), widget (QLabel, infoWidthLabel)
-#: rc.cpp:101
+#: rc.cpp:113
 msgid "Width:"
 msgstr "Larĝeco:"
 
 #. i18n: file: media/imagemanagerbase.ui:104
 #. i18n: ectx: property (text), widget (QLabel, infoTransLabel)
-#: rc.cpp:104
+#: rc.cpp:116
 msgid "Transparency:"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:114
 #. i18n: ectx: property (text), widget (QLabel, infoGraysLabel)
-#: rc.cpp:107
+#: rc.cpp:119
 msgid "Grayscale:"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:124
 #. i18n: ectx: property (text), widget (QLabel, infoDepthLabel)
-#: rc.cpp:110
+#: rc.cpp:122
 #, fuzzy
 msgid "Depth:"
 msgstr "Ripeto:"
 
 #. i18n: file: media/imagemanagerbase.ui:134
 #. i18n: ectx: property (text), widget (QLabel, infoHeightLabel)
-#: rc.cpp:113
+#: rc.cpp:125
 msgid "Height:"
 msgstr "Alteco:"
 
@@ -846,120 +873,120 @@ msgstr "Alteco:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. i18n: file: media/imagemanagerbase.ui:487
 #. i18n: ectx: property (text), widget (QPushButton, resizeButton)
-#: rc.cpp:116 rc.cpp:152
+#: rc.cpp:128 rc.cpp:164
 msgid "Resi&ze"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:197
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:119
+#: rc.cpp:131
 msgid "Before using resize, please set the Blog width below."
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:226
 #. i18n: ectx: property (text), item, widget (QComboBox, resizeComboBox)
-#: rc.cpp:122
+#: rc.cpp:134
 msgctxt "@item"
 msgid "Original"
 msgstr "Original"
 
 #. i18n: file: media/imagemanagerbase.ui:231
 #. i18n: ectx: property (text), item, widget (QComboBox, resizeComboBox)
-#: rc.cpp:125
+#: rc.cpp:137
 msgctxt "@item"
 msgid "Big"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:236
 #. i18n: ectx: property (text), item, widget (QComboBox, resizeComboBox)
-#: rc.cpp:128
+#: rc.cpp:140
 msgctxt "@item"
 msgid "Medium"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:241
 #. i18n: ectx: property (text), item, widget (QComboBox, resizeComboBox)
-#: rc.cpp:131
+#: rc.cpp:143
 msgctxt "@item"
 msgid "Small"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:246
 #. i18n: ectx: property (text), item, widget (QComboBox, resizeComboBox)
-#: rc.cpp:134
+#: rc.cpp:146
 msgctxt "@item"
 msgid "Free"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:295
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:137
+#: rc.cpp:149
 msgid "x"
 msgstr "x"
 
 #. i18n: file: media/imagemanagerbase.ui:372
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: rc.cpp:140
+#: rc.cpp:152
 msgid "Blog Settings:"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:418
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:143
+#: rc.cpp:155
 msgid "Blog width:"
 msgstr ""
 
 #. i18n: file: media/imagemanagerbase.ui:431
 #. i18n: ectx: property (text), widget (QLineEdit, blogWidthLine)
-#: rc.cpp:146
+#: rc.cpp:158
 msgid "450"
 msgstr "450"
 
 #. i18n: file: media/imagemanagerbase.ui:441
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:149
+#: rc.cpp:161
 msgid "px"
 msgstr "px"
 
 #. i18n: file: media/importmediawidgetbase.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ImportMediaWidgetBase)
-#: rc.cpp:155
+#: rc.cpp:167
 msgid "Import Media"
 msgstr ""
 
 #. i18n: file: media/importmediawidgetbase.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:158
+#: rc.cpp:170
 msgid "Click OK to import these media in KBlogger"
 msgstr ""
 
 #. i18n: file: media/importmediawidgetbase.ui:38
 #. i18n: ectx: property (text), widget (QTreeWidget, mediaTreeWidget)
-#: rc.cpp:164
+#: rc.cpp:176
 msgid "URL"
 msgstr "Retadreso"
 
 #. i18n: file: media/importmediawidgetbase.ui:48
 #. i18n: ectx: property (text), widget (QTreeWidget, mediaTreeWidget)
-#: rc.cpp:170
+#: rc.cpp:182
 msgid "Post ID"
 msgstr ""
 
 #. i18n: file: media/importmediawidgetbase.ui:53
 #. i18n: ectx: property (text), widget (QTreeWidget, mediaTreeWidget)
-#: rc.cpp:173
+#: rc.cpp:185
 msgid "Size"
 msgstr "Grandeco"
 
 #. i18n: file: media/importmediawidgetbase.ui:61
 #. i18n: ectx: property (text), widget (QLabel, blacklistLabel)
-#: rc.cpp:176
+#: rc.cpp:188
 msgid "No black-listed media URLs here."
 msgstr ""
 
 #. i18n: file: media/uploadmediadialogbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:179
+#: rc.cpp:191
 msgid ""
 "Select a file to upload, and press OK to add it to the KBlogger queue. \n"
 "Local media will be created.\n"
@@ -968,60 +995,33 @@ msgstr ""
 
 #. i18n: file: media/uploadmediadialogbase.ui:38
 #. i18n: ectx: property (title), widget (QGroupBox, blogGroupBox)
-#: rc.cpp:185
+#: rc.cpp:197
 msgid "Account:"
 msgstr "Konto:"
 
 #. i18n: file: media/uploadmediadialogbase.ui:55
 #. i18n: ectx: property (text), widget (QLabel, FileTextLabel)
-#: rc.cpp:188
+#: rc.cpp:200
 msgid "File to upload:"
 msgstr ""
 
 #. i18n: file: media/uploadmediadialogbase.ui:71
 #. i18n: ectx: property (text), widget (QLabel, NameTextLabel)
-#: rc.cpp:191
+#: rc.cpp:203
 msgid "Serverside object name:"
 msgstr ""
 
 #. i18n: file: media/uploadmediadialogbase.ui:85
 #. i18n: ectx: property (filter), widget (KUrlRequester, FilekURLRequester)
-#: rc.cpp:194
+#: rc.cpp:206
 msgid "*.txt *.jpg *.gif *.png *.pdf *.zip *.tgz"
 msgstr "*.txt *.jpg *.gif *.png *.pdf *.zip *.tgz"
 
 #. i18n: file: media/uploadmediadialogbase.ui:105
 #. i18n: ectx: property (text), widget (QLabel, filesizeLabel)
-#: rc.cpp:197
+#: rc.cpp:209
 msgid "File size: 0 Kb"
 msgstr ""
-
-#. i18n: file: media/medialistbase.ui:68
-#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
-#: rc.cpp:200
-msgctxt "@column"
-msgid "Name"
-msgstr ""
-
-#. i18n: file: media/medialistbase.ui:73
-#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
-#: rc.cpp:203
-msgctxt "@column"
-msgid "Created"
-msgstr ""
-
-#. i18n: file: media/medialistbase.ui:78
-#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
-#: rc.cpp:206
-msgctxt "@column"
-msgid "Size"
-msgstr ""
-
-#. i18n: file: media/medialistbase.ui:83
-#. i18n: ectx: property (text), widget (QTreeWidget, listTree)
-#: rc.cpp:209
-msgid "Status"
-msgstr "Stato"
 
 #. i18n: file: post/postslistbase.ui:58
 #. i18n: ectx: property (text), widget (QTreeWidget, listTree)
@@ -1061,21 +1061,47 @@ msgstr ""
 msgid "Published"
 msgstr ""
 
+#. i18n: file: profiles/profilelistbase.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ProfileListBase)
+#: rc.cpp:233
+msgid "KBlogger Profile Manager"
+msgstr ""
+
+#. i18n: file: profiles/profilelistbase.ui:36
+#. i18n: ectx: property (text), widget (QTreeWidget, ProfileListTree)
+#. i18n: file: profiles/profile.kcfg:10
+#. i18n: ectx: whatsthis, entry (AccountName), group ($(ProfileName))
+#: rc.cpp:236 rc.cpp:306
+msgid "Account Name"
+msgstr "Kontonomo"
+
+#. i18n: file: profiles/profilelistbase.ui:46
+#. i18n: ectx: property (text), widget (KPushButton, addButton)
+#: rc.cpp:239
+msgid "A&dd"
+msgstr "Al&doni"
+
+#. i18n: file: profiles/profilelistbase.ui:66
+#. i18n: ectx: property (text), widget (KPushButton, delButton)
+#: rc.cpp:245
+msgid "Delete"
+msgstr "Forigi"
+
 #. i18n: file: profiles/profileconfigdialogbase.ui:20
 #. i18n: ectx: property (windowTitle), widget (QWidget, ProfileConfigDialogBase)
-#: rc.cpp:233
+#: rc.cpp:248
 msgid "KBlogger Configuration"
 msgstr ""
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:30
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:236
+#: rc.cpp:251
 msgid "Basic"
 msgstr "Baza"
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:37
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:239
+#: rc.cpp:254
 msgid ""
 "In order to use KBlogger you need a weblog account.\n"
 "If you have it, please fill these fields and click Autoconfigure button to "
@@ -1084,77 +1110,51 @@ msgstr ""
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:49
 #. i18n: ectx: property (text), widget (QLabel, PasswordLabel_2)
-#: rc.cpp:243
+#: rc.cpp:258
 msgid "Homepage URL:"
 msgstr ""
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:76
 #. i18n: ectx: property (text), widget (QLabel, UserLabel)
-#: rc.cpp:246
+#: rc.cpp:261
 msgid "Username:"
 msgstr "Uzantnomo:"
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:97
 #. i18n: ectx: property (text), widget (QLabel, PasswordLabel)
-#: rc.cpp:249
+#: rc.cpp:264
 msgid "Password:"
 msgstr "Pasvorto:"
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:156
 #. i18n: ectx: property (text), widget (QPushButton, mAutoconfigureButton)
-#: rc.cpp:252
+#: rc.cpp:267
 msgid "Autoconfigure"
 msgstr ""
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:179
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:255
+#: rc.cpp:270
 msgid "Advanced"
 msgstr "Plie"
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:193
 #. i18n: ectx: property (text), widget (QLabel, TypeLabel)
-#: rc.cpp:258
+#: rc.cpp:273
 msgid "Blog system:"
 msgstr ""
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:239
 #. i18n: ectx: property (text), widget (QLabel, BlogIdLabel)
-#: rc.cpp:261
+#: rc.cpp:276
 msgid "Blog-ID:"
 msgstr ""
 
 #. i18n: file: profiles/profileconfigdialogbase.ui:252
 #. i18n: ectx: property (text), widget (QPushButton, mFetchIDButton)
-#: rc.cpp:264
+#: rc.cpp:279
 msgid "Fetch ID"
 msgstr ""
-
-#. i18n: file: profiles/profilelistbase.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ProfileListBase)
-#: rc.cpp:267
-msgid "KBlogger Profile Manager"
-msgstr ""
-
-#. i18n: file: profiles/profilelistbase.ui:36
-#. i18n: ectx: property (text), widget (QTreeWidget, ProfileListTree)
-#. i18n: file: profiles/profile.kcfg:10
-#. i18n: ectx: whatsthis, entry (AccountName), group ($(ProfileName))
-#: rc.cpp:270 rc.cpp:306
-msgid "Account Name"
-msgstr "Kontonomo"
-
-#. i18n: file: profiles/profilelistbase.ui:46
-#. i18n: ectx: property (text), widget (KPushButton, addButton)
-#: rc.cpp:273
-msgid "A&dd"
-msgstr "Al&doni"
-
-#. i18n: file: profiles/profilelistbase.ui:66
-#. i18n: ectx: property (text), widget (KPushButton, delButton)
-#: rc.cpp:279
-msgid "Delete"
-msgstr "Forigi"
 
 #. i18n: file: profiles/profile.kcfg:9
 #. i18n: ectx: label, entry (AccountName), group ($(ProfileName))
