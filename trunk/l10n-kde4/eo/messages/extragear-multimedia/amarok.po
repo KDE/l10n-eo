@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-04-10 04:48+0200\n"
+"POT-Creation-Date: 2010-04-11 05:22+0200\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1655,6 +1655,7 @@ msgstr[0] "La forigado de trakoj fiaskis."
 msgstr[1] "La forigado de trakoj fiaskis."
 
 #: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:115
+#: playlistmanager/file/PlaylistFileProvider.cpp:430
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:121
 #: playlistmanager/PlaylistManager.cpp:253
 #, fuzzy
@@ -1663,6 +1664,7 @@ msgid "Change playlist"
 msgstr "Kon&servi la ludliston kiel..."
 
 #: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:116
+#: playlistmanager/file/PlaylistFileProvider.cpp:431
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:122
 #: playlistmanager/PlaylistManager.cpp:254
 #, fuzzy
@@ -1971,7 +1973,7 @@ msgstr "La forigado fiaskis"
 
 #: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:251
 #: browsers/filebrowser/FileView.cpp:456
-#: playlistmanager/file/PlaylistFileProvider.cpp:273
+#: playlistmanager/file/PlaylistFileProvider.cpp:320
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:238
 #, fuzzy
 #| msgid "Configure Playback"
@@ -2061,6 +2063,10 @@ msgid " Item"
 msgid_plural " Items"
 msgstr[0] " Eroj"
 msgstr[1] " Eroj"
+
+#: core-impl/podcasts/sql/SqlPodcastProvider.h:50
+msgid "Local Podcasts"
+msgstr "Lokaj podkastoj"
 
 #: core-impl/podcasts/sql/SqlPodcastProvider.cpp:269
 #, fuzzy
@@ -2178,10 +2184,6 @@ msgstr "Elŝutante podkaston \"%1\""
 #, kde-format
 msgid "Unable to save podcast episode file to %1"
 msgstr "Ne eblis konservi la podkastaĵon al %1"
-
-#: core-impl/podcasts/sql/SqlPodcastProvider.h:50
-msgid "Local Podcasts"
-msgstr "Lokaj podkastoj"
 
 #: TrayIcon.cpp:127 widgets/VolumeDial.cpp:298 widgets/VolumeDial.cpp:337
 #: TrayIconLegacy.cpp:144
@@ -2932,8 +2934,8 @@ msgid "Sort Options"
 msgstr "Opcioj"
 
 #: browsers/collectionbrowser/CollectionWidget.cpp:324
-#: browsers/playlistbrowser/UserPlaylistCategory.cpp:100
 #: browsers/playlistbrowser/PodcastCategory.cpp:146
+#: browsers/playlistbrowser/UserPlaylistCategory.cpp:100
 msgid "Merged View"
 msgstr ""
 
@@ -3017,7 +3019,7 @@ msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 
 #: browsers/filebrowser/FileView.cpp:463
-#: playlistmanager/file/PlaylistFileProvider.cpp:280
+#: playlistmanager/file/PlaylistFileProvider.cpp:327
 msgid "Yes, delete from disk."
 msgstr ""
 
@@ -3144,6 +3146,67 @@ msgstr ""
 
 #: browsers/playlistbrowser/APGCategory.cpp:124
 msgid "Accuracy"
+msgstr ""
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:97
+msgid "Podcasts"
+msgstr "Podkastoj"
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:98
+msgid "List of podcast subscriptions and episodes"
+msgstr ""
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:101
+msgid ""
+"Manage your podcast subscriptions and browse individual episodes. "
+"Downloading episodes to the disk is also done here, or you can tell Amarok "
+"to do this automatically."
+msgstr ""
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:119
+msgid "&Add Podcast"
+msgstr "&Aldoni podkaston..."
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:124
+msgid "&Update All"
+msgstr "Akt&ualigi ĉion"
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:192
+#: browsers/playlistbrowser/PodcastCategory.cpp:195
+#, fuzzy
+#| msgid "Import playlist"
+msgid "Import OPML File"
+msgstr "Importi ludliston"
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:227
+#, fuzzy
+#| msgid "Modify"
+msgid "By"
+msgstr "Modifi"
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:266
+msgctxt "Podcast published on date"
+msgid "On"
+msgstr ""
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:284
+#, fuzzy
+#| msgid "File Size"
+msgid "File Size:"
+msgstr "Dosiera grandeco"
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:296
+#, fuzzy
+#| msgid "&Duration:"
+msgid "Subscription Date:"
+msgstr "&Daŭro:"
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:304
+msgid "Keywords:"
+msgstr ""
+
+#: browsers/playlistbrowser/PodcastCategory.cpp:341
+msgid "Select OPML file to import"
 msgstr ""
 
 #: browsers/playlistbrowser/UserPlaylistCategory.cpp:57
@@ -3336,67 +3399,6 @@ msgstr "Renomi"
 msgctxt "Enter a new name for a folder that already exists"
 msgid "Enter new folder name:"
 msgstr "Tajpu novan antaŭagordan nomon:"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:97
-msgid "Podcasts"
-msgstr "Podkastoj"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:98
-msgid "List of podcast subscriptions and episodes"
-msgstr ""
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:101
-msgid ""
-"Manage your podcast subscriptions and browse individual episodes. "
-"Downloading episodes to the disk is also done here, or you can tell Amarok "
-"to do this automatically."
-msgstr ""
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:119
-msgid "&Add Podcast"
-msgstr "&Aldoni podkaston..."
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:124
-msgid "&Update All"
-msgstr "Akt&ualigi ĉion"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:192
-#: browsers/playlistbrowser/PodcastCategory.cpp:195
-#, fuzzy
-#| msgid "Import playlist"
-msgid "Import OPML File"
-msgstr "Importi ludliston"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:227
-#, fuzzy
-#| msgid "Modify"
-msgid "By"
-msgstr "Modifi"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:266
-msgctxt "Podcast published on date"
-msgid "On"
-msgstr ""
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:284
-#, fuzzy
-#| msgid "File Size"
-msgid "File Size:"
-msgstr "Dosiera grandeco"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:296
-#, fuzzy
-#| msgid "&Duration:"
-msgid "Subscription Date:"
-msgstr "&Daŭro:"
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:304
-msgid "Keywords:"
-msgstr ""
-
-#: browsers/playlistbrowser/PodcastCategory.cpp:341
-msgid "Select OPML file to import"
-msgstr ""
 
 #: browsers/playlistbrowser/DynamicBiasWidgets.cpp:111
 #, fuzzy
@@ -5629,71 +5631,6 @@ msgstr ""
 msgid "Script Manager - Amarok"
 msgstr "Skripta administrilo"
 
-#: dialogs/CollectionSetup.cpp:67
-#, kde-format
-msgid "Rescan '%1'"
-msgstr ""
-
-#: dialogs/CollectionSetup.cpp:96
-msgid ""
-"These folders will be scanned for media to make up your collection. You can\n"
-"right-click on a folder to individually rescan it, if it was previously "
-"selected:"
-msgstr ""
-
-#: dialogs/CollectionSetup.cpp:110
-#, fuzzy
-#| msgid "Rescan Collection"
-msgid "Fully Rescan Entire Collection"
-msgstr "Reesplori la kolekton"
-
-#: dialogs/CollectionSetup.cpp:111
-msgid ""
-"Rescan your entire collection. This will <i>not</i> delete any statistics."
-msgstr ""
-
-#: dialogs/CollectionSetup.cpp:114
-#, fuzzy
-#| msgid "Statistics"
-msgid "Import Statistics"
-msgstr "Statistikoj"
-
-#: dialogs/CollectionSetup.cpp:115
-msgid ""
-"Import collection statistics from older Amarok versions, or from other media "
-"players."
-msgstr ""
-
-#: dialogs/CollectionSetup.cpp:118
-msgid "&Scan folders recursively"
-msgstr "&Esplori dosierujojn rikure"
-
-#: dialogs/CollectionSetup.cpp:119
-msgid "&Watch folders for changes"
-msgstr "&Rigardadi la dosierujojn pri ŝanĝoj"
-
-#: dialogs/CollectionSetup.cpp:120
-msgid "&Enable character set detection in ID3 tags"
-msgstr ""
-
-#: dialogs/CollectionSetup.cpp:125
-msgid "If selected, Amarok will read all subfolders."
-msgstr "Se ŝaltita, Amarok legos ĉiujn subdosierujojn."
-
-#: dialogs/CollectionSetup.cpp:126
-msgid ""
-"If selected, folders will automatically get rescanned when the content is "
-"modified, e.g. when a new file was added."
-msgstr ""
-"Se ŝaltita, la dosierujoj estos aŭtomate reesplorataj kiam ilia enhavo "
-"ŝanĝos, ekz. kiam nova dosiero estus aldonita."
-
-#: dialogs/CollectionSetup.cpp:127
-msgid ""
-"If selected, Amarok will use Mozilla's Character Set Detector to attempt to "
-"automatically guess the character sets used in ID3 tags."
-msgstr ""
-
 #: dialogs/EditFilterDialog.cpp:43
 msgid "Edit Filter"
 msgstr "Redakti la filtrilon"
@@ -5958,6 +5895,71 @@ msgstr "Meznombraj poentoj:"
 #: dialogs/TagDialog.cpp:1646
 msgid ""
 "Writing to file failed. Please check permissions and available disc space."
+msgstr ""
+
+#: dialogs/CollectionSetup.cpp:67
+#, kde-format
+msgid "Rescan '%1'"
+msgstr ""
+
+#: dialogs/CollectionSetup.cpp:96
+msgid ""
+"These folders will be scanned for media to make up your collection. You can "
+"right-click on a folder to individually rescan it, if it was previously "
+"selected:"
+msgstr ""
+
+#: dialogs/CollectionSetup.cpp:112
+#, fuzzy
+#| msgid "Rescan Collection"
+msgid "Fully Rescan Entire Collection"
+msgstr "Reesplori la kolekton"
+
+#: dialogs/CollectionSetup.cpp:113
+msgid ""
+"Rescan your entire collection. This will <i>not</i> delete any statistics."
+msgstr ""
+
+#: dialogs/CollectionSetup.cpp:116
+#, fuzzy
+#| msgid "Statistics"
+msgid "Import Statistics"
+msgstr "Statistikoj"
+
+#: dialogs/CollectionSetup.cpp:117
+msgid ""
+"Import collection statistics from older Amarok versions, or from other media "
+"players."
+msgstr ""
+
+#: dialogs/CollectionSetup.cpp:120
+msgid "&Scan folders recursively"
+msgstr "&Esplori dosierujojn rikure"
+
+#: dialogs/CollectionSetup.cpp:121
+msgid "&Watch folders for changes"
+msgstr "&Rigardadi la dosierujojn pri ŝanĝoj"
+
+#: dialogs/CollectionSetup.cpp:122
+msgid "&Enable character set detection in ID3 tags"
+msgstr ""
+
+#: dialogs/CollectionSetup.cpp:127
+msgid "If selected, Amarok will read all subfolders."
+msgstr "Se ŝaltita, Amarok legos ĉiujn subdosierujojn."
+
+#: dialogs/CollectionSetup.cpp:128
+msgid ""
+"If selected, folders will automatically get rescanned when the content is "
+"modified, e.g. when a new file was added."
+msgstr ""
+"Se ŝaltita, la dosierujoj estos aŭtomate reesplorataj kiam ilia enhavo "
+"ŝanĝos, ekz. kiam nova dosiero estus aldonita."
+
+#: dialogs/CollectionSetup.cpp:129
+msgid ""
+"If selected, Amarok will use Mozilla's Character Set Detector to attempt to "
+"automatically guess the character sets used in ID3 tags."
 msgstr ""
 
 #: dynamic/biases/EchoNest.cpp:52
@@ -6357,205 +6359,6 @@ msgstr "Ludlista nomo:"
 msgid "Encountered an unknown element name while reading layout."
 msgstr ""
 
-#: playlist/layouts/LayoutManager.cpp:105
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:418
-#, kde-format
-msgid "copy of %1"
-msgstr ""
-
-#: playlist/layouts/LayoutManager.cpp:113
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:426
-#, kde-format
-msgctxt ""
-"adds a copy number to a generated name if the name already exists, for "
-"instance 'copy of Foo 2' if 'copy of Foo' is taken"
-msgid "%1 %2"
-msgstr "%1 %2"
-
-#: playlist/layouts/LayoutManager.cpp:117
-#, kde-format
-msgid ""
-"Current layout '%1' is read only. Creating a new layout '%2' with your "
-"changes and setting this as active"
-msgstr ""
-
-#: playlist/layouts/LayoutManager.cpp:408
-#, kde-format
-msgid "The layout '%1' is one of the default layouts and cannot be deleted."
-msgstr ""
-
-#: playlist/layouts/LayoutManager.cpp:408
-msgid "Cannot Delete Default Layouts"
-msgstr ""
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:73
-#: playlist/PlaylistDefines.h:108
-#, fuzzy
-#| msgid "Moodbar"
-msgctxt "'Moodbar' playlist column name and token for playlist layouts"
-msgid "Moodbar"
-msgstr "Humorbreto"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:106
-msgid "Head"
-msgstr ""
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:107
-#, fuzzy
-#| msgid "Modify"
-msgid "Body"
-msgstr "Modifi"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:108
-#, fuzzy
-#| msgid "Various Artists"
-msgid "Body (Various artists)"
-msgstr "Diversaj artistoj"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:109
-#, fuzzy
-#| msgid "single"
-msgid "Single"
-msgstr "unutrako"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:143
-#, fuzzy
-#| msgid "Playlist name:"
-msgid "New playlist layout"
-msgstr "Ludlista nomo:"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:148
-#, fuzzy
-#| msgid "Playlist name:"
-msgid "Copy playlist layout"
-msgstr "Ludlista nomo:"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:153
-#, fuzzy
-#| msgid "Playlist name:"
-msgid "Delete playlist layout"
-msgstr "Ludlista nomo:"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:158
-#, fuzzy
-#| msgid "Playlist name:"
-msgid "Rename playlist layout"
-msgstr "Ludlista nomo:"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:181
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:232
-#, fuzzy
-#| msgid "Enter a &name for this device (required):"
-msgid "Choose a name for the new playlist layout"
-msgstr "Enmetu &nomon por tiu aparato (bezonata):"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:182
-msgid "Please enter a name for the playlist layout you are about to define:"
-msgstr ""
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:187
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:240
-#, fuzzy
-#| msgid ""
-#| "Sorry, you cannot define two devices\n"
-#| "with the same name and mountpoint!"
-msgid "Cannot create a layout with no name."
-msgstr ""
-"Pardonu, vi ne povas difini du aparatojn\n"
-"kun sama nomo kaj sama kroĉpunkto!"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:187
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:192
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:197
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:240
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:245
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:299
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:301
-#, fuzzy
-#| msgid "Playcount"
-msgid "Layout name error"
-msgstr "Ludfojo"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:192
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:245
-#, fuzzy
-#| msgid ""
-#| "Sorry, you cannot define two devices\n"
-#| "with the same name and mountpoint!"
-msgid "Cannot create a layout with the same name as an existing layout."
-msgstr ""
-"Pardonu, vi ne povas difini du aparatojn\n"
-"kun sama nomo kaj sama kroĉpunkto!"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:197
-#, fuzzy
-#| msgid ""
-#| "Sorry, you cannot define two devices\n"
-#| "with the same name and mountpoint!"
-msgid "Cannot create a layout containing '/'."
-msgstr ""
-"Pardonu, vi ne povas difini du aparatojn\n"
-"kun sama nomo kaj sama kroĉpunkto!"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:233
-#, kde-format
-msgid ""
-"Please enter a name for the playlist layout you are about to define as copy "
-"of the layout '%1':"
-msgstr ""
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:290
-#, fuzzy
-#| msgid "Enter a &name for this device (required):"
-msgid "Choose a new name for the playlist layout"
-msgstr "Enmetu &nomon por tiu aparato (bezonata):"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:291
-msgid ""
-"Please enter a new name for the playlist layout you are about to rename:"
-msgstr ""
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:299
-#, fuzzy
-#| msgid ""
-#| "Sorry, you cannot define two devices\n"
-#| "with the same name and mountpoint!"
-msgid "Cannot rename a layout to have no name."
-msgstr ""
-"Pardonu, vi ne povas difini du aparatojn\n"
-"kun sama nomo kaj sama kroĉpunkto!"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:301
-#, fuzzy
-#| msgid ""
-#| "Sorry, you cannot define two devices\n"
-#| "with the same name and mountpoint!"
-msgid "Cannot rename a layout to have the same name as an existing layout."
-msgstr ""
-"Pardonu, vi ne povas difini du aparatojn\n"
-"kun sama nomo kaj sama kroĉpunkto!"
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:429
-#, kde-format
-msgid ""
-"The layout '%1' you modified is one of the default layouts and cannot be "
-"overwritten. Saved as new layout '%2'"
-msgstr ""
-
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:431
-#, fuzzy
-#| msgid "Playlist name:"
-msgid "Default Layout"
-msgstr "Ludlista nomo:"
-
-#. i18n: tag layout attribute name
-#. i18n: file: data/DefaultPlaylistLayouts.xml:38
-#: playlist/layouts/PlaylistLayoutEditDialog.cpp:525 rc.cpp:2719
-#, fuzzy
-#| msgid "Groupings"
-msgid "No Grouping"
-msgstr "Grupaĵoj"
-
 #: playlist/layouts/LayoutEditDialog.cpp:75
 #, fuzzy
 #| msgid "MySQL Configuration"
@@ -6617,6 +6420,205 @@ msgstr "Formato:"
 #| msgid "MySQL Configuration"
 msgid "Configuration for '%1'"
 msgstr "MySQL agordo"
+
+#: playlist/layouts/LayoutManager.cpp:105
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:413
+#, kde-format
+msgid "copy of %1"
+msgstr ""
+
+#: playlist/layouts/LayoutManager.cpp:113
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:421
+#, kde-format
+msgctxt ""
+"adds a copy number to a generated name if the name already exists, for "
+"instance 'copy of Foo 2' if 'copy of Foo' is taken"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: playlist/layouts/LayoutManager.cpp:117
+#, kde-format
+msgid ""
+"Current layout '%1' is read only. Creating a new layout '%2' with your "
+"changes and setting this as active"
+msgstr ""
+
+#: playlist/layouts/LayoutManager.cpp:408
+#, kde-format
+msgid "The layout '%1' is one of the default layouts and cannot be deleted."
+msgstr ""
+
+#: playlist/layouts/LayoutManager.cpp:408
+msgid "Cannot Delete Default Layouts"
+msgstr ""
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:72
+#: playlist/PlaylistDefines.h:108
+#, fuzzy
+#| msgid "Moodbar"
+msgctxt "'Moodbar' playlist column name and token for playlist layouts"
+msgid "Moodbar"
+msgstr "Humorbreto"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:103
+msgid "Head"
+msgstr ""
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:104
+#, fuzzy
+#| msgid "Modify"
+msgid "Body"
+msgstr "Modifi"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:105
+#, fuzzy
+#| msgid "Various Artists"
+msgid "Body (Various artists)"
+msgstr "Diversaj artistoj"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:106
+#, fuzzy
+#| msgid "single"
+msgid "Single"
+msgstr "unutrako"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:140
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "New playlist layout"
+msgstr "Ludlista nomo:"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:145
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "Copy playlist layout"
+msgstr "Ludlista nomo:"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:150
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "Delete playlist layout"
+msgstr "Ludlista nomo:"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:155
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "Rename playlist layout"
+msgstr "Ludlista nomo:"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:177
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:225
+#, fuzzy
+#| msgid "Enter a &name for this device (required):"
+msgid "Choose a name for the new playlist layout"
+msgstr "Enmetu &nomon por tiu aparato (bezonata):"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:178
+msgid "Please enter a name for the playlist layout you are about to define:"
+msgstr ""
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:183
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:233
+#, fuzzy
+#| msgid ""
+#| "Sorry, you cannot define two devices\n"
+#| "with the same name and mountpoint!"
+msgid "Cannot create a layout with no name."
+msgstr ""
+"Pardonu, vi ne povas difini du aparatojn\n"
+"kun sama nomo kaj sama kroĉpunkto!"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:183
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:188
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:193
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:233
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:238
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:292
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:294
+#, fuzzy
+#| msgid "Playcount"
+msgid "Layout name error"
+msgstr "Ludfojo"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:188
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:238
+#, fuzzy
+#| msgid ""
+#| "Sorry, you cannot define two devices\n"
+#| "with the same name and mountpoint!"
+msgid "Cannot create a layout with the same name as an existing layout."
+msgstr ""
+"Pardonu, vi ne povas difini du aparatojn\n"
+"kun sama nomo kaj sama kroĉpunkto!"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:193
+#, fuzzy
+#| msgid ""
+#| "Sorry, you cannot define two devices\n"
+#| "with the same name and mountpoint!"
+msgid "Cannot create a layout containing '/'."
+msgstr ""
+"Pardonu, vi ne povas difini du aparatojn\n"
+"kun sama nomo kaj sama kroĉpunkto!"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:226
+#, kde-format
+msgid ""
+"Please enter a name for the playlist layout you are about to define as copy "
+"of the layout '%1':"
+msgstr ""
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:283
+#, fuzzy
+#| msgid "Enter a &name for this device (required):"
+msgid "Choose a new name for the playlist layout"
+msgstr "Enmetu &nomon por tiu aparato (bezonata):"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:284
+msgid ""
+"Please enter a new name for the playlist layout you are about to rename:"
+msgstr ""
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:292
+#, fuzzy
+#| msgid ""
+#| "Sorry, you cannot define two devices\n"
+#| "with the same name and mountpoint!"
+msgid "Cannot rename a layout to have no name."
+msgstr ""
+"Pardonu, vi ne povas difini du aparatojn\n"
+"kun sama nomo kaj sama kroĉpunkto!"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:294
+#, fuzzy
+#| msgid ""
+#| "Sorry, you cannot define two devices\n"
+#| "with the same name and mountpoint!"
+msgid "Cannot rename a layout to have the same name as an existing layout."
+msgstr ""
+"Pardonu, vi ne povas difini du aparatojn\n"
+"kun sama nomo kaj sama kroĉpunkto!"
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:424
+#, kde-format
+msgid ""
+"The layout '%1' you modified is one of the default layouts and cannot be "
+"overwritten. Saved as new layout '%2'"
+msgstr ""
+
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:426
+#, fuzzy
+#| msgid "Playlist name:"
+msgid "Default Layout"
+msgstr "Ludlista nomo:"
+
+#. i18n: tag layout attribute name
+#. i18n: file: data/DefaultPlaylistLayouts.xml:38
+#: playlist/layouts/PlaylistLayoutEditDialog.cpp:524 rc.cpp:2719
+#, fuzzy
+#| msgid "Groupings"
+msgid "No Grouping"
+msgstr "Grupaĵoj"
 
 #: playlist/navigators/NavigatorConfigAction.cpp:33
 #, fuzzy
@@ -7152,14 +7154,28 @@ msgstr "Trakoj forigitaj"
 msgid "Too many errors encountered in playlist. Playback stopped."
 msgstr ""
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:79
+#: playlistmanager/file/PlaylistFileProvider.cpp:81
 #, fuzzy
 #| msgid "Playlist Files"
 msgid "Playlist Files on Disk"
 msgstr "Ludlistaj dosieroj"
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:131
-#: playlistmanager/file/PlaylistFileProvider.cpp:140
+#: playlistmanager/file/PlaylistFileProvider.cpp:123
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:163
+#, fuzzy
+#| msgid "&Rename"
+msgid "&Rename..."
+msgstr "&Renomi"
+
+#: playlistmanager/file/PlaylistFileProvider.cpp:135
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:175
+#, fuzzy
+#| msgid "&Delete"
+msgid "&Delete..."
+msgstr "&Forigi"
+
+#: playlistmanager/file/PlaylistFileProvider.cpp:171
+#: playlistmanager/file/PlaylistFileProvider.cpp:180
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:199
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -7171,11 +7187,11 @@ msgstr "Forigi"
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: file: services/ampache/AmpacheConfigWidget.ui:98
 #. i18n: ectx: property (text), widget (KPushButton, removeButton)
-#: playlistmanager/file/PlaylistFileProvider.cpp:157 rc.cpp:1196 rc.cpp:1928
+#: playlistmanager/file/PlaylistFileProvider.cpp:197 rc.cpp:1196 rc.cpp:1928
 msgid "Remove"
 msgstr "Forigi"
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:275
+#: playlistmanager/file/PlaylistFileProvider.cpp:322
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:240
 #, fuzzy, kde-format
 #| msgid "Are you sure you want to remove this cover from the Collection?"
@@ -7186,8 +7202,8 @@ msgid_plural "Are you sure you want to delete these %1 playlist files?"
 msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:322
-#: playlistmanager/file/PlaylistFileProvider.cpp:348
+#: playlistmanager/file/PlaylistFileProvider.cpp:363
+#: playlistmanager/file/PlaylistFileProvider.cpp:389
 #, fuzzy, kde-format
 #| msgid "This object could not be created."
 msgid "The playlist file \"%1\" could not be loaded."
@@ -7222,18 +7238,6 @@ msgstr "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 #| msgid "Enter a &name for this device (required):"
 msgid "Yes, rename this playlist."
 msgstr "Enmetu &nomon por tiu aparato (bezonata):"
-
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:163
-#, fuzzy
-#| msgid "&Rename"
-msgid "&Rename..."
-msgstr "&Renomi"
-
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:175
-#, fuzzy
-#| msgid "&Delete"
-msgid "&Delete..."
-msgstr "&Forigi"
 
 #: playlistmanager/sql/SqlUserPlaylistProvider.cpp:245
 msgid "Yes, delete from database."
@@ -8341,7 +8345,7 @@ msgstr "Amarok estas paŭzata"
 msgid "Playing: %1"
 msgstr "Ludante: %1"
 
-#: statusbar/StatusBar.cpp:366
+#: statusbar/StatusBar.cpp:368
 #, fuzzy, kde-format
 #| msgctxt "The Amount of tracks in queue"
 #| msgid "1 track (%1)"
@@ -8352,23 +8356,23 @@ msgid_plural "%1 tracks (%2)"
 msgstr[0] "1 trako (%1)"
 msgstr[1] "%1 trakoj (%1)"
 
-#: statusbar/StatusBar.cpp:389 statusbar/StatusBar.cpp:395
+#: statusbar/StatusBar.cpp:391 statusbar/StatusBar.cpp:397
 #, fuzzy, kde-format
 #| msgid "&Save Playlist As..."
 msgid "Total playlist size: %1"
 msgstr "Kon&servi la ludliston kiel..."
 
-#: statusbar/StatusBar.cpp:390
+#: statusbar/StatusBar.cpp:392
 #, kde-format
 msgid "Queue size: %1"
 msgstr ""
 
-#: statusbar/StatusBar.cpp:391
+#: statusbar/StatusBar.cpp:393
 #, kde-format
 msgid "Queue length: %1"
 msgstr ""
 
-#: statusbar/StatusBar.cpp:403
+#: statusbar/StatusBar.cpp:405
 #, fuzzy, kde-format
 #| msgid "%1 track"
 #| msgid_plural "%1 tracks"
