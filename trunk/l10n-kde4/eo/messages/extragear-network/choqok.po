@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-04-08 04:33+0200\n"
+"POT-Creation-Date: 2010-04-17 04:44+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -22,8 +22,8 @@ msgstr "Aŭtentigo malsukcesis"
 
 #: microblogs/twitter/twittereditaccount.cpp:152
 #: microblogs/laconica/laconicaeditaccount.cpp:157
-#: plugins/twitpic/twitpicuploadimage.cpp:173
-#: plugins/twitpic/twitpicuploadimage.cpp:188
+#: plugins/uploaders/twitpic/twitpic.cpp:147
+#: plugins/uploaders/yfrog/yfrog.cpp:147
 msgid "Unrecognized result."
 msgstr ""
 
@@ -130,8 +130,7 @@ msgstr ""
 
 #: microblogs/laconica/laconicamicroblog.cpp:153
 #: microblogs/laconica/laconicamicroblog.cpp:160
-#: plugins/twitpic/twitpicuploadimage.cpp:84
-#: plugins/twitpic/twitpicuploadimage.cpp:90
+#: libchoqok/mediamanager.cpp:186 libchoqok/mediamanager.cpp:192
 msgid "Uploading medium failed: cannot read the medium file."
 msgstr ""
 
@@ -184,31 +183,6 @@ msgstr ""
 msgid "The Search action plugin does not support the current microblog."
 msgstr ""
 
-#: plugins/twitpic/twitpic.cpp:43
-msgid "Upload to TwitPic"
-msgstr ""
-
-#: plugins/twitpic/twitpicuploadimage.cpp:42
-msgid "Upload image to Twitpic"
-msgstr ""
-
-#: plugins/twitpic/twitpicuploadimage.cpp:51
-msgid ""
-"You did not set your twitter account.\n"
-"In order to use this plugin, you have to set a twitter account: please go to "
-"Plugin Configuration and set it."
-msgstr ""
-
-#: plugins/twitpic/twitpicuploadimage.cpp:144
-#: plugins/twitpic/twitpicuploadimage.cpp:176
-#: plugins/twitpic/twitpicuploadimage.cpp:187
-msgid "Uploading image to Twitpic failed."
-msgstr ""
-
-#: plugins/twitpic/twitpicuploadimage.cpp:165
-msgid "Image successfully uploaded to Twitpic, and posted to Twitter."
-msgstr ""
-
 #: plugins/shorteners/yourls/yourls.cpp:87
 msgid "Yourls Error"
 msgstr ""
@@ -218,6 +192,12 @@ msgstr ""
 msgid ""
 "Cannot create a short url.\n"
 "%1"
+msgstr ""
+
+#: plugins/uploaders/twitpic/twitpic.cpp:128
+#: plugins/uploaders/twitpic/twitpic.cpp:157
+#: plugins/uploaders/yfrog/yfrog.cpp:128 plugins/uploaders/yfrog/yfrog.cpp:157
+msgid "Malformed response"
 msgstr ""
 
 #: choqok/config/accounts/editaccountdialog.cpp:41
@@ -299,8 +279,8 @@ msgid "KDE Micro-Blogging Client."
 msgstr ""
 
 #: choqok/main.cpp:40 choqok/systrayicon.cpp:125 choqok/systrayicon.cpp:131
-#: choqok/mainwindow.cpp:77 choqok/mainwindow.cpp:463
-#: choqok/mainwindow.cpp:520
+#: choqok/mainwindow.cpp:78 choqok/mainwindow.cpp:467
+#: choqok/mainwindow.cpp:524
 msgid "Choqok"
 msgstr "Choqok"
 
@@ -361,57 +341,61 @@ msgstr[1] ""
 msgid "Choqok - Disabled"
 msgstr ""
 
-#: choqok/mainwindow.cpp:186
+#: choqok/mainwindow.cpp:187
 msgid "Update Timelines"
 msgstr ""
 
-#: choqok/mainwindow.cpp:195 libchoqok/ui/quickpost.cpp:100
+#: choqok/mainwindow.cpp:196 libchoqok/ui/quickpost.cpp:100
 msgid "Quick Post"
 msgstr ""
 
-#: choqok/mainwindow.cpp:202
+#: choqok/mainwindow.cpp:203
 msgid "Mark All As Read"
 msgstr ""
 
-#: choqok/mainwindow.cpp:211
+#: choqok/mainwindow.cpp:212
 msgid "Minimize"
 msgstr "Minimumigi"
 
-#: choqok/mainwindow.cpp:218
+#: choqok/mainwindow.cpp:219
 msgid "Enable Update Timer"
 msgstr ""
 
-#: choqok/mainwindow.cpp:224
+#: choqok/mainwindow.cpp:225
 msgid "Enable Notifications"
 msgstr ""
 
-#: choqok/mainwindow.cpp:230
+#: choqok/mainwindow.cpp:231
 msgid "Clear Avatar Cache"
 msgstr ""
 
-#: choqok/mainwindow.cpp:232
+#: choqok/mainwindow.cpp:233
 msgid "You have to restart Choqok to load avatars again"
 msgstr ""
 
-#: choqok/mainwindow.cpp:275
+#: choqok/mainwindow.cpp:239 libchoqok/ui/uploadmediadialog.cpp:58
+msgid "Upload Medium"
+msgstr ""
+
+#: choqok/mainwindow.cpp:279
 msgid ""
 "No account created. You have to create an account before being able to make "
 "posts."
 msgstr ""
 
-#: choqok/mainwindow.cpp:305
+#: choqok/mainwindow.cpp:309
 msgid ""
 "In order to use Choqok you need an account at one of the supported micro-"
 "blogging services.\n"
 "Would you like to add your account now?"
 msgstr ""
 
-#: choqok/mainwindow.cpp:461
+#: choqok/mainwindow.cpp:465
 #, kde-format
 msgid "Choqok (%1)"
 msgstr "Choqok (%1)"
 
-#: choqok/mainwindow.cpp:551
+#: choqok/mainwindow.cpp:555
 msgid "Loading timelines..."
 msgstr ""
 
@@ -707,7 +691,7 @@ msgstr ""
 
 #: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1188
 #, kde-format
-msgid "Your posts are blocked for %1."
+msgid "You will no longer be disturbed by %1."
 msgstr ""
 
 #: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1192
@@ -813,6 +797,14 @@ msgstr ""
 msgid "Select All"
 msgstr "Elekti ĉion"
 
+#: libchoqok/ui/uploadmediadialog.cpp:60
+msgid "Upload"
+msgstr ""
+
+#: libchoqok/ui/uploadmediadialog.cpp:229
+msgid "Medium uploading failed."
+msgstr ""
+
 #: libchoqok/notifymanager.h:41
 msgid "Error"
 msgstr "Eraro"
@@ -829,17 +821,21 @@ msgstr ""
 msgid "Shortening a URL"
 msgstr ""
 
-#: libchoqok/mediamanager.cpp:100
+#: libchoqok/mediamanager.cpp:108
 msgid "Cannot create a KDE Job. Please check your installation."
 msgstr ""
 
-#: libchoqok/mediamanager.cpp:119
+#: libchoqok/mediamanager.cpp:127
 #, kde-format
 msgid "Cannot download image from %1."
 msgstr ""
 
-#: libchoqok/mediamanager.cpp:130
+#: libchoqok/mediamanager.cpp:138
 msgid "The download failed. The returned file is corrupted."
+msgstr ""
+
+#: libchoqok/mediamanager.cpp:168
+msgid "No pluginId specified, And last used plugin is null."
 msgstr ""
 
 #: libchoqok/microblog.cpp:78
@@ -1202,19 +1198,15 @@ msgstr ""
 #. i18n: ectx: Menu (tools)
 #. i18n: file: plugins/searchaction/searchactionui.rc:4
 #. i18n: ectx: Menu (tools)
-#. i18n: file: plugins/twitpic/twitpicui.rc:4
-#. i18n: ectx: Menu (tools)
 #. i18n: file: choqok/choqokui.rc:11
 #. i18n: ectx: Menu (tools)
 #. i18n: file: plugins/nowlistening/nowlisteningui.rc:4
 #. i18n: ectx: Menu (tools)
 #. i18n: file: plugins/searchaction/searchactionui.rc:4
 #. i18n: ectx: Menu (tools)
-#. i18n: file: plugins/twitpic/twitpicui.rc:4
-#. i18n: ectx: Menu (tools)
 #. i18n: file: choqok/choqokui.rc:11
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:156 rc.cpp:166 rc.cpp:185 rc.cpp:311
+#: rc.cpp:156 rc.cpp:166 rc.cpp:304
 msgid "Tools"
 msgstr "Iloj"
 
@@ -1230,53 +1222,21 @@ msgstr ""
 msgid "Template:"
 msgstr "Ŝablono:"
 
-#. i18n: file: plugins/twitpic/twitpicprefs.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:169
-msgid "Twitter password:"
-msgstr ""
-
-#. i18n: file: plugins/twitpic/twitpicprefs.ui:27
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:172
-msgid "Twitter username:"
-msgstr ""
-
-#. i18n: file: plugins/twitpic/twitpicuploadimage_base.ui:30
-#. i18n: ectx: property (filter), widget (KUrlRequester, kcfg_imageUrl)
-#: rc.cpp:175
-msgid "*.gif, *.jpeg, *.png"
-msgstr ""
-
-#. i18n: file: plugins/twitpic/twitpicuploadimage_base.ui:37
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:178
-msgid "Image:"
-msgstr ""
-
-#. i18n: file: plugins/twitpic/twitpicuploadimage_base.ui:48
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:181
-msgid ""
-"Message:\n"
-"(Optional)"
-msgstr ""
-
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:188
+#: rc.cpp:169
 msgid "Yourls API Url:"
 msgstr ""
 
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:27
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, kcfg_yourlsHost)
-#: rc.cpp:191
+#: rc.cpp:172
 msgid "http://SomeDomain.com/yourls/yourls-api.php"
 msgstr ""
 
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:194
+#: rc.cpp:175
 #, fuzzy
 #| msgid "&Username:"
 msgid "Username:"
@@ -1284,153 +1244,183 @@ msgstr "&Uzantonomo:"
 
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:47
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:197
+#: rc.cpp:178
 #, fuzzy
 #| msgid "&Password:"
 msgid "Password:"
 msgstr "&Pasvorto:"
 
+#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. i18n: file: plugins/uploaders/yfrog/yfrogprefs.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. i18n: file: plugins/uploaders/yfrog/yfrogprefs.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:181 rc.cpp:187
+msgid "Twitter password:"
+msgstr ""
+
+#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:27
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: plugins/uploaders/yfrog/yfrogprefs.ui:27
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:27
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: plugins/uploaders/yfrog/yfrogprefs.ui:27
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:184 rc.cpp:190
+msgid "Twitter username:"
+msgstr ""
+
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:28
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnAdd)
-#: rc.cpp:200
+#: rc.cpp:193
 msgid "Add a new account"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:31
 #. i18n: ectx: property (text), widget (KPushButton, btnAdd)
-#: rc.cpp:203
+#: rc.cpp:196
 msgid "&Add..."
 msgstr "&Aldonu"
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:41
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnEdit)
-#: rc.cpp:206
+#: rc.cpp:199
 msgid "Modify the selected account"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:44
 #. i18n: ectx: property (text), widget (KPushButton, btnEdit)
-#: rc.cpp:209
+#: rc.cpp:202
 msgid "&Modify..."
 msgstr "&Modifi..."
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:54
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnRemove)
-#: rc.cpp:212
+#: rc.cpp:205
 msgid "Remove the selected account"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:57
 #. i18n: ectx: property (text), widget (KPushButton, btnRemove)
-#: rc.cpp:215
+#: rc.cpp:208
 msgid "&Remove"
 msgstr "Fo&rigi"
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:130
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: rc.cpp:218
+#: rc.cpp:211
 msgid "Alias"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:135
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: rc.cpp:221
+#: rc.cpp:214
 msgid "Micro-Blog"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:140
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: rc.cpp:224
+#: rc.cpp:217
 msgid "Read Only"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:143
 #. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
-#: rc.cpp:227
+#: rc.cpp:220
 msgid "Read Only account"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:148
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: rc.cpp:230
+#: rc.cpp:223
 msgid "Include in Quick Post"
 msgstr ""
 
 #. i18n: file: choqok/config/accounts/accountswidget_base.ui:151
 #. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
-#: rc.cpp:233
+#: rc.cpp:226
 msgid "Show in Quick Post"
 msgstr ""
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_isEmoticonsEnabled)
-#: rc.cpp:236
+#: rc.cpp:229
 msgid "Enable emoticons"
 msgstr ""
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:27
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_isCustomUi)
-#: rc.cpp:239
+#: rc.cpp:232
 msgid "Use custom colors"
 msgstr ""
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:55
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:242
+#: rc.cpp:235
 msgid "Post Color Preferences"
 msgstr ""
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:63
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:245
+#: rc.cpp:238
 msgid "Background"
 msgstr "Fono"
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:73
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:248
+#: rc.cpp:241
 msgid "Default color:"
 msgstr ""
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:110
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:251
+#: rc.cpp:244
 msgid "Unread post color:"
 msgstr ""
 
 #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:154
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:254
+#: rc.cpp:247
 msgid "Foreground"
 msgstr "Malfono"
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showAllNotifiesInOne)
-#: rc.cpp:257
+#: rc.cpp:250
 msgid "&Show all new posts in one notification"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:260
+#: rc.cpp:253
 msgid "&Notification duration:"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_shortenOnPaste)
-#: rc.cpp:263
+#: rc.cpp:256
 msgid "Shorten &URLs on paste"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:266
+#: rc.cpp:259
 msgid "Shortening &service:"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:49
 #. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
-#: rc.cpp:269
+#. i18n: file: libchoqok/ui/uploadmedia_base.ui:51
+#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:49
+#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+#. i18n: file: libchoqok/ui/uploadmedia_base.ui:51
+#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+#: rc.cpp:262 rc.cpp:313
 #, fuzzy
 #| msgid "Configuration"
 msgid "Configure plugin"
@@ -1438,13 +1428,19 @@ msgstr "Agordo"
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:62
 #. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
-#: rc.cpp:272
+#. i18n: file: libchoqok/ui/uploadmedia_base.ui:70
+#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:62
+#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+#. i18n: file: libchoqok/ui/uploadmedia_base.ui:70
+#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+#: rc.cpp:265 rc.cpp:316
 msgid "About plugin"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:275
+#: rc.cpp:268
 #, fuzzy
 #| msgid "&General"
 msgid "General Options"
@@ -1452,75 +1448,87 @@ msgstr "&Ĝeneralo"
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSplashScreen)
-#: rc.cpp:278
+#: rc.cpp:271
 msgid "Show splash-screen on startup"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_markAllAsReadOnExit)
-#: rc.cpp:281
+#: rc.cpp:274
 msgid "Mark all posts as read on exit"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:46
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_markAllAsReadOnHideToSystray)
-#: rc.cpp:284
+#: rc.cpp:277
 msgid "Mark all unread posts as read, when hiding to system tray"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:56
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableSpellChecker)
-#: rc.cpp:287
+#: rc.cpp:280
 msgid "Enable automatic spellchecking in the message editor"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:71
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomBrowser)
-#: rc.cpp:290
+#: rc.cpp:283
 msgid "Use &custom web browser:"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:89
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomRT)
-#: rc.cpp:293
+#: rc.cpp:286
 msgid "Use custom prefix for ReSend [ReTweet]:"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:108
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:296
+#: rc.cpp:289
 msgid "Timelines Options"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:118
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:299
+#: rc.cpp:292
 msgid "&Update interval:"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:137
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:302
+#: rc.cpp:295
 msgid "&Number of posts to show in timelines:"
 msgstr ""
 
 #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:154
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_updateInterval)
-#: rc.cpp:305
+#: rc.cpp:298
 msgid "Disabled"
 msgstr "Malŝaltita"
 
 #. i18n: file: choqok/choqokui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:308
+#: rc.cpp:301
 msgid "File"
 msgstr "Dosiero"
 
-#. i18n: file: choqok/choqokui.rc:14
+#. i18n: file: choqok/choqokui.rc:15
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:314
+#: rc.cpp:307
 msgid "Settings"
 msgstr "Agordo"
+
+#. i18n: file: libchoqok/ui/uploadmedia_base.ui:19
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:310
+msgid "Upload via:"
+msgstr ""
+
+#. i18n: file: libchoqok/ui/uploadmedia_base.ui:98
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:319
+msgid "Medium to upload:"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Disabled"
