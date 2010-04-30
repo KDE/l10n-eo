@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-04-10 04:46+0200\n"
+"POT-Creation-Date: 2010-04-30 04:52+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -578,7 +578,7 @@ msgstr "Ĝenro"
 #: src/collections/videocollection.cpp:215
 #: src/collections/cardcollection.cpp:111
 #: src/collections/bibtexcollection.cpp:234
-#: src/collections/musiccollection.cpp:113 src/fetch/amazonfetcher.cpp:853
+#: src/collections/musiccollection.cpp:113 src/fetch/amazonfetcher.cpp:856
 msgid "Keywords"
 msgstr "Ĉefvortoj"
 
@@ -784,11 +784,11 @@ msgid "My Videos"
 msgstr ""
 
 #: src/collections/videocollection.cpp:54
-#: src/collections/musiccollection.cpp:54 src/fetch/amazonfetcher.cpp:819
+#: src/collections/musiccollection.cpp:54 src/fetch/amazonfetcher.cpp:822
 msgid "DVD"
 msgstr "DVD"
 
-#: src/collections/videocollection.cpp:54
+#: src/collections/videocollection.cpp:54 src/fetch/amazonfetcher.cpp:809
 msgid "VHS"
 msgstr "VHS"
 
@@ -870,7 +870,7 @@ msgstr "Regiono"
 msgid "Nationality"
 msgstr ""
 
-#: src/collections/videocollection.cpp:102 src/fetch/amazonfetcher.cpp:815
+#: src/collections/videocollection.cpp:102 src/fetch/amazonfetcher.cpp:818
 msgid "NTSC"
 msgstr "NTSC"
 
@@ -944,7 +944,7 @@ msgstr ""
 msgid "Aspect Ratio"
 msgstr ""
 
-#: src/collections/videocollection.cpp:175 src/fetch/amazonfetcher.cpp:795
+#: src/collections/videocollection.cpp:175 src/fetch/amazonfetcher.cpp:792
 msgid "Widescreen"
 msgstr ""
 
@@ -956,7 +956,7 @@ msgstr ""
 msgid "Color Mode"
 msgstr "Kolormodo"
 
-#: src/collections/videocollection.cpp:186 src/fetch/amazonfetcher.cpp:810
+#: src/collections/videocollection.cpp:186 src/fetch/amazonfetcher.cpp:813
 msgid "Director's Cut"
 msgstr ""
 
@@ -1322,7 +1322,7 @@ msgstr "Anstataŭigu"
 
 #: src/fetch/giantbombfetcher.cpp:205 src/fetch/themoviedbfetcher.cpp:349
 #: src/fetch/discogsfetcher.cpp:232 src/fetch/winecomfetcher.cpp:291
-#: src/fetch/isbndbfetcher.cpp:355 src/fetch/amazonfetcher.cpp:869
+#: src/fetch/isbndbfetcher.cpp:355 src/fetch/amazonfetcher.cpp:872
 #: src/fetch/crossreffetcher.cpp:311
 #, kde-format
 msgid ""
@@ -1333,7 +1333,7 @@ msgstr ""
 
 #: src/fetch/giantbombfetcher.cpp:218 src/fetch/themoviedbfetcher.cpp:362
 #: src/fetch/discogsfetcher.cpp:245 src/fetch/winecomfetcher.cpp:304
-#: src/fetch/isbndbfetcher.cpp:368 src/fetch/amazonfetcher.cpp:882
+#: src/fetch/isbndbfetcher.cpp:368 src/fetch/amazonfetcher.cpp:885
 msgid "Access key: "
 msgstr ""
 
@@ -1420,7 +1420,7 @@ msgstr ""
 msgid "Download cover &image"
 msgstr ""
 
-#: src/fetch/imdbfetcher.cpp:1211 src/fetch/amazonfetcher.cpp:929
+#: src/fetch/imdbfetcher.cpp:1211 src/fetch/amazonfetcher.cpp:932
 msgid ""
 "The cover image may be downloaded as well. However, too many large images in "
 "the collection may degrade performance."
@@ -1448,7 +1448,7 @@ msgstr ""
 msgid "Yahoo! Audio Search"
 msgstr ""
 
-#: src/fetch/yahoofetcher.cpp:242 src/fetch/amazonfetcher.cpp:710
+#: src/fetch/yahoofetcher.cpp:242 src/fetch/amazonfetcher.cpp:707
 msgid "The cover image could not be loaded."
 msgstr ""
 
@@ -1550,7 +1550,7 @@ msgstr ""
 msgid "Internet Bookshop (ibs.it)"
 msgstr ""
 
-#: src/fetch/fetcher.cpp:75
+#: src/fetch/fetcher.cpp:77
 #, kde-format
 msgid "%1 does not allow searching for this collection type."
 msgstr ""
@@ -1568,7 +1568,7 @@ msgid "Episodes"
 msgstr ""
 
 #: src/fetch/winecomfetcher.cpp:224 src/fetch/isbndbfetcher.cpp:257
-#: src/fetch/amazonfetcher.cpp:547
+#: src/fetch/amazonfetcher.cpp:544
 #, kde-format
 msgid "Results from %1: %2/%3"
 msgstr ""
@@ -1588,8 +1588,9 @@ msgstr "ISBNdb.com"
 msgid "GCstar Plugin"
 msgstr ""
 
-#: src/fetch/gcstarpluginfetcher.cpp:351 src/fetch/execexternalfetcher.cpp:339
-#: src/translators/csvimporter.cpp:181 src/configdialog.cpp:440
+#: src/fetch/gcstarpluginfetcher.cpp:351 src/fetch/multifetcher.cpp:191
+#: src/fetch/execexternalfetcher.cpp:342 src/translators/csvimporter.cpp:181
+#: src/configdialog.cpp:440
 msgid "Collection &type:"
 msgstr ""
 
@@ -1661,7 +1662,7 @@ msgstr ""
 msgid "Amazon (Canada)"
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:171 src/fetch/amazonfetcher.cpp:887
+#: src/fetch/amazonfetcher.cpp:171 src/fetch/amazonfetcher.cpp:890
 msgid ""
 "Access to data from Amazon.com requires an AWS Access Key ID and a Secret "
 "Key."
@@ -1671,76 +1672,80 @@ msgstr ""
 msgid "Those values must be entered in the data source settings."
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:844
+#: src/fetch/amazonfetcher.cpp:847
 msgid "Amazon.com Web Services"
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:892
+#: src/fetch/amazonfetcher.cpp:895
 msgid "Secret key: "
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:902
+#: src/fetch/amazonfetcher.cpp:905
 msgid "Co&untry: "
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:905
+#: src/fetch/amazonfetcher.cpp:908
 msgid "United States"
 msgstr "Usono"
 
-#: src/fetch/amazonfetcher.cpp:906
+#: src/fetch/amazonfetcher.cpp:909
 msgid "United Kingdom"
 msgstr "Britio"
 
-#: src/fetch/amazonfetcher.cpp:907
+#: src/fetch/amazonfetcher.cpp:910
 msgid "Germany"
 msgstr "Germanio"
 
-#: src/fetch/amazonfetcher.cpp:908
+#: src/fetch/amazonfetcher.cpp:911
 msgid "Japan"
 msgstr "Japanio"
 
-#: src/fetch/amazonfetcher.cpp:909
+#: src/fetch/amazonfetcher.cpp:912
 msgid "France"
 msgstr "Francio"
 
-#: src/fetch/amazonfetcher.cpp:910
+#: src/fetch/amazonfetcher.cpp:913
 msgid "Canada"
 msgstr "Kanado"
 
-#: src/fetch/amazonfetcher.cpp:914
+#: src/fetch/amazonfetcher.cpp:917
 msgid ""
 "Amazon.com provides data from several different localized sites. Choose the "
 "one you wish to use for this data source."
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:920
+#: src/fetch/amazonfetcher.cpp:923
 msgid "&Image size: "
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:923
+#: src/fetch/amazonfetcher.cpp:926
 msgid "Small Image"
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:924
+#: src/fetch/amazonfetcher.cpp:927
 msgid "Medium Image"
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:925
+#: src/fetch/amazonfetcher.cpp:928
 msgid "Large Image"
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:926
+#: src/fetch/amazonfetcher.cpp:929
 msgid "No Image"
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:935
+#: src/fetch/amazonfetcher.cpp:938
 msgid "&Associate's ID: "
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:940
+#: src/fetch/amazonfetcher.cpp:943
 msgid ""
 "The associate's id identifies the person accessing the Amazon.com Web "
 "Services, and is included in any links to the Amazon.com site."
+msgstr ""
+
+#: src/fetch/multifetcher.cpp:172
+msgid "Multiple Sources"
 msgstr ""
 
 #: src/fetch/configwidget.cpp:41
@@ -1809,53 +1814,53 @@ msgstr ""
 msgid "Email: "
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:324
+#: src/fetch/execexternalfetcher.cpp:327
 msgid "External Application"
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:344
+#: src/fetch/execexternalfetcher.cpp:347
 msgid ""
 "Set the collection type of the data returned from the external application."
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:349
+#: src/fetch/execexternalfetcher.cpp:352
 msgid "&Result type: "
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:358
+#: src/fetch/execexternalfetcher.cpp:361
 msgid "Set the result type of the data returned from the external application."
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:363
+#: src/fetch/execexternalfetcher.cpp:366
 msgid "Application &path: "
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:368
+#: src/fetch/execexternalfetcher.cpp:371
 msgid ""
 "Set the path of the application to run that should output a valid Tellico "
 "data file."
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:373
+#: src/fetch/execexternalfetcher.cpp:376
 msgid "Select the search keys supported by the data source."
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:375
+#: src/fetch/execexternalfetcher.cpp:378
 #, kde-format
 msgid ""
 "Add any arguments that may be needed. <b>%1</b> will be replaced by the "
 "search term."
 msgstr ""
 
-#: src/fetch/execexternalfetcher.cpp:376
+#: src/fetch/execexternalfetcher.cpp:379
 msgid "Arguments"
 msgstr "Argumentoj"
 
-#: src/fetch/execexternalfetcher.cpp:408
+#: src/fetch/execexternalfetcher.cpp:411
 msgid "Update"
 msgstr "Ĝisdatigi"
 
-#: src/fetch/execexternalfetcher.cpp:416
+#: src/fetch/execexternalfetcher.cpp:419
 msgid ""
 "<p>Enter the arguments which should be used to search for available updates "
 "to an entry.</p><p>The format is the same as for fields with derived values, "
