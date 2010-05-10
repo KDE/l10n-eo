@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcachegrind_qt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-06 04:56+0200\n"
+"POT-Creation-Date: 2010-05-10 04:42+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -91,8 +91,8 @@ msgstr ""
 msgid "Function Source File"
 msgstr ""
 
-#: libcore/context.cpp:88 libviews/stackselection.cpp:56
-#: libviews/functionselection.cpp:90
+#: libcore/context.cpp:88 libviews/functionlistmodel.cpp:35
+#: libviews/stackselection.cpp:56
 msgid "Function"
 msgstr "Funkcio"
 
@@ -229,19 +229,19 @@ msgstr ""
 msgid "Recalculating Function Cycles..."
 msgstr ""
 
-#: libviews/partview.cpp:45 libviews/coverageview.cpp:47
-#: libviews/functionselection.cpp:87 libviews/eventtypeview.cpp:48
+#: libviews/partview.cpp:45 libviews/functionlistmodel.cpp:32
+#: libviews/coverageview.cpp:47 libviews/eventtypeview.cpp:48
 msgid "Incl."
 msgstr ""
 
-#: libviews/partview.cpp:46 libviews/coverageview.cpp:56
-#: libviews/functionselection.cpp:79 libviews/functionselection.cpp:88
+#: libviews/partview.cpp:46 libviews/functionlistmodel.cpp:33
+#: libviews/coverageview.cpp:56 libviews/functionselection.cpp:82
 #: libviews/eventtypeview.cpp:49
 msgid "Self"
 msgstr ""
 
-#: libviews/partview.cpp:47 libviews/coverageview.cpp:51
-#: libviews/functionselection.cpp:89
+#: libviews/partview.cpp:47 libviews/functionlistmodel.cpp:34
+#: libviews/coverageview.cpp:51
 msgid "Called"
 msgstr ""
 
@@ -318,11 +318,20 @@ msgstr ""
 #: libviews/callview.cpp:127 libviews/callview.cpp:132
 #: libviews/coverageview.cpp:170 libviews/callgraphview.cpp:2933
 #: libviews/callgraphview.cpp:2938 libviews/callgraphview.cpp:2956
-#: libviews/functionselection.cpp:236 libviews/partselection.cpp:372
+#: libviews/functionselection.cpp:222 libviews/partselection.cpp:372
 #: libviews/instrview.cpp:211 libviews/sourceview.cpp:113
 #, qt-format
 msgid "Go to '%1'"
 msgstr "Iru al '%1'"
+
+#: libviews/functionlistmodel.cpp:36 libviews/callmapview.cpp:64
+msgid "Location"
+msgstr "Loko"
+
+#: libviews/functionlistmodel.cpp:76
+#, qt-format
+msgid "(%1 function(s) skipped)"
+msgstr ""
 
 #: libviews/stackselection.cpp:46
 msgid "Stack Selection"
@@ -714,27 +723,23 @@ msgstr ""
 msgid "(active)"
 msgstr ""
 
-#: libviews/functionselection.cpp:53
+#: libviews/functionselection.cpp:56
 msgid "Function Profile"
 msgstr ""
 
-#: libviews/functionselection.cpp:61
+#: libviews/functionselection.cpp:64
 msgid "&Search:"
 msgstr "&Serĉi:"
 
-#: libviews/functionselection.cpp:80
+#: libviews/functionselection.cpp:83
 msgid "Group"
 msgstr "Grupo"
 
-#: libviews/functionselection.cpp:91 libviews/callmapview.cpp:64
-msgid "Location"
-msgstr "Loko"
-
-#: libviews/functionselection.cpp:98
+#: libviews/functionselection.cpp:108
 msgid "(No Grouping)"
 msgstr ""
 
-#: libviews/functionselection.cpp:176
+#: libviews/functionselection.cpp:162
 #, no-c-format
 msgid ""
 "<b>The Flat Profile</b><p>The flat profile contains a group and a function "
@@ -745,11 +750,11 @@ msgid ""
 "spent therein. Functions with costs less than 1% are hidden on default.</p>"
 msgstr ""
 
-#: libviews/functionselection.cpp:287
+#: libviews/functionselection.cpp:274
 msgid "Grouping"
 msgstr "Grupado"
 
-#: libviews/functionselection.cpp:290
+#: libviews/functionselection.cpp:277
 #, fuzzy
 #| msgid "Groupings"
 msgid "No Grouping"
