@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-13 04:50+0200\n"
+"POT-Creation-Date: 2010-05-18 06:10+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -276,6 +276,7 @@ msgid "You are already downloading the same file"
 msgstr ""
 
 #: core/kget.cpp:1017 core/kget.cpp:1020
+#: transfer-plugins/metalink/metalink.cpp:743
 msgid "File already exists"
 msgstr "Dosiero jam ekzistas"
 
@@ -373,27 +374,27 @@ msgstr ""
 msgid "Downloads completed"
 msgstr ""
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "file in a filesystem"
 msgid "File"
 msgstr "Dosiero"
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "status of the download"
 msgid "Status"
 msgstr ""
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "size of the download"
 msgid "Size"
 msgstr ""
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "checksum of a file"
 msgid "Checksum"
 msgstr ""
 
-#: core/filemodel.cpp:277
+#: core/filemodel.cpp:276
 msgctxt "signature of a file"
 msgid "Signature"
 msgstr ""
@@ -447,13 +448,13 @@ msgid ""
 "settings or restart KGet and retry downloading."
 msgstr ""
 
-#: core/datasourcefactory.cpp:573
+#: core/datasourcefactory.cpp:577
 #, kde-format
 msgctxt "A mirror is removed when the file has the wrong download size"
 msgid "%1 removed as it did report a wrong file size."
 msgstr ""
 
-#: core/datasourcefactory.cpp:573 transfer-plugins/metalink/metalink.cpp:218
+#: core/datasourcefactory.cpp:577 transfer-plugins/metalink/metalink.cpp:219
 #: transfer-plugins/bittorrent/bttransfer.cpp:499
 #: transfer-plugins/bittorrent/bttransfer.cpp:510
 #: ui/metalinkcreator/metalinkcreator.cpp:156
@@ -632,34 +633,34 @@ msgctxt "Transfer State: Aborted"
 msgid "Aborted"
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:87
+#: transfer-plugins/metalink/metalink.cpp:88
 msgid "Downloading Metalink File...."
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:133
+#: transfer-plugins/metalink/metalink.cpp:134
 msgid ""
 "A newer version of this Metalink might exist, do you want to download it?"
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:134
+#: transfer-plugins/metalink/metalink.cpp:135
 #, fuzzy
 #| msgid "Downloading"
 msgid "Redownload Metalink"
 msgstr "Elŝutas"
 
-#: transfer-plugins/metalink/metalink.cpp:218
+#: transfer-plugins/metalink/metalink.cpp:219
 msgid "Download failed, no working URLs were found."
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:244
-msgid "File Selection"
-msgstr "Dosierelekto"
-
-#: transfer-plugins/metalink/metalink.cpp:547
+#: transfer-plugins/metalink/metalink.cpp:518
 msgid ""
 "The download could not be verified, do you want to repair (if repairing does "
 "not work the download would be restarted) it?"
 msgstr ""
+
+#: transfer-plugins/metalink/fileselectiondlg.cpp:31
+msgid "File Selection"
+msgstr "Dosierelekto"
 
 #: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:42
 msgid "Add item"
@@ -1659,11 +1660,11 @@ msgstr ""
 msgid "Information:"
 msgstr ""
 
-#: ui/transfersview.cpp:149
+#: ui/transfersview.cpp:125
 msgid "Select columns"
 msgstr ""
 
-#: ui/transfersview.cpp:310
+#: ui/transfersview.cpp:303
 msgid "Transfer Details"
 msgstr ""
 
@@ -3956,19 +3957,19 @@ msgstr ""
 msgid "Transfer group:"
 msgstr ""
 
-#. i18n: file: ui/verificationdialog.ui:39
+#. i18n: file: ui/verificationdialog.ui:42
 #. i18n: ectx: property (toolTip), widget (KPushButton, verify)
 #: rc.cpp:938
 msgid "Verify the finished download with the selected checksum."
 msgstr ""
 
-#. i18n: file: ui/verificationdialog.ui:42
+#. i18n: file: ui/verificationdialog.ui:45
 #. i18n: ectx: property (text), widget (KPushButton, verify)
 #: rc.cpp:941
 msgid "&Verify"
 msgstr "&Kontroli"
 
-#. i18n: file: ui/verificationdialog.ui:68
+#. i18n: file: ui/verificationdialog.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:944
 msgid "Verifying:"
@@ -4010,21 +4011,15 @@ msgstr "Ĉefa ilobreto"
 msgid "&Tools"
 msgstr "&Iloj"
 
-#. i18n: file: conf/kget.kcfg:34
+#. i18n: file: conf/kget.kcfg:33
 #. i18n: ectx: label, entry (ShowSplashscreen), group (Appearance)
 #: rc.cpp:965
 msgid "Sets to show the splashscreen while KGet is loading"
 msgstr ""
 
-#. i18n: file: conf/kget.kcfg:167
-#. i18n: ectx: label, entry (ColumnWidths), group (Geometry)
-#: rc.cpp:968
-msgid "The width of the columns in the main view"
-msgstr ""
-
-#. i18n: file: conf/kget.kcfg:170
+#. i18n: file: conf/kget.kcfg:166
 #. i18n: ectx: label, entry (HistoryColumnWidths), group (Geometry)
-#: rc.cpp:971
+#: rc.cpp:968
 msgid "The width of the columns in the history view"
 msgstr ""
 
@@ -4032,7 +4027,7 @@ msgstr ""
 #. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
 #. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
-#: rc.cpp:974 rc.cpp:996
+#: rc.cpp:971 rc.cpp:993
 msgid "List of the available search engines"
 msgstr ""
 
@@ -4044,25 +4039,25 @@ msgstr ""
 #. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:17
 #. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
-#: rc.cpp:977 rc.cpp:983 rc.cpp:999 rc.cpp:1002
+#: rc.cpp:974 rc.cpp:980 rc.cpp:996 rc.cpp:999
 msgid "List of the available search engine URLs"
 msgstr ""
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:9
 #. i18n: ectx: label, entry (UrlRegexpList), group (UserScripts)
-#: rc.cpp:980
+#: rc.cpp:977
 msgid "List of the Regexp to match input URL"
 msgstr ""
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:21
 #. i18n: ectx: label, entry (DescriptionList), group (UserScripts)
-#: rc.cpp:986
+#: rc.cpp:983
 msgid "List of descriptions for user scripts"
 msgstr ""
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:25
 #. i18n: ectx: label, entry (EnableList), group (UserScripts)
-#: rc.cpp:989
+#: rc.cpp:986
 msgid "List of whether the script is enabled"
 msgstr ""
 
