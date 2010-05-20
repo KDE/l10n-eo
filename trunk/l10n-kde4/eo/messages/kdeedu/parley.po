@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: parley\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-05-19 04:48+0200\n"
+"POT-Creation-Date: 2010-05-20 04:49+0200\n"
 "PO-Revision-Date: 2007-12-18 19:38+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -439,7 +439,7 @@ msgstr "Lekcio"
 msgid "Number of entries in this lesson."
 msgstr "Neniu ero en la elektitaj lekcioj"
 
-#: src/vocabulary/basiccontainermodel.cpp:134
+#: src/vocabulary/basiccontainermodel.cpp:145
 #, fuzzy
 #| msgctxt ""
 #| "@item:inlistbox selection for word types with special meaning in the "
@@ -1517,14 +1517,14 @@ msgstr "&Ĉesigi la ekzercadon"
 msgid "Stop practicing"
 msgstr "&Ĉesigi la ekzercadon"
 
-#: src/practice/guifrontend.cpp:125
+#: src/practice/guifrontend.cpp:129
 #, fuzzy, kde-format
 #| msgid "Lesson %1"
 msgctxt "Display of the current lesson during practice"
 msgid "Lesson: %1"
 msgstr "Lekcio %1"
 
-#: src/practice/guifrontend.cpp:187
+#: src/practice/guifrontend.cpp:191
 #, kde-format
 msgid ""
 "You answered %2 of a total of %1 word.\n"
@@ -1578,6 +1578,51 @@ msgstr ""
 #, kde-format
 msgid "Not answered during this practice: %1 of %2 (%3 %)"
 msgstr ""
+
+#: src/practice/comparisonmodewidget.cpp:57
+#, fuzzy
+#| msgid "Comparison"
+msgid "Enter the comparison forms."
+msgstr "Komparado"
+
+#: src/practice/comparisonbackendmode.cpp:81
+#, fuzzy
+#| msgid "A neutral conjugation form exists"
+msgid "All comparison forms were right."
+msgstr "Neŭtra konjugacioformo ekzistas"
+
+#: src/practice/comparisonbackendmode.cpp:88
+#, kde-format
+msgctxt ""
+"the user entered the wrong absolute form when practicing comparison forms of "
+"adjectives (the base form of the adjective is wrong)"
+msgid "\"%1\" is the wrong word."
+msgstr ""
+
+#: src/practice/comparisonbackendmode.cpp:92
+msgctxt ""
+"the user entered the wrong comparison forms when practicing comparison forms "
+"of adjectives (good, better, best)"
+msgid "Both comparison forms (comparative and superlative) are wrong."
+msgstr ""
+
+#: src/practice/comparisonbackendmode.cpp:95
+#, fuzzy
+#| msgid "The answer was wrong."
+msgctxt ""
+"the user entered the wrong comparison forms when practicing comparison forms "
+"of adjectives (second form wrong - better)"
+msgid "The comparative is wrong."
+msgstr "La respondo estis malĝusta."
+
+#: src/practice/comparisonbackendmode.cpp:98
+#, fuzzy
+#| msgid "The answer was wrong."
+msgctxt ""
+"the user entered the wrong comparison forms when practicing comparison forms "
+"of adjectives (third form wrong - best)"
+msgid "The superlative is wrong."
+msgstr "La respondo estis malĝusta."
 
 #: src/practice/writtenpracticewidget.cpp:119
 #, fuzzy
@@ -2317,7 +2362,7 @@ msgstr ""
 #. i18n: ectx: Menu (file)
 #. i18n: file: src/practice/practiceui.rc:7
 #. i18n: ectx: Menu (file)
-#: rc.cpp:269 rc.cpp:1195 rc.cpp:1282 rc.cpp:1291
+#: rc.cpp:269 rc.cpp:1195 rc.cpp:1282 rc.cpp:1302
 #, fuzzy
 #| msgid "&Fixed"
 msgid "&File"
@@ -2335,7 +2380,7 @@ msgstr "Redaktado"
 #. i18n: ectx: Menu (view)
 #. i18n: file: src/practice/practiceui.rc:12
 #. i18n: ectx: Menu (view)
-#: rc.cpp:275 rc.cpp:1294
+#: rc.cpp:275 rc.cpp:1305
 #, fuzzy
 #| msgid "View"
 msgid "&View"
@@ -3949,7 +3994,7 @@ msgstr "Ĉefa ilobreto"
 #. i18n: ectx: ToolBar (practiceToolBar)
 #. i18n: file: src/practice/practiceui.rc:18
 #. i18n: ectx: ToolBar (practiceToolBar)
-#: rc.cpp:1156 rc.cpp:1297
+#: rc.cpp:1156 rc.cpp:1308
 #, fuzzy
 #| msgid "Main Toolbar"
 msgid "Practice Toolbar"
@@ -4139,7 +4184,7 @@ msgstr "Montri la &solvon"
 #. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
 #. i18n: file: plasmoid/config.ui:81
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1250 rc.cpp:1312
+#: rc.cpp:1250 rc.cpp:1323
 #, fuzzy
 #| msgid "Show &Solution"
 msgid "Solution"
@@ -4213,9 +4258,37 @@ msgstr "Forlasi (Mi &scias ĝin)"
 msgid "%v/%m"
 msgstr ""
 
+#. i18n: file: src/practice/practice_widget_comparison.ui:42
+#. i18n: ectx: property (text), widget (QLabel, absoluteLabel)
+#: rc.cpp:1291
+#, fuzzy
+#| msgctxt ""
+#| "Comparison form of adjective - the normal form of the adjective (good)"
+#| msgid "&Absolute"
+msgid "absolute"
+msgstr "&Absoluto"
+
+#. i18n: file: src/practice/practice_widget_comparison.ui:99
+#. i18n: ectx: property (text), widget (QLabel, comparativeLabel)
+#: rc.cpp:1295
+#, fuzzy
+#| msgctxt "comparison form of adjectives - comparison form (better)"
+#| msgid "&Comparative"
+msgid "comparative"
+msgstr "&Komparativo"
+
+#. i18n: file: src/practice/practice_widget_comparison.ui:156
+#. i18n: ectx: property (text), widget (QLabel, superlativeLabel)
+#: rc.cpp:1299
+#, fuzzy
+#| msgctxt "comparison of adjectives - (best)"
+#| msgid "&Superlative"
+msgid "superlative"
+msgstr "&Superlativo"
+
 #. i18n: file: plasmoid/config.ui:18
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1300
+#: rc.cpp:1311
 #, fuzzy
 #| msgid "Vocabulary Trainer"
 msgid "Vocabulary collection:"
@@ -4223,7 +4296,7 @@ msgstr "Vortoproviza ekzercilo"
 
 #. i18n: file: plasmoid/config.ui:30
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:1303
+#: rc.cpp:1314
 #, fuzzy
 #| msgid "Language Elements"
 msgid "Language Selection"
@@ -4231,7 +4304,7 @@ msgstr "Lingvaj eroj"
 
 #. i18n: file: plasmoid/config.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1306
+#: rc.cpp:1317
 #, fuzzy
 #| msgid "To"
 msgid "Top:"
@@ -4239,19 +4312,19 @@ msgstr "Al"
 
 #. i18n: file: plasmoid/config.ui:45
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1309
+#: rc.cpp:1320
 msgid "Bottom:"
 msgstr "Sube:"
 
 #. i18n: file: plasmoid/config.ui:87
 #. i18n: ectx: property (text), widget (QRadioButton, solutionOnHover)
-#: rc.cpp:1315
+#: rc.cpp:1326
 msgid "Reveal solution when mouse cursor is over the widget"
 msgstr ""
 
 #. i18n: file: plasmoid/config.ui:97
 #. i18n: ectx: property (text), widget (QRadioButton, solutionAlways)
-#: rc.cpp:1318
+#: rc.cpp:1329
 #, fuzzy
 #| msgid "&Show solution"
 msgid "Always show the solution"
@@ -4259,13 +4332,13 @@ msgstr "&Montri la solvon"
 
 #. i18n: file: plasmoid/config.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1321
+#: rc.cpp:1332
 msgid "Update interval:"
 msgstr "Aktualigintervalo:"
 
 #. i18n: file: plasmoid/config.ui:153
 #. i18n: ectx: property (text), widget (KPushButton, fontSelectButton)
-#: rc.cpp:1324
+#: rc.cpp:1335
 #, fuzzy
 #| msgid "Select All Lessons"
 msgid "Select Font..."
@@ -4523,9 +4596,6 @@ msgstr "Enmetu la ĝustan tradukaĵon:"
 
 #~ msgid "There is a mistake."
 #~ msgstr "Estas eraro."
-
-#~ msgid "The answer was wrong."
-#~ msgstr "La respondo estis malĝusta."
 
 #~ msgid "Well done, you knew the correct answer."
 #~ msgstr "Bone, vi konis la korektan respondon."
@@ -5017,11 +5087,6 @@ msgstr "Enmetu la ĝustan tradukaĵon:"
 #~| msgid "Conjugation"
 #~ msgid "Conjugate:"
 #~ msgstr "Konjugacio"
-
-#, fuzzy
-#~| msgid "Comparison"
-#~ msgid "Enter Comparison Forms:"
-#~ msgstr "Komparado"
 
 #, fuzzy
 #~| msgid "&Table font:"
