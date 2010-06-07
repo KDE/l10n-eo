@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcontrolflowgraph\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-06 05:00+0200\n"
+"POT-Creation-Date: 2010-06-07 04:56+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -17,18 +17,23 @@ msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, ControlFlowGraphView)
-#: duchaincontrolflow.cpp:87 duchaincontrolflow.cpp:127
-#: kdevcontrolflowgraphviewplugin.cpp:62 kdevcontrolflowgraphviewplugin.cpp:89
-#: rc.cpp:42 rc.cpp:203
+#: duchaincontrolflow.cpp:87 kdevcontrolflowgraphviewplugin.cpp:62
+#: kdevcontrolflowgraphviewplugin.cpp:89
+#: kdevcontrolflowgraphviewplugin.cpp:114 rc.cpp:45 rc.cpp:209
 msgid "Control Flow Graph"
 msgstr ""
 
-#: duchaincontrolflow.cpp:273 controlflowgraphnavigationcontext.cpp:54
+#: duchaincontrolflow.cpp:122
+#, kde-format
+msgid "Generating graph for function %1"
+msgstr ""
+
+#: duchaincontrolflow.cpp:282 controlflowgraphnavigationcontext.cpp:54
 msgid "Uses of"
 msgstr ""
 
-#: duchaincontrolflow.cpp:550 duchaincontrolflow.cpp:552
-#: duchaincontrolflow.cpp:568
+#: duchaincontrolflow.cpp:557 duchaincontrolflow.cpp:559
+#: duchaincontrolflow.cpp:575
 msgid "Global Namespace"
 msgstr ""
 
@@ -37,9 +42,8 @@ msgid "Control flow graph support in KDevelop"
 msgstr ""
 
 #: kdevcontrolflowgraphviewplugin.cpp:100
-#: kdevcontrolflowgraphviewplugin.cpp:130
-#: kdevcontrolflowgraphviewplugin.cpp:143
-#: kdevcontrolflowgraphviewplugin.cpp:438 controlflowgraphview.cpp:181
+#: kdevcontrolflowgraphviewplugin.cpp:135
+#: kdevcontrolflowgraphviewplugin.cpp:472 controlflowgraphview.cpp:181
 msgid "Export Control Flow Graph"
 msgstr ""
 
@@ -51,16 +55,26 @@ msgstr ""
 msgid "Export Project Control Flow Graph"
 msgstr ""
 
-#: kdevcontrolflowgraphviewplugin.cpp:142
-msgid "File already exists. Are you sure you want to overwrite it?"
+#: kdevcontrolflowgraphviewplugin.cpp:285
+msgid "Could not generate control flow graph"
 msgstr ""
 
-#: kdevcontrolflowgraphviewplugin.cpp:289
-msgid "Could not generate control flow graph."
+#: kdevcontrolflowgraphviewplugin.cpp:332
+msgid "Could not generate project control flow graph"
 msgstr ""
 
-#: kdevcontrolflowgraphviewplugin.cpp:437 controlflowgraphview.cpp:181
-msgid "Control flow graph exported."
+#: kdevcontrolflowgraphviewplugin.cpp:390
+#, kde-format
+msgid "Generating graph for class %1"
+msgstr ""
+
+#: kdevcontrolflowgraphviewplugin.cpp:447
+#, kde-format
+msgid "Generating graph for file %1"
+msgstr ""
+
+#: kdevcontrolflowgraphviewplugin.cpp:471
+msgid "Control flow graph exported"
 msgstr ""
 
 #: controlflowgraphnavigationcontext.cpp:41
@@ -79,6 +93,10 @@ msgstr ""
 msgid "Could not find the KGraphViewer factory"
 msgstr ""
 
+#: controlflowgraphview.cpp:181
+msgid "Control flow graph exported."
+msgstr ""
+
 #: controlflowgraphview.cpp:188
 msgid "Unlock control flow graph"
 msgstr ""
@@ -87,87 +105,95 @@ msgstr ""
 msgid "Lock control flow graph"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:47
+#. i18n: file: controlflowgraphexportconfiguration.ui:45
 #. i18n: ectx: property (title), widget (QGroupBox, controlFlowModeGroupBox)
-#: rc.cpp:3 rc.cpp:164
+#: rc.cpp:3 rc.cpp:167
 msgid "Control Flow Mode"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:69
+#. i18n: file: controlflowgraphexportconfiguration.ui:67
 #. i18n: ectx: property (text), widget (QRadioButton, controlFlowFunctionRadioButton)
-#: rc.cpp:6 rc.cpp:167
+#: rc.cpp:6 rc.cpp:170
 msgid "Between functions"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:76
+#. i18n: file: controlflowgraphexportconfiguration.ui:74
 #. i18n: ectx: property (text), widget (QRadioButton, controlFlowClassRadioButton)
-#: rc.cpp:9 rc.cpp:170
+#: rc.cpp:9 rc.cpp:173
 msgid "Between classes"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:86
+#. i18n: file: controlflowgraphexportconfiguration.ui:84
 #. i18n: ectx: property (text), widget (QRadioButton, controlFlowNamespaceRadioButton)
-#: rc.cpp:12 rc.cpp:173
+#: rc.cpp:12 rc.cpp:176
 msgid "Between namespaces"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:127
+#. i18n: file: controlflowgraphexportconfiguration.ui:125
 #. i18n: ectx: property (title), widget (QGroupBox, drawingOptionsGroupBox)
-#: rc.cpp:15 rc.cpp:176
+#: rc.cpp:15 rc.cpp:179
 msgid "Drawing Options"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:151
+#. i18n: file: controlflowgraphexportconfiguration.ui:149
 #. i18n: ectx: property (text), widget (QCheckBox, limitMaxLevelCheckBox)
-#: rc.cpp:18 rc.cpp:179
+#: rc.cpp:18 rc.cpp:182
 msgid "Limit max level to"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:192
+#. i18n: file: controlflowgraphexportconfiguration.ui:190
 #. i18n: ectx: property (text), widget (QCheckBox, drawIncomingArcsCheckBox)
-#: rc.cpp:21 rc.cpp:182
+#: rc.cpp:21 rc.cpp:185
 msgid "Draw incoming arcs"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:205
+#. i18n: file: controlflowgraphexportconfiguration.ui:203
 #. i18n: ectx: property (text), widget (QCheckBox, useFolderNameCheckBox)
-#: rc.cpp:24 rc.cpp:185
+#: rc.cpp:24 rc.cpp:188
 msgid "Use folder name"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:218
+#. i18n: file: controlflowgraphexportconfiguration.ui:216
 #. i18n: ectx: property (text), widget (QCheckBox, useShortNamesCheckBox)
-#: rc.cpp:27 rc.cpp:188
+#: rc.cpp:27 rc.cpp:191
 msgid "Use short names"
 msgstr "Uzu mallongajn nomojn"
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:262
+#. i18n: file: controlflowgraphexportconfiguration.ui:260
 #. i18n: ectx: property (title), widget (QGroupBox, clusteringModeGroupBox)
-#: rc.cpp:30 rc.cpp:191
+#: rc.cpp:30 rc.cpp:194
 msgid "Clustering Mode"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:287
+#. i18n: file: controlflowgraphexportconfiguration.ui:285
 #. i18n: ectx: property (text), widget (QCheckBox, clusteringClassCheckBox)
-#: rc.cpp:33 rc.cpp:194
+#: rc.cpp:33 rc.cpp:197
 msgid "By class"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:294
+#. i18n: file: controlflowgraphexportconfiguration.ui:292
 #. i18n: ectx: property (text), widget (QCheckBox, clusteringNamespaceCheckBox)
-#: rc.cpp:36 rc.cpp:197
+#: rc.cpp:36 rc.cpp:200
 msgid "By namespace"
 msgstr ""
 
-#. i18n: file: controlflowgraphexportconfiguration.ui:307
+#. i18n: file: controlflowgraphexportconfiguration.ui:305
 #. i18n: ectx: property (text), widget (QCheckBox, clusteringProjectCheckBox)
-#: rc.cpp:39 rc.cpp:200
+#: rc.cpp:39 rc.cpp:203
 msgid "By project"
+msgstr ""
+
+#. i18n: file: controlflowgraphexportconfiguration.ui:330
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:42 rc.cpp:206
+msgid ""
+"Warning: changing such default values can make class and project graphs "
+"export extremely slow !"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:41
 #. i18n: ectx: property (toolTip), widget (QToolButton, birdseyeToolButton)
-#: rc.cpp:45 rc.cpp:206
+#: rc.cpp:48 rc.cpp:212
 msgid "Enable/Disable Bird's Eye"
 msgstr ""
 
@@ -231,41 +257,41 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, useShortNamesToolButton)
 #. i18n: file: controlflowgraphview.ui:356
 #. i18n: ectx: property (text), widget (QToolButton, lockControlFlowGraphToolButton)
-#: rc.cpp:48 rc.cpp:54 rc.cpp:60 rc.cpp:66 rc.cpp:75 rc.cpp:84 rc.cpp:93
-#: rc.cpp:105 rc.cpp:114 rc.cpp:123 rc.cpp:135 rc.cpp:144 rc.cpp:150
-#: rc.cpp:156 rc.cpp:159 rc.cpp:209 rc.cpp:215 rc.cpp:221 rc.cpp:227
-#: rc.cpp:236 rc.cpp:245 rc.cpp:254 rc.cpp:266 rc.cpp:275 rc.cpp:284
-#: rc.cpp:296 rc.cpp:305 rc.cpp:311 rc.cpp:317 rc.cpp:320
+#: rc.cpp:51 rc.cpp:57 rc.cpp:63 rc.cpp:69 rc.cpp:78 rc.cpp:87 rc.cpp:96
+#: rc.cpp:108 rc.cpp:117 rc.cpp:126 rc.cpp:138 rc.cpp:147 rc.cpp:153
+#: rc.cpp:159 rc.cpp:162 rc.cpp:215 rc.cpp:221 rc.cpp:227 rc.cpp:233
+#: rc.cpp:242 rc.cpp:251 rc.cpp:260 rc.cpp:272 rc.cpp:281 rc.cpp:290
+#: rc.cpp:302 rc.cpp:311 rc.cpp:317 rc.cpp:323 rc.cpp:326
 msgid "..."
 msgstr "..."
 
 #. i18n: file: controlflowgraphview.ui:54
 #. i18n: ectx: property (toolTip), widget (QToolButton, zoominToolButton)
-#: rc.cpp:51 rc.cpp:212
+#: rc.cpp:54 rc.cpp:218
 msgid "Zoom In"
 msgstr "Enzomi"
 
 #. i18n: file: controlflowgraphview.ui:64
 #. i18n: ectx: property (toolTip), widget (QToolButton, zoomoutToolButton)
-#: rc.cpp:57 rc.cpp:218
+#: rc.cpp:60 rc.cpp:224
 msgid "Zoom Out"
 msgstr "Elzomi"
 
 #. i18n: file: controlflowgraphview.ui:74
 #. i18n: ectx: property (toolTip), widget (QToolButton, exportToolButton)
-#: rc.cpp:63 rc.cpp:224
+#: rc.cpp:66 rc.cpp:230
 msgid "Export control flow graph"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:106
 #. i18n: ectx: property (text), widget (QLabel, controlFlowModeLabel)
-#: rc.cpp:69 rc.cpp:230
+#: rc.cpp:72 rc.cpp:236
 msgid "Control flow mode:"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:113
 #. i18n: ectx: property (toolTip), widget (QToolButton, modeFunctionToolButton)
-#: rc.cpp:72 rc.cpp:233
+#: rc.cpp:75 rc.cpp:239
 msgid ""
 "Show control flow between functions (CTRL+ALT+1). This can produce large "
 "graphs."
@@ -273,85 +299,85 @@ msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:119
 #. i18n: ectx: property (shortcut), widget (QToolButton, modeFunctionToolButton)
-#: rc.cpp:78 rc.cpp:239
+#: rc.cpp:81 rc.cpp:245
 msgid "Ctrl+Alt+1"
 msgstr "Ctrl+Alt+1"
 
 #. i18n: file: controlflowgraphview.ui:135
 #. i18n: ectx: property (toolTip), widget (QToolButton, modeClassToolButton)
-#: rc.cpp:81 rc.cpp:242
+#: rc.cpp:84 rc.cpp:248
 msgid "Show control flow between classes (CTRL+ALT+2)"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:141
 #. i18n: ectx: property (shortcut), widget (QToolButton, modeClassToolButton)
-#: rc.cpp:87 rc.cpp:248
+#: rc.cpp:90 rc.cpp:254
 msgid "Ctrl+Alt+2"
 msgstr "Ctrl+Alt+2"
 
 #. i18n: file: controlflowgraphview.ui:157
 #. i18n: ectx: property (toolTip), widget (QToolButton, modeNamespaceToolButton)
-#: rc.cpp:90 rc.cpp:251
+#: rc.cpp:93 rc.cpp:257
 msgid "Show control flow between namespaces (CTRL+ALT+3)"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:163
 #. i18n: ectx: property (shortcut), widget (QToolButton, modeNamespaceToolButton)
-#: rc.cpp:96 rc.cpp:257
+#: rc.cpp:99 rc.cpp:263
 msgid "Ctrl+Alt+3"
 msgstr "Ctrl+Alt+3"
 
 #. i18n: file: controlflowgraphview.ui:189
 #. i18n: ectx: property (text), widget (QLabel, clusteringModeLabel)
-#: rc.cpp:99 rc.cpp:260
+#: rc.cpp:102 rc.cpp:266
 msgid "Clustering mode:"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:199
 #. i18n: ectx: property (toolTip), widget (QToolButton, clusteringClassToolButton)
-#: rc.cpp:102 rc.cpp:263
+#: rc.cpp:105 rc.cpp:269
 msgid "Group nodes by class (CTRL+ALT+8)"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:205
 #. i18n: ectx: property (shortcut), widget (QToolButton, clusteringClassToolButton)
-#: rc.cpp:108 rc.cpp:269
+#: rc.cpp:111 rc.cpp:275
 msgid "Ctrl+Alt+8"
 msgstr "Ctrl+Alt+8"
 
 #. i18n: file: controlflowgraphview.ui:215
 #. i18n: ectx: property (toolTip), widget (QToolButton, clusteringNamespaceToolButton)
-#: rc.cpp:111 rc.cpp:272
+#: rc.cpp:114 rc.cpp:278
 msgid "Group nodes by namespace (CTRL+ALT+9)"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:221
 #. i18n: ectx: property (shortcut), widget (QToolButton, clusteringNamespaceToolButton)
-#: rc.cpp:117 rc.cpp:278
+#: rc.cpp:120 rc.cpp:284
 msgid "Ctrl+Alt+9"
 msgstr "Ctrl+Alt+9"
 
 #. i18n: file: controlflowgraphview.ui:237
 #. i18n: ectx: property (toolTip), widget (QToolButton, clusteringProjectToolButton)
-#: rc.cpp:120 rc.cpp:281
+#: rc.cpp:123 rc.cpp:287
 msgid "Group nodes by project (CTRL+ALT+0)"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:243
 #. i18n: ectx: property (shortcut), widget (QToolButton, clusteringProjectToolButton)
-#: rc.cpp:126 rc.cpp:287
+#: rc.cpp:129 rc.cpp:293
 msgid "Ctrl+Alt+0"
 msgstr "Ctrl+Alt+0"
 
 #. i18n: file: controlflowgraphview.ui:266
 #. i18n: ectx: property (text), widget (QLabel, graphSettingsLabel)
-#: rc.cpp:129 rc.cpp:290
+#: rc.cpp:132 rc.cpp:296
 msgid "Graph settings:"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:273
 #. i18n: ectx: property (toolTip), widget (QToolButton, maxLevelToolButton)
-#: rc.cpp:132 rc.cpp:293
+#: rc.cpp:135 rc.cpp:299
 msgid ""
 "Adjust the maximum level of outcoming arcs (disabling this makes the graph "
 "generation slower)"
@@ -359,7 +385,7 @@ msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:289
 #. i18n: ectx: property (toolTip), widget (QSpinBox, maxLevelSpinBox)
-#: rc.cpp:138 rc.cpp:299
+#: rc.cpp:141 rc.cpp:305
 msgid ""
 "Maximum number of graph levels. Expect slower graph generation for large "
 "maximum levels values."
@@ -367,28 +393,28 @@ msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:305
 #. i18n: ectx: property (toolTip), widget (QToolButton, drawIncomingArcsToolButton)
-#: rc.cpp:141 rc.cpp:302
+#: rc.cpp:144 rc.cpp:308
 msgid "Draw incoming arcs to the current function"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:324
 #. i18n: ectx: property (toolTip), widget (QToolButton, useFolderNameToolButton)
-#: rc.cpp:147 rc.cpp:308
+#: rc.cpp:150 rc.cpp:314
 msgid "Use folder name instead of Global Namespace"
 msgstr ""
 
 #. i18n: file: controlflowgraphview.ui:340
 #. i18n: ectx: property (toolTip), widget (QToolButton, useShortNamesToolButton)
-#: rc.cpp:153 rc.cpp:314
+#: rc.cpp:156 rc.cpp:320
 msgid "Use short (non-qualified) names for clustered graphs"
 msgstr ""
 
-#: rc.cpp:160
+#: rc.cpp:163
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Axel Rousseau"
 
-#: rc.cpp:161
+#: rc.cpp:164
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
