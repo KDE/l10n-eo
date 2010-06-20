@@ -27,14 +27,12 @@ msgctxt "@action:button"
 msgid "Save SMART Report"
 msgstr ""
 
-#: gui/smartdialog.cpp:89 gui/smartdialog.cpp:156
-#: gui/devicepropsdialog.cpp:117
+#: gui/smartdialog.cpp:89 gui/smartdialog.cpp:156 gui/devicepropsdialog.cpp:117
 msgctxt "@label SMART disk status"
 msgid "good"
 msgstr ""
 
-#: gui/smartdialog.cpp:94 gui/smartdialog.cpp:158
-#: gui/devicepropsdialog.cpp:122
+#: gui/smartdialog.cpp:94 gui/smartdialog.cpp:158 gui/devicepropsdialog.cpp:122
 msgctxt "@label SMART disk status"
 msgid "BAD"
 msgstr ""
@@ -94,8 +92,10 @@ msgstr "Movi"
 #. i18n: file: gui/smartdialogwidgetbase.ui:92
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextSmartSerialNumber)
 #: gui/smartdialog.cpp:165 rc.cpp:356
+#, fuzzy
+#| msgid "Serial Number:"
 msgid "Serial number:"
-msgstr ""
+msgstr "Seria numero:"
 
 #. i18n: file: gui/smartdialogwidgetbase.ui:121
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextSmartFirmware)
@@ -107,7 +107,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextSmartTemperature)
 #: gui/smartdialog.cpp:167 rc.cpp:362
 msgid "Temperature:"
-msgstr ""
+msgstr "Temperaturo:"
 
 #. i18n: file: gui/smartdialogwidgetbase.ui:179
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextSmartBadSectors)
@@ -164,9 +164,9 @@ msgstr "Kroĉpunkto"
 msgctxt "@info"
 msgid ""
 "<para>Are you sure you want to save the changes you made to the system table "
-"file <filename>/etc/fstab</filename>?</para><para><warning>This will "
-"overwrite the existing file on your hard drive now. This <strong>can not be "
-"undone</strong>.</warning></para>"
+"file <filename>/etc/fstab</filename>?</para>"
+"<para><warning>This will overwrite the existing file on your hard drive now. "
+"This <strong>can not be undone</strong>.</warning></para>"
 msgstr ""
 
 #: gui/editmountpointdialog.cpp:53
@@ -234,14 +234,14 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para>There is already one primary partition on this device. This is the "
-"maximum number its partition table type can handle.</para><para>You cannot "
-"create, paste or restore a primary partition on it before you delete an "
-"existing one.</para>"
+"maximum number its partition table type can handle.</para>"
+"<para>You cannot create, paste or restore a primary partition on it before "
+"you delete an existing one.</para>"
 msgid_plural ""
 "<para>There are already %1 primary partitions on this device. This is the "
-"maximum number its partition table type can handle.</para><para>You cannot "
-"create, paste or restore a primary partition on it before you delete an "
-"existing one.</para>"
+"maximum number its partition table type can handle.</para>"
+"<para>You cannot create, paste or restore a primary partition on it before "
+"you delete an existing one.</para>"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -256,8 +256,9 @@ msgctxt "@info"
 msgid ""
 "<para>The partition <filename>%1</filename> cannot currently be deleted "
 "because one or more partitions with higher logical numbers are still mounted."
-"</para><para>Please unmount all partitions with higher logical numbers than %"
-"2 first.</para>"
+"</para>"
+"<para>Please unmount all partitions with higher logical numbers than %2 "
+"first.</para>"
 msgstr ""
 
 #: gui/partitionmanagerwidget.cpp:526
@@ -305,9 +306,10 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para><warning>You are about to lose all data on partition <filename>%1</"
-"filename>.</warning></para><para>Overwriting one partition with another (or "
-"with an image file) will destroy all data on this target partition.</"
-"para><para>If you continue now and apply the resulting operation in the main "
+"filename>.</warning></para>"
+"<para>Overwriting one partition with another (or with an image file) will "
+"destroy all data on this target partition.</para>"
+"<para>If you continue now and apply the resulting operation in the main "
 "window, all data currently stored on <filename>%1</filename> will "
 "unrecoverably be overwritten.</para>"
 msgstr ""
@@ -326,8 +328,9 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para>The selected partition is not large enough to hold the source "
-"partition or the backup file.</para><para>Pick another target or resize this "
-"partition so it is as large as the source.</para>"
+"partition or the backup file.</para>"
+"<para>Pick another target or resize this partition so it is as large as the "
+"source.</para>"
 msgstr ""
 
 #: gui/partitionmanagerwidget.cpp:703
@@ -339,9 +342,10 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para>It is not possible to create the target partition large enough to hold "
-"the source.</para><para>This may happen if not all partitions on a device "
-"are correctly aligned or when copying a primary partition into an extended "
-"partition.</para>"
+"the source.</para>"
+"<para>This may happen if not all partitions on a device are correctly "
+"aligned or when copying a primary partition into an extended partition.</"
+"para>"
 msgstr ""
 
 #: gui/partitionmanagerwidget.cpp:709
@@ -415,9 +419,10 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para>Do you really want to create an MS-Dos partition table on <filename>%"
-"1</filename>?</para><para>This device has more than 2^32 sectors. That is "
-"the most the MS-Dos partition table type supports, so you will not be able "
-"to use the whole device.</para>"
+"1</filename>?</para>"
+"<para>This device has more than 2^32 sectors. That is the most the MS-Dos "
+"partition table type supports, so you will not be able to use the whole "
+"device.</para>"
 msgstr ""
 
 #: gui/createpartitiontabledialog.cpp:62
@@ -516,10 +521,11 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para><warning>You are about to lose all data on partition <filename>%1</"
-"filename>.</warning></para><para>Changing the file system on a partition "
-"already on disk will erase all its contents. If you continue now and apply "
-"the resulting operation in the main window, all data on <filename>%1</"
-"filename> will unrecoverably be lost.</para>"
+"filename>.</warning></para>"
+"<para>Changing the file system on a partition already on disk will erase all "
+"its contents. If you continue now and apply the resulting operation in the "
+"main window, all data on <filename>%1</filename> will unrecoverably be lost."
+"</para>"
 msgstr ""
 
 #: gui/partpropsdialog.cpp:326
@@ -545,10 +551,10 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para><warning>You are about to lose all data on partition <filename>%1</"
-"filename>.</warning></para><para>Recreating a file system will erase all its "
-"contents. If you continue now and apply the resulting operation in the main "
-"window, all data on <filename>%1</filename> will unrecoverably be lost.</"
-"para>"
+"filename>.</warning></para>"
+"<para>Recreating a file system will erase all its contents. If you continue "
+"now and apply the resulting operation in the main window, all data on "
+"<filename>%1</filename> will unrecoverably be lost.</para>"
 msgstr ""
 
 #: gui/partpropsdialog.cpp:348
@@ -680,11 +686,11 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid ""
-"<para>Do you really want to quit the application?</para><para>There is still "
-"an operation pending.</para>"
+"<para>Do you really want to quit the application?</para>"
+"<para>There is still an operation pending.</para>"
 msgid_plural ""
-"<para>Do you really want to quit the application?</para><para>There are "
-"still %1 operations pending.</para>"
+"<para>Do you really want to quit the application?</para>"
+"<para>There are still %1 operations pending.</para>"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1097,8 +1103,9 @@ msgstr ""
 #: gui/mainwindow.cpp:652
 msgctxt "@info"
 msgid ""
-"<para>Do you really want to rescan the devices?</para><para><warning>This "
-"will also clear the list of pending operations.</warning></para>"
+"<para>Do you really want to rescan the devices?</para>"
+"<para><warning>This will also clear the list of pending operations.</"
+"warning></para>"
 msgstr ""
 
 #: gui/mainwindow.cpp:654
@@ -1114,8 +1121,8 @@ msgstr ""
 #: gui/mainwindow.cpp:671
 msgctxt "@info"
 msgid ""
-"<para>Do you really want to apply the pending operations listed below?</"
-"para><para><warning>This will permanently modify your disks.</warning></para>"
+"<para>Do you really want to apply the pending operations listed below?</para>"
+"<para><warning>This will permanently modify your disks.</warning></para>"
 msgstr ""
 
 #: gui/mainwindow.cpp:673
@@ -1274,15 +1281,22 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para>No support tools were found for file systems currently present on hard "
-"disks in this computer:</para><table style='margin-top:12px'><tr><td "
-"style='font-weight:bold;padding-right:12px;white-space:nowrap;'>Partition</"
-"td><td style='font-weight:bold;padding-right:12px;white-space:nowrap;'>File "
-"System</td><td style='font-weight:bold;padding-right:12px;white-space:"
-"nowrap;'>Support Tools</td><td style='font-weight:bold;padding-right:12px;"
-"white-space:nowrap;'>URL</td></tr>%1</table><para>As long as the support "
-"tools for these file systems are not installed you will not be able to "
-"modify them.</para><para>You should find packages with these support tools "
-"in your distribution's package manager.</para>"
+"disks in this computer:</para>"
+"<table style='margin-top:12px'>"
+"<tr>"
+"<td style='font-weight:bold;padding-right:12px;white-space:nowrap;"
+"'>Partition</td>"
+"<td style='font-weight:bold;padding-right:12px;white-space:nowrap;'>File "
+"System</td>"
+"<td style='font-weight:bold;padding-right:12px;white-space:nowrap;'>Support "
+"Tools</td>"
+"<td style='font-weight:bold;padding-right:12px;white-space:nowrap;'>URL</td>"
+"</tr>"
+"%1</table>"
+"<para>As long as the support tools for these file systems are not installed "
+"you will not be able to modify them.</para>"
+"<para>You should find packages with these support tools in your "
+"distribution's package manager.</para>"
 msgstr ""
 
 #: gui/mainwindow.cpp:1089
@@ -2024,7 +2038,9 @@ msgstr ""
 
 #: core/smartattribute.cpp:144
 msgctxt "SMART attr name"
-msgid "Multi-Zone Error Rate<br/>Write Error Rate"
+msgid ""
+"Multi-Zone Error Rate<br/>"
+"Write Error Rate"
 msgstr ""
 
 #: core/smartattribute.cpp:144
@@ -2302,14 +2318,16 @@ msgstr ""
 
 #: core/smartattribute.cpp:171
 msgctxt "SMART attr name"
-msgid "Head Flying Hours<br/>or Transfer Error Rate (Fujitsu)"
+msgid ""
+"Head Flying Hours<br/>"
+"or Transfer Error Rate (Fujitsu)"
 msgstr ""
 
 #: core/smartattribute.cpp:171
 msgctxt "SMART attr description"
 msgid ""
-"Time while head is positioning<br/>or counts the number of times the link is "
-"reset during a data transfer."
+"Time while head is positioning<br/>"
+"or counts the number of times the link is reset during a data transfer."
 msgstr ""
 
 #: core/smartattribute.cpp:172
@@ -2657,8 +2675,8 @@ msgstr ""
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
-"Copy file system on partition <filename>%1</filename> to partition <filename>"
-"%2</filename>"
+"Copy file system on partition <filename>%1</filename> to partition "
+"<filename>%2</filename>"
 msgstr ""
 
 #: jobs/deletepartitionjob.cpp:71
@@ -3453,11 +3471,11 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid ""
-"<para><warning>You do not have administrative privileges.</warning></"
-"para><para>It is possible to run <application>%1</application> without these "
+"<para><warning>You do not have administrative privileges.</warning></para>"
+"<para>It is possible to run <application>%1</application> without these "
 "privileges. You will, however, <emphasis>not</emphasis> be allowed to apply "
-"operations.</para><para>Do you want to continue running <application>%1</"
-"application>?</para>"
+"operations.</para>"
+"<para>Do you want to continue running <application>%1</application>?</para>"
 msgstr ""
 
 #: util/helpers.cpp:109
@@ -3503,14 +3521,14 @@ msgstr ""
 #: util/helpers.cpp:159
 msgctxt "@title:menu"
 msgid "Columns"
-msgstr ""
+msgstr "Kolumnoj"
 
 #: util/helpers.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid ""
-"<para>The configured backend plugin \"%1\" could not be loaded.</"
-"para><para>Loading the default backend plugin \"%2\" instead.</para>"
+"<para>The configured backend plugin \"%1\" could not be loaded.</para>"
+"<para>Loading the default backend plugin \"%2\" instead.</para>"
 msgstr ""
 
 #: util/helpers.cpp:196 util/helpers.cpp:205
@@ -3523,7 +3541,8 @@ msgstr ""
 msgctxt "@info"
 msgid ""
 "<para>Neither the configured (\"%1\") nor the default (\"%2\") backend "
-"plugin could be loaded.</para><para>Please check your installation.</para>"
+"plugin could be loaded.</para>"
+"<para>Please check your installation.</para>"
 msgstr ""
 
 #: util/capacity.cpp:169
@@ -3663,8 +3682,8 @@ msgstr ""
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
-"Creating partition table failed: Could not retrieve partition table type \"%1"
-"\" for <filename>%2</filename>."
+"Creating partition table failed: Could not retrieve partition table type \"%"
+"1\" for <filename>%2</filename>."
 msgstr ""
 
 #: plugins/libparted/libparteddevice.cpp:108
@@ -3804,7 +3823,7 @@ msgstr ""
 
 #: config/configureoptionsdialog.cpp:54 config/configureoptionsdialog.cpp:101
 msgid "General Settings"
-msgstr ""
+msgstr "Ĝeneralaj Agordoj"
 
 #: config/configureoptionsdialog.cpp:59
 #, fuzzy
@@ -3824,14 +3843,14 @@ msgstr ""
 
 #: config/configureoptionsdialog.cpp:64
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Plia agordo"
 
 #: config/configureoptionsdialog.cpp:151
 msgctxt "@info"
 msgid ""
-"<para>Do you really want to change the backend?</para><para><warning>This "
-"will also rescan devices and thus clear the list of pending operations.</"
-"warning></para>"
+"<para>Do you really want to change the backend?</para>"
+"<para><warning>This will also rescan devices and thus clear the list of "
+"pending operations.</warning></para>"
 msgstr ""
 
 #: config/configureoptionsdialog.cpp:153
@@ -4030,7 +4049,7 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QWidget, SizeDialogWidgetBase)
 #: rc.cpp:71 rc.cpp:137 rc.cpp:205
 msgid "Form"
-msgstr ""
+msgstr "Formo"
 
 #. i18n: file: gui/devicepropswidgetbase.ui:61
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextType)
@@ -4054,7 +4073,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextCapacity)
 #: rc.cpp:83
 msgid "Capacity:"
-msgstr ""
+msgstr "Enhaveco:"
 
 #. i18n: file: gui/devicepropswidgetbase.ui:133
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextTotalSectors)
@@ -4102,7 +4121,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_ButtonMore)
 #: rc.cpp:107 rc.cpp:446
 msgid "More..."
-msgstr ""
+msgstr "Plia..."
 
 #. i18n: file: gui/treelogbase.ui:54
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeLog)
@@ -4352,13 +4371,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QRadioButton, m_RadioExtended)
 #: rc.cpp:214
 msgid "Extended"
-msgstr ""
+msgstr "Etendata"
 
 #. i18n: file: gui/sizedialogwidgetbase.ui:87
 #. i18n: ectx: property (text), widget (QRadioButton, m_RadioLogical)
 #: rc.cpp:217
 msgid "Logical"
-msgstr ""
+msgstr "Logika"
 
 #. i18n: file: gui/sizedialogwidgetbase.ui:158
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -4569,8 +4588,11 @@ msgstr ""
 #. i18n: file: gui/partitionmanagerwidgetbase.ui:105
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
 #: rc.cpp:314
+#, fuzzy
+#| msgctxt "Preview available"
+#| msgid "Available"
 msgid "Available"
-msgstr ""
+msgstr "Disponebla"
 
 #. i18n: file: gui/partitionmanagerwidgetbase.ui:110
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreePartitions)
@@ -4629,7 +4651,7 @@ msgstr "&Konservi"
 #. i18n: ectx: property (text), widget (QPushButton, m_ButtonBrowser)
 #: rc.cpp:347
 msgid "Open in External Browser"
-msgstr ""
+msgstr "Malfermu en ekstera retumilo"
 
 #. i18n: file: gui/smartdialogwidgetbase.ui:289
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
@@ -4641,7 +4663,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
 #: rc.cpp:377
 msgid "Attribute"
-msgstr ""
+msgstr "Atributo"
 
 #. i18n: file: gui/smartdialogwidgetbase.ui:299
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
@@ -4674,14 +4696,16 @@ msgstr "Krei"
 #. i18n: file: gui/smartdialogwidgetbase.ui:319
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
 #: rc.cpp:392
+#, fuzzy
+#| msgid "Threshold:"
 msgid "Threshold"
-msgstr ""
+msgstr "Pentrosojlo:"
 
 #. i18n: file: gui/smartdialogwidgetbase.ui:324
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
 #: rc.cpp:395
 msgid "Raw"
-msgstr ""
+msgstr "Kruda"
 
 #. i18n: file: gui/smartdialogwidgetbase.ui:329
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
@@ -4693,7 +4717,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, m_TreeSmartAttributes)
 #: rc.cpp:401
 msgid "Value"
-msgstr ""
+msgstr "Valoro"
 
 #. i18n: file: gui/editmountpointdialogwidgetbase.ui:17
 #. i18n: ectx: property (text), widget (QLabel, m_LabelPath)
@@ -4707,7 +4731,7 @@ msgstr "Dato:"
 #. i18n: ectx: property (text), widget (KPushButton, m_ButtonSelect)
 #: rc.cpp:413
 msgid "Select..."
-msgstr ""
+msgstr "Elektu..."
 
 #. i18n: file: gui/editmountpointdialogwidgetbase.ui:53
 #. i18n: ectx: property (text), widget (QLabel, m_LabelType)
@@ -4720,14 +4744,15 @@ msgstr "Tipo"
 #. i18n: file: gui/editmountpointdialogwidgetbase.ui:63
 #. i18n: ectx: property (text), widget (QLabel, m_LabelOptions)
 #: rc.cpp:419
+#, fuzzy
 msgid "Options:"
-msgstr ""
+msgstr "Bildoperacioj"
 
 #. i18n: file: gui/editmountpointdialogwidgetbase.ui:73
 #. i18n: ectx: property (text), widget (QCheckBox, m_CheckReadOnly)
 #: rc.cpp:422
 msgid "Read-only"
-msgstr ""
+msgstr "Nurlege"
 
 #. i18n: file: gui/editmountpointdialogwidgetbase.ui:80
 #. i18n: ectx: property (text), widget (QCheckBox, m_CheckUsers)
@@ -4978,7 +5003,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: rc.cpp:551
 msgid "Logging"
-msgstr ""
+msgstr "Protokolado"
 
 #. i18n: file: config/configurepagegeneral.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -4990,7 +5015,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_minLogLevel)
 #: rc.cpp:557
 msgid "Debug"
-msgstr ""
+msgstr "Sencimigu"
 
 #. i18n: file: config/configurepagegeneral.ui:112
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_minLogLevel)
@@ -5005,13 +5030,13 @@ msgstr "Informoj"
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_minLogLevel)
 #: rc.cpp:563
 msgid "Warning"
-msgstr ""
+msgstr "Averto"
 
 #. i18n: file: config/configurepagegeneral.ui:122
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_minLogLevel)
 #: rc.cpp:566
 msgid "Error"
-msgstr ""
+msgstr "Eraro"
 
 #. i18n: file: config/configurepagegeneral.ui:145
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -5050,7 +5075,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:588
 msgid "Permissions"
-msgstr ""
+msgstr "Permesoj"
 
 #. i18n: file: config/configurepageadvanced.ui:38
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowApplyOperationsAsNonRoot)
@@ -5076,7 +5101,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
 #: rc.cpp:600
 msgid "Units"
-msgstr ""
+msgstr "Unuoj"
 
 #. i18n: file: config/configurepageadvanced.ui:88
 #. i18n: ectx: property (text), widget (QLabel, label_5)
