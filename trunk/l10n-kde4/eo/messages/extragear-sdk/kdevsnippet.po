@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevsnippet\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-06-23 05:07+0200\n"
+"POT-Creation-Date: 2010-06-29 08:23+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -15,14 +15,36 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: snippet.cpp:27
-msgid "<empty snippet>"
+#: editsnippet.cpp:46 editsnippet.cpp:101
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Snippet %1 in %2"
+msgstr "Redakti skripton..."
+
+#: editsnippet.cpp:55
+#, kde-format
+msgid "Create New Snippet in Repository %1"
 msgstr ""
 
-#: snippet.cpp:89
+#: snippetcompletionmodel.cpp:56 snippetplugin.cpp:48 snippetplugin.cpp:91
+#: snippetview.cpp:42 snippetview.cpp:156
+msgid "Snippets"
+msgstr ""
+
+#: snippetplugin.cpp:48
+msgid "Support for managing and using code snippets"
+msgstr ""
+
+#: snippetplugin.cpp:162
+#, fuzzy
+#| msgid "Add Entry..."
+msgid "Create Snippet"
+msgstr "Aldoni eron..."
+
+#: snippetplugin.cpp:200
 #, fuzzy, kde-format
 #| msgid "Add Entry..."
-msgid "insert snippet %1"
+msgid "%1 snippets"
 msgstr "Aldoni eron..."
 
 #: snippetrepository.cpp:40
@@ -73,52 +95,6 @@ msgstr ""
 #, kde-format
 msgid "Applies to the following filetypes: %1"
 msgstr ""
-
-#: editrepository.cpp:60
-msgid "You need at least KDE 4.5 for scripting support in snippets."
-msgstr ""
-
-#: editrepository.cpp:86 editrepository.cpp:125
-#, fuzzy, kde-format
-#| msgid "Edit Script..."
-msgid "Edit Snippet Repository %1"
-msgstr "Redakti skripton..."
-
-#: editrepository.cpp:88
-msgid "Create New Snippet Repository"
-msgstr ""
-
-#: editsnippet.cpp:46 editsnippet.cpp:101
-#, fuzzy, kde-format
-#| msgid "Edit Script..."
-msgid "Edit Snippet %1 in %2"
-msgstr "Redakti skripton..."
-
-#: editsnippet.cpp:55
-#, kde-format
-msgid "Create New Snippet in Repository %1"
-msgstr ""
-
-#: snippetcompletionmodel.cpp:56 snippetplugin.cpp:48 snippetplugin.cpp:91
-#: snippetview.cpp:42 snippetview.cpp:156
-msgid "Snippets"
-msgstr ""
-
-#: snippetplugin.cpp:48
-msgid "Support for managing and using code snippets"
-msgstr ""
-
-#: snippetplugin.cpp:162
-#, fuzzy
-#| msgid "Add Entry..."
-msgid "Create Snippet"
-msgstr "Aldoni eron..."
-
-#: snippetplugin.cpp:200
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
-msgid "%1 snippets"
-msgstr "Aldoni eron..."
 
 #: snippetview.cpp:63
 msgid "Add Repository"
@@ -189,9 +165,33 @@ msgid ""
 "Do you really want to delete the repository \"%1\" with all its snippets?"
 msgstr ""
 
+#: editrepository.cpp:60
+msgid "You need at least KDE 4.5 for scripting support in snippets."
+msgstr ""
+
+#: editrepository.cpp:86 editrepository.cpp:125
+#, fuzzy, kde-format
+#| msgid "Edit Script..."
+msgid "Edit Snippet Repository %1"
+msgstr "Redakti skripton..."
+
+#: editrepository.cpp:88
+msgid "Create New Snippet Repository"
+msgstr ""
+
+#: snippet.cpp:27
+msgid "<empty snippet>"
+msgstr ""
+
+#: snippet.cpp:89
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgid "insert snippet %1"
+msgstr "Aldoni eron..."
+
 #. i18n: file: editrepository.ui:27
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:3 rc.cpp:91
+#: rc.cpp:3 rc.cpp:125
 #, fuzzy
 #| msgid "Add Repository"
 msgid "Repository"
@@ -203,22 +203,20 @@ msgstr "Aldoni Deponejon"
 #. i18n: ectx: property (text), widget (QLabel, snippetName)
 #. i18n: file: editrepository.ui:33
 #. i18n: ectx: property (text), widget (QLabel, repoNameLabel)
-#. i18n: file: editsnippet.ui:23
-#. i18n: ectx: property (text), widget (QLabel, snippetName)
-#: rc.cpp:6 rc.cpp:37 rc.cpp:94 rc.cpp:125
+#: rc.cpp:6 rc.cpp:37 rc.cpp:91 rc.cpp:128
 msgid "Name:"
 msgstr "Nomo:"
 
 #. i18n: file: editrepository.ui:40
 #. i18n: ectx: property (toolTip), widget (KLineEdit, repoNameEdit)
-#: rc.cpp:9 rc.cpp:97
+#: rc.cpp:9 rc.cpp:131
 msgid ""
 "The name of the repository. Must not be empty or contain forward slashes (/)."
 msgstr ""
 
 #. i18n: file: editrepository.ui:47
 #. i18n: ectx: property (text), widget (QLabel, repoNamespaceLabel)
-#: rc.cpp:12 rc.cpp:100
+#: rc.cpp:12 rc.cpp:134
 #, fuzzy
 #| msgid "Name:"
 msgid "Namespace:"
@@ -226,7 +224,7 @@ msgstr "Nomo:"
 
 #. i18n: file: editrepository.ui:55
 #. i18n: ectx: property (toolTip), widget (KLineEdit, repoNamespaceEdit)
-#: rc.cpp:15 rc.cpp:103
+#: rc.cpp:15 rc.cpp:137
 msgid ""
 "<p>If non-empty this will be used as a prefix for all snippets in this "
 "repository during code completion.</p>\n"
@@ -235,37 +233,37 @@ msgstr ""
 
 #. i18n: file: editrepository.ui:62
 #. i18n: ectx: property (text), widget (QLabel, repoLicenseLabel)
-#: rc.cpp:19 rc.cpp:107
+#: rc.cpp:19 rc.cpp:141
 msgid "License:"
 msgstr "Permesilo:"
 
 #. i18n: file: editrepository.ui:72
 #. i18n: ectx: property (text), widget (QLabel, repoAuthorsLabel)
-#: rc.cpp:22 rc.cpp:110
+#: rc.cpp:22 rc.cpp:144
 msgid "Authors:"
 msgstr ""
 
 #. i18n: file: editrepository.ui:82
 #. i18n: ectx: property (text), widget (QLabel, repoFileTypesLabel)
-#: rc.cpp:25 rc.cpp:113
+#: rc.cpp:25 rc.cpp:147
 msgid "File types:"
 msgstr "Dosiertipoj:"
 
 #. i18n: file: editrepository.ui:92
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, repoFileTypesEdit)
-#: rc.cpp:28 rc.cpp:116
+#: rc.cpp:28 rc.cpp:150
 msgid "leave empty for general purpose snippets"
 msgstr ""
 
 #. i18n: file: editrepository.ui:103
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:31 rc.cpp:119
+#: rc.cpp:31 rc.cpp:153
 msgid "Scripts"
 msgstr "Skriptoj"
 
 #. i18n: file: editrepository.ui:116
 #. i18n: ectx: property (text), widget (QLabel, repoScriptLabel)
-#: rc.cpp:34 rc.cpp:122
+#: rc.cpp:34 rc.cpp:156
 msgid ""
 "<p>You can add JavaScript functions here and use them in your scripts via "
 "<code>${someName`yourFunction`}</code>. The functions should return a string "
@@ -275,7 +273,7 @@ msgstr ""
 
 #. i18n: file: editsnippet.ui:31
 #. i18n: ectx: property (toolTip), widget (KLineEdit, snippetNameEdit)
-#: rc.cpp:40 rc.cpp:128
+#: rc.cpp:40 rc.cpp:94
 msgid ""
 "<p>The name will also be used as the identifier during code completion.</p>\n"
 "<p><b>Note:</b> No spaces allowed.</p>"
@@ -283,43 +281,43 @@ msgstr ""
 
 #. i18n: file: editsnippet.ui:38
 #. i18n: ectx: property (text), widget (QLabel, snippetPrefixLabel)
-#: rc.cpp:44 rc.cpp:132
+#: rc.cpp:44 rc.cpp:98
 msgid "Display Prefix:"
 msgstr ""
 
 #. i18n: file: editsnippet.ui:45
 #. i18n: ectx: property (toolTip), widget (KLineEdit, snippetPrefixEdit)
-#: rc.cpp:47 rc.cpp:135
+#: rc.cpp:47 rc.cpp:101
 msgid "The display prefix will be shown during code completion."
 msgstr ""
 
 #. i18n: file: editsnippet.ui:52
 #. i18n: ectx: property (text), widget (QLabel, snippetArgumentsLabel)
-#: rc.cpp:50 rc.cpp:138
+#: rc.cpp:50 rc.cpp:104
 msgid "Display Arguments:"
 msgstr ""
 
 #. i18n: file: editsnippet.ui:59
 #. i18n: ectx: property (toolTip), widget (KLineEdit, snippetArgumentsEdit)
-#: rc.cpp:53 rc.cpp:141
+#: rc.cpp:53 rc.cpp:107
 msgid "The arguments will be shown during code completion."
 msgstr ""
 
 #. i18n: file: editsnippet.ui:66
 #. i18n: ectx: property (text), widget (QLabel, snippetPostfixLabel)
-#: rc.cpp:56 rc.cpp:144
+#: rc.cpp:56 rc.cpp:110
 msgid "Display Postfix:"
 msgstr ""
 
 #. i18n: file: editsnippet.ui:73
 #. i18n: ectx: property (toolTip), widget (KLineEdit, snippetPostfixEdit)
-#: rc.cpp:59 rc.cpp:147
+#: rc.cpp:59 rc.cpp:113
 msgid "The postfix will be shown during code completion."
 msgstr ""
 
 #. i18n: file: editsnippet.ui:80
 #. i18n: ectx: property (text), widget (QLabel, snippetContentsLabel)
-#: rc.cpp:62 rc.cpp:150
+#: rc.cpp:62 rc.cpp:116
 #, fuzzy
 #| msgid "Add Entry..."
 msgid "Snippet:"
@@ -327,13 +325,13 @@ msgstr "Aldoni eron..."
 
 #. i18n: file: editsnippet.ui:93
 #. i18n: ectx: property (toolTip), widget (KTextEdit, snippetContentsEdit)
-#: rc.cpp:65 rc.cpp:153
+#: rc.cpp:65 rc.cpp:119
 msgid "The actual snippet contents that will be inserted."
 msgstr ""
 
 #. i18n: file: editsnippet.ui:103
 #. i18n: ectx: property (text), widget (QLabel, snippetShortcutLabel)
-#: rc.cpp:68 rc.cpp:156
+#: rc.cpp:68 rc.cpp:122
 msgid "Shortcut:"
 msgstr ""
 
