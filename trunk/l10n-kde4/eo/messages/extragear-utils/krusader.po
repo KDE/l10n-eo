@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krusader\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-01 05:16+0200\n"
+"POT-Creation-Date: 2010-08-02 05:07+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -62,8 +62,10 @@ msgstr "Priskribo:"
 #. i18n: file: krusader/ActionMan/actionproperty.ui:68
 #. i18n: ectx: property (title), widget (KButtonGroup, bgAccept)
 #: rc.cpp:20
-msgid "Command accepts"
-msgstr ""
+#, fuzzy
+#| msgid "Command:"
+msgid "Command Accepts"
+msgstr "Komando:"
 
 #. i18n: file: krusader/ActionMan/actionproperty.ui:74
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioLocal)
@@ -74,19 +76,19 @@ msgstr ""
 #. i18n: file: krusader/ActionMan/actionproperty.ui:77
 #. i18n: ectx: property (text), widget (QRadioButton, radioLocal)
 #: rc.cpp:26
-msgid "Local files only (no URL's)"
+msgid "Local files only (no URLs)"
 msgstr ""
 
 #. i18n: file: krusader/ActionMan/actionproperty.ui:87
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioUrl)
 #: rc.cpp:29
-msgid "Substitute the <b>Placeholders</b> with valid URL's."
+msgid "Substitute the <b>Placeholders</b> with valid URLs."
 msgstr ""
 
 #. i18n: file: krusader/ActionMan/actionproperty.ui:90
 #. i18n: ectx: property (text), widget (QRadioButton, radioUrl)
 #: rc.cpp:32
-msgid "URL's (remote and local)"
+msgid "URLs (remote and local)"
 msgstr ""
 
 #. i18n: file: krusader/ActionMan/actionproperty.ui:100
@@ -259,9 +261,11 @@ msgstr "Ebligita"
 
 #. i18n: file: krusader/ActionMan/actionproperty.ui:402
 #. i18n: ectx: property (title), widget (KButtonGroup, bgExecType)
-#: rc.cpp:121 krusader/GUI/kcmdmodebutton.cpp:47
-msgid "Execution mode"
-msgstr ""
+#: rc.cpp:121
+#, fuzzy
+#| msgid "Selection mode:"
+msgid "Execution Mode"
+msgstr "Elektomoduso:"
 
 #. i18n: file: krusader/ActionMan/actionproperty.ui:408
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioCollectOutput)
@@ -1618,7 +1622,6 @@ msgid ""
 msgstr ""
 
 #: krusader/Synchronizer/synchronizerdirlist.cpp:133
-#: krusader/VFS/normal_vfs.cpp:110
 #, kde-format
 msgid "Can't open the %1 directory!"
 msgstr ""
@@ -3661,7 +3664,8 @@ msgid "Failed to list the content of the archive (%1)!"
 msgstr ""
 
 #: krusader/VFS/krarchandler.cpp:275
-msgid "Failed to unpack"
+#, kde-format
+msgid "Failed to unpack \"%1\"!"
 msgstr ""
 
 #: krusader/VFS/krarchandler.cpp:318
@@ -3710,7 +3714,7 @@ msgstr ""
 
 #: krusader/VFS/virt_vfs.cpp:97
 msgid ""
-"You can't copy files directly to the 'virt:/' directory.\n"
+"You cannot copy files directly to the 'virt:/' directory.\n"
 "You can create a sub directory and copy your files into it."
 msgstr ""
 
@@ -3727,9 +3731,9 @@ msgstr ""
 
 #: krusader/VFS/ftp_vfs.cpp:170
 msgid ""
-"Krusader doesn't support FTP access via HTTP.\n"
-"If it is not the case, please check and change the Proxy settings in "
-"kcontrol."
+"Krusader does not support FTP access via HTTP.\n"
+"If it is not the case, please check and change the proxy settings in the "
+"System Settings."
 msgstr ""
 
 #: krusader/VFS/ftp_vfs.cpp:172
@@ -3782,21 +3786,28 @@ msgstr "Propra"
 
 #: krusader/VFS/krquery.cpp:467
 #, kde-format
+msgctxt "%1=filename, %2=percentage"
 msgid "Searching content of '%1' (%2%)"
 msgstr ""
 
 #: krusader/VFS/normal_vfs.cpp:99
 #, kde-format
-msgid "Directory %1 does not exist!"
+msgid "The directory %1 does not exist."
+msgstr ""
+
+#: krusader/VFS/normal_vfs.cpp:110
+#, kde-format
+msgid "Cannot open the directory %1."
 msgstr ""
 
 #: krusader/VFS/normal_vfs.cpp:118
 #, kde-format
-msgid "Access denied to %1"
+msgctxt "%1=directory path"
+msgid "Access to %1 denied"
 msgstr ""
 
 #: krusader/VFS/normal_vfs.cpp:231
-msgid "Can't create a directory. Check your permissions."
+msgid "Cannot create a directory. Check your permissions."
 msgstr ""
 
 #: krusader/VFS/packjob.cpp:70 krusader/VFS/packjob.cpp:196
@@ -3804,16 +3815,18 @@ msgid "Processed files"
 msgstr ""
 
 #: krusader/VFS/packjob.cpp:80
-msgid "Error at packing"
+msgid "Error while packing"
 msgstr ""
 
 #: krusader/VFS/packjob.cpp:130 krusader/VFS/packjob.cpp:190
 #, kde-format
+msgctxt "%1=archive filename"
 msgid "%1, unsupported archive type."
 msgstr ""
 
 #: krusader/VFS/packjob.cpp:138
 #, kde-format
+msgctxt "%1=archive filename"
 msgid "%1, test failed!"
 msgstr ""
 
@@ -3822,7 +3835,7 @@ msgid "Archive tests passed."
 msgstr ""
 
 #: krusader/VFS/packjob.cpp:203
-msgid "Error at unpacking"
+msgid "Error while unpacking"
 msgstr ""
 
 #: krusader/VFS/virtualcopyjob.cpp:387
@@ -4386,7 +4399,6 @@ msgid "Append"
 msgstr ""
 
 #: krusader/UserAction/kraction.cpp:184
-#: krusader/ActionMan/useractionpage.cpp:299
 #, kde-format
 msgid ""
 "Can't open %1 for writing!\n"
@@ -5003,6 +5015,10 @@ msgstr "Okazis eraro dum aliro al '%1', la sistemo respondis: %2"
 msgid "An error occurred while accessing '%1'"
 msgstr "Okazis eraro dum aliro al '%1'"
 
+#: krusader/GUI/kcmdmodebutton.cpp:47
+msgid "Execution mode"
+msgstr ""
+
 #: krusader/GUI/krremoteencodingmenu.cpp:118
 msgid "Reload"
 msgstr "Reŝargi"
@@ -5601,7 +5617,7 @@ msgstr ""
 #: krusader/ActionMan/actionproperty.cpp:524
 msgid ""
 "There already is an action with this name\n"
-"If you don't have such an useraction the name is used by Krusader for an "
+"If you don not have such an useraction the name is used by Krusader for an "
 "internal action"
 msgstr ""
 
@@ -5676,6 +5692,13 @@ msgstr ""
 
 #: krusader/ActionMan/useractionpage.cpp:284
 msgid "Overwrite existing file?"
+msgstr ""
+
+#: krusader/ActionMan/useractionpage.cpp:299
+#, kde-format
+msgid ""
+"Cannot open %1 for writing!\n"
+"Nothing exported."
 msgstr ""
 
 #: krusader/Panel/krpreviewpopup.cpp:49
