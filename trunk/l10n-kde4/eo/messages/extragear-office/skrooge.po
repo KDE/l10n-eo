@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-16 05:10+0200\n"
+"POT-Creation-Date: 2010-08-17 06:09+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -127,6 +127,7 @@ msgstr "Sumo"
 #: skrooge_calculator/skginterestboardwidget.cpp:101
 #: skgapplets/bank/bankskroogoid.cpp:91
 #: skgapplets/account/accountskroogoid.cpp:119
+#: skgapplets/calculator/calculatorskroogoid.cpp:73
 msgctxt "Noun, the numerical total of a sum of values"
 msgid "Total"
 msgstr ""
@@ -838,15 +839,15 @@ msgctxt "Description of a tips"
 msgid "<p>...you can follow your refunds by using a tracker.</p>"
 msgstr ""
 
-#: skrooge_tracker/skgtrackerplugin.cpp:141
+#: skrooge_tracker/skgtrackerplugin.cpp:142
 #, kde-format
-msgctxt "Advice long message"
-msgid "'%1' is a very old tracker"
+msgctxt "Advice on making the best (short)"
+msgid "'%1' is an old tracker"
 msgstr ""
 
-#: skrooge_tracker/skgtrackerplugin.cpp:142
-msgctxt "Advice short message"
-msgid "Take care, some trackers are very old."
+#: skrooge_tracker/skgtrackerplugin.cpp:143
+msgctxt "Advice on making the best (long)"
+msgid "(Provide a description of why having anx old tracker is a problem)"
 msgstr ""
 
 #: skrooge_tracker/skgtrackerpluginwidget.cpp:238
@@ -1477,38 +1478,45 @@ msgstr "Operacioj"
 
 #: skrooge_operation/skgoperationplugin.cpp:571
 #, kde-format
-msgctxt "Advice long message"
+msgctxt "Advice on making the best (short)"
 msgid "Duplicate number %1 in account '%2'"
 msgstr ""
 
 #: skrooge_operation/skgoperationplugin.cpp:572
 #, kde-format
-msgctxt "Advice short message"
-msgid "Your account '%1' contains more than one operation with number %2."
+msgctxt "Advice on making the best (long)"
+msgid ""
+"Your account '%1' contains more than one operation with number %2.The "
+"operation number should be unique (check number, transaction reference...)"
 msgstr ""
 
 #: skrooge_operation/skgoperationplugin.cpp:573
 #, fuzzy
 #| msgid "Operation canceled"
-msgctxt "Advice correction message"
-msgid "Open operations with duplicate number"
+msgctxt "Advice on making the best (action)"
+msgid "Edit operations with duplicate number"
 msgstr "Operacio rezignita"
 
 #: skrooge_operation/skgoperationplugin.cpp:589
-#, kde-format
-msgctxt "Advice long message"
-msgid "Many operations of '%1' seem to be not reconciliated"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Operations"
+msgctxt "Advice on making the best (short)"
+msgid "Many operations of '%1' not reconciliated"
+msgstr "Operacioj"
 
 #: skrooge_operation/skgoperationplugin.cpp:590
-msgctxt "Advice short message"
-msgid "Don't forget to reconciliate your accounts."
+msgctxt "Advice on making the best (long)"
+msgid ""
+"Don't forget to reconciliate your accounts. By doing so, you acknowledge "
+"that your bank has indeed processed these operations on your account. This "
+"is how you enforce compliance with your bank's statements. See online help "
+"for more details"
 msgstr ""
 
 #: skrooge_operation/skgoperationplugin.cpp:591
 #, fuzzy, kde-format
 #| msgid "Operations"
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Open account '%1' for reconciliation"
 msgstr "Operacioj"
 
@@ -1519,6 +1527,7 @@ msgid "Operations of '%1' with duplicate number %2"
 msgstr ""
 
 #: skrooge_operation/skgbookmarkboardwidget.cpp:83
+#: skgapplets/highlightedoperation/highlightedoperationskroogoid.cpp:66
 msgctxt "Message"
 msgid ""
 "No operation highlighted<br>on the <a href=\"___\">\"Operations\"</a> page."
@@ -1730,6 +1739,7 @@ msgid "No Operation Selected"
 msgstr "Operacio rezignita"
 
 #: skrooge_scheduled/skgscheduledboardwidget.cpp:81
+#: skgapplets/scheduledoperation/scheduledoperationskroogoid.cpp:64
 msgctxt "Message"
 msgid ""
 "No operation scheduled<br>on the <a href=\"___\">\"Operations\"</a> page."
@@ -2359,6 +2369,7 @@ msgid "Document to open"
 msgstr "La dosiero malfermiĝi"
 
 #: skrooge_calculator/skginterestboardwidget.cpp:108
+#: skgapplets/calculator/calculatorskroogoid.cpp:80
 msgctxt "Message"
 msgid ""
 "No interest defined for accounts<br>on the <a href=\"___\">\"Simulation\"</"
@@ -2433,21 +2444,38 @@ msgstr ""
 
 #. i18n: file: skrooge_calculator/skginterestpluginwidget_board.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, kGroup)
-#: skrooge_calculator/skgcalculatorplugin.cpp:83 rc.cpp:856
+#: skrooge_calculator/skgcalculatorplugin.cpp:84 rc.cpp:856
 msgctxt "Noun"
 msgid "Estimated interest"
 msgstr ""
 
-#: skrooge_calculator/skgcalculatorplugin.cpp:130
+#: skrooge_calculator/skgcalculatorplugin.cpp:131
 #, fuzzy
 #| msgid "Operations"
 msgctxt "A tool tip"
 msgid "Simulations"
 msgstr "Operacioj"
 
-#: skrooge_calculator/skgcalculatorplugin.cpp:141
+#: skrooge_calculator/skgcalculatorplugin.cpp:142
 msgctxt "Description of a tips"
 msgid "<p>... you can use the calculator for many things</p>"
+msgstr ""
+
+#: skrooge_calculator/skgcalculatorplugin.cpp:164
+#, kde-format
+msgctxt "Advice on making the best (short)"
+msgid "No interest rate defined for account '%1'"
+msgstr ""
+
+#: skrooge_calculator/skgcalculatorplugin.cpp:165
+#, kde-format
+msgctxt "Advice on making the best (long)"
+msgid "Your investment account '%1' doesn't have interest rate defined"
+msgstr ""
+
+#: skrooge_calculator/skgcalculatorplugin.cpp:166
+msgctxt "Advice on making the best (action)"
+msgid "Open interest page"
 msgstr ""
 
 #: skgbasemodeler/skgdefine.h:161
@@ -4114,30 +4142,31 @@ msgid "Operations imported and not yet validated"
 msgstr ""
 
 #: skrooge_importexport/skgimportexportplugin.cpp:655
-msgctxt "Advice long message"
+#, fuzzy
+#| msgid "Operation canceled"
+msgctxt "Advice on making the best (short)"
 msgid "Many operations imported and not yet validated"
-msgstr ""
+msgstr "Operacio rezignita"
 
 #: skrooge_importexport/skgimportexportplugin.cpp:656
-#, fuzzy
-#| msgid "Operations"
-msgctxt "Advice short message"
-msgid "Don't forget to validate imported operations."
-msgstr "Operacioj"
+msgctxt "Advice on making the best (long)"
+msgid ""
+"After importing operations, you should review them, make corrections on, for "
+"instance, category, payee. Once done, you should mark the imported operation "
+"as validated, so that you know the operation has been fully processed."
+msgstr ""
 
 #: skrooge_importexport/skgimportexportplugin.cpp:657
 #, fuzzy
 #| msgid "Operation canceled"
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Open operations imported and not yet validated"
 msgstr "Operacio rezignita"
 
 #: skrooge_importexport/skgimportexportplugin.cpp:658
-#, fuzzy
-#| msgid "Operations"
-msgctxt "Advice correction message"
-msgid "Validate all operations"
-msgstr "Operacioj"
+msgctxt "Advice on making the best (action)"
+msgid "Validate operations that do not require further action"
+msgstr ""
 
 #: skrooge_importexport/skgimportexportplugin.cpp:679
 #, fuzzy
@@ -4166,6 +4195,7 @@ msgid "Shares owned only"
 msgstr ""
 
 #: skrooge_unit/skgunitboardwidget.cpp:168
+#: skgapplets/unit/unitskroogoid.cpp:90
 msgctxt "Message"
 msgid "No share or index defined<br>on the <a href=\"___\">\"Units\"</a> page."
 msgstr ""
@@ -4247,49 +4277,78 @@ msgid "Splitting stock failed."
 msgstr ""
 
 #: skrooge_unit/skgunitplugin.cpp:279
-msgctxt "Advice long message"
+msgctxt "Advice on making the best (short)"
 msgid "Define a primary currency"
 msgstr ""
 
 #: skrooge_unit/skgunitplugin.cpp:280
-msgctxt "Advice short message"
-msgid "To avoid misunderstanding, you should define a primary currency."
+msgctxt "Advice on making the best (long)"
+msgid ""
+"To avoid misunderstanding and conflicts between units at conversion time, "
+"you should define a primary currency. It is the currency against which all "
+"other will be converted"
 msgstr ""
 
 #: skrooge_unit/skgunitplugin.cpp:281
 #, kde-format
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Set '%1' as primary currency"
 msgstr ""
 
-#: skrooge_unit/skgunitplugin.cpp:291
-msgctxt "Advice long message"
+#: skrooge_unit/skgunitplugin.cpp:296
+msgctxt "Advice on making the best (short)"
 msgid "Define a secondary currency"
 msgstr ""
 
-#: skrooge_unit/skgunitplugin.cpp:292
-msgctxt "Advice short message"
+#: skrooge_unit/skgunitplugin.cpp:297
+msgctxt "Advice on making the best (long)"
 msgid ""
-"You can define a secondary currency to display all amounts in two currencies."
+"When a secondary unit is defined, Skrooge will display it as an additional "
+"amount information."
 msgstr ""
 
-#: skrooge_unit/skgunitplugin.cpp:308
+#: skrooge_unit/skgunitplugin.cpp:298
+#, kde-format
+msgctxt "Advice on making the best (action)"
+msgid "Set '%1' as secondary currency"
+msgstr ""
+
+#: skrooge_unit/skgunitplugin.cpp:314
 msgctxt "Noun, name of the user action"
-msgid "Define primary unit"
+msgid "Define primary currency"
 msgstr ""
 
-#: skrooge_unit/skgunitplugin.cpp:320
+#: skrooge_unit/skgunitplugin.cpp:326
 #, fuzzy
 #| msgid "Delete failed"
 msgctxt "Message for successful user action"
-msgid "Primary unit defined."
+msgid "Primary currency defined."
 msgstr "La forigado fiaskis"
 
-#: skrooge_unit/skgunitplugin.cpp:321
+#: skrooge_unit/skgunitplugin.cpp:327
 #, fuzzy
 #| msgid "Delete failed"
 msgctxt "Error message"
-msgid "Primary unit definition failed"
+msgid "Primary currency definition failed"
+msgstr "La forigado fiaskis"
+
+#: skrooge_unit/skgunitplugin.cpp:341
+msgctxt "Noun, name of the user action"
+msgid "Define secondary currency"
+msgstr ""
+
+#: skrooge_unit/skgunitplugin.cpp:353
+#, fuzzy
+#| msgid "Delete failed"
+msgctxt "Message for successful user action"
+msgid "Secondary currency defined."
+msgstr "La forigado fiaskis"
+
+#: skrooge_unit/skgunitplugin.cpp:354
+#, fuzzy
+#| msgid "Delete failed"
+msgctxt "Error message"
+msgid "Secondary currency definition failed"
 msgstr "La forigado fiaskis"
 
 #: skrooge_unit/skgunitpluginwidget.cpp:322
@@ -4477,19 +4536,20 @@ msgstr ""
 #: skrooge_categories/skgcategoriesplugin.cpp:195
 #, fuzzy
 #| msgid "Delete failed"
-msgctxt "Advice long message"
+msgctxt "Advice on making the best (short)"
 msgid "Many unused categories"
 msgstr "La forigado fiaskis"
 
 #: skrooge_categories/skgcategoriesplugin.cpp:196
-msgctxt "Advice short message"
-msgid "You can improve performances by removing unused categories."
+msgctxt "Advice on making the best (long)"
+msgid ""
+"You can improve performances by removing categories that have no operations."
 msgstr ""
 
 #: skrooge_categories/skgcategoriesplugin.cpp:197
 #, fuzzy
 #| msgid "Delete failed"
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Delete unused categories"
 msgstr "La forigado fiaskis"
 
@@ -4894,24 +4954,26 @@ msgid ""
 msgstr ""
 
 #: skg_undoredo/skgundoredoplugin.cpp:225
-msgctxt "Advice long message"
-msgid "Too much history"
+msgctxt "Advice on making the best (short)"
+msgid "History is too large"
 msgstr ""
 
 #: skg_undoredo/skgundoredoplugin.cpp:226
-msgctxt "Advice short message"
-msgid "You can improve performances by reducing your history."
+msgctxt "Advice on making the best (long)"
+msgid ""
+"You can improve performances by reducing your history size in Skrooge "
+"settings."
 msgstr ""
 
 #: skg_undoredo/skgundoredoplugin.cpp:227
 #, fuzzy
 #| msgid "History"
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Clear history"
 msgstr "Historio"
 
 #: skg_undoredo/skgundoredoplugin.cpp:228
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Open settings panel"
 msgstr ""
 
@@ -5265,19 +5327,21 @@ msgstr ""
 #: skrooge_payee/skgpayeeplugin.cpp:147
 #, fuzzy
 #| msgid "Delete failed"
-msgctxt "Advice long message"
+msgctxt "Advice on making the best (short)"
 msgid "Many unused payees"
 msgstr "La forigado fiaskis"
 
 #: skrooge_payee/skgpayeeplugin.cpp:148
-msgctxt "Advice short message"
-msgid "You can improve performances by removing unused payees."
+msgctxt "Advice on making the best (long)"
+msgid ""
+"You can improve performances by removing payees for which no operation is "
+"registered."
 msgstr ""
 
 #: skrooge_payee/skgpayeeplugin.cpp:149
 #, fuzzy
 #| msgid "Delete failed"
-msgctxt "Advice correction message"
+msgctxt "Advice on making the best (action)"
 msgid "Delete unused payees"
 msgstr "La forigado fiaskis"
 
@@ -5399,53 +5463,53 @@ msgctxt "The tool tip"
 msgid "Advices"
 msgstr ""
 
-#: skg_advice/skgadviceboardwidget.cpp:46
+#: skg_advice/skgadviceboardwidget.cpp:47
 msgctxt "Noun, a user action"
-msgid "Reset ignored advices"
-msgstr ""
-
-#: skg_advice/skgadviceboardwidget.cpp:135
-#, kde-format
-msgid "Priority %1:%2"
+msgid "Activate all advices"
 msgstr ""
 
 #: skg_advice/skgadviceboardwidget.cpp:138
-msgctxt "Advice correction message"
-msgid "Ignore this advice"
+#, kde-format
+msgid "<p><b>Priority %1:</b>%2</p>"
 msgstr ""
 
-#: skg_advice/skgadviceboardwidget.cpp:188
+#: skg_advice/skgadviceboardwidget.cpp:141
+msgctxt "Dismiss an advice provided by Skrooge"
+msgid "Dismiss"
+msgstr ""
+
+#: skg_advice/skgadviceboardwidget.cpp:230
 msgctxt "Noun, name of the user action"
-msgid "Reset ignored advices"
+msgid "Activate all advices"
 msgstr ""
 
-#: skg_advice/skgadviceboardwidget.cpp:196
+#: skg_advice/skgadviceboardwidget.cpp:238
 msgctxt "Successful message after an user action"
-msgid "Advice reseted."
+msgid "Advices activated."
 msgstr ""
 
-#: skg_advice/skgadviceboardwidget.cpp:197
+#: skg_advice/skgadviceboardwidget.cpp:239
 #, fuzzy
 #| msgid "Delete failed"
 msgctxt "Error message"
-msgid "Reset advices failed"
+msgid "Advices activation failed"
 msgstr "La forigado fiaskis"
 
-#: skg_advice/skgadviceboardwidget.cpp:216
+#: skg_advice/skgadviceboardwidget.cpp:258
 msgctxt "Noun, name of the user action"
-msgid "Ignore advice"
+msgid "Dismiss advice"
 msgstr ""
 
-#: skg_advice/skgadviceboardwidget.cpp:224
+#: skg_advice/skgadviceboardwidget.cpp:266
 msgctxt "Successful message after an user action"
-msgid "Advice ignored."
+msgid "Advice dismissed."
 msgstr ""
 
-#: skg_advice/skgadviceboardwidget.cpp:225
+#: skg_advice/skgadviceboardwidget.cpp:267
 #, fuzzy
 #| msgid "Delete failed"
 msgctxt "Error message"
-msgid "Advice ignore failed"
+msgid "Advice dismiss failed"
 msgstr "La forigado fiaskis"
 
 #: rc.cpp:1
@@ -9041,6 +9105,42 @@ msgstr ""
 #: rc.cpp:2273
 msgid "First setting for xxx"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Operations"
+#~ msgctxt "Advice short message"
+#~ msgid "Don't forget to validate imported operations."
+#~ msgstr "Operacioj"
+
+#, fuzzy
+#~| msgid "Operations"
+#~ msgctxt "Advice correction message"
+#~ msgid "Validate all operations"
+#~ msgstr "Operacioj"
+
+#, fuzzy
+#~| msgid "Delete failed"
+#~ msgctxt "Advice correction message"
+#~ msgid "Delete unused categories"
+#~ msgstr "La forigado fiaskis"
+
+#, fuzzy
+#~| msgid "History"
+#~ msgctxt "Advice correction message"
+#~ msgid "Clear history"
+#~ msgstr "Historio"
+
+#, fuzzy
+#~| msgid "Delete failed"
+#~ msgctxt "Advice correction message"
+#~ msgid "Delete unused payees"
+#~ msgstr "La forigado fiaskis"
+
+#, fuzzy
+#~| msgid "Delete failed"
+#~ msgctxt "Error message"
+#~ msgid "Reset advices failed"
+#~ msgstr "La forigado fiaskis"
 
 #, fuzzy
 #~| msgid "Delete failed"

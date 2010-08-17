@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalzium\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-07-14 05:15+0200\n"
+"POT-Creation-Date: 2010-08-17 05:59+0200\n"
 "PO-Revision-Date: 2007-10-17 22:26+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -101,7 +101,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, style2Combo)
 #. i18n: file: src/tools/moleculeviewerwidget.ui:215
 #. i18n: ectx: property (text), item, widget (KComboBox, labelsCombo)
-#: rc.cpp:38 rc.cpp:53
+#: rc.cpp:38 rc.cpp:53 src/kalziumelementproperty.cpp:89
 #, fuzzy
 #| msgid "Neon"
 msgid "None"
@@ -818,7 +818,7 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:70
 #. i18n: file: data/knowledge.xml:135
 #: rc.cpp:334 rc.cpp:350 rc.cpp:898 rc.cpp:989 rc.cpp:1469 rc.cpp:1508
-#: rc.cpp:1904 rc.cpp:2357 rc.cpp:2425 src/detailinfodlg.cpp:333
+#: rc.cpp:1883 rc.cpp:2339 rc.cpp:2407 src/detailinfodlg.cpp:333
 #: src/exportdialog.cpp:125
 msgid "Mass"
 msgstr "Maso"
@@ -2815,7 +2815,7 @@ msgstr ""
 
 #. i18n: file: src/settings_units.ui:22
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1312 src/kalzium.cpp:577
+#: rc.cpp:1312 src/kalzium.cpp:526
 msgid "Units"
 msgstr "Unuoj"
 
@@ -3148,7 +3148,7 @@ msgstr "Atoma nukleo"
 #. i18n: ectx: property (text), item, widget (KComboBox, KCB_y)
 #. i18n: file: src/settings_colors.ui:1053
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LogarithmicElectronegativityGradient)
-#: rc.cpp:1472 rc.cpp:1511 rc.cpp:1913 src/elementdataviewer.cpp:234
+#: rc.cpp:1472 rc.cpp:1511 rc.cpp:1892 src/elementdataviewer.cpp:234
 #: src/exportdialog.cpp:129
 msgid "Electronegativity"
 msgstr "Elektronegativo"
@@ -3159,7 +3159,7 @@ msgstr "Elektronegativo"
 #. i18n: ectx: property (text), item, widget (KComboBox, KCB_y)
 #. i18n: file: src/settings_colors.ui:1046
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LogarithmicMeltingPointGradient)
-#: rc.cpp:1475 rc.cpp:1514 rc.cpp:1910 src/kalziumgradienttype.cpp:338
+#: rc.cpp:1475 rc.cpp:1514 rc.cpp:1889 src/kalziumgradienttype.cpp:364
 #: src/exportdialog.cpp:132
 msgid "Melting Point"
 msgstr "Fandpunkto"
@@ -3170,7 +3170,7 @@ msgstr "Fandpunkto"
 #. i18n: ectx: property (text), item, widget (KComboBox, KCB_y)
 #. i18n: file: src/settings_colors.ui:1039
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LogarithmicBoilingPointGradient)
-#: rc.cpp:1478 rc.cpp:1517 rc.cpp:1907 src/kalziumgradienttype.cpp:295
+#: rc.cpp:1478 rc.cpp:1517 rc.cpp:1886 src/kalziumgradienttype.cpp:314
 #: src/exportdialog.cpp:133
 msgid "Boiling Point"
 msgstr "Bolpunkto"
@@ -3183,7 +3183,7 @@ msgstr "Bolpunkto"
 #. i18n: file: data/knowledge.xml:261
 #. i18n: file: data/knowledge.xml:266
 #. i18n: file: data/knowledge.xml:278
-#: rc.cpp:1481 rc.cpp:1520 rc.cpp:2542 rc.cpp:2552 rc.cpp:2556 rc.cpp:2570
+#: rc.cpp:1481 rc.cpp:1520 rc.cpp:2524 rc.cpp:2534 rc.cpp:2538 rc.cpp:2552
 msgid "Atomic Radius"
 msgstr "Atoma radiuso"
 
@@ -3197,8 +3197,8 @@ msgstr "Atoma radiuso"
 #. i18n: file: data/knowledge.xml:260
 #. i18n: file: data/knowledge.xml:269
 #. i18n: file: data/knowledge.xml:275
-#: rc.cpp:1484 rc.cpp:1523 rc.cpp:1898 rc.cpp:2540 rc.cpp:2550 rc.cpp:2560
-#: rc.cpp:2566 src/kalziumgradienttype.cpp:164 src/exportdialog.cpp:130
+#: rc.cpp:1484 rc.cpp:1523 rc.cpp:1877 rc.cpp:2522 rc.cpp:2532 rc.cpp:2542
+#: rc.cpp:2548 src/kalziumgradienttype.cpp:165 src/exportdialog.cpp:130
 msgid "Covalent Radius"
 msgstr "Kovalanta radiuso"
 
@@ -3480,7 +3480,7 @@ msgstr "&Filtrilo"
 
 #. i18n: file: src/settings_misc.ui:22
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:1646 src/detailinfodlg.cpp:453 src/kalzium.cpp:583
+#: rc.cpp:1646 src/detailinfodlg.cpp:459 src/kalzium.cpp:532
 msgid "Miscellaneous"
 msgstr "Diversaj"
 
@@ -3502,56 +3502,9 @@ msgstr ""
 msgid "Display only the number of the element"
 msgstr "Nur montru la numeron de la elemento"
 
-#. i18n: file: src/somwidget.ui:40
-#. i18n: ectx: property (text), widget (QLabel, lbl1)
-#: rc.cpp:1658
-msgid "Temperature:"
-msgstr "Temperaturo:"
-
-#. i18n: file: src/somwidget.ui:67
-#. i18n: ectx: property (toolTip), widget (QSlider, temp_slider)
-#: rc.cpp:1661
-msgid "Slide to change current temperature"
-msgstr ""
-
-#. i18n: file: src/somwidget.ui:105
-#. i18n: ectx: property (toolTip), widget (QSpinBox, temp_spinbox)
-#: rc.cpp:1664
-msgid "Click to edit current temperature"
-msgstr ""
-
-#. i18n: file: src/somwidget.ui:123
-#. i18n: ectx: property (toolTip), widget (QPushButton, Play)
-#: rc.cpp:1667
-msgid "Click to Play / Pause the increase in temperature."
-msgstr ""
-
-#. i18n: file: src/somwidget.ui:126
-#. i18n: ectx: property (text), widget (QPushButton, Play)
-#. i18n: file: src/timewidget.ui:133
-#. i18n: ectx: property (text), widget (QPushButton, Play)
-#: rc.cpp:1670 rc.cpp:1943 src/timewidget_impl.cpp:90
-#: src/somwidget_impl.cpp:182
-msgid "Play"
-msgstr "Ludi"
-
-#. i18n: file: src/somwidget.ui:133
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: src/timewidget.ui:140
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1673 rc.cpp:1946
-msgid "Speed"
-msgstr "Rapido"
-
-#. i18n: file: src/somwidget.ui:156
-#. i18n: ectx: property (toolTip), widget (QSlider, Speed)
-#: rc.cpp:1676
-msgid "Slide to change the speed of increase in temperature."
-msgstr ""
-
 #. i18n: file: src/molcalcwidgetbase.ui:21
 #. i18n: ectx: attribute (title), widget (QWidget, calcTab)
-#: rc.cpp:1679 src/kalzium.cpp:594
+#: rc.cpp:1658 src/kalzium.cpp:543
 #, fuzzy
 #| msgid "Calculate"
 msgid "Calculator"
@@ -3559,13 +3512,13 @@ msgstr "Kalkulu"
 
 #. i18n: file: src/molcalcwidgetbase.ui:51
 #. i18n: ectx: property (toolTip), widget (KLineEdit, formulaEdit)
-#: rc.cpp:1682
+#: rc.cpp:1661
 msgid "Enter molecular formula here"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:58
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, formulaEdit)
-#: rc.cpp:1685
+#: rc.cpp:1664
 msgid ""
 "This box can be used to enter the formula for the molecule.\n"
 "e.g. 1.> CaCO3\n"
@@ -3577,19 +3530,19 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QPushButton, calcButton)
 #. i18n: file: src/molcalcwidgetbase.ui:68
 #. i18n: ectx: property (whatsThis), widget (QPushButton, calcButton)
-#: rc.cpp:1692 rc.cpp:1695
+#: rc.cpp:1671 rc.cpp:1674
 msgid "Click on this button to calculate."
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:71
 #. i18n: ectx: property (text), widget (QPushButton, calcButton)
-#: rc.cpp:1698
+#: rc.cpp:1677
 msgid "Calc"
 msgstr "Kalk"
 
 #. i18n: file: src/molcalcwidgetbase.ui:164
 #. i18n: ectx: property (title), widget (QGroupBox, details)
-#: rc.cpp:1701
+#: rc.cpp:1680
 #, fuzzy
 #| msgid "Non-Metals"
 msgid "Details"
@@ -3597,13 +3550,13 @@ msgstr "Nemetalo"
 
 #. i18n: file: src/molcalcwidgetbase.ui:172
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:1704
+#: rc.cpp:1683
 msgid "Composition"
 msgstr "Kunmetaĵo"
 
 #. i18n: file: src/molcalcwidgetbase.ui:185
 #. i18n: ectx: property (toolTip), widget (QTableWidget, table)
-#: rc.cpp:1707
+#: rc.cpp:1686
 #, fuzzy
 #| msgid "Element Names"
 msgid "Elemental composition"
@@ -3611,7 +3564,7 @@ msgstr "Elementaj nomoj"
 
 #. i18n: file: src/molcalcwidgetbase.ui:188
 #. i18n: ectx: property (whatsThis), widget (QTableWidget, table)
-#: rc.cpp:1710
+#: rc.cpp:1689
 msgid ""
 "This table previews the elemental composition of the molecule, i.e. the "
 "percentage of each element in the molecule."
@@ -3622,13 +3575,13 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:15
 #. i18n: file: data/knowledge.xml:27
 #. i18n: file: data/knowledge.xml:117
-#: rc.cpp:1713 rc.cpp:2305 rc.cpp:2315 rc.cpp:2405
+#: rc.cpp:1692 rc.cpp:2287 rc.cpp:2297 rc.cpp:2387
 msgid "Element"
 msgstr "Elemento"
 
 #. i18n: file: src/molcalcwidgetbase.ui:210
 #. i18n: ectx: property (text), widget (QTableWidget, table)
-#: rc.cpp:1716
+#: rc.cpp:1695
 #, fuzzy
 #| msgid "Atom"
 msgid "Atoms"
@@ -3636,7 +3589,7 @@ msgstr "Atomo"
 
 #. i18n: file: src/molcalcwidgetbase.ui:215
 #. i18n: ectx: property (text), widget (QTableWidget, table)
-#: rc.cpp:1719
+#: rc.cpp:1698
 #, fuzzy
 #| msgid "Atomic Mass"
 msgid "Atomic mass"
@@ -3644,31 +3597,31 @@ msgstr "Atommaso"
 
 #. i18n: file: src/molcalcwidgetbase.ui:220
 #. i18n: ectx: property (text), widget (QTableWidget, table)
-#: rc.cpp:1722
+#: rc.cpp:1701
 msgid "Total mass"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:225
 #. i18n: ectx: property (text), widget (QTableWidget, table)
-#: rc.cpp:1725 src/detailinfodlg.cpp:337
+#: rc.cpp:1704 src/detailinfodlg.cpp:337
 msgid "Percentage"
 msgstr "Elcentaĵo"
 
 #. i18n: file: src/molcalcwidgetbase.ui:237
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:1728
+#: rc.cpp:1707
 msgid "Aliases used"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:244
 #. i18n: ectx: property (toolTip), widget (QTableWidget, alias_list)
-#: rc.cpp:1731
+#: rc.cpp:1710
 msgid "Aliases used in the formula"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:248
 #. i18n: ectx: property (whatsThis), widget (QTableWidget, alias_list)
-#: rc.cpp:1734
+#: rc.cpp:1713
 msgid ""
 "This displays all the aliases used in the molecule.\n"
 "For instance, in the molecule MeOH, the alias used is Me = CH3."
@@ -3676,25 +3629,25 @@ msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:259
 #. i18n: ectx: property (text), widget (QTableWidget, alias_list)
-#: rc.cpp:1738
+#: rc.cpp:1717
 msgid "aliases"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:273
 #. i18n: ectx: attribute (title), widget (QWidget, aliasTab)
-#: rc.cpp:1741
+#: rc.cpp:1720
 msgid "Aliases"
 msgstr "Aliasoj"
 
 #. i18n: file: src/molcalcwidgetbase.ui:279
 #. i18n: ectx: property (title), widget (QGroupBox, aliasBox)
-#: rc.cpp:1744
+#: rc.cpp:1723
 msgid "Define alias"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:300
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1747
+#: rc.cpp:1726
 #, fuzzy
 #| msgid "Atom"
 msgid "Short-form"
@@ -3702,13 +3655,13 @@ msgstr "Atomo"
 
 #. i18n: file: src/molcalcwidgetbase.ui:307
 #. i18n: ectx: property (toolTip), widget (QLineEdit, shortForm)
-#: rc.cpp:1750
+#: rc.cpp:1729
 msgid "Short form of the alias"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:311
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, shortForm)
-#: rc.cpp:1753
+#: rc.cpp:1732
 msgid ""
 "You can specify the short form of the alias used here, \n"
 "for instance, Me."
@@ -3716,13 +3669,13 @@ msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:318
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1757
+#: rc.cpp:1736
 msgid "Full-form"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:326
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, fullForm)
-#: rc.cpp:1760
+#: rc.cpp:1739
 msgid ""
 "You can enter the full form of the alias in this box, \n"
 "for instance, CH3."
@@ -3730,235 +3683,235 @@ msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:333
 #. i18n: ectx: property (toolTip), widget (QPushButton, alias)
-#: rc.cpp:1764
+#: rc.cpp:1743
 msgid "Click to add the alias"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:336
 #. i18n: ectx: property (whatsThis), widget (QPushButton, alias)
-#: rc.cpp:1767
+#: rc.cpp:1746
 msgid "Click to add the alias if it is valid."
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:339
 #. i18n: ectx: property (text), widget (QPushButton, alias)
-#: rc.cpp:1770
+#: rc.cpp:1749
 msgid "Add Alias"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:373
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:1773
+#: rc.cpp:1752
 msgid "Pre-defined aliases"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:380
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:1776
+#: rc.cpp:1755
 msgid "User-defined aliases"
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:387
 #. i18n: ectx: property (toolTip), widget (QTableWidget, pre_defined)
-#: rc.cpp:1779
+#: rc.cpp:1758
 msgid "List of pre-defined aliases."
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:390
 #. i18n: ectx: property (whatsThis), widget (QTableWidget, pre_defined)
-#: rc.cpp:1782
+#: rc.cpp:1761
 msgid "This table displays all the pre-defined aliases."
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:419
 #. i18n: ectx: property (toolTip), widget (QTableWidget, user_defined)
-#: rc.cpp:1785
+#: rc.cpp:1764
 msgid "List of user-defined aliases."
 msgstr ""
 
 #. i18n: file: src/molcalcwidgetbase.ui:422
 #. i18n: ectx: property (whatsThis), widget (QTableWidget, user_defined)
-#: rc.cpp:1788
+#: rc.cpp:1767
 msgid "This is the list of aliases that you or some other user has added."
 msgstr ""
 
 #. i18n: file: src/settings_colors.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, setupColors)
-#: rc.cpp:1791
+#: rc.cpp:1770
 msgid "Set Colors"
 msgstr "Agordu la kolorojn"
 
 #. i18n: file: src/settings_colors.ui:38
 #. i18n: ectx: attribute (title), widget (QWidget, tabBlocks)
-#: rc.cpp:1794 src/kalziumschemetype.cpp:150
+#: rc.cpp:1773 src/kalziumschemetype.cpp:158
 msgid "Blocks"
 msgstr "Blokoj"
 
 #. i18n: file: src/settings_colors.ui:76
 #. i18n: ectx: property (text), widget (QLabel, textLabel13)
-#: rc.cpp:1797
+#: rc.cpp:1776
 msgid "s-Block:"
 msgstr "s-bloka:"
 
 #. i18n: file: src/settings_colors.ui:105
 #. i18n: ectx: property (text), widget (QLabel, textLabel14)
-#: rc.cpp:1800
+#: rc.cpp:1779
 msgid "p-Block:"
 msgstr "p-bloka:"
 
 #. i18n: file: src/settings_colors.ui:134
 #. i18n: ectx: property (text), widget (QLabel, textLabel15)
-#: rc.cpp:1803
+#: rc.cpp:1782
 msgid "d-Block:"
 msgstr "d-bloka:"
 
 #. i18n: file: src/settings_colors.ui:163
 #. i18n: ectx: property (text), widget (QLabel, textLabel16)
-#: rc.cpp:1806
+#: rc.cpp:1785
 msgid "f-Block:"
 msgstr "f-bloka:"
 
 #. i18n: file: src/settings_colors.ui:189
 #. i18n: ectx: attribute (title), widget (QWidget, tabGroups)
-#: rc.cpp:1809 src/kalziumschemetype.cpp:335
+#: rc.cpp:1788 src/kalziumschemetype.cpp:343
 msgid "Groups"
 msgstr "Grupoj"
 
 #. i18n: file: src/settings_colors.ui:227
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2_2)
-#: rc.cpp:1812
+#: rc.cpp:1791
 msgid "Group 1:"
 msgstr "Grupo 1:"
 
 #. i18n: file: src/settings_colors.ui:256
 #. i18n: ectx: property (text), widget (QLabel, textLabel8)
-#: rc.cpp:1815
+#: rc.cpp:1794
 msgid "Group 2:"
 msgstr "Grupo 2:"
 
 #. i18n: file: src/settings_colors.ui:285
 #. i18n: ectx: property (text), widget (QLabel, textLabel7)
-#: rc.cpp:1818
+#: rc.cpp:1797
 msgid "Group 3:"
 msgstr "Grupo 3:"
 
 #. i18n: file: src/settings_colors.ui:314
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: rc.cpp:1821
+#: rc.cpp:1800
 msgid "Group 4:"
 msgstr "Grupo 4:"
 
 #. i18n: file: src/settings_colors.ui:343
 #. i18n: ectx: property (text), widget (QLabel, textLabel5_2)
-#: rc.cpp:1824
+#: rc.cpp:1803
 msgid "Group 5:"
 msgstr "Grupo 5:"
 
 #. i18n: file: src/settings_colors.ui:372
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
-#: rc.cpp:1827
+#: rc.cpp:1806
 msgid "Group 6:"
 msgstr "Grupo 6:"
 
 #. i18n: file: src/settings_colors.ui:401
 #. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
-#: rc.cpp:1830
+#: rc.cpp:1809
 msgid "Group 7:"
 msgstr "Grupo 7:"
 
 #. i18n: file: src/settings_colors.ui:430
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:1833
+#: rc.cpp:1812
 msgid "Group 8:"
 msgstr "Grupo 8:"
 
 #. i18n: file: src/settings_colors.ui:456
 #. i18n: ectx: attribute (title), widget (QWidget, tabStateOfMatter)
-#: rc.cpp:1836 src/kalzium.cpp:348
+#: rc.cpp:1815
 msgid "State of Matter"
 msgstr "Materia stato"
 
 #. i18n: file: src/settings_colors.ui:494
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:1839
+#: rc.cpp:1818
 msgid "Solid:"
 msgstr "Solida:"
 
 #. i18n: file: src/settings_colors.ui:523
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:1842
+#: rc.cpp:1821
 msgid "Liquid:"
 msgstr "Likva:"
 
 #. i18n: file: src/settings_colors.ui:552
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:1845
+#: rc.cpp:1824
 msgid "Vaporous:"
 msgstr "Gasa:"
 
 #. i18n: file: src/settings_colors.ui:578
 #. i18n: ectx: attribute (title), widget (QWidget, tabFamily)
-#: rc.cpp:1848 src/kalziumschemetype.cpp:253 src/exportdialog.cpp:134
+#: rc.cpp:1827 src/kalziumschemetype.cpp:261 src/exportdialog.cpp:134
 msgid "Family"
 msgstr "Familio"
 
 #. i18n: file: src/settings_colors.ui:616
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2_2_2)
-#: rc.cpp:1851
+#: rc.cpp:1830
 msgid "Alkali metals:"
 msgstr "Alkalaj metaloj:"
 
 #. i18n: file: src/settings_colors.ui:645
 #. i18n: ectx: property (text), widget (QLabel, textLabel8_2)
-#: rc.cpp:1854
+#: rc.cpp:1833
 msgid "Rare earth:"
 msgstr "Raraj teroj:"
 
 #. i18n: file: src/settings_colors.ui:674
 #. i18n: ectx: property (text), widget (QLabel, textLabel7_2)
-#: rc.cpp:1857
+#: rc.cpp:1836
 msgid "Non-metals:"
 msgstr "Nemetaloj:"
 
 #. i18n: file: src/settings_colors.ui:703
 #. i18n: ectx: property (text), widget (QLabel, textLabel6_2)
-#: rc.cpp:1860
+#: rc.cpp:1839
 msgid "Alkaline earth metals:"
 msgstr "Teralkalaj metaloj:"
 
 #. i18n: file: src/settings_colors.ui:732
 #. i18n: ectx: property (text), widget (QLabel, textLabel5_2_2)
-#: rc.cpp:1863
+#: rc.cpp:1842
 msgid "Other metals:"
 msgstr "Aliaj metaloj:"
 
 #. i18n: file: src/settings_colors.ui:761
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2_2)
-#: rc.cpp:1866
+#: rc.cpp:1845
 msgid "Halogens:"
 msgstr "Halogenoj:"
 
 #. i18n: file: src/settings_colors.ui:790
 #. i18n: ectx: property (text), widget (QLabel, textLabel3_2_2)
-#: rc.cpp:1869
+#: rc.cpp:1848
 msgid "Transition metals:"
 msgstr "Transirmetaloj:"
 
 #. i18n: file: src/settings_colors.ui:819
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2_3)
-#: rc.cpp:1872
+#: rc.cpp:1851
 msgid "Noble gases:"
 msgstr "Noblaj gasoj:"
 
 #. i18n: file: src/settings_colors.ui:848
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2_3_2)
-#: rc.cpp:1875
+#: rc.cpp:1854
 msgid "Metalloids:"
 msgstr "Metaloidoj:"
 
 #. i18n: file: src/settings_colors.ui:874
 #. i18n: ectx: attribute (title), widget (QWidget, tabNoColor)
-#: rc.cpp:1878
+#: rc.cpp:1857
 #, fuzzy
 #| msgid "&No Color Scheme"
 msgid "No Color Scheme"
@@ -3966,7 +3919,7 @@ msgstr "&Neniu kolora aranĝo"
 
 #. i18n: file: src/settings_colors.ui:912
 #. i18n: ectx: property (text), widget (QLabel, textLabel8_2_2)
-#: rc.cpp:1881
+#: rc.cpp:1860
 msgid "All the elements:"
 msgstr "Ĉiuj elementoj:"
 
@@ -3974,19 +3927,19 @@ msgstr "Ĉiuj elementoj:"
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_noscheme)
 #. i18n: file: src/settings_colors.ui:922
 #. i18n: ectx: property (whatsThis), widget (KColorButton, kcfg_noscheme)
-#: rc.cpp:1884 rc.cpp:1887
+#: rc.cpp:1863 rc.cpp:1866
 msgid "This color will be used if no other scheme is selected"
 msgstr ""
 
 #. i18n: file: src/settings_colors.ui:945
 #. i18n: ectx: attribute (title), widget (QWidget, tabGradientTypes)
-#: rc.cpp:1890
+#: rc.cpp:1869
 msgid "Gradient Types"
 msgstr "Gradienttipoj"
 
 #. i18n: file: src/settings_colors.ui:972
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1893
+#: rc.cpp:1872
 msgid ""
 "Instead of using a linear gradient to display the given property of an "
 "element in the periodic table, Kalzium can also use a logarithmic gradient.\n"
@@ -4000,32 +3953,32 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:257
 #. i18n: file: data/knowledge.xml:270
 #. i18n: file: data/knowledge.xml:280
-#: rc.cpp:1901 rc.cpp:2544 rc.cpp:2546 rc.cpp:2562 rc.cpp:2574
+#: rc.cpp:1880 rc.cpp:2526 rc.cpp:2528 rc.cpp:2544 rc.cpp:2556
 #: src/exportdialog.cpp:131
 msgid "Van der Waals Radius"
 msgstr ""
 
 #. i18n: file: src/settings_colors.ui:1060
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LogarithmicDiscoverydateGradient)
-#: rc.cpp:1916
+#: rc.cpp:1895
 msgid "Discovery Date"
 msgstr ""
 
 #. i18n: file: src/settings_colors.ui:1067
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LogarithmicElectronaffinityGradient)
-#: rc.cpp:1919 src/kalziumgradienttype.cpp:473
+#: rc.cpp:1898 src/kalziumgradienttype.cpp:571
 msgid "Electronaffinity"
 msgstr "Elektrona akordemo"
 
 #. i18n: file: src/settings_colors.ui:1074
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LogarithmicIonizationGradient)
-#: rc.cpp:1922 src/exportdialog.cpp:127
+#: rc.cpp:1901 src/exportdialog.cpp:127
 msgid "Ionization"
 msgstr "Jonigo"
 
 #. i18n: file: src/exportdialog.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:1925
+#: rc.cpp:1904
 #, fuzzy
 #| msgid "&Filter"
 msgid "File:"
@@ -4033,43 +3986,66 @@ msgstr "&Filtrilo"
 
 #. i18n: file: src/exportdialog.ui:68
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:1928
+#: rc.cpp:1907
 msgid "Format:"
 msgstr "Formato:"
 
-#. i18n: file: src/timewidget.ui:24
-#. i18n: ectx: property (text), widget (QLabel, lbl1)
-#: rc.cpp:1931
-msgid "Year:"
-msgstr "Jaro:"
+#. i18n: file: src/gradientwidget.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:1910
+#, fuzzy
+#| msgid "&Scheme"
+msgid "Scheme:"
+msgstr "&Skemo"
 
-#. i18n: file: src/timewidget.ui:57
-#. i18n: ectx: property (toolTip), widget (QSlider, time_slider)
-#: rc.cpp:1934
-msgid "Changes the current year."
+#. i18n: file: src/gradientwidget.ui:58
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:1913
+#, fuzzy
+#| msgid "Gradient: %1"
+msgid "Gradient:"
+msgstr "Gradiento: %1"
+
+#. i18n: file: src/gradientwidget.ui:92
+#. i18n: ectx: property (text), widget (QLabel, lblUnit)
+#: rc.cpp:1916 src/kalziumgradienttype.cpp:326 src/kalziumgradienttype.cpp:376
+#: src/kalziumgradienttype.cpp:431
+msgid "K"
 msgstr ""
 
-#. i18n: file: src/timewidget.ui:104
-#. i18n: ectx: property (toolTip), widget (QSpinBox, time_box)
-#: rc.cpp:1937
-msgid "Edit to change the current year."
+#. i18n: file: src/gradientwidget.ui:101
+#. i18n: ectx: property (toolTip), widget (QSlider, gradient_slider)
+#: rc.cpp:1919
+msgid "Slide to change current temperature"
 msgstr ""
 
-#. i18n: file: src/timewidget.ui:127
+#. i18n: file: src/gradientwidget.ui:125
 #. i18n: ectx: property (toolTip), widget (QPushButton, Play)
-#: rc.cpp:1940
-msgid "Click to play / pause the change of time."
+#: rc.cpp:1922
+msgid "Click to Play / Pause the increase in temperature."
 msgstr ""
 
-#. i18n: file: src/timewidget.ui:163
+#. i18n: file: src/gradientwidget.ui:128
+#. i18n: ectx: property (text), widget (QPushButton, Play)
+#: rc.cpp:1925 src/gradientwidget_impl.cpp:265
+msgid "Play"
+msgstr "Ludi"
+
+#. i18n: file: src/gradientwidget.ui:135
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:1928
+msgid "Speed"
+msgstr "Rapido"
+
+#. i18n: file: src/gradientwidget.ui:142
 #. i18n: ectx: property (toolTip), widget (QSlider, Speed)
-#: rc.cpp:1949
-msgid "Slide to change the speed at which time increases."
+#: rc.cpp:1931
+msgid "Slide to change the speed of increase in temperature."
 msgstr ""
 
 #. i18n: file: src/kalziumui.rc:4
 #. i18n: ectx: Menu (file_menu)
-#: rc.cpp:1952
+#: rc.cpp:1934
 #, fuzzy
 #| msgid "&Filter"
 msgid "&File"
@@ -4077,43 +4053,43 @@ msgstr "&Filtrilo"
 
 #. i18n: file: src/kalziumui.rc:11
 #. i18n: ectx: Menu (table_menu)
-#: rc.cpp:1955
+#: rc.cpp:1937
 msgid "&View"
 msgstr "&Rigardi"
 
 #. i18n: file: src/kalziumui.rc:21
 #. i18n: ectx: Menu (miscmenu)
-#: rc.cpp:1958
+#: rc.cpp:1940
 msgid "&Tools"
 msgstr "&Iloj"
 
 #. i18n: file: src/kalziumui.rc:35
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:1961
+#: rc.cpp:1943
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
 
 #. i18n: file: src/kalzium.kcfg:9
 #. i18n: ectx: label, entry (schemaPSE), group (Periodic Table)
-#: rc.cpp:1964
+#: rc.cpp:1946
 msgid "Selects the PSE"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:10
 #. i18n: ectx: whatsthis, entry (schemaPSE), group (Periodic Table)
-#: rc.cpp:1967
+#: rc.cpp:1949
 msgid "Select the PSE you want"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:14
 #. i18n: ectx: label, entry (colorschemebox), group (Periodic Table)
-#: rc.cpp:1970
+#: rc.cpp:1952
 msgid "Selects the default color scheme"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:15
 #. i18n: ectx: whatsthis, entry (colorschemebox), group (Periodic Table)
-#: rc.cpp:1973
+#: rc.cpp:1955
 msgid ""
 "Select the color scheme you prefer by clicking on the corresponding radio "
 "button"
@@ -4121,25 +4097,25 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:19
 #. i18n: ectx: label, entry (gradient), group (Periodic Table)
-#: rc.cpp:1976
+#: rc.cpp:1958
 msgid "Selects the default gradient"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:20
 #. i18n: ectx: whatsthis, entry (gradient), group (Periodic Table)
-#: rc.cpp:1979
+#: rc.cpp:1961
 msgid "Select the gradient you want by clicking on the menu entry"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:24
 #. i18n: ectx: label, entry (numeration), group (Periodic Table)
-#: rc.cpp:1982
+#: rc.cpp:1964
 msgid "Selects the default numeration (IUPAC)"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:25
 #. i18n: ectx: whatsthis, entry (numeration), group (Periodic Table)
-#: rc.cpp:1985
+#: rc.cpp:1967
 msgid "Select the numeration you want"
 msgstr ""
 
@@ -4147,37 +4123,37 @@ msgstr ""
 #. i18n: ectx: label, entry (showlegend), group (Periodic Table)
 #. i18n: file: src/kalzium.kcfg:30
 #. i18n: ectx: whatsthis, entry (showlegend), group (Periodic Table)
-#: rc.cpp:1988 rc.cpp:1991
+#: rc.cpp:1970 rc.cpp:1973
 msgid "Show or hide the legend"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:34
 #. i18n: ectx: label, entry (pselook), group (Periodic Table)
-#: rc.cpp:1994
+#: rc.cpp:1976
 msgid "Whether the atomic mass will be displayed in the PSE-Table"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:35
 #. i18n: ectx: whatsthis, entry (pselook), group (Periodic Table)
-#: rc.cpp:1997
+#: rc.cpp:1979
 msgid "Display the atomic mass in the PSE"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:39
 #. i18n: ectx: label, entry (table), group (Periodic Table)
-#: rc.cpp:2000
+#: rc.cpp:1982
 msgid "Selects the table view (default is classical)"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:40
 #. i18n: ectx: whatsthis, entry (table), group (Periodic Table)
-#: rc.cpp:2003
+#: rc.cpp:1985
 msgid "Display the table view"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:46
 #. i18n: ectx: label, entry (LogarithmicCovalentRadiusGradient), group (Logarithmic Gradients)
-#: rc.cpp:2006
+#: rc.cpp:1988
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Covalent Radius "
 "Gradient feature"
@@ -4185,7 +4161,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:47
 #. i18n: ectx: whatsthis, entry (LogarithmicCovalentRadiusGradient), group (Logarithmic Gradients)
-#: rc.cpp:2009
+#: rc.cpp:1991
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Covalent Radius Gradient feature"
@@ -4193,7 +4169,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:51
 #. i18n: ectx: label, entry (LogarithmicVanDerWaalsRadiusGradient), group (Logarithmic Gradients)
-#: rc.cpp:2012
+#: rc.cpp:1994
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium van der Waals Radius "
 "Gradient feature"
@@ -4201,7 +4177,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:52
 #. i18n: ectx: whatsthis, entry (LogarithmicVanDerWaalsRadiusGradient), group (Logarithmic Gradients)
-#: rc.cpp:2015
+#: rc.cpp:1997
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium van der Waals Radius Gradient feature"
@@ -4209,14 +4185,14 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:56
 #. i18n: ectx: label, entry (LogarithmicMassGradient), group (Logarithmic Gradients)
-#: rc.cpp:2018
+#: rc.cpp:2000
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Mass Gradient feature"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:57
 #. i18n: ectx: whatsthis, entry (LogarithmicMassGradient), group (Logarithmic Gradients)
-#: rc.cpp:2021
+#: rc.cpp:2003
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Mass Gradient feature"
@@ -4224,7 +4200,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:61
 #. i18n: ectx: label, entry (LogarithmicBoilingPointGradient), group (Logarithmic Gradients)
-#: rc.cpp:2024
+#: rc.cpp:2006
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Boiling Point Gradient "
 "feature"
@@ -4232,7 +4208,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:62
 #. i18n: ectx: whatsthis, entry (LogarithmicBoilingPointGradient), group (Logarithmic Gradients)
-#: rc.cpp:2027
+#: rc.cpp:2009
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Boiling Point Gradient feature"
@@ -4240,7 +4216,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:66
 #. i18n: ectx: label, entry (LogarithmicMeltingPointGradient), group (Logarithmic Gradients)
-#: rc.cpp:2030
+#: rc.cpp:2012
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Melting Point Gradient "
 "feature"
@@ -4248,7 +4224,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:67
 #. i18n: ectx: whatsthis, entry (LogarithmicMeltingPointGradient), group (Logarithmic Gradients)
-#: rc.cpp:2033
+#: rc.cpp:2015
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Melting Point Gradient feature"
@@ -4256,7 +4232,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:71
 #. i18n: ectx: label, entry (LogarithmicElectronegativityGradient), group (Logarithmic Gradients)
-#: rc.cpp:2036
+#: rc.cpp:2018
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Electronegativity "
 "Gradient feature"
@@ -4264,7 +4240,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:72
 #. i18n: ectx: whatsthis, entry (LogarithmicElectronegativityGradient), group (Logarithmic Gradients)
-#: rc.cpp:2039
+#: rc.cpp:2021
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Electronegativity Gradient feature"
@@ -4272,7 +4248,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:76
 #. i18n: ectx: label, entry (LogarithmicDiscoverydateGradient), group (Logarithmic Gradients)
-#: rc.cpp:2042
+#: rc.cpp:2024
 msgid ""
 "whether to use a logarithmic gradient for the Kalzium Discovery Date "
 "Gradient feature"
@@ -4280,7 +4256,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:77
 #. i18n: ectx: whatsthis, entry (LogarithmicDiscoverydateGradient), group (Logarithmic Gradients)
-#: rc.cpp:2045
+#: rc.cpp:2027
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Discovery Date Gradient feature"
@@ -4288,7 +4264,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:81
 #. i18n: ectx: label, entry (LogarithmicElectronaffinityGradient), group (Logarithmic Gradients)
-#: rc.cpp:2048
+#: rc.cpp:2030
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Electron Affinity "
 "Gradient feature"
@@ -4296,7 +4272,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:82
 #. i18n: ectx: whatsthis, entry (LogarithmicElectronaffinityGradient), group (Logarithmic Gradients)
-#: rc.cpp:2051
+#: rc.cpp:2033
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Electron Affinity Gradient feature"
@@ -4304,7 +4280,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:86
 #. i18n: ectx: label, entry (LogarithmicIonizationGradient), group (Logarithmic Gradients)
-#: rc.cpp:2054
+#: rc.cpp:2036
 msgid ""
 "Whether to use a logarithmic gradient for the Kalzium Ionization Gradient "
 "feature"
@@ -4312,7 +4288,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:87
 #. i18n: ectx: whatsthis, entry (LogarithmicIonizationGradient), group (Logarithmic Gradients)
-#: rc.cpp:2057
+#: rc.cpp:2039
 msgid ""
 "Specifies whether to use a logarithmic instead of a linear gradient for the "
 "Kalzium Ionization Gradient feature"
@@ -4322,19 +4298,19 @@ msgstr ""
 #. i18n: ectx: label, entry (colorgradientbox), group (Colors)
 #. i18n: file: src/kalzium.kcfg:94
 #. i18n: ectx: whatsthis, entry (colorgradientbox), group (Colors)
-#: rc.cpp:2060 rc.cpp:2063
+#: rc.cpp:2042 rc.cpp:2045
 msgid "Selects the default gradient color"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:98
 #. i18n: ectx: label, entry (noscheme), group (Colors)
-#: rc.cpp:2066
+#: rc.cpp:2048
 msgid "Selects the color if no scheme is selected"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:99
 #. i18n: ectx: whatsthis, entry (noscheme), group (Colors)
-#: rc.cpp:2069
+#: rc.cpp:2051
 msgid "Selects the color of the elements if no scheme is selected"
 msgstr ""
 
@@ -4342,7 +4318,7 @@ msgstr ""
 #. i18n: ectx: label, entry (color_liquid), group (Colors)
 #. i18n: file: src/kalzium.kcfg:104
 #. i18n: ectx: whatsthis, entry (color_liquid), group (Colors)
-#: rc.cpp:2072 rc.cpp:2075
+#: rc.cpp:2054 rc.cpp:2057
 msgid "Selects the color of liquid elements"
 msgstr ""
 
@@ -4350,7 +4326,7 @@ msgstr ""
 #. i18n: ectx: label, entry (color_solid), group (Colors)
 #. i18n: file: src/kalzium.kcfg:109
 #. i18n: ectx: whatsthis, entry (color_solid), group (Colors)
-#: rc.cpp:2078 rc.cpp:2081
+#: rc.cpp:2060 rc.cpp:2063
 msgid "Selects the color of solid elements"
 msgstr ""
 
@@ -4358,7 +4334,7 @@ msgstr ""
 #. i18n: ectx: label, entry (color_vapor), group (Colors)
 #. i18n: file: src/kalzium.kcfg:114
 #. i18n: ectx: whatsthis, entry (color_vapor), group (Colors)
-#: rc.cpp:2084 rc.cpp:2087
+#: rc.cpp:2066 rc.cpp:2069
 msgid "Selects the color of vaporous elements"
 msgstr ""
 
@@ -4366,7 +4342,7 @@ msgstr ""
 #. i18n: ectx: label, entry (color_radioactive), group (Colors)
 #. i18n: file: src/kalzium.kcfg:119
 #. i18n: ectx: whatsthis, entry (color_radioactive), group (Colors)
-#: rc.cpp:2090 rc.cpp:2093
+#: rc.cpp:2072 rc.cpp:2075
 msgid "Selects the color of radioactive elements"
 msgstr ""
 
@@ -4374,7 +4350,7 @@ msgstr ""
 #. i18n: ectx: label, entry (color_artificial), group (Colors)
 #. i18n: file: src/kalzium.kcfg:124
 #. i18n: ectx: whatsthis, entry (color_artificial), group (Colors)
-#: rc.cpp:2096 rc.cpp:2099
+#: rc.cpp:2078 rc.cpp:2081
 msgid "Selects the color of artificial elements"
 msgstr ""
 
@@ -4382,7 +4358,7 @@ msgstr ""
 #. i18n: ectx: label, entry (block_s), group (Colors)
 #. i18n: file: src/kalzium.kcfg:129
 #. i18n: ectx: whatsthis, entry (block_s), group (Colors)
-#: rc.cpp:2102 rc.cpp:2105
+#: rc.cpp:2084 rc.cpp:2087
 msgid "Selects the color of the elements in block s"
 msgstr "Elektu la koloron de la s-blokaj elementoj"
 
@@ -4390,7 +4366,7 @@ msgstr "Elektu la koloron de la s-blokaj elementoj"
 #. i18n: ectx: label, entry (block_p), group (Colors)
 #. i18n: file: src/kalzium.kcfg:134
 #. i18n: ectx: whatsthis, entry (block_p), group (Colors)
-#: rc.cpp:2108 rc.cpp:2111
+#: rc.cpp:2090 rc.cpp:2093
 msgid "Selects the color of the elements in block p"
 msgstr "Elektu la koloron de la p-blokaj elementoj"
 
@@ -4398,7 +4374,7 @@ msgstr "Elektu la koloron de la p-blokaj elementoj"
 #. i18n: ectx: label, entry (block_d), group (Colors)
 #. i18n: file: src/kalzium.kcfg:139
 #. i18n: ectx: whatsthis, entry (block_d), group (Colors)
-#: rc.cpp:2114 rc.cpp:2117
+#: rc.cpp:2096 rc.cpp:2099
 msgid "Selects the color of the elements in block d"
 msgstr "Elektu la koloron de la d-blokaj elementoj"
 
@@ -4406,7 +4382,7 @@ msgstr "Elektu la koloron de la d-blokaj elementoj"
 #. i18n: ectx: label, entry (block_f), group (Colors)
 #. i18n: file: src/kalzium.kcfg:144
 #. i18n: ectx: whatsthis, entry (block_f), group (Colors)
-#: rc.cpp:2120 rc.cpp:2123
+#: rc.cpp:2102 rc.cpp:2105
 msgid "Selects the color of the elements in block f"
 msgstr "Elektu la koloron de la f-blokaj elementoj"
 
@@ -4414,7 +4390,7 @@ msgstr "Elektu la koloron de la f-blokaj elementoj"
 #. i18n: ectx: label, entry (group_1), group (Colors)
 #. i18n: file: src/kalzium.kcfg:149
 #. i18n: ectx: whatsthis, entry (group_1), group (Colors)
-#: rc.cpp:2126 rc.cpp:2129
+#: rc.cpp:2108 rc.cpp:2111
 msgid "Selects the color of the elements in group 1"
 msgstr "Elektu la koloron de la 1-grupaj elementoj"
 
@@ -4422,7 +4398,7 @@ msgstr "Elektu la koloron de la 1-grupaj elementoj"
 #. i18n: ectx: label, entry (group_2), group (Colors)
 #. i18n: file: src/kalzium.kcfg:154
 #. i18n: ectx: whatsthis, entry (group_2), group (Colors)
-#: rc.cpp:2132 rc.cpp:2135
+#: rc.cpp:2114 rc.cpp:2117
 msgid "Selects the color of the elements in group 2"
 msgstr "Elektu la koloron de la 2-grupaj elementoj"
 
@@ -4430,7 +4406,7 @@ msgstr "Elektu la koloron de la 2-grupaj elementoj"
 #. i18n: ectx: label, entry (group_3), group (Colors)
 #. i18n: file: src/kalzium.kcfg:159
 #. i18n: ectx: whatsthis, entry (group_3), group (Colors)
-#: rc.cpp:2138 rc.cpp:2141
+#: rc.cpp:2120 rc.cpp:2123
 msgid "Selects the color of the elements in group 3"
 msgstr "Elektu la koloron de la 3-grupaj elementoj"
 
@@ -4438,7 +4414,7 @@ msgstr "Elektu la koloron de la 3-grupaj elementoj"
 #. i18n: ectx: label, entry (group_4), group (Colors)
 #. i18n: file: src/kalzium.kcfg:164
 #. i18n: ectx: whatsthis, entry (group_4), group (Colors)
-#: rc.cpp:2144 rc.cpp:2147
+#: rc.cpp:2126 rc.cpp:2129
 msgid "Selects the color of the elements in group 4"
 msgstr "Elektu la koloron de la 4-grupaj elementoj"
 
@@ -4446,7 +4422,7 @@ msgstr "Elektu la koloron de la 4-grupaj elementoj"
 #. i18n: ectx: label, entry (group_5), group (Colors)
 #. i18n: file: src/kalzium.kcfg:169
 #. i18n: ectx: whatsthis, entry (group_5), group (Colors)
-#: rc.cpp:2150 rc.cpp:2153
+#: rc.cpp:2132 rc.cpp:2135
 msgid "Selects the color of the elements in group 5"
 msgstr "Elektu la koloron de la 5-grupaj elementoj"
 
@@ -4454,7 +4430,7 @@ msgstr "Elektu la koloron de la 5-grupaj elementoj"
 #. i18n: ectx: label, entry (group_6), group (Colors)
 #. i18n: file: src/kalzium.kcfg:174
 #. i18n: ectx: whatsthis, entry (group_6), group (Colors)
-#: rc.cpp:2156 rc.cpp:2159
+#: rc.cpp:2138 rc.cpp:2141
 msgid "Selects the color of the elements in group 6"
 msgstr "Elektu la koloron de la 6-grupaj elementoj"
 
@@ -4462,7 +4438,7 @@ msgstr "Elektu la koloron de la 6-grupaj elementoj"
 #. i18n: ectx: label, entry (group_7), group (Colors)
 #. i18n: file: src/kalzium.kcfg:179
 #. i18n: ectx: whatsthis, entry (group_7), group (Colors)
-#: rc.cpp:2162 rc.cpp:2165
+#: rc.cpp:2144 rc.cpp:2147
 msgid "Selects the color of the elements in group 7"
 msgstr "Elektu la koloron de la 7-grupaj elementoj"
 
@@ -4470,7 +4446,7 @@ msgstr "Elektu la koloron de la 7-grupaj elementoj"
 #. i18n: ectx: label, entry (group_8), group (Colors)
 #. i18n: file: src/kalzium.kcfg:184
 #. i18n: ectx: whatsthis, entry (group_8), group (Colors)
-#: rc.cpp:2168 rc.cpp:2171
+#: rc.cpp:2150 rc.cpp:2153
 msgid "Selects the color of the elements in group 8"
 msgstr "Elektu la koloron de la 8-grupaj elementoj"
 
@@ -4478,7 +4454,7 @@ msgstr "Elektu la koloron de la 8-grupaj elementoj"
 #. i18n: ectx: label, entry (alkalie), group (Colors)
 #. i18n: file: src/kalzium.kcfg:189
 #. i18n: ectx: whatsthis, entry (alkalie), group (Colors)
-#: rc.cpp:2174 rc.cpp:2177
+#: rc.cpp:2156 rc.cpp:2159
 msgid "Selects the color of the alkali metals"
 msgstr ""
 
@@ -4486,7 +4462,7 @@ msgstr ""
 #. i18n: ectx: label, entry (rare), group (Colors)
 #. i18n: file: src/kalzium.kcfg:194
 #. i18n: ectx: whatsthis, entry (rare), group (Colors)
-#: rc.cpp:2180 rc.cpp:2183
+#: rc.cpp:2162 rc.cpp:2165
 msgid "Selects the color of the rare-earth elements"
 msgstr ""
 
@@ -4494,7 +4470,7 @@ msgstr ""
 #. i18n: ectx: label, entry (nonmetal), group (Colors)
 #. i18n: file: src/kalzium.kcfg:199
 #. i18n: ectx: whatsthis, entry (nonmetal), group (Colors)
-#: rc.cpp:2186 rc.cpp:2189
+#: rc.cpp:2168 rc.cpp:2171
 msgid "Selects the color of the non-metal elements"
 msgstr ""
 
@@ -4502,7 +4478,7 @@ msgstr ""
 #. i18n: ectx: label, entry (alkaline), group (Colors)
 #. i18n: file: src/kalzium.kcfg:204
 #. i18n: ectx: whatsthis, entry (alkaline), group (Colors)
-#: rc.cpp:2192 rc.cpp:2195
+#: rc.cpp:2174 rc.cpp:2177
 msgid "Selects the color of the alkaline earth metals"
 msgstr ""
 
@@ -4510,7 +4486,7 @@ msgstr ""
 #. i18n: ectx: label, entry (other_metal), group (Colors)
 #. i18n: file: src/kalzium.kcfg:209
 #. i18n: ectx: whatsthis, entry (other_metal), group (Colors)
-#: rc.cpp:2198 rc.cpp:2201
+#: rc.cpp:2180 rc.cpp:2183
 msgid ""
 "Selects the color of the metals which do not fit into the other categories"
 msgstr ""
@@ -4519,7 +4495,7 @@ msgstr ""
 #. i18n: ectx: label, entry (halogene), group (Colors)
 #. i18n: file: src/kalzium.kcfg:214
 #. i18n: ectx: whatsthis, entry (halogene), group (Colors)
-#: rc.cpp:2204 rc.cpp:2207
+#: rc.cpp:2186 rc.cpp:2189
 msgid "Selects the color of the halogen elements"
 msgstr ""
 
@@ -4527,7 +4503,7 @@ msgstr ""
 #. i18n: ectx: label, entry (transition), group (Colors)
 #. i18n: file: src/kalzium.kcfg:219
 #. i18n: ectx: whatsthis, entry (transition), group (Colors)
-#: rc.cpp:2210 rc.cpp:2213
+#: rc.cpp:2192 rc.cpp:2195
 msgid "Selects the color of the transition elements"
 msgstr ""
 
@@ -4535,7 +4511,7 @@ msgstr ""
 #. i18n: ectx: label, entry (noble_gas), group (Colors)
 #. i18n: file: src/kalzium.kcfg:224
 #. i18n: ectx: whatsthis, entry (noble_gas), group (Colors)
-#: rc.cpp:2216 rc.cpp:2219
+#: rc.cpp:2198 rc.cpp:2201
 msgid "Selects the color of the noble gases"
 msgstr ""
 
@@ -4543,32 +4519,32 @@ msgstr ""
 #. i18n: ectx: label, entry (metalloid), group (Colors)
 #. i18n: file: src/kalzium.kcfg:229
 #. i18n: ectx: whatsthis, entry (metalloid), group (Colors)
-#: rc.cpp:2222 rc.cpp:2225
+#: rc.cpp:2204 rc.cpp:2207
 msgid "Selects the color of the metalloid elements"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:235
 #. i18n: ectx: label, entry (energies), group (Units)
-#: rc.cpp:2228
+#: rc.cpp:2210
 msgid "This value defines whether eV or kJ/mol should be used within Kalzium"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:236
 #. i18n: ectx: whatsthis, entry (energies), group (Units)
-#: rc.cpp:2231
+#: rc.cpp:2213
 msgid "Use eV or kJ/mol"
 msgstr "Uzu eV aŭ kJ/mol"
 
 #. i18n: file: src/kalzium.kcfg:240
 #. i18n: ectx: label, entry (temperatureUnit), group (Units)
-#: rc.cpp:2234
+#: rc.cpp:2216
 msgid ""
 "This value defines which temperature scale should be used within Kalzium"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:241
 #. i18n: ectx: whatsthis, entry (temperatureUnit), group (Units)
-#: rc.cpp:2237
+#: rc.cpp:2219
 msgid "Select the scale for the temperature"
 msgstr ""
 
@@ -4576,13 +4552,13 @@ msgstr ""
 #. i18n: ectx: label, entry (schemaSelected), group (Units)
 #. i18n: file: src/kalzium.kcfg:246
 #. i18n: ectx: whatsthis, entry (schemaSelected), group (Units)
-#: rc.cpp:2240 rc.cpp:2243
+#: rc.cpp:2222 rc.cpp:2225
 msgid "True if schema was last selected"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:252
 #. i18n: ectx: label, entry (language), group (Web)
-#: rc.cpp:2246
+#: rc.cpp:2228
 msgid ""
 "This value determines the Wikipedia language in the detailed elemental "
 "information"
@@ -4590,13 +4566,13 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:253
 #. i18n: ectx: whatsthis, entry (language), group (Web)
-#: rc.cpp:2249
+#: rc.cpp:2231
 msgid "Selects the wikipedia language"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:259
 #. i18n: ectx: label, entry (mass), group (Calculator)
-#: rc.cpp:2252
+#: rc.cpp:2234
 msgid ""
 "This setting tells the nuclear calculator whether the amounts are always in "
 "terms of mass"
@@ -4604,19 +4580,19 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:260
 #. i18n: ectx: whatsthis, entry (mass), group (Calculator)
-#: rc.cpp:2255
+#: rc.cpp:2237
 msgid "True if the user wants to specify amount only in terms of mass"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:263
 #. i18n: ectx: label, entry (ideal), group (Calculator)
-#: rc.cpp:2258
+#: rc.cpp:2240
 msgid "This setting says whether the user wants the gas to be ideal by default"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:264
 #. i18n: ectx: whatsthis, entry (ideal), group (Calculator)
-#: rc.cpp:2261
+#: rc.cpp:2243
 msgid ""
 "True if gasses are assumed to be ideal, the Van der Waals co-efficients will "
 "not be shown in the calculator"
@@ -4624,7 +4600,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:268
 #. i18n: ectx: label, entry (soluteMass), group (Calculator)
-#: rc.cpp:2264
+#: rc.cpp:2246
 msgid ""
 "This setting tells the concentration calculator that amount of solute is "
 "always in mass"
@@ -4632,13 +4608,13 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:269
 #. i18n: ectx: whatsthis, entry (soluteMass), group (Calculator)
-#: rc.cpp:2267
+#: rc.cpp:2249
 msgid "True if the amount of solute is specified only in terms of mass"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:272
 #. i18n: ectx: label, entry (solventVolume), group (Calculator)
-#: rc.cpp:2270
+#: rc.cpp:2252
 msgid ""
 "This setting tells the concentration calculator that amount of solvent is "
 "always in volume"
@@ -4646,13 +4622,13 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:273
 #. i18n: ectx: whatsthis, entry (solventVolume), group (Calculator)
-#: rc.cpp:2273
+#: rc.cpp:2255
 msgid "True if the amount of solvent is specified only in terms of volume"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:276
 #. i18n: ectx: label, entry (alias), group (Calculator)
-#: rc.cpp:2276
+#: rc.cpp:2258
 msgid ""
 "This setting tells the molecular mass calculator whether extra details such "
 "as aliases should be shown"
@@ -4660,13 +4636,13 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:277
 #. i18n: ectx: whatsthis, entry (alias), group (Calculator)
-#: rc.cpp:2279
+#: rc.cpp:2261
 msgid "True if the aliases and other details should be shown"
 msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:280
 #. i18n: ectx: label, entry (addAlias), group (Calculator)
-#: rc.cpp:2282
+#: rc.cpp:2264
 msgid ""
 "This setting tells the molecular calculator whether the add Alias tab should "
 "be shown"
@@ -4674,7 +4650,7 @@ msgstr ""
 
 #. i18n: file: src/kalzium.kcfg:281
 #. i18n: ectx: whatsthis, entry (addAlias), group (Calculator)
-#: rc.cpp:2285
+#: rc.cpp:2267
 msgid "True if the user wants to add aliases"
 msgstr ""
 
@@ -4682,66 +4658,66 @@ msgstr ""
 #. i18n: ectx: label, entry (showsidebar), group (Sidebar)
 #. i18n: file: src/kalzium.kcfg:287
 #. i18n: ectx: whatsthis, entry (showsidebar), group (Sidebar)
-#: rc.cpp:2288 rc.cpp:2291
+#: rc.cpp:2270 rc.cpp:2273
 msgid "Show or hide the sidebar"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:4
-#: rc.cpp:2293
+#: rc.cpp:2275 src/kalziumgradienttype.cpp:417
 #, fuzzy
 #| msgid "State of Matter"
 msgid "State of matter"
 msgstr "Materia stato"
 
 #. i18n: file: data/knowledge.xml:5
-#: rc.cpp:2295
+#: rc.cpp:2277
 msgid ""
 "Form of a substance; dependant on form stability and whether it takes up a "
 "definite volume: solid, liquid or gaseous."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:7
-#: rc.cpp:2297
+#: rc.cpp:2279
 msgid "Boiling point"
 msgstr "Bolpunkto"
 
 #. i18n: file: data/knowledge.xml:8
-#: rc.cpp:2299
+#: rc.cpp:2281
 msgid "Melting point"
 msgstr "Fandpunkto"
 
 #. i18n: file: data/knowledge.xml:12
-#: rc.cpp:2301
+#: rc.cpp:2283
 #, fuzzy
 #| msgid "Element Symbols"
 msgid "Chemical Symbol"
 msgstr "Elementaj simboloj"
 
 #. i18n: file: data/knowledge.xml:13
-#: rc.cpp:2303
+#: rc.cpp:2285
 msgid ""
 "One, two, or three letter abbreviation; set through international convention."
 msgstr "Unu-, du- aŭ trilitera mallongigo; elekta per internacia konvencio."
 
 #. i18n: file: data/knowledge.xml:19
-#: rc.cpp:2307
+#: rc.cpp:2289
 msgid "Chromatography"
 msgstr "Kromatografio"
 
 #. i18n: file: data/knowledge.xml:20
-#: rc.cpp:2309
+#: rc.cpp:2291
 msgid ""
 "Matter separation in a moving medium (mobile phase) through differentiated "
 "absorption on a static medium (stationary phase)."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:23
-#: rc.cpp:2311
+#: rc.cpp:2293
 msgid "Distillation"
 msgstr "Distilado"
 
 #. i18n: file: data/knowledge.xml:24
-#: rc.cpp:2313
+#: rc.cpp:2295
 msgid ""
 "Separation of a liquid solution (homogeneous mix) into its components "
 "through evaporation and condensation. In a fractionary distillation the "
@@ -4749,7 +4725,7 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:28
-#: rc.cpp:2317
+#: rc.cpp:2299
 msgid ""
 "Matter that cannot be broken down into simpler matter. Chemical elements are "
 "cornerstones of Materials. Elements consist of atoms that consist of a "
@@ -4757,45 +4733,45 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:31
-#: rc.cpp:2319
+#: rc.cpp:2301
 msgid "Emulsion"
 msgstr "Emulsio"
 
 #. i18n: file: data/knowledge.xml:32
-#: rc.cpp:2321
+#: rc.cpp:2303
 msgid "Heterogeneous mix of two liquids."
 msgstr "Heterogena miksaĵo de du likvoj."
 
 #. i18n: file: data/knowledge.xml:35
-#: rc.cpp:2323
+#: rc.cpp:2305
 msgid "Extraction"
 msgstr "Ekstraktado"
 
 #. i18n: file: data/knowledge.xml:36
-#: rc.cpp:2325
+#: rc.cpp:2307
 msgid "Processing a homogeneous or heterogeneous mix to get pure matter."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:38
 #. i18n: file: data/knowledge.xml:46
-#: rc.cpp:2327 rc.cpp:2333
+#: rc.cpp:2309 rc.cpp:2315
 msgid "Mix"
 msgstr "Mikso"
 
 #. i18n: file: data/knowledge.xml:42
-#: rc.cpp:2329
+#: rc.cpp:2311
 msgid "Filtering"
 msgstr "Filtrado"
 
 #. i18n: file: data/knowledge.xml:43
-#: rc.cpp:2331
+#: rc.cpp:2313
 msgid ""
 "Separation of a solid matter from a liquid matter or gaseous matter with a "
 "filter (porous separation wall)."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:47
-#: rc.cpp:2335
+#: rc.cpp:2317
 msgid ""
 "Matter consisting of differentiated matter, combined in non-set ratios. [i]"
 "Homogeneous mixes[/i] have a coherent look, [i]heterogeneous mixes[/i] "
@@ -4803,22 +4779,22 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:50
-#: rc.cpp:2337
+#: rc.cpp:2319
 msgid "Accuracy"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:51
-#: rc.cpp:2339
+#: rc.cpp:2321
 msgid "Consisting of accidental and systematic errors."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:54
-#: rc.cpp:2341
+#: rc.cpp:2323
 msgid "Law of Conservation of Mass"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:55
-#: rc.cpp:2343
+#: rc.cpp:2325
 msgid ""
 "During a chemical reaction mass is neither lost nor gained. The sum mass of "
 "the material going into the reaction equals the sum of the mass of the "
@@ -4826,61 +4802,61 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:58
-#: rc.cpp:2345
+#: rc.cpp:2327
 msgid "Law of multiple proportions"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:59
-#: rc.cpp:2347
+#: rc.cpp:2329
 msgid ""
 "An alloy always contains the same elements in the same mass ratio. Should "
 "two or more elements bind together then the mass ratio is constant."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:62
-#: rc.cpp:2349
+#: rc.cpp:2331
 msgid "Crystallization"
 msgstr "Kristaliĝo"
 
 #. i18n: file: data/knowledge.xml:63
-#: rc.cpp:2351
+#: rc.cpp:2333
 msgid ""
 "Separation of solid, crystalline matter from a solution, or the liquid or "
 "gaseous phases."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:66
-#: rc.cpp:2353
+#: rc.cpp:2335
 msgid "Solution"
 msgstr "Solvaĵo"
 
 #. i18n: file: data/knowledge.xml:67
-#: rc.cpp:2355
+#: rc.cpp:2337
 msgid "Homogeneous mix of multiple pure materials"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:71
-#: rc.cpp:2359
+#: rc.cpp:2341
 msgid "Measurement of an amount of matter."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:74
-#: rc.cpp:2361
+#: rc.cpp:2343
 msgid "Matter"
 msgstr "Materio"
 
 #. i18n: file: data/knowledge.xml:75
-#: rc.cpp:2363
+#: rc.cpp:2345
 msgid "All that takes up space and has mass."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:78
-#: rc.cpp:2365
+#: rc.cpp:2347
 msgid "Phase"
 msgstr "Fazo"
 
 #. i18n: file: data/knowledge.xml:79
-#: rc.cpp:2367
+#: rc.cpp:2349
 msgid ""
 "Through chemical composition and physical attributes, homogeneous portion of "
 "matter that separated from its environment in its expansion through a "
@@ -4888,87 +4864,87 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:82
-#: rc.cpp:2369
+#: rc.cpp:2351
 msgid "Accuracy and precision"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:83
-#: rc.cpp:2371
+#: rc.cpp:2353
 msgid ""
 "Expressed through standard deviation: Values given over accidental errors."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:86
-#: rc.cpp:2373
+#: rc.cpp:2355
 msgid "Correctness"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:87
-#: rc.cpp:2375
+#: rc.cpp:2357
 msgid "Values given over accidental errors."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:90
-#: rc.cpp:2377
+#: rc.cpp:2359
 msgid "SI-Unit"
 msgstr "SI-unuo"
 
 #. i18n: file: data/knowledge.xml:91
-#: rc.cpp:2379
+#: rc.cpp:2361
 msgid "Measurement unit using International Symbols."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:94
-#: rc.cpp:2381
+#: rc.cpp:2363
 msgid "Significant figures"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:95
-#: rc.cpp:2383
+#: rc.cpp:2365
 msgid "The number of digits which are meaningful in a number."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:98
-#: rc.cpp:2385
+#: rc.cpp:2367
 msgid "Standard deviation"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:99
-#: rc.cpp:2387
+#: rc.cpp:2369
 msgid "An amount with which the precision of a measurement can be estimated."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:102
-#: rc.cpp:2389
+#: rc.cpp:2371
 #, fuzzy
 #| msgid "upsilon"
 msgid "Suspension"
 msgstr "upsilono"
 
 #. i18n: file: data/knowledge.xml:103
-#: rc.cpp:2391
+#: rc.cpp:2373
 #, fuzzy
 #| msgid "Heterogeneous mix of two liquids."
 msgid "Heterogeneous mix consisting of a liquid and solid matter."
 msgstr "Heterogena miksaĵo de du likvoj."
 
 #. i18n: file: data/knowledge.xml:106
-#: rc.cpp:2393
+#: rc.cpp:2375
 msgid "Alloys"
 msgstr "Alojoj"
 
 #. i18n: file: data/knowledge.xml:107
-#: rc.cpp:2395
+#: rc.cpp:2377
 msgid "Pure matter consisting of multiple elements in a set ratio."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:110
-#: rc.cpp:2397
+#: rc.cpp:2379
 msgid "Alpha rays"
 msgstr "Alfa-radioj"
 
 #. i18n: file: data/knowledge.xml:111
-#: rc.cpp:2399
+#: rc.cpp:2381
 msgid ""
 "Rays consisting of alpha particles, consisting of two protons and two "
 "neutrons that are emitted from the Atoms of certain radioactive elements."
@@ -4981,13 +4957,13 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:219
 #. i18n: file: data/knowledge.xml:226
 #. i18n: file: data/knowledge.xml:235
-#: rc.cpp:2401 rc.cpp:2417 rc.cpp:2423 rc.cpp:2431 rc.cpp:2508 rc.cpp:2514
-#: rc.cpp:2524
+#: rc.cpp:2383 rc.cpp:2399 rc.cpp:2405 rc.cpp:2413 rc.cpp:2490 rc.cpp:2496
+#: rc.cpp:2506
 msgid "Atom"
 msgstr "Atomo"
 
 #. i18n: file: data/knowledge.xml:115
-#: rc.cpp:2403
+#: rc.cpp:2385
 msgid ""
 "Atoms are chemically inseparable and building blocks of matter. Atoms of one "
 "kind are called an Element."
@@ -4998,43 +4974,43 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:227
 #. i18n: file: data/knowledge.xml:236
 #. i18n: file: data/knowledge.xml:244
-#: rc.cpp:2407 rc.cpp:2503 rc.cpp:2516 rc.cpp:2526 rc.cpp:2534
+#: rc.cpp:2389 rc.cpp:2485 rc.cpp:2498 rc.cpp:2508 rc.cpp:2516
 msgid "Electron"
 msgstr "Elektrono"
 
 #. i18n: file: data/knowledge.xml:119
 #. i18n: file: data/knowledge.xml:223
 #. i18n: file: data/knowledge.xml:237
-#: rc.cpp:2409 rc.cpp:2510 rc.cpp:2528
+#: rc.cpp:2391 rc.cpp:2492 rc.cpp:2510
 msgid "Proton"
 msgstr "Protono"
 
 #. i18n: file: data/knowledge.xml:120
 #. i18n: file: data/knowledge.xml:228
 #. i18n: file: data/knowledge.xml:232
-#: rc.cpp:2411 rc.cpp:2518 rc.cpp:2520
+#: rc.cpp:2393 rc.cpp:2500 rc.cpp:2502
 msgid "Neutron"
 msgstr "Neŭtrono"
 
 #. i18n: file: data/knowledge.xml:124
-#: rc.cpp:2413
+#: rc.cpp:2395
 msgid "Atomic nucleus"
 msgstr "Atoma nukleo"
 
 #. i18n: file: data/knowledge.xml:125
-#: rc.cpp:2415
+#: rc.cpp:2397
 msgid ""
 "The small, positively-charged center of an Atom, in which Protons and "
 "Neutrons are found."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:131
-#: rc.cpp:2419 src/kalziumgradienttype.cpp:252
+#: rc.cpp:2401 src/kalziumgradienttype.cpp:265
 msgid "Atomic Mass"
 msgstr "Atommaso"
 
 #. i18n: file: data/knowledge.xml:132
-#: rc.cpp:2421
+#: rc.cpp:2403
 msgid ""
 "Mass of an atom, taken on a scale where the mass of a carbon atom is 12u. In "
 "elements that consist of different isotopes the mid-range mass of the "
@@ -5050,13 +5026,13 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:187
 #. i18n: file: data/knowledge.xml:196
 #. i18n: file: data/knowledge.xml:205
-#: rc.cpp:2427 rc.cpp:2437 rc.cpp:2443 rc.cpp:2449 rc.cpp:2455 rc.cpp:2461
-#: rc.cpp:2473 rc.cpp:2483 rc.cpp:2493
+#: rc.cpp:2409 rc.cpp:2419 rc.cpp:2425 rc.cpp:2431 rc.cpp:2437 rc.cpp:2443
+#: rc.cpp:2455 rc.cpp:2465 rc.cpp:2475
 msgid "Isotope"
 msgstr "Izotopo"
 
 #. i18n: file: data/knowledge.xml:140
-#: rc.cpp:2429
+#: rc.cpp:2411
 msgid ""
 "Isotopes are forms of a chemical element whose nuclei have the same atomic "
 "number, Z, but different atomic masses, A. The word isotope, meaning at the "
@@ -5065,12 +5041,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:146
-#: rc.cpp:2433
+#: rc.cpp:2415
 msgid "Spin"
 msgstr "Spino"
 
 #. i18n: file: data/knowledge.xml:147
-#: rc.cpp:2435
+#: rc.cpp:2417
 msgid ""
 "The spin is an intrinsic angular momentum associated with microscopic "
 "particles. It is a purely quantum mechanical phenomenon without any analogy "
@@ -5080,12 +5056,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:153
-#: rc.cpp:2439 src/detailinfodlg.cpp:345
+#: rc.cpp:2421 src/detailinfodlg.cpp:345
 msgid "Magnetic Moment"
 msgstr "Magneta momanto"
 
 #. i18n: file: data/knowledge.xml:154
-#: rc.cpp:2441
+#: rc.cpp:2423
 msgid ""
 "The magnetic moment of an object is a vector relating the aligning torque in "
 "a magnetic field experienced by the object to the field vector itself. It is "
@@ -5094,12 +5070,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:160
-#: rc.cpp:2445
+#: rc.cpp:2427
 msgid "Decay Mode"
 msgstr "Disiĝa modo"
 
 #. i18n: file: data/knowledge.xml:161
-#: rc.cpp:2447
+#: rc.cpp:2429
 msgid ""
 "The decay mode describes a particular way a particle decays. For radioactive "
 "decay (the decay of nuclides) the decay modes are:[br] -> alpha decay "
@@ -5110,24 +5086,24 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:167
-#: rc.cpp:2451
+#: rc.cpp:2433
 #, fuzzy
 #| msgid "Decay Mode"
 msgid "Decay Energy"
 msgstr "Disiĝa modo"
 
 #. i18n: file: data/knowledge.xml:168
-#: rc.cpp:2453
+#: rc.cpp:2435
 msgid "The decay energy is the energy released by a nuclear decay."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:174
-#: rc.cpp:2457
+#: rc.cpp:2439
 msgid "Nuclides"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:175
-#: rc.cpp:2459
+#: rc.cpp:2441
 msgid "[i]see isotopes[/i]"
 msgstr "[i]vidu izotopojn[/i]"
 
@@ -5135,7 +5111,7 @@ msgstr "[i]vidu izotopojn[/i]"
 #. i18n: file: data/knowledge.xml:184
 #. i18n: file: data/knowledge.xml:197
 #. i18n: file: data/knowledge.xml:207
-#: rc.cpp:2463 rc.cpp:2469 rc.cpp:2485 rc.cpp:2497
+#: rc.cpp:2445 rc.cpp:2451 rc.cpp:2467 rc.cpp:2479
 msgid "Isotone"
 msgstr "Izotono"
 
@@ -5143,38 +5119,38 @@ msgstr "Izotono"
 #. i18n: file: data/knowledge.xml:188
 #. i18n: file: data/knowledge.xml:198
 #. i18n: file: data/knowledge.xml:202
-#: rc.cpp:2465 rc.cpp:2475 rc.cpp:2487 rc.cpp:2489
+#: rc.cpp:2447 rc.cpp:2457 rc.cpp:2469 rc.cpp:2471
 msgid "Nuclear Isomer"
 msgstr "Nuklea izomero"
 
 #. i18n: file: data/knowledge.xml:180
-#: rc.cpp:2467
+#: rc.cpp:2449
 msgid "Isobars"
 msgstr "Izobaroj"
 
 #. i18n: file: data/knowledge.xml:185
-#: rc.cpp:2471
+#: rc.cpp:2453
 msgid "Two nuclides are isotones if they have the same number N of neutrons."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:189
 #. i18n: file: data/knowledge.xml:193
 #. i18n: file: data/knowledge.xml:206
-#: rc.cpp:2477 rc.cpp:2479 rc.cpp:2495
+#: rc.cpp:2459 rc.cpp:2461 rc.cpp:2477
 #, fuzzy
 #| msgid "Isobars"
 msgid "Isobar"
 msgstr "Izobaroj"
 
 #. i18n: file: data/knowledge.xml:194
-#: rc.cpp:2481
+#: rc.cpp:2463
 msgid ""
 "Isobars are nuclides having the same mass number, i.e. sum of protons plus "
 "neutrons."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:203
-#: rc.cpp:2491
+#: rc.cpp:2473
 msgid ""
 "A nuclear isomer is a metastable or isomeric state of an atom caused by the "
 "excitation of a proton or neutron in its nucleus so that it requires a "
@@ -5192,21 +5168,21 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:211
-#: rc.cpp:2499
+#: rc.cpp:2481
 #, fuzzy
 #| msgid "Alpha rays"
 msgid "Beta rays"
 msgstr "Alfa-radioj"
 
 #. i18n: file: data/knowledge.xml:212
-#: rc.cpp:2501
+#: rc.cpp:2483
 msgid ""
 "Rays consisting of electrons that are emitted from Atoms of radioactive "
 "elements."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:217
-#: rc.cpp:2505
+#: rc.cpp:2487
 msgid ""
 "The electron is a subatomic particle with a mass of m[sub]e[/sub]=(9.1093897 "
 "&#177; 0.0000054)e-31 kg and a negative charge of [i]e[/i]=(1.60217733 "
@@ -5215,7 +5191,7 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:224
-#: rc.cpp:2512
+#: rc.cpp:2494
 msgid ""
 "The proton is a subatomic particle with a mass of m[sub]e[/sub]=(1.6726231 "
 "&#177; 0.0000010) 10[sup]-27[/sup] kg and a positive charge of [i]e[/i]="
@@ -5224,19 +5200,19 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:233
-#: rc.cpp:2522
+#: rc.cpp:2504
 msgid ""
 "The neutron is a subatomic particle with a mass of m[sub]e[/sub]=(1.6749286 "
 "&#177; 0.0000010) 10[sup]-27[/sup] kg which occurs in the nucleus of an atom."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:241
-#: rc.cpp:2530
+#: rc.cpp:2512
 msgid "Cathode Rays"
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:242
-#: rc.cpp:2532
+#: rc.cpp:2514
 msgid ""
 "Cathode rays are streams of electrons observed in vacuum tubes, i.e. "
 "evacuated glass tubes that are equipped with at least two electrodes, a "
@@ -5248,14 +5224,14 @@ msgstr ""
 #. i18n: file: data/knowledge.xml:262
 #. i18n: file: data/knowledge.xml:271
 #. i18n: file: data/knowledge.xml:279
-#: rc.cpp:2536 rc.cpp:2554 rc.cpp:2564 rc.cpp:2572
+#: rc.cpp:2518 rc.cpp:2536 rc.cpp:2546 rc.cpp:2554
 #, fuzzy
 #| msgid "Atomic Radius"
 msgid "Ionic Radius"
 msgstr "Atoma radiuso"
 
 #. i18n: file: data/knowledge.xml:249
-#: rc.cpp:2538
+#: rc.cpp:2520
 msgid ""
 "The Ionic Radius is the radius of a charged atom, known as an ion. The ion "
 "can have a positive or a negative charge. The charge of the ion with the "
@@ -5265,7 +5241,7 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:258
-#: rc.cpp:2548
+#: rc.cpp:2530
 msgid ""
 "The van der Waals radius of an atom is the radius of an imaginary hard "
 "sphere which can be used to model the atom for many purposes. Van der Waals "
@@ -5274,26 +5250,26 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:267
-#: rc.cpp:2558
+#: rc.cpp:2540
 msgid ""
 "The atomic radius is the distance from the atomic nucleus to the outmost "
 "stable electron orbital in a atom that is at equilibrium."
 msgstr ""
 
 #. i18n: file: data/knowledge.xml:276
-#: rc.cpp:2568
+#: rc.cpp:2550
 msgid ""
 "The covalent radius in chemistry corresponds to half of the distance between "
 "two identical atomic nuclei, bound by a covalent bond."
 msgstr ""
 
 #. i18n: file: data/tools.xml:5
-#: rc.cpp:2576
+#: rc.cpp:2558
 msgid "Watchglass"
 msgstr ""
 
 #. i18n: file: data/tools.xml:6
-#: rc.cpp:2578
+#: rc.cpp:2560
 msgid ""
 "Watchglasses are round glass panes with a diameter of around 5 - 10cm, used "
 "in various experimental techniques. The border is bent upwards to allow the "
@@ -5306,12 +5282,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:10
-#: rc.cpp:2580
+#: rc.cpp:2562
 msgid "Dehydrator"
 msgstr ""
 
 #. i18n: file: data/tools.xml:13
-#: rc.cpp:2582
+#: rc.cpp:2564
 msgid ""
 "A dehydrator is a piece of laboratory apparatus, often made of glass, and "
 "which serves to dry chemical matters; that is, to remove water or liquid "
@@ -5327,12 +5303,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:17
-#: rc.cpp:2586
+#: rc.cpp:2568
 msgid "Spatula"
 msgstr ""
 
 #. i18n: file: data/tools.xml:18
-#: rc.cpp:2588
+#: rc.cpp:2570
 msgid ""
 "The spatula is a laboratory tool to scrape off, grind, and transport "
 "chemicals. The material they are made of (e.g. iron, titanium, platinum) and "
@@ -5340,12 +5316,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:22
-#: rc.cpp:2590
+#: rc.cpp:2572
 msgid "Water Jet Pump"
 msgstr ""
 
 #. i18n: file: data/tools.xml:23
-#: rc.cpp:2592
+#: rc.cpp:2574
 msgid ""
 "The water jet pump has two entry pipes and one exit, and consists, in "
 "principle, of two pipes one inside the other. At the water entry a water jet "
@@ -5357,12 +5333,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:27
-#: rc.cpp:2594
+#: rc.cpp:2576
 msgid "Refractometer"
 msgstr ""
 
 #. i18n: file: data/tools.xml:28
-#: rc.cpp:2596
+#: rc.cpp:2578
 msgid ""
 "With a refractometer the refractive index of optical media is determined. If "
 "the refractive index of a chemical is known it can be used after a synthesis "
@@ -5370,14 +5346,14 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:32
-#: rc.cpp:2598
+#: rc.cpp:2580
 #, fuzzy
 #| msgid "iota"
 msgid "Mortar"
 msgstr "joto"
 
 #. i18n: file: data/tools.xml:33
-#: rc.cpp:2600
+#: rc.cpp:2582
 msgid ""
 "A mortar is used for manually grinding solids. It can also be used to "
 "homogenize a mixture of powders by grinding. A club-shaped tool known as a "
@@ -5385,14 +5361,14 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:37
-#: rc.cpp:2602
+#: rc.cpp:2584
 #, fuzzy
 #| msgid "Melting Point"
 msgid "Heating Coil"
 msgstr "Fandpunkto"
 
 #. i18n: file: data/tools.xml:38
-#: rc.cpp:2604
+#: rc.cpp:2586
 msgid ""
 "Heating coils are used to heat flasks and other containers. Multiple heating "
 "coils can be connected with a thermometer so that the heat will not exceed a "
@@ -5402,12 +5378,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:42
-#: rc.cpp:2606
+#: rc.cpp:2588
 msgid "Cork Ring"
 msgstr ""
 
 #. i18n: file: data/tools.xml:43
-#: rc.cpp:2608
+#: rc.cpp:2590
 msgid ""
 "Large containers like round-bottomed flasks are placed on rings made of "
 "cork, a special soft lightweight wood with good insulating qualities to "
@@ -5415,24 +5391,24 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:47
-#: rc.cpp:2610
+#: rc.cpp:2592
 msgid "Dropping Funnel"
 msgstr ""
 
 #. i18n: file: data/tools.xml:48
-#: rc.cpp:2612
+#: rc.cpp:2594
 msgid ""
 "A dropping funnel can be used to drop precise amounts of fluid. The dropping "
 "speed can be controlled with a valve."
 msgstr ""
 
 #. i18n: file: data/tools.xml:52
-#: rc.cpp:2614
+#: rc.cpp:2596
 msgid "Separating Funnel"
 msgstr ""
 
 #. i18n: file: data/tools.xml:53
-#: rc.cpp:2616
+#: rc.cpp:2598
 msgid ""
 "A separating funnel can be used to separate a mixture of fluids of differing "
 "densities. A valve at the bottom allows the denser fluid to be drained for "
@@ -5440,24 +5416,24 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:57
-#: rc.cpp:2618
+#: rc.cpp:2600
 msgid "Test Tube Rack"
 msgstr ""
 
 #. i18n: file: data/tools.xml:58
-#: rc.cpp:2620
+#: rc.cpp:2602
 msgid ""
 "This rack is useful when many small amounts of chemicals are to be tested in "
 "a row; or alternatively, to dry test tubes."
 msgstr ""
 
 #. i18n: file: data/tools.xml:62
-#: rc.cpp:2622
+#: rc.cpp:2604
 msgid "Vortexer"
 msgstr ""
 
 #. i18n: file: data/tools.xml:63
-#: rc.cpp:2624
+#: rc.cpp:2606
 msgid ""
 "A vortexer serves to homogenize reagents found in laboratories. The "
 "container containing liquid to be homogenized is put on a platform. The "
@@ -5468,12 +5444,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:67
-#: rc.cpp:2626
+#: rc.cpp:2608
 msgid "Wash Bottle"
 msgstr ""
 
 #. i18n: file: data/tools.xml:68
-#: rc.cpp:2628
+#: rc.cpp:2610
 msgid ""
 "These bottles are used for many purposes. In most laboratories they are "
 "usually filled with water, salt, acid or other commonly used fluids. They "
@@ -5481,12 +5457,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:72
-#: rc.cpp:2630
+#: rc.cpp:2612
 msgid "Rotary Evaporator"
 msgstr ""
 
 #. i18n: file: data/tools.xml:73
-#: rc.cpp:2632
+#: rc.cpp:2614
 msgid ""
 "A rotary evaporator consists of a round flask in a bath of hot water, and is "
 "designed to evaporate solvents. The flask is rotated and the solvent "
@@ -5497,12 +5473,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:77
-#: rc.cpp:2634
+#: rc.cpp:2616
 msgid "Reflux Condenser"
 msgstr ""
 
 #. i18n: file: data/tools.xml:78
-#: rc.cpp:2636
+#: rc.cpp:2618
 msgid ""
 "A reflux condenser subjects fluid to a process where a gas produced by "
 "heating is collected on the reflux condenser. The fluid is cooled until it "
@@ -5511,12 +5487,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:82
-#: rc.cpp:2638
+#: rc.cpp:2620
 msgid "Pipette Bulb"
 msgstr ""
 
 #. i18n: file: data/tools.xml:83
-#: rc.cpp:2640
+#: rc.cpp:2622
 msgid ""
 "A pipette bulb is used to fill pipettes.  Squeezing then releasing the bulb "
 "produces a negative pressure, causing fluid to flow into the pipette; "
@@ -5524,12 +5500,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:87
-#: rc.cpp:2642
+#: rc.cpp:2624
 msgid "Test Tube"
 msgstr ""
 
 #. i18n: file: data/tools.xml:88
-#: rc.cpp:2644
+#: rc.cpp:2626
 msgid ""
 "In a test tube small reactions or experiments are performed. There are many "
 "different types of tubes. For example some have connectors, some are etched "
@@ -5537,12 +5513,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:92
-#: rc.cpp:2646
+#: rc.cpp:2628
 msgid "Protective Goggles"
 msgstr ""
 
 #. i18n: file: data/tools.xml:93
-#: rc.cpp:2648
+#: rc.cpp:2630
 msgid ""
 "Most laboratories insist that protective goggles are worn. Without them, it "
 "is too risky to work with most chemicals. Usually, the lens is a special "
@@ -5551,12 +5527,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:97
-#: rc.cpp:2650
+#: rc.cpp:2632
 msgid "Round-Bottomed Flask"
 msgstr ""
 
 #. i18n: file: data/tools.xml:98
-#: rc.cpp:2652
+#: rc.cpp:2634
 msgid ""
 "A round-bottomed flask is used for many reactions. Some can be connected to "
 "other items, as the frosting on the neck shows. With cork rings they can be "
@@ -5564,24 +5540,24 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:102
-#: rc.cpp:2654
+#: rc.cpp:2636
 msgid "Full Pipette"
 msgstr ""
 
 #. i18n: file: data/tools.xml:103
-#: rc.cpp:2656
+#: rc.cpp:2638
 msgid ""
 "Unlike a regular pipette, a full pipette only has one marking for a specific "
 "volume."
 msgstr ""
 
 #. i18n: file: data/tools.xml:107
-#: rc.cpp:2658
+#: rc.cpp:2640
 msgid "Drying Tube"
 msgstr ""
 
 #. i18n: file: data/tools.xml:108
-#: rc.cpp:2660
+#: rc.cpp:2642
 msgid ""
 "Some reactions need to be kept free of water: to make this possible a drying "
 "tube can be used.  Drying tubes contains a hygroscopic chemical to absorb "
@@ -5589,12 +5565,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:112
-#: rc.cpp:2662
+#: rc.cpp:2644
 msgid "Test Tube Holder"
 msgstr ""
 
 #. i18n: file: data/tools.xml:113
-#: rc.cpp:2664
+#: rc.cpp:2646
 msgid ""
 "Test tube holders make it easier to hold test tubes. By using a holder, "
 "there is a safe distance between ones hand and the test tube when the tube "
@@ -5603,12 +5579,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:117
-#: rc.cpp:2666
+#: rc.cpp:2648
 msgid "Measuring Cylinder"
 msgstr ""
 
 #. i18n: file: data/tools.xml:118
-#: rc.cpp:2668
+#: rc.cpp:2650
 msgid ""
 "A measuring cylinder can be used to measure amounts of liquids relatively "
 "precisely. Furthermore, the cylinder allows particulate matter to sink: "
@@ -5617,12 +5593,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:122
-#: rc.cpp:2670
+#: rc.cpp:2652
 msgid "Thermometer"
 msgstr ""
 
 #. i18n: file: data/tools.xml:123
-#: rc.cpp:2672
+#: rc.cpp:2654
 msgid ""
 "A thermometer can be used to determine the temperature of a sample. In a "
 "laboratory, special thermometers are used which can also be used within "
@@ -5630,14 +5606,14 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:127
-#: rc.cpp:2674
+#: rc.cpp:2656
 #, fuzzy
 #| msgid "Magnetic Moment"
 msgid "Magnetic Stir Bar"
 msgstr "Magneta momanto"
 
 #. i18n: file: data/tools.xml:128
-#: rc.cpp:2676
+#: rc.cpp:2658
 msgid ""
 "Magnetic stir bars are highly chemically inert, small magnetic bars. Most "
 "heaters have a built-in magnet which can rotate: this causes the stir bar to "
@@ -5645,12 +5621,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:132
-#: rc.cpp:2678
+#: rc.cpp:2660
 msgid "Magnetic Stir Bar Retriever"
 msgstr ""
 
 #. i18n: file: data/tools.xml:133
-#: rc.cpp:2680
+#: rc.cpp:2662
 msgid ""
 "A magnetic stir bar retriever can be used to retrieve magnetic stir bars "
 "from containers. The retriever is a bar with a magnet at the end which "
@@ -5658,12 +5634,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:137
-#: rc.cpp:2682
+#: rc.cpp:2664
 msgid "Pipette"
 msgstr ""
 
 #. i18n: file: data/tools.xml:138
-#: rc.cpp:2684
+#: rc.cpp:2666
 msgid ""
 "Pipettes are used to introduce small quantities of liquids in laboratories. "
 "A pipette has a volume scale and, as a rule, pipette bulbs are used as "
@@ -5673,12 +5649,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:142
-#: rc.cpp:2686
+#: rc.cpp:2668
 msgid "Erlenmeyer Flask"
 msgstr ""
 
 #. i18n: file: data/tools.xml:148
-#: rc.cpp:2688
+#: rc.cpp:2670
 msgid ""
 "An Erlenmeyer flask, named after the chemist Emil Erlenmeyer (1825-1909), is "
 "different to a beaker in that it comes with an inverted conical base and a "
@@ -5698,12 +5674,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:153
-#: rc.cpp:2695
+#: rc.cpp:2677
 msgid "Ultrasonic Bath"
 msgstr ""
 
 #. i18n: file: data/tools.xml:154
-#: rc.cpp:2697
+#: rc.cpp:2679
 msgid ""
 "For some chemical reactions it is important that the solvent is gas free. To "
 "achieve this the reaction vessel is put for some time into a ultrasonic "
@@ -5712,12 +5688,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:158
-#: rc.cpp:2699
+#: rc.cpp:2681
 msgid "Scales"
 msgstr "Skaloj"
 
 #. i18n: file: data/tools.xml:159
-#: rc.cpp:2701
+#: rc.cpp:2683
 msgid ""
 "In a laboratory, very precise quantities of reagents often have to be "
 "weighed out. High precision scales can measure masses down to 1/10000 gram.  "
@@ -5726,14 +5702,14 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:163
-#: rc.cpp:2703
+#: rc.cpp:2685
 #, fuzzy
 #| msgid "Distillation"
 msgid "Distillation bridge"
 msgstr "Distilado"
 
 #. i18n: file: data/tools.xml:164
-#: rc.cpp:2705
+#: rc.cpp:2687
 msgid ""
 "One means of separating a mixture is to use distillation.  In this setting, "
 "a distillation bridge acts as a conduit between the two pots.  One pot "
@@ -5745,14 +5721,14 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:169
-#: rc.cpp:2707
+#: rc.cpp:2689
 #, fuzzy
 #| msgid "Silver"
 msgid "Syringe"
 msgstr "Arĝento"
 
 #. i18n: file: data/tools.xml:170
-#: rc.cpp:2709
+#: rc.cpp:2691
 msgid ""
 "A syringe consists of two parts, a glass tube and a plunger, both normally "
 "made of glass. Gasses flow into the glass tube, and as the syringe is a "
@@ -5761,12 +5737,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:174
-#: rc.cpp:2711
+#: rc.cpp:2693
 msgid "Separation Beaker"
 msgstr ""
 
 #. i18n: file: data/tools.xml:175
-#: rc.cpp:2713
+#: rc.cpp:2695
 msgid ""
 "First, four small caps are placed at the four ends of the separation "
 "beaker.  Then, whilst distilling, the beaker is turned by 60 degrees after a "
@@ -5776,12 +5752,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:179
-#: rc.cpp:2715
+#: rc.cpp:2697
 msgid "Burner"
 msgstr "Flamingo"
 
 #. i18n: file: data/tools.xml:180
-#: rc.cpp:2717
+#: rc.cpp:2699
 msgid ""
 "There are several types of burners; this picture shows a Teclu-Burner. Each "
 "type of burner has specific uses, and they vary in peak temperature and "
@@ -5789,26 +5765,26 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:184
-#: rc.cpp:2719
+#: rc.cpp:2701
 #, fuzzy
 #| msgid "Extraction"
 msgid "Extractor Hood"
 msgstr "Ekstraktado"
 
 #. i18n: file: data/tools.xml:185
-#: rc.cpp:2721
+#: rc.cpp:2703
 msgid ""
 "Extractor hoods are used to filter out gasses from chemical reactions.  The "
 "air, once cleaned, is pumped outside of the building."
 msgstr ""
 
 #. i18n: file: data/tools.xml:189
-#: rc.cpp:2723
+#: rc.cpp:2705
 msgid "Contact Thermometer"
 msgstr ""
 
 #. i18n: file: data/tools.xml:190
-#: rc.cpp:2725
+#: rc.cpp:2707
 msgid ""
 "Contact thermometers differ from regular thermometers in that they are "
 "connected to a heating coil, and are hence able to both sense and control "
@@ -5820,22 +5796,22 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:194
-#: rc.cpp:2727
+#: rc.cpp:2709
 msgid "Clamps"
 msgstr ""
 
 #. i18n: file: data/tools.xml:195
-#: rc.cpp:2729
+#: rc.cpp:2711
 msgid "Laboratory clamps make it easier to hold many kinds of tools."
 msgstr ""
 
 #. i18n: file: data/tools.xml:199
-#: rc.cpp:2731
+#: rc.cpp:2713
 msgid "Indicator Paper"
 msgstr ""
 
 #. i18n: file: data/tools.xml:200
-#: rc.cpp:2733
+#: rc.cpp:2715
 msgid ""
 "There are multiple ways of measuring the pH value of a solution, one of "
 "which is to use indicator paper. Indicator paper changes color depending on "
@@ -5846,26 +5822,26 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:204
-#: rc.cpp:2735
+#: rc.cpp:2717
 msgid "Short-Stem Funnel"
 msgstr ""
 
 #. i18n: file: data/tools.xml:205
-#: rc.cpp:2737
+#: rc.cpp:2719
 msgid ""
 "A funnel can be used to fill a narrow-necked vessel with a liquid or fine "
 "powder."
 msgstr ""
 
 #. i18n: file: data/tools.xml:209
-#: rc.cpp:2739
+#: rc.cpp:2721
 #, fuzzy
 #| msgid "Burner"
 msgid "Buret"
 msgstr "Flamingo"
 
 #. i18n: file: data/tools.xml:210
-#: rc.cpp:2741
+#: rc.cpp:2723
 msgid ""
 "Burets are used to titrate liquids.  A buret is filled with a specific "
 "volume of a liquid, and placed beneath it is a container such as an "
@@ -5876,12 +5852,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:214
-#: rc.cpp:2743
+#: rc.cpp:2725
 msgid "Beaker"
 msgstr ""
 
 #. i18n: file: data/tools.xml:215
-#: rc.cpp:2745
+#: rc.cpp:2727
 msgid ""
 "Beakers can be used for many tasks.  For instance, they are used to store "
 "chemicals and to perform chemical reactions.  They are often also used for "
@@ -5889,12 +5865,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:219
-#: rc.cpp:2747
+#: rc.cpp:2729
 msgid "DSC (Differential Scanning Calorimeter)"
 msgstr ""
 
 #. i18n: file: data/tools.xml:220
-#: rc.cpp:2749
+#: rc.cpp:2731
 msgid ""
 "A DSC measures the heat flow volume of a compound.  This value is very "
 "specific for every kind of matter, and thus a DSC can be used to identify "
@@ -5902,12 +5878,12 @@ msgid ""
 msgstr ""
 
 #. i18n: file: data/tools.xml:224
-#: rc.cpp:2751
+#: rc.cpp:2733
 msgid "Dewar Vessel"
 msgstr ""
 
 #. i18n: file: data/tools.xml:225
-#: rc.cpp:2753
+#: rc.cpp:2735
 msgid ""
 "A Dewar vessel (or Dewar flask), named after the physicist Sir James Dewar "
 "(1842-1923), is a double-walled vacuum flask, designed to provide good "
@@ -6298,60 +6274,60 @@ msgstr "Neono"
 msgid "Unable to find the user defined alias file."
 msgstr ""
 
-#: src/legendwidget.cpp:91
+#: src/legendwidget.cpp:74
 msgctxt ""
 "one of the three states of matter (solid, liquid, vaporous or unknown)"
 msgid "Solid"
 msgstr "Solida"
 
-#: src/legendwidget.cpp:92
+#: src/legendwidget.cpp:75
 msgctxt ""
 "one of the three states of matter (solid, liquid, vaporous or unknown)"
 msgid "Liquid"
 msgstr "Likva"
 
-#: src/legendwidget.cpp:93
+#: src/legendwidget.cpp:76
 msgctxt ""
 "one of the three states of matter (solid, liquid, vaporous or unknown)"
 msgid "Vaporous"
 msgstr "Gasa"
 
-#: src/legendwidget.cpp:94
+#: src/legendwidget.cpp:77
 msgctxt ""
 "one of the three states of matter (solid, liquid, vaporous or unknown)"
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: src/legendwidget.cpp:100
+#: src/legendwidget.cpp:82
 msgctxt "one of the two types of gradients available"
 msgid "logarithmic"
 msgstr "logaritma"
 
-#: src/legendwidget.cpp:102
+#: src/legendwidget.cpp:84
 msgctxt "one of the two types of gradients available"
 msgid "linear"
 msgstr "lineara"
 
-#: src/legendwidget.cpp:103
+#: src/legendwidget.cpp:85
 #, fuzzy, kde-format
 #| msgctxt "For example Carbon (6)"
 #| msgid "%1 (%2)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/legendwidget.cpp:104
+#: src/legendwidget.cpp:86
 #, kde-format
 msgctxt "Minimum value of the gradient"
 msgid "Minimum: %1"
 msgstr "Minimumo: %1"
 
-#: src/legendwidget.cpp:105
+#: src/legendwidget.cpp:87
 #, kde-format
 msgctxt "Maximum value of the gradient"
 msgid "Maximum: %1"
 msgstr "Maksimumo: %1"
 
-#: src/legendwidget.cpp:110
+#: src/legendwidget.cpp:91
 #, kde-format
 msgid "Scheme: %1"
 msgstr "Skemo: %1"
@@ -7487,7 +7463,29 @@ msgstr "Tadeu Araujo"
 msgid "Tiago Porangaba"
 msgstr "Tiago Porangaba"
 
-#: src/timewidget_impl.cpp:83 src/somwidget_impl.cpp:175
+#: src/gradientwidget_impl.cpp:200
+msgid "Elements with melting point around this temperature:"
+msgstr ""
+
+#: src/gradientwidget_impl.cpp:202 src/gradientwidget_impl.cpp:213
+#, kde-format
+msgctxt "For example: Carbon (300K)"
+msgid "%1 (%2%3)"
+msgstr "%1 (%2%3)"
+
+#: src/gradientwidget_impl.cpp:207
+msgid "No elements with a melting point around this temperature"
+msgstr ""
+
+#: src/gradientwidget_impl.cpp:211
+msgid "Elements with boiling point around this temperature:"
+msgstr ""
+
+#: src/gradientwidget_impl.cpp:218
+msgid "No elements with a boiling point around this temperature"
+msgstr ""
+
+#: src/gradientwidget_impl.cpp:258
 #, fuzzy
 #| msgid "Phase"
 msgid "Pause"
@@ -7636,115 +7634,123 @@ msgstr "Spino"
 msgid "Exact mass: %1 u"
 msgstr "Meznombra maso: %1 u"
 
-#: src/kalziumschemetype.cpp:108
+#: src/kalziumschemetype.cpp:117
 msgid "Monochrome"
 msgstr "Unukolora"
 
-#: src/kalziumschemetype.cpp:127
+#: src/kalziumschemetype.cpp:135
 msgid "All the Elements"
 msgstr "Ĉiuj elementoj"
 
-#: src/kalziumschemetype.cpp:185
+#: src/kalziumschemetype.cpp:193
 msgid "s-Block"
 msgstr "s-bloko"
 
-#: src/kalziumschemetype.cpp:186
+#: src/kalziumschemetype.cpp:194
 msgid "p-Block"
 msgstr "p-bloko"
 
-#: src/kalziumschemetype.cpp:187
+#: src/kalziumschemetype.cpp:195
 msgid "d-Block"
 msgstr "d-bloko"
 
-#: src/kalziumschemetype.cpp:188
+#: src/kalziumschemetype.cpp:196
 msgid "f-Block"
 msgstr "f-bloko"
 
-#: src/kalziumschemetype.cpp:212
+#: src/kalziumschemetype.cpp:220
 msgid "Iconic"
 msgstr ""
 
-#: src/kalziumschemetype.cpp:229
+#: src/kalziumschemetype.cpp:237
 msgid "Each element is represented by an icon which represents its use."
 msgstr ""
 
-#: src/kalziumschemetype.cpp:303
+#: src/kalziumschemetype.cpp:311
 msgid "Alkaline"
 msgstr "Teralkala metalo"
 
-#: src/kalziumschemetype.cpp:304
+#: src/kalziumschemetype.cpp:312
 msgid "Rare Earth"
 msgstr "Rara tero"
 
-#: src/kalziumschemetype.cpp:305
+#: src/kalziumschemetype.cpp:313
 msgid "Non-Metals"
 msgstr "Nemetalo"
 
-#: src/kalziumschemetype.cpp:306
+#: src/kalziumschemetype.cpp:314
 msgid "Alkalie Metal"
 msgstr "Alkala metalo"
 
-#: src/kalziumschemetype.cpp:307
+#: src/kalziumschemetype.cpp:315
 msgid "Other Metal"
 msgstr "Alia metalo"
 
-#: src/kalziumschemetype.cpp:308
+#: src/kalziumschemetype.cpp:316
 msgid "Halogen"
 msgstr "Halogeno"
 
-#: src/kalziumschemetype.cpp:309
+#: src/kalziumschemetype.cpp:317
 msgid "Transition Metal"
 msgstr "Transirmetalo"
 
-#: src/kalziumschemetype.cpp:310
+#: src/kalziumschemetype.cpp:318
 msgid "Noble Gas"
 msgstr "Nobla gaso"
 
-#: src/kalziumschemetype.cpp:311
+#: src/kalziumschemetype.cpp:319
 msgid "Metalloid"
 msgstr "Metaloido"
 
-#: src/kalziumschemetype.cpp:382
+#: src/kalziumschemetype.cpp:390
 msgid "Group 1"
 msgstr "Grupo 1"
 
-#: src/kalziumschemetype.cpp:383
+#: src/kalziumschemetype.cpp:391
 msgid "Group 2"
 msgstr "Grupo 2"
 
-#: src/kalziumschemetype.cpp:384
+#: src/kalziumschemetype.cpp:392
 msgid "Group 3"
 msgstr "Grupo 3"
 
-#: src/kalziumschemetype.cpp:385
+#: src/kalziumschemetype.cpp:393
 msgid "Group 4"
 msgstr "Grupo 4"
 
-#: src/kalziumschemetype.cpp:386
+#: src/kalziumschemetype.cpp:394
 msgid "Group 5"
 msgstr "Grupo 5"
 
-#: src/kalziumschemetype.cpp:387
+#: src/kalziumschemetype.cpp:395
 msgid "Group 6"
 msgstr "Grupo 6"
 
-#: src/kalziumschemetype.cpp:388
+#: src/kalziumschemetype.cpp:396
 msgid "Group 7"
 msgstr "Grupo 7"
 
-#: src/kalziumschemetype.cpp:389
+#: src/kalziumschemetype.cpp:397
 msgid "Group 8"
 msgstr "Grupo 8"
 
-#: src/detailedgraphicaloverview.cpp:81
+#: src/kalziumschemetype.cpp:422 src/kalzium.cpp:520
+msgid "Colors"
+msgstr "Koloroj"
+
+#: src/kalziumschemetype.cpp:443
+msgid "Nice colors without meaning"
+msgstr ""
+
+#: src/detailedgraphicaloverview.cpp:80
 msgid "No element selected"
 msgstr "Neniu elemento elekta"
 
-#: src/detailedgraphicaloverview.cpp:100
+#: src/detailedgraphicaloverview.cpp:99
 msgid "No graphic found"
 msgstr "Neniu bildo trovita"
 
-#: src/detailedgraphicaloverview.cpp:163
+#: src/detailedgraphicaloverview.cpp:162
 #, kde-format
 msgctxt "For example '1.0079u', the mass of an element in units"
 msgid "%1 u"
@@ -7774,19 +7780,19 @@ msgstr "Atoma radiuso [pm]"
 msgid "Covalent Radius [pm]"
 msgstr "Kovalenta radiuso [pm]"
 
-#: src/kalziumnumerationtype.cpp:117
+#: src/kalziumnumerationtype.cpp:116
 msgid "No Numeration"
 msgstr "Ne numeru"
 
-#: src/kalziumnumerationtype.cpp:168
+#: src/kalziumnumerationtype.cpp:167
 msgid "IUPAC"
 msgstr "IUPAC"
 
-#: src/kalziumnumerationtype.cpp:208
+#: src/kalziumnumerationtype.cpp:207
 msgid "CAS"
 msgstr "CAS"
 
-#: src/kalziumnumerationtype.cpp:248
+#: src/kalziumnumerationtype.cpp:247
 msgid "Old IUPAC"
 msgstr "Malnovan IUPAC"
 
@@ -7949,45 +7955,41 @@ msgstr ""
 msgid "%1 %2<sub>n</sub>"
 msgstr "%1 %2<sub>n</sub>"
 
-#: src/detailinfodlg.cpp:422 src/detailinfodlg.cpp:423 src/kalzium.cpp:342
-msgid "Overview"
-msgstr "Superrigardo"
-
-#: src/detailinfodlg.cpp:444 src/detailinfodlg.cpp:445
-msgid "Atom Model"
-msgstr "Atoma modelo"
-
-#: src/detailinfodlg.cpp:454
-msgid "Isotopes"
-msgstr "Izotopoj"
-
-#: src/detailinfodlg.cpp:455
+#: src/detailinfodlg.cpp:445
 msgid "Data Overview"
 msgstr "Datuma superrigardo"
 
-#: src/detailinfodlg.cpp:456
+#: src/detailinfodlg.cpp:449 src/detailinfodlg.cpp:450
+msgid "Atom Model"
+msgstr "Atoma modelo"
+
+#: src/detailinfodlg.cpp:458
+msgid "Isotopes"
+msgstr "Izotopoj"
+
+#: src/detailinfodlg.cpp:460
 #, fuzzy
 #| msgid "Ionization"
 msgid "Extra information"
 msgstr "Jonigo"
 
-#: src/detailinfodlg.cpp:456
+#: src/detailinfodlg.cpp:460
 #, fuzzy
 #| msgid "Ionization"
 msgid "Extra Information"
 msgstr "Jonigo"
 
-#: src/detailinfodlg.cpp:460 src/detailinfodlg.cpp:461
+#: src/detailinfodlg.cpp:464 src/detailinfodlg.cpp:465
 msgid "Spectrum"
 msgstr ""
 
-#: src/detailinfodlg.cpp:481
+#: src/detailinfodlg.cpp:485
 #, kde-format
 msgctxt "For example Carbon (6)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/detailinfodlg.cpp:523
+#: src/detailinfodlg.cpp:527
 #, kde-format
 msgid "No spectrum of %1 found."
 msgstr ""
@@ -8249,188 +8251,183 @@ msgstr "100"
 msgid "&Copy"
 msgstr "&Kopiu"
 
-#: src/kalziumpainter.cpp:1639 src/kalziumpainter.cpp:1671
-msgctxt "It means: Not Available. Translators: keep it as short as you can!"
-msgid "N/A"
+#: src/elementitem.cpp:112
+msgid "n/a"
 msgstr ""
 
-#: src/kalzium.cpp:152
+#: src/kalzium.cpp:134
 msgid "Knowledge"
 msgstr "Sciaĵo"
 
-#: src/kalzium.cpp:157
+#: src/kalzium.cpp:139
 msgid "Tools"
 msgstr "Iloj"
 
-#: src/kalzium.cpp:167
+#: src/kalzium.cpp:149
 #, fuzzy
 #| msgid "&Plot Data..."
 msgid "&Export Data..."
 msgstr "&Desegnu datumon..."
 
-#: src/kalzium.cpp:172
-#, fuzzy
-#| msgid "Gradient: %1"
-msgid "No Gradient"
-msgstr "Gradiento: %1"
-
-#: src/kalzium.cpp:177
+#: src/kalzium.cpp:158
 msgid "&Scheme"
 msgstr "&Skemo"
 
-#: src/kalzium.cpp:185
+#: src/kalzium.cpp:166
 #, fuzzy
 #| msgid "Gradient Types"
 msgid "&Gradients"
 msgstr "Gradienttipoj"
 
-#: src/kalzium.cpp:194
+#: src/kalzium.cpp:175
 msgid "&Tables"
 msgstr ""
 
-#: src/kalzium.cpp:201
+#: src/kalzium.cpp:182
 msgid "&Numeration"
 msgstr "&Numerado"
 
-#: src/kalzium.cpp:207
+#: src/kalzium.cpp:188
 msgid "&Equation Solver..."
 msgstr "&Ekvacia solvilo..."
 
-#: src/kalzium.cpp:209
+#: src/kalzium.cpp:190
 msgctxt "WhatsThis Help"
 msgid "This tool allows you to solve chemical equations."
 msgstr ""
 
-#: src/kalzium.cpp:220
+#: src/kalzium.cpp:201
 msgid "&Plot Data..."
 msgstr "&Desegnu datumon..."
 
-#: src/kalzium.cpp:226
+#: src/kalzium.cpp:207
 msgid "Perform &Calculations..."
 msgstr ""
 
-#: src/kalzium.cpp:228
+#: src/kalzium.cpp:209
 msgctxt "WhatsThis Help"
 msgid "This is the calculator, it performs basic chemical calculations."
 msgstr ""
 
-#: src/kalzium.cpp:232
+#: src/kalzium.cpp:213
 msgid "&Isotope Table..."
 msgstr "&Izotopa tabelo..."
 
-#: src/kalzium.cpp:234
+#: src/kalzium.cpp:215
 msgctxt "WhatsThis Help"
 msgid "This table shows all of the known isotopes of the chemical elements."
 msgstr ""
 
-#: src/kalzium.cpp:238
+#: src/kalzium.cpp:219
 msgid "&Glossary..."
 msgstr "&Glosaro..."
 
-#: src/kalzium.cpp:243
+#: src/kalzium.cpp:224
 msgid "&R/S Phrases..."
 msgstr ""
 
-#: src/kalzium.cpp:248
+#: src/kalzium.cpp:229
 msgid "Convert chemical files..."
 msgstr ""
 
-#: src/kalzium.cpp:250
+#: src/kalzium.cpp:231
 msgctxt "WhatsThis Help"
 msgid ""
 "With this tool, you can convert files containing chemical data between "
 "various file formats."
 msgstr ""
 
-#: src/kalzium.cpp:257
+#: src/kalzium.cpp:238
 msgid "Molecular Editor..."
 msgstr ""
 
-#: src/kalzium.cpp:259
+#: src/kalzium.cpp:240
 msgctxt "WhatsThis Help"
 msgid "This tool allows you to view and edit 3D molecular structures."
 msgstr ""
 
-#: src/kalzium.cpp:266
+#: src/kalzium.cpp:247
 msgid "&Tables..."
 msgstr "&Tabeloj..."
 
-#: src/kalzium.cpp:268
+#: src/kalzium.cpp:249
 msgctxt "WhatsThis Help"
 msgid ""
 "This will open a dialog with listings of symbols and numbers related to "
 "chemistry."
 msgstr ""
 
-#: src/kalzium.cpp:276
+#: src/kalzium.cpp:257
 msgctxt "WhatsThis Help"
 msgid "This will show or hide the legend for the periodic table."
 msgstr ""
 
-#: src/kalzium.cpp:281
+#: src/kalzium.cpp:262
 msgctxt "WhatsThis Help"
 msgid ""
 "This will show or hide a sidebar with additional information and a set of "
 "tools."
 msgstr ""
 
-#: src/kalzium.cpp:286
+#: src/kalzium.cpp:267
 msgctxt "WhatsThis Help"
 msgid ""
 "This will show or hide a sidebar with additional information about the table."
 msgstr ""
 
-#: src/kalzium.cpp:313
+#: src/kalzium.cpp:298
 #, fuzzy
 #| msgid "Show &Legend"
 msgid "Legend"
 msgstr "Montru la &apudskribon"
 
-#: src/kalzium.cpp:319
+#: src/kalzium.cpp:305
 #, fuzzy
 #| msgid "Ionization"
 msgid "Table Information"
 msgstr "Jonigo"
 
-#: src/kalzium.cpp:324
+#: src/kalzium.cpp:311
 #, fuzzy
 #| msgid "Ionization"
 msgid "Information"
 msgstr "Jonigo"
 
-#: src/kalzium.cpp:354
-msgid "Timeline"
-msgstr "Kronologio"
+#: src/kalzium.cpp:322
+msgid "Overview"
+msgstr "Superrigardo"
 
-#: src/kalzium.cpp:359
+#: src/kalzium.cpp:331
+#, fuzzy
+#| msgid "&View"
+msgid "View"
+msgstr "&Rigardi"
+
+#: src/kalzium.cpp:336
 msgid "Calculate"
 msgstr "Kalkulu"
 
-#: src/kalzium.cpp:375
+#: src/kalzium.cpp:351
 msgid "*.png *.xpm *.jpg *.svg"
 msgstr "*.png *.xpm *.jpg *.svg"
 
-#: src/kalzium.cpp:377
+#: src/kalzium.cpp:353
 msgid "Save Kalzium's Table In"
 msgstr ""
 
-#: src/kalzium.cpp:413
+#: src/kalzium.cpp:389
 msgid "This system does not support OpenGL."
 msgstr "Tiu sistemo ne subtenas OpenGL."
 
-#: src/kalzium.cpp:413
+#: src/kalzium.cpp:389
 msgid "Kalzium Error"
 msgstr "Kalziumo eraris"
 
-#: src/kalzium.cpp:571
-msgid "Colors"
-msgstr "Koloroj"
-
-#: src/kalzium.cpp:589
+#: src/kalzium.cpp:538
 msgid " Web look up"
 msgstr ""
 
-#: src/kalzium.cpp:627
+#: src/kalzium.cpp:576
 #, kde-format
 msgctxt "For example: \"Carbon (6), Mass: 12.0107 u\""
 msgid "%1 (%2), Mass: %3 u"
@@ -8451,43 +8448,35 @@ msgstr "%1 u"
 msgid "Search:"
 msgstr "Serĉo:"
 
-#: src/kalziumgradienttype.cpp:208
+#: src/kalziumgradienttype.cpp:177 src/kalziumgradienttype.cpp:227
+msgid "Å"
+msgstr ""
+
+#: src/kalziumgradienttype.cpp:215
 msgid "van Der Waals"
 msgstr "van der Waals"
 
-#: src/kalziumgradienttype.cpp:382
+#: src/kalziumgradienttype.cpp:277
+#, fuzzy
+#| msgid "mu"
+msgid "u"
+msgstr "muo"
+
+#: src/kalziumgradienttype.cpp:469
 msgid "Electronegativity (Pauling)"
 msgstr "Elektronegativo (Pauling)"
 
-#: src/kalziumgradienttype.cpp:427
+#: src/kalziumgradienttype.cpp:520
 msgid "Discovery date"
 msgstr ""
 
-#: src/kalziumgradienttype.cpp:518
+#: src/kalziumgradienttype.cpp:584 src/kalziumgradienttype.cpp:635
+msgid "eV"
+msgstr ""
+
+#: src/kalziumgradienttype.cpp:623
 msgid "First Ionization"
 msgstr "Unua jonigo"
-
-#: src/somwidget_impl.cpp:122
-msgid "Elements with melting point around this temperature:"
-msgstr ""
-
-#: src/somwidget_impl.cpp:125 src/somwidget_impl.cpp:140
-#, kde-format
-msgctxt "For example: Carbon (300K)"
-msgid "%1 (%2%3)"
-msgstr "%1 (%2%3)"
-
-#: src/somwidget_impl.cpp:132
-msgid "No elements with a melting point around this temperature"
-msgstr ""
-
-#: src/somwidget_impl.cpp:137
-msgid "Elements with boiling point around this temperature:"
-msgstr ""
-
-#: src/somwidget_impl.cpp:147
-msgid "No elements with a boiling point around this temperature"
-msgstr ""
 
 #: src/exportdialog.cpp:79
 msgid "Ok"
@@ -8533,6 +8522,20 @@ msgstr ""
 msgid "Could not open file for writing."
 msgstr "Ne eblis malfermi por skribado."
 
+#~ msgid "Temperature:"
+#~ msgstr "Temperaturo:"
+
+#~ msgid "Year:"
+#~ msgstr "Jaro:"
+
+#, fuzzy
+#~| msgid "Gradient: %1"
+#~ msgid "No Gradient"
+#~ msgstr "Gradiento: %1"
+
+#~ msgid "Timeline"
+#~ msgstr "Kronologio"
+
 #~ msgid "Settings"
 #~ msgstr "Agordo"
 
@@ -8550,11 +8553,6 @@ msgstr "Ne eblis malfermi por skribado."
 
 #~ msgid "Transition Elements"
 #~ msgstr "Transiraj elementoj"
-
-#, fuzzy
-#~| msgid "Gradient: %1"
-#~ msgid "&Gradient"
-#~ msgstr "Gradiento: %1"
 
 #~ msgid "Table: %1"
 #~ msgstr "Tabelo: %1"
@@ -8756,11 +8754,6 @@ msgstr "Ne eblis malfermi por skribado."
 #~| msgid "Mass"
 #~ msgid "(u) mass"
 #~ msgstr "Maso"
-
-#, fuzzy
-#~| msgid "mu"
-#~ msgid "u"
-#~ msgstr "muo"
 
 #, fuzzy
 #~| msgid "iota"
