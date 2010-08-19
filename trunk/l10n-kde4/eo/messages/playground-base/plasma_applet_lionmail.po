@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lionmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-18 05:29+0200\n"
+"POT-Creation-Date: 2010-08-19 05:40+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -85,12 +85,12 @@ msgstr "<style type=\"text/css\">%1</style><body>%2</body>"
 msgid "<style type=\"text/css\">%1</style><body><h3>%2.</h3></body>"
 msgstr "<style type=\"text/css\">%1</style><body>%2</body>"
 
-#: emailmessage/emailwidget.cpp:878 emailnotifier/emailwidget.cpp:811
+#: emailmessage/emailwidget.cpp:878
 #, kde-format
 msgid "<h3>Fetching email body %1 failed: <p /></h3><pre>%2</pre>"
 msgstr ""
 
-#: emailmessage/emailwidget.cpp:887 emailnotifier/emailwidget.cpp:818
+#: emailmessage/emailwidget.cpp:887
 #, kde-format
 msgid "<h3>Could not find Email with id: <p /></h3><pre>%1</pre>"
 msgstr ""
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Please select an Email Folder"
 msgstr ""
 
-#: lionmail.cpp:125 emailnotifier/emailnotifier.cpp:157
+#: lionmail.cpp:125
 #, fuzzy
 #| msgid "Collection"
 msgid "Collections"
@@ -184,7 +184,7 @@ msgstr ""
 
 #: emailnotifier/dialog.cpp:64
 msgctxt "list title"
-msgid "New Emails"
+msgid "New Messages"
 msgstr ""
 
 #: emailnotifier/dialog.cpp:72
@@ -193,7 +193,7 @@ msgstr ""
 
 #: emailnotifier/dialog.cpp:86
 msgctxt "tooltip on the refresh button"
-msgid "Check for new email"
+msgid "Check Mail"
 msgstr ""
 
 #: emailnotifier/dialog.cpp:93
@@ -204,7 +204,7 @@ msgstr ""
 #: emailnotifier/dialog.cpp:187
 #, kde-format
 msgctxt "sync status running"
-msgid "Checking email in %1"
+msgid "Checking mail in %1"
 msgstr ""
 
 #: emailnotifier/dialog.cpp:190
@@ -216,19 +216,19 @@ msgstr ""
 #: emailnotifier/dialog.cpp:193
 #, kde-format
 msgctxt "sync status error"
-msgid "Error checking email in %1"
+msgid "Error checking mail in %1"
 msgstr ""
 
-#: emailnotifier/emaillist.cpp:327
+#: emailnotifier/emaillist.cpp:328
 msgctxt "applet status"
-msgid "No new email"
+msgid "No New Messages"
 msgstr ""
 
-#: emailnotifier/emaillist.cpp:330
+#: emailnotifier/emaillist.cpp:331
 #, kde-format
 msgctxt "applet status"
-msgid "%1 new email"
-msgid_plural "%1 new emails"
+msgid "%1 New Message"
+msgid_plural "%1 New Messages"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -237,16 +237,20 @@ msgctxt "tooltip on startup"
 msgid "No new email"
 msgstr ""
 
-#: emailnotifier/emailnotifier.cpp:307
+#: emailnotifier/emailnotifier.cpp:157
+msgid "Mail"
+msgstr ""
+
+#: emailnotifier/emailnotifier.cpp:305
 #, kde-format
-msgid "%1 new email"
-msgid_plural "%1 new emails"
+msgid "%1 New Message"
+msgid_plural "%1 New Messages"
 msgstr[0] ""
 msgstr[1] ""
 
-#: emailnotifier/emailnotifier.cpp:313
+#: emailnotifier/emailnotifier.cpp:311
 msgctxt "tooltip: no new emails"
-msgid "No new email"
+msgid "No New Messages"
 msgstr ""
 
 #: emailnotifier/emailwidget.cpp:335
@@ -257,6 +261,16 @@ msgstr ""
 #: emailnotifier/emailwidget.cpp:678
 msgctxt "empty subject label"
 msgid "(No Subject)"
+msgstr ""
+
+#: emailnotifier/emailwidget.cpp:811
+#, kde-format
+msgid "<h3>Fetching message body %1 failed: <p /></h3><pre>%2</pre>"
+msgstr ""
+
+#: emailnotifier/emailwidget.cpp:818
+#, kde-format
+msgid "<h3>Could not find message with id: <p /></h3><pre>%1</pre>"
 msgstr ""
 
 #: emailnotifier/emailwidget.cpp:885
@@ -289,9 +303,9 @@ msgstr ""
 
 #. i18n: file: lionmailConfig.ui:46
 #. i18n: ectx: property (text), widget (QCheckBox, allowHtml)
-#. i18n: file: emailnotifier/emailnotifierConfig.ui:118
+#. i18n: file: emailnotifier/emailnotifierConfig.ui:69
 #. i18n: ectx: property (text), widget (QCheckBox, allowHtml)
-#: rc.cpp:10 rc.cpp:57 rc.cpp:118
+#: rc.cpp:10 rc.cpp:57 rc.cpp:106
 msgid "Allow HTML"
 msgstr ""
 
@@ -380,7 +394,7 @@ msgstr ""
 #. i18n: file: emailnotifier/emailnotifierConfig.ui:29
 #. i18n: ectx: property (text), widget (QLabel, selectcollectionslabel)
 #: rc.cpp:97
-msgid "<b>Mail Folders</b>"
+msgid "<b>Folders</b>"
 msgstr ""
 
 #. i18n: file: emailnotifier/emailnotifierConfig.ui:52
@@ -390,33 +404,29 @@ msgid "Mark the folders you want to monitor for new and important emails"
 msgstr ""
 
 #. i18n: file: emailnotifier/emailnotifierConfig.ui:59
-#. i18n: ectx: property (text), widget (QLabel, selectcollectionslabel_2)
+#. i18n: ectx: property (text), widget (QLabel, selectcollectionslabel_3)
 #: rc.cpp:103
-msgid "<b>Filtering</b>"
-msgstr ""
+#, fuzzy
+#| msgid "Display"
+msgid "<b>Messages</b>"
+msgstr "Montri"
 
-#. i18n: file: emailnotifier/emailnotifierConfig.ui:84
-#. i18n: ectx: property (text), widget (QRadioButton, showImportantNone)
-#: rc.cpp:106
-msgid "Do not show emails marked as Important"
-msgstr ""
-
-#. i18n: file: emailnotifier/emailnotifierConfig.ui:91
-#. i18n: ectx: property (text), widget (QRadioButton, showImportantMerged)
-#: rc.cpp:109
-msgid "Show emails marked as Important"
-msgstr ""
-
-#. i18n: file: emailnotifier/emailnotifierConfig.ui:98
-#. i18n: ectx: property (text), widget (QRadioButton, showImportantSeparately)
-#: rc.cpp:112
-msgid "Show Important emails in a separate tab"
-msgstr ""
-
-#. i18n: file: emailnotifier/emailnotifierConfig.ui:108
+#. i18n: file: emailnotifier/emailnotifierConfig.ui:76
 #. i18n: ectx: property (text), widget (QLabel, generallabel)
-#: rc.cpp:115
+#: rc.cpp:109
 #, fuzzy
 #| msgid "Display"
 msgid "<b>Display</b>"
 msgstr "Montri"
+
+#. i18n: file: emailnotifier/emailnotifierConfig.ui:89
+#. i18n: ectx: property (text), widget (QCheckBox, showImportantSeparately)
+#: rc.cpp:112
+msgid "Show Important messages in a separate list"
+msgstr ""
+
+#. i18n: file: emailnotifier/emailnotifierConfig.ui:96
+#. i18n: ectx: property (text), widget (QCheckBox, showImportant)
+#: rc.cpp:115
+msgid "Also show messages marked as Important"
+msgstr ""
