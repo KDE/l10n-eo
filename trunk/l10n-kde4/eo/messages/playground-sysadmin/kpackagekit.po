@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-02 07:19+0200\n"
+"POT-Creation-Date: 2010-09-07 02:51+0200\n"
 "PO-Revision-Date: 2009-12-11 16:07+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr ""
 
 #: SmartIcon/KpkTransactionWatcher.cpp:103
 #: SmartIcon/KpkTransactionTrayIcon.cpp:322
-#: Updater/KpkSimpleTransactionModel.cpp:48 AddRm/KpkPackageDetails.cpp:123
+#: Updater/KpkSimpleTransactionModel.cpp:48
 msgid "Details"
 msgstr "Detaloj"
 
@@ -265,7 +265,6 @@ msgid "Could not find %1"
 msgstr "Ne eblis trovi %1"
 
 #: SmartIcon/main.cpp:34 SmartIcon/KpkUpdateIcon.cpp:135
-#: KPackageKit/main.cpp:34
 msgid "KPackageKit"
 msgstr ""
 
@@ -304,7 +303,10 @@ msgstr[1] ""
 msgid "Impossible to install"
 msgstr ""
 
-#: SmartIcon/PkInstallPackageFiles.cpp:117 libkpackagekit/KpkDelegate.cpp:42
+#. i18n: file: AddRm/KpkPackageDetails.ui:346
+#. i18n: ectx: property (text), widget (QPushButton, installPB)
+#: SmartIcon/PkInstallPackageFiles.cpp:117 libkpackagekit/KpkDelegate.cpp:43
+#: rc.cpp:114
 msgid "Install"
 msgstr "Instalu"
 
@@ -404,7 +406,7 @@ msgstr ""
 msgid "Configure"
 msgstr "Daŭrigi"
 
-#: SmartIcon/KpkUpdateIcon.cpp:144 libkpackagekit/KpkTransaction.cpp:88
+#: SmartIcon/KpkUpdateIcon.cpp:144 libkpackagekit/KpkTransaction.cpp:98
 msgid "Hide"
 msgstr "Kaŝi"
 
@@ -609,8 +611,7 @@ msgstr "Pakaĵo"
 msgid "KPackageKit settings"
 msgstr ""
 
-#: Settings/SettingsKCM.cpp:52 Updater/KcmKpkUpdate.cpp:63
-#: AddRm/AddRmKCM.cpp:76
+#: Settings/SettingsKCM.cpp:52 Updater/UpdateKCM.cpp:63 AddRm/AddRmKCM.cpp:82
 #, fuzzy
 #| msgid "(C) 2008-2009 Daniel Nicoletti"
 msgid "(C) 2008-2010 Daniel Nicoletti"
@@ -654,11 +655,11 @@ msgctxt "None updates will be automatically installed"
 msgid "None"
 msgstr "Neniu"
 
-#: Settings/SettingsKCM.cpp:196 libkpackagekit/KpkStrings.cpp:947
+#: Settings/SettingsKCM.cpp:206 libkpackagekit/KpkStrings.cpp:952
 msgid "You do not have the necessary privileges to perform this action."
 msgstr ""
 
-#: Settings/SettingsKCM.cpp:197
+#: Settings/SettingsKCM.cpp:207
 msgid "Failed to set origin data"
 msgstr ""
 
@@ -812,14 +813,6 @@ msgstr ""
 msgid "Distribution upgrade complete."
 msgstr ""
 
-#: Updater/KcmKpkUpdate.cpp:59
-msgid "Software update"
-msgstr ""
-
-#: Updater/KcmKpkUpdate.cpp:61
-msgid "KDE interface for updating software"
-msgstr ""
-
 #: Updater/KpkSimpleTransactionModel.cpp:46
 msgid "Date"
 msgstr "Dato"
@@ -836,6 +829,16 @@ msgstr "Uzantnomo"
 #: Updater/KpkSimpleTransactionModel.cpp:50
 msgid "Application"
 msgstr "Aplikaĵo"
+
+#: Updater/UpdateKCM.cpp:59
+#, fuzzy
+#| msgid "Updated"
+msgid "Update Software"
+msgstr "Aktualigita"
+
+#: Updater/UpdateKCM.cpp:61
+msgid "Review and Update Software"
+msgstr ""
 
 #: libkpackagekit/KpkStrings.cpp:33
 #, fuzzy
@@ -1476,7 +1479,7 @@ msgstr "Aktualigita"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, installedCB)
-#: libkpackagekit/KpkStrings.cpp:361 AddRm/KpkFiltersMenu.cpp:56 rc.cpp:156
+#: libkpackagekit/KpkStrings.cpp:361 AddRm/KpkFiltersMenu.cpp:56 rc.cpp:166
 msgid "Installed"
 msgstr "Instalita"
 
@@ -1693,7 +1696,7 @@ msgstr ""
 msgid "No space is left on the disk"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:476 libkpackagekit/KpkTransaction.cpp:480
+#: libkpackagekit/KpkStrings.cpp:476 libkpackagekit/KpkTransaction.cpp:493
 msgid "A media change is required"
 msgstr ""
 
@@ -2323,7 +2326,11 @@ msgctxt "The type of update"
 msgid "Unknown update"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:801
+#: libkpackagekit/KpkStrings.cpp:800
+msgid "No Updates Available"
+msgstr ""
+
+#: libkpackagekit/KpkStrings.cpp:803
 #, fuzzy, kde-format
 #| msgid "Updated"
 msgctxt "Some updates were selected on the view"
@@ -2332,7 +2339,7 @@ msgid_plural "%1 Updates Selected"
 msgstr[0] "Aktualigita"
 msgstr[1] "Aktualigita"
 
-#: libkpackagekit/KpkStrings.cpp:805
+#: libkpackagekit/KpkStrings.cpp:807
 #, fuzzy, kde-format
 #| msgid "Updated"
 msgctxt "Some updates are being shown on the screen"
@@ -2341,13 +2348,19 @@ msgid_plural "%1 Updates"
 msgstr[0] "Aktualigita"
 msgstr[1] "Aktualigita"
 
-#: libkpackagekit/KpkStrings.cpp:809
+#: libkpackagekit/KpkStrings.cpp:811
 #, kde-format
 msgctxt "Type of update, in the case it's just an update"
 msgid "%1 Updates, %2 Selected"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:814
+#: libkpackagekit/KpkStrings.cpp:817
+#, fuzzy
+#| msgid "Package"
+msgid "No Packages"
+msgstr "Pakaĵo"
+
+#: libkpackagekit/KpkStrings.cpp:819
 #, fuzzy, kde-format
 #| msgid "Package"
 msgid "1 Package"
@@ -2355,179 +2368,179 @@ msgid_plural "%1 Packages"
 msgstr[0] "Pakaĵo"
 msgstr[1] "Pakaĵo"
 
-#: libkpackagekit/KpkStrings.cpp:822
+#: libkpackagekit/KpkStrings.cpp:827
 msgid "No restart is necessary"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:824
+#: libkpackagekit/KpkStrings.cpp:829
 msgid "You will be required to restart this application"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:826
+#: libkpackagekit/KpkStrings.cpp:831
 msgid "You will be required to log out and back in"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:828
+#: libkpackagekit/KpkStrings.cpp:833
 msgid "A restart will be required"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:830
+#: libkpackagekit/KpkStrings.cpp:835
 msgid "You will be required to log out and back in due to a security update."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:832
+#: libkpackagekit/KpkStrings.cpp:837
 msgid "A restart will be required due to a security update."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:846
+#: libkpackagekit/KpkStrings.cpp:851
 msgid "No restart is required"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:848
+#: libkpackagekit/KpkStrings.cpp:853
 msgid "A restart is required"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:850
+#: libkpackagekit/KpkStrings.cpp:855
 msgid "You need to log out and log back in"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:852
+#: libkpackagekit/KpkStrings.cpp:857
 msgid "You need to restart the application"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:854
+#: libkpackagekit/KpkStrings.cpp:859
 msgid "You need to log out and log back in to remain secure."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:856
+#: libkpackagekit/KpkStrings.cpp:861
 msgid "A restart is required to remain secure."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:870
+#: libkpackagekit/KpkStrings.cpp:875
 msgid "Stable"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:872
+#: libkpackagekit/KpkStrings.cpp:877
 msgid "Unstable"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:874
+#: libkpackagekit/KpkStrings.cpp:879
 msgid "Testing"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:888
+#: libkpackagekit/KpkStrings.cpp:893
 #, kde-format
 msgid "Please insert the CD labeled '%1', and press continue."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:890
+#: libkpackagekit/KpkStrings.cpp:895
 #, kde-format
 msgid "Please insert the DVD labeled '%1', and press continue."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:892
+#: libkpackagekit/KpkStrings.cpp:897
 #, kde-format
 msgid "Please insert the disc labeled '%1', and press continue."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:895 libkpackagekit/KpkStrings.cpp:898
+#: libkpackagekit/KpkStrings.cpp:900 libkpackagekit/KpkStrings.cpp:903
 #, kde-format
 msgid "Please insert the medium labeled '%1', and press continue."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:905
+#: libkpackagekit/KpkStrings.cpp:910
 msgid "A mirror is possibly broken"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:907
+#: libkpackagekit/KpkStrings.cpp:912
 msgid "The connection was refused"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:909
+#: libkpackagekit/KpkStrings.cpp:914
 msgid "The parameter was invalid"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:911
+#: libkpackagekit/KpkStrings.cpp:916
 msgid "The priority was invalid"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:913
+#: libkpackagekit/KpkStrings.cpp:918
 msgid "Backend warning"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:915
+#: libkpackagekit/KpkStrings.cpp:920
 msgid "Daemon warning"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:917
+#: libkpackagekit/KpkStrings.cpp:922
 msgid "The package list cache is being rebuilt"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:919
+#: libkpackagekit/KpkStrings.cpp:924
 msgid "An untrusted package was installed"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:921
+#: libkpackagekit/KpkStrings.cpp:926
 msgid "A newer package exists"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:923
+#: libkpackagekit/KpkStrings.cpp:928
 msgid "Could not find package"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:925
+#: libkpackagekit/KpkStrings.cpp:930
 msgid "Configuration files were changed"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:927
+#: libkpackagekit/KpkStrings.cpp:932
 msgid "Package is already installed"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:929
+#: libkpackagekit/KpkStrings.cpp:934
 msgid "Automatic cleanup is being ignored"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:931
+#: libkpackagekit/KpkStrings.cpp:936
 msgid "Software source download failed"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:933
+#: libkpackagekit/KpkStrings.cpp:938
 msgid "This software source is for developers only"
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:949
+#: libkpackagekit/KpkStrings.cpp:954
 msgid "Could not get a transaction id from packagekitd."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:951
+#: libkpackagekit/KpkStrings.cpp:956
 msgid "Cannot connect to this transaction id."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:953
+#: libkpackagekit/KpkStrings.cpp:958
 msgid "This action is unknown."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:955
+#: libkpackagekit/KpkStrings.cpp:960
 msgid "The packagekitd service could not be started."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:957
+#: libkpackagekit/KpkStrings.cpp:962
 msgid "The query is not valid."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:959
+#: libkpackagekit/KpkStrings.cpp:964
 msgid "The file is not valid."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:961
+#: libkpackagekit/KpkStrings.cpp:966
 msgid "This function is not yet supported."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:963
+#: libkpackagekit/KpkStrings.cpp:968
 msgid "Could not talk to packagekitd."
 msgstr ""
 
-#: libkpackagekit/KpkStrings.cpp:968 libkpackagekit/KpkStrings.cpp:971
+#: libkpackagekit/KpkStrings.cpp:973 libkpackagekit/KpkStrings.cpp:976
 msgid "An unknown error happened."
 msgstr ""
 
@@ -2584,14 +2597,14 @@ msgstr "Pakaĵo"
 msgid "Version"
 msgstr "Versio"
 
-#: libkpackagekit/KpkDelegate.cpp:44
+#: libkpackagekit/KpkDelegate.cpp:45
 #, fuzzy
 #| msgctxt "The action of the package, in past tense"
 #| msgid "Removed"
 msgid "Remove"
 msgstr "Forigita"
 
-#: libkpackagekit/KpkDelegate.cpp:46
+#: libkpackagekit/KpkDelegate.cpp:47
 #, fuzzy
 #| msgid "Development"
 msgid "Deselect"
@@ -2603,7 +2616,7 @@ msgstr ""
 
 #. i18n: file: libkpackagekit/KpkLicenseAgreement.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, KpkLicenseAgreement)
-#: libkpackagekit/KpkLicenseAgreement.cpp:35 rc.cpp:80
+#: libkpackagekit/KpkLicenseAgreement.cpp:35 rc.cpp:83
 msgid "License Agreement Required"
 msgstr ""
 
@@ -2614,7 +2627,7 @@ msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:362
 #. i18n: ectx: property (text), widget (QCheckBox, cancelCB)
-#: libkpackagekit/KpkTransactionBar.cpp:46 rc.cpp:234
+#: libkpackagekit/KpkTransactionBar.cpp:46 rc.cpp:244
 msgid "Cancel"
 msgstr "Rezigni"
 
@@ -2625,14 +2638,14 @@ msgctxt "The transaction finished it's job"
 msgid "Finished"
 msgstr "Trovi"
 
-#: libkpackagekit/KpkPackageModel.cpp:168
+#: libkpackagekit/KpkPackageModel.cpp:217
 #, fuzzy
 #| msgctxt "The action of the package, in past tense"
 #| msgid "Removed"
 msgid "To be Removed"
 msgstr "Forigita"
 
-#: libkpackagekit/KpkPackageModel.cpp:170
+#: libkpackagekit/KpkPackageModel.cpp:219
 #, fuzzy
 #| msgid "Installed"
 msgid "To be Installed"
@@ -2681,17 +2694,17 @@ msgid_plural "%1 packages to update"
 msgstr[0] ""
 msgstr[1] ""
 
-#: libkpackagekit/KpkTransaction.cpp:90
+#: libkpackagekit/KpkTransaction.cpp:100
 msgid ""
 "Allows you to hide the window whilst keeping the transaction task running."
 msgstr ""
 
-#: libkpackagekit/KpkTransaction.cpp:363
+#: libkpackagekit/KpkTransaction.cpp:376
 #, kde-format
 msgid "Downloading packages at %1/s"
 msgstr ""
 
-#: libkpackagekit/KpkTransaction.cpp:402
+#: libkpackagekit/KpkTransaction.cpp:415
 msgid ""
 "You are about to install unsigned packages that can compromise your system, "
 "as it is impossible to verify if the software came from a trusted source.\n"
@@ -2699,15 +2712,15 @@ msgid ""
 "Are you sure you want to proceed with the installation?"
 msgstr ""
 
-#: libkpackagekit/KpkTransaction.cpp:405
+#: libkpackagekit/KpkTransaction.cpp:418
 msgid "Installing unsigned software"
 msgstr ""
 
-#: libkpackagekit/KpkTransaction.cpp:462
+#: libkpackagekit/KpkTransaction.cpp:475
 msgid "Failed to accept EULA"
 msgstr ""
 
-#: libkpackagekit/KpkTransaction.cpp:510
+#: libkpackagekit/KpkTransaction.cpp:523
 #, fuzzy
 #| msgid "Packages"
 msgid "Failed to install signature"
@@ -2715,26 +2728,16 @@ msgstr "Pakaĵoj"
 
 #. i18n: file: libkpackagekit/KpkRepoSig.ui:6
 #. i18n: ectx: property (windowTitle), widget (QWidget, KpkRepoSig)
-#: libkpackagekit/KpkRepoSig.cpp:36 rc.cpp:44
+#: libkpackagekit/KpkRepoSig.cpp:36 rc.cpp:47
 msgid "Software signature is required"
 msgstr ""
 
-#: AddRm/KpkPackageDetails.cpp:128
-msgid "Home Page"
-msgstr "Hejma paĝo"
-
-#: AddRm/KpkPackageDetails.cpp:133
-msgid "License"
-msgstr "Permesilo"
-
-#: AddRm/KpkPackageDetails.cpp:138
-msgctxt "Group of the package"
-msgid "Group"
-msgstr "Grupo"
-
-#: AddRm/KpkPackageDetails.cpp:144
-msgid "Size"
-msgstr "Grandeco"
+#: libkpackagekit/ApplicationLauncher.cpp:33
+msgid "The following application was just installed, click on it to launch:"
+msgid_plural ""
+"The following applications where just installed, click on them to launch:"
+msgstr[0] ""
+msgstr[1] ""
 
 #: AddRm/KpkFiltersMenu.cpp:35
 msgid "Collections"
@@ -2764,7 +2767,7 @@ msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:110
 #. i18n: ectx: property (text), widget (QCheckBox, developmentCB)
-#: AddRm/KpkFiltersMenu.cpp:84 rc.cpp:159
+#: AddRm/KpkFiltersMenu.cpp:84 rc.cpp:169
 msgid "Development"
 msgstr "Evoluigo"
 
@@ -2844,63 +2847,64 @@ msgstr ""
 
 #. i18n: file: AddRm/AddRmKCM.ui:20
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddRmKCM)
-#: AddRm/AddRmKCM.cpp:72 rc.cpp:98
+#: AddRm/AddRmKCM.cpp:78 rc.cpp:117
 msgid "Add and Remove Software"
 msgstr ""
 
-#: AddRm/AddRmKCM.cpp:74
+#: AddRm/AddRmKCM.cpp:80
 msgid "KDE interface for managing software"
 msgstr ""
 
-#: AddRm/AddRmKCM.cpp:104 AddRm/AddRmKCM.cpp:334
+#: AddRm/AddRmKCM.cpp:152 AddRm/AddRmKCM.cpp:348
 msgid "Find"
 msgstr "Trovi"
 
-#: AddRm/AddRmKCM.cpp:157
+#: AddRm/AddRmKCM.cpp:325 AddRm/AddRmKCM.cpp:326 AddRm/AddRmKCM.cpp:327
+#: AddRm/AddRmKCM.cpp:328
+msgid "&Cancel"
+msgstr "&Rezigni"
+
+#. i18n: file: AddRm/AddRmKCM.ui:160
+#. i18n: ectx: property (text), widget (KpkTransactionBar, transactionBar)
+#: AddRm/AddRmKCM.cpp:335 rc.cpp:129
+msgid "Find by &name"
+msgstr ""
+
+#. i18n: file: AddRm/AddRmKCM.ui:170
+#. i18n: ectx: property (text), widget (KpkTransactionBar, transactionBar)
+#: AddRm/AddRmKCM.cpp:336 rc.cpp:135
+msgid "Find by f&ile name"
+msgstr ""
+
+#. i18n: file: AddRm/AddRmKCM.ui:165
+#. i18n: ectx: property (text), widget (KpkTransactionBar, transactionBar)
+#: AddRm/AddRmKCM.cpp:337 rc.cpp:132
+msgid "Find by &description"
+msgstr ""
+
+#: AddRm/CategoryModel.cpp:40
+#, fuzzy
+#| msgid "Installed"
+msgid "Installed Software"
+msgstr "Instalita"
+
+#: AddRm/CategoryModel.cpp:42
+msgid "Lists"
+msgstr ""
+
+#: AddRm/CategoryModel.cpp:56
 #, fuzzy
 #| msgctxt "Group of the package"
 #| msgid "Group"
 msgid "Groups"
 msgstr "Grupo"
 
-#: AddRm/AddRmKCM.cpp:311 AddRm/AddRmKCM.cpp:312 AddRm/AddRmKCM.cpp:313
-#: AddRm/AddRmKCM.cpp:314
-msgid "&Cancel"
-msgstr "&Rezigni"
-
-#. i18n: file: AddRm/AddRmKCM.ui:271
-#. i18n: ectx: property (text), widget (KpkCategorizedView, changesView)
-#: AddRm/AddRmKCM.cpp:321 rc.cpp:125
-msgid "Find by &name"
-msgstr ""
-
-#. i18n: file: AddRm/AddRmKCM.ui:281
-#. i18n: ectx: property (text), widget (KpkCategorizedView, changesView)
-#: AddRm/AddRmKCM.cpp:322 rc.cpp:131
-msgid "Find by f&ile name"
-msgstr ""
-
-#. i18n: file: AddRm/AddRmKCM.ui:276
-#. i18n: ectx: property (text), widget (KpkCategorizedView, changesView)
-#: AddRm/AddRmKCM.cpp:323 rc.cpp:128
-msgid "Find by &description"
-msgstr ""
-
-#: AddRm/AddRmKCM.cpp:343
-#, kde-format
-msgid "1 Change Pending"
-msgid_plural "%1 Changes Pending"
-msgstr[0] ""
-msgstr[1] ""
-
-#. i18n: file: AddRm/AddRmKCM.ui:242
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: AddRm/AddRmKCM.cpp:346 rc.cpp:122
-msgid "No Change Pending"
+#: KPackageKit/main.cpp:34
+msgid "AppGet"
 msgstr ""
 
 #: KPackageKit/main.cpp:36
-msgid "KPackageKit is a tool to manage software"
+msgid "AppGet is an application to get and manage software"
 msgstr ""
 
 #: KPackageKit/main.cpp:46
@@ -3005,180 +3009,186 @@ msgstr ""
 msgid "Show confirmation dialog when installing or updating packages"
 msgstr ""
 
-#. i18n: file: Settings/SettingsKCM.ui:151
-#. i18n: ectx: property (text), widget (QCheckBox, showOriginsCB)
+#. i18n: file: Settings/SettingsKCM.ui:123
+#. i18n: ectx: property (text), widget (QCheckBox, appLauncherCB)
 #: rc.cpp:26
+msgid "Show application launcher after installing new applications"
+msgstr ""
+
+#. i18n: file: Settings/SettingsKCM.ui:158
+#. i18n: ectx: property (text), widget (QCheckBox, showOriginsCB)
+#: rc.cpp:29
 msgid "&Show origins of debug and development packages"
 msgstr ""
 
 #. i18n: file: Updater/KpkHistory.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, KpkHistory)
-#. i18n: file: Updater/KcmKpkUpdate.ui:116
+#. i18n: file: Updater/UpdateKCM.ui:116
 #. i18n: ectx: property (text), widget (KPushButton, historyPB)
-#: rc.cpp:29 rc.cpp:41
+#: rc.cpp:32 rc.cpp:44
 msgid "History"
 msgstr "Historio"
 
 #. i18n: file: Updater/KpkHistory.ui:22
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, searchLineKLE)
-#: rc.cpp:32
+#: rc.cpp:35
 msgid "Type filter"
 msgstr ""
 
 #. i18n: file: Updater/KpkHistory.ui:54
 #. i18n: ectx: property (text), widget (QLabel, timeCacheLabel)
-#: rc.cpp:35
+#: rc.cpp:38
 msgid "Time since last cache refresh: 5 hours"
 msgstr ""
 
-#. i18n: file: Updater/KcmKpkUpdate.ui:106
+#. i18n: file: Updater/UpdateKCM.ui:106
 #. i18n: ectx: property (text), widget (KPushButton, refreshPB)
-#: rc.cpp:38
+#: rc.cpp:41
 msgid "Check for new Updates"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRepoSig.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:47
+#: rc.cpp:50
 msgid "Do you trust the origin of packages?"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRepoSig.ui:39
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:50
+#: rc.cpp:53
 msgid "Repository name:"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRepoSig.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:53
+#: rc.cpp:56
 msgid "Signature URL:"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRepoSig.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:56
+#: rc.cpp:59
 msgid "Signature user identifier:"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRepoSig.ui:108
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:59
+#: rc.cpp:62
 msgid "Signature identifier:"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRequirements.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:62
+#: rc.cpp:65
 msgid "Additional changes are required to complete the task"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkRequirements.ui:57
 #. i18n: ectx: property (windowTitle), widget (QDockWidget, dockWidget)
-#: rc.cpp:65
+#: rc.cpp:68
 msgid "Actions"
 msgstr "Agoj"
 
 #. i18n: file: libkpackagekit/KpkRequirements.ui:138
 #. i18n: ectx: property (text), widget (QCheckBox, confirmCB)
-#: rc.cpp:68
+#: rc.cpp:71
 msgid ""
 "Do not show this confirmation when installing or updating additional packages"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkTransaction.ui:30
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:71
+#: rc.cpp:74
 msgid "icon"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkTransaction.ui:56
 #. i18n: ectx: property (text), widget (QLabel, currentL)
-#: rc.cpp:74
+#: rc.cpp:77
 msgid "Downloading Packages"
 msgstr ""
 
 #. i18n: file: libkpackagekit/KpkReviewChanges.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:77
+#: rc.cpp:80
 msgid "TextLabel"
 msgstr "TextLabel"
 
 #. i18n: file: libkpackagekit/KpkLicenseAgreement.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:83
+#: rc.cpp:86
 msgid "Please read the following important information before continuing:"
 msgstr ""
 
-#. i18n: file: AddRm/KpkPackageDetails.ui:45
+#. i18n: file: libkpackagekit/ApplicationLauncher.ui:43
+#. i18n: ectx: property (text), widget (QCheckBox, showCB)
+#: rc.cpp:90
+#, fuzzy
+#| msgid "Do not ask again"
+msgid "Do not show this dialog again"
+msgstr "Ne petu plu"
+
+#. i18n: file: AddRm/KpkPackageDetails.ui:199
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:97
+msgid "Find it in the K menu: Applications -> Foo -> bar"
+msgstr ""
+
+#. i18n: file: AddRm/KpkPackageDetails.ui:221
 #. i18n: ectx: property (text), widget (QToolButton, descriptionTB)
-#: rc.cpp:86
+#: rc.cpp:100
 msgid "Description"
 msgstr "Priskribo"
 
-#. i18n: file: AddRm/KpkPackageDetails.ui:64
+#. i18n: file: AddRm/KpkPackageDetails.ui:240
 #. i18n: ectx: property (text), widget (QToolButton, fileListTB)
-#: rc.cpp:89
+#: rc.cpp:103
 msgid "File List"
 msgstr "Dosierlisto"
 
-#. i18n: file: AddRm/KpkPackageDetails.ui:80
+#. i18n: file: AddRm/KpkPackageDetails.ui:256
 #. i18n: ectx: property (text), widget (QToolButton, dependsOnTB)
-#: rc.cpp:92
+#: rc.cpp:106
 msgid "Depends on"
 msgstr ""
 
-#. i18n: file: AddRm/KpkPackageDetails.ui:96
+#. i18n: file: AddRm/KpkPackageDetails.ui:272
 #. i18n: ectx: property (text), widget (QToolButton, requiredByTB)
-#: rc.cpp:95
+#: rc.cpp:109
 msgid "Required by"
 msgstr ""
 
-#. i18n: file: AddRm/AddRmKCM.ui:42
-#. i18n: ectx: attribute (title), widget (QWidget, browse)
-#: rc.cpp:101
-msgid "Browse"
-msgstr ""
-
-#. i18n: file: AddRm/AddRmKCM.ui:75
+#. i18n: file: AddRm/AddRmKCM.ui:37
 #. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: rc.cpp:104
+#: rc.cpp:120
 msgid "Back"
 msgstr ""
 
-#. i18n: file: AddRm/AddRmKCM.ui:92
+#. i18n: file: AddRm/AddRmKCM.ui:54
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, searchKLE)
-#: rc.cpp:107
+#: rc.cpp:123
 msgid "Search packages"
 msgstr ""
 
-#. i18n: file: AddRm/AddRmKCM.ui:127
+#. i18n: file: AddRm/AddRmKCM.ui:95
 #. i18n: ectx: property (text), widget (QToolButton, filtersTB)
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:91
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:110 rc.cpp:153
+#: rc.cpp:126 rc.cpp:163
 msgid "Filters"
 msgstr "Filtriloj"
 
-#. i18n: file: AddRm/AddRmKCM.ui:177
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:113
-#, fuzzy
-#| msgid "Packages"
-msgid "Installed Packages"
-msgstr "Pakaĵoj"
-
-#. i18n: file: AddRm/AddRmKCM.ui:214
+#. i18n: file: AddRm/BrowseView.ui:137
 #. i18n: ectx: property (text), widget (QPushButton, exportInstalledPB)
-#: rc.cpp:116
+#: rc.cpp:138
 #, fuzzy
 #| msgid "Packages"
 msgid "Export Installed Package List..."
 msgstr "Pakaĵoj"
 
-#. i18n: file: AddRm/AddRmKCM.ui:221
+#. i18n: file: AddRm/BrowseView.ui:147
 #. i18n: ectx: property (text), widget (QPushButton, importInstalledPB)
-#: rc.cpp:119
+#: rc.cpp:141
 #, fuzzy
 #| msgid "Packages"
 msgid "Install Packages from List..."
@@ -3186,7 +3196,7 @@ msgstr "Pakaĵoj"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:26
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:134
+#: rc.cpp:144
 #, fuzzy
 #| msgid "About backend..."
 msgid "About Backend"
@@ -3194,13 +3204,13 @@ msgstr "Pri la interno..."
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:137
+#: rc.cpp:147
 msgid "Backend name:"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:141
+#: rc.cpp:151
 #, fuzzy
 #| msgid "Description"
 msgid "Backend description:"
@@ -3208,55 +3218,55 @@ msgstr "Priskribo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:60
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:145
+#: rc.cpp:155
 msgid "Backend author:"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:74
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:149
+#: rc.cpp:159
 msgid "Distribution ID:"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:120
 #. i18n: ectx: property (text), widget (QCheckBox, visibleCB)
-#: rc.cpp:162
+#: rc.cpp:172
 msgid "Package is visible"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:130
 #. i18n: ectx: property (text), widget (QCheckBox, newestCB)
-#: rc.cpp:165
+#: rc.cpp:175
 msgid "Newest"
 msgstr "Plej freŝa"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:140
 #. i18n: ectx: property (text), widget (QCheckBox, guiCB)
-#: rc.cpp:168
+#: rc.cpp:178
 msgid "GUI"
 msgstr "GUI"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:150
 #. i18n: ectx: property (text), widget (QCheckBox, freeCB)
-#: rc.cpp:171
+#: rc.cpp:181
 msgid "Free software"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:160
 #. i18n: ectx: property (text), widget (QCheckBox, supportedCB)
-#: rc.cpp:174
+#: rc.cpp:184
 msgid "Supported"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:177
+#: rc.cpp:187
 msgid "Methods"
 msgstr "Metodoj"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:182
 #. i18n: ectx: property (text), widget (QCheckBox, getUpdatesCB)
-#: rc.cpp:180
+#: rc.cpp:190
 #, fuzzy
 #| msgid "Updated"
 msgid "Get Updates"
@@ -3264,7 +3274,7 @@ msgstr "Aktualigita"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:192
 #. i18n: ectx: property (text), widget (QCheckBox, getRepositoryListCB)
-#: rc.cpp:183
+#: rc.cpp:193
 #, fuzzy
 #| msgid "Repository"
 msgid "Get Repository List"
@@ -3272,7 +3282,7 @@ msgstr "Deponejo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:202
 #. i18n: ectx: property (text), widget (QCheckBox, refreshCacheCB)
-#: rc.cpp:186
+#: rc.cpp:196
 #, fuzzy
 #| msgid "Refresh"
 msgid "Refresh Cache"
@@ -3280,7 +3290,7 @@ msgstr "Refreŝigi"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:212
 #. i18n: ectx: property (text), widget (QCheckBox, updateSystemCB)
-#: rc.cpp:189
+#: rc.cpp:199
 #, fuzzy
 #| msgid "Updated"
 msgid "Update System"
@@ -3288,7 +3298,7 @@ msgstr "Aktualigita"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:222
 #. i18n: ectx: property (text), widget (QCheckBox, searchNameCB)
-#: rc.cpp:192
+#: rc.cpp:202
 #, fuzzy
 #| msgctxt "Search for packages"
 #| msgid "Search"
@@ -3297,13 +3307,13 @@ msgstr "Serĉi"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:232
 #. i18n: ectx: property (text), widget (QCheckBox, getDependsCB)
-#: rc.cpp:195
+#: rc.cpp:205
 msgid "Get Package Depends"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:242
 #. i18n: ectx: property (text), widget (QCheckBox, searchDetailsCB)
-#: rc.cpp:198
+#: rc.cpp:208
 #, fuzzy
 #| msgid "Details"
 msgid "Search Details"
@@ -3311,13 +3321,13 @@ msgstr "Detaloj"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:252
 #. i18n: ectx: property (text), widget (QCheckBox, getRequiresCB)
-#: rc.cpp:201
+#: rc.cpp:211
 msgid "Get Package Requires"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:262
 #. i18n: ectx: property (text), widget (QCheckBox, searchGroupCB)
-#: rc.cpp:204
+#: rc.cpp:214
 #, fuzzy
 #| msgctxt "Search for packages"
 #| msgid "Search"
@@ -3326,13 +3336,13 @@ msgstr "Serĉi"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:272
 #. i18n: ectx: property (text), widget (QCheckBox, getUpdateDetailCB)
-#: rc.cpp:207
+#: rc.cpp:217
 msgid "Get Update Detail"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:282
 #. i18n: ectx: property (text), widget (QCheckBox, searchFileCB)
-#: rc.cpp:210
+#: rc.cpp:220
 #, fuzzy
 #| msgctxt "Search for packages"
 #| msgid "Search"
@@ -3341,7 +3351,7 @@ msgstr "Serĉi"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:292
 #. i18n: ectx: property (text), widget (QCheckBox, getDescriptionCB)
-#: rc.cpp:213
+#: rc.cpp:223
 #, fuzzy
 #| msgid "Description"
 msgid "Get Package Description"
@@ -3349,7 +3359,7 @@ msgstr "Priskribo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:302
 #. i18n: ectx: property (text), widget (QCheckBox, getFilesCB)
-#: rc.cpp:216
+#: rc.cpp:226
 #, fuzzy
 #| msgid "Packages"
 msgid "Get Package Files"
@@ -3357,13 +3367,13 @@ msgstr "Pakaĵoj"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:312
 #. i18n: ectx: property (text), widget (QCheckBox, getDistroUpgradesCB)
-#: rc.cpp:219
+#: rc.cpp:229
 msgid "Get Distro Upgrades"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:322
 #. i18n: ectx: property (text), widget (QCheckBox, installPackageCB)
-#: rc.cpp:222
+#: rc.cpp:232
 #, fuzzy
 #| msgid "Packages"
 msgid "Install Packages"
@@ -3371,7 +3381,7 @@ msgstr "Pakaĵoj"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:332
 #. i18n: ectx: property (text), widget (QCheckBox, updatePackageCB)
-#: rc.cpp:225
+#: rc.cpp:235
 #, fuzzy
 #| msgid "Package"
 msgid "Update Packages"
@@ -3379,7 +3389,7 @@ msgstr "Pakaĵo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:342
 #. i18n: ectx: property (text), widget (QCheckBox, removePackageCB)
-#: rc.cpp:228
+#: rc.cpp:238
 #, fuzzy
 #| msgid "Package"
 msgid "Remove Packages"
@@ -3387,7 +3397,7 @@ msgstr "Pakaĵo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:352
 #. i18n: ectx: property (text), widget (QCheckBox, installFileCB)
-#: rc.cpp:231
+#: rc.cpp:241
 #, fuzzy
 #| msgid "Installed"
 msgid "Install Files"
@@ -3395,13 +3405,13 @@ msgstr "Instalita"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:372
 #. i18n: ectx: property (text), widget (QCheckBox, resolveCB)
-#: rc.cpp:237
+#: rc.cpp:247
 msgid "Resolve"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:382
 #. i18n: ectx: property (text), widget (QCheckBox, repositoryEnableCB)
-#: rc.cpp:240
+#: rc.cpp:250
 #, fuzzy
 #| msgid "Repository"
 msgid "Enable Repository"
@@ -3409,7 +3419,7 @@ msgstr "Deponejo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:392
 #. i18n: ectx: property (text), widget (QCheckBox, repositorySetEnableCB)
-#: rc.cpp:243
+#: rc.cpp:253
 #, fuzzy
 #| msgid "Repository"
 msgid "Set Repository Data"
@@ -3417,13 +3427,13 @@ msgstr "Deponejo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:402
 #. i18n: ectx: property (text), widget (QCheckBox, whatProvidesCB)
-#: rc.cpp:246
+#: rc.cpp:256
 msgid "What Provides"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:412
 #. i18n: ectx: property (text), widget (QCheckBox, getPackagesCB)
-#: rc.cpp:249
+#: rc.cpp:259
 #, fuzzy
 #| msgid "Package"
 msgid "Get Packages"
@@ -3431,13 +3441,13 @@ msgstr "Pakaĵo"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:422
 #. i18n: ectx: property (text), widget (QCheckBox, simulateInstallFilesCB)
-#: rc.cpp:252
+#: rc.cpp:262
 msgid "Simulate Install Files"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:432
 #. i18n: ectx: property (text), widget (QCheckBox, simulateInstallPackagesCB)
-#: rc.cpp:255
+#: rc.cpp:265
 #, fuzzy
 #| msgid "Packages"
 msgid "Simulate Install Packages"
@@ -3445,15 +3455,33 @@ msgstr "Pakaĵoj"
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:442
 #. i18n: ectx: property (text), widget (QCheckBox, simulateRemovePackagesCB)
-#: rc.cpp:258
+#: rc.cpp:268
 msgid "Simulate Remove Packages"
 msgstr ""
 
 #. i18n: file: KPackageKit/KpkBackendDetails.ui:452
 #. i18n: ectx: property (text), widget (QCheckBox, simulateUpdatePackagesCB)
-#: rc.cpp:261
+#: rc.cpp:271
 msgid "Simulate Update Packages"
 msgstr ""
+
+#~ msgid "Home Page"
+#~ msgstr "Hejma paĝo"
+
+#~ msgid "License"
+#~ msgstr "Permesilo"
+
+#~ msgctxt "Group of the package"
+#~ msgid "Group"
+#~ msgstr "Grupo"
+
+#~ msgid "Size"
+#~ msgstr "Grandeco"
+
+#, fuzzy
+#~| msgid "Packages"
+#~ msgid "Installed Packages"
+#~ msgstr "Pakaĵoj"
 
 #~ msgid "Apply Now"
 #~ msgstr "Apliki tuj"
@@ -3497,6 +3525,3 @@ msgstr ""
 #~ msgctxt "The time that the transaction took to complete"
 #~ msgid "Finished in %1."
 #~ msgstr "Trovi"
-
-#~ msgid "Do not ask again"
-#~ msgstr "Ne petu plu"

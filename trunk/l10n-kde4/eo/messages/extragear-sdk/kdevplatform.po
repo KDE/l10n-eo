@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-02 07:10+0200\n"
+"POT-Creation-Date: 2010-09-07 02:43+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -14,22 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: pology\n"
-
-#: debugger/breakpoint/breakpoint.cpp:135
-msgid "error"
-msgstr ""
-
-#: debugger/breakpoint/breakpoint.cpp:141
-msgid "dirty"
-msgstr ""
-
-#: debugger/breakpoint/breakpoint.cpp:143
-msgid "pending"
-msgstr ""
-
-#: debugger/breakpoint/breakpoint.cpp:145
-msgid "clean"
-msgstr ""
 
 #: debugger/breakpoint/breakpointdetails.cpp:74
 #: debugger/breakpoint/breakpointdetails.cpp:146
@@ -80,37 +64,6 @@ msgstr ""
 msgid ""
 "<b>Breakpoint is dirty</b><p>The breakpoint has not yet been passed to the "
 "debugger.</p>"
-msgstr ""
-
-#: debugger/breakpoint/breakpointmodel.cpp:87
-msgid "Breakpoint"
-msgstr "haltopunkto"
-
-#: debugger/breakpoint/breakpointmodel.cpp:131
-msgid "Type"
-msgstr "Tipo"
-
-#: debugger/breakpoint/breakpointmodel.cpp:132
-#: vcs/models/vcsitemeventmodel.cpp:122
-msgid "Location"
-msgstr "Loko"
-
-#: debugger/breakpoint/breakpointmodel.cpp:133
-msgid "Condition"
-msgstr "Kondiĉoj"
-
-#: debugger/breakpoint/breakpointmodel.cpp:137
-msgid "Active status"
-msgstr ""
-
-#: debugger/breakpoint/breakpointmodel.cpp:138
-#, fuzzy
-#| msgid "Status"
-msgid "State"
-msgstr "Stato"
-
-#: debugger/breakpoint/breakpointmodel.cpp:216
-msgid "Double-click to create new code breakpoint"
 msgstr ""
 
 #: debugger/breakpoint/breakpointwidget.cpp:51
@@ -201,6 +154,53 @@ msgstr "Forigi ĉiujn"
 msgid "Enable"
 msgstr "Ŝaltu"
 
+#: debugger/breakpoint/breakpoint.cpp:135
+msgid "error"
+msgstr ""
+
+#: debugger/breakpoint/breakpoint.cpp:141
+msgid "dirty"
+msgstr ""
+
+#: debugger/breakpoint/breakpoint.cpp:143
+msgid "pending"
+msgstr ""
+
+#: debugger/breakpoint/breakpoint.cpp:145
+msgid "clean"
+msgstr ""
+
+#: debugger/breakpoint/breakpointmodel.cpp:86
+msgid "Breakpoint"
+msgstr "haltopunkto"
+
+#: debugger/breakpoint/breakpointmodel.cpp:130
+msgid "Type"
+msgstr "Tipo"
+
+#: debugger/breakpoint/breakpointmodel.cpp:131
+#: vcs/models/vcsitemeventmodel.cpp:122
+msgid "Location"
+msgstr "Loko"
+
+#: debugger/breakpoint/breakpointmodel.cpp:132
+msgid "Condition"
+msgstr "Kondiĉoj"
+
+#: debugger/breakpoint/breakpointmodel.cpp:136
+msgid "Active status"
+msgstr ""
+
+#: debugger/breakpoint/breakpointmodel.cpp:137 shell/sessioncontroller.cpp:850
+#, fuzzy
+#| msgid "Status"
+msgid "State"
+msgstr "Stato"
+
+#: debugger/breakpoint/breakpointmodel.cpp:215
+msgid "Double-click to create new code breakpoint"
+msgstr ""
+
 #: debugger/framestack/framestackwidget.cpp:59
 msgid ""
 "<b>Frame stack</b><p>Often referred to as the \"call stack\", this is a list "
@@ -266,7 +266,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, btnDelStyle)
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:35
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: debugger/util/pathmappings.cpp:244 shell/workingsetcontroller.cpp:763
+#: debugger/util/pathmappings.cpp:244 shell/workingsetcontroller.cpp:772
 #: rc.cpp:134 rc.cpp:182 rc.cpp:212 rc.cpp:262 rc.cpp:407
 msgid "Delete"
 msgstr "Forigi"
@@ -408,8 +408,25 @@ msgid ""
 "be executed. <br />The plugin will not work until you fix this problem."
 msgstr ""
 
-#: language/backgroundparser/backgroundparser.cpp:377
+#: language/backgroundparser/backgroundparser.cpp:354
 msgid "Background Parser"
+msgstr ""
+
+#: language/backgroundparser/parsejob.cpp:301
+#, kde-format
+msgid "Could not open file '%1'"
+msgstr ""
+
+#: language/backgroundparser/parsejob.cpp:304
+msgid "File could not be read from disk."
+msgstr ""
+
+#: language/backgroundparser/parsejob.cpp:307
+msgid "File could not be opened."
+msgstr ""
+
+#: language/backgroundparser/parsejob.cpp:310
+msgid "File could not be read from disk due to permissions."
 msgstr ""
 
 #: language/backgroundparser/parseprojectjob.cpp:51
@@ -446,7 +463,7 @@ msgstr "Enmeti"
 
 #. i18n: file: language/codegen/ui/newclass.ui:77
 #. i18n: ectx: property (toolTip), widget (KPushButton, removeInheritancePushButton)
-#: language/codegen/applychangeswidget.cpp:268 sublime/ideal.cpp:489
+#: language/codegen/applychangeswidget.cpp:268 sublime/ideal.cpp:490
 #: rc.cpp:116
 msgid "Remove"
 msgstr "Forigi"
@@ -535,52 +552,10 @@ msgstr "Protektata"
 msgid "Private"
 msgstr "Privata"
 
-#: language/duchain/forwarddeclaration.cpp:63
+#: language/duchain/forwarddeclaration.cpp:61
 #, kde-format
 msgid "context-free forward-declaration %1"
 msgstr ""
-
-#: language/duchain/navigation/abstractincludenavigationcontext.cpp:96
-msgid "Declarations:"
-msgstr "Deklaroj:"
-
-#: language/duchain/navigation/abstractincludenavigationcontext.cpp:101
-msgid "not parsed yet"
-msgstr "ankoraŭ ne parsita"
-
-#: language/duchain/navigation/abstractincludenavigationcontext.cpp:112
-msgctxt "Files included into this file"
-msgid "Includes"
-msgstr ""
-
-#: language/duchain/navigation/abstractincludenavigationcontext.cpp:112
-msgctxt "Count of files this file was included into"
-msgid "Included by"
-msgstr ""
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:370
-msgid "Typedef"
-msgstr ""
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:373
-msgid "Class"
-msgstr "Klaso"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:377
-msgid "Variable"
-msgstr "Variablo"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:381
-msgid "Namespace import"
-msgstr "Importo de nomspaco"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:383
-msgid "Namespace alias"
-msgstr "Alinomo de nomspaco"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:390
-msgid "Forward Declaration"
-msgstr "Anonca deklaro"
 
 #: language/duchain/navigation/problemnavigationcontext.cpp:41
 msgid "Solve"
@@ -603,56 +578,6 @@ msgstr ""
 #, kde-format
 msgid "Uses of %1"
 msgstr ""
-
-#. i18n: file: language/codegen/ui/outputlocation.ui:99
-#. i18n: ectx: property (text), widget (QLabel, headerRowLabel)
-#. i18n: file: language/codegen/ui/outputlocation.ui:132
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: language/duchain/navigation/useswidget.cpp:118 rc.cpp:59 rc.cpp:68
-msgid "Line"
-msgstr "Linio"
-
-#: language/duchain/navigation/useswidget.cpp:160
-#: language/duchain/navigation/useswidget.cpp:164
-#, kde-format
-msgid "<a href='open'>Line <b>%1</b></a> %2"
-msgstr ""
-
-#: language/duchain/navigation/useswidget.cpp:316
-msgid "Unknown context"
-msgstr ""
-
-#: language/duchain/navigation/useswidget.cpp:324
-#: shell/launchconfigurationdialog.cpp:302
-msgid "Global"
-msgstr "Malloka"
-
-#: language/duchain/navigation/useswidget.cpp:349
-msgid "Context"
-msgstr "Kunteksto"
-
-#: language/duchain/navigation/useswidget.cpp:352
-#, kde-format
-msgid "<i>(1 use)</i>"
-msgid_plural "<i>(%1 uses)</i>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: language/duchain/navigation/useswidget.cpp:383
-msgid "Declaration"
-msgstr ""
-
-#: language/duchain/navigation/useswidget.cpp:409
-msgid "No project"
-msgstr ""
-
-#: language/duchain/navigation/useswidget.cpp:427
-#, kde-format
-msgid "<b>Project:</b> %2 &nbsp; <b>File:</b> %3 &nbsp; <i>(1 use)</i>"
-msgid_plural ""
-"<b>Project:</b> %2 &nbsp; <b>File:</b> %3 &nbsp; <i>(%1 uses)</i>"
-msgstr[0] ""
-msgstr[1] ""
 
 #: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:71
 msgid "<br /> lost declaration <br />"
@@ -802,6 +727,98 @@ msgctxt "A declaration that is unknown"
 msgid "Unknown"
 msgstr ""
 
+#: language/duchain/navigation/abstractincludenavigationcontext.cpp:96
+msgid "Declarations:"
+msgstr "Deklaroj:"
+
+#: language/duchain/navigation/abstractincludenavigationcontext.cpp:101
+msgid "not parsed yet"
+msgstr "ankoraŭ ne parsita"
+
+#: language/duchain/navigation/abstractincludenavigationcontext.cpp:112
+msgctxt "Files included into this file"
+msgid "Includes"
+msgstr ""
+
+#: language/duchain/navigation/abstractincludenavigationcontext.cpp:112
+msgctxt "Count of files this file was included into"
+msgid "Included by"
+msgstr ""
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:370
+msgid "Typedef"
+msgstr ""
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:373
+msgid "Class"
+msgstr "Klaso"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:377
+msgid "Variable"
+msgstr "Variablo"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:381
+msgid "Namespace import"
+msgstr "Importo de nomspaco"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:383
+msgid "Namespace alias"
+msgstr "Alinomo de nomspaco"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:390
+msgid "Forward Declaration"
+msgstr "Anonca deklaro"
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:99
+#. i18n: ectx: property (text), widget (QLabel, headerRowLabel)
+#. i18n: file: language/codegen/ui/outputlocation.ui:132
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: language/duchain/navigation/useswidget.cpp:115 rc.cpp:59 rc.cpp:68
+msgid "Line"
+msgstr "Linio"
+
+#: language/duchain/navigation/useswidget.cpp:155
+#: language/duchain/navigation/useswidget.cpp:159
+#, kde-format
+msgid "<a href='open'>Line <b>%1</b></a> %2"
+msgstr ""
+
+#: language/duchain/navigation/useswidget.cpp:308
+msgid "Unknown context"
+msgstr ""
+
+#: language/duchain/navigation/useswidget.cpp:316
+#: shell/launchconfigurationdialog.cpp:302
+msgid "Global"
+msgstr "Malloka"
+
+#: language/duchain/navigation/useswidget.cpp:341
+msgid "Context"
+msgstr "Kunteksto"
+
+#: language/duchain/navigation/useswidget.cpp:344
+#, kde-format
+msgid "<i>(1 use)</i>"
+msgid_plural "<i>(%1 uses)</i>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: language/duchain/navigation/useswidget.cpp:375
+msgid "Declaration"
+msgstr ""
+
+#: language/duchain/navigation/useswidget.cpp:401
+msgid "No project"
+msgstr ""
+
+#: language/duchain/navigation/useswidget.cpp:419
+#, kde-format
+msgid "<b>Project:</b> %2 &nbsp; <b>File:</b> %3 &nbsp; <i>(1 use)</i>"
+msgid_plural ""
+"<b>Project:</b> %2 &nbsp; <b>File:</b> %3 &nbsp; <i>(%1 uses)</i>"
+msgstr[0] ""
+msgstr[1] ""
+
 #: language/interfaces/iproblem.cpp:132
 msgid "Disk"
 msgstr ""
@@ -908,6 +925,32 @@ msgstr ""
 #: project/projectitemlineedit.cpp:188
 msgid "Select an item..."
 msgstr ""
+
+#: shell/textdocument.cpp:349 shell/partdocument.cpp:108
+#, kde-format
+msgid "The document \"%1\" has unsaved changes. Would you like to save them?"
+msgstr ""
+
+#: shell/textdocument.cpp:350 shell/partdocument.cpp:109
+msgid "Close Document"
+msgstr "Fermi dokumenton"
+
+#: shell/textdocument.cpp:362
+#, kde-format
+msgid ""
+"The file \"%1\" is modified on disk.\n"
+"\n"
+"Are you sure you want to overwrite it? (External changes will be lost.)"
+msgstr ""
+
+#: shell/textdocument.cpp:365
+msgid "Document Externally Modified"
+msgstr ""
+
+#: shell/textdocument.cpp:643
+#, kde-format
+msgid " Line: %1 Col: %2 "
+msgstr " Linio: %1 Kol: %2"
 
 #: shell/assistantpopup.cpp:99
 msgid "Hide"
@@ -1145,125 +1188,134 @@ msgid ""
 "editor.</p>"
 msgstr ""
 
-#: shell/core.cpp:65
+#: shell/core.cpp:63
 msgid "KDevelop Platform"
 msgstr ""
 
-#: shell/core.cpp:66
+#: shell/core.cpp:64
 msgid "Development Platform for IDE-like Applications"
 msgstr ""
 
-#: shell/core.cpp:67
+#: shell/core.cpp:65
 msgid "Copyright 2004-2009, The KDevelop developers"
 msgstr ""
 
-#: shell/core.cpp:69
+#: shell/core.cpp:67
 msgid "Andreas Pakulat"
 msgstr "Andreas Pakulat"
 
-#: shell/core.cpp:69
+#: shell/core.cpp:67
 msgid ""
 "Architecture, VCS Support, Project Management Support, QMake Projectmanager"
 msgstr ""
 
-#: shell/core.cpp:70
+#: shell/core.cpp:68
 msgid "Alexander Dymo"
 msgstr "Alexander Dymo"
 
-#: shell/core.cpp:70
+#: shell/core.cpp:68
 msgid "Architecture, Sublime UI, Ruby support"
 msgstr ""
 
-#: shell/core.cpp:71
+#: shell/core.cpp:69
 msgid "David Nolden"
 msgstr "David Nolden"
 
-#: shell/core.cpp:71
+#: shell/core.cpp:69
 msgid "Definition-Use Chain, C++ Support"
 msgstr ""
 
-#: shell/core.cpp:72
+#: shell/core.cpp:70
 msgid "Aleix Pol Gonzalez"
 msgstr "Aleix Pol Gonzalez"
 
-#: shell/core.cpp:72
+#: shell/core.cpp:70
 msgid "Co-Maintainer, CMake Support, Run Support, Kross Support"
 msgstr ""
 
-#: shell/core.cpp:73
+#: shell/core.cpp:71
 msgid "Vladimir Prus"
 msgstr "Vladimir Prus"
 
-#: shell/core.cpp:73
+#: shell/core.cpp:71
 #, fuzzy
 #| msgid "generating"
 msgid "GDB integration"
 msgstr "generanta"
 
-#: shell/core.cpp:74
+#: shell/core.cpp:72
 msgid "Hamish Rodda"
 msgstr "Hamish Rodda"
 
-#: shell/core.cpp:74
+#: shell/core.cpp:72
 msgid "Text editor integration, definition-use chain"
 msgstr ""
 
-#: shell/core.cpp:76
+#: shell/core.cpp:74
 msgid "Matt Rogers"
 msgstr "Matt Rogers"
 
-#: shell/core.cpp:77
+#: shell/core.cpp:75
 msgid "Cédric Pasteur"
 msgstr "Cédric Pasteur"
 
-#: shell/core.cpp:77
+#: shell/core.cpp:75
 msgid "astyle and ident support"
 msgstr ""
 
-#: shell/core.cpp:78
+#: shell/core.cpp:76
 msgid "Evgeniy Ivanov"
 msgstr "Evgeniy Ivanov"
 
-#: shell/core.cpp:78
+#: shell/core.cpp:76
 msgid "Distributed VCS, Git, Mercurial"
 msgstr ""
 
-#: shell/core.cpp:81
+#: shell/core.cpp:79
 msgid "Robert Gruber"
 msgstr "Robert Gruber"
 
-#: shell/core.cpp:81
+#: shell/core.cpp:79
 msgid "SnippetPart, debugger and usability patches"
 msgstr ""
 
-#: shell/core.cpp:82
+#: shell/core.cpp:80
 msgid "Dukju Ahn"
 msgstr "Dukju Ahn"
 
-#: shell/core.cpp:82
+#: shell/core.cpp:80
 msgid "Subversion plugin, Custom Make Manager, Overall improvements"
 msgstr ""
 
-#: shell/core.cpp:83
+#: shell/core.cpp:81
 msgid "Niko Sams"
 msgstr ""
 
-#: shell/core.cpp:83
+#: shell/core.cpp:81
 msgid "GDB integration, Webdevelopment Plugins"
 msgstr ""
 
-#: shell/core.cpp:84
+#: shell/core.cpp:82
 msgid "Milian Wolff"
 msgstr ""
 
-#: shell/core.cpp:84
+#: shell/core.cpp:82
 msgid ""
 "Co-Maintainer, Generic manager, Webdevelopment Plugins, Snippets, Performance"
 msgstr ""
 
-#: shell/core.cpp:171
+#: shell/core.cpp:170
 #, kde-format
-msgid "This session (%1) is already active in another running instance"
+msgid ""
+"The session %1 is already active in another running instance. Choose another "
+"session or close the running instance."
+msgstr ""
+
+#: shell/core.cpp:180
+#, kde-format
+msgid ""
+"Failed to lock the session %1, probably it is already active in another "
+"running instance"
 msgstr ""
 
 #: shell/kross/xmltokross/mainduchain.cpp:46 shell/mainwindow_p.cpp:71
@@ -1556,44 +1608,44 @@ msgstr "Reŝargi"
 msgid "Reload All"
 msgstr ""
 
-#: shell/projectcontroller.cpp:145
+#: shell/projectcontroller.cpp:141
 #, fuzzy, kde-format
 #| msgid "Configure %1"
 msgid "Configure Project %1"
 msgstr "Agordi %1"
 
-#: shell/projectcontroller.cpp:227
+#: shell/projectcontroller.cpp:223
 #, kde-format
 msgid "Invalid Location: %1"
 msgstr ""
 
-#: shell/projectcontroller.cpp:233
+#: shell/projectcontroller.cpp:229
 msgid "Project already being opened"
 msgstr ""
 
-#: shell/projectcontroller.cpp:234
+#: shell/projectcontroller.cpp:230
 #, kde-format
 msgid "Already opening %1, not opening again"
 msgstr ""
 
-#: shell/projectcontroller.cpp:337
+#: shell/projectcontroller.cpp:333
 #, kde-format
 msgid "Unable to create configuration file %1"
 msgstr ""
 
-#: shell/projectcontroller.cpp:349
+#: shell/projectcontroller.cpp:345
 msgid "Reopen the current project?"
 msgstr ""
 
-#: shell/projectcontroller.cpp:392
+#: shell/projectcontroller.cpp:388
 msgid "Open / Import Project..."
 msgstr ""
 
-#: shell/projectcontroller.cpp:393
+#: shell/projectcontroller.cpp:389
 msgid "Open / Import Project"
 msgstr ""
 
-#: shell/projectcontroller.cpp:394
+#: shell/projectcontroller.cpp:390
 msgid ""
 "<b>Open / Import project</b><p>Open an existing KDevelop 4 project or import "
 "an existing Project into KDevelop 4. This entry allows to select a KDevelop4 "
@@ -1602,66 +1654,90 @@ msgid ""
 "file will be created.</p>"
 msgstr ""
 
-#: shell/projectcontroller.cpp:399
+#: shell/projectcontroller.cpp:395
 #, fuzzy
 #| msgid "Protected"
 msgid "Fetch Project..."
 msgstr "Protektata"
 
-#: shell/projectcontroller.cpp:400
+#: shell/projectcontroller.cpp:396
 #, fuzzy
 #| msgid "Protected"
 msgid "Fetch Project"
 msgstr "Protektata"
 
-#: shell/projectcontroller.cpp:401
+#: shell/projectcontroller.cpp:397
 msgid ""
 "<b>Fetch project</b><p>Fetches a project from either a Version Control "
 "System or somewhere else and puts into the disk and lets </p>"
 msgstr ""
 
-#: shell/projectcontroller.cpp:414
+#: shell/projectcontroller.cpp:410
 msgid "Close Project(s)"
 msgstr ""
 
-#: shell/projectcontroller.cpp:416
+#: shell/projectcontroller.cpp:412
 msgid "Closes all currently selected projects"
 msgstr ""
 
-#: shell/projectcontroller.cpp:421
+#: shell/projectcontroller.cpp:417
 msgid "Open Configuration..."
 msgstr ""
 
-#: shell/projectcontroller.cpp:432
+#: shell/projectcontroller.cpp:428
 msgid "Open Recent"
 msgstr ""
 
-#: shell/projectcontroller.cpp:433
+#: shell/projectcontroller.cpp:429
 msgid "Open recent project"
 msgstr "Malfermi lasttempan projekton"
 
-#: shell/projectcontroller.cpp:435
+#: shell/projectcontroller.cpp:431
 msgid "<b>Open recent project</b><p>Opens recently opened project.</p>"
 msgstr ""
 
-#: shell/projectcontroller.cpp:440
+#: shell/projectcontroller.cpp:436
 msgid "Open Project for Current File"
 msgstr ""
 
-#: shell/projectcontroller.cpp:531
+#: shell/projectcontroller.cpp:527
 #, kde-format
 msgid "Project already open: %1"
 msgstr ""
 
-#: shell/projectcontroller.cpp:534
+#: shell/projectcontroller.cpp:530
 msgid "No active document"
 msgstr ""
 
-#: shell/projectcontroller.cpp:580
+#: shell/projectcontroller.cpp:576
 #, kde-format
 msgid ""
 "The project you are opening is part of the session %1, do you want to open "
 "the session instead?"
+msgstr ""
+
+#: shell/savedialog.cpp:55
+msgid "Save Modified Files?"
+msgstr ""
+
+#: shell/savedialog.cpp:65
+msgid "The following files have been modified. Save them?"
+msgstr ""
+
+#: shell/savedialog.cpp:73
+msgid "Save &Selected"
+msgstr ""
+
+#: shell/savedialog.cpp:73
+msgid "Saves all selected files"
+msgstr ""
+
+#: shell/savedialog.cpp:74
+msgid "Save &None"
+msgstr ""
+
+#: shell/savedialog.cpp:75
+msgid "Discard all modifications"
 msgstr ""
 
 #: shell/openprojectdialog.cpp:124
@@ -1673,15 +1749,6 @@ msgstr "Malfermi lasttempan projekton"
 #: shell/openprojectdialog.cpp:130
 msgid "Selected URL is invalid."
 msgstr ""
-
-#: shell/partdocument.cpp:108 shell/textdocument.cpp:351
-#, kde-format
-msgid "The document \"%1\" has unsaved changes. Would you like to save them?"
-msgstr ""
-
-#: shell/partdocument.cpp:109 shell/textdocument.cpp:352
-msgid "Close Document"
-msgstr "Fermi dokumenton"
 
 #: shell/progressdialog.cpp:186
 msgid "Cancel this operation."
@@ -1816,59 +1883,29 @@ msgstr ""
 msgid "%1 As..."
 msgstr ""
 
-#: shell/savedialog.cpp:55
-msgid "Save Modified Files?"
-msgstr ""
-
-#: shell/savedialog.cpp:65
-msgid "The following files have been modified. Save them?"
-msgstr ""
-
-#: shell/savedialog.cpp:73
-msgid "Save &Selected"
-msgstr ""
-
-#: shell/savedialog.cpp:73
-msgid "Saves all selected files"
-msgstr ""
-
-#: shell/savedialog.cpp:74
-msgid "Save &None"
-msgstr ""
-
-#: shell/savedialog.cpp:75
-msgid "Discard all modifications"
-msgstr ""
-
-#: shell/session.cpp:125
-#, fuzzy
-#| msgid "Protected"
-msgid "(no projects)"
-msgstr "Protektata"
-
-#: shell/sessioncontroller.cpp:175
+#: shell/sessioncontroller.cpp:194
 msgid ""
 "The current session and all contained settings will be deleted. The projects "
 "will stay unaffected. Do you really want to continue?"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:187
+#: shell/sessioncontroller.cpp:206
 #, fuzzy
 #| msgid "Remove Expression"
 msgid "Rename Session"
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:191
+#: shell/sessioncontroller.cpp:210
 #, fuzzy
 #| msgid "Revision"
 msgid "New Session Name"
 msgstr "Revizio"
 
-#: shell/sessioncontroller.cpp:211
+#: shell/sessioncontroller.cpp:230
 msgid "The selected session is already active in another running instance"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:344
+#: shell/sessioncontroller.cpp:363
 #, kde-format
 msgid ""
 "This session crashed at %1, but recovery copies of the following modified "
@@ -1879,56 +1916,112 @@ msgid ""
 "Push Cancel to lose the modifications."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:344 shell/sessioncontroller.cpp:374
+#: shell/sessioncontroller.cpp:363 shell/sessioncontroller.cpp:393
 #, fuzzy
 #| msgid "Remove"
 msgid "Recovery"
 msgstr "Forigi"
 
-#: shell/sessioncontroller.cpp:374
+#: shell/sessioncontroller.cpp:393
 #, kde-format
 msgid "Could not recover %1, the recovery file is empty"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:506
+#: shell/sessioncontroller.cpp:525
 msgid "Start New Session"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:507
+#: shell/sessioncontroller.cpp:526
 msgid "Start a new KDevelop instance with an empty session"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:511
+#: shell/sessioncontroller.cpp:530
 #, fuzzy
 #| msgid "Remove Expression"
 msgid "Rename Session..."
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:515
+#: shell/sessioncontroller.cpp:534
 msgid "Delete Session..."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:519
+#: shell/sessioncontroller.cpp:538
 msgid "Quit"
 msgstr "Forlasi"
 
-#: shell/sessioncontroller.cpp:525
+#: shell/sessioncontroller.cpp:544
 msgid "Configure Sessions..."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:526
+#: shell/sessioncontroller.cpp:545
 msgid "Create/Delete/Activate Sessions"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:527
+#: shell/sessioncontroller.cpp:546
 msgid ""
 "<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and set "
 "a new active session.</p>"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:669 shell/tests/sessioncontrollertest.cpp:202
+#: shell/sessioncontroller.cpp:695 shell/tests/sessioncontrollertest.cpp:202
 #, kde-format
 msgid "Copy of %1"
+msgstr ""
+
+#: shell/sessioncontroller.cpp:812 shell/sessioncontroller.cpp:885
+#: shell/sessioncontroller.cpp:907
+#, fuzzy
+#| msgid "Remove Expression"
+msgid "Create New Session"
+msgstr "Forigi esprimon"
+
+#: shell/sessioncontroller.cpp:820
+#, kde-format
+msgid "[running, process %1]"
+msgstr ""
+
+#: shell/sessioncontroller.cpp:848
+msgid "Identity"
+msgstr ""
+
+#: shell/sessioncontroller.cpp:849
+#, fuzzy
+#| msgid "Context"
+msgid "Contents"
+msgstr "Kunteksto"
+
+#: shell/session.cpp:125
+#, fuzzy
+#| msgid "Protected"
+msgid "(no projects)"
+msgstr "Protektata"
+
+#: shell/uicontroller.cpp:96
+msgid "Review"
+msgstr ""
+
+#: shell/uicontroller.cpp:186
+msgid "&Assistant Action 1"
+msgstr ""
+
+#: shell/uicontroller.cpp:191
+msgid "&Assistant Action 2"
+msgstr ""
+
+#: shell/uicontroller.cpp:196
+msgid "&Assistant Action 3"
+msgstr ""
+
+#: shell/uicontroller.cpp:201
+msgid "&Assistant Action 4"
+msgstr ""
+
+#: shell/uicontroller.cpp:206
+msgid "&Hide Assistant"
+msgstr ""
+
+#: shell/uicontroller.cpp:386
+msgid "Select Tool View to Add"
 msgstr ""
 
 #: shell/sessiondialog.cpp:183
@@ -1984,6 +2077,10 @@ msgstr "Revizio"
 msgid "Language Support Settings"
 msgstr ""
 
+#: shell/settings/uipreferences.cpp:38
+msgid "User Interface Settings"
+msgstr ""
+
 #: shell/settings/sourceformattersettings.cpp:365
 #, fuzzy, kde-format
 #| msgid "New"
@@ -1996,12 +2093,8 @@ msgstr "Nova"
 msgid "New Style"
 msgstr "Stilo:"
 
-#: shell/settings/sourceformattersettings.cpp:422
+#: shell/settings/sourceformattersettings.cpp:426
 msgid "No Language selected"
-msgstr ""
-
-#: shell/settings/uipreferences.cpp:38
-msgid "User Interface Settings"
 msgstr ""
 
 #: shell/sourceformattercontroller.cpp:68
@@ -2060,90 +2153,73 @@ msgstr ""
 msgid "Unable to write to %1"
 msgstr ""
 
-#: shell/textdocument.cpp:364
-#, kde-format
-msgid ""
-"The file \"%1\" is modified on disk.\n"
-"\n"
-"Are you sure you want to overwrite it? (External changes will be lost.)"
-msgstr ""
-
-#: shell/textdocument.cpp:367
-msgid "Document Externally Modified"
-msgstr ""
-
-#: shell/textdocument.cpp:646
-#, kde-format
-msgid " Line: %1 Col: %2 "
-msgstr " Linio: %1 Kol: %2"
-
 #: shell/tests/nonguiinterfaceplugin.cpp:30
 msgid "Plugin for unit-tests"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:515
+#: shell/workingsetcontroller.cpp:524
 msgid "Close Working Set (Left Click)"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:516
+#: shell/workingsetcontroller.cpp:525
 msgid "Duplicate Working Set"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:518
+#: shell/workingsetcontroller.cpp:527
 msgid "Load Working Set (Left Click)"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:528
+#: shell/workingsetcontroller.cpp:537
 msgid "Delete Working Set"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:752
+#: shell/workingsetcontroller.cpp:761
 msgid "<b>Working Set</b>"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:764
+#: shell/workingsetcontroller.cpp:773
 msgid "Remove this working set. The contained documents are not affected."
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:789
+#: shell/workingsetcontroller.cpp:798
 msgid "Documents:"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:796
+#: shell/workingsetcontroller.cpp:805
 msgid "Add All"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:797
+#: shell/workingsetcontroller.cpp:806
 msgid ""
 "Add all documents that are part of this working set to the currently active "
 "working set."
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:804
+#: shell/workingsetcontroller.cpp:813
 msgid "Subtract All"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:805
+#: shell/workingsetcontroller.cpp:814
 msgid ""
 "Remove all documents that are part of this working set from the currently "
 "active working set."
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:859
+#: shell/workingsetcontroller.cpp:868
 msgid "Remove this file from the current working set"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:863
+#: shell/workingsetcontroller.cpp:872
 msgid "Add this file to the current working set"
 msgstr ""
 
 #. i18n: file: shell/kross/examples/guiexample/GUIExample/example.ui:25
 #. i18n: ectx: property (text), widget (QPushButton, close)
-#: shell/workingsetcontroller.cpp:879 rc.cpp:125
+#: shell/workingsetcontroller.cpp:888 rc.cpp:125
 msgid "Close"
 msgstr "Fermi"
 
-#: shell/workingsetcontroller.cpp:884
+#: shell/workingsetcontroller.cpp:893
 #, fuzzy
 #| msgid "Reload"
 msgid "Load"
@@ -2272,34 +2348,6 @@ msgid ""
 "exception of the currently active document.</p>"
 msgstr ""
 
-#: shell/uicontroller.cpp:96
-msgid "Review"
-msgstr ""
-
-#: shell/uicontroller.cpp:188
-msgid "&Assistant Action 1"
-msgstr ""
-
-#: shell/uicontroller.cpp:193
-msgid "&Assistant Action 2"
-msgstr ""
-
-#: shell/uicontroller.cpp:198
-msgid "&Assistant Action 3"
-msgstr ""
-
-#: shell/uicontroller.cpp:203
-msgid "&Assistant Action 4"
-msgstr ""
-
-#: shell/uicontroller.cpp:208
-msgid "&Hide Assistant"
-msgstr ""
-
-#: shell/uicontroller.cpp:388
-msgid "Select Tool View to Add"
-msgstr ""
-
 #: shell/projectsourcepage.cpp:38
 #, fuzzy
 #| msgid "Do Nothing"
@@ -2336,69 +2384,6 @@ msgstr ""
 
 #: sublime/examples/example2.cpp:34
 msgid "Example 2"
-msgstr ""
-
-#: sublime/ideal.cpp:360
-msgid "Lock the tool"
-msgstr ""
-
-#: sublime/ideal.cpp:361
-msgid ""
-"<b>Lock the tool</b><p>When a tool is unlocked, it will be automatically "
-"hidden when you click outside it. A locked tool will remain visible until "
-"you explicitly hide it, or switch to a different tool.</p>"
-msgstr ""
-
-#: sublime/ideal.cpp:368
-msgid "Remove the tool"
-msgstr ""
-
-#: sublime/ideal.cpp:369
-msgid ""
-"<b>Remove the tool</b><p>Removes this tool completely. You can add the tool "
-"again by using the <tt>View->Add Tool View</tt> command.</p>"
-msgstr ""
-
-#: sublime/ideal.cpp:460
-msgid "Position"
-msgstr "Pozicio"
-
-#: sublime/ideal.cpp:464
-msgid "Left"
-msgstr "Maldekstre"
-
-#: sublime/ideal.cpp:465
-msgid "Bottom"
-msgstr "Malsupre"
-
-#: sublime/ideal.cpp:466
-msgid "Right"
-msgstr "Dekstra"
-
-#: sublime/ideal.cpp:467
-msgid "Top"
-msgstr "Supro"
-
-#: sublime/ideal.cpp:486
-msgid "Assign Shortcut..."
-msgstr ""
-
-#: sublime/ideal.cpp:492
-msgid "Unlock"
-msgstr "Malŝlosi"
-
-#: sublime/ideal.cpp:494
-msgid "Lock"
-msgstr "Ŝloso"
-
-#: sublime/ideal.cpp:523
-#, kde-format
-msgid "Assign Shortcut For '%1' Tool View"
-msgstr ""
-
-#: sublime/ideal.cpp:640
-#, kde-format
-msgid "%1 Tool Bar"
 msgstr ""
 
 #: sublime/container.cpp:139
@@ -2461,6 +2446,69 @@ msgstr ""
 
 #: sublime/mainwindow_p.cpp:118
 msgid "Tool Views"
+msgstr ""
+
+#: sublime/ideal.cpp:361
+msgid "Lock the tool"
+msgstr ""
+
+#: sublime/ideal.cpp:362
+msgid ""
+"<b>Lock the tool</b><p>When a tool is unlocked, it will be automatically "
+"hidden when you click outside it. A locked tool will remain visible until "
+"you explicitly hide it, or switch to a different tool.</p>"
+msgstr ""
+
+#: sublime/ideal.cpp:369
+msgid "Remove the tool"
+msgstr ""
+
+#: sublime/ideal.cpp:370
+msgid ""
+"<b>Remove the tool</b><p>Removes this tool completely. You can add the tool "
+"again by using the <tt>View->Add Tool View</tt> command.</p>"
+msgstr ""
+
+#: sublime/ideal.cpp:461
+msgid "Position"
+msgstr "Pozicio"
+
+#: sublime/ideal.cpp:465
+msgid "Left"
+msgstr "Maldekstre"
+
+#: sublime/ideal.cpp:466
+msgid "Bottom"
+msgstr "Malsupre"
+
+#: sublime/ideal.cpp:467
+msgid "Right"
+msgstr "Dekstra"
+
+#: sublime/ideal.cpp:468
+msgid "Top"
+msgstr "Supro"
+
+#: sublime/ideal.cpp:487
+msgid "Assign Shortcut..."
+msgstr ""
+
+#: sublime/ideal.cpp:493
+msgid "Unlock"
+msgstr "Malŝlosi"
+
+#: sublime/ideal.cpp:495
+msgid "Lock"
+msgstr "Ŝloso"
+
+#: sublime/ideal.cpp:524
+#, kde-format
+msgid "Assign Shortcut For '%1' Tool View"
+msgstr ""
+
+#: sublime/ideal.cpp:641
+#, kde-format
+msgid "%1 Tool Bar"
 msgstr ""
 
 #: util/duchainify/main.cpp:200
@@ -2683,7 +2731,7 @@ msgstr ""
 msgid "No log information found"
 msgstr ""
 
-#: vcs/dvcs/ui/logview.cpp:63 vcs/widgets/vcsdiffpatchsources.cpp:99
+#: vcs/dvcs/ui/logview.cpp:63 vcs/widgets/vcsdiffpatchsources.cpp:122
 msgid "Commit"
 msgstr "Enmeti"
 
@@ -2721,15 +2769,17 @@ msgid "Command exited with value %1."
 msgstr ""
 
 #: vcs/dvcs/dvcsplugin.cpp:125
-msgid "Push..."
+msgid "Push"
 msgstr ""
 
 #: vcs/dvcs/dvcsplugin.cpp:126
-msgid "Pull..."
-msgstr ""
+#, fuzzy
+#| msgid "Public"
+msgid "Pull"
+msgstr "Publika"
 
 #: vcs/dvcs/dvcsplugin.cpp:127
-msgid "Branch Manager"
+msgid "Branches..."
 msgstr ""
 
 #: vcs/dvcs/dvcsplugin.cpp:128
@@ -2780,7 +2830,67 @@ msgstr ""
 msgid "Source Revision"
 msgstr ""
 
-#: vcs/widgets/vcsdiffwidget.cpp:86
+#: vcs/widgets/standardvcslocationwidget.cpp:35
+msgid "Introduce the repository URL..."
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:110
+msgid "Commit Message"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:191
+msgctxt "file was added to versioncontrolsystem"
+msgid "Added"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:195
+msgctxt "file was deleted from versioncontrolsystem"
+msgid "Deleted"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:199
+msgctxt "version controlled file was modified"
+msgid "Modified"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:202
+msgctxt "file is not known to versioncontrolsystem"
+msgid "Unknown"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:293 vcs/vcspluginhelper.cpp:265
+msgid "Unable to get difference."
+msgstr ""
+
+#. i18n: file: vcs/widgets/vcscommitdialog.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: vcs/widgets/vcsdiffpatchsources.cpp:46 rc.cpp:419
+msgid "Commit Message:"
+msgstr ""
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:50
+#, fuzzy
+#| msgid "Message"
+msgid "Old Messages"
+msgstr "Mesaĝo"
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:149
+msgid "Files will be committed:\n"
+msgstr ""
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:153
+#, kde-format
+msgid ""
+"\n"
+"With message:\n"
+" %1"
+msgstr ""
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:155
+msgid "About to commit to repository"
+msgstr ""
+
+#: vcs/widgets/vcsdiffwidget.cpp:103
 #, kde-format
 msgid "Difference between revision %1 and %2:"
 msgstr ""
@@ -2793,73 +2903,19 @@ msgstr ""
 msgid "Diff between revisions"
 msgstr ""
 
-#: vcs/widgets/vcseventwidget.cpp:149
+#: vcs/widgets/vcseventwidget.cpp:151
 msgid "Difference To Previous"
 msgstr ""
 
-#: vcs/widgets/vcseventwidget.cpp:173
+#: vcs/widgets/vcseventwidget.cpp:175
 msgid "Difference between Revisions"
 msgstr ""
 
-#: vcs/widgets/vcscommitdialog.cpp:105
-msgid "Commit Message"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:185
-msgctxt "file was added to versioncontrolsystem"
-msgid "Added"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:189
-msgctxt "file was deleted from versioncontrolsystem"
-msgid "Deleted"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:193
-msgctxt "version controlled file was modified"
-msgid "Modified"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:196
-msgctxt "file is not known to versioncontrolsystem"
-msgid "Unknown"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:281 vcs/vcspluginhelper.cpp:264
-msgid "Unable to get difference."
-msgstr ""
-
-#. i18n: file: vcs/widgets/vcscommitdialog.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: vcs/widgets/vcsdiffpatchsources.cpp:45 rc.cpp:419
-msgid "Commit Message:"
-msgstr ""
-
-#: vcs/widgets/vcsdiffpatchsources.cpp:118
-msgid "Files will be committed:\n"
-msgstr ""
-
-#: vcs/widgets/vcsdiffpatchsources.cpp:122
-#, kde-format
-msgid ""
-"\n"
-"With message:\n"
-" %1"
-msgstr ""
-
-#: vcs/widgets/vcsdiffpatchsources.cpp:124
-msgid "About to commit to repository"
-msgstr ""
-
-#: vcs/widgets/standardvcslocationwidget.cpp:35
-msgid "Introduce the repository URL..."
-msgstr ""
-
-#: vcs/vcspluginhelper.cpp:92
+#: vcs/vcspluginhelper.cpp:93
 msgid "Commit..."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:93
+#: vcs/vcspluginhelper.cpp:94
 msgid "Update"
 msgstr "Ĝisdatigi"
 
@@ -2867,50 +2923,50 @@ msgstr "Ĝisdatigi"
 #. i18n: ectx: property (toolTip), widget (KPushButton, addInheritancePushButton)
 #. i18n: file: shell/launchconfigurationdialog.ui:37
 #. i18n: ectx: property (text), widget (QToolButton, addConfig)
-#: vcs/vcspluginhelper.cpp:94 rc.cpp:113 rc.cpp:131
+#: vcs/vcspluginhelper.cpp:95 rc.cpp:113 rc.cpp:131
 msgid "Add"
 msgstr "Aldoni"
 
-#: vcs/vcspluginhelper.cpp:95
+#: vcs/vcspluginhelper.cpp:96
 msgid "Compare to Head..."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:96
+#: vcs/vcspluginhelper.cpp:97
 msgid "Compare to Base..."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:97
+#: vcs/vcspluginhelper.cpp:98
 msgid "Revert"
 msgstr "Malfari"
 
-#: vcs/vcspluginhelper.cpp:98
+#: vcs/vcspluginhelper.cpp:99
 msgid "History..."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:99
+#: vcs/vcspluginhelper.cpp:100
 msgid "Annotation..."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:257
-msgid "Cannot show the differences because there were none."
+#: vcs/vcspluginhelper.cpp:258
+msgid "There are no differences."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:258
+#: vcs/vcspluginhelper.cpp:259
 msgid "VCS support"
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:291
+#: vcs/vcspluginhelper.cpp:292
 #, kde-format
 msgid "%2 History (%1)"
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:322
+#: vcs/vcspluginhelper.cpp:323
 msgid ""
 "Cannot display annotations, missing interface KTextEditor::"
 "AnnotationInterface for the editor."
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:326
+#: vcs/vcspluginhelper.cpp:327
 #, kde-format
 msgid ""
 "Cannot execute annotate action because the document was not found, or was "
@@ -2918,12 +2974,8 @@ msgid ""
 "%1"
 msgstr ""
 
-#: vcs/vcspluginhelper.cpp:374
+#: vcs/vcspluginhelper.cpp:375
 msgid "Could not create a patch for the current version."
-msgstr ""
-
-#: vcs/vcspluginhelper.cpp:376
-msgid "Could not find any modifications to commit."
 msgstr ""
 
 #: rc.cpp:1
