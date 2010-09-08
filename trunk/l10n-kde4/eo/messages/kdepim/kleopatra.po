@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-07 02:34+0200\n"
+"POT-Creation-Date: 2010-09-08 06:58+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1952,7 +1952,7 @@ msgstr ""
 msgid "User cancel"
 msgstr ""
 
-#: crypto/signemailtask.cpp:85 crypto/signencryptfilestask.cpp:133
+#: crypto/signemailtask.cpp:85 crypto/signencryptfilestask.cpp:173
 msgid "Signing canceled."
 msgstr ""
 
@@ -1961,7 +1961,7 @@ msgstr ""
 msgid "Signing failed: %1"
 msgstr ""
 
-#: crypto/signemailtask.cpp:90 crypto/signencryptfilestask.cpp:137
+#: crypto/signemailtask.cpp:90 crypto/signencryptfilestask.cpp:177
 msgid "Signing succeeded."
 msgstr ""
 
@@ -1994,53 +1994,63 @@ msgstr ""
 msgid "Call to EncryptEMailController::protocolAsString() is ambiguous."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:73 crypto/decryptverifytask.cpp:290
+#: crypto/signencryptfilestask.cpp:74 crypto/decryptverifytask.cpp:290
 #, kde-format
 msgctxt "Input file --> Output file (rarr is arrow"
 msgid "%1 &rarr; %2"
 msgstr "%1 &rarr; %2"
 
-#: crypto/signencryptfilestask.cpp:136
+#: crypto/signencryptfilestask.cpp:176
 msgid "Signing failed."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:146 crypto/encryptemailtask.cpp:85
+#: crypto/signencryptfilestask.cpp:186 crypto/encryptemailtask.cpp:85
 msgid "Encryption canceled."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:149
+#: crypto/signencryptfilestask.cpp:189
 msgid "Encryption failed."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:151 crypto/encryptemailtask.cpp:90
+#: crypto/signencryptfilestask.cpp:191 crypto/encryptemailtask.cpp:90
 msgid "Encryption succeeded."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:170
+#: crypto/signencryptfilestask.cpp:210
 msgid "Signing and encryption succeeded."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:184
+#: crypto/signencryptfilestask.cpp:223 crypto/signencryptfilestask.cpp:235
+#, fuzzy, kde-format
+msgid "Input error: %1"
+msgstr "Forigu propran katalogon"
+
+#: crypto/signencryptfilestask.cpp:225 crypto/signencryptfilestask.cpp:237
+#, kde-format
+msgid "Output error: %1"
+msgstr ""
+
+#: crypto/signencryptfilestask.cpp:240
 msgid " Encryption succeeded."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:196
+#: crypto/signencryptfilestask.cpp:252
 #, kde-format
 msgid "%1: <b>Sign/encrypt canceled.</b>"
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:196
+#: crypto/signencryptfilestask.cpp:252
 #, kde-format
 msgid " %1: Sign/encrypt failed."
 msgstr ""
 
-#: crypto/signencryptfilestask.cpp:197
+#: crypto/signencryptfilestask.cpp:253
 #, kde-format
 msgctxt "label: result. Example: foo -> foo.gpg: Encryption failed."
 msgid "%1: <b>%2</b>"
 msgstr "%1: <b>%2</b>"
 
-#: crypto/signencryptfilestask.cpp:341
+#: crypto/signencryptfilestask.cpp:397
 msgid "Cannot determine protocol for task"
 msgstr ""
 
@@ -2451,13 +2461,14 @@ msgid "Failed to open file \"%1\" for reading and writing: %2"
 msgstr ""
 
 #: crypto/createchecksumscontroller.cpp:535
-#: crypto/verifychecksumscontroller.cpp:552
+#: crypto/verifychecksumscontroller.cpp:552 utils/output.cpp:448
 #, kde-format
 msgid "Error while running %1: %2"
 msgstr ""
 
 #: crypto/createchecksumscontroller.cpp:538
-#: crypto/verifychecksumscontroller.cpp:555
+#: crypto/verifychecksumscontroller.cpp:555 utils/input.cpp:311
+#: utils/output.cpp:451
 #, kde-format
 msgid "Failed to execute %1: %2"
 msgstr ""
@@ -3240,56 +3251,71 @@ msgid ""
 "configuration:</para>%1"
 msgstr ""
 
-#: utils/input.cpp:156
+#: utils/input.cpp:86
+msgid "No input device"
+msgstr ""
+
+#: utils/input.cpp:174
 #, kde-format
 msgid "Could not open FD %1 for reading"
 msgstr ""
 
-#: utils/input.cpp:185 utils/input.cpp:201
+#: utils/input.cpp:203 utils/input.cpp:219
 #, kde-format
 msgid "Could not open file \"%1\" for reading"
 msgstr ""
 
-#: utils/input.cpp:198
+#: utils/input.cpp:216
 #, kde-format
 msgid "File \"%1\" is already open, but not for reading"
 msgstr ""
 
-#: utils/input.cpp:261 utils/output.cpp:416
+#: utils/input.cpp:277 utils/output.cpp:424
+msgid "Command not specified"
+msgstr ""
+
+#: utils/input.cpp:282 utils/output.cpp:429
 #, kde-format
 msgid "Could not start %1 process: %2"
 msgstr ""
 
-#: utils/input.cpp:266
+#: utils/input.cpp:287
 #, kde-format
 msgid "Failed to write input to %1 process: %2"
 msgstr ""
 
-#: utils/input.cpp:277
+#: utils/input.cpp:298
 #, kde-format
 msgctxt "e.g. \"Output of tar xf - file1 ...\""
 msgid "Output of %1 ..."
 msgstr ""
 
-#: utils/input.cpp:279
+#: utils/input.cpp:300
 #, kde-format
 msgctxt "e.g. \"Output of tar xf - file\""
 msgid "Output of %1"
 msgstr ""
 
-#: utils/input.cpp:301
+#: utils/input.cpp:308
+#, kde-format
+msgid ""
+"Error while running %1:\n"
+"%2"
+msgstr ""
+
+#: utils/input.cpp:333
 msgid "Could not open clipboard for reading"
 msgstr ""
 
-#: utils/input.cpp:311
+#: utils/input.cpp:343
 msgid "Clipboard contents"
 msgstr ""
 
-#: utils/input.cpp:313
+#: utils/input.cpp:345
 msgid "FindBuffer contents"
 msgstr ""
 
-#: utils/input.cpp:315
+#: utils/input.cpp:347
 msgid "Current selection"
 msgstr ""
 
@@ -3670,75 +3696,79 @@ msgstr "Malfermi"
 msgid "Icon Files (*.png *.xpm *.svg *.svgz)"
 msgstr ""
 
-#: utils/output.cpp:295
+#: utils/output.cpp:179
+msgid "No output device"
+msgstr ""
+
+#: utils/output.cpp:305
 #, kde-format
 msgid "Could not open FD %1 for writing"
 msgstr ""
 
-#: utils/output.cpp:320
+#: utils/output.cpp:330
 #, kde-format
 msgid "Could not create temporary file for output \"%1\""
 msgstr ""
 
-#: utils/output.cpp:326
+#: utils/output.cpp:336
 #, kde-format
 msgid ""
 "The file <b>%1</b> already exists.\n"
 "Overwrite?"
 msgstr ""
 
-#: utils/output.cpp:328
+#: utils/output.cpp:338
 msgid "Overwrite Existing File?"
 msgstr ""
 
-#: utils/output.cpp:330
+#: utils/output.cpp:340
 msgid "Overwrite All"
 msgstr ""
 
-#: utils/output.cpp:368
+#: utils/output.cpp:378
 msgid "Overwriting declined"
 msgstr ""
 
-#: utils/output.cpp:374
+#: utils/output.cpp:384
 #, kde-format
 msgid "Could not remove file \"%1\" for overwriting."
 msgstr ""
 
-#: utils/output.cpp:386
+#: utils/output.cpp:396
 #, kde-format
 msgid "Could not rename file \"%1\" to \"%2\""
 msgstr ""
 
-#: utils/output.cpp:425
+#: utils/output.cpp:438
 #, kde-format
 msgctxt "e.g. \"Input to tar xf - file1 ...\""
 msgid "Input to %1 ..."
 msgstr ""
 
-#: utils/output.cpp:427
+#: utils/output.cpp:440
 #, kde-format
 msgctxt "e.g. \"Input to tar xf - file\""
 msgid "Input to %1"
 msgstr ""
 
-#: utils/output.cpp:442
+#: utils/output.cpp:466
 msgid "Could not write to clipboard"
 msgstr ""
 
-#: utils/output.cpp:448 commands/importcertificatefromclipboardcommand.cpp:122
+#: utils/output.cpp:472 commands/importcertificatefromclipboardcommand.cpp:122
 #: systrayicon.cpp:202
 msgid "Clipboard"
 msgstr ""
 
-#: utils/output.cpp:450
+#: utils/output.cpp:474
 msgid "Find buffer"
 msgstr ""
 
-#: utils/output.cpp:452
+#: utils/output.cpp:476
 msgid "Selection"
 msgstr "Elektaĵo"
 
-#: utils/output.cpp:464
+#: utils/output.cpp:488
 msgid "Could not find clipboard"
 msgstr ""
 
