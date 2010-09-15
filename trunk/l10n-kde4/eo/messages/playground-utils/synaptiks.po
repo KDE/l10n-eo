@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: synaptiks\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-22 05:57+0200\n"
+"POT-Creation-Date: 2010-09-15 06:12+0200\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -142,7 +142,7 @@ msgctxt "touchpadOn shortcut"
 msgid "Ctrl+Alt+T"
 msgstr ""
 
-#: daemon/synaptiksdaemon.cpp:386
+#: daemon/synaptiksdaemon.cpp:385
 msgctxt "@info connectivity error"
 msgid ""
 "<warning>Touchpad configuration is not supported on this system.</"
@@ -151,7 +151,7 @@ msgid ""
 "driver version."
 msgstr ""
 
-#: daemon/synaptiksdaemon.cpp:395
+#: daemon/synaptiksdaemon.cpp:394
 msgctxt "@info connectivity error"
 msgid ""
 "<warning>No configurable touchpad was found on your system.</warning>If your "
@@ -159,7 +159,7 @@ msgid ""
 "<application>synaptics</application> driver."
 msgstr ""
 
-#: daemon/synaptiksdaemon.cpp:437
+#: daemon/synaptiksdaemon.cpp:436
 msgctxt "@title daemon error notification"
 msgid "Touchpad error"
 msgstr ""
@@ -211,14 +211,22 @@ msgid ""
 "which in turn manages and configures your touchpad.</para>"
 msgstr ""
 
-#: kcmodule/synaptikskcm.cpp:85 applet/synaptiksapplet.cpp:127
+#: kcmodule/synaptikskcm.cpp:88
 msgctxt "@info connectivity error"
 msgid ""
-"<warning>The <application>synaptiks</application> daemon is not running.</"
-"warning>"
+"<warning>The <application>synaptiks</application> daemon is not running and "
+"could not be started.</warning>"
 msgstr ""
 
-#: kcmodule/synaptikskcm.cpp:128
+#: kcmodule/synaptikskcm.cpp:98
+msgctxt "@info connectivity error"
+msgid ""
+"<warning>Invalid response from <application>synaptiks</application> daemon.  "
+"Please report this issue to the <application>synaptiks</application> "
+"development team.</warning>"
+msgstr ""
+
+#: kcmodule/synaptikskcm.cpp:144
 msgctxt "@title:window"
 msgid "Touchpad configuration"
 msgstr ""
@@ -252,6 +260,13 @@ msgstr ""
 #: kcmodule/mousebuttoncombobox.cpp:46
 msgctxt "@item:inlistbox mouse button triggered by tapping"
 msgid "Right mouse button"
+msgstr ""
+
+#: applet/synaptiksapplet.cpp:127
+msgctxt "@info connectivity error"
+msgid ""
+"<warning>The <application>synaptiks</application> daemon is not running.</"
+"warning>"
 msgstr ""
 
 #: applet/synaptiksapplet.cpp:168
@@ -632,16 +647,36 @@ msgctxt "@label touchpad information mouse button"
 msgid "Right button"
 msgstr ""
 
+#. i18n: file: kcmodule/ui/touchpadinformationpage.ui:145
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: file: kcmodule/ui/touchpadinformationpage.ui:171
+#. i18n: ectx: property (text), widget (QLabel, emulationLabel)
+#: rc.cpp:149 rc.cpp:158
+msgid "Two-finger emulation"
+msgstr ""
+
+#. i18n: file: kcmodule/ui/touchpadinformationpage.ui:151
+#. i18n: ectx: property (text), widget (QLabel, pressureLabel)
+#: rc.cpp:152
+msgid "Pressure detection"
+msgstr ""
+
+#. i18n: file: kcmodule/ui/touchpadinformationpage.ui:161
+#. i18n: ectx: property (text), widget (QLabel, widthLabel)
+#: rc.cpp:155
+msgid "Finger width detection"
+msgstr ""
+
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:15
 #. i18n: ectx: property (windowTitle), widget (QWidget, AutoTouchpadControlPage)
-#: rc.cpp:149
+#: rc.cpp:161
 msgctxt "@title:window"
 msgid "Automatic touchpad control"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:21
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, kcfg_SwitchOffIfMouseIsPlugged)
-#: rc.cpp:152
+#: rc.cpp:164
 msgctxt "@info:whatsthis"
 msgid ""
 "Automatically switch off touchpad, if a mouse is plugged in. If the mouse is "
@@ -650,21 +685,21 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:24
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_SwitchOffIfMouseIsPlugged)
-#: rc.cpp:155
+#: rc.cpp:167
 msgctxt "@option:check"
 msgid "Automatically switch off touchpad, if a mouse is plugged"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:158
+#: rc.cpp:170
 msgctxt "@label"
 msgid "Ignore the following mouse devices"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:43
 #. i18n: ectx: property (whatsThis), widget (synaptiks::MouseDevicesView, kcfg_IgnoredMouseDevices)
-#: rc.cpp:161
+#: rc.cpp:173
 msgctxt "@info:whatsthis"
 msgid ""
 "All checked mouse devices are ignored. If such a mouse is plugged, the "
@@ -673,21 +708,21 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:53
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_SwitchOffOnKeyboardActivity)
-#: rc.cpp:164
+#: rc.cpp:176
 msgctxt "@option:check"
 msgid "Automatically switch off touchpad on keyboard activity"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:167
+#: rc.cpp:179
 msgctxt "@label:listbox"
 msgid "Ignore these keys"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:80
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_KeysToIgnore)
-#: rc.cpp:170
+#: rc.cpp:182
 msgctxt "@info:tooltip"
 msgid ""
 "<para>These keys will be ignored when monitoring the keyboard:</para>\n"
@@ -707,7 +742,7 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:89
 #. i18n: ectx: property (whatsThis), widget (KComboBox, kcfg_KeysToIgnore)
-#: rc.cpp:179
+#: rc.cpp:191
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>These keys will be ignored when monitoring the keyboard:</para>\n"
@@ -727,119 +762,119 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:96
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_KeysToIgnore)
-#: rc.cpp:188
+#: rc.cpp:200
 msgctxt "@item:inlistbox automatic touchpad control"
 msgid "No keys"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:101
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_KeysToIgnore)
-#: rc.cpp:191
+#: rc.cpp:203
 msgctxt "@item:inlistbox automatic touchpad control"
 msgid "Modifier keys"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:106
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_KeysToIgnore)
-#: rc.cpp:194
+#: rc.cpp:206
 msgctxt "@item:inlistbox automatic touchpad control"
 msgid "Modifier combinations"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:116
 #. i18n: ectx: property (label), widget (KDoubleNumInput, kcfg_IdleTime)
-#: rc.cpp:197
+#: rc.cpp:209
 msgctxt "@label:spinbox"
 msgid "Time to wait before switching the keyboard on again"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/autotouchpadcontrolpage.ui:122
 #. i18n: ectx: property (suffix), widget (KDoubleNumInput, kcfg_IdleTime)
-#: rc.cpp:200
+#: rc.cpp:212
 msgctxt "@label:spinbox"
 msgid " s"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, TappingPage)
-#: rc.cpp:203
+#: rc.cpp:215
 msgctxt "@title:window tapping settings"
 msgid "Tapping"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, generalSettingsGroup)
-#: rc.cpp:206
+#: rc.cpp:218
 msgctxt "@title:group"
 msgid "General tapping settings"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_FastTaps)
-#: rc.cpp:209
+#: rc.cpp:221
 msgctxt "@option:check"
 msgid "Make single taps faster and double taps slower (fast taps)"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:36
 #. i18n: ectx: property (title), widget (QGroupBox, tappingButtonGroup)
-#: rc.cpp:212
+#: rc.cpp:224
 msgctxt "@title:group"
 msgid "Mouse clicks triggered by tapping"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:49
 #. i18n: ectx: property (text), widget (QLabel, topLeftLabel)
-#: rc.cpp:215
+#: rc.cpp:227
 msgctxt "@label:listbox"
 msgid "Top left corner"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:76
 #. i18n: ectx: property (text), widget (QLabel, topRightLabel)
-#: rc.cpp:218
+#: rc.cpp:230
 msgctxt "@label:listbox"
 msgid "Top right corner"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:104
 #. i18n: ectx: property (text), widget (QLabel, oneFingerLabel)
-#: rc.cpp:221
+#: rc.cpp:233
 msgctxt "@label:listbox"
 msgid "Tapping with one finger"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:111
 #. i18n: ectx: property (text), widget (QLabel, twoFingerLabel)
-#: rc.cpp:224
+#: rc.cpp:236
 msgctxt "@label:listbox"
 msgid "Tapping with two fingers"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:118
 #. i18n: ectx: property (text), widget (QLabel, threeFingerLabel)
-#: rc.cpp:227
+#: rc.cpp:239
 msgctxt "@label:listbox"
 msgid "Tapping with three fingers"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:155
 #. i18n: ectx: property (text), widget (QLabel, bottomLeftLabel)
-#: rc.cpp:230
+#: rc.cpp:242
 msgctxt "@label:listbox"
 msgid "Bottom left corner"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:182
 #. i18n: ectx: property (text), widget (QLabel, bottomRightLabel)
-#: rc.cpp:233
+#: rc.cpp:245
 msgctxt "@label:listbox"
 msgid "Bottom right corner"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:199
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
-#: rc.cpp:236
+#: rc.cpp:248
 msgctxt "@option:check"
 msgid ""
 "Drag items by tapping the touchpad and then immediately touching it again"
@@ -847,7 +882,7 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:208
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LockedDrags)
-#: rc.cpp:239
+#: rc.cpp:251
 msgctxt "@option:check"
 msgid ""
 "Continue dragging when releasing the finger until the touchpad is touched "
@@ -856,49 +891,49 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:218
 #. i18n: ectx: property (label), widget (KDoubleNumInput, kcfg_LockedDragsTimeout)
-#: rc.cpp:242
+#: rc.cpp:254
 msgctxt "@label:spinbox"
 msgid "Timeout to automatically stop dragging"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/tappingpage.ui:227
 #. i18n: ectx: property (suffix), widget (KDoubleNumInput, kcfg_LockedDragsTimeout)
-#: rc.cpp:245
+#: rc.cpp:257
 msgctxt "@label:spinbox seconds"
 msgid " s"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, MotionPage)
-#: rc.cpp:248
+#: rc.cpp:260
 msgctxt "@title:window cursor motion settings"
 msgid "Cursor motion"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, speedGroup)
-#: rc.cpp:251
+#: rc.cpp:263
 msgctxt "@title:group"
 msgid "Cursor motion speed"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:26
 #. i18n: ectx: property (label), widget (KDoubleNumInput, kcfg_MinimumSpeed)
-#: rc.cpp:254
+#: rc.cpp:266
 msgctxt "@label:slider"
 msgid "Minimum speed"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:42
 #. i18n: ectx: property (label), widget (KDoubleNumInput, kcfg_MaximumSpeed)
-#: rc.cpp:257
+#: rc.cpp:269
 msgctxt "@label:slider"
 msgid "Maximum speed"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:58
 #. i18n: ectx: property (toolTip), widget (KDoubleNumInput, kcfg_AccelerationFactor)
-#: rc.cpp:260
+#: rc.cpp:272
 msgctxt "@info:tooltip"
 msgid ""
 "The acceleration factor defines the acceleration between minimum and maximum "
@@ -907,7 +942,7 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:61
 #. i18n: ectx: property (whatsThis), widget (KDoubleNumInput, kcfg_AccelerationFactor)
-#: rc.cpp:263
+#: rc.cpp:275
 msgctxt "@info:whatsthis"
 msgid ""
 "The acceleration factor defines the acceleration between minimum and maximum "
@@ -916,64 +951,64 @@ msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:64
 #. i18n: ectx: property (label), widget (KDoubleNumInput, kcfg_AccelerationFactor)
-#: rc.cpp:266
+#: rc.cpp:278
 msgctxt "@label:slider"
 msgid "Acceleration factor"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:86
 #. i18n: ectx: property (title), widget (QGroupBox, edgeMotionGroup)
-#: rc.cpp:269
+#: rc.cpp:281
 msgctxt "@title:group"
 msgid "Continue cursor motion when hitting the touchpad edge"
 msgstr ""
 
 #. i18n: file: kcmodule/ui/motionpage.ui:92
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EdgeMotionAlways)
-#: rc.cpp:272
+#: rc.cpp:284
 msgctxt "@option:radio"
 msgid "For all movements, not only dragging"
 msgstr ""
 
 #. i18n: file: applet/userinterfacepage.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UserInterfacePage)
-#: rc.cpp:275
+#: rc.cpp:287
 msgid "User interface"
 msgstr ""
 
 #. i18n: file: applet/userinterfacepage.ui:20
 #. i18n: ectx: property (text), widget (QLabel, doubleClickActionLabel)
-#: rc.cpp:278
+#: rc.cpp:290
 msgid "Double click action"
 msgstr ""
 
 #. i18n: file: applet/userinterfacepage.ui:28
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DoubleClickAction)
-#: rc.cpp:281
+#: rc.cpp:293
 msgid "No action"
 msgstr ""
 
 #. i18n: file: applet/userinterfacepage.ui:33
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DoubleClickAction)
-#: rc.cpp:284
+#: rc.cpp:296
 msgid "Open touchpad configuration"
 msgstr ""
 
 #. i18n: file: applet/userinterfacepage.ui:38
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DoubleClickAction)
-#: rc.cpp:287
+#: rc.cpp:299
 msgid "Switch touchpad on or off"
 msgstr ""
 
 #. i18n: file: applet/plasma-applet-synaptiks.kcfg:6
 #. i18n: ectx: label, entry (DoubleClickAction), group (UserInterface)
-#: rc.cpp:290
+#: rc.cpp:302
 msgid "What to do when double-clicking the applet"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:7
 #. i18n: ectx: label, entry (SwitchOffIfMouseIsPlugged), group (Automatic Touchpad control)
-#: rc.cpp:293
+#: rc.cpp:305
 msgid ""
 "Automatically switch off touchpad if a mouse is plugged\n"
 "in"
@@ -981,13 +1016,13 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:11
 #. i18n: ectx: label, entry (IgnoredMouseDevices), group (Automatic Touchpad control)
-#: rc.cpp:297
+#: rc.cpp:309
 msgid "A list of mouse devices to be ignored"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:14
 #. i18n: ectx: whatsthis, entry (IgnoredMouseDevices), group (Automatic Touchpad control)
-#: rc.cpp:300
+#: rc.cpp:312
 msgid ""
 "Mouse devices contained in this list are ignored. No\n"
 "notification will be issued, if such a device is plugged and the touchpad\n"
@@ -996,7 +1031,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:18
 #. i18n: ectx: label, entry (SwitchOffOnKeyboardActivity), group (Automatic Touchpad control)
-#: rc.cpp:305
+#: rc.cpp:317
 msgid ""
 "Automatically switch off touchpad, if the user starts\n"
 "typing"
@@ -1004,13 +1039,13 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:22
 #. i18n: ectx: label, entry (KeysToIgnore), group (Automatic Touchpad control)
-#: rc.cpp:309
+#: rc.cpp:321
 msgid "Ignore these keys when monitoring the keyboard"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:33
 #. i18n: ectx: label, entry (IdleTime), group (Automatic Touchpad control)
-#: rc.cpp:312
+#: rc.cpp:324
 msgid ""
 "Time in seconds to wait before switching on the touchpad, if\n"
 "typing stopped.  Fractions of seconds are supported up to millisecond\n"
@@ -1019,7 +1054,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:42
 #. i18n: ectx: label, entry (TouchpadNotSupported), group (General)
-#: rc.cpp:317
+#: rc.cpp:329
 msgid ""
 "Used by the daemon to avoid repeated error messages on systems\n"
 "with no configurable touchpad."
@@ -1027,7 +1062,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:47
 #. i18n: ectx: label, entry (TouchpadStateAtStartup), group (General)
-#: rc.cpp:321
+#: rc.cpp:333
 msgid ""
 "The initial state of the touchpad at daemon startup.  Change\n"
 "this to forcibly enable or disable the touchpad."
@@ -1035,7 +1070,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:57
 #. i18n: ectx: label, entry (CircularTouchpad), group (General)
-#: rc.cpp:325
+#: rc.cpp:337
 msgid ""
 "If true, the driver considers the touchpad as circular\n"
 "touchpad.  Enable this, if the touchpad is circular."
@@ -1043,19 +1078,19 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:63
 #. i18n: ectx: label, entry (MinimumSpeed), group (Motion)
-#: rc.cpp:329
+#: rc.cpp:341
 msgid "Minimum cursor motion speed"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:69
 #. i18n: ectx: label, entry (MaximumSpeed), group (Motion)
-#: rc.cpp:332
+#: rc.cpp:344
 msgid "Maximum cursor motion speed"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:76
 #. i18n: ectx: label, entry (AccelerationFactor), group (Motion)
-#: rc.cpp:335
+#: rc.cpp:347
 msgid ""
 "Acceleration factor between MinimumSpeed and\n"
 "MaximumSpeed"
@@ -1063,7 +1098,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:83
 #. i18n: ectx: label, entry (EdgeMotionAlways), group (Motion)
-#: rc.cpp:339
+#: rc.cpp:351
 msgid ""
 "Enable edge motion for all movements, not only for\n"
 "drags"
@@ -1071,19 +1106,19 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:89
 #. i18n: ectx: label, entry (CircularScrolling), group (Scrolling)
-#: rc.cpp:343
+#: rc.cpp:355
 msgid "Enable or disable circular scrolling"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:93
 #. i18n: ectx: label, entry (CircularScrollingTrigger), group (Scrolling)
-#: rc.cpp:346
+#: rc.cpp:358
 msgid "These touchpad areas trigger circular scrolling"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:110
 #. i18n: ectx: label, entry (CircularScrollingDistance), group (Scrolling)
-#: rc.cpp:349
+#: rc.cpp:361
 msgid ""
 "The move angle of the finger (in degrees) to generate a scroll\n"
 "event in circular scrolling mode.  The greater the angle, the slower\n"
@@ -1092,37 +1127,37 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:116
 #. i18n: ectx: label, entry (HorizontalTwoFingerScrolling), group (Scrolling)
-#: rc.cpp:354
+#: rc.cpp:366
 msgid "Enable horizontal scrolling with two fingers"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:120
 #. i18n: ectx: label, entry (VerticalTwoFingerScrolling), group (Scrolling)
-#: rc.cpp:357
+#: rc.cpp:369
 msgid "Enable vertical scrolling with two fingers"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:124
 #. i18n: ectx: label, entry (HorizontalEdgeScrolling), group (Scrolling)
-#: rc.cpp:360
+#: rc.cpp:372
 msgid "Enable horizontal scrolling at the bottom edge"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:128
 #. i18n: ectx: label, entry (VerticalEdgeScrolling), group (Scrolling)
-#: rc.cpp:363
+#: rc.cpp:375
 msgid "Enable vertical scrolling at the right edge"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:132
 #. i18n: ectx: label, entry (Coasting), group (Scrolling)
-#: rc.cpp:366
+#: rc.cpp:378
 msgid "Continue edge scrolling automatically."
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:137
 #. i18n: ectx: label, entry (CornerCoasting), group (Scrolling)
-#: rc.cpp:369
+#: rc.cpp:381
 msgid ""
 "Continue edge scrolling while the finger stays in an edge\n"
 "corner.  Coasting must be enabled."
@@ -1130,13 +1165,13 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:141
 #. i18n: ectx: label, entry (CoastingSpeed), group (Scrolling)
-#: rc.cpp:373
+#: rc.cpp:385
 msgid "Set threshold speed for conventional coasting."
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:147
 #. i18n: ectx: label, entry (HorizontalScrollingDistance), group (Scrolling)
-#: rc.cpp:376
+#: rc.cpp:388
 msgid ""
 "The move distance of the finger to generate a horizontal\n"
 "scrolling event."
@@ -1144,7 +1179,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:152
 #. i18n: ectx: label, entry (VerticalScrollingDistance), group (Scrolling)
-#: rc.cpp:380
+#: rc.cpp:392
 msgid ""
 "The move distance of the finger to generate a vertical\n"
 "scrolling event."
@@ -1152,25 +1187,25 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:156
 #. i18n: ectx: label, entry (TwoFingerEmulationMinimumPressure), group (Scrolling)
-#: rc.cpp:384
+#: rc.cpp:396
 msgid "Minimum pressure to emulate a two-finger press"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:160
 #. i18n: ectx: label, entry (TwoFingerEmulationMinimumWidth), group (Scrolling)
-#: rc.cpp:387
+#: rc.cpp:399
 msgid "Minimum width to emulate a two-finger press"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:200
 #. i18n: ectx: label, entry (FastTaps), group (Tapping)
-#: rc.cpp:390
+#: rc.cpp:402
 msgid "Enable fast tapping"
 msgstr ""
 
 #. i18n: file: synaptiks.kcfg:206
 #. i18n: ectx: label, entry (TapAndDragGesture), group (Tapping)
-#: rc.cpp:393
+#: rc.cpp:405
 msgid ""
 "Enable the tap-and-drag gesture, which enables dragging by\n"
 "tapping the touchpad and immediately moving finger on the\n"
@@ -1179,7 +1214,7 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:212
 #. i18n: ectx: label, entry (LockedDrags), group (Tapping)
-#: rc.cpp:398
+#: rc.cpp:410
 msgid ""
 "If true, a tap-and-drag gesture will remain active, if the\n"
 "finger is released, until the touchpad is touched again or the timeout\n"
@@ -1188,6 +1223,6 @@ msgstr ""
 
 #. i18n: file: synaptiks.kcfg:216
 #. i18n: ectx: label, entry (LockedDragsTimeout), group (Tapping)
-#: rc.cpp:403
+#: rc.cpp:415
 msgid "The timeout of a locked drag to expire in seconds."
 msgstr ""
