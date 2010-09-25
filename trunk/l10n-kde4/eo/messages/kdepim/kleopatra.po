@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-09-24 06:03+0200\n"
+"POT-Creation-Date: 2010-09-25 06:11+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2446,7 +2446,7 @@ msgstr ""
 msgid "Initializing..."
 msgstr ""
 
-#: crypto/createchecksumscontroller.cpp:296 mainwindow.cpp:661
+#: crypto/createchecksumscontroller.cpp:296 mainwindow.cpp:675
 msgid "Cancel"
 msgstr "Rezigni"
 
@@ -3931,6 +3931,8 @@ msgstr ""
 #: commands/signencryptfilescommand.cpp:231
 #: commands/encryptclipboardcommand.cpp:145
 #: commands/encryptclipboardcommand.cpp:158
+#: commands/checksumcreatefilescommand.cpp:153
+#: commands/checksumverifyfilescommand.cpp:153
 #, kde-format
 msgid "An error occurred: %1"
 msgstr ""
@@ -4687,6 +4689,14 @@ msgstr ""
 msgid "Encrypt Clipboard Error"
 msgstr ""
 
+#: commands/checksumcreatefilescommand.cpp:155
+msgid "Create Checksum Files Error"
+msgstr ""
+
+#: commands/checksumcreatefilescommand.cpp:166
+msgid "Select One or More Files to Create Checksums For"
+msgstr ""
+
 #: commands/importcrlcommand.cpp:70
 msgid ""
 "Certificate Revocation Lists, DER encoded (*.crl *.arl *-crl.der *-arl.der)"
@@ -4725,6 +4735,14 @@ msgstr ""
 
 #: commands/importcrlcommand.cpp:189
 msgid "Import CRL Finished"
+msgstr ""
+
+#: commands/checksumverifyfilescommand.cpp:155
+msgid "Verify Checksum Files Error"
+msgstr ""
+
+#: commands/checksumverifyfilescommand.cpp:166
+msgid "Select One or More Checksum Files"
 msgstr ""
 
 #: aboutdata.cpp:53
@@ -4946,208 +4964,216 @@ msgstr ""
 msgid "File(s) to process"
 msgstr ""
 
-#: mainwindow.cpp:141
+#: mainwindow.cpp:143
 #, kde-format
 msgctxt "Quit [ApplicationName]"
 msgid "&Quit %1"
 msgstr ""
 
-#: mainwindow.cpp:147
+#: mainwindow.cpp:149
 msgid "Only &Close Window"
 msgstr ""
 
-#: mainwindow.cpp:179
+#: mainwindow.cpp:181
 #, kde-format
 msgid ""
 "%1 may be used by other applications as a service.\n"
 "You may instead want to close this window without exiting %1."
 msgstr ""
 
-#: mainwindow.cpp:181
+#: mainwindow.cpp:183
 msgid "Really Quit?"
 msgstr ""
 
-#: mainwindow.cpp:281
+#: mainwindow.cpp:289
 msgid ""
 "Could not start the GnuPG Log Viewer (kwatchgnupg). Please check your "
 "installation."
 msgstr ""
 
-#: mainwindow.cpp:283
+#: mainwindow.cpp:291
 msgid "Error Starting KWatchGnuPG"
 msgstr ""
 
-#: mainwindow.cpp:288
+#: mainwindow.cpp:296
 msgid ""
 "Could not start the GnuPG Administrative Console (kgpgconf). Please check "
 "your installation."
 msgstr ""
 
-#: mainwindow.cpp:290
+#: mainwindow.cpp:298
 msgid "Error Starting KGpgConf"
 msgstr ""
 
-#: mainwindow.cpp:401
+#: mainwindow.cpp:409
 msgid "New Certificate..."
 msgstr ""
 
-#: mainwindow.cpp:403
+#: mainwindow.cpp:411
 msgid "Export Certificates..."
 msgstr ""
 
-#: mainwindow.cpp:405
+#: mainwindow.cpp:413
 msgid "Export Certificates to Server..."
 msgstr ""
 
-#: mainwindow.cpp:407
+#: mainwindow.cpp:415
 msgid "Export Secret Keys..."
 msgstr ""
 
-#: mainwindow.cpp:409
+#: mainwindow.cpp:417
 msgid "Lookup Certificates on Server..."
 msgstr ""
 
-#: mainwindow.cpp:411
+#: mainwindow.cpp:419
 msgid "Import Certificates..."
 msgstr ""
 
-#: mainwindow.cpp:413
+#: mainwindow.cpp:421
 msgid "Decrypt/Verify Files..."
 msgstr ""
 
-#: mainwindow.cpp:415
+#: mainwindow.cpp:423
 msgid "Sign/Encrypt Files..."
 msgstr ""
 
-#: mainwindow.cpp:418
+#: mainwindow.cpp:425
+msgid "Create Checksum Files..."
+msgstr ""
+
+#: mainwindow.cpp:427
+msgid "Verify Checksum Files..."
+msgstr ""
+
+#: mainwindow.cpp:430
 msgid "Redisplay"
 msgstr ""
 
-#: mainwindow.cpp:420
+#: mainwindow.cpp:432
 msgid "Stop Operation"
 msgstr ""
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, CertificateDetailsDialog)
-#: mainwindow.cpp:422 rc.cpp:397
+#: mainwindow.cpp:434 rc.cpp:397
 msgid "Certificate Details"
 msgstr ""
 
-#: mainwindow.cpp:425
+#: mainwindow.cpp:437
 msgid "Delete"
 msgstr "Forigi"
 
-#: mainwindow.cpp:427
+#: mainwindow.cpp:439
 msgid "Certify Certificate..."
 msgstr ""
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:60
 #. i18n: ectx: property (text), widget (QPushButton, changeExpiryDatePB)
-#: mainwindow.cpp:429 rc.cpp:412
+#: mainwindow.cpp:441 rc.cpp:412
 msgid "Change Expiry Date..."
 msgstr ""
 
-#: mainwindow.cpp:431
+#: mainwindow.cpp:443
 msgid "Change Owner Trust..."
 msgstr ""
 
-#: mainwindow.cpp:433
+#: mainwindow.cpp:445
 #, fuzzy
 #| msgid "Show certificate 0x%1"
 msgid "Trust Root Certificate"
 msgstr "Vidigi atestilon 0x%1"
 
-#: mainwindow.cpp:435
+#: mainwindow.cpp:447
 msgid "Distrust Root Certificate"
 msgstr ""
 
 #. i18n: file: dialogs/certificatedetailsdialog.ui:40
 #. i18n: ectx: property (text), widget (QPushButton, changePassphrasePB)
-#: mainwindow.cpp:437 rc.cpp:406
+#: mainwindow.cpp:449 rc.cpp:406
 msgid "Change Passphrase..."
 msgstr ""
 
-#: mainwindow.cpp:439
+#: mainwindow.cpp:451
 msgid "Add User-ID..."
 msgstr ""
 
-#: mainwindow.cpp:441
+#: mainwindow.cpp:453
 msgid "Dump Certificate"
 msgstr ""
 
-#: mainwindow.cpp:445
+#: mainwindow.cpp:457
 #, fuzzy
 #| msgid "GnuPG Log Viewer..."
 msgid "GnuPG Log Viewer"
 msgstr "GnuPGa protokolvidigilo..."
 
-#: mainwindow.cpp:449
+#: mainwindow.cpp:461
 msgid "GnuPG Administrative Console"
 msgstr ""
 
-#: mainwindow.cpp:452
+#: mainwindow.cpp:464
 msgid "Refresh X.509 Certificates"
 msgstr ""
 
-#: mainwindow.cpp:454
+#: mainwindow.cpp:466
 msgid "Refresh OpenPGP Certificates"
 msgstr ""
 
-#: mainwindow.cpp:457
+#: mainwindow.cpp:469
 msgid "Clear CRL Cache"
 msgstr ""
 
-#: mainwindow.cpp:459
+#: mainwindow.cpp:471
 msgid "Dump CRL Cache"
 msgstr ""
 
-#: mainwindow.cpp:462
+#: mainwindow.cpp:474
 msgid "Import CRL From File..."
 msgstr ""
 
-#: mainwindow.cpp:465
+#: mainwindow.cpp:477
 msgid "Configure GnuPG Backend..."
 msgstr ""
 
-#: mainwindow.cpp:469
+#: mainwindow.cpp:481
 msgid "Perform Self-Test"
 msgstr ""
 
-#: mainwindow.cpp:475
+#: mainwindow.cpp:487
 msgid "About Gpg4win"
 msgstr ""
 
-#: mainwindow.cpp:532
+#: mainwindow.cpp:546
 msgid "Could not configure the cryptography backend (gpgconf tool not found)"
 msgstr ""
 
-#: mainwindow.cpp:532
+#: mainwindow.cpp:546
 msgid "Configuration Error"
 msgstr ""
 
-#: mainwindow.cpp:564
+#: mainwindow.cpp:578
 msgid ""
 "There are still some background operations ongoing. These will be terminated "
 "when closing the window. Proceed?"
 msgstr ""
 
-#: mainwindow.cpp:567
+#: mainwindow.cpp:581
 msgid "Ongoing Background Tasks"
 msgstr ""
 
-#: mainwindow.cpp:648
+#: mainwindow.cpp:662
 msgid "Sign/Encrypt..."
 msgstr ""
 
-#: mainwindow.cpp:649 systrayicon.cpp:210
+#: mainwindow.cpp:663 systrayicon.cpp:210
 msgid "Decrypt/Verify..."
 msgstr ""
 
-#: mainwindow.cpp:653
+#: mainwindow.cpp:667
 msgid "Import Certificates"
 msgstr ""
 
-#: mainwindow.cpp:654
+#: mainwindow.cpp:668
 msgid "Import CRLs"
 msgstr ""
 
@@ -5213,7 +5239,7 @@ msgstr "axel@esperanto-jeunes.org"
 
 #. i18n: file: kwatchgnupg/kwatchgnupgui.rc:13
 #. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: kleopatra.rc:83
+#. i18n: file: kleopatra.rc:86
 #. i18n: ectx: ToolBar (mainToolBar)
 #: rc.cpp:8 rc.cpp:725
 msgid "Main Toolbar"
@@ -6624,45 +6650,45 @@ msgid ""
 "Outlook."
 msgstr ""
 
-#. i18n: file: kleopatra.rc:21
+#. i18n: file: kleopatra.rc:24
 #. i18n: ectx: Menu (view)
 #: rc.cpp:707
 msgid "&View"
 msgstr "&Rigardi"
 
-#. i18n: file: kleopatra.rc:33
+#. i18n: file: kleopatra.rc:36
 #. i18n: ectx: Menu (certMenu)
-#. i18n: file: kleopatra.rc:99
+#. i18n: file: kleopatra.rc:102
 #. i18n: ectx: Menu (listview_popup)
 #: rc.cpp:710 rc.cpp:731
 msgid "&Certificates"
 msgstr ""
 
-#. i18n: file: kleopatra.rc:48
+#. i18n: file: kleopatra.rc:51
 #. i18n: ectx: Menu (tools)
 #: rc.cpp:713
 msgid "&Tools"
 msgstr "&Iloj"
 
-#. i18n: file: kleopatra.rc:62
+#. i18n: file: kleopatra.rc:65
 #. i18n: ectx: Menu (settings)
 #: rc.cpp:716
 msgid "&Settings"
 msgstr "A&gordo"
 
-#. i18n: file: kleopatra.rc:66
+#. i18n: file: kleopatra.rc:69
 #. i18n: ectx: Menu (window)
 #: rc.cpp:719
 msgid "&Window"
 msgstr "Fe&nestro"
 
-#. i18n: file: kleopatra.rc:77
+#. i18n: file: kleopatra.rc:80
 #. i18n: ectx: Menu (help)
 #: rc.cpp:722
 msgid "&Help"
 msgstr "&Helpo"
 
-#. i18n: file: kleopatra.rc:94
+#. i18n: file: kleopatra.rc:97
 #. i18n: ectx: ToolBar (searchToolBar)
 #: rc.cpp:728
 msgid "Search Toolbar"
