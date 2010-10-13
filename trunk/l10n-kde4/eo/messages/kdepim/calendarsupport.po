@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-kcal\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-08 06:05+0200\n"
+"POT-Creation-Date: 2010-10-13 06:16+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -23,6 +23,144 @@ msgstr "Nekonata nomo"
 #, fuzzy
 msgid "unknown@nowhere"
 msgstr "neniu@nenie"
+
+#: archivedialog.cpp:63
+msgctxt "@title:window"
+msgid "Archive/Delete Past Events and To-dos"
+msgstr ""
+
+#: archivedialog.cpp:68
+msgctxt "@action:button"
+msgid "&Archive"
+msgstr ""
+
+#: archivedialog.cpp:80
+msgctxt "@info:whatsthis"
+msgid ""
+"Archiving saves old items into the given file and then deletes them in the "
+"current calendar. If the archive file already exists they will be added. "
+"(<link url=\"whatsthis:In order to add an archive to your calendar, use the "
+"Merge Calendar function. You can view an archive by opening it in KOrganizer "
+"like any other calendar. It is not saved in a special format, but as "
+"vCalendar.\">How to restore</link>)"
+msgstr ""
+
+#: archivedialog.cpp:100
+msgctxt "@option:radio"
+msgid "Archive now items older than:"
+msgstr ""
+
+#: archivedialog.cpp:107
+msgctxt "@info:whatsthis"
+msgid ""
+"The date before which items should be archived. All older events and to-dos "
+"will be saved and deleted, the newer (and events exactly on that date) will "
+"be kept."
+msgstr ""
+
+#: archivedialog.cpp:118
+msgctxt "@option:radio"
+msgid "Automaticall&y archive items older than:"
+msgstr ""
+
+#: archivedialog.cpp:123
+msgctxt "@info:whatsthis"
+msgid ""
+"If this feature is enabled, KOrganizer will regularly check if events and to-"
+"dos have to be archived; this means you will not need to use this dialog box "
+"again, except to change the settings."
+msgstr ""
+
+#: archivedialog.cpp:134
+msgctxt "@info:whatsthis"
+msgid ""
+"The age of the events and to-dos to archive. All older items will be saved "
+"and deleted, the newer will be kept."
+msgstr ""
+
+#: archivedialog.cpp:140
+msgctxt "@item:inlistbox expires in daily units"
+msgid "Day(s)"
+msgstr ""
+
+#: archivedialog.cpp:142
+msgctxt "@item:inlistbox expiration in weekly units"
+msgid "Week(s)"
+msgstr ""
+
+#: archivedialog.cpp:144
+msgctxt "@item:inlistbox expiration in monthly units"
+msgid "Month(s)"
+msgstr ""
+
+#: archivedialog.cpp:150
+msgctxt "@label"
+msgid "Archive &file:"
+msgstr ""
+
+#: archivedialog.cpp:154
+msgctxt "@label filter for KUrlRequester"
+msgid "*.ics|iCalendar Files"
+msgstr ""
+
+#: archivedialog.cpp:157
+msgctxt "@info:whatsthis"
+msgid ""
+"The path of the archive. The events and to-dos will be added to the archive "
+"file, so any events that are already in the file will not be modified or "
+"deleted. You can later load or merge the file like any other calendar. It is "
+"not saved in a special format, it uses the iCalendar format."
+msgstr ""
+
+#: archivedialog.cpp:167
+msgctxt "@title:group"
+msgid "Type of Items to Archive"
+msgstr ""
+
+#: archivedialog.cpp:172
+msgctxt "@option:check"
+msgid "&Events"
+msgstr ""
+
+#: archivedialog.cpp:174
+msgctxt "@option:check"
+msgid "&To-dos"
+msgstr ""
+
+#: archivedialog.cpp:178
+msgctxt "@info:whatsthis"
+msgid ""
+"Here you can select which items should be archived. Events are archived if "
+"they ended before the date given above; to-dos are archived if they were "
+"finished before the date."
+msgstr ""
+
+#: archivedialog.cpp:186
+msgctxt "@option:check"
+msgid "Archive &Events"
+msgstr ""
+
+#: archivedialog.cpp:188
+msgctxt "@option:check"
+msgid "Archive &To-dos"
+msgstr ""
+
+#: archivedialog.cpp:192
+msgctxt "@option:check"
+msgid "&Delete only, do not save"
+msgstr ""
+
+#: archivedialog.cpp:195
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option to delete old events and to-dos without saving them. It "
+"is not possible to recover the events later."
+msgstr ""
+
+#: archivedialog.cpp:259
+msgctxt "@info"
+msgid "The archive file name is not valid."
+msgstr ""
 
 #: attachmenthandler.cpp:99
 #, kde-format
@@ -123,12 +261,43 @@ msgctxt "@title:column calendar title"
 msgid "Calendar"
 msgstr ""
 
-#: calendarsearch.cpp:155
+#: calendarsearch.cpp:156
 msgid "Could not create search."
 msgstr ""
 
-#: calendarsearch.cpp:183
+#: calendarsearch.cpp:184
 msgid "Could not parse the collection ID"
+msgstr ""
+
+#: eventarchiver.cpp:123
+#, kde-format
+msgid "There are no items before %1"
+msgstr ""
+
+#: eventarchiver.cpp:152
+#, kde-format
+msgid ""
+"Delete all items before %1 without saving?\n"
+"The following items will be deleted:"
+msgstr ""
+
+#: eventarchiver.cpp:156
+msgid "Delete Old Items"
+msgstr ""
+
+#: eventarchiver.cpp:239
+msgctxt "save failure cause unknown"
+msgid "Reason unknown"
+msgstr ""
+
+#: eventarchiver.cpp:241
+#, kde-format
+msgid "Cannot write archive file %1. %2"
+msgstr ""
+
+#: eventarchiver.cpp:251
+#, kde-format
+msgid "Cannot write archive. %1"
 msgstr ""
 
 #: freebusymanager.cpp:335
@@ -722,29 +891,103 @@ msgstr ""
 msgid "Show timezone selectors in the event and todo editor dialog."
 msgstr ""
 
-#. i18n: file: kcalprefs.kcfg:200
-#. i18n: ectx: label, entry (UserName), group (Internal Settings)
+#. i18n: file: kcalprefs.kcfg:196
+#. i18n: ectx: label, entry, group (Archive Dialog)
 #: rc.cpp:141
-msgid "Full &name"
+msgid "Regularly archive events"
 msgstr ""
 
 #. i18n: file: kcalprefs.kcfg:201
-#. i18n: ectx: whatsthis, entry (UserName), group (Internal Settings)
+#. i18n: ectx: label, entry, group (Archive Dialog)
 #: rc.cpp:144
+msgid ""
+"If auto-archiving is enabled, events older than this amount will be "
+"archived. The unit of this value is specified in another field."
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:206
+#. i18n: ectx: label, entry (ExpiryUnit), group (Archive Dialog)
+#: rc.cpp:147
+msgid "The unit in which the expiry time is expressed."
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:209
+#. i18n: ectx: label, entry (ExpiryUnit), group (Archive Dialog)
+#: rc.cpp:150
+msgid "In days"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:212
+#. i18n: ectx: label, entry (ExpiryUnit), group (Archive Dialog)
+#: rc.cpp:153
+msgid "In weeks"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:215
+#. i18n: ectx: label, entry (ExpiryUnit), group (Archive Dialog)
+#: rc.cpp:156
+msgid "In months"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:222
+#. i18n: ectx: label, entry, group (Archive Dialog)
+#: rc.cpp:159
+msgid "URL of the file where old events should be archived"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:226
+#. i18n: ectx: label, entry, group (Archive Dialog)
+#: rc.cpp:162
+msgid "Archive events"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:231
+#. i18n: ectx: label, entry, group (Archive Dialog)
+#: rc.cpp:165
+msgid "Archive to-dos"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:236
+#. i18n: ectx: label, entry, group (Archive Dialog)
+#: rc.cpp:168
+msgid "What to do when archiving"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:239
+#. i18n: ectx: label, entry, group (Archive Dialog)
+#: rc.cpp:171
+msgid "Delete old events"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:242
+#. i18n: ectx: label, entry, group (Archive Dialog)
+#: rc.cpp:174
+msgid "Archive old events to a separate file"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:256
+#. i18n: ectx: label, entry (UserName), group (Internal Settings)
+#: rc.cpp:177
+msgid "Full &name"
+msgstr ""
+
+#. i18n: file: kcalprefs.kcfg:257
+#. i18n: ectx: whatsthis, entry (UserName), group (Internal Settings)
+#: rc.cpp:180
 msgid ""
 "Enter your full name here. This name will be displayed as \"Organizer\" in "
 "to-dos and events you create."
 msgstr ""
 
-#. i18n: file: kcalprefs.kcfg:206
+#. i18n: file: kcalprefs.kcfg:262
 #. i18n: ectx: label, entry (UserEmail), group (Internal Settings)
-#: rc.cpp:147
+#: rc.cpp:183
 msgid "E&mail address"
 msgstr ""
 
-#. i18n: file: kcalprefs.kcfg:207
+#. i18n: file: kcalprefs.kcfg:263
 #. i18n: ectx: whatsthis, entry (UserEmail), group (Internal Settings)
-#: rc.cpp:150
+#: rc.cpp:186
 msgid ""
 "Enter here your e-mail address. This e-mail address will be used to identify "
 "the owner of the calendar, and displayed in events and to-dos you create."
