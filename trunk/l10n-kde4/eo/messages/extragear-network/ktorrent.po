@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-17 06:27+0200\n"
+"POT-Creation-Date: 2010-10-19 07:07+0200\n"
 "PO-Revision-Date: 2009-11-17 11:13+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -114,7 +114,7 @@ msgstr "Ne povas malfermi %1 : %2"
 #: plugins/syndication/syndicationactivity.cpp:172
 #, fuzzy, kde-format
 #| msgid "Failed to create %1 : %2"
-msgid "Failed to create directory for feed %1 : %2"
+msgid "Failed to create directory for feed %1: %2"
 msgstr "Ne povas krei %1 : %2"
 
 #. i18n: file: plugins/syndication/managefiltersdlg.ui:127
@@ -1161,6 +1161,7 @@ msgid "Which files the chunk is located in"
 msgstr ""
 
 #: plugins/infowidget/webseedsmodel.cpp:124
+#: plugins/infowidget/trackermodel.cpp:147
 msgid "URL"
 msgstr "Retadreso"
 
@@ -1274,10 +1275,6 @@ msgstr[1] ""
 #: ktorrent/view/view.cpp:340
 msgid "Select a directory to move the data to."
 msgstr "Elektu dosierujon al kie vi volas movi la datumojn."
-
-#: plugins/infowidget/trackermodel.cpp:147
-msgid "Url"
-msgstr ""
 
 #: plugins/infowidget/trackermodel.cpp:149 ktorrent/view/viewmodel.cpp:454
 msgid "Seeders"
@@ -1504,7 +1501,7 @@ msgstr "Ĉiuj dosieroj"
 #| "You will lose all the downloaded data. Are you sure you want to do this?"
 msgid ""
 "Removing these scripts will fully delete them from your disk. Are you sure "
-"you want to do this ?"
+"you want to do this?"
 msgstr ""
 "Vi perdos ĉiujn la elŝutitajn datumojn. Ĉu vi certas ke vi volas fari tion?"
 
@@ -1649,7 +1646,7 @@ msgid "Add a Search Engine"
 msgstr "Serĉilo"
 
 #: plugins/search/searchprefpage.cpp:105
-msgid "Enter the hostname of the search engine (for example www.google.com) :"
+msgid "Enter the hostname of the search engine (for example www.google.com):"
 msgstr ""
 
 #: plugins/search/searchprefpage.cpp:143
@@ -1702,8 +1699,9 @@ msgstr "Dosierujoj en kiuj vi volas serĉi torentojn:"
 #: plugins/ipfilter/convertthread.cpp:67
 #: plugins/ipfilter/convertthread.cpp:167
 #: ktorrent/dialogs/importdialog.cpp:278
-#, kde-format
-msgid "Cannot open %1 : %2"
+#, fuzzy, kde-format
+#| msgid "Cannot open %1 : %2"
+msgid "Cannot open %1: %2"
 msgstr "Ne povas malfermi %1 : %2"
 
 #: plugins/search/searchenginelist.cpp:216
@@ -1715,7 +1713,7 @@ msgstr "Ne povas malfermi %1 : %2"
 #: plugins/search/searchenginelist.cpp:365
 #, fuzzy, kde-format
 #| msgid "Scanning data of <b>%1</b> :"
-msgid "Url: <b>%1</b>"
+msgid "URL: <b>%1</b>"
 msgstr "Legas datumon de <b>%1</b> :"
 
 #: plugins/search/searchtoolbar.cpp:68
@@ -2042,9 +2040,10 @@ msgid "Cannot open zip file %1."
 msgstr "Ne povas malfermi dosieron %1: %2"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:166
-#, kde-format
-msgid "Automatic update of IP filter failed: cannot open zipfile %1"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Cannot deselect missing files: %1"
+msgid "Automatic update of IP filter failed: cannot open zip file %1"
+msgstr "Ne povas malelekti mankantajn dosierojn: %1"
 
 #: plugins/ipfilter/downloadandconvertjob.cpp:203
 #, fuzzy, kde-format
@@ -2775,9 +2774,10 @@ msgid "All Torrents"
 msgstr "Ĉiuj torentoj"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:250
+#: ktorrent/dialogs/pastedialog.cpp:105 ktorrent/gui.cpp:356
 #, fuzzy, kde-format
 #| msgid "Invalid tracker URL"
-msgid "Invalid url %1"
+msgid "Invalid URL: %1"
 msgstr "Nevalida servila retadreso"
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:256
@@ -2789,8 +2789,12 @@ msgid "You must select a file or a folder."
 msgstr "Vi devas elekti dosieron aŭ dosierujon."
 
 #: ktorrent/dialogs/torrentcreatordlg.cpp:294
+#, fuzzy
+#| msgid ""
+#| "You have not added a tracker, are you sure you want to create this "
+#| "torrent ?"
 msgid ""
-"You have not added a tracker, are you sure you want to create this torrent ?"
+"You have not added a tracker, are you sure you want to create this torrent?"
 msgstr ""
 "Vi ne aldonis kunordigan servilon, ĉu vi certas ke vi volas krei ĉi tiun "
 "torenton?"
@@ -3065,7 +3069,7 @@ msgstr "Legas datumon de <b>%1</b> :"
 #: ktorrent/dialogs/torrentmigratordlg.cpp:160
 #, fuzzy, kde-format
 #| msgid "Failed to create %1 : %2"
-msgid "Failed to import <b>%1</b> : %2"
+msgid "Failed to import <b>%1</b>: %2"
 msgstr "Ne povas krei %1 : %2"
 
 #: ktorrent/dialogs/torrentmigratordlg.cpp:164
@@ -3074,18 +3078,21 @@ msgid "Imported <b>%1</b>"
 msgstr ""
 
 #: ktorrent/dialogs/importdialog.cpp:124
-#, kde-format
-msgid "Cannot verify data : %1"
+#, fuzzy, kde-format
+#| msgid "Cannot verify data : %1"
+msgid "Cannot verify data: %1"
 msgstr "Ne povas konfirmi datumon : %1"
 
 #: ktorrent/dialogs/importdialog.cpp:231 ktorrent/dialogs/importdialog.cpp:265
-#, kde-format
-msgid "Cannot load the torrent file : %1"
+#, fuzzy, kde-format
+#| msgid "Cannot load the torrent file : %1"
+msgid "Cannot load the torrent file: %1"
 msgstr "Ne povas ŝargi la torentdosieron : %1"
 
 #: ktorrent/dialogs/importdialog.cpp:387 ktorrent/dialogs/importdialog.cpp:404
-#, kde-format
-msgid "Failed to create %1 : %2"
+#, fuzzy, kde-format
+#| msgid "Failed to create %1 : %2"
+msgid "Failed to create %1: %2"
 msgstr "Ne povas krei %1 : %2"
 
 #. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
@@ -3093,12 +3100,6 @@ msgstr "Ne povas krei %1 : %2"
 #: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:2747
 msgid "Open an URL"
 msgstr "Malfermi retadreson"
-
-#: ktorrent/dialogs/pastedialog.cpp:105 ktorrent/gui.cpp:356
-#, fuzzy, kde-format
-#| msgid "Invalid tracker URL"
-msgid "Invalid URL: %1"
-msgstr "Nevalida servila retadreso"
 
 #: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
 #, kde-format
@@ -3443,7 +3444,7 @@ msgid "Aaron J. Seigo"
 msgstr "Aaron J. Seigo"
 
 #: ktorrent/main.cpp:140
-msgid "Drag and drop support for plasma applet"
+msgid "Drag and drop support for Plasma applet"
 msgstr ""
 
 #: ktorrent/main.cpp:141
@@ -3459,7 +3460,7 @@ msgid "Amichai Rothman"
 msgstr "Amichai Rothman"
 
 #: ktorrent/main.cpp:142
-msgid "Patch to make the plasma applet a popup applet"
+msgid "Patch to make the Plasma applet a popup applet"
 msgstr ""
 
 #: ktorrent/main.cpp:143
@@ -3848,9 +3849,12 @@ msgid "Cannot recreate missing files: %1"
 msgstr "Ne povas rekrei mankantajn dosierojn: %1"
 
 #: ktorrent/core.cpp:1257
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The file where the data is saved of the torrent \"%1\" is missing. \n"
+#| "Do you want to recreate it?"
 msgid ""
-"The file where the data is saved of the torrent \"%1\" is missing. \n"
+"The file where the data is saved of the torrent \"%1\" is missing.\n"
 "Do you want to recreate it?"
 msgstr ""
 "La dosiero al kiu la datumoj por la torento \"%1\" estas konservataj "
@@ -4085,7 +4089,7 @@ msgstr "Nesufiĉa diskspaco por %1"
 #| "you want to continue?"
 msgid ""
 "Not enough disk space for the following torrents. Do you want to start them "
-"anyway ?"
+"anyway?"
 msgstr ""
 "Vi ne havas sufiĉan diskspacon por elŝuti ĉi tiun torenton. Ĉu vi certas ke "
 "vi volas daŭri?"
@@ -4097,7 +4101,7 @@ msgstr ""
 #| "start seeding anyway?"
 msgid ""
 "The following torrents have reached their maximum seed time. Do you want to "
-"start them anyway ?"
+"start them anyway?"
 msgstr ""
 "Torento \"%1\" atingis ĝian maksimuman kundividan rejŝon. Ĉu ignori la "
 "limigon kaj fariĝi fonton spite?"
@@ -4109,14 +4113,15 @@ msgstr ""
 #| "start seeding anyway?"
 msgid ""
 "The following torrents have reached their maximum share ratio. Do you want "
-"to start them anyway ?"
+"to start them anyway?"
 msgstr ""
 "Torento \"%1\" atingis ĝian maksimuman kundividan rejŝon. Ĉu ignori la "
 "limigon kaj fariĝi fonton spite?"
 
 #: libktcore/torrent/queuemanager.cpp:737
-#, kde-format
-msgid "Error starting torrent %1 : %2"
+#, fuzzy, kde-format
+#| msgid "Error starting torrent %1 : %2"
+msgid "Error starting torrent %1: %2"
 msgstr "Eraro okazis dum la komenco de la torento %1 : %2"
 
 #: libktcore/torrent/queuemanager.cpp:739
@@ -4125,8 +4130,9 @@ msgid "Error"
 msgstr "Eraro"
 
 #: libktcore/torrent/queuemanager.cpp:753
-#, kde-format
-msgid "Error stopping torrent %1 : %2"
+#, fuzzy, kde-format
+#| msgid "Error stopping torrent %1 : %2"
+msgid "Error stopping torrent %1: %2"
 msgstr "Eraro okazis dum la ĉesigo de la torento %1 : %2"
 
 #: libktcore/torrent/chunkbar.cpp:93
@@ -11076,6 +11082,11 @@ msgstr "Movi finitajn elŝutojn al:"
 #: rc.cpp:2935
 msgid "Maximum seed time in hours (0 = no limit)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Invalid tracker URL"
+#~ msgid "Invalid url %1"
+#~ msgstr "Nevalida servila retadreso"
 
 #~ msgid ""
 #~ "Filter file (level1.dat) already exists, do you want to convert it again?"
