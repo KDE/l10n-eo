@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalarm\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-20 06:10+0200\n"
+"POT-Creation-Date: 2010-10-21 06:18+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -65,7 +65,8 @@ msgctxt "@info/plain"
 msgid "At login"
 msgstr ""
 
-#: cal/kaevent.cpp:3286 cal/kaevent.cpp:3321
+#: cal/kaevent.cpp:3286 cal/kaevent.cpp:3321 akonadi/kaeventformatter.cpp:318
+#: akonadi/kaeventformatter.cpp:332
 #, kde-format
 msgctxt "@info/plain"
 msgid "1 Minute"
@@ -73,7 +74,7 @@ msgid_plural "%1 Minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: cal/kaevent.cpp:3288 cal/kaevent.cpp:3323
+#: cal/kaevent.cpp:3288 cal/kaevent.cpp:3323 akonadi/kaeventformatter.cpp:334
 #, kde-format
 msgctxt "@info/plain"
 msgid "1 Hour"
@@ -87,7 +88,7 @@ msgctxt "@info/plain Hours and minutes"
 msgid "%1h %2m"
 msgstr ""
 
-#: cal/kaevent.cpp:3295 cal/kaevent.cpp:3329
+#: cal/kaevent.cpp:3295 cal/kaevent.cpp:3329 akonadi/kaeventformatter.cpp:336
 #, kde-format
 msgctxt "@info/plain"
 msgid "1 Day"
@@ -446,107 +447,94 @@ msgctxt "@info"
 msgid "Event with uid '%1' is read only"
 msgstr ""
 
-#: akonadi/akonadi_serializer_kalarm.cpp:105
+#: akonadi/akonadi_serializer_kalarm.cpp:106
 msgctxt "@title:column"
 msgid "Changed Alarm"
 msgstr ""
 
-#: akonadi/akonadi_serializer_kalarm.cpp:106
+#: akonadi/akonadi_serializer_kalarm.cpp:107
 msgctxt "@title:column"
 msgid "Conflicting Alarm"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:48
-msgctxt "@label"
-msgid "ID"
-msgstr ""
-
-#: akonadi/kaeventformatter.cpp:49
-msgctxt "@label"
-msgid "Alarm type"
-msgstr ""
-
 #: akonadi/kaeventformatter.cpp:50
-msgctxt "@label"
-msgid "Alarm status"
+msgctxt "@label Unique identifier"
+msgid "UID"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:51
 msgctxt "@label"
-msgid "Template name"
+msgid "Alarm type"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:52
 msgctxt "@label"
-msgid "Creation time"
+msgid "Alarm status"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:53
 msgctxt "@label"
-msgid "Start time"
+msgid "Template name"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:54
 msgctxt "@label"
-msgid "Template after time"
+msgid "Creation time"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:55
 msgctxt "@label"
-msgid "Recurs"
+msgid "Start time"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:56
-msgctxt "@label"
-msgid "Recurrence"
+msgctxt "@label Start delay configured in an alarm template"
+msgid "Template after time"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:57
 msgctxt "@label"
-msgid "Sub repetition interval"
+msgid "Recurs"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:58
 msgctxt "@label"
-msgid "Sub repetition count"
+msgid "Recurrence"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:59
 msgctxt "@label"
-msgid "Work time only"
+msgid "Sub-repetition"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:60
 msgctxt "@label"
-msgid "Holidays excluded"
+msgid "Sub-repetition interval"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:61
 msgctxt "@label"
-msgid "Next recurrence"
+msgid "Sub-repetition count"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:62
 msgctxt "@label"
-msgid "Reminder"
+msgid "Next sub-repetition"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:63
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "General"
 msgctxt "@label"
-msgid "Deferral"
-msgstr "Ĝenerale"
+msgid "Work time only"
+msgstr ""
 
 #: akonadi/kaeventformatter.cpp:64
 msgctxt "@label"
-msgid "Deferral default"
+msgid "Holidays excluded"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:65
 msgctxt "@label"
-msgid "Deferral default date only"
+msgid "Next recurrence"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:66
@@ -555,7 +543,7 @@ msgid "Late cancel"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:67
-msgctxt "@label"
+msgctxt "@label Automatically close window"
 msgid "Auto close"
 msgstr ""
 
@@ -570,7 +558,7 @@ msgid "Enabled"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:70
-msgctxt "@label"
+msgctxt "@label Whether alarm should be archived"
 msgid "Archive"
 msgstr ""
 
@@ -585,7 +573,7 @@ msgid "Message text"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:74
-msgctxt "@label"
+msgctxt "@label File to provide text for message"
 msgid "Message file"
 msgstr ""
 
@@ -608,10 +596,8 @@ msgctxt "@label"
 msgid "Font"
 msgstr ""
 
-#. i18n: file: kalarmconfig.kcfg:347
-#. i18n: ectx: label, entry (DefaultPreAction), group (Defaults)
-#: akonadi/kaeventformatter.cpp:78 rc.cpp:336
-msgctxt "@label"
+#: akonadi/kaeventformatter.cpp:78
+msgctxt "@label Shell command to execute before alarm"
 msgid "Pre-alarm action"
 msgstr ""
 
@@ -625,10 +611,8 @@ msgctxt "@label"
 msgid "Pre-alarm action no error"
 msgstr ""
 
-#. i18n: file: kalarmconfig.kcfg:361
-#. i18n: ectx: label, entry (DefaultPostAction), group (Defaults)
-#: akonadi/kaeventformatter.cpp:81 rc.cpp:354
-msgctxt "@label"
+#: akonadi/kaeventformatter.cpp:81
+msgctxt "@label Shell command to execute after alarm"
 msgid "Post-alarm action"
 msgstr ""
 
@@ -650,7 +634,7 @@ msgid "Sound"
 msgstr ""
 
 #: akonadi/kaeventformatter.cpp:85
-msgctxt "@label"
+msgctxt "@label Whether audio should repeat"
 msgid "Sound repeat"
 msgstr ""
 
@@ -671,74 +655,113 @@ msgctxt "@label"
 msgid "Sound fade time"
 msgstr ""
 
+#: akonadi/kaeventformatter.cpp:89
+msgctxt "@label Whether the alarm has a reminder"
+msgid "Reminder"
+msgstr ""
+
 #: akonadi/kaeventformatter.cpp:90
+msgctxt "@label Whether reminder is on first recurrence only"
+msgid "Reminder once only"
+msgstr ""
+
+#: akonadi/kaeventformatter.cpp:91
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "General"
+msgctxt "@label Deferral type"
+msgid "Deferral"
+msgstr "Ĝenerale"
+
+#: akonadi/kaeventformatter.cpp:92
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "General"
+msgctxt "@label"
+msgid "Deferral time"
+msgstr "Ĝenerale"
+
+#: akonadi/kaeventformatter.cpp:93
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "General"
+msgctxt "@label Default deferral delay"
+msgid "Deferral default"
+msgstr "Ĝenerale"
+
+#: akonadi/kaeventformatter.cpp:94
+msgctxt "@label Whether deferral time is date-only by default"
+msgid "Deferral default date only"
+msgstr ""
+
+#: akonadi/kaeventformatter.cpp:96
 msgctxt "@label A shell command"
 msgid "Command"
 msgstr ""
 
 #. i18n: file: kalarmconfig.kcfg:304
 #. i18n: ectx: label, entry (DefaultCmdLogFile), group (Defaults)
-#: akonadi/kaeventformatter.cpp:91 rc.cpp:285
+#: akonadi/kaeventformatter.cpp:97 rc.cpp:285
 msgctxt "@label"
 msgid "Log file"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:92
-msgctxt "@label"
-msgid "Command X-terminal"
+#: akonadi/kaeventformatter.cpp:98
+msgctxt "@label Execute in terminal window"
+msgid "Execute in terminal"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:94
+#: akonadi/kaeventformatter.cpp:100
 msgctxt "@label"
 msgid "Email subject"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:95
+#: akonadi/kaeventformatter.cpp:101
 msgctxt "@label Email address"
 msgid "Email sender ID"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:96
+#: akonadi/kaeventformatter.cpp:102
 msgctxt "@label Email address"
 msgid "Email to"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:97
+#: akonadi/kaeventformatter.cpp:103
 msgctxt "@label true/false"
 msgid "Email bcc"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:98
+#: akonadi/kaeventformatter.cpp:104
 msgctxt "@label"
 msgid "Email body"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:99
+#: akonadi/kaeventformatter.cpp:105
 msgctxt "@label"
 msgid "Email attachments"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:188
+#: akonadi/kaeventformatter.cpp:201
 msgctxt "@info/plain Alarm type"
-msgid "Text display"
+msgid "Display (text)"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:189
+#: akonadi/kaeventformatter.cpp:202
 msgctxt "@info/plain Alarm type"
-msgid "File display"
+msgid "Display (file)"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:191
+#: akonadi/kaeventformatter.cpp:204
 msgctxt "@info/plain Alarm type"
-msgid "Command display"
+msgid "Display (command)"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:192
+#: akonadi/kaeventformatter.cpp:205
 msgctxt "@info/plain Alarm type"
 msgid "Command"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:193
+#: akonadi/kaeventformatter.cpp:206
 #, fuzzy
 #| msgctxt "@option"
 #| msgid "Sendmail"
@@ -746,48 +769,53 @@ msgctxt "@info/plain Alarm type"
 msgid "Email"
 msgstr "Sendmail"
 
-#: akonadi/kaeventformatter.cpp:194
+#: akonadi/kaeventformatter.cpp:207
 msgctxt "@info/plain Alarm type"
 msgid "Audio"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:200
+#: akonadi/kaeventformatter.cpp:213
 msgctxt "@info/plain Alarm type"
 msgid "Active"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:201
+#: akonadi/kaeventformatter.cpp:214
 msgctxt "@info/plain Alarm type"
 msgid "Archived"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:202
+#: akonadi/kaeventformatter.cpp:215
 msgctxt "@info/plain Alarm type"
 msgid "Template"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:215
+#: akonadi/kaeventformatter.cpp:228
 #, kde-format
 msgctxt "@info/plain Repeat at login"
 msgid "At login until %1"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:241
+#: akonadi/kaeventformatter.cpp:261
 msgctxt "@info/plain Using default font"
 msgid "Default"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:249
+#: akonadi/kaeventformatter.cpp:268
+msgctxt "@info/plain"
+msgid "Reminder"
+msgstr ""
+
+#: akonadi/kaeventformatter.cpp:275
 msgctxt "@info/plain"
 msgid "Speak"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:250
+#: akonadi/kaeventformatter.cpp:276
 msgctxt "@info/plain"
 msgid "Beep"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:253 akonadi/kaeventformatter.cpp:256
+#: akonadi/kaeventformatter.cpp:279 akonadi/kaeventformatter.cpp:282
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "%1%2"
@@ -795,34 +823,26 @@ msgctxt "@info/plain Percentage"
 msgid "%1%%"
 msgstr "%1%2"
 
-#: akonadi/kaeventformatter.cpp:259
+#: akonadi/kaeventformatter.cpp:285
 #, c-format
 msgctxt "@info/plain"
-msgid "%s seconds"
+msgid "%s Seconds"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:273
+#: akonadi/kaeventformatter.cpp:299
 msgctxt "@info/plain Error indication"
 msgid "error!"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:278
-msgctxt "@info/plain General purpose status indication: true or false"
-msgid "true"
+#: akonadi/kaeventformatter.cpp:304
+msgctxt "@info/plain General purpose status indication: yes or no"
+msgid "Yes"
 msgstr ""
 
-#: akonadi/kaeventformatter.cpp:279
-msgctxt "@info/plain General purpose status indication: true or false"
-msgid "false"
+#: akonadi/kaeventformatter.cpp:305
+msgctxt "@info/plain General purpose status indication: yes or no"
+msgid "No"
 msgstr ""
-
-#: akonadi/kaeventformatter.cpp:292
-#, kde-format
-msgctxt "@info/plain"
-msgid "1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
 
 #: kamail.cpp:88
 msgctxt "@info/plain"
@@ -3783,6 +3803,13 @@ msgctxt "@option"
 msgid "Hours/Minutes"
 msgstr ""
 
+#. i18n: file: kalarmconfig.kcfg:347
+#. i18n: ectx: label, entry (DefaultPreAction), group (Defaults)
+#: rc.cpp:336
+msgctxt "@label"
+msgid "Pre-alarm action"
+msgstr ""
+
 #. i18n: file: kalarmconfig.kcfg:348
 #. i18n: ectx: whatsthis, entry (DefaultPreAction), group (Defaults)
 #: rc.cpp:339
@@ -3820,6 +3847,13 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Default setting for whether to show no error status or error message if the "
 "pre-alarm action command fails."
+msgstr ""
+
+#. i18n: file: kalarmconfig.kcfg:361
+#. i18n: ectx: label, entry (DefaultPostAction), group (Defaults)
+#: rc.cpp:354
+msgctxt "@label"
+msgid "Post-alarm action"
 msgstr ""
 
 #. i18n: file: kalarmconfig.kcfg:362
