@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krfb\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-08-22 05:46+0200\n"
+"POT-Creation-Date: 2010-10-24 06:22+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -15,24 +15,18 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: connectioncontroller.cpp:112
-#, kde-format
-msgid "Refused uninvited connection attempt from %1"
+#: abstractrfbserver.cpp:221
+msgid "Address already in use"
 msgstr ""
 
-#: connectioncontroller.cpp:123
-#, kde-format
-msgid "Accepted uninvited connection from %1"
+#: abstractrfbserver.cpp:306
+msgid ""
+"Your X11 Server does not support the required XTest extension version 2.2. "
+"Sharing your desktop is not possible."
 msgstr ""
 
-#: connectioncontroller.cpp:131
-#, kde-format
-msgid "Received connection from %1, on hold (waiting for confirmation)"
-msgstr ""
-
-#: connectioncontroller.cpp:174 connectioncontroller.cpp:178
-#, kde-format
-msgid "Failed login attempt from %1: wrong password"
+#: abstractrfbserver.cpp:307
+msgid "Desktop Sharing Error"
 msgstr ""
 
 #: connectiondialog.cpp:32
@@ -47,7 +41,7 @@ msgstr ""
 msgid "Refuse Connection"
 msgstr ""
 
-#: invitedialog.cpp:34 manageinvitationsdialog.cpp:57
+#: invitedialog.cpp:34 manageinvitationsdialog.cpp:55
 msgid "Invitation"
 msgstr ""
 
@@ -76,23 +70,29 @@ msgid ""
 "in the configuration."
 msgstr ""
 
-#: krfbserver.cpp:194 krfbserver.cpp:214
+#: krfbconnectioncontroller.cpp:97
+#, kde-format
+msgid "Refused uninvited connection attempt from %1"
+msgstr ""
+
+#: krfbconnectioncontroller.cpp:108
+#, kde-format
+msgid "Accepted uninvited connection from %1"
+msgstr ""
+
+#: krfbconnectioncontroller.cpp:116
+#, kde-format
+msgid "Received connection from %1, on hold (waiting for confirmation)"
+msgstr ""
+
+#: krfbconnectioncontroller.cpp:159 krfbconnectioncontroller.cpp:163
+#, kde-format
+msgid "Failed login attempt from %1: wrong password"
+msgstr ""
+
+#: krfbserver.cpp:60 krfbserver.cpp:65
 #, kde-format
 msgid "%1@%2 (shared desktop)"
-msgstr ""
-
-#: krfbserver.cpp:207
-msgid "Address already in use"
-msgstr ""
-
-#: krfbserver.cpp:302
-msgid ""
-"Your X11 Server does not support the required XTest extension version 2.2. "
-"Sharing your desktop is not possible."
-msgstr ""
-
-#: krfbserver.cpp:303
-msgid "Desktop Sharing Error"
 msgstr ""
 
 #: main.cpp:40
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Do not show the invitations management dialog at startup"
 msgstr ""
 
-#: manageinvitationsdialog.cpp:95
+#: manageinvitationsdialog.cpp:93
 msgid ""
 "An invitation creates a one-time password that allows the receiver to "
 "connect to your desktop.\n"
@@ -212,7 +212,7 @@ msgid ""
 "in the configuration."
 msgstr ""
 
-#: manageinvitationsdialog.cpp:117
+#: manageinvitationsdialog.cpp:115
 msgid ""
 "When sending an invitation by email, note that everybody who reads this "
 "email will be able to connect to your computer for one hour, or until the "
@@ -221,15 +221,15 @@ msgid ""
 "network, but not over the Internet."
 msgstr ""
 
-#: manageinvitationsdialog.cpp:122
+#: manageinvitationsdialog.cpp:120
 msgid "Send Invitation via Email"
 msgstr ""
 
-#: manageinvitationsdialog.cpp:143
+#: manageinvitationsdialog.cpp:141
 msgid "Desktop Sharing (VNC) invitation"
 msgstr ""
 
-#: manageinvitationsdialog.cpp:144
+#: manageinvitationsdialog.cpp:142
 #, kde-format
 msgid ""
 "You have been invited to a VNC session. If you have the KDE Remote Desktop "
@@ -245,23 +245,23 @@ msgid ""
 "For security reasons this invitation will expire at %5 (%6)."
 msgstr ""
 
-#: manageinvitationsdialog.cpp:182
+#: manageinvitationsdialog.cpp:180
 msgid "Network"
 msgstr "Reto"
 
-#: manageinvitationsdialog.cpp:183
+#: manageinvitationsdialog.cpp:181
 msgid "Security"
 msgstr "Sekureco"
 
-#: manageinvitationsdialog.cpp:192
+#: manageinvitationsdialog.cpp:190
 msgid "<qt>Are you sure you want to delete all invitations?</qt>"
 msgstr ""
 
-#: manageinvitationsdialog.cpp:193 manageinvitationsdialog.cpp:209
+#: manageinvitationsdialog.cpp:191 manageinvitationsdialog.cpp:207
 msgid "Confirm delete Invitations"
 msgstr ""
 
-#: manageinvitationsdialog.cpp:208
+#: manageinvitationsdialog.cpp:206
 msgid "<qt>Are you sure you want to delete this invitation?</qt>"
 msgstr ""
 
@@ -635,28 +635,28 @@ msgstr ""
 msgid "Preferred Frame Buffer Plugin"
 msgstr ""
 
-#: trayicon.cpp:39 trayicon.cpp:91
+#: trayicon.cpp:38 trayicon.cpp:90
 msgid "Desktop Sharing - disconnected"
 msgstr ""
 
-#: trayicon.cpp:48
+#: trayicon.cpp:47
 msgid "Enable Remote Control"
 msgstr ""
 
-#: trayicon.cpp:49
+#: trayicon.cpp:48
 msgid "Disable Remote Control"
 msgstr ""
 
-#: trayicon.cpp:79
+#: trayicon.cpp:78
 #, kde-format
 msgid "The remote user %1 is now connected."
 msgstr ""
 
-#: trayicon.cpp:81
+#: trayicon.cpp:80
 #, kde-format
 msgid "Desktop Sharing - connected with %1"
 msgstr ""
 
-#: trayicon.cpp:93
+#: trayicon.cpp:92
 msgid "The remote user has closed the connection."
 msgstr ""
