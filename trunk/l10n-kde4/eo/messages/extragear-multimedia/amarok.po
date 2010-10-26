@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-25 06:10+0200\n"
+"POT-Creation-Date: 2010-10-26 07:02+0200\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -738,8 +738,10 @@ msgstr "Artisto / Jaro - Albumo"
 #: context/applets/albums/AlbumsView.cpp:239
 #: context/applets/wikipedia/WikipediaApplet.cpp:543
 #: dialogs/FilenameLayoutDialog.cpp:232 dialogs/FilenameLayoutDialog.cpp:585
-#: dialogs/transferdialog.cpp:89 playlist/view/PlaylistViewCommon.cpp:66
-#: playlist/PlaylistModel.cpp:819 services/jamendo/JamendoInfoParser.cpp:83
+#: dialogs/transferdialog.cpp:89 musicbrainz/MusicBrainzTagsModel.cpp:105
+#: musicbrainz/MusicBrainzTrackListModel.cpp:60
+#: playlist/view/PlaylistViewCommon.cpp:66 playlist/PlaylistModel.cpp:819
+#: services/jamendo/JamendoInfoParser.cpp:83
 #: services/magnatune/MagnatuneStore.cpp:222
 #: widgets/SmartPlaylistEditor.cpp:183 widgets/SmartPlaylistEditor.cpp:197
 #: widgets/MetaQueryWidget.cpp:214
@@ -753,7 +755,8 @@ msgstr "Albumo"
 #: context/applets/lyrics/LyricsApplet.cpp:218
 #: context/applets/wikipedia/WikipediaApplet.cpp:536
 #: dialogs/FilenameLayoutDialog.cpp:220 dialogs/FilenameLayoutDialog.cpp:564
-#: dialogs/transferdialog.cpp:88 playlist/PlaylistModel.cpp:815
+#: dialogs/transferdialog.cpp:88 musicbrainz/MusicBrainzTagsModel.cpp:104
+#: musicbrainz/MusicBrainzTrackListModel.cpp:59 playlist/PlaylistModel.cpp:815
 #: services/jamendo/JamendoInfoParser.cpp:51
 #: services/lastfm/LastFmService.cpp:535
 #: services/magnatune/MagnatuneStore.cpp:216
@@ -1429,8 +1432,9 @@ msgstr[1] "Akt&ualigi ĉion"
 #: browsers/playlistbrowser/PodcastModel.cpp:335
 #: context/applets/lyrics/LyricsApplet.cpp:218
 #: dialogs/FilenameLayoutDialog.cpp:216 dialogs/FilenameLayoutDialog.cpp:550
-#: playlist/PlaylistModel.cpp:814 widgets/SmartPlaylistEditor.cpp:183
-#: widgets/MetaQueryWidget.cpp:211
+#: musicbrainz/MusicBrainzTagsModel.cpp:103
+#: musicbrainz/MusicBrainzTrackListModel.cpp:58 playlist/PlaylistModel.cpp:814
+#: widgets/SmartPlaylistEditor.cpp:183 widgets/MetaQueryWidget.cpp:211
 msgid "Title"
 msgstr "Titolo"
 
@@ -1694,6 +1698,16 @@ msgstr "Envi&cigi la trakon"
 msgid "Edit Track Details"
 msgstr "Redakti trakan informon"
 
+#: context/applets/currenttrack/CurrentTrack.h:47
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:417
+msgid "Unknown Artist"
+msgstr "Nekonata artisto"
+
+#: context/applets/currenttrack/CurrentTrack.h:48
+#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:427
+msgid "Unknown Album"
+msgstr "Nekonata albumo"
+
 #: context/applets/currenttrack/CurrentTrack.cpp:86
 #, fuzzy
 #| msgid "Modify"
@@ -1710,7 +1724,7 @@ msgstr ""
 #: context/applets/labels/LabelsApplet.cpp:171
 #: context/applets/photos/PhotosApplet.cpp:143
 #: context/engines/current/CurrentEngine.cpp:140 mac/GrowlInterface.cpp:39
-#: widgets/Osd.cpp:582 EngineController.cpp:1341
+#: widgets/Osd.cpp:582 EngineController.cpp:1356
 msgid "No track playing"
 msgstr "Neniu trako legata"
 
@@ -1744,16 +1758,6 @@ msgstr "Lasta ludita"
 #| msgid "After Current Track"
 msgid "Current Track Settings"
 msgstr "Post la nuna trako"
-
-#: context/applets/currenttrack/CurrentTrack.h:47
-#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:417
-msgid "Unknown Artist"
-msgstr "Nekonata artisto"
-
-#: context/applets/currenttrack/CurrentTrack.h:48
-#: core-impl/collections/mtpcollection/handler/MtpHandler.cpp:427
-msgid "Unknown Album"
-msgstr "Nekonata albumo"
 
 #: context/applets/labels/LabelGraphicsItem.cpp:43
 #, fuzzy
@@ -3556,6 +3560,17 @@ msgstr ""
 msgid "&Delete Channel and Episodes"
 msgstr "Elŝuti dosieron"
 
+#: core-impl/collections/upnpcollection/UpnpBrowseCollection.cpp:118
+#, fuzzy, kde-format
+#| msgid "Scanning music"
+msgid "Scanning %1"
+msgstr "Esplorante la muzikaron"
+
+#: core-impl/collections/upnpcollection/UpnpBrowseCollection.cpp:184
+#, kde-format
+msgid "UPnP Error: %1"
+msgstr ""
+
 #: core-impl/meta/default/DefaultMetaTypes.h:39
 #: core-impl/meta/default/DefaultMetaTypes.h:79
 #: core-impl/meta/default/DefaultMetaTypes.h:97
@@ -3775,57 +3790,57 @@ msgstr "Elŝutante podkaston \"%1\""
 msgid "Unable to save podcast episode file to %1"
 msgstr "Ne eblis konservi la podkastaĵon al %1"
 
-#: core/meta/support/MetaUtility.cpp:423
+#: core/meta/support/MetaUtility.cpp:426
 msgctxt "The quality of music"
 msgid "Awful"
 msgstr "Aĉa"
 
-#: core/meta/support/MetaUtility.cpp:424
+#: core/meta/support/MetaUtility.cpp:427
 msgctxt "The quality of music"
 msgid "Bad"
 msgstr "Malbona"
 
-#: core/meta/support/MetaUtility.cpp:425
+#: core/meta/support/MetaUtility.cpp:428
 msgctxt "The quality of music"
 msgid "Barely tolerable"
 msgstr "Apenaŭ tolerebla"
 
-#: core/meta/support/MetaUtility.cpp:426
+#: core/meta/support/MetaUtility.cpp:429
 msgctxt "The quality of music"
 msgid "Tolerable"
 msgstr "Tolerebla"
 
-#: core/meta/support/MetaUtility.cpp:427
+#: core/meta/support/MetaUtility.cpp:430
 msgctxt "The quality of music"
 msgid "Okay"
 msgstr "Jesa"
 
-#: core/meta/support/MetaUtility.cpp:428
+#: core/meta/support/MetaUtility.cpp:431
 msgctxt "The quality of music"
 msgid "Good"
 msgstr "Bona"
 
-#: core/meta/support/MetaUtility.cpp:429
+#: core/meta/support/MetaUtility.cpp:432
 msgctxt "The quality of music"
 msgid "Very good"
 msgstr "Bonega"
 
-#: core/meta/support/MetaUtility.cpp:430
+#: core/meta/support/MetaUtility.cpp:433
 msgctxt "The quality of music"
 msgid "Excellent"
 msgstr "Ekstra"
 
-#: core/meta/support/MetaUtility.cpp:431
+#: core/meta/support/MetaUtility.cpp:434
 msgctxt "The quality of music"
 msgid "Amazing"
 msgstr "Orelfrapa"
 
-#: core/meta/support/MetaUtility.cpp:432
+#: core/meta/support/MetaUtility.cpp:435
 msgctxt "The quality of music"
 msgid "Favorite"
 msgstr "Favorata"
 
-#: core/meta/support/MetaUtility.cpp:433
+#: core/meta/support/MetaUtility.cpp:436
 msgctxt "The quality of music"
 msgid "Not rated"
 msgstr "Sennota"
@@ -4997,16 +5012,6 @@ msgstr "Aldoni aparaton..."
 msgid "Folder"
 msgstr "Aldoni komputilon"
 
-#: dialogs/MusicBrainzTagger.cpp:73
-msgid "Click on the first column header to check all tracks"
-msgstr ""
-
-#: dialogs/MusicBrainzTagger.cpp:135
-msgid ""
-"There are tracks that MusicBrainz didn't find. Try to find them with "
-"MusicDNS service?"
-msgstr ""
-
 #: dialogs/OrganizeCollectionDialog.cpp:137
 #: dialogs/OrganizeCollectionDialog.cpp:140
 #, kde-format
@@ -5162,174 +5167,6 @@ msgstr "Simpla serĉado"
 #| msgid "Scripts"
 msgid "Search Scripts"
 msgstr "Skriptoj"
-
-#: dialogs/TagDialog.cpp:591
-msgid "Filename Layout Chooser"
-msgstr ""
-
-#: dialogs/TagDialog.cpp:698
-msgid "Tags"
-msgstr "Etikedoj"
-
-#: dialogs/TagDialog.cpp:700
-msgid "Statistics"
-msgstr "Statistikoj"
-
-#: dialogs/TagDialog.cpp:841
-msgctxt "The value for this tag is not known"
-msgid "Unknown"
-msgstr "Nekonata"
-
-#: dialogs/TagDialog.cpp:897
-#, fuzzy
-#| msgid "Burn All Tracks by This Artist"
-msgid "Tracks by this Artist"
-msgstr "Enskribi ĉiujn trakojn de ĉi tiu artisto"
-
-#: dialogs/TagDialog.cpp:905
-#, fuzzy
-#| msgid "Album Artist"
-msgid "Albums by this Artist"
-msgstr "Albuma artisto"
-
-#: dialogs/TagDialog.cpp:964
-#, fuzzy, kde-format
-#| msgid "Track Information: %1 by %2"
-msgid "Track Details: %1 by %2"
-msgstr "Traka informo: %1 de %2"
-
-#: dialogs/TagDialog.cpp:988 dialogs/TagDialog.cpp:998
-#, kde-format
-msgid "<b>%1</b> by <b>%2</b>"
-msgstr "<b>%1</b> de <b>%2</b>"
-
-#: dialogs/TagDialog.cpp:996
-#, kde-format
-msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
-msgstr "<b>%1</b> de <b>%2</b> en <b>%3</b>"
-
-#: dialogs/TagDialog.cpp:1000
-#, kde-format
-msgid "<b>%1</b>"
-msgstr "<b>%1</b>"
-
-#: dialogs/TagDialog.cpp:1043
-msgid "Length:"
-msgstr "Longo:"
-
-#: dialogs/TagDialog.cpp:1044
-#, fuzzy
-#| msgid "Bitrate:"
-msgid "Bit rate:"
-msgstr "Bitkvanto:"
-
-#: dialogs/TagDialog.cpp:1045
-#, fuzzy
-#| msgid "Samplerate:"
-msgid "Sample rate:"
-msgstr "Specimena kvanto:"
-
-#: dialogs/TagDialog.cpp:1046
-msgid "Size:"
-msgstr "Grandeco:"
-
-#: dialogs/TagDialog.cpp:1047
-msgid "Format:"
-msgstr "Formato:"
-
-#. i18n: file: dialogs/TagDialogBase.ui:640
-#. i18n: ectx: property (text), widget (QLabel, scoreLabel)
-#: dialogs/TagDialog.cpp:1050 rc.cpp:1075
-msgid "Score:"
-msgstr "Poentoj:"
-
-#. i18n: file: dialogs/TagDialogBase.ui:672
-#. i18n: ectx: property (text), widget (QLabel, ratingLabel)
-#: dialogs/TagDialog.cpp:1052 rc.cpp:1078
-msgid "Rating:"
-msgstr "Noto:"
-
-#: dialogs/TagDialog.cpp:1054
-#, fuzzy
-#| msgid "Play Count"
-msgid "Play Count:"
-msgstr "Luda fojo"
-
-#: dialogs/TagDialog.cpp:1057
-msgid "First Played:"
-msgstr "Unue ludita:"
-
-#: dialogs/TagDialog.cpp:1058
-msgctxt "When this track was first played"
-msgid "Never"
-msgstr "Neniam"
-
-#: dialogs/TagDialog.cpp:1059
-msgctxt "a single item (singular)"
-msgid "Last Played:"
-msgstr "Laste ludita:"
-
-#: dialogs/TagDialog.cpp:1060
-msgctxt "When this track was last played"
-msgid "Never"
-msgstr "Neniam"
-
-#: dialogs/TagDialog.cpp:1064
-#, fuzzy
-#| msgid "Collection"
-msgid "Collection:"
-msgstr "Kolekto"
-
-#: dialogs/TagDialog.cpp:1066
-#, fuzzy
-#| msgid "None"
-msgctxt "The collection this track is part of"
-msgid "None"
-msgstr "Neniu"
-
-#: dialogs/TagDialog.cpp:1189
-#, kde-format
-msgctxt "The amount of tracks being edited"
-msgid "1 Track"
-msgid_plural "Information for %1 Tracks"
-msgstr[0] "1 Trako"
-msgstr[1] "%1 Trakoj"
-
-#: dialogs/TagDialog.cpp:1322
-#, kde-format
-msgid "Editing 1 file"
-msgid_plural "Editing %1 files"
-msgstr[0] "Redaktante 1 dosieron"
-msgstr[1] "Redaktante %1 dosierojn"
-
-#: dialogs/TagDialog.cpp:1327
-msgid "Rated Songs:"
-msgstr "Notitaj kantoj:"
-
-#: dialogs/TagDialog.cpp:1329
-msgid "Average Rating:"
-msgstr "Meznombra noto:"
-
-#: dialogs/TagDialog.cpp:1331
-msgid "Scored Songs:"
-msgstr "Poentigitaj kantoj:"
-
-#: dialogs/TagDialog.cpp:1333
-msgid "Average Score:"
-msgstr "Meznombraj poentoj:"
-
-#: dialogs/TagDialog.cpp:1662
-msgid ""
-"Writing to file failed. Please check permissions and available disc space."
-msgstr ""
-
-#. i18n: file: dialogs/MusicBrainzTagger.ui:20
-#. i18n: ectx: property (windowTitle), widget (QWidget, MusicBrainzTagger)
-#: dialogs/TagDialog.cpp:1843 rc.cpp:843
-#, fuzzy
-#| msgid "MusicBrainz Lookup"
-msgid "MusicBrainz Tagger"
-msgstr "Serĉado per MusicBrainz"
 
 #: dialogs/deletedialog.cpp:63
 #, kde-format
@@ -5541,6 +5378,184 @@ msgid ""
 "If selected, Amarok will use Mozilla's Character Set Detector to attempt to "
 "automatically guess the character sets used in ID3 tags."
 msgstr ""
+
+#: dialogs/MusicBrainzTagger.cpp:73
+msgid "Click on the first column header to check all tracks"
+msgstr ""
+
+#: dialogs/MusicBrainzTagger.cpp:142
+msgid ""
+"There are tracks that MusicBrainz didn't find. Try to find them with "
+"MusicDNS service?"
+msgstr ""
+
+#: dialogs/TagDialog.cpp:591
+msgid "Filename Layout Chooser"
+msgstr ""
+
+#: dialogs/TagDialog.cpp:698
+msgid "Tags"
+msgstr "Etikedoj"
+
+#: dialogs/TagDialog.cpp:700
+msgid "Statistics"
+msgstr "Statistikoj"
+
+#: dialogs/TagDialog.cpp:841
+msgctxt "The value for this tag is not known"
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: dialogs/TagDialog.cpp:897
+#, fuzzy
+#| msgid "Burn All Tracks by This Artist"
+msgid "Tracks by this Artist"
+msgstr "Enskribi ĉiujn trakojn de ĉi tiu artisto"
+
+#: dialogs/TagDialog.cpp:905
+#, fuzzy
+#| msgid "Album Artist"
+msgid "Albums by this Artist"
+msgstr "Albuma artisto"
+
+#: dialogs/TagDialog.cpp:964
+#, fuzzy, kde-format
+#| msgid "Track Information: %1 by %2"
+msgid "Track Details: %1 by %2"
+msgstr "Traka informo: %1 de %2"
+
+#: dialogs/TagDialog.cpp:988 dialogs/TagDialog.cpp:998
+#, kde-format
+msgid "<b>%1</b> by <b>%2</b>"
+msgstr "<b>%1</b> de <b>%2</b>"
+
+#: dialogs/TagDialog.cpp:996
+#, kde-format
+msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
+msgstr "<b>%1</b> de <b>%2</b> en <b>%3</b>"
+
+#: dialogs/TagDialog.cpp:1000
+#, kde-format
+msgid "<b>%1</b>"
+msgstr "<b>%1</b>"
+
+#: dialogs/TagDialog.cpp:1043
+msgid "Length:"
+msgstr "Longo:"
+
+#: dialogs/TagDialog.cpp:1044
+#, fuzzy
+#| msgid "Bitrate:"
+msgid "Bit rate:"
+msgstr "Bitkvanto:"
+
+#: dialogs/TagDialog.cpp:1045
+#, fuzzy
+#| msgid "Samplerate:"
+msgid "Sample rate:"
+msgstr "Specimena kvanto:"
+
+#: dialogs/TagDialog.cpp:1046
+msgid "Size:"
+msgstr "Grandeco:"
+
+#: dialogs/TagDialog.cpp:1047
+msgid "Format:"
+msgstr "Formato:"
+
+#. i18n: file: dialogs/TagDialogBase.ui:640
+#. i18n: ectx: property (text), widget (QLabel, scoreLabel)
+#: dialogs/TagDialog.cpp:1050 rc.cpp:1075
+msgid "Score:"
+msgstr "Poentoj:"
+
+#. i18n: file: dialogs/TagDialogBase.ui:672
+#. i18n: ectx: property (text), widget (QLabel, ratingLabel)
+#: dialogs/TagDialog.cpp:1052 rc.cpp:1078
+msgid "Rating:"
+msgstr "Noto:"
+
+#: dialogs/TagDialog.cpp:1054
+#, fuzzy
+#| msgid "Play Count"
+msgid "Play Count:"
+msgstr "Luda fojo"
+
+#: dialogs/TagDialog.cpp:1057
+msgid "First Played:"
+msgstr "Unue ludita:"
+
+#: dialogs/TagDialog.cpp:1058
+msgctxt "When this track was first played"
+msgid "Never"
+msgstr "Neniam"
+
+#: dialogs/TagDialog.cpp:1059
+msgctxt "a single item (singular)"
+msgid "Last Played:"
+msgstr "Laste ludita:"
+
+#: dialogs/TagDialog.cpp:1060
+msgctxt "When this track was last played"
+msgid "Never"
+msgstr "Neniam"
+
+#: dialogs/TagDialog.cpp:1064
+#, fuzzy
+#| msgid "Collection"
+msgid "Collection:"
+msgstr "Kolekto"
+
+#: dialogs/TagDialog.cpp:1066
+#, fuzzy
+#| msgid "None"
+msgctxt "The collection this track is part of"
+msgid "None"
+msgstr "Neniu"
+
+#: dialogs/TagDialog.cpp:1189
+#, kde-format
+msgctxt "The amount of tracks being edited"
+msgid "1 Track"
+msgid_plural "Information for %1 Tracks"
+msgstr[0] "1 Trako"
+msgstr[1] "%1 Trakoj"
+
+#: dialogs/TagDialog.cpp:1322
+#, kde-format
+msgid "Editing 1 file"
+msgid_plural "Editing %1 files"
+msgstr[0] "Redaktante 1 dosieron"
+msgstr[1] "Redaktante %1 dosierojn"
+
+#: dialogs/TagDialog.cpp:1327
+msgid "Rated Songs:"
+msgstr "Notitaj kantoj:"
+
+#: dialogs/TagDialog.cpp:1329
+msgid "Average Rating:"
+msgstr "Meznombra noto:"
+
+#: dialogs/TagDialog.cpp:1331
+msgid "Scored Songs:"
+msgstr "Poentigitaj kantoj:"
+
+#: dialogs/TagDialog.cpp:1333
+msgid "Average Score:"
+msgstr "Meznombraj poentoj:"
+
+#: dialogs/TagDialog.cpp:1662
+msgid ""
+"Writing to file failed. Please check permissions and available disc space."
+msgstr ""
+
+#. i18n: file: dialogs/MusicBrainzTagger.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, MusicBrainzTagger)
+#: dialogs/TagDialog.cpp:1842 rc.cpp:843
+#, fuzzy
+#| msgid "MusicBrainz Lookup"
+msgid "MusicBrainz Tagger"
+msgstr "Serĉado per MusicBrainz"
 
 #: dynamic/CustomBiasEntryWidget.cpp:58
 msgid "Match Type:"
@@ -5783,586 +5798,6 @@ msgstr "Esplorilo de kolekto por Amarok"
 #: mac/GrowlInterface.cpp:60 widgets/Osd.cpp:606
 msgid "No information available for this track"
 msgstr "Neniu informo havebla pri tiu trako"
-
-#: main.cpp:35
-msgid "Alejandro Wainzinger"
-msgstr "Alejandro Wainzinger"
-
-#: main.cpp:36
-msgid "Developer (xevix)"
-msgstr ""
-
-#: main.cpp:37
-msgid "Bart 'Where are my toothpicks' Cerneels"
-msgstr ""
-
-#: main.cpp:38
-msgid "Developer (Stecchino)"
-msgstr ""
-
-#: main.cpp:39
-msgid "Dan 'Hey, it compiled...' Meltzer"
-msgstr ""
-
-#: main.cpp:40
-msgid "Developer (hydrogen)"
-msgstr ""
-
-#: main.cpp:41
-msgid "Ian 'The Beard' Monroe"
-msgstr "Ian 'La barbulo' Monroe"
-
-#: main.cpp:42
-msgid "Developer (eean)"
-msgstr ""
-
-#: main.cpp:43
-#, fuzzy
-#| msgid "Jeff 'IROCKSOHARD' Mitchell"
-msgid "Jeff 'IROKSOHARD' Mitchell"
-msgstr "Jeff 'IROCKSOHARD' Mitchell"
-
-#: main.cpp:44
-msgid "Developer (jefferai)"
-msgstr ""
-
-#: main.cpp:46
-msgid "Developer (lfranchi)"
-msgstr ""
-
-#: main.cpp:47
-msgid "Lydia 'is wrong(TM)' Pintscher"
-msgstr ""
-
-#: main.cpp:48
-msgid "Release Vixen (Nightrose)"
-msgstr ""
-
-#: main.cpp:49
-msgid "Mark 'It's good, but it's not irssi' Kretschmann"
-msgstr "Mark 'Estas bone, sed ne estas irssi' Kretschmann"
-
-#: main.cpp:50
-msgid "Project founder (markey)"
-msgstr ""
-
-#: main.cpp:51
-msgid "Maximilian Kossick"
-msgstr "Maximilian Kossick"
-
-#: main.cpp:52
-msgid "Developer (maxx_k)"
-msgstr ""
-
-#: main.cpp:53
-msgid "Nikolaj Hald 'Also very hot' Nielsen"
-msgstr "Nikolaj Hald 'Ankaŭ tre varma' Nielsen"
-
-#: main.cpp:54
-msgid "Developer (nhn)"
-msgstr ""
-
-#: main.cpp:55
-msgid "Seb 'Surfin' down under' Ruiz"
-msgstr ""
-
-#: main.cpp:56
-msgid "Developer (sebr)"
-msgstr ""
-
-#: main.cpp:57
-msgid "Téo Mrnjavac"
-msgstr "Téo Mrnjavac"
-
-#: main.cpp:58
-msgid "Developer (Teo`)"
-msgstr ""
-
-#: main.cpp:74
-msgid "Alex Merry"
-msgstr "Alex Merry"
-
-#: main.cpp:74
-msgid "Developer, Replay Gain support"
-msgstr ""
-
-#: main.cpp:76
-msgid "Casey Link"
-msgstr "Casey Link"
-
-#: main.cpp:76
-msgid "MP3tunes integration"
-msgstr ""
-
-#: main.cpp:78
-msgid "Casper van Donderen"
-msgstr "Casper van Donderen"
-
-#: main.cpp:78
-msgid "Windows porting"
-msgstr ""
-
-#: main.cpp:80
-msgid "Christie Harris"
-msgstr "Christie Harris"
-
-#: main.cpp:80
-msgid "Rokymoter (dangle)"
-msgstr ""
-
-#: main.cpp:82
-msgid "Dan Leinir Turthra Jensen"
-msgstr "Dan Leinir Turthra Jensen"
-
-#: main.cpp:82
-msgid "Usability"
-msgstr "Afabligo"
-
-#: main.cpp:84
-msgid "Daniel Caleb Jones"
-msgstr "Daniel Caleb Jones"
-
-#: main.cpp:84
-#, fuzzy
-#| msgid "&Save Playlist As..."
-msgid "Biased playlists"
-msgstr "Kon&servi la ludliston kiel..."
-
-#: main.cpp:86
-msgid "Daniel Dewald"
-msgstr "Daniel Dewald"
-
-#: main.cpp:86
-msgid "Tag Guesser, Labels"
-msgstr ""
-
-#: main.cpp:88
-msgid "Daniel Winter"
-msgstr "Daniel Winter"
-
-#: main.cpp:88
-#, fuzzy
-#| msgid "&Copy Files to Collection..."
-msgid "Nepomuk integration"
-msgstr "&Kopii dosierojn al la kolekto..."
-
-#: main.cpp:90
-msgid "Edward \"Hades\" Toroshchin"
-msgstr "Edward \"Hades\" Toroshchin"
-
-#: main.cpp:92
-msgid "Frank Meerkötter"
-msgstr ""
-
-#: main.cpp:92 main.cpp:111
-#, fuzzy
-#| msgctxt "The location on disc of this track"
-#| msgid "Directory"
-msgid "Podcast improvements"
-msgstr "Dosierujo"
-
-#: main.cpp:95
-msgid "Greg Meyer"
-msgstr "Greg Meyer"
-
-#: main.cpp:95
-msgid "Live CD, Bug squashing (oggb4mp3)"
-msgstr ""
-
-#: main.cpp:97
-msgid "Harald Sitter"
-msgstr "Harald Sitter"
-
-#: main.cpp:97
-msgid "Rokymoter (apachelogger)"
-msgstr ""
-
-#: main.cpp:99
-msgid "John Atkinson"
-msgstr "John Atkinson"
-
-#: main.cpp:101
-msgid "Kenneth Wesley Wimer II"
-msgstr "Kenneth Wesley Wimer II"
-
-#: main.cpp:101
-#, fuzzy
-#| msgid "Seconds"
-msgid "Icons"
-msgstr "Sekundoj"
-
-#: main.cpp:103
-msgid "Kevin Funk"
-msgstr "Kevin Funk"
-
-#: main.cpp:103
-msgid "Developer, Website theme (KRF)"
-msgstr ""
-
-#: main.cpp:105
-msgid "Kuba Serafinowski"
-msgstr "Kuba Serafinowski"
-
-#: main.cpp:105
-msgid "Rokymoter"
-msgstr ""
-
-#: main.cpp:107
-msgid "Lee Olson"
-msgstr "Lee Olson"
-
-#: main.cpp:107 main.cpp:119
-#, fuzzy
-#| msgid "Update Artwork"
-msgid "Artwork"
-msgstr "Ĝisdatigi la artaĵon"
-
-#: main.cpp:109
-msgid "Ljubomir Simin"
-msgstr "Ljubomir Simin"
-
-#: main.cpp:109
-msgid "Rokymoter (ljubomir)"
-msgstr ""
-
-#: main.cpp:111
-msgid "Mathias Panzenböck"
-msgstr ""
-
-#: main.cpp:113
-msgid "Max Howell"
-msgstr "Max Howell"
-
-#: main.cpp:113
-msgid "Developer, Vision"
-msgstr ""
-
-#: main.cpp:115
-msgid "Mikko Caldara"
-msgstr "Mikko Caldara"
-
-#: main.cpp:115
-msgid "Bug triaging and sanitizing"
-msgstr ""
-
-#: main.cpp:117
-msgid "Myriam Schweingruber"
-msgstr "Myriam Schweingruber"
-
-#: main.cpp:117
-msgid "Rokymoter, bug squashing (Mamarok)"
-msgstr ""
-
-#: main.cpp:119
-msgid "Nuno Pinheiro"
-msgstr "Nuno Pinheiro"
-
-#: main.cpp:121
-msgid "Olivier Bédard"
-msgstr "Olivier Bédard"
-
-#: main.cpp:121
-msgid "Website hosting"
-msgstr ""
-
-#: main.cpp:123
-msgid "Pasi Lalinaho"
-msgstr "Pasi Lalinaho"
-
-#: main.cpp:123
-msgid "Rokymoter (emunkki)"
-msgstr ""
-
-#: main.cpp:125
-msgid "Peter Zhou Lei"
-msgstr "Peter Zhou Lei"
-
-#: main.cpp:125
-#, fuzzy
-#| msgid "Scripted Services"
-msgid "Scripting interface"
-msgstr "Skriptaj servoj"
-
-#: main.cpp:127
-msgid "Rick W. Chen"
-msgstr ""
-
-#: main.cpp:127
-#, fuzzy
-#| msgid "Clear filter"
-msgid "Cover fetcher"
-msgstr "Forviŝi la filtrilon"
-
-#: main.cpp:129
-msgid "Scott Wheeler"
-msgstr "Scott Wheeler"
-
-#: main.cpp:129
-msgid "TagLib & ktrm code"
-msgstr ""
-
-#: main.cpp:131
-msgid "Shane King"
-msgstr "Shane King"
-
-#: main.cpp:131
-msgid "Patches & Windows porting (shakes)"
-msgstr ""
-
-#: main.cpp:133
-msgid "Simon Esneault"
-msgstr "Simon Esneault"
-
-#: main.cpp:133
-msgid "Photos & Videos applets, Context View"
-msgstr ""
-
-#: main.cpp:135
-msgid "Soren Harward"
-msgstr "Soren Harward"
-
-#: main.cpp:135
-msgid "Developer, Automated Playlist Generator"
-msgstr ""
-
-#: main.cpp:137
-msgid "Sven Krohlas"
-msgstr "Sven Krohlas"
-
-#: main.cpp:137
-msgid "Rokymoter, Developer (sven423)"
-msgstr ""
-
-#: main.cpp:139
-msgid "Thomas Lübking"
-msgstr "Thomas Lübking"
-
-#: main.cpp:141
-msgid "Valentin Rouet"
-msgstr "Valentin Rouet"
-
-#: main.cpp:143
-msgid "Wade Olson"
-msgstr "Wade Olson"
-
-#: main.cpp:143
-msgid "Splash screen artist"
-msgstr ""
-
-#: main.cpp:145
-msgid "William Viana Soares"
-msgstr "William Viana Soares"
-
-#: main.cpp:145
-#, fuzzy
-#| msgid "&Connect"
-msgid "Context view"
-msgstr "&Konekti"
-
-#: main.cpp:147
-msgid "Former contributors"
-msgstr ""
-
-#: main.cpp:147
-msgid "People listed below have contributed to Amarok in the past. Thank you!"
-msgstr ""
-
-#: main.cpp:149
-msgid "Adam Pigg"
-msgstr "Adam Pigg"
-
-#: main.cpp:149
-msgid "Analyzers, patches, shoutcast"
-msgstr ""
-
-#: main.cpp:151
-msgid "Adeodato Simó"
-msgstr "Adeodato Simó"
-
-#: main.cpp:151 main.cpp:159
-#, fuzzy
-#| msgctxt "Fetch new information from the website"
-#| msgid "Update"
-msgid "Patches"
-msgstr "Aktualigi"
-
-#: main.cpp:153
-msgid "Alexandre Oliveira"
-msgstr "Alexandre Oliveira"
-
-#: main.cpp:155
-msgid "Andreas Mair"
-msgstr "Andreas Mair"
-
-#: main.cpp:155
-msgid "MySQL support"
-msgstr ""
-
-#: main.cpp:157
-msgid "Andrew de Quincey"
-msgstr "Andrew de Quincey"
-
-#: main.cpp:157
-msgid "Postgresql support"
-msgstr ""
-
-#: main.cpp:159
-msgid "Andrew Turner"
-msgstr "Andrew Turner"
-
-#: main.cpp:161
-msgid "Andy Kelk"
-msgstr "Andy Kelk"
-
-#: main.cpp:161
-msgid "MTP and Rio Karma media devices, patches"
-msgstr ""
-
-#: main.cpp:163
-msgid "Christian Muehlhaeuser"
-msgstr "Christian Muehlhaeuser"
-
-#: main.cpp:165
-msgid "Derek Nelson"
-msgstr "Derek Nelson"
-
-#: main.cpp:165
-msgid "Graphics, splash-screen"
-msgstr ""
-
-#: main.cpp:167
-msgid "Enrico Ros"
-msgstr "Enrico Ros"
-
-#: main.cpp:167
-msgid "Analyzers, Context Browser and systray eye-candy"
-msgstr ""
-
-#: main.cpp:169
-msgid "Frederik Holljen"
-msgstr "Frederik Holljen"
-
-#: main.cpp:171
-msgid "Gábor Lehel"
-msgstr "Gábor Lehel"
-
-#: main.cpp:173
-msgid "Gérard Dürrmeyer"
-msgstr "Gérard Dürrmeyer"
-
-#: main.cpp:173
-msgid "Icons and image work"
-msgstr ""
-
-#: main.cpp:175
-msgid "Giovanni Venturi"
-msgstr "Giovanni Venturi"
-
-#: main.cpp:175
-#, fuzzy
-#| msgid "List of folders in the Collection"
-msgid "Dialog to filter the collection titles"
-msgstr "Listo de dosierujoj en la kolekto"
-
-#: main.cpp:177
-msgid "Jarkko Lehti"
-msgstr "Jarkko Lehti"
-
-#: main.cpp:177
-msgid "Tester, IRC channel operator, whipping"
-msgstr ""
-
-#: main.cpp:179
-msgid "Jocke Andersson"
-msgstr "Jocke Andersson"
-
-#: main.cpp:179
-msgid "Rokymoter, bug fixer (Firetech)"
-msgstr ""
-
-#: main.cpp:181
-msgid "Marco Gulino"
-msgstr "Marco Gulino"
-
-#: main.cpp:181
-msgid "Konqueror Sidebar, some DCOP methods"
-msgstr ""
-
-#: main.cpp:183
-msgid "Martin Aumueller"
-msgstr "Martin Aumueller"
-
-#: main.cpp:185
-msgid "Melchior Franz"
-msgstr "Melchior Franz"
-
-#: main.cpp:185
-msgid "FHT routine, bugfixes"
-msgstr ""
-
-#: main.cpp:187
-msgid "Michael Pyne"
-msgstr "Michael Pyne"
-
-#: main.cpp:187
-msgid "K3b export code"
-msgstr ""
-
-#: main.cpp:189
-msgid "Mike Diehl"
-msgstr "Mike Diehl"
-
-#: main.cpp:191
-msgid "Paul Cifarelli"
-msgstr "Paul Cifarelli"
-
-#: main.cpp:193
-msgid "Peter C. Ndikuwera"
-msgstr "Peter C. Ndikuwera"
-
-#: main.cpp:193
-msgid "Bugfixes, PostgreSQL support"
-msgstr ""
-
-#: main.cpp:195
-msgid "Pierpaolo Panfilo"
-msgstr "Pierpaolo Panfilo"
-
-#: main.cpp:197
-msgid "Reigo Reinmets"
-msgstr "Reigo Reinmets"
-
-#: main.cpp:197
-msgid "Wikipedia support, patches"
-msgstr ""
-
-#: main.cpp:199
-msgid "Roman Becker"
-msgstr "Roman Becker"
-
-#: main.cpp:199
-msgid "Former Amarok logo, former splash screen, former icons"
-msgstr ""
-
-#: main.cpp:201
-msgid "Sami Nieminen"
-msgstr "Sami Nieminen"
-
-#: main.cpp:201
-msgid "Audioscrobbler support"
-msgstr ""
-
-#: main.cpp:203
-msgid "Stanislav Karchebny"
-msgstr "Stanislav Karchebny"
-
-#: main.cpp:205
-msgid "Stefan Bogner"
-msgstr "Stefan Bogner"
-
-#: main.cpp:205
-msgid "Loads of stuff"
-msgstr ""
 
 #: playlist/PlaylistSortWidget.cpp:43
 msgid "Clear the playlist sorting configuration."
@@ -7221,7 +6656,7 @@ msgstr "Humoro"
 msgid "File Size"
 msgstr "Dosiera grandeco"
 
-#: playlist/PlaylistActions.cpp:407
+#: playlist/PlaylistActions.cpp:394
 msgid "Too many errors encountered in playlist. Playback stopped."
 msgstr ""
 
@@ -9498,522 +8933,585 @@ msgstr "Muta"
 msgid "Volume: <i>Muted</i>"
 msgstr "Laŭteco: 100%"
 
-#: MainWindow.cpp:282
-#, fuzzy
-#| msgid "Shared Music"
-msgid "Local Music"
-msgstr "Komunigita muziko"
+#: main.cpp:35
+msgid "Alejandro Wainzinger"
+msgstr "Alejandro Wainzinger"
 
-#: MainWindow.cpp:284
-msgid "Local sources of content"
+#: main.cpp:36
+msgid "Developer (xevix)"
 msgstr ""
 
-#: MainWindow.cpp:292
-msgid "Internet"
-msgstr "Interreto"
-
-#: MainWindow.cpp:294
-msgid "Online sources of content"
+#: main.cpp:37
+msgid "Bart 'Where are my toothpicks' Cerneels"
 msgstr ""
 
-#: MainWindow.cpp:300
-msgid "Playlists"
-msgstr "Ludlistoj"
-
-#: MainWindow.cpp:302
-#, fuzzy
-#| msgid "Various Artists"
-msgid "Various types of playlists"
-msgstr "Diversaj artistoj"
-
-#: MainWindow.cpp:311
-msgid "Browse local hard drive for content"
+#: main.cpp:38
+msgid "Developer (Stecchino)"
 msgstr ""
 
-#: MainWindow.cpp:380
-#, fuzzy
-#| msgctxt "switch view"
-#| msgid "&View"
-msgctxt "@item:inmenu"
-msgid "&View"
-msgstr "&Vidi"
-
-#: MainWindow.cpp:383
-#, fuzzy
-#| msgid "Playcount"
-msgid "Lock Layout"
-msgstr "Ludfojo"
-
-#: MainWindow.cpp:502
-msgid ""
-"<qt>Closing the main window will keep Amarok running in the System Tray. Use "
-"<B>Quit</B> from the menu, or the Amarok tray icon to exit the application.</"
-"qt>"
+#: main.cpp:39
+msgid "Dan 'Hey, it compiled...' Meltzer"
 msgstr ""
 
-#: MainWindow.cpp:504
-msgid "Docking in System Tray"
-msgstr "Fiksigu en sistemfako"
-
-#: MainWindow.cpp:554
-msgid "Use relative path for &saving"
+#: main.cpp:40
+msgid "Developer (hydrogen)"
 msgstr ""
 
-#: MainWindow.cpp:620
-msgid "Play Media (Files or URLs)"
-msgstr "Ludi medion (dosierojn aŭ URLojn)"
+#: main.cpp:41
+msgid "Ian 'The Beard' Monroe"
+msgstr "Ian 'La barbulo' Monroe"
 
-#: MainWindow.cpp:620
-msgid "Add Media (Files or URLs)"
-msgstr "Aldoni medion (dosierojn aŭ URLojn)"
+#: main.cpp:42
+msgid "Developer (eean)"
+msgstr ""
 
-#: MainWindow.cpp:638
-msgid "Add Stream"
-msgstr "Aldoni fluon"
-
-#: MainWindow.cpp:638
-msgid "Enter Stream URL:"
-msgstr "Enmetu la fluan URLon:"
-
-#: MainWindow.cpp:780
-msgid "&Add Media..."
-msgstr "&Aldoni medion..."
-
-#: MainWindow.cpp:785
+#: main.cpp:43
 #, fuzzy
-#| msgid "Smart Playlist"
-msgctxt "clear playlist"
-msgid "&Clear Playlist"
-msgstr "Lerta ludlisto"
+#| msgid "Jeff 'IROCKSOHARD' Mitchell"
+msgid "Jeff 'IROKSOHARD' Mitchell"
+msgstr "Jeff 'IROCKSOHARD' Mitchell"
 
-#: MainWindow.cpp:789
-#, fuzzy
-#| msgid "Remove selected"
-msgctxt "Remove duplicate and dead (unplayable) tracks from the playlist"
-msgid "Re&move Duplicates"
-msgstr "Forigi la elektitan"
+#: main.cpp:44
+msgid "Developer (jefferai)"
+msgstr ""
 
-#: MainWindow.cpp:796
-msgid "&Add Stream..."
-msgstr "&Aldoni fluon..."
+#: main.cpp:46
+msgid "Developer (lfranchi)"
+msgstr ""
 
-#: MainWindow.cpp:800
+#: main.cpp:47
+msgid "Lydia 'is wrong(TM)' Pintscher"
+msgstr ""
+
+#: main.cpp:48
+msgid "Release Vixen (Nightrose)"
+msgstr ""
+
+#: main.cpp:49
+msgid "Mark 'It's good, but it's not irssi' Kretschmann"
+msgstr "Mark 'Estas bone, sed ne estas irssi' Kretschmann"
+
+#: main.cpp:50
+msgid "Project founder (markey)"
+msgstr ""
+
+#: main.cpp:51
+msgid "Maximilian Kossick"
+msgstr "Maximilian Kossick"
+
+#: main.cpp:52
+msgid "Developer (maxx_k)"
+msgstr ""
+
+#: main.cpp:53
+msgid "Nikolaj Hald 'Also very hot' Nielsen"
+msgstr "Nikolaj Hald 'Ankaŭ tre varma' Nielsen"
+
+#: main.cpp:54
+msgid "Developer (nhn)"
+msgstr ""
+
+#: main.cpp:55
+msgid "Seb 'Surfin' down under' Ruiz"
+msgstr ""
+
+#: main.cpp:56
+msgid "Developer (sebr)"
+msgstr ""
+
+#: main.cpp:57
+msgid "Téo Mrnjavac"
+msgstr "Téo Mrnjavac"
+
+#: main.cpp:58
+msgid "Developer (Teo`)"
+msgstr ""
+
+#: main.cpp:74
+msgid "Alex Merry"
+msgstr "Alex Merry"
+
+#: main.cpp:74
+msgid "Developer, Replay Gain support"
+msgstr ""
+
+#: main.cpp:76
+msgid "Casey Link"
+msgstr "Casey Link"
+
+#: main.cpp:76
+msgid "MP3tunes integration"
+msgstr ""
+
+#: main.cpp:78
+msgid "Casper van Donderen"
+msgstr "Casper van Donderen"
+
+#: main.cpp:78
+msgid "Windows porting"
+msgstr ""
+
+#: main.cpp:80
+msgid "Christie Harris"
+msgstr "Christie Harris"
+
+#: main.cpp:80
+msgid "Rokymoter (dangle)"
+msgstr ""
+
+#: main.cpp:82
+msgid "Dan Leinir Turthra Jensen"
+msgstr "Dan Leinir Turthra Jensen"
+
+#: main.cpp:82
+msgid "Usability"
+msgstr "Afabligo"
+
+#: main.cpp:84
+msgid "Daniel Caleb Jones"
+msgstr "Daniel Caleb Jones"
+
+#: main.cpp:84
 #, fuzzy
 #| msgid "&Save Playlist As..."
-msgid "&Export Playlist As..."
+msgid "Biased playlists"
 msgstr "Kon&servi la ludliston kiel..."
 
-#: MainWindow.cpp:812
-msgid "Equalizer"
-msgstr "Egalizilo"
+#: main.cpp:86
+msgid "Daniel Dewald"
+msgstr "Daniel Dewald"
 
-#: MainWindow.cpp:820
+#: main.cpp:86
+msgid "Tag Guesser, Labels"
+msgstr ""
+
+#: main.cpp:88
+msgid "Daniel Winter"
+msgstr "Daniel Winter"
+
+#: main.cpp:88
 #, fuzzy
-#| msgid "Various Artists"
-msgid "Bookmark Context Applets"
-msgstr "Diversaj artistoj"
+#| msgid "&Copy Files to Collection..."
+msgid "Nepomuk integration"
+msgstr "&Kopii dosierojn al la kolekto..."
 
-#: MainWindow.cpp:828
-msgid "Play Media..."
-msgstr "Ludi medion..."
+#: main.cpp:90
+msgid "Edward \"Hades\" Toroshchin"
+msgstr "Edward \"Hades\" Toroshchin"
 
-#: MainWindow.cpp:837
-msgid "&Seek Forward"
+#: main.cpp:92
+msgid "Frank Meerkötter"
 msgstr ""
 
-#: MainWindow.cpp:843
-msgid "&Seek Backward"
-msgstr ""
-
-#: MainWindow.cpp:850
-msgid "Update Collection"
-msgstr "Aktualigi la kolekton"
-
-#: MainWindow.cpp:864
+#: main.cpp:92 main.cpp:111
 #, fuzzy
-#| msgid "Rate Current Track: 1"
-msgid "Restart current track"
-msgstr "Noti la aktualan trakon: 1"
+#| msgctxt "The location on disc of this track"
+#| msgid "Directory"
+msgid "Podcast improvements"
+msgstr "Dosierujo"
 
-#: MainWindow.cpp:870
+#: main.cpp:95
+msgid "Greg Meyer"
+msgstr "Greg Meyer"
+
+#: main.cpp:95
+msgid "Live CD, Bug squashing (oggb4mp3)"
+msgstr ""
+
+#: main.cpp:97
+msgid "Harald Sitter"
+msgstr "Harald Sitter"
+
+#: main.cpp:97
+msgid "Rokymoter (apachelogger)"
+msgstr ""
+
+#: main.cpp:99
+msgid "John Atkinson"
+msgstr "John Atkinson"
+
+#: main.cpp:101
+msgid "Kenneth Wesley Wimer II"
+msgstr "Kenneth Wesley Wimer II"
+
+#: main.cpp:101
 #, fuzzy
-#| msgid "Repeat Playlist"
-msgid "Repopulate Playlist"
-msgstr "Ripeti la ludliston"
+#| msgid "Seconds"
+msgid "Icons"
+msgstr "Sekundoj"
 
-#: MainWindow.cpp:876
+#: main.cpp:103
+msgid "Kevin Funk"
+msgstr "Kevin Funk"
+
+#: main.cpp:103
+msgid "Developer, Website theme (KRF)"
+msgstr ""
+
+#: main.cpp:105
+msgid "Kuba Serafinowski"
+msgstr "Kuba Serafinowski"
+
+#: main.cpp:105
+msgid "Rokymoter"
+msgstr ""
+
+#: main.cpp:107
+msgid "Lee Olson"
+msgstr "Lee Olson"
+
+#: main.cpp:107 main.cpp:119
 #, fuzzy
-#| msgid "Default Dynamic Playlist"
-msgid "Disable Dynamic Playlist"
-msgstr "Defaŭlta dinamika ludlisto"
+#| msgid "Update Artwork"
+msgid "Artwork"
+msgstr "Ĝisdatigi la artaĵon"
 
-#: MainWindow.cpp:885
-msgid "Increase Volume"
-msgstr "Pliigi la laŭtecon"
+#: main.cpp:109
+msgid "Ljubomir Simin"
+msgstr "Ljubomir Simin"
 
-#: MainWindow.cpp:891
-msgid "Decrease Volume"
-msgstr "Malpliigi la laŭtecon"
-
-#: MainWindow.cpp:897
-msgid "Toggle Main Window"
+#: main.cpp:109
+msgid "Rokymoter (ljubomir)"
 msgstr ""
 
-#: MainWindow.cpp:902
+#: main.cpp:111
+msgid "Mathias Panzenböck"
+msgstr ""
+
+#: main.cpp:113
+msgid "Max Howell"
+msgstr "Max Howell"
+
+#: main.cpp:113
+msgid "Developer, Vision"
+msgstr ""
+
+#: main.cpp:115
+msgid "Mikko Caldara"
+msgstr "Mikko Caldara"
+
+#: main.cpp:115
+msgid "Bug triaging and sanitizing"
+msgstr ""
+
+#: main.cpp:117
+msgid "Myriam Schweingruber"
+msgstr "Myriam Schweingruber"
+
+#: main.cpp:117
+msgid "Rokymoter, bug squashing (Mamarok)"
+msgstr ""
+
+#: main.cpp:119
+msgid "Nuno Pinheiro"
+msgstr "Nuno Pinheiro"
+
+#: main.cpp:121
+msgid "Olivier Bédard"
+msgstr "Olivier Bédard"
+
+#: main.cpp:121
+msgid "Website hosting"
+msgstr ""
+
+#: main.cpp:123
+msgid "Pasi Lalinaho"
+msgstr "Pasi Lalinaho"
+
+#: main.cpp:123
+msgid "Rokymoter (emunkki)"
+msgstr ""
+
+#: main.cpp:125
+msgid "Peter Zhou Lei"
+msgstr "Peter Zhou Lei"
+
+#: main.cpp:125
 #, fuzzy
-#| msgid "Toggle Focus"
-msgid "Toggle Full Screen"
-msgstr "Komuti la fokuson"
+#| msgid "Scripted Services"
+msgid "Scripting interface"
+msgstr "Skriptaj servoj"
 
-#: MainWindow.cpp:907
-msgid "Jump to"
+#: main.cpp:127
+msgid "Rick W. Chen"
 msgstr ""
 
-#: MainWindow.cpp:912
+#: main.cpp:127
 #, fuzzy
-#| msgid "Skip this track"
-msgid "Show active track"
-msgstr "Pasigi tiun trakon"
+#| msgid "Clear filter"
+msgid "Cover fetcher"
+msgstr "Forviŝi la filtrilon"
 
-#: MainWindow.cpp:916
+#: main.cpp:129
+msgid "Scott Wheeler"
+msgstr "Scott Wheeler"
+
+#: main.cpp:129
+msgid "TagLib & ktrm code"
+msgstr ""
+
+#: main.cpp:131
+msgid "Shane King"
+msgstr "Shane King"
+
+#: main.cpp:131
+msgid "Patches & Windows porting (shakes)"
+msgstr ""
+
+#: main.cpp:133
+msgid "Simon Esneault"
+msgstr "Simon Esneault"
+
+#: main.cpp:133
+msgid "Photos & Videos applets, Context View"
+msgstr ""
+
+#: main.cpp:135
+msgid "Soren Harward"
+msgstr "Soren Harward"
+
+#: main.cpp:135
+msgid "Developer, Automated Playlist Generator"
+msgstr ""
+
+#: main.cpp:137
+msgid "Sven Krohlas"
+msgstr "Sven Krohlas"
+
+#: main.cpp:137
+msgid "Rokymoter, Developer (sven423)"
+msgstr ""
+
+#: main.cpp:139
+msgid "Thomas Lübking"
+msgstr "Thomas Lübking"
+
+#: main.cpp:141
+msgid "Valentin Rouet"
+msgstr "Valentin Rouet"
+
+#: main.cpp:143
+msgid "Wade Olson"
+msgstr "Wade Olson"
+
+#: main.cpp:143
+msgid "Splash screen artist"
+msgstr ""
+
+#: main.cpp:145
+msgid "William Viana Soares"
+msgstr "William Viana Soares"
+
+#: main.cpp:145
 #, fuzzy
-#| msgid "Location:"
-msgid "Show Notification Popup"
-msgstr "Loko:"
+#| msgid "&Connect"
+msgid "Context view"
+msgstr "&Konekti"
 
-#: MainWindow.cpp:921
-msgid "Mute Volume"
-msgstr "Mutigi la laŭtecon"
+#: main.cpp:147
+msgid "Former contributors"
+msgstr ""
 
-#: MainWindow.cpp:926
+#: main.cpp:147
+msgid "People listed below have contributed to Amarok in the past. Thank you!"
+msgstr ""
+
+#: main.cpp:149
+msgid "Adam Pigg"
+msgstr "Adam Pigg"
+
+#: main.cpp:149
+msgid "Analyzers, patches, shoutcast"
+msgstr ""
+
+#: main.cpp:151
+msgid "Adeodato Simó"
+msgstr "Adeodato Simó"
+
+#: main.cpp:151 main.cpp:159
 #, fuzzy
-#| msgid "After Current Track"
-msgid "Last.fm: Love Current Track"
-msgstr "Post la nuna trako"
+#| msgctxt "Fetch new information from the website"
+#| msgid "Update"
+msgid "Patches"
+msgstr "Aktualigi"
 
-#: MainWindow.cpp:931
+#: main.cpp:153
+msgid "Alexandre Oliveira"
+msgstr "Alexandre Oliveira"
+
+#: main.cpp:155
+msgid "Andreas Mair"
+msgstr "Andreas Mair"
+
+#: main.cpp:155
+msgid "MySQL support"
+msgstr ""
+
+#: main.cpp:157
+msgid "Andrew de Quincey"
+msgstr "Andrew de Quincey"
+
+#: main.cpp:157
+msgid "Postgresql support"
+msgstr ""
+
+#: main.cpp:159
+msgid "Andrew Turner"
+msgstr "Andrew Turner"
+
+#: main.cpp:161
+msgid "Andy Kelk"
+msgstr "Andy Kelk"
+
+#: main.cpp:161
+msgid "MTP and Rio Karma media devices, patches"
+msgstr ""
+
+#: main.cpp:163
+msgid "Christian Muehlhaeuser"
+msgstr "Christian Muehlhaeuser"
+
+#: main.cpp:165
+msgid "Derek Nelson"
+msgstr "Derek Nelson"
+
+#: main.cpp:165
+msgid "Graphics, splash-screen"
+msgstr ""
+
+#: main.cpp:167
+msgid "Enrico Ros"
+msgstr "Enrico Ros"
+
+#: main.cpp:167
+msgid "Analyzers, Context Browser and systray eye-candy"
+msgstr ""
+
+#: main.cpp:169
+msgid "Frederik Holljen"
+msgstr "Frederik Holljen"
+
+#: main.cpp:171
+msgid "Gábor Lehel"
+msgstr "Gábor Lehel"
+
+#: main.cpp:173
+msgid "Gérard Dürrmeyer"
+msgstr "Gérard Dürrmeyer"
+
+#: main.cpp:173
+msgid "Icons and image work"
+msgstr ""
+
+#: main.cpp:175
+msgid "Giovanni Venturi"
+msgstr "Giovanni Venturi"
+
+#: main.cpp:175
 #, fuzzy
-#| msgid "After Current Track"
-msgid "Last.fm: Ban Current Track"
-msgstr "Post la nuna trako"
+#| msgid "List of folders in the Collection"
+msgid "Dialog to filter the collection titles"
+msgstr "Listo de dosierujoj en la kolekto"
 
-#: MainWindow.cpp:936
-#, fuzzy
-#| msgid "After Current Track"
-msgid "Last.fm: Skip Current Track"
-msgstr "Post la nuna trako"
+#: main.cpp:177
+msgid "Jarkko Lehti"
+msgstr "Jarkko Lehti"
 
-#: MainWindow.cpp:946
-msgid "Rate Current Track: 1"
-msgstr "Noti la aktualan trakon: 1"
-
-#: MainWindow.cpp:951
-msgid "Rate Current Track: 2"
-msgstr "Noti la aktualan trakon: 2"
-
-#: MainWindow.cpp:956
-msgid "Rate Current Track: 3"
-msgstr "Noti la aktualan trakon: 3"
-
-#: MainWindow.cpp:961
-msgid "Rate Current Track: 4"
-msgstr "Noti la aktualan trakon: 4"
-
-#: MainWindow.cpp:966
-msgid "Rate Current Track: 5"
-msgstr "Noti la aktualan trakon: 5"
-
-#: MainWindow.cpp:972
-msgid "Network Request Viewer"
+#: main.cpp:177
+msgid "Tester, IRC channel operator, whipping"
 msgstr ""
 
-#: MainWindow.cpp:990
-#, fuzzy
-#| msgid "&Amarok"
-msgid "&About Amarok"
-msgstr "&Amarok"
+#: main.cpp:179
+msgid "Jocke Andersson"
+msgstr "Jocke Andersson"
 
-#: MainWindow.cpp:994
-msgid "&Report Bug..."
-msgstr "&Raporti cimon..."
-
-#: MainWindow.cpp:1054
-msgid "&Music"
+#: main.cpp:179
+msgid "Rokymoter, bug fixer (Firetech)"
 msgstr ""
 
-#: MainWindow.cpp:1058
-msgid "&Amarok"
-msgstr "&Amarok"
+#: main.cpp:181
+msgid "Marco Gulino"
+msgstr "Marco Gulino"
 
-#: MainWindow.cpp:1082
-msgid "&Playlist"
-msgstr "&Ludlisto"
-
-#: MainWindow.cpp:1098
-msgid "&Tools"
-msgstr "&Iloj"
-
-#: MainWindow.cpp:1113
-msgid "&Settings"
-msgstr "A&gordo"
-
-#: MainWindow.cpp:1159
-#, kde-format
-msgid ""
-"You have chosen to hide the menu bar.\n"
-"\n"
-"Please remember that you can always use the shortcut \"%1\" to bring it back."
+#: main.cpp:181
+msgid "Konqueror Sidebar, some DCOP methods"
 msgstr ""
 
-#: MainWindow.cpp:1161
-msgid "Hide Menu"
+#: main.cpp:183
+msgid "Martin Aumueller"
+msgstr "Martin Aumueller"
+
+#: main.cpp:185
+msgid "Melchior Franz"
+msgstr "Melchior Franz"
+
+#: main.cpp:185
+msgid "FHT routine, bugfixes"
 msgstr ""
 
-#: MainWindow.cpp:1556
-#, fuzzy, kde-format
-#| msgid "Paused  -  %1"
-msgid "Paused  ::  %1"
-msgstr "Paŭzata - %1"
+#: main.cpp:187
+msgid "Michael Pyne"
+msgstr "Michael Pyne"
 
-#: MainWindow.cpp:1575
-#, kde-format
-msgid "%1 - %2  ::  %3"
-msgstr "%1 - %2  ::  %3"
-
-#. i18n: file: core-impl/collections/audiocd/FormatSelectionDialog.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, FormatSelectionDialog)
-#: App.cpp:111 rc.cpp:463
-msgid "Amarok"
-msgstr "Amarok"
-
-#: App.cpp:112
-msgid "The audio player for KDE"
-msgstr "La sonorludilo de KDE"
-
-#: App.cpp:113
-#, fuzzy
-#| msgid ""
-#| "(C) 2002-2003, Mark Kretschmann\n"
-#| "(C) 2003-2008, The Amarok Development Squad"
-msgid ""
-"(C) 2002-2003, Mark Kretschmann\n"
-"(C) 2003-2010, The Amarok Development Squad"
-msgstr ""
-"(C) 2002-2003, Mark Kretschmann\n"
-"(C) 2003-2007, The Amarok Development Squad"
-
-#: App.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "IRC:\n"
-#| "irc.freenode.net - #amarok, #amarok.de, #amarok.es, #amarok.fr\n"
-#| "\n"
-#| "Feedback:\n"
-#| "amarok@kde.org\n"
-#| "\n"
-#| "(Build Date: "
-msgid ""
-"IRC:\n"
-"irc.freenode.net - #amarok, #amarok.de, #amarok.es, #amarok.fr\n"
-"\n"
-"Feedback:\n"
-"amarok@kde.org\n"
-"\n"
-"(Build Date: %1)"
-msgstr ""
-"IRC:\n"
-"irc.freenode.net - #amarok, #amarok.de, #amarok.es, #amarok.fr\n"
-"\n"
-"Retroinformoj:\n"
-"amarok@kde.org\n"
-"\n"
-"(Kompila dato: "
-
-#: App.cpp:452
-msgid "Files/URLs to open"
-msgstr "Dosieroj/URLoj malfermotaj"
-
-#: App.cpp:453
-msgid "Immediately start playing an audio cd"
+#: main.cpp:187
+msgid "K3b export code"
 msgstr ""
 
-#: App.cpp:455
-msgid "Skip backwards in playlist"
-msgstr "Pasigi malantaŭe la ludliston"
+#: main.cpp:189
+msgid "Mike Diehl"
+msgstr "Mike Diehl"
 
-#: App.cpp:457
-msgid "Start playing current playlist"
-msgstr "Ekludi la aktualan ludliston"
+#: main.cpp:191
+msgid "Paul Cifarelli"
+msgstr "Paul Cifarelli"
 
-#: App.cpp:459
-msgid "Play if stopped, pause if playing"
-msgstr "Ludi se haltite, paŭzi se ludante"
+#: main.cpp:193
+msgid "Peter C. Ndikuwera"
+msgstr "Peter C. Ndikuwera"
 
-#: App.cpp:460
-msgid "Pause playback"
-msgstr "Paŭzi la ludadon"
-
-#: App.cpp:462
-msgid "Stop playback"
-msgstr "Halti la ludadon"
-
-#: App.cpp:464
-msgid "Skip forwards in playlist"
-msgstr "Pasigi antaŭe la ludliston"
-
-#: App.cpp:465
-msgid "Additional options:"
-msgstr "Kromaj opcioj:"
-
-#: App.cpp:467
-msgid "Append files/URLs to playlist"
-msgstr "Postglui dosierojn/URLjn al ludlisto"
-
-#: App.cpp:468
-msgid "Queue URLs after the currently playing track"
+#: main.cpp:193
+msgid "Bugfixes, PostgreSQL support"
 msgstr ""
 
-#: App.cpp:470
-msgid "Load URLs, replacing current playlist"
+#: main.cpp:195
+msgid "Pierpaolo Panfilo"
+msgstr "Pierpaolo Panfilo"
+
+#: main.cpp:197
+msgid "Reigo Reinmets"
+msgstr "Reigo Reinmets"
+
+#: main.cpp:197
+msgid "Wikipedia support, patches"
 msgstr ""
 
-#: App.cpp:472
-msgid "Print verbose debugging information"
+#: main.cpp:199
+msgid "Roman Becker"
+msgstr "Roman Becker"
+
+#: main.cpp:199
+msgid "Former Amarok logo, former splash screen, former icons"
 msgstr ""
 
-#: App.cpp:474
-msgid "Allow running multiple Amarok instances"
+#: main.cpp:201
+msgid "Sami Nieminen"
+msgstr "Sami Nieminen"
+
+#: main.cpp:201
+msgid "Audioscrobbler support"
 msgstr ""
 
-#: App.cpp:475
-msgid "Base for relative filenames/URLs"
-msgstr "Bazo por relativaj dosiernomoj/URLoj"
+#: main.cpp:203
+msgid "Stanislav Karchebny"
+msgstr "Stanislav Karchebny"
 
-#: App.cpp:477
-#, fuzzy
-#| msgid "Stream options"
-msgid "Unit test options:"
-msgstr "Fluaj opcioj"
+#: main.cpp:205
+msgid "Stefan Bogner"
+msgstr "Stefan Bogner"
 
-#: App.cpp:478
-msgid "Run integrated unit tests"
+#: main.cpp:205
+msgid "Loads of stuff"
 msgstr ""
-
-#: App.cpp:479
-msgid "Destination of test output: 'stdout', 'log'"
-msgstr ""
-
-#: App.cpp:480
-msgid "Format of test output: 'xml', 'lightxml', 'plaintext'"
-msgstr ""
-
-#: App.cpp:481
-msgid "Verbosity from 0-3 (highest)"
-msgstr ""
-
-#: App.cpp:732
-msgid ""
-"The embedded database was not found; you must set up a database server "
-"connection.\n"
-"You must restart Amarok after doing this."
-msgstr ""
-
-#: App.cpp:733
-msgid ""
-"The connection details for the database server were invalid.\n"
-"You must enter correct settings and restart Amarok after doing this."
-msgstr ""
-
-#: App.cpp:734
-#, fuzzy
-#| msgid "Database:"
-msgid "Database Error"
-msgstr "Datumbazo:"
-
-#: App.cpp:751
-#, kde-format
-msgid ""
-"A music path, %1, is set in System Settings.\n"
-"Would you like to use that as a collection folder?"
-msgstr ""
-
-#: App.cpp:806
-msgid ""
-"<p>The version of the 'amarokcollectionscanner' tool\n"
-"does not match your Amarok version.</p><p>Please note that Collection "
-"Scanning may not work correctly.</p>"
-msgstr ""
-
-#: App.cpp:847
-msgid "Moving files to trash"
-msgstr "Metante dosierojn en la rubujo"
-
-#: TrayIcon.cpp:148
-#, fuzzy
-#| msgctxt "Column name"
-#| msgid "Last Played"
-msgid "Last played"
-msgstr "Lasta ludita"
-
-#: EngineController.cpp:257
-msgid ""
-"<p>Phonon claims it <b>cannot</b> play MP3 files. You may want to examine "
-"the installation of the backend that phonon uses.</p><p>You may find useful "
-"information in the <i>FAQ</i> section of the <i>Amarok Handbook</i>.</p>"
-msgstr ""
-
-#: EngineController.cpp:278
-#, fuzzy
-#| msgid "No MP3 Support"
-msgid "Install MP3 Support"
-msgstr "Neniu MP3 subteno"
-
-#: EngineController.cpp:280
-#, fuzzy
-#| msgid "Amarok currently cannot play MP3 files."
-msgid ""
-"Amarok currently cannot play MP3 files. Do you want to install support for "
-"MP3?"
-msgstr "Amarok aktuale ne kapablas legi MP3 dosierojn."
-
-#: EngineController.cpp:281
-msgid "No MP3 Support"
-msgstr "Neniu MP3 subteno"
-
-#: EngineController.cpp:837
-#, fuzzy
-#| msgid "Pre-amp"
-msgid "Preamp"
-msgstr "Antaŭampl"
-
-#: EngineController.cpp:1309
-#, kde-format
-msgctxt "track by artist on album"
-msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
-msgstr "<b>%1</b> de <b>%2</b> en <b>%3</b>"
-
-#: EngineController.cpp:1312
-#, kde-format
-msgctxt "track by artist"
-msgid "<b>%1</b> by <b>%2</b>"
-msgstr "<b>%1</b> de <b>%2</b>"
-
-#: EngineController.cpp:1316
-#, kde-format
-msgctxt "track on album"
-msgid "<b>%1</b> on <b>%2</b>"
-msgstr "<b>%1</b> en <b>%2</b>"
-
-#: EngineController.cpp:1321
-msgid "Unknown track"
-msgstr "Nekonata trako"
-
-#: EngineController.cpp:1328
-#, fuzzy, kde-format
-#| msgid "<b>%1</b> by <b>%2</b>"
-msgctxt "track from source"
-msgid "from <b>%1</b>"
-msgstr "<b>%1</b> de <b>%2</b>"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -10846,6 +10344,12 @@ msgstr "Ek&rano:"
 #: rc.cpp:460
 msgid "Youtube HQ"
 msgstr ""
+
+#. i18n: file: core-impl/collections/audiocd/FormatSelectionDialog.ui:14
+#. i18n: ectx: property (windowTitle), widget (QDialog, FormatSelectionDialog)
+#: rc.cpp:463 App.cpp:111
+msgid "Amarok"
+msgstr "Amarok"
 
 #. i18n: file: core-impl/collections/audiocd/FormatSelectionDialog.ui:26
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -14471,6 +13975,517 @@ msgstr "Grupaĵoj"
 #: rc.cpp:2398
 msgid "Verbose"
 msgstr ""
+
+#: MainWindow.cpp:282
+#, fuzzy
+#| msgid "Shared Music"
+msgid "Local Music"
+msgstr "Komunigita muziko"
+
+#: MainWindow.cpp:284
+msgid "Local sources of content"
+msgstr ""
+
+#: MainWindow.cpp:292
+msgid "Internet"
+msgstr "Interreto"
+
+#: MainWindow.cpp:294
+msgid "Online sources of content"
+msgstr ""
+
+#: MainWindow.cpp:300
+msgid "Playlists"
+msgstr "Ludlistoj"
+
+#: MainWindow.cpp:302
+#, fuzzy
+#| msgid "Various Artists"
+msgid "Various types of playlists"
+msgstr "Diversaj artistoj"
+
+#: MainWindow.cpp:311
+msgid "Browse local hard drive for content"
+msgstr ""
+
+#: MainWindow.cpp:380
+#, fuzzy
+#| msgctxt "switch view"
+#| msgid "&View"
+msgctxt "@item:inmenu"
+msgid "&View"
+msgstr "&Vidi"
+
+#: MainWindow.cpp:383
+#, fuzzy
+#| msgid "Playcount"
+msgid "Lock Layout"
+msgstr "Ludfojo"
+
+#: MainWindow.cpp:502
+msgid ""
+"<qt>Closing the main window will keep Amarok running in the System Tray. Use "
+"<B>Quit</B> from the menu, or the Amarok tray icon to exit the application.</"
+"qt>"
+msgstr ""
+
+#: MainWindow.cpp:504
+msgid "Docking in System Tray"
+msgstr "Fiksigu en sistemfako"
+
+#: MainWindow.cpp:554
+msgid "Use relative path for &saving"
+msgstr ""
+
+#: MainWindow.cpp:620
+msgid "Play Media (Files or URLs)"
+msgstr "Ludi medion (dosierojn aŭ URLojn)"
+
+#: MainWindow.cpp:620
+msgid "Add Media (Files or URLs)"
+msgstr "Aldoni medion (dosierojn aŭ URLojn)"
+
+#: MainWindow.cpp:638
+msgid "Add Stream"
+msgstr "Aldoni fluon"
+
+#: MainWindow.cpp:638
+msgid "Enter Stream URL:"
+msgstr "Enmetu la fluan URLon:"
+
+#: MainWindow.cpp:780
+msgid "&Add Media..."
+msgstr "&Aldoni medion..."
+
+#: MainWindow.cpp:785
+#, fuzzy
+#| msgid "Smart Playlist"
+msgctxt "clear playlist"
+msgid "&Clear Playlist"
+msgstr "Lerta ludlisto"
+
+#: MainWindow.cpp:789
+#, fuzzy
+#| msgid "Remove selected"
+msgctxt "Remove duplicate and dead (unplayable) tracks from the playlist"
+msgid "Re&move Duplicates"
+msgstr "Forigi la elektitan"
+
+#: MainWindow.cpp:796
+msgid "&Add Stream..."
+msgstr "&Aldoni fluon..."
+
+#: MainWindow.cpp:800
+#, fuzzy
+#| msgid "&Save Playlist As..."
+msgid "&Export Playlist As..."
+msgstr "Kon&servi la ludliston kiel..."
+
+#: MainWindow.cpp:812
+msgid "Equalizer"
+msgstr "Egalizilo"
+
+#: MainWindow.cpp:820
+#, fuzzy
+#| msgid "Various Artists"
+msgid "Bookmark Context Applets"
+msgstr "Diversaj artistoj"
+
+#: MainWindow.cpp:828
+msgid "Play Media..."
+msgstr "Ludi medion..."
+
+#: MainWindow.cpp:837
+msgid "&Seek Forward"
+msgstr ""
+
+#: MainWindow.cpp:843
+msgid "&Seek Backward"
+msgstr ""
+
+#: MainWindow.cpp:850
+msgid "Update Collection"
+msgstr "Aktualigi la kolekton"
+
+#: MainWindow.cpp:864
+#, fuzzy
+#| msgid "Rate Current Track: 1"
+msgid "Restart current track"
+msgstr "Noti la aktualan trakon: 1"
+
+#: MainWindow.cpp:870
+#, fuzzy
+#| msgid "Repeat Playlist"
+msgid "Repopulate Playlist"
+msgstr "Ripeti la ludliston"
+
+#: MainWindow.cpp:876
+#, fuzzy
+#| msgid "Default Dynamic Playlist"
+msgid "Disable Dynamic Playlist"
+msgstr "Defaŭlta dinamika ludlisto"
+
+#: MainWindow.cpp:885
+msgid "Increase Volume"
+msgstr "Pliigi la laŭtecon"
+
+#: MainWindow.cpp:891
+msgid "Decrease Volume"
+msgstr "Malpliigi la laŭtecon"
+
+#: MainWindow.cpp:897
+msgid "Toggle Main Window"
+msgstr ""
+
+#: MainWindow.cpp:902
+#, fuzzy
+#| msgid "Toggle Focus"
+msgid "Toggle Full Screen"
+msgstr "Komuti la fokuson"
+
+#: MainWindow.cpp:907
+msgid "Jump to"
+msgstr ""
+
+#: MainWindow.cpp:912
+#, fuzzy
+#| msgid "Skip this track"
+msgid "Show active track"
+msgstr "Pasigi tiun trakon"
+
+#: MainWindow.cpp:916
+#, fuzzy
+#| msgid "Location:"
+msgid "Show Notification Popup"
+msgstr "Loko:"
+
+#: MainWindow.cpp:921
+msgid "Mute Volume"
+msgstr "Mutigi la laŭtecon"
+
+#: MainWindow.cpp:926
+#, fuzzy
+#| msgid "After Current Track"
+msgid "Last.fm: Love Current Track"
+msgstr "Post la nuna trako"
+
+#: MainWindow.cpp:931
+#, fuzzy
+#| msgid "After Current Track"
+msgid "Last.fm: Ban Current Track"
+msgstr "Post la nuna trako"
+
+#: MainWindow.cpp:936
+#, fuzzy
+#| msgid "After Current Track"
+msgid "Last.fm: Skip Current Track"
+msgstr "Post la nuna trako"
+
+#: MainWindow.cpp:946
+msgid "Rate Current Track: 1"
+msgstr "Noti la aktualan trakon: 1"
+
+#: MainWindow.cpp:951
+msgid "Rate Current Track: 2"
+msgstr "Noti la aktualan trakon: 2"
+
+#: MainWindow.cpp:956
+msgid "Rate Current Track: 3"
+msgstr "Noti la aktualan trakon: 3"
+
+#: MainWindow.cpp:961
+msgid "Rate Current Track: 4"
+msgstr "Noti la aktualan trakon: 4"
+
+#: MainWindow.cpp:966
+msgid "Rate Current Track: 5"
+msgstr "Noti la aktualan trakon: 5"
+
+#: MainWindow.cpp:972
+msgid "Network Request Viewer"
+msgstr ""
+
+#: MainWindow.cpp:990
+#, fuzzy
+#| msgid "&Amarok"
+msgid "&About Amarok"
+msgstr "&Amarok"
+
+#: MainWindow.cpp:994
+msgid "&Report Bug..."
+msgstr "&Raporti cimon..."
+
+#: MainWindow.cpp:1054
+msgid "&Music"
+msgstr ""
+
+#: MainWindow.cpp:1058
+msgid "&Amarok"
+msgstr "&Amarok"
+
+#: MainWindow.cpp:1082
+msgid "&Playlist"
+msgstr "&Ludlisto"
+
+#: MainWindow.cpp:1098
+msgid "&Tools"
+msgstr "&Iloj"
+
+#: MainWindow.cpp:1113
+msgid "&Settings"
+msgstr "A&gordo"
+
+#: MainWindow.cpp:1159
+#, kde-format
+msgid ""
+"You have chosen to hide the menu bar.\n"
+"\n"
+"Please remember that you can always use the shortcut \"%1\" to bring it back."
+msgstr ""
+
+#: MainWindow.cpp:1161
+msgid "Hide Menu"
+msgstr ""
+
+#: MainWindow.cpp:1556
+#, fuzzy, kde-format
+#| msgid "Paused  -  %1"
+msgid "Paused  ::  %1"
+msgstr "Paŭzata - %1"
+
+#: MainWindow.cpp:1575
+#, kde-format
+msgid "%1 - %2  ::  %3"
+msgstr "%1 - %2  ::  %3"
+
+#: App.cpp:112
+msgid "The audio player for KDE"
+msgstr "La sonorludilo de KDE"
+
+#: App.cpp:113
+#, fuzzy
+#| msgid ""
+#| "(C) 2002-2003, Mark Kretschmann\n"
+#| "(C) 2003-2008, The Amarok Development Squad"
+msgid ""
+"(C) 2002-2003, Mark Kretschmann\n"
+"(C) 2003-2010, The Amarok Development Squad"
+msgstr ""
+"(C) 2002-2003, Mark Kretschmann\n"
+"(C) 2003-2007, The Amarok Development Squad"
+
+#: App.cpp:114
+#, fuzzy, kde-format
+#| msgid ""
+#| "IRC:\n"
+#| "irc.freenode.net - #amarok, #amarok.de, #amarok.es, #amarok.fr\n"
+#| "\n"
+#| "Feedback:\n"
+#| "amarok@kde.org\n"
+#| "\n"
+#| "(Build Date: "
+msgid ""
+"IRC:\n"
+"irc.freenode.net - #amarok, #amarok.de, #amarok.es, #amarok.fr\n"
+"\n"
+"Feedback:\n"
+"amarok@kde.org\n"
+"\n"
+"(Build Date: %1)"
+msgstr ""
+"IRC:\n"
+"irc.freenode.net - #amarok, #amarok.de, #amarok.es, #amarok.fr\n"
+"\n"
+"Retroinformoj:\n"
+"amarok@kde.org\n"
+"\n"
+"(Kompila dato: "
+
+#: App.cpp:452
+msgid "Files/URLs to open"
+msgstr "Dosieroj/URLoj malfermotaj"
+
+#: App.cpp:453
+msgid "Immediately start playing an audio cd"
+msgstr ""
+
+#: App.cpp:455
+msgid "Skip backwards in playlist"
+msgstr "Pasigi malantaŭe la ludliston"
+
+#: App.cpp:457
+msgid "Start playing current playlist"
+msgstr "Ekludi la aktualan ludliston"
+
+#: App.cpp:459
+msgid "Play if stopped, pause if playing"
+msgstr "Ludi se haltite, paŭzi se ludante"
+
+#: App.cpp:460
+msgid "Pause playback"
+msgstr "Paŭzi la ludadon"
+
+#: App.cpp:462
+msgid "Stop playback"
+msgstr "Halti la ludadon"
+
+#: App.cpp:464
+msgid "Skip forwards in playlist"
+msgstr "Pasigi antaŭe la ludliston"
+
+#: App.cpp:465
+msgid "Additional options:"
+msgstr "Kromaj opcioj:"
+
+#: App.cpp:467
+msgid "Append files/URLs to playlist"
+msgstr "Postglui dosierojn/URLjn al ludlisto"
+
+#: App.cpp:468
+msgid "Queue URLs after the currently playing track"
+msgstr ""
+
+#: App.cpp:470
+msgid "Load URLs, replacing current playlist"
+msgstr ""
+
+#: App.cpp:472
+msgid "Print verbose debugging information"
+msgstr ""
+
+#: App.cpp:474
+msgid "Allow running multiple Amarok instances"
+msgstr ""
+
+#: App.cpp:475
+msgid "Base for relative filenames/URLs"
+msgstr "Bazo por relativaj dosiernomoj/URLoj"
+
+#: App.cpp:477
+#, fuzzy
+#| msgid "Stream options"
+msgid "Unit test options:"
+msgstr "Fluaj opcioj"
+
+#: App.cpp:478
+msgid "Run integrated unit tests"
+msgstr ""
+
+#: App.cpp:479
+msgid "Destination of test output: 'stdout', 'log'"
+msgstr ""
+
+#: App.cpp:480
+msgid "Format of test output: 'xml', 'lightxml', 'plaintext'"
+msgstr ""
+
+#: App.cpp:481
+msgid "Verbosity from 0-3 (highest)"
+msgstr ""
+
+#: App.cpp:732
+msgid ""
+"The embedded database was not found; you must set up a database server "
+"connection.\n"
+"You must restart Amarok after doing this."
+msgstr ""
+
+#: App.cpp:733
+msgid ""
+"The connection details for the database server were invalid.\n"
+"You must enter correct settings and restart Amarok after doing this."
+msgstr ""
+
+#: App.cpp:734
+#, fuzzy
+#| msgid "Database:"
+msgid "Database Error"
+msgstr "Datumbazo:"
+
+#: App.cpp:751
+#, kde-format
+msgid ""
+"A music path, %1, is set in System Settings.\n"
+"Would you like to use that as a collection folder?"
+msgstr ""
+
+#: App.cpp:806
+msgid ""
+"<p>The version of the 'amarokcollectionscanner' tool\n"
+"does not match your Amarok version.</p><p>Please note that Collection "
+"Scanning may not work correctly.</p>"
+msgstr ""
+
+#: App.cpp:847
+msgid "Moving files to trash"
+msgstr "Metante dosierojn en la rubujo"
+
+#: TrayIcon.cpp:148
+#, fuzzy
+#| msgctxt "Column name"
+#| msgid "Last Played"
+msgid "Last played"
+msgstr "Lasta ludita"
+
+#: EngineController.cpp:267
+msgid ""
+"<p>Phonon claims it <b>cannot</b> play MP3 files. You may want to examine "
+"the installation of the backend that phonon uses.</p><p>You may find useful "
+"information in the <i>FAQ</i> section of the <i>Amarok Handbook</i>.</p>"
+msgstr ""
+
+#: EngineController.cpp:288
+#, fuzzy
+#| msgid "No MP3 Support"
+msgid "Install MP3 Support"
+msgstr "Neniu MP3 subteno"
+
+#: EngineController.cpp:290
+#, fuzzy
+#| msgid "Amarok currently cannot play MP3 files."
+msgid ""
+"Amarok currently cannot play MP3 files. Do you want to install support for "
+"MP3?"
+msgstr "Amarok aktuale ne kapablas legi MP3 dosierojn."
+
+#: EngineController.cpp:291
+msgid "No MP3 Support"
+msgstr "Neniu MP3 subteno"
+
+#: EngineController.cpp:851
+#, fuzzy
+#| msgid "Pre-amp"
+msgid "Preamp"
+msgstr "Antaŭampl"
+
+#: EngineController.cpp:1324
+#, kde-format
+msgctxt "track by artist on album"
+msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
+msgstr "<b>%1</b> de <b>%2</b> en <b>%3</b>"
+
+#: EngineController.cpp:1327
+#, kde-format
+msgctxt "track by artist"
+msgid "<b>%1</b> by <b>%2</b>"
+msgstr "<b>%1</b> de <b>%2</b>"
+
+#: EngineController.cpp:1331
+#, kde-format
+msgctxt "track on album"
+msgid "<b>%1</b> on <b>%2</b>"
+msgstr "<b>%1</b> en <b>%2</b>"
+
+#: EngineController.cpp:1336
+msgid "Unknown track"
+msgstr "Nekonata trako"
+
+#: EngineController.cpp:1343
+#, fuzzy, kde-format
+#| msgid "<b>%1</b> by <b>%2</b>"
+msgctxt "track from source"
+msgid "from <b>%1</b>"
+msgstr "<b>%1</b> de <b>%2</b>"
 
 #, fuzzy
 #~| msgid "Similar Artists to %1"
