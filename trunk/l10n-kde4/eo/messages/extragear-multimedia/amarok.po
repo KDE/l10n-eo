@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-11-20 06:37+0100\n"
+"POT-Creation-Date: 2010-11-21 06:20+0100\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -423,7 +423,7 @@ msgstr "<b>%1</b> de <b>%2</b>"
 
 #: EngineController.cpp:1398 context/applets/labels/LabelsApplet.cpp:179
 #: context/applets/photos/PhotosApplet.cpp:146
-#: context/engines/current/CurrentEngine.cpp:131 mac/GrowlInterface.cpp:43
+#: context/engines/current/CurrentEngine.cpp:125 mac/GrowlInterface.cpp:43
 #: widgets/Osd.cpp:604
 msgid "No track playing"
 msgstr "Neniu trako legata"
@@ -1952,8 +1952,25 @@ msgid_plural "%1 tracks"
 msgstr[0] "1 trako"
 msgstr[1] "%1 trakoj"
 
+#: context/applets/albums/AlbumsView.cpp:216
+#: context/applets/videoclip/VideoItemButton.cpp:97
+#, fuzzy
+#| msgid "&Queue Track"
+msgid "&Queue"
+msgstr "Envi&cigi la trakon"
+
+#. i18n: file: context/applets/currenttrack/currentTrackSettings.ui:38
+#. i18n: ectx: property (text), widget (QCheckBox, editTrackDetailsCheckBox)
+#: context/applets/albums/AlbumsView.cpp:217
+#: context/applets/currenttrack/CurrentTrack.cpp:803
+#: playlist/view/PlaylistViewCommon.cpp:231 rc.cpp:289
+#, fuzzy
+#| msgid "Edit Track Information"
+msgid "Edit Track Details"
+msgstr "Redakti trakan informon"
+
 #: context/applets/albums/Albums.cpp:69
-#: context/engines/current/CurrentEngine.cpp:139
+#: context/engines/current/CurrentEngine.cpp:133
 #, fuzzy
 #| msgid "Recently Played Tracks"
 msgid "Recently added albums"
@@ -1961,7 +1978,7 @@ msgstr "Freŝdate luditaj trakoj"
 
 #: context/applets/albums/Albums.cpp:76
 #: context/applets/labels/LabelsApplet.cpp:111
-#: context/applets/lyrics/LyricsApplet.cpp:528
+#: context/applets/lyrics/LyricsApplet.cpp:521
 #: context/applets/photos/PhotosApplet.cpp:84
 #: context/applets/similarartists/SimilarArtistsApplet.cpp:89
 #: context/applets/upcomingevents/UpcomingEventsApplet.cpp:80
@@ -1973,7 +1990,15 @@ msgstr "Freŝdate luditaj trakoj"
 msgid "Settings"
 msgstr "A&gordo"
 
-#: context/applets/albums/Albums.cpp:182
+#: context/applets/albums/Albums.cpp:117
+#: context/applets/currenttrack/CurrentTrack.cpp:468
+#: playlist/ProgressiveSearchWidget.cpp:85
+#, fuzzy
+#| msgid "&Albums"
+msgid "Albums"
+msgstr "&Albumoj"
+
+#: context/applets/albums/Albums.cpp:183
 #, fuzzy, kde-format
 #| msgid "disc"
 msgid "Disc %1"
@@ -1983,67 +2008,50 @@ msgstr "disko"
 #. i18n: ectx: property (text), widget (QCheckBox, groupVenueCheckBox)
 #. i18n: file: core-impl/collections/umscollection/UmsConfiguration.ui:46
 #. i18n: ectx: property (text), widget (QCheckBox, m_autoConnect)
-#: context/applets/albums/Albums.cpp:219 rc.cpp:415 rc.cpp:514
+#: context/applets/albums/Albums.cpp:220 rc.cpp:415 rc.cpp:514
 #, fuzzy
 #| msgid "Disable"
 msgid "Enabled"
 msgstr "Malŝalti"
 
-#: context/applets/albums/Albums.cpp:224
+#: context/applets/albums/Albums.cpp:225
 #, fuzzy
 #| msgid "Recently Played Tracks"
 msgid "Number of recently added albums:"
 msgstr "Freŝdate luditaj trakoj"
 
-#: context/applets/albums/Albums.cpp:225
+#: context/applets/albums/Albums.cpp:226
 msgid "Right align track lengths:"
 msgstr ""
 
-#: context/applets/albums/Albums.cpp:230
+#: context/applets/albums/Albums.cpp:231
 msgid "Albums Applet Settings"
 msgstr ""
 
-#: context/applets/albums/AlbumsView.cpp:216
-#: context/applets/videoclip/VideoItemButton.cpp:97
-#, fuzzy
-#| msgid "&Queue Track"
-msgid "&Queue"
-msgstr "Envi&cigi la trakon"
-
-#. i18n: file: context/applets/currenttrack/currentTrackSettings.ui:38
-#. i18n: ectx: property (text), widget (QCheckBox, editTrackDetailsCheckBox)
-#: context/applets/albums/AlbumsView.cpp:217
-#: context/applets/currenttrack/CurrentTrack.cpp:815
-#: playlist/view/PlaylistViewCommon.cpp:231 rc.cpp:289
-#, fuzzy
-#| msgid "Edit Track Information"
-msgid "Edit Track Details"
-msgstr "Redakti trakan informon"
-
-#: context/applets/currenttrack/CurrentTrack.cpp:102
+#: context/applets/currenttrack/CurrentTrack.cpp:103
 #: core-impl/collections/db/sql/SqlCollectionLocation.cpp:68
 #: core-impl/collections/db/sql/mysqlecollection/MySqlEmbeddedCollection.cpp:35
 #: core-impl/collections/db/sql/mysqlservercollection/MySqlServerCollection.cpp:41
 msgid "Local Collection"
 msgstr "Loka kolekto"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:111
+#: context/applets/currenttrack/CurrentTrack.cpp:112
 #, fuzzy
 #| msgid "Modify"
 msgctxt "What artist is this track by"
 msgid "By"
 msgstr "Modifi"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:112
+#: context/applets/currenttrack/CurrentTrack.cpp:113
 msgctxt "What album is this track on"
 msgid "On"
 msgstr ""
 
-#: context/applets/currenttrack/CurrentTrack.cpp:287
+#: context/applets/currenttrack/CurrentTrack.cpp:283
 msgid "Recently Played Tracks"
 msgstr "Freŝdate luditaj trakoj"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:480
+#: context/applets/currenttrack/CurrentTrack.cpp:467
 #: playlist/ProgressiveSearchWidget.cpp:78
 #: services/lastfm/biases/LastFmBias.cpp:128
 #, fuzzy
@@ -2052,32 +2060,25 @@ msgstr "Freŝdate luditaj trakoj"
 msgid "Tracks"
 msgstr "&Trakoj"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:480
+#: context/applets/currenttrack/CurrentTrack.cpp:467
 #, fuzzy
 #| msgid "Playcount"
 msgid "Play count"
 msgstr "Ludfojo"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:481
-#: playlist/ProgressiveSearchWidget.cpp:85
-#, fuzzy
-#| msgid "&Albums"
-msgid "Albums"
-msgstr "&Albumoj"
-
-#: context/applets/currenttrack/CurrentTrack.cpp:481
+#: context/applets/currenttrack/CurrentTrack.cpp:468
 #: playlist/PlaylistModel.cpp:841 widgets/MetaQueryWidget.cpp:231
 #: widgets/SmartPlaylistEditor.cpp:185 TrayIcon.cpp:152
 msgid "Score"
 msgstr "Poentoj"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:482
+#: context/applets/currenttrack/CurrentTrack.cpp:469
 #, fuzzy
 #| msgid "Genre"
 msgid "Genres"
 msgstr "Ĝenro"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:482
+#: context/applets/currenttrack/CurrentTrack.cpp:469
 #: widgets/MetaQueryWidget.cpp:234
 #, fuzzy
 #| msgctxt "Column name"
@@ -2089,43 +2090,43 @@ msgstr "Lasta ludita"
 #. i18n: ectx: property (windowTitle), widget (QWidget, currentTrackSettings)
 #. i18n: file: context/applets/tabs/TabsSettings.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, TabsSettings)
-#: context/applets/currenttrack/CurrentTrack.cpp:710 rc.cpp:283 rc.cpp:457
+#: context/applets/currenttrack/CurrentTrack.cpp:698 rc.cpp:283 rc.cpp:457
 #, fuzzy
 #| msgid "After Current Track"
 msgid "Current Track Settings"
 msgstr "Post la nuna trako"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:838
+#: context/applets/currenttrack/CurrentTrack.cpp:826
 #, fuzzy
 #| msgid "Select Format:"
 msgid "Show Album In Media Sources"
 msgstr "Elektu formaton:"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:845
+#: context/applets/currenttrack/CurrentTrack.cpp:833
 #, fuzzy
 #| msgid "Select Format:"
 msgid "Show Artist In Media Sources"
 msgstr "Elektu formaton:"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:850 core/meta/Meta.cpp:552
+#: context/applets/currenttrack/CurrentTrack.cpp:838 core/meta/Meta.cpp:552
 #, fuzzy
 #| msgid "Unknown Genre"
 msgid "Unknown Composer"
 msgstr "Nekonata ĝenro"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:852
+#: context/applets/currenttrack/CurrentTrack.cpp:840
 #, fuzzy
 #| msgid "Select Format:"
 msgid "Show Composer In Media Sources"
 msgstr "Elektu formaton:"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:859
+#: context/applets/currenttrack/CurrentTrack.cpp:847
 #, fuzzy
 #| msgid "Select Format:"
 msgid "Show Genre In Media Sources"
 msgstr "Elektu formaton:"
 
-#: context/applets/currenttrack/CurrentTrack.cpp:866
+#: context/applets/currenttrack/CurrentTrack.cpp:854
 #, fuzzy
 #| msgid "Select Format:"
 msgid "Show Year In Media Sources"
@@ -2208,7 +2209,7 @@ msgid "Labels Settings"
 msgstr "A&gordo"
 
 #: context/applets/lyrics/LyricsApplet.cpp:54
-#: context/applets/lyrics/LyricsApplet.cpp:484
+#: context/applets/lyrics/LyricsApplet.cpp:477
 #: context/applets/lyrics/LyricsApplet.cpp:641
 #: context/applets/lyrics/LyricsApplet.cpp:675
 #: context/applets/lyrics/LyricsApplet.cpp:687 dialogs/ScriptManager.cpp:698
@@ -2237,7 +2238,7 @@ msgid ""
 "want to save your changes?"
 msgstr ""
 
-#: context/applets/lyrics/LyricsApplet.cpp:492
+#: context/applets/lyrics/LyricsApplet.cpp:485
 #, fuzzy
 #| msgid "Lyrics"
 msgid "Edit Lyrics"
@@ -2245,7 +2246,7 @@ msgstr "Paroloj"
 
 #. i18n: file: services/magnatune/MagnatuneSignupDialogBase.ui:45
 #. i18n: ectx: property (text), widget (QPushButton, closeButton)
-#: context/applets/lyrics/LyricsApplet.cpp:501
+#: context/applets/lyrics/LyricsApplet.cpp:494
 #: firstruntutorial/FirstRunTutorialPage.cpp:56 rc.cpp:1785
 #, fuzzy
 #| msgctxt "@action:button"
@@ -2253,13 +2254,13 @@ msgstr "Paroloj"
 msgid "Close"
 msgstr "Fermi"
 
-#: context/applets/lyrics/LyricsApplet.cpp:510
+#: context/applets/lyrics/LyricsApplet.cpp:503
 #, fuzzy
 #| msgid "Lyrics"
 msgid "Save Lyrics"
 msgstr "Paroloj"
 
-#: context/applets/lyrics/LyricsApplet.cpp:519
+#: context/applets/lyrics/LyricsApplet.cpp:512
 #, fuzzy
 #| msgid "Lyrics"
 msgid "Reload Lyrics"
@@ -2324,7 +2325,7 @@ msgstr "1 ne trovita"
 msgid "There were no lyrics found for this track"
 msgstr "Neniaj paroloj troviĝis pri tiu trako"
 
-#: context/applets/lyrics/LyricsApplet.cpp:743
+#: context/applets/lyrics/LyricsApplet.cpp:746
 #, fuzzy
 #| msgid "Are you sure you want to remove this cover from the Collection?"
 #| msgid_plural ""
@@ -2337,7 +2338,7 @@ msgstr "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 
 #. i18n: file: context/applets/lyrics/lyricsSettings.ui:26
 #. i18n: ectx: property (windowTitle), widget (QWidget, lyricsSettings)
-#: context/applets/lyrics/LyricsApplet.cpp:764 rc.cpp:350
+#: context/applets/lyrics/LyricsApplet.cpp:767 rc.cpp:350
 #, fuzzy
 #| msgid "&Settings"
 msgid "Lyrics Settings"
@@ -2986,7 +2987,7 @@ msgid ""
 "Please add some applets from the toolbar at the bottom of the context view."
 msgstr ""
 
-#: context/engines/current/CurrentEngine.cpp:212
+#: context/engines/current/CurrentEngine.cpp:207
 #, fuzzy, kde-format
 #| msgid "Albums By"
 msgid "Albums by %1"
@@ -5762,106 +5763,6 @@ msgstr "Ĝeneralo"
 msgid "Scriptable Service"
 msgstr "Simpla serĉado"
 
-#: dialogs/FilenameLayoutDialog.cpp:122
-#, fuzzy
-#| msgid "Collection"
-msgid "Collection root"
-msgstr "Kolekto"
-
-#: dialogs/FilenameLayoutDialog.cpp:180
-#, fuzzy
-#| msgid "File Name"
-msgid "File Type"
-msgstr "Dosiernomo"
-
-#: dialogs/FilenameLayoutDialog.cpp:241 dialogs/FilenameLayoutDialog.cpp:610
-#: playlist/PlaylistModel.cpp:835 widgets/MetaQueryWidget.cpp:220
-#: widgets/SmartPlaylistEditor.cpp:184
-msgid "Comment"
-msgstr "Komento"
-
-#: dialogs/FilenameLayoutDialog.cpp:258 dialogs/FilenameLayoutDialog.cpp:629
-#, fuzzy
-#| msgid "genre"
-msgid "Ignore"
-msgstr "ĝenro"
-
-#: dialogs/FilenameLayoutDialog.cpp:261
-#, no-c-format, kde-format
-msgctxt ""
-"Please do not translate the %foo words as they define a syntax used "
-"internally by a parser to describe a filename."
-msgid ""
-"The following tokens can be used to define a filename scheme:"
-"<br>                                      <font color=\"%1\">%track</font>, "
-"<font color=\"%2\">%title</font>,                                      <font "
-"color=\"%3\">%artist</font>, <font color=\"%4\">%composer</"
-"font>,                                      <font color=\"%5\">%year</font>, "
-"<font color=\"%6\">%album</font>,                                      <font "
-"color=\"%7\">%albumartist</font>, <font color=\"%8\">%comment</"
-"font>,                                      <font color=\"%9\">%genre</"
-"font>, %ignore."
-msgstr ""
-
-#: dialogs/FilenameLayoutDialog.cpp:274 dialogs/FilenameLayoutDialog.cpp:639
-#, fuzzy
-#| msgid "&Initialize"
-msgctxt "Artist's Initial"
-msgid "Initial"
-msgstr "Prepar&i"
-
-#: dialogs/FilenameLayoutDialog.cpp:275 dialogs/FilenameLayoutDialog.cpp:624
-#, fuzzy
-#| msgid "File Name"
-msgid "File type"
-msgstr "Dosiernomo"
-
-#: dialogs/FilenameLayoutDialog.cpp:277 dialogs/FilenameLayoutDialog.cpp:644
-#, fuzzy
-#| msgid "Disc Number"
-msgid "Disc number"
-msgstr "Diska numero:"
-
-#: dialogs/FilenameLayoutDialog.cpp:280
-#, no-c-format
-msgctxt ""
-"Please do not translate the %foo words as they define a syntax used "
-"internally by a parser to describe a filename."
-msgid ""
-"The following tokens can be used to define a filename "
-"scheme:                                      <br>%track, %title, %artist, %"
-"composer, %year, %album, %albumartist %comment, %genre, %initial, %folder, %"
-"filetype, %discnumber."
-msgstr ""
-
-#: dialogs/FilenameLayoutDialog.cpp:379 dialogs/FilenameLayoutDialog.cpp:384
-#: dialogs/FilenameLayoutDialog.cpp:389 dialogs/FilenameLayoutDialog.cpp:394
-#: dialogs/FilenameLayoutDialog.cpp:399 dialogs/FilenameLayoutDialog.cpp:404
-#: dialogs/FilenameLayoutDialog.cpp:409 dialogs/FilenameLayoutDialog.cpp:414
-#: dialogs/FilenameLayoutDialog.cpp:419
-msgctxt ""
-"Text to represent an empty tag. Braces (<>) are only to clarify emptiness."
-msgid "&lt;empty&gt;"
-msgstr ""
-
-#: dialogs/FilenameLayoutDialog.cpp:500
-msgid "&Basic..."
-msgstr ""
-
-#. i18n: file: dialogs/FilenameLayoutDialog.ui:263
-#. i18n: ectx: property (text), widget (KPushButton, kpbAdvanced)
-#: dialogs/FilenameLayoutDialog.cpp:510 rc.cpp:972
-#, fuzzy
-#| msgid "Add Device..."
-msgid "&Advanced..."
-msgstr "Aldoni aparaton..."
-
-#: dialogs/FilenameLayoutDialog.cpp:634
-#, fuzzy
-#| msgid "Add computer"
-msgid "Folder"
-msgstr "Aldoni komputilon"
-
 #: dialogs/TagDialog.cpp:605
 msgid "Filename Layout Chooser"
 msgstr ""
@@ -6029,6 +5930,106 @@ msgstr ""
 #| msgid "MusicBrainz Lookup"
 msgid "MusicBrainz Tagger"
 msgstr "Serĉado per MusicBrainz"
+
+#: dialogs/FilenameLayoutDialog.cpp:122
+#, fuzzy
+#| msgid "Collection"
+msgid "Collection root"
+msgstr "Kolekto"
+
+#: dialogs/FilenameLayoutDialog.cpp:180
+#, fuzzy
+#| msgid "File Name"
+msgid "File Type"
+msgstr "Dosiernomo"
+
+#: dialogs/FilenameLayoutDialog.cpp:241 dialogs/FilenameLayoutDialog.cpp:610
+#: playlist/PlaylistModel.cpp:835 widgets/MetaQueryWidget.cpp:220
+#: widgets/SmartPlaylistEditor.cpp:184
+msgid "Comment"
+msgstr "Komento"
+
+#: dialogs/FilenameLayoutDialog.cpp:258 dialogs/FilenameLayoutDialog.cpp:629
+#, fuzzy
+#| msgid "genre"
+msgid "Ignore"
+msgstr "ĝenro"
+
+#: dialogs/FilenameLayoutDialog.cpp:261
+#, no-c-format, kde-format
+msgctxt ""
+"Please do not translate the %foo words as they define a syntax used "
+"internally by a parser to describe a filename."
+msgid ""
+"The following tokens can be used to define a filename scheme:"
+"<br>                                      <font color=\"%1\">%track</font>, "
+"<font color=\"%2\">%title</font>,                                      <font "
+"color=\"%3\">%artist</font>, <font color=\"%4\">%composer</"
+"font>,                                      <font color=\"%5\">%year</font>, "
+"<font color=\"%6\">%album</font>,                                      <font "
+"color=\"%7\">%albumartist</font>, <font color=\"%8\">%comment</"
+"font>,                                      <font color=\"%9\">%genre</"
+"font>, %ignore."
+msgstr ""
+
+#: dialogs/FilenameLayoutDialog.cpp:274 dialogs/FilenameLayoutDialog.cpp:639
+#, fuzzy
+#| msgid "&Initialize"
+msgctxt "Artist's Initial"
+msgid "Initial"
+msgstr "Prepar&i"
+
+#: dialogs/FilenameLayoutDialog.cpp:275 dialogs/FilenameLayoutDialog.cpp:624
+#, fuzzy
+#| msgid "File Name"
+msgid "File type"
+msgstr "Dosiernomo"
+
+#: dialogs/FilenameLayoutDialog.cpp:277 dialogs/FilenameLayoutDialog.cpp:644
+#, fuzzy
+#| msgid "Disc Number"
+msgid "Disc number"
+msgstr "Diska numero:"
+
+#: dialogs/FilenameLayoutDialog.cpp:280
+#, no-c-format
+msgctxt ""
+"Please do not translate the %foo words as they define a syntax used "
+"internally by a parser to describe a filename."
+msgid ""
+"The following tokens can be used to define a filename "
+"scheme:                                      <br>%track, %title, %artist, %"
+"composer, %year, %album, %albumartist, %comment, %genre, %initial, %folder, %"
+"filetype, %discnumber."
+msgstr ""
+
+#: dialogs/FilenameLayoutDialog.cpp:379 dialogs/FilenameLayoutDialog.cpp:384
+#: dialogs/FilenameLayoutDialog.cpp:389 dialogs/FilenameLayoutDialog.cpp:394
+#: dialogs/FilenameLayoutDialog.cpp:399 dialogs/FilenameLayoutDialog.cpp:404
+#: dialogs/FilenameLayoutDialog.cpp:409 dialogs/FilenameLayoutDialog.cpp:414
+#: dialogs/FilenameLayoutDialog.cpp:419
+msgctxt ""
+"Text to represent an empty tag. Braces (<>) are only to clarify emptiness."
+msgid "&lt;empty&gt;"
+msgstr ""
+
+#: dialogs/FilenameLayoutDialog.cpp:500
+msgid "&Basic..."
+msgstr ""
+
+#. i18n: file: dialogs/FilenameLayoutDialog.ui:263
+#. i18n: ectx: property (text), widget (KPushButton, kpbAdvanced)
+#: dialogs/FilenameLayoutDialog.cpp:510 rc.cpp:972
+#, fuzzy
+#| msgid "Add Device..."
+msgid "&Advanced..."
+msgstr "Aldoni aparaton..."
+
+#: dialogs/FilenameLayoutDialog.cpp:634
+#, fuzzy
+#| msgid "Add computer"
+msgid "Folder"
+msgstr "Aldoni komputilon"
 
 #: dynamic/biases/EchoNest.cpp:50
 #, fuzzy
