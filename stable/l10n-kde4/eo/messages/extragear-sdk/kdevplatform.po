@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-11-03 01:50+0100\n"
+"POT-Creation-Date: 2010-11-24 01:52+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -201,18 +201,6 @@ msgstr "Forigi ĉiujn"
 msgid "Enable"
 msgstr "Ŝaltu"
 
-#: debugger/framestack/framestackwidget.cpp:59
-msgid ""
-"<b>Frame stack</b><p>Often referred to as the \"call stack\", this is a list "
-"showing which function is currently active, and what called each function to "
-"get to this point in your program. By clicking on an item you can see the "
-"values in any of the previous calling functions.</p>"
-msgstr ""
-
-#: debugger/framestack/framestackwidget.cpp:94
-msgid "Threads:"
-msgstr ""
-
 #: debugger/framestack/framestackmodel.cpp:129
 #, kde-format
 msgctxt "#thread-id at function-name or address"
@@ -230,9 +218,21 @@ msgstr "Funkcio"
 
 #. i18n: file: shell/projectsourcepage.ui:49
 #. i18n: ectx: property (title), widget (QGroupBox, sourceBox)
-#: debugger/framestack/framestackmodel.cpp:211 rc.cpp:149
+#: debugger/framestack/framestackmodel.cpp:211 rc.cpp:167
 msgid "Source"
 msgstr "Fonto"
+
+#: debugger/framestack/framestackwidget.cpp:59
+msgid ""
+"<b>Frame stack</b><p>Often referred to as the \"call stack\", this is a list "
+"showing which function is currently active, and what called each function to "
+"get to this point in your program. By clicking on an item you can see the "
+"values in any of the previous calling functions.</p>"
+msgstr ""
+
+#: debugger/framestack/framestackwidget.cpp:94
+msgid "Threads:"
+msgstr ""
 
 #: debugger/interfaces/ibreakpointcontroller.cpp:171
 #, kde-format
@@ -267,7 +267,7 @@ msgstr ""
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:35
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: debugger/util/pathmappings.cpp:244 shell/workingsetcontroller.cpp:768
-#: rc.cpp:134 rc.cpp:182 rc.cpp:212 rc.cpp:262 rc.cpp:407
+#: rc.cpp:134 rc.cpp:182 rc.cpp:282 rc.cpp:332 rc.cpp:398
 msgid "Delete"
 msgstr "Forigi"
 
@@ -446,8 +446,7 @@ msgstr "Enmeti"
 
 #. i18n: file: language/codegen/ui/newclass.ui:77
 #. i18n: ectx: property (toolTip), widget (KPushButton, removeInheritancePushButton)
-#: language/codegen/applychangeswidget.cpp:268 sublime/ideal.cpp:491
-#: rc.cpp:116
+#: language/codegen/applychangeswidget.cpp:268 sublime/ideal.cpp:491 rc.cpp:62
 msgid "Remove"
 msgstr "Forigi"
 
@@ -538,28 +537,6 @@ msgstr "Privata"
 #: language/duchain/forwarddeclaration.cpp:63
 #, kde-format
 msgid "context-free forward-declaration %1"
-msgstr ""
-
-#: language/duchain/navigation/problemnavigationcontext.cpp:41
-msgid "Solve"
-msgstr "Solvi"
-
-#: language/duchain/navigation/problemnavigationcontext.cpp:72
-msgid "Problem"
-msgstr ""
-
-#: language/duchain/navigation/problemnavigationcontext.cpp:82
-#, kde-format
-msgid "Problem in <b>%1</b>:<br/>"
-msgstr ""
-
-#: language/duchain/navigation/usesnavigationcontext.cpp:44
-msgid "Uses of "
-msgstr ""
-
-#: language/duchain/navigation/usesnavigationcontext.cpp:49
-#, kde-format
-msgid "Uses of %1"
 msgstr ""
 
 #: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:71
@@ -758,11 +735,33 @@ msgstr "Alinomo de nomspaco"
 msgid "Forward Declaration"
 msgstr "Anonca deklaro"
 
+#: language/duchain/navigation/problemnavigationcontext.cpp:41
+msgid "Solve"
+msgstr "Solvi"
+
+#: language/duchain/navigation/problemnavigationcontext.cpp:72
+msgid "Problem"
+msgstr ""
+
+#: language/duchain/navigation/problemnavigationcontext.cpp:82
+#, kde-format
+msgid "Problem in <b>%1</b>:<br/>"
+msgstr ""
+
+#: language/duchain/navigation/usesnavigationcontext.cpp:44
+msgid "Uses of "
+msgstr ""
+
+#: language/duchain/navigation/usesnavigationcontext.cpp:49
+#, kde-format
+msgid "Uses of %1"
+msgstr ""
+
 #. i18n: file: language/codegen/ui/outputlocation.ui:99
 #. i18n: ectx: property (text), widget (QLabel, headerRowLabel)
 #. i18n: file: language/codegen/ui/outputlocation.ui:132
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: language/duchain/navigation/useswidget.cpp:118 rc.cpp:59 rc.cpp:68
+#: language/duchain/navigation/useswidget.cpp:118 rc.cpp:89 rc.cpp:98
 msgid "Line"
 msgstr "Linio"
 
@@ -860,15 +859,6 @@ msgid ""
 "provided"
 msgstr ""
 
-#: project/importprojectjob.cpp:72
-#, kde-format
-msgid "Project Import: %1"
-msgstr ""
-
-#: project/importprojectjob.cpp:102
-msgid "Project import canceled."
-msgstr ""
-
 #: project/helper.cpp:55
 #, kde-format
 msgid "Cannot remove folder <i>%1</i>."
@@ -899,6 +889,15 @@ msgstr ""
 msgid "Cannot create folder <i>%1</i>."
 msgstr ""
 
+#: project/importprojectjob.cpp:72
+#, kde-format
+msgid "Project Import: %1"
+msgstr ""
+
+#: project/importprojectjob.cpp:102
+msgid "Project import canceled."
+msgstr ""
+
 #: project/projectbuildsetmodel.cpp:147
 msgid "Path"
 msgstr "Vojo"
@@ -925,13 +924,135 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
-#: shell/documentationcontroller.cpp:60
-msgid "Show Documentation"
+#: shell/core.cpp:67
+msgid "KDevelop Platform"
 msgstr ""
 
-#: shell/documentationcontroller.cpp:67 shell/documentationcontroller.cpp:139
-msgid "Documentation"
-msgstr "Dokumentaro"
+#: shell/core.cpp:68
+msgid "Development Platform for IDE-like Applications"
+msgstr ""
+
+#: shell/core.cpp:69
+msgid "Copyright 2004-2009, The KDevelop developers"
+msgstr ""
+
+#: shell/core.cpp:71
+msgid "Andreas Pakulat"
+msgstr "Andreas Pakulat"
+
+#: shell/core.cpp:71
+msgid ""
+"Architecture, VCS Support, Project Management Support, QMake Projectmanager"
+msgstr ""
+
+#: shell/core.cpp:72
+msgid "Alexander Dymo"
+msgstr "Alexander Dymo"
+
+#: shell/core.cpp:72
+msgid "Architecture, Sublime UI, Ruby support"
+msgstr ""
+
+#: shell/core.cpp:73
+msgid "David Nolden"
+msgstr "David Nolden"
+
+#: shell/core.cpp:73
+msgid "Definition-Use Chain, C++ Support"
+msgstr ""
+
+#: shell/core.cpp:74
+msgid "Aleix Pol Gonzalez"
+msgstr "Aleix Pol Gonzalez"
+
+#: shell/core.cpp:74
+msgid "Co-Maintainer, CMake Support, Run Support, Kross Support"
+msgstr ""
+
+#: shell/core.cpp:75
+msgid "Vladimir Prus"
+msgstr "Vladimir Prus"
+
+#: shell/core.cpp:75
+#, fuzzy
+#| msgid "generating"
+msgid "GDB integration"
+msgstr "generanta"
+
+#: shell/core.cpp:76
+msgid "Hamish Rodda"
+msgstr "Hamish Rodda"
+
+#: shell/core.cpp:76
+msgid "Text editor integration, definition-use chain"
+msgstr ""
+
+#: shell/core.cpp:78
+msgid "Matt Rogers"
+msgstr "Matt Rogers"
+
+#: shell/core.cpp:79
+msgid "Cédric Pasteur"
+msgstr "Cédric Pasteur"
+
+#: shell/core.cpp:79
+msgid "astyle and ident support"
+msgstr ""
+
+#: shell/core.cpp:80
+msgid "Evgeniy Ivanov"
+msgstr "Evgeniy Ivanov"
+
+#: shell/core.cpp:80
+msgid "Distributed VCS, Git, Mercurial"
+msgstr ""
+
+#: shell/core.cpp:83
+msgid "Robert Gruber"
+msgstr "Robert Gruber"
+
+#: shell/core.cpp:83
+msgid "SnippetPart, debugger and usability patches"
+msgstr ""
+
+#: shell/core.cpp:84
+msgid "Dukju Ahn"
+msgstr "Dukju Ahn"
+
+#: shell/core.cpp:84
+msgid "Subversion plugin, Custom Make Manager, Overall improvements"
+msgstr ""
+
+#: shell/core.cpp:85
+msgid "Niko Sams"
+msgstr ""
+
+#: shell/core.cpp:85
+msgid "GDB integration, Webdevelopment Plugins"
+msgstr ""
+
+#: shell/core.cpp:86
+msgid "Milian Wolff"
+msgstr ""
+
+#: shell/core.cpp:86
+msgid ""
+"Co-Maintainer, Generic manager, Webdevelopment Plugins, Snippets, Performance"
+msgstr ""
+
+#: shell/core.cpp:128
+msgid ""
+"The installed Kate version does not support the SmartInterface which is "
+"crucial forKDevelop up to and including version 4.1.\n"
+"\n"
+"To use KDevelop with KDE SC 4.6, where the SmartInterface is replaced by the "
+"MovingInterface, you need KDevelop 4.2 or higher."
+msgstr ""
+
+#: shell/core.cpp:190
+#, kde-format
+msgid "This session (%1) is already active in another running instance"
+msgstr ""
 
 #: shell/debugcontroller.cpp:113
 msgid "Frame Stack"
@@ -1104,164 +1225,123 @@ msgid ""
 "editor.</p>"
 msgstr ""
 
-#: shell/runcontroller.cpp:88
-msgid "Profile"
+#: shell/documentationcontroller.cpp:60
+msgid "Show Documentation"
 msgstr ""
 
-#: shell/runcontroller.cpp:97
-msgid "Execute"
-msgstr "Lanĉi"
+#: shell/documentationcontroller.cpp:67 shell/documentationcontroller.cpp:139
+msgid "Documentation"
+msgstr "Dokumentaro"
 
-#: shell/runcontroller.cpp:380
+#: shell/documentcontroller.cpp:61
+msgid "Untitled"
+msgstr "Sentitola"
+
+#: shell/documentcontroller.cpp:122 shell/documentcontroller.cpp:186
+msgid "*|Text File\n"
+msgstr ""
+
+#: shell/documentcontroller.cpp:124 shell/documentcontroller.cpp:188
+msgid "Open File"
+msgstr "Malfermu dosieron"
+
+#: shell/documentcontroller.cpp:269
 #, kde-format
 msgid ""
-"Launcher could not be found for the name '%1'. Check the launch "
-"configuration."
+"KDevelop could not find the editor for file '%1'.\n"
+"Do you want to open it as plain text?"
 msgstr ""
 
-#: shell/runcontroller.cpp:396
-msgid "Configure Launches..."
+#: shell/documentcontroller.cpp:269
+msgid "Could Not Find Editor"
 msgstr ""
 
-#: shell/runcontroller.cpp:398 shell/runcontroller.cpp:399
-msgid "Open Launch Configuration Dialog"
+#: shell/documentcontroller.cpp:467
+msgid "&Open..."
+msgstr "&Malfermi..."
+
+#: shell/documentcontroller.cpp:469
+msgid "Open file"
+msgstr "Malfermi dosieron"
+
+#: shell/documentcontroller.cpp:470
+msgid "<b>Open file</b><p>Opens a file for editing.</p>"
 msgstr ""
 
-#: shell/runcontroller.cpp:400
+#: shell/documentcontroller.cpp:474
 msgid ""
-"<p>Opens a dialog to setup new launch configurations, or to change the "
-"existing ones.</p>"
+"This lists files which you have opened recently, and allows you to easily "
+"open them again."
+msgstr ""
+"Ĉi tio listigas dosierojn kiujn vi malfermis antaŭ nelonge, kaj permesas la "
+"rapidan malfermon de ili denove."
+
+#: shell/documentcontroller.cpp:479
+msgid "Save Al&l"
 msgstr ""
 
-#: shell/runcontroller.cpp:403
-msgid "Execute Launch"
+#: shell/documentcontroller.cpp:481
+msgid "Save all open documents"
 msgstr ""
 
-#: shell/runcontroller.cpp:404
-msgctxt "Short text for 'Execute Launch' used in the toolbar"
-msgid "Execute"
-msgstr ""
-
-#: shell/runcontroller.cpp:406 shell/runcontroller.cpp:407
-msgid "Execute current Launch"
-msgstr ""
-
-#: shell/runcontroller.cpp:408
+#: shell/documentcontroller.cpp:482
 msgid ""
-"<b>Execute Launch</b><p>Executes the target or the program specified in "
-"currently active launch configuration.</p>"
+"<b>Save all documents</b><p>Save all open documents, prompting for "
+"additional information when necessary.</p>"
 msgstr ""
 
-#: shell/runcontroller.cpp:412
-msgid "Debug Launch"
+#: shell/documentcontroller.cpp:487
+msgid "Rever&t All"
 msgstr ""
 
-#: shell/runcontroller.cpp:414
-msgctxt "Short text for 'Debug Launch' used in the toolbar"
-msgid "Debug"
+#: shell/documentcontroller.cpp:489
+msgid "Revert all open documents"
 msgstr ""
 
-#: shell/runcontroller.cpp:415 shell/runcontroller.cpp:416
-msgid "Debug current Launch"
-msgstr ""
-
-#: shell/runcontroller.cpp:417
+#: shell/documentcontroller.cpp:490
 msgid ""
-"<b>Debug Launch</b><p>Executes the target or the program specified in "
-"currently active launch configuration inside a Debugger.</p>"
+"<b>Revert all documents</b><p>Revert all open documents, returning to the "
+"previously saved state.</p>"
 msgstr ""
 
-#: shell/runcontroller.cpp:421
-msgid "Profile Launch"
+#: shell/documentcontroller.cpp:496
+msgid "&Close"
+msgstr "F&ermi"
+
+#: shell/documentcontroller.cpp:498 sublime/container.cpp:415
+msgid "Close File"
 msgstr ""
 
-#: shell/runcontroller.cpp:422 shell/runcontroller.cpp:423
-msgid "Profile current Launch"
+#: shell/documentcontroller.cpp:499
+msgid "<b>Close File</b><p>Closes current file.</p>"
 msgstr ""
 
-#: shell/runcontroller.cpp:424
+#: shell/documentcontroller.cpp:504
+msgid "Clos&e All"
+msgstr "F&ermi ĉiujn"
+
+#: shell/documentcontroller.cpp:506
+msgid "Close all open documents"
+msgstr ""
+
+#: shell/documentcontroller.cpp:507
 msgid ""
-"<b>Profile Launch</b><p>Executes the target or the program specified in "
-"currently active launch configuration inside a Profiler.</p>"
+"<b>Close all documents</b><p>Close all open documents, prompting for "
+"additional information when necessary.</p>"
 msgstr ""
 
-#: shell/runcontroller.cpp:428
-msgid "Stop Jobs"
+#: shell/documentcontroller.cpp:513
+msgid "Close All Ot&hers"
 msgstr ""
 
-#: shell/runcontroller.cpp:429
-msgctxt "Short text for 'Stop Jobs' used in the toolbar"
-msgid "Stop"
+#: shell/documentcontroller.cpp:515
+msgid "Close all other documents"
 msgstr ""
 
-#: shell/runcontroller.cpp:431
-msgid "Stop all currently running jobs"
-msgstr ""
-
-#: shell/runcontroller.cpp:432
-msgid "<b>Stop Jobs</b><p>Requests that all running jobs are stopped.</p>"
-msgstr ""
-
-#: shell/runcontroller.cpp:437 shell/runcontroller.cpp:438
-#: shell/runcontroller.cpp:439
-msgid "Current Launch Configuration"
-msgstr ""
-
-#: shell/runcontroller.cpp:440
-msgid "<p>Select which launch configuration to run when run is invoked.</p>"
-msgstr ""
-
-#: shell/runcontroller.cpp:529
-msgid "Unnamed job"
-msgstr ""
-
-#: shell/runcontroller.cpp:616
-msgid "Process Error"
-msgstr ""
-
-#: shell/runcontroller.cpp:804
-#, kde-format
-msgid "New %1 Configuration"
-msgstr ""
-
-#: shell/runcontroller.cpp:839
-#, kde-format
-msgid "%1 As..."
-msgstr ""
-
-#: shell/launchconfigurationdialog.cpp:56
-msgid "Launch Configurations"
-msgstr ""
-
-#: shell/launchconfigurationdialog.cpp:146
+#: shell/documentcontroller.cpp:516
 msgid ""
-"Selected Launch Configuration has unsaved changes. Do you want to save it?"
-msgstr ""
-
-#: shell/launchconfigurationdialog.cpp:146
-msgid "Unsaved Changes"
-msgstr "Nekonservitaj ŝanĝoj"
-
-#: shell/launchconfigurationdialog.cpp:281
-#, kde-format
-msgid "<b>%1</b>"
-msgstr "<b>%1</b>"
-
-#: shell/launchconfigurationdialog.cpp:284
-#, kde-format
-msgid "<b>%1</b> (%2)"
-msgstr "<b>%1</b> (%2)"
-
-#: shell/launchconfigurationdialog.cpp:538
-msgctxt "Name of the Launch Configurations"
-msgid "Name"
-msgstr ""
-
-#: shell/launchconfigurationdialog.cpp:541
-msgctxt ""
-"The type of the Launch Configurations (i.e. Python Application, C++ "
-"Application)"
-msgid "Type"
+"<b>Close all other documents</b><p>Close all open documents, with the "
+"exception of the currently active document.</p>"
 msgstr ""
 
 #: shell/kross/xmltokross/mainduchain.cpp:46 shell/mainwindow_p.cpp:71
@@ -1317,6 +1397,41 @@ msgstr ""
 
 #: shell/kross/xmltokross/mainduchain.cpp:95
 msgid "Verbose output"
+msgstr ""
+
+#: shell/launchconfigurationdialog.cpp:56
+msgid "Launch Configurations"
+msgstr ""
+
+#: shell/launchconfigurationdialog.cpp:146
+msgid ""
+"Selected Launch Configuration has unsaved changes. Do you want to save it?"
+msgstr ""
+
+#: shell/launchconfigurationdialog.cpp:146
+msgid "Unsaved Changes"
+msgstr "Nekonservitaj ŝanĝoj"
+
+#: shell/launchconfigurationdialog.cpp:281
+#, kde-format
+msgid "<b>%1</b>"
+msgstr "<b>%1</b>"
+
+#: shell/launchconfigurationdialog.cpp:284
+#, kde-format
+msgid "<b>%1</b> (%2)"
+msgstr "<b>%1</b> (%2)"
+
+#: shell/launchconfigurationdialog.cpp:538
+msgctxt "Name of the Launch Configurations"
+msgid "Name"
+msgstr ""
+
+#: shell/launchconfigurationdialog.cpp:541
+msgctxt ""
+"The type of the Launch Configurations (i.e. Python Application, C++ "
+"Application)"
+msgid "Type"
 msgstr ""
 
 #: shell/loadedpluginsdialog.cpp:257 shell/mainwindow_p.cpp:250
@@ -1554,30 +1669,6 @@ msgstr ""
 msgid "Close Document"
 msgstr "Fermi dokumenton"
 
-#: shell/savedialog.cpp:55
-msgid "Save Modified Files?"
-msgstr ""
-
-#: shell/savedialog.cpp:65
-msgid "The following files have been modified. Save them?"
-msgstr ""
-
-#: shell/savedialog.cpp:73
-msgid "Save &Selected"
-msgstr ""
-
-#: shell/savedialog.cpp:73
-msgid "Saves all selected files"
-msgstr ""
-
-#: shell/savedialog.cpp:74
-msgid "Save &None"
-msgstr ""
-
-#: shell/savedialog.cpp:75
-msgid "Discard all modifications"
-msgstr ""
-
 #: shell/progressdialog.cpp:186
 msgid "Cancel this operation."
 msgstr ""
@@ -1586,498 +1677,17 @@ msgstr ""
 msgid "Aborting..."
 msgstr "Ĉesigante..."
 
-#: shell/sessioncontroller.cpp:175
-msgid ""
-"The current session and all contained settings will be deleted. The projects "
-"will stay unaffected. Do you really want to continue?"
+#: shell/progresswidget.cpp:69
+msgid "Open detailed progress dialog"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:187
-#, fuzzy
-#| msgid "Remove Expression"
-msgid "Rename Session"
-msgstr "Forigi esprimon"
-
-#: shell/sessioncontroller.cpp:191
-#, fuzzy
-#| msgid "Revision"
-msgid "New Session Name"
-msgstr "Revizio"
-
-#: shell/sessioncontroller.cpp:211
-msgid "The selected session is already active in another running instance"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:344
-#, kde-format
-msgid ""
-"This session crashed at %1, but recovery copies of the following modified "
-"files are available.\n"
-"\n"
-"Push Continue to recover the modified files.\n"
-"\n"
-"Push Cancel to lose the modifications."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:344 shell/sessioncontroller.cpp:374
-#, fuzzy
-#| msgid "Remove"
-msgid "Recovery"
-msgstr "Forigi"
-
-#: shell/sessioncontroller.cpp:374
-#, kde-format
-msgid "Could not recover %1, the recovery file is empty"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:506
-msgid "Start New Session"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:507
-msgid "Start a new KDevelop instance with an empty session"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:511
-#, fuzzy
-#| msgid "Remove Expression"
-msgid "Rename Session..."
-msgstr "Forigi esprimon"
-
-#: shell/sessioncontroller.cpp:515
-msgid "Delete Session..."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:519
-msgid "Quit"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:525
-msgid "Configure Sessions..."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:526
-msgid "Create/Delete/Activate Sessions"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:527
-msgid ""
-"<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and set "
-"a new active session.</p>"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:669 shell/tests/sessioncontrollertest.cpp:202
-#, kde-format
-msgid "Copy of %1"
-msgstr ""
-
-#: shell/textdocument.cpp:364
-#, kde-format
-msgid ""
-"The file \"%1\" is modified on disk.\n"
-"\n"
-"Are you sure you want to overwrite it? (External changes will be lost.)"
-msgstr ""
-
-#: shell/textdocument.cpp:367
-msgid "Document Externally Modified"
-msgstr ""
-
-#: shell/textdocument.cpp:646
-#, kde-format
-msgid " Line: %1 Col: %2 "
-msgstr " Linio: %1 Kol: %2"
-
-#: shell/uicontroller.cpp:96
-msgid "Review"
-msgstr ""
-
-#: shell/uicontroller.cpp:186
-msgid "&Assistant Action 1"
-msgstr ""
-
-#: shell/uicontroller.cpp:191
-msgid "&Assistant Action 2"
-msgstr ""
-
-#: shell/uicontroller.cpp:196
-msgid "&Assistant Action 3"
-msgstr ""
-
-#: shell/uicontroller.cpp:201
-msgid "&Assistant Action 4"
-msgstr ""
-
-#: shell/uicontroller.cpp:206
-msgid "&Hide Assistant"
-msgstr ""
-
-#: shell/uicontroller.cpp:386
-msgid "Select Tool View to Add"
-msgstr ""
-
-#: shell/session.cpp:125
-#, fuzzy
-#| msgid "Protected"
-msgid "(no projects)"
-msgstr "Protektata"
-
-#: shell/projectsourcepage.cpp:38
-#, fuzzy
-#| msgid "Do Nothing"
-msgid "Do not obtain"
-msgstr "Nenion fari"
-
-#: shell/projectsourcepage.cpp:136
-#, kde-format
-msgid "Could not create the directory: %1"
-msgstr ""
-
-#: shell/projectsourcepage.cpp:158
-#, kde-format
-msgctxt "Format of the progress bar text. progress and info"
-msgid "%1 : %p%"
-msgstr ""
-
-#: shell/projectsourcepage.cpp:187
-msgid ""
-"You need to specify a valid or nonexistent directory to check out a project"
-msgstr ""
-
-#: shell/projectsourcepage.cpp:189
-msgid "You need to specify a valid location for the project"
-msgstr ""
-
-#: shell/sessiondialog.cpp:183
-msgid "Configure Sessions"
-msgstr ""
-
-#: shell/settings/bgpreferences.cpp:40
-msgid "Parser Background Settings"
-msgstr ""
-
-#: shell/settings/environmentpreferences.cpp:45
-msgid "Environment Settings"
-msgstr ""
-
-#: shell/settings/environmentwidget.cpp:116
-msgid "New Environment Variable"
-msgstr ""
-
-#: shell/settings/environmentwidget.cpp:123
-msgctxt "Name of an environment variable"
-msgid "Variable Name:"
-msgstr ""
-
-#: shell/settings/environmentwidget.cpp:128
-msgctxt "Value of an environment variable"
-msgid "Variable Value:"
-msgstr ""
-
-#: shell/settings/pluginpreferences.cpp:40
-msgid "Plugin Selection"
-msgstr ""
-
-#: shell/settings/projectpreferences.cpp:37
-#, fuzzy
-#| msgid "Revision"
-msgid "Projects Settings"
-msgstr "Revizio"
-
-#: shell/settings/ccpreferences.cpp:52
-msgid "Language Support Settings"
-msgstr ""
-
-#: shell/settings/uipreferences.cpp:38
-msgid "User Interface Settings"
-msgstr ""
-
-#: shell/settings/editstyledialog.cpp:69
-#: shell/settings/sourceformattersettings.cpp:70
-msgid ""
-"A KDE text-editor component could not be found.\n"
-"Please check your KDE installation."
-msgstr ""
-"Ne povis trovi KDE-tekstredaktilo-parton;\n"
-"bonvolu kontroli vian KDE-instalon."
-
-#: shell/settings/editstyledialog.cpp:102
-msgid "No Source Formatter available"
-msgstr ""
-
-#: shell/settings/sourceformattersettings.cpp:366
-#, fuzzy, kde-format
-#| msgid "New"
-msgid "New %1"
-msgstr "Nova"
-
-#: shell/settings/sourceformattersettings.cpp:369
-#, fuzzy
-#| msgid "Style:"
-msgid "New Style"
-msgstr "Stilo:"
-
-#: shell/settings/sourceformattersettings.cpp:427
-msgid "No Language selected"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:68
-msgid "&Reformat Source"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:69
-msgid "Reformat source using AStyle"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:70
-msgid ""
-"<b>Reformat source</b><p>Source reformatting functionality using <b>astyle</"
-"b> library.</p>"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:75
-#, fuzzy
-#| msgid "Format"
-msgid "Reformat Line"
-msgstr "Formato"
-
-#: shell/sourceformattercontroller.cpp:76
-msgid "Reformat current line using AStyle"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:77
-msgid ""
-"<b>Reformat line</b><p>Source reformatting of line under cursor using "
-"<b>astyle</b> library.</p>"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:82
-#, fuzzy
-#| msgid "Format"
-msgid "Format files"
-msgstr "Formato"
-
-#: shell/sourceformattercontroller.cpp:83
-msgid "Format file(s) using the current theme"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:84
-msgid ""
-"<b>Format files</b><p>Formatting functionality using <b>astyle</b> library.</"
-"p>"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:392
-#, kde-format
-msgid "Unable to read %1"
-msgstr ""
-
-#: shell/sourceformattercontroller.cpp:400
-#, kde-format
-msgid "Unable to write to %1"
-msgstr ""
-
-#: shell/core.cpp:67
-msgid "KDevelop Platform"
-msgstr ""
-
-#: shell/core.cpp:68
-msgid "Development Platform for IDE-like Applications"
-msgstr ""
-
-#: shell/core.cpp:69
-msgid "Copyright 2004-2009, The KDevelop developers"
-msgstr ""
-
-#: shell/core.cpp:71
-msgid "Andreas Pakulat"
-msgstr "Andreas Pakulat"
-
-#: shell/core.cpp:71
-msgid ""
-"Architecture, VCS Support, Project Management Support, QMake Projectmanager"
-msgstr ""
-
-#: shell/core.cpp:72
-msgid "Alexander Dymo"
-msgstr "Alexander Dymo"
-
-#: shell/core.cpp:72
-msgid "Architecture, Sublime UI, Ruby support"
-msgstr ""
-
-#: shell/core.cpp:73
-msgid "David Nolden"
-msgstr "David Nolden"
-
-#: shell/core.cpp:73
-msgid "Definition-Use Chain, C++ Support"
-msgstr ""
-
-#: shell/core.cpp:74
-msgid "Aleix Pol Gonzalez"
-msgstr "Aleix Pol Gonzalez"
-
-#: shell/core.cpp:74
-msgid "Co-Maintainer, CMake Support, Run Support, Kross Support"
-msgstr ""
-
-#: shell/core.cpp:75
-msgid "Vladimir Prus"
-msgstr "Vladimir Prus"
-
-#: shell/core.cpp:75
-#, fuzzy
-#| msgid "generating"
-msgid "GDB integration"
-msgstr "generanta"
-
-#: shell/core.cpp:76
-msgid "Hamish Rodda"
-msgstr "Hamish Rodda"
-
-#: shell/core.cpp:76
-msgid "Text editor integration, definition-use chain"
-msgstr ""
-
-#: shell/core.cpp:78
-msgid "Matt Rogers"
-msgstr "Matt Rogers"
-
-#: shell/core.cpp:79
-msgid "Cédric Pasteur"
-msgstr "Cédric Pasteur"
-
-#: shell/core.cpp:79
-msgid "astyle and ident support"
-msgstr ""
-
-#: shell/core.cpp:80
-msgid "Evgeniy Ivanov"
-msgstr "Evgeniy Ivanov"
-
-#: shell/core.cpp:80
-msgid "Distributed VCS, Git, Mercurial"
-msgstr ""
-
-#: shell/core.cpp:83
-msgid "Robert Gruber"
-msgstr "Robert Gruber"
-
-#: shell/core.cpp:83
-msgid "SnippetPart, debugger and usability patches"
-msgstr ""
-
-#: shell/core.cpp:84
-msgid "Dukju Ahn"
-msgstr "Dukju Ahn"
-
-#: shell/core.cpp:84
-msgid "Subversion plugin, Custom Make Manager, Overall improvements"
-msgstr ""
-
-#: shell/core.cpp:85
-msgid "Niko Sams"
-msgstr ""
-
-#: shell/core.cpp:85
-msgid "GDB integration, Webdevelopment Plugins"
-msgstr ""
-
-#: shell/core.cpp:86
-msgid "Milian Wolff"
-msgstr ""
-
-#: shell/core.cpp:86
-msgid ""
-"Co-Maintainer, Generic manager, Webdevelopment Plugins, Snippets, Performance"
-msgstr ""
-
-#: shell/core.cpp:128
-msgid ""
-"The installed Kate version does not support the SmartInterface which is "
-"crucial forKDevelop up to and including version 4.1.\n"
-"\n"
-"To use KDevelop with KDE SC 4.6, where the SmartInterface is replaced by the "
-"MovingInterface, you need KDevelop 4.2 or higher."
-msgstr ""
-
-#: shell/core.cpp:190
-#, kde-format
-msgid "This session (%1) is already active in another running instance"
-msgstr ""
-
-#: shell/tests/nonguiinterfaceplugin.cpp:30
-msgid "Plugin for unit-tests"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:520
-msgid "Close Working Set (Left Click)"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:521
-msgid "Duplicate Working Set"
+#: shell/progresswidget.cpp:265
+msgid "Hide detailed progress window"
 msgstr ""
 
-#: shell/workingsetcontroller.cpp:523
-msgid "Load Working Set (Left Click)"
+#: shell/progresswidget.cpp:269
+msgid "Show detailed progress window"
 msgstr ""
-
-#: shell/workingsetcontroller.cpp:533
-msgid "Delete Working Set"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:757
-msgid "<b>Working Set</b>"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:769
-msgid "Remove this working set. The contained documents are not affected."
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:794
-msgid "Documents:"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:801
-msgid "Add All"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:802
-msgid ""
-"Add all documents that are part of this working set to the currently active "
-"working set."
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:809
-msgid "Subtract All"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:810
-msgid ""
-"Remove all documents that are part of this working set from the currently "
-"active working set."
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:864
-msgid "Remove this file from the current working set"
-msgstr ""
-
-#: shell/workingsetcontroller.cpp:868
-msgid "Add this file to the current working set"
-msgstr ""
-
-#. i18n: file: shell/kross/examples/guiexample/GUIExample/example.ui:25
-#. i18n: ectx: property (text), widget (QPushButton, close)
-#: shell/workingsetcontroller.cpp:884 rc.cpp:125
-msgid "Close"
-msgstr "Fermi"
-
-#: shell/workingsetcontroller.cpp:889
-#, fuzzy
-#| msgid "Reload"
-msgid "Load"
-msgstr "Reŝargi"
 
 #: shell/project.cpp:111
 #, fuzzy, kde-format
@@ -2240,188 +1850,517 @@ msgid ""
 "the session instead?"
 msgstr ""
 
-#: shell/documentcontroller.cpp:61
-msgid "Untitled"
-msgstr "Sentitola"
+#: shell/projectsourcepage.cpp:38
+#, fuzzy
+#| msgid "Do Nothing"
+msgid "Do not obtain"
+msgstr "Nenion fari"
 
-#: shell/documentcontroller.cpp:122 shell/documentcontroller.cpp:186
-msgid "*|Text File\n"
+#: shell/projectsourcepage.cpp:136
+#, kde-format
+msgid "Could not create the directory: %1"
 msgstr ""
 
-#: shell/documentcontroller.cpp:124 shell/documentcontroller.cpp:188
-msgid "Open File"
-msgstr "Malfermu dosieron"
+#: shell/projectsourcepage.cpp:158
+#, kde-format
+msgctxt "Format of the progress bar text. progress and info"
+msgid "%1 : %p%"
+msgstr ""
 
-#: shell/documentcontroller.cpp:269
+#: shell/projectsourcepage.cpp:187
+msgid ""
+"You need to specify a valid or nonexistent directory to check out a project"
+msgstr ""
+
+#: shell/projectsourcepage.cpp:189
+msgid "You need to specify a valid location for the project"
+msgstr ""
+
+#: shell/runcontroller.cpp:88
+msgid "Profile"
+msgstr ""
+
+#: shell/runcontroller.cpp:97
+msgid "Execute"
+msgstr "Lanĉi"
+
+#: shell/runcontroller.cpp:380
 #, kde-format
 msgid ""
-"KDevelop could not find the editor for file '%1'.\n"
-"Do you want to open it as plain text?"
+"Launcher could not be found for the name '%1'. Check the launch "
+"configuration."
 msgstr ""
 
-#: shell/documentcontroller.cpp:269
-msgid "Could Not Find Editor"
+#: shell/runcontroller.cpp:396
+msgid "Configure Launches..."
 msgstr ""
 
-#: shell/documentcontroller.cpp:467
-msgid "&Open..."
-msgstr "&Malfermi..."
-
-#: shell/documentcontroller.cpp:469
-msgid "Open file"
-msgstr "Malfermi dosieron"
-
-#: shell/documentcontroller.cpp:470
-msgid "<b>Open file</b><p>Opens a file for editing.</p>"
+#: shell/runcontroller.cpp:398 shell/runcontroller.cpp:399
+msgid "Open Launch Configuration Dialog"
 msgstr ""
 
-#: shell/documentcontroller.cpp:474
+#: shell/runcontroller.cpp:400
 msgid ""
-"This lists files which you have opened recently, and allows you to easily "
-"open them again."
-msgstr ""
-"Ĉi tio listigas dosierojn kiujn vi malfermis antaŭ nelonge, kaj permesas la "
-"rapidan malfermon de ili denove."
-
-#: shell/documentcontroller.cpp:479
-msgid "Save Al&l"
+"<p>Opens a dialog to setup new launch configurations, or to change the "
+"existing ones.</p>"
 msgstr ""
 
-#: shell/documentcontroller.cpp:481
-msgid "Save all open documents"
+#: shell/runcontroller.cpp:403
+msgid "Execute Launch"
 msgstr ""
 
-#: shell/documentcontroller.cpp:482
+#: shell/runcontroller.cpp:404
+msgctxt "Short text for 'Execute Launch' used in the toolbar"
+msgid "Execute"
+msgstr ""
+
+#: shell/runcontroller.cpp:406 shell/runcontroller.cpp:407
+msgid "Execute current Launch"
+msgstr ""
+
+#: shell/runcontroller.cpp:408
 msgid ""
-"<b>Save all documents</b><p>Save all open documents, prompting for "
-"additional information when necessary.</p>"
+"<b>Execute Launch</b><p>Executes the target or the program specified in "
+"currently active launch configuration.</p>"
 msgstr ""
 
-#: shell/documentcontroller.cpp:487
-msgid "Rever&t All"
+#: shell/runcontroller.cpp:412
+msgid "Debug Launch"
 msgstr ""
 
-#: shell/documentcontroller.cpp:489
-msgid "Revert all open documents"
+#: shell/runcontroller.cpp:414
+msgctxt "Short text for 'Debug Launch' used in the toolbar"
+msgid "Debug"
 msgstr ""
 
-#: shell/documentcontroller.cpp:490
+#: shell/runcontroller.cpp:415 shell/runcontroller.cpp:416
+msgid "Debug current Launch"
+msgstr ""
+
+#: shell/runcontroller.cpp:417
 msgid ""
-"<b>Revert all documents</b><p>Revert all open documents, returning to the "
-"previously saved state.</p>"
+"<b>Debug Launch</b><p>Executes the target or the program specified in "
+"currently active launch configuration inside a Debugger.</p>"
 msgstr ""
 
-#: shell/documentcontroller.cpp:496
-msgid "&Close"
-msgstr "F&ermi"
-
-#: shell/documentcontroller.cpp:498 sublime/container.cpp:415
-msgid "Close File"
+#: shell/runcontroller.cpp:421
+msgid "Profile Launch"
 msgstr ""
 
-#: shell/documentcontroller.cpp:499
-msgid "<b>Close File</b><p>Closes current file.</p>"
+#: shell/runcontroller.cpp:422 shell/runcontroller.cpp:423
+msgid "Profile current Launch"
 msgstr ""
 
-#: shell/documentcontroller.cpp:504
-msgid "Clos&e All"
-msgstr "F&ermi ĉiujn"
-
-#: shell/documentcontroller.cpp:506
-msgid "Close all open documents"
-msgstr ""
-
-#: shell/documentcontroller.cpp:507
+#: shell/runcontroller.cpp:424
 msgid ""
-"<b>Close all documents</b><p>Close all open documents, prompting for "
-"additional information when necessary.</p>"
+"<b>Profile Launch</b><p>Executes the target or the program specified in "
+"currently active launch configuration inside a Profiler.</p>"
 msgstr ""
 
-#: shell/documentcontroller.cpp:513
-msgid "Close All Ot&hers"
+#: shell/runcontroller.cpp:428
+msgid "Stop Jobs"
 msgstr ""
 
-#: shell/documentcontroller.cpp:515
-msgid "Close all other documents"
+#: shell/runcontroller.cpp:429
+msgctxt "Short text for 'Stop Jobs' used in the toolbar"
+msgid "Stop"
 msgstr ""
 
-#: shell/documentcontroller.cpp:516
+#: shell/runcontroller.cpp:431
+msgid "Stop all currently running jobs"
+msgstr ""
+
+#: shell/runcontroller.cpp:432
+msgid "<b>Stop Jobs</b><p>Requests that all running jobs are stopped.</p>"
+msgstr ""
+
+#: shell/runcontroller.cpp:437 shell/runcontroller.cpp:438
+#: shell/runcontroller.cpp:439
+msgid "Current Launch Configuration"
+msgstr ""
+
+#: shell/runcontroller.cpp:440
+msgid "<p>Select which launch configuration to run when run is invoked.</p>"
+msgstr ""
+
+#: shell/runcontroller.cpp:529
+msgid "Unnamed job"
+msgstr ""
+
+#: shell/runcontroller.cpp:616
+msgid "Process Error"
+msgstr ""
+
+#: shell/runcontroller.cpp:804
+#, kde-format
+msgid "New %1 Configuration"
+msgstr ""
+
+#: shell/runcontroller.cpp:839
+#, kde-format
+msgid "%1 As..."
+msgstr ""
+
+#: shell/savedialog.cpp:55
+msgid "Save Modified Files?"
+msgstr ""
+
+#: shell/savedialog.cpp:65
+msgid "The following files have been modified. Save them?"
+msgstr ""
+
+#: shell/savedialog.cpp:73
+msgid "Save &Selected"
+msgstr ""
+
+#: shell/savedialog.cpp:73
+msgid "Saves all selected files"
+msgstr ""
+
+#: shell/savedialog.cpp:74
+msgid "Save &None"
+msgstr ""
+
+#: shell/savedialog.cpp:75
+msgid "Discard all modifications"
+msgstr ""
+
+#: shell/session.cpp:125
+#, fuzzy
+#| msgid "Protected"
+msgid "(no projects)"
+msgstr "Protektata"
+
+#: shell/sessioncontroller.cpp:175
 msgid ""
-"<b>Close all other documents</b><p>Close all open documents, with the "
-"exception of the currently active document.</p>"
+"The current session and all contained settings will be deleted. The projects "
+"will stay unaffected. Do you really want to continue?"
 msgstr ""
 
-#: shell/progresswidget.cpp:69
-msgid "Open detailed progress dialog"
+#: shell/sessioncontroller.cpp:187
+#, fuzzy
+#| msgid "Remove Expression"
+msgid "Rename Session"
+msgstr "Forigi esprimon"
+
+#: shell/sessioncontroller.cpp:191
+#, fuzzy
+#| msgid "Revision"
+msgid "New Session Name"
+msgstr "Revizio"
+
+#: shell/sessioncontroller.cpp:211
+msgid "The selected session is already active in another running instance"
 msgstr ""
 
-#: shell/progresswidget.cpp:265
-msgid "Hide detailed progress window"
+#: shell/sessioncontroller.cpp:344
+#, kde-format
+msgid ""
+"This session crashed at %1, but recovery copies of the following modified "
+"files are available.\n"
+"\n"
+"Push Continue to recover the modified files.\n"
+"\n"
+"Push Cancel to lose the modifications."
 msgstr ""
 
-#: shell/progresswidget.cpp:269
-msgid "Show detailed progress window"
+#: shell/sessioncontroller.cpp:344 shell/sessioncontroller.cpp:374
+#, fuzzy
+#| msgid "Remove"
+msgid "Recovery"
+msgstr "Forigi"
+
+#: shell/sessioncontroller.cpp:374
+#, kde-format
+msgid "Could not recover %1, the recovery file is empty"
 msgstr ""
 
-#: sublime/examples/example1.cpp:29
-msgid "Example 1"
+#: shell/sessioncontroller.cpp:506
+msgid "Start New Session"
 msgstr ""
 
-#: sublime/examples/example1.cpp:31 sublime/examples/example2.cpp:36
-msgid "(c) 2007, Alexander Dymo"
+#: shell/sessioncontroller.cpp:507
+msgid "Start a new KDevelop instance with an empty session"
 msgstr ""
 
-#: sublime/examples/example2.cpp:34
-msgid "Example 2"
+#: shell/sessioncontroller.cpp:511
+#, fuzzy
+#| msgid "Remove Expression"
+msgid "Rename Session..."
+msgstr "Forigi esprimon"
+
+#: shell/sessioncontroller.cpp:515
+msgid "Delete Session..."
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:57
-msgid "Show Left Dock"
+#: shell/sessioncontroller.cpp:519
+msgid "Quit"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:63
-msgid "Show Right Dock"
+#: shell/sessioncontroller.cpp:525
+msgid "Configure Sessions..."
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:69
-msgid "Show Bottom Dock"
+#: shell/sessioncontroller.cpp:526
+msgid "Create/Delete/Activate Sessions"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:75
-msgid "Show Top Dock"
+#: shell/sessioncontroller.cpp:527
+msgid ""
+"<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and set "
+"a new active session.</p>"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:81
-msgid "Focus Editor"
+#: shell/sessioncontroller.cpp:669 shell/tests/sessioncontrollertest.cpp:202
+#, kde-format
+msgid "Copy of %1"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:86
-msgid "Hide/Restore Docks"
+#: shell/sessiondialog.cpp:183
+msgid "Configure Sessions"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:91
-msgid "Next Tool View"
+#: shell/settings/bgpreferences.cpp:40
+msgid "Parser Background Settings"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:96
-msgid "Previous Tool View"
+#: shell/settings/ccpreferences.cpp:52
+msgid "Language Support Settings"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:101
-msgid "Remove view"
+#: shell/settings/editstyledialog.cpp:69
+#: shell/settings/sourceformattersettings.cpp:70
+msgid ""
+"A KDE text-editor component could not be found.\n"
+"Please check your KDE installation."
+msgstr ""
+"Ne povis trovi KDE-tekstredaktilo-parton;\n"
+"bonvolu kontroli vian KDE-instalon."
+
+#: shell/settings/editstyledialog.cpp:102
+msgid "No Source Formatter available"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:105
-msgid "Anchor Current Dock"
+#: shell/settings/environmentpreferences.cpp:45
+msgid "Environment Settings"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:112
-msgid "Maximize Current Dock"
+#: shell/settings/environmentwidget.cpp:116
+msgid "New Environment Variable"
 msgstr ""
 
-#: sublime/mainwindow_p.cpp:118
-msgid "Tool Views"
+#: shell/settings/environmentwidget.cpp:123
+msgctxt "Name of an environment variable"
+msgid "Variable Name:"
 msgstr ""
+
+#: shell/settings/environmentwidget.cpp:128
+msgctxt "Value of an environment variable"
+msgid "Variable Value:"
+msgstr ""
+
+#: shell/settings/pluginpreferences.cpp:40
+msgid "Plugin Selection"
+msgstr ""
+
+#: shell/settings/projectpreferences.cpp:37
+#, fuzzy
+#| msgid "Revision"
+msgid "Projects Settings"
+msgstr "Revizio"
+
+#: shell/settings/sourceformattersettings.cpp:366
+#, fuzzy, kde-format
+#| msgid "New"
+msgid "New %1"
+msgstr "Nova"
+
+#: shell/settings/sourceformattersettings.cpp:369
+#, fuzzy
+#| msgid "Style:"
+msgid "New Style"
+msgstr "Stilo:"
+
+#: shell/settings/sourceformattersettings.cpp:427
+msgid "No Language selected"
+msgstr ""
+
+#: shell/settings/uipreferences.cpp:38
+msgid "User Interface Settings"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:68
+msgid "&Reformat Source"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:69
+msgid "Reformat source using AStyle"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:70
+msgid ""
+"<b>Reformat source</b><p>Source reformatting functionality using <b>astyle</"
+"b> library.</p>"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:75
+#, fuzzy
+#| msgid "Format"
+msgid "Reformat Line"
+msgstr "Formato"
+
+#: shell/sourceformattercontroller.cpp:76
+msgid "Reformat current line using AStyle"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:77
+msgid ""
+"<b>Reformat line</b><p>Source reformatting of line under cursor using "
+"<b>astyle</b> library.</p>"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:82
+#, fuzzy
+#| msgid "Format"
+msgid "Format files"
+msgstr "Formato"
+
+#: shell/sourceformattercontroller.cpp:83
+msgid "Format file(s) using the current theme"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:84
+msgid ""
+"<b>Format files</b><p>Formatting functionality using <b>astyle</b> library.</"
+"p>"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:392
+#, kde-format
+msgid "Unable to read %1"
+msgstr ""
+
+#: shell/sourceformattercontroller.cpp:400
+#, kde-format
+msgid "Unable to write to %1"
+msgstr ""
+
+#: shell/tests/nonguiinterfaceplugin.cpp:30
+msgid "Plugin for unit-tests"
+msgstr ""
+
+#: shell/textdocument.cpp:364
+#, kde-format
+msgid ""
+"The file \"%1\" is modified on disk.\n"
+"\n"
+"Are you sure you want to overwrite it? (External changes will be lost.)"
+msgstr ""
+
+#: shell/textdocument.cpp:367
+msgid "Document Externally Modified"
+msgstr ""
+
+#: shell/textdocument.cpp:646
+#, kde-format
+msgid " Line: %1 Col: %2 "
+msgstr " Linio: %1 Kol: %2"
+
+#: shell/uicontroller.cpp:96
+msgid "Review"
+msgstr ""
+
+#: shell/uicontroller.cpp:186
+msgid "&Assistant Action 1"
+msgstr ""
+
+#: shell/uicontroller.cpp:191
+msgid "&Assistant Action 2"
+msgstr ""
+
+#: shell/uicontroller.cpp:196
+msgid "&Assistant Action 3"
+msgstr ""
+
+#: shell/uicontroller.cpp:201
+msgid "&Assistant Action 4"
+msgstr ""
+
+#: shell/uicontroller.cpp:206
+msgid "&Hide Assistant"
+msgstr ""
+
+#: shell/uicontroller.cpp:386
+msgid "Select Tool View to Add"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:520
+msgid "Close Working Set (Left Click)"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:521
+msgid "Duplicate Working Set"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:523
+msgid "Load Working Set (Left Click)"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:533
+msgid "Delete Working Set"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:757
+msgid "<b>Working Set</b>"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:769
+msgid "Remove this working set. The contained documents are not affected."
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:794
+msgid "Documents:"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:801
+msgid "Add All"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:802
+msgid ""
+"Add all documents that are part of this working set to the currently active "
+"working set."
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:809
+msgid "Subtract All"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:810
+msgid ""
+"Remove all documents that are part of this working set from the currently "
+"active working set."
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:864
+msgid "Remove this file from the current working set"
+msgstr ""
+
+#: shell/workingsetcontroller.cpp:868
+msgid "Add this file to the current working set"
+msgstr ""
+
+#. i18n: file: shell/kross/examples/guiexample/GUIExample/example.ui:25
+#. i18n: ectx: property (text), widget (QPushButton, close)
+#: shell/workingsetcontroller.cpp:884 rc.cpp:125
+msgid "Close"
+msgstr "Fermi"
+
+#: shell/workingsetcontroller.cpp:889
+#, fuzzy
+#| msgid "Reload"
+msgid "Load"
+msgstr "Reŝargi"
 
 #: sublime/container.cpp:146
 msgid "Line: 00000 Col: 000"
@@ -2436,6 +2375,18 @@ msgstr ""
 #| msgid "Clos&e All"
 msgid "Close All Files"
 msgstr "F&ermi ĉiujn"
+
+#: sublime/examples/example1.cpp:29
+msgid "Example 1"
+msgstr ""
+
+#: sublime/examples/example1.cpp:31 sublime/examples/example2.cpp:36
+msgid "(c) 2007, Alexander Dymo"
+msgstr ""
+
+#: sublime/examples/example2.cpp:34
+msgid "Example 2"
+msgstr ""
 
 #: sublime/ideal.cpp:362
 msgid "Lock the tool"
@@ -2498,6 +2449,54 @@ msgstr ""
 #: sublime/ideal.cpp:642
 #, kde-format
 msgid "%1 Tool Bar"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:57
+msgid "Show Left Dock"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:63
+msgid "Show Right Dock"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:69
+msgid "Show Bottom Dock"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:75
+msgid "Show Top Dock"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:81
+msgid "Focus Editor"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:86
+msgid "Hide/Restore Docks"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:91
+msgid "Next Tool View"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:96
+msgid "Previous Tool View"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:101
+msgid "Remove view"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:105
+msgid "Anchor Current Dock"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:112
+msgid "Maximize Current Dock"
+msgstr ""
+
+#: sublime/mainwindow_p.cpp:118
+msgid "Tool Views"
 msgstr ""
 
 #: util/duchainify/main.cpp:200
@@ -2656,82 +2655,6 @@ msgstr ""
 msgid "Select keys"
 msgstr ""
 
-#: vcs/dvcs/ui/dvcsmainview.cpp:38
-msgid "Git"
-msgstr "Git"
-
-#: vcs/dvcs/ui/dvcsmainview.cpp:48
-msgid "DVCS"
-msgstr ""
-
-#: vcs/dvcs/ui/dvcsgenericoutputview.cpp:56
-msgid "Job exited normally"
-msgstr ""
-
-#: vcs/dvcs/ui/logview.cpp:45
-msgid "Listing the log of the files failed"
-msgstr ""
-
-#: vcs/dvcs/ui/logview.cpp:58
-msgid "No log information found"
-msgstr ""
-
-#: vcs/dvcs/ui/logview.cpp:63 vcs/widgets/vcsdiffpatchsources.cpp:104
-msgid "Commit"
-msgstr "Enmeti"
-
-#: vcs/dvcs/ui/logview.cpp:64 vcs/models/vcseventmodel.cpp:101
-msgid "Author"
-msgstr "Aŭtoro"
-
-#: vcs/dvcs/ui/logview.cpp:65 vcs/models/vcseventmodel.cpp:104
-msgid "Date"
-msgstr "Dato"
-
-#: vcs/dvcs/ui/branchmanager.cpp:75
-msgid "New branch"
-msgstr ""
-
-#: vcs/dvcs/ui/branchmanager.cpp:75
-msgid "Name of the new branch:"
-msgstr ""
-
-#: vcs/dvcs/ui/branchmanager.cpp:80
-#, kde-format
-msgid ""
-"Branch \"%1\" already exists.\n"
-"Please, choose another name."
-msgstr ""
-
-#: vcs/dvcs/ui/branchmanager.cpp:95
-#, kde-format
-msgid ""
-"Currently at the branch \"%1\".\n"
-"To remove it, please change to another branch."
-msgstr ""
-
-#: vcs/dvcs/ui/branchmanager.cpp:102
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to reopen the current project?"
-msgid "Are you sure you want to irreversibly remove the branch '%1'?"
-msgstr "Ĉu vi certas ke vi volas remalfermi la aktualan projekton?"
-
-#: vcs/dvcs/ui/branchmanager.cpp:113
-#, kde-format
-msgid "Already on branch \"%1\"\n"
-msgstr ""
-
-#: vcs/dvcs/ui/branchmanager.cpp:150
-#, kde-format
-msgid "Branch \"%1\" already exists."
-msgstr ""
-
-#: vcs/dvcs/ui/branchmanager.cpp:155
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to reopen the current project?"
-msgid "Are you sure you want to rename %1 to %2 ?"
-msgstr "Ĉu vi certas ke vi volas remalfermi la aktualan projekton?"
-
 #: vcs/dvcs/dvcsjob.cpp:147
 #, kde-format
 msgid "Working Directory does not exist: %1"
@@ -2779,6 +2702,82 @@ msgstr ""
 msgid "Could not show the Branch Manager, current branch is unavailable."
 msgstr ""
 
+#: vcs/dvcs/ui/branchmanager.cpp:75
+msgid "New branch"
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:75
+msgid "Name of the new branch:"
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:80
+#, kde-format
+msgid ""
+"Branch \"%1\" already exists.\n"
+"Please, choose another name."
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:95
+#, kde-format
+msgid ""
+"Currently at the branch \"%1\".\n"
+"To remove it, please change to another branch."
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:102
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to reopen the current project?"
+msgid "Are you sure you want to irreversibly remove the branch '%1'?"
+msgstr "Ĉu vi certas ke vi volas remalfermi la aktualan projekton?"
+
+#: vcs/dvcs/ui/branchmanager.cpp:113
+#, kde-format
+msgid "Already on branch \"%1\"\n"
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:150
+#, kde-format
+msgid "Branch \"%1\" already exists."
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:155
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to reopen the current project?"
+msgid "Are you sure you want to rename %1 to %2 ?"
+msgstr "Ĉu vi certas ke vi volas remalfermi la aktualan projekton?"
+
+#: vcs/dvcs/ui/dvcsgenericoutputview.cpp:56
+msgid "Job exited normally"
+msgstr ""
+
+#: vcs/dvcs/ui/dvcsmainview.cpp:38
+msgid "Git"
+msgstr "Git"
+
+#: vcs/dvcs/ui/dvcsmainview.cpp:48
+msgid "DVCS"
+msgstr ""
+
+#: vcs/dvcs/ui/logview.cpp:45
+msgid "Listing the log of the files failed"
+msgstr ""
+
+#: vcs/dvcs/ui/logview.cpp:58
+msgid "No log information found"
+msgstr ""
+
+#: vcs/dvcs/ui/logview.cpp:63 vcs/widgets/vcsdiffpatchsources.cpp:104
+msgid "Commit"
+msgstr "Enmeti"
+
+#: vcs/dvcs/ui/logview.cpp:64 vcs/models/vcseventmodel.cpp:101
+msgid "Author"
+msgstr "Aŭtoro"
+
+#: vcs/dvcs/ui/logview.cpp:65 vcs/models/vcseventmodel.cpp:104
+msgid "Date"
+msgstr "Dato"
+
 #: vcs/models/vcsannotationmodel.cpp:105
 #, kde-format
 msgid ""
@@ -2823,81 +2822,6 @@ msgstr ""
 msgid "Source Revision"
 msgstr ""
 
-#: vcs/widgets/vcsdiffwidget.cpp:86
-#, kde-format
-msgid "Difference between revision %1 and %2:"
-msgstr ""
-
-#: vcs/widgets/standardvcslocationwidget.cpp:35
-msgid "Introduce the repository URL..."
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:105
-msgid "Commit Message"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:185
-msgctxt "file was added to versioncontrolsystem"
-msgid "Added"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:189
-msgctxt "file was deleted from versioncontrolsystem"
-msgid "Deleted"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:193
-msgctxt "version controlled file was modified"
-msgid "Modified"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:196
-msgctxt "file is not known to versioncontrolsystem"
-msgid "Unknown"
-msgstr ""
-
-#: vcs/widgets/vcscommitdialog.cpp:281 vcs/vcspluginhelper.cpp:264
-msgid "Unable to get difference."
-msgstr ""
-
-#: vcs/widgets/vcseventwidget.cpp:83
-msgid "Diff to previous revision"
-msgstr ""
-
-#: vcs/widgets/vcseventwidget.cpp:86
-msgid "Diff between revisions"
-msgstr ""
-
-#: vcs/widgets/vcseventwidget.cpp:150
-msgid "Difference To Previous"
-msgstr ""
-
-#: vcs/widgets/vcseventwidget.cpp:174
-msgid "Difference between Revisions"
-msgstr ""
-
-#. i18n: file: vcs/widgets/vcscommitdialog.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: vcs/widgets/vcsdiffpatchsources.cpp:45 rc.cpp:419
-msgid "Commit Message:"
-msgstr ""
-
-#: vcs/widgets/vcsdiffpatchsources.cpp:123
-msgid "Files will be committed:\n"
-msgstr ""
-
-#: vcs/widgets/vcsdiffpatchsources.cpp:127
-#, kde-format
-msgid ""
-"\n"
-"With message:\n"
-" %1"
-msgstr ""
-
-#: vcs/widgets/vcsdiffpatchsources.cpp:129
-msgid "About to commit to repository"
-msgstr ""
-
 #: vcs/vcspluginhelper.cpp:92
 msgid "Commit..."
 msgstr ""
@@ -2910,7 +2834,7 @@ msgstr "Ĝisdatigi"
 #. i18n: ectx: property (toolTip), widget (KPushButton, addInheritancePushButton)
 #. i18n: file: shell/launchconfigurationdialog.ui:37
 #. i18n: ectx: property (text), widget (QToolButton, addConfig)
-#: vcs/vcspluginhelper.cpp:94 rc.cpp:113 rc.cpp:131
+#: vcs/vcspluginhelper.cpp:94 rc.cpp:59 rc.cpp:131
 msgid "Add"
 msgstr "Aldoni"
 
@@ -2942,6 +2866,10 @@ msgstr ""
 msgid "VCS support"
 msgstr ""
 
+#: vcs/vcspluginhelper.cpp:264 vcs/widgets/vcscommitdialog.cpp:281
+msgid "Unable to get difference."
+msgstr ""
+
 #: vcs/vcspluginhelper.cpp:291
 #, kde-format
 msgid "%2 History (%1)"
@@ -2967,6 +2895,77 @@ msgstr ""
 
 #: vcs/vcspluginhelper.cpp:376
 msgid "Could not find any modifications to commit."
+msgstr ""
+
+#: vcs/widgets/standardvcslocationwidget.cpp:35
+msgid "Introduce the repository URL..."
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:105
+msgid "Commit Message"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:185
+msgctxt "file was added to versioncontrolsystem"
+msgid "Added"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:189
+msgctxt "file was deleted from versioncontrolsystem"
+msgid "Deleted"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:193
+msgctxt "version controlled file was modified"
+msgid "Modified"
+msgstr ""
+
+#: vcs/widgets/vcscommitdialog.cpp:196
+msgctxt "file is not known to versioncontrolsystem"
+msgid "Unknown"
+msgstr ""
+
+#. i18n: file: vcs/widgets/vcscommitdialog.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: vcs/widgets/vcsdiffpatchsources.cpp:45 rc.cpp:419
+msgid "Commit Message:"
+msgstr ""
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:123
+msgid "Files will be committed:\n"
+msgstr ""
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:127
+#, kde-format
+msgid ""
+"\n"
+"With message:\n"
+" %1"
+msgstr ""
+
+#: vcs/widgets/vcsdiffpatchsources.cpp:129
+msgid "About to commit to repository"
+msgstr ""
+
+#: vcs/widgets/vcsdiffwidget.cpp:86
+#, kde-format
+msgid "Difference between revision %1 and %2:"
+msgstr ""
+
+#: vcs/widgets/vcseventwidget.cpp:83
+msgid "Diff to previous revision"
+msgstr ""
+
+#: vcs/widgets/vcseventwidget.cpp:86
+msgid "Diff between revisions"
+msgstr ""
+
+#: vcs/widgets/vcseventwidget.cpp:150
+msgid "Difference To Previous"
+msgstr ""
+
+#: vcs/widgets/vcseventwidget.cpp:174
+msgid "Difference between Revisions"
 msgstr ""
 
 #: rc.cpp:1
@@ -3060,129 +3059,45 @@ msgstr ""
 msgid "Group by access specifier (public / private etc)"
 msgstr ""
 
-#. i18n: file: language/codegen/ui/outputlocation.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:41
-msgid "Output file(s)"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/outputlocation.ui:29
-#. i18n: ectx: property (text), widget (QLabel, headerLabel1)
-#. i18n: file: language/codegen/ui/outputlocation.ui:86
-#. i18n: ectx: property (text), widget (QLabel, headerLabel2)
-#: rc.cpp:44 rc.cpp:56
-msgid "&Header:"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/outputlocation.ui:45
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: language/codegen/ui/outputlocation.ui:119
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:47 rc.cpp:65
-msgid "&Implementation:"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/outputlocation.ui:61
-#. i18n: ectx: property (text), widget (QCheckBox, lowerFilenameCheckBox)
-#: rc.cpp:50
-msgid "Low case file names"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/outputlocation.ui:77
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:53
-msgid "Location within existing file(s)"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/outputlocation.ui:109
-#. i18n: ectx: property (text), widget (QLabel, headerColumnLabel)
-#. i18n: file: language/codegen/ui/outputlocation.ui:142
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:62 rc.cpp:71
-msgid "Column"
-msgstr "Kolumno"
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:74
-msgid "Override virtual functions"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:27
-#. i18n: ectx: property (text), widget (KPushButton, selectAllPushButton)
-#: rc.cpp:77
-msgid "Select &All"
-msgstr "Elekti ĉi&ujn"
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:34
-#. i18n: ectx: property (text), widget (KPushButton, deselectAllPushButton)
-#: rc.cpp:80
-msgid "&Deselect All"
-msgstr "&Malelekti ĉion"
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:91
-#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
-#: rc.cpp:83
-msgid "Superclass -> Function"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:96
-#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
-#: rc.cpp:86
-msgid "Access"
-msgstr ""
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:101
-#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
-#: rc.cpp:89
-msgid "Signal"
-msgstr "Signalo"
-
-#. i18n: file: language/codegen/ui/overridevirtuals.ui:106
-#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
-#: rc.cpp:92
-msgid "Slot"
-msgstr "Fako"
-
 #. i18n: file: language/codegen/ui/licensechooser.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:95
+#: rc.cpp:41
 msgid "License type:"
 msgstr ""
 
 #. i18n: file: language/codegen/ui/licensechooser.ui:36
 #. i18n: ectx: property (toolTip), widget (QCheckBox, saveLicense)
-#: rc.cpp:98
+#: rc.cpp:44
 msgid "Click here if you want to save this license for future use"
 msgstr ""
 
 #. i18n: file: language/codegen/ui/licensechooser.ui:39
 #. i18n: ectx: property (text), widget (QCheckBox, saveLicense)
-#: rc.cpp:101
+#: rc.cpp:47
 msgid "Save License"
 msgstr ""
 
 #. i18n: file: language/codegen/ui/newclass.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:104
+#: rc.cpp:50
 msgid "New Class"
 msgstr "Nova Klaso"
 
 #. i18n: file: language/codegen/ui/newclass.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:107
+#: rc.cpp:53
 msgid "&Identifier:"
 msgstr ""
 
 #. i18n: file: language/codegen/ui/newclass.ui:42
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:110
+#: rc.cpp:56
 msgid "In&heritance:"
 msgstr ""
 
 #. i18n: file: language/codegen/ui/newclass.ui:87
 #. i18n: ectx: property (toolTip), widget (KPushButton, moveUpPushButton)
-#: rc.cpp:119
+#: rc.cpp:65
 #, fuzzy
 #| msgid "Move &Up"
 msgid "Move Up"
@@ -3190,11 +3105,95 @@ msgstr "Movu s&upren"
 
 #. i18n: file: language/codegen/ui/newclass.ui:97
 #. i18n: ectx: property (toolTip), widget (KPushButton, moveDownPushButton)
-#: rc.cpp:122
+#: rc.cpp:68
 #, fuzzy
 #| msgid "Move &Down"
 msgid "Move Down"
 msgstr "Movi &malsupren"
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:71
+msgid "Output file(s)"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:29
+#. i18n: ectx: property (text), widget (QLabel, headerLabel1)
+#. i18n: file: language/codegen/ui/outputlocation.ui:86
+#. i18n: ectx: property (text), widget (QLabel, headerLabel2)
+#: rc.cpp:74 rc.cpp:86
+msgid "&Header:"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:45
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: language/codegen/ui/outputlocation.ui:119
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:77 rc.cpp:95
+msgid "&Implementation:"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox, lowerFilenameCheckBox)
+#: rc.cpp:80
+msgid "Low case file names"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:77
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:83
+msgid "Location within existing file(s)"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/outputlocation.ui:109
+#. i18n: ectx: property (text), widget (QLabel, headerColumnLabel)
+#. i18n: file: language/codegen/ui/outputlocation.ui:142
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:92 rc.cpp:101
+msgid "Column"
+msgstr "Kolumno"
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:104
+msgid "Override virtual functions"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:27
+#. i18n: ectx: property (text), widget (KPushButton, selectAllPushButton)
+#: rc.cpp:107
+msgid "Select &All"
+msgstr "Elekti ĉi&ujn"
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:34
+#. i18n: ectx: property (text), widget (KPushButton, deselectAllPushButton)
+#: rc.cpp:110
+msgid "&Deselect All"
+msgstr "&Malelekti ĉion"
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:91
+#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
+#: rc.cpp:113
+msgid "Superclass -> Function"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:96
+#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
+#: rc.cpp:116
+msgid "Access"
+msgstr ""
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:101
+#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
+#: rc.cpp:119
+msgid "Signal"
+msgstr "Signalo"
+
+#. i18n: file: language/codegen/ui/overridevirtuals.ui:106
+#. i18n: ectx: property (text), widget (QTreeWidget, overridesTree)
+#: rc.cpp:122
+msgid "Slot"
+msgstr "Fako"
 
 #. i18n: file: shell/launchconfigurationdialog.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -3204,45 +3203,17 @@ msgstr "Movi &malsupren"
 msgid "Launch Configurations:"
 msgstr "Agordi mesaĝojn"
 
-#. i18n: file: shell/projectsourcepage.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:140
-#, fuzzy
-#| msgid "Documentation"
-msgid "Destination"
-msgstr "Dokumentaro"
-
-#. i18n: file: shell/projectsourcepage.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:143
-msgid "Working Directory:"
-msgstr ""
-
-#. i18n: file: shell/projectsourcepage.ui:33
-#. i18n: ectx: property (clickMessage), widget (KUrlRequester, workingDir)
-#: rc.cpp:146
-msgid "Select the directory to use..."
-msgstr ""
-
-#. i18n: file: shell/projectsourcepage.ui:63
-#. i18n: ectx: property (text), widget (QPushButton, get)
-#: rc.cpp:152
-#, fuzzy
-#| msgid "Git"
-msgid "Get"
-msgstr "Git"
-
 #. i18n: file: shell/projectinfopage.ui:16
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #. i18n: file: shell/projectinfopage.ui:26
 #. i18n: ectx: property (toolTip), widget (QLineEdit, nameEdit)
-#: rc.cpp:155 rc.cpp:161
+#: rc.cpp:140 rc.cpp:146
 msgid "Provide a name for the project"
 msgstr ""
 
 #. i18n: file: shell/projectinfopage.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:158
+#: rc.cpp:143
 msgid "Name:"
 msgstr "Nomo:"
 
@@ -3250,15 +3221,43 @@ msgstr "Nomo:"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: file: shell/projectinfopage.ui:43
 #. i18n: ectx: property (toolTip), widget (QComboBox, managerCombo)
-#: rc.cpp:164 rc.cpp:170
+#: rc.cpp:149 rc.cpp:155
 msgid "Select the Management Plugin to use for this project"
 msgstr ""
 
 #. i18n: file: shell/projectinfopage.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:167
+#: rc.cpp:152
 msgid "Build System:"
 msgstr ""
+
+#. i18n: file: shell/projectsourcepage.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:158
+#, fuzzy
+#| msgid "Documentation"
+msgid "Destination"
+msgstr "Dokumentaro"
+
+#. i18n: file: shell/projectsourcepage.ui:26
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:161
+msgid "Working Directory:"
+msgstr ""
+
+#. i18n: file: shell/projectsourcepage.ui:33
+#. i18n: ectx: property (clickMessage), widget (KUrlRequester, workingDir)
+#: rc.cpp:164
+msgid "Select the directory to use..."
+msgstr ""
+
+#. i18n: file: shell/projectsourcepage.ui:63
+#. i18n: ectx: property (text), widget (QPushButton, get)
+#: rc.cpp:170
+#, fuzzy
+#| msgid "Git"
+msgid "Get"
+msgstr "Git"
 
 #. i18n: file: shell/sessiondialog.ui:34
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
@@ -3268,7 +3267,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, btnNewStyle)
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:25
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
-#: rc.cpp:173 rc.cpp:209 rc.cpp:256 rc.cpp:401
+#: rc.cpp:173 rc.cpp:279 rc.cpp:326 rc.cpp:392
 msgid "New"
 msgstr "Nova"
 
@@ -3302,241 +3301,33 @@ msgstr ""
 msgid "Maximum Number of Threads"
 msgstr ""
 
-#. i18n: file: shell/settings/editstyledialog.ui:28
-#. i18n: ectx: property (text), widget (QLabel, lblPreview)
-#: rc.cpp:194
-msgid "Preview"
-msgstr "Antaŭrigardo"
-
-#. i18n: file: shell/settings/environmentwidget.ui:16
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:197
-msgid "Environment Group"
-msgstr ""
-
-#. i18n: file: shell/settings/environmentwidget.ui:36
-#. i18n: ectx: property (text), widget (QPushButton, addgrpBtn)
-#: rc.cpp:200
-msgid "Add group"
-msgstr "Aldoni grupon"
-
-#. i18n: file: shell/settings/environmentwidget.ui:43
-#. i18n: ectx: property (text), widget (QPushButton, removegrpBtn)
-#: rc.cpp:203
-msgid "Remove group"
-msgstr "Forpreni grupon"
-
-#. i18n: file: shell/settings/environmentwidget.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, setAsDefaultBtn)
-#: rc.cpp:206
-msgid "Set As Default Group"
-msgstr ""
-
-#. i18n: file: shell/settings/projectsettings.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:215
-msgid "Projects Base Directory:"
-msgstr ""
-
-#. i18n: file: shell/settings/projectsettings.ui:27
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_projectsBaseDirectory)
-#: rc.cpp:218
-msgid "Select the base directory where new projects are to be created."
-msgstr ""
-
-#. i18n: file: shell/settings/projectsettings.ui:38
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:221
-msgid ""
-"Schedule all project\n"
-"files for parsing:"
-msgstr ""
-
-#. i18n: file: shell/settings/projectsettings.ui:48
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_parseAllProjectSources)
-#: rc.cpp:225
-msgid "Parse all files in a project after the project has been opened."
-msgstr ""
-
-#. i18n: file: shell/settings/projectsettings.ui:79
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:228
-msgid ""
-"Save All Documents\n"
-"Before Building"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:232
-msgid "General"
-msgstr "Ĝeneralo"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:23
-#. i18n: ectx: property (toolTip), widget (QCheckBox, chkKateModelines)
-#: rc.cpp:235
-msgid "Add kate modeline to formatted documents."
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:26
-#. i18n: ectx: property (text), widget (QCheckBox, chkKateModelines)
-#: rc.cpp:238
-msgid "Add Kate modeline"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:48
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:241
-msgid "Formatting Styles"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:54
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:244
-msgid "Mimetype:"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:76
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:247
-msgid "Preview:"
-msgstr "Antaŭrigardo:"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:101
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:250
-#, fuzzy
-#| msgid "Format"
-msgid "Formatter:"
-msgstr "Formato"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:121
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:253
-msgid "Style:"
-msgstr "Stilo:"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:146
-#. i18n: ectx: property (text), widget (KPushButton, btnEditStyle)
-#: rc.cpp:259
-#, fuzzy
-#| msgid "Edit"
-msgid "Edit..."
-msgstr "Redakti"
-
-#. i18n: file: shell/settings/uiconfig.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, UiConfig)
-#: rc.cpp:265
-msgid "User Interface"
-msgstr "Uzant-interfaco"
-
-#. i18n: file: shell/settings/uiconfig.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:268
-msgid "Dock Window Behavior"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:271
-msgid "Top Left Owner"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:33
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:274
-msgid "Top Right Owner"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:41
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopLeftCornerOwner)
-#. i18n: file: shell/settings/uiconfig.ui:89
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
-#: rc.cpp:277 rc.cpp:295
-msgid "Left Dock"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:46
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopLeftCornerOwner)
-#. i18n: file: shell/settings/uiconfig.ui:60
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopRightCornerOwner)
-#: rc.cpp:280 rc.cpp:286
-msgid "Top Dock"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:55
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopRightCornerOwner)
-#. i18n: file: shell/settings/uiconfig.ui:109
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
-#: rc.cpp:283 rc.cpp:301
-msgid "Right Dock"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:68
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:289
-msgid "Bottom Left Owner"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:75
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:292
-msgid "Bottom Right Owner"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:94
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
-#. i18n: file: shell/settings/uiconfig.ui:114
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
-#: rc.cpp:298 rc.cpp:304
-msgid "Bottom Dock"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:138
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:307
-msgid "Tabbed Browsing"
-msgstr "Foliumado kun langetoj"
-
-#. i18n: file: shell/settings/uiconfig.ui:144
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarVisibility)
-#: rc.cpp:310
-msgid "Show tabs"
-msgstr ""
-
-#. i18n: file: shell/settings/uiconfig.ui:154
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarOpenAfterCurrent)
-#: rc.cpp:313
-msgid "Open new tab after current"
-msgstr ""
-
 #. i18n: file: shell/settings/ccsettings.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:316
+#: rc.cpp:194
 msgid "Code Completion"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_automaticInvocation)
-#: rc.cpp:319
+#: rc.cpp:197
 msgid "Enable Automatic Invocation"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:30
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMultiLineSelectionInformation)
-#: rc.cpp:322
+#: rc.cpp:200
 msgid "Additional Information For Current Item"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, completionLevelGroup)
-#: rc.cpp:325
+#: rc.cpp:203
 msgid "Level"
 msgstr "Nivelo"
 
 #. i18n: file: shell/settings/ccsettings.ui:43
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_minimalAutomaticCompletion)
-#: rc.cpp:328
+#: rc.cpp:206
 msgid ""
 "Use minimal completion when the completion is automatic, and full completion "
 "when it is triggered manually"
@@ -3544,13 +3335,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:46
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_minimalAutomaticCompletion)
-#: rc.cpp:331
+#: rc.cpp:209
 msgid "Minimal Automatic Completion"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:56
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_alwaysFullCompletion)
-#: rc.cpp:334
+#: rc.cpp:212
 msgid ""
 "When this is enabled, the completion-box will always show full type-"
 "information and argument-hints"
@@ -3558,31 +3349,31 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:59
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_alwaysFullCompletion)
-#: rc.cpp:337
+#: rc.cpp:215
 msgid "Always Full Completion"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:66
 #. i18n: ectx: property (toolTip), widget (QRadioButton, kcfg_alwaysMinimalCompletion)
-#: rc.cpp:340
+#: rc.cpp:218
 msgid "Do not show type-information or argument-hints"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:69
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_alwaysMinimalCompletion)
-#: rc.cpp:343
+#: rc.cpp:221
 msgid "Always Minimal Completion"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:82
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:346
+#: rc.cpp:224
 msgid "Semantic Code Highlighting"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:90
 #. i18n: ectx: property (toolTip), widget (QLabel, localColorizationLabel)
-#: rc.cpp:349
+#: rc.cpp:227
 msgid ""
 "This setting decides about the intensity of colors for local variables, for "
 "example function arguments, variables and the like."
@@ -3590,13 +3381,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:93
 #. i18n: ectx: property (text), widget (QLabel, localColorizationLabel)
-#: rc.cpp:352
+#: rc.cpp:230
 msgid "Local Colorization Intensity"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:126
 #. i18n: ectx: property (toolTip), widget (QLabel, globalColorizationLabel)
-#: rc.cpp:355
+#: rc.cpp:233
 msgid ""
 "This settings lets you change the intensity of globally accessible types, "
 "for example classes, methods, functions etc."
@@ -3604,13 +3395,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:129
 #. i18n: ectx: property (text), widget (QLabel, globalColorizationLabel)
-#: rc.cpp:358
+#: rc.cpp:236
 msgid "Global Colorization Intensity"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:160
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_highlightSemanticProblems)
-#: rc.cpp:361
+#: rc.cpp:239
 msgid ""
 "Highlight semantic problems, such as non-existent or inaccessible "
 "declarations."
@@ -3618,13 +3409,13 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:163
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_highlightSemanticProblems)
-#: rc.cpp:364
+#: rc.cpp:242
 msgid "Highlight Semantic Problems"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:170
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_highlightProblematicLines)
-#: rc.cpp:367
+#: rc.cpp:245
 msgid ""
 "When enabled, lines with errors will get additionally highlighted and their "
 "positions get marked in the scrollbar."
@@ -3632,25 +3423,25 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:173
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_highlightProblematicLines)
-#: rc.cpp:370
+#: rc.cpp:248
 msgid "Highlight Problematic Lines"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:183
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:373
+#: rc.cpp:251
 msgid "Project Parsing"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:191
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:376
+#: rc.cpp:254
 msgid "Minimum project size for simplified parsing"
 msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:211
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_minFilesForSimplifiedParsing)
-#: rc.cpp:379
+#: rc.cpp:257
 msgid ""
 "When a project contains more files than this number, the project will be\n"
 "parsed in simplified mode, increasing the efficiency by gathering less "
@@ -3660,33 +3451,223 @@ msgstr ""
 
 #. i18n: file: shell/settings/ccsettings.ui:214
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minFilesForSimplifiedParsing)
-#: rc.cpp:383
+#: rc.cpp:261
 #, fuzzy
 #| msgid "Open file"
 msgid " files"
 msgstr "Malfermi dosieron"
 
-#. i18n: file: vcs/dvcs/ui/importmetadatawidget.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, ImportMetadataWidget)
-#: rc.cpp:386
-msgid "Import"
-msgstr "Importi"
+#. i18n: file: shell/settings/editstyledialog.ui:28
+#. i18n: ectx: property (text), widget (QLabel, lblPreview)
+#: rc.cpp:264
+msgid "Preview"
+msgstr "Antaŭrigardo"
 
-#. i18n: file: vcs/dvcs/ui/importmetadatawidget.ui:19
-#. i18n: ectx: property (text), widget (QLabel, labelUrl)
-#: rc.cpp:389
-msgid "Source Directory:"
+#. i18n: file: shell/settings/environmentwidget.ui:16
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:267
+msgid "Environment Group"
 msgstr ""
 
-#. i18n: file: vcs/dvcs/ui/logview.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, LogViewBase)
-#: rc.cpp:392
-msgid "Log"
-msgstr "Protokolo"
+#. i18n: file: shell/settings/environmentwidget.ui:36
+#. i18n: ectx: property (text), widget (QPushButton, addgrpBtn)
+#: rc.cpp:270
+msgid "Add group"
+msgstr "Aldoni grupon"
+
+#. i18n: file: shell/settings/environmentwidget.ui:43
+#. i18n: ectx: property (text), widget (QPushButton, removegrpBtn)
+#: rc.cpp:273
+msgid "Remove group"
+msgstr "Forpreni grupon"
+
+#. i18n: file: shell/settings/environmentwidget.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, setAsDefaultBtn)
+#: rc.cpp:276
+msgid "Set As Default Group"
+msgstr ""
+
+#. i18n: file: shell/settings/projectsettings.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:285
+msgid "Projects Base Directory:"
+msgstr ""
+
+#. i18n: file: shell/settings/projectsettings.ui:27
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_projectsBaseDirectory)
+#: rc.cpp:288
+msgid "Select the base directory where new projects are to be created."
+msgstr ""
+
+#. i18n: file: shell/settings/projectsettings.ui:38
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:291
+msgid ""
+"Schedule all project\n"
+"files for parsing:"
+msgstr ""
+
+#. i18n: file: shell/settings/projectsettings.ui:48
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_parseAllProjectSources)
+#: rc.cpp:295
+msgid "Parse all files in a project after the project has been opened."
+msgstr ""
+
+#. i18n: file: shell/settings/projectsettings.ui:79
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:298
+msgid ""
+"Save All Documents\n"
+"Before Building"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:302
+msgid "General"
+msgstr "Ĝeneralo"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:23
+#. i18n: ectx: property (toolTip), widget (QCheckBox, chkKateModelines)
+#: rc.cpp:305
+msgid "Add kate modeline to formatted documents."
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:26
+#. i18n: ectx: property (text), widget (QCheckBox, chkKateModelines)
+#: rc.cpp:308
+msgid "Add Kate modeline"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:48
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:311
+msgid "Formatting Styles"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:54
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:314
+msgid "Mimetype:"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:76
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:317
+msgid "Preview:"
+msgstr "Antaŭrigardo:"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:101
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:320
+#, fuzzy
+#| msgid "Format"
+msgid "Formatter:"
+msgstr "Formato"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:121
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:323
+msgid "Style:"
+msgstr "Stilo:"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:146
+#. i18n: ectx: property (text), widget (KPushButton, btnEditStyle)
+#: rc.cpp:329
+#, fuzzy
+#| msgid "Edit"
+msgid "Edit..."
+msgstr "Redakti"
+
+#. i18n: file: shell/settings/uiconfig.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, UiConfig)
+#: rc.cpp:335
+msgid "User Interface"
+msgstr "Uzant-interfaco"
+
+#. i18n: file: shell/settings/uiconfig.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:338
+msgid "Dock Window Behavior"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:26
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:341
+msgid "Top Left Owner"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:33
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:344
+msgid "Top Right Owner"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:41
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopLeftCornerOwner)
+#. i18n: file: shell/settings/uiconfig.ui:89
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
+#: rc.cpp:347 rc.cpp:365
+msgid "Left Dock"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:46
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopLeftCornerOwner)
+#. i18n: file: shell/settings/uiconfig.ui:60
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopRightCornerOwner)
+#: rc.cpp:350 rc.cpp:356
+msgid "Top Dock"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:55
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopRightCornerOwner)
+#. i18n: file: shell/settings/uiconfig.ui:109
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
+#: rc.cpp:353 rc.cpp:371
+msgid "Right Dock"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:68
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:359
+msgid "Bottom Left Owner"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:75
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:362
+msgid "Bottom Right Owner"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:94
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
+#. i18n: file: shell/settings/uiconfig.ui:114
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
+#: rc.cpp:368 rc.cpp:374
+msgid "Bottom Dock"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:138
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:377
+msgid "Tabbed Browsing"
+msgstr "Foliumado kun langetoj"
+
+#. i18n: file: shell/settings/uiconfig.ui:144
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarVisibility)
+#: rc.cpp:380
+msgid "Show tabs"
+msgstr ""
+
+#. i18n: file: shell/settings/uiconfig.ui:154
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarOpenAfterCurrent)
+#: rc.cpp:383
+msgid "Open new tab after current"
+msgstr ""
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, BranchDialogBase)
-#: rc.cpp:395
+#: rc.cpp:386
 #, fuzzy
 #| msgid "Format"
 msgid "Form"
@@ -3694,27 +3675,45 @@ msgstr "Formato"
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:22
 #. i18n: ectx: property (toolTip), widget (QPushButton, newButton)
-#: rc.cpp:398
+#: rc.cpp:389
 msgid "Creates new branch based on the selected branch"
 msgstr ""
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:32
 #. i18n: ectx: property (toolTip), widget (QPushButton, deleteButton)
-#: rc.cpp:404
+#: rc.cpp:395
 msgid "The same as git branch -D"
 msgstr ""
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:42
 #. i18n: ectx: property (toolTip), widget (QPushButton, checkoutButton)
-#: rc.cpp:410
+#: rc.cpp:401
 msgid "Checkout to the selected branch"
 msgstr ""
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:45
 #. i18n: ectx: property (text), widget (QPushButton, checkoutButton)
-#: rc.cpp:413
+#: rc.cpp:404
 msgid "Checkout"
 msgstr ""
+
+#. i18n: file: vcs/dvcs/ui/importmetadatawidget.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, ImportMetadataWidget)
+#: rc.cpp:407
+msgid "Import"
+msgstr "Importi"
+
+#. i18n: file: vcs/dvcs/ui/importmetadatawidget.ui:19
+#. i18n: ectx: property (text), widget (QLabel, labelUrl)
+#: rc.cpp:410
+msgid "Source Directory:"
+msgstr ""
+
+#. i18n: file: vcs/dvcs/ui/logview.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, LogViewBase)
+#: rc.cpp:413
+msgid "Log"
+msgstr "Protokolo"
 
 #. i18n: file: vcs/widgets/vcscommitdialog.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, VcsCommitDialog)
