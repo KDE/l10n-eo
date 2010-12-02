@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgrepview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-10-28 01:44+0200\n"
+"POT-Creation-Date: 2010-12-02 08:44+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -15,69 +15,108 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: grepdialog.cpp:95
+#: grepdialog.cpp:113
 msgid "Search"
 msgstr "Serĉi"
 
-#. i18n: file: grepwidget.ui:25
-#. i18n: ectx: property (windowTitle), widget (QWidget, GrepWidget)
-#: grepdialog.cpp:96 grepviewplugin.cpp:46 rc.cpp:3 rc.cpp:58
-msgid "Find In Files"
+#: grepdialog.cpp:114
+#, fuzzy
+#| msgid "Template:"
+msgid "Replace"
+msgstr "Ŝablono:"
+
+#: grepdialog.cpp:115 grepviewplugin.cpp:46
+#, fuzzy
+#| msgid "Find In Files"
+msgid "Find/Replace In Files"
 msgstr "Trovi en dosieroj"
 
-#: grepdialog.cpp:148
-msgid "Missing tools"
+#: grepdialog.cpp:349
+msgid "Replace in files"
 msgstr ""
 
-#: grepdialog.cpp:148
-msgid "The following needed tools are missing on your system:"
-msgstr ""
-
-#: grepjob.cpp:54
-#, kde-format
-msgid "Grep: %1"
-msgstr ""
-
-#: grepjob.cpp:126
-#, fuzzy
-#| msgid "Could not create temporary file to upload."
-msgid "Unable to create a temporary file for search."
-msgstr "Ne eblis krei dumtempan dosieron por la alŝuto."
-
-#: grepjob.cpp:253
+#: grepjob.cpp:98
 #, fuzzy
 #| msgid "Find In Files"
 msgid "Find in Files"
 msgstr "Trovi en dosieroj"
 
-#: grepjob.cpp:335
+#: grepjob.cpp:138 grepjob.cpp:247
 #, fuzzy
-#| msgid "Profile to load"
-msgid "Process failed to start."
-msgstr "Profilo ŝargenda"
+#| msgid "Search"
+msgid "Search aborted"
+msgstr "Serĉi"
 
-#: grepjob.cpp:338
-#, fuzzy
-#| msgid "Process exited"
-msgid "Process crashed."
-msgstr "Procezo ĉesiĝis"
-
-#: grepjob.cpp:341
-#, fuzzy
-#| msgid "Process exited"
-msgid "Process timed out."
-msgstr "Procezo ĉesiĝis"
-
-#: grepjob.cpp:344
-msgid "Error while writing to process."
+#: grepjob.cpp:147
+msgid "No files found matching the wildcard patterns"
 msgstr ""
 
-#: grepjob.cpp:347
-msgid "Error while reading from process."
+#: grepjob.cpp:160
+msgid "Captures are not allowed in pattern string"
 msgstr ""
 
-#: grepjob.cpp:350
-msgid "Unknown process error."
+#: grepjob.cpp:183
+#, kde-format
+msgid "Replace <b>%2</b> by <b>%3</b> in one file"
+msgid_plural "Replace <b>%2</b> by <b>%3</b> in %1 files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grepjob.cpp:191
+#, kde-format
+msgid "Searching for <b>%2</b> in one file"
+msgid_plural "Searching for <b>%2</b> in %1 files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grepjob.cpp:213
+msgid "Collecting files..."
+msgstr ""
+
+#: grepjob.cpp:291
+msgid "No results found"
+msgstr ""
+
+#: grepjob.cpp:359
+#, kde-format
+msgid "Grep: %1"
+msgstr ""
+
+#: grepoutputmodel.cpp:283
+#, kde-format
+msgid "%1 matches in %2 files"
+msgstr ""
+
+#: grepoutputmodel.cpp:285
+#, kde-format
+msgid "%2 (one match)"
+msgid_plural "%2 (%1 matches)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grepoutputmodel.cpp:341
+#, kde-format
+msgid "Failed to replace <b>%1</b> by <b>%2</b> in %3:%4:%5"
+msgstr ""
+
+#: grepoutputview.cpp:47
+msgid "Replace output view"
+msgstr ""
+
+#: grepoutputview.cpp:50
+msgid "&Replace"
+msgstr ""
+
+#: grepoutputview.cpp:52
+msgid "&Previous"
+msgstr ""
+
+#: grepoutputview.cpp:54
+msgid "&Next"
+msgstr ""
+
+#: grepoutputview.cpp:58
+msgid "&Change criteria"
 msgstr ""
 
 #: grepviewplugin.cpp:46
@@ -85,7 +124,9 @@ msgid "Support for running grep over a list of files"
 msgstr ""
 
 #: grepviewplugin.cpp:55
-msgid "Find in Fi&les..."
+#, fuzzy
+#| msgid "Find in Fi&les..."
+msgid "Find/replace in Fi&les..."
 msgstr "Trovi en Dos&ieroj..."
 
 #: grepviewplugin.cpp:56
@@ -98,143 +139,317 @@ msgstr ""
 
 #: grepviewplugin.cpp:59
 msgid ""
-"<b>Find in files</b><p>Opens the 'Find in files' dialog. There you can enter "
-"a regular expression which is then searched for within all files in the "
-"directories you specify. Matches will be displayed, you can switch to a "
-"match directly.</p>"
+"<b>Find/Replace in files</b><p>Opens the 'Find/Replace in files' dialog. "
+"There you can enter a regular expression which is then searched for within "
+"all files in the directories you specify. Matches will be displayed, you can "
+"switch to a match directly. You can also do replacement.</p>"
 msgstr ""
 
-#: grepviewplugin.cpp:82
+#: grepviewplugin.cpp:83
+msgid "Find and replace in this folder"
+msgstr ""
+
+#: grepviewplugin.cpp:94
 #, fuzzy
 #| msgid "Find In Files"
-msgid "&Find in Files"
+msgid "&Find/Replace in Files"
 msgstr "Trovi en dosieroj"
 
-#. i18n: file: grepwidget.ui:31
+#. i18n: file: grepwidget.ui:26
+#. i18n: ectx: property (windowTitle), widget (QWidget, GrepWidget)
+#: rc.cpp:3 rc.cpp:115
+#, fuzzy
+#| msgid "Find In Files"
+msgid "Find-Replace In Files"
+msgstr "Trovi en dosieroj"
+
+#. i18n: file: grepwidget.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:6 rc.cpp:61
+#: rc.cpp:6 rc.cpp:118
 msgid "Pattern:"
 msgstr "Ŝablono:"
 
-#. i18n: file: grepwidget.ui:44
-#. i18n: ectx: property (whatsThis), widget (KComboBox, patternCombo)
-#: rc.cpp:9 rc.cpp:64
-msgid ""
-"Enter the regular expression you want to search for here.<p>Possible meta "
-"characters are:<ul><li><b>.</b> - Matches any character</li><li><b>^</b> - "
-"Matches the beginning of a line</li><li><b>$</b> - Matches the end of a "
-"line</li><li><b>\\&lt;</b> - Matches the beginning of a word</li><li><b>"
-"\\&gt;</b> - Matches the end of a word</li></ul>The following repetition "
-"operators exist:<ul><li><b>?</b> - The preceding item is matched at most "
-"once</li><li><b>*</b> - The preceding item is matched zero or more times</"
-"li><li><b>+</b> - The preceding item is matched one or more times</li><li><b>"
-"{<i>n</i>}</b> - The preceding item is matched exactly <i>n</i> times</"
-"li><li><b>{<i>n</i>,}</b> - The preceding item is matched <i>n</i> or more "
-"times</li><li><b>{,<i>n</i>}</b> - The preceding item is matched at most "
-"<i>n</i> times</li><li><b>{<i>n</i>,<i>m</i>}</b> - The preceding item is "
-"matched at least <i>n</i>, but at most <i>m</i> times.</li></ul>Furthermore, "
-"backreferences to bracketed subexpressions are available via the notation "
-"\\<i>n</i>.</p>"
+#. i18n: file: grepwidget.ui:45
+#. i18n: ectx: property (toolTip), widget (KComboBox, patternCombo)
+#: rc.cpp:9 rc.cpp:121
+msgid "Enter the regular expression you want to search for here."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:57
+#. i18n: file: grepwidget.ui:69
+#. i18n: ectx: property (whatsThis), widget (KComboBox, patternCombo)
+#: rc.cpp:12 rc.cpp:124
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Enter the regular "
+"expression you want to search for here.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">If you do not check "
+"\"Regular Expression\" below, this is considered a raw string. That means, "
+"all meta characters are escaped.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Possible meta characters "
+"are:</p>\n"
+"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-"
+"right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">.</span> - Matches any "
+"character</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">^</span> - Matches the beginning of a line</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">$</span> - Matches the end of a line</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">\\b</span> - Matches a word boundary</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">\\s</span> - Matches any whitespace character</li></ul>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">The following repetition "
+"operators exist:</p>\n"
+"<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-"
+"right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"><span style=\" font-weight:600;\">?</span> - The preceding "
+"item is matched at most once</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">*</span> - The preceding item is matched zero or more times</"
+"li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">+</span> - The preceding item is matched one or more times</"
+"li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">{</span><span style=\" font-weight:600; font-style:italic;"
+"\">n</span><span style=\" font-weight:600;\">}</span> - The preceding item "
+"is matched exactly <span style=\" font-style:italic;\">n</span> times</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">{</span><span style=\" font-weight:600; font-style:italic;"
+"\">n</span><span style=\" font-weight:600;\">,}</span> - The preceding item "
+"is matched <span style=\" font-style:italic;\">n</span> or more times</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">{,</span><span style=\" font-weight:600; font-style:italic;"
+"\">n</span><span style=\" font-weight:600;\">}</span> - The preceding item "
+"is matched at most <span style=\" font-style:italic;\">n</span> times</li>\n"
+"<li style=\" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">{</span><span style=\" font-weight:600; font-style:italic;"
+"\">n</span><span style=\" font-weight:600;\">,</span><span style=\" font-"
+"weight:600; font-style:italic;\">m</span><span style=\" font-weight:600;\">}"
+"</span> - The preceding item is matched at least <span style=\" font-style:"
+"italic;\">n</span>, but at most <span style=\" font-style:italic;\">m</span> "
+"times.</li></ul>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Furthermore, "
+"backreferences to bracketed subexpressions are available via the notation "
+"\\<span style=\" font-style:italic;\">n</span>.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">For further reference, "
+"look at <a href=\"http://www.pcre.org\"><span style=\" text-decoration: "
+"underline; color:#0057ae;\">www.pcre.org</span></a> or <span style=\" font-"
+"style:italic;\">man pcresyntax.</span></p></body></html>"
+msgstr ""
+
+#. i18n: file: grepwidget.ui:82
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:12 rc.cpp:67
+#: rc.cpp:36 rc.cpp:148
 msgid "Template:"
 msgstr "Ŝablono:"
 
-#. i18n: file: grepwidget.ui:70
+#. i18n: file: grepwidget.ui:95
+#. i18n: ectx: property (toolTip), widget (KLineEdit, templateEdit)
+#: rc.cpp:39 rc.cpp:151
+msgid "This is the regular expression template."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:98
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, templateEdit)
+#: rc.cpp:43 rc.cpp:155
+#, no-c-format
+msgid ""
+"This is the regular expression template. <i>%s</i> will be replaced by the "
+"pattern, while <i>%%</i> will be replaced by <i>%</i>."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:101
 #. i18n: ectx: property (text), widget (KLineEdit, templateEdit)
-#: rc.cpp:16 rc.cpp:71
+#: rc.cpp:47 rc.cpp:159
 #, no-c-format
 msgid "%s"
 msgstr "%s"
 
-#. i18n: file: grepwidget.ui:80
+#. i18n: file: grepwidget.ui:111
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:19 rc.cpp:74
+#: rc.cpp:50 rc.cpp:162
 msgid "Regular Expression:"
 msgstr "Regula Esprimo:"
 
-#. i18n: file: grepwidget.ui:103
+#. i18n: file: grepwidget.ui:124
+#. i18n: ectx: property (toolTip), widget (QCheckBox, regexCheck)
+#: rc.cpp:53 rc.cpp:165
+msgid "Enable or disable regular expression."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:137
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:22 rc.cpp:77
+#: rc.cpp:56 rc.cpp:168
 msgid "Case Sensitive:"
 msgstr "Usklecdistinga:"
 
-#. i18n: file: grepwidget.ui:132
+#. i18n: file: grepwidget.ui:156
+#. i18n: ectx: property (toolTip), widget (QCheckBox, caseSensitiveCheck)
+#: rc.cpp:59 rc.cpp:171
+#, fuzzy
+#| msgid "Case Sensitive:"
+msgid "Case-sensitive searching."
+msgstr "Usklecdistinga:"
+
+#. i18n: file: grepwidget.ui:169
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:25 rc.cpp:80
+#: rc.cpp:62 rc.cpp:174
 msgid "Directory:"
 msgstr "Dosierujo:"
 
-#. i18n: file: grepwidget.ui:165
+#. i18n: file: grepwidget.ui:188
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, directoryRequester)
+#: rc.cpp:65 rc.cpp:177
+msgid "Select in which directory you want to search."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:201
+#. i18n: ectx: property (toolTip), widget (KPushButton, syncButton)
+#: rc.cpp:68 rc.cpp:180
+msgid "Synchronize with current document directory."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:208
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:28 rc.cpp:83
+#: rc.cpp:71 rc.cpp:183
 msgid "Recursive:"
 msgstr "Rekursia:"
 
-#. i18n: file: grepwidget.ui:188
+#. i18n: file: grepwidget.ui:231
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:31 rc.cpp:86
+#: rc.cpp:74 rc.cpp:186
 msgid "Limit to project files:"
 msgstr "Limigo al projektdosieroj:"
 
-#. i18n: file: grepwidget.ui:217
+#. i18n: file: grepwidget.ui:260
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:34 rc.cpp:89
+#: rc.cpp:77 rc.cpp:189
 msgid "Files:"
 msgstr "Dosieroj:"
 
-#. i18n: file: grepwidget.ui:230
-#. i18n: ectx: property (whatsThis), widget (KComboBox, filesCombo)
-#: rc.cpp:37 rc.cpp:92
-msgid ""
-"Enter the file name pattern of the files to search here. You may give "
-"several patterns separated by commas"
+#. i18n: file: grepwidget.ui:273
+#. i18n: ectx: property (toolTip), widget (KComboBox, filesCombo)
+#: rc.cpp:80 rc.cpp:192
+msgid "Files filter."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:243
+#. i18n: file: grepwidget.ui:276
+#. i18n: ectx: property (whatsThis), widget (KComboBox, filesCombo)
+#: rc.cpp:83 rc.cpp:195
+msgid ""
+"Enter the file name pattern of the files to search here. You may give "
+"several patterns separated by spaces."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:289
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:40 rc.cpp:95
+#: rc.cpp:86 rc.cpp:198
 msgid "Exclude:"
 msgstr "Elbari:"
 
-#. i18n: file: grepwidget.ui:256
-#. i18n: ectx: property (whatsThis), widget (KComboBox, excludeCombo)
-#: rc.cpp:44 rc.cpp:99
-#, no-c-format
-msgid ""
-"You can choose a template for the pattern from the combo box and edit it "
-"here. The string %s in the template is replaced by the pattern input field, "
-"resulting in the regular expression to search for."
+#. i18n: file: grepwidget.ui:302
+#. i18n: ectx: property (toolTip), widget (KComboBox, excludeCombo)
+#: rc.cpp:89 rc.cpp:201
+msgid "Files pattern to exclude"
 msgstr ""
 
-#. i18n: file: grepwidget.ui:343
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:47 rc.cpp:102
-msgid "Suppress find errors:"
+#. i18n: file: grepwidget.ui:305
+#. i18n: ectx: property (whatsThis), widget (KComboBox, excludeCombo)
+#: rc.cpp:92 rc.cpp:204
+msgid ""
+"Enter the file name pattern of the files to exclude from the search here. "
+"You may give several patterns separated by spaces.<p>Every pattern is "
+"internally surrounded by asterisks, so that each pattern can match parts of "
+"the file paths.</p>"
 msgstr ""
+
+#. i18n: file: grepwidget.ui:382
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:95 rc.cpp:207
+msgid "Replacement:"
+msgstr ""
+
+#. i18n: file: grepwidget.ui:395
+#. i18n: ectx: property (toolTip), widget (KComboBox, replacementCombo)
+#: rc.cpp:98 rc.cpp:210
+msgid "Enter the replacement pattern."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:408
+#. i18n: ectx: property (toolTip), widget (KLineEdit, replacementTemplateEdit)
+#: rc.cpp:101 rc.cpp:213
+msgid "Enter the replacement template."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:415
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:104 rc.cpp:216
+#, fuzzy
+#| msgid "Template:"
+msgid "Replacement Template:"
+msgstr "Ŝablono:"
 
 #. i18n: file: kdevgrepview.rc:5
-#. i18n: ectx: Menu (navigation)
-#: rc.cpp:50 rc.cpp:55
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:107 rc.cpp:112
+#, fuzzy
+#| msgid "Edit"
 msgctxt "@title:menu"
-msgid "Navigation"
-msgstr ""
+msgid "Edit"
+msgstr "Redakti"
 
-#: rc.cpp:51
+#: rc.cpp:108
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Axel Rousseau"
 
-#: rc.cpp:52
+#: rc.cpp:109
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
 
 #, fuzzy
-#~| msgid "Edit"
-#~ msgctxt "@title:menu"
-#~ msgid "Edit"
-#~ msgstr "Redakti"
+#~| msgid "Could not create temporary file to upload."
+#~ msgid "Unable to create a temporary file for search."
+#~ msgstr "Ne eblis krei dumtempan dosieron por la alŝuto."
+
+#, fuzzy
+#~| msgid "Profile to load"
+#~ msgid "Process failed to start."
+#~ msgstr "Profilo ŝargenda"
+
+#, fuzzy
+#~| msgid "Process exited"
+#~ msgid "Process crashed."
+#~ msgstr "Procezo ĉesiĝis"
+
+#, fuzzy
+#~| msgid "Process exited"
+#~ msgid "Process timed out."
+#~ msgstr "Procezo ĉesiĝis"
