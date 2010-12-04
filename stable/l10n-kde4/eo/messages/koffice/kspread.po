@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-11-28 06:26+0100\n"
+"POT-Creation-Date: 2010-12-04 10:36+0100\n"
 "PO-Revision-Date: 2007-11-12 20:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -2507,7 +2507,7 @@ msgstr ""
 #. i18n: file: functions/text.xml:516
 #. i18n: file: functions/text.xml:531
 #. i18n: file: functions/text.xml:596
-#: FunctionDescription.cpp:51 rc.cpp:60 rc.cpp:395 xml_doc.cpp:4419
+#: FunctionDescription.cpp:51 rc.cpp:151 rc.cpp:486 xml_doc.cpp:4419
 #: xml_doc.cpp:4667 xml_doc.cpp:4735 xml_doc.cpp:4743 xml_doc.cpp:4783
 #: dialogs/LayoutDialog.cpp:930 dialogs/ValidityDialog.cpp:85
 msgid "Text"
@@ -2657,12 +2657,213 @@ msgstr "Donu nomon:"
 msgid "Password is incorrect."
 msgstr ""
 
-#: rc.cpp:1
+#. i18n: file: kspread.kcfg:12
+#. i18n: ectx: label, entry, group (Editor)
+#: rc.cpp:3 rc.cpp:827
+msgid "Navigate in the text by left/right arrow keys in the cell editor."
+msgstr ""
+
+#. i18n: file: kspread.kcfg:14
+#. i18n: ectx: whatsthis, entry, group (Editor)
+#: rc.cpp:6 rc.cpp:830
+msgid ""
+"If true, you can navigate by left/right arrows in the cell editor.\n"
+"              Otherwise, the editing mode will be left."
+msgstr ""
+
+#. i18n: file: kspread.rc:5
+#. i18n: ectx: Menu (file)
+#: rc.cpp:10 rc.cpp:834
+msgid "&File"
+msgstr "&Dosiero"
+
+#. i18n: file: kspread.rc:10
+#. i18n: ectx: Menu (Edit)
+#. i18n: file: kspread_readonly.rc:3
+#. i18n: ectx: Menu (edit)
+#. i18n: file: kspread.rc:10
+#. i18n: ectx: Menu (Edit)
+#. i18n: file: kspread_readonly.rc:3
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:13 rc.cpp:88 rc.cpp:837 rc.cpp:912
+msgid "&Edit"
+msgstr "R&edakti"
+
+#. i18n: file: kspread.rc:19
+#. i18n: ectx: Menu (Fill)
+#: rc.cpp:16 rc.cpp:840
+msgid "Fi&ll"
+msgstr "P&lenigi"
+
+#. i18n: file: kspread.rc:32
+#. i18n: ectx: Menu (Clear)
+#: rc.cpp:19 rc.cpp:843
+msgid "Clear"
+msgstr "Viŝi"
+
+#. i18n: file: kspread.rc:41
+#. i18n: ectx: Menu (Delete)
+#: rc.cpp:22 rc.cpp:846 commands/DeleteCommand.cpp:36 part/View.cpp:503
+msgid "Delete"
+msgstr "Forigi"
+
+#. i18n: file: kspread.rc:51
+#. i18n: ectx: Menu (View)
+#. i18n: file: kspread_readonly.rc:8
+#. i18n: ectx: Menu (view)
+#. i18n: file: kspread.rc:51
+#. i18n: ectx: Menu (View)
+#. i18n: file: kspread_readonly.rc:8
+#. i18n: ectx: Menu (view)
+#: rc.cpp:25 rc.cpp:91 rc.cpp:849 rc.cpp:915
+msgid "&View"
+msgstr "&Rigardo"
+
+#. i18n: file: kspread.rc:63
+#. i18n: ectx: Menu (go)
+#: rc.cpp:28 rc.cpp:852
+msgid "&Go"
+msgstr "Navi&gi"
+
+#. i18n: file: kspread.rc:74
+#. i18n: ectx: Menu (Insert)
+#: rc.cpp:31 rc.cpp:855 dialogs/CharacterSelectDialog.cpp:59
+#: dialogs/CharacterSelectDialog.cpp:76
+msgid "&Insert"
+msgstr "Enŝov&i"
+
+#. i18n: file: kspread.rc:87
+#. i18n: ectx: Menu (ExternalData)
+#: rc.cpp:34 rc.cpp:858
+msgid "&External Data"
+msgstr "&Ekstera datumo"
+
+#. i18n: file: kspread.rc:94
+#. i18n: ectx: Menu (Format)
+#: rc.cpp:37 rc.cpp:861
+msgid "F&ormat"
+msgstr "&Formato"
+
+#. i18n: file: kspread.rc:102
+#. i18n: ectx: Menu (MergeCellMenu)
+#. i18n: file: dialogs/PositionWidget.ui:179
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
+#. i18n: file: kspread.rc:102
+#. i18n: ectx: Menu (MergeCellMenu)
+#: rc.cpp:40 rc.cpp:340 rc.cpp:864 commands/MergeCommand.cpp:134
+#: ui/CellToolBase.cpp:440
+msgid "Merge Cells"
+msgstr "Kunigi ĉelojn"
+
+#. i18n: file: kspread.rc:110
+#. i18n: ectx: Menu (Row)
+#: rc.cpp:43 rc.cpp:867
+msgid "&Row"
+msgstr "&Linio"
+
+#. i18n: file: kspread.rc:116
+#. i18n: ectx: Menu (Column)
+#: rc.cpp:46 rc.cpp:870
+msgid "&Column"
+msgstr "&Kolumno"
+
+#. i18n: file: kspread.rc:122
+#. i18n: ectx: Menu (Sheet)
+#: rc.cpp:49 rc.cpp:873
+msgid "&Sheet"
+msgstr "&Tabelo"
+
+#. i18n: file: kspread.rc:130
+#. i18n: ectx: Menu (PrintRange)
+#: rc.cpp:52 rc.cpp:876
+msgid "&Print Range"
+msgstr "&Presintervalo"
+
+#. i18n: file: kspread.rc:135
+#. i18n: ectx: Menu
+#: rc.cpp:55 rc.cpp:879
+#, fuzzy
+#| msgid "&Page borders:"
+msgid "Manual Page Breaks"
+msgstr "&Paĝmarĝenoj:"
+
+#. i18n: file: kspread.rc:145
+#. i18n: ectx: Menu (Data)
+#: rc.cpp:58 rc.cpp:882
+msgid "&Data"
+msgstr "&Datumo"
+
+#. i18n: file: kspread.rc:147
+#. i18n: ectx: Menu (Filter)
+#: rc.cpp:61 rc.cpp:885
+msgid "Filter"
+msgstr "Filtrilo"
+
+#. i18n: file: kspread.rc:162
+#. i18n: ectx: Menu (tools)
+#: rc.cpp:64 rc.cpp:888
+msgid "&Tools"
+msgstr "&Iloj"
+
+#. i18n: file: kspread.rc:175
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:67 rc.cpp:891
+msgid "&Settings"
+msgstr "&Agordo"
+
+#. i18n: file: kspread.rc:205
+#. i18n: ectx: ToolBar (editToolBar)
+#: rc.cpp:70 rc.cpp:894
+msgid "Edit"
+msgstr "Redakti"
+
+#. i18n: file: kspread.rc:215
+#. i18n: ectx: ToolBar (navigationToolBar)
+#: rc.cpp:73 rc.cpp:897
+msgid "Navigation"
+msgstr "Navigado"
+
+#. i18n: file: kspread.rc:221
+#. i18n: ectx: Menu
+#: rc.cpp:76 rc.cpp:900
+#, fuzzy
+#| msgid "Hide Sheet"
+msgid "Activate"
+msgstr "Kaŝi tabelon"
+
+#. i18n: file: kspread.rc:227
+#. i18n: ectx: ToolBar (fontPropertyToolBar)
+#: rc.cpp:79 rc.cpp:903 ui/CellToolBase.cpp:233
+#, fuzzy
+msgid "Font"
+msgstr "Forinto"
+
+#. i18n: file: kspread.rc:231
+#. i18n: ectx: ToolBar (formatToolBar)
+#. i18n: file: dialogs/DataFormatWidget.ui:35
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: file: dialogs/SpecialPasteWidget.ui:70
+#. i18n: ectx: property (text), widget (QRadioButton, formatButton)
+#. i18n: file: kspread.rc:231
+#. i18n: ectx: ToolBar (formatToolBar)
+#. i18n: file: functions/conversion.xml:251
+#: rc.cpp:82 rc.cpp:144 rc.cpp:489 rc.cpp:906 xml_doc.cpp:198
+#: dialogs/LayoutDialog.cpp:886 ui/CellToolBase.cpp:184
+msgid "Format"
+msgstr "Formato"
+
+#. i18n: file: kspread.rc:255
+#. i18n: ectx: ToolBar (colorAndBorderToolBar)
+#: rc.cpp:85 rc.cpp:909
+msgid "Color/Border"
+msgstr "Koloro/Limo"
+
+#: rc.cpp:92
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Wolfram Diestel,Steffen Pietsch,Oliver Kellogg"
 
-#: rc.cpp:2
+#: rc.cpp:93
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
@@ -2671,7 +2872,7 @@ msgstr ""
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChartDatabaseSelector)
-#: rc.cpp:5
+#: rc.cpp:96
 #, fuzzy
 #| msgid "Related Functions"
 msgid "Database Selector"
@@ -2679,7 +2880,7 @@ msgstr "Najbaraj funkcioj"
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:22
 #. i18n: ectx: property (title), widget (QGroupBox, m_areaBox)
-#: rc.cpp:8
+#: rc.cpp:99
 #, fuzzy
 #| msgid "Database"
 msgid "Data Area"
@@ -2687,7 +2888,7 @@ msgstr "Datumbazo"
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:28
 #. i18n: ectx: property (text), widget (QLabel, m_areaLabel)
-#: rc.cpp:11
+#: rc.cpp:102
 #, fuzzy
 #| msgid "Area: %1"
 msgid "Area:"
@@ -2695,7 +2896,7 @@ msgstr "Areo: %1"
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:41
 #. i18n: ectx: property (text), widget (QCheckBox, m_firstRowAsLabel)
-#: rc.cpp:14
+#: rc.cpp:105
 #, fuzzy
 #| msgid "&First row contains headers"
 msgid "First row as label"
@@ -2703,7 +2904,7 @@ msgstr "&Unua linio enhavas ĉapojn"
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, m_firstColumnAsLabel)
-#: rc.cpp:17
+#: rc.cpp:108
 #, fuzzy
 #| msgid "&First column contains headers"
 msgid "First column as label"
@@ -2711,7 +2912,7 @@ msgstr "&Unua kolumno enhavas ĉapojn"
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:58
 #. i18n: ectx: property (title), widget (QGroupBox, m_formatBox)
-#: rc.cpp:20
+#: rc.cpp:111
 #, fuzzy
 #| msgid "&Data Format"
 msgid "Data Format"
@@ -2719,13 +2920,13 @@ msgstr "&Datumformato"
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:64
 #. i18n: ectx: property (text), widget (QRadioButton, m_dataInRows)
-#: rc.cpp:23
+#: rc.cpp:114
 msgid "Data sets in rows"
 msgstr ""
 
 #. i18n: file: chart/ChartDatabaseSelector.ui:71
 #. i18n: ectx: property (text), widget (QRadioButton, m_dataInColumns)
-#: rc.cpp:26
+#: rc.cpp:117
 #, fuzzy
 #| msgid "Insert columns"
 msgid "Data sets in columns"
@@ -2733,7 +2934,7 @@ msgstr "Enŝovi kolumnojn"
 
 #. i18n: file: dialogs/ConsolidateDetailsWidget.ui:35
 #. i18n: ectx: property (text), widget (QCheckBox, m_rowHeader)
-#: rc.cpp:29
+#: rc.cpp:120
 #, fuzzy
 #| msgid "&Description in row"
 msgid "Description in rows"
@@ -2741,7 +2942,7 @@ msgstr "&Priskribo en linio"
 
 #. i18n: file: dialogs/ConsolidateDetailsWidget.ui:42
 #. i18n: ectx: property (text), widget (QCheckBox, m_columnHeader)
-#: rc.cpp:32
+#: rc.cpp:123
 #, fuzzy
 #| msgid "De&scription in column"
 msgid "Description in columns"
@@ -2749,7 +2950,7 @@ msgstr "Pri&skribo en kolumno"
 
 #. i18n: file: dialogs/ConsolidateDetailsWidget.ui:49
 #. i18n: ectx: property (text), widget (QCheckBox, m_copyData)
-#: rc.cpp:35
+#: rc.cpp:126
 #, fuzzy
 #| msgid "Co&py data"
 msgid "Copy data"
@@ -2757,7 +2958,7 @@ msgstr "Ko&pii datumon"
 
 #. i18n: file: dialogs/ConsolidateWidget.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:38
+#: rc.cpp:129
 #, fuzzy
 #| msgid "&Function:"
 msgid "Function:"
@@ -2765,7 +2966,7 @@ msgstr "&Funkcio:"
 
 #. i18n: file: dialogs/ConsolidateWidget.ui:48
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:41
+#: rc.cpp:132
 #, fuzzy
 #| msgid "Re&ference:"
 msgid "Reference:"
@@ -2773,7 +2974,7 @@ msgstr "Re&ferenco:"
 
 #. i18n: file: dialogs/ConsolidateWidget.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:44
+#: rc.cpp:135
 #, fuzzy
 #| msgid "&Entered references:"
 msgid "Entered references:"
@@ -2783,7 +2984,7 @@ msgstr "&Donitaj referencoj:"
 #. i18n: ectx: property (text), widget (KPushButton, m_addButton)
 #. i18n: file: dialogs/SortWidget.ui:35
 #. i18n: ectx: property (text), widget (QPushButton, m_addButton)
-#: rc.cpp:47 rc.cpp:344 dialogs/ListDialog.cpp:89
+#: rc.cpp:138 rc.cpp:435 dialogs/ListDialog.cpp:89
 #, fuzzy
 #| msgid "&Add"
 msgid "Add"
@@ -2793,28 +2994,17 @@ msgstr "&Aldonu"
 #. i18n: ectx: property (text), widget (KPushButton, m_removeButton)
 #. i18n: file: dialogs/SortWidget.ui:42
 #. i18n: ectx: property (text), widget (QPushButton, m_removeButton)
-#: rc.cpp:50 rc.cpp:347 dialogs/InsertDialog.cpp:73 dialogs/ListDialog.cpp:100
+#: rc.cpp:141 rc.cpp:438 dialogs/InsertDialog.cpp:73
+#: dialogs/ListDialog.cpp:100
 #, fuzzy
 msgid "Remove"
 msgstr "Forigu ĉelon"
-
-#. i18n: file: dialogs/DataFormatWidget.ui:35
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#. i18n: file: dialogs/SpecialPasteWidget.ui:70
-#. i18n: ectx: property (text), widget (QRadioButton, formatButton)
-#. i18n: file: kspread.rc:231
-#. i18n: ectx: ToolBar (formatToolBar)
-#. i18n: file: functions/conversion.xml:251
-#: rc.cpp:53 rc.cpp:398 rc.cpp:815 xml_doc.cpp:198
-#: dialogs/LayoutDialog.cpp:886 ui/CellToolBase.cpp:184
-msgid "Format"
-msgstr "Formato"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:41
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: dialogs/FontWidget.ui:183
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: rc.cpp:56 rc.cpp:166 dialogs/LayoutDialog.cpp:940
+#: rc.cpp:147 rc.cpp:257 dialogs/LayoutDialog.cpp:940
 #: dialogs/LayoutDialog.cpp:2584 dialogs/LayoutDialog.cpp:3365
 msgid "Preview"
 msgstr "Antaŭrigardo"
@@ -2828,7 +3018,7 @@ msgstr "Antaŭrigardo"
 #. i18n: file: functions/datetime.xml:387
 #. i18n: file: functions/datetime.xml:461
 #. i18n: file: functions/datetime.xml:475
-#: rc.cpp:63 xml_doc.cpp:396 xml_doc.cpp:468 xml_doc.cpp:478 xml_doc.cpp:488
+#: rc.cpp:154 xml_doc.cpp:396 xml_doc.cpp:468 xml_doc.cpp:478 xml_doc.cpp:488
 #: xml_doc.cpp:592 xml_doc.cpp:634 xml_doc.cpp:642
 #: dialogs/LayoutDialog.cpp:922 dialogs/ValidityDialog.cpp:87
 msgid "Time"
@@ -2846,7 +3036,7 @@ msgstr "Tempo"
 #. i18n: file: functions/datetime.xml:588
 #. i18n: file: functions/datetime.xml:603
 #. i18n: file: functions/datetime.xml:716
-#: rc.cpp:66 xml_doc.cpp:374 xml_doc.cpp:404 xml_doc.cpp:412 xml_doc.cpp:424
+#: rc.cpp:157 xml_doc.cpp:374 xml_doc.cpp:404 xml_doc.cpp:412 xml_doc.cpp:424
 #: xml_doc.cpp:438 xml_doc.cpp:448 xml_doc.cpp:458 xml_doc.cpp:704
 #: xml_doc.cpp:712 xml_doc.cpp:782 dialogs/LayoutDialog.cpp:918
 #: dialogs/ValidityDialog.cpp:86
@@ -2857,32 +3047,32 @@ msgstr "Dato"
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_6)
 #. i18n: file: functions/financial.xml:384
 #. i18n: file: functions/financial.xml:404
-#: rc.cpp:69 xml_doc.cpp:1530 xml_doc.cpp:1540 dialogs/LayoutDialog.cpp:914
+#: rc.cpp:160 xml_doc.cpp:1530 xml_doc.cpp:1540 dialogs/LayoutDialog.cpp:914
 msgid "Fraction"
 msgstr "Frakcio"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:88
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_5)
 #. i18n: file: functions/financial.xml:517
-#: rc.cpp:72 xml_doc.cpp:1597
+#: rc.cpp:163 xml_doc.cpp:1597
 msgid "Currency"
 msgstr "Mono"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:95
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_4)
-#: rc.cpp:75 dialogs/LayoutDialog.cpp:906 ui/CellToolBase.cpp:396
+#: rc.cpp:166 dialogs/LayoutDialog.cpp:906 ui/CellToolBase.cpp:396
 msgid "Money"
 msgstr "Mono"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:102
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_3)
-#: rc.cpp:78 dialogs/LayoutDialog.cpp:902 ui/CellToolBase.cpp:390
+#: rc.cpp:169 dialogs/LayoutDialog.cpp:902 ui/CellToolBase.cpp:390
 msgid "Percent"
 msgstr "Procento"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:109
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: rc.cpp:81 dialogs/LayoutDialog.cpp:894
+#: rc.cpp:172 dialogs/LayoutDialog.cpp:894
 msgid "Generic"
 msgstr "Komuna"
 
@@ -2912,7 +3102,7 @@ msgstr "Komuna"
 #. i18n: file: functions/text.xml:11
 #. i18n: file: functions/text.xml:30
 #. i18n: file: functions/text.xml:656
-#: rc.cpp:84 xml_doc.cpp:196 xml_doc.cpp:804 xml_doc.cpp:856 xml_doc.cpp:1605
+#: rc.cpp:175 xml_doc.cpp:196 xml_doc.cpp:804 xml_doc.cpp:856 xml_doc.cpp:1605
 #: xml_doc.cpp:3448 xml_doc.cpp:3470 xml_doc.cpp:3490 xml_doc.cpp:3578
 #: xml_doc.cpp:3596 xml_doc.cpp:3608 xml_doc.cpp:3620 xml_doc.cpp:3630
 #: xml_doc.cpp:3654 xml_doc.cpp:3674 xml_doc.cpp:3800 xml_doc.cpp:3882
@@ -2924,7 +3114,7 @@ msgstr "Nombro"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:123
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_10)
-#: rc.cpp:87 dialogs/LayoutDialog.cpp:926
+#: rc.cpp:178 dialogs/LayoutDialog.cpp:926
 #, fuzzy
 #| msgid "Date & Time"
 msgid "Date and Time"
@@ -2932,37 +3122,37 @@ msgstr "Dato & Tempo"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:159
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:90 dialogs/LayoutDialog.cpp:1016
+#: rc.cpp:181 dialogs/LayoutDialog.cpp:1016
 msgid "Currency:"
 msgstr "Mono:"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:93 dialogs/LayoutDialog.cpp:1012
+#: rc.cpp:184 dialogs/LayoutDialog.cpp:1012
 msgid "Format:"
 msgstr "Formato:"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:173
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:96 dialogs/LayoutDialog.cpp:989
+#: rc.cpp:187 dialogs/LayoutDialog.cpp:989
 msgid "Postfix:"
 msgstr "Sufikso:"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:210
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:99 dialogs/LayoutDialog.cpp:999
+#: rc.cpp:190 dialogs/LayoutDialog.cpp:999
 msgid "Precision:"
 msgstr "Precizeco:"
 
 #. i18n: file: dialogs/DataFormatWidget.ui:217
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:102 dialogs/LayoutDialog.cpp:995
+#: rc.cpp:193 dialogs/LayoutDialog.cpp:995
 msgid "Prefix:"
 msgstr "Prefikso:"
 
 #. i18n: file: dialogs/FontWidget.ui:32
 #. i18n: ectx: property (whatsThis), widget (QWidget, FontWidget)
-#: rc.cpp:105
+#: rc.cpp:196
 msgid ""
 "You can select here the font style, size and color, including some "
 "additional options like underlined or stroke out text for the current cell "
@@ -2976,7 +3166,7 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (KComboBox, style_combo)
 #. i18n: file: dialogs/FontWidget.ui:148
 #. i18n: ectx: property (whatsThis), widget (KComboBox, size_combo)
-#: rc.cpp:109 rc.cpp:160
+#: rc.cpp:200 rc.cpp:251
 msgid ""
 "Choose the style for your font for the currently selected cells. When you "
 "select several cells with different styles, the displayed style is set to "
@@ -2989,25 +3179,25 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, style_combo)
 #. i18n: file: dialogs/FontWidget.ui:72
 #. i18n: ectx: property (text), item, widget (KComboBox, weight_combo)
-#: rc.cpp:112 rc.cpp:124
+#: rc.cpp:203 rc.cpp:215
 msgid "Varying (No Change)"
 msgstr "Varianta (Neniu ŝanĝo)"
 
 #. i18n: file: dialogs/FontWidget.ui:52
 #. i18n: ectx: property (text), item, widget (KComboBox, style_combo)
-#: rc.cpp:115 dialogs/LayoutDialog.cpp:1900
+#: rc.cpp:206 dialogs/LayoutDialog.cpp:1900
 msgid "Roman"
 msgstr "Romia"
 
 #. i18n: file: dialogs/FontWidget.ui:57
 #. i18n: ectx: property (text), item, widget (KComboBox, style_combo)
-#: rc.cpp:118 dialogs/LayoutDialog.cpp:1902 ui/CellToolBase.cpp:218
+#: rc.cpp:209 dialogs/LayoutDialog.cpp:1902 ui/CellToolBase.cpp:218
 msgid "Italic"
 msgstr "Kursiva"
 
 #. i18n: file: dialogs/FontWidget.ui:65
 #. i18n: ectx: property (whatsThis), widget (KComboBox, weight_combo)
-#: rc.cpp:121
+#: rc.cpp:212
 msgid ""
 "Choose the weight for your font for the currently selected cells. When you "
 "select several cells with different font weight, the displayed weight is set "
@@ -3018,55 +3208,55 @@ msgstr ""
 
 #. i18n: file: dialogs/FontWidget.ui:77
 #. i18n: ectx: property (text), item, widget (KComboBox, weight_combo)
-#: rc.cpp:127 dialogs/LayoutDialog.cpp:1889
+#: rc.cpp:218 dialogs/LayoutDialog.cpp:1889
 msgid "Normal"
 msgstr "Normala"
 
 #. i18n: file: dialogs/FontWidget.ui:82
 #. i18n: ectx: property (text), item, widget (KComboBox, weight_combo)
-#: rc.cpp:130 dialogs/LayoutDialog.cpp:1891 ui/CellToolBase.cpp:213
+#: rc.cpp:221 dialogs/LayoutDialog.cpp:1891 ui/CellToolBase.cpp:213
 msgid "Bold"
 msgstr "Grasa"
 
 #. i18n: file: dialogs/FontWidget.ui:90
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:133 dialogs/LayoutDialog.cpp:2549 dialogs/LayoutDialog.cpp:3328
+#: rc.cpp:224 dialogs/LayoutDialog.cpp:2549 dialogs/LayoutDialog.cpp:3328
 msgid "Color:"
 msgstr "Koloro:"
 
 #. i18n: file: dialogs/FontWidget.ui:97
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, underline)
-#: rc.cpp:136
+#: rc.cpp:227
 msgid "If this is checked, the current cell text wil be underlined."
 msgstr ""
 
 #. i18n: file: dialogs/FontWidget.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, underline)
-#: rc.cpp:139 ui/CellToolBase.cpp:223
+#: rc.cpp:230 ui/CellToolBase.cpp:223
 msgid "Underline"
 msgstr "Substrekita"
 
 #. i18n: file: dialogs/FontWidget.ui:107
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:142
+#: rc.cpp:233
 msgid "Size:"
 msgstr "Grandeco:"
 
 #. i18n: file: dialogs/FontWidget.ui:114
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:145
+#: rc.cpp:236
 msgid "Weight:"
 msgstr "Graseco:"
 
 #. i18n: file: dialogs/FontWidget.ui:121
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:148
+#: rc.cpp:239
 msgid "Style:"
 msgstr "Stilo:"
 
 #. i18n: file: dialogs/FontWidget.ui:128
 #. i18n: ectx: property (whatsThis), widget (KColorButton, textColorButton)
-#: rc.cpp:151
+#: rc.cpp:242
 msgid ""
 "Choose the color for the current cell text. Clicking on the color bar will "
 "bring you the standard KDE Select Color dialog where you will be able to "
@@ -3075,19 +3265,19 @@ msgstr ""
 
 #. i18n: file: dialogs/FontWidget.ui:138
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, strike)
-#: rc.cpp:154
+#: rc.cpp:245
 msgid "This will strike out the current cell text if this is checked."
 msgstr ""
 
 #. i18n: file: dialogs/FontWidget.ui:141
 #. i18n: ectx: property (text), widget (QCheckBox, strike)
-#: rc.cpp:157
+#: rc.cpp:248
 msgid "Strike out"
 msgstr "Trastrekita"
 
 #. i18n: file: dialogs/FontWidget.ui:176
 #. i18n: ectx: property (whatsThis), widget (QListWidget, family_combo)
-#: rc.cpp:163
+#: rc.cpp:254
 msgid ""
 "This box lists all your available font families. Click on one family to set "
 "it in the current cell."
@@ -3095,50 +3285,50 @@ msgstr ""
 
 #. i18n: file: dialogs/FontWidget.ui:195
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, example_label)
-#: rc.cpp:169
+#: rc.cpp:260
 msgid ""
 "You can see a preview of the font you are choosing for the current cell."
 msgstr ""
 
 #. i18n: file: dialogs/GoalSeekWidget.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label1)
-#: rc.cpp:172
+#: rc.cpp:263
 msgid "Set cell:"
 msgstr "Doni ĉelon:"
 
 #. i18n: file: dialogs/GoalSeekWidget.ui:48
 #. i18n: ectx: property (text), widget (QLabel, label2)
-#: rc.cpp:175
+#: rc.cpp:266
 msgid "To value:"
 msgstr "Al valoro:"
 
 #. i18n: file: dialogs/GoalSeekWidget.ui:58
 #. i18n: ectx: property (text), widget (QLabel, label3)
-#: rc.cpp:178
+#: rc.cpp:269
 msgid "By changing cell:"
 msgstr "Ŝanĝante ĉelon:"
 
 #. i18n: file: dialogs/GoalSeekWidget.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label4)
-#: rc.cpp:181
+#: rc.cpp:272
 msgid "Goal seeking with cell <cell> found <a | no> solution:"
 msgstr ""
 
 #. i18n: file: dialogs/GoalSeekWidget.ui:81
 #. i18n: ectx: property (text), widget (QLabel, label5)
-#: rc.cpp:184 dialogs/GoalSeekDialog.cpp:303
+#: rc.cpp:275 dialogs/GoalSeekDialog.cpp:303
 msgid "New value:"
 msgstr "Nova valoro:"
 
 #. i18n: file: dialogs/GoalSeekWidget.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label6)
-#: rc.cpp:187
+#: rc.cpp:278
 msgid "Current value:"
 msgstr "Nuna valoro:"
 
 #. i18n: file: dialogs/PositionWidget.ui:45
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, horizontalGroup)
-#: rc.cpp:190
+#: rc.cpp:281
 msgid ""
 "<qt>Set the content position horizontally in the cell.\n"
 "<b>Standard</b> is default and is set from the format you choose.\n"
@@ -3153,39 +3343,39 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:315
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:197 rc.cpp:600 dialogs/SeriesDialog.cpp:71
+#: rc.cpp:288 rc.cpp:691 dialogs/SeriesDialog.cpp:71
 msgid "Horizontal"
 msgstr "Horizontala"
 
 #. i18n: file: dialogs/PositionWidget.ui:54
 #. i18n: ectx: property (text), widget (QRadioButton, standard)
-#: rc.cpp:200
+#: rc.cpp:291
 msgid "Standard"
 msgstr "Normale"
 
 #. i18n: file: dialogs/PositionWidget.ui:61
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: rc.cpp:203 part/dialogs/PreferenceDialog.cpp:322 ui/CellToolBase.cpp:261
+#: rc.cpp:294 part/dialogs/PreferenceDialog.cpp:322 ui/CellToolBase.cpp:261
 #: ui/CellToolBase.cpp:308
 msgid "Left"
 msgstr "Liva"
 
 #. i18n: file: dialogs/PositionWidget.ui:68
 #. i18n: ectx: property (text), widget (QRadioButton, center)
-#: rc.cpp:206 ui/CellToolBase.cpp:268
+#: rc.cpp:297 ui/CellToolBase.cpp:268
 msgid "Center"
 msgstr "Centra"
 
 #. i18n: file: dialogs/PositionWidget.ui:75
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: rc.cpp:209 part/dialogs/PreferenceDialog.cpp:321 ui/CellToolBase.cpp:275
+#: rc.cpp:300 part/dialogs/PreferenceDialog.cpp:321 ui/CellToolBase.cpp:275
 #: ui/CellToolBase.cpp:314
 msgid "Right"
 msgstr "Dekstra"
 
 #. i18n: file: dialogs/PositionWidget.ui:88
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, buttonGroup2)
-#: rc.cpp:212
+#: rc.cpp:303
 msgid ""
 "<qt>Set the content position vertically in the cell.\n"
 "<b>Top</b> means the content will be displayed on top of the cell.\n"
@@ -3199,31 +3389,31 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:335
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:218 rc.cpp:603 dialogs/SeriesDialog.cpp:69 ui/CellToolBase.cpp:366
+#: rc.cpp:309 rc.cpp:694 dialogs/SeriesDialog.cpp:69 ui/CellToolBase.cpp:366
 msgid "Vertical"
 msgstr "Vertikala"
 
 #. i18n: file: dialogs/PositionWidget.ui:97
 #. i18n: ectx: property (text), widget (QRadioButton, top)
-#: rc.cpp:221 ui/CellToolBase.cpp:285 ui/CellToolBase.cpp:320
+#: rc.cpp:312 ui/CellToolBase.cpp:285 ui/CellToolBase.cpp:320
 msgid "Top"
 msgstr "Supro"
 
 #. i18n: file: dialogs/PositionWidget.ui:104
 #. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: rc.cpp:224 ui/CellToolBase.cpp:292
+#: rc.cpp:315 ui/CellToolBase.cpp:292
 msgid "Middle"
 msgstr "Meze"
 
 #. i18n: file: dialogs/PositionWidget.ui:111
 #. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: rc.cpp:227 ui/CellToolBase.cpp:299 ui/CellToolBase.cpp:326
+#: rc.cpp:318 ui/CellToolBase.cpp:299 ui/CellToolBase.cpp:326
 msgid "Bottom"
 msgstr "Malsupra"
 
 #. i18n: file: dialogs/PositionWidget.ui:121
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
-#: rc.cpp:230
+#: rc.cpp:321
 msgid ""
 "Your text will appear oriented in the angle you set here. Positive values "
 "will move it counter-clockwise and negative values will move it clockwise."
@@ -3231,19 +3421,19 @@ msgstr ""
 
 #. i18n: file: dialogs/PositionWidget.ui:124
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
-#: rc.cpp:233
+#: rc.cpp:324
 msgid "Rotation"
 msgstr "Rotacio"
 
 #. i18n: file: dialogs/PositionWidget.ui:146
 #. i18n: ectx: property (suffix), widget (QSpinBox, spinBox3)
-#: rc.cpp:236
+#: rc.cpp:327
 msgid "°"
 msgstr "°"
 
 #. i18n: file: dialogs/PositionWidget.ui:165
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
-#: rc.cpp:239
+#: rc.cpp:330
 msgid ""
 "Set the amount of indent that will be used in the cell when you choose the "
 "Format -> Increase Indent or Format -> Decrease Indent menus."
@@ -3251,13 +3441,13 @@ msgstr ""
 
 #. i18n: file: dialogs/PositionWidget.ui:168
 #. i18n: ectx: property (title), widget (QGroupBox, indentGroup)
-#: rc.cpp:242
+#: rc.cpp:333
 msgid "Indent"
 msgstr "Deŝovo"
 
 #. i18n: file: dialogs/PositionWidget.ui:176
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox5)
-#: rc.cpp:245
+#: rc.cpp:336
 msgid ""
 "When checked, this has the same effect as Data ->Merge Cells. You need to "
 "have at least two consecutive cells selected. Those consecutive cells are "
@@ -3267,35 +3457,27 @@ msgid ""
 "effect as Data -> Dissociate Cells."
 msgstr ""
 
-#. i18n: file: dialogs/PositionWidget.ui:179
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#. i18n: file: kspread.rc:102
-#. i18n: ectx: Menu (MergeCellMenu)
-#: rc.cpp:249 rc.cpp:773 commands/MergeCommand.cpp:134 ui/CellToolBase.cpp:440
-msgid "Merge Cells"
-msgstr "Kunigi ĉelojn"
-
 #. i18n: file: dialogs/PositionWidget.ui:185
 #. i18n: ectx: property (text), widget (QCheckBox, mergeCell)
-#: rc.cpp:252
+#: rc.cpp:343
 msgid "Merge cells"
 msgstr "Kunigi ĉelojn"
 
 #. i18n: file: dialogs/PositionWidget.ui:195
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, sizeCellGroup)
-#: rc.cpp:255
+#: rc.cpp:346
 msgid "The unit used here is the one set in Format -> Page Layout.. dialog."
 msgstr ""
 
 #. i18n: file: dialogs/PositionWidget.ui:198
 #. i18n: ectx: property (title), widget (QGroupBox, sizeCellGroup)
-#: rc.cpp:258
+#: rc.cpp:349
 msgid "Size of Cell"
 msgstr "Grandeco de ĉelo"
 
 #. i18n: file: dialogs/PositionWidget.ui:206
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, defaultHeight)
-#: rc.cpp:261
+#: rc.cpp:352
 msgid ""
 "If checked, the default height will be used for the cell instead of the "
 "value above."
@@ -3303,26 +3485,26 @@ msgstr ""
 
 #. i18n: file: dialogs/PositionWidget.ui:209
 #. i18n: ectx: property (text), widget (QCheckBox, defaultHeight)
-#: rc.cpp:265
+#: rc.cpp:356
 #, no-c-format, kde-format
 msgid "Default height (%1)"
 msgstr "Apriora alteco (%1)"
 
 #. i18n: file: dialogs/PositionWidget.ui:232
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:268 dialogs/Resize2Dialog.cpp:74
+#: rc.cpp:359 dialogs/Resize2Dialog.cpp:74
 msgid "Height:"
 msgstr "Alteco:"
 
 #. i18n: file: dialogs/PositionWidget.ui:239
 #. i18n: ectx: property (whatsThis), widget (QFrame, m_heightPanel)
-#: rc.cpp:271
+#: rc.cpp:362
 msgid "Set the height of the cell."
 msgstr "Meti la altecon de la ĉelo."
 
 #. i18n: file: dialogs/PositionWidget.ui:256
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, defaultWidth)
-#: rc.cpp:274
+#: rc.cpp:365
 msgid ""
 "If checked, the default width will be used for the cell instead of the value "
 "above."
@@ -3330,20 +3512,20 @@ msgstr ""
 
 #. i18n: file: dialogs/PositionWidget.ui:259
 #. i18n: ectx: property (text), widget (QCheckBox, defaultWidth)
-#: rc.cpp:278
+#: rc.cpp:369
 #, no-c-format, kde-format
 msgid "Default width (%1)"
 msgstr "Apriora larĝeco (%1)"
 
 #. i18n: file: dialogs/PositionWidget.ui:295
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:281 dialogs/Resize2Dialog.cpp:132
+#: rc.cpp:372 dialogs/Resize2Dialog.cpp:132
 msgid "Width:"
 msgstr "Larĝeco:"
 
 #. i18n: file: dialogs/PositionWidget.ui:309
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox3)
-#: rc.cpp:284
+#: rc.cpp:375
 msgid ""
 "This is only available when the rotation is 0°.\n"
 "Wrap text wraps the text so it fits in the previous cell size. If this is "
@@ -3354,25 +3536,25 @@ msgstr ""
 
 #. i18n: file: dialogs/PositionWidget.ui:312
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: rc.cpp:289
+#: rc.cpp:380
 msgid "Text Option"
 msgstr "Tekstopcio"
 
 #. i18n: file: dialogs/PositionWidget.ui:318
 #. i18n: ectx: property (text), widget (QCheckBox, multi)
-#: rc.cpp:292
+#: rc.cpp:383
 msgid "Wrap text"
 msgstr "Faldi tekston"
 
 #. i18n: file: dialogs/PositionWidget.ui:325
 #. i18n: ectx: property (text), widget (QCheckBox, vertical)
-#: rc.cpp:295
+#: rc.cpp:386
 msgid "Vertical text"
 msgstr "Vertikala teksto"
 
 #. i18n: file: dialogs/PositionWidget.ui:332
 #. i18n: ectx: property (text), widget (QCheckBox, shrinkToFit)
-#: rc.cpp:298
+#: rc.cpp:389
 #, fuzzy
 #| msgid "Strike out"
 msgid "Shrink to fit"
@@ -3380,7 +3562,7 @@ msgstr "Trastrekita"
 
 #. i18n: file: dialogs/ProtectionWidget.ui:34
 #. i18n: ectx: property (whatsThis), widget (QWidget, ProtectionWidget)
-#: rc.cpp:301
+#: rc.cpp:392
 msgid ""
 "This tab enables you to set Cell Protection. All cells are protected by "
 "default (that means cell content cannot be changed) and for the cell "
@@ -3396,13 +3578,13 @@ msgstr ""
 
 #. i18n: file: dialogs/ProtectionWidget.ui:40
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: rc.cpp:307
+#: rc.cpp:398
 msgid "Printing"
 msgstr "Presado"
 
 #. i18n: file: dialogs/ProtectionWidget.ui:47
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_bDontPrint)
-#: rc.cpp:310
+#: rc.cpp:401
 msgid ""
 "If checked, the content of the cell will not be printed. If this is not "
 "checked (default), the cell content will be printed.\n"
@@ -3411,19 +3593,19 @@ msgstr ""
 
 #. i18n: file: dialogs/ProtectionWidget.ui:50
 #. i18n: ectx: property (text), widget (QCheckBox, m_bDontPrint)
-#: rc.cpp:314
+#: rc.cpp:405
 msgid "&Do not print text"
 msgstr "&Ne presi la tekston"
 
 #. i18n: file: dialogs/ProtectionWidget.ui:60
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: rc.cpp:317
+#: rc.cpp:408
 msgid "Protection"
 msgstr "Protekto"
 
 #. i18n: file: dialogs/ProtectionWidget.ui:68
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_bHideAll)
-#: rc.cpp:320
+#: rc.cpp:411
 msgid ""
 "This hides the cell content and works only when the sheet is protected. "
 "Whether the cell itself is protected or not does not matter."
@@ -3431,13 +3613,13 @@ msgstr ""
 
 #. i18n: file: dialogs/ProtectionWidget.ui:71
 #. i18n: ectx: property (text), widget (QCheckBox, m_bHideAll)
-#: rc.cpp:323
+#: rc.cpp:414
 msgid "Hide &all"
 msgstr "Kaŝi ĉion"
 
 #. i18n: file: dialogs/ProtectionWidget.ui:96
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_bIsProtected)
-#: rc.cpp:326
+#: rc.cpp:417
 msgid ""
 "If checked, the cell content will be protected. This is the default "
 "behavior. You need to protect the whole sheet using the Tools->Protect "
@@ -3448,13 +3630,13 @@ msgstr ""
 
 #. i18n: file: dialogs/ProtectionWidget.ui:99
 #. i18n: ectx: property (text), widget (QCheckBox, m_bIsProtected)
-#: rc.cpp:329
+#: rc.cpp:420
 msgid "&Protected"
 msgstr "&Protektita"
 
 #. i18n: file: dialogs/ProtectionWidget.ui:129
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_bHideFormula)
-#: rc.cpp:332
+#: rc.cpp:423
 msgid ""
 "When this is checked, the cell is still visible. However, its contents do "
 "not appear in the Formula bar. Hiding formula is only working for cells that "
@@ -3464,13 +3646,13 @@ msgstr ""
 
 #. i18n: file: dialogs/ProtectionWidget.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, m_bHideFormula)
-#: rc.cpp:335
+#: rc.cpp:426
 msgid "&Hide formula"
 msgstr "&Kaŝi formulon"
 
 #. i18n: file: dialogs/SortDetailsWidget.ui:35
 #. i18n: ectx: property (text), widget (QCheckBox, m_useCustomLists)
-#: rc.cpp:338
+#: rc.cpp:429
 #, fuzzy
 #| msgid "&Use custom list"
 msgid "Use custom list"
@@ -3478,25 +3660,25 @@ msgstr "&Uzi propran liston"
 
 #. i18n: file: dialogs/SortDetailsWidget.ui:55
 #. i18n: ectx: property (text), widget (QCheckBox, m_copyLayout)
-#: rc.cpp:341
+#: rc.cpp:432
 msgid "Copy cell formatting (Borders, Colors, Text Style)"
 msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:49
 #. i18n: ectx: property (text), widget (QPushButton, m_upButton)
-#: rc.cpp:350
+#: rc.cpp:441
 msgid "Move Up"
 msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:90
 #. i18n: ectx: property (text), widget (QTableWidget, m_tableWidget)
-#: rc.cpp:353
+#: rc.cpp:444
 msgid "Item"
 msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:95
 #. i18n: ectx: property (text), widget (QTableWidget, m_tableWidget)
-#: rc.cpp:356
+#: rc.cpp:447
 #, fuzzy
 #| msgid "Sort Criteria"
 msgid "Sort Order"
@@ -3504,13 +3686,13 @@ msgstr "Ordigokriterio"
 
 #. i18n: file: dialogs/SortWidget.ui:100
 #. i18n: ectx: property (text), widget (QTableWidget, m_tableWidget)
-#: rc.cpp:359
+#: rc.cpp:450
 msgid "Case Sensitivity"
 msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:108
 #. i18n: ectx: property (text), widget (QPushButton, m_downButton)
-#: rc.cpp:362
+#: rc.cpp:453
 #, fuzzy
 #| msgid "Down"
 msgid "Move Down"
@@ -3518,7 +3700,7 @@ msgstr "Malsupren"
 
 #. i18n: file: dialogs/SortWidget.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, m_useHeader)
-#: rc.cpp:365
+#: rc.cpp:456
 #, fuzzy
 #| msgid "&First row contains headers"
 msgid "First row contains column headers"
@@ -3526,7 +3708,7 @@ msgstr "&Unua linio enhavas ĉapojn"
 
 #. i18n: file: dialogs/SortWidget.ui:122
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:368
+#: rc.cpp:459
 #, fuzzy
 #| msgid "Protection"
 msgid "Direction"
@@ -3534,7 +3716,7 @@ msgstr "Protekto"
 
 #. i18n: file: dialogs/SortWidget.ui:128
 #. i18n: ectx: property (toolTip), widget (QRadioButton, m_sortHorizontal)
-#: rc.cpp:371
+#: rc.cpp:462
 msgid ""
 "The data is grouped in columns and gets sorted horizontally by comparing the "
 "specified rows in the given order."
@@ -3542,7 +3724,7 @@ msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:131
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, m_sortHorizontal)
-#: rc.cpp:374
+#: rc.cpp:465
 msgid ""
 "The data is grouped in columns. Their rows are compared in the specified "
 "order. If the data in two rows is equal, the next given row gets compared "
@@ -3552,13 +3734,13 @@ msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:134
 #. i18n: ectx: property (text), widget (QRadioButton, m_sortHorizontal)
-#: rc.cpp:377
+#: rc.cpp:468
 msgid "Sort data grouped in columns horizontally"
 msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:141
 #. i18n: ectx: property (toolTip), widget (QRadioButton, m_sortVertical)
-#: rc.cpp:380
+#: rc.cpp:471
 msgid ""
 "The data is grouped in rows and gets sorted vertically by comparing the "
 "specified columns in the given order."
@@ -3566,7 +3748,7 @@ msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:144
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, m_sortVertical)
-#: rc.cpp:383
+#: rc.cpp:474
 msgid ""
 "The data is grouped in rows. Their columns are compared in the specified "
 "order. If the data in two columns is equal, the next given column gets "
@@ -3576,130 +3758,130 @@ msgstr ""
 
 #. i18n: file: dialogs/SortWidget.ui:147
 #. i18n: ectx: property (text), widget (QRadioButton, m_sortVertical)
-#: rc.cpp:386
+#: rc.cpp:477
 #, fuzzy
 msgid "Sort data grouped in rows vertically"
 msgstr "Ordigu grupon de ĉeloj."
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:41
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:389
+#: rc.cpp:480
 #, fuzzy
 msgid "Content"
 msgstr "Komenton"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:53
 #. i18n: ectx: property (text), widget (QRadioButton, everythingButton)
-#: rc.cpp:392
+#: rc.cpp:483
 msgid "Everything"
 msgstr "Ĉion"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:77
 #. i18n: ectx: property (text), widget (QRadioButton, commentButton)
-#: rc.cpp:401 ui/CellToolBase.cpp:576
+#: rc.cpp:492 ui/CellToolBase.cpp:576
 msgid "Comment"
 msgstr "Komenton"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:84
 #. i18n: ectx: property (text), widget (QRadioButton, resultButton)
-#: rc.cpp:404 dialogs/DatabaseDialog.cpp:343 dialogs/SubtotalDialog.cpp:117
+#: rc.cpp:495 dialogs/DatabaseDialog.cpp:343 dialogs/SubtotalDialog.cpp:117
 msgid "Result"
 msgstr "Rezulto"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:91
 #. i18n: ectx: property (text), widget (QRadioButton, noBorderButton)
-#: rc.cpp:407
+#: rc.cpp:498
 msgid "Everything without border"
 msgstr "Ĉion krom rando"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:101
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:410
+#: rc.cpp:501
 msgid "Operation"
 msgstr "Operacio"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:113
 #. i18n: ectx: property (text), widget (QRadioButton, overwriteButton)
-#: rc.cpp:413
+#: rc.cpp:504
 msgid "Overwrite"
 msgstr "Anstataŭigo"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:123
 #. i18n: ectx: property (text), widget (QRadioButton, additionButton)
-#: rc.cpp:416
+#: rc.cpp:507
 msgid "Addition"
 msgstr "Aldono"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:130
 #. i18n: ectx: property (text), widget (QRadioButton, substractionButton)
-#: rc.cpp:419
+#: rc.cpp:510
 #, fuzzy
 msgid "Subtraction"
 msgstr "Subtraho"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:137
 #. i18n: ectx: property (text), widget (QRadioButton, multiplicationButton)
-#: rc.cpp:422
+#: rc.cpp:513
 msgid "Multiplication"
 msgstr "Multipliko"
 
 #. i18n: file: dialogs/SpecialPasteWidget.ui:144
 #. i18n: ectx: property (text), widget (QRadioButton, divisionButton)
-#: rc.cpp:425
+#: rc.cpp:516
 msgid "Division"
 msgstr "Divizio"
 
 #. i18n: file: dialogs/SubtotalsDetailsWidget.ui:35
 #. i18n: ectx: property (text), widget (QCheckBox, m_replaceSubtotals)
-#: rc.cpp:428
+#: rc.cpp:519
 msgid "&Replace current Subtotals"
 msgstr ""
 
 #. i18n: file: dialogs/SubtotalsDetailsWidget.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, m_pageBreak)
-#: rc.cpp:431
+#: rc.cpp:522
 msgid "&Page break between groups"
 msgstr ""
 
 #. i18n: file: dialogs/SubtotalsDetailsWidget.ui:55
 #. i18n: ectx: property (text), widget (QCheckBox, m_summaryBelow)
-#: rc.cpp:434
+#: rc.cpp:525
 msgid "&Summary below data"
 msgstr "&Resumo sub la datoj"
 
 #. i18n: file: dialogs/SubtotalsDetailsWidget.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, m_summaryOnly)
-#: rc.cpp:437
+#: rc.cpp:528
 msgid "Summary &only"
 msgstr "&Nur resumo"
 
 #. i18n: file: dialogs/SubtotalsDetailsWidget.ui:75
 #. i18n: ectx: property (text), widget (QCheckBox, m_IgnoreBox)
-#: rc.cpp:440
+#: rc.cpp:531
 msgid "&Ignore empty cells when looking for changes"
 msgstr ""
 
 #. i18n: file: dialogs/SubtotalWidget.ui:35
 #. i18n: ectx: property (text), widget (QLabel, m_eachChangeLabel)
-#: rc.cpp:443
+#: rc.cpp:534
 msgid "At each change in:"
 msgstr ""
 
 #. i18n: file: dialogs/SubtotalWidget.ui:45
 #. i18n: ectx: property (text), widget (QLabel, m_useFunctionLabel)
-#: rc.cpp:446
+#: rc.cpp:537
 msgid "Use function:"
 msgstr "Uzi funkcion:"
 
 #. i18n: file: dialogs/SubtotalWidget.ui:55
 #. i18n: ectx: property (text), widget (QLabel, m_addSubtotalToLabel)
-#: rc.cpp:449
+#: rc.cpp:540
 msgid "Add Subtotal to:"
 msgstr "Aldoni subsumon al:"
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, FileOptionsWidget)
-#: rc.cpp:452
+#: rc.cpp:543
 #, fuzzy
 #| msgid "Fewer Options"
 msgid "File Options"
@@ -3707,7 +3889,7 @@ msgstr "Malpli da opcioj"
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:455
+#: rc.cpp:546
 #, fuzzy
 #| msgid "&Number of files to show in Recent Files list:"
 msgid "Number of entries in Recent Files list:"
@@ -3715,7 +3897,7 @@ msgstr "&Nombro de laste uzitaj dosieroj:"
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:26
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, m_recentFilesEntries)
-#: rc.cpp:458
+#: rc.cpp:549
 msgid ""
 "Controls the maximum number of filenames that are shown when you select File-"
 "> Open Recent."
@@ -3723,7 +3905,7 @@ msgstr ""
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:39
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:461
+#: rc.cpp:552
 #, fuzzy
 #| msgid "Au&tosave delay (minutes):"
 msgid "Autosave delay (minutes):"
@@ -3731,7 +3913,7 @@ msgstr "Aŭ&tomata sekurigo (minutoj):"
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:46
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, m_autoSaveDelay)
-#: rc.cpp:464
+#: rc.cpp:555
 msgid ""
 "Here you can select the time between autosaves, or disable this feature "
 "altogether by choosing Do not save automatically (drag the slider to the far "
@@ -3740,19 +3922,19 @@ msgstr ""
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:49
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, m_autoSaveDelay)
-#: rc.cpp:467
+#: rc.cpp:558
 msgid "Do not save automatically"
 msgstr "Ne aŭtomate sekurigi"
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:52
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, m_autoSaveDelay)
-#: rc.cpp:470
+#: rc.cpp:561
 msgid " min"
 msgstr " min"
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:65
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_createBackupFile)
-#: rc.cpp:473
+#: rc.cpp:564
 msgid ""
 "Check this box if you want some backup files created. This is checked per "
 "default."
@@ -3760,19 +3942,19 @@ msgstr ""
 
 #. i18n: file: part/dialogs/FileOptionsWidget.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, m_createBackupFile)
-#: rc.cpp:476
+#: rc.cpp:567
 msgid "Create backup files"
 msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:479
+#: rc.cpp:570
 msgid "Cursor movement after pressing Enter:"
 msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:27
 #. i18n: ectx: property (whatsThis), widget (KComboBox, m_cursorMovement)
-#: rc.cpp:482
+#: rc.cpp:573
 msgid ""
 "When you have selected a cell, pressing the Enter key will move the cell "
 "cursor one cell left, right, up or down, as determined by this setting."
@@ -3780,14 +3962,14 @@ msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:485
+#: rc.cpp:576
 #, fuzzy
 msgid "Function shown in status bar:"
 msgstr "Montru sta&tolistelon"
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:44
 #. i18n: ectx: property (whatsThis), widget (KComboBox, m_statusBarFunction)
-#: rc.cpp:488
+#: rc.cpp:579
 msgid ""
 "This drop down selection box can be used to choose the calculation performed "
 "by the Statusbar Summary  function."
@@ -3795,7 +3977,7 @@ msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:491
+#: rc.cpp:582
 #, fuzzy
 #| msgid "time"
 msgid "Unit:"
@@ -3803,7 +3985,7 @@ msgstr "tempo"
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:62
 #. i18n: ectx: property (whatsThis), widget (KComboBox, m_unit)
-#: rc.cpp:494
+#: rc.cpp:585
 msgid ""
 "Choose the default unit that will be used in your sheets.\n"
 "Note that you can overwrite the unit for the current sheet using the Format -"
@@ -3812,13 +3994,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:69
 #. i18n: ectx: property (text), widget (QLabel, m_indentationLabel)
-#: rc.cpp:498
+#: rc.cpp:589
 msgid "Indentation step:"
 msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:79
 #. i18n: ectx: property (whatsThis), widget (KoUnitDoubleSpinBox, m_indentationStep)
-#: rc.cpp:501
+#: rc.cpp:592
 msgid ""
 "Lets you define the amount of indenting used by the Increase Indent and "
 "Decrease Indent option in the Format menu."
@@ -3826,7 +4008,7 @@ msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:99
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:504
+#: rc.cpp:595
 #, fuzzy
 #| msgid "Color"
 msgid "Colors"
@@ -3834,7 +4016,7 @@ msgstr "Koloro"
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:105
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:507
+#: rc.cpp:598
 #, fuzzy
 #| msgid "Gourde"
 msgid "Grid:"
@@ -3842,7 +4024,7 @@ msgstr "Gourde"
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:115
 #. i18n: ectx: property (whatsThis), widget (KColorCombo, m_gridColor)
-#: rc.cpp:510
+#: rc.cpp:601
 msgid ""
 "Click here to change the grid color ie the color of the borders of each cell."
 msgstr ""
@@ -3851,7 +4033,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KColorCombo, m_gridColor)
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:226
 #. i18n: ectx: property (text), item, widget (KColorCombo, m_pageBorderColor)
-#: rc.cpp:513 rc.cpp:522
+#: rc.cpp:604 rc.cpp:613
 #, fuzzy
 #| msgid "Custom"
 msgid "Custom..."
@@ -3859,7 +4041,7 @@ msgstr "Propra"
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:212
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:516
+#: rc.cpp:607
 #, fuzzy
 #| msgid "&Page borders:"
 msgid "Page border:"
@@ -3867,7 +4049,7 @@ msgstr "&Paĝmarĝenoj:"
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:222
 #. i18n: ectx: property (whatsThis), widget (KColorCombo, m_pageBorderColor)
-#: rc.cpp:519
+#: rc.cpp:610
 msgid ""
 "When the View ->Show Page Borders menu item is checked, the page borders are "
 "displayed. Click here to choose another color for the borders than the "
@@ -3876,7 +4058,7 @@ msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:322
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_captureAllArrowKeys)
-#: rc.cpp:525
+#: rc.cpp:616
 msgid ""
 "Captures all navigation keys, i.e. the arrow keys, page up/down, tabulator "
 "and backward tabulator key, while editing a cell with the embedded editor. "
@@ -3887,13 +4069,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/InterfaceOptionsWidget.ui:325
 #. i18n: ectx: property (text), widget (QCheckBox, m_captureAllArrowKeys)
-#: rc.cpp:528
+#: rc.cpp:619
 msgid "Capture all navigation keys while editing"
 msgstr ""
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:35
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:531
+#: rc.cpp:622
 #, fuzzy
 #| msgid "Printing"
 msgid "Print settings"
@@ -3901,7 +4083,7 @@ msgstr "Presado"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:41
 #. i18n: ectx: property (text), widget (QCheckBox, gridCheckBox)
-#: rc.cpp:534
+#: rc.cpp:625
 #, fuzzy
 #| msgid "Gourde"
 msgid "Grid"
@@ -3909,7 +4091,7 @@ msgstr "Gourde"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, commentCheckBox)
-#: rc.cpp:537
+#: rc.cpp:628
 #, fuzzy
 #| msgid "Show c&omment indicator"
 msgid "Comment indicator"
@@ -3917,7 +4099,7 @@ msgstr "Montri k&omentindikilon"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:58
 #. i18n: ectx: property (text), widget (QCheckBox, chartsCheckBox)
-#: rc.cpp:540
+#: rc.cpp:631
 #, fuzzy
 #| msgid "Chart"
 msgid "Charts"
@@ -3925,7 +4107,7 @@ msgstr "Diagramo"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:71
 #. i18n: ectx: property (text), widget (QCheckBox, objectsCheckBox)
-#: rc.cpp:543
+#: rc.cpp:634
 #, fuzzy
 #| msgid "&Object"
 msgid "Objects"
@@ -3933,7 +4115,7 @@ msgstr "&Objekto"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:84
 #. i18n: ectx: property (text), widget (QCheckBox, zeroValuesCheckBox)
-#: rc.cpp:546
+#: rc.cpp:637
 #, fuzzy
 #| msgid "Par value"
 msgid "Zero values"
@@ -3941,7 +4123,7 @@ msgstr "Alparvaloro"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:91
 #. i18n: ectx: property (text), widget (QCheckBox, formulaCheckBox)
-#: rc.cpp:549
+#: rc.cpp:640
 #, fuzzy
 #| msgid "Show formula &indicator"
 msgid "Formula indicator"
@@ -3949,13 +4131,13 @@ msgstr "Montri formul&indikilon"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:101
 #. i18n: ectx: property (text), widget (QCheckBox, drawingsCheckBox)
-#: rc.cpp:552
+#: rc.cpp:643
 msgid "Drawings"
 msgstr ""
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:114
 #. i18n: ectx: property (text), widget (QCheckBox, headersCheckBox)
-#: rc.cpp:555
+#: rc.cpp:646
 #, fuzzy
 #| msgid "Header"
 msgid "Headers"
@@ -3963,7 +4145,7 @@ msgstr "Ĉapo"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:124
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:558
+#: rc.cpp:649
 #, fuzzy
 #| msgid "&Page borders:"
 msgid "Page order"
@@ -3971,25 +4153,25 @@ msgstr "&Paĝmarĝenoj:"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:130
 #. i18n: ectx: property (text), widget (QRadioButton, ltrButton)
-#: rc.cpp:561
+#: rc.cpp:652
 msgid "From left to right, then down"
 msgstr ""
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:140
 #. i18n: ectx: property (text), widget (QRadioButton, ttbButton)
-#: rc.cpp:564
+#: rc.cpp:655
 msgid "From top to bottom, then across"
 msgstr ""
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:150
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: rc.cpp:567
+#: rc.cpp:658
 msgid "Table alignment on page"
 msgstr ""
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:156
 #. i18n: ectx: property (text), widget (QCheckBox, horizontalCheckBox)
-#: rc.cpp:570
+#: rc.cpp:661
 #, fuzzy
 #| msgid "Merge Cells Horizontally"
 msgid "Center horizontally"
@@ -3997,14 +4179,14 @@ msgstr "Kunigi ĉelojn horizonte"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:163
 #. i18n: ectx: property (text), widget (QCheckBox, verticalCheckBox)
-#: rc.cpp:573
+#: rc.cpp:664
 #, fuzzy
 msgid "Center vertically"
 msgstr "Kunigu ĉelojn"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:576
+#: rc.cpp:667
 #, fuzzy
 #| msgid "Repeat rows on each page:"
 msgid "Repetitions on each page"
@@ -4012,7 +4194,7 @@ msgstr "Ripetendaj linioj sur ĉiu paĝo:"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:182
 #. i18n: ectx: property (text), widget (QCheckBox, columnsCheckBox)
-#: rc.cpp:579
+#: rc.cpp:670
 #, fuzzy
 #| msgid "Columns"
 msgid "Columns from"
@@ -4020,7 +4202,7 @@ msgstr "Kolumnoj"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:192
 #. i18n: ectx: property (text), widget (QCheckBox, rowsCheckBox)
-#: rc.cpp:582
+#: rc.cpp:673
 #, fuzzy
 #| msgid "Row"
 msgid "Rows from"
@@ -4030,7 +4212,7 @@ msgstr "Linio"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:206
 #. i18n: ectx: property (text), widget (QLabel, label_1)
-#: rc.cpp:585 rc.cpp:588
+#: rc.cpp:676 rc.cpp:679
 #, fuzzy
 #| msgid "Goto"
 msgid "to"
@@ -4038,7 +4220,7 @@ msgstr "Iri al"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:269
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: rc.cpp:591
+#: rc.cpp:682
 #, fuzzy
 #| msgid "Schilling"
 msgid "Scaling"
@@ -4046,13 +4228,13 @@ msgstr "Schilling"
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:275
 #. i18n: ectx: property (text), widget (QRadioButton, zoomButton)
-#: rc.cpp:594
+#: rc.cpp:685
 msgid "Fixed zoom:"
 msgstr ""
 
 #. i18n: file: part/dialogs/PageLayoutSheetPage.ui:305
 #. i18n: ectx: property (text), widget (QRadioButton, pageLimitsButton)
-#: rc.cpp:597
+#: rc.cpp:688
 #, fuzzy
 #| msgid "Lower limit"
 msgid "Page limits:"
@@ -4060,19 +4242,19 @@ msgstr "Malsupra limo"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:37
 #. i18n: ectx: property (windowTitle), widget (QWidget, SheetPropertiesWidget)
-#: rc.cpp:606
+#: rc.cpp:697
 msgid "SheetPropertiesBase"
 msgstr "SheetPropertiesBase"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:47
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:609
+#: rc.cpp:700
 msgid "Layout direction:"
 msgstr "Aranĝdirekto:"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:54
 #. i18n: ectx: property (whatsThis), widget (KComboBox, directionComboBox)
-#: rc.cpp:612
+#: rc.cpp:703
 msgid ""
 "Defaut is that the first column of the sheet is on the left. If you choose "
 "Right to Left, then the first column will be on the right and the others "
@@ -4081,19 +4263,19 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:58
 #. i18n: ectx: property (text), item, widget (KComboBox, directionComboBox)
-#: rc.cpp:615 part/dialogs/SheetPropertiesDialog.cpp:71
+#: rc.cpp:706 part/dialogs/SheetPropertiesDialog.cpp:71
 msgid "Left to Right"
 msgstr "Liva al Dekstra"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:63
 #. i18n: ectx: property (text), item, widget (KComboBox, directionComboBox)
-#: rc.cpp:618 part/dialogs/SheetPropertiesDialog.cpp:74
+#: rc.cpp:709 part/dialogs/SheetPropertiesDialog.cpp:74
 msgid "Right to Left"
 msgstr "Dekstra al Liva"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:109
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showCommentIndicatorCheckBox)
-#: rc.cpp:621
+#: rc.cpp:712
 msgid ""
 "If this box is checked cells containing comments will be marked by a small "
 "red triangle at the top right corner."
@@ -4101,13 +4283,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:112
 #. i18n: ectx: property (text), widget (QCheckBox, showCommentIndicatorCheckBox)
-#: rc.cpp:624
+#: rc.cpp:715
 msgid "Show c&omment indicator"
 msgstr "Montri k&omentindikilon"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:119
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, useLCModeCheckBox)
-#: rc.cpp:627
+#: rc.cpp:718
 msgid ""
 "If this box is checked the cell reference shown at the left end of the "
 "Formula Bar will be displayed in LC mode (i.e. L2C3) rather than in its "
@@ -4116,13 +4298,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:122
 #. i18n: ectx: property (text), widget (QCheckBox, useLCModeCheckBox)
-#: rc.cpp:630
+#: rc.cpp:721
 msgid "Use &LC mode"
 msgstr "Uzi &LC-moduson"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:129
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showPageBordersCheckBox)
-#: rc.cpp:633
+#: rc.cpp:724
 msgid ""
 "If you check this option, the page borders will be drawn on your current "
 "sheet. Per default the page borders are not displayed. It is useful to see "
@@ -4131,13 +4313,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, showPageBordersCheckBox)
-#: rc.cpp:636
+#: rc.cpp:727
 msgid "Show page &borders"
 msgstr "Montri &paĝmarĝenojn"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:139
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, capitalizeFirstLetterCheckBox)
-#: rc.cpp:639
+#: rc.cpp:730
 msgid ""
 "Check this box and the first letter of any text you type in will "
 "automatically be converted to uppercase."
@@ -4145,26 +4327,26 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:142
 #. i18n: ectx: property (text), widget (QCheckBox, capitalizeFirstLetterCheckBox)
-#: rc.cpp:642
+#: rc.cpp:733
 msgid "&Convert first letter to uppercase"
 msgstr "&Majuskligi unuan literon"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:149
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, hideZeroCheckBox)
-#: rc.cpp:645
+#: rc.cpp:736
 msgid ""
 "If this box is checked any cell containing the value zero will appear blank."
 msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:152
 #. i18n: ectx: property (text), widget (QCheckBox, hideZeroCheckBox)
-#: rc.cpp:648
+#: rc.cpp:739
 msgid "&Hide zero"
 msgstr "&Kaŝi nulon"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:159
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showFormulaCheckBox)
-#: rc.cpp:651
+#: rc.cpp:742
 msgid ""
 "If this box is checked KSpread will display the actual formulae in cells "
 "rather than the results."
@@ -4172,13 +4354,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:162
 #. i18n: ectx: property (text), widget (QCheckBox, showFormulaCheckBox)
-#: rc.cpp:654
+#: rc.cpp:745
 msgid "Show &formula"
 msgstr "Montri &formulon"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:169
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showColumnAsNumbersCheckBox)
-#: rc.cpp:657
+#: rc.cpp:748
 msgid ""
 "If this box is checked the column headings will show as numbers rather than "
 "as letters. Letters are default."
@@ -4186,13 +4368,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:172
 #. i18n: ectx: property (text), widget (QCheckBox, showColumnAsNumbersCheckBox)
-#: rc.cpp:660
+#: rc.cpp:751
 msgid "Show column as &numbers"
 msgstr "Montri kolumnojn kiel &numeroj"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:179
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showFormulaIndicatorCheckBox)
-#: rc.cpp:663
+#: rc.cpp:754
 msgid ""
 "If this box is checked KSpread will display a small blue triangle at the "
 "bottom left corner of cells containing formulae. This is useful if you want "
@@ -4201,13 +4383,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:182
 #. i18n: ectx: property (text), widget (QCheckBox, showFormulaIndicatorCheckBox)
-#: rc.cpp:666
+#: rc.cpp:757
 msgid "Show formula &indicator"
 msgstr "Montri formul&indikilon"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:189
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, showGridCheckBox)
-#: rc.cpp:669
+#: rc.cpp:760
 msgid ""
 "If checked, the grid (the cell limits) will be shown. This is the default. "
 "If unchecked, the grid will be hidden."
@@ -4215,13 +4397,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:192
 #. i18n: ectx: property (text), widget (QCheckBox, showGridCheckBox)
-#: rc.cpp:672
+#: rc.cpp:763
 msgid "Show &grid"
 msgstr "Montri &kradon"
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:199
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, autoCalcCheckBox)
-#: rc.cpp:675
+#: rc.cpp:766
 msgid ""
 "This setting controls whether formulae are recalculated automatically when "
 "the value of any cell they refer to changes."
@@ -4229,13 +4411,13 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetPropertiesWidget.ui:202
 #. i18n: ectx: property (text), widget (QCheckBox, autoCalcCheckBox)
-#: rc.cpp:678
+#: rc.cpp:769
 msgid "&Automatic recalculation"
 msgstr "&Aŭtomata rekalkulado"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:40
 #. i18n: ectx: property (text), widget (QRadioButton, allSheetsButton)
-#: rc.cpp:681
+#: rc.cpp:772
 #, fuzzy
 #| msgid "Available Sheets"
 msgid "All Sheets"
@@ -4243,7 +4425,7 @@ msgstr "Disponeblaj tabeloj"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:47
 #. i18n: ectx: property (text), widget (QRadioButton, activeSheetButton)
-#: rc.cpp:684
+#: rc.cpp:775
 #, fuzzy
 #| msgid "Hide Sheet"
 msgid "Active Sheet"
@@ -4251,7 +4433,7 @@ msgstr "Kaŝi tabelon"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:57
 #. i18n: ectx: property (text), widget (QRadioButton, selectedSheetsButton)
-#: rc.cpp:687
+#: rc.cpp:778
 #, fuzzy
 #| msgid "Selected Sheets"
 msgid "Selected Sheets:"
@@ -4259,13 +4441,13 @@ msgstr "Elektitaj tabeloj."
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QListWidget, ListViewAvailable)
-#: rc.cpp:690
+#: rc.cpp:781
 msgid "Available sheets"
 msgstr "Folioj disponeblaj"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:72
 #. i18n: ectx: property (whatsThis), widget (QListWidget, ListViewAvailable)
-#: rc.cpp:693
+#: rc.cpp:784
 msgid ""
 "<b>List of all available sheets.</b><br>\n"
 "To print a sheet you have to select one or more sheets in this list and use "
@@ -4277,19 +4459,19 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:79
 #. i18n: ectx: property (text), widget (QListWidget, ListViewAvailable)
-#: rc.cpp:698
+#: rc.cpp:789
 msgid "Available Sheets"
 msgstr "Disponeblaj tabeloj"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:112
 #. i18n: ectx: property (toolTip), widget (QListWidget, ListViewSelected)
-#: rc.cpp:701
+#: rc.cpp:792
 msgid "List of sheets to print in given order"
 msgstr ""
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:117
 #. i18n: ectx: property (whatsThis), widget (QListWidget, ListViewSelected)
-#: rc.cpp:704
+#: rc.cpp:795
 msgid ""
 "<b>List of sheets to print.</b><br>\n"
 "Only the sheets listed here will be printed in the order of listing. You can "
@@ -4300,229 +4482,61 @@ msgstr ""
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:124
 #. i18n: ectx: property (text), widget (QListWidget, ListViewSelected)
-#: rc.cpp:709
+#: rc.cpp:800
 msgid "Selected Sheets"
 msgstr "Elektitaj tabeloj."
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:154
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonSelectAll)
-#: rc.cpp:712
+#: rc.cpp:803
 msgid "Select all sheets"
 msgstr "Elekti ĉiujn foliojn"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:167
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonMoveTop)
-#: rc.cpp:715
+#: rc.cpp:806
 #, fuzzy
 msgid "Move selected sheet to the top"
 msgstr "Elektu kaŝitan linion por montri"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:180
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonSelect)
-#: rc.cpp:718
+#: rc.cpp:809
 msgid "Select sheets"
 msgstr "Elekti foliojn"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:193
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonMoveUp)
-#: rc.cpp:721
+#: rc.cpp:812
 #, fuzzy
 msgid "Move selected sheet up"
 msgstr "Movu al la sekvonta tabelo."
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:206
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonRemove)
-#: rc.cpp:724
+#: rc.cpp:815
 msgid "Remove sheets"
 msgstr "Forigi foliojn"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:219
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonMoveDown)
-#: rc.cpp:727
+#: rc.cpp:818
 #, fuzzy
 msgid "Move selected sheet down"
 msgstr "Movu al la sekvonta tabelo."
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:232
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonRemoveAll)
-#: rc.cpp:730
+#: rc.cpp:821
 msgid "Clear Selection"
 msgstr "Viŝi elekton"
 
 #. i18n: file: part/dialogs/SheetSelectWidget.ui:245
 #. i18n: ectx: property (toolTip), widget (KPushButton, ButtonMoveBottom)
-#: rc.cpp:733
+#: rc.cpp:824
 #, fuzzy
 msgid "Move selected sheet to the bottom"
 msgstr "Elektu kaŝitan linion por montri"
-
-#. i18n: file: kspread.kcfg:12
-#. i18n: ectx: label, entry, group (Editor)
-#: rc.cpp:736
-msgid "Navigate in the text by left/right arrow keys in the cell editor."
-msgstr ""
-
-#. i18n: file: kspread.kcfg:14
-#. i18n: ectx: whatsthis, entry, group (Editor)
-#: rc.cpp:739
-msgid ""
-"If true, you can navigate by left/right arrows in the cell editor.\n"
-"              Otherwise, the editing mode will be left."
-msgstr ""
-
-#. i18n: file: kspread.rc:5
-#. i18n: ectx: Menu (file)
-#: rc.cpp:743
-msgid "&File"
-msgstr "&Dosiero"
-
-#. i18n: file: kspread.rc:10
-#. i18n: ectx: Menu (Edit)
-#. i18n: file: kspread_readonly.rc:3
-#. i18n: ectx: Menu (edit)
-#: rc.cpp:746 rc.cpp:821
-msgid "&Edit"
-msgstr "R&edakti"
-
-#. i18n: file: kspread.rc:19
-#. i18n: ectx: Menu (Fill)
-#: rc.cpp:749
-msgid "Fi&ll"
-msgstr "P&lenigi"
-
-#. i18n: file: kspread.rc:32
-#. i18n: ectx: Menu (Clear)
-#: rc.cpp:752
-msgid "Clear"
-msgstr "Viŝi"
-
-#. i18n: file: kspread.rc:41
-#. i18n: ectx: Menu (Delete)
-#: rc.cpp:755 commands/DeleteCommand.cpp:36 part/View.cpp:503
-msgid "Delete"
-msgstr "Forigi"
-
-#. i18n: file: kspread.rc:51
-#. i18n: ectx: Menu (View)
-#. i18n: file: kspread_readonly.rc:8
-#. i18n: ectx: Menu (view)
-#: rc.cpp:758 rc.cpp:824
-msgid "&View"
-msgstr "&Rigardo"
-
-#. i18n: file: kspread.rc:63
-#. i18n: ectx: Menu (go)
-#: rc.cpp:761
-msgid "&Go"
-msgstr "Navi&gi"
-
-#. i18n: file: kspread.rc:74
-#. i18n: ectx: Menu (Insert)
-#: rc.cpp:764 dialogs/CharacterSelectDialog.cpp:59
-#: dialogs/CharacterSelectDialog.cpp:76
-msgid "&Insert"
-msgstr "Enŝov&i"
-
-#. i18n: file: kspread.rc:87
-#. i18n: ectx: Menu (ExternalData)
-#: rc.cpp:767
-msgid "&External Data"
-msgstr "&Ekstera datumo"
-
-#. i18n: file: kspread.rc:94
-#. i18n: ectx: Menu (Format)
-#: rc.cpp:770
-msgid "F&ormat"
-msgstr "&Formato"
-
-#. i18n: file: kspread.rc:110
-#. i18n: ectx: Menu (Row)
-#: rc.cpp:776
-msgid "&Row"
-msgstr "&Linio"
-
-#. i18n: file: kspread.rc:116
-#. i18n: ectx: Menu (Column)
-#: rc.cpp:779
-msgid "&Column"
-msgstr "&Kolumno"
-
-#. i18n: file: kspread.rc:122
-#. i18n: ectx: Menu (Sheet)
-#: rc.cpp:782
-msgid "&Sheet"
-msgstr "&Tabelo"
-
-#. i18n: file: kspread.rc:130
-#. i18n: ectx: Menu (PrintRange)
-#: rc.cpp:785
-msgid "&Print Range"
-msgstr "&Presintervalo"
-
-#. i18n: file: kspread.rc:135
-#. i18n: ectx: Menu
-#: rc.cpp:788
-#, fuzzy
-#| msgid "&Page borders:"
-msgid "Manual Page Breaks"
-msgstr "&Paĝmarĝenoj:"
-
-#. i18n: file: kspread.rc:145
-#. i18n: ectx: Menu (Data)
-#: rc.cpp:791
-msgid "&Data"
-msgstr "&Datumo"
-
-#. i18n: file: kspread.rc:147
-#. i18n: ectx: Menu (Filter)
-#: rc.cpp:794
-msgid "Filter"
-msgstr "Filtrilo"
-
-#. i18n: file: kspread.rc:162
-#. i18n: ectx: Menu (tools)
-#: rc.cpp:797
-msgid "&Tools"
-msgstr "&Iloj"
-
-#. i18n: file: kspread.rc:175
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:800
-msgid "&Settings"
-msgstr "&Agordo"
-
-#. i18n: file: kspread.rc:205
-#. i18n: ectx: ToolBar (editToolBar)
-#: rc.cpp:803
-msgid "Edit"
-msgstr "Redakti"
-
-#. i18n: file: kspread.rc:215
-#. i18n: ectx: ToolBar (navigationToolBar)
-#: rc.cpp:806
-msgid "Navigation"
-msgstr "Navigado"
-
-#. i18n: file: kspread.rc:221
-#. i18n: ectx: Menu
-#: rc.cpp:809
-#, fuzzy
-#| msgid "Hide Sheet"
-msgid "Activate"
-msgstr "Kaŝi tabelon"
-
-#. i18n: file: kspread.rc:227
-#. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: rc.cpp:812 ui/CellToolBase.cpp:233
-#, fuzzy
-msgid "Font"
-msgstr "Forinto"
-
-#. i18n: file: kspread.rc:255
-#. i18n: ectx: ToolBar (colorAndBorderToolBar)
-#: rc.cpp:818
-msgid "Color/Border"
-msgstr "Koloro/Limo"
 
 #: Sheet.cpp:914
 msgid "Dependency"
