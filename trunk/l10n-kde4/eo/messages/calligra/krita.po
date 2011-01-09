@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-01-08 03:05+0100\n"
+"POT-Creation-Date: 2011-01-09 03:03+0100\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -3127,6 +3127,7 @@ msgstr "Multipliku"
 #. i18n: file: ui/forms/wdgshapeoptions.ui:66
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbFill)
 #: rc.cpp:861 rc.cpp:4013
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:57
 msgid "Pattern"
 msgstr "Ŝablono"
 
@@ -3874,6 +3875,7 @@ msgstr "Aktuala kolormoduso:"
 #. i18n: file: plugins/extensions/separate_channels/wdg_separations.ui:43
 #. i18n: ectx: property (title), widget (QGroupBox, grpSource)
 #: rc.cpp:1219
+#: plugins/paintops/libpaintop/kis_color_source_option_widget.cpp:37
 msgid "Source"
 msgstr "Fonto"
 
@@ -4380,7 +4382,7 @@ msgstr "Radiuso"
 #. i18n: file: plugins/paintops/spray/wdgshapedynamicsoptions.ui:42
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: rc.cpp:1399 rc.cpp:2400 rc.cpp:2954
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:42
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:43
 #: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:27
 #, fuzzy
 msgid "Rotation"
@@ -6251,7 +6253,7 @@ msgstr "Satureco"
 
 #. i18n: file: plugins/paintops/experiment/wdgexperimentoptions.ui:57
 #. i18n: ectx: property (text), widget (QCheckBox, speedCHBox)
-#: rc.cpp:2358 plugins/paintops/libpaintop/kis_dynamic_sensor.h:37
+#: rc.cpp:2358 plugins/paintops/libpaintop/kis_dynamic_sensor.h:38
 #, fuzzy
 #| msgid "Shape:"
 msgid "Speed"
@@ -6296,7 +6298,7 @@ msgstr "Montrado"
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeBox)
 #: rc.cpp:2373 rc.cpp:2442 rc.cpp:2751 rc.cpp:2975
 #: image/recorder/kis_recorded_shape_paint_action.cpp:54
-#: plugins/assistants/RulerAssistant/EllipseAssistant.cc:99
+#: plugins/assistants/RulerAssistant/EllipseAssistant.cc:101
 #: plugins/tools/defaulttools/kis_tool_ellipse.cc:68
 msgid "Ellipse"
 msgstr "Elipso"
@@ -6993,7 +6995,7 @@ msgstr "Proporcio:"
 
 #. i18n: file: plugins/paintops/libpaintop/wdgautobrush.ui:155
 #. i18n: ectx: property (title), widget (QGroupBox, grpFade_2)
-#: rc.cpp:2682 plugins/paintops/libpaintop/kis_dynamic_sensor.h:38
+#: rc.cpp:2682 plugins/paintops/libpaintop/kis_dynamic_sensor.h:39
 #, fuzzy
 #| msgid "&Fade"
 msgid "Fade"
@@ -7246,7 +7248,7 @@ msgstr "Alkrementa"
 
 #. i18n: file: plugins/paintops/libpaintop/wdgcustombrush.ui:74
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
-#: rc.cpp:2815 plugins/paintops/libpaintop/kis_dynamic_sensor.h:43
+#: rc.cpp:2815 plugins/paintops/libpaintop/kis_dynamic_sensor.h:44
 msgid "Pressure"
 msgstr "Premo"
 
@@ -7511,7 +7513,7 @@ msgstr "Distanco:"
 
 #. i18n: file: plugins/paintops/spray/wdgshapedynamicsoptions.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, drawingAngle)
-#: rc.cpp:2969 plugins/paintops/libpaintop/kis_dynamic_sensor.h:41
+#: rc.cpp:2969 plugins/paintops/libpaintop/kis_dynamic_sensor.h:42
 #, fuzzy
 msgid "Drawing angle"
 msgstr "Rektangulo"
@@ -10208,19 +10210,13 @@ msgstr "Dosiero(j) aŭ URLo(j) malfermenda(j)"
 msgid "Ruler assistant editor tool"
 msgstr "Distanco:"
 
-#: plugins/assistants/RulerAssistant/EllipseAssistant.cc:33
-#, fuzzy
-#| msgid "Distance: "
-msgid "Ellipse assistant"
-msgstr "Distanco:"
-
 #: plugins/assistants/RulerAssistant/PerspectiveAssistant.cc:34
 #, fuzzy
 msgid "Perspective assistant"
 msgstr "&Stompilo"
 
 #: plugins/assistants/RulerAssistant/PerspectiveAssistant.cc:311
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:46
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:49
 #, fuzzy
 msgid "Perspective"
 msgstr "&Stompilo"
@@ -10251,6 +10247,12 @@ msgstr "Ligita"
 #: plugins/assistants/RulerAssistant/kis_ruler_assistant_tool.cc:420
 msgid "Errors were encountered. Not all assistants were successfully loaded."
 msgstr ""
+
+#: plugins/assistants/RulerAssistant/EllipseAssistant.cc:33
+#, fuzzy
+#| msgid "Distance: "
+msgid "Ellipse assistant"
+msgstr "Distanco:"
 
 #: plugins/colorspaces/ctlcs/KoCtlCompositeOp.cpp:135
 #, fuzzy
@@ -11723,27 +11725,14 @@ msgstr "Penikograndeco"
 msgid "Color options"
 msgstr "Alfo"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:36
-msgid "Fuzzy"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:29
+#: plugins/paintops/libpaintop/kis_curve_option.cpp:31
+msgid "0.0"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:39
-#, fuzzy
-#| msgid "Distance: "
-msgid "Distance"
-msgstr "Distanco:"
-
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
-#, fuzzy
-msgid "Time"
-msgstr "Importu bildon..."
-
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:44
-msgid "X-Tilt"
-msgstr ""
-
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:45
-msgid "Y-Tilt"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:30
+#: plugins/paintops/libpaintop/kis_curve_option.cpp:32
+msgid "1.0"
 msgstr ""
 
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:95
@@ -11762,15 +11751,39 @@ msgstr "Rotaciu je &90°"
 msgid "Spacing: "
 msgstr "Spaco:"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:28
-#: plugins/paintops/libpaintop/kis_curve_option.cpp:31
-msgid "0.0"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:37
+msgid "Fuzzy"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:29
-#: plugins/paintops/libpaintop/kis_curve_option.cpp:32
-msgid "1.0"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
+#, fuzzy
+#| msgid "Distance: "
+msgid "Distance"
+msgstr "Distanco:"
+
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:41
+#, fuzzy
+msgid "Time"
+msgstr "Importu bildon..."
+
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:45
+msgid "X-Tilt"
 msgstr ""
+
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:46
+msgid "Y-Tilt"
+msgstr ""
+
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:47
+#, fuzzy
+#| msgid "Dimensions"
+msgid "Ascension"
+msgstr "Dimensioj"
+
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:48
+#, fuzzy
+msgid "Declination"
+msgstr "&Koloroprenilo"
 
 #: plugins/paintops/libpaintop/kis_pressure_darken_option.cpp:27
 msgid "Darken"
@@ -11820,16 +11833,19 @@ msgid "Rate: "
 msgstr "Ripeto:"
 
 #: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:29
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:41
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:47
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:42
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:48
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:78
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:85
 #, fuzzy
 #| msgid "°"
 msgid "0°"
 msgstr "°"
 
 #: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:30
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:42
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:48
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:43
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:49
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:79
 msgid "360°"
 msgstr ""
 
@@ -11909,51 +11925,83 @@ msgstr ""
 msgid "%1 s"
 msgstr ""
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:27
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:28
 #, fuzzy
 #| msgid "&Show"
 msgid "Slow"
 msgstr "&Montri"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:28
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:29
 #, fuzzy
 #| msgid "Firmer"
 msgid "Fast"
 msgstr "Pli dura"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:59
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:60
 #, fuzzy
 #| msgid "Lower"
 msgid "Low"
 msgstr "Fonigi"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:60
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:61
 #, fuzzy
 msgid "High"
 msgstr "&Alteco:"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:65
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:71
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:66
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:72
 msgid "-30°"
 msgstr ""
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:66
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:72
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:67
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:73
 #, fuzzy
 #| msgid "°"
 msgid "30°"
 msgstr "°"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:77
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:84
+#, fuzzy
+#| msgid "°"
+msgid "90°"
+msgstr "°"
+
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:91
 #, fuzzy
 #| msgid "Feather"
 msgid "Far"
 msgstr "Plumo"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:78
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:92
 #, fuzzy
 msgid "Near"
 msgstr "Nova bildo"
+
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:53
+#, fuzzy
+#| msgid "Canvas color:"
+msgid "Plain color"
+msgstr "Kanvaskoloro:"
+
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:54
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:267
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:273
+msgid "Gradient"
+msgstr "Kolortransiro"
+
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:55
+msgid "Uniform random"
+msgstr ""
+
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:56
+msgid "Total random"
+msgstr ""
+
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:58
+#, fuzzy
+#| msgid "Use pattern"
+msgid "Locked pattern"
+msgstr "Uzi ŝablonon"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:81
 msgid ""
@@ -12555,11 +12603,6 @@ msgstr ""
 #: plugins/tools/defaulttools/kis_tool_fill.h:91
 msgid "Fill a contiguous area of color with a color, or fill a selection."
 msgstr ""
-
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:267
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:273
-msgid "Gradient"
-msgstr "Kolortransiro"
 
 #: plugins/tools/defaulttools/kis_tool_gradient.cc:327
 msgid "Repeat:"
