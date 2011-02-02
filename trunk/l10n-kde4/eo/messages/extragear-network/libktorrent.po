@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-01-19 02:37+0100\n"
+"POT-Creation-Date: 2011-02-02 03:19+0100\n"
 "PO-Revision-Date: 2009-11-17 11:13+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -155,6 +155,12 @@ msgstr "Ne povas krei %1 : %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Ne povas antaŭdisponigi diskspacon : %1"
 
+#: src/diskio/chunkmanager.cpp:933 src/diskio/chunkmanager.cpp:959
+#, fuzzy, kde-format
+#| msgid "Cannot open index file %1 : %2"
+msgid "Cannot open index file %1: %2"
+msgstr "Ne povas malfermi indekshavan dosieron %1 : %2"
+
 #: src/diskio/dndfile.cpp:89
 #, fuzzy, kde-format
 #| msgid "Cannot create file %1 : %2"
@@ -173,26 +179,30 @@ msgstr "Malsukcesis skribi unuan pecon al DND-dosiero : %1"
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Malsukcesis skribi lastan pecon al DND-dosiero : %1"
 
-#: src/diskio/movedatafilesjob.cpp:166
-#, fuzzy
-#| msgid "Moving average"
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Movanta averaĝo"
+#: src/diskio/movedatafilesjob.cpp:140
+msgid "Waiting for other move jobs to finish"
+msgstr ""
 
-#: src/diskio/movedatafilesjob.cpp:167
+#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
 #, fuzzy
 #| msgid "Score"
 msgctxt "The source of a file operation"
 msgid "Source"
 msgstr "Poentoj"
 
-#: src/diskio/movedatafilesjob.cpp:168
+#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
 #, fuzzy
 #| msgid "Scrape"
 msgctxt "The destination of a file operation"
 msgid "Destination"
 msgstr "Informpeti"
+
+#: src/diskio/movedatafilesjob.cpp:180
+#, fuzzy
+#| msgid "Moving average"
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Movanta averaĝo"
 
 #: src/diskio/multifilecache.cpp:93 src/diskio/singlefilecache.cpp:79
 #, fuzzy, kde-format
@@ -210,12 +220,6 @@ msgstr "Ne povas krei %1 : %2"
 msgid "Unable to write to a piece mapped read only"
 msgstr ""
 
-#: src/diskio/chunkmanager.cpp:933 src/diskio/chunkmanager.cpp:959
-#, fuzzy, kde-format
-#| msgid "Cannot open index file %1 : %2"
-msgid "Cannot open index file %1: %2"
-msgstr "Ne povas malfermi indekshavan dosieron %1 : %2"
-
 #: src/download/chunkdownload.cpp:382
 #, fuzzy, kde-format
 #| msgid "%1 peers"
@@ -224,27 +228,16 @@ msgid_plural "%1 peers"
 msgstr[0] "%1 kundividantoj"
 msgstr[1] "%1 kundividantoj"
 
-#: src/download/webseed.cpp:51 src/download/webseed.cpp:98
-#: src/download/httpconnection.cpp:37
+#: src/download/downloader.cpp:810
+msgid "Disabled because webseed does not match torrent"
+msgstr ""
+
+#: src/download/httpconnection.cpp:37 src/download/webseed.cpp:51
+#: src/download/webseed.cpp:98
 #, fuzzy
 #| msgid "Seeds connected"
 msgid "Not connected"
 msgstr "Fontoj konektitaj"
-
-#: src/download/webseed.cpp:336 src/download/httpconnection.cpp:129
-#, fuzzy
-#| msgid "Connections"
-msgid "Connection closed"
-msgstr "Konektoj"
-
-#: src/download/webseed.cpp:544
-#, kde-format
-msgid "Unused for %1 seconds (Too many connection failures)"
-msgstr ""
-
-#: src/download/downloader.cpp:810
-msgid "Disabled because webseed does not match torrent"
-msgstr ""
 
 #: src/download/httpconnection.cpp:107
 #, kde-format
@@ -256,6 +249,12 @@ msgstr ""
 #| msgid "Unable to create %1 : %2"
 msgid "Resolving hostname %1"
 msgstr "Ne povas krei %1 : %2"
+
+#: src/download/httpconnection.cpp:129 src/download/webseed.cpp:336
+#, fuzzy
+#| msgid "Connections"
+msgid "Connection closed"
+msgstr "Konektoj"
 
 #: src/download/httpconnection.cpp:136
 #, kde-format
@@ -298,6 +297,11 @@ msgstr ""
 
 #: src/download/httpconnection.cpp:398
 msgid "Redirected without a new location."
+msgstr ""
+
+#: src/download/webseed.cpp:544
+#, kde-format
+msgid "Unused for %1 seconds (Too many connection failures)"
 msgstr ""
 
 #: src/interfaces/trackerinterface.cpp:58
@@ -347,6 +351,51 @@ msgstr "Ne povas malfermi torentan dosieron %1 : %2"
 #: src/torrent/torrent.cpp:295
 msgid "Parse Error"
 msgstr "Sintaksa eraro"
+
+#: src/torrent/torrentcontrol.cpp:308
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:545
+#, fuzzy, kde-format
+#| msgid ""
+#| "An error occurred while loading the torrent. The torrent is probably "
+#| "corrupt or is not a torrent file."
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Eraro okazis dum la ŝargado de la torento. Kompreneble aŭ la torento estas "
+"malbona, aŭ eĉ ne estas torentdosiero."
+
+#: src/torrent/torrentcontrol.cpp:575
+#, kde-format
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:586
+#, fuzzy, kde-format
+#| msgid "Unable to create %1 : %2"
+msgid "Unable to create %1: %2"
+msgstr "Ne povas krei %1 : %2"
+
+#: src/torrent/torrentcontrol.cpp:601
+#, fuzzy, kde-format
+#| msgid ""
+#| "You are already downloading this torrent %1, the list of trackers of both "
+#| "torrents has been merged."
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"Vi jam elŝutas tiun ĉi torenton %1, la listo de kunordigaj serviloj de ambaŭ "
+"jam kunfandiĝis."
+
+#: src/torrent/torrentcontrol.cpp:606
+#, fuzzy, kde-format
+#| msgid "You are already downloading the torrent %1"
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Vi jam elŝutas la torenton %1"
 
 #: src/torrent/torrentcreator.cpp:361
 #, kde-format
@@ -413,51 +462,6 @@ msgstr "Paŭzita"
 #| msgid "Seeding"
 msgid "Superseeding"
 msgstr "Fontsendas"
-
-#: src/torrent/torrentcontrol.cpp:308
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:545
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent. The torrent is probably "
-#| "corrupt or is not a torrent file."
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Eraro okazis dum la ŝargado de la torento. Kompreneble aŭ la torento estas "
-"malbona, aŭ eĉ ne estas torentdosiero."
-
-#: src/torrent/torrentcontrol.cpp:575
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:586
-#, fuzzy, kde-format
-#| msgid "Unable to create %1 : %2"
-msgid "Unable to create %1: %2"
-msgstr "Ne povas krei %1 : %2"
-
-#: src/torrent/torrentcontrol.cpp:601
-#, fuzzy, kde-format
-#| msgid ""
-#| "You are already downloading this torrent %1, the list of trackers of both "
-#| "torrents has been merged."
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"Vi jam elŝutas tiun ĉi torenton %1, la listo de kunordigaj serviloj de ambaŭ "
-"jam kunfandiĝis."
-
-#: src/torrent/torrentcontrol.cpp:606
-#, fuzzy, kde-format
-#| msgid "You are already downloading the torrent %1"
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Vi jam elŝutas la torenton %1"
 
 #: src/tracker/httpannouncejob.cpp:142
 msgid "Redirect without a redirect location"
@@ -587,6 +591,18 @@ msgstr "Ne povas malpaki dosieron: %1"
 msgid "Cannot seek in file: %1"
 msgstr "Ne povas serĉi dosieron: %1"
 
+#: src/util/functions.cpp:280
+#, kde-format
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:291
+#, kde-format
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 tago"
+msgstr[1] "%1 tagoj"
+
 #: src/util/logsystemmanager.cpp:33
 #, fuzzy
 #| msgid "General:"
@@ -616,18 +632,6 @@ msgstr "Diska en/eligo:"
 #: src/util/logsystemmanager.cpp:38
 msgid "µTP"
 msgstr ""
-
-#: src/util/functions.cpp:280
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:291
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 tago"
-msgstr[1] "%1 tagoj"
 
 #: src/util/signalcatcher.cpp:57
 msgid "Error when writing to disk"

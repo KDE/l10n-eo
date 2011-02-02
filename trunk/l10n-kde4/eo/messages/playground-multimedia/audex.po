@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audex\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-01-16 02:48+0100\n"
+"POT-Creation-Date: 2011-02-02 03:32+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -213,7 +213,7 @@ msgstr "Nova profilo"
 msgid "Filename Pattern Wizard"
 msgstr ""
 
-#: dialogs/patternwizarddialog.cpp:83
+#: dialogs/patternwizarddialog.cpp:84
 msgid ""
 "<p>The following variables will be replaced with their particular meaning in "
 "every track name.</p><p><table border=\"1\"><tr><th><em>Variable</em></"
@@ -230,11 +230,13 @@ msgid ""
 "is especially useful on compilation CDs.</td></tr><tr><td>$ttitle</"
 "td><td>The track title. Normally each track on a CD has its own title, which "
 "is the name of the song.</td></tr><tr><td>$trackno</td><td>The track number. "
-"First track is 1.</td></tr><tr><td>$suffix</td><td>The filename extension.</"
-"td></tr></table></p>"
+"First track is 1.</td></tr><tr><td>$nooftracks</td><td>The total number of "
+"audio tracks of the CD.</td></tr><tr><td>$suffix</td><td>The filename "
+"extension.</td></tr><tr><td>$audex</td><td>Audex name and version.</td></"
+"tr></table></p>"
 msgstr ""
 
-#: dialogs/patternwizarddialog.cpp:101
+#: dialogs/patternwizarddialog.cpp:104
 msgid ""
 "<p>Variables in Audex can have parameters. E.g.</p><pre>$artist/$title/"
 "${trackno length=\"2\" fillchar=\"0\"} - $ttile.$suffix</pre><p>This means, "
@@ -252,7 +254,7 @@ msgstr ""
 msgid "Command Pattern Wizard"
 msgstr ""
 
-#: dialogs/commandwizarddialog.cpp:85
+#: dialogs/commandwizarddialog.cpp:86
 msgid ""
 "<p>The following variables will be replaced with their particular meaning in "
 "every track name.</p><p><table border=\"1\"><tr><th><em>Variable</em></"
@@ -270,14 +272,16 @@ msgid ""
 "td><td>The track title. Normally each track on a CD has its own title, which "
 "is the name of the song.</td></tr><tr><td>$trackno</td><td>The track number. "
 "First track is 1.</td></tr><tr><td>$cover</td><td>The cover file.</td></"
-"tr><tr><td>$i</td><td>The temporary WAV file (input file) created by Audex "
-"from CD audio track. You can use it as a normal input file for your command "
-"line encoder.</td></tr><tr><td>$o</td><td>The full output filename and path "
-"(output file). Use it as the output for your command line encoder.</td></"
-"tr></table></p>"
+"tr><tr><td>$nooftracks</td><td>The total number of audio tracks of the CD.</"
+"td></tr><tr><td>$i</td><td>The temporary WAV file (input file) created by "
+"Audex from CD audio track. You can use it as a normal input file for your "
+"command line encoder.</td></tr><tr><td>$o</td><td>The full output filename "
+"and path (output file). Use it as the output for your command line encoder.</"
+"td></tr><tr><td>$audex</td><td>Audex name and version.</td></tr><tr><td>"
+"$encoder</td><td>Encoder name and version.</td></tr></table></p>"
 msgstr ""
 
-#: dialogs/commandwizarddialog.cpp:105
+#: dialogs/commandwizarddialog.cpp:109
 msgid ""
 "<p>Variables in Audex can have parameters. E.g.</p><pre>${cover format=\"JPG"
 "\" x=\"300\" y=\"300\" preparam=\"-ti \"}</pre><p>A filename of a JPG image "
@@ -399,7 +403,7 @@ msgstr ""
 msgid "Pattern Wizard"
 msgstr ""
 
-#: dialogs/simplepatternwizarddialog.cpp:80
+#: dialogs/simplepatternwizarddialog.cpp:81
 msgid ""
 "<p>The following variables will be replaced with their particular meaning in "
 "every track name.</p><p><table border=\"1\"><tr><th><em>Variable</em></"
@@ -413,10 +417,12 @@ msgid ""
 "compilations consist of several CDs. <i>Note:</i> If the multi-CD flag is "
 "<b>not</b> set for the current CD, than this value will be just empty.</td></"
 "tr><tr><td>$suffix</td><td>The filename extension (e.g. \".jpg\", \".m3u\", "
-"\".md5\" ...).</td></tr></table></p>"
+"\".md5\" ...).</td></tr><tr><td>$nooftracks</td><td>The total number of "
+"audio tracks of the CD.</td></tr><tr><td>$audex</td><td>Audex name and "
+"version.</td></tr></table></p>"
 msgstr ""
 
-#: dialogs/simplepatternwizarddialog.cpp:95
+#: dialogs/simplepatternwizarddialog.cpp:98
 msgid ""
 "<p>Variables in Audex can have parameters. E.g.</p><pre>$title (${cdno "
 "length=\"2\" fillchar=\"0\"}).$suffix</pre><p>This means, that the cd number "
@@ -433,116 +439,116 @@ msgstr ""
 msgid "Cue Sheet Settings"
 msgstr ""
 
-#: core/audex.cpp:111
+#: core/audex.cpp:112
 msgid "No profile selected. Operation abort."
 msgstr ""
 
-#: core/audex.cpp:128
+#: core/audex.cpp:129
 #, kde-format
 msgid "Start ripping and encoding with profile \"%1\"..."
 msgstr ""
 
-#: core/audex.cpp:540 core/audex.cpp:600
+#: core/audex.cpp:545 core/audex.cpp:605
 #, kde-format
 msgid "Can't find path \"%1\"."
 msgstr ""
 
-#: core/audex.cpp:540 core/audex.cpp:549 core/audex.cpp:600 core/audex.cpp:609
+#: core/audex.cpp:545 core/audex.cpp:554 core/audex.cpp:605 core/audex.cpp:614
 msgid "Please check your path (write access?)"
 msgstr ""
 
-#: core/audex.cpp:549 core/audex.cpp:609
+#: core/audex.cpp:554 core/audex.cpp:614
 #, kde-format
 msgid "Unable to create folder \"%1\"."
 msgstr ""
 
-#: core/audex.cpp:552 core/audex.cpp:612
+#: core/audex.cpp:557 core/audex.cpp:617
 #, kde-format
 msgid "Folder \"%1\" successfully created."
 msgstr ""
 
-#: core/audex.cpp:555 core/audex.cpp:615
+#: core/audex.cpp:560 core/audex.cpp:620
 #, kde-format
 msgid "Folder \"%1\" already exists."
 msgstr ""
 
-#: core/audex.cpp:562
+#: core/audex.cpp:567
 #, kde-format
 msgid ""
 "Free space on \"%1\" is less than 200 MiB. Problems with low space possible."
 msgstr ""
 
-#: core/audex.cpp:568 core/audex.cpp:628
+#: core/audex.cpp:573 core/audex.cpp:633
 #, kde-format
 msgid "Warning! File \"%1\" already exists. Overwriting."
 msgstr ""
 
-#: core/audex.cpp:570 core/audex.cpp:630 core/audex.cpp:723 core/audex.cpp:755
-#: core/audex.cpp:803 core/audex.cpp:842 core/audex.cpp:881 core/audex.cpp:919
+#: core/audex.cpp:575 core/audex.cpp:635 core/audex.cpp:729 core/audex.cpp:762
+#: core/audex.cpp:811 core/audex.cpp:851 core/audex.cpp:890 core/audex.cpp:929
 #, kde-format
 msgid "Warning! File \"%1\" already exists. Skipping."
 msgstr ""
 
-#: core/audex.cpp:622
+#: core/audex.cpp:627
 #, kde-format
 msgid ""
 "Free space on \"%1\" is less than 800 MiB. Problems with low space possible."
 msgstr ""
 
-#: core/audex.cpp:649
+#: core/audex.cpp:654
 #, kde-format
 msgid "Temporary folder \"%1\" error."
 msgstr ""
 
-#: core/audex.cpp:649
+#: core/audex.cpp:654
 msgid "Please check."
 msgstr ""
 
-#: core/audex.cpp:655
+#: core/audex.cpp:660
 #, kde-format
 msgid ""
 "Free space on temporary folder \"%1\" is less than 800 MiB. Problems with "
 "low space possible."
 msgstr ""
 
-#: core/audex.cpp:657
+#: core/audex.cpp:662
 #, kde-format
 msgid "Temporary folder \"%1\" needs at least 200 MiB of free space."
 msgstr ""
 
-#: core/audex.cpp:657
+#: core/audex.cpp:662
 msgid "Please free space or set another path."
 msgstr ""
 
-#: core/audex.cpp:691
+#: core/audex.cpp:696
 msgid "Eject CD tray"
 msgstr ""
 
-#: core/audex.cpp:728
+#: core/audex.cpp:734
 #, kde-format
 msgid "Cover \"%1\" successfully saved."
 msgstr ""
 
-#: core/audex.cpp:781
+#: core/audex.cpp:788
 #, kde-format
 msgid "Playlist \"%1\" successfully created."
 msgstr ""
 
-#: core/audex.cpp:816
+#: core/audex.cpp:824
 #, kde-format
 msgid "Infofile \"%1\" successfully created."
 msgstr ""
 
-#: core/audex.cpp:863
+#: core/audex.cpp:872
 #, kde-format
 msgid "Hashlist \"%1\" successfully created."
 msgstr ""
 
-#: core/audex.cpp:894
+#: core/audex.cpp:903
 msgid "Discid successfully stored."
 msgstr ""
 
-#: core/audex.cpp:933
+#: core/audex.cpp:943
 #, kde-format
 msgid "Cue sheet \"%1\" successfully created."
 msgstr ""
@@ -551,25 +557,25 @@ msgstr ""
 msgid "MP3"
 msgstr "MP3"
 
-#: utils/encoderassistant.h:97
+#: utils/encoderassistant.h:98
 msgid "Ogg Vorbis"
 msgstr "Ogg Vorbis"
 
-#: utils/encoderassistant.h:126
+#: utils/encoderassistant.h:128
 msgid "FLAC (Uncompressed)"
 msgstr ""
 
-#: utils/encoderassistant.h:136
+#: utils/encoderassistant.h:139
 msgid "MP4 (AAC)"
 msgstr "MP4 (AAC)"
 
-#: utils/encoderassistant.h:153
+#: utils/encoderassistant.h:157
 msgid "WAVE (Raw Uncompressed)"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:130
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_custom)
-#: utils/encoderassistant.h:161 rc.cpp:366
+#: utils/encoderassistant.h:166 utils/encoderassistant.h:167 rc.cpp:375
 msgid "Custom"
 msgstr "Propra"
 
@@ -594,81 +600,81 @@ msgstr ""
 msgid "%1x%2, %3 KiB"
 msgstr ""
 
-#: utils/encoderwrapper.cpp:56
+#: utils/encoderwrapper.cpp:57
 msgid "Command pattern is empty."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:68
+#: utils/encoderwrapper.cpp:69
 #, kde-format
 msgid "Encoding track %1..."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:86
+#: utils/encoderwrapper.cpp:87
 #, kde-format
 msgid "Deleted partial file \"%1\"."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:91
+#: utils/encoderwrapper.cpp:92
 msgid "User canceled encoding."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:139
+#: utils/encoderwrapper.cpp:140
 #, kde-format
 msgid "Encoding OK (\"%1\")."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:141
+#: utils/encoderwrapper.cpp:142
 #, kde-format
 msgid "An error occured while encoding file \"%1\"."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:142 utils/encoderwrapper.cpp:154
-#: utils/encoderwrapper.cpp:156 utils/encoderwrapper.cpp:162
+#: utils/encoderwrapper.cpp:143 utils/encoderwrapper.cpp:155
+#: utils/encoderwrapper.cpp:157 utils/encoderwrapper.cpp:163
 msgid "Please check your profile."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:152
+#: utils/encoderwrapper.cpp:153
 #, kde-format
 msgid "%1 failed to start."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:152
+#: utils/encoderwrapper.cpp:153
 msgid ""
 "Either it is missing, or you may have insufficient permissions to invoke the "
 "program."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:154
+#: utils/encoderwrapper.cpp:155
 #, kde-format
 msgid "%1 crashed some time after starting successfully."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:156
+#: utils/encoderwrapper.cpp:157
 #, kde-format
 msgid "%1 timed out. This should not happen."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:158
+#: utils/encoderwrapper.cpp:159
 #, kde-format
 msgid "An error occurred when attempting to write to %1."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:158
+#: utils/encoderwrapper.cpp:159
 msgid ""
 "For example, the process may not be running, or it may have closed its input "
 "channel."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:160
+#: utils/encoderwrapper.cpp:161
 #, kde-format
 msgid "An error occurred when attempting to read from %1."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:160
+#: utils/encoderwrapper.cpp:161
 msgid "For example, the process may not be running."
 msgstr ""
 
-#: utils/encoderwrapper.cpp:162
+#: utils/encoderwrapper.cpp:163
 #, kde-format
 msgid "An unknown error occurred to %1. This should not happen."
 msgstr ""
@@ -949,7 +955,7 @@ msgstr ""
 
 #. i18n: file: widgets/profilewidgetUI.ui:65
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_init)
-#: widgets/profilewidget.cpp:140 widgets/profilewidget.cpp:150 rc.cpp:450
+#: widgets/profilewidget.cpp:140 widgets/profilewidget.cpp:150 rc.cpp:459
 msgid "Codec Scan"
 msgstr ""
 
@@ -982,7 +988,7 @@ msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:94
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: widgets/cddaheaderwidget.cpp:494 rc.cpp:417
+#: widgets/cddaheaderwidget.cpp:494 rc.cpp:426
 msgid "Wikipedia"
 msgstr "Vikipedio"
 
@@ -1558,7 +1564,7 @@ msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:16
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_various)
-#: models/cddamodel.cpp:947 rc.cpp:200
+#: models/cddamodel.cpp:947 rc.cpp:206
 msgid "Various Artists"
 msgstr "Diversaj artistoj"
 
@@ -1570,7 +1576,7 @@ msgstr "Diversaj artistoj"
 #. i18n: ectx: property (text), widget (QLabel, label_pattern)
 #. i18n: file: dialogs/profiledatacuesheetwidgetUI.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label_pattern)
-#: rc.cpp:5 rc.cpp:11 rc.cpp:197 rc.cpp:279
+#: rc.cpp:5 rc.cpp:11 rc.cpp:203 rc.cpp:288
 msgid "Name/Pattern:"
 msgstr ""
 
@@ -1580,7 +1586,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_format)
 #. i18n: file: dialogs/profiledatahashlistwidgetUI.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label_format)
-#: rc.cpp:8 rc.cpp:188 rc.cpp:194
+#: rc.cpp:8 rc.cpp:194 rc.cpp:200
 msgid "Format:"
 msgstr "Formato:"
 
@@ -1606,7 +1612,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_pattern)
 #. i18n: file: dialogs/profiledatainfowidgetUI.ui:99
 #. i18n: ectx: property (text), widget (QLabel, label_pattern)
-#: rc.cpp:23 rc.cpp:152
+#: rc.cpp:23 rc.cpp:155
 msgid "Pattern:"
 msgstr "Ŝablono:"
 
@@ -1739,7 +1745,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_album_example)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_album_example)
-#: rc.cpp:104 rc.cpp:234
+#: rc.cpp:104 rc.cpp:240
 msgid "Album Example:"
 msgstr ""
 
@@ -1747,7 +1753,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_sampler_example)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:143
 #. i18n: ectx: property (text), widget (QLabel, label_sampler_example)
-#: rc.cpp:107 rc.cpp:237
+#: rc.cpp:107 rc.cpp:243
 msgid "Sampler Example:"
 msgstr ""
 
@@ -1763,7 +1769,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KUrlLabel, kurllabel_aboutparameters)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:276
 #. i18n: ectx: property (text), widget (KUrlLabel, kurllabel_aboutparameters)
-#: rc.cpp:113 rc.cpp:161 rc.cpp:243
+#: rc.cpp:113 rc.cpp:164 rc.cpp:249
 msgid "About parameters"
 msgstr ""
 
@@ -1773,7 +1779,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_albumartist)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:300
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_albumartist)
-#: rc.cpp:116 rc.cpp:164 rc.cpp:246
+#: rc.cpp:116 rc.cpp:167 rc.cpp:252
 msgid "Album Artist"
 msgstr "Albuma artisto"
 
@@ -1783,7 +1789,7 @@ msgstr "Albuma artisto"
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_albumtitle)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:322
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_albumtitle)
-#: rc.cpp:119 rc.cpp:167 rc.cpp:249
+#: rc.cpp:119 rc.cpp:170 rc.cpp:255
 msgid "Album Title"
 msgstr "Albuma titolo"
 
@@ -1791,7 +1797,7 @@ msgstr "Albuma titolo"
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_trackartist)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:344
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_trackartist)
-#: rc.cpp:122 rc.cpp:252
+#: rc.cpp:122 rc.cpp:258
 msgid "Track Artist"
 msgstr "Traka artisto"
 
@@ -1799,7 +1805,7 @@ msgstr "Traka artisto"
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_tracktitle)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:366
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_tracktitle)
-#: rc.cpp:125 rc.cpp:255
+#: rc.cpp:125 rc.cpp:261
 msgid "Track Title"
 msgstr "Traka titolo"
 
@@ -1807,37 +1813,37 @@ msgstr "Traka titolo"
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_trackno)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:376
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_trackno)
-#: rc.cpp:128 rc.cpp:258
+#: rc.cpp:128 rc.cpp:264
 msgid "Track #"
 msgstr "Trako #"
 
 #. i18n: file: dialogs/patternwizardwidgetUI.ui:386
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_cdno)
-#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:221
+#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:231
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_cdno)
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:386
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_cdno)
-#: rc.cpp:131 rc.cpp:170 rc.cpp:261
+#: rc.cpp:131 rc.cpp:176 rc.cpp:267
 msgid "CD #"
 msgstr ""
 
 #. i18n: file: dialogs/patternwizardwidgetUI.ui:396
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_date)
-#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:231
+#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:241
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_date)
-#. i18n: file: dialogs/commandwizardwidgetUI.ui:396
+#. i18n: file: dialogs/commandwizardwidgetUI.ui:403
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_date)
-#: rc.cpp:134 rc.cpp:173 rc.cpp:264
+#: rc.cpp:134 rc.cpp:179 rc.cpp:273
 msgid "Date"
 msgstr "Dato"
 
 #. i18n: file: dialogs/patternwizardwidgetUI.ui:406
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_genre)
-#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:241
+#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:221
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_genre)
-#. i18n: file: dialogs/commandwizardwidgetUI.ui:406
+#. i18n: file: dialogs/commandwizardwidgetUI.ui:413
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_genre)
-#: rc.cpp:137 rc.cpp:176 rc.cpp:267
+#: rc.cpp:137 rc.cpp:173 rc.cpp:276
 msgid "Genre"
 msgstr "Ĝenro"
 
@@ -1845,19 +1851,31 @@ msgstr "Ĝenro"
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_suffix)
 #. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:248
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_suffix)
-#: rc.cpp:140 rc.cpp:179
+#: rc.cpp:140 rc.cpp:182
 msgid "Suffix"
 msgstr ""
 
+#. i18n: file: dialogs/patternwizardwidgetUI.ui:436
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_nooftracks)
+#. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:255
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_nooftracks)
+#. i18n: file: dialogs/commandwizardwidgetUI.ui:393
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_nooftracks)
+#: rc.cpp:143 rc.cpp:185 rc.cpp:270
+#, fuzzy
+#| msgid "Track"
+msgid "# of Tracks"
+msgstr "Trako"
+
 #. i18n: file: dialogs/profiledatainfowidgetUI.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label_text)
-#: rc.cpp:143
+#: rc.cpp:146
 msgid "Information text:"
 msgstr ""
 
 #. i18n: file: dialogs/profiledatainfowidgetUI.ui:58
 #. i18n: ectx: property (text), widget (KUrlLabel, kurllabel_aboutvariables)
-#: rc.cpp:146
+#: rc.cpp:149
 msgid "About variables"
 msgstr ""
 
@@ -1875,86 +1893,86 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_suffix)
 #. i18n: file: widgets/faacwidgetUI.ui:118
 #. i18n: ectx: property (text), widget (QLabel, label_suffix)
-#: rc.cpp:149 rc.cpp:306 rc.cpp:312 rc.cpp:330 rc.cpp:336 rc.cpp:384
-#: rc.cpp:396
+#: rc.cpp:152 rc.cpp:315 rc.cpp:321 rc.cpp:339 rc.cpp:345 rc.cpp:393
+#: rc.cpp:405
 msgid "Suffix:"
 msgstr ""
 
 #. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_album_example)
-#: rc.cpp:155
+#: rc.cpp:158
 msgid "Example:"
 msgstr ""
 
 #. i18n: file: dialogs/simplepatternwizardwidgetUI.ui:152
 #. i18n: ectx: property (text), widget (KUrlLabel, kurllabel_aboutschemes)
-#: rc.cpp:158
+#: rc.cpp:161
 msgid "About schemes"
 msgstr ""
 
 #. i18n: file: dialogs/profiledatacoverwidgetUI.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_scale)
-#: rc.cpp:182
+#: rc.cpp:188
 msgid "Scale before store:"
 msgstr ""
 
 #. i18n: file: dialogs/profiledatacoverwidgetUI.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_x)
-#: rc.cpp:185
+#: rc.cpp:191
 msgid "x"
 msgstr "x"
 
 #. i18n: file: dialogs/profiledatacoverwidgetUI.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_pattern)
-#: rc.cpp:191
+#: rc.cpp:197
 msgid "Cover pattern:"
 msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_multicd)
-#: rc.cpp:203
+#: rc.cpp:209
 msgid "Multi CD"
 msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_artist)
-#: rc.cpp:206
+#: rc.cpp:212
 msgid "Artist:"
 msgstr "Artisto:"
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:65
 #. i18n: ectx: property (text), widget (QLabel, label_title)
-#: rc.cpp:209
+#: rc.cpp:215
 msgid "Title:"
 msgstr "Titolo:"
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:75
 #. i18n: ectx: property (text), widget (QLabel, label_cdnum)
-#: rc.cpp:212
+#: rc.cpp:218
 msgid "CD Number:"
 msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:89
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:215
+#: rc.cpp:221
 msgid "Track Offset:"
 msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:105
 #. i18n: ectx: property (text), widget (QLabel, label_genre)
-#: rc.cpp:218
+#: rc.cpp:224
 msgid "Genre:"
 msgstr "Ĝenro:"
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:128
 #. i18n: ectx: property (text), widget (QLabel, label_year)
-#: rc.cpp:221
+#: rc.cpp:227
 msgid "Year:"
 msgstr "Jaro:"
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:155
 #. i18n: ectx: property (text), widget (QLabel, label_extdata)
-#: rc.cpp:224
+#: rc.cpp:230
 msgid ""
 "Additional\n"
 "Information:"
@@ -1962,37 +1980,37 @@ msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:171
 #. i18n: ectx: property (text), widget (QLabel, label_discid)
-#: rc.cpp:228
+#: rc.cpp:234
 msgid "Disc ID:"
 msgstr ""
 
 #. i18n: file: dialogs/cddaheaderdatawidgetUI.ui:178
 #. i18n: ectx: property (text), widget (QLabel, label_discid_2)
-#: rc.cpp:231
+#: rc.cpp:237
 msgid "0x00000000"
 msgstr "0x00000000"
 
 #. i18n: file: dialogs/commandwizardwidgetUI.ui:269
 #. i18n: ectx: property (text), widget (KUrlLabel, kurllabel_aboutcommandlineschemes)
-#: rc.cpp:240
+#: rc.cpp:246
 msgid "About commandline schemes"
 msgstr ""
 
-#. i18n: file: dialogs/commandwizardwidgetUI.ui:416
+#. i18n: file: dialogs/commandwizardwidgetUI.ui:423
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_cover_file)
-#: rc.cpp:270
+#: rc.cpp:279
 msgid "Cover File"
 msgstr ""
 
-#. i18n: file: dialogs/commandwizardwidgetUI.ui:426
+#. i18n: file: dialogs/commandwizardwidgetUI.ui:433
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_input_file)
-#: rc.cpp:273
+#: rc.cpp:282
 msgid "Input File"
 msgstr ""
 
-#. i18n: file: dialogs/commandwizardwidgetUI.ui:436
+#. i18n: file: dialogs/commandwizardwidgetUI.ui:443
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_output_file)
-#: rc.cpp:276
+#: rc.cpp:285
 msgid "Output File"
 msgstr ""
 
@@ -2000,7 +2018,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: widgets/faacwidgetUI.ui:29
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:282 rc.cpp:387
+#: rc.cpp:291 rc.cpp:396
 msgid "Quality"
 msgstr "Kvalito"
 
@@ -2012,7 +2030,7 @@ msgstr "Kvalito"
 #. i18n: ectx: property (text), widget (QLabel, label_lowest)
 #. i18n: file: widgets/faacwidgetUI.ui:83
 #. i18n: ectx: property (text), widget (QLabel, label_lowest)
-#: rc.cpp:285 rc.cpp:324 rc.cpp:375 rc.cpp:390
+#: rc.cpp:294 rc.cpp:333 rc.cpp:384 rc.cpp:399
 msgid "Lowest"
 msgstr "Plej malalta"
 
@@ -2024,13 +2042,13 @@ msgstr "Plej malalta"
 #. i18n: ectx: property (text), widget (QLabel, label_highest)
 #. i18n: file: widgets/faacwidgetUI.ui:97
 #. i18n: ectx: property (text), widget (QLabel, label_highest)
-#: rc.cpp:288 rc.cpp:327 rc.cpp:378 rc.cpp:393
+#: rc.cpp:297 rc.cpp:336 rc.cpp:387 rc.cpp:402
 msgid "Highest"
 msgstr ""
 
 #. i18n: file: widgets/oggencwidgetUI.ui:152
 #. i18n: ectx: property (text), widget (QLabel, label_targetbitrate)
-#: rc.cpp:291
+#: rc.cpp:300
 msgid "Target Bitrate ~"
 msgstr ""
 
@@ -2040,19 +2058,19 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_maxbitrate_kbps)
 #. i18n: file: widgets/oggencwidgetUI.ui:347
 #. i18n: ectx: property (text), widget (QLabel, label_minbitrate_kbps)
-#: rc.cpp:294 rc.cpp:303 rc.cpp:309
+#: rc.cpp:303 rc.cpp:312 rc.cpp:318
 msgid "kbit/s"
 msgstr ""
 
 #. i18n: file: widgets/oggencwidgetUI.ui:209
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_minbitrate)
-#: rc.cpp:297
+#: rc.cpp:306
 msgid "Set minimum bitrate"
 msgstr ""
 
 #. i18n: file: widgets/oggencwidgetUI.ui:245
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_maxbitrate)
-#: rc.cpp:300
+#: rc.cpp:309
 msgid "Set maximum bitrate"
 msgstr ""
 
@@ -2060,50 +2078,50 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_upload)
 #. i18n: file: audex.kcfg:58
 #. i18n: ectx: label, entry (upload), group (general)
-#: rc.cpp:315 rc.cpp:492
+#: rc.cpp:324 rc.cpp:501
 msgid "Upload files to server"
 msgstr ""
 
 #. i18n: file: widgets/remoteserversettingswidgetUI.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:318
+#: rc.cpp:327
 msgid "URL:"
 msgstr "URL:"
 
 #. i18n: file: widgets/flacwidgetUI.ui:29
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:321
+#: rc.cpp:330
 msgid "Compression"
 msgstr "Kompresigo"
 
 #. i18n: file: widgets/customwidgetUI.ui:29
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:333
+#: rc.cpp:342
 msgid "Command Pattern:"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:41
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:339
+#: rc.cpp:348
 msgid "Quality/Bitrate"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:53
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButton_medium)
-#: rc.cpp:342
+#: rc.cpp:351
 msgid ""
 "This preset should provide near transparency to most people on most music."
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:56
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_medium)
-#: rc.cpp:345
+#: rc.cpp:354
 msgid "Medium (140...185 kbit/s)"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:69
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButton_extreme)
-#: rc.cpp:348
+#: rc.cpp:357
 msgid ""
 "If you have extremely good hearing and similar equipment, this preset will "
 "generally provide slightly higher quality than the \"standard\" mode"
@@ -2111,13 +2129,13 @@ msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:72
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_extreme)
-#: rc.cpp:351
+#: rc.cpp:360
 msgid "Extreme (220...260 kbits/s)"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:98
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButton_standard)
-#: rc.cpp:354
+#: rc.cpp:363
 msgid ""
 "This preset should generally be transparent to most people on most music and "
 "is already quite high in quality."
@@ -2125,13 +2143,13 @@ msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:101
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_standard)
-#: rc.cpp:357
+#: rc.cpp:366
 msgid "Standard (170...210 kbit/s)"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:114
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButton_insane)
-#: rc.cpp:360
+#: rc.cpp:369
 msgid ""
 "This preset will usually be overkill for most people and most situations, "
 "but if you must have the absolute highest quality with no regard to "
@@ -2140,25 +2158,25 @@ msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:117
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_insane)
-#: rc.cpp:363
+#: rc.cpp:372
 msgid "Insane (320 kbit/s)"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:140
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_cbr)
-#: rc.cpp:369
+#: rc.cpp:378
 msgid "Constant Bitrate"
 msgstr "Konstanta bitkvanto"
 
 #. i18n: file: widgets/lamewidgetUI.ui:153
 #. i18n: ectx: property (text), widget (QLabel, label_targetbitrate)
-#: rc.cpp:372
+#: rc.cpp:381
 msgid "Target Bitrate (kbit/s)"
 msgstr ""
 
 #. i18n: file: widgets/lamewidgetUI.ui:248
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_embedcover)
-#: rc.cpp:381
+#: rc.cpp:390
 msgid "Embed cover in music file"
 msgstr ""
 
@@ -2166,7 +2184,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_overwriteExistingFiles)
 #. i18n: file: audex.kcfg:14
 #. i18n: ectx: label, entry (overwriteExistingFiles), group (general)
-#: rc.cpp:399 rc.cpp:459
+#: rc.cpp:408 rc.cpp:468
 msgid "Overwrite existing files"
 msgstr ""
 
@@ -2174,13 +2192,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_deletePartialFiles)
 #. i18n: file: audex.kcfg:18
 #. i18n: ectx: label, entry (deletePartialFiles), group (general)
-#: rc.cpp:402 rc.cpp:462
+#: rc.cpp:411 rc.cpp:471
 msgid "Delete partial files after cancel"
 msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:37
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ejectCDTray)
-#: rc.cpp:405
+#: rc.cpp:414
 msgid "Eject CD tray after finished extraction"
 msgstr ""
 
@@ -2188,31 +2206,31 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_cddbLookupAuto)
 #. i18n: file: audex.kcfg:26
 #. i18n: ectx: label, entry (cddbLookupAuto), group (general)
-#: rc.cpp:408 rc.cpp:468
+#: rc.cpp:417 rc.cpp:477
 msgid "Perform CDDB lookup automatically"
 msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:51
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_coverLookupAuto)
-#: rc.cpp:411
+#: rc.cpp:420
 msgid "Perform cover lookup automatically"
 msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:66
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:414
+#: rc.cpp:423
 msgid "Number of covers to fetch:"
 msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:106
 #. i18n: ectx: property (text), widget (QLabel, label_wikipediaLocale)
-#: rc.cpp:420
+#: rc.cpp:429
 msgid "Localization:"
 msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:126
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:423
+#: rc.cpp:432
 msgid "Device"
 msgstr "Disponaĵo"
 
@@ -2220,7 +2238,7 @@ msgstr "Disponaĵo"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_paranoiaMode)
 #. i18n: file: audex.kcfg:46
 #. i18n: ectx: label, entry (paranoiaMode), group (general)
-#: rc.cpp:426 rc.cpp:483
+#: rc.cpp:435 rc.cpp:492
 msgid "Full paranoia mode (best quality)"
 msgstr ""
 
@@ -2228,56 +2246,56 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_neverSkip)
 #. i18n: file: audex.kcfg:50
 #. i18n: ectx: label, entry (neverSkip), group (general)
-#: rc.cpp:429 rc.cpp:486
+#: rc.cpp:438 rc.cpp:495
 msgid "Never skip on read error"
 msgstr ""
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:156
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:432
+#: rc.cpp:441
 msgid "Paths"
 msgstr "Padoj"
 
 #. i18n: file: widgets/generalsettingswidgetUI.ui:164
 #. i18n: ectx: property (text), widget (QLabel, label_basePath)
-#: rc.cpp:435
+#: rc.cpp:444
 msgid "Base path to store music files:"
 msgstr ""
 
 #. i18n: file: widgets/profilewidgetUI.ui:21
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_add)
-#: rc.cpp:438
+#: rc.cpp:447
 msgid "Add..."
 msgstr "Aldoni..."
 
 #. i18n: file: widgets/profilewidgetUI.ui:28
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_rem)
-#: rc.cpp:441
+#: rc.cpp:450
 msgid "Remove"
 msgstr "Forigi"
 
 #. i18n: file: widgets/profilewidgetUI.ui:35
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_mod)
-#: rc.cpp:444
+#: rc.cpp:453
 msgid "Modify..."
 msgstr "Ŝanĝi..."
 
 #. i18n: file: widgets/profilewidgetUI.ui:42
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_copy)
-#: rc.cpp:447
+#: rc.cpp:456
 msgid "Copy"
 msgstr "Kopii"
 
 #. i18n: file: widgets/profilewidgetUI.ui:85
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_load)
-#: rc.cpp:453
+#: rc.cpp:462
 #, fuzzy
 msgid "Load..."
 msgstr "Ŝargu"
 
 #. i18n: file: widgets/profilewidgetUI.ui:92
 #. i18n: ectx: property (text), widget (KPushButton, kpushbutton_save)
-#: rc.cpp:456
+#: rc.cpp:465
 #, fuzzy
 #| msgid "New..."
 msgid "Save..."
@@ -2285,68 +2303,68 @@ msgstr "Nova..."
 
 #. i18n: file: audex.kcfg:22
 #. i18n: ectx: label, entry (ejectCDTray), group (general)
-#: rc.cpp:465
+#: rc.cpp:474
 msgid "Eject CD tray after extraction finished"
 msgstr ""
 
 #. i18n: file: audex.kcfg:30
 #. i18n: ectx: label, entry (coverLookupAuto), group (general)
-#: rc.cpp:471
+#: rc.cpp:480
 msgid "Perform cover lookup (amazon) automatically"
 msgstr ""
 
 #. i18n: file: audex.kcfg:34
 #. i18n: ectx: label, entry (wikipediaLocale), group (general)
-#: rc.cpp:474
+#: rc.cpp:483
 msgid "Wikipedia localization"
 msgstr ""
 
 #. i18n: file: audex.kcfg:38
 #. i18n: ectx: label, entry (fetchCount), group (general)
-#: rc.cpp:477
+#: rc.cpp:486
 msgid "Number of covers to fetch"
 msgstr ""
 
 #. i18n: file: audex.kcfg:42
 #. i18n: ectx: label, entry (cdDevice), group (general)
-#: rc.cpp:480
+#: rc.cpp:489
 msgid "CD Device"
 msgstr ""
 
 #. i18n: file: audex.kcfg:54
 #. i18n: ectx: label, entry (basePath), group (general)
-#: rc.cpp:489
+#: rc.cpp:498
 msgid "Base path to store music files"
 msgstr ""
 
 #. i18n: file: audex.kcfg:62
 #. i18n: ectx: label, entry (url), group (general)
-#: rc.cpp:495
+#: rc.cpp:504
 msgid "URL of server"
 msgstr ""
 
 #. i18n: file: audexui.rc:6
 #. i18n: ectx: Menu (file)
-#: rc.cpp:500
+#: rc.cpp:509
 msgid "&Audex"
 msgstr "&Audex"
 
 #. i18n: file: audexui.rc:13
 #. i18n: ectx: Menu (cddb)
-#: rc.cpp:503
+#: rc.cpp:512
 msgid "&CDDB"
 msgstr "&CDDB"
 
 #. i18n: file: audexui.rc:18
 #. i18n: ectx: Menu (titlecorrectiontools)
-#: rc.cpp:506
+#: rc.cpp:515
 msgctxt "@title:menu"
 msgid "Title Correction Tools"
 msgstr ""
 
 #. i18n: file: audexui.rc:25
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:509
+#: rc.cpp:518
 msgid "&Settings"
 msgstr "A&gordo"
 
