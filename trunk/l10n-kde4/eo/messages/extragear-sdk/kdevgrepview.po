@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgrepview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-02-05 02:46+0100\n"
+"POT-Creation-Date: 2011-02-06 02:42+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -15,55 +15,64 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: grepviewplugin.cpp:46 grepdialog.cpp:112
-#, fuzzy
-#| msgid "Find In Files"
-msgid "Find/Replace In Files"
-msgstr "Trovi en dosieroj"
-
-#: grepviewplugin.cpp:46
-msgid "Support for running grep over a list of files"
+#: grepoutputdelegate.cpp:94 grepoutputdelegate.cpp:159
+#, kde-format
+msgid "Line %1: "
 msgstr ""
 
-#: grepviewplugin.cpp:55
-#, fuzzy
-#| msgid "Find in Fi&les..."
-msgid "Find/replace in Fi&les..."
-msgstr "Trovi en Dos&ieroj..."
+#: grepoutputmodel.cpp:349
+#, kde-format
+msgid "<b>1</b> match"
+msgid_plural "<b>%1</b> matches"
+msgstr[0] ""
+msgstr[1] ""
 
-#: grepviewplugin.cpp:56
-msgid "Ctrl+Alt+f"
+#: grepoutputmodel.cpp:350
+#, kde-format
+msgid "<b>1</b> file"
+msgid_plural "<b>%1</b> files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grepoutputmodel.cpp:352
+#, kde-format
+msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
+msgid "<h3>%1 in %2</h3>"
 msgstr ""
 
-#: grepviewplugin.cpp:58
-msgid "Search for expressions over several files"
+#: grepoutputmodel.cpp:354
+#, kde-format
+msgid "<big>%2 <i>(one match)</i></big>"
+msgid_plural "<big>%2 <i>(%1 matches)</i></big>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grepoutputmodel.cpp:422
+#, kde-format
+msgid "Failed to replace <b>%1</b> by <b>%2</b> in %3:%4:%5"
 msgstr ""
 
-#: grepviewplugin.cpp:59
-msgid ""
-"<b>Find/Replace in files</b><p>Opens the 'Find/Replace in files' dialog. "
-"There you can enter a regular expression which is then searched for within "
-"all files in the directories you specify. Matches will be displayed, you can "
-"switch to a match directly. You can also do replacement.</p>"
+#: grepdialog.cpp:54
+msgid "All Open Files"
 msgstr ""
 
-#: grepviewplugin.cpp:83 grepviewplugin.cpp:104
-msgid "Find and replace in this folder"
+#: grepdialog.cpp:55
+msgid "All Open Projects"
 msgstr ""
 
-#: grepviewplugin.cpp:94
-#, fuzzy
-#| msgid "Find In Files"
-msgid "&Find/Replace in Files"
-msgstr "Trovi en dosieroj"
-
-#: grepdialog.cpp:110
+#: grepdialog.cpp:114
 #, fuzzy
 #| msgid "Search"
 msgid "Search..."
 msgstr "Serĉi"
 
-#: grepdialog.cpp:312
+#: grepdialog.cpp:116 grepviewplugin.cpp:46
+#, fuzzy
+#| msgid "Find In Files"
+msgid "Find/Replace In Files"
+msgstr "Trovi en dosieroj"
+
+#: grepdialog.cpp:397
 #, fuzzy
 #| msgid "Find In Files"
 msgid "Find/Replace in Files"
@@ -112,43 +121,6 @@ msgstr ""
 msgid "Grep: %1"
 msgstr ""
 
-#: grepoutputdelegate.cpp:94 grepoutputdelegate.cpp:159
-#, kde-format
-msgid "Line %1: "
-msgstr ""
-
-#: grepoutputmodel.cpp:349
-#, kde-format
-msgid "<b>1</b> match"
-msgid_plural "<b>%1</b> matches"
-msgstr[0] ""
-msgstr[1] ""
-
-#: grepoutputmodel.cpp:350
-#, kde-format
-msgid "<b>1</b> file"
-msgid_plural "<b>%1</b> files"
-msgstr[0] ""
-msgstr[1] ""
-
-#: grepoutputmodel.cpp:352
-#, kde-format
-msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
-msgid "<h3>%1 in %2</h3>"
-msgstr ""
-
-#: grepoutputmodel.cpp:354
-#, kde-format
-msgid "<big>%2 <i>(one match)</i></big>"
-msgid_plural "<big>%2 <i>(%1 matches)</i></big>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: grepoutputmodel.cpp:422
-#, kde-format
-msgid "Failed to replace <b>%1</b> by <b>%2</b> in %3:%4:%5"
-msgstr ""
-
 #: grepoutputview.cpp:60
 msgid "Replace output view"
 msgstr ""
@@ -177,13 +149,49 @@ msgstr ""
 msgid "Clear search history"
 msgstr ""
 
-#: grepoutputview.cpp:242
+#: grepoutputview.cpp:245
 msgid "Do you want to replace with an empty string?"
 msgstr ""
 
-#: grepoutputview.cpp:243
+#: grepoutputview.cpp:246
 msgid "Start replacement"
 msgstr ""
+
+#: grepviewplugin.cpp:46
+msgid "Support for running grep over a list of files"
+msgstr ""
+
+#: grepviewplugin.cpp:55
+#, fuzzy
+#| msgid "Find in Fi&les..."
+msgid "Find/replace in Fi&les..."
+msgstr "Trovi en Dos&ieroj..."
+
+#: grepviewplugin.cpp:56
+msgid "Ctrl+Alt+f"
+msgstr ""
+
+#: grepviewplugin.cpp:58
+msgid "Search for expressions over several files"
+msgstr ""
+
+#: grepviewplugin.cpp:59
+msgid ""
+"<b>Find/Replace in files</b><p>Opens the 'Find/Replace in files' dialog. "
+"There you can enter a regular expression which is then searched for within "
+"all files in the directories you specify. Matches will be displayed, you can "
+"switch to a match directly. You can also do replacement.</p>"
+msgstr ""
+
+#: grepviewplugin.cpp:83 grepviewplugin.cpp:104
+msgid "Find and replace in this folder"
+msgstr ""
+
+#: grepviewplugin.cpp:94
+#, fuzzy
+#| msgid "Find In Files"
+msgid "&Find/Replace in Files"
+msgstr "Trovi en dosieroj"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
