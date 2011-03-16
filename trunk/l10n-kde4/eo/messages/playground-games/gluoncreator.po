@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gluoncreator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-03-14 04:00+0100\n"
+"POT-Creation-Date: 2011-03-16 04:00+0100\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Aliaj"
 msgid "Plugins"
 msgstr "Kromaĵoj"
 
-#: dialogs/newprojectdialogpage.cpp:66 mainwindow.cpp:364 mainwindow.cpp:372
+#: dialogs/newprojectdialogpage.cpp:66 mainwindow.cpp:360 mainwindow.cpp:368
 #, fuzzy
 #| msgid "Open Project"
 msgid "New Project"
@@ -143,6 +143,7 @@ msgid "Move Down"
 msgstr "Movi malsupren"
 
 #: lib/widgets/propertywidgetcontainer.cpp:214
+#: plugins/docks/scenedock/scenedock.cpp:98
 #: plugins/kparts/codeeditorpart/Actions/DeleteAction.cpp:34
 msgid "Delete"
 msgstr "Forigi"
@@ -276,7 +277,7 @@ msgstr ""
 msgid "(no object selected)"
 msgstr ""
 
-#: lib/objectmanager.cpp:234
+#: lib/objectmanager.cpp:242
 msgid "NewScene"
 msgstr ""
 
@@ -360,17 +361,15 @@ msgstr "Ecoj"
 msgid "Item count: %1"
 msgstr ""
 
-#: plugins/docks/scenedock/scenedock.cpp:92
-msgid "Delete Object(s)"
-msgstr ""
-
-#: plugins/docks/scenedock/scenedock.cpp:101
-msgid "New GameObject"
-msgstr ""
-
 #: plugins/docks/scenedock/scenedockplugin.cpp:44
 msgid "Scene"
 msgstr ""
+
+#: plugins/docks/scenedock/scenedock.cpp:91 mainwindow.cpp:264
+#, fuzzy
+#| msgid "Open Project"
+msgid "New Game Object"
+msgstr "Malfermi Projekton"
 
 #: plugins/kparts/codeeditorpart/Actions/AddEdge.cpp:35
 msgid "Add Edge"
@@ -841,10 +840,6 @@ msgstr "Projekto"
 msgid "Redo Project Action"
 msgstr "Projekto"
 
-#: mainwindow.cpp:264
-msgid "New Object"
-msgstr ""
-
 #: mainwindow.cpp:272
 #, fuzzy
 msgid "Play Game"
@@ -863,30 +858,26 @@ msgid "Stop Game"
 msgstr "Caserta"
 
 #: mainwindow.cpp:288
-msgid "Set current scene as entry point"
-msgstr ""
-
-#: mainwindow.cpp:292
 #, fuzzy
 #| msgid "Playcount"
 msgid "Lock layout"
 msgstr "Ludfojo"
 
-#: mainwindow.cpp:364
+#: mainwindow.cpp:360
 #, kde-format
 msgid "%1 [modified]"
 msgstr ""
 
-#: mainwindow.cpp:372
+#: mainwindow.cpp:368
 #, fuzzy, kde-format
 msgid "%1"
 msgstr "%1"
 
-#: mainwindow.cpp:380
+#: mainwindow.cpp:376
 msgid "The project has been changed. Do you want to save before closing?"
 msgstr ""
 
-#: mainwindow.cpp:380
+#: mainwindow.cpp:376
 msgid "Save Before Closing?"
 msgstr ""
 
@@ -1335,61 +1326,58 @@ msgid "&Project"
 msgstr "Projekto"
 
 #. i18n: file: ui/gluoncreatorui.rc:22
-#. i18n: ectx: Menu (game)
-#: rc.cpp:254
-#, fuzzy
-#| msgctxt "City name (optional, probably does not need a translation)"
-#| msgid "Caserta"
-msgid "&Game"
-msgstr "Caserta"
-
-#. i18n: file: ui/gluoncreatorui.rc:28
 #. i18n: ectx: Menu (file)
-#: rc.cpp:257
+#: rc.cpp:254
 #, fuzzy
 #| msgid "View"
 msgid "&File"
 msgstr "Vido"
 
-#. i18n: file: ui/gluoncreatorui.rc:42
+#. i18n: file: ui/gluoncreatorui.rc:41
 #. i18n: ectx: Menu (scene)
-#: rc.cpp:260
+#: rc.cpp:257
 msgid "&Scene"
 msgstr ""
 
-#. i18n: file: ui/gluoncreatorui.rc:49
+#. i18n: file: ui/gluoncreatorui.rc:48
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:263
+#: rc.cpp:260
 #, fuzzy
 #| msgid "Tools"
 msgid "&Tools"
 msgstr "Iloj"
 
-#. i18n: file: ui/gluoncreatorui.rc:51
+#. i18n: file: ui/gluoncreatorui.rc:50
 #. i18n: ectx: Menu (versionControlSystem)
-#: rc.cpp:266
+#: rc.cpp:263
 msgid "&Version Control System"
 msgstr ""
 
-#. i18n: file: ui/gluoncreatorui.rc:58
+#. i18n: file: ui/gluoncreatorui.rc:57
 #. i18n: ectx: Menu (docks)
-#: rc.cpp:269
+#: rc.cpp:266
 msgid "&Docks"
 msgstr ""
 
-#. i18n: file: ui/gluoncreatorui.rc:72
+#. i18n: file: ui/gluoncreatorui.rc:71
 #. i18n: ectx: ToolBar (projectToolBar)
-#: rc.cpp:272
+#: rc.cpp:269
 #, fuzzy
 #| msgid "Project"
 msgid "Project Toolbar"
 msgstr "Projekto"
 
-#. i18n: file: ui/gluoncreatorui.rc:78
+#. i18n: file: ui/gluoncreatorui.rc:77
 #. i18n: ectx: ToolBar (gameActionsToolbar)
-#: rc.cpp:275
+#: rc.cpp:272
 msgid "Game Actions"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "City name (optional, probably does not need a translation)"
+#~| msgid "Caserta"
+#~ msgid "&Game"
+#~ msgstr "Caserta"
 
 #, fuzzy
 #~| msgid "New Folder"
