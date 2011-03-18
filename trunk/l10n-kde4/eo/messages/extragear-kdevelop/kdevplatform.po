@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-03-14 03:24+0100\n"
+"POT-Creation-Date: 2011-03-18 03:19+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -266,7 +266,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
 #: debugger/util/pathmappings.cpp:244
 #: shell/workingsets/workingsettooltipwidget.cpp:89 rc.cpp:134 rc.cpp:182
-#: rc.cpp:327 rc.cpp:390
+#: rc.cpp:378 rc.cpp:390
 msgid "Delete"
 msgstr "Forigi"
 
@@ -431,7 +431,7 @@ msgid_plural "Process %1 files in %2"
 msgstr[0] ""
 msgstr[1] ""
 
-#: language/backgroundparser/backgroundparser.cpp:381
+#: language/backgroundparser/backgroundparser.cpp:389
 msgid "Background Parser"
 msgstr ""
 
@@ -1671,6 +1671,32 @@ msgstr ""
 msgid "Verbose output"
 msgstr ""
 
+#: shell/textdocument.cpp:371 shell/partdocument.cpp:108
+#, kde-format
+msgid "The document \"%1\" has unsaved changes. Would you like to save them?"
+msgstr ""
+
+#: shell/textdocument.cpp:372 shell/partdocument.cpp:109
+msgid "Close Document"
+msgstr "Fermi dokumenton"
+
+#: shell/textdocument.cpp:384
+#, kde-format
+msgid ""
+"The file \"%1\" is modified on disk.\n"
+"\n"
+"Are you sure you want to overwrite it? (External changes will be lost.)"
+msgstr ""
+
+#: shell/textdocument.cpp:387
+msgid "Document Externally Modified"
+msgstr ""
+
+#: shell/textdocument.cpp:665
+#, kde-format
+msgid " Line: %1 Col: %2 "
+msgstr " Linio: %1 Kol: %2"
+
 #: shell/launchconfigurationdialog.cpp:57
 msgid "Launch Configurations"
 msgstr ""
@@ -1809,15 +1835,6 @@ msgstr ""
 #: shell/uicontroller.cpp:364
 msgid "Select Tool View to Add"
 msgstr ""
-
-#: shell/partdocument.cpp:108 shell/textdocument.cpp:371
-#, kde-format
-msgid "The document \"%1\" has unsaved changes. Would you like to save them?"
-msgstr ""
-
-#: shell/partdocument.cpp:109 shell/textdocument.cpp:372
-msgid "Close Document"
-msgstr "Fermi dokumenton"
 
 #: shell/plugincontroller.cpp:443
 #, kde-format
@@ -2022,7 +2039,7 @@ msgid "Language Support Settings"
 msgstr ""
 
 #: shell/settings/editstyledialog.cpp:69
-#: shell/settings/sourceformattersettings.cpp:70
+#: shell/settings/sourceformattersettings.cpp:100
 msgid ""
 "A KDE text-editor component could not be found.\n"
 "Please check your KDE installation."
@@ -2090,24 +2107,36 @@ msgstr ""
 msgid "Projects Settings"
 msgstr "Revizio"
 
-#: shell/settings/sourceformattersettings.cpp:366
+#: shell/settings/uipreferences.cpp:38
+msgid "User Interface Settings"
+msgstr ""
+
+#: shell/settings/sourceformattersettings.cpp:371
+#, kde-format
+msgid ""
+"The style %1 is also used for the following languages:\n"
+"%2.\n"
+"Are you sure you want to delete it?"
+msgstr ""
+
+#: shell/settings/sourceformattersettings.cpp:372
+msgid "Style being deleted"
+msgstr ""
+
+#: shell/settings/sourceformattersettings.cpp:424
 #, fuzzy, kde-format
 #| msgid "New"
 msgid "New %1"
 msgstr "Nova"
 
-#: shell/settings/sourceformattersettings.cpp:369
+#: shell/settings/sourceformattersettings.cpp:427
 #, fuzzy
 #| msgid "Style:"
 msgid "New Style"
 msgstr "Stilo:"
 
-#: shell/settings/sourceformattersettings.cpp:427
+#: shell/settings/sourceformattersettings.cpp:476
 msgid "No Language selected"
-msgstr ""
-
-#: shell/settings/uipreferences.cpp:38
-msgid "User Interface Settings"
 msgstr ""
 
 #: shell/sourceformattercontroller.cpp:68
@@ -2165,23 +2194,6 @@ msgstr ""
 #, kde-format
 msgid "Unable to write to %1"
 msgstr ""
-
-#: shell/textdocument.cpp:384
-#, kde-format
-msgid ""
-"The file \"%1\" is modified on disk.\n"
-"\n"
-"Are you sure you want to overwrite it? (External changes will be lost.)"
-msgstr ""
-
-#: shell/textdocument.cpp:387
-msgid "Document Externally Modified"
-msgstr ""
-
-#: shell/textdocument.cpp:665
-#, kde-format
-msgid " Line: %1 Col: %2 "
-msgstr " Linio: %1 Kol: %2"
 
 #: shell/workingsets/workingsettoolbutton.cpp:101
 msgid "Close Working Set (Left Click)"
@@ -3495,7 +3507,7 @@ msgstr "Git"
 #. i18n: ectx: property (text), widget (KPushButton, btnNewStyle)
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:22
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
-#: rc.cpp:173 rc.cpp:321 rc.cpp:384
+#: rc.cpp:173 rc.cpp:372 rc.cpp:384
 msgid "New"
 msgstr "Nova"
 
@@ -3751,85 +3763,27 @@ msgstr ""
 msgid "Save all documents before building"
 msgstr ""
 
-#. i18n: file: shell/settings/sourceformattersettings.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:297
-msgid "General"
-msgstr "Ĝeneralo"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:23
-#. i18n: ectx: property (toolTip), widget (QCheckBox, chkKateModelines)
-#: rc.cpp:300
-msgid "Add kate modeline to formatted documents."
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:26
-#. i18n: ectx: property (text), widget (QCheckBox, chkKateModelines)
-#: rc.cpp:303
-msgid "Add Kate modeline"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:48
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:306
-msgid "Formatting Styles"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:54
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:309
-msgid "Mimetype:"
-msgstr ""
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:76
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:312
-msgid "Preview:"
-msgstr "Antaŭrigardo:"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:101
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:315
-#, fuzzy
-#| msgid "Format"
-msgid "Formatter:"
-msgstr "Formato"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:121
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:318
-msgid "Style:"
-msgstr "Stilo:"
-
-#. i18n: file: shell/settings/sourceformattersettings.ui:146
-#. i18n: ectx: property (text), widget (KPushButton, btnEditStyle)
-#: rc.cpp:324
-#, fuzzy
-#| msgid "Edit"
-msgid "Edit..."
-msgstr "Redakti"
-
 #. i18n: file: shell/settings/uiconfig.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, UiConfig)
-#: rc.cpp:330
+#: rc.cpp:297
 msgid "User Interface"
 msgstr "Uzant-interfaco"
 
 #. i18n: file: shell/settings/uiconfig.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:333
+#: rc.cpp:300
 msgid "Dock Window Behavior"
 msgstr ""
 
 #. i18n: file: shell/settings/uiconfig.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:336
+#: rc.cpp:303
 msgid "Top Left Owner"
 msgstr ""
 
 #. i18n: file: shell/settings/uiconfig.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:339
+#: rc.cpp:306
 msgid "Top Right Owner"
 msgstr ""
 
@@ -3837,7 +3791,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopLeftCornerOwner)
 #. i18n: file: shell/settings/uiconfig.ui:89
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
-#: rc.cpp:342 rc.cpp:360
+#: rc.cpp:309 rc.cpp:327
 msgid "Left Dock"
 msgstr ""
 
@@ -3845,7 +3799,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopLeftCornerOwner)
 #. i18n: file: shell/settings/uiconfig.ui:60
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopRightCornerOwner)
-#: rc.cpp:345 rc.cpp:351
+#: rc.cpp:312 rc.cpp:318
 msgid "Top Dock"
 msgstr ""
 
@@ -3853,19 +3807,19 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_TopRightCornerOwner)
 #. i18n: file: shell/settings/uiconfig.ui:109
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
-#: rc.cpp:348 rc.cpp:366
+#: rc.cpp:315 rc.cpp:333
 msgid "Right Dock"
 msgstr ""
 
 #. i18n: file: shell/settings/uiconfig.ui:68
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:354
+#: rc.cpp:321
 msgid "Bottom Left Owner"
 msgstr ""
 
 #. i18n: file: shell/settings/uiconfig.ui:75
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:357
+#: rc.cpp:324
 msgid "Bottom Right Owner"
 msgstr ""
 
@@ -3873,27 +3827,85 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
 #. i18n: file: shell/settings/uiconfig.ui:114
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
-#: rc.cpp:363 rc.cpp:369
+#: rc.cpp:330 rc.cpp:336
 msgid "Bottom Dock"
 msgstr ""
 
 #. i18n: file: shell/settings/uiconfig.ui:138
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:372
+#: rc.cpp:339
 msgid "Tabbed Browsing"
 msgstr "Foliumado kun langetoj"
 
 #. i18n: file: shell/settings/uiconfig.ui:144
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarVisibility)
-#: rc.cpp:375
+#: rc.cpp:342
 msgid "Show tabs"
 msgstr ""
 
 #. i18n: file: shell/settings/uiconfig.ui:154
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarOpenAfterCurrent)
-#: rc.cpp:378
+#: rc.cpp:345
 msgid "Open new tab after current"
 msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:348
+msgid "General"
+msgstr "Ĝeneralo"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:23
+#. i18n: ectx: property (toolTip), widget (QCheckBox, chkKateModelines)
+#: rc.cpp:351
+msgid "Add kate modeline to formatted documents."
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:26
+#. i18n: ectx: property (text), widget (QCheckBox, chkKateModelines)
+#: rc.cpp:354
+msgid "Add Kate modeline"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:48
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:357
+msgid "Formatting Styles"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:54
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:360
+msgid "Language:"
+msgstr ""
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:76
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:363
+msgid "Preview:"
+msgstr "Antaŭrigardo:"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:101
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:366
+#, fuzzy
+#| msgid "Format"
+msgid "Formatter:"
+msgstr "Formato"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:121
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:369
+msgid "Style:"
+msgstr "Stilo:"
+
+#. i18n: file: shell/settings/sourceformattersettings.ui:146
+#. i18n: ectx: property (text), widget (KPushButton, btnEditStyle)
+#: rc.cpp:375
+#, fuzzy
+#| msgid "Edit"
+msgid "Edit..."
+msgstr "Redakti"
 
 #. i18n: file: vcs/dvcs/ui/branchmanager.ui:19
 #. i18n: ectx: property (toolTip), widget (QPushButton, newButton)
