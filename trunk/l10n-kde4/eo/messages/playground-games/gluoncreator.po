@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gluoncreator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-20 04:19+0200\n"
+"POT-Creation-Date: 2011-04-23 04:19+0200\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -31,11 +31,14 @@ msgstr "Aliaj"
 msgid "Plugins"
 msgstr "Kromaĵoj"
 
-#: dialogs/recentprojectsdialogpage.cpp:58 mainwindow.cpp:260
-#, fuzzy
-#| msgid "Open Project"
-msgid "Recent Projects"
+#: dialogs/openprojectdialogpage.cpp:57
+msgid "Open Project"
 msgstr "Malfermi Projekton"
+
+#: dialogs/openprojectdialogpage.cpp:69
+#: plugins/docks/projectdock/projectdockplugin.cpp:40
+msgid "Project"
+msgstr "Projekto"
 
 #: dialogs/newprojectdialogpage.cpp:68 mainwindow.cpp:364 mainwindow.cpp:372
 #, fuzzy
@@ -68,7 +71,7 @@ msgid "You need to enter a name and location to continue"
 msgstr ""
 
 #: dialogs/newprojectdialogpage.cpp:127
-#: plugins/docks/projectdock/projectdock.cpp:212 mainwindow.cpp:272
+#: plugins/docks/projectdock/projectdock.cpp:206 mainwindow.cpp:272
 msgid "New Scene"
 msgstr ""
 
@@ -108,14 +111,11 @@ msgstr ""
 msgid "Path already exists and contains files"
 msgstr ""
 
-#: dialogs/openprojectdialogpage.cpp:57
-msgid "Open Project"
+#: dialogs/recentprojectsdialogpage.cpp:58 mainwindow.cpp:260
+#, fuzzy
+#| msgid "Open Project"
+msgid "Recent Projects"
 msgstr "Malfermi Projekton"
-
-#: dialogs/openprojectdialogpage.cpp:69
-#: plugins/docks/projectdock/projectdockplugin.cpp:39
-msgid "Project"
-msgstr "Projekto"
 
 #: lib/models/componentmodel.cpp:185
 #, fuzzy
@@ -162,6 +162,35 @@ msgstr ""
 #: lib/widgets/gluonobjectpropertywidgetitem.cpp:209
 msgid "(no object selected)"
 msgstr ""
+
+#: lib/widgets/propertywidgetcontainer.cpp:201
+msgid "Add Custom Property..."
+msgstr ""
+
+#: lib/widgets/propertywidgetcontainer.cpp:209
+msgid "Move Up"
+msgstr "Movi supren"
+
+#: lib/widgets/propertywidgetcontainer.cpp:213
+msgid "Move Down"
+msgstr "Movi malsupren"
+
+#: lib/widgets/propertywidgetcontainer.cpp:221
+#: plugins/docks/scenedock/scenedock.cpp:100
+#: plugins/kparts/codeeditorpart/Actions/DeleteAction.cpp:34
+msgid "Delete"
+msgstr "Forigi"
+
+#: lib/widgets/propertywidgetcontainer.cpp:270
+#, kde-format
+msgid "Are you sure you wish to delete the item %1?"
+msgstr ""
+
+#: lib/widgets/propertywidgetcontainer.cpp:270
+#, fuzzy
+#| msgid "Delete"
+msgid "Delete Item?"
+msgstr "Forigi"
 
 #: lib/widgets/propertywidgetitemnewcustomproperty.cpp:49
 msgid "Boolean (bool)"
@@ -229,8 +258,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: lib/widgets/propertywidgetitemnewcustomproperty.cpp:78 rc.cpp:35 rc.cpp:119
-#: rc.cpp:179
+#: lib/widgets/propertywidgetitemnewcustomproperty.cpp:78 rc.cpp:11 rc.cpp:95
+#: rc.cpp:155
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Caserta"
@@ -248,35 +277,6 @@ msgstr ""
 msgid "Add Property"
 msgstr "Ecoj"
 
-#: lib/widgets/propertywidgetcontainer.cpp:201
-msgid "Add Custom Property..."
-msgstr ""
-
-#: lib/widgets/propertywidgetcontainer.cpp:209
-msgid "Move Up"
-msgstr "Movi supren"
-
-#: lib/widgets/propertywidgetcontainer.cpp:213
-msgid "Move Down"
-msgstr "Movi malsupren"
-
-#: lib/widgets/propertywidgetcontainer.cpp:221
-#: plugins/docks/scenedock/scenedock.cpp:100
-#: plugins/kparts/codeeditorpart/Actions/DeleteAction.cpp:34
-msgid "Delete"
-msgstr "Forigi"
-
-#: lib/widgets/propertywidgetcontainer.cpp:270
-#, kde-format
-msgid "Are you sure you wish to delete the item %1?"
-msgstr ""
-
-#: lib/widgets/propertywidgetcontainer.cpp:270
-#, fuzzy
-#| msgid "Delete"
-msgid "Delete Item?"
-msgstr "Forigi"
-
 #: lib/objectmanager.cpp:233
 msgid "NewScene"
 msgstr ""
@@ -284,12 +284,6 @@ msgstr ""
 #: plugins/docks/componentsdock/componentsdockplugin.cpp:41
 msgid "Components"
 msgstr "Komponantoj"
-
-#: plugins/docks/messagedock/messagedockplugin.cpp:42
-#, fuzzy
-#| msgid "&Message"
-msgid "Messages"
-msgstr "&Mesaĝo"
 
 #: plugins/docks/messagedock/messagedock.cpp:54
 #, kde-format
@@ -316,45 +310,51 @@ msgstr ""
 msgid "Clear All"
 msgstr "Forigi"
 
-#: plugins/docks/projectdock/projectdock.cpp:159
+#: plugins/docks/messagedock/messagedockplugin.cpp:41
+#, fuzzy
+#| msgid "&Message"
+msgid "Messages"
+msgstr "&Mesaĝo"
+
+#: plugins/docks/projectdock/projectdock.cpp:153
 #, fuzzy, kde-format
 #| msgid "Delete"
 msgid "Delete \"%1\"..."
 msgstr "Forigi"
 
-#: plugins/docks/projectdock/projectdock.cpp:200
+#: plugins/docks/projectdock/projectdock.cpp:194
 msgid "New"
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:204
+#: plugins/docks/projectdock/projectdock.cpp:198
 msgid "Add..."
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:211
-#: plugins/docks/projectdock/projectdock.cpp:352
+#: plugins/docks/projectdock/projectdock.cpp:205
+#: plugins/docks/projectdock/projectdock.cpp:346
 #, fuzzy
 #| msgid "New Folder"
 #| msgid_plural "New Folder (%1)"
 msgid "New Folder"
 msgstr "Nova dosierujo"
 
-#: plugins/docks/projectdock/projectdock.cpp:218
+#: plugins/docks/projectdock/projectdock.cpp:212
 #, kde-format
 msgid "New %1"
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:226 mainwindow.cpp:288
+#: plugins/docks/projectdock/projectdock.cpp:220 mainwindow.cpp:288
 msgid "Import Assets..."
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:228
+#: plugins/docks/projectdock/projectdock.cpp:222
 #, fuzzy
 #| msgid "Delete"
 msgctxt "Delete selected object from project"
 msgid "Delete"
 msgstr "Forigi"
 
-#: plugins/docks/projectdock/projectdock.cpp:328
+#: plugins/docks/projectdock/projectdock.cpp:322
 #, kde-format
 msgctxt "For shortening of the dialog text"
 msgid "%1 other object"
@@ -362,33 +362,29 @@ msgid_plural "%1 other objects"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/docks/projectdock/projectdock.cpp:329
+#: plugins/docks/projectdock/projectdock.cpp:323
 #, kde-format
 msgid ""
 "The object %1 is currently referenced by %2. Please remove these references "
 "before deleting the object."
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:329
+#: plugins/docks/projectdock/projectdock.cpp:323
 msgid "Object in use"
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:334
+#: plugins/docks/projectdock/projectdock.cpp:328
 #, kde-format
 msgid ""
 "Are you sure you wish to delete %1?\n"
 "This will delete the item and all its children!"
 msgstr ""
 
-#: plugins/docks/projectdock/projectdock.cpp:334
+#: plugins/docks/projectdock/projectdock.cpp:328
 #, fuzzy
 #| msgid "Delete"
 msgid "Really Delete?"
 msgstr "Forigi"
-
-#: plugins/docks/propertiesdock/propertiesdockplugin.cpp:40
-msgid "Properties"
-msgstr "Ecoj"
 
 #: plugins/docks/propertiesdock/propertywidgetitems/intvectorpropertywidgetitem.cpp:53
 #: plugins/docks/propertiesdock/propertywidgetitems/intvectorpropertywidgetitem.cpp:158
@@ -400,15 +396,19 @@ msgstr "Ecoj"
 msgid "Item count: %1"
 msgstr ""
 
-#: plugins/docks/scenedock/scenedockplugin.cpp:44
-msgid "Scene"
-msgstr ""
+#: plugins/docks/propertiesdock/propertiesdockplugin.cpp:41
+msgid "Properties"
+msgstr "Ecoj"
 
 #: plugins/docks/scenedock/scenedock.cpp:93 mainwindow.cpp:268
 #, fuzzy
 #| msgid "Open Project"
 msgid "New Game Object"
 msgstr "Malfermi Projekton"
+
+#: plugins/docks/scenedock/scenedockplugin.cpp:44
+msgid "Scene"
+msgstr ""
 
 #: plugins/kparts/codeeditorpart/Actions/AddEdge.cpp:35
 msgid "Add Edge"
@@ -442,6 +442,17 @@ msgstr ""
 msgid "Delete items by clicking on them."
 msgstr ""
 
+#: plugins/kparts/codeeditorpart/Actions/Select.cpp:37
+#: plugins/kparts/gluoneditorpart/gluoneditorpart.cpp:99
+#, fuzzy
+#| msgid "Delete"
+msgid "Select"
+msgstr "Forigi"
+
+#: plugins/kparts/codeeditorpart/Actions/Select.cpp:38
+msgid "Select Items by clicking on them."
+msgstr ""
+
 #: plugins/kparts/codeeditorpart/Actions/MoveNode.cpp:41
 #, fuzzy
 #| msgid "Move Down"
@@ -452,15 +463,13 @@ msgstr "Movi malsupren"
 msgid "Moves a node around the drawing area."
 msgstr ""
 
-#: plugins/kparts/codeeditorpart/Actions/Select.cpp:37
-#: plugins/kparts/gluoneditorpart/gluoneditorpart.cpp:99
-#, fuzzy
-#| msgid "Delete"
-msgid "Select"
-msgstr "Forigi"
+#: plugins/kparts/codeeditorpart/Core/threadDocument.cpp:51
+msgid "Untitled"
+msgstr ""
 
-#: plugins/kparts/codeeditorpart/Actions/Select.cpp:38
-msgid "Select Items by clicking on them."
+#: plugins/kparts/codeeditorpart/Core/threadDocument.cpp:61
+#: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.cpp:148
+msgid "Untitled0"
 msgstr ""
 
 #: plugins/kparts/codeeditorpart/Core/DynamicPropertiesList.cpp:186
@@ -475,24 +484,15 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:270
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: plugins/kparts/codeeditorpart/Core/DynamicPropertiesList.cpp:190 rc.cpp:83
-#: rc.cpp:227
+#: plugins/kparts/codeeditorpart/Core/DynamicPropertiesList.cpp:190 rc.cpp:59
+#: rc.cpp:203
 msgid "Global"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:62
-#. i18n: ectx: property (text), item, widget (QComboBox, _cmbOptions)
-#: plugins/kparts/codeeditorpart/Core/DynamicPropertiesList.cpp:193 rc.cpp:23
+#. i18n: ectx: property (text), item, widget (KComboBox, _cmbOptions)
+#: plugins/kparts/codeeditorpart/Core/DynamicPropertiesList.cpp:193 rc.cpp:230
 msgid "None"
-msgstr ""
-
-#: plugins/kparts/codeeditorpart/Core/threadDocument.cpp:51
-msgid "Untitled"
-msgstr ""
-
-#: plugins/kparts/codeeditorpart/Core/threadDocument.cpp:61
-#: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.cpp:148
-msgid "Untitled0"
 msgstr ""
 
 #: plugins/kparts/codeeditorpart/GraphicsItem/NodeItem.cpp:203
@@ -504,11 +504,6 @@ msgstr ""
 #: plugins/kparts/codeeditorpart/GraphicsItem/NodeItem.cpp:218
 #, kde-format
 msgid "Value: %1"
-msgstr ""
-
-#: plugins/kparts/codeeditorpart/Models/model_GraphLayers.cpp:97
-#, kde-format
-msgid "Untitled%1"
 msgstr ""
 
 #: plugins/kparts/codeeditorpart/Models/model_GraphProperties.cpp:100
@@ -524,8 +519,13 @@ msgstr "Ecoj"
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:290
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: plugins/kparts/codeeditorpart/Models/model_GraphProperties.cpp:102
-#: rc.cpp:74 rc.cpp:80 rc.cpp:233
+#: rc.cpp:50 rc.cpp:56 rc.cpp:209
 msgid "Value"
+msgstr ""
+
+#: plugins/kparts/codeeditorpart/Models/model_GraphLayers.cpp:97
+#, kde-format
+msgid "Untitled%1"
 msgstr ""
 
 #: plugins/kparts/gluonviewerpart/gluonviewerpart.cpp:82
@@ -561,50 +561,50 @@ msgstr ""
 msgid "Snap"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:100
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:117
-#: plugins/tools/vcs/vcstool.cpp:108
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:101
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:118
+#: plugins/tools/vcs/vcstool.cpp:130
 #, fuzzy
 #| msgid "&Message"
 msgid "Commit Message"
 msgstr "&Mesaĝo"
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:198
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:200
 msgctxt "file was added to versioncontrolsystem"
 msgid "Added"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:202
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:204
 #, fuzzy
 #| msgid "Delete"
 msgctxt "file was deleted from versioncontrolsystem"
 msgid "Deleted"
 msgstr "Forigi"
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:206
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:208
 msgctxt "version controlled file was modified"
 msgid "Modified"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:209
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:211
 #, fuzzy
 #| msgid "Unknown Type"
 msgctxt "file is not known to versioncontrolsystem"
 msgid "Unknown"
 msgstr "Nekonata Tipo"
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:384
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:395
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:393
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:404
 msgid "Select Files to commit"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:385
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:394
 #, fuzzy
 #| msgid "&Message"
 msgid "Commit Message:"
 msgstr "&Mesaĝo"
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:386
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:395
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -618,25 +618,25 @@ msgid ""
 "font-size:9pt;\">Insert commit message here</p></body></html>"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:391
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:400
 #, fuzzy
 #| msgid "&Message"
 msgid "Commit Files:"
 msgstr "&Mesaĝo"
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:393
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:402
 msgid "Files to commit"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:394
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:403
 msgid "Status"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:396
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:405
 msgid "Recursive:"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:399
+#: plugins/tools/vcs/widgets/vcscommitdialog.cpp:408
 #, fuzzy
 #| msgid "&Message"
 msgid "Previous Messages:"
@@ -651,81 +651,81 @@ msgstr ""
 msgid "Difference between revisions"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:105
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:106
 msgid "Diff to previous revision"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:108
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:109
 msgid "Diff between revisions"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:172
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:173
 msgid "Difference To Previous"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:196
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:197
 msgid "Difference between Revisions"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:283
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:284
 #, fuzzy
 #| msgid "View"
 msgid "Logview"
 msgstr "Vido"
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:284
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:285
 msgid "Events:"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:285
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:286
 msgid "Event Details:"
 msgstr ""
 
-#: plugins/tools/vcs/widgets/vcslogwidget.cpp:286
+#: plugins/tools/vcs/widgets/vcslogwidget.cpp:287
 #, fuzzy
 #| msgid "&Message"
 msgid "Message:"
 msgstr "&Mesaĝo"
 
-#: plugins/tools/vcs/vcstoolplugin.cpp:43
-msgid "Version Control System"
-msgstr ""
-
-#: plugins/tools/vcs/vcstool.cpp:51
+#: plugins/tools/vcs/vcstool.cpp:64
 msgid "Code"
 msgstr ""
 
-#: plugins/tools/vcs/vcstool.cpp:79
+#: plugins/tools/vcs/vcstool.cpp:101
 #, fuzzy
 #| msgid "&Message"
 msgid "Commit"
 msgstr "&Mesaĝo"
 
-#: plugins/tools/vcs/vcstool.cpp:84
+#: plugins/tools/vcs/vcstool.cpp:106
 msgid "Diff"
 msgstr ""
 
-#: plugins/tools/vcs/vcstool.cpp:89
+#: plugins/tools/vcs/vcstool.cpp:111
 msgid "Log"
 msgstr ""
 
-#: plugins/tools/vcs/vcstool.cpp:94
+#: plugins/tools/vcs/vcstool.cpp:116
 msgid "Push"
 msgstr ""
 
-#: plugins/tools/vcs/vcstool.cpp:99
+#: plugins/tools/vcs/vcstool.cpp:121
 msgid "Pull"
 msgstr ""
 
-#: plugins/tools/vcs/vcstool.cpp:121
+#: plugins/tools/vcs/vcstool.cpp:143
 msgid "Diff Output"
 msgstr ""
 
-#: plugins/tools/vcs/vcstool.cpp:134
+#: plugins/tools/vcs/vcstool.cpp:156
 #, fuzzy
 #| msgid "&Message"
 msgid "Log Message"
 msgstr "&Mesaĝo"
+
+#: plugins/tools/vcs/vcstoolplugin.cpp:43
+msgid "Version Control System"
+msgstr ""
 
 #: main.cpp:34
 msgid "Gluon Creator"
@@ -954,55 +954,9 @@ msgstr "axel@esperanto-jeunes.org"
 msgid "Lock the dock layout"
 msgstr "Ludfojo"
 
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, addMultiNodes)
-#: rc.cpp:8
-msgid "Dialog"
-msgstr ""
-
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:20
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:11
-msgid "Nodes:"
-msgstr ""
-
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:30
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:14
-msgid "Radius:"
-msgstr ""
-
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:47
-#. i18n: ectx: property (text), widget (QLabel, _txtRadius)
-#: rc.cpp:17
-msgid "0"
-msgstr ""
-
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:54
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:20
-#, fuzzy
-#| msgid "Unknown Type"
-msgid "Connection Type"
-msgstr "Nekonata Tipo"
-
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:67
-#. i18n: ectx: property (text), item, widget (QComboBox, _cmbOptions)
-#: rc.cpp:26
-msgid "Circular"
-msgstr ""
-
-#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:72
-#. i18n: ectx: property (text), item, widget (QComboBox, _cmbOptions)
-#: rc.cpp:29
-#, fuzzy
-#| msgid "Component"
-msgid "Complete"
-msgstr "Komponanto"
-
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, EdgePropertiesWidget)
-#: rc.cpp:32
+#: rc.cpp:8
 #, fuzzy
 #| msgid "Properties"
 msgid "Edge Properties"
@@ -1010,13 +964,13 @@ msgstr "Ecoj"
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:30
 #. i18n: ectx: property (toolTip), widget (KLineEdit, _name)
-#: rc.cpp:38
+#: rc.cpp:14
 msgid "Edge name"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:44
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
-#: rc.cpp:41
+#: rc.cpp:17
 #, fuzzy
 #| msgid "New Folder"
 #| msgid_plural "New Folder (%1)"
@@ -1025,49 +979,49 @@ msgstr "Nova dosierujo"
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:44
+#: rc.cpp:20
 msgid "Style:"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:61
 #. i18n: ectx: property (toolTip), widget (KComboBox, _style)
-#: rc.cpp:47
+#: rc.cpp:23
 msgid "Edge style"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:65
 #. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:50
+#: rc.cpp:26
 msgid "solid"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:70
 #. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:53
+#: rc.cpp:29
 msgid "dash"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:75
 #. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:56
+#: rc.cpp:32
 msgid "dot"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:80
 #. i18n: ectx: property (text), item, widget (KComboBox, _style)
-#: rc.cpp:59
+#: rc.cpp:35
 msgid "dash dot"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:90
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:62
+#: rc.cpp:38
 msgid "Show"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:100
 #. i18n: ectx: property (toolTip), widget (KPushButton, _showName)
-#: rc.cpp:65
+#: rc.cpp:41
 msgid "Show/hide edge name"
 msgstr ""
 
@@ -1077,7 +1031,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:283
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:68 rc.cpp:77 rc.cpp:230
+#: rc.cpp:44 rc.cpp:53 rc.cpp:206
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Caserta"
@@ -1086,7 +1040,7 @@ msgstr "Caserta"
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:113
 #. i18n: ectx: property (toolTip), widget (KPushButton, _showValue)
-#: rc.cpp:71
+#: rc.cpp:47
 msgid "Show/add edge value"
 msgstr ""
 
@@ -1094,7 +1048,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, _addProperty)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:197
 #. i18n: ectx: property (text), widget (KPushButton, _addProperty)
-#: rc.cpp:86 rc.cpp:212
+#: rc.cpp:62 rc.cpp:188
 msgid "add"
 msgstr ""
 
@@ -1102,25 +1056,25 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:151
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:89 rc.cpp:200
+#: rc.cpp:65 rc.cpp:176
 msgid "Color:"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:186
 #. i18n: ectx: property (toolTip), widget (KLineEdit, _value)
-#: rc.cpp:92
+#: rc.cpp:68
 msgid "Edge value"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:196
 #. i18n: ectx: property (toolTip), widget (QLabel, label_4)
-#: rc.cpp:95
+#: rc.cpp:71
 msgid "Edge width"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/EdgePropertiesWidget.ui:199
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:98
+#: rc.cpp:74
 msgid "Width:"
 msgstr ""
 
@@ -1128,44 +1082,44 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:93
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:101 rc.cpp:188
+#: rc.cpp:77 rc.cpp:164
 msgid "Value:"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:52
 #. i18n: ectx: property (text), widget (QRadioButton, _activateGraph)
-#: rc.cpp:104
+#: rc.cpp:80
 msgid "graph name here"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:59
 #. i18n: ectx: property (text), widget (QToolButton, _graphVisible)
-#: rc.cpp:107
+#: rc.cpp:83
 msgid "..."
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:72
 #. i18n: ectx: property (toolTip), widget (KPushButton, _graphDelete)
-#: rc.cpp:110
+#: rc.cpp:86
 msgid "Delete the active graph"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:75
 #. i18n: ectx: property (whatsThis), widget (KPushButton, _graphDelete)
-#: rc.cpp:113
+#: rc.cpp:89
 msgid "Delete the current active graph: delete all nodes and edges"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:78
 #. i18n: ectx: property (text), widget (KPushButton, _graphDelete)
-#: rc.cpp:116
+#: rc.cpp:92
 msgctxt "Do not translate, X is for delete"
 msgid "x"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:115
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:122
+#: rc.cpp:98
 #, fuzzy
 #| msgid "New Folder"
 #| msgid_plural "New Folder (%1)"
@@ -1174,19 +1128,19 @@ msgstr "Nova dosierujo"
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:131
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _graphNodeColor)
-#: rc.cpp:125
+#: rc.cpp:101
 msgid "Color for new nodes"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:138
 #. i18n: ectx: property (toolTip), widget (KPushButton, _graphNodeColorApplyNow)
-#: rc.cpp:128
+#: rc.cpp:104
 msgid "Apply the current color to all nodes"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:141
 #. i18n: ectx: property (whatsThis), widget (KPushButton, _graphNodeColorApplyNow)
-#: rc.cpp:131
+#: rc.cpp:107
 msgid "Apply the current color to all nodes on the drawing area"
 msgstr ""
 
@@ -1194,13 +1148,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, _graphNodeColorApplyNow)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:180
 #. i18n: ectx: property (text), widget (KPushButton, _graphEdgeColorApplyNow)
-#: rc.cpp:134 rc.cpp:149
+#: rc.cpp:110 rc.cpp:125
 msgid "All"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:151
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:137
+#: rc.cpp:113
 #, fuzzy
 #| msgid "New Folder"
 #| msgid_plural "New Folder (%1)"
@@ -1209,25 +1163,25 @@ msgstr "Nova dosierujo"
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:167
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _graphEdgeColor)
-#: rc.cpp:140
+#: rc.cpp:116
 msgid "Color for new edges"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:174
 #. i18n: ectx: property (toolTip), widget (KPushButton, _graphEdgeColorApplyNow)
-#: rc.cpp:143
+#: rc.cpp:119
 msgid "Apply the current color to all edges"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:177
 #. i18n: ectx: property (whatsThis), widget (KPushButton, _graphEdgeColorApplyNow)
-#: rc.cpp:146
+#: rc.cpp:122
 msgid "Apply the current color to all edges on the drawing area"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:189
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:152
+#: rc.cpp:128
 msgid "Show names in:"
 msgstr ""
 
@@ -1235,7 +1189,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:224
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:155 rc.cpp:167
+#: rc.cpp:131 rc.cpp:143
 msgid "Nodes"
 msgstr ""
 
@@ -1243,31 +1197,31 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:238
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:158 rc.cpp:173
+#: rc.cpp:134 rc.cpp:149
 msgid "Edges"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:210
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:161
+#: rc.cpp:137
 msgid "Graph is oriented"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:217
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:164
+#: rc.cpp:140
 msgid "Graph is Automate"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/GraphPropertiesWidget.ui:231
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:170
+#: rc.cpp:146
 msgid "Show values in:"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:20
 #. i18n: ectx: property (windowTitle), widget (QWidget, NodePropertiesWidget)
-#: rc.cpp:176
+#: rc.cpp:152
 #, fuzzy
 #| msgid "Properties"
 msgid "Node Properties"
@@ -1275,26 +1229,26 @@ msgstr "Ecoj"
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:61
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
-#: rc.cpp:182
+#: rc.cpp:158
 msgid "X-coordinate "
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:185
+#: rc.cpp:161
 msgctxt "X-coordinate "
 msgid "x"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:122
 #. i18n: ectx: property (toolTip), widget (QLabel, label_4)
-#: rc.cpp:191
+#: rc.cpp:167
 msgid "Y-coordinate "
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:194
+#: rc.cpp:170
 msgctxt "Y-coordinate "
 msgid "y"
 msgstr ""
@@ -1303,7 +1257,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QLabel, label_6)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:234
 #. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
-#: rc.cpp:197 rc.cpp:224
+#: rc.cpp:173 rc.cpp:200
 #, fuzzy
 #| msgid "New Folder"
 #| msgid_plural "New Folder (%1)"
@@ -1314,39 +1268,85 @@ msgstr "Nova dosierujo"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:174
 #. i18n: ectx: property (toolTip), widget (KDoubleNumInput, _width)
-#: rc.cpp:203 rc.cpp:209
+#: rc.cpp:179 rc.cpp:185
 msgid "Node size"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:164
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:206
+#: rc.cpp:182
 msgid "Size:"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:204
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:215
+#: rc.cpp:191
 msgid "Image"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:214
 #. i18n: ectx: property (text), widget (QCheckBox, _begin)
-#: rc.cpp:218
+#: rc.cpp:194
 msgid "Begin"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:227
 #. i18n: ectx: property (text), widget (QCheckBox, _end)
-#: rc.cpp:221
+#: rc.cpp:197
 msgid "End"
 msgstr ""
 
 #. i18n: file: plugins/kparts/codeeditorpart/Interface/NodePropertiesWidget.ui:306
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:236
+#: rc.cpp:212
 msgid "Preview"
 msgstr ""
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:14
+#. i18n: ectx: property (windowTitle), widget (QDialog, addMultiNodes)
+#: rc.cpp:215
+msgid "Dialog"
+msgstr ""
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:20
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:218
+msgid "Nodes:"
+msgstr ""
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:30
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:221
+msgid "Radius:"
+msgstr ""
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:47
+#. i18n: ectx: property (text), widget (QLabel, _txtRadius)
+#: rc.cpp:224
+msgid "0"
+msgstr ""
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:54
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:227
+#, fuzzy
+#| msgid "Unknown Type"
+msgid "Connection Type"
+msgstr "Nekonata Tipo"
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:67
+#. i18n: ectx: property (text), item, widget (KComboBox, _cmbOptions)
+#: rc.cpp:233
+msgid "Circular"
+msgstr ""
+
+#. i18n: file: plugins/kparts/codeeditorpart/Interface/AddMultiNodes.ui:72
+#. i18n: ectx: property (text), item, widget (KComboBox, _cmbOptions)
+#: rc.cpp:236
+#, fuzzy
+#| msgid "Component"
+msgid "Complete"
+msgstr "Komponanto"
 
 #. i18n: file: plugins/kparts/gluonviewerpart/gluonviewerpartui.rc:8
 #. i18n: ectx: Menu (view)
