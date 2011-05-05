@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-04 04:05+0200\n"
+"POT-Creation-Date: 2011-05-05 04:05+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -174,9 +174,39 @@ msgid_plural "KGet is downloading %1 files"
 msgstr[0] ""
 msgstr[1] ""
 
+#: core/signature.cpp:217
+msgid "The key to verify the signature is missing, do you want to download it?"
+msgstr ""
+
+#: core/signature.cpp:235
+#, kde-format
+msgid ""
+"The signature could not be verified for %1. See transfer settings for more "
+"information."
+msgstr ""
+
+#: core/signature.cpp:236
+msgid "Signature not verified"
+msgstr ""
+
 #: core/linkimporter.cpp:90
 #, kde-format
 msgid "Error trying to get %1"
+msgstr ""
+
+#: core/keydownloader.cpp:73
+msgid ""
+"No server for downloading keys is specified in settings. Downloading aborted."
+msgstr ""
+
+#: core/keydownloader.cpp:74 core/keydownloader.cpp:94
+msgid "No key server"
+msgstr ""
+
+#: core/keydownloader.cpp:93
+msgid ""
+"No useful key server found, key not downloaded. Add more servers to the "
+"settings or restart KGet and retry downloading."
 msgstr ""
 
 #: core/kget.cpp:121
@@ -325,7 +355,7 @@ msgid "You are already downloading the same file"
 msgstr ""
 
 #: core/kget.cpp:1116 core/kget.cpp:1119 core/urlchecker.cpp:606
-#: core/urlchecker.cpp:713 transfer-plugins/metalink/metalink.cpp:737
+#: core/urlchecker.cpp:713 transfer-plugins/metalink/metalink.cpp:738
 msgid "File already exists"
 msgstr "Dosiero jam ekzistas"
 
@@ -374,8 +404,8 @@ msgstr ""
 msgid "Download started"
 msgstr "Elŝutis"
 
-#: core/kget.cpp:1355 core/datasourcefactory.cpp:286
-#: core/datasourcefactory.cpp:613 transfer-plugins/metalink/metalink.cpp:201
+#: core/kget.cpp:1355 core/datasourcefactory.cpp:287
+#: core/datasourcefactory.cpp:614 transfer-plugins/metalink/metalink.cpp:202
 #: ui/metalinkcreator/metalinkcreator.cpp:161
 #: ui/metalinkcreator/metalinkcreator.cpp:178
 msgid "Error"
@@ -444,85 +474,55 @@ msgstr ""
 msgid "Downloads completed"
 msgstr ""
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:281
 msgctxt "file in a filesystem"
 msgid "File"
 msgstr "Dosiero"
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:281
 msgctxt "status of the download"
 msgid "Status"
 msgstr ""
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:281
 msgctxt "size of the download"
 msgid "Size"
 msgstr ""
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:281
 msgctxt "checksum of a file"
 msgid "Checksum"
 msgstr ""
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:281
 msgctxt "signature of a file"
 msgid "Signature"
+msgstr ""
+
+#: core/verificationmodel.cpp:151
+msgctxt "the type of the hash, e.g. MD5"
+msgid "Type"
+msgstr ""
+
+#: core/verificationmodel.cpp:153
+msgctxt "the used hash for verification"
+msgid "Hash"
+msgstr ""
+
+#: core/verificationmodel.cpp:155
+msgctxt "verification-result of a file, can be true/false"
+msgid "Verified"
 msgstr ""
 
 #: core/kgetkjobadapter.cpp:45
 msgid "KGet Transfer"
 msgstr ""
 
-#: core/verifier.cpp:412
-msgctxt "the type of the hash, e.g. MD5"
-msgid "Type"
-msgstr ""
-
-#: core/verifier.cpp:414
-msgctxt "the used hash for verification"
-msgid "Hash"
-msgstr ""
-
-#: core/verifier.cpp:416
-msgctxt "verification-result of a file, can be true/false"
-msgid "Verified"
-msgstr ""
-
-#: core/verifier.cpp:1210
-msgid "The key to verify the signature is missing, do you want to download it?"
-msgstr ""
-
-#: core/verifier.cpp:1228
-#, kde-format
-msgid ""
-"The signature could not be verified for %1. See transfer settings for more "
-"information."
-msgstr ""
-
-#: core/verifier.cpp:1229
-msgid "Signature not verified"
-msgstr ""
-
-#: core/verifier.cpp:1334
-msgid ""
-"No server for downloading keys is specified in settings. Downloading aborted."
-msgstr ""
-
-#: core/verifier.cpp:1335 core/verifier.cpp:1355
-msgid "No key server"
-msgstr ""
-
-#: core/verifier.cpp:1354
-msgid ""
-"No useful key server found, key not downloaded. Add more servers to the "
-"settings or restart KGet and retry downloading."
-msgstr ""
-
-#: core/datasourcefactory.cpp:286
+#: core/datasourcefactory.cpp:287
 msgid "Filesize is larger than maximum file size supported by VFAT."
 msgstr ""
 
-#: core/datasourcefactory.cpp:613
+#: core/datasourcefactory.cpp:614
 #, kde-format
 msgctxt "A mirror is removed when the file has the wrong download size"
 msgid "%1 removed as it did report a wrong file size."
@@ -903,20 +903,20 @@ msgstr ""
 msgid "URL:"
 msgstr "URL:"
 
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:227
-#: transfer-plugins/kio/transferKio.cpp:264
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:228
+#: transfer-plugins/kio/transferKio.cpp:265
 #, kde-format
 msgid "The download (%1) could not be verified. Do you want to repair it?"
 msgstr ""
 
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:230
-#: transfer-plugins/kio/transferKio.cpp:267
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:231
+#: transfer-plugins/kio/transferKio.cpp:268
 #, kde-format
 msgid "The download (%1) could not be verified. Do you want to redownload it?"
 msgstr ""
 
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:234
-#: transfer-plugins/kio/transferKio.cpp:271
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:235
+#: transfer-plugins/kio/transferKio.cpp:272
 msgid "Verification failed."
 msgstr ""
 
@@ -926,7 +926,7 @@ msgstr ""
 msgid "Failed to write to the file."
 msgstr "Ne povas krei %1 : %2"
 
-#: transfer-plugins/kio/transferKio.cpp:93
+#: transfer-plugins/kio/transferKio.cpp:94
 msgctxt "transfer state: connecting"
 msgid "Connecting...."
 msgstr ""
@@ -965,26 +965,26 @@ msgctxt "Transfer State: Aborted"
 msgid "Aborted"
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:82
+#: transfer-plugins/metalink/metalink.cpp:83
 msgid "Downloading Metalink File...."
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:116
+#: transfer-plugins/metalink/metalink.cpp:117
 msgid ""
 "A newer version of this Metalink might exist, do you want to download it?"
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:117
+#: transfer-plugins/metalink/metalink.cpp:118
 #, fuzzy
 #| msgid "Downloading"
 msgid "Redownload Metalink"
 msgstr "Elŝutas"
 
-#: transfer-plugins/metalink/metalink.cpp:201
+#: transfer-plugins/metalink/metalink.cpp:202
 msgid "Download failed, no working URLs were found."
 msgstr ""
 
-#: transfer-plugins/metalink/metalink.cpp:510
+#: transfer-plugins/metalink/metalink.cpp:511
 msgid ""
 "The download could not be verified, do you want to repair (if repairing does "
 "not work the download would be restarted) it?"
@@ -1565,25 +1565,25 @@ msgstr ""
 msgid "Import dropped files"
 msgstr ""
 
-#: ui/metalinkcreator/dragdlg.cpp:90 ui/metalinkcreator/filedlg.cpp:64
-#: ui/metalinkcreator/filedlg.cpp:172
+#: ui/metalinkcreator/dragdlg.cpp:90 ui/metalinkcreator/filedlg.cpp:66
+#: ui/metalinkcreator/filedlg.cpp:174
 msgctxt "comma, to seperate members of a list"
 msgid ","
 msgstr ","
 
-#: ui/metalinkcreator/filedlg.cpp:113
+#: ui/metalinkcreator/filedlg.cpp:115
 msgid "File Properties"
 msgstr "Dosierecoj"
 
-#: ui/metalinkcreator/filedlg.cpp:125
+#: ui/metalinkcreator/filedlg.cpp:127
 msgid "Enter a filename."
 msgstr ""
 
-#: ui/metalinkcreator/filedlg.cpp:128
+#: ui/metalinkcreator/filedlg.cpp:130
 msgid "The filename exists already, choose a different one."
 msgstr ""
 
-#: ui/metalinkcreator/filedlg.cpp:131
+#: ui/metalinkcreator/filedlg.cpp:133
 msgid "Enter at least one URL."
 msgstr ""
 
@@ -2013,21 +2013,21 @@ msgstr ""
 msgid "Transfer Details"
 msgstr ""
 
-#: ui/verificationdialog.cpp:37
+#: ui/verificationdialog.cpp:39
 msgid "Add checksum"
 msgstr ""
 
-#: ui/verificationdialog.cpp:86
+#: ui/verificationdialog.cpp:88
 #, kde-format
 msgid "Transfer Verification for %1"
 msgstr ""
 
-#: ui/verificationdialog.cpp:199
+#: ui/verificationdialog.cpp:201
 #, kde-format
 msgid "%1 was successfully verified."
 msgstr ""
 
-#: ui/verificationdialog.cpp:200
+#: ui/verificationdialog.cpp:202
 msgid "Verification successful"
 msgstr ""
 
