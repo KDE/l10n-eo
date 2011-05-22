@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-21 03:33+0200\n"
+"POT-Creation-Date: 2011-05-22 03:34+0200\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1412,7 +1412,7 @@ msgstr "Ecoj de Ebeno"
 
 #. i18n: file: plugins/extensions/compose/wdg_compose.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:207 ui/tool/kis_tool_paint.cc:247
+#: rc.cpp:207 ui/kis_paintop_box.cc:154
 #, fuzzy
 msgid "Opacity: "
 msgstr "Travidebleco:"
@@ -4372,7 +4372,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:1418 rc.cpp:3094
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:136
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:965
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:954
 msgid "Radius"
 msgstr "Radiuso"
 
@@ -7728,7 +7728,7 @@ msgstr "Limigi al aktuala ebeno"
 #. i18n: file: plugins/tools/tool_crop/wdg_tool_crop.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
 #: rc.cpp:3127 image/kis_crop_visitor.h:121
-#: plugins/tools/tool_crop/kis_tool_crop.cc:442
+#: plugins/tools/tool_crop/kis_tool_crop.cc:451
 msgid "Crop"
 msgstr "Stuci"
 
@@ -8021,8 +8021,8 @@ msgstr "Triangula ondo"
 
 #. i18n: file: plugins/tools/tool_transform2/wdg_tool_transform.ui:1062
 #. i18n: ectx: property (text), widget (QPushButton, lockUnlockPointsButton)
-#: rc.cpp:3303 plugins/tools/tool_transform2/kis_tool_transform.cc:2502
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2893
+#: rc.cpp:3303 plugins/tools/tool_transform2/kis_tool_transform.cc:2509
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2900
 msgid "Lock Points"
 msgstr ""
 
@@ -9893,21 +9893,21 @@ msgstr "Fluplenigo"
 msgid "Gradient Fill"
 msgstr "Kolortransiro"
 
-#: image/brushengine/kis_paintop_factory.cpp:45
+#: image/brushengine/kis_paintop_factory.cpp:61
 #, fuzzy
 #| msgid "Radius"
 msgctxt "Category of brush engines"
 msgid "Experimental"
 msgstr "Radiuso"
 
-#: image/brushengine/kis_paintop_factory.cpp:50
+#: image/brushengine/kis_paintop_factory.cpp:66
 #, fuzzy
 #| msgid "&Scale"
 msgctxt "Category of brush engines"
 msgid "Stable"
 msgstr "&Skali"
 
-#: image/brushengine/kis_paintop_registry.cc:113
+#: image/brushengine/kis_paintop_registry.cc:117
 msgid "default"
 msgstr "norma"
 
@@ -10520,29 +10520,17 @@ msgstr "&Rotacii Ebenon..."
 msgid "Compose Layer"
 msgstr "Forigita ebeno"
 
-#: plugins/extensions/dockers/channeldocker/channeldocker_dock.cpp:33
-#, fuzzy
-#| msgid "Channel"
-msgid "Channels"
-msgstr "Kanalo"
-
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:61
 #, fuzzy
 #| msgid "Enable"
 msgid "Enabled"
 msgstr "Ŝalti"
 
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:44
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:102
-#: plugins/extensions/histogram/dlg_histogram.cc:47
-#: plugins/extensions/histogram/dlg_histogram.cc:54
-msgid "Histogram"
-msgstr "Histogramo"
-
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:115
-#, kde-format
-msgid "Histograms are not supported for images in the %1 colorspace."
-msgstr ""
+#: plugins/extensions/dockers/channeldocker/channeldocker_dock.cpp:33
+#, fuzzy
+#| msgid "Channel"
+msgid "Channels"
+msgstr "Kanalo"
 
 #: plugins/extensions/dockers/defaultdockers/kis_birdeye_box.cc:62
 msgid "Select the exposure (stops) for HDR images"
@@ -10551,6 +10539,18 @@ msgstr ""
 #: plugins/extensions/dockers/defaultdockers/kis_palette_docker.cc:32
 msgid "Palettes"
 msgstr "Paletroj"
+
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:44
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:106
+#: plugins/extensions/histogram/dlg_histogram.cc:47
+#: plugins/extensions/histogram/dlg_histogram.cc:54
+msgid "Histogram"
+msgstr "Histogramo"
+
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:119
+#, kde-format
+msgid "Histograms are not supported for images in the %1 colorspace."
+msgstr ""
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:76
 msgid "Layers"
@@ -10656,7 +10656,7 @@ msgstr "&Sekva ebeno"
 msgid "&Effect Mask..."
 msgstr "Elekto"
 
-#: plugins/extensions/dockers/digitalmixer/digitalmixer_dock.cc:42
+#: plugins/extensions/dockers/digitalmixer/digitalmixer_dock.cc:43
 #, fuzzy
 msgid "Digital Colors Mixer"
 msgstr "Pentriiloj"
@@ -10680,12 +10680,6 @@ msgstr "Simila Elekto"
 msgid "Small Color Selector"
 msgstr "Simila Elekto"
 
-#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:30
-#, fuzzy
-#| msgid "Similar Selection"
-msgid "Specific Color Selector"
-msgstr "Simila Elekto"
-
 #: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:47
 #, kde-format
 msgid "%1:"
@@ -10697,7 +10691,13 @@ msgstr "%1:"
 msgid "Color name:"
 msgstr "Kolorspaco:"
 
-#: plugins/extensions/dockers/trianglecolorselector/kis_triangle_color_selector_dock.cc:28
+#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:31
+#, fuzzy
+#| msgid "Similar Selection"
+msgid "Specific Color Selector"
+msgstr "Simila Elekto"
+
+#: plugins/extensions/dockers/trianglecolorselector/kis_triangle_color_selector_dock.cc:29
 msgid "Triangle Color Selector"
 msgstr ""
 
@@ -10931,11 +10931,6 @@ msgstr "Elekto"
 msgid "KS%1 Engine"
 msgstr ""
 
-#: plugins/extensions/painterlyframework/kis_painterlymixerdocker.cpp:36
-#, fuzzy
-msgid "Painterly Color Mixer"
-msgstr "Pentriiloj"
-
 #: plugins/extensions/painterlyframework/kis_ks_colorspace.h:77
 #, fuzzy, kde-format
 msgid "Painterly Color Space, %1 wavelengths"
@@ -10958,6 +10953,11 @@ msgstr "Alfo"
 #, fuzzy
 msgid "Scattering"
 msgstr "Koloraĵoj"
+
+#: plugins/extensions/painterlyframework/kis_painterlymixerdocker.cpp:36
+#, fuzzy
+msgid "Painterly Color Mixer"
+msgstr "Pentriiloj"
 
 #: plugins/extensions/rotateimage/rotateimage.cc:67
 msgid "&Rotate Image..."
@@ -11557,7 +11557,7 @@ msgid ""
 "present) animation effects."
 msgstr ""
 
-#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:657
+#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:654
 #: ui/kis_aboutdata.h:31 ui/kis_clipboard.cc:154
 msgid "Krita"
 msgstr "Krito"
@@ -11905,7 +11905,7 @@ msgid "Darken"
 msgstr "Malheligi"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:31
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:925
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:914
 #, fuzzy
 #| msgid "Crop Image"
 msgid "Mirror"
@@ -11923,13 +11923,13 @@ msgid "Mirrored"
 msgstr "Tondi Bildon"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:945
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:934
 #, fuzzy
 msgid "Horizontally"
 msgstr "Triangula ondo"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:947
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:936
 #, fuzzy
 msgid "Vertically"
 msgstr "Triangula ondo"
@@ -12678,26 +12678,26 @@ msgid "Color Rate"
 msgstr "Kolorgamo"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:137
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:889
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:878
 #, fuzzy
 msgctxt "smooth out the curves while drawing"
 msgid "Smoothness:"
 msgstr "Linilarĝeco:"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:152
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:904
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:893
 #, fuzzy
 #| msgid "Distance: "
 msgid "Assistant:"
 msgstr "Distanco:"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:153
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:905
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:894
 msgid "You need to add Ruler Assistants before this tool will work."
 msgstr ""
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:156
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:908
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:897
 #, fuzzy
 #| msgid "Magentas"
 msgid "Assistant Magnetism"
@@ -12931,21 +12931,21 @@ msgstr "Peniko"
 msgid "Decrease Brush Size"
 msgstr "Penikograndeco"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:917
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:906
 msgid "Axis point"
 msgstr ""
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:924
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:913
 msgid "Symmetry"
 msgstr ""
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:926
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:915
 #, fuzzy
 #| msgid "Triangle"
 msgid "Translate"
 msgstr "Triangulo"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:930
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:919
 #, fuzzy
 #| msgid "Brush size"
 msgid "Brush count"
@@ -13061,7 +13061,7 @@ msgstr ""
 msgid "Similar Selection"
 msgstr "Simila Elekto"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:147
+#: plugins/tools/tool_crop/kis_tool_crop.h:148
 msgid "Crop the image to an area"
 msgstr ""
 
@@ -13236,33 +13236,33 @@ msgstr "Anguloj:"
 msgid "Transform"
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2099
+#: plugins/tools/tool_transform2/kis_tool_transform.h:435
+msgid "Transform a layer or a selection"
+msgstr ""
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2106
 #, fuzzy
 msgid "Apply Transformation"
 msgstr "Anguloj:"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2356
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2363
 #, fuzzy
 msgid "Affine"
 msgstr "Ligita"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2357
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2364
 msgid "Similitude"
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2358
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2365
 #, fuzzy
 #| msgid "Right:"
 msgid "Rigid"
 msgstr "Dekstre:"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2504
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2889
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2511
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2896
 msgid "Unlock Points"
-msgstr ""
-
-#: plugins/tools/tool_transform2/kis_tool_transform.h:435
-msgid "Transform a layer or a selection"
 msgstr ""
 
 #: ui/kis_filter_handler.cc:110
@@ -13355,6 +13355,11 @@ msgstr "Ecoj de Bildo"
 msgid "Layer Properties"
 msgstr "Ecoj de Ebeno"
 
+#: ui/dialogs/kis_dlg_transformation_effect.cpp:38
+#, fuzzy
+msgid "New Transformation Mask"
+msgstr "&Stompilo"
+
 #: ui/dialogs/kis_dlg_preferences.cc:190
 msgid "Monitor profile: "
 msgstr ""
@@ -13385,7 +13390,7 @@ msgstr "Koloragordo"
 msgid "Tablet"
 msgstr "Tabulo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:654
+#: ui/dialogs/kis_dlg_preferences.cc:651
 msgid ""
 "You are trying to enable OpenGL\n"
 "\n"
@@ -13394,11 +13399,6 @@ msgid ""
 "\n"
 "Are you sure you want to enable OpenGL?\n"
 msgstr ""
-
-#: ui/dialogs/kis_dlg_transformation_effect.cpp:38
-#, fuzzy
-msgid "New Transformation Mask"
-msgstr "&Stompilo"
 
 #: ui/flake/kis_shape_controller.cpp:229
 #, kde-format
@@ -13627,48 +13627,48 @@ msgstr "Andreas Lundin"
 msgid "New configuration %1"
 msgstr "Anguloj:"
 
-#: ui/kis_paintop_box.cc:98
+#: ui/kis_paintop_box.cc:99
 msgid "Painter's Toolchest"
 msgstr "Pentrista Ilaro"
 
-#: ui/kis_paintop_box.cc:102
+#: ui/kis_paintop_box.cc:103
 #, fuzzy
 msgid "Edit brush settings"
 msgstr "Ebeno-proprecoj..."
 
-#: ui/kis_paintop_box.cc:108
+#: ui/kis_paintop_box.cc:109
 #, fuzzy
 msgid "Choose brush preset"
 msgstr "Ebeno-proprecoj..."
 
-#: ui/kis_paintop_box.cc:115
+#: ui/kis_paintop_box.cc:116
 #, fuzzy
 msgid "Set eraser mode"
 msgstr "Elekto"
 
-#: ui/kis_paintop_box.cc:125
+#: ui/kis_paintop_box.cc:126
 #, fuzzy
 #| msgid "Horizontal Wave"
 msgid "Set horizontal mirror mode"
 msgstr "Horizontala Ondo"
 
-#: ui/kis_paintop_box.cc:135
+#: ui/kis_paintop_box.cc:136
 #, fuzzy
 msgid "Set vertical mirror mode"
 msgstr "Elekto"
 
-#: ui/kis_paintop_box.cc:146
+#: ui/kis_paintop_box.cc:147
 #, fuzzy
 msgid "Mode: "
 msgstr "Moduso:"
 
-#: ui/kis_paintop_box.cc:157
+#: ui/kis_paintop_box.cc:166
 #, fuzzy
 #| msgid "Palette"
 msgid "Save to Palette"
 msgstr "Paletro"
 
-#: ui/kis_paintop_box.cc:165
+#: ui/kis_paintop_box.cc:174
 #, fuzzy
 msgid "Choose workspace"
 msgstr "&Koloroprenilo"
@@ -14262,16 +14262,6 @@ msgstr ""
 msgid "x%1"
 msgstr "%1%"
 
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:46
-msgid "Thumbnails"
-msgstr ""
-
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:51
-#, fuzzy
-#| msgid "Detailed View"
-msgid "Details"
-msgstr "Detala rigardo"
-
 #: ui/widgets/kis_wdg_generator.cpp:150 ui/widgets/kis_wdg_generator.cpp:164
 #, fuzzy
 msgid "No configuration options."
@@ -14316,6 +14306,16 @@ msgstr ""
 #: ui/widgets/kis_paintop_presets_popup.cpp:233
 msgid "Detach from Toolbar"
 msgstr ""
+
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:47
+msgid "Thumbnails"
+msgstr ""
+
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:52
+#, fuzzy
+#| msgid "Detailed View"
+msgid "Details"
+msgstr "Detala rigardo"
 
 #, fuzzy
 #~| msgid "Image Size"
