@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-22 03:49+0200\n"
+"POT-Creation-Date: 2011-05-28 03:48+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -299,10 +299,6 @@ msgctxt ""
 msgid "... closing the window will minimize to the system tray"
 msgstr ""
 
-#: src/config/preferences.cpp:50
-msgid "Default Identity"
-msgstr ""
-
 #: src/config/settingsdialog.cpp:46
 msgid "Interface"
 msgstr "Interfaco"
@@ -466,6 +462,10 @@ msgstr ""
 #: src/config/highlight_config.cpp:42
 msgid "Select Sound File"
 msgstr "Elekti sondosieron"
+
+#: src/config/preferences.cpp:50
+msgid "Default Identity"
+msgstr ""
 
 #: src/dcc/chat.cpp:102
 #, kde-format
@@ -2078,33 +2078,6 @@ msgstr "(nekonata)"
 
 #: src/irc/nickinfo.cpp:378
 msgid "Online&nbsp;Since:"
-msgstr ""
-
-#: src/irc/nicklistview.cpp:145
-msgid ""
-"<qt><p>This shows all the people in the channel.  The nick for each person "
-"is shown.<br />Usually an icon is shown showing the status of each person, "
-"but you do not seem to have any icon theme installed.  See the Konversation "
-"settings - <i>Configure Konversation</i> under the <i>Settings</i> menu.  "
-"Then view the page for <i>Themes</i> under <i>Appearance</i>.</p></qt>"
-msgstr ""
-
-#: src/irc/nicklistview.cpp:149
-msgid ""
-"<qt><p>This shows all the people in the channel.  The nick for each person "
-"is shown, with a picture showing their status.</p><table><tr><th><img src="
-"\"admin\"/></th><td>This person has administrator privileges.</td></"
-"tr><tr><th><img src=\"owner\"/></th><td>This person is a channel owner.</"
-"td></tr><tr><th><img src=\"op\"/></th><td>This person is a channel operator."
-"</td></tr><tr><th><img src=\"halfop\"/></th><td>This person is a channel "
-"half-operator.</td></tr><tr><th><img src=\"voice\"/></th><td>This person has "
-"voice, and can therefore talk in a moderated channel.</td></tr><tr><th><img "
-"src=\"normal\"/></th><td>This person does not have any special privileges.</"
-"td></tr><tr><th><img src=\"normalaway\"/></th><td>This indicates that this "
-"person is currently away.</td></tr></table><p>The meaning of admin, owner "
-"and halfop varies between different IRC servers.</p><p>Hovering over any "
-"nick shows their current status. See the Konversation Handbook for more "
-"information.</p></qt>"
 msgstr ""
 
 #: src/irc/nicksonline.cpp:42 src/viewer/viewcontainer.cpp:2566
@@ -3882,6 +3855,33 @@ msgstr ""
 msgid "Channel List for %1"
 msgstr ""
 
+#: src/irc/nicklistview.cpp:145
+msgid ""
+"<qt><p>This shows all the people in the channel.  The nick for each person "
+"is shown.<br />Usually an icon is shown showing the status of each person, "
+"but you do not seem to have any icon theme installed.  See the Konversation "
+"settings - <i>Configure Konversation</i> under the <i>Settings</i> menu.  "
+"Then view the page for <i>Themes</i> under <i>Appearance</i>.</p></qt>"
+msgstr ""
+
+#: src/irc/nicklistview.cpp:149
+msgid ""
+"<qt><p>This shows all the people in the channel.  The nick for each person "
+"is shown, with a picture showing their status.</p><table><tr><th><img src="
+"\"admin\"/></th><td>This person has administrator privileges.</td></"
+"tr><tr><th><img src=\"owner\"/></th><td>This person is a channel owner.</"
+"td></tr><tr><th><img src=\"op\"/></th><td>This person is a channel operator."
+"</td></tr><tr><th><img src=\"halfop\"/></th><td>This person is a channel "
+"half-operator.</td></tr><tr><th><img src=\"voice\"/></th><td>This person has "
+"voice, and can therefore talk in a moderated channel.</td></tr><tr><th><img "
+"src=\"normal\"/></th><td>This person does not have any special privileges.</"
+"td></tr><tr><th><img src=\"normalaway\"/></th><td>This indicates that this "
+"person is currently away.</td></tr></table><p>The meaning of admin, owner "
+"and halfop varies between different IRC servers.</p><p>Hovering over any "
+"nick shows their current status. See the Konversation Handbook for more "
+"information.</p></qt>"
+msgstr ""
+
 #: src/konsolepanel.cpp:27 src/viewer/viewcontainer.cpp:2139
 #: src/viewer/viewcontainer.cpp:2140
 msgid "Konsole"
@@ -5249,7 +5249,7 @@ msgid "Channel &List"
 msgstr ""
 
 #: src/viewer/viewcontainer.cpp:594 src/mainwindow.cpp:186
-#: src/mainwindow.cpp:765
+#: src/mainwindow.cpp:773
 msgid "&Open Logfile"
 msgstr ""
 
@@ -5509,6 +5509,80 @@ msgstr ""
 msgid "Reset Values"
 msgstr ""
 
+#: src/connectionmanager.cpp:224
+msgid "Network is down, will reconnect automatically when it is back up."
+msgstr ""
+
+#: src/connectionmanager.cpp:259
+#, kde-format
+msgid "Trying to connect to %2 (port <numid>%3</numid>) in 1 second."
+msgid_plural "Trying to connect to %2 (port <numid>%3</numid>) in %1 seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/connectionmanager.cpp:269
+#, kde-format
+msgid "Trying to reconnect to %2 (port <numid>%3</numid>) in 1 second."
+msgid_plural ""
+"Trying to reconnect to %2 (port <numid>%3</numid>) in %1 seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/connectionmanager.cpp:282
+msgid "Reconnection attempts exceeded."
+msgstr ""
+
+#: src/connectionmanager.cpp:522
+#, kde-format
+msgid ""
+"You are already connected to %1. Do you want to open another connection?"
+msgstr ""
+
+#: src/connectionmanager.cpp:523 src/connectionmanager.cpp:544
+#, kde-format
+msgid "Already connected to %1"
+msgstr ""
+
+#: src/connectionmanager.cpp:524
+msgid "Create connection"
+msgstr ""
+
+#: src/connectionmanager.cpp:538
+#, kde-format
+msgid ""
+"You are presently connected to %1 via '%2' (port <numid>%3</numid>). Do you "
+"want to switch to '%4' (port <numid>%5</numid>) instead?"
+msgstr ""
+
+#: src/connectionmanager.cpp:545
+msgid "Switch Server"
+msgstr ""
+
+#: src/connectionmanager.cpp:592
+msgid "Please fill in your <b>Ident</b>.<br/>"
+msgstr ""
+
+#: src/connectionmanager.cpp:595
+msgid "Please fill in your <b>Real name</b>.<br/>"
+msgstr ""
+
+#: src/connectionmanager.cpp:598
+msgid "Please provide at least one <b>Nickname</b>.<br/>"
+msgstr ""
+
+#: src/connectionmanager.cpp:606
+#, kde-format
+msgid "<qt>Your identity \"%1\" is not set up correctly:<br/>%2</qt>"
+msgstr ""
+
+#: src/connectionmanager.cpp:607
+msgid "Identity Settings"
+msgstr "Identeca agordo"
+
+#: src/connectionmanager.cpp:608
+msgid "Edit Identity..."
+msgstr ""
+
 #: src/mainwindow.cpp:121
 msgid "Restart"
 msgstr ""
@@ -5617,7 +5691,7 @@ msgstr ""
 msgid "Rejoin Channel"
 msgstr ""
 
-#: src/mainwindow.cpp:363 src/mainwindow.cpp:771
+#: src/mainwindow.cpp:363 src/mainwindow.cpp:779
 msgid "Enable Notifications"
 msgstr ""
 
@@ -5666,7 +5740,7 @@ msgstr ""
 msgid "Global Away"
 msgstr ""
 
-#: src/mainwindow.cpp:448 src/mainwindow.cpp:773
+#: src/mainwindow.cpp:448 src/mainwindow.cpp:781
 msgid "&IRC Color..."
 msgstr ""
 
@@ -5674,7 +5748,7 @@ msgstr ""
 msgid "Set the color of your current IRC message"
 msgstr ""
 
-#: src/mainwindow.cpp:457 src/mainwindow.cpp:775
+#: src/mainwindow.cpp:457 src/mainwindow.cpp:783
 msgid "&Marker Line"
 msgstr ""
 
@@ -5682,7 +5756,7 @@ msgstr ""
 msgid "Insert a horizontal line into the current tab that only you can see"
 msgstr ""
 
-#: src/mainwindow.cpp:465 src/mainwindow.cpp:774
+#: src/mainwindow.cpp:465 src/mainwindow.cpp:782
 msgid "Special &Character..."
 msgstr ""
 
@@ -5708,150 +5782,82 @@ msgstr ""
 msgid "Show/Hide Konversation"
 msgstr "Konversation"
 
-#: src/mainwindow.cpp:502
+#: src/mainwindow.cpp:504
+#, fuzzy
+#| msgid "&Use On-Screen-Display"
+msgid "Enable On Screen Display"
+msgstr "&Uzi la vidigilon"
+
+#: src/mainwindow.cpp:510
 msgid "Bookmarks"
 msgstr "Legosignoj"
 
-#: src/mainwindow.cpp:553
+#: src/mainwindow.cpp:561
 msgid ""
 "<qt>You have active DCC file transfers. Are you sure you want to quit "
 "<b>Konversation</b>?</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:554 src/mainwindow.cpp:564
+#: src/mainwindow.cpp:562 src/mainwindow.cpp:572
 msgid "Confirm Quit"
 msgstr ""
 
-#: src/mainwindow.cpp:563
+#: src/mainwindow.cpp:571
 msgid "<qt>Are you sure you want to quit <b>Konversation</b>?</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:599
+#: src/mainwindow.cpp:607
 msgid ""
 "<p>Closing the main window will keep Konversation running in the system "
 "tray. Use <b>Quit</b> from the <b>Konversation</b> menu to quit the "
 "application.</p>"
 msgstr ""
 
-#: src/mainwindow.cpp:601
+#: src/mainwindow.cpp:609
 msgid "Docking in System Tray"
 msgstr "Fiksigu en sistemfako"
 
-#: src/mainwindow.cpp:716
+#: src/mainwindow.cpp:724
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing %"
 "1.</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:717
+#: src/mainwindow.cpp:725
 msgid "Hide menu bar"
 msgstr ""
 
-#: src/mainwindow.cpp:757
+#: src/mainwindow.cpp:765
 msgid "Toggle Notifications"
 msgstr ""
 
-#: src/mainwindow.cpp:758
+#: src/mainwindow.cpp:766
 msgid "Toggle Away Globally"
 msgstr ""
 
-#: src/mainwindow.cpp:759
+#: src/mainwindow.cpp:767
 msgid "Insert &IRC Color..."
 msgstr ""
 
-#: src/mainwindow.cpp:760
+#: src/mainwindow.cpp:768
 msgid "Insert Special &Character..."
 msgstr ""
 
-#: src/mainwindow.cpp:761
+#: src/mainwindow.cpp:769
 msgid "Insert &Marker Line"
 msgstr ""
 
-#: src/mainwindow.cpp:763
+#: src/mainwindow.cpp:771
 msgid "&Channel List"
 msgstr ""
 
-#: src/mainwindow.cpp:772
+#: src/mainwindow.cpp:780
 msgid "Set &Away Globally"
 msgstr ""
 
-#: src/mainwindow.cpp:784
+#: src/mainwindow.cpp:792
 msgid "Server List"
-msgstr ""
-
-#: src/connectionmanager.cpp:224
-msgid "Network is down, will reconnect automatically when it is back up."
-msgstr ""
-
-#: src/connectionmanager.cpp:259
-#, kde-format
-msgid "Trying to connect to %2 (port <numid>%3</numid>) in 1 second."
-msgid_plural "Trying to connect to %2 (port <numid>%3</numid>) in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/connectionmanager.cpp:269
-#, kde-format
-msgid "Trying to reconnect to %2 (port <numid>%3</numid>) in 1 second."
-msgid_plural ""
-"Trying to reconnect to %2 (port <numid>%3</numid>) in %1 seconds."
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/connectionmanager.cpp:282
-msgid "Reconnection attempts exceeded."
-msgstr ""
-
-#: src/connectionmanager.cpp:522
-#, kde-format
-msgid ""
-"You are already connected to %1. Do you want to open another connection?"
-msgstr ""
-
-#: src/connectionmanager.cpp:523 src/connectionmanager.cpp:544
-#, kde-format
-msgid "Already connected to %1"
-msgstr ""
-
-#: src/connectionmanager.cpp:524
-msgid "Create connection"
-msgstr ""
-
-#: src/connectionmanager.cpp:538
-#, kde-format
-msgid ""
-"You are presently connected to %1 via '%2' (port <numid>%3</numid>). Do you "
-"want to switch to '%4' (port <numid>%5</numid>) instead?"
-msgstr ""
-
-#: src/connectionmanager.cpp:545
-msgid "Switch Server"
-msgstr ""
-
-#: src/connectionmanager.cpp:592
-msgid "Please fill in your <b>Ident</b>.<br/>"
-msgstr ""
-
-#: src/connectionmanager.cpp:595
-msgid "Please fill in your <b>Real name</b>.<br/>"
-msgstr ""
-
-#: src/connectionmanager.cpp:598
-msgid "Please provide at least one <b>Nickname</b>.<br/>"
-msgstr ""
-
-#: src/connectionmanager.cpp:606
-#, kde-format
-msgid "<qt>Your identity \"%1\" is not set up correctly:<br/>%2</qt>"
-msgstr ""
-
-#: src/connectionmanager.cpp:607
-msgid "Identity Settings"
-msgstr "Identeca agordo"
-
-#: src/connectionmanager.cpp:608
-msgid "Edit Identity..."
 msgstr ""
 
 #: rc.cpp:1
