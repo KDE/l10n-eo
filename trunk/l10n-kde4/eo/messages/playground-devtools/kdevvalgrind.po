@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-03-01 04:15+0100\n"
+"POT-Creation-Date: 2011-05-29 04:34+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -66,7 +66,7 @@ msgid "Valgrind crashed."
 msgstr "Fina Situo:"
 
 #: valgrindjob.cpp:293 valgrindjob.cpp:296 valgrindjob.cpp:299
-#: valgrindjob.cpp:302 valgrindjob.cpp:305 valgrindparser.cpp:123
+#: valgrindjob.cpp:302 valgrindjob.cpp:305 valgrindparser.cpp:126
 #, fuzzy
 #| msgid "Valgrind Warning"
 msgid "Valgrind Error"
@@ -96,57 +96,28 @@ msgstr "\"make\"-procezo malsukcesis"
 msgid "Unknown Valgrind process error."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: valgrindmodel.cpp:82
-#, fuzzy, kde-format
-#| msgid "Watch: %1"
-msgid "at: %1"
-msgstr "Observi: %1"
-
-#: valgrindmodel.cpp:84
-#, fuzzy, kde-format
-#| msgid "Watch: %1"
-msgid "by: %1"
-msgstr "Observi: %1"
-
-#: valgrindmodel.cpp:146
-msgid "Function"
-msgstr "Funkcio"
-
-#: valgrindmodel.cpp:148
-msgid "Source"
-msgstr "Fonto"
-
-#: valgrindmodel.cpp:150
-msgid "Object"
-msgstr "Objekto"
-
-#: valgrindparser.cpp:123
-#, kde-format
-msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
-msgstr ""
-
 #. i18n: file: config/ui/valgrindgenericconfig.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: valgrindplugin.cpp:67 valgrindplugin.cpp:102 valgrindlauncher.cpp:121
+#: valgrindplugin.cpp:68 valgrindplugin.cpp:105 valgrindlauncher.cpp:127
 #: rc.cpp:26
 msgid "Valgrind"
 msgstr "Valgrind"
 
-#: valgrindplugin.cpp:67
+#: valgrindplugin.cpp:68
 msgid "Support for running Valgrind"
 msgstr ""
 
-#: valgrindplugin.cpp:107
+#: valgrindplugin.cpp:110
 msgid ""
 "Launches the currently selected launch configuration with the Valgrind "
 "presets"
 msgstr ""
 
-#: valgrindplugin.cpp:158
+#: valgrindplugin.cpp:161
 msgid "Open Valgrind Output"
 msgstr ""
 
-#: valgrindplugin.cpp:164
+#: valgrindplugin.cpp:167
 #, fuzzy, kde-format
 #| msgid "Could not open file '%1'"
 msgid "Could not open Valgrind output: %1"
@@ -184,18 +155,52 @@ msgstr "&Helgrind"
 msgid "Massif"
 msgstr "Massi&f"
 
-#. i18n: file: config/ui/valgrindmemcheckconfig.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: config/valgrindmemcheckconfigpage.cpp:68 rc.cpp:59
-msgid "Memcheck"
-msgstr ""
-
-#: config/valgrindgenericconfigpage.cpp:96
+#: config/valgrindgenericconfigpage.cpp:100
 msgid "Global settings"
 msgstr ""
 
-#: valgrindlauncher.cpp:111
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: config/valgrindmemcheckconfigpage.cpp:108 rc.cpp:59
+msgid "Memcheck"
+msgstr ""
+
+#: valgrindlauncher.cpp:117
 msgid "Profile application with Valgrind"
+msgstr ""
+
+#: valgrindmodel.cpp:87
+#, fuzzy, kde-format
+#| msgid "Watch: %1"
+msgid "at %1: %2"
+msgstr "Observi: %1"
+
+#: valgrindmodel.cpp:89
+#, fuzzy, kde-format
+#| msgid "Watch: %1"
+msgid "by %1: %2"
+msgstr "Observi: %1"
+
+#: valgrindmodel.cpp:142
+#, kde-format
+msgid "%1:%2"
+msgstr ""
+
+#: valgrindmodel.cpp:160
+msgid "Function"
+msgstr "Funkcio"
+
+#: valgrindmodel.cpp:162
+msgid "Source"
+msgstr "Fonto"
+
+#: valgrindmodel.cpp:164
+msgid "Object"
+msgstr "Objekto"
+
+#: valgrindparser.cpp:126
+#, kde-format
+msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
 msgstr ""
 
 #: rc.cpp:1
@@ -310,19 +315,136 @@ msgstr "Pluaj sinkronigoeventoj"
 msgid "Freelist size"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
-#. i18n: file: config/ui/valgrindmemcheckconfig.ui:75
-#. i18n: ectx: property (text), widget (QCheckBox, trackOrigin)
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:62
+#. i18n: ectx: property (toolTip), widget (QCheckBox, showInvalidFree)
 #: rc.cpp:71
-msgid "Track unitialized values origins"
+msgid ""
+"Wheter or not to trace invalid frees (call to free on a non-allocated "
+"address)"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:65
+#. i18n: ectx: property (text), widget (QCheckBox, showInvalidFree)
+#: rc.cpp:74
+msgid "Show invalid frees"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:72
+#. i18n: ectx: property (toolTip), widget (QCheckBox, showMismatchedFree)
+#: rc.cpp:77
+msgid ""
+"Wheter or not to trace mismatched frees (for example, trying to call free on "
+"an area allocated with new)"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:75
+#. i18n: ectx: property (text), widget (QCheckBox, showMismatchedFree)
+#: rc.cpp:80
+msgid "Show mismatched frees"
 msgstr ""
 
 #. i18n: file: config/ui/valgrindmemcheckconfig.ui:82
-#. i18n: ectx: property (text), widget (QCheckBox, showReachable)
-#: rc.cpp:74
+#. i18n: ectx: property (toolTip), widget (QCheckBox, showInvalidRead)
+#: rc.cpp:83
+msgid ""
+"Wheter or not to trace invalid reads (dereferencing of a non-allocated "
+"address)"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:85
+#. i18n: ectx: property (text), widget (QCheckBox, showInvalidRead)
+#: rc.cpp:86
+msgid "Show invalid reads"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:92
+#. i18n: ectx: property (toolTip), widget (QCheckBox, showInvalidWrite)
+#: rc.cpp:89
+msgid ""
+"Wheter or not to trace invalid writes (writing to a non-allocated address)"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:95
+#. i18n: ectx: property (text), widget (QCheckBox, showInvalidWrite)
+#: rc.cpp:92
+msgid "Show invalid writes"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:102
+#. i18n: ectx: property (toolTip), widget (QCheckBox, showInvalidJump)
+#: rc.cpp:95
+msgid ""
+"Wheter or not to trace invalid jumps (call to an invalid pointer of function "
+"for example)"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:105
+#. i18n: ectx: property (text), widget (QCheckBox, showInvalidJump)
+#: rc.cpp:98
+msgid "Show invalid jumps"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:112
+#. i18n: ectx: property (text), widget (QCheckBox, showOverlap)
+#: rc.cpp:101
+msgid "Show overlaps"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:119
+#. i18n: ectx: property (text), widget (QCheckBox, showInvalidMemPool)
+#: rc.cpp:104
+msgid "Show invalid memory pools"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:126
+#. i18n: ectx: property (text), widget (QCheckBox, showUninitCondition)
+#: rc.cpp:107
+msgid "Show uninitialized conditions"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:133
+#. i18n: ectx: property (text), widget (QCheckBox, showUninitValue)
+#: rc.cpp:110
+msgid "Show uninitialized values"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:140
+#. i18n: ectx: property (text), widget (QCheckBox, showSyscallParam)
+#: rc.cpp:113
+msgid "Show invalid syscall parameters"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:147
+#. i18n: ectx: property (text), widget (QCheckBox, showClientCheck)
+#: rc.cpp:116
+msgid "Show client checks"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:154
+#. i18n: ectx: property (text), widget (QCheckBox, showLeakDefinitelyLost)
+#: rc.cpp:119
+msgid "Show definitely lost leaks"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:161
+#. i18n: ectx: property (text), widget (QCheckBox, showLeakIndirectlyLost)
+#: rc.cpp:122
+msgid "Show indirectly lost leaks"
+msgstr ""
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:168
+#. i18n: ectx: property (text), widget (QCheckBox, showLeakStillReachable)
+#: rc.cpp:125
 #, fuzzy
 #| msgid "Show Reachable Blocks"
-msgid "Show reachable"
+msgid "Show still reachable leaks"
 msgstr "Montri atingeblajn blokjn"
+
+#. i18n: file: config/ui/valgrindmemcheckconfig.ui:175
+#. i18n: ectx: property (text), widget (QCheckBox, showOthers)
+#: rc.cpp:128
+msgid "Show others"
+msgstr ""
 
 #, fuzzy
 #~| msgid "&Cachegrind"
