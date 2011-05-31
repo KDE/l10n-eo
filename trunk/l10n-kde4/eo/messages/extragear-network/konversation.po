@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-28 03:48+0200\n"
+"POT-Creation-Date: 2011-05-31 04:03+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -623,7 +623,7 @@ msgctxt "%1=Encoding"
 msgid "Default ( %1 )"
 msgstr "Defaŭlta"
 
-#: src/dcc/chatcontainer.cpp:269 src/irc/outputfilter.cpp:1985
+#: src/dcc/chatcontainer.cpp:269 src/irc/outputfilter.cpp:1987
 msgid "Usage"
 msgstr ""
 
@@ -639,12 +639,12 @@ msgstr ""
 #: src/irc/inputfilter.cpp:2027 src/irc/inputfilter.cpp:2048
 #: src/irc/inputfilter.cpp:2056 src/irc/inputfilter.cpp:2064
 #: src/irc/inputfilter.cpp:2088 src/irc/outputfilterresolvejob.cpp:85
-#: src/irc/outputfilter.cpp:2003 src/irc/server.cpp:692
-#: src/irc/server.cpp:2038 src/irc/server.cpp:2109 src/irc/server.cpp:2282
-#: src/irc/server.cpp:2318 src/irc/server.cpp:2369 src/irc/server.cpp:2437
-#: src/irc/server.cpp:2456 src/irc/server.cpp:2472 src/irc/server.cpp:3914
-#: src/irc/server.cpp:3926 src/irc/server.cpp:3950 src/irc/server.cpp:3973
-#: src/irc/server.cpp:3989 src/linkaddressbook/addressbook.cpp:113
+#: src/irc/server.cpp:692 src/irc/server.cpp:2038 src/irc/server.cpp:2109
+#: src/irc/server.cpp:2282 src/irc/server.cpp:2318 src/irc/server.cpp:2369
+#: src/irc/server.cpp:2437 src/irc/server.cpp:2456 src/irc/server.cpp:2472
+#: src/irc/server.cpp:3914 src/irc/server.cpp:3926 src/irc/server.cpp:3950
+#: src/irc/server.cpp:3973 src/irc/server.cpp:3989
+#: src/irc/outputfilter.cpp:2005 src/linkaddressbook/addressbook.cpp:113
 #: src/connectionmanager.cpp:282
 msgid "Error"
 msgstr "Eraro"
@@ -1471,8 +1471,8 @@ msgstr ""
 #: src/irc/inputfilter.cpp:504 src/irc/inputfilter.cpp:569
 #: src/irc/inputfilter.cpp:574 src/irc/inputfilter.cpp:597
 #: src/irc/inputfilter.cpp:763 src/irc/inputfilter.cpp:1313
-#: src/irc/outputfilter.cpp:659 src/irc/outputfilter.cpp:895
 #: src/irc/server.cpp:3956 src/irc/server.cpp:3985
+#: src/irc/outputfilter.cpp:659 src/irc/outputfilter.cpp:895
 #: src/viewer/ignorelistviewitem.cpp:44 rc.cpp:394
 msgid "Notice"
 msgstr "Rimarku"
@@ -1695,11 +1695,11 @@ msgstr ""
 msgid "You are now an IRC operator on this server."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1321 src/irc/outputfilter.cpp:1994
-#: src/irc/server.cpp:253 src/irc/server.cpp:399 src/irc/server.cpp:451
-#: src/irc/server.cpp:613 src/irc/server.cpp:624 src/irc/server.cpp:861
-#: src/irc/server.cpp:891 src/connectionmanager.cpp:224
-#: src/connectionmanager.cpp:257 src/connectionmanager.cpp:267
+#: src/irc/inputfilter.cpp:1321 src/irc/server.cpp:253 src/irc/server.cpp:399
+#: src/irc/server.cpp:451 src/irc/server.cpp:613 src/irc/server.cpp:624
+#: src/irc/server.cpp:861 src/irc/server.cpp:891 src/irc/outputfilter.cpp:1996
+#: src/connectionmanager.cpp:224 src/connectionmanager.cpp:257
+#: src/connectionmanager.cpp:267
 msgid "Info"
 msgstr "Informo"
 
@@ -3073,6 +3073,403 @@ msgstr ""
 msgid "Leave"
 msgstr "Foriri"
 
+#: src/irc/server.cpp:401 src/irc/server.cpp:411
+msgid "Warning"
+msgstr "Averto"
+
+#: src/irc/server.cpp:451
+#, fuzzy, kde-format
+#| msgid "%1 on %2"
+msgid "Looking for server %1 (port <numid>%2</numid>)..."
+msgstr "%1 sur %2"
+
+#: src/irc/server.cpp:613
+msgid "Server found, connecting..."
+msgstr ""
+
+#: src/irc/server.cpp:624
+msgid "Connected; logging in..."
+msgstr ""
+
+#: src/irc/server.cpp:687
+#, fuzzy, kde-format
+#| msgid "%1 on %2"
+msgid "Connection to server %1 (port <numid>%2</numid>) lost: %3."
+msgstr "%1 sur %2"
+
+#: src/irc/server.cpp:731
+#, fuzzy, kde-format
+#| msgid "%1 on %2"
+msgid ""
+"The SSL certificate for the server %1 (port <numid>%2</numid>) failed the "
+"authenticity check."
+msgstr "%1 sur %2"
+
+#: src/irc/server.cpp:735
+#, fuzzy
+#| msgid "Connection"
+msgid "SSL Connection Warning"
+msgstr "Konekto"
+
+#: src/irc/server.cpp:746
+#, kde-format
+msgid ""
+"Could not connect to %1 (port <numid>%2</numid>) using SSL encryption. "
+"Either the server does not support SSL (did you use the correct port?) or "
+"you rejected the certificate. %3"
+msgstr ""
+
+#: src/irc/server.cpp:751
+msgid "SSL Connection Error"
+msgstr ""
+
+#: src/irc/server.cpp:861
+msgid "Delayed connect aborted."
+msgstr ""
+
+#: src/irc/server.cpp:891
+#, fuzzy, kde-format
+#| msgid "%1 on %2"
+msgid "Disconnected from %1 (port <numid>%2</numid>)."
+msgstr "%1 sur %2"
+
+#: src/irc/server.cpp:1063
+#, kde-format
+msgid ""
+"No nicknames from the \"%1\" identity were accepted by the connection \"%2"
+"\".\n"
+"Please enter a new one or press Cancel to disconnect:"
+msgstr ""
+
+#: src/irc/server.cpp:1064
+msgid "Nickname error"
+msgstr ""
+
+#: src/irc/server.cpp:1520 src/irc/server.cpp:3489 src/irc/server.cpp:3494
+#: src/application.cpp:371
+msgid "D-Bus"
+msgstr "D-Bus"
+
+#: src/irc/server.cpp:1866
+#, kde-format
+msgid "Select File(s) to Send to %1"
+msgstr ""
+
+#: src/irc/server.cpp:2039
+#, kde-format
+msgctxt "%1=nickname"
+msgid "Received invalid DCC SEND request from %1."
+msgstr ""
+
+#: src/irc/server.cpp:2074 src/irc/server.cpp:2204 src/irc/server.cpp:2216
+#: src/irc/server.cpp:2365 src/irc/server.cpp:2421 src/irc/server.cpp:2530
+msgid "unknown size"
+msgstr ""
+
+#: src/irc/server.cpp:2071
+#, kde-format
+msgid "%1 offers to send you \"%2\" (%3)..."
+msgstr ""
+
+#: src/irc/server.cpp:2110
+#, kde-format
+msgctxt "%1=nickname"
+msgid "Received invalid DCC CHAT request from %1."
+msgstr ""
+
+#: src/irc/server.cpp:2201
+#, kde-format
+msgid "Asking %1 to accept upload of \"%2\" (%3)..."
+msgstr ""
+
+#: src/irc/server.cpp:2213
+#, kde-format
+msgid "Asking %1 to accept passive upload of \"%2\" (%3)..."
+msgstr ""
+
+#: src/irc/server.cpp:2225
+#, kde-format
+msgctxt "%1=name, %2=dcc extension, chat or wboard for example"
+msgid "Asking %1 to accept %2..."
+msgstr ""
+
+#: src/irc/server.cpp:2284
+#, kde-format
+msgctxt "%1 = nickname"
+msgid "Received invalid passive DCC chat acceptance message from %1."
+msgstr ""
+
+#: src/irc/server.cpp:2320
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname"
+msgid ""
+"Received invalid passive DCC send acceptance message for \"%1\" from %2."
+msgstr ""
+
+#: src/irc/server.cpp:2361
+#, kde-format
+msgctxt ""
+"%1 = file name, %2 = nickname of sender, %3 = percentage of file size, %4 = "
+"file size"
+msgid "Resuming download of \"%1\" from %2 starting at %3% of %4..."
+msgstr ""
+
+#: src/irc/server.cpp:2371
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname"
+msgid "Received invalid resume acceptance message for \"%1\" from %2."
+msgstr ""
+
+#: src/irc/server.cpp:2417
+#, kde-format
+msgctxt ""
+"%1 = file name, %2 = nickname of recipient, %3 = percentage of file size, %4 "
+"= file size"
+msgid "Resuming upload of \"%1\" to %2 starting at %3% of %4..."
+msgstr ""
+
+#: src/irc/server.cpp:2439
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname"
+msgid "Received invalid resume request for \"%1\" from %2."
+msgstr ""
+
+#: src/irc/server.cpp:2458
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname"
+msgid "Received invalid reject request for \"%1\" from %2."
+msgstr ""
+
+#: src/irc/server.cpp:2474
+#, kde-format
+msgctxt "%1 = nickname"
+msgid "Received invalid reject request from %1."
+msgstr ""
+
+#: src/irc/server.cpp:2487
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname of sender"
+msgid "Download of \"%1\" from %2 finished."
+msgstr ""
+
+#: src/irc/server.cpp:2492
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname of sender"
+msgid "Download of \"%1\" from %2 failed. Reason: %3."
+msgstr ""
+
+#: src/irc/server.cpp:2504
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname of recipient"
+msgid "Upload of \"%1\" to %2 finished."
+msgstr ""
+
+#: src/irc/server.cpp:2507
+#, kde-format
+msgctxt "%1 = file name, %2 = nickname of recipient"
+msgid "Upload of \"%1\" to %2 failed. Reason: %3."
+msgstr ""
+
+#: src/irc/server.cpp:2521
+#, kde-format
+msgctxt "%1 = file name, %2 nickname of recipient"
+msgid "Sending \"%1\" to %2..."
+msgstr ""
+
+#: src/irc/server.cpp:2528
+#, kde-format
+msgctxt "%1 = file name, %2 = file size, %3 = nickname of sender"
+msgid "Downloading \"%1\" (%2) from %3..."
+msgstr ""
+
+#: src/irc/server.cpp:2835 src/irc/server.cpp:2852
+#: src/irc/outputfilter.cpp:1311
+msgid "Notify"
+msgstr ""
+
+#: src/irc/server.cpp:2835 src/notificationhandler.cpp:307
+#, kde-format
+msgid "%1 is online (%2)."
+msgstr ""
+
+#: src/irc/server.cpp:2852 src/notificationhandler.cpp:321
+#, kde-format
+msgid "%1 went offline (%2)."
+msgstr ""
+
+#: src/irc/server.cpp:3489
+#, kde-format
+msgid "Error: Could not find script \"%1\"."
+msgstr ""
+
+#: src/irc/server.cpp:3494
+#, kde-format
+msgid "Error: Could not execute script \"%1\". Check file permissions."
+msgstr ""
+
+#: src/irc/server.cpp:3696
+msgid "Gone away for now"
+msgstr ""
+
+#: src/irc/server.cpp:3727
+#, kde-format
+msgid "You are now marked as being away (reason: %1)."
+msgstr ""
+
+#: src/irc/server.cpp:3729
+msgid "You are now marked as being away."
+msgstr ""
+
+#: src/irc/server.cpp:3754
+msgid "You are no longer marked as being away."
+msgstr ""
+
+#: src/irc/server.cpp:3763
+msgid "You are not marked as being away."
+msgstr ""
+
+#: src/irc/server.cpp:3914
+#, kde-format
+msgid "Failed to initiate key exchange with %1."
+msgstr ""
+
+#: src/irc/server.cpp:3926
+#, kde-format
+msgid "Unable to perform key exchange with %1."
+msgstr ""
+
+#: src/irc/server.cpp:3950
+#, kde-format
+msgid "Failed to parse the DH1080_INIT of %1. Key exchange failed."
+msgstr ""
+
+#: src/irc/server.cpp:3956
+#, kde-format
+msgid ""
+"Your key is set and your messages will now be encrypted, sending "
+"DH1080_FINISH to %1."
+msgstr ""
+
+#: src/irc/server.cpp:3973
+#, kde-format
+msgid "Unable to complete key exchange with %1."
+msgstr ""
+
+#: src/irc/server.cpp:3985
+#, kde-format
+msgid ""
+"Successfully parsed DH1080_FINISH sent by %1. Your key is set and your "
+"messages will now be encrypted."
+msgstr ""
+
+#: src/irc/server.cpp:3989
+#, kde-format
+msgid "Failed to parse DH1080_FINISH sent by %1. Key exchange failed."
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:87
+msgid "Channel Name"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:91
+msgid "Channel Topic"
+msgstr ""
+
+#. i18n: file: src/irc/channellistpanelui.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ChannelListWidgetUI)
+#: src/irc/channellistpanel.cpp:146 src/viewer/viewcontainer.cpp:2485
+#: src/viewer/viewcontainer.cpp:2506 rc.cpp:1214
+msgid "Channel List"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:163
+#, fuzzy
+#| msgid "Save Link As..."
+msgctxt "save list"
+msgid "Save &List..."
+msgstr "Konservi la ligon kiel..."
+
+#: src/irc/channellistpanel.cpp:164
+msgid "Click here to save the channel list."
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:165
+msgctxt "refresh list"
+msgid "&Refresh List"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:166
+msgid "Click here to refresh the channel list."
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:168
+#, fuzzy
+#| msgid "Channel"
+msgctxt "join channel"
+msgid "&Join Channel"
+msgstr "Kanalo"
+
+#: src/irc/channellistpanel.cpp:169
+msgid "Click here to join the channel. A new tab is created for the channel."
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:239 src/irc/channellistpanel.cpp:336
+msgid "Refreshing."
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:353
+#, kde-format
+msgid "Channels: %1 (%2 shown)"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:354
+#, kde-format
+msgid " Non-unique users: %1 (%2 shown)"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:364
+msgid "Save Channel List"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:396
+#, kde-format
+msgid ""
+"Konversation Channel List: %1 - %2\n"
+"\n"
+msgstr ""
+
+#: src/irc/channellistpanel.cpp:534
+#, kde-format
+msgid "Channel List for %1"
+msgstr ""
+
+#: src/irc/nicklistview.cpp:145
+msgid ""
+"<qt><p>This shows all the people in the channel.  The nick for each person "
+"is shown.<br />Usually an icon is shown showing the status of each person, "
+"but you do not seem to have any icon theme installed.  See the Konversation "
+"settings - <i>Configure Konversation</i> under the <i>Settings</i> menu.  "
+"Then view the page for <i>Themes</i> under <i>Appearance</i>.</p></qt>"
+msgstr ""
+
+#: src/irc/nicklistview.cpp:149
+msgid ""
+"<qt><p>This shows all the people in the channel.  The nick for each person "
+"is shown, with a picture showing their status.</p><table><tr><th><img src="
+"\"admin\"/></th><td>This person has administrator privileges.</td></"
+"tr><tr><th><img src=\"owner\"/></th><td>This person is a channel owner.</"
+"td></tr><tr><th><img src=\"op\"/></th><td>This person is a channel operator."
+"</td></tr><tr><th><img src=\"halfop\"/></th><td>This person is a channel "
+"half-operator.</td></tr><tr><th><img src=\"voice\"/></th><td>This person has "
+"voice, and can therefore talk in a moderated channel.</td></tr><tr><th><img "
+"src=\"normal\"/></th><td>This person does not have any special privileges.</"
+"td></tr><tr><th><img src=\"normalaway\"/></th><td>This indicates that this "
+"person is currently away.</td></tr></table><p>The meaning of admin, owner "
+"and halfop varies between different IRC servers.</p><p>Hovering over any "
+"nick shows their current status. See the Konversation Handbook for more "
+"information.</p></qt>"
+msgstr ""
+
 #: src/irc/outputfilter.cpp:215
 msgid ""
 "The message you are sending includes characters that do not exist in your "
@@ -3308,11 +3705,6 @@ msgctxt "%1 = Comma-separated list of nicknames"
 msgid "Current notify list: %1."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1311 src/irc/server.cpp:2835
-#: src/irc/server.cpp:2852
-msgid "Notify"
-msgstr ""
-
 #: src/irc/outputfilter.cpp:1333
 msgid "Enter username and password for IRC operator privileges:"
 msgstr ""
@@ -3420,7 +3812,7 @@ msgstr ""
 msgid "The key for %1 has been set."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1711 src/irc/outputfilter.cpp:1735
+#: src/irc/outputfilter.cpp:1712 src/irc/outputfilter.cpp:1737
 msgid ""
 "Setting an encryption key requires Konversation to have been built with "
 "support for the Qt Cryptographic Architecture (QCA) library. Contact your "
@@ -3428,458 +3820,66 @@ msgid ""
 "Konversation with QCA present."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1726
+#: src/irc/outputfilter.cpp:1727
 #, kde-format
 msgid ""
 "Usage: %1keyx <nick|channel> triggers DH1080 key exchange with the target."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1729
+#: src/irc/outputfilter.cpp:1730
 #, kde-format
 msgid "Unable to request a key exchange from %1."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1733
+#: src/irc/outputfilter.cpp:1734
 #, kde-format
 msgid "Beginning DH1080 key exchange with %1."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1751
+#: src/irc/outputfilter.cpp:1753
 #, c-format, kde-format
 msgid ""
 "Usage: %1delkey <nick> or <channel> deletes the encryption key for nick or "
 "channel"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1763
+#: src/irc/outputfilter.cpp:1765
 #, kde-format
 msgid "The key for %1 has been deleted."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1766 src/irc/outputfilter.cpp:1786
+#: src/irc/outputfilter.cpp:1768 src/irc/outputfilter.cpp:1788
 #, kde-format
 msgid "No key has been set for %1."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1783
+#: src/irc/outputfilter.cpp:1785
 #, kde-format
 msgid "The key for %1 is \"%2\"."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1784
+#: src/irc/outputfilter.cpp:1786
 msgid "Blowfish"
 msgstr "Blowfish"
 
-#: src/irc/outputfilter.cpp:1796
+#: src/irc/outputfilter.cpp:1798
 #, kde-format
 msgid "Usage: %1KILL <nick> [comment]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1810
+#: src/irc/outputfilter.cpp:1812
 #, kde-format
 msgid "Usage: %1DNS <nick>"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1840
+#: src/irc/outputfilter.cpp:1842
 #, c-format, kde-format
 msgid "Usage: %1queuetuner [on | off]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1909
+#: src/irc/outputfilter.cpp:1911
 #, c-format, kde-format
 msgid "%1CYCLE [-APP | -SERVER] [channel | nickname]"
-msgstr ""
-
-#: src/irc/server.cpp:401 src/irc/server.cpp:411
-msgid "Warning"
-msgstr "Averto"
-
-#: src/irc/server.cpp:451
-#, fuzzy, kde-format
-#| msgid "%1 on %2"
-msgid "Looking for server %1 (port <numid>%2</numid>)..."
-msgstr "%1 sur %2"
-
-#: src/irc/server.cpp:613
-msgid "Server found, connecting..."
-msgstr ""
-
-#: src/irc/server.cpp:624
-msgid "Connected; logging in..."
-msgstr ""
-
-#: src/irc/server.cpp:687
-#, fuzzy, kde-format
-#| msgid "%1 on %2"
-msgid "Connection to server %1 (port <numid>%2</numid>) lost: %3."
-msgstr "%1 sur %2"
-
-#: src/irc/server.cpp:731
-#, fuzzy, kde-format
-#| msgid "%1 on %2"
-msgid ""
-"The SSL certificate for the server %1 (port <numid>%2</numid>) failed the "
-"authenticity check."
-msgstr "%1 sur %2"
-
-#: src/irc/server.cpp:735
-#, fuzzy
-#| msgid "Connection"
-msgid "SSL Connection Warning"
-msgstr "Konekto"
-
-#: src/irc/server.cpp:746
-#, kde-format
-msgid ""
-"Could not connect to %1 (port <numid>%2</numid>) using SSL encryption. "
-"Either the server does not support SSL (did you use the correct port?) or "
-"you rejected the certificate. %3"
-msgstr ""
-
-#: src/irc/server.cpp:751
-msgid "SSL Connection Error"
-msgstr ""
-
-#: src/irc/server.cpp:861
-msgid "Delayed connect aborted."
-msgstr ""
-
-#: src/irc/server.cpp:891
-#, fuzzy, kde-format
-#| msgid "%1 on %2"
-msgid "Disconnected from %1 (port <numid>%2</numid>)."
-msgstr "%1 sur %2"
-
-#: src/irc/server.cpp:1063
-#, kde-format
-msgid ""
-"No nicknames from the \"%1\" identity were accepted by the connection \"%2"
-"\".\n"
-"Please enter a new one or press Cancel to disconnect:"
-msgstr ""
-
-#: src/irc/server.cpp:1064
-msgid "Nickname error"
-msgstr ""
-
-#: src/irc/server.cpp:1520 src/irc/server.cpp:3489 src/irc/server.cpp:3494
-#: src/application.cpp:371
-msgid "D-Bus"
-msgstr "D-Bus"
-
-#: src/irc/server.cpp:1866
-#, kde-format
-msgid "Select File(s) to Send to %1"
-msgstr ""
-
-#: src/irc/server.cpp:2039
-#, kde-format
-msgctxt "%1=nickname"
-msgid "Received invalid DCC SEND request from %1."
-msgstr ""
-
-#: src/irc/server.cpp:2074 src/irc/server.cpp:2204 src/irc/server.cpp:2216
-#: src/irc/server.cpp:2365 src/irc/server.cpp:2421 src/irc/server.cpp:2530
-msgid "unknown size"
-msgstr ""
-
-#: src/irc/server.cpp:2071
-#, kde-format
-msgid "%1 offers to send you \"%2\" (%3)..."
-msgstr ""
-
-#: src/irc/server.cpp:2110
-#, kde-format
-msgctxt "%1=nickname"
-msgid "Received invalid DCC CHAT request from %1."
-msgstr ""
-
-#: src/irc/server.cpp:2201
-#, kde-format
-msgid "Asking %1 to accept upload of \"%2\" (%3)..."
-msgstr ""
-
-#: src/irc/server.cpp:2213
-#, kde-format
-msgid "Asking %1 to accept passive upload of \"%2\" (%3)..."
-msgstr ""
-
-#: src/irc/server.cpp:2225
-#, kde-format
-msgctxt "%1=name, %2=dcc extension, chat or wboard for example"
-msgid "Asking %1 to accept %2..."
-msgstr ""
-
-#: src/irc/server.cpp:2284
-#, kde-format
-msgctxt "%1 = nickname"
-msgid "Received invalid passive DCC chat acceptance message from %1."
-msgstr ""
-
-#: src/irc/server.cpp:2320
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname"
-msgid ""
-"Received invalid passive DCC send acceptance message for \"%1\" from %2."
-msgstr ""
-
-#: src/irc/server.cpp:2361
-#, kde-format
-msgctxt ""
-"%1 = file name, %2 = nickname of sender, %3 = percentage of file size, %4 = "
-"file size"
-msgid "Resuming download of \"%1\" from %2 starting at %3% of %4..."
-msgstr ""
-
-#: src/irc/server.cpp:2371
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname"
-msgid "Received invalid resume acceptance message for \"%1\" from %2."
-msgstr ""
-
-#: src/irc/server.cpp:2417
-#, kde-format
-msgctxt ""
-"%1 = file name, %2 = nickname of recipient, %3 = percentage of file size, %4 "
-"= file size"
-msgid "Resuming upload of \"%1\" to %2 starting at %3% of %4..."
-msgstr ""
-
-#: src/irc/server.cpp:2439
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname"
-msgid "Received invalid resume request for \"%1\" from %2."
-msgstr ""
-
-#: src/irc/server.cpp:2458
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname"
-msgid "Received invalid reject request for \"%1\" from %2."
-msgstr ""
-
-#: src/irc/server.cpp:2474
-#, kde-format
-msgctxt "%1 = nickname"
-msgid "Received invalid reject request from %1."
-msgstr ""
-
-#: src/irc/server.cpp:2487
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname of sender"
-msgid "Download of \"%1\" from %2 finished."
-msgstr ""
-
-#: src/irc/server.cpp:2492
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname of sender"
-msgid "Download of \"%1\" from %2 failed. Reason: %3."
-msgstr ""
-
-#: src/irc/server.cpp:2504
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname of recipient"
-msgid "Upload of \"%1\" to %2 finished."
-msgstr ""
-
-#: src/irc/server.cpp:2507
-#, kde-format
-msgctxt "%1 = file name, %2 = nickname of recipient"
-msgid "Upload of \"%1\" to %2 failed. Reason: %3."
-msgstr ""
-
-#: src/irc/server.cpp:2521
-#, kde-format
-msgctxt "%1 = file name, %2 nickname of recipient"
-msgid "Sending \"%1\" to %2..."
-msgstr ""
-
-#: src/irc/server.cpp:2528
-#, kde-format
-msgctxt "%1 = file name, %2 = file size, %3 = nickname of sender"
-msgid "Downloading \"%1\" (%2) from %3..."
-msgstr ""
-
-#: src/irc/server.cpp:2835 src/notificationhandler.cpp:307
-#, kde-format
-msgid "%1 is online (%2)."
-msgstr ""
-
-#: src/irc/server.cpp:2852 src/notificationhandler.cpp:321
-#, kde-format
-msgid "%1 went offline (%2)."
-msgstr ""
-
-#: src/irc/server.cpp:3489
-#, kde-format
-msgid "Error: Could not find script \"%1\"."
-msgstr ""
-
-#: src/irc/server.cpp:3494
-#, kde-format
-msgid "Error: Could not execute script \"%1\". Check file permissions."
-msgstr ""
-
-#: src/irc/server.cpp:3696
-msgid "Gone away for now"
-msgstr ""
-
-#: src/irc/server.cpp:3727
-#, kde-format
-msgid "You are now marked as being away (reason: %1)."
-msgstr ""
-
-#: src/irc/server.cpp:3729
-msgid "You are now marked as being away."
-msgstr ""
-
-#: src/irc/server.cpp:3754
-msgid "You are no longer marked as being away."
-msgstr ""
-
-#: src/irc/server.cpp:3763
-msgid "You are not marked as being away."
-msgstr ""
-
-#: src/irc/server.cpp:3914
-#, kde-format
-msgid "Failed to initiate key exchange with %1."
-msgstr ""
-
-#: src/irc/server.cpp:3926
-#, kde-format
-msgid "Unable to perform key exchange with %1."
-msgstr ""
-
-#: src/irc/server.cpp:3950
-#, kde-format
-msgid "Failed to parse the DH1080_INIT of %1. Key exchange failed."
-msgstr ""
-
-#: src/irc/server.cpp:3956
-#, kde-format
-msgid ""
-"Your key is set and your messages will now be encrypted, sending "
-"DH1080_FINISH to %1."
-msgstr ""
-
-#: src/irc/server.cpp:3973
-#, kde-format
-msgid "Unable to complete key exchange with %1."
-msgstr ""
-
-#: src/irc/server.cpp:3985
-#, kde-format
-msgid ""
-"Successfully parsed DH1080_FINISH sent by %1. Your key is set and your "
-"messages will now be encrypted."
-msgstr ""
-
-#: src/irc/server.cpp:3989
-#, kde-format
-msgid "Failed to parse DH1080_FINISH sent by %1. Key exchange failed."
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:87
-msgid "Channel Name"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:91
-msgid "Channel Topic"
-msgstr ""
-
-#. i18n: file: src/irc/channellistpanelui.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ChannelListWidgetUI)
-#: src/irc/channellistpanel.cpp:146 src/viewer/viewcontainer.cpp:2485
-#: src/viewer/viewcontainer.cpp:2506 rc.cpp:1214
-msgid "Channel List"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:163
-#, fuzzy
-#| msgid "Save Link As..."
-msgctxt "save list"
-msgid "Save &List..."
-msgstr "Konservi la ligon kiel..."
-
-#: src/irc/channellistpanel.cpp:164
-msgid "Click here to save the channel list."
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:165
-msgctxt "refresh list"
-msgid "&Refresh List"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:166
-msgid "Click here to refresh the channel list."
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:168
-#, fuzzy
-#| msgid "Channel"
-msgctxt "join channel"
-msgid "&Join Channel"
-msgstr "Kanalo"
-
-#: src/irc/channellistpanel.cpp:169
-msgid "Click here to join the channel. A new tab is created for the channel."
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:239 src/irc/channellistpanel.cpp:336
-msgid "Refreshing."
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:353
-#, kde-format
-msgid "Channels: %1 (%2 shown)"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:354
-#, kde-format
-msgid " Non-unique users: %1 (%2 shown)"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:364
-msgid "Save Channel List"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:396
-#, kde-format
-msgid ""
-"Konversation Channel List: %1 - %2\n"
-"\n"
-msgstr ""
-
-#: src/irc/channellistpanel.cpp:534
-#, kde-format
-msgid "Channel List for %1"
-msgstr ""
-
-#: src/irc/nicklistview.cpp:145
-msgid ""
-"<qt><p>This shows all the people in the channel.  The nick for each person "
-"is shown.<br />Usually an icon is shown showing the status of each person, "
-"but you do not seem to have any icon theme installed.  See the Konversation "
-"settings - <i>Configure Konversation</i> under the <i>Settings</i> menu.  "
-"Then view the page for <i>Themes</i> under <i>Appearance</i>.</p></qt>"
-msgstr ""
-
-#: src/irc/nicklistview.cpp:149
-msgid ""
-"<qt><p>This shows all the people in the channel.  The nick for each person "
-"is shown, with a picture showing their status.</p><table><tr><th><img src="
-"\"admin\"/></th><td>This person has administrator privileges.</td></"
-"tr><tr><th><img src=\"owner\"/></th><td>This person is a channel owner.</"
-"td></tr><tr><th><img src=\"op\"/></th><td>This person is a channel operator."
-"</td></tr><tr><th><img src=\"halfop\"/></th><td>This person is a channel "
-"half-operator.</td></tr><tr><th><img src=\"voice\"/></th><td>This person has "
-"voice, and can therefore talk in a moderated channel.</td></tr><tr><th><img "
-"src=\"normal\"/></th><td>This person does not have any special privileges.</"
-"td></tr><tr><th><img src=\"normalaway\"/></th><td>This indicates that this "
-"person is currently away.</td></tr></table><p>The meaning of admin, owner "
-"and halfop varies between different IRC servers.</p><p>Hovering over any "
-"nick shows their current status. See the Konversation Handbook for more "
-"information.</p></qt>"
 msgstr ""
 
 #: src/konsolepanel.cpp:27 src/viewer/viewcontainer.cpp:2139
@@ -5401,11 +5401,6 @@ msgstr ""
 msgid "You have joined %1."
 msgstr ""
 
-#: src/dbus.cpp:144
-#, kde-format
-msgid "getNickname: Server %1 is not found."
-msgstr ""
-
 #: src/identitydialog.cpp:28
 msgid "Identities"
 msgstr ""
@@ -5858,6 +5853,23 @@ msgstr ""
 
 #: src/mainwindow.cpp:792
 msgid "Server List"
+msgstr ""
+
+#: src/dbus.cpp:118
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgid "Debug: %1"
+msgstr "Sencimigu"
+
+#: src/dbus.cpp:124
+#, fuzzy, kde-format
+#| msgid "Error"
+msgid "Error: %1"
+msgstr "Eraro"
+
+#: src/dbus.cpp:144
+#, kde-format
+msgid "getNickname: Server %1 is not found."
 msgstr ""
 
 #: rc.cpp:1
