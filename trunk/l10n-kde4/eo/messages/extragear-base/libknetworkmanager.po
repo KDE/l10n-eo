@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libknetworkmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-05 03:47+0200\n"
+"POT-Creation-Date: 2011-06-08 03:40+0200\n"
 "PO-Revision-Date: 2009-11-21 12:05+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -35,6 +35,34 @@ msgstr "Apriora"
 msgctxt "@item:inlist Item added when OpenVPN cipher lookup failed"
 msgid "No OpenVPN ciphers found"
 msgstr ""
+
+#: vpnplugins/vpnc/vpnc.cpp:71
+msgid "Error decrypting the obfuscated password"
+msgstr ""
+
+#: vpnplugins/vpnc/vpnc.cpp:71 libs/service/networkinterfacemonitor.cpp:188
+#: settings/config/manageconnectionwidget.cpp:530
+#: settings/config/manageconnectionwidget.cpp:574
+#: settings/config/manageconnectionwidget.cpp:689
+msgid "Error"
+msgstr ""
+
+#: vpnplugins/vpnc/vpnc.cpp:227
+#, kde-format
+msgid ""
+"The VPN settings file '%1' specifies that VPN traffic should be tunneled "
+"through TCP which is currently not supported in the vpnc software.\n"
+"\n"
+"The connection can still be created, with TCP tunneling disabled, however it "
+"may not work as expected."
+msgstr ""
+
+#: vpnplugins/vpnc/vpnc.cpp:227
+#, fuzzy
+#| msgctxt "description of unconnected network interface state"
+#| msgid "Not connected"
+msgid "Not supported"
+msgstr "Sen konekto"
 
 #: libs/internals/connection.cpp:115
 #, fuzzy
@@ -1063,9 +1091,8 @@ msgstr "Nekonata"
 msgid "Unlock failed. Error code is %1/%2 (%3)."
 msgstr ""
 
-#: libs/service/networkinterfacemonitor.cpp:188
-#: settings/config/manageconnectionwidget.cpp:602
-msgid "Error"
+#: libs/ui/vpnpreferences.cpp:51 libs/ui/vpnpreferences.cpp:104
+msgid "New VPN Connection"
 msgstr ""
 
 #: libs/ui/connectioneditor.cpp:70 libs/ui/connectioneditor.cpp:98
@@ -1451,22 +1478,6 @@ msgstr "Servo"
 msgid "New PPPoE Connection"
 msgstr ""
 
-#: libs/ui/vpnpreferences.cpp:50 libs/ui/vpnpreferences.cpp:84
-msgid "New VPN Connection"
-msgstr ""
-
-#: settings/config/addeditdeletebuttonset.cpp:37
-#, fuzzy
-#| msgid "&Add..."
-msgid "Add..."
-msgstr "&Aldonu"
-
-#: settings/config/addeditdeletebuttonset.cpp:39
-#, fuzzy
-#| msgid "&Edit..."
-msgid "Edit..."
-msgstr "&Redakto"
-
 #: settings/config/mobileconnectionwizard.cpp:51
 msgctxt "Mobile Connection Wizard"
 msgid "New Mobile Broadband Connection"
@@ -1631,7 +1642,31 @@ msgctxt "Mobile Connection Wizard"
 msgid "Your Plan:"
 msgstr ""
 
-#: settings/config/manageconnectionwidget.cpp:181
+#: settings/config/addeditdeletebuttonset.cpp:40
+#, fuzzy
+#| msgid "&Add..."
+msgid "Add..."
+msgstr "&Aldonu"
+
+#: settings/config/addeditdeletebuttonset.cpp:42
+#, fuzzy
+#| msgid "&Edit..."
+msgid "Edit..."
+msgstr "&Redakto"
+
+#: settings/config/addeditdeletebuttonset.cpp:48
+#, fuzzy
+#| msgid "Port"
+msgid "Import"
+msgstr "Pordo"
+
+#: settings/config/addeditdeletebuttonset.cpp:49
+#, fuzzy
+#| msgid "Port"
+msgid "Export"
+msgstr "Pordo"
+
+#: settings/config/manageconnectionwidget.cpp:188
 #, kde-format
 msgctxt ""
 "Label for last used time for a network connection used in the last hour, as "
@@ -1641,7 +1676,7 @@ msgid_plural "%1 minutes ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: settings/config/manageconnectionwidget.cpp:188
+#: settings/config/manageconnectionwidget.cpp:195
 #, kde-format
 msgctxt ""
 "Label for last used time for a network connection used in the last day, as "
@@ -1651,46 +1686,76 @@ msgid_plural "%1 hours ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: settings/config/manageconnectionwidget.cpp:193
+#: settings/config/manageconnectionwidget.cpp:200
 msgctxt ""
 "Label for last used time for a network connection used the previous day"
 msgid "Yesterday"
 msgstr "Hieraŭ"
 
-#: settings/config/manageconnectionwidget.cpp:199
+#: settings/config/manageconnectionwidget.cpp:206
 msgctxt ""
 "Label for last used time for a network connection that has never been used"
 msgid "Never"
 msgstr "Neniam"
 
-#: settings/config/manageconnectionwidget.cpp:435
+#: settings/config/manageconnectionwidget.cpp:442
 msgctxt "Tooltip for disabled tab when no VPN plugins are installed"
 msgid "No VPN plugins were found"
 msgstr ""
 
-#: settings/config/manageconnectionwidget.cpp:575
+#: settings/config/manageconnectionwidget.cpp:495
+msgctxt "File chooser dialog title for importing VPN"
+msgid "Import VPN connection settings"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:530
+msgid "Could not import VPN connection settings"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:564
+msgctxt "File chooser dialog title for exporting VPN"
+msgid "Export VPN"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:572
+msgid "VPN connection successfully exported"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:572
+msgid "Success"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:572
+msgid "Do not show again"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:574
+msgid "Could not export VPN connection settings"
+msgstr ""
+
+#: settings/config/manageconnectionwidget.cpp:665
 msgid ""
 "Connection edit option failed, make sure that NetworkManager is properly "
 "running."
 msgstr ""
 
-#: settings/config/manageconnectionwidget.cpp:657
+#: settings/config/manageconnectionwidget.cpp:742
 #, fuzzy
 #| msgid "Connection"
 msgid "Connection create operation failed."
 msgstr "Konekto"
 
-#: settings/config/manageconnectionwidget.cpp:724
+#: settings/config/manageconnectionwidget.cpp:809
 #, kde-format
 msgctxt "Warning message on attempting to delete a connection"
 msgid "Do you really want to delete the connection '%1'?"
 msgstr ""
 
-#: settings/config/manageconnectionwidget.cpp:725
+#: settings/config/manageconnectionwidget.cpp:810
 msgid "Confirm Delete"
 msgstr "Konfirmi forigon"
 
-#: settings/config/manageconnectionwidget.cpp:888
+#: settings/config/manageconnectionwidget.cpp:976
 msgctxt "Text for connection list entry that is currently in used"
 msgid "Now"
 msgstr "Tuj"
