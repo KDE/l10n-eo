@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalarm\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-20 04:23+0200\n"
+"POT-Creation-Date: 2011-07-05 05:18+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -4784,32 +4784,6 @@ msgctxt "@info:whatsthis"
 msgid "Select a template to base the new alarm on."
 msgstr ""
 
-#: traywindow.cpp:96
-msgctxt "@action"
-msgid "&New Alarm"
-msgstr ""
-
-#: traywindow.cpp:272
-msgid "Disabled"
-msgstr ""
-
-#: traywindow.cpp:277
-msgctxt "@info:tooltip Brief: some alarms are disabled"
-msgid "(Some alarms disabled)"
-msgstr ""
-
-#: traywindow.cpp:354
-#, kde-format
-msgctxt "@info/plain prefix + hours:minutes"
-msgid "(%1%2:%3)"
-msgstr "(%1%2:%3)"
-
-#: traywindow.cpp:356
-#, kde-format
-msgctxt "@info/plain prefix + hours:minutes"
-msgid "%1%2:%3"
-msgstr "%1%2:%3"
-
 #: undo.cpp:439
 msgctxt "@info/plain"
 msgid "Alarm not found"
@@ -4911,40 +4885,31 @@ msgctxt "@info/plain"
 msgid "Reactivate multiple alarms"
 msgstr ""
 
-#: rtcwakeaction.cpp:88
+#: traywindow.cpp:96
+msgctxt "@action"
+msgid "&New Alarm"
+msgstr ""
+
+#: traywindow.cpp:272
+msgid "Disabled"
+msgstr ""
+
+#: traywindow.cpp:277
+msgctxt "@info:tooltip Brief: some alarms are disabled"
+msgid "(Some alarms disabled)"
+msgstr ""
+
+#: traywindow.cpp:354
 #, kde-format
-msgctxt "@text/plain"
-msgid "Could not run <command>%1</command> to set wake from suspend"
-msgstr ""
+msgctxt "@info/plain prefix + hours:minutes"
+msgid "(%1%2:%3)"
+msgstr "(%1%2:%3)"
 
-#: rtcwakeaction.cpp:91
+#: traywindow.cpp:356
 #, kde-format
-msgctxt "@text/plain"
-msgid ""
-"Error setting wake from suspend.<nl/>Command was: <command>%1</command><nl/"
-">Error code: %2."
-msgstr ""
-
-#: wakedlg.cpp:51
-msgctxt "@title:window"
-msgid "Wake From Suspend"
-msgstr ""
-
-#: wakedlg.cpp:154
-msgctxt "@info"
-msgid "Cannot schedule wakeup time for a date-only alarm"
-msgstr ""
-
-#: wakedlg.cpp:158
-msgctxt "@info"
-msgid ""
-"<para>This wakeup will cancel any existing wakeup which has been set by "
-"KAlarm or any other application, because your computer can only schedule a "
-"single wakeup time.</para><para><b>Note:</b> Wake From Suspend is not "
-"supported at all on some computers, especially older ones, and some "
-"computers only support setting a wakeup time up to 24 hours ahead. You may "
-"wish to set up a test alarm to check your system's capability.</para>"
-msgstr ""
+msgctxt "@info/plain prefix + hours:minutes"
+msgid "%1%2:%3"
+msgstr "%1%2:%3"
 
 #: calendarmigrator.cpp:205
 #, kde-format
@@ -4994,6 +4959,41 @@ msgctxt "@info/plain"
 msgid "New configuration was corrupt"
 msgstr ""
 
+#: rtcwakeaction.cpp:89
+#, kde-format
+msgctxt "@text/plain"
+msgid "Could not run <command>%1</command> to set wake from suspend"
+msgstr ""
+
+#: rtcwakeaction.cpp:92
+#, kde-format
+msgctxt "@text/plain"
+msgid ""
+"Error setting wake from suspend.<nl/>Command was: <command>%1</command><nl/"
+">Error code: %2."
+msgstr ""
+
+#: wakedlg.cpp:51
+msgctxt "@title:window"
+msgid "Wake From Suspend"
+msgstr ""
+
+#: wakedlg.cpp:154
+msgctxt "@info"
+msgid "Cannot schedule wakeup time for a date-only alarm"
+msgstr ""
+
+#: wakedlg.cpp:158
+msgctxt "@info"
+msgid ""
+"<para>This wakeup will cancel any existing wakeup which has been set by "
+"KAlarm or any other application, because your computer can only schedule a "
+"single wakeup time.</para><para><b>Note:</b> Wake From Suspend is not "
+"supported at all on some computers, especially older ones, and some "
+"computers only support setting a wakeup time up to 24 hours ahead. You may "
+"wish to set up a test alarm to check your system's capability.</para>"
+msgstr ""
+
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -5038,7 +5038,7 @@ msgstr ""
 #. i18n: ectx: label, entry (DisplayName), group (General)
 #. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:13
 #. i18n: ectx: label, entry (DisplayName), group (General)
-#: rc.cpp:20 rc.cpp:65
+#: rc.cpp:20 rc.cpp:35
 msgid "Display name."
 msgstr ""
 
@@ -5046,7 +5046,7 @@ msgstr ""
 #. i18n: ectx: label, entry (ReadOnly), group (General)
 #. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:17
 #. i18n: ectx: label, entry (ReadOnly), group (General)
-#: rc.cpp:23 rc.cpp:68
+#: rc.cpp:23 rc.cpp:38
 msgid "Do not change the actual backend data."
 msgstr ""
 
@@ -5060,31 +5060,43 @@ msgstr ""
 #. i18n: ectx: label, entry (AlarmTypes), group (General)
 #. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:25
 #. i18n: ectx: label, entry (AlarmTypes), group (General)
-#: rc.cpp:29 rc.cpp:74
+#: rc.cpp:29 rc.cpp:44
 msgid "Alarm types."
+msgstr ""
+
+#. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:9
+#. i18n: ectx: label, entry (Path), group (General)
+#: rc.cpp:32
+msgid "Path to KAlarm directory."
+msgstr ""
+
+#. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:21
+#. i18n: ectx: label, entry (MonitorFiles), group (General)
+#: rc.cpp:41
+msgid "Monitor directory for changes."
 msgstr ""
 
 #. i18n: file: akonadi/kalarmdir/settingsdialog.ui:26
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:32
+#: rc.cpp:47
 msgid "Directory"
 msgstr ""
 
 #. i18n: file: akonadi/kalarmdir/settingsdialog.ui:32
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:35
+#: rc.cpp:50
 msgid "Directory Name"
 msgstr ""
 
 #. i18n: file: akonadi/kalarmdir/settingsdialog.ui:40
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:38
+#: rc.cpp:53
 msgid "&Directory:"
 msgstr ""
 
 #. i18n: file: akonadi/kalarmdir/settingsdialog.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:41
+#: rc.cpp:56
 msgid ""
 "Select the directory whose contents should be represented by this resource. "
 "If the directory does not exist, it will be created."
@@ -5094,7 +5106,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: file: akonadi/kdepim-runtime/shared/singlefileresourceconfigwidget_desktop.ui:113
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:44 rc.cpp:110
+#: rc.cpp:59 rc.cpp:110
 msgid "Display Name"
 msgstr ""
 
@@ -5102,13 +5114,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_1)
 #. i18n: file: akonadi/kdepim-runtime/shared/singlefileresourceconfigwidget_desktop.ui:121
 #. i18n: ectx: property (text), widget (QLabel, label_1)
-#: rc.cpp:47 rc.cpp:113
+#: rc.cpp:62 rc.cpp:113
 msgid "&Name:"
 msgstr ""
 
 #. i18n: file: akonadi/kalarmdir/settingsdialog.ui:91
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:50
+#: rc.cpp:65
 msgid ""
 "Enter the name used to identify this resource in displays. If not specified, "
 "the directory name will be used."
@@ -5118,7 +5130,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: akonadi/kdepim-runtime/shared/singlefileresourceconfigwidget_desktop.ui:18
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:53 rc.cpp:80
+#: rc.cpp:68 rc.cpp:80
 msgid "Access Rights"
 msgstr ""
 
@@ -5128,29 +5140,17 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReadOnly)
 #. i18n: file: akonadi/kdepim-runtime/shared/singlefileresourceconfigwidget_mobile.ui:51
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReadOnly)
-#: rc.cpp:56 rc.cpp:83 rc.cpp:125
+#: rc.cpp:71 rc.cpp:83 rc.cpp:125
 msgid "Read only"
 msgstr ""
 
 #. i18n: file: akonadi/kalarmdir/settingsdialog.ui:117
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:59
+#: rc.cpp:74
 msgid ""
 "If read-only mode is enabled, no changes will be written to the directory "
 "selected above. Read-only mode will be automatically enabled if you do not "
 "have write access to the directory."
-msgstr ""
-
-#. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:9
-#. i18n: ectx: label, entry (Path), group (General)
-#: rc.cpp:62
-msgid "Path to KAlarm directory."
-msgstr ""
-
-#. i18n: file: akonadi/kalarmdir/kalarmdirresource.kcfg:21
-#. i18n: ectx: label, entry (MonitorFiles), group (General)
-#: rc.cpp:71
-msgid "Monitor directory for changes."
 msgstr ""
 
 #. i18n: file: akonadi/kdepim-runtime/shared/singlefileresourceconfigwidget_desktop.ui:12
