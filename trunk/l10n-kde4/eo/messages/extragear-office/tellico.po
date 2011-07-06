@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-01 04:03+0200\n"
+"POT-Creation-Date: 2011-07-06 04:10+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -439,9 +439,10 @@ msgstr ""
 #: src/configdialog.cpp:182 src/configdialog.cpp:209 src/configdialog.cpp:227
 #: src/fetch/animenfofetcher.cpp:294 src/fetch/animenfofetcher.cpp:298
 #: src/fetch/filmasterfetcher.cpp:233 src/fetch/freebasefetcher.cpp:367
-#: src/fetch/imdbfetcher.cpp:753 src/fetch/imdbfetcher.cpp:1071
-#: src/fetch/openlibraryfetcher.cpp:298 src/field.cpp:37 src/field.cpp:78
-#: src/translators/gcstarimporter.cpp:89 src/collection.cpp:57
+#: src/fetch/openlibraryfetcher.cpp:298 src/fetch/imdbfetcher.cpp:753
+#: src/fetch/imdbfetcher.cpp:1071 src/fetch/moviemeterfetcher.cpp:238
+#: src/field.cpp:37 src/field.cpp:78 src/translators/gcstarimporter.cpp:89
+#: src/collection.cpp:57
 msgid "General"
 msgstr "Ĝeneralo"
 
@@ -1892,14 +1893,15 @@ msgid "*.tar.gz *.tgz|Template Packages (*.tar.gz)"
 msgstr ""
 
 #: src/configdialog.cpp:1137 src/mainwindow.cpp:1072 src/mainwindow.cpp:1237
-#: src/reportdialog.cpp:215 src/translators/bibtexexporter.cpp:61
-#: src/translators/bibtexmlexporter.cpp:53 src/translators/csvexporter.cpp:59
-#: src/translators/gcstarexporter.cpp:56 src/translators/htmlexporter.cpp:91
-#: src/translators/onixexporter.cpp:71 src/translators/pilotdbexporter.cpp:58
+#: src/reportdialog.cpp:215 src/translators/bibtexmlexporter.cpp:53
+#: src/translators/csvexporter.cpp:59 src/translators/gcstarexporter.cpp:56
+#: src/translators/htmlexporter.cpp:91 src/translators/onixexporter.cpp:71
+#: src/translators/pilotdbexporter.cpp:58
 #: src/translators/tellicoxmlexporter.cpp:70
 #: src/translators/tellicozipexporter.cpp:56
 #: src/translators/xsltexporter.cpp:54 src/translators/xsltexporter.cpp:99
-#: src/translators/xsltimporter.cpp:117 src/importdialog.cpp:337
+#: src/translators/xsltimporter.cpp:117 src/translators/bibtexexporter.cpp:61
+#: src/importdialog.cpp:337
 msgid "*|All Files"
 msgstr "*|Ĉiuj dosieroj"
 
@@ -1996,18 +1998,18 @@ msgid "Tellico is unable to load the image - %1."
 msgstr ""
 
 #: src/core/filehandler.cpp:219
+msgid "Overwrite"
+msgstr "Anstataŭigu"
+
+#: src/core/filehandler.cpp:223
 #, kde-format
 msgid ""
 "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
 msgstr "Dosiero nomita \"%1\" jam ekzistas. Ĉu vi vere volas anstataŭigi ĝin?"
 
-#: src/core/filehandler.cpp:222
+#: src/core/filehandler.cpp:226
 msgid "Overwrite File?"
 msgstr "Ĉu anstataŭigi la dosieron?"
-
-#: src/core/filehandler.cpp:223
-msgid "Overwrite"
-msgstr "Anstataŭigu"
 
 #: src/entryeditdialog.cpp:64 src/entryeditdialog.cpp:389
 #: src/entryeditdialog.cpp:412 src/entryeditdialog.cpp:508
@@ -2275,8 +2277,9 @@ msgstr ""
 
 #: src/fetch/animenfofetcher.cpp:279 src/fetch/animenfofetcher.cpp:479
 #: src/fetch/doubanfetcher.cpp:209 src/fetch/dvdfrfetcher.cpp:165
-#: src/fetch/imdbfetcher.cpp:823 src/fetch/imdbfetcher.cpp:1268
-#: src/fetch/themoviedbfetcher.cpp:229
+#: src/fetch/themoviedbfetcher.cpp:229 src/fetch/imdbfetcher.cpp:823
+#: src/fetch/imdbfetcher.cpp:1268 src/fetch/moviemeterfetcher.cpp:244
+#: src/fetch/moviemeterfetcher.cpp:351
 msgid "Alternative Titles"
 msgstr ""
 
@@ -2302,7 +2305,7 @@ msgstr ""
 #: src/fetch/filmasterfetcher.cpp:319 src/fetch/freebasefetcher.cpp:902
 #: src/fetch/googlescholarfetcher.cpp:267 src/fetch/ibsfetcher.cpp:413
 #: src/fetch/musicbrainzfetcher.cpp:332 src/fetch/openlibraryfetcher.cpp:434
-#: src/fetch/yahoofetcher.cpp:394
+#: src/fetch/yahoofetcher.cpp:394 src/fetch/moviemeterfetcher.cpp:358
 msgid "This source has no options."
 msgstr ""
 
@@ -2378,8 +2381,8 @@ msgstr ""
 msgid "Douban Link"
 msgstr ""
 
-#: src/fetch/doubanfetcher.cpp:211 src/fetch/imdbfetcher.cpp:752
-#: src/fetch/imdbfetcher.cpp:1266 src/fetch/themoviedbfetcher.cpp:228
+#: src/fetch/doubanfetcher.cpp:211 src/fetch/themoviedbfetcher.cpp:228
+#: src/fetch/imdbfetcher.cpp:752 src/fetch/imdbfetcher.cpp:1266
 msgid "IMDb Link"
 msgstr ""
 
@@ -2531,62 +2534,6 @@ msgstr ""
 msgid "Internet Bookshop (ibs.it)"
 msgstr ""
 
-#: src/fetch/imdbfetcher.cpp:615
-msgid "Select IMDb Result"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:621
-msgid ""
-"<qt>Your search returned multiple matches. Please select one below.</qt>"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:638
-msgid "<qt>Select a search result.</qt>"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1070 src/fetch/imdbfetcher.cpp:1267
-msgid "IMDb Rating"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1227 src/fetch/imdbfetcher.cpp:1269
-msgid "Certifications"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1256
-msgid "Internet Movie Database"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1284 src/fetch/srufetcher.cpp:469
-#: src/fetch/z3950fetcher.cpp:577
-msgid "Hos&t: "
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1289
-msgid ""
-"The Internet Movie Database uses several different servers. Choose the one "
-"you wish to use."
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1295
-msgid "&Maximum cast: "
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1300
-msgid ""
-"The list of cast members may include many people. Set the maximum number "
-"returned from the search."
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1305
-msgid "Download cover &image"
-msgstr ""
-
-#: src/fetch/imdbfetcher.cpp:1309 src/fetch/amazonfetcher.cpp:945
-msgid ""
-"The cover image may be downloaded as well. However, too many large images in "
-"the collection may degrade performance."
-msgstr ""
-
 #: src/fetch/isbndbfetcher.cpp:222
 msgid ""
 "<qt><p><b>The ISBNndb.com server reports an access key error.</b></p>You may "
@@ -2618,6 +2565,11 @@ msgstr ""
 
 #: src/fetch/srufetcher.cpp:443
 msgid "SRU Server"
+msgstr ""
+
+#: src/fetch/srufetcher.cpp:469 src/fetch/z3950fetcher.cpp:577
+#: src/fetch/imdbfetcher.cpp:1284
+msgid "Hos&t: "
 msgstr ""
 
 #: src/fetch/srufetcher.cpp:476 src/fetch/z3950fetcher.cpp:583
@@ -2854,6 +2806,12 @@ msgstr ""
 msgid "No Image"
 msgstr ""
 
+#: src/fetch/amazonfetcher.cpp:945 src/fetch/imdbfetcher.cpp:1309
+msgid ""
+"The cover image may be downloaded as well. However, too many large images in "
+"the collection may degrade performance."
+msgstr ""
+
 #: src/fetch/amazonfetcher.cpp:951
 msgid "&Associate's ID: "
 msgstr ""
@@ -2901,6 +2859,66 @@ msgstr ""
 #: src/fetch/themoviedbfetcher.cpp:302
 #, kde-format
 msgid "TheMovieDB (%1)"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:615
+msgid "Select IMDb Result"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:621
+msgid ""
+"<qt>Your search returned multiple matches. Please select one below.</qt>"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:638
+msgid "<qt>Select a search result.</qt>"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1070 src/fetch/imdbfetcher.cpp:1267
+msgid "IMDb Rating"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1227 src/fetch/imdbfetcher.cpp:1269
+msgid "Certifications"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1256
+msgid "Internet Movie Database"
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1289
+msgid ""
+"The Internet Movie Database uses several different servers. Choose the one "
+"you wish to use."
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1295
+msgid "&Maximum cast: "
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1300
+msgid ""
+"The list of cast members may include many people. Set the maximum number "
+"returned from the search."
+msgstr ""
+
+#: src/fetch/imdbfetcher.cpp:1305
+msgid "Download cover &image"
+msgstr ""
+
+#: src/fetch/moviemeterfetcher.cpp:237 src/fetch/moviemeterfetcher.cpp:350
+#, fuzzy
+#| msgid "Filter"
+msgid "MovieMeter Link"
+msgstr "Filtrilo"
+
+#: src/fetch/xmlrpc/query.cpp:376
+#, kde-format
+msgid "Received invalid XML markup: %1 at %2:%3"
+msgstr ""
+
+#: src/fetch/xmlrpc/query.cpp:390
+msgid "Unknown type of XML markup received"
 msgstr ""
 
 #: src/fetchdialog.cpp:82
@@ -4384,66 +4402,6 @@ msgstr ""
 msgid "If checked, the bitrate for each track is added to the entries."
 msgstr ""
 
-#: src/translators/bibtexexporter.cpp:57
-msgid "Bibtex"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:61 src/importdialog.cpp:289
-msgid "*.bib|Bibtex Files (*.bib)"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:214
-#: src/translators/bibteximporter.cpp:327
-msgid "Bibtex Options"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:217
-msgid "Expand string macros"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:219
-msgid ""
-"If checked, the string macros will be expanded and no @string{} entries will "
-"be written."
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:222
-msgid "Use URL package"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:224
-msgid "If checked, any URL fields will be wrapped in a \\url declaration."
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:227
-msgid "Skip entries with empty citation keys"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:229
-msgid "If checked, any entries without a bibtex citation key will be skipped."
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:235
-msgid "Bibtex quotation style:"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:237
-#: src/translators/bibtexexporter.cpp:244
-#: src/translators/bibtexexporter.cpp:283
-msgid "Braces"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:238
-#: src/translators/bibtexexporter.cpp:246
-msgid "Quotes"
-msgstr ""
-
-#: src/translators/bibtexexporter.cpp:239
-msgid ""
-"<qt>The quotation style used when exporting bibtex. All field values will  "
-"be escaped with either braces or quotation marks.</qt>"
-msgstr ""
-
 #: src/translators/bibteximporter.cpp:99
 msgid "No valid bibtex entries were found"
 msgstr ""
@@ -4451,6 +4409,11 @@ msgstr ""
 #: src/translators/bibteximporter.cpp:119
 #, kde-format
 msgid "No valid bibtex entries were found in file - %1"
+msgstr ""
+
+#: src/translators/bibteximporter.cpp:327
+#: src/translators/bibtexexporter.cpp:214
+msgid "Bibtex Options"
 msgstr ""
 
 #: src/translators/bibteximporter.cpp:330
@@ -4561,73 +4524,6 @@ msgstr "nelima"
 
 #: src/translators/csvexporter.cpp:199 src/translators/csvimporter.cpp:262
 msgid "The row delimiter separates values in each row of a <i>Table</i> field."
-msgstr ""
-
-#: src/translators/csvimporter.cpp:190
-msgid "Select the type of collection being imported."
-msgstr ""
-
-#: src/translators/csvimporter.cpp:193
-msgid "&First row contains field titles"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:194
-msgid "If checked, the first row is used as field titles."
-msgstr ""
-
-#: src/translators/csvimporter.cpp:203
-#, fuzzy
-#| msgid "unlimited"
-msgid "Delimiter:"
-msgstr "nelima"
-
-#: src/translators/csvimporter.cpp:209
-msgid "&Comma"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:215
-msgid "&Semicolon"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:220
-msgid "Ta&b"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:225
-msgid "Ot&her:"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:281
-msgid "The table shows up to the first five lines of the CSV file."
-msgstr ""
-
-#: src/translators/csvimporter.cpp:288
-msgid ""
-"<qt>Set each column to correspond to a field in the collection by choosing a "
-"column, selecting the field, then clicking the <i>Assign Field</i> button.</"
-"qt>"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:290
-msgid "Co&lumn:"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:302
-msgid "&Data field in this column:"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:315
-msgid "&Assign Field"
-msgstr ""
-
-#: src/translators/csvimporter.cpp:351
-msgid ""
-"At least one column must be assigned to a field. Only assigned columns will "
-"be imported."
-msgstr ""
-
-#: src/translators/csvimporter.cpp:400 src/translators/csvimporter.cpp:522
-msgid "New Field"
 msgstr ""
 
 #: src/translators/filelistingimporter.cpp:80
@@ -4805,14 +4701,6 @@ msgstr ""
 msgid "PDF"
 msgstr "PDF"
 
-#: src/translators/tellicoimporter.cpp:177
-msgid "The file is empty."
-msgstr ""
-
-#: src/translators/tellicoimporter.cpp:194
-msgid "The file contains no collection data."
-msgstr ""
-
 #: src/translators/tellicoxmlexporter.cpp:66
 msgid "XML"
 msgstr "XML"
@@ -4872,6 +4760,136 @@ msgstr "Ĝeneralaj opcioj"
 
 #: src/translators/goodreadsimporter.cpp:129
 msgid "User ID"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:57
+msgid "Bibtex"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:61 src/importdialog.cpp:289
+msgid "*.bib|Bibtex Files (*.bib)"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:217
+msgid "Expand string macros"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:219
+msgid ""
+"If checked, the string macros will be expanded and no @string{} entries will "
+"be written."
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:222
+msgid "Use URL package"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:224
+msgid "If checked, any URL fields will be wrapped in a \\url declaration."
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:227
+msgid "Skip entries with empty citation keys"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:229
+msgid "If checked, any entries without a bibtex citation key will be skipped."
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:235
+msgid "Bibtex quotation style:"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:237
+#: src/translators/bibtexexporter.cpp:244
+#: src/translators/bibtexexporter.cpp:283
+msgid "Braces"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:238
+#: src/translators/bibtexexporter.cpp:246
+msgid "Quotes"
+msgstr ""
+
+#: src/translators/bibtexexporter.cpp:239
+msgid ""
+"<qt>The quotation style used when exporting bibtex. All field values will  "
+"be escaped with either braces or quotation marks.</qt>"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:190
+msgid "Select the type of collection being imported."
+msgstr ""
+
+#: src/translators/csvimporter.cpp:193
+msgid "&First row contains field titles"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:194
+msgid "If checked, the first row is used as field titles."
+msgstr ""
+
+#: src/translators/csvimporter.cpp:203
+#, fuzzy
+#| msgid "unlimited"
+msgid "Delimiter:"
+msgstr "nelima"
+
+#: src/translators/csvimporter.cpp:209
+msgid "&Comma"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:215
+msgid "&Semicolon"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:220
+msgid "Ta&b"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:225
+msgid "Ot&her:"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:282
+msgid "The table shows up to the first five lines of the CSV file."
+msgstr ""
+
+#: src/translators/csvimporter.cpp:289
+msgid ""
+"<qt>Set each column to correspond to a field in the collection by choosing a "
+"column, selecting the field, then clicking the <i>Assign Field</i> button.</"
+"qt>"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:291
+msgid "Co&lumn:"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:303
+msgid "&Data field in this column:"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:316
+msgid "&Assign Field"
+msgstr ""
+
+#: src/translators/csvimporter.cpp:352
+msgid ""
+"At least one column must be assigned to a field. Only assigned columns will "
+"be imported."
+msgstr ""
+
+#: src/translators/csvimporter.cpp:401 src/translators/csvimporter.cpp:522
+msgid "New Field"
+msgstr ""
+
+#: src/translators/tellicoimporter.cpp:176
+msgid "The file is empty."
+msgstr ""
+
+#: src/translators/tellicoimporter.cpp:193
+msgid "The file contains no collection data."
 msgstr ""
 
 #: src/utils/calendarhandler.cpp:197
