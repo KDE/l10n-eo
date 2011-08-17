@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: liboktetakasten\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-16 05:55+0200\n"
+"POT-Creation-Date: 2011-08-17 04:05+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -478,14 +478,14 @@ msgid "%1 %2"
 msgstr "%1: %2"
 
 #: controllers/view/structures/datatypes/datainformation.cpp:199
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:264
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:262
 #, kde-format
 msgctxt "not all values in this structure are as they should be"
 msgid "Validation failed: \"%1\""
 msgstr ""
 
 #: controllers/view/structures/datatypes/datainformation.cpp:205
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:270
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:268
 msgctxt "not all values in this structure are as they should be"
 msgid "Validation failed."
 msgstr ""
@@ -512,21 +512,13 @@ msgid ""
 "Size: %4"
 msgstr ""
 
-#: controllers/view/structures/datatypes/array/arraydatainformation.cpp:33
-msgid "Empty array"
-msgstr ""
-
-#: controllers/view/structures/datatypes/array/arraydatainformation.cpp:39
-#, kde-format
-msgctxt "array type then length"
+#: controllers/view/structures/datatypes/array/complexarraydata.cpp:131
+#, fuzzy, kde-format
+#| msgctxt "array type then length"
+#| msgid "%1[%2]"
+msgctxt "type name, then array length"
 msgid "%1[%2]"
 msgstr "%1[%2]"
-
-#: controllers/view/structures/datatypes/array/arraydatainformation.cpp:42
-#, kde-format
-msgctxt "subelem type then array name and length"
-msgid "%1[%2] (%3)"
-msgstr "%1[%2] (%3)"
 
 #: controllers/view/structures/datatypes/enumdatainformation.cpp:61
 #, fuzzy, kde-format
@@ -636,50 +628,30 @@ msgstr ""
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:47
 #: controllers/view/structures/datatypes/primitive/bitfield/unsignedbitfielddatainformation.cpp:45
 #: controllers/view/structures/datatypes/primitive/bitfield/signedbitfielddatainformation.cpp:45
-#: controllers/view/structures/datatypes/primitive/bool32datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/bool16datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/bool64datainformation.cpp:27
 #: controllers/view/structures/datatypes/primitive/floatdatainformation.cpp:29
 #: controllers/view/structures/datatypes/primitive/doubledatainformation.cpp:28
-#: controllers/view/structures/datatypes/primitive/int8datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/bool8datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/uint32datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/uint16datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/uint64datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/int32datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/int16datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/int64datainformation.cpp:27
-#: controllers/view/structures/datatypes/primitive/uint8datainformation.cpp:27
 #: controllers/view/structures/datatypes/primitive/chardatainformation.cpp:28
+#: controllers/view/structures/datatypes/primitive/sintdatainformation.h:176
 msgctxt "invalid value (out of range)"
 msgid "<invalid>"
 msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:51
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:72
-#: controllers/view/structures/datatypes/primitive/bool32datainformation.cpp:30
-#: controllers/view/structures/datatypes/primitive/bool16datainformation.cpp:30
-#: controllers/view/structures/datatypes/primitive/bool64datainformation.cpp:30
-#: controllers/view/structures/datatypes/primitive/bool8datainformation.cpp:30
+#: controllers/view/structures/datatypes/primitive/booldatainformation.h:58
 msgctxt "boolean value"
 msgid "false"
 msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:53
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:73
-#: controllers/view/structures/datatypes/primitive/bool32datainformation.cpp:32
-#: controllers/view/structures/datatypes/primitive/bool16datainformation.cpp:32
-#: controllers/view/structures/datatypes/primitive/bool64datainformation.cpp:32
-#: controllers/view/structures/datatypes/primitive/bool8datainformation.cpp:32
+#: controllers/view/structures/datatypes/primitive/booldatainformation.h:60
 msgctxt "boolean value"
 msgid "true"
 msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:62
-#: controllers/view/structures/datatypes/primitive/bool32datainformation.cpp:41
-#: controllers/view/structures/datatypes/primitive/bool16datainformation.cpp:41
-#: controllers/view/structures/datatypes/primitive/bool64datainformation.cpp:41
-#: controllers/view/structures/datatypes/primitive/bool8datainformation.cpp:41
+#: controllers/view/structures/datatypes/primitive/booldatainformation.h:72
 #, kde-format
 msgctxt "boolean value with actual value"
 msgid "true (%1)"
@@ -715,47 +687,9 @@ msgid_plural "bitfield (%1 bits wide)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: controllers/view/structures/datatypes/primitive/uint64datainformation.h:58
-msgctxt "Data type"
-msgid "unsigned long"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/int32datainformation.h:60
-#, fuzzy
-#| msgctxt "@item:inlistbox coding of the bytes as values in the binary format"
-#| msgid "Bin"
-msgctxt "Data type"
-msgid "int"
-msgstr "Bin"
-
-#: controllers/view/structures/datatypes/primitive/int16datainformation.h:60
-msgctxt "Data type"
-msgid "short"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/int64datainformation.h:60
-msgctxt "Data type"
-msgid "long"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/uint8datainformation.h:59
-msgctxt "Data type"
-msgid "unsigned byte"
-msgstr ""
-
 #: controllers/view/structures/datatypes/primitive/chardatainformation.h:62
 msgctxt "Data type"
 msgid "char"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/bool32datainformation.h:53
-msgctxt "Data type"
-msgid "bool (4 bytes)"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/bool16datainformation.h:54
-msgctxt "Data type"
-msgid "bool (2 bytes)"
 msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/floatdatainformation.h:66
@@ -763,34 +697,15 @@ msgctxt "Data type"
 msgid "float"
 msgstr ""
 
-#: controllers/view/structures/datatypes/primitive/bool64datainformation.h:54
-msgctxt "Data type"
-msgid "bool (8 bytes)"
-msgstr ""
-
 #: controllers/view/structures/datatypes/primitive/doubledatainformation.h:67
 msgctxt "Data type"
 msgid "double"
 msgstr ""
 
-#: controllers/view/structures/datatypes/primitive/int8datainformation.h:59
-msgctxt "Data type"
-msgid "byte"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/bool8datainformation.h:58
-msgctxt "Data type"
-msgid "bool (1 byte)"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/uint32datainformation.h:58
-msgctxt "Data type"
-msgid "unsigned int"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/uint16datainformation.h:58
-msgctxt "Data type"
-msgid "unsigned short"
+#: controllers/view/structures/datatypes/primitive/booldatainformation.h:55
+#: controllers/view/structures/datatypes/primitive/uintdatainformation.h:68
+msgctxt "invalid value (out of range)"
+msgid "&lt;invalid&gt;"
 msgstr ""
 
 #: controllers/view/structures/datatypes/uniondatainformation.cpp:27
@@ -798,7 +713,7 @@ msgctxt "data type in C/C++"
 msgid "union"
 msgstr ""
 
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:272
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:270
 #, kde-format
 msgid ""
 "Name: %2\n"
@@ -819,7 +734,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:278
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:276
 #, kde-format
 msgid ""
 "Name: %2\n"
@@ -976,6 +891,86 @@ msgstr "Tipo:"
 #: controllers/view/structures/structtool.cpp:204
 msgctxt "value of a data structure (primitive type)"
 msgid "Value"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:31
+msgctxt "data type"
+msgid "bool (1 byte)"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:32
+msgctxt "data type"
+msgid "signed byte"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:33
+msgctxt "data type"
+msgid "unsigned byte"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:34
+msgctxt "data type"
+msgid "char"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:35
+msgctxt "data type"
+msgid "bool (2 bytes)"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:36
+msgctxt "data type"
+msgid "signed short"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:37
+msgctxt "data type"
+msgid "unsigned short"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:38
+msgctxt "data type"
+msgid "bool (4 bytes)"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:39
+msgctxt "data type"
+msgid "signed int"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:40
+msgctxt "data type"
+msgid "unsigned int"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:41
+msgctxt "data type"
+msgid "bool (8 bytes)"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:42
+msgctxt "data type"
+msgid "signed long"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:43
+msgctxt "data type"
+msgid "unsigned long"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:44
+msgctxt "data type"
+msgid "float"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:45
+msgctxt "data type"
+msgid "double"
+msgstr ""
+
+#: controllers/view/structures/allprimitivetypes.cpp:46
+msgctxt "data type"
+msgid "bitfield"
 msgstr ""
 
 #: controllers/view/stringsextract/stringsextractview.cpp:62
@@ -2648,9 +2643,9 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_UnsignedDisplayBase)
 #. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:49
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignedDisplayBase)
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:102
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:123
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_CharDisplayBase)
-#: rc.cpp:3 rc.cpp:15 rc.cpp:33
+#: rc.cpp:3 rc.cpp:15 rc.cpp:39
 #, fuzzy
 #| msgctxt "@item:inlistbox coding of the bytes as values in the binary format"
 #| msgid "Bin"
@@ -2661,9 +2656,9 @@ msgstr "Bin"
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_UnsignedDisplayBase)
 #. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:54
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignedDisplayBase)
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:107
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:128
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_CharDisplayBase)
-#: rc.cpp:6 rc.cpp:18 rc.cpp:36
+#: rc.cpp:6 rc.cpp:18 rc.cpp:42
 #, fuzzy
 #| msgctxt "@item:inmenu encoding of the bytes as values in the decimal format"
 #| msgid "Decimal"
@@ -2674,9 +2669,9 @@ msgstr "Decimal"
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_UnsignedDisplayBase)
 #. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:59
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignedDisplayBase)
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:112
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:133
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_CharDisplayBase)
-#: rc.cpp:9 rc.cpp:21 rc.cpp:39
+#: rc.cpp:9 rc.cpp:21 rc.cpp:45
 #, fuzzy
 #| msgctxt ""
 #| "@item:inmenu encoding of the bytes as values in the hexadecimal format"
@@ -2697,99 +2692,124 @@ msgid "Unsigned values:"
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:84
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowCharNumericalValue)
-#: rc.cpp:27
-msgid "Show numerical value of chars"
-msgstr ""
-
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:91
-#. i18n: ectx: property (text), widget (QLabel, char_label)
-#: rc.cpp:30
-msgid "Character value:"
-msgstr ""
-
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:124
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LocaleAwareFloatFormatting)
-#: rc.cpp:42
+#: rc.cpp:27
 msgid "Use locale-aware floating-point formatting"
 msgstr ""
 
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:131
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:94
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:45
+#: rc.cpp:30
 msgid "Floating-point precision:"
 msgstr ""
 
-#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:143
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_LocaleAwareDecimalFormatting)
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:103
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShortTypeNames)
+#: rc.cpp:33
+msgid "Use short type names"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:115
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowCharNumericalValue)
+#: rc.cpp:36
+msgid "Show numerical value of chars"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:141
+#. i18n: ectx: property (text), widget (QLabel, char_label)
 #: rc.cpp:48
+msgid "Character value:"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewdisplaysettingswidget.ui:153
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_LocaleAwareDecimalFormatting)
+#: rc.cpp:51
 msgid "Use locale-aware integer formatting"
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:8
 #. i18n: ectx: label, entry (UnsignedDisplayBase), group (ValueDisplay)
-#: rc.cpp:51
+#: rc.cpp:54
 msgid "Unsigned values display"
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:9
 #. i18n: ectx: tooltip, entry (UnsignedDisplayBase), group (ValueDisplay)
-#: rc.cpp:54
+#: rc.cpp:57
 msgctxt "@info:tooltip"
 msgid "The base to use when converting unsigned numbers to a string."
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:18
 #. i18n: ectx: tooltip, entry (SignedDisplayBase), group (ValueDisplay)
-#: rc.cpp:57
+#: rc.cpp:60
 msgctxt "@info:tooltip"
 msgid "The base to use when converting signed numbers to a string."
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:27
 #. i18n: ectx: tooltip, entry (CharDisplayBase), group (ValueDisplay)
-#: rc.cpp:60
+#: rc.cpp:63
 msgctxt "@info:tooltip"
 msgid "The base to use when converting characters to a value string."
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:36
 #. i18n: ectx: tooltip, entry (ShowCharNumericalValue), group (ValueDisplay)
-#: rc.cpp:63
+#: rc.cpp:66
 msgctxt "@info:tooltip"
 msgid "Whether to show the numerical value of chars"
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:40
 #. i18n: ectx: tooltip, entry (LocaleAwareFloatFormatting), group (ValueDisplay)
-#: rc.cpp:66
+#: rc.cpp:69
 msgctxt "@info:tooltip"
 msgid "Whether to format floating point values according to the current locale"
 msgstr ""
 
 #. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:44
+#. i18n: ectx: tooltip, entry (ShortTypeNames), group (ValueDisplay)
+#: rc.cpp:72
+msgctxt "@info:tooltip"
+msgid "Whether to use short type names (i.e. uint32 instead of unsigned int)"
+msgstr ""
+
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:48
 #. i18n: ectx: tooltip, entry (LocaleAwareDecimalFormatting), group (ValueDisplay)
-#: rc.cpp:69
+#: rc.cpp:75
 msgctxt "@info:tooltip"
 msgid ""
 "If true, integers being displayed in decimal format will be formatted "
 "according to the current locale settings"
 msgstr ""
 
-#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:45
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:49
 #. i18n: ectx: whatsthis, entry (LocaleAwareDecimalFormatting), group (ValueDisplay)
-#: rc.cpp:72
+#: rc.cpp:78
 msgid "Whether to format integer values according to the current locale"
 msgstr ""
 
-#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:49
+#. i18n: file: controllers/view/structures/settings/structviewpreferences.kcfg:53
 #. i18n: ectx: tooltip, entry (FloatPrecision), group (ValueDisplay)
-#: rc.cpp:75
+#: rc.cpp:81
 msgctxt "@info:tooltip"
 msgid ""
 "The precision used for converting floating-point numbers to strings (number "
 "of decimal digits)"
 msgstr ""
+
+#~ msgctxt "subelem type then array name and length"
+#~ msgid "%1[%2] (%3)"
+#~ msgstr "%1[%2] (%3)"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@item:inlistbox coding of the bytes as values in the binary format"
+#~| msgid "Bin"
+#~ msgctxt "Data type"
+#~ msgid "int"
+#~ msgstr "Bin"
 
 #, fuzzy
 #~| msgctxt "@item description of bookmark"
