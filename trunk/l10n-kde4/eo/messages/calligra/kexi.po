@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kexi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-05 02:23+0200\n"
+"POT-Creation-Date: 2011-09-06 02:29+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -44,13 +44,19 @@ msgid ""
 "column is used for sorting."
 msgstr ""
 
+#: core/kexiprojectdata.cpp:192
+#, kde-format
+msgctxt "database connection"
+msgid "(connection %1)"
+msgstr ""
+
 #: core/kexicontexthelp.cpp:34 core/KoContextHelp.cpp:518
 #: core/KoContextHelp.cpp:550 core/KoContextHelp.cpp:560
 #: core/KoContextHelp.cpp:579 core/KoContextHelp.cpp:591
 msgid "Context Help"
 msgstr "Kunteksthelpo"
 
-#: core/kexiguimsghandler.cpp:123 core/kexitextmsghandler.cpp:52
+#: core/kexiguimsghandler.cpp:123 core/kexitextmsghandler.cpp:53
 msgid "Unknown error"
 msgstr "Nekonata eraro"
 
@@ -83,12 +89,6 @@ msgstr ""
 msgid "Creates new object of type \"%1\""
 msgstr ""
 
-#: core/kexiprojectdata.cpp:190
-#, kde-format
-msgctxt "database connection"
-msgid "(connection %1)"
-msgstr ""
-
 #: core/KexiWindow.cpp:608 widget/kexidbconnectionwidget.cpp:89
 msgid "Save Changes"
 msgstr ""
@@ -113,7 +113,7 @@ msgid ""
 "Design has been changed. You must save it before switching to other view."
 msgstr ""
 
-#: core/KexiWindow.cpp:703 main/KexiMainWindow.cpp:3584
+#: core/KexiWindow.cpp:703 main/KexiMainWindow.cpp:3608
 #, kde-format
 msgid "Switching to other view failed (%1)."
 msgstr ""
@@ -352,6 +352,54 @@ msgid ""
 "project on a server to open."
 msgstr ""
 
+#: core/kexi.cpp:125
+msgid "&No View"
+msgstr ""
+
+#: core/kexi.cpp:127
+msgid "&Data View"
+msgstr ""
+
+#: core/kexi.cpp:129
+msgid "D&esign View"
+msgstr ""
+
+#: core/kexi.cpp:131
+msgid "&Text View"
+msgstr ""
+
+#: core/kexi.cpp:133
+msgid "&Unknown"
+msgstr ""
+
+#: core/kexi.cpp:140
+msgid "state_data"
+msgstr ""
+
+#: core/kexi.cpp:142
+msgid "state_edit"
+msgstr ""
+
+#: core/kexi.cpp:144
+msgid "state_sql"
+msgstr ""
+
+#: core/kexi.cpp:152
+msgid ""
+"You can correct data in this record or use \"Cancel record changes\" "
+"function."
+msgstr ""
+
+#: core/kexi.cpp:316
+#, kde-format
+msgid "This function is not available for version %1 of %2 application."
+msgstr ""
+
+#: core/kexi.cpp:321
+#, kde-format
+msgid "\"%1\" function is not available for version %2 of %3 application."
+msgstr ""
+
 #: core/kexipartmanager.cpp:66
 #, kde-format
 msgid ""
@@ -410,7 +458,7 @@ msgstr ""
 msgid "This project is opened as read only."
 msgstr ""
 
-#: core/kexiproject.cpp:877 main/KexiMainWindow.cpp:4514
+#: core/kexiproject.cpp:877 main/KexiMainWindow.cpp:4538
 msgid "Could not set empty name for this object."
 msgstr ""
 
@@ -709,54 +757,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
 
-#: core/kexi.cpp:122
-msgid "&No View"
-msgstr ""
-
-#: core/kexi.cpp:124
-msgid "&Data View"
-msgstr ""
-
-#: core/kexi.cpp:126
-msgid "D&esign View"
-msgstr ""
-
-#: core/kexi.cpp:128
-msgid "&Text View"
-msgstr ""
-
-#: core/kexi.cpp:130
-msgid "&Unknown"
-msgstr ""
-
-#: core/kexi.cpp:137
-msgid "state_data"
-msgstr ""
-
-#: core/kexi.cpp:139
-msgid "state_edit"
-msgstr ""
-
-#: core/kexi.cpp:141
-msgid "state_sql"
-msgstr ""
-
-#: core/kexi.cpp:149
-msgid ""
-"You can correct data in this record or use \"Cancel record changes\" "
-"function."
-msgstr ""
-
-#: core/kexi.cpp:313
-#, kde-format
-msgid "This function is not available for version %1 of %2 application."
-msgstr ""
-
-#: core/kexi.cpp:318
-#, kde-format
-msgid "\"%1\" function is not available for version %2 of %3 application."
-msgstr ""
-
 #: core/KexiView.cpp:66
 msgid "Switch to data view"
 msgstr ""
@@ -797,7 +797,7 @@ msgstr ""
 msgid "Show:"
 msgstr ""
 
-#: core/KexiView.cpp:606 main/KexiMainWindow_p.h:198
+#: core/KexiView.cpp:606 main/KexiMainWindow_p.h:951
 msgid "Data"
 msgstr "Datumo"
 
@@ -886,10 +886,6 @@ msgstr ""
 
 #: formeditor/connectiondialog.cpp:414
 msgid "&Delete Connection"
-msgstr ""
-
-#: formeditor/container.cpp:1485
-msgid "Move multiple widgets"
 msgstr ""
 
 #: formeditor/factories/containerfactory.cpp:297
@@ -1892,10 +1888,10 @@ msgstr ""
 msgid "&Select action to be executed after clicking \"%1\" button:"
 msgstr ""
 
-#. i18n: file: main/startup/KexiConnSelector.ui:78
-#. i18n: ectx: property (text), widget (Q3ListView, list)
+#. i18n: file: main/startup/KexiConnSelector.ui:91
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
 #: formeditor/form.cpp:438 formeditor/form.cpp:439
-#: plugins/tables/kexitabledesignerview.cpp:351 rc.cpp:98
+#: plugins/tables/kexitabledesignerview.cpp:351 rc.cpp:108
 msgid "Name"
 msgstr "Nomo"
 
@@ -2576,6 +2572,10 @@ msgstr ""
 msgid "Edit Contents of %1"
 msgstr ""
 
+#: formeditor/container.cpp:1485
+msgid "Move multiple widgets"
+msgstr ""
+
 #: kexidb/connectiondata.cpp:97
 msgid "file"
 msgstr "dosiero"
@@ -2768,7 +2768,7 @@ msgid "Could not remove file \"%1\"."
 msgstr ""
 
 #: kexidb/drivers/sqlite/sqliteconnection.cpp:272
-#: main/startup/KexiStartup.cpp:753 main/startup/KexiStartup.cpp:785
+#: main/startup/KexiStartup.cpp:756 main/startup/KexiStartup.cpp:788
 msgid ""
 "Check the file's permissions and whether it is already opened and locked by "
 "another application."
@@ -3437,6 +3437,23 @@ msgstr ""
 msgid "\"%1\" value has to be entered."
 msgstr ""
 
+#: kexiutils/KexiAssistantPage.cpp:67
+msgctxt "Back button arrow: back button in assistant (wizard)"
+msgid "‹ %L"
+msgstr ""
+
+#: kexiutils/KexiAssistantPage.cpp:72
+#, fuzzy
+#| msgid "Next Page"
+msgctxt "Button text: Next page in assistant (wizard)"
+msgid "Next"
+msgstr "Sekva paĝo"
+
+#: kexiutils/KexiAssistantPage.cpp:74
+msgctxt "Next button arrow: next button in assistant (wizard)"
+msgid "%L ›"
+msgstr ""
+
 #: main/kexifinddialog.cpp:176
 msgid "(All fields)"
 msgstr ""
@@ -3550,7 +3567,7 @@ msgid "%1 - Print Preview - %2"
 msgstr ""
 
 #: main/printing/kexisimpleprintpreviewwindow.cpp:183
-#: main/KexiMainWindow.cpp:824
+#: main/KexiMainWindow.cpp:835
 msgid "Page Set&up..."
 msgstr ""
 
@@ -3636,124 +3653,27 @@ msgstr "Horizontale"
 msgid "margins:"
 msgstr ""
 
-#: main/startup/KexiNewProjectWizard.cpp:112
-msgid "Creating New Project"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:113 main/KexiMainWindow_p.h:195
-msgid "Create"
-msgstr "Krei"
-
-#: main/startup/KexiNewProjectWizard.cpp:127
-msgid "New Project Stored in File"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:131
-msgid "New Project Stored on Database Server"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:152
-msgid "Select Storage Method"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:158
-msgid "Select Project's Caption"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:163
-msgid "Enter a new Kexi project's file name:"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:181
-msgid ""
-"Select database server's connection you wish to use to create a new Kexi "
-"project. <p>Here you may also add, edit or remove connections from the list."
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:198
-msgid "Select Project's Location"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:204
-#, kde-format
-msgid "Existing project databases on <b>%1</b> database server:"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:213
-#: main/startup/KexiNewProjectWizard.cpp:267
-msgid "New database"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:221
-msgid "Select Project's Caption & Database Name"
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:311
-#: main/startup/KexiNewProjectWizard.cpp:349
-msgid "Enter project caption."
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:322
-msgid "Select server connection for a new project."
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:356
-msgid "Enter project's database name."
-msgstr ""
-
-#: main/startup/KexiNewProjectWizard.cpp:365
-#, kde-format
-msgid ""
-"<b>A project with database name \"%1\" already exists</b><p>Do you want to "
-"delete it and create a new one?"
-msgstr ""
-
-#: main/startup/KexiProjectSelector.cpp:74
-#: main/startup/KexiConnSelector.cpp:82
-msgid "File"
-msgstr "Dosiero"
-
-#: main/startup/KexiProjectSelector.cpp:229
-#: main/startup/KexiStartupDialog.cpp:150
-msgid "Open Recent Project"
-msgstr ""
-
-#: main/startup/KexiProjectSelector.cpp:238
-msgid "Open Project"
-msgstr "Malfermi Projekton"
-
-#: main/startup/KexiProjectSelector.cpp:242 main/startup/KexiStartup.cpp:172
-#: widget/kexidbconnectionwidget.cpp:400 widget/KexiProjectListView.cpp:130
-#: widget/KexiProjectNavigator.cpp:107
-msgid "&Open"
-msgstr "&Malfermu"
-
-#: main/startup/KexiProjectSelector.cpp:243
-#: widget/kexidbconnectionwidget.cpp:400
-msgid "Open Database Connection"
-msgstr ""
-
-#: main/startup/KexiProjectSelector.cpp:245
-#, kde-format
-msgid "Select a project on <b>%1</b> database server to open:"
-msgstr ""
-
 #: main/startup/KexiStartupFileWidget.cpp:260
+#: main/startup/KexiStartupFileHandler.cpp:294
 #, kde-format
 msgid "All Supported Files (%1)"
 msgstr ""
 
 #: main/startup/KexiStartupFileWidget.cpp:367
 #: main/startup/KexiStartupFileWidget.cpp:409
+#: main/startup/KexiStartupFileHandler.cpp:410
+#: main/startup/KexiStartupFileHandler.cpp:454
 msgid "Enter a filename."
 msgstr ""
 
 #: main/startup/KexiStartupFileWidget.cpp:404
+#: main/startup/KexiStartupFileHandler.cpp:448
 #, kde-format
 msgid "The file \"%1\" does not exist."
 msgstr ""
 
 #: main/startup/KexiStartupFileWidget.cpp:412
+#: main/startup/KexiStartupFileHandler.cpp:458
 #, kde-format
 msgid "The file \"%1\" is not readable."
 msgstr ""
@@ -3766,6 +3686,7 @@ msgid ""
 msgstr ""
 
 #: main/startup/KexiStartupFileWidget.cpp:433
+#: main/startup/KexiStartupFileHandler.cpp:489
 msgid "Overwrite"
 msgstr "Anstataŭigu"
 
@@ -3774,94 +3695,414 @@ msgstr "Anstataŭigu"
 msgid "Saving \"%1\" project file to a new \"%2\" database format..."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:146
+#: main/startup/KexiConnSelector.cpp:78
+msgid "File"
+msgstr "Dosiero"
+
+#: main/startup/KexiConnSelector.cpp:166
+msgid "Add a new database connection"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:167
+msgid "Edit selected database connection"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:168
+msgid "Remove selected database connections"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:397
+msgid "&Add"
+msgstr "&Aldoni"
+
+#: main/startup/KexiConnSelector.cpp:397
+msgid "Add database connection"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:398
+msgid "Add New Database Connection"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:426
+msgid "&Save"
+msgstr "&Konservi"
+
+#: main/startup/KexiConnSelector.cpp:427
+msgid "Save changes made to this database connection"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:428
+msgid "Edit Database Connection"
+msgstr ""
+
+#: main/startup/KexiConnSelector.cpp:453
+#, kde-format
+msgid ""
+"Do you want to remove database connection \"%1\" from the list of available "
+"connections?"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:86
+#, fuzzy
+#| msgid "Open Project"
+msgid "New Project"
+msgstr "Malfermi Projekton"
+
+#: main/startup/KexiNewProjectAssistant.cpp:87
+msgid ""
+"Kexi will create a new database project. Select blank database or template."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:105
+#, fuzzy
+#| msgid "Open Project"
+msgid "Blank Projects"
+msgstr "Malfermi Projekton"
+
+#: main/startup/KexiNewProjectAssistant.cpp:109
+#, fuzzy
+#| msgid "Database"
+msgid "Blank database"
+msgstr "Datumbazo"
+
+#: main/startup/KexiNewProjectAssistant.cpp:110
+msgid "Database project without any objects"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:117
+msgid "Office Templates"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:122
+#, fuzzy
+#| msgid "Contents"
+msgid "Contacts"
+msgstr "Enhavo"
+
+#: main/startup/KexiNewProjectAssistant.cpp:123
+msgid "Database for collecting and managing contacts"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:130
+msgid "Movie catalog"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:131
+msgid "Database for collecting movies"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:160
+msgid "Templates"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:166
+msgid "Storage Method"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:167
+msgid "Select a storage method which will be used to store the new project."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:200
+msgid "New database"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:204
+msgid "Project Title & Filename"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:205
+msgid ""
+"Enter title for the new project. Filename will created automatically based "
+"on the title. You can change the filename too."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:225
+msgid "Save New Project As"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:269
+#: main/startup/KexiNewProjectAssistant.cpp:457
+msgid "Enter project title."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:277
+msgid ""
+"Enter valid project filename. The file should be located on this computer."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:290
+#, fuzzy
+#| msgid "Open Project"
+msgid "Creating Project"
+msgstr "Malfermi Projekton"
+
+#: main/startup/KexiNewProjectAssistant.cpp:291
+msgid "Please wait while the project is created."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:313
+#: widget/kexidbconnectionwidget.cpp:138
+msgid "Database Connection"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:314
+msgid ""
+"Select database server's connection you wish to use to create a new Kexi "
+"project. <p>Here you may also add, edit or remove connections from the list."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:347
+msgid "Project Title & Database Name"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:348
+msgid ""
+"Enter title for the new project. Database name will created automatically "
+"based on the title. You can change the database name too."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:359 main/KexiMainWindow_p.h:948
+msgid "Create"
+msgstr "Krei"
+
+#: main/startup/KexiNewProjectAssistant.cpp:417
+#, kde-format
+msgid "Existing project databases on <b>%1 (%2)</b> database server:"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:465
+msgid "Enter database name."
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:476
+msgid ""
+"Database with this name already exists. Do you want to delete it and create "
+"a new one?"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:479
+msgid "Delete and Create New"
+msgstr ""
+
+#: main/startup/KexiNewProjectAssistant.cpp:673
+#: main/startup/KexiOpenProjectAssistant.cpp:278
+msgid "Try Again"
+msgstr ""
+
+#: main/startup/KexiOpenProjectAssistant.cpp:37
+#: main/startup/KexiProjectSelector.cpp:305
+msgid "Open Project"
+msgstr "Malfermi Projekton"
+
+#: main/startup/KexiOpenProjectAssistant.cpp:38
+msgid ""
+"Select project to open. You can choose project stored in file or on database "
+"server."
+msgstr ""
+
+#: main/startup/KexiOpenProjectAssistant.cpp:51
+msgid "Projects Stored in File"
+msgstr ""
+
+#: main/startup/KexiOpenProjectAssistant.cpp:67
+msgid "Projects Stored on Database Server"
+msgstr ""
+
+#: main/startup/KexiOpenProjectAssistant.cpp:88
+msgid ""
+"Select database server's connection with project you wish to open. <p>Here "
+"you may also add, edit or remove connections from the list."
+msgstr ""
+
+#: main/startup/KexiOpenProjectAssistant.cpp:115
+msgid "Open Project on Database Server"
+msgstr ""
+
+#: main/startup/KexiOpenProjectAssistant.cpp:120
+#, fuzzy
+#| msgid "&Open"
+msgid "Open"
+msgstr "&Malfermu"
+
+#: main/startup/KexiOpenProjectAssistant.cpp:157
+#, kde-format
+msgid "Select project on database server <b>%1 (%2)</b> to open."
+msgstr ""
+
+#: main/startup/KexiProjectSelector.cpp:75
+#, fuzzy, kde-format
+#| msgid "File"
+msgid "File (%1)"
+msgstr "Dosiero"
+
+#: main/startup/KexiProjectSelector.cpp:85
+#, fuzzy, kde-format
+#| msgctxt "Object name : Object type"
+#| msgid "%1 : %2"
+msgctxt "caption: server_info"
+msgid "%1: %2"
+msgstr "%1 : %2"
+
+#: main/startup/KexiProjectSelector.cpp:296
+#: main/startup/KexiStartupDialog.cpp:150
+#: main/startup/KexiStartupDialog.cpp:709
+msgid "Open Recent Project"
+msgstr ""
+
+#: main/startup/KexiProjectSelector.cpp:309 main/startup/KexiStartup.cpp:171
+#: widget/kexidbconnectionwidget.cpp:400 widget/KexiProjectListView.cpp:130
+#: widget/KexiProjectNavigator.cpp:107
+msgid "&Open"
+msgstr "&Malfermu"
+
+#: main/startup/KexiProjectSelector.cpp:310
+#: widget/kexidbconnectionwidget.cpp:400
+msgid "Open Database Connection"
+msgstr ""
+
+#: main/startup/KexiProjectSelector.cpp:312
+#, kde-format
+msgid "Select a project on <b>%1</b> database server to open:"
+msgstr ""
+
+#: main/startup/KexiRecentProjectsAssistant.cpp:62
+#, fuzzy
+#| msgid "Open &Recent Project"
+msgid "Recent Projects"
+msgstr "Malfermi Lasttempan P&rojekton"
+
+#: main/startup/KexiRecentProjectsAssistant.cpp:63
+msgid "Select one of the recently used projects to open."
+msgstr ""
+
+#: main/startup/KexiRecentProjectsModel.cpp:66
+msgid "Opened less than minute ago"
+msgstr ""
+
+#: main/startup/KexiRecentProjectsModel.cpp:68
+#, kde-format
+msgid "Opened 1 minute ago"
+msgid_plural "Opened %1 minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/startup/KexiRecentProjectsModel.cpp:70
+#, kde-format
+msgid "Opened 1 hour ago"
+msgid_plural "Opened %1 hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/startup/KexiRecentProjectsModel.cpp:74
+#, kde-format
+msgid "Opened yesterday"
+msgid_plural "Opened %1 days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/startup/KexiRecentProjectsModel.cpp:76
+#, kde-format
+msgid "Opened over a month ago"
+msgid_plural "Opened %1 months ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/startup/KexiRecentProjectsModel.cpp:77
+#, kde-format
+msgid "Opened one year ago"
+msgid_plural "Opened %1 years ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/startup/KexiStartup.cpp:145
 msgid "Opening database"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:147
+#: main/startup/KexiStartup.cpp:146
 msgid "Please enter the password."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:154
+#: main/startup/KexiStartup.cpp:153
 msgid "local database server"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:156
+#: main/startup/KexiStartup.cpp:155
 #, kde-format
 msgid "Database server: %1"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:160
+#: main/startup/KexiStartup.cpp:159
 msgctxt "unspecified user"
 msgid "(unspecified)"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:164
+#: main/startup/KexiStartup.cpp:163
 #, kde-format
 msgid "Username: %1"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:170
+#: main/startup/KexiStartup.cpp:169
 msgid "&Details"
 msgstr "&Detaloj"
 
-#: main/startup/KexiStartup.cpp:295
+#: main/startup/KexiStartup.cpp:294
 #, kde-format
 msgid ""
 "Could not read connection information from connection shortcut file <nobr>"
 "\"%1\"</nobr>.<br><br>Check whether the file has valid contents."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:308
+#: main/startup/KexiStartup.cpp:307
 #, kde-format
 msgid ""
 "You have specified invalid argument (\"%1\") for \"type\" command-line "
 "option."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:363
+#: main/startup/KexiStartup.cpp:362
 #, kde-format
 msgid "You have specified invalid port number \"%1\"."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:380
+#: main/startup/KexiStartup.cpp:379
 msgid "Could not start Kexi application this way."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:384
+#: main/startup/KexiStartup.cpp:383
 msgid "You have used both \"createdb\" and \"dropdb\" startup options."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:390
+#: main/startup/KexiStartup.cpp:389
 msgid "No project name specified."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:425
+#: main/startup/KexiStartup.cpp:424
 msgid "You have used both \"user-mode\" and \"design-mode\" startup options."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:447
+#: main/startup/KexiStartup.cpp:446
 #, kde-format
 msgid ""
 "Could not remove project.\n"
 "The file \"%1\" does not exist."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:488
+#: main/startup/KexiStartup.cpp:487
 #, kde-format
 msgid ""
 "Could not open shortcut file\n"
 "\"%1\"."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:520
+#: main/startup/KexiStartup.cpp:515
 #, kde-format
 msgid ""
 "Could not open connection data file\n"
 "\"%1\"."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:604
+#: main/startup/KexiStartup.cpp:599
 msgid ""
 "You have specified a few database objects to be opened automatically, using "
 "startup options.\n"
@@ -3869,31 +4110,31 @@ msgid ""
 "dropping projects."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:620
+#: main/startup/KexiStartup.cpp:615
 #, kde-format
 msgid "Project \"%1\" created successfully."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:629
+#: main/startup/KexiStartup.cpp:624
 #, kde-format
 msgid "Project \"%1\" dropped successfully."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:750 main/startup/KexiStartup.cpp:782
+#: main/startup/KexiStartup.cpp:753 main/startup/KexiStartup.cpp:785
 msgid "<p>Could not open project.</p>"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:751
+#: main/startup/KexiStartup.cpp:754
 #, kde-format
 msgid "<p>The file <nobr>\"%1\"</nobr> does not exist or is not readable.</p>"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:783
+#: main/startup/KexiStartup.cpp:786
 #, kde-format
 msgid "<p>The file <nobr>\"%1\"</nobr> is not readable.</p>"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:805
+#: main/startup/KexiStartup.cpp:808
 #, kde-format
 msgid ""
 "\"%1\" is an external file of type:\n"
@@ -3901,15 +4142,15 @@ msgid ""
 "Do you want to import the file as a Kexi project?"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:808
+#: main/startup/KexiStartup.cpp:811
 msgid "Open External File"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:808
+#: main/startup/KexiStartup.cpp:811
 msgid "Import..."
 msgstr "Importi..."
 
-#: main/startup/KexiStartup.cpp:829
+#: main/startup/KexiStartup.cpp:832
 #, kde-format
 msgid ""
 "The project file \"%1\" is recognized as compatible with \"%2\" database "
@@ -3917,7 +4158,7 @@ msgid ""
 "Do you want to use \"%4\" database driver?"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:852
+#: main/startup/KexiStartup.cpp:855
 #, kde-format
 msgid ""
 "Previous version of database file format (\"%1\") is detected in the \"%2\" "
@@ -3925,99 +4166,54 @@ msgid ""
 "Do you want to convert the project to a new \"%3\" format (recommended)?"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:861
+#: main/startup/KexiStartup.cpp:864
 #, kde-format
 msgid ""
 "Failed to convert project file \"%1\" to a new \"%2\" format.\n"
 "The file format remains unchanged."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:874
+#: main/startup/KexiStartup.cpp:877
 msgid "Possible problems:"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:879
+#: main/startup/KexiStartup.cpp:882
 #, kde-format
 msgid "The file \"%1\" is not recognized as being supported by Kexi."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:882
+#: main/startup/KexiStartup.cpp:885
 #, kde-format
 msgid ""
 "Database driver for this file type not found.\n"
 "Detected MIME type: %1"
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:918 main/startup/KexiStartup.cpp:922
+#: main/startup/KexiStartup.cpp:921 main/startup/KexiStartup.cpp:925
 #, kde-format
 msgid ""
 "Could not load list of available projects for <b>%1</b> database server."
 msgstr ""
 
-#: main/startup/KexiStartup.cpp:953
+#: main/startup/KexiStartup.cpp:962
 #, kde-format
 msgid ""
 "Failed saving connection data to\n"
 "\"%1\" file."
 msgstr ""
 
-#: main/startup/KexiConnSelector.cpp:167
-msgid "Add a new database connection"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:168
-msgid "Edit selected database connection"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:169
-msgid "Remove selected database connections"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:377
-msgid "&Add"
-msgstr "&Aldoni"
-
-#: main/startup/KexiConnSelector.cpp:377
-msgid "Add database connection"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:378
-msgid "Add New Database Connection"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:403
-msgid "&Save"
-msgstr "&Konservi"
-
-#: main/startup/KexiConnSelector.cpp:404
-msgid "Save changes made to this database connection"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:405
-msgid "Edit Database Connection"
-msgstr ""
-
-#: main/startup/KexiConnSelector.cpp:427
-#, kde-format
-msgid ""
-"Do you want to remove database connection \"%1\" from the list of available "
-"connections?"
-msgstr ""
-
 #: main/startup/KexiStartupDialog.cpp:146
+#: main/startup/KexiStartupDialog.cpp:313
 msgid "Create Project"
 msgstr ""
 
 #: main/startup/KexiStartupDialog.cpp:148
+#: main/startup/KexiStartupDialog.cpp:598
 msgid "Open Existing Project"
 msgstr ""
 
 #: main/startup/KexiStartupDialog.cpp:152
 msgid "Choose Project"
-msgstr ""
-
-#: main/startup/KexiStartupDialog.cpp:313
-msgid "&Create Project"
 msgstr ""
 
 #: main/startup/KexiStartupDialog.cpp:340
@@ -4070,726 +4266,685 @@ msgid ""
 "database project."
 msgstr ""
 
-#: main/startup/KexiStartupDialog.cpp:598
-msgid "Open &Existing Project"
+#: main/startup/KexiStartupFileHandler.cpp:488
+#, fuzzy
+#| msgid ""
+#| "The file %1 exists.\n"
+#| "Do you wish to overwrite it?"
+msgid "This file already exists. Do you want to overwrite it?"
 msgstr ""
+"La dosiero %1 ekzistas.\n"
+"Ĉu vi volas superskribi ĝin?"
 
-#: main/startup/KexiStartupDialog.cpp:709
-msgid "Open &Recent Project"
-msgstr "Malfermi Lasttempan P&rojekton"
-
-#: main/KexiMainWindow_p.h:137
-msgid "Task-based tabbed toolbar groups commands for application using tabs."
-msgstr ""
-
-#: main/KexiMainWindow_p.h:171
-msgctxt "Application name as menu entry"
-msgid "Kexi"
-msgstr "Kexi"
-
-#: main/KexiMainWindow_p.h:182
-msgid "Project"
-msgstr "Projekto"
-
-#: main/KexiMainWindow_p.h:213
-msgid "External Data"
-msgstr ""
-
-#: main/KexiMainWindow_p.h:241
-msgid "Tools"
-msgstr "Iloj"
-
-#: main/KexiMainWindow_p.h:246
-msgid "Form Design"
-msgstr ""
-
-#: main/KexiMainWindow_p.h:249
-msgid "Report Design"
-msgstr ""
-
-#: main/KexiMainWindow_p.h:729
-#, kde-format
-msgid "Could not start %1 application."
-msgstr ""
-
-#: main/KexiMainWindow_p.h:730
-#, kde-format
-msgid "Command \"%1\" failed."
-msgstr "Komando  \"%1\" malsukcesis."
-
-#: main/KexiMainWindow.cpp:185
+#: main/KexiMainWindow.cpp:189
 #, fuzzy
 #| msgid "&Close"
 msgid "&Close Tab"
 msgstr "F&ermi"
 
-#: main/KexiMainWindow.cpp:186
+#: main/KexiMainWindow.cpp:190
 msgid "Close the current tab"
 msgstr "Fermi la nunan folion"
 
-#: main/KexiMainWindow.cpp:187
+#: main/KexiMainWindow.cpp:191
 #, fuzzy
 #| msgid "Close the current tab"
 msgid "Closes the current tab."
 msgstr "Fermi la nunan folion"
 
-#: main/KexiMainWindow.cpp:428
+#: main/KexiMainWindow.cpp:415
 msgid "&Insert"
 msgstr "&Enmeti"
 
-#: main/KexiMainWindow.cpp:434
+#: main/KexiMainWindow.cpp:421
 msgid "&Import"
 msgstr "&Importi"
 
-#: main/KexiMainWindow.cpp:435
+#: main/KexiMainWindow.cpp:422
 msgid "Paste &Special"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:465
+#: main/KexiMainWindow.cpp:452
 msgctxt "Close the current tab page in Kexi tab interface"
 msgid "Close the current tab"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:507
+#: main/KexiMainWindow.cpp:494
 msgid "&Window"
 msgstr "Fe&nestro"
 
-#: main/KexiMainWindow.cpp:577
+#: main/KexiMainWindow.cpp:564
 #, kde-format
 msgid ""
 "User interface mode will be switched to IDEAl at next %1 application startup."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:602
+#: main/KexiMainWindow.cpp:589
 #, kde-format
 msgid ""
 "User interface mode will be switched to Childframe at next %1 application "
 "startup."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:656
-msgid "&New..."
-msgstr "&Nova..."
-
-#: main/KexiMainWindow.cpp:658
-msgid "Create a new project"
+#: main/KexiMainWindow.cpp:636
+#, kde-format
+msgctxt "Action name with three dots..."
+msgid "%1..."
 msgstr ""
 
 #: main/KexiMainWindow.cpp:660
+msgid "Create a new project"
+msgstr ""
+
+#: main/KexiMainWindow.cpp:662
 msgid "Creates a new project. Currently opened project is not affected."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:665
+#: main/KexiMainWindow.cpp:668
 msgid "Open an existing project"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:667
+#: main/KexiMainWindow.cpp:670
 msgid "Opens an existing project. Currently opened project is not affected."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:671
+#: main/KexiMainWindow.cpp:676
 msgid "&Download Example Databases..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:672
+#: main/KexiMainWindow.cpp:677
 msgid "Download example databases from the Internet"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:673
+#: main/KexiMainWindow.cpp:678
 msgid "Downloads example databases from the Internet."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:682 main/KexiMainWindow.cpp:3377
-msgid "Open Recent"
+#: main/KexiMainWindow.cpp:688
+#, fuzzy
+#| msgid "Open &Recent Project"
+msgid "Open recent project"
+msgstr "Malfermi Lasttempan P&rojekton"
+
+#: main/KexiMainWindow.cpp:690
+msgid ""
+"Opens one of the recently opened project. Currently opened project is not "
+"affected."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:702
+#: main/KexiMainWindow.cpp:697
 msgid "Save object changes"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:703
+#: main/KexiMainWindow.cpp:698
 msgid "Saves object changes from currently selected window."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:708
+#: main/KexiMainWindow.cpp:703
 msgid "Save &As..."
 msgstr "Konservi &kiel..."
 
-#: main/KexiMainWindow.cpp:709 main/KexiMainWindow.cpp:3393
+#: main/KexiMainWindow.cpp:704 main/KexiMainWindow.cpp:3402
 msgid "Save object as"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:711
+#: main/KexiMainWindow.cpp:706
 msgid ""
 "Saves object changes from currently selected window under a new name (within "
 "the same project)."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:717
+#: main/KexiMainWindow.cpp:712
 msgid "Project Properties"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:726
-msgid "&Close Project"
+#: main/KexiMainWindow.cpp:724
+#, fuzzy
+msgid "&Import, Export or Send..."
+msgstr "Importo de Aŭtluko Ekspresa 4"
+
+#: main/KexiMainWindow.cpp:725
+msgid "Import, export or send project"
 msgstr ""
 
 #: main/KexiMainWindow.cpp:727
+msgid "Imports, exports or sends project."
+msgstr ""
+
+#: main/KexiMainWindow.cpp:736
+msgid "&Close Project"
+msgstr ""
+
+#: main/KexiMainWindow.cpp:737
 msgid "Close the current project"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:728
+#: main/KexiMainWindow.cpp:738
 msgid "Closes the current project."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:734
-msgid "Quits Kexi application. Kexi prompts you to save changes."
-msgstr ""
-
-#: main/KexiMainWindow.cpp:739
-msgid "&Relationships..."
-msgstr ""
-
-#: main/KexiMainWindow.cpp:741
-msgid "Project relationships"
-msgstr ""
-
-#: main/KexiMainWindow.cpp:742
-msgid "Shows project relationships."
+#: main/KexiMainWindow.cpp:745
+msgid "Quits Kexi application."
 msgstr ""
 
 #: main/KexiMainWindow.cpp:751
-msgid "&Import Database..."
+msgid "&Relationships..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:752
-msgid "Import entire database as a Kexi project"
+#: main/KexiMainWindow.cpp:753
+msgid "Project relationships"
 msgstr ""
 
 #: main/KexiMainWindow.cpp:754
+msgid "Shows project relationships."
+msgstr ""
+
+#: main/KexiMainWindow.cpp:763
+msgid "&Import Database..."
+msgstr ""
+
+#: main/KexiMainWindow.cpp:764
+msgid "Import entire database as a Kexi project"
+msgstr ""
+
+#: main/KexiMainWindow.cpp:766
 msgid "Imports entire database as a Kexi project."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:759
+#: main/KexiMainWindow.cpp:770
 msgid "Import Tables"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:760 main/KexiMainWindow.cpp:761
+#: main/KexiMainWindow.cpp:771 main/KexiMainWindow.cpp:772
 msgid "Import data from an external source into this database"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:769
+#: main/KexiMainWindow.cpp:780
 msgid "&Compact Database..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:770
+#: main/KexiMainWindow.cpp:781
 msgid "Compact the current database project"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:772
+#: main/KexiMainWindow.cpp:783
 msgid ""
 "Compacts the current database project, so it will take less space and work "
 "faster."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:782
+#: main/KexiMainWindow.cpp:793
 msgctxt "Import->Table Data From File..."
 msgid "Import Data From &File..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:784
+#: main/KexiMainWindow.cpp:795
 msgid "Import table data from a file"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:785
+#: main/KexiMainWindow.cpp:796
 msgid "Imports table data from a file."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:793
+#: main/KexiMainWindow.cpp:804
 msgctxt "Export->Table or Query Data to File..."
 msgid "Export Data to &File..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:796
+#: main/KexiMainWindow.cpp:807
 msgid "Export data from the active table or query data to a file"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:798
+#: main/KexiMainWindow.cpp:809
 msgid "Exports data from the active table or query data to a file."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:810
+#: main/KexiMainWindow.cpp:821
 msgid "Print data from the active table or query"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:811
+#: main/KexiMainWindow.cpp:822
 msgid "Prints data from the active table or query."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:817
+#: main/KexiMainWindow.cpp:828
 msgid "Show print preview for the active table or query"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:819
+#: main/KexiMainWindow.cpp:830
 msgid "Shows print preview for the active table or query."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:826
+#: main/KexiMainWindow.cpp:837
 msgid "Show page setup for printing the active table or query"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:828 widget/KexiProjectListView.cpp:225
+#: main/KexiMainWindow.cpp:839 widget/KexiProjectListView.cpp:225
 #: widget/KexiProjectNavigator.cpp:193
 msgid "Shows page setup for printing the active table or query."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:844
+#: main/KexiMainWindow.cpp:855
 msgctxt "Paste Special->As Data &Table..."
 msgid "Paste Special..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:847
+#: main/KexiMainWindow.cpp:858
 msgid "Paste clipboard data as a table"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:849
+#: main/KexiMainWindow.cpp:860
 msgid "Pastes clipboard data to a table."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:857
+#: main/KexiMainWindow.cpp:868
 msgctxt "Copy Special->Table or Query Data..."
 msgid "Copy Special..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:861
+#: main/KexiMainWindow.cpp:872
 msgid "Copy selected table or query data to clipboard"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:863
+#: main/KexiMainWindow.cpp:874
 msgid "Copies selected table or query data to clipboard."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:868
+#: main/KexiMainWindow.cpp:879
 msgid "Reverts the most recent editing action."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:870
+#: main/KexiMainWindow.cpp:881
 msgid "Reverts the most recent undo action."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:882
+#: main/KexiMainWindow.cpp:893
 #, fuzzy
 #| msgid "Find"
 msgid "Find text"
 msgstr "Trovi"
 
-#: main/KexiMainWindow.cpp:883
+#: main/KexiMainWindow.cpp:894
 msgid "Looks up the first occurrence of a piece of text."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:901 widget/KexiProjectListView.cpp:150
+#: main/KexiMainWindow.cpp:912 widget/KexiProjectListView.cpp:150
 msgid "&Delete"
 msgstr "&Forigi"
 
-#: main/KexiMainWindow.cpp:903
+#: main/KexiMainWindow.cpp:914
 msgid "Delete selected object"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:904
+#: main/KexiMainWindow.cpp:915
 msgid "Deletes currently selected object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:906
+#: main/KexiMainWindow.cpp:917
 #, fuzzy
 #| msgid "&Delete Row"
 msgid "Delete Record"
 msgstr "&Forigi vicon"
 
-#: main/KexiMainWindow.cpp:908
+#: main/KexiMainWindow.cpp:919
 msgid "Delete currently selected record"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:909
+#: main/KexiMainWindow.cpp:920
 msgid "Deletes currently selected record."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:911
+#: main/KexiMainWindow.cpp:922
 msgid "Clear Table Contents"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:913
+#: main/KexiMainWindow.cpp:924
 msgid "Clear table contents"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:914
+#: main/KexiMainWindow.cpp:925
 msgid "Clears table contents."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:917
+#: main/KexiMainWindow.cpp:928
 msgid "Edit Item"
 msgstr "Modifi eron"
 
-#: main/KexiMainWindow.cpp:920
+#: main/KexiMainWindow.cpp:931
 msgid "Edit currently selected item"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:921
+#: main/KexiMainWindow.cpp:932
 msgid "Edits currently selected item."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:923
+#: main/KexiMainWindow.cpp:934
 msgid "&Insert Empty Row"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:927
+#: main/KexiMainWindow.cpp:938
 msgid "Insert one empty row above"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:929
+#: main/KexiMainWindow.cpp:940
 msgid "Inserts one empty row above currently selected table row."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:986 widget/KexiProjectListView.cpp:87
+#: main/KexiMainWindow.cpp:997 widget/KexiProjectListView.cpp:87
 #: widget/KexiProjectNavigator.cpp:71
 msgid "Project Navigator"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:988
+#: main/KexiMainWindow.cpp:999
 msgid "Go to project navigator panel"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:989
+#: main/KexiMainWindow.cpp:1000
 msgid "Goes to project navigator panel."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:996
+#: main/KexiMainWindow.cpp:1007
 msgid "Main Area"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:998
+#: main/KexiMainWindow.cpp:1009
 msgid "Go to main area"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:999
+#: main/KexiMainWindow.cpp:1010
 msgid "Goes to main area."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1005 main/KexiMainWindow.cpp:2257
+#: main/KexiMainWindow.cpp:1016 main/KexiMainWindow.cpp:2274
 msgid "Property Editor"
 msgstr "Trajtoredaktilo"
 
-#: main/KexiMainWindow.cpp:1007
+#: main/KexiMainWindow.cpp:1018
 msgid "Go to property editor panel"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1008
+#: main/KexiMainWindow.cpp:1019
 msgid "Goes to property editor panel."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1015
+#: main/KexiMainWindow.cpp:1026
 msgid "&Save Record"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1017
+#: main/KexiMainWindow.cpp:1028
 msgid "Save changes made to the current record"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1018
+#: main/KexiMainWindow.cpp:1029
 msgid "Saves changes made to the current record."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1021
+#: main/KexiMainWindow.cpp:1032
 msgid "&Cancel Record Changes"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1024
+#: main/KexiMainWindow.cpp:1035
 msgid "Cancel changes made to the current record"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1026
+#: main/KexiMainWindow.cpp:1037
 msgid "Cancels changes made to the current record."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1030
+#: main/KexiMainWindow.cpp:1041
 msgid "&Execute"
 msgstr "&Plenumi"
 
-#: main/KexiMainWindow.cpp:1035
+#: main/KexiMainWindow.cpp:1046
 msgid "&Filter"
 msgstr "&Filtrilo"
 
-#: main/KexiMainWindow.cpp:1061
+#: main/KexiMainWindow.cpp:1072
 msgid "&Font..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1063
+#: main/KexiMainWindow.cpp:1074
 msgid "Change font for selected object"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1064
+#: main/KexiMainWindow.cpp:1075
 msgid "Changes font for selected object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1088
+#: main/KexiMainWindow.cpp:1099
 msgid "&Next Window"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1096
+#: main/KexiMainWindow.cpp:1107
 msgid "Next window"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1097
+#: main/KexiMainWindow.cpp:1108
 msgid "Switches to the next window."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1102
+#: main/KexiMainWindow.cpp:1113
 msgid "&Previous Window"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1110
+#: main/KexiMainWindow.cpp:1121
 msgid "Previous window"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1111
+#: main/KexiMainWindow.cpp:1122
 msgid "Switches to the previous window."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1124
+#: main/KexiMainWindow.cpp:1137
 msgid "Lets you configure shortcut keys."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1160
-msgid "Lets you configure Kexi."
-msgstr ""
-
-#: main/KexiMainWindow.cpp:1169
-msgid "Shows bug reporting tool for Kexi application."
-msgstr ""
-
-#: main/KexiMainWindow.cpp:1171
-msgid "Shows \"What's This\" tool."
-msgstr ""
-
-#: main/KexiMainWindow.cpp:1173 migration/importwizard.cpp:968
-#: migration/importwizard.cpp:975 migration/importwizard.cpp:977
-#: migration/importwizard.cpp:979 migration/importwizard.cpp:981
-#: migration/importwizard.cpp:983
-msgid "Help"
-msgstr "Helpo"
-
-#: main/KexiMainWindow.cpp:1174
-msgid "Shows Kexi Handbook."
-msgstr ""
-
 #: main/KexiMainWindow.cpp:1176
-msgid "Shows information about Kexi application."
+msgid "Settings..."
+msgstr ""
+
+#: main/KexiMainWindow.cpp:1177
+msgid "Kexi settings"
 msgstr ""
 
 #: main/KexiMainWindow.cpp:1178
-msgid "Shows information about K Desktop Environment."
+msgid "Lets you to view and change Kexi settings."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1182
+#: main/KexiMainWindow.cpp:1184
 msgid "This shows useful tips on the use of this application."
 msgstr "Tiu montras helpajn konsilojn por uzi tiun aplikaĵon."
 
-#: main/KexiMainWindow.cpp:1185 main/KexiMainWindow.cpp:4672
+#: main/KexiMainWindow.cpp:1187 main/KexiMainWindow.cpp:4696
 msgid "Important Information"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1192
+#: main/KexiMainWindow.cpp:1194
 msgid "Give Feedback..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1560
+#: main/KexiMainWindow.cpp:1566
 msgid "reason:"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1595
+#: main/KexiMainWindow.cpp:1603
 #, kde-format
 msgid ""
-"<qt>Database project %1 does not appear to have been created using Kexi."
-"<br><br>Do you want to import it as a new Kexi project?</qt>"
+"Database project %1 does not appear to have been created using Kexi.<p>Do "
+"you want to import it as a new Kexi project?"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1597
+#: main/KexiMainWindow.cpp:1606
 msgctxt "Import Database"
 msgid "&Import..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1631
+#: main/KexiMainWindow.cpp:1642
 msgid "Select New Project's Location"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1727
+#: main/KexiMainWindow.cpp:1738
 #, kde-format
 msgid "cannot create object - unknown object type \"%1\""
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1729
+#: main/KexiMainWindow.cpp:1740
 #, kde-format
 msgid "unknown object type \"%1\""
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1737
+#: main/KexiMainWindow.cpp:1748
 #, kde-format
 msgid "cannot create object of type \"%1\""
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1749
+#: main/KexiMainWindow.cpp:1760
 msgctxt "\"executing object\" action"
 msgid "executing"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1752
+#: main/KexiMainWindow.cpp:1763
 msgid "making print preview for"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1754
+#: main/KexiMainWindow.cpp:1765
 msgid "printing"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1757
+#: main/KexiMainWindow.cpp:1768
 msgid "opening"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1761
+#: main/KexiMainWindow.cpp:1772
 msgid "table not found"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1763
+#: main/KexiMainWindow.cpp:1774
 msgid "query not found"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1765
+#: main/KexiMainWindow.cpp:1776
 msgid "macro not found"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1767
+#: main/KexiMainWindow.cpp:1778
 msgid "script not found"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1769
+#: main/KexiMainWindow.cpp:1780
 msgid "object not found"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1777
+#: main/KexiMainWindow.cpp:1788
 msgid "cannot execute object"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1786
+#: main/KexiMainWindow.cpp:1797
 msgid "cannot print object"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1794
+#: main/KexiMainWindow.cpp:1805
 msgid "cannot make print preview of object"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1816
+#: main/KexiMainWindow.cpp:1827
 msgid "cannot open object"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:1830
+#: main/KexiMainWindow.cpp:1841
 msgid ""
 "You have requested selected objects to be automatically opened or processed "
 "on startup. Several objects cannot be opened or processed."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:2285 widget/KexiPropertyEditorView.cpp:46
+#: main/KexiMainWindow.cpp:2302 widget/KexiPropertyEditorView.cpp:46
 #: widget/utils/kexicontextmenuutils.cpp:97
 msgid "Properties"
 msgstr "Ecoj"
 
-#: main/KexiMainWindow.cpp:3334
-msgid "Recently Opened Databases"
-msgstr ""
-
-#: main/KexiMainWindow.cpp:3353
-msgid "Recently Connected Database Servers"
-msgstr ""
-
-#: main/KexiMainWindow.cpp:3453
+#: main/KexiMainWindow.cpp:3477
 msgid "From File..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3458
+#: main/KexiMainWindow.cpp:3482
 msgid "From Server..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3570
+#: main/KexiMainWindow.cpp:3594
 #, kde-format
 msgid "Selected view is not supported for \"%1\" object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3572
+#: main/KexiMainWindow.cpp:3596
 #, kde-format
 msgid "Selected view (%1) is not supported by this object type (%2)."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3669
+#: main/KexiMainWindow.cpp:3693
 msgid "Save Object As"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3690
+#: main/KexiMainWindow.cpp:3714
 msgid "Do you want to replace it?"
 msgstr ""
 
 #. i18n: file: main/kexifinddialog.ui:103
 #. i18n: ectx: property (text), widget (KPushButton, m_btnReplace)
-#: main/KexiMainWindow.cpp:3692 migration/importwizard.cpp:809
+#: main/KexiMainWindow.cpp:3716 migration/importwizard.cpp:808
 #: widget/utils/kexicontextmenuutils.cpp:233 rc.cpp:11
 msgid "&Replace"
 msgstr "&Anstataŭigi"
 
-#: main/KexiMainWindow.cpp:3693
+#: main/KexiMainWindow.cpp:3717
 msgid "&Choose Other Name..."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3710
+#: main/KexiMainWindow.cpp:3734
 msgid "Please choose other name."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3733
+#: main/KexiMainWindow.cpp:3757
 #, kde-format
 msgid "Saving \"%1\" object failed."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3750
+#: main/KexiMainWindow.cpp:3774
 #, kde-format
 msgid "Saving new \"%1\" object failed."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3802 main/KexiMainWindow.cpp:5128
+#: main/KexiMainWindow.cpp:3826 main/KexiMainWindow.cpp:5153
 msgid "Save changes"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3804 main/KexiMainWindow.cpp:5130
+#: main/KexiMainWindow.cpp:3828 main/KexiMainWindow.cpp:5155
 #, kde-format
 msgid ""
 "Pressing this button will save all recent changes made in \"%1\" object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3808
+#: main/KexiMainWindow.cpp:3832
 #, kde-format
 msgid ""
 "Pressing this button will discard all recent changes made in \"%1\" object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:3830
+#: main/KexiMainWindow.cpp:3854
 msgid "Do you want to save changes?"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4217 mobile/KexiMobileMainWindow.cpp:139
+#: main/KexiMainWindow.cpp:4241 mobile/KexiMobileMainWindow.cpp:139
 #, kde-format
 msgctxt "opening is not allowed in \"data view/design view/text view\" mode"
 msgid "opening is not allowed in \"%1\" mode"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4267
+#: main/KexiMainWindow.cpp:4291
 #, kde-format
 msgid "Tab for \"%1\" (%2)."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4442
+#: main/KexiMainWindow.cpp:4466
 #, kde-format
 msgid ""
 "Do you want to permanently delete:\n"
@@ -4797,46 +4952,46 @@ msgid ""
 "If you click \"Delete\", you will not be able to undo the deletion."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4446
+#: main/KexiMainWindow.cpp:4470
 msgid "Delete"
 msgstr "Forigi"
 
-#: main/KexiMainWindow.cpp:4500
+#: main/KexiMainWindow.cpp:4524
 msgid "Could not remove object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4522
+#: main/KexiMainWindow.cpp:4546
 #, kde-format
 msgid "Renaming object \"%1\" failed."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4731
+#: main/KexiMainWindow.cpp:4755
 #, kde-format
 msgid "Could not start project \"%1\" in Final Mode."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4735
+#: main/KexiMainWindow.cpp:4759
 msgid "No Final Mode data found."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4742
+#: main/KexiMainWindow.cpp:4766
 msgid "Error reading Final Mode data."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4771
+#: main/KexiMainWindow.cpp:4795
 msgid "Specified plugin does not exist."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4780
+#: main/KexiMainWindow.cpp:4804
 msgid "Specified object could not be opened."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4864
+#: main/KexiMainWindow.cpp:4889
 #, kde-format
 msgid "Compacting database file <nobr>\"%1\"</nobr> is not supported."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:4876
+#: main/KexiMainWindow.cpp:4901
 msgid ""
 "The current project has to be closed before compacting the database. It will "
 "be open again after compacting.\n"
@@ -4844,23 +4999,106 @@ msgid ""
 "Do you want to continue?"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:5134
+#: main/KexiMainWindow.cpp:5159
 #, kde-format
 msgid ""
 "Pressing this button will ignore all unsaved changes made in \"%1\" object."
 msgstr ""
 
-#: main/KexiMainWindow.cpp:5139
+#: main/KexiMainWindow.cpp:5164
 msgid "Do you want to save changes before printing?"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:5141
+#: main/KexiMainWindow.cpp:5166
 msgid "Do you want to save changes before making print preview?"
 msgstr ""
 
-#: main/KexiMainWindow.cpp:5143
+#: main/KexiMainWindow.cpp:5168
 msgid "Do you want to save changes before showing page setup?"
 msgstr ""
+
+#: main/KexiMainWindow_p.h:867
+msgid "Task-based tabbed toolbar groups commands for application using tabs."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:904
+msgid "Shows bug reporting tool for Kexi application."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:906
+msgid "Activates \"What's This\" tool."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:908 migration/importwizard.cpp:967
+#: migration/importwizard.cpp:974 migration/importwizard.cpp:976
+#: migration/importwizard.cpp:978 migration/importwizard.cpp:980
+#: migration/importwizard.cpp:982
+msgid "Help"
+msgstr "Helpo"
+
+#: main/KexiMainWindow_p.h:909
+msgid "Shows Kexi Handbook."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:911
+msgid "Shows information about Kexi application."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:913
+msgid "Shows information about K Desktop Environment."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:918
+msgid "Show Help menu"
+msgstr ""
+
+#: main/KexiMainWindow_p.h:919
+msgid "Shows Help menu"
+msgstr ""
+
+#: main/KexiMainWindow_p.h:930
+msgctxt "Help shortcut"
+msgid "Alt+H"
+msgstr ""
+
+#: main/KexiMainWindow_p.h:937
+#, fuzzy
+#| msgid "&Search:"
+msgid "Search"
+msgstr "&Serĉi:"
+
+#: main/KexiMainWindow_p.h:944
+#, fuzzy
+#| msgid "File"
+msgctxt "File menu"
+msgid "&File"
+msgstr "Dosiero"
+
+#: main/KexiMainWindow_p.h:966
+msgid "External Data"
+msgstr ""
+
+#: main/KexiMainWindow_p.h:994
+msgid "Tools"
+msgstr "Iloj"
+
+#: main/KexiMainWindow_p.h:999
+msgid "Form Design"
+msgstr ""
+
+#: main/KexiMainWindow_p.h:1002
+msgid "Report Design"
+msgstr ""
+
+#: main/KexiMainWindow_p.h:1664
+#, kde-format
+msgid "Could not start %1 application."
+msgstr ""
+
+#: main/KexiMainWindow_p.h:1665
+#, kde-format
+msgid "Command \"%1\" failed."
+msgstr "Komando  \"%1\" malsukcesis."
 
 #: migration/importoptionsdlg.cpp:45
 msgid "Advanced Import Options"
@@ -4885,55 +5123,110 @@ msgstr ""
 msgid "Always use this encoding in similar situations"
 msgstr ""
 
-#: migration/importtablewizard.cpp:125
+#: migration/keximigratetest.cpp:37
+msgid "Kexi Migrate Test"
+msgstr ""
+
+#: migration/mdb/src/keximdb/mdbmigrate.cpp:48
+msgid "Source Database Has Non-Unicode Encoding"
+msgstr ""
+
+#: migration/mdb/src/keximdb/mdbmigrate.cpp:51
+msgid "Source Database Non-Unicode Encoding"
+msgstr ""
+
+#: migration/migratemanager.cpp:165
+msgid "Could not find any import/export database drivers."
+msgstr ""
+
+#: migration/migratemanager.cpp:185
+#, kde-format
+msgid "Could not find import/export database driver \"%1\"."
+msgstr ""
+
+#: migration/migratemanager.cpp:200
+#, kde-format
+msgid ""
+"Incompatible migration driver's \"%1\" version: found version %2, expected "
+"version %3."
+msgstr ""
+
+#: migration/migratemanager.cpp:214
+#, kde-format
+msgid "Could not load import/export database driver \"%1\"."
+msgstr ""
+
+#: migration/AlterSchemaWidget.cpp:42 migration/AlterSchemaWidget.cpp:95
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:948
+#: plugins/importexport/csv/kexicsvimportdialog.cpp:961
+#, kde-format
+msgid "Column %1"
+msgstr "Kolumno %1"
+
+#. i18n: file: main/startup/KexiConnSelector.ui:96
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#. i18n: file: main/startup/KexiProjectSelector.ui:99
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: migration/AlterSchemaWidget.cpp:43
+#: plugins/tables/kexitabledesignerview.cpp:356 rc.cpp:111 rc.cpp:145
+msgid "Type"
+msgstr "Tipo"
+
+#: migration/AlterSchemaWidget.cpp:44
+#: plugins/tables/kexitabledesignerview.cpp:193
+#: plugins/tables/kexitabledesignerview.cpp:430
+msgid "Primary Key"
+msgstr ""
+
+#: migration/importtablewizard.cpp:124
 msgid ""
 "Table importing wizard allows you to import a table from an existing "
 "database into the current Kexi database."
 msgstr ""
 
-#: migration/importtablewizard.cpp:128 migration/importwizard.cpp:191
+#: migration/importtablewizard.cpp:127 migration/importwizard.cpp:190
 msgid ""
 "Click \"Next\" button to continue or \"Cancel\" button to exit this wizard."
 msgstr ""
 
-#: migration/importtablewizard.cpp:131
+#: migration/importtablewizard.cpp:130
 msgid "Welcome to the Table Importing Wizard"
 msgstr ""
 
-#: migration/importtablewizard.cpp:162 migration/importwizard.cpp:223
+#: migration/importtablewizard.cpp:161 migration/importwizard.cpp:222
 msgid "Select Location for Source Database"
 msgstr ""
 
-#: migration/importtablewizard.cpp:172 migration/importwizard.cpp:235
+#: migration/importtablewizard.cpp:171 migration/importwizard.cpp:234
 msgid "Select Source Database"
 msgstr ""
 
-#: migration/importtablewizard.cpp:187
+#: migration/importtablewizard.cpp:186
 msgid "Select the Table to Import"
 msgstr ""
 
-#: migration/importtablewizard.cpp:220 migration/importwizard.cpp:384
+#: migration/importtablewizard.cpp:219 migration/importwizard.cpp:383
 msgid "Advanced Options"
 msgstr "Pliaj opcioj"
 
-#: migration/importtablewizard.cpp:229 migration/importwizard.cpp:396
+#: migration/importtablewizard.cpp:228 migration/importwizard.cpp:395
 msgid "Importing"
 msgstr ""
 
-#: migration/importtablewizard.cpp:245
+#: migration/importtablewizard.cpp:244
 msgid "Alter the Detected Design"
 msgstr ""
 
-#: migration/importtablewizard.cpp:262 migration/importwizard.cpp:420
-#: migration/importwizard.cpp:830
+#: migration/importtablewizard.cpp:261 migration/importwizard.cpp:419
+#: migration/importwizard.cpp:829
 msgid "Success"
 msgstr "Sukceso"
 
-#: migration/importtablewizard.cpp:307 migration/importwizard.cpp:492
+#: migration/importtablewizard.cpp:306 migration/importwizard.cpp:491
 msgid "Select source database you wish to import:"
 msgstr ""
 
-#: migration/importtablewizard.cpp:392
+#: migration/importtablewizard.cpp:391
 msgid ""
 "All required information has now been gathered. Click \"Next\" button to "
 "start importing.\n"
@@ -4944,22 +5237,187 @@ msgid ""
 "\n"
 msgstr ""
 
-#: migration/importtablewizard.cpp:444 migration/importwizard.cpp:709
+#: migration/importtablewizard.cpp:443 migration/importwizard.cpp:708
 msgid "No appropriate migration driver found."
 msgstr ""
 
-#: migration/importtablewizard.cpp:533
+#: migration/importtablewizard.cpp:532
 #: plugins/importexport/csv/kexicsvimportdialog.cpp:1405
 msgid "No project available."
 msgstr ""
 
-#: migration/importtablewizard.cpp:544
+#: migration/importtablewizard.cpp:543
 msgid "No table was selected to import."
 msgstr ""
 
-#: migration/importtablewizard.cpp:556
+#: migration/importtablewizard.cpp:555
 #, kde-format
 msgid "Unable to create table [%1]"
+msgstr ""
+
+#: migration/importwizard.cpp:68
+msgid "Import Database"
+msgstr ""
+
+#: migration/importwizard.cpp:173
+#, kde-format
+msgid ""
+"<qt>Database Importing wizard is about to import \"%1\" database <nobr>"
+"(connection %2)</nobr> into a Kexi database.</qt>"
+msgstr ""
+
+#: migration/importwizard.cpp:182
+#, kde-format
+msgid ""
+"<qt>Database Importing wizard is about to import <nobr>\"%1\"</nobr> file of "
+"type \"%2\" into a Kexi database.</qt>"
+msgstr ""
+
+#: migration/importwizard.cpp:186
+msgid ""
+"Database Importing wizard allows you to import an existing database into a "
+"Kexi database."
+msgstr ""
+
+#: migration/importwizard.cpp:193
+msgid "Welcome to the Database Importing Wizard"
+msgstr ""
+
+#: migration/importwizard.cpp:253
+msgid "Destination database type:"
+msgstr ""
+
+#: migration/importwizard.cpp:259
+msgid "Database project stored in a file"
+msgstr ""
+
+#: migration/importwizard.cpp:260
+msgid "Database project stored on a server"
+msgstr ""
+
+#: migration/importwizard.cpp:274
+msgid "Select Destination Database Type"
+msgstr ""
+
+#: migration/importwizard.cpp:282
+msgid "Destination project's title:"
+msgstr ""
+
+#: migration/importwizard.cpp:287
+msgid "Select Destination Database Project's Title"
+msgstr ""
+
+#: migration/importwizard.cpp:322
+msgid "Select Location for Destination Database"
+msgstr ""
+
+#: migration/importwizard.cpp:339
+msgid "Structure and data"
+msgstr ""
+
+#: migration/importwizard.cpp:343
+msgid "Structure only"
+msgstr ""
+
+#: migration/importwizard.cpp:348
+msgid "Select Type of Import"
+msgstr ""
+
+#: migration/importwizard.cpp:412
+msgid "Open imported project"
+msgstr ""
+
+#: migration/importwizard.cpp:430
+msgid "No new database name was entered."
+msgstr ""
+
+#: migration/importwizard.cpp:436
+msgid "Source database is the same as destination."
+msgstr ""
+
+#: migration/importwizard.cpp:440
+msgid "Following problems were found with the data you entered:"
+msgstr ""
+
+#: migration/importwizard.cpp:442
+msgid "Please click 'Back' button and correct these errors."
+msgstr ""
+
+#: migration/importwizard.cpp:552
+msgid ""
+"All required information has now been gathered. Click \"Next\" button to "
+"start importing.\n"
+"\n"
+"Depending on size of the database this may take some time."
+msgstr ""
+
+#: migration/importwizard.cpp:805
+#, kde-format
+msgid "Database %1 already exists.<p>Do you want to replace it with a new one?"
+msgstr ""
+
+#: migration/importwizard.cpp:808
+msgid "No"
+msgstr "Ne"
+
+#: migration/importwizard.cpp:843
+msgid "Failure"
+msgstr ""
+
+#: migration/importwizard.cpp:846
+#, kde-format
+msgid ""
+"<p>Import failed.</p>%1<p>%2</p><p>You can click \"Back\" button and try "
+"again.</p>"
+msgstr ""
+
+#: migration/importwizard.cpp:867
+msgid "Select source database filename."
+msgstr ""
+
+#: migration/importwizard.cpp:872
+msgid "Select source database."
+msgstr ""
+
+#: migration/importwizard.cpp:886
+msgid "Could not import database. This type is not supported."
+msgstr ""
+
+#: migration/importwizard.cpp:887
+#, kde-format
+msgid "Could not import database \"%1\". This type is not supported."
+msgstr ""
+
+#: migration/importwizard.cpp:901
+#, fuzzy
+msgid "Importing in progress..."
+msgstr "Importo de Aŭtluko Ekspresa 4"
+
+#: migration/importwizard.cpp:905
+#, kde-format
+msgid "Database has been imported into Kexi database project \"%1\"."
+msgstr ""
+
+#: migration/importwizard.cpp:967 migration/importwizard.cpp:982
+msgid "No help is available for this page."
+msgstr ""
+
+#: migration/importwizard.cpp:974
+msgid "Here you can choose the location to import data from."
+msgstr ""
+
+#: migration/importwizard.cpp:976
+msgid "Here you can choose the actual database to import data from."
+msgstr ""
+
+#: migration/importwizard.cpp:978
+msgid "Here you can choose the location to save the data."
+msgstr ""
+
+#: migration/importwizard.cpp:980
+msgid ""
+"Here you can choose the location to save the data in and the new database "
+"name."
 msgstr ""
 
 #: migration/keximigrate.cpp:78 migration/keximigrate.cpp:128
@@ -5003,226 +5461,6 @@ msgstr ""
 msgid ""
 "The data type for %1 could not be determined. Please select one of the "
 "following data types"
-msgstr ""
-
-#: migration/keximigratetest.cpp:37
-msgid "Kexi Migrate Test"
-msgstr ""
-
-#: migration/mdb/src/keximdb/mdbmigrate.cpp:48
-msgid "Source Database Has Non-Unicode Encoding"
-msgstr ""
-
-#: migration/mdb/src/keximdb/mdbmigrate.cpp:51
-msgid "Source Database Non-Unicode Encoding"
-msgstr ""
-
-#: migration/migratemanager.cpp:165
-msgid "Could not find any import/export database drivers."
-msgstr ""
-
-#: migration/migratemanager.cpp:185
-#, kde-format
-msgid "Could not find import/export database driver \"%1\"."
-msgstr ""
-
-#: migration/migratemanager.cpp:200
-#, kde-format
-msgid ""
-"Incompatible migration driver's \"%1\" version: found version %2, expected "
-"version %3."
-msgstr ""
-
-#: migration/migratemanager.cpp:214
-#, kde-format
-msgid "Could not load import/export database driver \"%1\"."
-msgstr ""
-
-#: migration/importwizard.cpp:69
-msgid "Import Database"
-msgstr ""
-
-#: migration/importwizard.cpp:174
-#, kde-format
-msgid ""
-"<qt>Database Importing wizard is about to import \"%1\" database <nobr>"
-"(connection %2)</nobr> into a Kexi database.</qt>"
-msgstr ""
-
-#: migration/importwizard.cpp:183
-#, kde-format
-msgid ""
-"<qt>Database Importing wizard is about to import <nobr>\"%1\"</nobr> file of "
-"type \"%2\" into a Kexi database.</qt>"
-msgstr ""
-
-#: migration/importwizard.cpp:187
-msgid ""
-"Database Importing wizard allows you to import an existing database into a "
-"Kexi database."
-msgstr ""
-
-#: migration/importwizard.cpp:194
-msgid "Welcome to the Database Importing Wizard"
-msgstr ""
-
-#: migration/importwizard.cpp:254
-msgid "Destination database type:"
-msgstr ""
-
-#: migration/importwizard.cpp:260
-msgid "Database project stored in a file"
-msgstr ""
-
-#: migration/importwizard.cpp:261
-msgid "Database project stored on a server"
-msgstr ""
-
-#: migration/importwizard.cpp:275
-msgid "Select Destination Database Type"
-msgstr ""
-
-#: migration/importwizard.cpp:283
-msgid "Destination project's caption:"
-msgstr ""
-
-#: migration/importwizard.cpp:288
-msgid "Select Destination Database Project's Caption"
-msgstr ""
-
-#: migration/importwizard.cpp:323
-msgid "Select Location for Destination Database"
-msgstr ""
-
-#: migration/importwizard.cpp:340
-msgid "Structure and data"
-msgstr ""
-
-#: migration/importwizard.cpp:344
-msgid "Structure only"
-msgstr ""
-
-#: migration/importwizard.cpp:349
-msgid "Select Type of Import"
-msgstr ""
-
-#: migration/importwizard.cpp:413
-msgid "Open imported project"
-msgstr ""
-
-#: migration/importwizard.cpp:431
-msgid "No new database name was entered."
-msgstr ""
-
-#: migration/importwizard.cpp:437
-msgid "Source database is the same as destination."
-msgstr ""
-
-#: migration/importwizard.cpp:441
-msgid "Following problems were found with the data you entered:"
-msgstr ""
-
-#: migration/importwizard.cpp:443
-msgid "Please click 'Back' button and correct these errors."
-msgstr ""
-
-#: migration/importwizard.cpp:553
-msgid ""
-"All required information has now been gathered. Click \"Next\" button to "
-"start importing.\n"
-"\n"
-"Depending on size of the database this may take some time."
-msgstr ""
-
-#: migration/importwizard.cpp:806
-#, kde-format
-msgid "Database %1 already exists.<p>Do you want to replace it with a new one?"
-msgstr ""
-
-#: migration/importwizard.cpp:809
-msgid "No"
-msgstr "Ne"
-
-#: migration/importwizard.cpp:844
-msgid "Failure"
-msgstr ""
-
-#: migration/importwizard.cpp:847
-#, kde-format
-msgid ""
-"<p>Import failed.</p>%1<p>%2</p><p>You can click \"Back\" button and try "
-"again.</p>"
-msgstr ""
-
-#: migration/importwizard.cpp:868
-msgid "Select source database filename."
-msgstr ""
-
-#: migration/importwizard.cpp:873
-msgid "Select source database."
-msgstr ""
-
-#: migration/importwizard.cpp:887
-msgid "Could not import database. This type is not supported."
-msgstr ""
-
-#: migration/importwizard.cpp:888
-#, kde-format
-msgid "Could not import database \"%1\". This type is not supported."
-msgstr ""
-
-#: migration/importwizard.cpp:902
-#, fuzzy
-msgid "Importing in progress..."
-msgstr "Importo de Aŭtluko Ekspresa 4"
-
-#: migration/importwizard.cpp:906
-#, kde-format
-msgid "Database has been imported into Kexi database project \"%1\"."
-msgstr ""
-
-#: migration/importwizard.cpp:968 migration/importwizard.cpp:983
-msgid "No help is available for this page."
-msgstr ""
-
-#: migration/importwizard.cpp:975
-msgid "Here you can choose the location to import data from."
-msgstr ""
-
-#: migration/importwizard.cpp:977
-msgid "Here you can choose the actual database to import data from."
-msgstr ""
-
-#: migration/importwizard.cpp:979
-msgid "Here you can choose the location to save the data."
-msgstr ""
-
-#: migration/importwizard.cpp:981
-msgid ""
-"Here you can choose the location to save the data in and the new database "
-"name."
-msgstr ""
-
-#: migration/AlterSchemaWidget.cpp:42 migration/AlterSchemaWidget.cpp:95
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:948
-#: plugins/importexport/csv/kexicsvimportdialog.cpp:961
-#, kde-format
-msgid "Column %1"
-msgstr "Kolumno %1"
-
-#. i18n: file: main/startup/KexiConnSelector.ui:83
-#. i18n: ectx: property (text), widget (Q3ListView, list)
-#. i18n: file: main/startup/KexiProjectSelector.ui:101
-#. i18n: ectx: property (text), widget (Q3ListView, list)
-#: migration/AlterSchemaWidget.cpp:43
-#: plugins/tables/kexitabledesignerview.cpp:356 rc.cpp:101 rc.cpp:146
-msgid "Type"
-msgstr "Tipo"
-
-#: migration/AlterSchemaWidget.cpp:44
-#: plugins/tables/kexitabledesignerview.cpp:193
-#: plugins/tables/kexitabledesignerview.cpp:430
-msgid "Primary Key"
 msgstr ""
 
 #: plugins/forms/kexidatasourcepage.cpp:49
@@ -6875,15 +7113,11 @@ msgid ""
 "is provided."
 msgstr ""
 
-#: widget/kexidbconnectionwidget.cpp:138
-msgid "Database Connection"
-msgstr ""
-
-#. i18n: file: main/startup/KexiProjectSelector.ui:90
-#. i18n: ectx: property (text), widget (Q3ListView, list)
+#. i18n: file: main/startup/KexiProjectSelector.ui:88
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
 #. i18n: file: widget/kexidbconnectionwidget.ui:289
 #. i18n: ectx: property (title), widget (Q3GroupBox, dbGroupBox)
-#: widget/kexidbconnectionwidget.cpp:146 rc.cpp:143 rc.cpp:191
+#: widget/kexidbconnectionwidget.cpp:146 rc.cpp:142 rc.cpp:202
 msgid "Database"
 msgstr "Datumbazo"
 
@@ -6934,7 +7168,7 @@ msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:295
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: widget/pixmapcollection.cpp:156 rc.cpp:194
+#: widget/pixmapcollection.cpp:156 rc.cpp:205
 msgid "&Name:"
 msgstr "&Nomo:"
 
@@ -7499,9 +7733,29 @@ msgstr ""
 msgid "Add table borders"
 msgstr ""
 
-#. i18n: file: main/startup/KexiConnSelector.ui:37
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: main/startup/KexiOpenExistingFile.ui:31
+#. i18n: ectx: property (text), widget (QLabel, lbl)
 #: rc.cpp:93
+msgid "<b>Select existing Kexi project file to open:</b>\n"
+msgstr ""
+
+#. i18n: file: main/startup/KexiOpenExistingFile.ui:89
+#. i18n: ectx: property (text), widget (QPushButton, btn_advanced)
+#: rc.cpp:97
+msgid "&Advanced "
+msgstr ""
+
+#. i18n: file: main/startup/KexiOpenExistingFile.ui:104
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:100
+msgid ""
+"Click \"Advanced\" button if you want to find an existing project on a "
+"server rather than a file."
+msgstr ""
+
+#. i18n: file: main/startup/KexiConnSelector.ui:50
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:103
 msgid ""
 "<b>Select Existing Database Server's Connection From the List Below</b>\n"
 "<p>You will see existing Kexi projects available for the selected "
@@ -7509,201 +7763,223 @@ msgid ""
 "list.\n"
 msgstr ""
 
-#. i18n: file: main/startup/KexiConnSelector.ui:88
-#. i18n: ectx: property (text), widget (Q3ListView, list)
-#: rc.cpp:104
+#. i18n: file: main/startup/KexiConnSelector.ui:101
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: rc.cpp:114
 msgid "Server Information"
 msgstr "Servila informo"
 
-#. i18n: file: main/startup/KexiConnSelector.ui:96
+#. i18n: file: main/startup/KexiConnSelector.ui:115
 #. i18n: ectx: property (title), widget (QGroupBox, descGroupBox)
-#: rc.cpp:107
+#: rc.cpp:117
 msgid "Description"
 msgstr "Priskribo"
 
-#. i18n: file: main/startup/KexiConnSelector.ui:161
+#. i18n: file: main/startup/KexiConnSelector.ui:152
 #. i18n: ectx: property (text), widget (QPushButton, btn_add)
-#: rc.cpp:110
+#: rc.cpp:120
 msgid "&Add..."
 msgstr "&Aldonu"
 
-#. i18n: file: main/startup/KexiConnSelector.ui:174
+#. i18n: file: main/startup/KexiConnSelector.ui:165
 #. i18n: ectx: property (text), widget (QPushButton, btn_edit)
-#: rc.cpp:113
+#: rc.cpp:123
 msgid "&Edit..."
 msgstr "&Redakto"
 
-#. i18n: file: main/startup/KexiConnSelector.ui:187
+#. i18n: file: main/startup/KexiConnSelector.ui:178
 #. i18n: ectx: property (text), widget (QPushButton, btn_remove)
-#: rc.cpp:116
+#: rc.cpp:126
 msgid "&Remove"
 msgstr "Fo&rigi"
 
 #. i18n: file: main/startup/KexiDBTitlePage.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: main/startup/KexiServerDBNamePage.ui:19
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:119 rc.cpp:152
-msgid "Project caption: "
+#: rc.cpp:129
+#, fuzzy
+msgid "Project title: "
+msgstr "Paĝotitolo:"
+
+#. i18n: file: main/startup/KexiDBTitlePage.ui:54
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:132
+msgid "Project filename:"
 msgstr ""
 
-#. i18n: file: main/startup/KexiNewPrjTypeSelector.ui:68
-#. i18n: ectx: property (text), widget (QLabel, lbl)
-#: rc.cpp:122
-msgid ""
-"Kexi will create a new database project. Select a storage method which will "
-"be used to store the new project.\n"
-msgstr ""
-
-#. i18n: file: main/startup/KexiOpenExistingFile.ui:31
-#. i18n: ectx: property (text), widget (QLabel, lbl)
-#: rc.cpp:126
-msgid "<b>Select existing Kexi project file to open:</b>\n"
-msgstr ""
-
-#. i18n: file: main/startup/KexiOpenExistingFile.ui:89
-#. i18n: ectx: property (text), widget (QPushButton, btn_advanced)
-#: rc.cpp:130
-msgid "&Advanced "
-msgstr ""
-
-#. i18n: file: main/startup/KexiOpenExistingFile.ui:104
+#. i18n: file: main/startup/KexiProjectSelector.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:133
-msgid ""
-"Click \"Advanced\" button if you want to find an existing project on a "
-"server rather than a file."
-msgstr ""
-
-#. i18n: file: main/startup/KexiProjectSelector.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:136
+#: rc.cpp:135
 msgid ""
 "<b>There are Kexi projects you have recently opened.</b> Select one you wish "
 "to open:\n"
 msgstr ""
 
-#. i18n: file: main/startup/KexiProjectSelector.ui:79
-#. i18n: ectx: property (text), widget (Q3ListView, list)
-#: rc.cpp:140
+#. i18n: file: main/startup/KexiProjectSelector.ui:77
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: rc.cpp:139
 msgid "Project Name"
 msgstr ""
 
-#. i18n: file: main/startup/KexiProjectSelector.ui:112
-#. i18n: ectx: property (text), widget (Q3ListView, list)
-#: rc.cpp:149
+#. i18n: file: main/startup/KexiProjectSelector.ui:110
+#. i18n: ectx: property (text), widget (QTreeWidget, list)
+#: rc.cpp:148
 msgid "Connection"
 msgstr "Konekto"
 
-#. i18n: file: main/startup/KexiServerDBNamePage.ui:29
+#. i18n: file: main/startup/KexiProjectStorageTypeSelectionPage.ui:22
+#. i18n: ectx: property (text), widget (KexiCommandLinkButton, btn_file)
+#: rc.cpp:151
+#, fuzzy
+#| msgid "File"
+msgctxt "New Project Stored in File"
+msgid "File"
+msgstr "Dosiero"
+
+#. i18n: file: main/startup/KexiProjectStorageTypeSelectionPage.ui:25
+#. i18n: ectx: property (description), widget (KexiCommandLinkButton, btn_file)
+#: rc.cpp:154
+msgid "New Project Stored in File"
+msgstr ""
+
+#. i18n: file: main/startup/KexiProjectStorageTypeSelectionPage.ui:32
+#. i18n: ectx: property (text), widget (KexiCommandLinkButton, btn_server)
+#: rc.cpp:157
+msgctxt "New Project Stored on Database Server"
+msgid "Server"
+msgstr ""
+
+#. i18n: file: main/startup/KexiProjectStorageTypeSelectionPage.ui:35
+#. i18n: ectx: property (description), widget (KexiCommandLinkButton, btn_server)
+#: rc.cpp:160
+msgid "New Project Stored on Database Server"
+msgstr ""
+
+#. i18n: file: main/startup/KexiServerDBNamePage.ui:22
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:163
+#, fuzzy
+msgid "Project title:"
+msgstr "Paĝotitolo:"
+
+#. i18n: file: main/startup/KexiServerDBNamePage.ui:51
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:155
-msgid "Project's database name: "
+#: rc.cpp:166
+msgid "Project's database name:"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:89
 #. i18n: ectx: property (title), widget (Q3ButtonGroup, locationBGrp)
-#: rc.cpp:158
+#: rc.cpp:169
 msgid "Database Server"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:118
 #. i18n: ectx: property (text), widget (QLabel, portLbl)
-#: rc.cpp:161
+#: rc.cpp:172
 msgid "Port:"
 msgstr "Pordo:"
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:131
 #. i18n: ectx: property (text), widget (QRadioButton, localhostRBtn)
-#: rc.cpp:164
+#: rc.cpp:175
 msgid "Local server"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:160
 #. i18n: ectx: property (text), widget (QLabel, hostLbl)
-#: rc.cpp:167
+#: rc.cpp:178
 msgid "&Hostname:"
 msgstr "&Komputilnomo:"
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:173
 #. i18n: ectx: property (text), widget (QCheckBox, chkPortDefault)
-#: rc.cpp:170
+#: rc.cpp:181
 msgctxt "port: default"
 msgid "Default"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:183
 #. i18n: ectx: property (text), widget (QRadioButton, remotehostRBtn)
-#: rc.cpp:173
+#: rc.cpp:184
 msgid "Remote server"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:196
 #. i18n: ectx: property (text), widget (QLabel, lblEngine)
-#: rc.cpp:176
+#: rc.cpp:187
 msgid "&Engine:"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:231
 #. i18n: ectx: property (title), widget (Q3GroupBox, authenticationGBox)
-#: rc.cpp:179
+#: rc.cpp:190
 msgid "Authentication"
 msgstr "Aŭtentigo"
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:237
 #. i18n: ectx: property (text), widget (QLabel, userLbl)
-#: rc.cpp:182
+#: rc.cpp:193
 msgid "&Username:"
 msgstr "&Uzantonomo:"
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:253
 #. i18n: ectx: property (text), widget (QLabel, passwordLbl)
-#: rc.cpp:185
+#: rc.cpp:196
 msgid "&Password:"
 msgstr "&Pasvorto:"
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:273
 #. i18n: ectx: property (text), widget (QCheckBox, chkSavePassword)
-#: rc.cpp:188
+#: rc.cpp:199
 msgid "Save password in the shortcut file"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidget.ui:311
 #. i18n: ectx: property (text), widget (QLabel, titleLabel)
-#: rc.cpp:197
+#: rc.cpp:208
 msgid "&Title (optional):"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidgetdetails.ui:27
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseSocket)
-#: rc.cpp:200
+#: rc.cpp:211
 msgid "Use socket &file instead of TCP/IP port:"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidgetdetails.ui:66
 #. i18n: ectx: property (text), widget (QCheckBox, chkSocketDefault)
-#: rc.cpp:203
+#: rc.cpp:214
 msgctxt "socket: default"
 msgid "Default"
 msgstr ""
 
 #. i18n: file: widget/kexidbconnectionwidgetdetails.ui:119
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:206
+#: rc.cpp:217
 msgid "&Description:"
 msgstr "&Priskribo:"
 
 #. i18n: file: widget/kexiprjtypeselector.ui:43
 #. i18n: ectx: property (text), widget (QRadioButton, option_server)
-#: rc.cpp:209
+#: rc.cpp:220
 msgid "Projects stored on a database server"
 msgstr ""
 
 #. i18n: file: widget/kexiprjtypeselector.ui:53
 #. i18n: ectx: property (text), widget (QRadioButton, option_file)
-#: rc.cpp:212
+#: rc.cpp:223
 msgid "Projects stored in a file"
 msgstr ""
+
+#~ msgctxt "Application name as menu entry"
+#~ msgid "Kexi"
+#~ msgstr "Kexi"
+
+#~ msgid "Project"
+#~ msgstr "Projekto"
+
+#~ msgid "&New..."
+#~ msgstr "&Nova..."
 
 #, fuzzy
 #~| msgid "Page %1"
@@ -7735,13 +8011,6 @@ msgstr ""
 
 #~ msgid "&Cancel"
 #~ msgstr "&Rezigni"
-
-#~ msgid ""
-#~ "The file %1 exists.\n"
-#~ "Do you wish to overwrite it?"
-#~ msgstr ""
-#~ "La dosiero %1 ekzistas.\n"
-#~ "Ĉu vi volas superskribi ĝin?"
 
 #~ msgid "Label"
 #~ msgstr "Etikedo"
