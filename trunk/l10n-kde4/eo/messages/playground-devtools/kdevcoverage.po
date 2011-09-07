@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcoverage\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-05 03:50+0200\n"
+"POT-Creation-Date: 2011-09-07 03:50+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -28,12 +28,12 @@ msgstr ""
 msgid "Coverage"
 msgstr ""
 
-#: reportwidget.cpp:400
+#: reportwidget.cpp:414
 msgctxt "@info:tooltip"
 msgid "Start coverage analysis"
 msgstr ""
 
-#: reportwidget.cpp:401
+#: reportwidget.cpp:415
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>Start coverage analysis in the specified path.</para>\n"
@@ -41,16 +41,52 @@ msgid ""
 "gcda files.</para>"
 msgstr ""
 
-#: reportwidget.cpp:408
+#: reportwidget.cpp:422
 msgctxt "@info:tooltip"
 msgid "Stop coverage analysis"
 msgstr ""
 
-#: reportwidget.cpp:409
+#: reportwidget.cpp:423
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>Stop coverage analysis killing <command>geninfo</command> process.</"
 "para>"
+msgstr ""
+
+#: reportwidget.cpp:430
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Remove all the .gcda files in <filename>%1</filename> directory and, "
+"recursively, in its subdirectories?"
+msgstr ""
+
+#: reportwidget.cpp:431
+msgctxt "@title:window"
+msgid "Remove .gcda files"
+msgstr ""
+
+#: reportwidget.cpp:462
+msgctxt "@info:tooltip"
+msgid "Remove coverage data"
+msgstr ""
+
+#: reportwidget.cpp:463
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Remove coverage data from the specified path.</para>\n"
+"<para>The .gcda files are removed in the given directory and, recursively, "
+"its subdirectories.</para>"
+msgstr ""
+
+#: reportwidget.cpp:470
+msgctxt "@info:tooltip"
+msgid "Stop removing coverage data"
+msgstr ""
+
+#: reportwidget.cpp:471
+msgctxt "@info:whatsthis"
+msgid "<para>Stop removing coverage data from the specified path.</para>"
 msgstr ""
 
 #: buildpathselection.cpp:40
@@ -168,6 +204,12 @@ msgctxt "@item:inlistbox Gradient color range type"
 msgid "Gradient"
 msgstr ""
 
+#: removegcdafilesjob.cpp:36
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove coverage data from <filename>%1</filename> directory"
+msgstr ""
+
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -273,14 +315,14 @@ msgstr ""
 msgid "Build Path: "
 msgstr ""
 
-#. i18n: file: reportwidget.ui:59
+#. i18n: file: reportwidget.ui:66
 #. i18n: ectx: property (toolTip), widget (QLabel, getFromProjectTextLabel)
 #: rc.cpp:48
 msgctxt "@info:tooltip"
 msgid "Use the build path from the selected project"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:62
+#. i18n: file: reportwidget.ui:69
 #. i18n: ectx: property (whatsThis), widget (QLabel, getFromProjectTextLabel)
 #: rc.cpp:51
 msgctxt "@info:whatsthis"
@@ -290,20 +332,20 @@ msgid ""
 "project."
 msgstr ""
 
-#. i18n: file: reportwidget.ui:65
+#. i18n: file: reportwidget.ui:72
 #. i18n: ectx: property (text), widget (QLabel, getFromProjectTextLabel)
 #: rc.cpp:54
 msgctxt "@label:listbox"
 msgid "Get from project:"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:114
+#. i18n: file: reportwidget.ui:121
 #. i18n: ectx: property (toolTip), widget (KLineEdit, filterBox)
 #: rc.cpp:57
 msgid "Filter directories by name"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:119
+#. i18n: file: reportwidget.ui:126
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, filterBox)
 #: rc.cpp:60
 msgid ""
@@ -313,33 +355,33 @@ msgid ""
 "In file mode, the filter has no effect."
 msgstr ""
 
-#. i18n: file: reportwidget.ui:143
+#. i18n: file: reportwidget.ui:150
 #. i18n: ectx: property (whatsThis), widget (QLabel, coverageRatioTextLabel)
-#. i18n: file: reportwidget.ui:153
+#. i18n: file: reportwidget.ui:160
 #. i18n: ectx: property (whatsThis), widget (QLabel, coverageRatio)
 #: rc.cpp:65 rc.cpp:71
 msgid "Percentage of covered lines in the selected directories."
 msgstr ""
 
-#. i18n: file: reportwidget.ui:146
+#. i18n: file: reportwidget.ui:153
 #. i18n: ectx: property (text), widget (QLabel, coverageRatioTextLabel)
 #: rc.cpp:68
 msgid "Line Coverage:"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:156
+#. i18n: file: reportwidget.ui:163
 #. i18n: ectx: property (text), widget (QLabel, coverageRatio)
-#. i18n: file: reportwidget.ui:180
+#. i18n: file: reportwidget.ui:187
 #. i18n: ectx: property (text), widget (QLabel, nrofCoveredLines)
-#. i18n: file: reportwidget.ui:204
+#. i18n: file: reportwidget.ui:211
 #. i18n: ectx: property (text), widget (QLabel, sloc)
 #: rc.cpp:74 rc.cpp:90 rc.cpp:106
 msgid "-"
 msgstr "-"
 
-#. i18n: file: reportwidget.ui:165
+#. i18n: file: reportwidget.ui:172
 #. i18n: ectx: property (whatsThis), widget (QLabel, nrofCoveredLinesTextLabel)
-#. i18n: file: reportwidget.ui:177
+#. i18n: file: reportwidget.ui:184
 #. i18n: ectx: property (whatsThis), widget (QLabel, nrofCoveredLines)
 #: rc.cpp:77 rc.cpp:85
 msgid ""
@@ -348,15 +390,15 @@ msgid ""
 "Covered lines are those that were executed at least once."
 msgstr ""
 
-#. i18n: file: reportwidget.ui:168
+#. i18n: file: reportwidget.ui:175
 #. i18n: ectx: property (text), widget (QLabel, nrofCoveredLinesTextLabel)
 #: rc.cpp:82
 msgid "Covered Lines:"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:189
+#. i18n: file: reportwidget.ui:196
 #. i18n: ectx: property (whatsThis), widget (QLabel, slocTextLabel)
-#. i18n: file: reportwidget.ui:201
+#. i18n: file: reportwidget.ui:208
 #. i18n: ectx: property (whatsThis), widget (QLabel, sloc)
 #: rc.cpp:93 rc.cpp:101
 msgid ""
@@ -366,13 +408,13 @@ msgid ""
 "macros, forward declarations, etc. are not taken into account."
 msgstr ""
 
-#. i18n: file: reportwidget.ui:192
+#. i18n: file: reportwidget.ui:199
 #. i18n: ectx: property (text), widget (QLabel, slocTextLabel)
 #: rc.cpp:98
 msgid "Total SLOC:"
 msgstr ""
 
-#. i18n: file: reportwidget.ui:252
+#. i18n: file: reportwidget.ui:259
 #. i18n: ectx: property (whatsThis), widget (Veritas::DrillDownView, table)
 #: rc.cpp:109
 msgid ""
