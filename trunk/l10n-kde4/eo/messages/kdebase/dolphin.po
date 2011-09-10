@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dolphin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-09 03:17+0200\n"
+"POT-Creation-Date: 2011-09-10 03:05+0200\n"
 "PO-Revision-Date: 2009-10-27 09:48+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -526,7 +526,15 @@ msgctxt "@item:intable"
 msgid "items"
 msgstr ""
 
-#: kitemviews/kfileitemlistwidget.cpp:665
+#: kitemviews/kfileitemmodel.cpp:743
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Description:"
+msgctxt "@item:intable"
+msgid "No destination"
+msgstr "Priskribo:"
+
+#: kitemviews/kfileitemlistwidget.cpp:673
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 item selected"
@@ -536,14 +544,6 @@ msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 ero elektita"
 msgstr[1] "%1 eroj elektitaj"
-
-#: kitemviews/kfileitemmodel.cpp:743
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Description:"
-msgctxt "@item:intable"
-msgid "No destination"
-msgstr "Priskribo:"
 
 #: main.cpp:35
 msgctxt "@title"
@@ -1514,62 +1514,6 @@ msgstr "Reŝargi"
 msgid "Default"
 msgstr "Defaŭlta"
 
-#: views/dolphinview.cpp:492
-#, kde-format
-msgctxt "@info:status"
-msgid "<filename>%1</filename> selected"
-msgstr "<filename>%1</filename> elektita:"
-
-#: views/dolphinview.cpp:493
-#, kde-format
-msgctxt "@info:status"
-msgid "<filename>%1</filename> selected (%2)"
-msgstr "<filename>%1</filename> elektita (%2)"
-
-#: views/dolphinview.cpp:497
-#, kde-format
-msgctxt "@info:status"
-msgid "1 Folder selected"
-msgid_plural "%1 Folders selected"
-msgstr[0] "1 dosierujo elektita"
-msgstr[1] "%1 dosierujoj elektitaj"
-
-#: views/dolphinview.cpp:498
-#, kde-format
-msgctxt "@info:status"
-msgid "1 File selected"
-msgid_plural "%1 Files selected"
-msgstr[0] "1 dosierujo elektita"
-msgstr[1] "%1 dosierujoj elektitaj"
-
-#: views/dolphinview.cpp:500
-#, kde-format
-msgctxt "@info:status folders, files (size)"
-msgid "%1, %2 (%3)"
-msgstr "%1, %2 (%3)"
-
-#: views/dolphinview.cpp:503
-#, kde-format
-msgctxt "@info:status files (size)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: views/dolphinview.cpp:1030
-msgctxt "@info:status"
-msgid "Delete operation completed."
-msgstr "Forigadon plenumis."
-
-#: views/dolphinview.cpp:1082
-msgctxt "@info:status"
-msgid "The location is empty."
-msgstr "La loko estas malplena."
-
-#: views/dolphinview.cpp:1084
-#, kde-format
-msgctxt "@info:status"
-msgid "The location '%1' is invalid."
-msgstr "La loko '%1' estas nevalida."
-
 #: views/dolphinviewactionhandler.cpp:92
 msgctxt "@action"
 msgid "Create Folder..."
@@ -1754,7 +1698,7 @@ msgctxt "@info"
 msgid "# will be replaced by ascending numbers starting with:"
 msgstr "(# anstataŭigita per kresktantaj numeroj)"
 
-#: views/versioncontrol/versioncontrolobserver.cpp:192
+#: views/versioncontrol/versioncontrolobserver.cpp:187
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Additional information"
@@ -1762,13 +1706,69 @@ msgctxt "@info:status"
 msgid "Update of version information failed."
 msgstr "Pliaj informoj"
 
-#: views/versioncontrol/versioncontrolobserver.cpp:246
+#: views/versioncontrol/versioncontrolobserver.cpp:243
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Additional information"
 msgctxt "@info:status"
 msgid "Updating version information..."
 msgstr "Pliaj informoj"
+
+#: views/dolphinview.cpp:492
+#, kde-format
+msgctxt "@info:status"
+msgid "<filename>%1</filename> selected"
+msgstr "<filename>%1</filename> elektita:"
+
+#: views/dolphinview.cpp:493
+#, kde-format
+msgctxt "@info:status"
+msgid "<filename>%1</filename> selected (%2)"
+msgstr "<filename>%1</filename> elektita (%2)"
+
+#: views/dolphinview.cpp:497
+#, kde-format
+msgctxt "@info:status"
+msgid "1 Folder selected"
+msgid_plural "%1 Folders selected"
+msgstr[0] "1 dosierujo elektita"
+msgstr[1] "%1 dosierujoj elektitaj"
+
+#: views/dolphinview.cpp:498
+#, kde-format
+msgctxt "@info:status"
+msgid "1 File selected"
+msgid_plural "%1 Files selected"
+msgstr[0] "1 dosierujo elektita"
+msgstr[1] "%1 dosierujoj elektitaj"
+
+#: views/dolphinview.cpp:500
+#, kde-format
+msgctxt "@info:status folders, files (size)"
+msgid "%1, %2 (%3)"
+msgstr "%1, %2 (%3)"
+
+#: views/dolphinview.cpp:503
+#, kde-format
+msgctxt "@info:status files (size)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: views/dolphinview.cpp:1038
+msgctxt "@info:status"
+msgid "Delete operation completed."
+msgstr "Forigadon plenumis."
+
+#: views/dolphinview.cpp:1090
+msgctxt "@info:status"
+msgid "The location is empty."
+msgstr "La loko estas malplena."
+
+#: views/dolphinview.cpp:1092
+#, kde-format
+msgctxt "@info:status"
+msgid "The location '%1' is invalid."
+msgstr "La loko '%1' estas nevalida."
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
