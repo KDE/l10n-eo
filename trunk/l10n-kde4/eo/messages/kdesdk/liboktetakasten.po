@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: liboktetakasten\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-20 06:07+0200\n"
+"POT-Creation-Date: 2011-09-28 03:57+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -448,8 +448,9 @@ msgid "<no name specified>"
 msgstr ""
 
 #: controllers/view/structures/datatypes/structuredatainformation.cpp:26
-msgctxt "data type in C/C++"
-msgid "struct"
+#, kde-format
+msgctxt "data type in C/C++, then name"
+msgid "struct %1"
 msgstr ""
 
 #: controllers/view/structures/datatypes/datainformation.cpp:59
@@ -478,14 +479,14 @@ msgid "%1 %2"
 msgstr "%1: %2"
 
 #: controllers/view/structures/datatypes/datainformation.cpp:199
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:262
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:258
 #, kde-format
 msgctxt "not all values in this structure are as they should be"
 msgid "Validation failed: \"%1\""
 msgstr ""
 
 #: controllers/view/structures/datatypes/datainformation.cpp:205
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:268
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:264
 msgctxt "not all values in this structure are as they should be"
 msgid "Validation failed."
 msgstr ""
@@ -512,13 +513,20 @@ msgid ""
 "Size: %4"
 msgstr ""
 
-#: controllers/view/structures/datatypes/array/complexarraydata.cpp:131
+#: controllers/view/structures/datatypes/array/complexarraydata.cpp:125
 #, fuzzy, kde-format
 #| msgctxt "array type then length"
 #| msgid "%1[%2]"
 msgctxt "type name, then array length"
 msgid "%1[%2]"
 msgstr "%1[%2]"
+
+#: controllers/view/structures/datatypes/array/primitivearraydata.cpp:173
+#: controllers/view/structures/datatypes/primitive/uintdatainformation.cpp:40
+#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:28
+msgctxt "invalid value (out of range)"
+msgid "&lt;invalid&gt;"
+msgstr ""
 
 #: controllers/view/structures/datatypes/enumdatainformation.cpp:61
 #, fuzzy, kde-format
@@ -537,7 +545,7 @@ msgstr ""
 msgid "enum (%1)"
 msgstr ""
 
-#: controllers/view/structures/datatypes/strings/stringdatainformation.cpp:358
+#: controllers/view/structures/datatypes/strings/stringdatainformation.cpp:365
 msgid "End of file reached prematurely"
 msgstr ""
 
@@ -638,20 +646,20 @@ msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:51
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:72
-#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:31
+#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:36
 msgctxt "boolean value"
 msgid "false"
 msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:53
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:73
-#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:33
+#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:38
 msgctxt "boolean value"
 msgid "true"
 msgstr ""
 
 #: controllers/view/structures/datatypes/primitive/bitfield/boolbitfielddatainformation.cpp:62
-#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:45
+#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:50
 #, kde-format
 msgctxt "boolean value with actual value"
 msgid "true (%1)"
@@ -687,33 +695,28 @@ msgid_plural "bitfield (%1 bits wide)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: controllers/view/structures/datatypes/primitive/chardatainformation.h:62
+#: controllers/view/structures/datatypes/primitive/chardatainformation.h:63
 msgctxt "Data type"
 msgid "char"
 msgstr ""
 
-#: controllers/view/structures/datatypes/primitive/floatdatainformation.h:66
+#: controllers/view/structures/datatypes/primitive/floatdatainformation.h:62
 msgctxt "Data type"
 msgid "float"
 msgstr ""
 
-#: controllers/view/structures/datatypes/primitive/doubledatainformation.h:67
+#: controllers/view/structures/datatypes/primitive/doubledatainformation.h:63
 msgctxt "Data type"
 msgid "double"
 msgstr ""
 
-#: controllers/view/structures/datatypes/primitive/uintdatainformation.cpp:40
-#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:28
-msgctxt "invalid value (out of range)"
-msgid "&lt;invalid&gt;"
-msgstr ""
-
 #: controllers/view/structures/datatypes/uniondatainformation.cpp:27
-msgctxt "data type in C/C++"
-msgid "union"
+#, kde-format
+msgctxt "data type in C/C++, then name"
+msgid "union %1"
 msgstr ""
 
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:270
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:266
 #, kde-format
 msgid ""
 "Name: %2\n"
@@ -734,7 +737,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:276
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:272
 #, kde-format
 msgid ""
 "Name: %2\n"
@@ -876,99 +879,99 @@ msgctxt "@info:tooltip"
 msgid "Lock selected structure to current offset."
 msgstr ""
 
-#: controllers/view/structures/structtool.cpp:200
+#: controllers/view/structures/structtool.cpp:213
 msgctxt "name of a data structure"
 msgid "Name"
 msgstr ""
 
-#: controllers/view/structures/structtool.cpp:202
+#: controllers/view/structures/structtool.cpp:215
 #, fuzzy
 #| msgid "Type:"
 msgctxt "type of a data structure"
 msgid "Type"
 msgstr "Tipo:"
 
-#: controllers/view/structures/structtool.cpp:204
+#: controllers/view/structures/structtool.cpp:217
 msgctxt "value of a data structure (primitive type)"
 msgid "Value"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:31
+#: controllers/view/structures/allprimitivetypes.cpp:32
 msgctxt "data type"
 msgid "bool (1 byte)"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:32
+#: controllers/view/structures/allprimitivetypes.cpp:33
 msgctxt "data type"
 msgid "signed byte"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:33
+#: controllers/view/structures/allprimitivetypes.cpp:34
 msgctxt "data type"
 msgid "unsigned byte"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:34
+#: controllers/view/structures/allprimitivetypes.cpp:35
 msgctxt "data type"
 msgid "char"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:35
+#: controllers/view/structures/allprimitivetypes.cpp:36
 msgctxt "data type"
 msgid "bool (2 bytes)"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:36
+#: controllers/view/structures/allprimitivetypes.cpp:37
 msgctxt "data type"
 msgid "signed short"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:37
+#: controllers/view/structures/allprimitivetypes.cpp:38
 msgctxt "data type"
 msgid "unsigned short"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:38
+#: controllers/view/structures/allprimitivetypes.cpp:39
 msgctxt "data type"
 msgid "bool (4 bytes)"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:39
+#: controllers/view/structures/allprimitivetypes.cpp:40
 msgctxt "data type"
 msgid "signed int"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:40
+#: controllers/view/structures/allprimitivetypes.cpp:41
 msgctxt "data type"
 msgid "unsigned int"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:41
+#: controllers/view/structures/allprimitivetypes.cpp:42
 msgctxt "data type"
 msgid "bool (8 bytes)"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:42
+#: controllers/view/structures/allprimitivetypes.cpp:43
 msgctxt "data type"
 msgid "signed long"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:43
+#: controllers/view/structures/allprimitivetypes.cpp:44
 msgctxt "data type"
 msgid "unsigned long"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:44
+#: controllers/view/structures/allprimitivetypes.cpp:45
 msgctxt "data type"
 msgid "float"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:45
+#: controllers/view/structures/allprimitivetypes.cpp:46
 msgctxt "data type"
 msgid "double"
 msgstr ""
 
-#: controllers/view/structures/allprimitivetypes.cpp:46
+#: controllers/view/structures/allprimitivetypes.cpp:47
 msgctxt "data type"
 msgid "bitfield"
 msgstr ""
