@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-10-10 03:24+0200\n"
+"POT-Creation-Date: 2011-10-12 03:06+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -267,6 +267,7 @@ msgstr ""
 
 #: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:114
 #: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:314
+#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:36
 msgid "Please wait..."
 msgstr ""
 
@@ -299,7 +300,7 @@ msgid "Page Number"
 msgstr ""
 
 #: helperlibs/twitterapihelper/twitterapishowthread.cpp:49
-#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:35
+#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:64
 #, fuzzy
 #| msgid "Configuration"
 msgid "Conversation"
@@ -370,6 +371,50 @@ msgstr ""
 #| msgid "Select All"
 msgid "Close All"
 msgstr "Elekti ĉion"
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:72
+msgctxt "@info:tooltip"
+msgid "Reply"
+msgstr ""
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:75
+#, fuzzy, kde-format
+#| msgid "Repeat"
+msgid "Reply to %1"
+msgstr "Ripeti"
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:80
+#, fuzzy, kde-format
+#| msgid "Subscribe"
+msgid "Write to %1"
+msgstr "Subskribi"
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:86
+msgid "Reply to all"
+msgstr ""
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:95
+msgctxt "@info:tooltip"
+msgid "Favorite"
+msgstr ""
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:129
+#, kde-format
+msgid "<a href='%1' title='Sent from %2 via OStatus'>%2</a>"
+msgstr ""
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:139
+#, fuzzy
+#| msgid "Configuration"
+msgid "Show Conversation"
+msgstr "Agordo"
+
+#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:146
+#, kde-format
+msgid ""
+"<a href='replyto://%1'>in reply to</a> @<a href='user://%4'>%4</a>&nbsp;<a "
+"href=\"%2\" title=\"%2\">%3</a>"
+msgstr ""
 
 #: helperlibs/twitterapihelper/twitterapimicroblog.cpp:105
 msgctxt "Timeline Name"
@@ -537,116 +582,72 @@ msgid "Timeline update failed, %1"
 msgstr ""
 
 #: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1104
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1661
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1660
 #: microblogs/laconica/laconicamicroblog.cpp:293
 msgid ""
 "Retrieving the friends list failed. The data returned from the server is "
 "corrupted."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1259
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1258
 #, kde-format
 msgid "Creating friendship with %1 failed. %2"
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1266
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1265
 #, kde-format
 msgid "You are now listening to %1's posts."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1274
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1273
 #, kde-format
 msgid "Creating friendship with %1 failed: the server returned invalid data."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1279
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1278
 #, kde-format
 msgid "Creating friendship with %1 failed: %2"
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1317
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1316
 #, kde-format
 msgid "Destroying friendship with %1 failed. %2"
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1324
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1323
 #, kde-format
 msgid "You will not receive %1's updates."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1332
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1331
 #, kde-format
 msgid "Destroying friendship with %1 failed: the server returned invalid data."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1337
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1336
 #, kde-format
 msgid "Destroying friendship with %1 failed: %2"
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1374
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1373
 #, kde-format
 msgid "Blocking %1 failed. %2"
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1380
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1379
 #, kde-format
 msgid "You will no longer be disturbed by %1."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1384
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1383
 #, kde-format
 msgid "Blocking %1 failed: the server returned invalid data."
 msgstr ""
 
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1489
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1512
-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1571
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1488
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1511
+#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1570
 msgid "Could not parse the data that has been received from the server."
-msgstr ""
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:72
-msgctxt "@info:tooltip"
-msgid "Reply"
-msgstr ""
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:75
-#, fuzzy, kde-format
-#| msgid "Repeat"
-msgid "Reply to %1"
-msgstr "Ripeti"
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:80
-#, fuzzy, kde-format
-#| msgid "Subscribe"
-msgid "Write to %1"
-msgstr "Subskribi"
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:86
-msgid "Reply to all"
-msgstr ""
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:95
-msgctxt "@info:tooltip"
-msgid "Favorite"
-msgstr ""
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:129
-#, kde-format
-msgid "<a href='%1' title='Sent from %2 via OStatus'>%2</a>"
-msgstr ""
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:139
-#, fuzzy
-#| msgid "Configuration"
-msgid "Show Conversation"
-msgstr "Agordo"
-
-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:146
-#, kde-format
-msgid ""
-"<a href='replyto://%1'>in reply to</a> @<a href='user://%4'>%4</a>&nbsp;<a "
-"href=\"%2\" title=\"%2\">%3</a>"
 msgstr ""
 
 #: libchoqok/accountmanager.cpp:111 libchoqok/accountmanager.cpp:142
@@ -1002,12 +1003,6 @@ msgstr ""
 msgid "Unable to fetch search results: %1"
 msgstr ""
 
-#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:33
-#, fuzzy, kde-format
-#| msgid "Configuration"
-msgid "Conversation %1"
-msgstr "Agordo"
-
 #: microblogs/laconica/laconicamicroblog.cpp:62
 msgctxt "Timeline name"
 msgid "Repeated"
@@ -1038,6 +1033,12 @@ msgstr ""
 #, kde-format
 msgid "Fetching conversation failed. %1"
 msgstr ""
+
+#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:34
+#, fuzzy, kde-format
+#| msgid "Configuration"
+msgid "Conversation %1"
+msgstr "Agordo"
 
 #: microblogs/laconica/laconicapostwidget.cpp:84
 #: microblogs/twitter/twitterpostwidget.cpp:52
@@ -2840,31 +2841,37 @@ msgstr ""
 msgid "Notify Interval:"
 msgstr ""
 
-#. i18n: file: plugins/betternotify/notifyprefs.ui:44
-#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: plugins/betternotify/notifyprefs.ui:36
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: rc.cpp:571
+msgid "seconds"
+msgstr ""
+
+#. i18n: file: plugins/betternotify/notifyprefs.ui:51
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:574
 #, fuzzy
 #| msgid "Select All"
 msgid "Select Timelines"
 msgstr "Elekti ĉion"
 
-#. i18n: file: plugins/betternotify/notifyprefs.ui:54
+#. i18n: file: plugins/betternotify/notifyprefs.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:574
+#: rc.cpp:577
 #, fuzzy
 #| msgid "Actions"
 msgid "Accounts"
 msgstr "Agoj"
 
-#. i18n: file: plugins/betternotify/notifyprefs.ui:99
+#. i18n: file: plugins/betternotify/notifyprefs.ui:106
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:577
+#: rc.cpp:580
 msgid "Select timelines you wish to see notifications for their new posts:"
 msgstr ""
 
-#. i18n: file: plugins/betternotify/notifyprefs.ui:128
+#. i18n: file: plugins/betternotify/notifyprefs.ui:135
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:580
+#: rc.cpp:583
 msgid "* Any change, needs plugin re-load (disable/enable) to take effect."
 msgstr ""
 
