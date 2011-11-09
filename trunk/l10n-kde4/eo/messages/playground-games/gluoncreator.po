@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gluoncreator\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-10-10 04:07+0200\n"
+"POT-Creation-Date: 2011-11-09 04:10+0100\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -31,21 +31,6 @@ msgstr "Aliaj"
 #: dialogs/configdialog.cpp:37
 msgid "Plugins"
 msgstr "Kromaĵoj"
-
-#: dialogs/openprojectdialogpage.cpp:57
-msgid "Open Project"
-msgstr "Malfermi Projekton"
-
-#: dialogs/openprojectdialogpage.cpp:69
-#: plugins/docks/projectdock/projectdockplugin.cpp:41
-msgid "Project"
-msgstr "Projekto"
-
-#: dialogs/recentprojectsdialogpage.cpp:57 mainwindow.cpp:259
-#, fuzzy
-#| msgid "Open Project"
-msgid "Recent Projects"
-msgstr "Malfermi Projekton"
 
 #: dialogs/newprojectdialogpage.cpp:67 mainwindow.cpp:366 mainwindow.cpp:374
 #, fuzzy
@@ -118,6 +103,21 @@ msgstr ""
 msgid "Path already exists and contains files"
 msgstr ""
 
+#: dialogs/openprojectdialogpage.cpp:57
+msgid "Open Project"
+msgstr "Malfermi Projekton"
+
+#: dialogs/openprojectdialogpage.cpp:69
+#: plugins/docks/projectdock/projectdockplugin.cpp:41
+msgid "Project"
+msgstr "Projekto"
+
+#: dialogs/recentprojectsdialogpage.cpp:57 mainwindow.cpp:259
+#, fuzzy
+#| msgid "Open Project"
+msgid "Recent Projects"
+msgstr "Malfermi Projekton"
+
 #: lib/models/componentmodel.cpp:107
 msgctxt "Uncategorised component category"
 msgid "Uncategorised"
@@ -137,6 +137,10 @@ msgstr "Kategorio"
 #: lib/models/componentmodel.cpp:205
 msgid "Component"
 msgstr "Komponanto"
+
+#: lib/widgets/nullpropertywidgetitem.cpp:37
+msgid "Unknown Type"
+msgstr "Nekonata Tipo"
 
 #: lib/widgets/gluonobjectpropertywidgetitem.cpp:91
 msgctxt "Edit/preview currently selected object"
@@ -167,9 +171,34 @@ msgstr ""
 msgid "(no object selected)"
 msgstr ""
 
-#: lib/widgets/nullpropertywidgetitem.cpp:37
-msgid "Unknown Type"
-msgstr "Nekonata Tipo"
+#: lib/widgets/propertywidgetcontainer.cpp:215
+msgid "Add Custom Property..."
+msgstr ""
+
+#: lib/widgets/propertywidgetcontainer.cpp:223
+msgid "Move Up"
+msgstr "Movi supren"
+
+#: lib/widgets/propertywidgetcontainer.cpp:227
+msgid "Move Down"
+msgstr "Movi malsupren"
+
+#: lib/widgets/propertywidgetcontainer.cpp:235
+#: plugins/docks/scenedock/scenedock.cpp:101
+#: nodeeditor/actions/DeleteAction.cpp:34
+msgid "Delete"
+msgstr "Forigi"
+
+#: lib/widgets/propertywidgetcontainer.cpp:284
+#, kde-format
+msgid "Are you sure you wish to delete the item %1?"
+msgstr ""
+
+#: lib/widgets/propertywidgetcontainer.cpp:284
+#, fuzzy
+#| msgid "Delete"
+msgid "Delete Item?"
+msgstr "Forigi"
 
 #: lib/widgets/propertywidgetitemnewcustomproperty.cpp:49
 msgid "Boolean (bool)"
@@ -250,35 +279,6 @@ msgstr ""
 msgid "Add Property"
 msgstr "Ecoj"
 
-#: lib/widgets/propertywidgetcontainer.cpp:215
-msgid "Add Custom Property..."
-msgstr ""
-
-#: lib/widgets/propertywidgetcontainer.cpp:223
-msgid "Move Up"
-msgstr "Movi supren"
-
-#: lib/widgets/propertywidgetcontainer.cpp:227
-msgid "Move Down"
-msgstr "Movi malsupren"
-
-#: lib/widgets/propertywidgetcontainer.cpp:235
-#: plugins/docks/scenedock/scenedock.cpp:101
-#: nodeeditor/actions/DeleteAction.cpp:34
-msgid "Delete"
-msgstr "Forigi"
-
-#: lib/widgets/propertywidgetcontainer.cpp:284
-#, kde-format
-msgid "Are you sure you wish to delete the item %1?"
-msgstr ""
-
-#: lib/widgets/propertywidgetcontainer.cpp:284
-#, fuzzy
-#| msgid "Delete"
-msgid "Delete Item?"
-msgstr "Forigi"
-
 #: lib/objectmanager.cpp:257 plugins/docks/projectdock/projectdock.cpp:377
 msgid "NewScene"
 msgstr ""
@@ -286,6 +286,12 @@ msgstr ""
 #: plugins/docks/componentsdock/componentsdockplugin.cpp:42
 msgid "Components"
 msgstr "Komponantoj"
+
+#: plugins/docks/messagedock/messagedockplugin.cpp:42
+#, fuzzy
+#| msgid "&Message"
+msgid "Messages"
+msgstr "&Mesaĝo"
 
 #: plugins/docks/messagedock/messagedock.cpp:54
 #, kde-format
@@ -311,12 +317,6 @@ msgstr ""
 #| msgid "Delete"
 msgid "Clear All"
 msgstr "Forigi"
-
-#: plugins/docks/messagedock/messagedockplugin.cpp:42
-#, fuzzy
-#| msgid "&Message"
-msgid "Messages"
-msgstr "&Mesaĝo"
 
 #: plugins/docks/projectdock/projectdock.cpp:76
 msgctxt "Asset without a category"
@@ -392,15 +392,15 @@ msgstr ""
 msgid "Really Delete?"
 msgstr "Forigi"
 
-#: plugins/docks/propertiesdock/propertywidgetitems/stringlistpropertywidgetitem.cpp:54
-#: plugins/docks/propertiesdock/propertywidgetitems/stringlistpropertywidgetitem.cpp:177
 #: plugins/docks/propertiesdock/propertywidgetitems/intvectorpropertywidgetitem.cpp:53
 #: plugins/docks/propertiesdock/propertywidgetitems/intvectorpropertywidgetitem.cpp:172
+#: plugins/docks/propertiesdock/propertywidgetitems/stringlistpropertywidgetitem.cpp:54
+#: plugins/docks/propertiesdock/propertywidgetitems/stringlistpropertywidgetitem.cpp:177
 msgid "Item count: 0"
 msgstr ""
 
-#: plugins/docks/propertiesdock/propertywidgetitems/stringlistpropertywidgetitem.cpp:163
 #: plugins/docks/propertiesdock/propertywidgetitems/intvectorpropertywidgetitem.cpp:158
+#: plugins/docks/propertiesdock/propertywidgetitems/stringlistpropertywidgetitem.cpp:163
 #, kde-format
 msgid "Item count: %1"
 msgstr ""
@@ -724,26 +724,27 @@ msgstr ""
 msgid "GDL file to open"
 msgstr ""
 
+#: nodeeditor/actions/DeleteAction.cpp:35
+msgid "Delete items by clicking on them."
+msgstr ""
+
+#: nodeeditor/actions/Select.cpp:39
+#, fuzzy
+#| msgid "Delete"
+msgctxt "Select items by clicking on them"
+msgid "Select"
+msgstr "Forigi"
+
+#: nodeeditor/actions/Select.cpp:40
+msgid "Select Items by clicking on them."
+msgstr ""
+
 #: nodeeditor/actions/AddEdge.cpp:35
 msgid "Add Edge"
 msgstr ""
 
 #: nodeeditor/actions/AddEdge.cpp:36
 msgid "Creates a new edge between 2 nodes"
-msgstr ""
-
-#: nodeeditor/actions/DeleteAction.cpp:35
-msgid "Delete items by clicking on them."
-msgstr ""
-
-#: nodeeditor/actions/MoveNode.cpp:41
-#, fuzzy
-#| msgid "Move Down"
-msgid "Move Node"
-msgstr "Movi malsupren"
-
-#: nodeeditor/actions/MoveNode.cpp:42
-msgid "Moves a node around the drawing area."
 msgstr ""
 
 #: nodeeditor/actions/AddNode.cpp:33 nodeeditor/actions/AddTypedNode.cpp:33
@@ -764,15 +765,14 @@ msgid ""
 "area."
 msgstr ""
 
-#: nodeeditor/actions/Select.cpp:39
+#: nodeeditor/actions/MoveNode.cpp:41
 #, fuzzy
-#| msgid "Delete"
-msgctxt "Select items by clicking on them"
-msgid "Select"
-msgstr "Forigi"
+#| msgid "Move Down"
+msgid "Move Node"
+msgstr "Movi malsupren"
 
-#: nodeeditor/actions/Select.cpp:40
-msgid "Select Items by clicking on them."
+#: nodeeditor/actions/MoveNode.cpp:42
+msgid "Moves a node around the drawing area."
 msgstr ""
 
 #: nodeeditor/core/DynamicPropertiesList.cpp:186
@@ -795,7 +795,7 @@ msgctxt "The type of the text"
 msgid "None"
 msgstr ""
 
-#: nodeeditor/core/threadDocument.cpp:51
+#: nodeeditor/core/graph.h:157 nodeeditor/core/threadDocument.cpp:51
 msgid "Untitled"
 msgstr ""
 
