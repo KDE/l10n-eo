@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-11-09 02:59+0100\n"
+"POT-Creation-Date: 2011-11-11 03:13+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -3284,7 +3284,7 @@ msgid ""
 msgstr ""
 
 #: imageplugins/color/adjustlevelstool.cpp:319
-#: libs/dimg/filters/bw/mixersettings.cpp:155
+#: libs/dimg/filters/bw/mixersettings.cpp:167
 #: libs/dimg/filters/curves/curvesbox.cpp:215
 msgid "&Reset"
 msgstr "&Reagordu"
@@ -3391,12 +3391,6 @@ msgstr ""
 
 #: imageplugins/color/imageplugin_color.cpp:314
 msgid "Color Management is disabled..."
-msgstr ""
-
-#: imageplugins/color/channelmixertool.cpp:108
-#: imageplugins/color/channelmixertool.cpp:225
-#: utilities/queuemanager/basetools/color/channelmixer.cpp:50
-msgid "Channel Mixer"
 msgstr ""
 
 #: imageplugins/color/autocorrectiontool.cpp:91
@@ -3528,6 +3522,12 @@ msgstr ""
 #: utilities/queuemanager/basetools/color/whitebalance.cpp:48
 #: utilities/searchwindow/searchfields.cpp:438
 msgid "White Balance"
+msgstr ""
+
+#: imageplugins/color/channelmixertool.cpp:108
+#: imageplugins/color/channelmixertool.cpp:212
+#: utilities/queuemanager/basetools/color/channelmixer.cpp:49
+msgid "Channel Mixer"
 msgstr ""
 
 #: imageplugins/decorate/superimpose/superimposetool.cpp:103
@@ -6926,54 +6926,81 @@ msgstr ""
 msgid "Cannot save settings to the Black & White text file."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:129
+#: libs/dimg/filters/bw/mixersettings.cpp:135
+#, fuzzy
+#| msgid "Channel:"
+msgid "Output Channel:"
+msgstr "Kanalo:"
+
+#: libs/dimg/filters/bw/mixersettings.cpp:137
+#: libs/dimg/filters/cb/cbsettings.cpp:97
+#: libs/widgets/common/colorlabelwidget.cpp:409
+#: utilities/queuemanager/basetools/color/curvesadjust.cpp:71
+msgid "Red"
+msgstr "Ruĝo"
+
+#: libs/dimg/filters/bw/mixersettings.cpp:138
+#: libs/dimg/filters/cb/cbsettings.cpp:111
+#: libs/widgets/common/colorlabelwidget.cpp:418
+#: utilities/queuemanager/basetools/color/curvesadjust.cpp:72
+msgid "Green"
+msgstr "Verdo"
+
+#: libs/dimg/filters/bw/mixersettings.cpp:139
+#: libs/dimg/filters/cb/cbsettings.cpp:119
+#: libs/widgets/common/colorlabelwidget.cpp:421
+#: utilities/queuemanager/basetools/color/curvesadjust.cpp:73
+msgid "Blue"
+msgstr "Bluo"
+
+#: libs/dimg/filters/bw/mixersettings.cpp:141
 #, fuzzy
 #| msgid "Size:"
 msgid "Red (%):"
 msgstr "Grandeco:"
 
-#: libs/dimg/filters/bw/mixersettings.cpp:134
+#: libs/dimg/filters/bw/mixersettings.cpp:146
 msgid "Select the red color gain, as a percentage, for the current channel."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:137
+#: libs/dimg/filters/bw/mixersettings.cpp:149
 #, fuzzy
 #| msgid "Green:"
 msgid "Green (%):"
 msgstr "Verdo:"
 
-#: libs/dimg/filters/bw/mixersettings.cpp:142
+#: libs/dimg/filters/bw/mixersettings.cpp:154
 msgid "Select the green color gain, as a percentage, for the current channel."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:145
+#: libs/dimg/filters/bw/mixersettings.cpp:157
 #, fuzzy
 #| msgid "Blue:"
 msgid "Blue (%):"
 msgstr "Bluo:"
 
-#: libs/dimg/filters/bw/mixersettings.cpp:150
+#: libs/dimg/filters/bw/mixersettings.cpp:162
 msgid "Select the blue color gain, as a percentage, for the current channel."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:157
+#: libs/dimg/filters/bw/mixersettings.cpp:169
 msgid ""
 "Reset color channels' gains settings from the currently selected channel."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:165
+#: libs/dimg/filters/bw/mixersettings.cpp:177
 msgid "Preserve luminosity"
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:166
+#: libs/dimg/filters/bw/mixersettings.cpp:178
 msgid "Enable this option is you want preserve the image luminosity."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:171
+#: libs/dimg/filters/bw/mixersettings.cpp:183
 msgid "Monochrome"
 msgstr "Unukolora"
 
-#: libs/dimg/filters/bw/mixersettings.cpp:172
+#: libs/dimg/filters/bw/mixersettings.cpp:184
 msgid ""
 "<p>Use <b>Monochrome</b> mode to convert color picture to Black and White:</"
 "p><p>The <qt><font color=\"red\">red channel</font></qt> modifies <a "
@@ -6985,25 +7012,25 @@ msgid ""
 "this mode, the histogram will display only luminosity values.</p>"
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:335
+#: libs/dimg/filters/bw/mixersettings.cpp:354
 #, fuzzy, kde-format
 #| msgid "%1 (%2)"
 msgid "Total: %1 (%)"
 msgstr "%1 (%2)"
 
-#: libs/dimg/filters/bw/mixersettings.cpp:524
+#: libs/dimg/filters/bw/mixersettings.cpp:550
 msgid "Select Gimp Gains Mixer File to Load"
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:620
+#: libs/dimg/filters/bw/mixersettings.cpp:646
 msgid "Cannot load settings from the Gains Mixer text file."
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:632
+#: libs/dimg/filters/bw/mixersettings.cpp:658
 msgid "Gimp Gains Mixer File to Save"
 msgstr ""
 
-#: libs/dimg/filters/bw/mixersettings.cpp:698
+#: libs/dimg/filters/bw/mixersettings.cpp:724
 msgid "Cannot save settings to the Gains Mixer text file."
 msgstr ""
 
@@ -7019,13 +7046,6 @@ msgstr "Ciana"
 msgid "Set here the cyan/red color adjustment of the image."
 msgstr ""
 
-#: libs/dimg/filters/cb/cbsettings.cpp:97
-#: libs/widgets/common/colorlabelwidget.cpp:409
-#: utilities/queuemanager/basetools/color/curvesadjust.cpp:71
-#: utilities/queuemanager/basetools/color/channelmixer.cpp:59
-msgid "Red"
-msgstr "Ruĝo"
-
 #: libs/dimg/filters/cb/cbsettings.cpp:102
 #: libs/widgets/common/colorlabelwidget.cpp:424
 msgid "Magenta"
@@ -7035,24 +7055,10 @@ msgstr "Violkolora (magenta)"
 msgid "Set here the magenta/green color adjustment of the image."
 msgstr ""
 
-#: libs/dimg/filters/cb/cbsettings.cpp:111
-#: libs/widgets/common/colorlabelwidget.cpp:418
-#: utilities/queuemanager/basetools/color/curvesadjust.cpp:72
-#: utilities/queuemanager/basetools/color/channelmixer.cpp:60
-msgid "Green"
-msgstr "Verdo"
-
 #: libs/dimg/filters/cb/cbsettings.cpp:116
 #: libs/widgets/common/colorlabelwidget.cpp:415
 msgid "Yellow"
 msgstr "Flava"
-
-#: libs/dimg/filters/cb/cbsettings.cpp:119
-#: libs/widgets/common/colorlabelwidget.cpp:421
-#: utilities/queuemanager/basetools/color/curvesadjust.cpp:73
-#: utilities/queuemanager/basetools/color/channelmixer.cpp:61
-msgid "Blue"
-msgstr "Bluo"
 
 #: libs/dimg/filters/cb/cbsettings.cpp:126
 msgid "Set here the yellow/blue color adjustment of the image."
@@ -8125,7 +8131,6 @@ msgstr "&Lenskorekto..."
 
 #: libs/dimg/filters/levels/histogrambox.cpp:89
 #: utilities/queuemanager/basetools/color/curvesadjust.cpp:68
-#: utilities/queuemanager/basetools/color/channelmixer.cpp:57
 msgid "Channel:"
 msgstr "Kanalo:"
 
@@ -14486,7 +14491,7 @@ msgstr ""
 msgid "Alpha"
 msgstr "Atlas"
 
-#: utilities/queuemanager/basetools/color/channelmixer.cpp:51
+#: utilities/queuemanager/basetools/color/channelmixer.cpp:50
 msgid "Mix color channel."
 msgstr ""
 
