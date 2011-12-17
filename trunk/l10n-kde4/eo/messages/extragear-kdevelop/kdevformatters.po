@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevformatters\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-11-29 04:45+0100\n"
+"POT-Creation-Date: 2011-12-17 03:22+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Gnu Indent: Original Berkeley indent style"
 msgstr ""
 
-#: indent/indent_plugin.cpp:339 customscript/customscript_plugin.cpp:464
+#: indent/indent_plugin.cpp:339 customscript/customscript_plugin.cpp:481
 msgid "Command: "
 msgstr ""
 
@@ -76,12 +76,29 @@ msgid ""
 "instead."
 msgstr ""
 
-#: indent/indent_plugin.cpp:360 customscript/customscript_plugin.cpp:491
+#: indent/indent_plugin.cpp:360 customscript/customscript_plugin.cpp:508
 #, kde-format
 msgid "Style: %1"
 msgstr ""
 
-#: customscript/customscript_plugin.cpp:470
+#: customscript/customscript_plugin.cpp:240
+msgid ""
+"Description:<br /><b>kdev_format_source.sh</b> is a script bundled with "
+"KDevelop which allows using fine-grained formatting rules by placing meta-"
+"files called <b>format_sources</b> into the file-system.<br /><br />Each "
+"line of the <b>format_sources</b> files defines a list of wildcards followed "
+"by a colon and the used formatting-command.<br /><br />The formatting-"
+"command should use <b>$TMPFILE</b> to reference the temporary file to "
+"reformat.<br /><br />Example:<br /><b>*.cpp *.h : myformatter.sh $TMPFILE</"
+"b><br />This will reformat all files ending with <b>.cpp</b> or <b>.h</b> "
+"using the custom formatting script <b>myformatter.sh</b>.<br /><br /"
+">Example: <br /><b>subdir/*.h : uncrustify -l CPP -f $TMPFILE -c uncrustify."
+"config -o $TMPFILE</b> <br />This will reformat all files in subdirectory "
+"<b>subdir</b> using the <b>uncrustify</b> tool with the config-file "
+"<b>uncrustify.config</b>."
+msgstr ""
+
+#: customscript/customscript_plugin.cpp:487
 msgid ""
 "<i>You can enter an arbitrary shell command.</i><br />The unformatted source-"
 "code is reached to the command <br />through the standard input, and the "
@@ -90,11 +107,11 @@ msgid ""
 "for transferring the code."
 msgstr ""
 
-#: customscript/customscript_plugin.cpp:481
+#: customscript/customscript_plugin.cpp:498
 msgid "More Variables"
 msgstr ""
 
-#: customscript/customscript_plugin.cpp:504
+#: customscript/customscript_plugin.cpp:521
 msgid ""
 "<b>$TMPFILE</b> will be replaced with the path to a temporary file. <br /"
 ">The code will be written into the file, the temporary <br />file will be "
@@ -106,7 +123,7 @@ msgid ""
 "matching name."
 msgstr ""
 
-#: customscript/customscript_plugin.cpp:516
+#: customscript/customscript_plugin.cpp:533
 msgid "Variable Replacements"
 msgstr ""
 
