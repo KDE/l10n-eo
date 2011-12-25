@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-12-24 02:24+0100\n"
+"POT-Creation-Date: 2011-12-25 02:22+0100\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -4332,7 +4332,7 @@ msgstr ""
 
 #. i18n: file: plugins/extensions/shearimage/wdg_shearimage.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: rc.cpp:1356 image/kis_image.cc:606
+#: rc.cpp:1356 image/kis_image.cc:650
 #: plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:90
 msgid "Shear Image"
@@ -10470,7 +10470,7 @@ msgctxt "Category of brush engines"
 msgid "Stable"
 msgstr "&Skali"
 
-#: image/brushengine/kis_paintop_registry.cc:119
+#: image/brushengine/kis_paintop_registry.cc:135
 msgid "default"
 msgstr "norma"
 
@@ -10647,52 +10647,56 @@ msgstr "Blua"
 msgid "Locked"
 msgstr "Ŝlosita"
 
-#: image/kis_image.cc:261
+#: image/kis_image.cc:260
 msgid "background"
 msgstr "fono"
 
-#: image/kis_image.cc:264
+#: image/kis_image.cc:263
 #, kde-format
 msgid "Layer %1"
 msgstr "Ebeno %1"
 
-#: image/kis_image.cc:420
+#: image/kis_image.cc:419
 msgid "Crop Image"
 msgstr "Tondi Bildon"
 
-#: image/kis_image.cc:420
+#: image/kis_image.cc:419
 msgid "Resize Image"
 msgstr "Ŝanĝi Grandecon de Ŝildo"
 
-#: image/kis_image.cc:452
+#: image/kis_image.cc:451
 #, fuzzy
 #| msgid "Crop Image"
 msgid "Crop Node"
 msgstr "Tondi Bildon"
 
-#: image/kis_image.cc:626
+#: image/kis_image.cc:644
+msgid "Shear layer"
+msgstr "Tondi Ebenon"
+
+#: image/kis_image.cc:660
 #, fuzzy
 #| msgid "Convert Image Type"
 msgid "Convert Image Color Space"
 msgstr "Konverti Bildotipon"
 
-#: image/kis_image.cc:643
+#: image/kis_image.cc:677
 msgid "Assign Profile"
 msgstr ""
 
-#: image/kis_image.cc:664
+#: image/kis_image.cc:698
 msgid "Convert Projection Color Space"
 msgstr ""
 
-#: image/kis_image.cc:838 ui/kis_layer_manager.cc:740
+#: image/kis_image.cc:872 ui/kis_layer_manager.cc:719
 msgid "Flatten Image"
 msgstr "Platigi Bildon"
 
-#: image/kis_image.cc:896
+#: image/kis_image.cc:930
 msgid "Merge with Layer Below"
 msgstr "Kunigi kun Ebeno Malsupra"
 
-#: image/kis_image.cc:921
+#: image/kis_image.cc:955
 #, fuzzy
 #| msgid "Flatten Image"
 msgid "Flatten Layer"
@@ -11246,7 +11250,7 @@ msgid "&Duplicate Layer or Mask"
 msgstr "&Sekva ebeno"
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:381
-#: ui/kis_layer_manager.cc:138
+#: ui/kis_layer_manager.cc:137
 msgid "&Merge with Layer Below"
 msgstr "&Kunigi kun Ebeno Malsupra"
 
@@ -11653,7 +11657,7 @@ msgid "Rotate Layer of 90° to the Left"
 msgstr ""
 
 #: plugins/extensions/rotateimage/rotateimage.cc:151
-#: ui/kis_layer_manager.cc:678
+#: ui/kis_layer_manager.cc:675
 msgid "Rotate Layer"
 msgstr "Turni Ebenon"
 
@@ -11716,7 +11720,7 @@ msgid "Separate Image..."
 msgstr "Apartigi Bildon..."
 
 #: plugins/extensions/separate_channels/kis_channel_separator.cc:242
-#: ui/kis_layer_manager.cc:832
+#: ui/kis_layer_manager.cc:811
 msgid "Export Layer"
 msgstr "Eksporti Paletron"
 
@@ -11878,11 +11882,6 @@ msgstr "Koloralĝustigo"
 msgid "&Brightness/Contrast curve..."
 msgstr "Nur heligu"
 
-#: plugins/filters/colorsfilters/kis_perchannel_filter.cpp:370
-#, fuzzy
-msgid "&Color Adjustment curves..."
-msgstr "Koloromoduso"
-
 #: plugins/filters/colorsfilters/colorsfilters.cpp:89
 msgid "&Auto Contrast"
 msgstr "&Aŭtokontrasto"
@@ -11890,6 +11889,11 @@ msgstr "&Aŭtokontrasto"
 #: plugins/filters/colorsfilters/colorsfilters.cpp:193
 msgid "&Desaturate"
 msgstr "&Malsaturigi"
+
+#: plugins/filters/colorsfilters/kis_perchannel_filter.cpp:376
+#, fuzzy
+msgid "&Color Adjustment curves..."
+msgstr "Koloromoduso"
 
 #: plugins/filters/convolutionfilters/convolutionfilters.h:34
 msgid "Sharpen"
@@ -14567,97 +14571,93 @@ msgstr ""
 msgid "Apply Filter Again: %1"
 msgstr ""
 
-#: ui/kis_image_manager.cc:58
+#: ui/kis_image_manager.cc:55
 msgid "I&nsert Image as Layer..."
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: ui/kis_image_manager.cc:62
+#: ui/kis_image_manager.cc:59
 #, fuzzy
 msgid "Properties..."
 msgstr "Ebeno-proprecoj..."
 
-#: ui/kis_image_manager.cc:93
+#: ui/kis_image_manager.cc:90
 msgid "Import Image"
 msgstr "Importi Bildon"
 
-#: ui/kis_layer_manager.cc:133
+#: ui/kis_layer_manager.cc:132
 #, fuzzy
 msgid "&Flatten image"
 msgstr "Forigu bildon"
 
-#: ui/kis_layer_manager.cc:143
+#: ui/kis_layer_manager.cc:142
 #, fuzzy
 #| msgid "&Filters Gallery"
 msgid "&Flatten Layer"
 msgstr "&Filtrilgalerio"
 
-#: ui/kis_layer_manager.cc:147 ui/kis_layer_manager.cc:804
+#: ui/kis_layer_manager.cc:146 ui/kis_layer_manager.cc:783
 #, fuzzy
 #| msgid "Rotate Layer"
 msgid "Rasterize Layer"
 msgstr "Turni Ebenon"
 
-#: ui/kis_layer_manager.cc:151
+#: ui/kis_layer_manager.cc:150
 msgid "Save Layer as Image..."
 msgstr "Konservu ebenon kiel bildo..."
 
-#: ui/kis_layer_manager.cc:155
+#: ui/kis_layer_manager.cc:154
 #, fuzzy
 #| msgid "Resize Image to Size of Current Layer"
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Adapti Bildon al Grandeco de Aktuala Ebeno"
 
-#: ui/kis_layer_manager.cc:223
+#: ui/kis_layer_manager.cc:220
 #, fuzzy
 #| msgid "Layer Properties"
 msgid "Filter Layer Properties"
 msgstr "Ecoj de Ebeno"
 
-#: ui/kis_layer_manager.cc:252
+#: ui/kis_layer_manager.cc:249
 #, fuzzy
 #| msgid "Layer Properties"
 msgid "Generator Layer Properties"
 msgstr "Ecoj de Ebeno"
 
-#: ui/kis_layer_manager.cc:305 ui/kis_layer_manager.cc:321
-#: ui/kis_layer_manager.cc:365 ui/kis_layer_manager.cc:398
-#: ui/kis_layer_manager.cc:536
+#: ui/kis_layer_manager.cc:302 ui/kis_layer_manager.cc:318
+#: ui/kis_layer_manager.cc:362 ui/kis_layer_manager.cc:395
+#: ui/kis_layer_manager.cc:533
 msgid "Could not add layer to image."
 msgstr ""
 
-#: ui/kis_layer_manager.cc:305 ui/kis_layer_manager.cc:321
-#: ui/kis_layer_manager.cc:365 ui/kis_layer_manager.cc:398
-#: ui/kis_layer_manager.cc:536
+#: ui/kis_layer_manager.cc:302 ui/kis_layer_manager.cc:318
+#: ui/kis_layer_manager.cc:362 ui/kis_layer_manager.cc:395
+#: ui/kis_layer_manager.cc:533
 msgid "Layer Error"
 msgstr "Eben-eraro"
 
-#: ui/kis_layer_manager.cc:428
+#: ui/kis_layer_manager.cc:425
 #, fuzzy
 msgid "New Filter Layer"
 msgstr "&Blanka"
 
-#: ui/kis_layer_manager.cc:598 ui/kis_layer_manager.cc:608
+#: ui/kis_layer_manager.cc:595 ui/kis_layer_manager.cc:605
 msgid "Mirror Layer X"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_layer_manager.cc:625 ui/kis_layer_manager.cc:635
+#: ui/kis_layer_manager.cc:622 ui/kis_layer_manager.cc:632
 #: ui/kis_mask_manager.cc:316
 msgid "Mirror Layer Y"
 msgstr "Speguli Ebenon Y"
 
-#: ui/kis_layer_manager.cc:657
+#: ui/kis_layer_manager.cc:654
 msgid "Scale Layer"
 msgstr "Skali Ebenon"
 
-#: ui/kis_layer_manager.cc:710 ui/kis_layer_manager.cc:713
-msgid "Shear layer"
-msgstr "Tondi Ebenon"
-
-#: ui/kis_layer_manager.cc:739
+#: ui/kis_layer_manager.cc:718
 msgid "The image contains hidden layers that will be lost."
 msgstr ""
 
-#: ui/kis_layer_manager.cc:741
+#: ui/kis_layer_manager.cc:720
 msgid "&Flatten Image"
 msgstr "&Platigi Bildon"
 
