@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgrepview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-03 07:43+0200\n"
+"POT-Creation-Date: 2012-01-04 12:28+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,21 +16,36 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: grepdialog.cpp:110
+#: grepdialog.cpp:55
+msgid "All Open Files"
+msgstr ""
+
+#: grepdialog.cpp:56
+msgid "All Open Projects"
+msgstr ""
+
+#: grepdialog.cpp:115
 #, fuzzy
 #| msgid "Search"
 msgid "Search..."
 msgstr "Serĉi"
 
-#: grepdialog.cpp:111 grepviewplugin.cpp:46
+#: grepdialog.cpp:117 grepviewplugin.cpp:48
 #, fuzzy
 #| msgid "Find In Files"
 msgid "Find/Replace In Files"
 msgstr "Trovi en dosieroj"
 
-#: grepdialog.cpp:311
-msgid "Replace in files"
+#: grepdialog.cpp:431
+#, kde-format
+msgid "%1, and %2 more items"
 msgstr ""
+
+#: grepdialog.cpp:434 grepviewplugin.cpp:74
+#, fuzzy
+#| msgid "Find In Files"
+msgid "Find/Replace in Files"
+msgstr "Trovi en dosieroj"
 
 #: grepjob.cpp:99
 #, fuzzy
@@ -75,94 +90,98 @@ msgstr ""
 msgid "Grep: %1"
 msgstr ""
 
-#: grepoutputdelegate.cpp:85
+#: grepoutputdelegate.cpp:94 grepoutputdelegate.cpp:159
 #, kde-format
 msgid "Line %1: "
 msgstr ""
 
-#: grepoutputmodel.cpp:316
+#: grepoutputmodel.cpp:377
 #, kde-format
-msgid "1 match"
-msgid_plural "%1 matches"
+msgid "<b>1</b> match"
+msgid_plural "<b>%1</b> matches"
 msgstr[0] ""
 msgstr[1] ""
 
-#: grepoutputmodel.cpp:317
+#: grepoutputmodel.cpp:378
 #, kde-format
-msgid "1 file"
-msgid_plural "%1 files"
-msgstr[0] ""
-msgstr[1] ""
-
-#: grepoutputmodel.cpp:319
-#, kde-format
-msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
-msgid "%1 in %2"
-msgstr ""
-
-#: grepoutputmodel.cpp:321
-#, kde-format
-msgid "%2 <i>(one match)</i>"
-msgid_plural "%2 <i>(%1 matches)</i>"
+msgid "<b>1</b> file"
+msgid_plural "<b>%1</b> files"
 msgstr[0] ""
 msgstr[1] ""
 
 #: grepoutputmodel.cpp:380
 #, kde-format
+msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
+msgid "<h3>%1 in %2</h3>"
+msgstr ""
+
+#: grepoutputmodel.cpp:382
+#, kde-format
+msgid "<big>%2 <i>(one match)</i></big>"
+msgid_plural "<big>%2 <i>(%1 matches)</i></big>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grepoutputmodel.cpp:450
+#, kde-format
 msgid "Failed to replace <b>%1</b> by <b>%2</b> in %3:%4:%5"
 msgstr ""
 
-#: grepoutputview.cpp:51
+#: grepoutputview.cpp:69
 msgid "Replace output view"
 msgstr ""
 
-#: grepoutputview.cpp:54
+#: grepoutputview.cpp:72
 msgid "&Previous item"
 msgstr ""
 
-#: grepoutputview.cpp:56
+#: grepoutputview.cpp:74
 msgid "&Next item"
 msgstr ""
 
-#: grepoutputview.cpp:58
+#: grepoutputview.cpp:76
 msgid "C&ollapse all"
 msgstr ""
 
-#: grepoutputview.cpp:60
+#: grepoutputview.cpp:78
 msgid "&Expand all"
 msgstr ""
 
-#: grepoutputview.cpp:64
+#: grepoutputview.cpp:82
 msgid "&Change criteria"
 msgstr ""
 
-#: grepoutputview.cpp:152
-msgid "Would you want to replace by empty string?"
+#: grepoutputview.cpp:83
+msgid "Clear search history"
 msgstr ""
 
-#: grepoutputview.cpp:153
+#: grepoutputview.cpp:257
+msgid "Do you want to replace with an empty string?"
+msgstr ""
+
+#: grepoutputview.cpp:258
 msgid "Start replacement"
 msgstr ""
 
-#: grepviewplugin.cpp:46
+#: grepviewplugin.cpp:48
 msgid "Support for running grep over a list of files"
 msgstr ""
 
-#: grepviewplugin.cpp:55
+#: grepviewplugin.cpp:59
 #, fuzzy
 #| msgid "Find in Fi&les..."
 msgid "Find/replace in Fi&les..."
 msgstr "Trovi en Dos&ieroj..."
 
-#: grepviewplugin.cpp:56
+#: grepviewplugin.cpp:60
 msgid "Ctrl+Alt+f"
 msgstr ""
 
-#: grepviewplugin.cpp:58
+#: grepviewplugin.cpp:62
 msgid "Search for expressions over several files"
 msgstr ""
 
-#: grepviewplugin.cpp:59
+#: grepviewplugin.cpp:63
 msgid ""
 "<b>Find/Replace in files</b><p>Opens the 'Find/Replace in files' dialog. "
 "There you can enter a regular expression which is then searched for within "
@@ -170,11 +189,11 @@ msgid ""
 "switch to a match directly. You can also do replacement.</p>"
 msgstr ""
 
-#: grepviewplugin.cpp:83
+#: grepviewplugin.cpp:104 grepviewplugin.cpp:125
 msgid "Find and replace in this folder"
 msgstr ""
 
-#: grepviewplugin.cpp:94
+#: grepviewplugin.cpp:115
 #, fuzzy
 #| msgid "Find In Files"
 msgid "&Find/Replace in Files"
@@ -199,33 +218,35 @@ msgctxt "@title:menu"
 msgid "Edit"
 msgstr "Redakti"
 
-#. i18n: file: grepoutputview.ui:44
+#. i18n: file: grepoutputview.ui:41
 #. i18n: ectx: property (text), widget (QLabel, replacementLabel)
 #: rc.cpp:8
 #, fuzzy
 #| msgid "Template:"
-msgid "Replace with: "
+msgid "Replacement Text:"
 msgstr "Ŝablono:"
 
-#. i18n: file: grepoutputview.ui:57
+#. i18n: file: grepoutputview.ui:54
 #. i18n: ectx: property (toolTip), widget (KComboBox, replacementCombo)
 #: rc.cpp:11
 msgid "Enter the replacement pattern."
 msgstr ""
 
-#. i18n: file: grepoutputview.ui:73
+#. i18n: file: grepoutputview.ui:70
 #. i18n: ectx: property (toolTip), widget (QPushButton, applyButton)
 #: rc.cpp:14
 msgid "Apply replacement on selected items."
 msgstr ""
 
-#. i18n: file: grepoutputview.ui:76
+#. i18n: file: grepoutputview.ui:73
 #. i18n: ectx: property (text), widget (QPushButton, applyButton)
 #: rc.cpp:17
-msgid "Apply"
-msgstr ""
+#, fuzzy
+#| msgid "Template:"
+msgid "Replace"
+msgstr "Ŝablono:"
 
-#. i18n: file: grepwidget.ui:26
+#. i18n: file: grepwidget.ui:32
 #. i18n: ectx: property (windowTitle), widget (QWidget, GrepWidget)
 #: rc.cpp:20
 #, fuzzy
@@ -233,19 +254,19 @@ msgstr ""
 msgid "Find-Replace In Files"
 msgstr "Trovi en dosieroj"
 
-#. i18n: file: grepwidget.ui:32
+#. i18n: file: grepwidget.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:23
 msgid "Pattern:"
 msgstr "Ŝablono:"
 
-#. i18n: file: grepwidget.ui:45
+#. i18n: file: grepwidget.ui:57
 #. i18n: ectx: property (toolTip), widget (KComboBox, patternCombo)
 #: rc.cpp:26
 msgid "Enter the regular expression you want to search for here."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:69
+#. i18n: file: grepwidget.ui:81
 #. i18n: ectx: property (whatsThis), widget (KComboBox, patternCombo)
 #: rc.cpp:29
 msgid ""
@@ -333,20 +354,20 @@ msgid ""
 "style:italic;\">man pcresyntax.</span></p></body></html>"
 msgstr ""
 
-#. i18n: file: grepwidget.ui:82
+#. i18n: file: grepwidget.ui:94
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: rc.cpp:53
 msgid "Template:"
 msgstr "Ŝablono:"
 
-#. i18n: file: grepwidget.ui:95
-#. i18n: ectx: property (toolTip), widget (KLineEdit, templateEdit)
+#. i18n: file: grepwidget.ui:107
+#. i18n: ectx: property (toolTip), widget (KComboBox, templateEdit)
 #: rc.cpp:56
 msgid "This is the regular expression template."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:98
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, templateEdit)
+#. i18n: file: grepwidget.ui:110
+#. i18n: ectx: property (whatsThis), widget (KComboBox, templateEdit)
 #: rc.cpp:60
 #, no-c-format
 msgid ""
@@ -354,124 +375,125 @@ msgid ""
 "pattern, while <i>%%</i> will be replaced by <i>%</i>."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:101
-#. i18n: ectx: property (text), widget (KLineEdit, templateEdit)
-#: rc.cpp:64
-#, no-c-format
-msgid "%s"
-msgstr "%s"
-
-#. i18n: file: grepwidget.ui:111
+#. i18n: file: grepwidget.ui:120
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:67
+#: rc.cpp:63
 msgid "Regular Expression:"
 msgstr "Regula Esprimo:"
 
-#. i18n: file: grepwidget.ui:124
+#. i18n: file: grepwidget.ui:133
 #. i18n: ectx: property (toolTip), widget (QCheckBox, regexCheck)
-#: rc.cpp:70
+#: rc.cpp:66
 msgid "Enable or disable regular expression."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:137
+#. i18n: file: grepwidget.ui:146
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:73
+#: rc.cpp:69
 msgid "Case Sensitive:"
 msgstr "Usklecdistinga:"
 
-#. i18n: file: grepwidget.ui:156
+#. i18n: file: grepwidget.ui:165
 #. i18n: ectx: property (toolTip), widget (QCheckBox, caseSensitiveCheck)
-#: rc.cpp:76
+#: rc.cpp:72
 #, fuzzy
 #| msgid "Case Sensitive:"
 msgid "Case-sensitive searching."
 msgstr "Usklecdistinga:"
 
-#. i18n: file: grepwidget.ui:169
+#. i18n: file: grepwidget.ui:178
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:79
-msgid "Directory:"
-msgstr "Dosierujo:"
-
-#. i18n: file: grepwidget.ui:188
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, directoryRequester)
-#: rc.cpp:82
-msgid "Select in which directory you want to search."
+#: rc.cpp:75
+msgid "Location(s):"
 msgstr ""
 
-#. i18n: file: grepwidget.ui:201
+#. i18n: file: grepwidget.ui:197
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, directoryRequester)
+#: rc.cpp:78
+msgid ""
+"Select the location where you want to search. It can be a directory, a file, "
+"or a semicolon separated list of directories/files."
+msgstr ""
+
+#. i18n: file: grepwidget.ui:210
 #. i18n: ectx: property (toolTip), widget (KPushButton, syncButton)
-#: rc.cpp:85
+#: rc.cpp:81
 msgid "Synchronize with current document directory."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:208
+#. i18n: file: grepwidget.ui:217
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:88
+#: rc.cpp:84
 msgid "Recursive:"
 msgstr "Rekursia:"
 
-#. i18n: file: grepwidget.ui:231
+#. i18n: file: grepwidget.ui:240
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:91
+#: rc.cpp:87
 msgid "Limit to project files:"
 msgstr "Limigo al projektdosieroj:"
 
-#. i18n: file: grepwidget.ui:260
+#. i18n: file: grepwidget.ui:269
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:94
+#: rc.cpp:90
 msgid "Files:"
 msgstr "Dosieroj:"
 
-#. i18n: file: grepwidget.ui:273
+#. i18n: file: grepwidget.ui:282
 #. i18n: ectx: property (toolTip), widget (KComboBox, filesCombo)
-#: rc.cpp:97
+#: rc.cpp:93
 msgid "Files filter."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:276
+#. i18n: file: grepwidget.ui:285
 #. i18n: ectx: property (whatsThis), widget (KComboBox, filesCombo)
-#: rc.cpp:100
+#: rc.cpp:96
 msgid ""
 "Enter the file name pattern of the files to search here. You may give "
-"several patterns separated by spaces."
+"several patterns separated by commas or spaces."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:289
+#. i18n: file: grepwidget.ui:298
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:103
+#: rc.cpp:99
 msgid "Exclude:"
 msgstr "Elbari:"
 
-#. i18n: file: grepwidget.ui:302
+#. i18n: file: grepwidget.ui:311
 #. i18n: ectx: property (toolTip), widget (KComboBox, excludeCombo)
-#: rc.cpp:106
+#: rc.cpp:102
 msgid "Files pattern to exclude"
 msgstr ""
 
-#. i18n: file: grepwidget.ui:305
+#. i18n: file: grepwidget.ui:314
 #. i18n: ectx: property (whatsThis), widget (KComboBox, excludeCombo)
-#: rc.cpp:109
+#: rc.cpp:105
 msgid ""
 "Enter the file name pattern of the files to exclude from the search here. "
-"You may give several patterns separated by spaces.<p>Every pattern is "
-"internally surrounded by asterisks, so that each pattern can match parts of "
-"the file paths.</p>"
+"You may give several patterns separated by commas or spaces.<p>Every pattern "
+"is internally surrounded by asterisks, so that each pattern can match parts "
+"of the file paths.</p>"
 msgstr ""
 
-#. i18n: file: grepwidget.ui:382
-#. i18n: ectx: property (toolTip), widget (KLineEdit, replacementTemplateEdit)
-#: rc.cpp:112
+#. i18n: file: grepwidget.ui:391
+#. i18n: ectx: property (toolTip), widget (KComboBox, replacementTemplateEdit)
+#: rc.cpp:108
 msgid "Enter the replacement template."
 msgstr ""
 
-#. i18n: file: grepwidget.ui:389
+#. i18n: file: grepwidget.ui:398
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:115
+#: rc.cpp:111
 #, fuzzy
 #| msgid "Template:"
 msgid "Replacement Template:"
 msgstr "Ŝablono:"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Directory:"
+#~ msgstr "Dosierujo:"
 
 #, fuzzy
 #~| msgid "Find In Files"
