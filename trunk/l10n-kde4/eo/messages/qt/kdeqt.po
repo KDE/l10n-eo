@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeqt\n"
 "Report-Msgid-Bugs-To: qt-bugs@trolltech.com\n"
-"POT-Creation-Date: 2012-01-06 04:16+0100\n"
+"POT-Creation-Date: 2012-01-12 04:27+0100\n"
 "PO-Revision-Date: 2009-10-23 21:31+0300\n"
 "Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -1656,8 +1656,8 @@ msgctxt "QIODevice"
 msgid "No space left on device"
 msgstr ""
 
-#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qpluginloader.cpp:367
-#: corelib/plugin/qlibrary.cpp:1233
+#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qlibrary.cpp:1233
+#: corelib/plugin/qpluginloader.cpp:367
 #: corelib/statemachine/qstatemachine.cpp:1046
 #: network/kernel/qhostinfo_unix.cpp:300 network/kernel/qhostinfo_win.cpp:209
 #: network/kernel/qhostinfo_win.cpp:236
@@ -1665,6 +1665,24 @@ msgstr ""
 #: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
 msgid "Unknown error"
 msgstr "Nekonata eraro"
+
+#: corelib/io/qprocess.cpp:887 corelib/io/qprocess.cpp:939
+#: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
+msgid "Error reading from process"
+msgstr ""
+
+#: corelib/io/qprocess.cpp:986 corelib/io/qprocess.cpp:1854
+#: corelib/io/qprocess_win.cpp:791
+msgid "Error writing to process"
+msgstr ""
+
+#: corelib/io/qprocess.cpp:1055
+msgid "Process crashed"
+msgstr "Procezo kolapsis"
+
+#: corelib/io/qprocess.cpp:2056
+msgid "No program defined"
+msgstr "Programo ne difinita"
 
 #: corelib/io/qprocess_unix.cpp:401 corelib/io/qprocess_win.cpp:138
 msgid "Could not open input redirection for reading"
@@ -1692,24 +1710,6 @@ msgstr ""
 #| msgid "Process failed to start"
 msgid "Process failed to start: %1"
 msgstr "Procezo malsukcesis lanĉi"
-
-#: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
-#: corelib/io/qprocess.cpp:887 corelib/io/qprocess.cpp:939
-msgid "Error reading from process"
-msgstr ""
-
-#: corelib/io/qprocess_win.cpp:791 corelib/io/qprocess.cpp:986
-#: corelib/io/qprocess.cpp:1854
-msgid "Error writing to process"
-msgstr ""
-
-#: corelib/io/qprocess.cpp:1055
-msgid "Process crashed"
-msgstr "Procezo kolapsis"
-
-#: corelib/io/qprocess.cpp:2056
-msgid "No program defined"
-msgstr "Programo ne difinita"
 
 #: corelib/io/qfile.cpp:736 corelib/io/qfile.cpp:890
 msgid "Destination file exists"
@@ -1940,33 +1940,14 @@ msgstr ""
 msgid "'%1' is an invalid ELF object (%2)"
 msgstr ""
 
-#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
-#, qt-format
-msgid "Cannot load library %1: %2"
-msgstr ""
-
-#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
-#, qt-format
-msgid "Cannot unload library %1: %2"
-msgstr ""
-
-#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
-#, qt-format
-msgid "Cannot resolve symbol \"%1\" in %2: %3"
-msgstr ""
-
-#: corelib/plugin/qpluginloader.cpp:254
-msgid "The plugin was not loaded."
-msgstr ""
-
-#: corelib/plugin/qpluginloader.cpp:343 corelib/plugin/qlibrary.cpp:679
-#: corelib/plugin/qlibrary.cpp:825
-msgid "The shared library was not found."
-msgstr ""
-
 #: corelib/plugin/qlibrary.cpp:402
 #, qt-format
 msgid "Plugin verification data mismatch in '%1'"
+msgstr ""
+
+#: corelib/plugin/qlibrary.cpp:679 corelib/plugin/qlibrary.cpp:825
+#: corelib/plugin/qpluginloader.cpp:343
+msgid "The shared library was not found."
 msgstr ""
 
 #: corelib/plugin/qlibrary.cpp:827
@@ -1991,6 +1972,25 @@ msgstr ""
 msgid ""
 "The plugin '%1' uses incompatible Qt library. (Cannot mix debug and release "
 "libraries.)"
+msgstr ""
+
+#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
+#, qt-format
+msgid "Cannot load library %1: %2"
+msgstr ""
+
+#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
+#, qt-format
+msgid "Cannot unload library %1: %2"
+msgstr ""
+
+#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
+#, qt-format
+msgid "Cannot resolve symbol \"%1\" in %2: %3"
+msgstr ""
+
+#: corelib/plugin/qpluginloader.cpp:254
+msgid "The plugin was not loaded."
 msgstr ""
 
 #: corelib/statemachine/qstatemachine.cpp:1028
@@ -2175,6 +2175,49 @@ msgctxt "Debugger::JSAgentWatchData"
 msgid "<undefined>"
 msgstr ""
 
+#: declarative/graphicsitems/qdeclarativeitem.cpp:814
+msgid "LayoutDirection attached property only works with Items"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:103
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:206
+msgctxt "QDeclarativeAnimatedImage"
+msgid "Qt was built without support for QMovie"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:175
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:258
+msgid "KeyNavigation is only available via attached properties"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:176
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:259
+msgid "Keys is only available via attached properties"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:201
+msgid "LayoutMirroring is only available via attached properties"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeloader.cpp:407
+msgid "Loader does not support loading non-visual elements."
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
+#, fuzzy
+#| msgid "Could not locate media source."
+msgid "Could not load cursor delegate"
+msgstr "Ne eblis trovi aŭdvidaĵfonton."
+
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
+msgid "Could not instantiate cursor delegate"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativevisualitemmodel.cpp:1099
+msgid "Delegate component must be Item type."
+msgstr ""
+
 #: declarative/graphicsitems/qdeclarativeanchors.cpp:198
 msgid "Possible anchor loop detected on fill."
 msgstr ""
@@ -2228,49 +2271,6 @@ msgstr ""
 
 #: declarative/graphicsitems/qdeclarativeanchors.cpp:1149
 msgid "Cannot anchor a vertical edge to a horizontal edge."
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitem.cpp:814
-msgid "LayoutDirection attached property only works with Items"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:103
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:206
-msgctxt "QDeclarativeAnimatedImage"
-msgid "Qt was built without support for QMovie"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:175
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:258
-msgid "KeyNavigation is only available via attached properties"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:176
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:259
-msgid "Keys is only available via attached properties"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:201
-msgid "LayoutMirroring is only available via attached properties"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeloader.cpp:407
-msgid "Loader does not support loading non-visual elements."
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
-#, fuzzy
-#| msgid "Could not locate media source."
-msgid "Could not load cursor delegate"
-msgstr "Ne eblis trovi aŭdvidaĵfonton."
-
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
-msgid "Could not instantiate cursor delegate"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativevisualitemmodel.cpp:1099
-msgid "Delegate component must be Item type."
 msgstr ""
 
 #: declarative/graphicsitems/qdeclarativeflipable.cpp:138
@@ -3003,10 +3003,6 @@ msgstr ""
 msgid "%1 %2"
 msgstr "%1%"
 
-#: declarative/util/qdeclarativebehavior.cpp:127
-msgid "Cannot change the animation assigned to a Behavior."
-msgstr ""
-
 #: declarative/util/qdeclarativeconnections.cpp:217
 msgid "Connections: nested objects not allowed"
 msgstr ""
@@ -3073,85 +3069,6 @@ msgstr ""
 msgid "ListModel: undefined property '%1'"
 msgstr ""
 
-#: declarative/util/qdeclarativeutilmodule.cpp:79
-msgid "Application is an abstract class"
-msgstr ""
-
-#: declarative/util/qdeclarativeutilmodule.cpp:111
-#: declarative/util/qdeclarativeutilmodule.cpp:113
-#: declarative/util/qdeclarativeutilmodule.cpp:160
-#: declarative/util/qdeclarativeutilmodule.cpp:162
-msgctxt "QDeclarativeXmlListModel"
-msgid "Qt was built without support for xmlpatterns"
-msgstr ""
-
-#: declarative/util/qdeclarativeutilmodule.cpp:123
-#: declarative/util/qdeclarativeutilmodule.cpp:168
-msgid "Animation is an abstract class"
-msgstr ""
-
-#: declarative/util/qdeclarativeanimation.cpp:172
-#, qt-format
-msgid "Cannot animate non-existent property \"%1\""
-msgstr ""
-
-#: declarative/util/qdeclarativeanimation.cpp:175
-#, qt-format
-msgid "Cannot animate read-only property \"%1\""
-msgstr ""
-
-#: declarative/util/qdeclarativeanimation.cpp:609
-#: declarative/util/qdeclarativeanimation.cpp:1847
-#: declarative/util/qdeclarativeanimation.cpp:2867
-msgid "Cannot set a duration of < 0"
-msgstr ""
-
-#: declarative/util/qdeclarativeanimation.cpp:2699
-#: declarative/util/qdeclarativestateoperations.cpp:103
-msgid "Unable to preserve appearance under complex transform"
-msgstr ""
-
-#: declarative/util/qdeclarativeanimation.cpp:2710
-#: declarative/util/qdeclarativeanimation.cpp:2717
-#: declarative/util/qdeclarativestateoperations.cpp:114
-#: declarative/util/qdeclarativestateoperations.cpp:121
-msgid "Unable to preserve appearance under non-uniform scale"
-msgstr ""
-
-#: declarative/util/qdeclarativeanimation.cpp:2724
-#: declarative/util/qdeclarativestateoperations.cpp:128
-#, fuzzy
-#| msgctxt "QODBCResult"
-#| msgid "Unable to fetch last"
-msgid "Unable to preserve appearance under scale of 0"
-msgstr "Ne eblas venigi la lastan"
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:581
-#, qt-format
-msgid "\"%1\" duplicates a previous role name and will be disabled."
-msgstr ""
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:826
-msgctxt "QDeclarativeXmlRoleList"
-msgid "An XmlListModel query must start with '/' or \"//\""
-msgstr ""
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:1105
-#: declarative/util/qdeclarativexmllistmodel.cpp:1109
-#, fuzzy, qt-format
-#| msgid "Invalid URI: %1"
-msgid "invalid query: \"%1\""
-msgstr "Nevalida adreso: %1"
-
-#: declarative/util/qdeclarativepropertychanges.cpp:256
-msgid "PropertyChanges does not support creating state-specific objects."
-msgstr ""
-
-#: declarative/util/qdeclarativepropertychanges.cpp:427
-#, qt-format
-msgid "Cannot assign to read-only property \"%1\""
-msgstr ""
-
 #: declarative/util/qdeclarativepixmapcache.cpp:311
 #, qt-format
 msgid "Error decoding: %1: %2"
@@ -3170,6 +3087,89 @@ msgstr ""
 msgid "Cannot open: %1"
 msgstr "Ne eblas malfermi %1 por enigo"
 
+#: declarative/util/qdeclarativepropertychanges.cpp:256
+msgid "PropertyChanges does not support creating state-specific objects."
+msgstr ""
+
+#: declarative/util/qdeclarativepropertychanges.cpp:427
+#, qt-format
+msgid "Cannot assign to read-only property \"%1\""
+msgstr ""
+
+#: declarative/util/qdeclarativestateoperations.cpp:103
+#: declarative/util/qdeclarativeanimation.cpp:2699
+msgid "Unable to preserve appearance under complex transform"
+msgstr ""
+
+#: declarative/util/qdeclarativestateoperations.cpp:114
+#: declarative/util/qdeclarativestateoperations.cpp:121
+#: declarative/util/qdeclarativeanimation.cpp:2710
+#: declarative/util/qdeclarativeanimation.cpp:2717
+msgid "Unable to preserve appearance under non-uniform scale"
+msgstr ""
+
+#: declarative/util/qdeclarativestateoperations.cpp:128
+#: declarative/util/qdeclarativeanimation.cpp:2724
+#, fuzzy
+#| msgctxt "QODBCResult"
+#| msgid "Unable to fetch last"
+msgid "Unable to preserve appearance under scale of 0"
+msgstr "Ne eblas venigi la lastan"
+
+#: declarative/util/qdeclarativeutilmodule.cpp:79
+msgid "Application is an abstract class"
+msgstr ""
+
+#: declarative/util/qdeclarativeutilmodule.cpp:111
+#: declarative/util/qdeclarativeutilmodule.cpp:113
+#: declarative/util/qdeclarativeutilmodule.cpp:160
+#: declarative/util/qdeclarativeutilmodule.cpp:162
+msgctxt "QDeclarativeXmlListModel"
+msgid "Qt was built without support for xmlpatterns"
+msgstr ""
+
+#: declarative/util/qdeclarativeutilmodule.cpp:123
+#: declarative/util/qdeclarativeutilmodule.cpp:168
+msgid "Animation is an abstract class"
+msgstr ""
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:581
+#, qt-format
+msgid "\"%1\" duplicates a previous role name and will be disabled."
+msgstr ""
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:826
+msgctxt "QDeclarativeXmlRoleList"
+msgid "An XmlListModel query must start with '/' or \"//\""
+msgstr ""
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:1105
+#: declarative/util/qdeclarativexmllistmodel.cpp:1109
+#, fuzzy, qt-format
+#| msgid "Invalid URI: %1"
+msgid "invalid query: \"%1\""
+msgstr "Nevalida adreso: %1"
+
+#: declarative/util/qdeclarativeanimation.cpp:172
+#, qt-format
+msgid "Cannot animate non-existent property \"%1\""
+msgstr ""
+
+#: declarative/util/qdeclarativeanimation.cpp:175
+#, qt-format
+msgid "Cannot animate read-only property \"%1\""
+msgstr ""
+
+#: declarative/util/qdeclarativeanimation.cpp:609
+#: declarative/util/qdeclarativeanimation.cpp:1847
+#: declarative/util/qdeclarativeanimation.cpp:2867
+msgid "Cannot set a duration of < 0"
+msgstr ""
+
+#: declarative/util/qdeclarativebehavior.cpp:127
+msgid "Cannot change the animation assigned to a Behavior."
+msgstr ""
+
 #: gui/accessible/qaccessibleobject.cpp:374
 msgid "Activate"
 msgstr "Aktivigi"
@@ -3178,17 +3178,14 @@ msgstr "Aktivigi"
 msgid "Activates the program's main window"
 msgstr "Aktivigas ĉeffenestron de la programo"
 
-#: gui/dialogs/qabstractpagesetupdialog.cpp:68
-#: gui/dialogs/qabstractpagesetupdialog.cpp:80
-msgctxt "QPrintPreviewDialog"
-msgid "Page Setup"
-msgstr "Paĝo-agordo"
+#: gui/dialogs/qdialog.cpp:524 gui/dialogs/qwizard.cpp:698
+#: gui/kernel/qsoftkeymanager.cpp:70
+msgid "Done"
+msgstr "Finita"
 
-#: gui/dialogs/qabstractprintdialog.cpp:116
-#: gui/dialogs/qabstractprintdialog.cpp:129
-msgctxt "QPrintDialog"
-msgid "Print"
-msgstr "Presi"
+#: gui/dialogs/qdialog.cpp:651 gui/kernel/qwhatsthis.cpp:527
+msgid "What's This?"
+msgstr "Kio estas tio ĉi?"
 
 #: gui/dialogs/qfilesystemmodel.cpp:763 gui/itemviews/qdirmodel.cpp:1334
 #, qt-format
@@ -3290,6 +3287,65 @@ msgstr "Skiribadsistemo"
 #: gui/dialogs/qinputdialog.cpp:223
 msgid "Enter a value:"
 msgstr "Entajpu valoro:"
+
+#: gui/dialogs/qmessagebox.cpp:139
+msgid "Show Details..."
+msgstr "Montri detalojn..."
+
+#: gui/dialogs/qmessagebox.cpp:139
+msgid "Hide Details..."
+msgstr "Kaŝi detalojn..."
+
+#: gui/dialogs/qmessagebox.cpp:427 gui/dialogs/qmessagebox.cpp:1272
+msgctxt "QMessageBox"
+msgid "OK"
+msgstr "Konfirmi"
+
+#: gui/dialogs/qmessagebox.cpp:1273
+msgctxt "QMessageBox"
+msgid "Help"
+msgstr "Helpo"
+
+#: gui/dialogs/qmessagebox.cpp:1762
+#, qt-format
+msgid "<h3>About Qt</h3><p>This program uses Qt version %1.</p>"
+msgstr ""
+
+#: gui/dialogs/qmessagebox.cpp:1767
+msgid ""
+"<p>Qt is a C++ toolkit for cross-platform application development.</p><p>Qt "
+"provides single-source portability across MS&nbsp;Windows, Mac&nbsp;OS&nbsp;"
+"X, Linux, and all major commercial Unix variants. Qt is also available for "
+"embedded devices as Qt for Embedded Linux and Qt for Windows CE.</p><p>Qt is "
+"available under three different licensing options designed to accommodate "
+"the needs of our various users.</p><p>Qt licensed under our commercial "
+"license agreement is appropriate for development of proprietary/commercial "
+"software where you do not want to share any source code with third parties "
+"or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU "
+"GPL version 3.0.</p><p>Qt licensed under the GNU LGPL version 2.1 is "
+"appropriate for the development of Qt applications (proprietary or open "
+"source) provided you can comply with the terms and conditions of the GNU "
+"LGPL version 2.1.</p><p>Qt licensed under the GNU General Public License "
+"version 3.0 is appropriate for the development of Qt applications where you "
+"wish to use such applications in combination with software subject to the "
+"terms of the GNU GPL version 3.0 or where you are otherwise willing to "
+"comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
+"\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
+"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Nokia "
+"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
+"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
+msgstr ""
+
+#: gui/dialogs/qmessagebox.cpp:1797
+msgid "About Qt"
+msgstr "Pri Qt"
+
+#: gui/dialogs/qmessagebox.cpp:1937 gui/dialogs/qmessagebox.cpp:2383
+#: gui/dialogs/qprintdialog_win.cpp:272 gui/kernel/qsoftkeymanager.cpp:64
+#: qt3support/dialogs/q3tabdialog.cpp:190
+#: qt3support/dialogs/q3tabdialog.cpp:1014
+msgid "OK"
+msgstr "Konfirmi"
 
 #: gui/dialogs/qpagesetupdialog_unix.cpp:72
 msgid "A0"
@@ -3431,6 +3487,141 @@ msgstr "Coloj (in)"
 msgid "Points (pt)"
 msgstr "Punktoj (pt)"
 
+#: gui/dialogs/qprintdialog_unix.cpp:396 gui/dialogs/qprintdialog_unix.cpp:464
+msgid "&Options >>"
+msgstr "&Opcioj >>"
+
+#: gui/dialogs/qprintdialog_unix.cpp:401
+msgid "&Print"
+msgstr "&Presi"
+
+#: gui/dialogs/qprintdialog_unix.cpp:468
+msgid "&Options <<"
+msgstr "&Opcioj <<"
+
+#: gui/dialogs/qprintdialog_unix.cpp:728
+msgid "Print to File (PDF)"
+msgstr "Presi al dosiero (PDF)"
+
+#: gui/dialogs/qprintdialog_unix.cpp:729
+msgid "Print to File (Postscript)"
+msgstr "Presi al dosiero (Postskripto)"
+
+#: gui/dialogs/qprintdialog_unix.cpp:776
+msgid "Local file"
+msgstr "Loka dosiero"
+
+#: gui/dialogs/qprintdialog_unix.cpp:777
+#, qt-format
+msgid "Write %1 file"
+msgstr "Skribi %1 dosieron"
+
+#: gui/dialogs/qprintdialog_unix.cpp:848
+msgid "Print To File ..."
+msgstr "Presi al dosiero..."
+
+#: gui/dialogs/qprintdialog_unix.cpp:926
+#, qt-format
+msgid ""
+"%1 is a directory.\n"
+"Please choose a different file name."
+msgstr ""
+"%1 estas dosierujo.\n"
+"Bonvole elektu alian dosiernomon."
+
+#: gui/dialogs/qprintdialog_unix.cpp:930
+#, qt-format
+msgid ""
+"File %1 is not writable.\n"
+"Please choose a different file name."
+msgstr ""
+"Dosiero %1 ne estas skribebla.\n"
+"Bonvole elektu alian dosiernomon."
+
+#: gui/dialogs/qprintdialog_unix.cpp:934
+#, qt-format
+msgid ""
+"%1 already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"%1 jam ekzistas.\n"
+"Ĉu vi volas anstataŭigi ĝin?"
+
+#: gui/dialogs/qprintdialog_unix.cpp:1238
+msgctxt "QPPDOptionsModel"
+msgid "Name"
+msgstr "Nomo"
+
+#: gui/dialogs/qprintdialog_unix.cpp:1240
+msgctxt "QPPDOptionsModel"
+msgid "Value"
+msgstr "Valoro"
+
+#: gui/dialogs/qprintdialog_win.cpp:270
+msgid "Print"
+msgstr "Presi"
+
+#: gui/dialogs/qprintdialog_win.cpp:271
+msgid "The 'From' value cannot be greater than the 'To' value."
+msgstr "La 'De' valoro ne povas esti pli granda ol la 'Ĝis' valoro."
+
+#: gui/dialogs/qprogressdialog.cpp:203 gui/dialogs/qwizard.cpp:700
+#: gui/kernel/qsoftkeymanager.cpp:76
+#: qt3support/dialogs/q3progressdialog.cpp:224
+#: qt3support/dialogs/q3progressdialog.cpp:285
+#: qt3support/dialogs/q3tabdialog.cpp:786
+msgid "Cancel"
+msgstr "Rezigni"
+
+#: gui/dialogs/qwizard.cpp:688
+msgid "Go Back"
+msgstr "Malantaŭen"
+
+#: gui/dialogs/qwizard.cpp:688 qt3support/dialogs/q3wizard.cpp:178
+msgid "< &Back"
+msgstr "< &Antaŭa"
+
+#: gui/dialogs/qwizard.cpp:691 scripttools/debugging/qscriptdebugger.cpp:1694
+msgid "Continue"
+msgstr "Daŭrigi"
+
+#: gui/dialogs/qwizard.cpp:694
+msgid "&Next"
+msgstr "&Sekva"
+
+#: gui/dialogs/qwizard.cpp:694 qt3support/dialogs/q3wizard.cpp:179
+msgid "&Next >"
+msgstr "&Sekva >"
+
+#: gui/dialogs/qwizard.cpp:696
+msgid "Commit"
+msgstr "Enmeti"
+
+#: gui/dialogs/qwizard.cpp:698 qt3support/dialogs/q3wizard.cpp:180
+msgid "&Finish"
+msgstr "&Fini"
+
+#: gui/dialogs/qwizard.cpp:702 gui/widgets/qmdisubwindow.cpp:355
+#: qt3support/dialogs/q3tabdialog.cpp:691
+msgid "Help"
+msgstr "Helpo"
+
+#: gui/dialogs/qwizard.cpp:702 qt3support/dialogs/q3wizard.cpp:181
+msgid "&Help"
+msgstr "&Helpo"
+
+#: gui/dialogs/qabstractpagesetupdialog.cpp:68
+#: gui/dialogs/qabstractpagesetupdialog.cpp:80
+msgctxt "QPrintPreviewDialog"
+msgid "Page Setup"
+msgstr "Paĝo-agordo"
+
+#: gui/dialogs/qabstractprintdialog.cpp:116
+#: gui/dialogs/qabstractprintdialog.cpp:129
+msgctxt "QPrintDialog"
+msgid "Print"
+msgstr "Presi"
+
 #: gui/dialogs/qprintdialog_qws.cpp:148
 msgid "File exists"
 msgstr "Dosiero ekzistas"
@@ -3569,91 +3760,6 @@ msgstr "Presi elekton"
 msgid "Print current page"
 msgstr "Presi intervalon"
 
-#: gui/dialogs/qprintdialog_unix.cpp:396 gui/dialogs/qprintdialog_unix.cpp:464
-msgid "&Options >>"
-msgstr "&Opcioj >>"
-
-#: gui/dialogs/qprintdialog_unix.cpp:401
-msgid "&Print"
-msgstr "&Presi"
-
-#: gui/dialogs/qprintdialog_unix.cpp:468
-msgid "&Options <<"
-msgstr "&Opcioj <<"
-
-#: gui/dialogs/qprintdialog_unix.cpp:728
-msgid "Print to File (PDF)"
-msgstr "Presi al dosiero (PDF)"
-
-#: gui/dialogs/qprintdialog_unix.cpp:729
-msgid "Print to File (Postscript)"
-msgstr "Presi al dosiero (Postskripto)"
-
-#: gui/dialogs/qprintdialog_unix.cpp:776
-msgid "Local file"
-msgstr "Loka dosiero"
-
-#: gui/dialogs/qprintdialog_unix.cpp:777
-#, qt-format
-msgid "Write %1 file"
-msgstr "Skribi %1 dosieron"
-
-#: gui/dialogs/qprintdialog_unix.cpp:848
-msgid "Print To File ..."
-msgstr "Presi al dosiero..."
-
-#: gui/dialogs/qprintdialog_unix.cpp:926
-#, qt-format
-msgid ""
-"%1 is a directory.\n"
-"Please choose a different file name."
-msgstr ""
-"%1 estas dosierujo.\n"
-"Bonvole elektu alian dosiernomon."
-
-#: gui/dialogs/qprintdialog_unix.cpp:930
-#, qt-format
-msgid ""
-"File %1 is not writable.\n"
-"Please choose a different file name."
-msgstr ""
-"Dosiero %1 ne estas skribebla.\n"
-"Bonvole elektu alian dosiernomon."
-
-#: gui/dialogs/qprintdialog_unix.cpp:934
-#, qt-format
-msgid ""
-"%1 already exists.\n"
-"Do you want to overwrite it?"
-msgstr ""
-"%1 jam ekzistas.\n"
-"Ĉu vi volas anstataŭigi ĝin?"
-
-#: gui/dialogs/qprintdialog_unix.cpp:1238
-msgctxt "QPPDOptionsModel"
-msgid "Name"
-msgstr "Nomo"
-
-#: gui/dialogs/qprintdialog_unix.cpp:1240
-msgctxt "QPPDOptionsModel"
-msgid "Value"
-msgstr "Valoro"
-
-#: gui/dialogs/qprintdialog_win.cpp:270
-msgid "Print"
-msgstr "Presi"
-
-#: gui/dialogs/qprintdialog_win.cpp:271
-msgid "The 'From' value cannot be greater than the 'To' value."
-msgstr "La 'De' valoro ne povas esti pli granda ol la 'Ĝis' valoro."
-
-#: gui/dialogs/qprintdialog_win.cpp:272 gui/dialogs/qmessagebox.cpp:1937
-#: gui/dialogs/qmessagebox.cpp:2383 gui/kernel/qsoftkeymanager.cpp:64
-#: qt3support/dialogs/q3tabdialog.cpp:190
-#: qt3support/dialogs/q3tabdialog.cpp:1014
-msgid "OK"
-msgstr "Konfirmi"
-
 #: gui/dialogs/qprintpreviewdialog.cpp:249
 #, qt-format
 msgid "%1%"
@@ -3754,115 +3860,9 @@ msgctxt "QPrintPreviewDialog"
 msgid "Export to PostScript"
 msgstr "Eksporti kiel Postskript-dosiero"
 
-#: gui/dialogs/qprogressdialog.cpp:203 gui/dialogs/qwizard.cpp:700
-#: gui/kernel/qsoftkeymanager.cpp:76
-#: qt3support/dialogs/q3progressdialog.cpp:224
-#: qt3support/dialogs/q3progressdialog.cpp:285
-#: qt3support/dialogs/q3tabdialog.cpp:786
-msgid "Cancel"
-msgstr "Rezigni"
-
 #: gui/dialogs/qsidebar.cpp:442
 msgid "Remove"
 msgstr "Forigi"
-
-#: gui/dialogs/qwizard.cpp:688
-msgid "Go Back"
-msgstr "Malantaŭen"
-
-#: gui/dialogs/qwizard.cpp:688 qt3support/dialogs/q3wizard.cpp:178
-msgid "< &Back"
-msgstr "< &Antaŭa"
-
-#: gui/dialogs/qwizard.cpp:691 scripttools/debugging/qscriptdebugger.cpp:1694
-msgid "Continue"
-msgstr "Daŭrigi"
-
-#: gui/dialogs/qwizard.cpp:694
-msgid "&Next"
-msgstr "&Sekva"
-
-#: gui/dialogs/qwizard.cpp:694 qt3support/dialogs/q3wizard.cpp:179
-msgid "&Next >"
-msgstr "&Sekva >"
-
-#: gui/dialogs/qwizard.cpp:696
-msgid "Commit"
-msgstr "Enmeti"
-
-#: gui/dialogs/qwizard.cpp:698 gui/dialogs/qdialog.cpp:524
-#: gui/kernel/qsoftkeymanager.cpp:70
-msgid "Done"
-msgstr "Finita"
-
-#: gui/dialogs/qwizard.cpp:698 qt3support/dialogs/q3wizard.cpp:180
-msgid "&Finish"
-msgstr "&Fini"
-
-#: gui/dialogs/qwizard.cpp:702 gui/widgets/qmdisubwindow.cpp:355
-#: qt3support/dialogs/q3tabdialog.cpp:691
-msgid "Help"
-msgstr "Helpo"
-
-#: gui/dialogs/qwizard.cpp:702 qt3support/dialogs/q3wizard.cpp:181
-msgid "&Help"
-msgstr "&Helpo"
-
-#: gui/dialogs/qdialog.cpp:651 gui/kernel/qwhatsthis.cpp:527
-msgid "What's This?"
-msgstr "Kio estas tio ĉi?"
-
-#: gui/dialogs/qmessagebox.cpp:139
-msgid "Show Details..."
-msgstr "Montri detalojn..."
-
-#: gui/dialogs/qmessagebox.cpp:139
-msgid "Hide Details..."
-msgstr "Kaŝi detalojn..."
-
-#: gui/dialogs/qmessagebox.cpp:427 gui/dialogs/qmessagebox.cpp:1272
-msgctxt "QMessageBox"
-msgid "OK"
-msgstr "Konfirmi"
-
-#: gui/dialogs/qmessagebox.cpp:1273
-msgctxt "QMessageBox"
-msgid "Help"
-msgstr "Helpo"
-
-#: gui/dialogs/qmessagebox.cpp:1762
-#, qt-format
-msgid "<h3>About Qt</h3><p>This program uses Qt version %1.</p>"
-msgstr ""
-
-#: gui/dialogs/qmessagebox.cpp:1767
-msgid ""
-"<p>Qt is a C++ toolkit for cross-platform application development.</p><p>Qt "
-"provides single-source portability across MS&nbsp;Windows, Mac&nbsp;OS&nbsp;"
-"X, Linux, and all major commercial Unix variants. Qt is also available for "
-"embedded devices as Qt for Embedded Linux and Qt for Windows CE.</p><p>Qt is "
-"available under three different licensing options designed to accommodate "
-"the needs of our various users.</p><p>Qt licensed under our commercial "
-"license agreement is appropriate for development of proprietary/commercial "
-"software where you do not want to share any source code with third parties "
-"or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU "
-"GPL version 3.0.</p><p>Qt licensed under the GNU LGPL version 2.1 is "
-"appropriate for the development of Qt applications (proprietary or open "
-"source) provided you can comply with the terms and conditions of the GNU "
-"LGPL version 2.1.</p><p>Qt licensed under the GNU General Public License "
-"version 3.0 is appropriate for the development of Qt applications where you "
-"wish to use such applications in combination with software subject to the "
-"terms of the GNU GPL version 3.0 or where you are otherwise willing to "
-"comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
-"\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
-"a> for an overview of Qt licensing.</p><p>Copyright (C) 2011 Nokia "
-"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
-"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
-msgstr ""
-
-#: gui/dialogs/qmessagebox.cpp:1797
-msgid "About Qt"
-msgstr "Pri Qt"
 
 #: gui/inputmethod/qinputcontextfactory.cpp:301
 msgid "XIM"
@@ -5108,14 +5108,6 @@ msgstr "+"
 msgid "F%1"
 msgstr "F%1"
 
-#: gui/kernel/qsoftkeymanager_s60.cpp:373
-msgid "Exit"
-msgstr "Finu"
-
-#: gui/kernel/qwidget.cpp:6050
-msgid "*"
-msgstr "*"
-
 #: gui/kernel/qsoftkeymanager.cpp:67
 #: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:67
 #, fuzzy
@@ -5123,6 +5115,14 @@ msgstr "*"
 #| msgid "Select"
 msgid "Select"
 msgstr "Elekti"
+
+#: gui/kernel/qsoftkeymanager_s60.cpp:373
+msgid "Exit"
+msgstr "Finu"
+
+#: gui/kernel/qwidget.cpp:6050
+msgid "*"
+msgstr "*"
 
 #: gui/painting/qprinterinfo_unix.cpp:135
 msgid "locally connected"
@@ -5674,9 +5674,9 @@ msgstr "Restaŭri"
 #: gui/widgets/qmdisubwindow.cpp:352 gui/widgets/qworkspace.cpp:113
 #: plugins/accessible/compat/q3complexwidgets.cpp:256
 #: plugins/accessible/widgets/complexwidgets.cpp:1847
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1249
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:157
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:382
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1249
 #: scripttools/debugging/qscriptbreakpointswidget.cpp:81
 #: scripttools/debugging/qscriptdebuggercodefinderwidget.cpp:141
 msgid "Close"
@@ -6414,14 +6414,20 @@ msgstr "Rulumi dekstren"
 
 #: plugins/accessible/widgets/complexwidgets.cpp:1781
 #: plugins/accessible/widgets/complexwidgets.cpp:1847
-#: plugins/accessible/widgets/simplewidgets.cpp:117
-#: plugins/accessible/widgets/simplewidgets.cpp:452
-#: plugins/accessible/widgets/simplewidgets.cpp:460
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:158
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:383
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:437
+#: plugins/accessible/widgets/simplewidgets.cpp:117
+#: plugins/accessible/widgets/simplewidgets.cpp:452
+#: plugins/accessible/widgets/simplewidgets.cpp:460
 msgid "Open"
 msgstr "Malfermi"
+
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:160
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:385
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:438
+msgid "Execute"
+msgstr "Lanĉi"
 
 #: plugins/accessible/widgets/qaccessiblewidgets.cpp:1251
 msgid "Dock"
@@ -6488,12 +6494,6 @@ msgstr "Baskuligi"
 msgid "Press"
 msgstr "Premi"
 
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:160
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:385
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:438
-msgid "Execute"
-msgstr "Lanĉi"
-
 #: plugins/bearer/icd/qnetworksession_impl.cpp:1030
 #, fuzzy
 #| msgid "Unknown error"
@@ -6505,8 +6505,8 @@ msgid "Session aborted by user or system"
 msgstr ""
 
 #: plugins/bearer/icd/qnetworksession_impl.cpp:1036
-#: plugins/bearer/qnetworksession_impl.cpp:260
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:307
+#: plugins/bearer/qnetworksession_impl.cpp:260
 msgid "The specified configuration cannot be used."
 msgstr ""
 
@@ -6514,25 +6514,25 @@ msgstr ""
 msgid "Unidentified Error"
 msgstr ""
 
-#: plugins/bearer/qnetworksession_impl.cpp:254
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:301
+#: plugins/bearer/qnetworksession_impl.cpp:254
 #, fuzzy
 #| msgid "Unknown error"
 msgid "Unknown session error."
 msgstr "Nekonata eraro"
 
-#: plugins/bearer/qnetworksession_impl.cpp:256
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:303
+#: plugins/bearer/qnetworksession_impl.cpp:256
 msgid "The session was aborted by the user or system."
 msgstr ""
 
-#: plugins/bearer/qnetworksession_impl.cpp:258
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:305
+#: plugins/bearer/qnetworksession_impl.cpp:258
 msgid "The requested operation is not supported by the system."
 msgstr ""
 
-#: plugins/bearer/qnetworksession_impl.cpp:262
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:309
+#: plugins/bearer/qnetworksession_impl.cpp:262
 msgid "Roaming was aborted or is not possible."
 msgstr ""
 
@@ -6582,6 +6582,10 @@ msgstr ""
 msgid "Could not reset to read data"
 msgstr "Ne eblis trovi aŭdvidaĵfonton."
 
+#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
+msgid "Select IM"
+msgstr "Elekti enigan metodon"
+
 #: plugins/inputmethods/imsw-multi/qmultiinputcontextplugin.cpp:95
 msgid "Multiple input method switcher"
 msgstr "Pluropa enigan metodon elektilo"
@@ -6592,10 +6596,6 @@ msgid ""
 msgstr ""
 "Pluropa enigan metodon elektilo, kiu uzas la kuntekstan menuon de la "
 "tekstfenestraĵoj"
-
-#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
-msgid "Select IM"
-msgstr "Elekti enigan metodon"
 
 #: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
 msgid "Items"
@@ -7723,6 +7723,22 @@ msgid ""
 "character."
 msgstr ""
 
+#: xmlpatterns/api/qiodevicedelegate.cpp:84
+msgid "Network timeout."
+msgstr ""
+
+#: xmlpatterns/api/qxmlserializer.cpp:321
+#, qt-format
+msgid ""
+"Element %1 can't be serialized because it appears outside the document "
+"element."
+msgstr ""
+
+#: xmlpatterns/api/qxmlserializer.cpp:381
+#, qt-format
+msgid "Attribute %1 can't be serialized because it appears at the top level."
+msgstr ""
+
 #: xmlpatterns/api/qcoloringmessagehandler.cpp:87
 #, qt-format
 msgid "Warning in %1, at line %2, column %3: %4"
@@ -7747,73 +7763,6 @@ msgstr ""
 #: xmlpatterns/api/qcoloringmessagehandler.cpp:132
 #, qt-format
 msgid "Error %1 in %2: %3"
-msgstr ""
-
-#: xmlpatterns/api/qiodevicedelegate.cpp:84
-msgid "Network timeout."
-msgstr ""
-
-#: xmlpatterns/api/qxmlserializer.cpp:321
-#, qt-format
-msgid ""
-"Element %1 can't be serialized because it appears outside the document "
-"element."
-msgstr ""
-
-#: xmlpatterns/api/qxmlserializer.cpp:381
-#, qt-format
-msgid "Attribute %1 can't be serialized because it appears at the top level."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:80
-#, qt-format
-msgid "Year %1 is invalid because it begins with %2."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:99
-#, qt-format
-msgid "Day %1 is outside the range %2..%3."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:106
-#, qt-format
-msgid "Month %1 is outside the range %2..%3."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:117
-#, qt-format
-msgid "Overflow: Can't represent date %1."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:125
-#, qt-format
-msgid "Day %1 is invalid for month %2."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:174
-#, qt-format
-msgid ""
-"Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and "
-"milliseconds are not all 0; "
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:187
-#, qt-format
-msgid "Time %1:%2:%3.%4 is invalid."
-msgstr ""
-
-#: xmlpatterns/data/qabstractdatetime.cpp:302
-msgid "Overflow: Date can't be represented."
-msgstr ""
-
-#: xmlpatterns/data/qabstractduration.cpp:99
-#: xmlpatterns/data/qabstractduration.cpp:114
-msgid "At least one component must be present."
-msgstr ""
-
-#: xmlpatterns/data/qabstractduration.cpp:107
-#, qt-format
-msgid "At least one time component must appear after the %1-delimiter."
 msgstr ""
 
 #: xmlpatterns/data/qabstractfloatmathematician.cpp:64
@@ -7886,6 +7835,57 @@ msgstr ""
 #: xmlpatterns/data/qhexbinary.cpp:111
 #, qt-format
 msgid "%1 is not valid as a value of type %2."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:80
+#, qt-format
+msgid "Year %1 is invalid because it begins with %2."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:99
+#, qt-format
+msgid "Day %1 is outside the range %2..%3."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:106
+#, qt-format
+msgid "Month %1 is outside the range %2..%3."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:117
+#, qt-format
+msgid "Overflow: Can't represent date %1."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:125
+#, qt-format
+msgid "Day %1 is invalid for month %2."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:174
+#, qt-format
+msgid ""
+"Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and "
+"milliseconds are not all 0; "
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:187
+#, qt-format
+msgid "Time %1:%2:%3.%4 is invalid."
+msgstr ""
+
+#: xmlpatterns/data/qabstractdatetime.cpp:302
+msgid "Overflow: Date can't be represented."
+msgstr ""
+
+#: xmlpatterns/data/qabstractduration.cpp:99
+#: xmlpatterns/data/qabstractduration.cpp:114
+msgid "At least one component must be present."
+msgstr ""
+
+#: xmlpatterns/data/qabstractduration.cpp:107
+#, qt-format
+msgid "At least one time component must appear after the %1-delimiter."
 msgstr ""
 
 #: xmlpatterns/expr/qapplytemplate.cpp:119
@@ -8053,32 +8053,6 @@ msgstr ""
 msgid "The parameter %1 is required, but no corresponding %2 is supplied."
 msgstr ""
 
-#: xmlpatterns/functions/qaggregatefns.cpp:120
-#, qt-format
-msgid ""
-"The first argument to %1 cannot be of type %2. It must be a numeric type, xs:"
-"yearMonthDuration or xs:dayTimeDuration."
-msgstr ""
-
-#: xmlpatterns/functions/qaggregatefns.cpp:194
-#, qt-format
-msgid ""
-"The first argument to %1 cannot be of type %2. It must be of type %3, %4, or "
-"%5."
-msgstr ""
-
-#: xmlpatterns/functions/qaggregatefns.cpp:285
-#, qt-format
-msgid ""
-"The second argument to %1 cannot be of type %2. It must be of type %3, %4, "
-"or %5."
-msgstr ""
-
-#: xmlpatterns/functions/qassemblestringfns.cpp:88
-#, qt-format
-msgid "%1 is not a valid XML 1.0 character."
-msgstr ""
-
 #: xmlpatterns/functions/qcomparingaggregator.cpp:197
 #, qt-format
 msgid "The first argument to %1 cannot be of type %2."
@@ -8169,6 +8143,15 @@ msgstr ""
 msgid "It will not be possible to retrieve %1."
 msgstr ""
 
+#: xmlpatterns/functions/qsequencegeneratingfns.cpp:282
+msgid "The default collection is undefined"
+msgstr ""
+
+#: xmlpatterns/functions/qsequencegeneratingfns.cpp:295
+#, qt-format
+msgid "%1 cannot be retrieved"
+msgstr ""
+
 #: xmlpatterns/functions/qstringvaluefns.cpp:252
 #, qt-format
 msgid ""
@@ -8191,13 +8174,30 @@ msgstr ""
 msgid "The URI cannot have a fragment"
 msgstr ""
 
-#: xmlpatterns/functions/qsequencegeneratingfns.cpp:282
-msgid "The default collection is undefined"
+#: xmlpatterns/functions/qaggregatefns.cpp:120
+#, qt-format
+msgid ""
+"The first argument to %1 cannot be of type %2. It must be a numeric type, xs:"
+"yearMonthDuration or xs:dayTimeDuration."
 msgstr ""
 
-#: xmlpatterns/functions/qsequencegeneratingfns.cpp:295
+#: xmlpatterns/functions/qaggregatefns.cpp:194
 #, qt-format
-msgid "%1 cannot be retrieved"
+msgid ""
+"The first argument to %1 cannot be of type %2. It must be of type %3, %4, or "
+"%5."
+msgstr ""
+
+#: xmlpatterns/functions/qaggregatefns.cpp:285
+#, qt-format
+msgid ""
+"The second argument to %1 cannot be of type %2. It must be of type %3, %4, "
+"or %5."
+msgstr ""
+
+#: xmlpatterns/functions/qassemblestringfns.cpp:88
+#, qt-format
+msgid "%1 is not a valid XML 1.0 character."
 msgstr ""
 
 #: xmlpatterns/janitors/qcardinalityverifier.cpp:58
@@ -8258,152 +8258,6 @@ msgstr ""
 #: xmlpatterns/parser/qparsercontext.cpp:93
 #, qt-format
 msgid "The variable %1 is unused"
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:519
-#, qt-format
-msgid "Element %1 is not allowed at this location."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:528
-msgid "Text nodes are not allowed at this location."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:548
-#, qt-format
-msgid "Parse error: %1"
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:610
-#, qt-format
-msgid ""
-"The value of the XSL-T version attribute must be a value of type %1, which "
-"%2 isn't."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:630
-msgid "Running an XSL-T 1.0 stylesheet with a 2.0 processor."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:738
-#, qt-format
-msgid "Unknown XSL-T attribute %1."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:761
-#, qt-format
-msgid "Attribute %1 and %2 are mutually exclusive."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:927
-#, qt-format
-msgid "In a simplified stylesheet module, attribute %1 must be present."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:999
-#, qt-format
-msgid "If element %1 has no attribute %2, it cannot have attribute %3 or %4."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1008
-#, qt-format
-msgid "Element %1 must have at least one of the attributes %2 or %3."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1036
-#, qt-format
-msgid "At least one mode must be specified in the %1-attribute on element %2."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1159
-#, qt-format
-msgid "Element %1 must come last."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1183
-#, qt-format
-msgid "At least one %1-element must occur before %2."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1190
-#, qt-format
-msgid "Only one %1-element can appear."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1221
-#, qt-format
-msgid "At least one %1-element must occur inside %2."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1279
-#, qt-format
-msgid ""
-"When attribute %1 is present on %2, a sequence constructor cannot be used."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1292
-#, qt-format
-msgid "Element %1 must have either a %2-attribute or a sequence constructor."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1417
-#, qt-format
-msgid ""
-"When a parameter is required, a default value cannot be supplied through a "
-"%1-attribute or a sequence constructor."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1687
-#, qt-format
-msgid "Element %1 cannot have children."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2121
-#, qt-format
-msgid "Element %1 cannot have a sequence constructor."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2207
-#: xmlpatterns/parser/qxslttokenizer.cpp:2216
-#, qt-format
-msgid "The attribute %1 cannot appear on %2, when it is a child of %3."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2231
-msgid "A parameter in a function cannot be declared to be a tunnel."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2380
-#, qt-format
-msgid "This processor is not Schema-aware and therefore %1 cannot be used."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2437
-#, qt-format
-msgid ""
-"Top level stylesheet elements must be in a non-null namespace, which %1 "
-"isn't."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2485
-#, qt-format
-msgid ""
-"The value for attribute %1 on element %2 must either be %3 or %4, not %5."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2505
-#, qt-format
-msgid "Attribute %1 cannot have the value %2."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2563
-#, qt-format
-msgid "The attribute %1 can only appear on the first %2 element."
-msgstr ""
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2662
-#, qt-format
-msgid "At least one %1 element must appear as child of %2."
 msgstr ""
 
 #: querytransformparser.ypp:202
@@ -8750,6 +8604,152 @@ msgstr ""
 
 #: querytransformparser.ypp:4553
 msgid "The name of an extension expression must be in a namespace."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:519
+#, qt-format
+msgid "Element %1 is not allowed at this location."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:528
+msgid "Text nodes are not allowed at this location."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:548
+#, qt-format
+msgid "Parse error: %1"
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:610
+#, qt-format
+msgid ""
+"The value of the XSL-T version attribute must be a value of type %1, which "
+"%2 isn't."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:630
+msgid "Running an XSL-T 1.0 stylesheet with a 2.0 processor."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:738
+#, qt-format
+msgid "Unknown XSL-T attribute %1."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:761
+#, qt-format
+msgid "Attribute %1 and %2 are mutually exclusive."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:927
+#, qt-format
+msgid "In a simplified stylesheet module, attribute %1 must be present."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:999
+#, qt-format
+msgid "If element %1 has no attribute %2, it cannot have attribute %3 or %4."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1008
+#, qt-format
+msgid "Element %1 must have at least one of the attributes %2 or %3."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1036
+#, qt-format
+msgid "At least one mode must be specified in the %1-attribute on element %2."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1159
+#, qt-format
+msgid "Element %1 must come last."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1183
+#, qt-format
+msgid "At least one %1-element must occur before %2."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1190
+#, qt-format
+msgid "Only one %1-element can appear."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1221
+#, qt-format
+msgid "At least one %1-element must occur inside %2."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1279
+#, qt-format
+msgid ""
+"When attribute %1 is present on %2, a sequence constructor cannot be used."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1292
+#, qt-format
+msgid "Element %1 must have either a %2-attribute or a sequence constructor."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1417
+#, qt-format
+msgid ""
+"When a parameter is required, a default value cannot be supplied through a "
+"%1-attribute or a sequence constructor."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1687
+#, qt-format
+msgid "Element %1 cannot have children."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2121
+#, qt-format
+msgid "Element %1 cannot have a sequence constructor."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2207
+#: xmlpatterns/parser/qxslttokenizer.cpp:2216
+#, qt-format
+msgid "The attribute %1 cannot appear on %2, when it is a child of %3."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2231
+msgid "A parameter in a function cannot be declared to be a tunnel."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2380
+#, qt-format
+msgid "This processor is not Schema-aware and therefore %1 cannot be used."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2437
+#, qt-format
+msgid ""
+"Top level stylesheet elements must be in a non-null namespace, which %1 "
+"isn't."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2485
+#, qt-format
+msgid ""
+"The value for attribute %1 on element %2 must either be %3 or %4, not %5."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2505
+#, qt-format
+msgid "Attribute %1 cannot have the value %2."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2563
+#, qt-format
+msgid "The attribute %1 can only appear on the first %2 element."
+msgstr ""
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2662
+#, qt-format
+msgid "At least one %1 element must appear as child of %2."
 msgstr ""
 
 #: xmlpatterns/schema/qxsdparticlechecker.cpp:165
@@ -9592,6 +9592,239 @@ msgstr ""
 msgid "Duplicated facets in simple type %1."
 msgstr ""
 
+#: xmlpatterns/schema/qxsdtypechecker.cpp:235
+#: xmlpatterns/schema/qxsdtypechecker.cpp:242
+#: xmlpatterns/schema/qxsdtypechecker.cpp:263
+#, qt-format
+msgid "%1 is not valid according to %2."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:430
+msgid "String content does not match the length facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:438
+msgid "String content does not match the minLength facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:446
+msgid "String content does not match the maxLength facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:464
+msgid "String content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:482
+msgid "String content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:499
+msgid "Signed integer content does not match the maxInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:507
+msgid "Signed integer content does not match the maxExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:515
+msgid "Signed integer content does not match the minInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:523
+msgid "Signed integer content does not match the minExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:541
+msgid "Signed integer content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:559
+msgid "Signed integer content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:568
+msgid "Signed integer content does not match in the totalDigits facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:585
+msgid "Unsigned integer content does not match the maxInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:593
+msgid "Unsigned integer content does not match the maxExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:601
+msgid "Unsigned integer content does not match the minInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:609
+msgid "Unsigned integer content does not match the minExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:627
+msgid "Unsigned integer content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:645
+msgid "Unsigned integer content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:654
+msgid "Unsigned integer content does not match in the totalDigits facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:671
+msgid "Double content does not match the maxInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:679
+msgid "Double content does not match the maxExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:687
+msgid "Double content does not match the minInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:695
+msgid "Double content does not match the minExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:721
+msgid "Double content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:739
+msgid "Double content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:757
+msgid "Decimal content does not match in the fractionDigits facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:766
+msgid "Decimal content does not match in the totalDigits facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:780
+msgid "Date time content does not match the maxInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:788
+msgid "Date time content does not match the maxExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:796
+msgid "Date time content does not match the minInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:804
+msgid "Date time content does not match the minExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:822
+msgid "Date time content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:840
+msgid "Date time content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:855
+msgid "Duration content does not match the maxInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:864
+msgid "Duration content does not match the maxExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:873
+msgid "Duration content does not match the minInclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:882
+msgid "Duration content does not match the minExclusive facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:900
+msgid "Duration content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:918
+msgid "Duration content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:945
+msgid "Boolean content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:962
+msgid "Binary content does not match the length facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:970
+msgid "Binary content does not match the minLength facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:978
+msgid "Binary content does not match the maxLength facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:996
+msgid "Binary content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1023
+#, qt-format
+msgid "Invalid QName content: %1."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1040
+msgid "QName content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1058
+msgid "QName content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1094
+msgid "Notation content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1113
+msgid "List content does not match length facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1120
+msgid "List content does not match minLength facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1127
+msgid "List content does not match maxLength facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1217
+msgid "List content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1235
+msgid "List content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1274
+msgid "Union content is not listed in the enumeration facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1292
+msgid "Union content does not match pattern facet."
+msgstr ""
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1307
+#, qt-format
+msgid "Data of type %1 are not allowed to be empty."
+msgstr ""
+
 #: xmlpatterns/schema/qxsdschemaresolver.cpp:354
 #, qt-format
 msgid "%1 references unknown %2 or %3 element %4."
@@ -9976,239 +10209,6 @@ msgstr ""
 #: xmlpatterns/schema/qxsdvalidatinginstancereader.cpp:1235
 #, qt-format
 msgid "'%1' attribute contains invalid QName content: %2."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:235
-#: xmlpatterns/schema/qxsdtypechecker.cpp:242
-#: xmlpatterns/schema/qxsdtypechecker.cpp:263
-#, qt-format
-msgid "%1 is not valid according to %2."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:430
-msgid "String content does not match the length facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:438
-msgid "String content does not match the minLength facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:446
-msgid "String content does not match the maxLength facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:464
-msgid "String content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:482
-msgid "String content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:499
-msgid "Signed integer content does not match the maxInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:507
-msgid "Signed integer content does not match the maxExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:515
-msgid "Signed integer content does not match the minInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:523
-msgid "Signed integer content does not match the minExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:541
-msgid "Signed integer content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:559
-msgid "Signed integer content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:568
-msgid "Signed integer content does not match in the totalDigits facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:585
-msgid "Unsigned integer content does not match the maxInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:593
-msgid "Unsigned integer content does not match the maxExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:601
-msgid "Unsigned integer content does not match the minInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:609
-msgid "Unsigned integer content does not match the minExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:627
-msgid "Unsigned integer content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:645
-msgid "Unsigned integer content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:654
-msgid "Unsigned integer content does not match in the totalDigits facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:671
-msgid "Double content does not match the maxInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:679
-msgid "Double content does not match the maxExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:687
-msgid "Double content does not match the minInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:695
-msgid "Double content does not match the minExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:721
-msgid "Double content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:739
-msgid "Double content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:757
-msgid "Decimal content does not match in the fractionDigits facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:766
-msgid "Decimal content does not match in the totalDigits facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:780
-msgid "Date time content does not match the maxInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:788
-msgid "Date time content does not match the maxExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:796
-msgid "Date time content does not match the minInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:804
-msgid "Date time content does not match the minExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:822
-msgid "Date time content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:840
-msgid "Date time content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:855
-msgid "Duration content does not match the maxInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:864
-msgid "Duration content does not match the maxExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:873
-msgid "Duration content does not match the minInclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:882
-msgid "Duration content does not match the minExclusive facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:900
-msgid "Duration content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:918
-msgid "Duration content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:945
-msgid "Boolean content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:962
-msgid "Binary content does not match the length facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:970
-msgid "Binary content does not match the minLength facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:978
-msgid "Binary content does not match the maxLength facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:996
-msgid "Binary content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1023
-#, qt-format
-msgid "Invalid QName content: %1."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1040
-msgid "QName content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1058
-msgid "QName content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1094
-msgid "Notation content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1113
-msgid "List content does not match length facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1120
-msgid "List content does not match minLength facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1127
-msgid "List content does not match maxLength facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1217
-msgid "List content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1235
-msgid "List content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1274
-msgid "Union content is not listed in the enumeration facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1292
-msgid "Union content does not match pattern facet."
-msgstr ""
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1307
-#, qt-format
-msgid "Data of type %1 are not allowed to be empty."
 msgstr ""
 
 #: xmlpatterns/type/qcardinality.cpp:55
