@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-15 10:27+0100\n"
+"POT-Creation-Date: 2012-01-27 11:02+0100\n"
 "PO-Revision-Date: 2009-11-17 11:13+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -678,7 +678,7 @@ msgstr ""
 
 #: ktorrent/tools/queuemanagerwidget.cpp:57
 #: plugins/search/searchactivity.cpp:81 plugins/search/searchtoolbar.cpp:70
-#: plugins/search/webview.cpp:161
+#: plugins/search/webview.cpp:178
 msgid "Search"
 msgstr "Serĉi"
 
@@ -770,15 +770,6 @@ msgstr "Ne estas envicigita"
 #, fuzzy
 msgid "Show all not queued torrents"
 msgstr "Ĉesigi ĉiujn torentojn"
-
-#: ktorrent/view/scanextender.cpp:46
-msgid "Checked %v of %m chunks"
-msgstr ""
-
-#: ktorrent/view/scanextender.cpp:127
-#, kde-format
-msgid "<font color=\"red\">%1</font>"
-msgstr ""
 
 #: ktorrent/view/propertiesdlg.cpp:34
 #, fuzzy
@@ -933,6 +924,15 @@ msgstr "Legas datumon de <b>%1</b> :"
 
 #: ktorrent/view/viewmodel.cpp:581
 msgid "<br/><br/>Unable to contact a tracker."
+msgstr ""
+
+#: ktorrent/view/scanextender.cpp:46
+msgid "Checked %v of %m chunks"
+msgstr ""
+
+#: ktorrent/view/scanextender.cpp:128
+#, kde-format
+msgid "<font color=\"red\">%1</font>"
 msgstr ""
 
 #. i18n: file: ktorrent/kttorrentactivityui.rc:75
@@ -1345,7 +1345,7 @@ msgstr "Por konservi, elektu dosiernomon"
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
-#: ktorrent/main.cpp:94 plugins/search/webview.cpp:158 rc.cpp:515
+#: ktorrent/main.cpp:94 plugins/search/webview.cpp:175 rc.cpp:515
 msgid "KTorrent"
 msgstr "KTorrent"
 
@@ -3357,39 +3357,20 @@ msgstr "Titoleto por serĉilo"
 msgid " Engine: "
 msgstr " Serĉilo: "
 
-#: plugins/search/webview.cpp:157
-msgid "Home"
-msgstr "Hejmo"
-
-#: plugins/search/webview.cpp:159
-msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
-msgid "Be free."
-msgstr ""
-
-#: plugins/search/webview.cpp:160
-#, fuzzy
-msgid "Search the web for torrents."
-msgstr "Dosierujoj en kiuj vi volas serĉi torentojn:"
-
-#: plugins/search/webview.cpp:188
-#, kde-format
-msgid "Save %1 to"
-msgstr ""
-
-#: plugins/search/webview.cpp:205
-#, fuzzy, kde-format
-msgid "Cannot open <b>%1</b>: %2"
-msgstr "Ne povas malfermi %1 : %2"
-
-#: plugins/search/searchwidget.cpp:75
+#: plugins/search/searchwidget.cpp:77
 msgid " Engine:"
 msgstr "Serĉilo:"
 
-#: plugins/search/searchwidget.cpp:228
+#: plugins/search/searchwidget.cpp:203
+#, fuzzy, kde-format
+msgid "Downloading:<br/><b>%1</b>"
+msgstr "Elŝutas"
+
+#: plugins/search/searchwidget.cpp:243
 msgid "Do you want to download or save the torrent?"
 msgstr "Ĉu vi volas elŝuti aŭ konservi la fontan torenton?"
 
-#: plugins/search/searchwidget.cpp:229
+#: plugins/search/searchwidget.cpp:244
 msgid "Download Torrent"
 msgstr "Elŝuti torenton"
 
@@ -3413,10 +3394,34 @@ msgstr "Elŝuti torenton"
 #. i18n: ectx: property (title), widget (QGroupBox, DlSpdGbw)
 #. i18n: file: plugins/syndication/feedwidget.ui:121
 #. i18n: ectx: property (text), widget (KPushButton, m_download)
-#: plugins/search/searchwidget.cpp:230 rc.cpp:2253 rc.cpp:2256 rc.cpp:2373
+#: plugins/search/searchwidget.cpp:245 rc.cpp:2253 rc.cpp:2256 rc.cpp:2373
 #: rc.cpp:2412 rc.cpp:2565
 msgid "Download"
 msgstr "Elŝuti"
+
+#: plugins/search/webview.cpp:174
+msgid "Home"
+msgstr "Hejmo"
+
+#: plugins/search/webview.cpp:176
+msgctxt "KDE 4 tag line, see http://kde.org/img/kde40.png"
+msgid "Be free."
+msgstr ""
+
+#: plugins/search/webview.cpp:177
+#, fuzzy
+msgid "Search the web for torrents."
+msgstr "Dosierujoj en kiuj vi volas serĉi torentojn:"
+
+#: plugins/search/webview.cpp:205
+#, kde-format
+msgid "Save %1 to"
+msgstr ""
+
+#: plugins/search/webview.cpp:225
+#, fuzzy, kde-format
+msgid "Cannot open <b>%1</b>: %2"
+msgstr "Ne povas malfermi %1 : %2"
 
 #: plugins/shutdown/shutdowntorrentmodel.cpp:92
 #: plugins/shutdown/shutdowntorrentmodel.cpp:235
@@ -3956,6 +3961,23 @@ msgstr ""
 msgid "ZeroConf"
 msgstr "Zeroconf"
 
+#: kio-magnet/kio_magnet.cpp:235 kio-magnet/kio_magnet.cpp:310
+#: kio-magnet/kio_magnet.cpp:336
+#, kde-format
+msgid ""
+"File exists in KTorrent, but cannot open it on disk at path \"%1\". Have you "
+"removed the file manually?"
+msgstr ""
+
+#: kio-magnet/kio_magnet.cpp:295
+msgid "You cannot write to magnet resources."
+msgstr ""
+
+#: kio-magnet/kio_magnet.cpp:316
+#, kde-format
+msgid "File \"%1\" is a directory. This should not happen. Please file a bug."
+msgstr ""
+
 #: kio-magnet/dbushandler.cpp:87
 msgid ""
 "The Web share for magnet-links is disabled.         You can set it up at "
@@ -3982,37 +4004,20 @@ msgid ""
 "running?"
 msgstr ""
 
-#: kio-magnet/dbushandler.cpp:278
+#: kio-magnet/dbushandler.cpp:288
 #, kde-format
 msgid "The link for %1 does not contain the required btih hash-parameter."
 msgstr ""
 
-#: kio-magnet/dbushandler.cpp:288
+#: kio-magnet/dbushandler.cpp:299
 #, kde-format
 msgid "The found value (%1) for the hash is neither 32 nor 40 chars long."
 msgstr ""
 
-#: kio-magnet/dbushandler.cpp:520
+#: kio-magnet/dbushandler.cpp:563
 #, fuzzy
 msgid "Torrent has been removed from KTorrent."
 msgstr "Ĉesigis la torenton.<br />"
-
-#: kio-magnet/kio_magnet.cpp:235 kio-magnet/kio_magnet.cpp:310
-#: kio-magnet/kio_magnet.cpp:336
-#, kde-format
-msgid ""
-"File exists in KTorrent, but cannot open it on disk at path \"%1\". Have you "
-"removed the file manually?"
-msgstr ""
-
-#: kio-magnet/kio_magnet.cpp:295
-msgid "You cannot write to magnet resources."
-msgstr ""
-
-#: kio-magnet/kio_magnet.cpp:316
-#, kde-format
-msgid "File \"%1\" is a directory. This should not happen. Please file a bug."
-msgstr ""
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
