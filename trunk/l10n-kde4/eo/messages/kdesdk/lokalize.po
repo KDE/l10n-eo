@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lokalize\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-28 04:23+0100\n"
+"POT-Creation-Date: 2012-01-29 03:16+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -216,7 +216,7 @@ msgstr ""
 #. i18n: ectx: Menu (go)
 #. i18n: file: src/editorui.rc:141
 #. i18n: ectx: Menu (go)
-#: rc.cpp:95 rc.cpp:522
+#: rc.cpp:95 rc.cpp:507
 msgid "&Go"
 msgstr "Navi&gi"
 
@@ -226,7 +226,9 @@ msgstr "Navi&gi"
 #. i18n: ectx: ToolBar (mainToolBar)
 #. i18n: file: src/editorui.rc:232
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:98 rc.cpp:474 rc.cpp:537
+#. i18n: file: src/filesearch/filesearchtabui.rc:10
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:98 rc.cpp:459 rc.cpp:522 rc.cpp:574
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
 
@@ -776,7 +778,9 @@ msgstr ""
 
 #. i18n: file: src/tm/queryoptions.ui:74
 #. i18n: ectx: property (toolTip), widget (KLineEdit, queryTarget)
-#: rc.cpp:380
+#. i18n: file: src/filesearch/filesearchoptions.ui:50
+#. i18n: ectx: property (toolTip), widget (KLineEdit, queryTarget)
+#: rc.cpp:380 rc.cpp:564
 msgid ""
 "Search expression for target language part.\n"
 "Press Enter to start the search."
@@ -784,13 +788,17 @@ msgstr ""
 
 #. i18n: file: src/tm/queryoptions.ui:81
 #. i18n: ectx: property (text), widget (QLabel, querySourceLabel)
-#: rc.cpp:384 scripts/newprojectwizard.py:281
+#. i18n: file: src/filesearch/filesearchoptions.ui:19
+#. i18n: ectx: property (text), widget (QLabel, querySourceLabel)
+#: rc.cpp:384 rc.cpp:552 scripts/newprojectwizard.py:281
 msgid "Source:"
 msgstr ""
 
 #. i18n: file: src/tm/queryoptions.ui:91
 #. i18n: ectx: property (text), widget (QLabel, queryTargetLabel)
-#: rc.cpp:387 scripts/newprojectwizard.py:282
+#. i18n: file: src/filesearch/filesearchoptions.ui:39
+#. i18n: ectx: property (text), widget (QLabel, queryTargetLabel)
+#: rc.cpp:387 rc.cpp:561 scripts/newprojectwizard.py:282
 msgid "Target:"
 msgstr "Celo:"
 
@@ -810,86 +818,55 @@ msgstr ""
 msgid "Invert"
 msgstr "Inversigite"
 
-#. i18n: file: src/tm/queryoptions.ui:137
+#. i18n: file: src/tm/queryoptions.ui:135
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: rc.cpp:402
 msgid "File mask:"
 msgstr ""
 
-#. i18n: file: src/tm/queryoptions.ui:153
+#. i18n: file: src/tm/queryoptions.ui:151
 #. i18n: ectx: property (toolTip), widget (KLineEdit, filemask)
 #: rc.cpp:405
 msgid "Show only results from files with path matching specified mask"
 msgstr ""
 
-#. i18n: file: src/tm/queryoptions.ui:164
-#. i18n: ectx: property (toolTip), widget (QRadioButton, substr)
-#: rc.cpp:408 src/cataloglistview/cataloglistview.cpp:195
-msgid "Case insensitive"
+#. i18n: file: src/tm/queryoptions.ui:158
+#. i18n: ectx: property (text), widget (QLabel, label_s)
+#: rc.cpp:408
+msgid "Query syntax:"
 msgstr ""
 
-#. i18n: file: src/tm/queryoptions.ui:167
-#. i18n: ectx: property (text), widget (QRadioButton, substr)
-#: rc.cpp:411
-msgctxt "@option:radio"
-msgid "Substring"
-msgstr ""
-
-#. i18n: file: src/tm/queryoptions.ui:177
-#. i18n: ectx: property (toolTip), widget (QRadioButton, like)
-#: rc.cpp:414
-msgid "Space is AND operator. Case insensitive."
-msgstr ""
-
-#. i18n: file: src/tm/queryoptions.ui:180
-#. i18n: ectx: property (text), widget (QRadioButton, like)
-#: rc.cpp:417
-msgctxt "@option:radio"
-msgid "Google-like"
-msgstr ""
-
-#. i18n: file: src/tm/queryoptions.ui:190
-#. i18n: ectx: property (toolTip), widget (QRadioButton, glob)
-#: rc.cpp:420
-msgid "Shell globs (* and ?). Case sensitive."
-msgstr ""
-
-#. i18n: file: src/tm/queryoptions.ui:193
-#. i18n: ectx: property (text), widget (QRadioButton, glob)
-#: rc.cpp:423
-msgctxt "@option:radio"
-msgid "Wildcard"
-msgstr ""
-
-#. i18n: file: src/tm/queryoptions.ui:213
+#. i18n: file: src/tm/queryoptions.ui:186
 #. i18n: ectx: property (text), widget (QPushButton, doFind)
-#: rc.cpp:426
+#. i18n: file: src/filesearch/filesearchoptions.ui:64
+#. i18n: ectx: property (text), widget (QPushButton, doFind)
+#: rc.cpp:411 rc.cpp:571
 msgid "&Search"
 msgstr "&Serĉi"
 
-#. i18n: file: src/tm/queryoptions.ui:220
+#. i18n: file: src/tm/queryoptions.ui:193
 #. i18n: ectx: property (toolTip), widget (QPushButton, doUpdateTM)
-#: rc.cpp:429
+#: rc.cpp:414
 msgid ""
 "Reads all project files into translation memory, updating old entries. The "
 "scanning will work in background."
 msgstr ""
 
-#. i18n: file: src/tm/queryoptions.ui:223
+#. i18n: file: src/tm/queryoptions.ui:196
 #. i18n: ectx: property (text), widget (QPushButton, doUpdateTM)
-#: rc.cpp:432
+#: rc.cpp:417
 msgid "&Rescan project files"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:20
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:435 scripts/newprojectwizard.py:213
+#: rc.cpp:420 scripts/newprojectwizard.py:213
 msgid "Name:"
 msgstr "Nomo:"
 
 #. i18n: file: src/tm/dbparams.ui:28
 #. i18n: ectx: property (text), item, widget (QComboBox, dbType)
-#: rc.cpp:438
+#: rc.cpp:423
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Lokalize"
@@ -898,13 +875,13 @@ msgstr "Lokalize"
 
 #. i18n: file: src/tm/dbparams.ui:36
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:441
+#: rc.cpp:426
 msgid "Database type:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:43
 #. i18n: ectx: property (title), widget (QGroupBox, connectionBox)
-#: rc.cpp:444
+#: rc.cpp:429
 #, fuzzy
 #| msgid "Location:"
 msgid "Connection"
@@ -912,43 +889,43 @@ msgstr "Loko:"
 
 #. i18n: file: src/tm/dbparams.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:447
+#: rc.cpp:432
 msgid "Database name:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:62
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:450
+#: rc.cpp:435
 msgid "Host:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:453
+#: rc.cpp:438
 msgid "User:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:86
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:456
+#: rc.cpp:441
 msgid "Password:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:103
 #. i18n: ectx: property (title), widget (QGroupBox, contentBox)
-#: rc.cpp:459
+#: rc.cpp:444
 msgid "Content"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:462
+#: rc.cpp:447
 msgid "Source language:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:122
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:465
+#: rc.cpp:450
 #, fuzzy
 #| msgid "Target:"
 msgid "Target language:"
@@ -956,67 +933,67 @@ msgstr "Celo:"
 
 #. i18n: file: src/tm/dbparams.ui:135
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:468
+#: rc.cpp:453
 msgid "Markup regex:"
 msgstr ""
 
 #. i18n: file: src/tm/dbparams.ui:145
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:471
+#: rc.cpp:456
 msgid "Accelerator:"
 msgstr ""
 
 #. i18n: file: src/tm/managedatabases.ui:19
 #. i18n: ectx: property (text), widget (QPushButton, create)
-#: rc.cpp:477
+#: rc.cpp:462
 msgid "Create"
 msgstr "Krei"
 
 #. i18n: file: src/tm/managedatabases.ui:26
 #. i18n: ectx: property (text), widget (QPushButton, addData)
-#: rc.cpp:480
+#: rc.cpp:465
 msgid "Add Data"
 msgstr ""
 
 #. i18n: file: src/tm/managedatabases.ui:33
 #. i18n: ectx: property (text), widget (QPushButton, importTMX)
-#: rc.cpp:483
+#: rc.cpp:468
 msgid "Add Data from TMX"
 msgstr ""
 
 #. i18n: file: src/tm/managedatabases.ui:40
 #. i18n: ectx: property (text), widget (QPushButton, exportTMX)
-#: rc.cpp:486
+#: rc.cpp:471
 msgid "Export to TMX"
 msgstr ""
 
 #. i18n: file: src/tm/managedatabases.ui:47
 #. i18n: ectx: property (text), widget (QPushButton, remove)
-#: rc.cpp:489
+#: rc.cpp:474
 msgid "Remove"
 msgstr "Forigi"
 
 #. i18n: file: src/webquery/querycontrol.ui:8
 #. i18n: ectx: property (text), widget (QPushButton, queryBtn)
-#: rc.cpp:492
+#: rc.cpp:477
 msgid "Query"
 msgstr ""
 
 #. i18n: file: src/webquery/querycontrol.ui:15
 #. i18n: ectx: property (text), widget (QCheckBox, autoQuery)
-#: rc.cpp:495
+#: rc.cpp:480
 msgid "Autoquery"
 msgstr ""
 
 #. i18n: file: src/webquery/querycontrol.ui:22
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkBox)
-#: rc.cpp:498
+#: rc.cpp:483
 msgid "Prefetch for the next untranslated"
 msgstr ""
 
 #. i18n: file: src/webquery/querycontrol.ui:25
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: rc.cpp:501
+#: rc.cpp:486
 msgid "Prefetch"
 msgstr ""
 
@@ -1024,119 +1001,135 @@ msgstr ""
 #. i18n: ectx: Menu (file)
 #. i18n: file: src/lokalizemainwindowui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:504 rc.cpp:555
+#: rc.cpp:489 rc.cpp:540
 msgid "&File"
 msgstr "&Dosiero"
 
 #. i18n: file: src/editorui.rc:32
 #. i18n: ectx: Menu (edit)
-#: rc.cpp:507
+#: rc.cpp:492
 msgid "&Edit"
 msgstr "&Redakti"
 
 #. i18n: file: src/editorui.rc:64
 #. i18n: ectx: Menu (glossary)
-#: rc.cpp:510
+#: rc.cpp:495
 msgid "&Glossary"
 msgstr ""
 
 #. i18n: file: src/editorui.rc:89
 #. i18n: ectx: Menu (webquery)
-#: rc.cpp:513
+#: rc.cpp:498
 msgid "&WebQuery"
 msgstr ""
 
 #. i18n: file: src/editorui.rc:106
 #. i18n: ectx: Menu (tmquery)
-#: rc.cpp:516
+#: rc.cpp:501
 msgid "Translation &Memory"
 msgstr ""
 
 #. i18n: file: src/editorui.rc:123
 #. i18n: ectx: Menu (alttrans)
-#: rc.cpp:519
+#: rc.cpp:504
 msgid "Alternative Translations"
 msgstr ""
 
 #. i18n: file: src/editorui.rc:171
 #. i18n: ectx: Menu (bookmarks)
-#: rc.cpp:525
+#: rc.cpp:510
 msgid "&Bookmarks"
 msgstr "&Legosignoj"
 
 #. i18n: file: src/editorui.rc:178
 #. i18n: ectx: Menu (merge)
-#: rc.cpp:528
+#: rc.cpp:513
 msgid "S&ync"
 msgstr ""
 
 #. i18n: file: src/editorui.rc:187
 #. i18n: ectx: Menu (mergesecondary)
-#: rc.cpp:531
+#: rc.cpp:516
 msgid "&Secondary sync source"
 msgstr ""
 
 #. i18n: file: src/editorui.rc:209
 #. i18n: ectx: Menu (toolviews)
-#. i18n: file: src/lokalizemainwindowui.rc:40
+#. i18n: file: src/lokalizemainwindowui.rc:43
 #. i18n: ectx: Menu (toolviews)
-#: rc.cpp:534 rc.cpp:564
+#: rc.cpp:519 rc.cpp:549
 msgid "Tool&views"
 msgstr ""
 
 #. i18n: file: src/kaider_findextension.ui:30
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_skipTags)
-#: rc.cpp:540
+#: rc.cpp:525
 msgid "Skip tags"
 msgstr ""
 
 #. i18n: file: src/kaider_findextension.ui:33
 #. i18n: ectx: property (text), widget (QCheckBox, m_skipTags)
-#: rc.cpp:543
+#: rc.cpp:528
 msgctxt "@option:check"
 msgid "Skip markup"
 msgstr ""
 
 #. i18n: file: src/kaider_findextension.ui:40
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_ignoreAccelMarks)
-#: rc.cpp:546 src/cataloglistview/cataloglistview.cpp:196
+#: rc.cpp:531 src/cataloglistview/cataloglistview.cpp:196
 msgid "Ignore accelerator marks"
 msgstr ""
 
 #. i18n: file: src/kaider_findextension.ui:43
 #. i18n: ectx: property (text), widget (QCheckBox, m_ignoreAccelMarks)
-#: rc.cpp:549
+#: rc.cpp:534
 msgctxt "@option:check"
 msgid "Ignore accelerator marks"
 msgstr ""
 
 #. i18n: file: src/kaider_findextension.ui:54
 #. i18n: ectx: property (text), widget (QCheckBox, m_notes)
-#: rc.cpp:552
+#: rc.cpp:537
 msgid "Include notes"
 msgstr ""
 
 #. i18n: file: src/lokalizemainwindowui.rc:17
 #. i18n: ectx: Menu (project)
-#: rc.cpp:558
+#: rc.cpp:543
 msgid "&Project"
 msgstr "&Projekto"
 
 #. i18n: file: src/lokalizemainwindowui.rc:27
 #. i18n: ectx: Menu (project_actions)
-#: rc.cpp:561
+#: rc.cpp:546
 msgid "&Scripts"
+msgstr ""
+
+#. i18n: file: src/filesearch/filesearchoptions.ui:32
+#. i18n: ectx: property (toolTip), widget (KLineEdit, querySource)
+#: rc.cpp:555
+msgid ""
+"Search expression for source language part.\n"
+"Press Ctrl+L to go to this control.\n"
+"Press Enter to start the search.\n"
+"Press Esc to stop the search."
+msgstr ""
+
+#. i18n: file: src/filesearch/filesearchoptions.ui:57
+#. i18n: ectx: property (text), widget (QCheckBox, regEx)
+#: rc.cpp:568
+msgid "Regular expressions"
 msgstr ""
 
 #. i18n: tag collection attribute text
 #. i18n: file: scripts/msgmerge.rc:3
-#: rc.cpp:567
+#: rc.cpp:577
 msgid "File"
 msgstr "Dosiero"
 
 #. i18n: tag script attribute text
 #. i18n: file: scripts/msgmerge.rc:4
-#: rc.cpp:570
+#: rc.cpp:580
 msgid "Update file from template"
 msgstr ""
 
@@ -1144,13 +1137,13 @@ msgstr ""
 #. i18n: file: scripts/newprojectwizard.rc:3
 #. i18n: tag collection attribute text
 #. i18n: file: scripts/newprojectwizard_win.rc:3
-#: rc.cpp:573 rc.cpp:582
+#: rc.cpp:583 rc.cpp:592
 msgid "Project"
 msgstr "Projekto"
 
 #. i18n: tag script attribute text
 #. i18n: file: scripts/newprojectwizard.rc:4
-#: rc.cpp:576
+#: rc.cpp:586
 msgid "New project wizard"
 msgstr ""
 
@@ -1158,13 +1151,13 @@ msgstr ""
 #. i18n: file: scripts/newprojectwizard.rc:4
 #. i18n: tag script attribute comment
 #. i18n: file: scripts/newprojectwizard_win.rc:4
-#: rc.cpp:579 rc.cpp:588
+#: rc.cpp:589 rc.cpp:598
 msgid "Fires up a wizard to guide you through project creation"
 msgstr ""
 
 #. i18n: tag script attribute text
 #. i18n: file: scripts/newprojectwizard_win.rc:4
-#: rc.cpp:585
+#: rc.cpp:595
 msgid "Create new project"
 msgstr ""
 
@@ -1172,19 +1165,19 @@ msgstr ""
 #. i18n: file: scripts/widget-text-capture.rc:3
 #. i18n: tag collection attribute text
 #. i18n: file: scripts/xliff2odf.rc:3
-#: rc.cpp:591 rc.cpp:600
+#: rc.cpp:601 rc.cpp:610
 msgid "Tools"
 msgstr "Iloj"
 
 #. i18n: tag script attribute text
 #. i18n: file: scripts/widget-text-capture.rc:4
-#: rc.cpp:594
+#: rc.cpp:604
 msgid "Widget text capture"
 msgstr ""
 
 #. i18n: tag script attribute comment
 #. i18n: file: scripts/widget-text-capture.rc:4
-#: rc.cpp:597
+#: rc.cpp:607
 msgid ""
 "Middle mouse click on a widget in any KDE app initiates TM search in all "
 "opened Lokalize windows"
@@ -1192,13 +1185,13 @@ msgstr ""
 
 #. i18n: tag script attribute text
 #. i18n: file: scripts/xliff2odf.rc:4
-#: rc.cpp:603
+#: rc.cpp:613
 msgid "Merge into ODF"
 msgstr ""
 
 #. i18n: tag script attribute comment
 #. i18n: file: scripts/xliff2odf.rc:4
-#: rc.cpp:606
+#: rc.cpp:616
 msgid "Generates translated version of ODF document"
 msgstr ""
 
@@ -1276,8 +1269,8 @@ msgctxt "@info:status message entry"
 msgid "Current: %1"
 msgstr ""
 
-#: src/editortab.cpp:165 src/editortab.cpp:834 src/project/projecttab.cpp:246
-#: src/tm/tmtab.cpp:677
+#: src/editortab.cpp:165 src/editortab.cpp:834 src/project/projecttab.cpp:274
+#: src/tm/tmtab.cpp:592
 #, kde-format
 msgctxt "@info:status message entries"
 msgid "Total: %1"
@@ -1303,7 +1296,7 @@ msgctxt "percentages in statusbar"
 msgid " (%1%)"
 msgstr ""
 
-#: src/editortab.cpp:211 src/lokalizemainwindow.cpp:402
+#: src/editortab.cpp:211 src/lokalizemainwindow.cpp:443
 #, fuzzy
 #| msgid "&View"
 msgctxt "@title actions category"
@@ -1332,7 +1325,7 @@ msgstr ""
 msgid "Translation Memory"
 msgstr ""
 
-#: src/editortab.cpp:217 src/lokalizemainwindow.cpp:404
+#: src/editortab.cpp:217 src/lokalizemainwindow.cpp:445
 msgctxt "@title actions category"
 msgid "Glossary"
 msgstr ""
@@ -1665,61 +1658,61 @@ msgctxt "@label:spinbox"
 msgid "Enter entry number:"
 msgstr ""
 
-#: src/editortab.cpp:1044
+#: src/editortab.cpp:1043
 #, kde-format
 msgctxt "@info:status"
 msgid "Current: %1"
 msgstr ""
 
-#: src/editortab.cpp:1056 src/cataloglistview/catalogmodel.cpp:176
-#: src/tm/tmtab.cpp:326
+#: src/editortab.cpp:1055 src/cataloglistview/catalogmodel.cpp:179
+#: src/tm/tmtab.cpp:238
 msgctxt "@info:status"
 msgid "Untranslated"
 msgstr ""
 
-#: src/editortab.cpp:1057 src/editortab.cpp:1249
-#: src/cataloglistview/catalogmodel.cpp:174 src/tm/tmtab.cpp:324
+#: src/editortab.cpp:1056 src/editortab.cpp:1248
+#: src/cataloglistview/catalogmodel.cpp:177 src/tm/tmtab.cpp:236
 msgctxt "@info:status 'non-fuzzy' in gettext terminology"
 msgid "Ready"
 msgstr ""
 
-#: src/editortab.cpp:1058 src/editortab.cpp:1244
-#: src/cataloglistview/catalogmodel.cpp:175 src/tm/tmtab.cpp:325
+#: src/editortab.cpp:1057 src/editortab.cpp:1243
+#: src/cataloglistview/catalogmodel.cpp:178 src/tm/tmtab.cpp:237
 msgctxt "@info:status 'fuzzy' in gettext terminology"
 msgid "Needs review"
 msgstr ""
 
-#: src/editortab.cpp:1222
+#: src/editortab.cpp:1221
 msgctxt "@option:check trans-unit state"
 msgid "Translated"
 msgstr ""
 
-#: src/editortab.cpp:1223
+#: src/editortab.cpp:1222
 msgctxt "@option:check trans-unit state"
 msgid "Signed-off"
 msgstr ""
 
-#: src/editortab.cpp:1224
+#: src/editortab.cpp:1223
 msgctxt "@option:check trans-unit state"
 msgid "Approved"
 msgstr ""
 
-#: src/editortab.cpp:1227
+#: src/editortab.cpp:1226
 msgctxt "@info:tooltip"
 msgid "Translation is done (although still may need a review)"
 msgstr ""
 
-#: src/editortab.cpp:1228
+#: src/editortab.cpp:1227
 msgctxt "@info:tooltip"
 msgid "Translation received positive review"
 msgstr ""
 
-#: src/editortab.cpp:1229
+#: src/editortab.cpp:1228
 msgctxt "@info:tooltip"
 msgid "Entry is fully localized (i.e. final)"
 msgstr ""
 
-#: src/editortab.cpp:1369
+#: src/editortab.cpp:1368
 msgctxt "@info"
 msgid ""
 "Cannot open source files: no scripts to do so are currently loaded. Refer to "
@@ -1796,78 +1789,88 @@ msgctxt "@item Undo action item"
 msgid "Unwrap"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:139
+#: src/lokalizemainwindow.cpp:140
 msgctxt "@info"
 msgid "No Qt Sql modules were found. Translation memory will not work."
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:367 src/project/project.cpp:241
+#: src/lokalizemainwindow.cpp:378 src/project/project.cpp:245
 msgid "TM facility requires SQLite Qt module."
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:367 src/project/project.cpp:241
+#: src/lokalizemainwindow.cpp:378 src/project/project.cpp:245
 msgid "No SQLite module available"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:405 src/tm/tmtab.cpp:561
+#: src/lokalizemainwindow.cpp:446 src/tm/tmtab.cpp:499
 msgctxt "@title actions category"
 msgid "Translation Memory"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:406 src/project/projecttab.cpp:128
+#: src/lokalizemainwindow.cpp:447 src/project/projecttab.cpp:128
 msgctxt "@title actions category"
 msgid "Project"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:445
+#: src/lokalizemainwindow.cpp:486
 msgid "Next tab"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:448
+#: src/lokalizemainwindow.cpp:489
 msgid "Previous tab"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:454
+#: src/lokalizemainwindow.cpp:495
 msgctxt "@action:inmenu"
 msgid "Glossary"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:462
+#: src/lokalizemainwindow.cpp:499
 msgctxt "@action:inmenu"
 msgid "Translation memory"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:466 src/tm/tmtab.cpp:564
+#: src/lokalizemainwindow.cpp:503 src/tm/tmtab.cpp:502
 msgctxt "@action:inmenu"
 msgid "Manage translation memories"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:470
+#: src/lokalizemainwindow.cpp:507
 msgctxt "@action:inmenu"
 msgid "Project overview"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:474
+#: src/lokalizemainwindow.cpp:511
 msgctxt "@action:inmenu"
 msgid "Configure project"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:477
+#: src/lokalizemainwindow.cpp:514
 msgctxt "@action:inmenu"
 msgid "Create new project"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:480 src/project/projecttab.cpp:131
+#: src/lokalizemainwindow.cpp:517 src/project/projecttab.cpp:131
 msgctxt "@action:inmenu"
 msgid "Open project"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:483
+#: src/lokalizemainwindow.cpp:520
 msgctxt "@action:inmenu"
 msgid "Open recent project"
 msgstr ""
 
-#: src/lokalizemainwindow.cpp:663
+#: src/lokalizemainwindow.cpp:528
+msgctxt "@action:inmenu"
+msgid "Search and replace in files"
+msgstr ""
+
+#: src/lokalizemainwindow.cpp:531
+msgctxt "@action:inmenu"
+msgid "Find next in files"
+msgstr ""
+
+#: src/lokalizemainwindow.cpp:707
 msgctxt "@info"
 msgid ""
 "Error opening the following files:\n"
@@ -1888,7 +1891,7 @@ msgstr "Lokalize"
 #: src/main.cpp:61
 msgctxt "@info:credit"
 msgid ""
-"(c) 2007-2011 Nick Shaforostoff\n"
+"(c) 2007-2012 Nick Shaforostoff\n"
 "(c) 1999-2006 The KBabel developers"
 msgstr ""
 
@@ -2087,21 +2090,21 @@ msgctxt "@item Undo action item"
 msgid "Edit phases"
 msgstr ""
 
-#: src/xlifftextedit.cpp:658 src/catalog/cmd.cpp:429
+#: src/xlifftextedit.cpp:659 src/catalog/cmd.cpp:429
 msgctxt "@item Undo action item"
 msgid "Insert text with markup"
 msgstr ""
 
-#: src/xlifftextedit.cpp:1042 src/xlifftextedit.cpp:1101
+#: src/xlifftextedit.cpp:1043 src/xlifftextedit.cpp:1102
 msgctxt "@item Undo action item"
 msgid "Replace text"
 msgstr ""
 
-#: src/xlifftextedit.cpp:1126
+#: src/xlifftextedit.cpp:1127
 msgid "no spellcheck available"
 msgstr ""
 
-#: src/xlifftextedit.cpp:1257
+#: src/xlifftextedit.cpp:1258
 msgctxt "@item Undo action item"
 msgid "Copy source to target"
 msgstr ""
@@ -2521,6 +2524,10 @@ msgstr ""
 msgid "Reset individual filter"
 msgstr ""
 
+#: src/cataloglistview/cataloglistview.cpp:195 src/tm/tmtab.cpp:373
+msgid "Case insensitive"
+msgstr ""
+
 #: src/cataloglistview/cataloglistview.cpp:197
 msgid "Ready"
 msgstr "Preta"
@@ -2573,13 +2580,13 @@ msgid "Entry"
 msgstr ""
 
 #: src/cataloglistview/catalogmodel.cpp:103 src/glossary/glossary.cpp:231
-#: src/tm/qamodel.cpp:76 src/tm/tmtab.cpp:154
+#: src/tm/qamodel.cpp:104 src/tm/tmtab.cpp:69
 msgctxt "@title:column Original text"
 msgid "Source"
 msgstr ""
 
 #: src/cataloglistview/catalogmodel.cpp:104 src/glossary/glossary.cpp:232
-#: src/tm/tmtab.cpp:155
+#: src/tm/tmtab.cpp:70
 msgctxt "@title:column Text in target language"
 msgid "Target"
 msgstr ""
@@ -2589,7 +2596,7 @@ msgctxt "@title:column"
 msgid "Notes"
 msgstr ""
 
-#: src/cataloglistview/catalogmodel.cpp:106 src/tm/tmtab.cpp:158
+#: src/cataloglistview/catalogmodel.cpp:106 src/tm/tmtab.cpp:73
 msgctxt "@title:column"
 msgid "Translation Status"
 msgstr ""
@@ -2835,6 +2842,16 @@ msgctxt "@action:inmenu"
 msgid "Add to translation memory"
 msgstr ""
 
+#: src/project/projecttab.cpp:185
+msgctxt "@action:inmenu"
+msgid "Search in files"
+msgstr ""
+
+#: src/project/projecttab.cpp:187
+msgctxt "@action:inmenu"
+msgid "Search in files (including templates)"
+msgstr ""
+
 #: src/tm/dbfilesmodel.cpp:106
 msgctxt "@title:column"
 msgid "Name"
@@ -2869,7 +2886,7 @@ msgctxt "@title:column"
 msgid "Unique translations"
 msgstr ""
 
-#: src/tm/qamodel.cpp:77
+#: src/tm/qamodel.cpp:105
 msgctxt "@title:column Translator's false friend"
 msgid "False Friend"
 msgstr ""
@@ -2931,42 +2948,62 @@ msgctxt "@title:window"
 msgid "Select TMX file to export selected database to"
 msgstr ""
 
-#: src/tm/tmscanapi.cpp:87
+#: src/tm/tmscanapi.cpp:88
 msgid "Adding files to Lokalize translation memory"
 msgstr ""
 
-#: src/tm/tmscanapi.cpp:88
+#: src/tm/tmscanapi.cpp:89
 msgid "TM"
 msgstr ""
 
-#: src/tm/tmtab.cpp:156
+#: src/tm/tmtab.cpp:71
 msgctxt "@title:column"
 msgid "Context"
 msgstr ""
 
-#: src/tm/tmtab.cpp:157
+#: src/tm/tmtab.cpp:72
 msgctxt "@title:column"
 msgid "File"
 msgstr ""
 
-#: src/tm/tmtab.cpp:465 src/tm/tmview.cpp:147 src/tm/tmview.cpp:152
+#: src/tm/tmtab.cpp:366
+msgid "Substring"
+msgstr ""
+
+#: src/tm/tmtab.cpp:366
+msgid "Google-like"
+msgstr ""
+
+#: src/tm/tmtab.cpp:366
+msgid "Wildcard"
+msgstr ""
+
+#: src/tm/tmtab.cpp:374
+msgid "Space is AND operator. Case insensitive."
+msgstr ""
+
+#: src/tm/tmtab.cpp:375
+msgid "Shell globs (* and ?). Case sensitive."
+msgstr ""
+
+#: src/tm/tmtab.cpp:390 src/tm/tmview.cpp:147 src/tm/tmview.cpp:152
 msgctxt "@title:window"
 msgid "Translation Memory"
 msgstr ""
 
-#: src/tm/tmtab.cpp:487
+#: src/tm/tmtab.cpp:412
 msgid "Copy source to clipboard"
 msgstr ""
 
-#: src/tm/tmtab.cpp:493
+#: src/tm/tmtab.cpp:418
 msgid "Copy target to clipboard"
 msgstr ""
 
-#: src/tm/tmtab.cpp:499
+#: src/tm/tmtab.cpp:424
 msgid "Open file"
 msgstr "Malfermi dosieron"
 
-#: src/tm/tmtab.cpp:679
+#: src/tm/tmtab.cpp:594
 #, kde-format
 msgctxt "@info:status message entries"
 msgid "Total: %1 (%2)"
@@ -3063,7 +3100,7 @@ msgctxt "@title:window"
 msgid "Translation Memory Entry Removal"
 msgstr ""
 
-#: src/tm/tmview.cpp:991
+#: src/tm/tmview.cpp:994
 msgctxt "@item Undo action"
 msgid "Use translation memory suggestion"
 msgstr ""

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: liboktetakasten\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-16 04:18+0100\n"
+"POT-Creation-Date: 2012-01-29 03:16+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -186,7 +186,7 @@ msgid "Value coding:"
 msgstr ""
 
 #: gui/io/streamencoder/values/bytearrayvaluesstreamencoderconfigeditor.cpp:57
-#: controllers/view/viewprofiles/viewprofileedit.cpp:137
+#: controllers/view/viewprofiles/viewprofileedit.cpp:138
 #: controllers/view/viewstatus/viewstatuscontroller.cpp:71
 msgctxt ""
 "@item:inmenu encoding of the bytes as values in the hexadecimal format"
@@ -194,21 +194,21 @@ msgid "Hexadecimal"
 msgstr "Hexadecimal"
 
 #: gui/io/streamencoder/values/bytearrayvaluesstreamencoderconfigeditor.cpp:58
-#: controllers/view/viewprofiles/viewprofileedit.cpp:138
+#: controllers/view/viewprofiles/viewprofileedit.cpp:140
 #: controllers/view/viewstatus/viewstatuscontroller.cpp:72
 msgctxt "@item:inmenu encoding of the bytes as values in the decimal format"
 msgid "Decimal"
 msgstr "Decimal"
 
 #: gui/io/streamencoder/values/bytearrayvaluesstreamencoderconfigeditor.cpp:59
-#: controllers/view/viewprofiles/viewprofileedit.cpp:139
+#: controllers/view/viewprofiles/viewprofileedit.cpp:142
 #: controllers/view/viewstatus/viewstatuscontroller.cpp:73
 msgctxt "@item:inmenu encoding of the bytes as values in the octal format"
 msgid "Octal"
 msgstr ""
 
 #: gui/io/streamencoder/values/bytearrayvaluesstreamencoderconfigeditor.cpp:60
-#: controllers/view/viewprofiles/viewprofileedit.cpp:140
+#: controllers/view/viewprofiles/viewprofileedit.cpp:144
 #: controllers/view/viewstatus/viewstatuscontroller.cpp:74
 msgctxt "@item:inmenu encoding of the bytes as values in the binary format"
 msgid "Binary"
@@ -357,7 +357,7 @@ msgctxt "@item:inmenu"
 msgid "&Rows"
 msgstr ""
 
-#: controllers/view/gotooffset/gotooffsetcontroller.cpp:47
+#: controllers/view/gotooffset/gotooffsetcontroller.cpp:48
 msgctxt "@action:inmenu"
 msgid "&Go to Offset..."
 msgstr ""
@@ -447,42 +447,88 @@ msgstr ""
 msgid "<no name specified>"
 msgstr ""
 
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:45
-msgid "UTF32-LE char"
-msgstr ""
-
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:45
-msgid "UTF32-BE char"
-msgstr ""
-
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:50
-msgid "UTF32-LE string"
-msgstr ""
-
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:50
-msgid "UTF32-BE string"
-msgstr ""
-
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:68
-#: controllers/view/structures/datatypes/strings/utf16stringdata.cpp:68
-#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:67
+#: controllers/view/structures/datatypes/structuredatainformation.cpp:26
 #, kde-format
-msgid "Value too big: 0x%1"
+msgctxt "data type in C/C++, then name"
+msgid "struct %1"
 msgstr ""
 
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:73
-#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:76
-#: controllers/view/structures/datatypes/strings/utf16stringdata.cpp:73
-#: controllers/view/structures/datatypes/strings/utf16stringdata.cpp:76
-#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:72
-#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:75
+#: controllers/view/structures/datatypes/datainformation.cpp:59
+#: controllers/view/structures/datatypes/datainformation.cpp:63
+#: controllers/view/info/infoview.cpp:156
+#: controllers/view/viewstatus/viewstatuscontroller.cpp:230
+#, kde-format
+msgid "1 byte"
+msgid_plural "%1 bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: controllers/view/structures/datatypes/datainformation.cpp:64
+#, kde-format
+msgid "1 bit"
+msgid_plural "%1 bits"
+msgstr[0] ""
+msgstr[1] ""
+
+#: controllers/view/structures/datatypes/datainformation.cpp:65
 #, fuzzy, kde-format
 #| msgctxt "@item description of bookmark"
 #| msgid "%1: %2"
-msgid "%1 (U+%2)"
+msgctxt "number of bytes, then number of bits"
+msgid "%1 %2"
 msgstr "%1: %2"
 
-#: controllers/view/structures/datatypes/strings/stringdatainformation.cpp:377
+#: controllers/view/structures/datatypes/datainformation.cpp:199
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:260
+#, kde-format
+msgctxt "not all values in this structure are as they should be"
+msgid "Validation failed: \"%1\""
+msgstr ""
+
+#: controllers/view/structures/datatypes/datainformation.cpp:205
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:266
+msgctxt "not all values in this structure are as they should be"
+msgid "Validation failed."
+msgstr ""
+
+#: controllers/view/structures/datatypes/datainformation.cpp:207
+#, kde-format
+msgid ""
+"Name: %1\n"
+"Value: %2\n"
+"\n"
+"Type: %3\n"
+"Size: %4\n"
+"\n"
+"%5"
+msgstr ""
+
+#: controllers/view/structures/datatypes/datainformation.cpp:212
+#, kde-format
+msgid ""
+"Name: %1\n"
+"Value: %2\n"
+"\n"
+"Type: %3\n"
+"Size: %4"
+msgstr ""
+
+#: controllers/view/structures/datatypes/array/complexarraydata.cpp:105
+#, fuzzy, kde-format
+#| msgctxt "array type then length"
+#| msgid "%1[%2]"
+msgctxt "type name, then array length"
+msgid "%1[%2]"
+msgstr "%1[%2]"
+
+#: controllers/view/structures/datatypes/array/primitivearraydata.cpp:179
+#: controllers/view/structures/datatypes/primitive/uintdatainformation.cpp:55
+#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:28
+msgctxt "invalid value (out of range)"
+msgid "&lt;invalid&gt;"
+msgstr ""
+
+#: controllers/view/structures/datatypes/strings/stringdatainformation.cpp:378
 msgid "End of file reached prematurely"
 msgstr ""
 
@@ -502,15 +548,24 @@ msgstr ""
 msgid "UTF16-BE string"
 msgstr ""
 
-#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:45
-msgid "UTF8 char"
+#: controllers/view/structures/datatypes/strings/utf16stringdata.cpp:68
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:68
+#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:67
+#, kde-format
+msgid "Value too big: 0x%1"
 msgstr ""
 
-#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:50
-#, fuzzy
-#| msgid "Settings"
-msgid "UTF8 string"
-msgstr "Agordo"
+#: controllers/view/structures/datatypes/strings/utf16stringdata.cpp:73
+#: controllers/view/structures/datatypes/strings/utf16stringdata.cpp:76
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:73
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:76
+#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:72
+#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:75
+#, fuzzy, kde-format
+#| msgctxt "@item description of bookmark"
+#| msgid "%1: %2"
+msgid "%1 (U+%2)"
+msgstr "%1: %2"
 
 #: controllers/view/structures/datatypes/strings/asciistringdata.cpp:155
 #, kde-format
@@ -525,6 +580,32 @@ msgstr ""
 #, fuzzy
 #| msgid "Settings"
 msgid "ASCII string"
+msgstr "Agordo"
+
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:45
+msgid "UTF32-LE char"
+msgstr ""
+
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:45
+msgid "UTF32-BE char"
+msgstr ""
+
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:50
+msgid "UTF32-LE string"
+msgstr ""
+
+#: controllers/view/structures/datatypes/strings/utf32stringdata.cpp:50
+msgid "UTF32-BE string"
+msgstr ""
+
+#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:45
+msgid "UTF8 char"
+msgstr ""
+
+#: controllers/view/structures/datatypes/strings/utf8stringdata.cpp:50
+#, fuzzy
+#| msgid "Settings"
+msgid "UTF8 string"
 msgstr "Agordo"
 
 #: controllers/view/structures/datatypes/strings/latin1stringdata.cpp:144
@@ -597,6 +678,11 @@ msgid_plural "bitfield (%1 bits wide)"
 msgstr[0] ""
 msgstr[1] ""
 
+#: controllers/view/structures/datatypes/primitive/chardatainformation.h:67
+msgctxt "Data type"
+msgid "char"
+msgstr ""
+
 #: controllers/view/structures/datatypes/primitive/enumdatainformation.cpp:61
 #, fuzzy, kde-format
 #| msgctxt "@item description of bookmark"
@@ -614,6 +700,16 @@ msgstr ""
 msgid "enum (%1)"
 msgstr ""
 
+#: controllers/view/structures/datatypes/primitive/floatdatainformation.h:67
+msgctxt "Data type"
+msgid "float"
+msgstr ""
+
+#: controllers/view/structures/datatypes/primitive/doubledatainformation.h:68
+msgctxt "Data type"
+msgid "double"
+msgstr ""
+
 #: controllers/view/structures/datatypes/primitive/flagdatainformation.cpp:92
 #, kde-format
 msgid "0x%1 (no matching flags)"
@@ -625,103 +721,13 @@ msgctxt "bit flags, i.e. 'R | W | X' with undelying type"
 msgid "flags(%1)"
 msgstr ""
 
-#: controllers/view/structures/datatypes/primitive/floatdatainformation.h:67
-msgctxt "Data type"
-msgid "float"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/uintdatainformation.cpp:55
-#: controllers/view/structures/datatypes/primitive/booldatainformation.cpp:28
-#: controllers/view/structures/datatypes/array/primitivearraydata.cpp:179
-msgctxt "invalid value (out of range)"
-msgid "&lt;invalid&gt;"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/doubledatainformation.h:68
-msgctxt "Data type"
-msgid "double"
-msgstr ""
-
-#: controllers/view/structures/datatypes/primitive/chardatainformation.h:67
-msgctxt "Data type"
-msgid "char"
-msgstr ""
-
-#: controllers/view/structures/datatypes/array/complexarraydata.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "array type then length"
-#| msgid "%1[%2]"
-msgctxt "type name, then array length"
-msgid "%1[%2]"
-msgstr "%1[%2]"
-
-#: controllers/view/structures/datatypes/structuredatainformation.cpp:26
+#: controllers/view/structures/datatypes/uniondatainformation.cpp:27
 #, kde-format
 msgctxt "data type in C/C++, then name"
-msgid "struct %1"
+msgid "union %1"
 msgstr ""
 
-#: controllers/view/structures/datatypes/datainformation.cpp:59
-#: controllers/view/structures/datatypes/datainformation.cpp:63
-#: controllers/view/info/infoview.cpp:156
-#: controllers/view/viewstatus/viewstatuscontroller.cpp:230
-#, kde-format
-msgid "1 byte"
-msgid_plural "%1 bytes"
-msgstr[0] ""
-msgstr[1] ""
-
-#: controllers/view/structures/datatypes/datainformation.cpp:64
-#, kde-format
-msgid "1 bit"
-msgid_plural "%1 bits"
-msgstr[0] ""
-msgstr[1] ""
-
-#: controllers/view/structures/datatypes/datainformation.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@item description of bookmark"
-#| msgid "%1: %2"
-msgctxt "number of bytes, then number of bits"
-msgid "%1 %2"
-msgstr "%1: %2"
-
-#: controllers/view/structures/datatypes/datainformation.cpp:199
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:259
-#, kde-format
-msgctxt "not all values in this structure are as they should be"
-msgid "Validation failed: \"%1\""
-msgstr ""
-
-#: controllers/view/structures/datatypes/datainformation.cpp:205
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:265
-msgctxt "not all values in this structure are as they should be"
-msgid "Validation failed."
-msgstr ""
-
-#: controllers/view/structures/datatypes/datainformation.cpp:207
-#, kde-format
-msgid ""
-"Name: %1\n"
-"Value: %2\n"
-"\n"
-"Type: %3\n"
-"Size: %4\n"
-"\n"
-"%5"
-msgstr ""
-
-#: controllers/view/structures/datatypes/datainformation.cpp:212
-#, kde-format
-msgid ""
-"Name: %1\n"
-"Value: %2\n"
-"\n"
-"Type: %3\n"
-"Size: %4"
-msgstr ""
-
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:267
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:268
 #, kde-format
 msgid ""
 "Name: %2\n"
@@ -742,7 +748,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:273
+#: controllers/view/structures/datatypes/datainformationwithchildren.cpp:274
 #, kde-format
 msgid ""
 "Name: %2\n"
@@ -758,12 +764,6 @@ msgid_plural ""
 "Size: %5 (%1 children)"
 msgstr[0] ""
 msgstr[1] ""
-
-#: controllers/view/structures/datatypes/uniondatainformation.cpp:27
-#, kde-format
-msgctxt "data type in C/C++, then name"
-msgid "union %1"
-msgstr ""
 
 #: controllers/view/structures/settings/structuresmanagerview.cpp:65
 msgid "Get New Structures..."
@@ -1092,8 +1092,8 @@ msgid "Select the operation to use for the filter."
 msgstr ""
 
 #: controllers/view/filter/filterview.cpp:76
-#: controllers/view/charsetconversion/charsetconversionview.cpp:102
 #: controllers/view/checksum/checksumview.cpp:77
+#: controllers/view/charsetconversion/charsetconversionview.cpp:102
 msgctxt "@title:group"
 msgid "Parameters"
 msgstr ""
@@ -1252,22 +1252,22 @@ msgctxt "default name of a bookmark"
 msgid "Bookmark"
 msgstr ""
 
-#: controllers/view/bookmarks/bookmarkscontroller.cpp:66
+#: controllers/view/bookmarks/bookmarkscontroller.cpp:67
 msgctxt "@action:inmenu"
 msgid "Remove Bookmark"
 msgstr ""
 
-#: controllers/view/bookmarks/bookmarkscontroller.cpp:71
+#: controllers/view/bookmarks/bookmarkscontroller.cpp:72
 msgctxt "@action:inmenu"
 msgid "Remove All Bookmarks"
 msgstr ""
 
-#: controllers/view/bookmarks/bookmarkscontroller.cpp:76
+#: controllers/view/bookmarks/bookmarkscontroller.cpp:77
 msgctxt "@action:inmenu"
 msgid "Go to Next Bookmark"
 msgstr ""
 
-#: controllers/view/bookmarks/bookmarkscontroller.cpp:81
+#: controllers/view/bookmarks/bookmarkscontroller.cpp:82
 msgctxt "@action:inmenu"
 msgid "Go to Previous Bookmark"
 msgstr ""
@@ -1354,12 +1354,6 @@ msgctxt "@info:tooltip column contains the character with the value"
 msgid "Character"
 msgstr ""
 
-#: controllers/view/info/infotoolviewfactory.cpp:38
-#: controllers/view/info/infotool.cpp:50
-msgctxt "@title:window"
-msgid "Statistics"
-msgstr ""
-
 #: controllers/view/info/infoview.cpp:56
 msgctxt "@label size of selected bytes"
 msgid "Size:"
@@ -1386,6 +1380,12 @@ msgctxt "@info:whatsthis"
 msgid ""
 "If you press the <interface>Build</interface> button, the byte frequency "
 "statistic is built for the bytes in the selected range."
+msgstr ""
+
+#: controllers/view/info/infotool.cpp:50
+#: controllers/view/info/infotoolviewfactory.cpp:38
+msgctxt "@title:window"
+msgid "Statistics"
 msgstr ""
 
 #: controllers/view/overwritemode/overwritemodecontroller.cpp:43
@@ -1426,7 +1426,7 @@ msgctxt "@info"
 msgid "Could not print."
 msgstr ""
 
-#: controllers/view/selectrange/selectrangecontroller.cpp:48
+#: controllers/view/selectrange/selectrangecontroller.cpp:49
 msgctxt "@action:inmenu"
 msgid "&Select range..."
 msgstr ""
@@ -1467,144 +1467,6 @@ msgstr ""
 msgctxt "@title:window of the tool to select a range"
 msgid "Select"
 msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversiontoolviewfactory.cpp:38
-msgctxt "@title:window"
-msgid "Charset Conversion"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:62
-msgctxt ""
-"@item:inmenu Is converted _from_ charset (selected in combobox next to this)"
-msgid "From"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:64
-msgctxt ""
-"@item:inmenu Is converted _to_ charset (selected in combobox next to this)"
-msgid "To"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:70
-msgctxt "@info:tooltip"
-msgid "The direction the bytes are converted, to or from the selected charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:74
-msgctxt "@info:whatsthis"
-msgid ""
-"Select the direction the bytes are converted, to or from the selected "
-"charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:89
-msgctxt "@info:tooltip"
-msgid "The charset the bytes are converted to."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:93
-msgctxt "@info:whatsthis"
-msgid "Select the charset the bytes are converted to."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:108
-msgctxt ""
-"@option:check substitute bytes whose char is not part of the target charset"
-msgid "Substitute missing:"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:113
-msgctxt "@info:tooltip"
-msgid ""
-"Selects if bytes should be substituted with a default byte if its char in "
-"the source charset is not part of the target charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:117
-msgctxt "@info:whatsthis"
-msgid ""
-"Set to true if bytes should be substituted with a default byte if its char "
-"in the source charset is not part of the target charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:133
-msgctxt ""
-"@label:textbox byte to use for chars which are not part of the target charset"
-msgid "Substitute byte:"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:139
-msgctxt "@info:tooltip"
-msgid "The byte to use for chars which are not part of the target charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:142
-msgctxt "@info:whatsthis"
-msgid ""
-"Define the byte to use for chars which are not part of the target charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:164
-msgid "Con&vert"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:167
-msgctxt "@info:tooltip"
-msgid "Converts the bytes in the selected range."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:169
-msgctxt "@info:whatsthis"
-msgid ""
-"If you press the <interface>Convert</interface> button, all bytes in the "
-"selected range will be replaced by bytes which represent the same character "
-"in the selected target charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:211
-msgctxt "@info"
-msgid "No bytes converted."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:212
-#, kde-format
-msgctxt "@info"
-msgid "1 byte converted."
-msgid_plural "%1 bytes converted."
-msgstr[0] ""
-msgstr[1] ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:221
-msgctxt "@info"
-msgid "No bytes substituted."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:222
-#, kde-format
-msgctxt "@info"
-msgid "1 byte substituted."
-msgid_plural "%1 bytes substituted."
-msgstr[0] ""
-msgstr[1] ""
-
-#: controllers/view/charsetconversion/charsetconversionview.cpp:233
-msgctxt "@info"
-msgid ""
-"Conversion cancelled because of chars which are not in the target charset."
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversiontool.cpp:65
-msgctxt "@title:window of the tool to convert between charsets"
-msgid "Charset Conversion"
-msgstr ""
-
-#: controllers/view/charsetconversion/charsetconversiontool.cpp:168
-#, fuzzy, kde-format
-#| msgctxt "@item description of bookmark"
-#| msgid "%1: %2"
-msgctxt "Converted from charset 1 to charset 2"
-msgid "%1 to %2"
-msgstr "%1: %2"
 
 #: controllers/view/libbytearrayfilter/filter/invertbytearrayfilter.cpp:34
 msgctxt ""
@@ -1765,12 +1627,12 @@ msgctxt "@option:check"
 msgid "Show &Non-printing Chars"
 msgstr ""
 
-#: controllers/view/viewconfig/viewconfigcontroller.cpp:74
+#: controllers/view/viewconfig/viewconfigcontroller.cpp:75
 msgctxt "@action:inmenu"
 msgid "Set Bytes per Line..."
 msgstr ""
 
-#: controllers/view/viewconfig/viewconfigcontroller.cpp:79
+#: controllers/view/viewconfig/viewconfigcontroller.cpp:80
 msgctxt "@action:inmenu"
 msgid "Set Bytes per Group..."
 msgstr ""
@@ -2203,7 +2065,7 @@ msgctxt "@title:window"
 msgid "Value/Char Table"
 msgstr ""
 
-#: controllers/view/bytetable/bytetabletool.cpp:97
+#: controllers/view/bytetable/bytetabletool.cpp:101
 #, kde-format
 msgid "Inserted 1 Byte"
 msgid_plural "Inserted %1 Bytes"
@@ -2339,7 +2201,7 @@ msgstr ""
 
 #: controllers/view/viewprofiles/viewprofileedit.cpp:85
 msgctxt "@label:listbox "
-msgid "Show with Rows or Columns::"
+msgid "Show with Rows or Columns:"
 msgstr ""
 
 #: controllers/view/viewprofiles/viewprofileedit.cpp:88
@@ -2393,111 +2255,124 @@ msgstr ""
 msgid "Values"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofileedit.cpp:142
-#: controllers/view/viewprofiles/viewprofileedit.cpp:151
+#: controllers/view/viewprofiles/viewprofileedit.cpp:146
+#: controllers/view/viewprofiles/viewprofileedit.cpp:155
 msgid "Coding:"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofileedit.cpp:146
+#: controllers/view/viewprofiles/viewprofileedit.cpp:150
 msgid "Chars"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofileedit.cpp:154
+#: controllers/view/viewprofiles/viewprofileedit.cpp:158
 msgid "Show Non-printable:"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofileedit.cpp:158
+#: controllers/view/viewprofiles/viewprofileedit.cpp:162
 msgid "Char for non-printable bytes:"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofileedit.cpp:162
+#: controllers/view/viewprofiles/viewprofileedit.cpp:166
 msgid "Char for undefined bytes:"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilescontroller.cpp:56
-msgctxt "@title:menu submenu to select the view profile or change it"
-msgid "View Profile"
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilescontroller.cpp:61
-msgctxt "@title:menu create a new view profile"
-msgid "Create new..."
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilescontroller.cpp:66
-msgctxt "@title:menu "
-msgid "Reset changes"
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilescontroller.cpp:71
-msgctxt "@title:menu "
-msgid "Save changes"
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilescontroller.cpp:195
-msgctxt "@window:title"
-msgid "Create new View Profile"
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilescontroller.cpp:199
-msgid "Modification of X"
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:61
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:75
 msgctxt "@action:button"
 msgid "&Create new..."
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:62
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:70
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:78
 msgctxt "@info:tooltip"
-msgid "Opens an editor for the view profile as default for all views."
+msgid "Opens an editor for a new view profile."
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:64
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:72
 #: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:80
+msgctxt "@info:whatsthis"
+msgid ""
+"If you press the <interface>Create new...</interface> button, an editor is "
+"opened where you can create and edit a new view profile. The values will be "
+"based on the ones of the view profile you selected in the list."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:90
+msgctxt "@action:button"
+msgid "&Edit..."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:93
+msgctxt "@info:tooltip"
+msgid "Opens an editor for the view profile."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:95
+msgctxt "@info:whatsthis"
+msgid ""
+"If you press the <interface>Edit...</interface> button, an editor will be "
+"opened for the view profile you selected in the list."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:104
+msgctxt "@action:button"
+msgid "&Set as Default"
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:107
+msgctxt "@info:tooltip"
+msgid "Sets the selected view profile as default for all views."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:109
 msgctxt "@info:whatsthis"
 msgid ""
 "If you press the <interface>Set as Default</interface> button, the view "
 "profile you selected in the list is set as default for all views."
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:69
-msgctxt "@action:button"
-msgid "&Edit..."
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:77
-msgctxt "@action:button"
-msgid "&Set as Default"
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:78
-msgctxt "@info:tooltip"
-msgid "Sets the selected view profile as default for all views."
-msgstr ""
-
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:85
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:117
 msgctxt "@action:button"
 msgid "&Delete"
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:86
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:120
 msgctxt "@info:tooltip"
 msgid "Deletes the selected view profile."
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:88
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:122
 msgctxt "@info:whatsthis"
 msgid ""
 "If you press the <interface>Delete</interface> button, the view profile you "
 "selected in the list is deleted."
 msgstr ""
 
-#: controllers/view/viewprofiles/viewprofilesmanagecontroller.cpp:48
+#: controllers/view/viewprofiles/viewprofilesmanagedialog.cpp:183
+#, kde-format
+msgid "Modification of %1"
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesmanagecontroller.cpp:50
 msgctxt "@action:inmenu"
 msgid "Manage View Profiles..."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesynccontroller.cpp:56
+msgctxt "@title:menu create a new view profile"
+msgid "Create new..."
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesynccontroller.cpp:62
+msgctxt "@title:menu save changed to the view profile to the base profile"
+msgid "Save changes"
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesynccontroller.cpp:67
+msgctxt "@title:menu reset settings back to those of the saved base profile"
+msgid "Reset changes"
+msgstr ""
+
+#: controllers/view/viewprofiles/viewprofilesynccontroller.cpp:111
+msgctxt "@window:title"
+msgid "Create new View Profile"
 msgstr ""
 
 #: controllers/view/viewstatus/viewstatuscontroller.cpp:59
@@ -2563,6 +2438,144 @@ msgstr ""
 msgctxt "@info:status selection: start offset - end offset (number of bytes)"
 msgid "Selection: %1 - %2 (%3)"
 msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversiontoolviewfactory.cpp:38
+msgctxt "@title:window"
+msgid "Charset Conversion"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:62
+msgctxt ""
+"@item:inmenu Is converted _from_ charset (selected in combobox next to this)"
+msgid "From"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:64
+msgctxt ""
+"@item:inmenu Is converted _to_ charset (selected in combobox next to this)"
+msgid "To"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:70
+msgctxt "@info:tooltip"
+msgid "The direction the bytes are converted, to or from the selected charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:74
+msgctxt "@info:whatsthis"
+msgid ""
+"Select the direction the bytes are converted, to or from the selected "
+"charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:89
+msgctxt "@info:tooltip"
+msgid "The charset the bytes are converted to."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:93
+msgctxt "@info:whatsthis"
+msgid "Select the charset the bytes are converted to."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:108
+msgctxt ""
+"@option:check substitute bytes whose char is not part of the target charset"
+msgid "Substitute missing:"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:113
+msgctxt "@info:tooltip"
+msgid ""
+"Selects if bytes should be substituted with a default byte if its char in "
+"the source charset is not part of the target charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:117
+msgctxt "@info:whatsthis"
+msgid ""
+"Set to true if bytes should be substituted with a default byte if its char "
+"in the source charset is not part of the target charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:133
+msgctxt ""
+"@label:textbox byte to use for chars which are not part of the target charset"
+msgid "Substitute byte:"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:139
+msgctxt "@info:tooltip"
+msgid "The byte to use for chars which are not part of the target charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:142
+msgctxt "@info:whatsthis"
+msgid ""
+"Define the byte to use for chars which are not part of the target charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:164
+msgid "Con&vert"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:167
+msgctxt "@info:tooltip"
+msgid "Converts the bytes in the selected range."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:169
+msgctxt "@info:whatsthis"
+msgid ""
+"If you press the <interface>Convert</interface> button, all bytes in the "
+"selected range will be replaced by bytes which represent the same character "
+"in the selected target charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:211
+msgctxt "@info"
+msgid "No bytes converted."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:212
+#, kde-format
+msgctxt "@info"
+msgid "1 byte converted."
+msgid_plural "%1 bytes converted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:221
+msgctxt "@info"
+msgid "No bytes substituted."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:222
+#, kde-format
+msgctxt "@info"
+msgid "1 byte substituted."
+msgid_plural "%1 bytes substituted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: controllers/view/charsetconversion/charsetconversionview.cpp:233
+msgctxt "@info"
+msgid ""
+"Conversion cancelled because of chars which are not in the target charset."
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversiontool.cpp:65
+msgctxt "@title:window of the tool to convert between charsets"
+msgid "Charset Conversion"
+msgstr ""
+
+#: controllers/view/charsetconversion/charsetconversiontool.cpp:168
+#, fuzzy, kde-format
+#| msgctxt "@item description of bookmark"
+#| msgid "%1: %2"
+msgctxt "Converted from charset 1 to charset 2"
+msgid "%1 to %2"
+msgstr "%1: %2"
 
 #: controllers/document/overwriteonly/overwriteonlycontroller.cpp:43
 msgctxt "@action:inmenu"
