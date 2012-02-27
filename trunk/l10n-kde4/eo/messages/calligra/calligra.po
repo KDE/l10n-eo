@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-25 02:50+0100\n"
+"POT-Creation-Date: 2012-02-27 02:57+0100\n"
 "PO-Revision-Date: 2007-11-04 20:12+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1434,8 +1434,9 @@ msgstr "Aro"
 msgid "Label"
 msgstr "Ebeno"
 
-#: koreport/items/text/KoReportTextPlugin.cpp:34 kotext/KoTextEditor.cpp:175
-#: kotext/KoTextEditor.cpp:350 kotext/KoTextEditor.cpp:364
+#: koreport/items/text/KoReportTextPlugin.cpp:34
+#: kotext/KoTextEditor_undo.cpp:170 kotext/KoTextEditor_undo.cpp:205
+#: kotext/KoTextEditor_undo.cpp:222 kotext/KoTextEditor_undo.cpp:264
 #: widgets/KoCsvImportDialog.cpp:217 widgets/KoCsvImportDialog.cpp:581
 msgid "Text"
 msgstr "Teksto"
@@ -1616,9 +1617,8 @@ msgstr "Objekto"
 
 #. i18n: file: koreport/wrtembed/sectioneditor.ui:200
 #. i18n: ectx: property (text), widget (QPushButton, btnRemove)
-#: koreport/wrtembed/KoReportDesigner.cpp:840 kotext/KoTextEditor.cpp:1487
-#: kotext/KoTextEditor.cpp:1532
-#: kotext/commands/ChangeTrackedDeleteCommand.cpp:316 rc.cpp:170
+#: koreport/wrtembed/KoReportDesigner.cpp:840
+#: kotext/commands/ChangeTrackedDeleteCommand.cpp:314 rc.cpp:170
 msgid "Delete"
 msgstr "Forigi"
 
@@ -1641,224 +1641,153 @@ msgstr "%1 %"
 msgid "Detail"
 msgstr "Detala rigardo"
 
-#: kotext/KoTextEditor.cpp:115 kotext/commands/DeleteCommand.cpp:190
-#: kotext/commands/ChangeTrackedDeleteCommand.cpp:375
-#, fuzzy
-#| msgid "Text"
-msgctxt "(qtundo-format)"
-msgid "Text"
-msgstr "Teksto"
-
-#: kotext/KoTextEditor.cpp:278 kotext/KoTextEditor.cpp:2150
+#: kotext/KoTextEditor.cpp:165 kotext/KoTextEditor.cpp:1561
+#: kotext/KoTextEditor.cpp:1563
 #, fuzzy
 #| msgid "Set Paragraph Style"
 msgctxt "(qtundo-format)"
 msgid "New Paragraph"
 msgstr "Meti Alineostilon"
 
-#: kotext/KoTextEditor.cpp:501 kotext/KoTextEditor.cpp:507
-#, fuzzy
-#| msgid "Bold"
-msgctxt "(qtundo-format)"
-msgid "Bold"
-msgstr "Grasa"
-
-#: kotext/KoTextEditor.cpp:518 kotext/KoTextEditor.cpp:524
-#, fuzzy
-#| msgid "Italic"
-msgctxt "(qtundo-format)"
-msgid "Italic"
-msgstr "Kursiva"
-
-#: kotext/KoTextEditor.cpp:535 kotext/KoTextEditor.cpp:547
-#, fuzzy
-#| msgid "Underline"
-msgctxt "(qtundo-format)"
-msgid "Underline"
-msgstr "Substreko"
-
-#: kotext/KoTextEditor.cpp:558 kotext/KoTextEditor.cpp:569
-#, fuzzy
-#| msgid "Strike Out"
-msgctxt "(qtundo-format)"
-msgid "Strike Out"
-msgstr "Trastreko"
-
-#: kotext/KoTextEditor.cpp:591 kotext/KoTextEditor.cpp:592
-#, fuzzy
-#| msgid "Change"
-msgctxt "(qtundo-format)"
-msgid "Change Alignment"
-msgstr "Ŝanĝi"
-
-#: kotext/KoTextEditor.cpp:609 kotext/KoTextEditor.cpp:614
-msgid "Set Vertical Alignment"
-msgstr "Meti Vertikalan Alĝustigon"
-
-#: kotext/KoTextEditor.cpp:636 kotext/KoTextEditor.cpp:637
-msgid "Decrease Indent"
-msgstr "Malpligrandigi Deŝovon"
-
-#: kotext/KoTextEditor.cpp:659 kotext/KoTextEditor.cpp:660
-msgid "Increase Indent"
-msgstr "Pligrandigi Deŝovon"
-
-#: kotext/KoTextEditor.cpp:695 kotext/KoTextEditor.cpp:697
-msgid "Decrease font size"
-msgstr "Malpligrandigi tipargrandecon"
-
-#: kotext/KoTextEditor.cpp:708 kotext/KoTextEditor.cpp:710
-msgid "Increase font size"
-msgstr "Pligrandigi tipargrandecon"
-
-#: kotext/KoTextEditor.cpp:721 kotext/KoTextEditor.cpp:726
-#, fuzzy
-#| msgid "Set point type"
-msgid "Set Font"
-msgstr "Meit punktotipon"
-
-#: kotext/KoTextEditor.cpp:737 kotext/KoTextEditor.cpp:742
-#, fuzzy
-#| msgid "Set point type"
-msgid "Set Font Size"
-msgstr "Meit punktotipon"
-
-#: kotext/KoTextEditor.cpp:753 kotext/KoTextEditor.cpp:758
-#, fuzzy
-#| msgid "Set background"
-msgid "Set Background Color"
-msgstr "Meti fonon"
-
-#: kotext/KoTextEditor.cpp:769 kotext/KoTextEditor.cpp:774
-#, fuzzy
-#| msgid "Text Color..."
-msgid "Set Text Color"
-msgstr "Tekstkoloro..."
-
-#: kotext/KoTextEditor.cpp:841 kotext/KoTextEditor.cpp:880
-msgid "Set Character Style"
-msgstr "Meti Signostilon"
-
-#: kotext/KoTextEditor.cpp:1011
-msgid "Set Paragraph Style"
-msgstr "Meti Alineostilon"
-
-#: kotext/KoTextEditor.cpp:1028
+#: kotext/KoTextEditor.cpp:440
 #, fuzzy
 #| msgid "Insert Break"
 msgid "Insert Bookmark"
 msgstr "Enmeti linirompon"
 
-#: kotext/KoTextEditor.cpp:1094
+#: kotext/KoTextEditor.cpp:483
 msgid "Insert Index"
 msgstr "Enmeti Indekson"
 
-#: kotext/KoTextEditor.cpp:1107
+#: kotext/KoTextEditor.cpp:520
 #, fuzzy
 #| msgid "Insert page"
 msgid "Insert Variable"
 msgstr "Enmeti paĝon"
 
-#: kotext/KoTextEditor.cpp:1135
-#: kotext/commands/ChangeTrackedDeleteCommand.cpp:201
+#: kotext/KoTextEditor.cpp:548
+#: kotext/commands/ChangeTrackedDeleteCommand.cpp:199
 msgid "Key Press"
 msgstr ""
 
-#: kotext/KoTextEditor.cpp:1175
+#: kotext/KoTextEditor.cpp:588
 msgid "Insert Break"
 msgstr "Enmeti linirompon"
 
-#: kotext/KoTextEditor.cpp:1634 kotext/KoTextEditor.cpp:1644
+#: kotext/KoTextEditor.cpp:975 kotext/KoTextEditor.cpp:977
+#, fuzzy
+#| msgid "Insert page"
+msgctxt "(qtundo-format)"
+msgid "Insert Table"
+msgstr "Enmeti paĝon"
+
+#: kotext/KoTextEditor.cpp:991
 #, fuzzy
 #| msgid "Insert page"
 msgid "Insert Table"
 msgstr "Enmeti paĝon"
 
-#: kotext/KoTextEditor.cpp:1706 kotext/KoTextEditor.cpp:1724
+#: kotext/KoTextEditor.cpp:1063 kotext/KoTextEditor.cpp:1081
 #, fuzzy
 #| msgid "Insert page"
 msgid "Insert Row Above"
 msgstr "Enmeti paĝon"
 
-#: kotext/KoTextEditor.cpp:1742
+#: kotext/KoTextEditor.cpp:1099
 #, fuzzy
 #| msgid "Insert point"
 msgid "Insert Column Left"
 msgstr "Enmeti punkton"
 
-#: kotext/KoTextEditor.cpp:1760
+#: kotext/KoTextEditor.cpp:1117
 #, fuzzy
 #| msgid "Insert point"
 msgid "Insert Column Right"
 msgstr "Enmeti punkton"
 
-#: kotext/KoTextEditor.cpp:1778
+#: kotext/KoTextEditor.cpp:1135
 #, fuzzy
 #| msgid "Delete shape"
 msgid "Delete Column"
 msgstr "Forigi formon"
 
-#: kotext/KoTextEditor.cpp:1797
+#: kotext/KoTextEditor.cpp:1154
 #, fuzzy
 #| msgid "Delete"
 msgid "Delete Row"
 msgstr "Forigi"
 
-#: kotext/KoTextEditor.cpp:1810
+#: kotext/KoTextEditor.cpp:1167
 #, fuzzy
 #| msgid "Merge points"
 msgid "Merge Cells"
 msgstr "Kunfandi punktojn"
 
-#: kotext/KoTextEditor.cpp:1827
+#: kotext/KoTextEditor.cpp:1184
 #, fuzzy
 #| msgid "Vertical"
 msgid "Split Cells"
 msgstr "Vertikala"
 
-#: kotext/KoTextEditor.cpp:1841
+#: kotext/KoTextEditor.cpp:1204 kotext/KoTextEditor.cpp:1206
 #, fuzzy
 #| msgid "Insert point"
+msgctxt "(qtundo-format)"
 msgid "Insert Footnote"
 msgstr "Enmeti punkton"
 
-#: kotext/KoTextEditor.cpp:1853
+#: kotext/KoTextEditor.cpp:1236 kotext/KoTextEditor.cpp:1238
 #, fuzzy
 #| msgid "Insert Index"
+msgctxt "(qtundo-format)"
 msgid "Insert Endnote"
 msgstr "Enmeti Indekson"
 
-#: kotext/KoTextEditor.cpp:1869 kotext/KoTextEditor.cpp:1881
+#: kotext/KoTextEditor.cpp:1268 kotext/KoTextEditor.cpp:1270
+#, fuzzy
+#| msgid "Insert page"
+msgctxt "(qtundo-format)"
+msgid "Insert Table Of Contents"
+msgstr "Enmeti paĝon"
+
+#: kotext/KoTextEditor.cpp:1285
 #, fuzzy
 #| msgid "Insert page"
 msgid "Insert Table Of Contents"
 msgstr "Enmeti paĝon"
 
-#: kotext/KoTextEditor.cpp:1912
+#: kotext/KoTextEditor.cpp:1322
 #, fuzzy
 #| msgid "Insert page"
 msgid "Modify Table Of Contents"
 msgstr "Enmeti paĝon"
 
-#: kotext/KoTextEditor.cpp:1927 kotext/KoTextEditor.cpp:1940
+#: kotext/KoTextEditor.cpp:1339 kotext/KoTextEditor.cpp:1341
+#, fuzzy
+#| msgid "Insert Break"
+msgctxt "(qtundo-format)"
+msgid "Insert Bibliography"
+msgstr "Enmeti linirompon"
+
+#: kotext/KoTextEditor.cpp:1357
 #, fuzzy
 #| msgid "Insert Break"
 msgid "Insert Bibliography"
 msgstr "Enmeti linirompon"
 
-#: kotext/KoTextEditor.cpp:1967
+#: kotext/KoTextEditor.cpp:1393 kotext/KoTextEditor.cpp:1395
 #, fuzzy
 #| msgid "Position"
 msgctxt "(qtundo-format)"
 msgid "Add Citation"
 msgstr "Posicio"
 
-#: kotext/KoTextEditor.cpp:1983
+#: kotext/KoTextEditor.cpp:1422 kotext/KoTextEditor.cpp:1424
 msgctxt "(qtundo-format)"
 msgid "Typing"
 msgstr ""
 
-#: kotext/KoTextEditor.cpp:2017
+#: kotext/KoTextEditor.cpp:1461
 msgid "Typing"
 msgstr ""
 
@@ -1926,7 +1855,7 @@ msgstr "duobla"
 
 #. i18n: file: widgets/KoCsvImportDialog.ui:147
 #. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
-#: kotext/KoTextEditor_p.h:82 kotext/KoTextEditor_p.h:119 rc.cpp:469
+#: kotext/KoTextEditor_p.h:128 kotext/KoTextEditor_p.h:165 rc.cpp:469
 msgid "Format"
 msgstr "Formato"
 
@@ -1979,20 +1908,37 @@ msgctxt "(qtundo-format)"
 msgid "Change List Numbering"
 msgstr "Ŝanĝi parametron"
 
-#: kotext/commands/DeleteCommand.cpp:47
+#: kotext/commands/ChangeListCommand.cpp:40
+#: kotext/commands/ChangeListCommand.cpp:82
+#: kotext/commands/ChangeListCommand.cpp:95
+#, fuzzy
+#| msgid "Change"
+msgctxt "(qtundo-format)"
+msgid "Change List"
+msgstr "Ŝanĝi"
+
+#: kotext/commands/ChangeStylesMacroCommand.cpp:37
+#, fuzzy
+#| msgid "Change Filetype"
+msgctxt "(qtundo-format)"
+msgid "Change Styles"
+msgstr "Ŝanĝ dosiertipon"
+
 #: kotext/commands/ChangeTrackedDeleteCommand.cpp:83
+#: kotext/commands/DeleteCommand.cpp:50
 #, fuzzy
 #| msgid "Delete"
 msgctxt "(qtundo-format)"
 msgid "Delete"
 msgstr "Forigi"
 
-#: kotext/commands/ChangeStylesMacroCommand.cpp:35
+#: kotext/commands/ChangeTrackedDeleteCommand.cpp:373
+#: kotext/commands/DeleteCommand.cpp:251 kotext/KoTextEditor_undo.cpp:88
 #, fuzzy
-#| msgid "Change Filetype"
+#| msgid "Text"
 msgctxt "(qtundo-format)"
-msgid "Change Styles"
-msgstr "Ŝanĝ dosiertipon"
+msgid "Text"
+msgstr "Teksto"
 
 #: kotext/commands/TextPasteCommand.cpp:61
 #, fuzzy
@@ -2008,52 +1954,130 @@ msgctxt "(qtundo-format)"
 msgid "Paste"
 msgstr "Dato"
 
-#: kotext/commands/ChangeListCommand.cpp:40
-#: kotext/commands/ChangeListCommand.cpp:82
-#: kotext/commands/ChangeListCommand.cpp:95
-#, fuzzy
-#| msgid "Change"
-msgctxt "(qtundo-format)"
-msgid "Change List"
-msgstr "Ŝanĝi"
-
 #: kotext/styles/KoStyleManager.cpp:100 kotext/styles/KoStyleManager.cpp:105
 #, fuzzy
 #| msgid "&Default"
 msgid "Default"
 msgstr "&Apriora"
 
-#: kundo2/kundo2group.cpp:359 kundo2/kundo2stack.cpp:841
+#: kotext/KoTextEditor_format.cpp:77 kotext/KoTextEditor_format.cpp:83
+#, fuzzy
+#| msgid "Bold"
+msgctxt "(qtundo-format)"
+msgid "Bold"
+msgstr "Grasa"
+
+#: kotext/KoTextEditor_format.cpp:94 kotext/KoTextEditor_format.cpp:100
+#, fuzzy
+#| msgid "Italic"
+msgctxt "(qtundo-format)"
+msgid "Italic"
+msgstr "Kursiva"
+
+#: kotext/KoTextEditor_format.cpp:111 kotext/KoTextEditor_format.cpp:123
+#, fuzzy
+#| msgid "Underline"
+msgctxt "(qtundo-format)"
+msgid "Underline"
+msgstr "Substreko"
+
+#: kotext/KoTextEditor_format.cpp:134 kotext/KoTextEditor_format.cpp:145
+#, fuzzy
+#| msgid "Strike Out"
+msgctxt "(qtundo-format)"
+msgid "Strike Out"
+msgstr "Trastreko"
+
+#: kotext/KoTextEditor_format.cpp:167 kotext/KoTextEditor_format.cpp:168
+#, fuzzy
+#| msgid "Change"
+msgctxt "(qtundo-format)"
+msgid "Change Alignment"
+msgstr "Ŝanĝi"
+
+#: kotext/KoTextEditor_format.cpp:185 kotext/KoTextEditor_format.cpp:190
+msgid "Set Vertical Alignment"
+msgstr "Meti Vertikalan Alĝustigon"
+
+#: kotext/KoTextEditor_format.cpp:212 kotext/KoTextEditor_format.cpp:213
+msgid "Decrease Indent"
+msgstr "Malpligrandigi Deŝovon"
+
+#: kotext/KoTextEditor_format.cpp:235 kotext/KoTextEditor_format.cpp:236
+msgid "Increase Indent"
+msgstr "Pligrandigi Deŝovon"
+
+#: kotext/KoTextEditor_format.cpp:271 kotext/KoTextEditor_format.cpp:273
+msgid "Decrease font size"
+msgstr "Malpligrandigi tipargrandecon"
+
+#: kotext/KoTextEditor_format.cpp:284 kotext/KoTextEditor_format.cpp:286
+msgid "Increase font size"
+msgstr "Pligrandigi tipargrandecon"
+
+#: kotext/KoTextEditor_format.cpp:297 kotext/KoTextEditor_format.cpp:302
+#, fuzzy
+#| msgid "Set point type"
+msgid "Set Font"
+msgstr "Meit punktotipon"
+
+#: kotext/KoTextEditor_format.cpp:313 kotext/KoTextEditor_format.cpp:318
+#, fuzzy
+#| msgid "Set point type"
+msgid "Set Font Size"
+msgstr "Meit punktotipon"
+
+#: kotext/KoTextEditor_format.cpp:329 kotext/KoTextEditor_format.cpp:334
+#, fuzzy
+#| msgid "Set background"
+msgid "Set Background Color"
+msgstr "Meti fonon"
+
+#: kotext/KoTextEditor_format.cpp:345 kotext/KoTextEditor_format.cpp:350
+#, fuzzy
+#| msgid "Text Color..."
+msgid "Set Text Color"
+msgstr "Tekstkoloro..."
+
+#: kotext/KoTextEditor_format.cpp:376 kotext/KoTextEditor_format.cpp:415
+msgid "Set Character Style"
+msgstr "Meti Signostilon"
+
+#: kotext/KoTextEditor_format.cpp:455
+msgid "Set Paragraph Style"
+msgstr "Meti Alineostilon"
+
+#: kundo2/kundo2group.cpp:359 kundo2/kundo2stack.cpp:848
 #, kde-format
 msgid "Undo %1"
 msgstr ""
 
-#: kundo2/kundo2group.cpp:359 kundo2/kundo2stack.cpp:841
+#: kundo2/kundo2group.cpp:359 kundo2/kundo2stack.cpp:848
 msgctxt "Default text for undo action"
 msgid "Undo"
 msgstr ""
 
-#: kundo2/kundo2group.cpp:386 kundo2/kundo2stack.cpp:867
+#: kundo2/kundo2group.cpp:386 kundo2/kundo2stack.cpp:874
 #, fuzzy, kde-format
 #| msgid "Red"
 msgid "Redo %1"
 msgstr "Ruĝa"
 
-#: kundo2/kundo2group.cpp:386 kundo2/kundo2stack.cpp:867
+#: kundo2/kundo2group.cpp:386 kundo2/kundo2stack.cpp:874
 #, fuzzy
 #| msgid "Red"
 msgctxt "Default text for redo action"
 msgid "Redo"
 msgstr "Ruĝa"
 
-#: kundo2/kundo2stack.cpp:1074 main/KoMainWindow.cpp:1475
+#: kundo2/kundo2stack.cpp:1081 main/KoMainWindow.cpp:1475
 #: main/KoUndoStackAction.cpp:44 main/KoUndoStackAction.cpp:52
 #, fuzzy
 #| msgid "Red"
 msgid "Redo"
 msgstr "Ruĝa"
 
-#: kundo2/kundo2stack.cpp:1093 main/KoMainWindow.cpp:1474
+#: kundo2/kundo2stack.cpp:1100 main/KoMainWindow.cpp:1474
 #: main/KoUndoStackAction.cpp:36 main/KoUndoStackAction.cpp:52
 msgid "Undo"
 msgstr ""
