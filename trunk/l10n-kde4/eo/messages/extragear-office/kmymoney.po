@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-25 04:11+0100\n"
+"POT-Creation-Date: 2012-03-02 04:29+0100\n"
 "PO-Revision-Date: 2009-12-21 12:23+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 
 #: kmymoney/converter/mymoneytemplate.cpp:76
 #: kmymoney/converter/mymoneyqifreader.cpp:416
+#: kmymoney/plugins/csvimport/csvdialog.cpp:610
 #: kmymoney/plugins/csvimport/investprocessing.cpp:235
-#: kmymoney/plugins/csvimport/csvdialog.cpp:591
 #: kmymoney/views/kmymoneyview.cpp:653
 #, kde-format
 msgid "Error while loading file '%1'."
@@ -28,8 +28,8 @@ msgstr ""
 #: kmymoney/converter/mymoneytemplate.cpp:78
 #: kmymoney/converter/mymoneyqifreader.cpp:418
 #: kmymoney/converter/mymoneyqifreader.cpp:996
+#: kmymoney/plugins/csvimport/csvdialog.cpp:612
 #: kmymoney/plugins/csvimport/investprocessing.cpp:237
-#: kmymoney/plugins/csvimport/csvdialog.cpp:593
 #: kmymoney/views/kmymoneyview.cpp:655
 msgid "File access error"
 msgstr ""
@@ -980,8 +980,8 @@ msgstr ""
 
 #: kmymoney/converter/mymoneyqifreader.cpp:1064
 #: kmymoney/converter/mymoneyqifreader.cpp:1297
+#: kmymoney/plugins/csvimport/csvdialog.cpp:993
 #: kmymoney/plugins/csvimport/investprocessing.cpp:1280
-#: kmymoney/plugins/csvimport/csvdialog.cpp:952
 msgid "Invalid date format"
 msgstr ""
 
@@ -3555,6 +3555,468 @@ msgctxt "CSV Importer dialog title"
 msgid "CSV Importer"
 msgstr "Importi"
 
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:63
+#, fuzzy
+#| msgid "Result"
+msgid "Results table"
+msgstr "Rezulto"
+
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:86
+#, fuzzy
+#| msgid "Columns"
+msgid "Column "
+msgstr "Kolumnoj"
+
+#. i18n: file: kmymoney/dialogs/keditscheduledlgdecl.ui:174
+#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
+#. i18n: file: kmymoney/dialogs/kenterscheduledlgdecl.ui:165
+#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
+#. i18n: file: kmymoney/dialogs/kfindtransactiondlgdecl.ui:788
+#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
+#. i18n: file: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:79
+#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
+#. i18n: file: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:571
+#. i18n: ectx: property (text), item, widget (QTreeWidget, m_editAmounts)
+#. i18n: file: kmymoney/plugins/csvimport/investmentwizardpage.ui:373
+#. i18n: ectx: property (text), widget (QLabel, labelInv_quantity)
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:114
+#: kmymoney/widgets/register.cpp:513 rc.cpp:245 rc.cpp:323 rc.cpp:583
+#: rc.cpp:1162 rc.cpp:1375 rc.cpp:2598
+msgid "Quantity"
+msgstr ""
+
+#. i18n: file: kmymoney/plugins/csvimport/investmentwizardpage.ui:571
+#. i18n: ectx: property (text), widget (QLabel, labelInv_detailCol)
+#. i18n: file: kmymoney/views/kforecastviewdecl.ui:361
+#. i18n: ectx: attribute (title), widget (QWidget, detail)
+#. i18n: file: kmymoney/widgets/kmymoneyreportconfigtab2decl.ui:33
+#. i18n: ectx: property (text), widget (QLabel, textLabel6)
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:130 rc.cpp:2640 rc.cpp:3269
+#: rc.cpp:3589
+msgid "Detail"
+msgstr "Detalo"
+
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:181
+msgid ""
+"There is a problem with the columns selected\n"
+" for 'Price', 'Quantity and 'Amount'.\n"
+"     You will need to reselect those columns."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:191
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:206
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1098
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1160
+msgid ""
+"Enter the name of the Brokerage or Checking Account used for the transfer of "
+"funds : "
+msgstr ""
+
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:264
+msgid ""
+" The values in the columns you have selected\n"
+" do not match any expected investment type.\n"
+" Please check the fields in the current transaction,\n"
+" and also your selections."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:265
+#: kmymoney/plugins/csvimport/csvdialog.cpp:826
+#: kmymoney/plugins/csvimport/csvdialog.cpp:858
+#: kmymoney/plugins/csvimport/csvdialog.cpp:901
+#: kmymoney/plugins/csvimport/csvdialog.cpp:971
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1042
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1663
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1697
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1746
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1792
+#: kmymoney/plugins/csvimport/investprocessing.cpp:846
+#: kmymoney/plugins/csvimport/investprocessing.cpp:879
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1169
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1376
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1401
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1773
+#, fuzzy
+#| msgid "Import"
+msgid "CSV import"
+msgstr "Importi"
+
+#: kmymoney/plugins/csvimport/redefinedlg.cpp:273
+msgid "Enter Account Name"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/symboltabledlg.cpp:44
+msgid "Symbols and Security Names present"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/symboltabledlg.cpp:68
+#, fuzzy
+#| msgid "Yes"
+msgctxt "Confirm"
+msgid "Yes"
+msgstr "Jes"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:362
+msgid "Add New Profile"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:588
+#: kmymoney/plugins/csvimport/investprocessing.cpp:215
+msgid ""
+"*.csv *.PRN *.txt | CSV Files\n"
+" *|All files"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:823
+#, kde-format
+msgid ""
+"<center>Row number %1 does not have the expected number of columns.</"
+"center><center>This might not be a problem, but it may be a header line.</"
+"center><center>You may accept all similar items, or just this one, or cancel."
+"</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:827
+#, fuzzy
+#| msgctxt "Accept 'imported' and 'matched' transaction"
+#| msgid "Accept"
+msgid "Accept All"
+msgstr "Akcepti"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:828
+#, fuzzy
+#| msgctxt "Accept 'imported' and 'matched' transaction"
+#| msgid "Accept"
+msgid "Accept This"
+msgstr "Akcepti"
+
+#. i18n: file: kmymoney/dialogs/kbackupdlgdecl.ui:163
+#. i18n: ectx: property (text), widget (KPushButton, btnCancel)
+#. i18n: file: kmymoney/dialogs/kcategoryreassigndlgdecl.ui:134
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/kchooseimportexportdlgdecl.ui:164
+#. i18n: ectx: property (text), widget (QPushButton, cancelButton)
+#. i18n: file: kmymoney/dialogs/kconfirmmanualenterdlgdecl.ui:128
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/keditequityentrydecl.ui:217
+#. i18n: ectx: property (text), widget (KPushButton, btnCancel)
+#. i18n: file: kmymoney/dialogs/keditscheduledlgdecl.ui:431
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/kenterscheduledlgdecl.ui:292
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/kexportdlgdecl.ui:362
+#. i18n: ectx: property (text), widget (KPushButton, m_qbuttonCancel)
+#. i18n: file: kmymoney/dialogs/kimportdlgdecl.ui:205
+#. i18n: ectx: property (text), widget (KPushButton, m_qbuttonCancel)
+#. i18n: file: kmymoney/dialogs/kimportverifydlgdecl.ui:92
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/kloadtemplatedlgdecl.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/knewaccountdlgdecl.ui:799
+#. i18n: ectx: property (text), widget (KPushButton, cancelButton)
+#. i18n: file: kmymoney/dialogs/knewbankdlgdecl.ui:237
+#. i18n: ectx: property (text), widget (KPushButton, cancelBtn)
+#. i18n: file: kmymoney/dialogs/knewbudgetdlgdecl.ui:103
+#. i18n: ectx: property (text), widget (KPushButton, m_pbCancel)
+#. i18n: file: kmymoney/dialogs/knewequityentrydecl.ui:178
+#. i18n: ectx: property (text), widget (KPushButton, btnCancel)
+#. i18n: file: kmymoney/dialogs/knewfiledlgdecl.ui:273
+#. i18n: ectx: property (text), widget (KPushButton, cancelBtn)
+#. i18n: file: kmymoney/dialogs/kpayeereassigndlgdecl.ui:144
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:140
+#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
+#. i18n: file: kmymoney/dialogs/ksortoptiondlg.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, m_cancelButton)
+#. i18n: file: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:765
+#. i18n: ectx: property (text), widget (KPushButton, m_cancelButton)
+#. i18n: file: kmymoney/plugins/ofximport/dialogs/kofxdirectconnectdlgdecl.ui:57
+#. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
+#: kmymoney/plugins/csvimport/csvdialog.cpp:829 rc.cpp:48 rc.cpp:63 rc.cpp:91
+#: rc.cpp:115 rc.cpp:209 rc.cpp:293 rc.cpp:356 rc.cpp:430 rc.cpp:735
+#: rc.cpp:747 rc.cpp:759 rc.cpp:957 rc.cpp:990 rc.cpp:1005 rc.cpp:1050
+#: rc.cpp:1089 rc.cpp:1107 rc.cpp:1180 rc.cpp:1195 rc.cpp:1408 rc.cpp:3014
+msgid "Cancel"
+msgstr "Rezigni"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:855
+#, kde-format
+msgid ""
+"<center>An invalid date has been detected during import.</center><center><b>"
+"%1</b></center>Please check that you have set the correct date format."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:891
+msgid "Enter debit flag column number"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:900
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1168
+#, kde-format
+msgid ""
+"An invalid column was entered.\n"
+"Must be between 1 and %1."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:970
+msgid ""
+"<center>The columns selected are invalid.\n"
+"</center>There must an amount or debit and credit fields, plus date and "
+"payee fields."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:989
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1277
+#, kde-format
+msgid ""
+"The date entry \"%1\" read from the file cannot be interpreted through the "
+"current date format setting of \"%2.\"\n"
+"\n"
+"Pressing 'Continue' will assign today's date to the transaction. Pressing "
+"'Cancel'' will abort the import operation. You can then restart the import "
+"and select a different date format."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1041
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1791
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1400
+msgid ""
+"<center>The start line is greater than the end line.\n"
+"</center><center>Please correct your settings.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1051
+msgid ""
+"<center>An Amount-type column, and Date and Payee columns are needed.</"
+"center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1053
+msgid ""
+"<center>As you had skipped Setup, the wizard will now return you to the "
+"setups.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1082
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1431
+msgid "QIF Files"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1082
+#: kmymoney/plugins/csvimport/investprocessing.cpp:1431
+#, fuzzy
+#| msgid "Save As"
+msgid "Save QIF"
+msgstr "Konservi kiel"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1112
+msgid "Enter column number of debit/credit code"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1248
+msgid ""
+"<center>Are you sure you wish to exit?</center><center>Restart or Quit?</"
+"center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1249
+#, fuzzy
+#| msgid "Cancel"
+msgid "Cancel clicked"
+msgstr "Rezigni"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1249
+msgid "Restart"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1354
+#, kde-format
+msgid ""
+"<center>The '<b>%1</b>' field already has this column selected.</"
+"center><center>If you wish to copy the Memo data to the Payee field, click "
+"'Yes'.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1368
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1539
+#: kmymoney/plugins/csvimport/investprocessing.cpp:427
+#: kmymoney/plugins/csvimport/investprocessing.cpp:528
+#, kde-format
+msgid ""
+"The '<b>%1</b>' field already has this column selected. <center>Please "
+"reselect both entries as necessary.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1524
+#, kde-format
+msgid ""
+"<center>The '<b>%1</b>' field already has this column selected.</"
+"center><center>If you wish to copy the Payee data to the memo field, click "
+"'Yes'.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1662
+#, kde-format
+msgid ""
+"<center>Field name not recognised.</center> <center>'<b>%1</b>'</center> "
+"Please re-enter your column selections."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1695
+#, kde-format
+msgid ""
+"Row number %1 may be a header line, as it has an incomplete set of entries."
+"<center>It may be that the start line is incorrectly set.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1701
+#, kde-format
+msgid ""
+"<center>The cell in column '%1' on row %2 is empty.</center><center>Please "
+"check your selections.</center><center>Continue or Cancel?</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1703
+msgid "Selections Warning"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1741
+#, kde-format
+msgid ""
+"<center>The selected decimal symbol was not present in column %1,</"
+"center><center>- but may now have been added.</center><center>If the "
+"<b>decimal</b> symbol displayed does not match your system   setting</"
+"center><center>your data is unlikely to import correctly.</"
+"center><center>Please check your selection.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1751
+#, kde-format
+msgid ""
+"<center>The selected decimal symbol/thousands separator</center><center>have "
+"produced invalid results in row %1, and possibly more.</"
+"center><center>Please try again.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:1753
+msgid "Invalid Conversion"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2129
+#, kde-format
+msgid ""
+"<center>You have cleared the profile name '%1'.</center>\n"
+"<center>If you wish to delete the entry, click 'Delete'.</center>\n"
+"<center>Otherwise, click 'Keep'.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2132
+msgid "Delete or Edit Profile Name"
+msgstr ""
+
+#. i18n: file: kmymoney/dialogs/kmymoneypricedlgdecl.ui:109
+#. i18n: ectx: property (text), widget (KPushButton, m_deleteButton)
+#. i18n: file: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:712
+#. i18n: ectx: property (text), widget (KPushButton, m_deleteButton)
+#. i18n: file: kmymoney/dialogs/settings/ksettingsonlinequotesdecl.ui:180
+#. i18n: ectx: property (text), widget (KPushButton, m_deleteButton)
+#. i18n: file: kmymoney/widgets/kmymoneyreportcontroldecl.ui:115
+#. i18n: ectx: property (text), widget (QPushButton, buttonDelete)
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2133 rc.cpp:837 rc.cpp:1396
+#: rc.cpp:1820 rc.cpp:3850
+msgid "Delete"
+msgstr "Forigi"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2134
+msgid "Keep"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2219
+#, kde-format
+msgid ""
+"<center>The name you have entered does not exist,</center><center>but you "
+"have not elected to add a new profile</center><center>If you wish to add "
+"'%1' as a new profile,</center><center> click 'Yes'.  Otherwise, click 'No'</"
+"center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2223
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2431
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2445
+msgid "Adding profile name."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2299
+#, kde-format
+msgid ""
+"<center>You have edited the name of a profile</center><center>from '%1' to "
+"'%2'.</center><center>If you wish to accept the new name, click 'Yes'.</"
+"center><center>Otherwise, click 'No'</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2303
+msgid "Edit a profile name or create new one."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2354
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2385
+msgid ""
+"<center>If you continue, you will lose any recent profile edits.</"
+"center><center>Continue or Cancel?</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2355
+msgid "Radio button Banking clicked"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2386
+#, fuzzy
+#| msgid "Investment"
+msgid "Radio button Investment clicked"
+msgstr "Investo"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2422
+msgid ""
+"<center>The name you have entered does not exist,</center><center>but you "
+"have not elected to add a new profile.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2424
+#, kde-format
+msgid ""
+"<center>If you wish to add '%1'as a new profile,</center><center> click "
+"'Yes'.  Otherwise, click 'No'</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2468
+#, fuzzy
+#| msgid "Select Style"
+msgid "Select File"
+msgstr "Elekti stilon"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2471
+msgid "A profile must be selected before selecting a file."
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:2595
+msgid ""
+"<center>It is not possible to select another file.</center><center>It is "
+"necessary to restart the plugin.</center>"
+msgstr ""
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:3009
+#: kmymoney/plugins/csvimport/csvdialog.cpp:3033
+#: kmymoney/plugins/csvimport/csvdialog.cpp:3047
+#, fuzzy
+#| msgid "Import"
+msgid "Import CSV"
+msgstr "Importi"
+
+#: kmymoney/plugins/csvimport/csvdialog.cpp:3011
+#: kmymoney/plugins/csvimport/csvdialog.cpp:3049
+msgid "Make QIF File"
+msgstr ""
+
 #: kmymoney/plugins/csvimport/investprocessing.cpp:159
 msgctxt "verb"
 msgid "buy"
@@ -3610,49 +4072,11 @@ msgctxt "noun"
 msgid "payment"
 msgstr "Pagado"
 
-#: kmymoney/plugins/csvimport/investprocessing.cpp:215
-#: kmymoney/plugins/csvimport/csvdialog.cpp:569
-msgid ""
-"*.csv *.PRN *.txt | CSV Files\n"
-" *|All files"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/investprocessing.cpp:427
-#: kmymoney/plugins/csvimport/investprocessing.cpp:528
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1298
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1461
-#, kde-format
-msgid ""
-"The '<b>%1</b>' field already has this column selected. <center>Please "
-"reselect both entries as necessary.</center>"
-msgstr ""
-
 #: kmymoney/plugins/csvimport/investprocessing.cpp:844
 msgid ""
 "The price, quantity and/or amount column values appear to be invalid."
 "<center>Please correct the settings.</center>"
 msgstr ""
-
-#: kmymoney/plugins/csvimport/investprocessing.cpp:846
-#: kmymoney/plugins/csvimport/investprocessing.cpp:879
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1169
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1376
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1401
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1773
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:265
-#: kmymoney/plugins/csvimport/csvdialog.cpp:789
-#: kmymoney/plugins/csvimport/csvdialog.cpp:823
-#: kmymoney/plugins/csvimport/csvdialog.cpp:864
-#: kmymoney/plugins/csvimport/csvdialog.cpp:930
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1002
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1585
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1619
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1668
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1714
-#, fuzzy
-#| msgid "Import"
-msgid "CSV import"
-msgstr "Importi"
 
 #: kmymoney/plugins/csvimport/investprocessing.cpp:879
 #, kde-format
@@ -3668,15 +4092,6 @@ msgid ""
 " Please select another action type\n"
 msgstr ""
 
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1098
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1160
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:191
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:206
-msgid ""
-"Enter the name of the Brokerage or Checking Account used for the transfer of "
-"funds : "
-msgstr ""
-
 #: kmymoney/plugins/csvimport/investprocessing.cpp:1138
 msgid ""
 "<center>buyList of transaction types was not found.</center><center>Check "
@@ -3689,30 +4104,10 @@ msgid ""
 "the Payee or Detail :</center>"
 msgstr ""
 
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1168
-#: kmymoney/plugins/csvimport/csvdialog.cpp:863
-#, kde-format
-msgid ""
-"An invalid column was entered.\n"
-"Must be between 1 and %1."
-msgstr ""
-
 #: kmymoney/plugins/csvimport/investprocessing.cpp:1246
 msgid ""
 " The transaction below has an unrecognised type/action. \n"
 "Please select an appropriate entry."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1277
-#: kmymoney/plugins/csvimport/csvdialog.cpp:948
-#, kde-format
-msgid ""
-"The date entry \"%1\" read from the file cannot be interpreted through the "
-"current date format setting of \"%2.\"\n"
-"\n"
-"Pressing 'Continue' will assign today's date to the transaction. Pressing "
-"'Cancel'' will abort the import operation. You can then restart the import "
-"and select a different date format."
 msgstr ""
 
 #: kmymoney/plugins/csvimport/investprocessing.cpp:1363
@@ -3733,32 +4128,12 @@ msgid ""
 "</center>"
 msgstr ""
 
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1400
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1001
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1713
-msgid ""
-"<center>The start line is greater than the end line.\n"
-"</center><center>Please correct your settings.</center>"
-msgstr ""
-
 #: kmymoney/plugins/csvimport/investprocessing.cpp:1418
 msgid ""
 "The Security Name, and Date and Type columns are needed.<center>Also, the "
 "Price, Quantity and Amount columns.</center><center>Please try again.</"
 "center>"
 msgstr ""
-
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1431
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1042
-msgid "QIF Files"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/investprocessing.cpp:1431
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1042
-#, fuzzy
-#| msgid "Save As"
-msgid "Save QIF"
-msgstr "Konservi kiel"
 
 #: kmymoney/plugins/csvimport/investprocessing.cpp:1508
 msgid "Brokerage Item"
@@ -3823,365 +4198,6 @@ msgstr ""
 #: kmymoney/kmymoney.cpp:2948
 #, kde-format
 msgid "Unable to add account: %1"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:63
-#, fuzzy
-#| msgid "Result"
-msgid "Results table"
-msgstr "Rezulto"
-
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:86
-#, fuzzy
-#| msgid "Columns"
-msgid "Column "
-msgstr "Kolumnoj"
-
-#. i18n: file: kmymoney/dialogs/keditscheduledlgdecl.ui:174
-#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
-#. i18n: file: kmymoney/dialogs/kenterscheduledlgdecl.ui:165
-#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
-#. i18n: file: kmymoney/dialogs/kfindtransactiondlgdecl.ui:788
-#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
-#. i18n: file: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:79
-#. i18n: ectx: property (text), widget (KMyMoneyRegister::Register, m_register)
-#. i18n: file: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:571
-#. i18n: ectx: property (text), item, widget (QTreeWidget, m_editAmounts)
-#. i18n: file: kmymoney/plugins/csvimport/investmentwizardpage.ui:373
-#. i18n: ectx: property (text), widget (QLabel, labelInv_quantity)
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:114
-#: kmymoney/widgets/register.cpp:513 rc.cpp:245 rc.cpp:323 rc.cpp:583
-#: rc.cpp:1162 rc.cpp:1375 rc.cpp:2598
-msgid "Quantity"
-msgstr ""
-
-#. i18n: file: kmymoney/plugins/csvimport/investmentwizardpage.ui:571
-#. i18n: ectx: property (text), widget (QLabel, labelInv_detailCol)
-#. i18n: file: kmymoney/views/kforecastviewdecl.ui:361
-#. i18n: ectx: attribute (title), widget (QWidget, detail)
-#. i18n: file: kmymoney/widgets/kmymoneyreportconfigtab2decl.ui:33
-#. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:130 rc.cpp:2640 rc.cpp:3269
-#: rc.cpp:3589
-msgid "Detail"
-msgstr "Detalo"
-
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:181
-msgid ""
-"There is a problem with the columns selected\n"
-" for 'Price', 'Quantity and 'Amount'.\n"
-"     You will need to reselect those columns."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:264
-msgid ""
-" The values in the columns you have selected\n"
-" do not match any expected investment type.\n"
-" Please check the fields in the current transaction,\n"
-" and also your selections."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/redefinedlg.cpp:273
-msgid "Enter Account Name"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/symboltabledlg.cpp:44
-msgid "Symbols and Security Names present"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/symboltabledlg.cpp:68
-#, fuzzy
-#| msgid "Yes"
-msgctxt "Confirm"
-msgid "Yes"
-msgstr "Jes"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:360
-msgid "Add New Profile"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:786
-#, kde-format
-msgid ""
-"<center>Row number %1 does not have the expected number of columns.</"
-"center><center>This might not be a problem, but it may be a header line.</"
-"center><center>You may accept all similar items, or just this one, or cancel."
-"</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:790
-#, fuzzy
-#| msgctxt "Accept 'imported' and 'matched' transaction"
-#| msgid "Accept"
-msgid "Accept All"
-msgstr "Akcepti"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:791
-#, fuzzy
-#| msgctxt "Accept 'imported' and 'matched' transaction"
-#| msgid "Accept"
-msgid "Accept This"
-msgstr "Akcepti"
-
-#. i18n: file: kmymoney/dialogs/kbackupdlgdecl.ui:163
-#. i18n: ectx: property (text), widget (KPushButton, btnCancel)
-#. i18n: file: kmymoney/dialogs/kcategoryreassigndlgdecl.ui:134
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/kchooseimportexportdlgdecl.ui:164
-#. i18n: ectx: property (text), widget (QPushButton, cancelButton)
-#. i18n: file: kmymoney/dialogs/kconfirmmanualenterdlgdecl.ui:128
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/keditequityentrydecl.ui:217
-#. i18n: ectx: property (text), widget (KPushButton, btnCancel)
-#. i18n: file: kmymoney/dialogs/keditscheduledlgdecl.ui:431
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/kenterscheduledlgdecl.ui:292
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/kexportdlgdecl.ui:362
-#. i18n: ectx: property (text), widget (KPushButton, m_qbuttonCancel)
-#. i18n: file: kmymoney/dialogs/kimportdlgdecl.ui:205
-#. i18n: ectx: property (text), widget (KPushButton, m_qbuttonCancel)
-#. i18n: file: kmymoney/dialogs/kimportverifydlgdecl.ui:92
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/kloadtemplatedlgdecl.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/knewaccountdlgdecl.ui:799
-#. i18n: ectx: property (text), widget (KPushButton, cancelButton)
-#. i18n: file: kmymoney/dialogs/knewbankdlgdecl.ui:237
-#. i18n: ectx: property (text), widget (KPushButton, cancelBtn)
-#. i18n: file: kmymoney/dialogs/knewbudgetdlgdecl.ui:103
-#. i18n: ectx: property (text), widget (KPushButton, m_pbCancel)
-#. i18n: file: kmymoney/dialogs/knewequityentrydecl.ui:178
-#. i18n: ectx: property (text), widget (KPushButton, btnCancel)
-#. i18n: file: kmymoney/dialogs/knewfiledlgdecl.ui:273
-#. i18n: ectx: property (text), widget (KPushButton, cancelBtn)
-#. i18n: file: kmymoney/dialogs/kpayeereassigndlgdecl.ui:144
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/kselecttransactionsdlgdecl.ui:140
-#. i18n: ectx: property (text), widget (KPushButton, buttonCancel)
-#. i18n: file: kmymoney/dialogs/ksortoptiondlg.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, m_cancelButton)
-#. i18n: file: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:765
-#. i18n: ectx: property (text), widget (KPushButton, m_cancelButton)
-#. i18n: file: kmymoney/plugins/ofximport/dialogs/kofxdirectconnectdlgdecl.ui:57
-#. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
-#: kmymoney/plugins/csvimport/csvdialog.cpp:792 rc.cpp:48 rc.cpp:63 rc.cpp:91
-#: rc.cpp:115 rc.cpp:209 rc.cpp:293 rc.cpp:356 rc.cpp:430 rc.cpp:735
-#: rc.cpp:747 rc.cpp:759 rc.cpp:957 rc.cpp:990 rc.cpp:1005 rc.cpp:1050
-#: rc.cpp:1089 rc.cpp:1107 rc.cpp:1180 rc.cpp:1195 rc.cpp:1408 rc.cpp:3014
-msgid "Cancel"
-msgstr "Rezigni"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:820
-#, kde-format
-msgid ""
-"<center>An invalid date has been detected during import.</center><center><b>"
-"%1</b></center>Please check that you have set the correct date format."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:854
-msgid "Enter debit flag column number"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:929
-msgid ""
-"<center>The columns selected are invalid.\n"
-"</center>There must an amount or debit and credit fields, plus date and "
-"payee fields."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1011
-msgid ""
-"<center>An Amount-type column, and Date and Payee columns are needed.</"
-"center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1013
-msgid ""
-"<center>As you had skipped Setup, the wizard will now return you to the "
-"setups.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1072
-msgid "Enter column number of debit/credit code"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1207
-msgid ""
-"<center>Are you sure you wish to exit?</center><center>Restart or Quit?</"
-"center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1208
-#, fuzzy
-#| msgid "Cancel"
-msgid "Cancel clicked"
-msgstr "Rezigni"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1208
-msgid "Restart"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1584
-#, kde-format
-msgid ""
-"<center>Field name not recognised.</center> <center>'<b>%1</b>'</center> "
-"Please re-enter your column selections."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1617
-#, kde-format
-msgid ""
-"Row number %1 may be a header line, as it has an incomplete set of entries."
-"<center>It may be that the start line is incorrectly set.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1623
-#, kde-format
-msgid ""
-"<center>The cell in column '%1' on row %2 is empty.</center><center>Please "
-"check your selections.</center><center>Continue or Cancel?</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1625
-msgid "Selections Warning"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1663
-#, kde-format
-msgid ""
-"<center>The selected decimal symbol was not present in column %1,</"
-"center><center>- but may now have been added.</center><center>If the "
-"<b>decimal</b> symbol displayed does not match your system   setting</"
-"center><center>your data is unlikely to import correctly.</"
-"center><center>Please check your selection.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1673
-#, kde-format
-msgid ""
-"<center>The selected decimal symbol/thousands separator</center><center>have "
-"produced invalid results in row %1, and possibly more.</"
-"center><center>Please try again.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:1675
-msgid "Invalid Conversion"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2053
-#, kde-format
-msgid ""
-"<center>You have cleared the profile name '%1'.</center>\n"
-"<center>If you wish to delete the entry, click 'Delete'.</center>\n"
-"<center>Otherwise, click 'Keep'.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2056
-msgid "Delete or Edit Profile Name"
-msgstr ""
-
-#. i18n: file: kmymoney/dialogs/kmymoneypricedlgdecl.ui:109
-#. i18n: ectx: property (text), widget (KPushButton, m_deleteButton)
-#. i18n: file: kmymoney/dialogs/mymoneyqifprofileeditordecl.ui:712
-#. i18n: ectx: property (text), widget (KPushButton, m_deleteButton)
-#. i18n: file: kmymoney/dialogs/settings/ksettingsonlinequotesdecl.ui:180
-#. i18n: ectx: property (text), widget (KPushButton, m_deleteButton)
-#. i18n: file: kmymoney/widgets/kmymoneyreportcontroldecl.ui:115
-#. i18n: ectx: property (text), widget (QPushButton, buttonDelete)
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2057 rc.cpp:837 rc.cpp:1396
-#: rc.cpp:1820 rc.cpp:3850
-msgid "Delete"
-msgstr "Forigi"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2058
-msgid "Keep"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2143
-#, kde-format
-msgid ""
-"<center>The name you have entered does not exist,</center><center>but you "
-"have not elected to add a new profile</center><center>If you wish to add "
-"'%1' as a new profile,</center><center> click 'Yes'.  Otherwise, click 'No'</"
-"center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2147
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2355
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2369
-msgid "Adding profile name."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2223
-#, kde-format
-msgid ""
-"<center>You have edited the name of a profile</center><center>from '%1' to "
-"'%2'.</center><center>If you wish to accept the new name, click 'Yes'.</"
-"center><center>Otherwise, click 'No'</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2227
-msgid "Edit a profile name or create new one."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2278
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2309
-msgid ""
-"<center>If you continue, you will lose any recent profile edits.</"
-"center><center>Continue or Cancel?</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2279
-msgid "Radio button Banking clicked"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2310
-#, fuzzy
-#| msgid "Investment"
-msgid "Radio button Investment clicked"
-msgstr "Investo"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2346
-msgid ""
-"<center>The name you have entered does not exist,</center><center>but you "
-"have not elected to add a new profile.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2348
-#, kde-format
-msgid ""
-"<center>If you wish to add '%1'as a new profile,</center><center> click "
-"'Yes'.  Otherwise, click 'No'</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2392
-#, fuzzy
-#| msgid "Select Style"
-msgid "Select File"
-msgstr "Elekti stilon"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2395
-msgid "A profile must be selected before selecting a file."
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2517
-msgid ""
-"<center>It is not possible to select another file.</center><center>It is "
-"necessary to restart the plugin.</center>"
-msgstr ""
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2930
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2954
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2968
-#, fuzzy
-#| msgid "Import"
-msgid "Import CSV"
-msgstr "Importi"
-
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2932
-#: kmymoney/plugins/csvimport/csvdialog.cpp:2970
-msgid "Make QIF File"
 msgstr ""
 
 #: kmymoney/plugins/icalendarexport/icalendarexport.cpp:65
@@ -4805,6 +4821,12 @@ msgstr ""
 msgid "Failed to import all statements."
 msgstr ""
 
+#: kmymoney/plugins/printcheck/printcheck.cpp:63
+#, fuzzy
+#| msgid "Preview"
+msgid "Print check"
+msgstr "Antaŭrigardo"
+
 #: kmymoney/plugins/printcheck/numbertowords.cpp:30
 #, fuzzy
 #| msgid "Period"
@@ -5065,12 +5087,6 @@ msgctxt ""
 "fractional part and the third is the denominator of the fractional part"
 msgid "%1 and %2/%3"
 msgstr "%1 de %2"
-
-#: kmymoney/plugins/printcheck/printcheck.cpp:63
-#, fuzzy
-#| msgid "Preview"
-msgid "Print check"
-msgstr "Antaŭrigardo"
 
 #: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:113
 #, kde-format
