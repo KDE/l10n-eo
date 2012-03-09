@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-04 03:26+0100\n"
+"POT-Creation-Date: 2012-03-09 03:40+0100\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1993,6 +1993,7 @@ msgid "&Edit Track Details"
 msgstr "Redakti trakan informon"
 
 #: browsers/filebrowser/FileView.cpp:573
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:39
 #, fuzzy
 #| msgid "Configure Playback"
 msgctxt "@title:window"
@@ -2010,7 +2011,7 @@ msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
 
 #: browsers/filebrowser/FileView.cpp:580
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:70
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:52
 #, fuzzy
 #| msgid "Moving files to trash"
 msgctxt "@title:window"
@@ -4800,107 +4801,6 @@ msgstr "Kolekto"
 msgid "Proxy Collection"
 msgstr "Kolekto"
 
-#: core-impl/collections/support/TrashCollectionLocation.cpp:47
-#, fuzzy
-#| msgctxt "Items, as in music"
-#| msgid "&Tracks"
-msgid "Trash"
-msgstr "&Trakoj"
-
-#: core-impl/collections/support/TrashCollectionLocation.cpp:101
-#, fuzzy, kde-format
-#| msgid "Moving files to trash"
-msgid "Moving to trash: %1"
-msgstr "Metante dosierojn en la rubujo"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:40
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to remove this cover from the Collection?"
-#| msgid_plural ""
-#| "Are you sure you want to delete these %1 covers from the Collection?"
-msgctxt "@info"
-msgid ""
-"Do you really want to delete this track? It will be removed from your "
-"collection."
-msgid_plural ""
-"Do you really want to delete these %1 tracks? They will be removed from your "
-"collection."
-msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:45
-#, fuzzy
-#| msgid "Delete failed"
-msgid "Delete Files"
-msgstr "La forigado fiaskis"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:61
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to remove this cover from the Collection?"
-#| msgid_plural ""
-#| "Are you sure you want to delete these %1 covers from the Collection?"
-msgctxt "@info"
-msgid ""
-"Do you really want to move this track to the trash? It will be removed from "
-"your collection."
-msgid_plural ""
-"Do you really want to move these %1 tracks to the trash? They will be "
-"removed from your collection."
-msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:82
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to remove this cover from the Collection?"
-#| msgid_plural ""
-#| "Are you sure you want to delete these %1 covers from the Collection?"
-msgctxt "@info"
-msgid ""
-"Do you really want to move this track? It will be renamed and the original "
-"deleted."
-msgid_plural ""
-"Do you really want to move these %1 tracks? They will be renamed and the "
-"originals deleted."
-msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:87
-#, fuzzy
-#| msgid "Files"
-msgid "Move Files"
-msgstr "Dosieroj"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:98
-#, kde-format
-msgctxt "@info"
-msgid ""
-"There was a problem and this track could not be removed. Make sure the "
-"directory is writable."
-msgid_plural ""
-"There was a problem and %1 tracks could not be removed. Make sure the "
-"directory is writable."
-msgstr[0] ""
-msgstr[1] ""
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:103
-msgid "Unable to be removed tracks"
-msgstr ""
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:110
-msgid ""
-"The collection does not have enough free space available or is not writable."
-msgstr ""
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:116
-msgid "Do you want to remove empty folders?"
-msgstr ""
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:117
-#, fuzzy
-#| msgid "&Remove Computer"
-msgid "Remove empty folders?"
-msgstr "Fo&rigi komputilon"
-
 #: core-impl/collections/support/ArtistHelper.cpp:31
 msgctxt "The genre name for classical music"
 msgid "Classical"
@@ -4932,6 +4832,132 @@ msgstr ""
 #| msgid_plural "%1 minutes ago"
 msgid "three months ago"
 msgstr "Unu minuto antaŭe"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:35
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to remove this cover from the Collection?"
+#| msgid_plural ""
+#| "Are you sure you want to delete these %1 covers from the Collection?"
+msgctxt "@info"
+msgid ""
+"Do you really want to delete this track? It will be removed from %1 and from "
+"underlying storage medium."
+msgid_plural ""
+"Do you really want to delete these %2 tracks? They will be removed from %1 "
+"and from underlying storage medium."
+msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:48
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to remove this cover from the Collection?"
+#| msgid_plural ""
+#| "Are you sure you want to delete these %1 covers from the Collection?"
+msgctxt "@info"
+msgid ""
+"Do you really want to move this track to the trash? It will be removed from "
+"%1."
+msgid_plural ""
+"Do you really want to move these %2 tracks to the trash? They will be "
+"removed from %1."
+msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:62
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to remove this cover from the Collection?"
+#| msgid_plural ""
+#| "Are you sure you want to delete these %1 covers from the Collection?"
+msgctxt "@info"
+msgid ""
+"Do you really want to move this track? It will be renamed and the original "
+"deleted."
+msgid_plural ""
+"Do you really want to move these %1 tracks? They will be renamed and the "
+"originals deleted."
+msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:66
+#, fuzzy
+#| msgid "Files"
+msgctxt "@title:window"
+msgid "Move Files"
+msgstr "Dosieroj"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:66
+#, fuzzy
+#| msgid "&Rename"
+msgctxt "rename files button"
+msgid "&Rename"
+msgstr "&Renomi"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:76
+#, kde-format
+msgctxt "@info"
+msgid ""
+"There was a problem and this track could not be removed. Make sure the "
+"directory is writable."
+msgid_plural ""
+"There was a problem and %1 tracks could not be removed. Make sure the "
+"directory is writable."
+msgstr[0] ""
+msgstr[1] ""
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:79
+#, fuzzy
+#| msgid "Could not connect to MTP Device"
+msgid "Unable to remove tracks"
+msgstr "Ne eblis konektiĝi al la MTP disponaĵo"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:87
+msgid ""
+"The collection does not have enough free space available or is not writable."
+msgstr ""
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:94
+msgid "Do you want to remove empty folders?"
+msgstr ""
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:95
+#, fuzzy
+#| msgid "&Remove Computer"
+msgid "Remove empty folders?"
+msgstr "Fo&rigi komputilon"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:116
+#, fuzzy, kde-format
+#| msgid "%1 (x%2)"
+msgctxt "%1 is track url, %2 track title, %3 track artist"
+msgid "%1 (%2 by %3)"
+msgstr "%1 (x%2)"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:118
+#, fuzzy, kde-format
+#| msgid "%1 (x%2)"
+msgctxt "%1 is track url, %2 track name"
+msgid "%1 (%2)"
+msgstr "%1 (x%2)"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:120
+#, fuzzy, kde-format
+#| msgid "%1 (x%2)"
+msgctxt "%1 is track url, %2 artist name"
+msgid "%1 (by %2)"
+msgstr "%1 (x%2)"
+
+#: core-impl/collections/support/TrashCollectionLocation.cpp:47
+#, fuzzy
+#| msgctxt "Items, as in music"
+#| msgid "&Tracks"
+msgid "Trash"
+msgstr "&Trakoj"
+
+#: core-impl/collections/support/TrashCollectionLocation.cpp:101
+#, fuzzy, kde-format
+#| msgid "Moving files to trash"
+msgid "Moving to trash: %1"
+msgstr "Metante dosierojn en la rubujo"
 
 #: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:184
 #, fuzzy
@@ -16736,6 +16762,11 @@ msgid ""
 "Would you like to use that as a collection folder?"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Delete failed"
+#~ msgid "Delete Files"
+#~ msgstr "La forigado fiaskis"
+
 #~ msgid "Devices"
 #~ msgstr "Disponaĵoj"
 
@@ -19129,9 +19160,6 @@ msgstr ""
 
 #~ msgid "iPod"
 #~ msgstr "iPod"
-
-#~ msgid "%1 (x%2)"
-#~ msgstr "%1 (x%2)"
 
 #~ msgid "Unable to set iPod model to %1 GB %2 (x%3)"
 #~ msgstr "Ne eblis agordi la iPod modelon al %1 GB %2 (x%3)"
