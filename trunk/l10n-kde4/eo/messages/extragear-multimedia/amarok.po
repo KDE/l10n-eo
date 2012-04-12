@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-06 03:36+0200\n"
+"POT-Creation-Date: 2012-04-12 03:47+0200\n"
 "PO-Revision-Date: 2008-04-12 23:37+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -4712,7 +4712,7 @@ msgstr ""
 
 #. i18n: file: dialogs/TagDialogBase.ui:1061
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: rc.cpp:1656 playlistmanager/file/PlaylistFileProvider.cpp:223
+#: rc.cpp:1656
 msgid "Remove"
 msgstr "Forigi"
 
@@ -7336,8 +7336,8 @@ msgstr "Tajpu novan antaŭagordan nomon:"
 
 #: browsers/playlistbrowser/PlaylistsInFoldersProxy.cpp:333
 #: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:254
-#: playlistmanager/file/PlaylistFileProvider.cpp:446
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:117
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:130
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:98
 #, fuzzy
 #| msgid "Configure Playback"
 msgid "Confirm Delete"
@@ -9692,18 +9692,12 @@ msgstr[0] "La forigado de trakoj fiaskis."
 msgstr[1] "La forigado de trakoj fiaskis."
 
 #: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:115
-#: playlistmanager/file/PlaylistFileProvider.cpp:474
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:148
-#: playlistmanager/PlaylistManager.cpp:392
 #, fuzzy
 #| msgid "&Save Playlist As..."
 msgid "Change playlist"
 msgstr "Kon&servi la ludliston kiel..."
 
 #: core-impl/collections/mediadevicecollection/playlist/MediaDeviceUserPlaylistProvider.cpp:116
-#: playlistmanager/file/PlaylistFileProvider.cpp:475
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:149
-#: playlistmanager/PlaylistManager.cpp:393
 #, fuzzy
 #| msgid "Enter a &name for this device (required):"
 msgid "Enter new name for playlist:"
@@ -10061,6 +10055,55 @@ msgstr "Nekonata"
 #| msgid "Stream"
 msgid "Stream (%1)"
 msgstr "Fluo"
+
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:34
+#, fuzzy
+#| msgid "&Delete"
+msgid "&Delete..."
+msgstr "&Forigi"
+
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:38
+#, fuzzy
+#| msgid "&Rename"
+msgid "&Rename..."
+msgstr "&Renomi"
+
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:104
+#, fuzzy, kde-format
+#| msgid "Remove From Playlist"
+msgctxt "Number of playlists is >= 2"
+msgid "Remove a track from %2 playlists"
+msgid_plural "Remove %1 tracks from %2 playlists"
+msgstr[0] "Forigi el la ludlisto"
+msgstr[1] "Forigi el la ludlisto"
+
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:110
+#, fuzzy, kde-format
+#| msgid "Deleting track(s) failed."
+msgctxt "%2 is saved playlist name"
+msgid "Remove a track from %2"
+msgid_plural "Remove %1 tracks from %2"
+msgstr[0] "La forigado de trakoj fiaskis."
+msgstr[1] "La forigado de trakoj fiaskis."
+
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:132
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:100
+#, fuzzy, kde-format
+#| msgid "Are you sure you want to remove this cover from the Collection?"
+#| msgid_plural ""
+#| "Are you sure you want to delete these %1 covers from the Collection?"
+msgid "Are you sure you want to delete this playlist?"
+msgid_plural "Are you sure you want to delete these %1 playlists?"
+msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+
+#: core-impl/playlists/providers/user/UserPlaylistProvider.cpp:139
+#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:107
+#, fuzzy, kde-format
+#| msgid "Delete failed"
+msgctxt "%1 is playlist provider pretty name"
+msgid "Yes, delete from %1."
+msgstr "La forigado fiaskis"
 
 #: core-impl/playlists/types/dynamic/DynamicPlaylist.cpp:36
 msgid "Default Dynamic Playlist"
@@ -14464,85 +14507,23 @@ msgid ""
 "constraints to find more tracks."
 msgstr ""
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:105
+#: playlistmanager/file/PlaylistFileProvider.cpp:98
 #, fuzzy
 #| msgid "Playlist Files"
 msgid "Playlist Files on Disk"
 msgstr "Ludlistaj dosieroj"
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:149
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:190
-#, fuzzy
-#| msgid "&Rename"
-msgid "&Rename..."
-msgstr "&Renomi"
-
-#: playlistmanager/file/PlaylistFileProvider.cpp:161
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:202
-#, fuzzy
-#| msgid "&Delete"
-msgid "&Delete..."
-msgstr "&Forigi"
-
-#: playlistmanager/file/PlaylistFileProvider.cpp:217
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:247
-#, fuzzy
-#| msgid "Repeat Track"
-msgid "Remove tracks"
-msgstr "Ripeti la trakon"
-
-#: playlistmanager/file/PlaylistFileProvider.cpp:220
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:250
-#, fuzzy, kde-format
-#| msgid "Remove"
-msgctxt "Remove a track from a saved playlist"
-msgid "Remove From \"%1\""
-msgstr "Forigi"
-
-#: playlistmanager/file/PlaylistFileProvider.cpp:378
+#: playlistmanager/file/PlaylistFileProvider.cpp:276
 #, fuzzy, kde-format
 #| msgid "This object could not be created."
 msgid "The playlist file \"%1\" could not be loaded."
 msgstr "Tiu objekto ne kreeblis."
 
-#: playlistmanager/file/PlaylistFileProvider.cpp:448
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:119
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to remove this cover from the Collection?"
-#| msgid_plural ""
-#| "Are you sure you want to delete these %1 covers from the Collection?"
-msgid "Are you sure you want to delete this playlist?"
-msgid_plural "Are you sure you want to delete these %1 playlist files?"
-msgstr[0] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-msgstr[1] "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-
-#: playlistmanager/file/PlaylistFileProvider.cpp:454
-msgid "Yes, delete from disk."
-msgstr ""
-
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:90
+#: playlistmanager/sql/SqlPlaylist.cpp:41
 #, fuzzy
-#| msgid "Configure Playback"
-msgid "Confirm Rename"
-msgstr "Agordi la ludadon"
-
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:92
-#, fuzzy, kde-format
-#| msgid "Are you sure you want to remove this cover from the Collection?"
-#| msgid_plural ""
-#| "Are you sure you want to delete these %1 covers from the Collection?"
-msgid "Are you sure you want to rename this playlist to '%1'?"
-msgstr "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
-
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:93
-#, fuzzy
-#| msgid "Enter a &name for this device (required):"
-msgid "Yes, rename this playlist."
-msgstr "Enmetu &nomon por tiu aparato (bezonata):"
-
-#: playlistmanager/sql/SqlUserPlaylistProvider.cpp:125
-msgid "Yes, delete from database."
-msgstr ""
+#| msgid "Playlist name:"
+msgid "Playlist in database"
+msgstr "Ludlista nomo:"
 
 #: playlistmanager/sql/SqlUserPlaylistProvider.h:44
 #, fuzzy
@@ -14553,12 +14534,6 @@ msgstr "Aldoni al la datumbazo"
 #: playlistmanager/sql/SqlUserPlaylistProvider.h:45
 msgid "Local playlists stored in the database"
 msgstr ""
-
-#: playlistmanager/sql/SqlPlaylist.cpp:41
-#, fuzzy
-#| msgid "Playlist name:"
-msgid "Playlist in database"
-msgstr "Ludlista nomo:"
 
 #: playlistmanager/SyncedPlaylist.cpp:42 playlistmanager/SyncedPlaylist.cpp:50
 #: playlistmanager/SyncedPlaylist.cpp:58
@@ -16917,6 +16892,34 @@ msgid ""
 "A music path, %1, is set in System Settings.\n"
 "Would you like to use that as a collection folder?"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Repeat Track"
+#~ msgid "Remove tracks"
+#~ msgstr "Ripeti la trakon"
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgctxt "Remove a track from a saved playlist"
+#~ msgid "Remove From \"%1\""
+#~ msgstr "Forigi"
+
+#, fuzzy
+#~| msgid "Configure Playback"
+#~ msgid "Confirm Rename"
+#~ msgstr "Agordi la ludadon"
+
+#, fuzzy
+#~| msgid "Are you sure you want to remove this cover from the Collection?"
+#~| msgid_plural ""
+#~| "Are you sure you want to delete these %1 covers from the Collection?"
+#~ msgid "Are you sure you want to rename this playlist to '%1'?"
+#~ msgstr "Ĉu vi vere volas forigi tiun jaketon el la kolekto?"
+
+#, fuzzy
+#~| msgid "Enter a &name for this device (required):"
+#~ msgid "Yes, rename this playlist."
+#~ msgstr "Enmetu &nomon por tiu aparato (bezonata):"
 
 #, fuzzy
 #~| msgid "Format:"
