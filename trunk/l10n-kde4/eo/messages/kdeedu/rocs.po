@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rocs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-06 05:06+0200\n"
+"POT-Creation-Date: 2012-05-07 04:38+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,15 +16,7 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: Actions/AddConnectionHandAction.cpp:36
-msgid "Add Edge"
-msgstr ""
-
-#: Actions/AddConnectionHandAction.cpp:37
-msgid "Creates a new edge between 2 nodes"
-msgstr ""
-
-#: Actions/AddDataAction.cpp:33 Actions/AddDataHandAction.cpp:34
+#: Actions/AddDataAction.cpp:33
 msgid "Add Node"
 msgstr ""
 
@@ -32,7 +24,7 @@ msgstr ""
 msgid "Creates a new node at the click position."
 msgstr ""
 
-#: Actions/AddDataAction.cpp:51 Actions/AddDataHandAction.cpp:53
+#: Actions/AddDataAction.cpp:51 Actions/AddDataHandAction.cpp:77
 msgid "untitled"
 msgstr ""
 
@@ -52,17 +44,13 @@ msgstr ""
 msgid "Zoom the canvas by the wheel, or by dragging."
 msgstr ""
 
-#: Actions/AddDataHandAction.cpp:35
-msgid "Creates a new node at the click position on the drawing area."
-msgstr ""
-
 #. i18n: file: Interface/PointerTypePage.ui:125
 #. i18n: ectx: property (text), widget (KPushButton, deleteType)
 #. i18n: file: Interface/DataTypePage.ui:135
 #. i18n: ectx: property (text), widget (KPushButton, deleteType)
 #: Actions/DeleteHandAction.cpp:36 Interface/VisualEditor/GraphScene.cpp:406
 #: Interface/VisualEditor/GraphScene.cpp:407
-#: Interface/VisualEditor/GraphScene.cpp:408 Interface/MainWindow.cpp:414
+#: Interface/VisualEditor/GraphScene.cpp:408 Interface/MainWindow.cpp:420
 #: rc.cpp:119 rc.cpp:149
 msgid "Delete"
 msgstr "Forigi"
@@ -82,6 +70,30 @@ msgstr "Eco"
 #| msgid "Property"
 msgid "Pointer Type Properties"
 msgstr "Eco"
+
+#: Actions/AddConnectionHandAction.cpp:38
+msgid "Add Edge"
+msgstr ""
+
+#: Actions/AddConnectionHandAction.cpp:39
+#: Actions/AddConnectionHandAction.cpp:54
+msgid "Creates a new edge between 2 nodes"
+msgstr ""
+
+#: Actions/AddConnectionHandAction.cpp:53 Actions/AddDataHandAction.cpp:45
+#: Actions/AddDataHandAction.cpp:59
+#, kde-format
+msgid "Add %1"
+msgstr ""
+
+#: Actions/AddDataHandAction.cpp:35 Interface/MainWindow.cpp:356
+#: Interface/MainWindow.cpp:357
+msgid "Add Data"
+msgstr ""
+
+#: Actions/AddDataHandAction.cpp:36 Actions/AddDataHandAction.cpp:46
+msgid "Creates a new node at the click position on the drawing area."
+msgstr ""
 
 #: Core/DynamicPropertiesList.cpp:172
 msgctxt "dynamic property that is present exactly once"
@@ -118,10 +130,6 @@ msgstr ""
 msgid "<b style=\"color: red\"> Error in include file %1</b>"
 msgstr ""
 
-#: Core/DataType.cpp:57
-msgid "Element"
-msgstr ""
-
 #: Core/PointerType.cpp:55
 #, fuzzy
 #| msgid "Connection Type"
@@ -135,6 +143,10 @@ msgctxt ""
 msgid "Document"
 msgstr "Dek"
 
+#: Core/DataType.cpp:61
+msgid "Element"
+msgstr ""
+
 #: GraphicsItem/DataItem.cpp:198 GraphicsItem/DataItem.cpp:203
 #, kde-format
 msgid "%1"
@@ -143,22 +155,6 @@ msgstr ""
 #: GraphicsItem/DataItem.cpp:242 GraphicsItem/DataItem.cpp:247
 #, kde-format
 msgid "v=%1"
-msgstr ""
-
-#: Interface/DataStructurePropertiesWidget.cpp:210
-msgid "Show values of data elements"
-msgstr ""
-
-#: Interface/DataStructurePropertiesWidget.cpp:272
-msgid "Show names of pointers"
-msgstr ""
-
-#: Interface/DataStructurePropertiesWidget.cpp:279
-msgid "Show values of pointers"
-msgstr ""
-
-#: Interface/DataStructurePropertiesWidget.cpp:286
-msgid "Set visibility of pointers"
 msgstr ""
 
 #: Interface/DocumentPropertiesDialog.cpp:36
@@ -189,6 +185,22 @@ msgstr ""
 
 #: Interface/GraphLayers.cpp:51
 msgid "Identifier for new Data Structure"
+msgstr ""
+
+#: Interface/DataStructurePropertiesWidget.cpp:184
+msgid "Show values of data elements"
+msgstr ""
+
+#: Interface/DataStructurePropertiesWidget.cpp:249
+msgid "Show names of pointers"
+msgstr ""
+
+#: Interface/DataStructurePropertiesWidget.cpp:256
+msgid "Show values of pointers"
+msgstr ""
+
+#: Interface/DataStructurePropertiesWidget.cpp:263
+msgid "Set visibility of pointers"
 msgstr ""
 
 #: Interface/PointerPropertiesWidget.cpp:33
@@ -298,7 +310,7 @@ msgstr ""
 #: Interface/VisualEditor/GraphScene.cpp:370
 #: Interface/VisualEditor/GraphScene.cpp:427
 #: Interface/VisualEditor/GraphScene.cpp:432 Interface/MainWindow.cpp:329
-#: Interface/MainWindow.cpp:564
+#: Interface/MainWindow.cpp:570
 #, fuzzy
 #| msgid "Property"
 msgid "Properties"
@@ -341,7 +353,7 @@ msgstr "Eksporti"
 msgid "Export graphs to file"
 msgstr ""
 
-#: Interface/ImporterExporterManager.cpp:92 Interface/MainWindow.cpp:621
+#: Interface/ImporterExporterManager.cpp:92 Interface/MainWindow.cpp:670
 msgid "Graph Files"
 msgstr ""
 
@@ -411,214 +423,228 @@ msgstr ""
 msgid "Graph Document:"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:379
-msgctxt "Alignment"
-msgid "Base"
+#: Interface/MainWindow.cpp:358
+msgid "Add new data element"
 msgstr ""
 
-#: Interface/MainWindow.cpp:380 Interface/MainWindow.cpp:383
-msgctxt "Alignment"
-msgid "Center"
-msgstr ""
+#: Interface/MainWindow.cpp:361 Interface/MainWindow.cpp:362
+#, fuzzy
+#| msgid "Connection Type"
+msgid "Add Connection"
+msgstr "Konekta tipo"
 
-#: Interface/MainWindow.cpp:381
-msgctxt "Alignment"
-msgid "Top"
-msgstr ""
-
-#: Interface/MainWindow.cpp:382
-msgctxt "Alignment"
-msgid "Left"
-msgstr ""
-
-#: Interface/MainWindow.cpp:384
-msgctxt "Alignment"
-msgid "Right"
+#: Interface/MainWindow.cpp:363
+msgid "Add a new connection between two data elements of selected type"
 msgstr ""
 
 #: Interface/MainWindow.cpp:385
 msgctxt "Alignment"
+msgid "Base"
+msgstr ""
+
+#: Interface/MainWindow.cpp:386 Interface/MainWindow.cpp:389
+msgctxt "Alignment"
+msgid "Center"
+msgstr ""
+
+#: Interface/MainWindow.cpp:387
+msgctxt "Alignment"
+msgid "Top"
+msgstr ""
+
+#: Interface/MainWindow.cpp:388
+msgctxt "Alignment"
+msgid "Left"
+msgstr ""
+
+#: Interface/MainWindow.cpp:390
+msgctxt "Alignment"
+msgid "Right"
+msgstr ""
+
+#: Interface/MainWindow.cpp:391
+msgctxt "Alignment"
 msgid "Circle"
 msgstr ""
 
-#: Interface/MainWindow.cpp:386
+#: Interface/MainWindow.cpp:392
 msgctxt "Alignment"
 msgid "Minimize Crossing Edges"
 msgstr ""
 
-#: Interface/MainWindow.cpp:389
+#: Interface/MainWindow.cpp:395
 msgid "New Project"
 msgstr ""
 
-#: Interface/MainWindow.cpp:390 Interface/MainWindow.cpp:666
+#: Interface/MainWindow.cpp:396 Interface/MainWindow.cpp:715
 #, fuzzy
 msgid "Save Project"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:391
+#: Interface/MainWindow.cpp:397
 #, fuzzy
 msgid "Open Project"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:392
+#: Interface/MainWindow.cpp:398
 #, fuzzy
 #| msgid "Name"
 msgid "Set Name"
 msgstr "Nomo"
 
-#: Interface/MainWindow.cpp:393
+#: Interface/MainWindow.cpp:399
 msgid "New Graph Document"
 msgstr ""
 
-#: Interface/MainWindow.cpp:394
+#: Interface/MainWindow.cpp:400
 #, fuzzy
 msgid "New Script File"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:395
+#: Interface/MainWindow.cpp:401
 #, fuzzy
 #| msgid "Import"
 msgid "Import Rocs Graph"
 msgstr "Importi"
 
-#: Interface/MainWindow.cpp:396
+#: Interface/MainWindow.cpp:402
 msgid "Save Graph"
 msgstr ""
 
-#: Interface/MainWindow.cpp:397
+#: Interface/MainWindow.cpp:403
 msgid "Save Graph as"
 msgstr ""
 
-#: Interface/MainWindow.cpp:398
+#: Interface/MainWindow.cpp:404
 msgid "Download Examples"
 msgstr ""
 
-#: Interface/MainWindow.cpp:399
+#: Interface/MainWindow.cpp:405
 msgid "Upload script"
 msgstr ""
 
-#: Interface/MainWindow.cpp:401
+#: Interface/MainWindow.cpp:407
 msgid "Possible Includes"
 msgstr ""
 
-#: Interface/MainWindow.cpp:402
+#: Interface/MainWindow.cpp:408
 #, fuzzy
 msgid "Open Script"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:403
+#: Interface/MainWindow.cpp:409
 #, fuzzy
 msgid "Save Script"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:404
+#: Interface/MainWindow.cpp:410
 #, fuzzy
 msgid "Save Script as"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:409
+#: Interface/MainWindow.cpp:415
 #, fuzzy
 #| msgid "Import"
 msgid "Import Graph"
 msgstr "Importi"
 
-#: Interface/MainWindow.cpp:410
+#: Interface/MainWindow.cpp:416
 #, fuzzy
 #| msgid "Export"
 msgid "Export Graph"
 msgstr "Eksporti"
 
-#: Interface/MainWindow.cpp:446
+#: Interface/MainWindow.cpp:452
 msgid "Include Manager"
 msgstr ""
 
-#: Interface/MainWindow.cpp:447
+#: Interface/MainWindow.cpp:453
 msgid "Default Settings"
 msgstr ""
 
-#: Interface/MainWindow.cpp:621
+#: Interface/MainWindow.cpp:670
 msgid ""
 "*.graph|Graph files\n"
 "*|All files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:632
+#: Interface/MainWindow.cpp:681
 msgid "This does not seem to be a graph file."
 msgstr ""
 
-#: Interface/MainWindow.cpp:632
+#: Interface/MainWindow.cpp:681
 #, fuzzy
 msgid "Invalid file"
 msgstr "nevalida dosiernomo"
 
-#: Interface/MainWindow.cpp:664 Interface/MainWindow.cpp:689
+#: Interface/MainWindow.cpp:713 Interface/MainWindow.cpp:738
 msgid ""
 "*.rocs|Rocs project files\n"
 "*|All files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:691
+#: Interface/MainWindow.cpp:740
 msgid "Open Project Files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:711
+#: Interface/MainWindow.cpp:760
 msgid "Set Project Name"
 msgstr ""
 
-#: Interface/MainWindow.cpp:712
+#: Interface/MainWindow.cpp:761
 #, fuzzy
 #| msgid "Name:"
 msgctxt "name of the project"
 msgid "Name:"
 msgstr "Nomo:"
 
-#: Interface/MainWindow.cpp:723
+#: Interface/MainWindow.cpp:772
 msgid ""
 "*.js|Rocs script documents\n"
 "*|All files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:725
+#: Interface/MainWindow.cpp:774
 #, fuzzy
 msgid "Save Script Document"
 msgstr "Dek"
 
-#: Interface/MainWindow.cpp:735
+#: Interface/MainWindow.cpp:784
 msgid ""
 "*.js|Rocs script document\n"
 "*|All files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:737
+#: Interface/MainWindow.cpp:786
 msgid "Enter Filename for the New Script File"
 msgstr ""
 
-#: Interface/MainWindow.cpp:791 Interface/MainWindow.cpp:801
+#: Interface/MainWindow.cpp:840 Interface/MainWindow.cpp:850
 msgid ""
 "*.graph|Rocs graph documents\n"
 "*|All files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:793
+#: Interface/MainWindow.cpp:842
 msgid "Save Graph Document"
 msgstr ""
 
-#: Interface/MainWindow.cpp:803
+#: Interface/MainWindow.cpp:852
 msgid "Enter Filename for the New Graph Document"
 msgstr ""
 
-#: Interface/MainWindow.cpp:824
+#: Interface/MainWindow.cpp:873
 msgid ""
 "Changes on your graph document are unsaved. Do you want to save your changes?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:832
+#: Interface/MainWindow.cpp:881
 msgid ""
 "Changes on your script files are unsaved. Do you want to save all unsaved "
 "scripts?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:840
+#: Interface/MainWindow.cpp:889
 msgid ""
 "Changes on your script files and on your graph document are unsaved. Do you "
 "want to save your graph document and all unsaved scripts?"
@@ -1037,7 +1063,7 @@ msgid "Type:"
 msgstr "Tipo"
 
 #. i18n: file: Interface/DataPropertiesWidget.ui:157
-#. i18n: ectx: property (title), widget (QGroupBox, Apearance)
+#. i18n: ectx: property (title), widget (QGroupBox, Appearance)
 #: rc.cpp:62
 msgid "Appearance"
 msgstr ""
