@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marble_qt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 04:58+0200\n"
+"POT-Creation-Date: 2012-05-15 05:11+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -582,15 +582,15 @@ msgstr "Malfermu dosieron"
 msgid "Simulates travelling along the current route."
 msgstr ""
 
-#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:36
+#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:35
 msgid "FlightGear position provider Plugin"
 msgstr ""
 
-#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:46
+#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:45
 msgid "FlightGear"
 msgstr ""
 
-#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:56
+#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:55
 msgid "Reports the position of running flightgear application."
 msgstr ""
 
@@ -752,7 +752,7 @@ msgstr ""
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:53
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:238
 #: src/plugins/render/elevationprofilefloatitem/ElevationProfilePlotAxis.cpp:142
-#: src/lib/MarbleWidget.cpp:1194
+#: src/lib/MarbleWidget.cpp:1194 src/lib/CurrentLocationWidget.cpp:273
 msgid "km"
 msgstr "km"
 
@@ -778,7 +778,7 @@ msgstr "Kreinto"
 #: src/plugins/render/gpsinfo/GpsInfo.cpp:140
 #: src/plugins/render/elevationprofilefloatitem/ElevationProfilePlotAxis.cpp:145
 #: src/plugins/render/elevationprofilemarker/ElevationProfileMarker.cpp:169
-#: src/lib/CurrentLocationWidget.cpp:267
+#: src/lib/CurrentLocationWidget.cpp:269 src/lib/CurrentLocationWidget.cpp:270
 msgid "m"
 msgstr "m"
 
@@ -1060,13 +1060,6 @@ msgstr ""
 msgid "Routing information and navigation controls"
 msgstr ""
 
-#: src/plugins/render/satellites/SatellitesItem.cpp:68
-#, qt-format
-msgid ""
-"NORAD ID: %2 <br />Perigee: %3 km <br />Apogee: %4 km <br />Inclination: %5 "
-"degrees <br />Period: %6 minutes <br />Semi-major axis: %7 km"
-msgstr ""
-
 #: src/plugins/render/satellites/SatellitesConfigModel.cpp:132
 msgid "Category"
 msgstr ""
@@ -1126,6 +1119,13 @@ msgstr ""
 msgid "Miscellaneous Satellites"
 msgstr ""
 
+#: src/plugins/render/satellites/SatellitesItem.cpp:68
+#, qt-format
+msgid ""
+"NORAD ID: %2 <br />Perigee: %3 km <br />Apogee: %4 km <br />Inclination: %5 "
+"degrees <br />Period: %6 minutes <br />Semi-major axis: %7 km"
+msgstr ""
+
 #: src/plugins/render/stars/StarsPlugin.cpp:58
 #, fuzzy
 #| msgid "Atlas"
@@ -1152,14 +1152,93 @@ msgstr ""
 msgid "show public twitts in their places"
 msgstr ""
 
-#: src/plugins/render/weather/BBCParser.cpp:117
-msgid "The file is not a valid BBC answer."
-msgstr ""
-
 #: src/plugins/render/weather/BBCWeatherItem.cpp:92
 msgid ""
 "Supported by <a href=\"http://backstage.bbc.co.uk\" target=\"_BLANK"
 "\">backstage.bbc.co.uk</a>.<br>Weather data from UK MET Office"
+msgstr ""
+
+#: src/plugins/render/weather/GeoNamesWeatherItem.cpp:37
+msgid ""
+"Supported by <a href=\"http://www.geonames.org/export/JSON-webservices.html"
+"\" target=\"_BLANK\">geonames.org</a>"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:55
+#: src/plugins/render/weather/WeatherPlugin.cpp:90
+msgid "Weather"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:109
+#, qt-format
+msgid "Station: %1\n"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:119
+#, qt-format
+msgctxt "Wind: WindSpeed, WindDirection"
+msgid "Wind: %4, %5\n"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:123
+#, qt-format
+msgctxt "Wind: WindSpeed"
+msgid "Wind: %4\n"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:126
+#, qt-format
+msgctxt "Wind: WindDirection"
+msgid "Wind: %4\n"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:130
+#, qt-format
+msgctxt "Pressure: Pressure, Development"
+msgid "Pressure: %6, %7"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:134
+#, qt-format
+msgctxt "Pressure: Pressure"
+msgid "Pressure: %6"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:137
+#, qt-format
+msgctxt "Pressure Development"
+msgid "Pressure %7"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:153
+#, qt-format
+msgctxt "DayOfWeek: Condition, MinTemp to MaxTemp"
+msgid "%1: %2, %3 to %4"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:223
+msgid "Remove from Favorites"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:224
+msgid "Add to Favorites"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:482
+#, qt-format
+msgid "Weather for %1"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:484
+msgid "Current Observation"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:490
+msgid "Forecasts"
+msgstr ""
+
+#: src/plugins/render/weather/BBCParser.cpp:117
+msgid "The file is not a valid BBC answer."
 msgstr ""
 
 #: src/plugins/render/weather/StationListParser.cpp:48
@@ -1299,7 +1378,7 @@ msgstr "OkSOk"
 #: src/plugins/render/weather/WeatherData.cpp:591
 #: src/plugins/render/gpsinfo/GpsInfo.cpp:138
 #: src/plugins/render/speedometer/Speedometer.cpp:137
-#: src/lib/CurrentLocationWidget.cpp:265
+#: src/lib/CurrentLocationWidget.cpp:267
 msgid "km/h"
 msgstr ""
 
@@ -1406,85 +1485,6 @@ msgstr ""
 msgid "Humidity: %1<br>"
 msgstr ""
 
-#: src/plugins/render/weather/GeoNamesWeatherItem.cpp:37
-msgid ""
-"Supported by <a href=\"http://www.geonames.org/export/JSON-webservices.html"
-"\" target=\"_BLANK\">geonames.org</a>"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:55
-#: src/plugins/render/weather/WeatherPlugin.cpp:90
-msgid "Weather"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:109
-#, qt-format
-msgid "Station: %1\n"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:119
-#, qt-format
-msgctxt "Wind: WindSpeed, WindDirection"
-msgid "Wind: %4, %5\n"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:123
-#, qt-format
-msgctxt "Wind: WindSpeed"
-msgid "Wind: %4\n"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:126
-#, qt-format
-msgctxt "Wind: WindDirection"
-msgid "Wind: %4\n"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:130
-#, qt-format
-msgctxt "Pressure: Pressure, Development"
-msgid "Pressure: %6, %7"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:134
-#, qt-format
-msgctxt "Pressure: Pressure"
-msgid "Pressure: %6"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:137
-#, qt-format
-msgctxt "Pressure Development"
-msgid "Pressure %7"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:153
-#, qt-format
-msgctxt "DayOfWeek: Condition, MinTemp to MaxTemp"
-msgid "%1: %2, %3 to %4"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:223
-msgid "Remove from Favorites"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:224
-msgid "Add to Favorites"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:482
-#, qt-format
-msgid "Weather for %1"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:484
-msgid "Current Observation"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:490
-msgid "Forecasts"
-msgstr ""
-
 #: src/plugins/render/weather/WeatherPlugin.cpp:95
 msgid "&Weather"
 msgstr ""
@@ -1498,10 +1498,6 @@ msgstr ""
 msgid ""
 "Supported by backstage.bbc.co.uk.\n"
 "Weather data from UK MET Office"
-msgstr ""
-
-#: src/plugins/render/wikipedia/GeonamesParser.cpp:42
-msgid "The file is not a valid Geonames answer."
 msgstr ""
 
 #: src/plugins/render/wikipedia/WikipediaItem.cpp:226
@@ -1530,6 +1526,10 @@ msgstr ""
 msgid ""
 "Geo positions by geonames.org\n"
 "Texts by wikipedia.org"
+msgstr ""
+
+#: src/plugins/render/wikipedia/GeonamesParser.cpp:42
+msgid "The file is not a valid Geonames answer."
 msgstr ""
 
 #: src/plugins/render/sun/SunPlugin.cpp:52
@@ -1592,7 +1592,7 @@ msgstr ""
 #: src/plugins/render/gpsinfo/GpsInfo.cpp:131
 #: src/plugins/render/elevationprofilefloatitem/ElevationProfilePlotAxis.cpp:155
 #: src/plugins/render/elevationprofilemarker/ElevationProfileMarker.cpp:177
-#: src/lib/CurrentLocationWidget.cpp:275
+#: src/lib/CurrentLocationWidget.cpp:282 src/lib/CurrentLocationWidget.cpp:283
 msgid "ft"
 msgstr ""
 
@@ -2430,43 +2430,43 @@ msgstr ""
 msgid "Unable to insert data into cache"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:206
+#: src/lib/CurrentLocationWidget.cpp:205
 msgid "Waiting for current location information..."
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:209
+#: src/lib/CurrentLocationWidget.cpp:208
 msgid "Initializing current location service..."
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:215
+#: src/lib/CurrentLocationWidget.cpp:214
 msgid "Error when determining current location: "
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:273
+#: src/lib/CurrentLocationWidget.cpp:280
 msgid "m/h"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:293
+#: src/lib/CurrentLocationWidget.cpp:304
 msgid "Disabled"
 msgstr "Malŝaltita"
 
-#: src/lib/CurrentLocationWidget.cpp:352
+#: src/lib/CurrentLocationWidget.cpp:363
 msgid "Save Track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:354 src/lib/CurrentLocationWidget.cpp:366
+#: src/lib/CurrentLocationWidget.cpp:365 src/lib/CurrentLocationWidget.cpp:377
 msgid "KML File (*.kml)"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:365
+#: src/lib/CurrentLocationWidget.cpp:376
 msgid "Open Track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:377
+#: src/lib/CurrentLocationWidget.cpp:388
 msgid "Clear current track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:378
+#: src/lib/CurrentLocationWidget.cpp:389
 msgid "Are you sure you want to clear the current track?"
 msgstr ""
 
@@ -3272,6 +3272,66 @@ msgid ""
 "href=\"http://edu.kde.org/marble\">http://edu.kde.org/marble</a>"
 msgstr ""
 
+#: src/lib/Planet.cpp:62 src/lib/Planet.cpp:353
+msgctxt "a planet without data"
+msgid "Unknown Planet"
+msgstr ""
+
+#: src/lib/Planet.cpp:326
+msgctxt "the planet"
+msgid "Mercury"
+msgstr ""
+
+#: src/lib/Planet.cpp:328
+msgctxt "the planet"
+msgid "Venus"
+msgstr ""
+
+#: src/lib/Planet.cpp:330
+msgctxt "the planet"
+msgid "Earth"
+msgstr ""
+
+#: src/lib/Planet.cpp:332
+msgctxt "the planet"
+msgid "Mars"
+msgstr ""
+
+#: src/lib/Planet.cpp:334
+msgctxt "the planet"
+msgid "Jupiter"
+msgstr ""
+
+#: src/lib/Planet.cpp:336
+msgctxt "the planet"
+msgid "Saturn"
+msgstr ""
+
+#: src/lib/Planet.cpp:338
+msgctxt "the planet"
+msgid "Uranus"
+msgstr ""
+
+#: src/lib/Planet.cpp:340
+msgctxt "the planet"
+msgid "Neptune"
+msgstr ""
+
+#: src/lib/Planet.cpp:343
+msgctxt "the planet"
+msgid "Pluto"
+msgstr ""
+
+#: src/lib/Planet.cpp:346
+msgctxt "the earth's star"
+msgid "Sun"
+msgstr ""
+
+#: src/lib/Planet.cpp:348
+msgctxt "the earth's moon"
+msgid "Moon"
+msgstr ""
+
 #: src/lib/NewstuffModel.cpp:600 src/lib/NewstuffModel.cpp:609
 msgid "Installation aborted by user."
 msgstr ""
@@ -3466,66 +3526,6 @@ msgid ""
 "You have decided to run Marble with a different graphics system.\n"
 "For this change to become effective, Marble has to be restarted.\n"
 "Please close the application and start Marble again."
-msgstr ""
-
-#: src/lib/Planet.cpp:62 src/lib/Planet.cpp:353
-msgctxt "a planet without data"
-msgid "Unknown Planet"
-msgstr ""
-
-#: src/lib/Planet.cpp:326
-msgctxt "the planet"
-msgid "Mercury"
-msgstr ""
-
-#: src/lib/Planet.cpp:328
-msgctxt "the planet"
-msgid "Venus"
-msgstr ""
-
-#: src/lib/Planet.cpp:330
-msgctxt "the planet"
-msgid "Earth"
-msgstr ""
-
-#: src/lib/Planet.cpp:332
-msgctxt "the planet"
-msgid "Mars"
-msgstr ""
-
-#: src/lib/Planet.cpp:334
-msgctxt "the planet"
-msgid "Jupiter"
-msgstr ""
-
-#: src/lib/Planet.cpp:336
-msgctxt "the planet"
-msgid "Saturn"
-msgstr ""
-
-#: src/lib/Planet.cpp:338
-msgctxt "the planet"
-msgid "Uranus"
-msgstr ""
-
-#: src/lib/Planet.cpp:340
-msgctxt "the planet"
-msgid "Neptune"
-msgstr ""
-
-#: src/lib/Planet.cpp:343
-msgctxt "the planet"
-msgid "Pluto"
-msgstr ""
-
-#: src/lib/Planet.cpp:346
-msgctxt "the earth's star"
-msgid "Sun"
-msgstr ""
-
-#: src/lib/Planet.cpp:348
-msgctxt "the earth's moon"
-msgid "Moon"
 msgstr ""
 
 #: src/lib/MarbleWidgetPopupMenu.cpp:50
@@ -3938,10 +3938,6 @@ msgstr "&Helpo"
 
 #: src/lib/routing/RoutingInputWidget.cpp:481
 msgid "Choose Placemark"
-msgstr ""
-
-#: src/lib/global.h:235
-msgid "not available"
 msgstr ""
 
 #, fuzzy
