@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplatolibs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-23 02:34+0200\n"
+"POT-Creation-Date: 2012-05-17 02:34+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -133,10 +133,10 @@ msgstr ""
 #: models/kptnodeitemmodel.cpp:620 models/kptnodeitemmodel.cpp:637
 #: models/kptnodeitemmodel.cpp:655 models/kptnodeitemmodel.cpp:673
 #: models/kptnodeitemmodel.cpp:708 models/kptnodeitemmodel.cpp:725
-#: models/kptresourceallocationmodel.cpp:741 models/kptresourcemodel.cpp:205
-#: models/kptresourcemodel.cpp:237 models/kptresourcemodel.cpp:358
-#: models/kptresourcemodel.cpp:362 models/kptresourcemodel.cpp:371
-#: models/kptschedulemodel.cpp:523 ui/kptpertresult.cpp:140
+#: models/kptresourcemodel.cpp:205 models/kptresourcemodel.cpp:237
+#: models/kptresourcemodel.cpp:358 models/kptresourcemodel.cpp:362
+#: models/kptresourcemodel.cpp:371 models/kptschedulemodel.cpp:523
+#: models/kptresourceallocationmodel.cpp:841 ui/kptpertresult.cpp:140
 #: ui/kptpertresult.cpp:491 ui/kptresourcedialog.cpp:300
 #: ui/kptresourcedialog.cpp:326 ui/kpttaskcostpanel.cpp:50
 #: ui/kpttaskgeneralpanel.cpp:80 rc.cpp:536
@@ -169,6 +169,11 @@ msgstr ""
 
 #: kernel/kptwbsdefinition.cpp:44
 msgid "Letter, lower case"
+msgstr ""
+
+#: kernel/KPlatoXmlLoaderBase.cpp:1098 kernel/kptdocuments.cpp:292
+#, kde-format
+msgid "Document loaded, URL=%1"
 msgstr ""
 
 #. i18n: file: ui/resourcedialogbase.ui:169
@@ -223,19 +228,14 @@ msgstr ""
 msgid "Resource %1 not available in interval: %2 to %3"
 msgstr ""
 
-#: kernel/kptresource.cpp:2520
+#: kernel/kptresource.cpp:2533
 #, kde-format
 msgid "Could not match effort. Want: %1 got: %2"
 msgstr ""
 
-#: kernel/kptresource.cpp:2523
+#: kernel/kptresource.cpp:2536
 #, kde-format
 msgid "Resource %1 available from %2 to %3"
-msgstr ""
-
-#: kernel/KPlatoXmlLoaderBase.cpp:1098 kernel/kptdocuments.cpp:292
-#, kde-format
-msgid "Document loaded, URL=%1"
 msgstr ""
 
 #: kernel/kptcalendar.h:260 kernel/kptcalendar.h:271
@@ -1296,12 +1296,12 @@ msgstr ""
 #. i18n: file: ui/kptresourceassignmentview.ui:27
 #. i18n: ectx: property (text), widget (QTreeWidget, m_resList)
 #: models/kptaccountsmodel.cpp:128 models/kptaccountsmodel.cpp:1030
-#: models/kptdocumentmodel.cpp:200 models/kptresourceallocationmodel.cpp:330
-#: models/kptresourceappointmentsmodel.cpp:907
+#: models/kptdocumentmodel.cpp:200 models/kptresourceappointmentsmodel.cpp:907
 #: models/kptresourceappointmentsmodel.cpp:922
 #: models/kptresourceappointmentsmodel.cpp:1483
 #: models/kptresourcemodel.cpp:441 models/kptschedulemodel.cpp:826
-#: models/kptschedulemodel.cpp:1104 rc.cpp:316
+#: models/kptschedulemodel.cpp:1104 models/kptresourceallocationmodel.cpp:336
+#: rc.cpp:316
 msgid "Name"
 msgstr "Nomo"
 
@@ -1527,9 +1527,9 @@ msgstr ""
 #. i18n: file: ui/kptresourceassignmentview.ui:32
 #. i18n: ectx: property (text), widget (QTreeWidget, m_resList)
 #: models/kptdocumentmodel.cpp:201 models/kptrelationmodel.cpp:150
-#: models/kptresourceallocationmodel.cpp:331
 #: models/kptresourceappointmentsmodel.cpp:1484
-#: models/kptresourcemodel.cpp:442 rc.cpp:319
+#: models/kptresourcemodel.cpp:442 models/kptresourceallocationmodel.cpp:337
+#: rc.cpp:319
 msgid "Type"
 msgstr "Tipo"
 
@@ -2751,105 +2751,6 @@ msgctxt "(qtundo-format)"
 msgid "Modify relation time lag"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:168
-#: models/kptresourceallocationmodel.cpp:226
-#: models/kptresourceallocationmodel.cpp:648
-#, no-c-format, kde-format
-msgctxt "<value>%"
-msgid "%1%"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:175
-#: models/kptresourceallocationmodel.cpp:654
-#, fuzzy
-#| msgid "Not started"
-msgctxt "@info:tooltip"
-msgid "Not allocated"
-msgstr "Ne lanĉiĝis"
-
-#: models/kptresourceallocationmodel.cpp:178
-#, no-c-format, kde-format
-msgctxt "@info:tooltip"
-msgid "Allocated units: %1%"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:231
-#, no-c-format, kde-format
-msgid "Maximum units available: %1%"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:271
-#, kde-format
-msgid "There is %1 resource available in this group"
-msgid_plural "There are %1 resources available in this group"
-msgstr[0] ""
-msgstr[1] ""
-
-#: models/kptresourceallocationmodel.cpp:332
-msgid "Allocation"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:333
-#, fuzzy
-#| msgctxt "Preview available"
-#| msgid "Available"
-msgctxt "@title:column"
-msgid "Available"
-msgstr "Disponebla"
-
-#: models/kptresourceallocationmodel.cpp:334
-#, fuzzy
-#| msgid "Resource"
-msgctxt "@title:column"
-msgid "Required Resources"
-msgstr "Risurco"
-
-#: models/kptresourceallocationmodel.cpp:346
-msgid "Resource allocation"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:347
-msgctxt "@info:tootip"
-msgid "Available resources or resource units"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:348
-#, fuzzy
-#| msgid "Resource"
-msgctxt "@info:tootip"
-msgid "Required Resources"
-msgstr "Risurco"
-
-#: models/kptresourceallocationmodel.cpp:656
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "%1 allocated out of %2 available"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:679
-#, kde-format
-msgid "%1 resource allocated"
-msgid_plural "%1 resources allocated"
-msgstr[0] ""
-msgstr[1] ""
-
-#: models/kptresourceallocationmodel.cpp:755
-#, fuzzy
-#| msgid "Resource"
-msgctxt "@info:tooltip"
-msgid "No required resources"
-msgstr "Risurco"
-
-#: models/kptresourceallocationmodel.cpp:758
-msgctxt "@info:tooltip"
-msgid "Material resources cannot have required resources"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:760
-msgctxt "@info:tooltip"
-msgid "Team resources cannot have required resources"
-msgstr ""
-
 #: models/kptresourceappointmentsmodel.cpp:577
 #, kde-format
 msgid "External project: %1"
@@ -3399,6 +3300,173 @@ msgstr ""
 
 #: models/kpttaskstatusmodel.cpp:65
 msgid "Tasks that are scheduled to start next period"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:168
+#: models/kptresourceallocationmodel.cpp:226
+#: models/kptresourceallocationmodel.cpp:683
+#, no-c-format, kde-format
+msgctxt "<value>%"
+msgid "%1%"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:175
+#: models/kptresourceallocationmodel.cpp:689
+#, fuzzy
+#| msgid "Not started"
+msgctxt "@info:tooltip"
+msgid "Not allocated"
+msgstr "Ne lanĉiĝis"
+
+#: models/kptresourceallocationmodel.cpp:178
+#, no-c-format, kde-format
+msgctxt "@info:tooltip"
+msgid "Allocated units: %1%"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:231
+#, no-c-format, kde-format
+msgid "Maximum units available: %1%"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:260
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Required Resources</title><para>A working resource can be assigned "
+"one or more required resource. A required resource is a material resource "
+"that the working resource depends on in order to do the work.</para><para>To "
+"be able to use a material resource as a required resource, the material "
+"resource must be part of a group of type <emphasis>Material</emphasis>.</"
+"para>"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:277
+#, kde-format
+msgid "There is %1 resource available in this group"
+msgid_plural "There are %1 resources available in this group"
+msgstr[0] ""
+msgstr[1] ""
+
+#: models/kptresourceallocationmodel.cpp:338
+msgid "Allocation"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:339
+#, fuzzy
+#| msgctxt "Preview available"
+#| msgid "Available"
+msgctxt "@title:column"
+msgid "Available"
+msgstr "Disponebla"
+
+#: models/kptresourceallocationmodel.cpp:340
+#, fuzzy
+#| msgid "Resource"
+msgctxt "@title:column"
+msgid "Required Resources"
+msgstr "Risurco"
+
+#: models/kptresourceallocationmodel.cpp:352
+msgid "Resource allocation"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:353
+msgctxt "@info:tootip"
+msgid "Available resources or resource units"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:354
+#, fuzzy
+#| msgid "Resource"
+msgctxt "@info:tootip"
+msgid "Required material resources"
+msgstr "Risurco"
+
+#: models/kptresourceallocationmodel.cpp:360
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Required Resources</title><para>A working resource can be assigned "
+"one or more required resource. A required resource is a material resource "
+"that the working resource depends on in order to do the work.</para><para>To "
+"be able to use a material resource as a required resource, the material "
+"resource must be part of a group of type Material.</para>"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:691
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "%1 allocated out of %2 available"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:729
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "%1 resource requested for dynamic allocation"
+msgid_plural "%1 resources requested for dynamic allocation"
+msgstr[0] ""
+msgstr[1] ""
+
+#: models/kptresourceallocationmodel.cpp:733
+#, fuzzy, kde-format
+#| msgid "Not started"
+msgctxt "@info:tooltip"
+msgid "%1 resource allocated"
+msgid_plural "%1 resources allocated"
+msgstr[0] "Ne lanĉiĝis"
+msgstr[1] "Ne lanĉiĝis"
+
+#: models/kptresourceallocationmodel.cpp:737
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "%1<nl/>%2"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:741
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Group allocations</title><para>You can allocate a number of resources "
+"from a group and let the scheduler select from the available resources at "
+"the time of scheduling.</para> These dynamically allocated resources will be "
+"in addition to any resource you have allocated specifically."
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:813
+#, kde-format
+msgctxt "1: free resources, 2: number of resources"
+msgid "%1 of %2"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:816
+#, fuzzy, kde-format
+#| msgid "Modify Task"
+msgctxt "@info:tooltip"
+msgid "There is %1 resource available in this group"
+msgid_plural "There are %1 resources available in this group"
+msgstr[0] "Ŝanĝu taskon"
+msgstr[1] "Ŝanĝu taskon"
+
+#: models/kptresourceallocationmodel.cpp:850
+#, fuzzy
+#| msgid "Not available"
+msgctxt "@info:tooltip"
+msgid "No material resources available"
+msgstr "Ne haviĝebla"
+
+#: models/kptresourceallocationmodel.cpp:858
+#, fuzzy
+#| msgid "Resource"
+msgctxt "@info:tooltip"
+msgid "No required resources"
+msgstr "Risurco"
+
+#: models/kptresourceallocationmodel.cpp:861
+msgctxt "@info:tooltip"
+msgid "Material resources cannot have required resources"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:863
+msgctxt "@info:tooltip"
+msgid "Team resources cannot have required resources"
 msgstr ""
 
 #: ui/kptaccountseditor.cpp:227
