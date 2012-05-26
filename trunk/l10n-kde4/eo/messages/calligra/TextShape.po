@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TextShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-13 02:50+0200\n"
+"POT-Creation-Date: 2012-05-26 02:59+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -118,7 +118,8 @@ msgstr ""
 msgid "Select"
 msgstr "Elekti tiparon"
 
-#: dialogs/CitationInsertionDialog.cpp:53
+#: dialogs/CitationInsertionDialog.cpp:53 dialogs/StyleManager.cpp:398
+#: dialogs/StyleManager.cpp:415
 msgid "Warning"
 msgstr ""
 
@@ -144,7 +145,7 @@ msgid "Select Font"
 msgstr "Elekti tiparon"
 
 #: dialogs/FontDia.cpp:83 dialogs/FormattingPreview.cpp:51
-#: dialogs/CharacterGeneral.cpp:46
+#: dialogs/CharacterGeneral.cpp:45
 msgid "Font"
 msgstr "Tiparo"
 
@@ -189,23 +190,38 @@ msgctxt "Close dialog"
 msgid "Close"
 msgstr ""
 
-#: dialogs/ParagraphGeneral.cpp:45
+#: dialogs/StyleManager.cpp:53
+msgid "Create a new style inheriting the current style"
+msgstr ""
+
+#: dialogs/StyleManager.cpp:333 dialogs/StyleManager.cpp:341
+#, fuzzy
+#| msgid "Styles"
+msgid "New Style"
+msgstr "Stiloj"
+
+#: dialogs/StyleManager.cpp:398 dialogs/StyleManager.cpp:415
+#, kde-format
+msgid "Another style named '%1' already exist. Please choose another name."
+msgstr ""
+
+#: dialogs/ParagraphGeneral.cpp:44
 msgid "Indent/Spacing"
 msgstr ""
 
-#: dialogs/ParagraphGeneral.cpp:51
+#: dialogs/ParagraphGeneral.cpp:49
 msgid "General Layout"
 msgstr ""
 
-#: dialogs/ParagraphGeneral.cpp:57
+#: dialogs/ParagraphGeneral.cpp:54
 msgid "Bullets/Numbers"
 msgstr ""
 
-#: dialogs/ParagraphGeneral.cpp:63
+#: dialogs/ParagraphGeneral.cpp:59
 msgid "Decorations"
 msgstr ""
 
-#: dialogs/ParagraphGeneral.cpp:74
+#: dialogs/ParagraphGeneral.cpp:68
 msgid "Drop Caps"
 msgstr ""
 
@@ -244,11 +260,11 @@ msgctxt "Line spacing type"
 msgid "At least"
 msgstr ""
 
-#: dialogs/ParagraphSettingsDialog.cpp:40
+#: dialogs/ParagraphSettingsDialog.cpp:39
 msgid "Paragraph Format"
 msgstr ""
 
-#: dialogs/ParagraphSettingsDialog.cpp:84
+#: dialogs/ParagraphSettingsDialog.cpp:83
 msgid "Paragraph Settings"
 msgstr ""
 
@@ -258,45 +274,45 @@ msgstr ""
 msgid "Insert a table"
 msgstr "Enmeti paĝon"
 
-#: dialogs/ParagraphBulletsNumbers.cpp:39
+#: dialogs/ParagraphBulletsNumbers.cpp:47
 msgid "Custom Bullet"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:40
+#: dialogs/ParagraphBulletsNumbers.cpp:48
 msgid "No Bullet"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:44
+#: dialogs/ParagraphBulletsNumbers.cpp:52
 msgctxt "Automatic horizontal alignment"
 msgid "Auto"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:45
+#: dialogs/ParagraphBulletsNumbers.cpp:53
 msgctxt "Text alignment"
 msgid "Left"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:46
+#: dialogs/ParagraphBulletsNumbers.cpp:54
 msgctxt "Text alignment"
 msgid "Right"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:47
+#: dialogs/ParagraphBulletsNumbers.cpp:55
 msgctxt "Text alignment"
 msgid "Centered"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:49
+#: dialogs/ParagraphBulletsNumbers.cpp:57
 msgctxt "Tab follows the bullet or number"
 msgid "Tab Stop"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:50
+#: dialogs/ParagraphBulletsNumbers.cpp:58
 msgctxt "Space"
 msgid "Space"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:51
+#: dialogs/ParagraphBulletsNumbers.cpp:59
 msgctxt "None"
 msgid "Nothing"
 msgstr ""
@@ -336,12 +352,24 @@ msgstr ""
 msgid "New style"
 msgstr "Stiloj"
 
-#: dialogs/StyleManagerDialog.cpp:32
+#: dialogs/StyleManagerDialog.cpp:33
 msgid "Style Manager"
 msgstr ""
 
-#: dialogs/StylesModel.cpp:53 dialogs/StylesModel.cpp:118
-#: dialogs/StylesModel.cpp:217
+#: dialogs/StyleManagerDialog.cpp:62
+#, fuzzy
+#| msgid "Second"
+msgid "save changes"
+msgstr "Dua"
+
+#: dialogs/StyleManagerDialog.cpp:62
+msgid ""
+"You have changes that are not applied,What do you want to do with those "
+"changes?"
+msgstr ""
+
+#: dialogs/StylesModel.cpp:52 dialogs/StylesModel.cpp:120
+#: dialogs/StylesModel.cpp:229
 msgid "None"
 msgstr ""
 
@@ -389,7 +417,7 @@ msgstr "Stiloj"
 
 #. i18n: file: dialogs/TableOfContentsConfigure.ui:57
 #. i18n: ectx: property (text), widget (QLabel, labelTitle)
-#: dialogs/TableOfContentsEntryModel.cpp:40 rc.cpp:796
+#: dialogs/TableOfContentsEntryModel.cpp:40 rc.cpp:808
 msgid "Title"
 msgstr ""
 
@@ -556,7 +584,7 @@ msgstr "Dua"
 
 #. i18n: file: dialogs/SimpleCitationBibliographyWidget.ui:26
 #. i18n: ectx: property (text), widget (QToolButton, addCitation)
-#: ReferencesTool.cpp:128 rc.cpp:713
+#: ReferencesTool.cpp:128 rc.cpp:725
 #, fuzzy
 #| msgid "Insert"
 msgid "Insert Citation"
@@ -570,7 +598,7 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QDialog, InsertBibliographyDialog)
 #. i18n: file: dialogs/SimpleCitationBibliographyWidget.ui:36
 #. i18n: ectx: property (text), widget (FormattingButton, addBibliography)
-#: ReferencesTool.cpp:133 rc.cpp:406 rc.cpp:716
+#: ReferencesTool.cpp:133 rc.cpp:406 rc.cpp:728
 msgid "Insert Bibliography"
 msgstr ""
 
@@ -758,7 +786,7 @@ msgstr ""
 
 #. i18n: file: dialogs/ParagraphDecorations.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: TextTool.cpp:374 rc.cpp:625
+#: TextTool.cpp:374 rc.cpp:637
 msgid "Background"
 msgstr "Fono"
 
@@ -939,7 +967,7 @@ msgstr ""
 
 #. i18n: file: dialogs/StyleManager.ui:53
 #. i18n: ectx: attribute (title), widget (QListView, characterStylesListView)
-#: TextTool.cpp:2038 rc.cpp:752
+#: TextTool.cpp:2038 rc.cpp:764
 #, fuzzy
 #| msgid "Create"
 msgid "Character"
@@ -947,7 +975,7 @@ msgstr "Krei"
 
 #. i18n: file: dialogs/StyleManager.ui:39
 #. i18n: ectx: attribute (title), widget (QListView, paragraphStylesListView)
-#: TextTool.cpp:2040 rc.cpp:749
+#: TextTool.cpp:2040 rc.cpp:761
 msgid "Paragraph"
 msgstr ""
 
@@ -967,7 +995,7 @@ msgstr "Aŭtokorektado"
 
 #. i18n: file: dialogs/StyleManager.ui:84
 #. i18n: ectx: property (text), widget (QPushButton, bDelete)
-#: TextTool.cpp:2352 rc.cpp:758
+#: TextTool.cpp:2352 rc.cpp:770
 msgid "Delete"
 msgstr "Forigi"
 
@@ -989,7 +1017,7 @@ msgstr "Ĉu malfermi ligon?"
 #. i18n: ectx: property (windowTitle), widget (QDialog, TableOfContentsConfigure)
 #. i18n: file: dialogs/TableOfContentsStyleConfigure.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, TableOfContentsStyleConfigure)
-#: rc.cpp:3 rc.cpp:790 rc.cpp:811
+#: rc.cpp:3 rc.cpp:802 rc.cpp:823
 #, fuzzy
 #| msgid "Distance:"
 msgid "Dialog"
@@ -1037,7 +1065,7 @@ msgstr "Tipo:"
 #. i18n: ectx: property (windowTitle), widget (QDialog, BibliographyConfigureDialog)
 #. i18n: file: dialogs/SimpleCitationBibliographyWidget.ui:52
 #. i18n: ectx: property (toolTip), widget (QToolButton, configureBibliography)
-#: rc.cpp:27 rc.cpp:719
+#: rc.cpp:27 rc.cpp:731
 msgid "Configure bibliography"
 msgstr ""
 
@@ -1049,17 +1077,17 @@ msgstr ""
 
 #. i18n: file: dialogs/BibliographyConfigureDialog.ui:28
 #. i18n: ectx: property (text), widget (QLabel, prefixLabel)
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:28
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:33 rc.cpp:574
+#: rc.cpp:33 rc.cpp:580
 msgid "Prefix:"
 msgstr "Prefikso:"
 
 #. i18n: file: dialogs/BibliographyConfigureDialog.ui:48
 #. i18n: ectx: property (text), widget (QLabel, suffixLabel)
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:44
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:86
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:36 rc.cpp:577
+#: rc.cpp:36 rc.cpp:583
 msgid "Suffix:"
 msgstr ""
 
@@ -1231,9 +1259,9 @@ msgstr "Fona koloro"
 #. i18n: ectx: property (text), widget (QToolButton, insertPageBreak)
 #: rc.cpp:87 rc.cpp:112 rc.cpp:121 rc.cpp:157 rc.cpp:163 rc.cpp:355 rc.cpp:361
 #: rc.cpp:370 rc.cpp:373 rc.cpp:376 rc.cpp:379 rc.cpp:382 rc.cpp:385
-#: rc.cpp:388 rc.cpp:391 rc.cpp:616 rc.cpp:628 rc.cpp:707 rc.cpp:734
-#: rc.cpp:737 rc.cpp:740 rc.cpp:743 rc.cpp:746 rc.cpp:835 rc.cpp:838
-#: rc.cpp:841 rc.cpp:844
+#: rc.cpp:388 rc.cpp:391 rc.cpp:616 rc.cpp:640 rc.cpp:719 rc.cpp:746
+#: rc.cpp:749 rc.cpp:752 rc.cpp:755 rc.cpp:758 rc.cpp:847 rc.cpp:850
+#: rc.cpp:853 rc.cpp:856
 msgid "..."
 msgstr "..."
 
@@ -2094,38 +2122,38 @@ msgstr ""
 msgid " Start of next page "
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:60
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:580
+#: rc.cpp:574
 msgid "Start at:"
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:86
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:583
+#: rc.cpp:577
 msgid "Alignment:"
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:102
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:105
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:586
 #, fuzzy
 msgid "Depth:"
 msgstr "Ripeto:"
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:125
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:128
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: rc.cpp:589
 msgid "Display Levels:"
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:145
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:148
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: rc.cpp:592
 msgid "Bullet/Number followed by"
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:155
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:158
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, doubleSpinBox)
 #. i18n: file: dialogs/ParagraphBulletsNumbers.ui:175
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, doubleSpinBox_2)
@@ -2135,7 +2163,7 @@ msgstr ""
 msgid " cm"
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:162
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:165
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: rc.cpp:598
 #, fuzzy
@@ -2171,15 +2199,43 @@ msgstr ""
 msgid "Restart numbering at this paragraph"
 msgstr ""
 
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:261
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:248
 #. i18n: ectx: property (text), widget (QCheckBox, letterSynchronization)
 #: rc.cpp:622
 msgid "Letter Synchronization"
 msgstr ""
 
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:257
+#. i18n: ectx: property (text), widget (QLabel, widthLabel)
+#: rc.cpp:625
+msgid "Width"
+msgstr ""
+
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:264
+#. i18n: ectx: property (text), widget (QLabel, insertImageLabel)
+#: rc.cpp:628
+#, fuzzy
+#| msgid "Insert Index"
+msgid "Insert Image"
+msgstr "Enmeti Indekson"
+
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:274
+#. i18n: ectx: property (text), widget (QLabel, heightLabel)
+#: rc.cpp:631
+#, fuzzy
+#| msgid "Right"
+msgid "Height"
+msgstr "Dekstra"
+
+#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:284
+#. i18n: ectx: property (text), widget (QPushButton, insertImage)
+#: rc.cpp:634
+msgid "Browse..."
+msgstr ""
+
 #. i18n: file: dialogs/ParagraphDecorations.ui:65
 #. i18n: ectx: property (text), widget (QLabel, backgroundColorLabel)
-#: rc.cpp:631
+#: rc.cpp:643
 msgid "Background color"
 msgstr "Fona koloro"
 
@@ -2187,164 +2243,164 @@ msgstr "Fona koloro"
 #. i18n: ectx: property (whatsThis), widget (QWidget, ParagraphIndentSpacing)
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:97
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: rc.cpp:634 rc.cpp:652
+#: rc.cpp:646 rc.cpp:664
 msgid "<p><ul><li><b>Single</b>: The normal linespacing</li></ul></p> "
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:637
+#: rc.cpp:649
 msgid "Indent"
 msgstr "Deŝovo"
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:640
+#: rc.cpp:652
 msgid "Left:"
 msgstr "Maldekstra:"
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:55
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:643
+#: rc.cpp:655
 msgid "Right:"
 msgstr "Dekstre:"
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:646
+#: rc.cpp:658
 msgid "First Line:"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:87
 #. i18n: ectx: property (text), widget (QCheckBox, autoTextIndent)
-#: rc.cpp:649
+#: rc.cpp:661
 msgid "Auto-infer from text size"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:100
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:655
+#: rc.cpp:667
 msgid "Line Spacing"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:134
 #. i18n: ectx: property (suffix), widget (QSpinBox, proportional)
-#: rc.cpp:659
+#: rc.cpp:671
 #, no-c-format
 msgid " %"
 msgstr " %"
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:180
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:662
+#: rc.cpp:674
 msgid "Use Font Metrics:"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:202
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:665
+#: rc.cpp:677
 msgid "Paragraph Space"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:208
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:668
+#: rc.cpp:680
 msgid "Before:"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphIndentSpacing.ui:221
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:671
+#: rc.cpp:683
 msgid "After:"
 msgstr "Post:"
 
 #. i18n: file: dialogs/ParagraphLayout.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:674
+#: rc.cpp:686
 msgid "Alignment"
 msgstr "Alĝustigo"
 
 #. i18n: file: dialogs/ParagraphLayout.ui:23
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: rc.cpp:677
+#: rc.cpp:689
 msgid "Left"
 msgstr "Maldekstre"
 
 #. i18n: file: dialogs/ParagraphLayout.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, center)
-#: rc.cpp:680
+#: rc.cpp:692
 msgid "Center"
 msgstr "Centrigita"
 
 #. i18n: file: dialogs/ParagraphLayout.ui:37
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: rc.cpp:683
+#: rc.cpp:695
 msgid "Right"
 msgstr "Dekstra"
 
 #. i18n: file: dialogs/ParagraphLayout.ui:44
 #. i18n: ectx: property (text), widget (QRadioButton, justify)
-#: rc.cpp:686
+#: rc.cpp:698
 msgid "Justify"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphLayout.ui:54
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:689
+#: rc.cpp:701
 msgid "Behavior at End of Frame/Page"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphLayout.ui:60
 #. i18n: ectx: property (text), widget (QCheckBox, keepTogether)
-#: rc.cpp:692
+#: rc.cpp:704
 msgid "Keep lines together"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphLayout.ui:67
 #. i18n: ectx: property (text), widget (QCheckBox, breakBefore)
-#: rc.cpp:695
+#: rc.cpp:707
 msgid "Insert break before paragraph"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphLayout.ui:74
 #. i18n: ectx: property (text), widget (QCheckBox, breakAfter)
-#: rc.cpp:698
+#: rc.cpp:710
 msgid "Insert break after paragraph"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphLayout.ui:83
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:701
+#: rc.cpp:713
 msgid "Leave at least this many lines (orphans):"
 msgstr ""
 
 #. i18n: file: dialogs/SimpleCaptionsWidget.ui:34
 #. i18n: ectx: property (text), widget (QToolButton, addCitation)
-#: rc.cpp:704
+#: rc.cpp:716
 msgid "Add caption"
 msgstr ""
 
 #. i18n: file: dialogs/SimpleCitationBibliographyWidget.ui:23
 #. i18n: ectx: property (toolTip), widget (QToolButton, addCitation)
-#: rc.cpp:710
+#: rc.cpp:722
 msgid "Insert citation at current position"
 msgstr ""
 
 #. i18n: file: dialogs/SimpleCitationBibliographyWidget.ui:55
 #. i18n: ectx: property (text), widget (QToolButton, configureBibliography)
-#: rc.cpp:722
+#: rc.cpp:734
 msgid "Configure Bibliography"
 msgstr ""
 
 #. i18n: file: dialogs/SimpleFootEndNotesWidget.ui:29
 #. i18n: ectx: property (text), widget (FormattingButton, addEndnote)
-#: rc.cpp:725
+#: rc.cpp:737
 msgid "Endnote"
 msgstr ""
 
 #. i18n: file: dialogs/SimpleFootEndNotesWidget.ui:42
 #. i18n: ectx: property (toolTip), widget (QToolButton, settings)
-#: rc.cpp:728
+#: rc.cpp:740
 #, fuzzy
 #| msgid "General"
 msgid "Settings"
@@ -2352,19 +2408,19 @@ msgstr "Ĝeneralo"
 
 #. i18n: file: dialogs/SimpleFootEndNotesWidget.ui:58
 #. i18n: ectx: property (text), widget (FormattingButton, addFootnote)
-#: rc.cpp:731
+#: rc.cpp:743
 msgid "Footnote"
 msgstr ""
 
 #. i18n: file: dialogs/StyleManager.ui:77
 #. i18n: ectx: property (text), widget (QPushButton, bNew)
-#: rc.cpp:755
+#: rc.cpp:767
 msgid "&New"
 msgstr "&Nova"
 
 #. i18n: file: dialogs/StyleManagerWelcome.ui:42
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:761
+#: rc.cpp:773
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -2385,49 +2441,49 @@ msgstr ""
 
 #. i18n: file: dialogs/TableDialog.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, groupLogical)
-#: rc.cpp:769
+#: rc.cpp:781
 msgid "Columns and rows"
 msgstr ""
 
 #. i18n: file: dialogs/TableDialog.ui:32
 #. i18n: ectx: property (text), widget (QLabel, labelColumns)
-#: rc.cpp:772
+#: rc.cpp:784
 msgid "Number of columns:"
 msgstr "Nombro da kolumnoj:"
 
 #. i18n: file: dialogs/TableDialog.ui:55
 #. i18n: ectx: property (text), widget (QLabel, labelRows)
-#: rc.cpp:775
+#: rc.cpp:787
 msgid "Number of rows:"
 msgstr "Nombro de linioj: "
 
 #. i18n: file: dialogs/TableDialog.ui:97
 #. i18n: ectx: property (title), widget (QGroupBox, groupPhysical)
-#: rc.cpp:778
+#: rc.cpp:790
 msgid "Width strategy"
 msgstr ""
 
 #. i18n: file: dialogs/TableDialog.ui:112
 #. i18n: ectx: property (text), widget (QRadioButton, radioFixed)
-#: rc.cpp:781
+#: rc.cpp:793
 msgid "Fixed column width:"
 msgstr ""
 
 #. i18n: file: dialogs/TableDialog.ui:125
 #. i18n: ectx: property (text), widget (QRadioButton, radioFitContents)
-#: rc.cpp:784
+#: rc.cpp:796
 msgid "Fit to contents"
 msgstr ""
 
 #. i18n: file: dialogs/TableDialog.ui:138
 #. i18n: ectx: property (text), widget (QRadioButton, radioFitAvail)
-#: rc.cpp:787
+#: rc.cpp:799
 msgid "Fit to available surrounding"
 msgstr ""
 
 #. i18n: file: dialogs/TableOfContentsConfigure.ui:49
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:793
+#: rc.cpp:805
 msgid "Tab 1"
 msgstr ""
 
@@ -2435,25 +2491,25 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, useOutline)
 #. i18n: file: dialogs/TableOfContentsConfigure.ui:78
 #. i18n: ectx: property (text), widget (QCheckBox, useStyles)
-#: rc.cpp:799 rc.cpp:802
+#: rc.cpp:811 rc.cpp:814
 msgid "CheckBox"
 msgstr ""
 
 #. i18n: file: dialogs/TableOfContentsConfigure.ui:85
 #. i18n: ectx: property (text), widget (QPushButton, configureStyles)
-#: rc.cpp:805
+#: rc.cpp:817
 msgid "PushButton"
 msgstr ""
 
 #. i18n: file: dialogs/TableOfContentsConfigure.ui:108
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:808
+#: rc.cpp:820
 msgid "Tab 2"
 msgstr ""
 
 #. i18n: file: dialogs/TableOfContentsStyleConfigure.ui:20
 #. i18n: ectx: property (text), widget (QLabel, stylesAvailableLabel)
-#: rc.cpp:814
+#: rc.cpp:826
 #, fuzzy
 #| msgid "Text"
 msgid "TextLabel"
@@ -2461,7 +2517,7 @@ msgstr "Teksto"
 
 #. i18n: file: dialogs/ParagraphDropCaps.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, ParagraphDropCaps)
-#: rc.cpp:817
+#: rc.cpp:829
 #, fuzzy
 #| msgid "Normal"
 msgid "Form"
@@ -2469,19 +2525,19 @@ msgstr "Normala"
 
 #. i18n: file: dialogs/ParagraphDropCaps.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:820
+#: rc.cpp:832
 msgid "Drop caps:"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphDropCaps.ui:87
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:823
+#: rc.cpp:835
 msgid "Distance to paragraph:"
 msgstr ""
 
 #. i18n: file: dialogs/ParagraphDropCaps.ui:97
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:826
+#: rc.cpp:838
 #, fuzzy
 #| msgid "Number of rows:"
 msgid "Number of characters:"
@@ -2489,7 +2545,7 @@ msgstr "Nombro de linioj: "
 
 #. i18n: file: dialogs/ParagraphDropCaps.ui:107
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:829
+#: rc.cpp:841
 #, fuzzy
 #| msgid "Number of columns:"
 msgid "Number of lines it covers:"
@@ -2497,7 +2553,7 @@ msgstr "Nombro da kolumnoj:"
 
 #. i18n: file: dialogs/SimpleInsertWidget.ui:20
 #. i18n: ectx: property (toolTip), widget (QWidget, SimpleInsertWidget)
-#: rc.cpp:832
+#: rc.cpp:844
 msgid "Other insertions from \"References\"  below and in \"Add Shape\" docker"
 msgstr ""
 
