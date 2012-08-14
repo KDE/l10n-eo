@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmix 1.0pre2\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-10 05:04+0200\n"
+"POT-Creation-Date: 2012-08-14 07:25+0200\n"
 "PO-Revision-Date: 2002-07-12 13:11GMT\n"
 "Last-Translator: Steffen Pietsch <Steffen.Pietsch@BerlinOnline.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -147,6 +147,17 @@ msgid ""
 "Inhibits the unhiding of the KMix main window, if KMix is already running."
 msgstr ""
 
+#: apps/kmixd.cpp:301 apps/kmix.cpp:902
+#, kde-format
+msgid ""
+"The soundcard containing the master device was unplugged. Changing to "
+"control %1 on card %2."
+msgstr ""
+
+#: apps/kmixd.cpp:311 apps/kmix.cpp:912
+msgid "The last soundcard was unplugged."
+msgstr ""
+
 #: apps/kmix.cpp:150
 msgid "Audio Setup"
 msgstr ""
@@ -224,17 +235,6 @@ msgstr ""
 msgid "View already exists. Cannot add View."
 msgstr ""
 
-#: apps/kmix.cpp:902 apps/kmixd.cpp:301
-#, kde-format
-msgid ""
-"The soundcard containing the master device was unplugged. Changing to "
-"control %1 on card %2."
-msgstr ""
-
-#: apps/kmix.cpp:912 apps/kmixd.cpp:311
-msgid "The last soundcard was unplugged."
-msgstr ""
-
 #: apps/kmix.cpp:1204
 msgid "Mixer Hardware Information"
 msgstr ""
@@ -250,6 +250,11 @@ msgstr ""
 #: apps/kmix.cpp:1261 gui/dialogaddview.cpp:128 gui/dialogselectmaster.cpp:112
 msgid "No sound card is installed or currently plugged in."
 msgstr ""
+
+#: apps/kmix.cpp:1272
+#, fuzzy
+msgid "KDE Mixer"
+msgstr "Miksiloj"
 
 #: backends/mixer_alsa9.cpp:891
 #, fuzzy
@@ -717,7 +722,7 @@ msgstr "Laŭteco je %1%"
 msgid " (Muted)"
 msgstr " (Mallaŭtigite)"
 
-#: gui/dialogviewconfiguration.cpp:153 gui/kmixprefdlg.cpp:40
+#: gui/dialogviewconfiguration.cpp:153 gui/kmixprefdlg.cpp:43
 msgid "Configure"
 msgstr "Agordi"
 
@@ -741,97 +746,103 @@ msgstr "&Dividu kanalojn"
 msgid "Invalid mixer"
 msgstr "Nevalida miksilo"
 
-#: gui/kmixprefdlg.cpp:55
+#: gui/kmixprefdlg.cpp:58
 msgid "Behavior"
 msgstr "Konduto"
 
-#: gui/kmixprefdlg.cpp:62
+#: gui/kmixprefdlg.cpp:65
 #, fuzzy
 #| msgid "&Dock into panel"
 msgid "&Dock in system tray"
 msgstr "&Enpaneligu"
 
-#: gui/kmixprefdlg.cpp:64
+#: gui/kmixprefdlg.cpp:67
 #, fuzzy
 #| msgid "Docks the mixer into the KDE panel"
 msgid "Docks the mixer into the KDE system tray"
 msgstr "Enmetas la miksilon en la Panelo"
 
-#: gui/kmixprefdlg.cpp:69
+#: gui/kmixprefdlg.cpp:72
 msgid "Enable system tray &volume control"
 msgstr "Ebligu &laŭtecŝanĝon en la Panelo"
 
-#: gui/kmixprefdlg.cpp:71
+#: gui/kmixprefdlg.cpp:74
 #, fuzzy
 #| msgid "Docks the mixer into the KDE panel"
 msgid "Allows to control the volume from the system tray"
 msgstr "Enmetas la miksilon en la Panelo"
 
-#: gui/kmixprefdlg.cpp:77
+#: gui/kmixprefdlg.cpp:80
 #, fuzzy
 #| msgid "Volume"
 msgid "Volume Feedback"
 msgstr "Laŭteco"
 
-#: gui/kmixprefdlg.cpp:83
+#: gui/kmixprefdlg.cpp:86
 msgid "Volume feedback is only available for Pulseaudio."
 msgstr ""
 
-#: gui/kmixprefdlg.cpp:88
+#: gui/kmixprefdlg.cpp:91
 msgid "Startup"
 msgstr ""
 
-#: gui/kmixprefdlg.cpp:94
+#: gui/kmixprefdlg.cpp:97
 #, fuzzy
 msgid "Restore volumes on login"
 msgstr "Restarigu la apriorajn laŭtecojn"
 
-#: gui/kmixprefdlg.cpp:95
+#: gui/kmixprefdlg.cpp:98
 #, fuzzy
 msgid "Restore all volume levels and switches."
 msgstr "Restarigu la apriorajn laŭtecojn"
 
-#: gui/kmixprefdlg.cpp:102
+#: gui/kmixprefdlg.cpp:105
 msgid "Dynamic controls from Pulseaudio and MPRIS2 will not be restored."
 msgstr ""
 
-#: gui/kmixprefdlg.cpp:114
-msgid "Suppress KMix Autostart"
+#: gui/kmixprefdlg.cpp:117
+msgid "Autostart"
 msgstr ""
 
-#: gui/kmixprefdlg.cpp:115
-msgid "Disables the KMix autostart service (kmix_autostart.desktop)"
+#: gui/kmixprefdlg.cpp:118
+msgid "Enables the KMix autostart service (kmix_autostart.desktop)"
 msgstr ""
 
-#: gui/kmixprefdlg.cpp:121
-msgid "Visual"
+#: gui/kmixprefdlg.cpp:124
+msgid ""
+"Autostart can not be enabled, as the autostart file kmix_autostart.desktop "
+"is not installed."
 msgstr ""
 
 #: gui/kmixprefdlg.cpp:127
+msgid "Visual"
+msgstr ""
+
+#: gui/kmixprefdlg.cpp:133
 msgid "Show &tickmarks"
 msgstr "Montru &skalerojn"
 
-#: gui/kmixprefdlg.cpp:129
+#: gui/kmixprefdlg.cpp:135
 msgid "Enable/disable tickmark scales on the sliders"
 msgstr "(Mal)montras skalojn ĉe la ŝoviloj"
 
-#: gui/kmixprefdlg.cpp:134
+#: gui/kmixprefdlg.cpp:140
 msgid "Show &labels"
 msgstr "Montru &etikedojn"
 
-#: gui/kmixprefdlg.cpp:136
+#: gui/kmixprefdlg.cpp:142
 msgid "Enables/disables description labels above the sliders"
 msgstr "(Mal)montras etikedojn super la ŝoviloj"
 
-#: gui/kmixprefdlg.cpp:143
+#: gui/kmixprefdlg.cpp:149
 msgid "Slider orientation: "
 msgstr ""
 
-#: gui/kmixprefdlg.cpp:144
+#: gui/kmixprefdlg.cpp:150
 msgid "&Horizontal"
 msgstr "&Horizontale"
 
-#: gui/kmixprefdlg.cpp:145
+#: gui/kmixprefdlg.cpp:151
 msgid "&Vertical"
 msgstr "&Vertikala"
 
