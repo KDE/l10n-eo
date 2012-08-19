@@ -16,30 +16,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: pology\n"
 
-#: kgpg.h:32
-msgid ""
-"Hi,\n"
-"\n"
-"please find attached the user id '%UIDNAME%' of your key %KEYID% signed by "
-"me. This mail is encrypted with that key to make sure you control both the "
-"email address and the key.\n"
-"\n"
-"If you have multiple user ids, I sent the signature for each user id "
-"separately to that user id's associated email address. You can import the "
-"signatures by running each through `gpg --import` after you have decrypted "
-"them with `gpg --decrypt`.\n"
-"\n"
-"If you are using KGpg store the attachment to disk and then import it. Just "
-"select `Import Key...` from `Keys` menu and open the file.\n"
-"\n"
-"Note that I did not upload your key to any keyservers. If you want this new "
-"signature to be available to others, please upload it yourself. With GnuPG "
-"this can be done using gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
-"\n"
-"With KGpg you can right click on the key once you imported all user ids and "
-"choose `Export Public Key...`.\n"
-"\n"
-"If you have any questions, don't hesitate to ask.\n"
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Axel Rousseau"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "axel@esperanto-jeunes.org"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: adduid.ui:16
+msgid "Name (minimum 5 characters):"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: adduid.ui:29 newkey.ui:67
+msgid "Email:"
+msgstr "Retpoŝto:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: adduid.ui:42
+msgid "Comment (optional):"
 msgstr ""
 
 #: caff.cpp:258
@@ -56,9 +54,900 @@ msgstr ""
 msgid "your key "
 msgstr ""
 
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
+#: conf_decryption.ui:52
+msgid ""
+"<qt><b>Custom Decryption Command:</b><br />\n"
+"<p>This option allows the user to specify a custom command to be executed by "
+"GPG when decryption occurs. (This is recommended for advanced users only).</"
+"p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
+#: conf_decryption.ui:55
+msgid "Custom decryption command:"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
+#: conf_encryption.ui:15 kgpgoptions.cpp:97
+msgid "Encryption"
+msgstr "Ĉifrado"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AsciiArmor)
+#: conf_encryption.ui:31
+msgid ""
+"<qt><b>ASCII armored encryption:</b> <br /> \n"
+"<p>Checking this option outputs all encrypted files in a format that can be "
+"opened by a text editor and as such the output is suitable for placing in "
+"the body of an e-mail message.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AsciiArmor)
+#: conf_encryption.ui:34 selectpublickeydialog.cpp:95
+msgid "ASCII armored encryption"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpExtension)
+#: conf_encryption.ui:42
+msgid ""
+"<qt><b>Use *.pgp extension for encrypted files:</b><br />\n"
+"<p>Checking this option will append a .pgp extension to all encrypted files "
+"instead of a .gpg extension. This option will maintain compatibility with "
+"users of PGP (Pretty Good Privacy) software.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpExtension)
+#: conf_encryption.ui:45
+msgid "Use *.pgp extension for encrypted files"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
+#: conf_encryption.ui:69
+msgid ""
+"<qt><b>Custom encryption command:</b><br />\n"
+"<p>When activated, an entry field will be shown in the key selection dialog, "
+"enabling you to enter a custom command for encryption. This option is "
+"recommended for experienced users only.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
+#: conf_encryption.ui:72
+msgid "Custom encryption command:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, encrypt_to_always)
+#: conf_encryption.ui:113
+msgid ""
+"<qt><b>Always encrypt with:</b><br />\n"
+"<p>This ensures all files/messages will also be encrypted with the chosen "
+"key. However, if the \"Encrypt files with:\" option is selected that chosen "
+"key will override the \"Always encrypt with:\" selection.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, encrypt_to_always)
+#: conf_encryption.ui:116
+msgid "Always encrypt with:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EncryptFilesTo)
+#: conf_encryption.ui:124
+msgid ""
+"<qt><b>Encrypt files with:</b><br />\n"
+"<p>Checking this option and selecting a key will force any file encryption "
+"operation to use the selected key. KGpg will not query for a recipient and "
+"the default key will be bypassed.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EncryptFilesTo)
+#: conf_encryption.ui:127
+msgid "Encrypt files with:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedKeys)
+#: conf_encryption.ui:135
+msgid ""
+"<qt><b>Allow encryption with untrusted keys:</b><br />\n"
+"<p>When importing a public key, the key is usually marked as untrusted and "
+"as such cannot be used unless it is signed by the default key (thus making "
+"it 'trusted'). Checking this box enables any key to be used even if it is "
+"untrusted.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedKeys)
+#: conf_encryption.ui:138 selectpublickeydialog.cpp:100
+msgid "Allow encryption with untrusted keys"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
+#: conf_encryption.ui:145
+msgid ""
+"<qt><b>Allow untrusted keys as members of key groups:</b><br /><p>A key "
+"group allows simple encryption to multiple recipients at once. Similar to "
+"the <em>Allow encryption with untrusted keys</em> option this allows "
+"untrusted keys to become member of a key group.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
+#: conf_encryption.ui:148
+msgid "Allow untrusted keys as members of key groups"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUserID)
+#: conf_encryption.ui:156
+msgid ""
+"<qt><b>Hide user ID:</b><br /> \n"
+"<p>Checking this option will remove the keyid of the recipient from all "
+"encrypted packets. The advantage: traffic analysis of the encrypted packets "
+"cannot be performed as easily because the recipient is unknown. The "
+"disadvantage: the receiver of the encrypted packets is forced to try all "
+"secret keys before being able to decrypt the packets. This can be a lengthy "
+"process depending on the number of secret keys the receiver holds.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUserID)
+#: conf_encryption.ui:159 selectpublickeydialog.cpp:106
+msgid "Hide user id"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpCompatibility)
+#: conf_encryption.ui:167
+msgid ""
+"<qt><b>PGP 6 compatibility:</b><br /> \n"
+"<p>Checking this option forces GnuPG to output encrypted packets that are as "
+"compliant with PGP (Pretty Good Privacy) 6 standards as possible thus "
+"allowing GnuPG users to inter operate with PGP 6 users.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpCompatibility)
+#: conf_encryption.ui:170
+msgid "PGP 6 compatibility"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QWidget, GPGConf)
+#: conf_gpg.ui:16
+msgid ""
+"<qt><b>Global Settings:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: conf_gpg.ui:22
+msgid "GnuPG Home"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2)
+#: conf_gpg.ui:30
+msgid ""
+"<b>Home Location</b><p>This is the directory where GnuPG stores its "
+"configuration and the keyrings. If you have not changed it this is usually "
+"<em>~/.gnupg/</em></p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2)
+#: conf_gpg.ui:33
+msgid "Home location:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2_2)
+#: conf_gpg.ui:43
+msgid ""
+"<b>Configuration File</b><p>This is the name of the configuration file in "
+"the directory specified above. The default is <em>gnupg.conf</em> while "
+"older versions of GnuPG used <em>options</em>.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2_2)
+#: conf_gpg.ui:46
+msgid "Configuration file:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, changeHome)
+#: conf_gpg.ui:96
+msgid "Change..."
+msgstr "Ŝanĝi..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: conf_gpg.ui:108 kgpgfirstassistant.cpp:123
+msgid "GnuPG Binary"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_6_2)
+#: conf_gpg.ui:114
+msgid ""
+"<b>Program path</b><p>This is the program that will be called for all GnuPG "
+"operations. The default of <em>gpg</em> will work on most systems.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_6_2)
+#: conf_gpg.ui:117
+msgid "Program path:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, use_agent)
+#: conf_gpg.ui:157
+msgid ""
+"<b>Use GnuPG agent</b><p>The GnuPG agent stores the passwords for your "
+"secret keys in memory for a limited amount of time. If you use your secret "
+"key again while it is cached you do not have to enter it again. This is less "
+"secure than typing it every time.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, use_agent)
+#: conf_gpg.ui:160
+msgid "Use GnuPG agent"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabGlobal)
+#: conf_misc.ui:24
+msgid "Global Settings"
+msgstr "Ĉiea agordo"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutoStart)
+#: conf_misc.ui:33
+msgid ""
+"<qt><b>Start KGpg automatically at KDE startup:</b><br />\n"
+"<p>If checked KGpg will start automatically each time that KDE starts up.</"
+"p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoStart)
+#: conf_misc.ui:36
+msgid "Start KGpg automatically at login"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseMouseSelection)
+#: conf_misc.ui:53
+msgid ""
+"<qt><b>Use mouse selection instead of clipboard:</b><br />\n"
+"<p>If checked, clipboard operations in KGpg will use the selection "
+"clipboard, that means highlighting a text to copy, and middle button (or "
+"right+left together) to paste. If this option is not checked, the clipboard "
+"will work with Key shortcuts (Ctrl-c, Ctrl-v).</p></qt> "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMouseSelection)
+#: conf_misc.ui:56
+msgid "Use mouse selection instead of clipboard"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_RemoteFileWarn)
+#: conf_misc.ui:70
+msgid ""
+"<qt><b>Display warning before creating temporary files:</b><br />\n"
+"<p></p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_RemoteFileWarn)
+#: conf_misc.ui:74
+msgid ""
+"Display warning before creating temporary files\n"
+"(only occurs on remote files operations)"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabApplet)
+#: conf_misc.ui:97
+msgid "Applet && Menus"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox11)
+#: conf_misc.ui:103
+msgid "Konqueror Service Menus"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#: conf_misc.ui:119
+msgid ""
+"<qt><b>Sign file service menu:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: conf_misc.ui:122
+msgid "Sign file service menu:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: conf_misc.ui:139 conf_misc.ui:178 keysmanager.cpp:298
+msgid "Disable"
+msgstr "Malŝalti"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: conf_misc.ui:144 conf_misc.ui:183
+msgid "Enable with All Files"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_3)
+#: conf_misc.ui:164
+msgid ""
+"<qt><b>Decrypt file service menu:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: conf_misc.ui:167
+msgid "Decrypt file service menu:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: conf_misc.ui:188
+msgid "Enable with Encrypted Files"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: conf_misc.ui:201
+msgid "System Tray Applet"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSystray)
+#: conf_misc.ui:208
+msgid ""
+"<qt><b>Show system tray icon:</b><br />\n"
+"<p>If checked KGpg will minimize to an icon in the system tray.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSystray)
+#: conf_misc.ui:211
+msgid "Show system tray icon"
+msgstr "Montri sistempletan piktogramon"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: conf_misc.ui:223
+msgid "Left mouse click opens:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
+#: conf_misc.ui:240
+msgid "Key Manager"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
+#. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
+#: conf_misc.ui:245 conf_misc.ui:272 editor/kgpgeditor.cpp:502
+msgid "Editor"
+msgstr "Redaktilo"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: conf_misc.ui:280
+msgid "Recent files"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabSigning)
+#: conf_misc.ui:306
+msgid "Key Signing"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#: conf_misc.ui:314
+msgid ""
+"Here you can define how User Ids that do not contain an email address (like "
+"Photo Ids) are sent to the key owner. You can choose to either send them "
+"with every other User Id you signed, only with the first Id you signed or to "
+"not send them at all."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: conf_misc.ui:317
+msgid "Mailing of User Ids without Email Addresses"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: conf_misc.ui:325
+msgid "Send with every Email"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: conf_misc.ui:330
+msgid "Send only with first Email"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: conf_misc.ui:335
+#, fuzzy
+#| msgid "Do Not Use"
+msgid "Do not send"
+msgstr "Ne uzi"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: conf_misc.ui:345
+msgid "Email template"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, EmailTemplateEdit)
+#: conf_misc.ui:353
+#, no-c-format
+msgid ""
+"This is the text of the email sent by the \"Sign and Mail User ID\" action.\n"
+"\n"
+"The placeholders surrounded by the percent signs (like %KEYID%) will be "
+"replaced with the corresponding text for every single mail."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: conf_servers.ui:29
+msgid ""
+"<b>INFORMATION</b>:\n"
+"Only the default server will be stored in GnuPG's configuration file,\n"
+"all others will be stored for use by KGpg only."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseProxy)
+#: conf_servers.ui:39
+msgid "Honor HTTP proxy when available"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, server_default)
+#: conf_servers.ui:50
+msgid "&Set as Default"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, server_add)
+#: conf_servers.ui:57
+msgid "&Add..."
+msgstr "&Aldonu"
+
+#. i18n: ectx: property (text), widget (KPushButton, server_del)
+#: conf_servers.ui:67
+msgid "&Delete"
+msgstr "&Forigi"
+
+#. i18n: ectx: property (text), widget (KPushButton, server_edit)
+#: conf_servers.ui:74
+msgid "&Edit..."
+msgstr "&Redakto"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: conf_ui2.ui:32
+msgid "Key Colors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUltimate)
+#: conf_ui2.ui:42
+msgid "Ultimately trusted keys:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustTrusted)
+#: conf_ui2.ui:52
+msgid "Trusted keys:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustMarginally)
+#: conf_ui2.ui:62
+msgid "Marginally trusted keys:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustExpired)
+#: conf_ui2.ui:72
+msgid "Expired keys:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustRevoked)
+#: conf_ui2.ui:82
+msgid "Revoked keys:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUnknown)
+#: conf_ui2.ui:92
+msgid "Unknown keys:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustDisabled)
+#: conf_ui2.ui:102
+#, fuzzy
+#| msgid "Disable"
+msgid "Disabled keys:"
+msgstr "Malŝalti"
+
+#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
+#: conf_ui2.ui:225
+#, fuzzy
+#| msgid "Editor"
+msgid "Editor Font"
+msgstr "Redaktilo"
+
+#: core/convert.cpp:37
+msgctxt "Encryption algorithm"
+msgid "RSA"
+msgstr "RSA"
+
+#: core/convert.cpp:38
+msgctxt "Encryption algorithm"
+msgid "DSA"
+msgstr "DSA"
+
+#: core/convert.cpp:39
+msgctxt "Encryption algorithm"
+msgid "ElGamal"
+msgstr "ElGamal"
+
+#: core/convert.cpp:40
+msgctxt "Encryption algorithm"
+msgid "DSA & ElGamal"
+msgstr ""
+
+#: core/convert.cpp:41
+msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
+msgid "RSA & RSA"
+msgstr ""
+
+#: core/convert.cpp:43
+msgctxt "Unknown algorithm"
+msgid "Unknown"
+msgstr ""
+
+#: core/convert.cpp:51
+msgid "Do not Know"
+msgstr ""
+
+#: core/convert.cpp:52
+msgid "Do NOT Trust"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: core/convert.cpp:53 kgpgKeyInfo.ui:193
+msgid "Marginally"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: core/convert.cpp:54 kgpgKeyInfo.ui:198
+msgid "Fully"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: core/convert.cpp:55 kgpgKeyInfo.ui:203
+msgid "Ultimately"
+msgstr ""
+
+#: core/convert.cpp:57
+msgctxt "Unknown trust in key owner"
+msgid "Unknown"
+msgstr ""
+
+#: core/convert.cpp:65
+msgctxt "Invalid key"
+msgid "Invalid"
+msgstr ""
+
+#: core/convert.cpp:66
+msgctxt "Disabled key"
+msgid "Disabled"
+msgstr ""
+
+#: core/convert.cpp:67
+msgid "Revoked"
+msgstr ""
+
+#: core/convert.cpp:68
+msgctxt "Expired key"
+msgid "Expired"
+msgstr ""
+
+#: core/convert.cpp:69
+msgctxt "Undefined key trust"
+msgid "Undefined"
+msgstr ""
+
+#: core/convert.cpp:70
+msgctxt "No trust in key"
+msgid "None"
+msgstr ""
+
+#: core/convert.cpp:71
+msgctxt "Marginal trust in key"
+msgid "Marginal"
+msgstr ""
+
+#: core/convert.cpp:72
+msgctxt "Full trust in key"
+msgid "Full"
+msgstr ""
+
+#: core/convert.cpp:73
+msgctxt "Ultimate trust in key"
+msgid "Ultimate"
+msgstr ""
+
+#: core/convert.cpp:75
+msgctxt "Unknown trust in key"
+msgid "Unknown"
+msgstr ""
+
+#: core/KGpgGroupNode.cpp:164
+#, kde-format
+msgid "1 key"
+msgid_plural "%1 keys"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/KGpgKeyNode.cpp:84
+#, kde-format
+msgctxt "size of signing key / size of encryption key"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: core/KGpgKeyNode.cpp:164 core/KGpgSignableNode.cpp:48
+#, kde-format
+msgid "1 signature"
+msgid_plural "%1 signatures"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/KGpgNode.cpp:56
+#, kde-format
+msgctxt "Name of uid (comment)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:481
+msgid "[No user id found]"
+msgstr ""
+
+#: core/KGpgSignNode.cpp:86
+#, kde-format
+msgid "%1 [local signature]"
+msgstr ""
+
+#: core/KGpgSubkeyNode.cpp:86
+#, kde-format
+msgid "%1 subkey"
+msgstr ""
+
+#: core/KGpgUatNode.cpp:105
+msgid "Photo id"
+msgstr ""
+
 #: detailedconsole.cpp:30
 msgid "Info"
 msgstr "Informo"
+
+#: editor/kgpgeditor.cpp:90 editor/kgpgeditor.cpp:240
+#: editor/kgpgeditor.cpp:747 editor/kgpgeditor.cpp:776
+msgid "Untitled"
+msgstr "Sentitola"
+
+#: editor/kgpgeditor.cpp:186
+msgid "&Encrypt File..."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:190
+msgid "&Decrypt File..."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:194
+msgid "&Open Key Manager"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:197
+msgid "&Generate Signature..."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:201
+msgid "&Verify Signature..."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:204
+msgid "&Check MD5 Sum..."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:207
+msgid "&Unicode (utf-8) Encoding"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:213
+msgid "En&crypt"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:217
+msgid "&Decrypt"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:221
+msgid "S&ign/Verify"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:244
+#, kde-format
+msgid ""
+"The document \"%1\" has changed.\n"
+"Do you want to save it?"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:245
+msgid "Close the document"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:291
+msgid ""
+"The document could not been saved, as the selected codec is not supported."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:297
+msgid ""
+"The document could not been saved, as the selected encoding cannot encode "
+"every unicode character in it."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:306 editor/kgpgeditor.cpp:325
+msgid ""
+"The document could not be saved, please check your permissions and disk "
+"space."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:351 editor/kgpgeditor.cpp:358 keyexport.cpp:41
+#, kde-format
+msgid "Overwrite existing file %1?"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:469 editor/kgpgeditor.cpp:477
+#: editor/kgpgeditor.cpp:612 editor/kgpgeditor.cpp:650
+#: editor/kgpgeditor.cpp:688
+msgid "*|All Files"
+msgstr "*|Ĉiuj dosieroj"
+
+#: editor/kgpgeditor.cpp:469
+msgid "Open File to Encode"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:477
+msgid "Open File to Decode"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:491
+msgid "Decrypt File To"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:500 keyexport.cpp:28
+msgid "Save File"
+msgstr "Konservi dosieron"
+
+#: editor/kgpgeditor.cpp:521 kgpgexternalactions.cpp:206
+#: kgpgexternalactions.cpp:361 transactions/kgpgencrypt.cpp:123
+msgid "File Already Exists"
+msgstr "Dosiero jam ekzistas"
+
+#: editor/kgpgeditor.cpp:612
+msgid "Open File to Sign"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:650 editor/kgpgeditor.cpp:688
+msgid "Open File to Verify"
+msgstr ""
+
+#: editor/kgpgeditor.cpp:701 editor/kgpgtextedit.cpp:333
+#, kde-format
+msgid ""
+"<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
+"import this key from a keyserver?</qt>"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_import)
+#: editor/kgpgeditor.cpp:702 keyserver.ui:32 keytreeview.cpp:167
+msgid "Import"
+msgstr "Importi"
+
+#: editor/kgpgeditor.cpp:702 keytreeview.cpp:168
+msgid "Do Not Import"
+msgstr "Ne importi"
+
+#: editor/kgpgeditor.cpp:728 transactions/kgpgverify.cpp:149
+msgid "No signature found."
+msgstr ""
+
+#: editor/kgpgeditor.cpp:733 editor/kgpgtextedit.cpp:320
+#: kgpgexternalactions.cpp:283
+msgctxt "Caption of message box"
+msgid "Verification Finished"
+msgstr ""
+
+#. i18n: ectx: Menu (view)
+#: editor/kgpgeditor.rc:13 keysmanager.rc:24
+msgid "&View"
+msgstr "&Rigardi"
+
+#. i18n: ectx: Menu (signature)
+#: editor/kgpgeditor.rc:18
+#, fuzzy
+#| msgid "Signature"
+msgid "Si&gnature"
+msgstr "Subskribo"
+
+#: editor/kgpgmd5widget.cpp:28
+msgid "MD5 Checksum"
+msgstr ""
+
+#: editor/kgpgmd5widget.cpp:31
+msgid "Compare MD5 with Clipboard"
+msgstr ""
+
+#: editor/kgpgmd5widget.cpp:46
+#, kde-format
+msgid "MD5 sum for <b>%1</b> is:"
+msgstr ""
+
+#: editor/kgpgmd5widget.cpp:59
+msgid "<b>Unknown status</b>"
+msgstr ""
+
+#: editor/kgpgmd5widget.cpp:84
+msgid "Clipboard content is not a MD5 sum."
+msgstr ""
+
+#: editor/kgpgmd5widget.cpp:88
+msgid "<b>Correct checksum</b>, file is ok."
+msgstr ""
+
+#: editor/kgpgmd5widget.cpp:94
+msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:90
+msgid ""
+"<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
+"temporary file to process requested operation. This temporary file will be "
+"deleted after operation.</qt>"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:94
+msgid "Could not download file."
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:127
+msgid ""
+"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:130
+msgid ""
+"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:135
+msgid "Key file dropped on Editor"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:257 kgpgexternalactions.cpp:397
+msgid "Decryption failed."
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:272 foldercompressjob.cpp:139
+#, kde-format
+msgid "The encryption failed with error code %1"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:273 foldercompressjob.cpp:140
+msgid "Encryption failed."
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:286
+msgid "Signing not possible: bad passphrase or missing key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
+#: editor/kgpgtextedit.cpp:326 keyserver.ui:144 keyservers.cpp:211
+msgid "&Import"
+msgstr "&Importi"
+
+#: editor/kgpgtextedit.cpp:327
+msgid "Import key in your list"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:330
+msgid "Do &Not Import"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:331
+msgid "Will not import this key in your list"
+msgstr ""
+
+#: editor/kgpgtextedit.cpp:333
+msgid "Missing Key"
+msgstr ""
 
 #: foldercompressjob.cpp:44
 msgid "Processing folder compression and encryption"
@@ -86,15 +975,6 @@ msgstr ""
 msgctxt "Status message 'Encrypting <filename>' (operation starts)"
 msgid "Encrypting %1"
 msgstr "Priskribo:"
-
-#: foldercompressjob.cpp:139 editor/kgpgtextedit.cpp:272
-#, kde-format
-msgid "The encryption failed with error code %1"
-msgstr ""
-
-#: foldercompressjob.cpp:140 editor/kgpgtextedit.cpp:273
-msgid "Encryption failed."
-msgstr ""
 
 #: foldercompressjob.cpp:143 transactions/kgpgencrypt.cpp:118
 #, fuzzy, kde-format
@@ -135,17 +1015,90 @@ msgstr ""
 msgid "Available Trusted Keys"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel)
+#. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
+#: groupedit.ui:38 keysmanager.cpp:414 searchres.ui:28
+msgid "Search:"
+msgstr "Serĉi:"
+
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: groupedit.ui:74 groupedit.ui:158 model/kgpgitemmodel.cpp:329
+#: model/kgpgsearchresultmodel.cpp:332
+msgid "Name"
+msgstr "Nomo"
+
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: groupedit.ui:79 groupedit.ui:163 model/kgpgitemmodel.cpp:330
+#: model/kgpgsearchresultmodel.cpp:334
+msgctxt "@title:column Title of a column of emails"
+msgid "Email"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: groupedit.ui:84 groupedit.ui:168
+msgid "Id"
+msgstr "Id"
+
+#. i18n: ectx: property (text), widget (QLabel, kActiveLabel1)
+#: groupedit.ui:100
+msgid "Keys in the Group"
+msgstr ""
+
 #: keyexport.cpp:25
 msgid "Public Key Export"
 msgstr ""
 
-#: keyexport.cpp:28 editor/kgpgeditor.cpp:500
-msgid "Save File"
-msgstr "Konservi dosieron"
+#. i18n: ectx: property (text), widget (QRadioButton, checkMail)
+#: keyexport.ui:38
+#, fuzzy
+#| msgid "Email:"
+msgctxt "Export a key via email"
+msgid "Email"
+msgstr "Retpoŝto:"
 
-#: keyexport.cpp:41 editor/kgpgeditor.cpp:351 editor/kgpgeditor.cpp:358
-#, kde-format
-msgid "Overwrite existing file %1?"
+#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
+#: keyexport.ui:45 sourceselect.ui:34
+msgid "Clipboard"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
+#: keyexport.ui:55 keyserver.ui:41 keyserver.ui:176
+msgid "Key server:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
+#: keyexport.ui:69 sourceselect.ui:43
+msgid "File:"
+msgstr "Dosiero:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
+#: keyexport.ui:89
+#, fuzzy
+#| msgid "Global Settings"
+msgid "Export Settings"
+msgstr "Ĉiea agordo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
+#: keyexport.ui:95
+msgid "Export everything"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
+#: keyexport.ui:105
+msgid "Do not export attributes (photo ids)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
+#: keyexport.ui:112
+msgctxt ""
+"@option:radio Exports the smallest key possible. Maps to export-minimal "
+"option of gpg"
+msgid "Clean key"
 msgstr ""
 
 #: keyinfodialog.cpp:166
@@ -205,11 +1158,95 @@ msgstr ""
 msgid "Changing key properties failed."
 msgstr ""
 
-#. i18n: file: kgpgKeyInfo.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, gr_properties)
-#: keyinfodialog.cpp:349 rc.cpp:520
+#: keyinfodialog.cpp:349 kgpgKeyInfo.ui:37
 msgid "Key properties"
 msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#: keyserver.ui:38
+msgid ""
+"<qt><b>Key Server:</b><br /> <p>A Key Server is a centralized repository of "
+"PGP/GnuPG keys connected to the Internet which can be conveniently accessed "
+"in order to obtain or deposit keys. Select from the drop down list to "
+"specify which key server should be used.</p> <p>Often these keys are held by "
+"people whom the user has never met and as such the authenticity is dubious "
+"at best. Refer to the GnuPG manual covering \"Web-of-Trust\" relationships "
+"to find out how GnuPG works around the problem of verifying authenticity.</"
+"p> </qt>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KComboBox, kCBimportks)
+#: keyserver.ui:52
+msgid ""
+"<b>Key Server Drop Down Dialog:</b>\n"
+"Allows the user to select the Key Server which will be used to import PGP/"
+"GnuPG keys into the local keyring."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
+#: keyserver.ui:60
+msgid ""
+"<qt><b>Text to search or ID of the key to import:</b><br />\n"
+"<p>There are multiple ways to search for a key, you can use a text or "
+"partial text search (example: entering Phil or Zimmerman will bring up all "
+"keys in which Phil or Zimmerman shows up) or you can search by the ID's of "
+"the key. Key ID's are strings of letters and numbers that uniquely identify "
+"a key (example: searching for 0xED7585F4 would bring up the key associated "
+"with that ID).</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: keyserver.ui:69
+msgid "Text to search or ID of the key to import:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cBproxyI)
+#. i18n: ectx: property (text), widget (QCheckBox, cBproxyE)
+#: keyserver.ui:91 keyserver.ui:221
+msgid "Honor HTTP proxy:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, Buttonsearch)
+#: keyserver.ui:134
+msgid "&Search"
+msgstr "&Serĉi"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_export)
+#: keyserver.ui:170
+msgid "Export"
+msgstr "Eksporti"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
+#: keyserver.ui:190
+msgid ""
+"<qt><b>Key to be exported:</b><br />\n"
+"<p>This allows the user to specify the key from the drop down list that will "
+"be exported to the key server selected.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: keyserver.ui:193
+msgid "Key to be exported:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, exportAttributes)
+#: keyserver.ui:206
+msgid "Export attributes (photo id)"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, Buttonexport)
+#: keyserver.ui:265
+msgid ""
+"<qt><b>Export:</b><br />\n"
+"<p>Pushing this button will export the specified key to the specified server."
+"</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, Buttonexport)
+#: keyserver.ui:268
+msgid "&Export"
+msgstr "E&ksporti"
 
 #: keyservers.cpp:45
 msgid "Key Server"
@@ -245,12 +1282,6 @@ msgid "Import Key From Keyserver"
 msgid_plural "Import Keys From Keyserver"
 msgstr[0] ""
 msgstr[1] ""
-
-#. i18n: file: keyserver.ui:144
-#. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
-#: keyservers.cpp:211 rc.cpp:476 editor/kgpgtextedit.cpp:326
-msgid "&Import"
-msgstr "&Importi"
 
 #: keyservers.cpp:216
 msgid "Connecting to the server..."
@@ -401,14 +1432,6 @@ msgstr ""
 msgid "&Photo ID's"
 msgstr ""
 
-#. i18n: file: conf_misc.ui:139
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
-#. i18n: file: conf_misc.ui:178
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: keysmanager.cpp:298 rc.cpp:298 rc.cpp:312
-msgid "Disable"
-msgstr "Malŝalti"
-
 #: keysmanager.cpp:299
 msgctxt "small picture"
 msgid "Small"
@@ -457,14 +1480,6 @@ msgstr ""
 msgid "&Show Only Secret Keys"
 msgstr ""
 
-#. i18n: file: groupedit.ui:38
-#. i18n: ectx: property (text), widget (QLabel)
-#. i18n: file: searchres.ui:28
-#. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
-#: keysmanager.cpp:414 rc.cpp:426 rc.cpp:656
-msgid "Search:"
-msgstr "Serĉi:"
-
 #: keysmanager.cpp:425
 msgctxt ""
 "Name of the action that is a search line, shown for example in the toolbar "
@@ -512,9 +1527,8 @@ msgstr ""
 msgid "The name is not accepted by gpg. Cannot generate a new key pair."
 msgstr ""
 
-#. i18n: file: newkey.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, newKey)
-#: keysmanager.cpp:574 rc.cpp:616
+#: keysmanager.cpp:574 newkey.ui:13
 msgid "New Key Pair Created"
 msgstr ""
 
@@ -1005,20 +2019,25 @@ msgstr ""
 msgid "Text successfully encrypted."
 msgstr ""
 
+#. i18n: ectx: Menu (managekeys)
+#: keysmanager.rc:6
+msgid "&Keys"
+msgstr ""
+
+#. i18n: ectx: Menu (show_details)
+#: keysmanager.rc:29
+msgid "&Show Details"
+msgstr ""
+
+#. i18n: ectx: Menu (groups)
+#: keysmanager.rc:41
+msgid "&Groups"
+msgstr "&Grupoj"
+
 #: keytreeview.cpp:166
 #, kde-format
 msgid "<p>Do you want to import file <b>%1</b> into your key ring?</p>"
 msgstr ""
-
-#. i18n: file: keyserver.ui:32
-#. i18n: ectx: attribute (title), widget (QWidget, tab_import)
-#: keytreeview.cpp:167 rc.cpp:450 editor/kgpgeditor.cpp:702
-msgid "Import"
-msgstr "Importi"
-
-#: keytreeview.cpp:168 editor/kgpgeditor.cpp:702
-msgid "Do Not Import"
-msgstr "Ne importi"
 
 #: kgpg.cpp:78
 msgid ""
@@ -1058,6 +2077,264 @@ msgid ""
 "folders."
 msgstr ""
 
+#: kgpg.h:32
+msgid ""
+"Hi,\n"
+"\n"
+"please find attached the user id '%UIDNAME%' of your key %KEYID% signed by "
+"me. This mail is encrypted with that key to make sure you control both the "
+"email address and the key.\n"
+"\n"
+"If you have multiple user ids, I sent the signature for each user id "
+"separately to that user id's associated email address. You can import the "
+"signatures by running each through `gpg --import` after you have decrypted "
+"them with `gpg --decrypt`.\n"
+"\n"
+"If you are using KGpg store the attachment to disk and then import it. Just "
+"select `Import Key...` from `Keys` menu and open the file.\n"
+"\n"
+"Note that I did not upload your key to any keyservers. If you want this new "
+"signature to be available to others, please upload it yourself. With GnuPG "
+"this can be done using gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
+"\n"
+"With KGpg you can right click on the key once you imported all user ids and "
+"choose `Export Public Key...`.\n"
+"\n"
+"If you have any questions, don't hesitate to ask.\n"
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomDecrypt), group (Decryption)
+#: kgpg.kcfg:13
+msgid "Custom decryption command."
+msgstr ""
+
+#. i18n: ectx: label, entry (CustomEncryptionOptions), group (Encryption)
+#: kgpg.kcfg:19
+msgid "Custom encryption options"
+msgstr ""
+
+#. i18n: ectx: label, entry (AllowCustomEncryptionOptions), group (Encryption)
+#: kgpg.kcfg:22
+msgid "Allow custom encryption options"
+msgstr ""
+
+#. i18n: ectx: label, entry (FileEncryptionKey), group (Encryption)
+#: kgpg.kcfg:26
+#, fuzzy
+#| msgid "Encryption"
+msgid "File encryption key."
+msgstr "Ĉifrado"
+
+#. i18n: ectx: label, entry (EncryptFilesTo), group (Encryption)
+#: kgpg.kcfg:29
+#, fuzzy
+#| msgid "Encryption"
+msgid "Encrypt files"
+msgstr "Ĉifrado"
+
+#. i18n: ectx: label, entry (AsciiArmor), group (Encryption)
+#: kgpg.kcfg:33
+msgid "Use ASCII armored encryption."
+msgstr ""
+
+#. i18n: ectx: label, entry (AllowUntrustedKeys), group (Encryption)
+#: kgpg.kcfg:37
+msgid "Allow encryption with untrusted keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (AllowUntrustedGroupMembers), group (Encryption)
+#: kgpg.kcfg:41
+msgid "Allow untrusted keys to become members of key groups."
+msgstr ""
+
+#. i18n: ectx: label, entry (HideUserID), group (Encryption)
+#: kgpg.kcfg:45
+msgid "Hide the user ID."
+msgstr ""
+
+#. i18n: ectx: label, entry (PgpCompatibility), group (Encryption)
+#: kgpg.kcfg:49
+msgid "Enable PGP 6 compatibility."
+msgstr ""
+
+#. i18n: ectx: label, entry (PgpExtension), group (Encryption)
+#: kgpg.kcfg:53
+msgid "Use *.pgp extension for encrypted files."
+msgstr ""
+
+#. i18n: ectx: label, entry (GpgConfigPath), group (GPG Settings)
+#: kgpg.kcfg:60
+msgid "The path of the gpg configuration file."
+msgstr ""
+
+#. i18n: ectx: label, entry (GpgBinaryPath), group (GPG Settings)
+#: kgpg.kcfg:63
+msgid "The path of the gpg binary used by KGpg."
+msgstr ""
+
+#. i18n: ectx: label, entry (FirstRun), group (General Options)
+#: kgpg.kcfg:79
+msgid "Is the first time the application runs."
+msgstr ""
+
+#. i18n: ectx: label, entry (EditorGeometry), group (General Options)
+#: kgpg.kcfg:83
+msgid "The size of the editor window."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowTrust), group (General Options)
+#: kgpg.kcfg:86
+msgid "Show the trust value in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowExpi), group (General Options)
+#: kgpg.kcfg:90
+msgid "Show the expiration value in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowSize), group (General Options)
+#: kgpg.kcfg:94
+msgid "Show the size value in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowCreat), group (General Options)
+#: kgpg.kcfg:98
+msgid "Show the creation value in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowSecret), group (General Options)
+#: kgpg.kcfg:102
+msgid "Show only secret keys in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowLongKeyId), group (General Options)
+#: kgpg.kcfg:106
+msgid "Show long key id in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (TrustLevel), group (General Options)
+#: kgpg.kcfg:110
+msgid "Show only keys with at least that trust level in key manager."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseMouseSelection), group (User Interface)
+#: kgpg.kcfg:124
+msgid "Use the mouse selection instead of the clipboard."
+msgstr ""
+
+#. i18n: ectx: label, entry (AutoStart), group (User Interface)
+#: kgpg.kcfg:128 kgpgfirstassistant.cpp:232
+msgid "Start KGpg automatically at KDE startup."
+msgstr ""
+
+#. i18n: ectx: label, entry (RemoteFileWarn), group (User Interface)
+#: kgpg.kcfg:132
+msgid ""
+"Display a warning before creating temporary files during remote file "
+"operations."
+msgstr ""
+
+#. i18n: ectx: label, entry (LeftClick), group (User Interface)
+#: kgpg.kcfg:136
+msgid "Choose default left-click behavior"
+msgstr ""
+
+#. i18n: ectx: label, entry (EncryptedDropEvent), group (User Interface)
+#: kgpg.kcfg:143
+msgid "Handle encrypted drops"
+msgstr ""
+
+#. i18n: ectx: label, entry (UnencryptedDropEvent), group (User Interface)
+#: kgpg.kcfg:151
+msgid "Handle unencrypted drops"
+msgstr ""
+
+#. i18n: ectx: label, entry (SignMenu), group (User Interface)
+#: kgpg.kcfg:159
+msgid "Show the \"sign file\" service menu."
+msgstr ""
+
+#. i18n: ectx: label, entry (DecryptMenu), group (User Interface)
+#: kgpg.kcfg:167
+msgid "Show the \"decrypt file\" service menu."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowSystray), group (User Interface)
+#: kgpg.kcfg:176
+#, fuzzy
+#| msgid "Show system tray icon"
+msgid "Show the systray icon"
+msgstr "Montri sistempletan piktogramon"
+
+#. i18n: ectx: label, entry (RecentFiles), group (User Interface)
+#: kgpg.kcfg:180
+msgid "The number of recently opened files shown in the editor menu."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowTipOfDay), group (TipOfDay)
+#: kgpg.kcfg:187
+#, fuzzy
+#| msgid "Tip of the &Day"
+msgid "Show tip of the day."
+msgstr "Konsileto de la ta&go"
+
+#. i18n: ectx: label, entry (ColorGood), group (Key Colors)
+#: kgpg.kcfg:194
+msgid "Color used for trusted keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorRev), group (Key Colors)
+#: kgpg.kcfg:198
+msgid "Color used for revoked keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorUnknown), group (Key Colors)
+#: kgpg.kcfg:202
+msgid "Color used for unknown keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorBad), group (Key Colors)
+#: kgpg.kcfg:206
+msgid "Color used for untrusted keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorUltimate), group (Key Colors)
+#: kgpg.kcfg:210
+msgid "Color used for ultimately trusted keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorMarginal), group (Key Colors)
+#: kgpg.kcfg:214
+msgid "Color used for marginally trusted keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorExpired), group (Key Colors)
+#: kgpg.kcfg:218
+msgid "Color used for expired keys."
+msgstr ""
+
+#. i18n: ectx: label, entry (Font), group (Text Font)
+#: kgpg.kcfg:225
+msgid "Font"
+msgstr "Tiparo"
+
+#. i18n: ectx: label, entry (KeyServers), group (Servers)
+#: kgpg.kcfg:236
+msgid ""
+"Key servers used by KGpg. The first server in the list is the default server."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseProxy), group (Key Servers)
+#: kgpg.kcfg:243
+msgid "Use HTTP proxy when available."
+msgstr ""
+
+#. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
+#: kgpg.kcfg:250
+msgid ""
+"This is the text of the email sent by the \"Sign and Mail User ID\" action."
+msgstr ""
+
 #: kgpgexternalactions.cpp:126
 msgid "Cannot create temporary file for folder compression."
 msgstr ""
@@ -1078,26 +2355,11 @@ msgstr ""
 msgid "Compression method for archive:"
 msgstr ""
 
-#: kgpgexternalactions.cpp:206 kgpgexternalactions.cpp:361
-#: editor/kgpgeditor.cpp:521 transactions/kgpgencrypt.cpp:123
-msgid "File Already Exists"
-msgstr "Dosiero jam ekzistas"
-
-#: kgpgexternalactions.cpp:283 editor/kgpgeditor.cpp:733
-#: editor/kgpgtextedit.cpp:320
-msgctxt "Caption of message box"
-msgid "Verification Finished"
-msgstr ""
-
 #: kgpgexternalactions.cpp:395
 msgid "Decryption of this file failed:"
 msgid_plural "Decryption of these files failed:"
 msgstr[0] ""
 msgstr[1] ""
-
-#: kgpgexternalactions.cpp:397 editor/kgpgtextedit.cpp:257
-msgid "Decryption failed."
-msgstr ""
 
 #: kgpgexternalactions.cpp:422
 msgid ""
@@ -1146,12 +2408,6 @@ msgid ""
 "*|All files"
 msgstr ""
 
-#. i18n: file: conf_gpg.ui:108
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: kgpgfirstassistant.cpp:123 rc.cpp:244
-msgid "GnuPG Binary"
-msgstr ""
-
 #: kgpgfirstassistant.cpp:141
 msgid "KGpg needs to know where your GnuPG configuration file is stored."
 msgstr ""
@@ -1174,12 +2430,6 @@ msgstr ""
 
 #: kgpgfirstassistant.cpp:222
 msgid "Generate new key"
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:128
-#. i18n: ectx: label, entry (AutoStart), group (User Interface)
-#: kgpgfirstassistant.cpp:232 rc.cpp:74
-msgid "Start KGpg automatically at KDE startup."
 msgstr ""
 
 #: kgpgfirstassistant.cpp:236
@@ -1265,9 +2515,8 @@ msgstr ""
 msgid "Commen&t (optional):"
 msgstr ""
 
-#. i18n: file: kgpgKeyInfo.ui:136
 #. i18n: ectx: property (text), widget (QLabel, tl_expiration)
-#: kgpgkeygenerate.cpp:66 rc.cpp:532
+#: kgpgkeygenerate.cpp:66 kgpgKeyInfo.ui:136
 msgid "Expiration:"
 msgstr ""
 
@@ -1336,11 +2585,96 @@ msgstr ""
 msgid "Email address not valid"
 msgstr ""
 
-#. i18n: file: conf_encryption.ui:15
-#. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
-#: kgpgoptions.cpp:97 rc.cpp:156
-msgid "Encryption"
-msgstr "Ĉifrado"
+#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
+#: kgpgKeyInfo.ui:14
+msgid "Kgpg"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, tl_id)
+#. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#: kgpgKeyInfo.ui:85 newkey.ui:91
+msgid "Key ID:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, tl_comment)
+#: kgpgKeyInfo.ui:102
+msgid "Comment:"
+msgstr "Komento:"
+
+#. i18n: ectx: property (text), widget (QLabel, tl_creation)
+#: kgpgKeyInfo.ui:119
+msgid "Creation:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, tl_trust)
+#: kgpgKeyInfo.ui:153
+msgid "Trust:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
+#: kgpgKeyInfo.ui:160
+msgid "Owner trust:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: kgpgKeyInfo.ui:183
+msgid "I do not know"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: kgpgKeyInfo.ui:188
+msgid "I do NOT trust"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
+#: kgpgKeyInfo.ui:211
+#, fuzzy
+msgid "Algorithm:"
+msgstr "Algoritmo"
+
+#. i18n: ectx: property (text), widget (QLabel, tl_length)
+#: kgpgKeyInfo.ui:228
+msgid "Length:"
+msgstr "Longo:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
+#: kgpgKeyInfo.ui:277
+msgid "Photo"
+msgstr "Foto"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
+#: kgpgKeyInfo.ui:297
+msgid ""
+"<qt><b>Photo:</b><p>A photo can be included with a public key for extra "
+"security. The photo can be used as an additional method of authenticating "
+"the key. However, it should not be relied upon as the only form of "
+"authentication.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_photo)
+#: kgpgKeyInfo.ui:306
+msgid "No Photo"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_disable)
+#: kgpgKeyInfo.ui:343
+msgid "Disable key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
+#: kgpgKeyInfo.ui:350
+msgid "Change Expiration"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, m_password)
+#: kgpgKeyInfo.ui:357
+msgid "Change Passphrase"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
+#: kgpgKeyInfo.ui:383
+msgid "Fingerprint"
+msgstr ""
 
 #: kgpgoptions.cpp:98
 msgid "Decryption"
@@ -1446,6 +2780,61 @@ msgstr ""
 msgid "Create Revocation Certificate"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: kgpgrevokewidget.ui:18
+msgid "Create revocation certificate for"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, keyID)
+#: kgpgrevokewidget.ui:28
+msgid "key id"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: kgpgrevokewidget.ui:45
+msgid "Reason for revocation:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: kgpgrevokewidget.ui:56
+msgid "No Reason"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: kgpgrevokewidget.ui:61
+msgid "Key Has Been Compromised"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: kgpgrevokewidget.ui:66
+msgid "Key is Superseded"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: kgpgrevokewidget.ui:71
+msgid "Key is No Longer Used"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: kgpgrevokewidget.ui:81
+msgid "Description:"
+msgstr "Priskribo:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbSave)
+#: kgpgrevokewidget.ui:96
+msgid "Save certificate:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbPrint)
+#: kgpgrevokewidget.ui:111
+msgid "Print certificate"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbImport)
+#: kgpgrevokewidget.ui:121
+msgid "Import into keyring"
+msgstr ""
+
 #: main.cpp:24
 msgid ""
 "KGpg - simple gui for gpg\n"
@@ -1507,1373 +2896,133 @@ msgstr ""
 msgid "File to open"
 msgstr "Malfermenda dosiero"
 
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Axel Rousseau"
+#: model/keylistproxymodel.cpp:96 transactions/kgpgimport.cpp:193
+#, kde-format
+msgctxt "ID: Name"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "axel@esperanto-jeunes.org"
+#: model/keylistproxymodel.cpp:98 transactions/kgpgimport.cpp:195
+#, kde-format
+msgctxt "ID: Name <Email>"
+msgid "%1: %2 &lt;%3&gt;"
+msgstr "%1: %2 &lt;%3&gt;"
 
-#. i18n: file: kgpg.kcfg:13
-#. i18n: ectx: label, entry (CustomDecrypt), group (Decryption)
-#: rc.cpp:5
-msgid "Custom decryption command."
+#: model/keylistproxymodel.cpp:103
+#, kde-format
+msgctxt "Name <Email>: ID"
+msgid "%1 &lt;%2&gt;: %3"
+msgstr "%1 &lt;%2&gt;: %3"
+
+#: model/kgpgitemmodel.cpp:228 model/kgpgitemmodel.cpp:231
+#, kde-format
+msgid "1 Key"
+msgid_plural "%1 Keys"
+msgstr[0] ""
+msgstr[1] ""
+
+#: model/kgpgitemmodel.cpp:232
+#, fuzzy, kde-format
+#| msgid "&Groups"
+msgid "1 Group"
+msgid_plural "%1 Groups"
+msgstr[0] "&Grupoj"
+msgstr[1] "&Grupoj"
+
+#: model/kgpgitemmodel.cpp:234
+#, fuzzy, kde-format
+#| msgctxt "Name: ID"
+#| msgid "%1: %2"
+msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
+msgid "%1, %2"
+msgstr "%1: %2"
+
+#: model/kgpgitemmodel.cpp:335
+msgid "ID"
+msgstr "ID"
+
+#: model/kgpgsearchresultmodel.cpp:124
+#, kde-format
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
+msgid "ID %1, %2-bit %3 key, created %4, revoked"
 msgstr ""
 
-#. i18n: file: kgpg.kcfg:19
-#. i18n: ectx: label, entry (CustomEncryptionOptions), group (Encryption)
-#: rc.cpp:8
-msgid "Custom encryption options"
+#: model/kgpgsearchresultmodel.cpp:129
+#, kde-format
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
+msgid "ID %1, %2-bit %3 key, created %4"
 msgstr ""
 
-#. i18n: file: kgpg.kcfg:22
-#. i18n: ectx: label, entry (AllowCustomEncryptionOptions), group (Encryption)
-#: rc.cpp:11
-msgid "Allow custom encryption options"
-msgstr ""
+#: model/kgpgsearchresultmodel.cpp:218
+#, kde-format
+msgid "One Photo ID"
+msgid_plural "%1 Photo IDs"
+msgstr[0] ""
+msgstr[1] ""
 
-#. i18n: file: kgpg.kcfg:26
-#. i18n: ectx: label, entry (FileEncryptionKey), group (Encryption)
-#: rc.cpp:14
-#, fuzzy
-#| msgid "Encryption"
-msgid "File encryption key."
-msgstr "Ĉifrado"
-
-#. i18n: file: kgpg.kcfg:29
-#. i18n: ectx: label, entry (EncryptFilesTo), group (Encryption)
-#: rc.cpp:17
-#, fuzzy
-#| msgid "Encryption"
-msgid "Encrypt files"
-msgstr "Ĉifrado"
-
-#. i18n: file: kgpg.kcfg:33
-#. i18n: ectx: label, entry (AsciiArmor), group (Encryption)
-#: rc.cpp:20
-msgid "Use ASCII armored encryption."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:37
-#. i18n: ectx: label, entry (AllowUntrustedKeys), group (Encryption)
-#: rc.cpp:23
-msgid "Allow encryption with untrusted keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:41
-#. i18n: ectx: label, entry (AllowUntrustedGroupMembers), group (Encryption)
-#: rc.cpp:26
-msgid "Allow untrusted keys to become members of key groups."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:45
-#. i18n: ectx: label, entry (HideUserID), group (Encryption)
-#: rc.cpp:29
-msgid "Hide the user ID."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:49
-#. i18n: ectx: label, entry (PgpCompatibility), group (Encryption)
-#: rc.cpp:32
-msgid "Enable PGP 6 compatibility."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:53
-#. i18n: ectx: label, entry (PgpExtension), group (Encryption)
-#: rc.cpp:35
-msgid "Use *.pgp extension for encrypted files."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:60
-#. i18n: ectx: label, entry (GpgConfigPath), group (GPG Settings)
-#: rc.cpp:38
-msgid "The path of the gpg configuration file."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:63
-#. i18n: ectx: label, entry (GpgBinaryPath), group (GPG Settings)
-#: rc.cpp:41
-msgid "The path of the gpg binary used by KGpg."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:79
-#. i18n: ectx: label, entry (FirstRun), group (General Options)
-#: rc.cpp:44
-msgid "Is the first time the application runs."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:83
-#. i18n: ectx: label, entry (EditorGeometry), group (General Options)
-#: rc.cpp:47
-msgid "The size of the editor window."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:86
-#. i18n: ectx: label, entry (ShowTrust), group (General Options)
-#: rc.cpp:50
-msgid "Show the trust value in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:90
-#. i18n: ectx: label, entry (ShowExpi), group (General Options)
-#: rc.cpp:53
-msgid "Show the expiration value in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:94
-#. i18n: ectx: label, entry (ShowSize), group (General Options)
-#: rc.cpp:56
-msgid "Show the size value in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:98
-#. i18n: ectx: label, entry (ShowCreat), group (General Options)
-#: rc.cpp:59
-msgid "Show the creation value in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:102
-#. i18n: ectx: label, entry (ShowSecret), group (General Options)
-#: rc.cpp:62
-msgid "Show only secret keys in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:106
-#. i18n: ectx: label, entry (ShowLongKeyId), group (General Options)
-#: rc.cpp:65
-msgid "Show long key id in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:110
-#. i18n: ectx: label, entry (TrustLevel), group (General Options)
-#: rc.cpp:68
-msgid "Show only keys with at least that trust level in key manager."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:124
-#. i18n: ectx: label, entry (UseMouseSelection), group (User Interface)
-#: rc.cpp:71
-msgid "Use the mouse selection instead of the clipboard."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:132
-#. i18n: ectx: label, entry (RemoteFileWarn), group (User Interface)
-#: rc.cpp:77
-msgid ""
-"Display a warning before creating temporary files during remote file "
-"operations."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:136
-#. i18n: ectx: label, entry (LeftClick), group (User Interface)
-#: rc.cpp:80
-msgid "Choose default left-click behavior"
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:143
-#. i18n: ectx: label, entry (EncryptedDropEvent), group (User Interface)
-#: rc.cpp:83
-msgid "Handle encrypted drops"
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:151
-#. i18n: ectx: label, entry (UnencryptedDropEvent), group (User Interface)
-#: rc.cpp:86
-msgid "Handle unencrypted drops"
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:159
-#. i18n: ectx: label, entry (SignMenu), group (User Interface)
-#: rc.cpp:89
-msgid "Show the \"sign file\" service menu."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:167
-#. i18n: ectx: label, entry (DecryptMenu), group (User Interface)
-#: rc.cpp:92
-msgid "Show the \"decrypt file\" service menu."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:176
-#. i18n: ectx: label, entry (ShowSystray), group (User Interface)
-#: rc.cpp:95
-#, fuzzy
-#| msgid "Show system tray icon"
-msgid "Show the systray icon"
-msgstr "Montri sistempletan piktogramon"
-
-#. i18n: file: kgpg.kcfg:180
-#. i18n: ectx: label, entry (RecentFiles), group (User Interface)
-#: rc.cpp:98
-msgid "The number of recently opened files shown in the editor menu."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:187
-#. i18n: ectx: label, entry (ShowTipOfDay), group (TipOfDay)
-#: rc.cpp:101
-#, fuzzy
-#| msgid "Tip of the &Day"
-msgid "Show tip of the day."
-msgstr "Konsileto de la ta&go"
-
-#. i18n: file: kgpg.kcfg:194
-#. i18n: ectx: label, entry (ColorGood), group (Key Colors)
-#: rc.cpp:104
-msgid "Color used for trusted keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:198
-#. i18n: ectx: label, entry (ColorRev), group (Key Colors)
-#: rc.cpp:107
-msgid "Color used for revoked keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:202
-#. i18n: ectx: label, entry (ColorUnknown), group (Key Colors)
-#: rc.cpp:110
-msgid "Color used for unknown keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:206
-#. i18n: ectx: label, entry (ColorBad), group (Key Colors)
-#: rc.cpp:113
-msgid "Color used for untrusted keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:210
-#. i18n: ectx: label, entry (ColorUltimate), group (Key Colors)
-#: rc.cpp:116
-msgid "Color used for ultimately trusted keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:214
-#. i18n: ectx: label, entry (ColorMarginal), group (Key Colors)
-#: rc.cpp:119
-msgid "Color used for marginally trusted keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:218
-#. i18n: ectx: label, entry (ColorExpired), group (Key Colors)
-#: rc.cpp:122
-msgid "Color used for expired keys."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:225
-#. i18n: ectx: label, entry (Font), group (Text Font)
-#: rc.cpp:125
-msgid "Font"
-msgstr "Tiparo"
-
-#. i18n: file: kgpg.kcfg:236
-#. i18n: ectx: label, entry (KeyServers), group (Servers)
-#: rc.cpp:128
-msgid ""
-"Key servers used by KGpg. The first server in the list is the default server."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:243
-#. i18n: ectx: label, entry (UseProxy), group (Key Servers)
-#: rc.cpp:131
-msgid "Use HTTP proxy when available."
-msgstr ""
-
-#. i18n: file: kgpg.kcfg:250
-#. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
-#: rc.cpp:134
-msgid ""
-"This is the text of the email sent by the \"Sign and Mail User ID\" action."
-msgstr ""
-
-#. i18n: file: adduid.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:140
-msgid "Name (minimum 5 characters):"
-msgstr ""
-
-#. i18n: file: adduid.ui:29
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: file: newkey.ui:67
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:143 rc.cpp:628
-msgid "Email:"
-msgstr "Retpoŝto:"
-
-#. i18n: file: adduid.ui:42
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:146
-msgid "Comment (optional):"
-msgstr ""
-
-#. i18n: file: conf_decryption.ui:52
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
-#: rc.cpp:149
-msgid ""
-"<qt><b>Custom Decryption Command:</b><br />\n"
-"<p>This option allows the user to specify a custom command to be executed by "
-"GPG when decryption occurs. (This is recommended for advanced users only).</"
-"p></qt>"
-msgstr ""
-
-#. i18n: file: conf_decryption.ui:55
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: rc.cpp:153
-msgid "Custom decryption command:"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:31
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AsciiArmor)
-#: rc.cpp:159
-msgid ""
-"<qt><b>ASCII armored encryption:</b> <br /> \n"
-"<p>Checking this option outputs all encrypted files in a format that can be "
-"opened by a text editor and as such the output is suitable for placing in "
-"the body of an e-mail message.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:34
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AsciiArmor)
-#: rc.cpp:163 selectpublickeydialog.cpp:95
-msgid "ASCII armored encryption"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:42
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpExtension)
-#: rc.cpp:166
-msgid ""
-"<qt><b>Use *.pgp extension for encrypted files:</b><br />\n"
-"<p>Checking this option will append a .pgp extension to all encrypted files "
-"instead of a .gpg extension. This option will maintain compatibility with "
-"users of PGP (Pretty Good Privacy) software.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:45
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpExtension)
-#: rc.cpp:170
-msgid "Use *.pgp extension for encrypted files"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:69
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
-#: rc.cpp:173
-msgid ""
-"<qt><b>Custom encryption command:</b><br />\n"
-"<p>When activated, an entry field will be shown in the key selection dialog, "
-"enabling you to enter a custom command for encryption. This option is "
-"recommended for experienced users only.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:72
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
-#: rc.cpp:177
-msgid "Custom encryption command:"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:113
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, encrypt_to_always)
-#: rc.cpp:180
-msgid ""
-"<qt><b>Always encrypt with:</b><br />\n"
-"<p>This ensures all files/messages will also be encrypted with the chosen "
-"key. However, if the \"Encrypt files with:\" option is selected that chosen "
-"key will override the \"Always encrypt with:\" selection.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:116
-#. i18n: ectx: property (text), widget (QCheckBox, encrypt_to_always)
-#: rc.cpp:184
-msgid "Always encrypt with:"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:124
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EncryptFilesTo)
-#: rc.cpp:187
-msgid ""
-"<qt><b>Encrypt files with:</b><br />\n"
-"<p>Checking this option and selecting a key will force any file encryption "
-"operation to use the selected key. KGpg will not query for a recipient and "
-"the default key will be bypassed.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:127
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EncryptFilesTo)
-#: rc.cpp:191
-msgid "Encrypt files with:"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:135
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedKeys)
-#: rc.cpp:194
-msgid ""
-"<qt><b>Allow encryption with untrusted keys:</b><br />\n"
-"<p>When importing a public key, the key is usually marked as untrusted and "
-"as such cannot be used unless it is signed by the default key (thus making "
-"it 'trusted'). Checking this box enables any key to be used even if it is "
-"untrusted.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:138
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedKeys)
-#: rc.cpp:198 selectpublickeydialog.cpp:100
-msgid "Allow encryption with untrusted keys"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:145
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
-#: rc.cpp:201
-msgid ""
-"<qt><b>Allow untrusted keys as members of key groups:</b><br /><p>A key "
-"group allows simple encryption to multiple recipients at once. Similar to "
-"the <em>Allow encryption with untrusted keys</em> option this allows "
-"untrusted keys to become member of a key group.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:148
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
-#: rc.cpp:204
-msgid "Allow untrusted keys as members of key groups"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:156
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUserID)
-#: rc.cpp:207
-msgid ""
-"<qt><b>Hide user ID:</b><br /> \n"
-"<p>Checking this option will remove the keyid of the recipient from all "
-"encrypted packets. The advantage: traffic analysis of the encrypted packets "
-"cannot be performed as easily because the recipient is unknown. The "
-"disadvantage: the receiver of the encrypted packets is forced to try all "
-"secret keys before being able to decrypt the packets. This can be a lengthy "
-"process depending on the number of secret keys the receiver holds.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:159
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUserID)
-#: rc.cpp:211 selectpublickeydialog.cpp:106
-msgid "Hide user id"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:167
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpCompatibility)
-#: rc.cpp:214
-msgid ""
-"<qt><b>PGP 6 compatibility:</b><br /> \n"
-"<p>Checking this option forces GnuPG to output encrypted packets that are as "
-"compliant with PGP (Pretty Good Privacy) 6 standards as possible thus "
-"allowing GnuPG users to inter operate with PGP 6 users.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_encryption.ui:170
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpCompatibility)
-#: rc.cpp:218
-msgid "PGP 6 compatibility"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:16
-#. i18n: ectx: property (whatsThis), widget (QWidget, GPGConf)
-#: rc.cpp:221
-msgid ""
-"<qt><b>Global Settings:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:22
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: rc.cpp:226
-msgid "GnuPG Home"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:30
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2)
-#: rc.cpp:229
-msgid ""
-"<b>Home Location</b><p>This is the directory where GnuPG stores its "
-"configuration and the keyrings. If you have not changed it this is usually "
-"<em>~/.gnupg/</em></p>"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:33
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2)
-#: rc.cpp:232
-msgid "Home location:"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:43
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2_2)
-#: rc.cpp:235
-msgid ""
-"<b>Configuration File</b><p>This is the name of the configuration file in "
-"the directory specified above. The default is <em>gnupg.conf</em> while "
-"older versions of GnuPG used <em>options</em>.</p>"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:46
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2_2)
-#: rc.cpp:238
-msgid "Configuration file:"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:96
-#. i18n: ectx: property (text), widget (QPushButton, changeHome)
-#: rc.cpp:241
-msgid "Change..."
-msgstr "Ŝanĝi..."
-
-#. i18n: file: conf_gpg.ui:114
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_6_2)
-#: rc.cpp:247
-msgid ""
-"<b>Program path</b><p>This is the program that will be called for all GnuPG "
-"operations. The default of <em>gpg</em> will work on most systems.</p>"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:117
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_6_2)
-#: rc.cpp:250
-msgid "Program path:"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:157
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, use_agent)
-#: rc.cpp:253
-msgid ""
-"<b>Use GnuPG agent</b><p>The GnuPG agent stores the passwords for your "
-"secret keys in memory for a limited amount of time. If you use your secret "
-"key again while it is cached you do not have to enter it again. This is less "
-"secure than typing it every time.</p>"
-msgstr ""
-
-#. i18n: file: conf_gpg.ui:160
-#. i18n: ectx: property (text), widget (QCheckBox, use_agent)
-#: rc.cpp:256
-msgid "Use GnuPG agent"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:24
-#. i18n: ectx: attribute (title), widget (QWidget, tabGlobal)
-#: rc.cpp:259
-msgid "Global Settings"
-msgstr "Ĉiea agordo"
-
-#. i18n: file: conf_misc.ui:33
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutoStart)
-#: rc.cpp:262
-msgid ""
-"<qt><b>Start KGpg automatically at KDE startup:</b><br />\n"
-"<p>If checked KGpg will start automatically each time that KDE starts up.</"
-"p></qt>"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:36
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoStart)
-#: rc.cpp:266
-msgid "Start KGpg automatically at login"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:53
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseMouseSelection)
-#: rc.cpp:269
-msgid ""
-"<qt><b>Use mouse selection instead of clipboard:</b><br />\n"
-"<p>If checked, clipboard operations in KGpg will use the selection "
-"clipboard, that means highlighting a text to copy, and middle button (or "
-"right+left together) to paste. If this option is not checked, the clipboard "
-"will work with Key shortcuts (Ctrl-c, Ctrl-v).</p></qt> "
-msgstr ""
-
-#. i18n: file: conf_misc.ui:56
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMouseSelection)
-#: rc.cpp:273
-msgid "Use mouse selection instead of clipboard"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:70
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_RemoteFileWarn)
-#: rc.cpp:276
-msgid ""
-"<qt><b>Display warning before creating temporary files:</b><br />\n"
-"<p></p></qt>"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:74
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_RemoteFileWarn)
-#: rc.cpp:280
-msgid ""
-"Display warning before creating temporary files\n"
-"(only occurs on remote files operations)"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:97
-#. i18n: ectx: attribute (title), widget (QWidget, tabApplet)
-#: rc.cpp:284
-msgid "Applet && Menus"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:103
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox11)
-#: rc.cpp:287
-msgid "Konqueror Service Menus"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:119
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#: rc.cpp:290
-msgid ""
-"<qt><b>Sign file service menu:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:122
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:295
-msgid "Sign file service menu:"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:144
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
-#. i18n: file: conf_misc.ui:183
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: rc.cpp:301 rc.cpp:315
-msgid "Enable with All Files"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:164
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_3)
-#: rc.cpp:304
-msgid ""
-"<qt><b>Decrypt file service menu:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:167
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:309
-msgid "Decrypt file service menu:"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:188
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: rc.cpp:318
-msgid "Enable with Encrypted Files"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:201
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: rc.cpp:321
-msgid "System Tray Applet"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:208
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSystray)
-#: rc.cpp:324
-msgid ""
-"<qt><b>Show system tray icon:</b><br />\n"
-"<p>If checked KGpg will minimize to an icon in the system tray.</p></qt>"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:211
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSystray)
-#: rc.cpp:328
-msgid "Show system tray icon"
-msgstr "Montri sistempletan piktogramon"
-
-#. i18n: file: conf_misc.ui:223
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:331
-msgid "Left mouse click opens:"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:240
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
-#: rc.cpp:334
-msgid "Key Manager"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:245
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
-#. i18n: file: conf_misc.ui:272
-#. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
-#: rc.cpp:337 rc.cpp:340 editor/kgpgeditor.cpp:502
-msgid "Editor"
-msgstr "Redaktilo"
-
-#. i18n: file: conf_misc.ui:280
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:343
-msgid "Recent files"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:306
-#. i18n: ectx: attribute (title), widget (QWidget, tabSigning)
-#: rc.cpp:346
-msgid "Key Signing"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:314
-#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
-#: rc.cpp:349
-msgid ""
-"Here you can define how User Ids that do not contain an email address (like "
-"Photo Ids) are sent to the key owner. You can choose to either send them "
-"with every other User Id you signed, only with the first Id you signed or to "
-"not send them at all."
-msgstr ""
-
-#. i18n: file: conf_misc.ui:317
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:352
-msgid "Mailing of User Ids without Email Addresses"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:325
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: rc.cpp:355
-msgid "Send with every Email"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:330
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: rc.cpp:358
-msgid "Send only with first Email"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:335
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: rc.cpp:361
-#, fuzzy
-#| msgid "Do Not Use"
-msgid "Do not send"
-msgstr "Ne uzi"
-
-#. i18n: file: conf_misc.ui:345
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:364
-msgid "Email template"
-msgstr ""
-
-#. i18n: file: conf_misc.ui:353
-#. i18n: ectx: property (whatsThis), widget (KTextEdit, EmailTemplateEdit)
-#: rc.cpp:368
-#, no-c-format
-msgid ""
-"This is the text of the email sent by the \"Sign and Mail User ID\" action.\n"
-"\n"
-"The placeholders surrounded by the percent signs (like %KEYID%) will be "
-"replaced with the corresponding text for every single mail."
-msgstr ""
-
-#. i18n: file: conf_servers.ui:29
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: rc.cpp:373
-msgid ""
-"<b>INFORMATION</b>:\n"
-"Only the default server will be stored in GnuPG's configuration file,\n"
-"all others will be stored for use by KGpg only."
-msgstr ""
-
-#. i18n: file: conf_servers.ui:39
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseProxy)
-#: rc.cpp:378
-msgid "Honor HTTP proxy when available"
-msgstr ""
-
-#. i18n: file: conf_servers.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, server_default)
-#: rc.cpp:381
-msgid "&Set as Default"
-msgstr ""
-
-#. i18n: file: conf_servers.ui:57
-#. i18n: ectx: property (text), widget (KPushButton, server_add)
-#: rc.cpp:384
-msgid "&Add..."
-msgstr "&Aldonu"
-
-#. i18n: file: conf_servers.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, server_del)
-#: rc.cpp:387
-msgid "&Delete"
-msgstr "&Forigi"
-
-#. i18n: file: conf_servers.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, server_edit)
-#: rc.cpp:390
-msgid "&Edit..."
-msgstr "&Redakto"
-
-#. i18n: file: conf_ui2.ui:32
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:393
-msgid "Key Colors"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:42
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUltimate)
-#: rc.cpp:396
-msgid "Ultimately trusted keys:"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:52
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustTrusted)
-#: rc.cpp:399
-msgid "Trusted keys:"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:62
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustMarginally)
-#: rc.cpp:402
-msgid "Marginally trusted keys:"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:72
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustExpired)
-#: rc.cpp:405
-msgid "Expired keys:"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:82
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustRevoked)
-#: rc.cpp:408
-msgid "Revoked keys:"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:92
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUnknown)
-#: rc.cpp:411
-msgid "Unknown keys:"
-msgstr ""
-
-#. i18n: file: conf_ui2.ui:102
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustDisabled)
-#: rc.cpp:414
-#, fuzzy
-#| msgid "Disable"
-msgid "Disabled keys:"
-msgstr "Malŝalti"
-
-#. i18n: file: conf_ui2.ui:225
-#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
-#: rc.cpp:417
-#, fuzzy
-#| msgid "Editor"
-msgid "Editor Font"
-msgstr "Redaktilo"
-
-#. i18n: file: editor/kgpgeditor.rc:13
-#. i18n: ectx: Menu (view)
-#. i18n: file: keysmanager.rc:24
-#. i18n: ectx: Menu (view)
-#: rc.cpp:420 rc.cpp:508
-msgid "&View"
-msgstr "&Rigardi"
-
-#. i18n: file: editor/kgpgeditor.rc:18
-#. i18n: ectx: Menu (signature)
-#: rc.cpp:423
-#, fuzzy
-#| msgid "Signature"
-msgid "Si&gnature"
-msgstr "Subskribo"
-
-#. i18n: file: groupedit.ui:74
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: file: groupedit.ui:158
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:429 rc.cpp:441 model/kgpgitemmodel.cpp:329
-#: model/kgpgsearchresultmodel.cpp:332
-msgid "Name"
-msgstr "Nomo"
-
-#. i18n: file: groupedit.ui:79
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: file: groupedit.ui:163
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:432 rc.cpp:444 model/kgpgitemmodel.cpp:330
-#: model/kgpgsearchresultmodel.cpp:334
-msgctxt "@title:column Title of a column of emails"
-msgid "Email"
-msgstr ""
-
-#. i18n: file: groupedit.ui:84
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: file: groupedit.ui:168
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: rc.cpp:435 rc.cpp:447
-msgid "Id"
-msgstr "Id"
-
-#. i18n: file: groupedit.ui:100
-#. i18n: ectx: property (text), widget (QLabel, kActiveLabel1)
-#: rc.cpp:438
-msgid "Keys in the Group"
-msgstr ""
-
-#. i18n: file: keyserver.ui:38
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#: rc.cpp:453
-msgid ""
-"<qt><b>Key Server:</b><br /> <p>A Key Server is a centralized repository of "
-"PGP/GnuPG keys connected to the Internet which can be conveniently accessed "
-"in order to obtain or deposit keys. Select from the drop down list to "
-"specify which key server should be used.</p> <p>Often these keys are held by "
-"people whom the user has never met and as such the authenticity is dubious "
-"at best. Refer to the GnuPG manual covering \"Web-of-Trust\" relationships "
-"to find out how GnuPG works around the problem of verifying authenticity.</"
-"p> </qt>"
-msgstr ""
-
-#. i18n: file: keyserver.ui:41
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: file: keyserver.ui:176
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: file: keyexport.ui:55
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
-#: rc.cpp:456 rc.cpp:482 rc.cpp:683
-msgid "Key server:"
-msgstr ""
-
-#. i18n: file: keyserver.ui:52
-#. i18n: ectx: property (whatsThis), widget (KComboBox, kCBimportks)
-#: rc.cpp:459
-msgid ""
-"<b>Key Server Drop Down Dialog:</b>\n"
-"Allows the user to select the Key Server which will be used to import PGP/"
-"GnuPG keys into the local keyring."
-msgstr ""
-
-#. i18n: file: keyserver.ui:60
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
-#: rc.cpp:463
-msgid ""
-"<qt><b>Text to search or ID of the key to import:</b><br />\n"
-"<p>There are multiple ways to search for a key, you can use a text or "
-"partial text search (example: entering Phil or Zimmerman will bring up all "
-"keys in which Phil or Zimmerman shows up) or you can search by the ID's of "
-"the key. Key ID's are strings of letters and numbers that uniquely identify "
-"a key (example: searching for 0xED7585F4 would bring up the key associated "
-"with that ID).</p></qt>"
-msgstr ""
-
-#. i18n: file: keyserver.ui:69
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:467
-msgid "Text to search or ID of the key to import:"
-msgstr ""
-
-#. i18n: file: keyserver.ui:91
-#. i18n: ectx: property (text), widget (QCheckBox, cBproxyI)
-#. i18n: file: keyserver.ui:221
-#. i18n: ectx: property (text), widget (QCheckBox, cBproxyE)
-#: rc.cpp:470 rc.cpp:495
-msgid "Honor HTTP proxy:"
-msgstr ""
-
-#. i18n: file: keyserver.ui:134
-#. i18n: ectx: property (text), widget (QPushButton, Buttonsearch)
-#: rc.cpp:473
-msgid "&Search"
-msgstr "&Serĉi"
-
-#. i18n: file: keyserver.ui:170
-#. i18n: ectx: attribute (title), widget (QWidget, tab_export)
-#: rc.cpp:479
-msgid "Export"
-msgstr "Eksporti"
-
-#. i18n: file: keyserver.ui:190
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
-#: rc.cpp:485
-msgid ""
-"<qt><b>Key to be exported:</b><br />\n"
-"<p>This allows the user to specify the key from the drop down list that will "
-"be exported to the key server selected.</p></qt>"
-msgstr ""
-
-#. i18n: file: keyserver.ui:193
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:489
-msgid "Key to be exported:"
-msgstr ""
-
-#. i18n: file: keyserver.ui:206
-#. i18n: ectx: property (text), widget (QCheckBox, exportAttributes)
-#: rc.cpp:492
-msgid "Export attributes (photo id)"
-msgstr ""
-
-#. i18n: file: keyserver.ui:265
-#. i18n: ectx: property (whatsThis), widget (QPushButton, Buttonexport)
-#: rc.cpp:498
-msgid ""
-"<qt><b>Export:</b><br />\n"
-"<p>Pushing this button will export the specified key to the specified server."
-"</p></qt>"
-msgstr ""
-
-#. i18n: file: keyserver.ui:268
-#. i18n: ectx: property (text), widget (QPushButton, Buttonexport)
-#: rc.cpp:502
-msgid "&Export"
-msgstr "E&ksporti"
-
-#. i18n: file: keysmanager.rc:6
-#. i18n: ectx: Menu (managekeys)
-#: rc.cpp:505
-msgid "&Keys"
-msgstr ""
-
-#. i18n: file: keysmanager.rc:29
-#. i18n: ectx: Menu (show_details)
-#: rc.cpp:511
-msgid "&Show Details"
-msgstr ""
-
-#. i18n: file: keysmanager.rc:41
-#. i18n: ectx: Menu (groups)
-#: rc.cpp:514
-msgid "&Groups"
-msgstr "&Grupoj"
-
-#. i18n: file: kgpgKeyInfo.ui:14
-#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
-#: rc.cpp:517
-msgid "Kgpg"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:85
-#. i18n: ectx: property (text), widget (QLabel, tl_id)
-#. i18n: file: newkey.ui:91
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:523 rc.cpp:631
-msgid "Key ID:"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:102
-#. i18n: ectx: property (text), widget (QLabel, tl_comment)
-#: rc.cpp:526
-msgid "Comment:"
-msgstr "Komento:"
-
-#. i18n: file: kgpgKeyInfo.ui:119
-#. i18n: ectx: property (text), widget (QLabel, tl_creation)
-#: rc.cpp:529
-msgid "Creation:"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:153
-#. i18n: ectx: property (text), widget (QLabel, tl_trust)
-#: rc.cpp:535
-msgid "Trust:"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:160
-#. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
-#: rc.cpp:538
-msgid "Owner trust:"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:183
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: rc.cpp:541
-msgid "I do not know"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:188
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: rc.cpp:544
-msgid "I do NOT trust"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:193
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: rc.cpp:547 core/convert.cpp:53
-msgid "Marginally"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:198
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: rc.cpp:550 core/convert.cpp:54
-msgid "Fully"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:203
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: rc.cpp:553 core/convert.cpp:55
-msgid "Ultimately"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:211
-#. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
-#: rc.cpp:556
-#, fuzzy
-msgid "Algorithm:"
-msgstr "Algoritmo"
-
-#. i18n: file: kgpgKeyInfo.ui:228
-#. i18n: ectx: property (text), widget (QLabel, tl_length)
-#: rc.cpp:559
-msgid "Length:"
-msgstr "Longo:"
-
-#. i18n: file: kgpgKeyInfo.ui:277
-#. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
-#: rc.cpp:562
-msgid "Photo"
-msgstr "Foto"
-
-#. i18n: file: kgpgKeyInfo.ui:297
-#. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
-#: rc.cpp:565
-msgid ""
-"<qt><b>Photo:</b><p>A photo can be included with a public key for extra "
-"security. The photo can be used as an additional method of authenticating "
-"the key. However, it should not be relied upon as the only form of "
-"authentication.</p></qt>"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:306
-#. i18n: ectx: property (text), widget (QLabel, m_photo)
-#: rc.cpp:568
-msgid "No Photo"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:343
-#. i18n: ectx: property (text), widget (QCheckBox, m_disable)
-#: rc.cpp:571
-msgid "Disable key"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:350
-#. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
-#: rc.cpp:574
-msgid "Change Expiration"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:357
-#. i18n: ectx: property (text), widget (KPushButton, m_password)
-#: rc.cpp:577
-msgid "Change Passphrase"
-msgstr ""
-
-#. i18n: file: kgpgKeyInfo.ui:383
-#. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
-#: rc.cpp:580
-msgid "Fingerprint"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:18
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:583
-msgid "Create revocation certificate for"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:28
-#. i18n: ectx: property (text), widget (QLabel, keyID)
-#: rc.cpp:586
-msgid "key id"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:45
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:589
-msgid "Reason for revocation:"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:56
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: rc.cpp:592
-msgid "No Reason"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:61
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: rc.cpp:595
-msgid "Key Has Been Compromised"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:66
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: rc.cpp:598
-msgid "Key is Superseded"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:71
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: rc.cpp:601
-msgid "Key is No Longer Used"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:81
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:604
-msgid "Description:"
-msgstr "Priskribo:"
-
-#. i18n: file: kgpgrevokewidget.ui:96
-#. i18n: ectx: property (text), widget (QCheckBox, cbSave)
-#: rc.cpp:607
-msgid "Save certificate:"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:111
-#. i18n: ectx: property (text), widget (QCheckBox, cbPrint)
-#: rc.cpp:610
-msgid "Print certificate"
-msgstr ""
-
-#. i18n: file: kgpgrevokewidget.ui:121
-#. i18n: ectx: property (text), widget (QCheckBox, cbImport)
-#: rc.cpp:613
-msgid "Import into keyring"
-msgstr ""
-
-#. i18n: file: newkey.ui:19
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: rc.cpp:619
+#: newkey.ui:19
 msgid "New Key Created"
 msgstr ""
 
-#. i18n: file: newkey.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:622
+#: newkey.ui:25
 msgid "You have successfully created the following key:"
 msgstr ""
 
-#. i18n: file: newkey.ui:37
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:625
+#: newkey.ui:37
 msgid "Name:"
 msgstr "Nomo:"
 
-#. i18n: file: newkey.ui:115
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: rc.cpp:634
+#: newkey.ui:115
 msgid "Fingerprint:"
 msgstr ""
 
-#. i18n: file: newkey.ui:136
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, CBdefault)
-#: rc.cpp:637
+#: newkey.ui:136
 msgid ""
 "<qt><b>Set as your default key:</b><br />\n"
 "<p>Checking this option sets the newly created key pair as the default key "
 "pair.</p></qt>"
 msgstr ""
 
-#. i18n: file: newkey.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, CBdefault)
-#: rc.cpp:641
+#: newkey.ui:139
 msgid "Set as your default key"
 msgstr ""
 
-#. i18n: file: newkey.ui:151
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: rc.cpp:644
+#: newkey.ui:151
 msgid "Revocation Certificate"
 msgstr ""
 
-#. i18n: file: newkey.ui:157
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:647
+#: newkey.ui:157
 msgid ""
 "It is recommended to save or print a revocation certificate in case your key "
 "is compromised."
 msgstr ""
 
-#. i18n: file: newkey.ui:169
 #. i18n: ectx: property (text), widget (QCheckBox, CBsave)
-#: rc.cpp:650
+#: newkey.ui:169
 msgid "Save as:"
 msgstr ""
 
-#. i18n: file: newkey.ui:185
 #. i18n: ectx: property (text), widget (QCheckBox, CBprint)
-#: rc.cpp:653
+#: newkey.ui:185
 msgid "Print"
 msgstr "Presi"
 
-#. i18n: file: searchres.ui:57
 #. i18n: ectx: property (text), widget (QTreeView, kLVsearch)
-#: rc.cpp:659
+#: searchres.ui:57
 msgid "Keys"
 msgstr ""
 
-#. i18n: file: searchres.ui:67
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:662
+#: searchres.ui:67
 msgid "Key to import:"
-msgstr ""
-
-#. i18n: file: sourceselect.ui:34
-#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
-#. i18n: file: keyexport.ui:45
-#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
-#: rc.cpp:665 rc.cpp:680
-msgid "Clipboard"
-msgstr ""
-
-#. i18n: file: sourceselect.ui:43
-#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
-#. i18n: file: keyexport.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
-#: rc.cpp:668 rc.cpp:686
-msgid "File:"
-msgstr "Dosiero:"
-
-#. i18n: file: sourceselect.ui:67
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
-#: rc.cpp:671
-msgid "Keyserver:"
-msgstr ""
-
-#. i18n: file: sourceselect.ui:80
-#. i18n: ectx: property (toolTip), widget (KLineEdit, keyIds)
-#: rc.cpp:674
-msgid ""
-"Enter the ids or fingerprints of the keys to import as space separated list."
-msgstr ""
-
-#. i18n: file: keyexport.ui:38
-#. i18n: ectx: property (text), widget (QRadioButton, checkMail)
-#: rc.cpp:677
-#, fuzzy
-#| msgid "Email:"
-msgctxt "Export a key via email"
-msgid "Email"
-msgstr "Retpoŝto:"
-
-#. i18n: file: keyexport.ui:89
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
-#: rc.cpp:689
-#, fuzzy
-#| msgid "Global Settings"
-msgid "Export Settings"
-msgstr "Ĉiea agordo"
-
-#. i18n: file: keyexport.ui:95
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
-#: rc.cpp:692
-msgid "Export everything"
-msgstr ""
-
-#. i18n: file: keyexport.ui:105
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
-#: rc.cpp:695
-msgid "Do not export attributes (photo ids)"
-msgstr ""
-
-#. i18n: file: keyexport.ui:112
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
-#: rc.cpp:698
-msgctxt ""
-"@option:radio Exports the smallest key possible. Maps to export-minimal "
-"option of gpg"
-msgid "Clean key"
 msgstr ""
 
 #: selectexpirydate.cpp:27
@@ -2999,9 +3148,19 @@ msgstr ""
 msgid "Do not sign all user id's (open terminal)"
 msgstr ""
 
-#. i18n: file: tips:2
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
+#: sourceselect.ui:67
+msgid "Keyserver:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, keyIds)
+#: sourceselect.ui:80
+msgid ""
+"Enter the ids or fingerprints of the keys to import as space separated list."
+msgstr ""
+
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:3
+#: tips:2
 msgid ""
 "<p>If you want to decrypt a text file, simply drag and drop it into the "
 "editor window. KGpg will do the rest. Even remote files can be dropped.</p>\n"
@@ -3009,26 +3168,23 @@ msgid ""
 "import it if you want.</p>\n"
 msgstr ""
 
-#. i18n: file: tips:7
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:9
+#: tips:7
 msgid ""
 "<p>The easiest way to encrypt a file: simply right click on the file, and "
 "you have an encrypt option in the contextual menu.\n"
 "This works in <strong>konqueror</strong> or on your Desktop!</p>\n"
 msgstr ""
 
-#. i18n: file: tips:13
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:15
+#: tips:13
 msgid ""
 "<p>If you want to encrypt a message for several persons, just select several "
 "encryption keys by pressing the &quot;Ctrl&quot; key.</p>\n"
 msgstr ""
 
-#. i18n: file: tips:18
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:20
+#: tips:18
 msgid ""
 "<p><strong>You do not know anything about encryption?</strong><br>\n"
 "No problem, simply create yourself a key pair in the key management window. "
@@ -3040,450 +3196,57 @@ msgid ""
 "encrypted, ready to be sent by email.</p>\n"
 msgstr ""
 
-#. i18n: file: tips:26
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:28
+#: tips:26
 msgid ""
 "<p>To perform an operation on a key, open the key management window and "
 "right click on the key. A popup menu with all available options will appear."
 "</p>\n"
 msgstr ""
 
-#. i18n: file: tips:31
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:33
+#: tips:31
 msgid ""
 "<p>Decrypt a file with a single mouse click on it. You will then be prompted "
 "for password, and then that is it!</p>\n"
 msgstr ""
 
-#. i18n: file: tips:36
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:38
+#: tips:36
 msgid ""
 "<p>If you only want to open the key manager, type this in the command line "
 "prompt: <pre>kgpg -k</pre>\n"
 "The editor can be reached by: <pre>kgpg -d</pre></p>\n"
 msgstr ""
 
-#. i18n: file: tips:42
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:44
+#: tips:42
 msgid ""
 "<p>To open a file in the KGpg's editor and immediately decrypt it type: "
 "<pre>kgpg -s filename</pre></p>\n"
 msgstr ""
 
-#. i18n: file: tips:47
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:49
+#: tips:47
 msgid ""
 "<p>If you want to change the password or expiration of a secret key simply "
 "double click on it to get the key properties dialog.</p>\n"
 msgstr ""
 
-#. i18n: file: tips:52
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:54
+#: tips:52
 msgid ""
 "<p>You can reach your default key by pressing &quot;Ctrl+Home&quot; in the "
 "key manager.</p>\n"
 msgstr ""
 
-#. i18n: file: tips:57
 #. i18n: ectx: @info:tipoftheday
-#: tips.cpp:59
+#: tips:57
 msgid ""
 "<p>The number of signatures is shown as a tooltip if you hover the mouse on "
 "the size column in key manager. A key has to be expanded once for this to "
 "work.</p>\n"
 msgstr ""
-
-#: core/convert.cpp:37
-msgctxt "Encryption algorithm"
-msgid "RSA"
-msgstr "RSA"
-
-#: core/convert.cpp:38
-msgctxt "Encryption algorithm"
-msgid "DSA"
-msgstr "DSA"
-
-#: core/convert.cpp:39
-msgctxt "Encryption algorithm"
-msgid "ElGamal"
-msgstr "ElGamal"
-
-#: core/convert.cpp:40
-msgctxt "Encryption algorithm"
-msgid "DSA & ElGamal"
-msgstr ""
-
-#: core/convert.cpp:41
-msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
-msgid "RSA & RSA"
-msgstr ""
-
-#: core/convert.cpp:43
-msgctxt "Unknown algorithm"
-msgid "Unknown"
-msgstr ""
-
-#: core/convert.cpp:51
-msgid "Do not Know"
-msgstr ""
-
-#: core/convert.cpp:52
-msgid "Do NOT Trust"
-msgstr ""
-
-#: core/convert.cpp:57
-msgctxt "Unknown trust in key owner"
-msgid "Unknown"
-msgstr ""
-
-#: core/convert.cpp:65
-msgctxt "Invalid key"
-msgid "Invalid"
-msgstr ""
-
-#: core/convert.cpp:66
-msgctxt "Disabled key"
-msgid "Disabled"
-msgstr ""
-
-#: core/convert.cpp:67
-msgid "Revoked"
-msgstr ""
-
-#: core/convert.cpp:68
-msgctxt "Expired key"
-msgid "Expired"
-msgstr ""
-
-#: core/convert.cpp:69
-msgctxt "Undefined key trust"
-msgid "Undefined"
-msgstr ""
-
-#: core/convert.cpp:70
-msgctxt "No trust in key"
-msgid "None"
-msgstr ""
-
-#: core/convert.cpp:71
-msgctxt "Marginal trust in key"
-msgid "Marginal"
-msgstr ""
-
-#: core/convert.cpp:72
-msgctxt "Full trust in key"
-msgid "Full"
-msgstr ""
-
-#: core/convert.cpp:73
-msgctxt "Ultimate trust in key"
-msgid "Ultimate"
-msgstr ""
-
-#: core/convert.cpp:75
-msgctxt "Unknown trust in key"
-msgid "Unknown"
-msgstr ""
-
-#: core/KGpgGroupNode.cpp:164
-#, kde-format
-msgid "1 key"
-msgid_plural "%1 keys"
-msgstr[0] ""
-msgstr[1] ""
-
-#: core/KGpgKeyNode.cpp:84
-#, kde-format
-msgctxt "size of signing key / size of encryption key"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: core/KGpgKeyNode.cpp:164 core/KGpgSignableNode.cpp:48
-#, kde-format
-msgid "1 signature"
-msgid_plural "%1 signatures"
-msgstr[0] ""
-msgstr[1] ""
-
-#: core/KGpgNode.cpp:56
-#, kde-format
-msgctxt "Name of uid (comment)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:481
-msgid "[No user id found]"
-msgstr ""
-
-#: core/KGpgSignNode.cpp:86
-#, kde-format
-msgid "%1 [local signature]"
-msgstr ""
-
-#: core/KGpgSubkeyNode.cpp:86
-#, kde-format
-msgid "%1 subkey"
-msgstr ""
-
-#: core/KGpgUatNode.cpp:105
-msgid "Photo id"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:90 editor/kgpgeditor.cpp:240
-#: editor/kgpgeditor.cpp:747 editor/kgpgeditor.cpp:776
-msgid "Untitled"
-msgstr "Sentitola"
-
-#: editor/kgpgeditor.cpp:186
-msgid "&Encrypt File..."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:190
-msgid "&Decrypt File..."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:194
-msgid "&Open Key Manager"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:197
-msgid "&Generate Signature..."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:201
-msgid "&Verify Signature..."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:204
-msgid "&Check MD5 Sum..."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:207
-msgid "&Unicode (utf-8) Encoding"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:213
-msgid "En&crypt"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:217
-msgid "&Decrypt"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:221
-msgid "S&ign/Verify"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:244
-#, kde-format
-msgid ""
-"The document \"%1\" has changed.\n"
-"Do you want to save it?"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:245
-msgid "Close the document"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:291
-msgid ""
-"The document could not been saved, as the selected codec is not supported."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:297
-msgid ""
-"The document could not been saved, as the selected encoding cannot encode "
-"every unicode character in it."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:306 editor/kgpgeditor.cpp:325
-msgid ""
-"The document could not be saved, please check your permissions and disk "
-"space."
-msgstr ""
-
-#: editor/kgpgeditor.cpp:469 editor/kgpgeditor.cpp:477
-#: editor/kgpgeditor.cpp:612 editor/kgpgeditor.cpp:650
-#: editor/kgpgeditor.cpp:688
-msgid "*|All Files"
-msgstr "*|Ĉiuj dosieroj"
-
-#: editor/kgpgeditor.cpp:469
-msgid "Open File to Encode"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:477
-msgid "Open File to Decode"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:491
-msgid "Decrypt File To"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:612
-msgid "Open File to Sign"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:650 editor/kgpgeditor.cpp:688
-msgid "Open File to Verify"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:701 editor/kgpgtextedit.cpp:333
-#, kde-format
-msgid ""
-"<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
-"import this key from a keyserver?</qt>"
-msgstr ""
-
-#: editor/kgpgeditor.cpp:728 transactions/kgpgverify.cpp:149
-msgid "No signature found."
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:28
-msgid "MD5 Checksum"
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:31
-msgid "Compare MD5 with Clipboard"
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:46
-#, kde-format
-msgid "MD5 sum for <b>%1</b> is:"
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:59
-msgid "<b>Unknown status</b>"
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:84
-msgid "Clipboard content is not a MD5 sum."
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:88
-msgid "<b>Correct checksum</b>, file is ok."
-msgstr ""
-
-#: editor/kgpgmd5widget.cpp:94
-msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:90
-msgid ""
-"<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
-"temporary file to process requested operation. This temporary file will be "
-"deleted after operation.</qt>"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:94
-msgid "Could not download file."
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:127
-msgid ""
-"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
-"of opening it in editor?</qt>"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:130
-msgid ""
-"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
-"of opening it in editor?</qt>"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:135
-msgid "Key file dropped on Editor"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:286
-msgid "Signing not possible: bad passphrase or missing key"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:327
-msgid "Import key in your list"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:330
-msgid "Do &Not Import"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:331
-msgid "Will not import this key in your list"
-msgstr ""
-
-#: editor/kgpgtextedit.cpp:333
-msgid "Missing Key"
-msgstr ""
-
-#: model/keylistproxymodel.cpp:96 transactions/kgpgimport.cpp:193
-#, kde-format
-msgctxt "ID: Name"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: model/keylistproxymodel.cpp:98 transactions/kgpgimport.cpp:195
-#, kde-format
-msgctxt "ID: Name <Email>"
-msgid "%1: %2 &lt;%3&gt;"
-msgstr "%1: %2 &lt;%3&gt;"
-
-#: model/keylistproxymodel.cpp:103
-#, kde-format
-msgctxt "Name <Email>: ID"
-msgid "%1 &lt;%2&gt;: %3"
-msgstr "%1 &lt;%2&gt;: %3"
-
-#: model/kgpgitemmodel.cpp:228 model/kgpgitemmodel.cpp:231
-#, kde-format
-msgid "1 Key"
-msgid_plural "%1 Keys"
-msgstr[0] ""
-msgstr[1] ""
-
-#: model/kgpgitemmodel.cpp:232
-#, fuzzy, kde-format
-#| msgid "&Groups"
-msgid "1 Group"
-msgid_plural "%1 Groups"
-msgstr[0] "&Grupoj"
-msgstr[1] "&Grupoj"
-
-#: model/kgpgitemmodel.cpp:234
-#, fuzzy, kde-format
-#| msgctxt "Name: ID"
-#| msgid "%1: %2"
-msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
-msgid "%1, %2"
-msgstr "%1: %2"
-
-#: model/kgpgitemmodel.cpp:335
-msgid "ID"
-msgstr "ID"
-
-#: model/kgpgsearchresultmodel.cpp:124
-#, kde-format
-msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
-msgid "ID %1, %2-bit %3 key, created %4, revoked"
-msgstr ""
-
-#: model/kgpgsearchresultmodel.cpp:129
-#, kde-format
-msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
-msgid "ID %1, %2-bit %3 key, created %4"
-msgstr ""
-
-#: model/kgpgsearchresultmodel.cpp:218
-#, kde-format
-msgid "One Photo ID"
-msgid_plural "%1 Photo IDs"
-msgstr[0] ""
-msgstr[1] ""
 
 #: transactions/kgpgaddphoto.cpp:41
 msgid "This image is very large. Use it anyway?"
