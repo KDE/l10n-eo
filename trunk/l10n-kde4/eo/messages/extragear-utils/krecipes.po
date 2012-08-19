@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-18 04:11+0200\n"
+"POT-Creation-Date: 2012-08-19 04:25+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,11 +30,11 @@ msgstr ""
 #: actionshandlers/categoryactionshandler.cpp:158
 #: actionshandlers/headeractionshandler.cpp:66
 #: actionshandlers/ingredientactionshandler.cpp:65
-#: actionshandlers/kreauthoractionshandler.cpp:70
 #: actionshandlers/prepmethodactionshandler.cpp:65
+#: actionshandlers/unitactionshandler.cpp:133
 #: actionshandlers/recipeactionshandler.cpp:250
 #: actionshandlers/recipeactionshandler.cpp:261
-#: actionshandlers/unitactionshandler.cpp:133 krecipesview.cpp:696
+#: actionshandlers/kreauthoractionshandler.cpp:70 krecipesview.cpp:696
 msgid "Recipes"
 msgstr ""
 
@@ -142,13 +142,41 @@ msgid ""
 "into one.  Are you sure?"
 msgstr ""
 
-#: actionshandlers/recipeactionshandler.cpp:229
-#: actionshandlers/recipeactionshandler.cpp:235 krecipesview.cpp:517
-msgid "Edit Recipe"
+#: actionshandlers/unitactionshandler.cpp:69
+msgid "Rename Unit"
+msgstr ""
+
+#: actionshandlers/unitactionshandler.cpp:139 dialogs/setupdisplay.cpp:128
+#: exporters/htmlexporter.cpp:391 exporters/xsltexporter.cpp:57
+#: krecipesview.cpp:376 krecipesview.cpp:479
+msgid "Properties"
+msgstr "Ecoj"
+
+#: actionshandlers/unitactionshandler.cpp:145
+msgid "Ingredient Weights"
+msgstr ""
+
+#: actionshandlers/unitactionshandler.cpp:167
+#: widgets/ingredientinputwidget.cpp:256
+#, kde-format
+msgid "Unit name cannot be longer than 1 character."
+msgid_plural "Unit name cannot be longer than %1 characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: actionshandlers/unitactionshandler.cpp:205
+msgid ""
+"This unit already exists.  Continuing will merge these two units into one.  "
+"Are you sure?"
 msgstr ""
 
 #: actionshandlers/recipeactionshandler.cpp:229
 msgid "Please select only one recipe."
+msgstr ""
+
+#: actionshandlers/recipeactionshandler.cpp:229
+#: actionshandlers/recipeactionshandler.cpp:235 krecipesview.cpp:517
+msgid "Edit Recipe"
 msgstr ""
 
 #: actionshandlers/recipeactionshandler.cpp:235
@@ -215,34 +243,6 @@ msgstr ""
 
 #: actionshandlers/recipeactionshandler.cpp:439
 msgid "Saving recipes..."
-msgstr ""
-
-#: actionshandlers/unitactionshandler.cpp:69
-msgid "Rename Unit"
-msgstr ""
-
-#: actionshandlers/unitactionshandler.cpp:139 dialogs/setupdisplay.cpp:128
-#: exporters/htmlexporter.cpp:391 exporters/xsltexporter.cpp:57
-#: krecipesview.cpp:376 krecipesview.cpp:479
-msgid "Properties"
-msgstr "Ecoj"
-
-#: actionshandlers/unitactionshandler.cpp:145
-msgid "Ingredient Weights"
-msgstr ""
-
-#: actionshandlers/unitactionshandler.cpp:167
-#: widgets/ingredientinputwidget.cpp:256
-#, kde-format
-msgid "Unit name cannot be longer than 1 character."
-msgid_plural "Unit name cannot be longer than %1 characters."
-msgstr[0] ""
-msgstr[1] ""
-
-#: actionshandlers/unitactionshandler.cpp:205
-msgid ""
-"This unit already exists.  Continuing will merge these two units into one.  "
-"Are you sure?"
 msgstr ""
 
 #: backends/MySQL/mysqlrecipedb.cpp:474 backends/SQLite/literecipedb.cpp:750
@@ -406,11 +406,11 @@ msgid "Restore Failed"
 msgstr ""
 
 #: backends/recipedb.cpp:921
-msgid "Importing USDA nutrient data"
+msgid "Nutrient Import"
 msgstr ""
 
 #: backends/recipedb.cpp:921
-msgid "Nutrient Import"
+msgid "Importing USDA nutrient data"
 msgstr ""
 
 #: convert_sqlite3.cpp:83 convert_sqlite3.cpp:91
@@ -687,26 +687,6 @@ msgctxt "@item:inlistbox"
 msgid "No matching recipes found"
 msgstr ""
 
-#: dialogs/authorsdialog.cpp:45 dialogs/categorieseditordialog.cpp:44
-#: dialogs/ingredientgroupsdialog.cpp:40 dialogs/ingredientsdialog.cpp:64
-#: dialogs/prepmethodsdialog.cpp:44 dialogs/propertiesdialog.cpp:54
-#: dialogs/unitsdialog.cpp:54
-#, fuzzy
-#| msgid "Restore..."
-msgctxt "@action:button"
-msgid "Create..."
-msgstr "Rekreu..."
-
-#: dialogs/authorsdialog.cpp:50 dialogs/categorieseditordialog.cpp:49
-#: dialogs/ingredientgroupsdialog.cpp:45 dialogs/ingredientsdialog.cpp:69
-#: dialogs/prepmethodsdialog.cpp:49 dialogs/propertiesdialog.cpp:58
-#: dialogs/selectrecipedialog.cpp:108 dialogs/unitsdialog.cpp:59
-#, fuzzy
-#| msgid "Delete"
-msgctxt "@action:button"
-msgid "Delete"
-msgstr "Forigi"
-
 #: dialogs/borderdialog.cpp:35
 msgctxt "@title:window"
 msgid "Choose Border"
@@ -801,6 +781,26 @@ msgstr ""
 #: dialogs/borderdialog.cpp:229
 msgid "Border Preview"
 msgstr ""
+
+#: dialogs/categorieseditordialog.cpp:44 dialogs/ingredientgroupsdialog.cpp:40
+#: dialogs/ingredientsdialog.cpp:64 dialogs/prepmethodsdialog.cpp:44
+#: dialogs/propertiesdialog.cpp:54 dialogs/unitsdialog.cpp:54
+#: dialogs/authorsdialog.cpp:45
+#, fuzzy
+#| msgid "Restore..."
+msgctxt "@action:button"
+msgid "Create..."
+msgstr "Rekreu..."
+
+#: dialogs/categorieseditordialog.cpp:49 dialogs/ingredientgroupsdialog.cpp:45
+#: dialogs/ingredientsdialog.cpp:69 dialogs/prepmethodsdialog.cpp:49
+#: dialogs/propertiesdialog.cpp:58 dialogs/selectrecipedialog.cpp:108
+#: dialogs/unitsdialog.cpp:59 dialogs/authorsdialog.cpp:50
+#, fuzzy
+#| msgid "Delete"
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Forigi"
 
 #: dialogs/conversiondialog.cpp:34
 #, fuzzy
@@ -1113,30 +1113,6 @@ msgstr "Pordo:"
 msgctxt "@label:textbox Default port"
 msgid "Default"
 msgstr "Forigi"
-
-#: dialogs/dependanciesdialog.cpp:53
-msgctxt "@title:window"
-msgid "Element with Dependencies"
-msgstr ""
-
-#: dialogs/dependanciesdialog.cpp:65
-msgctxt "@info"
-msgid ""
-"<warning>The following will have to be removed also, since currently they "
-"use the element you have chosen to be removed.</warning>"
-msgstr ""
-
-#: dialogs/dependanciesdialog.cpp:68
-msgctxt "@info"
-msgid ""
-"<warning>The following currently use the element you have chosen to be "
-"removed.</warning>"
-msgstr ""
-
-#: dialogs/dependanciesdialog.cpp:104
-msgctxt "@info"
-msgid "Are you sure you wish to proceed?"
-msgstr ""
 
 #: dialogs/dietviewdialog.cpp:24
 msgctxt "@title:window"
@@ -1608,14 +1584,14 @@ msgstr ""
 msgid "&Cancel"
 msgstr "&Rezigni"
 
-#: dialogs/pagesetupdialog.cpp:141 dialogs/pagesetupdialog.cpp:219
-msgid "Save Layout?"
-msgstr ""
-
 #: dialogs/pagesetupdialog.cpp:141
 msgid ""
 "The recipe view layout has been modified.\n"
 "Do you want to save it?"
+msgstr ""
+
+#: dialogs/pagesetupdialog.cpp:141 dialogs/pagesetupdialog.cpp:219
+msgid "Save Layout?"
 msgstr ""
 
 #: dialogs/pagesetupdialog.cpp:195
@@ -1953,14 +1929,14 @@ msgid ""
 "%2\">Provide nutrient information.</a>"
 msgstr ""
 
+#: dialogs/recipeinputdialog.cpp:1584
+msgid "-No unit-"
+msgstr ""
+
 #: dialogs/recipeinputdialog.cpp:1583
 #, kde-format
 msgctxt "@info"
 msgid "<b>%3:</b> Unit conversion missing for conversion from '%1' to '%2'"
-msgstr ""
-
-#: dialogs/recipeinputdialog.cpp:1584
-msgid "-No unit-"
 msgstr ""
 
 #: dialogs/recipeinputdialog.cpp:1598 dialogs/recipeinputdialog.cpp:1601
@@ -2120,28 +2096,6 @@ msgstr ""
 msgctxt "@info"
 msgid "Invalid input"
 msgstr "Nevalida enigo"
-
-#: dialogs/selectauthorsdialog.cpp:36
-#, fuzzy
-#| msgid "Authors"
-msgctxt "@title:window"
-msgid "Authors"
-msgstr "Aŭtoroj"
-
-#: dialogs/selectauthorsdialog.cpp:74 widgets/kreauthorlistwidget.cpp:28
-#, fuzzy
-#| msgid "Author"
-msgctxt "@title:column"
-msgid "Author"
-msgstr "Aŭtoro"
-
-#: dialogs/selectauthorsdialog.cpp:143
-#, kde-format
-msgctxt "@info"
-msgid "Author name cannot be longer than 1 character."
-msgid_plural "Author name cannot be longer than %1 characters."
-msgstr[0] ""
-msgstr[1] ""
 
 #: dialogs/selectcategoriesdialog.cpp:32
 #, fuzzy
@@ -2486,13 +2440,13 @@ msgid "Please select only one category."
 msgstr ""
 
 #: dialogs/similarcategoriesdialog.cpp:351
-msgctxt "@title"
-msgid "Edit Recipe"
+msgctxt "@info"
+msgid "No recipes selected."
 msgstr ""
 
 #: dialogs/similarcategoriesdialog.cpp:351
-msgctxt "@info"
-msgid "No recipes selected."
+msgctxt "@title"
+msgid "Edit Recipe"
 msgstr ""
 
 #: dialogs/similarcategoriesdialog.cpp:382
@@ -2521,6 +2475,52 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Finding Unit Ratios"
 msgstr ""
+
+#: dialogs/dependanciesdialog.cpp:53
+msgctxt "@title:window"
+msgid "Element with Dependencies"
+msgstr ""
+
+#: dialogs/dependanciesdialog.cpp:65
+msgctxt "@info"
+msgid ""
+"<warning>The following will have to be removed also, since currently they "
+"use the element you have chosen to be removed.</warning>"
+msgstr ""
+
+#: dialogs/dependanciesdialog.cpp:68
+msgctxt "@info"
+msgid ""
+"<warning>The following currently use the element you have chosen to be "
+"removed.</warning>"
+msgstr ""
+
+#: dialogs/dependanciesdialog.cpp:104
+msgctxt "@info"
+msgid "Are you sure you wish to proceed?"
+msgstr ""
+
+#: dialogs/selectauthorsdialog.cpp:36
+#, fuzzy
+#| msgid "Authors"
+msgctxt "@title:window"
+msgid "Authors"
+msgstr "Aŭtoroj"
+
+#: dialogs/selectauthorsdialog.cpp:74 widgets/kreauthorlistwidget.cpp:28
+#, fuzzy
+#| msgid "Author"
+msgctxt "@title:column"
+msgid "Author"
+msgstr "Aŭtoro"
+
+#: dialogs/selectauthorsdialog.cpp:143
+#, kde-format
+msgctxt "@info"
+msgid "Author name cannot be longer than 1 character."
+msgid_plural "Author name cannot be longer than %1 characters."
+msgstr[0] ""
+msgstr[1] ""
 
 #: exporters/htmlexporter.cpp:134
 msgid "Krecipes Recipes"
@@ -2920,140 +2920,6 @@ msgstr ""
 msgid "Unsaved Changes"
 msgstr "Nekonservitaj ŝanĝoj"
 
-#: krecipesview.cpp:101 krecipesview.cpp:373 krecipesview.cpp:440
-msgid "Find/Edit Recipes"
-msgstr ""
-
-#: krecipesview.cpp:126
-msgid "Data..."
-msgstr ""
-
-#: krecipesview.cpp:332
-msgid ""
-"\n"
-"You are using SQLite; this error is often caused by using an SQLite 2 "
-"database with Krecipes supporting SQLite 3, if this is the case you could "
-"run the SQLite converter.\n"
-"What do you want to do?"
-msgstr ""
-
-#: krecipesview.cpp:337
-msgid "Run the setup assistant"
-msgstr ""
-
-#: krecipesview.cpp:338
-msgid "Run the SQLite converter"
-msgstr ""
-
-#: krecipesview.cpp:347 krecipesview.cpp:362
-msgctxt "Exiting Krecipes"
-msgid "Exiting"
-msgstr ""
-
-#: krecipesview.cpp:354
-msgid ""
-"\n"
-"Would you like to run the setup wizard again? Otherwise, the application "
-"will be closed."
-msgstr ""
-
-#: krecipesview.cpp:377 krecipesview.cpp:487 pref.cpp:419
-#: widgets/propertylistview.cpp:131
-msgid "Units"
-msgstr "Unuoj"
-
-#: krecipesview.cpp:378 krecipesview.cpp:495
-msgid "Preparation Methods"
-msgstr ""
-
-#: krecipesview.cpp:381 krecipesview.cpp:454
-msgid "Diet Helper"
-msgstr ""
-
-#: krecipesview.cpp:382 krecipesview.cpp:462
-msgid "Ingredient Matcher"
-msgstr ""
-
-#: krecipesview.cpp:522
-msgid "View Recipe"
-msgstr ""
-
-#: krecipesview.cpp:768
-msgid ""
-"A recipe contains unsaved changes.\n"
-"Do you want to save changes made to this recipe before editing another "
-"recipe?"
-msgstr ""
-
-#: krecipesview.cpp:770 krecipesview.cpp:857
-msgid "Unsaved changes"
-msgstr ""
-
-#: krecipesview.cpp:788
-#, kde-format
-msgid "Are you sure you want to permanently remove the recipe, %1?"
-msgstr ""
-
-#: krecipesview.cpp:789 krecipesview.cpp:837
-msgid "Confirm remove"
-msgstr ""
-
-#: krecipesview.cpp:815 widgets/recipelistview.cpp:149
-msgctxt "Recipe created"
-msgid "Created:"
-msgstr ""
-
-#: krecipesview.cpp:816 widgets/recipelistview.cpp:150
-msgctxt "Recipe modified"
-msgid "Modified:"
-msgstr ""
-
-#: krecipesview.cpp:817 widgets/recipelistview.cpp:151
-msgctxt "Recipe last accessed"
-msgid "Last Accessed:"
-msgstr ""
-
-#: krecipesview.cpp:836
-msgid "Are you sure you want to permanently remove the selected recipes?"
-msgstr ""
-
-#: krecipesview.cpp:855
-msgid ""
-"A recipe contains unsaved changes.\n"
-"Do you want to save changes made to this recipe before creating a new recipe?"
-msgstr ""
-
-#: krecipesview.cpp:1001
-msgid "Unable to setup database"
-msgstr ""
-
-#: krecipesview.cpp:1013
-msgid "Code error. No DB support has been included. Exiting"
-msgstr ""
-
-#: krecipesview.cpp:1175 krecipesview.cpp:1201
-msgid "Code error. No DB support was built in. Exiting"
-msgstr ""
-
-#: krecipesview.cpp:1184
-msgid "Unable to open database"
-msgstr ""
-
-#: krecipesview.cpp:1206
-msgid "DB started correctly\n"
-msgstr ""
-
-#: krecipesview.cpp:1214
-#, kde-format
-msgid "The configured database type (%1) is unsupported."
-msgstr ""
-
-#: krecipesview.cpp:1214
-msgid ""
-"Unsupported database type. Database must be either MySQL, SQLite, or "
-"PostgreSQL."
-msgstr ""
-
 #: krepagelayout.cpp:114
 msgid "ISO A3"
 msgstr "ISO A3"
@@ -3176,17 +3042,17 @@ msgid "Convert the current SQLite 2.x database to SQLite 3 and exit"
 msgstr ""
 
 #: main.cpp:32
-msgid ""
-"(C) 2003 Unai Garro\n"
-"(C) 2004-2006 Jason Kivlighn"
-msgstr ""
-
-#: main.cpp:32
 msgid "Krecipes"
 msgstr ""
 
 #: main.cpp:32
 msgid "The KDE Cookbook"
+msgstr ""
+
+#: main.cpp:32
+msgid ""
+"(C) 2003 Unai Garro\n"
+"(C) 2004-2006 Jason Kivlighn"
 msgstr ""
 
 #: main.cpp:32
@@ -3217,12 +3083,12 @@ msgid "Testing, bug reports, suggestions"
 msgstr ""
 
 #: main.cpp:38
-msgid "Icons and artwork"
-msgstr ""
-
-#: main.cpp:38
 msgid "Robert Wadley"
 msgstr "Robert Wadley"
+
+#: main.cpp:38
+msgid "Icons and artwork"
+msgstr ""
 
 #: main.cpp:39
 msgid "Daniel Sauvé"
@@ -3253,27 +3119,27 @@ msgid "Porting to KDE4, developer"
 msgstr ""
 
 #: main.cpp:45
-msgid "Patches to make Krecipes work under Windows"
-msgstr ""
-
-#: main.cpp:45
 msgid "Patrick Spendrin"
 msgstr "Patrick Spendrin"
 
-#: main.cpp:46
-msgid "Help with bugs, patches"
+#: main.cpp:45
+msgid "Patches to make Krecipes work under Windows"
 msgstr ""
 
 #: main.cpp:46
 msgid "Mike Ferguson"
 msgstr ""
 
-#: main.cpp:47
-msgid "Code to export recipes to *.mx2 files"
+#: main.cpp:46
+msgid "Help with bugs, patches"
 msgstr ""
 
 #: main.cpp:47
 msgid "Warren Severin"
+msgstr ""
+
+#: main.cpp:47
+msgid "Code to export recipes to *.mx2 files"
 msgstr ""
 
 #: main.cpp:49
@@ -3289,11 +3155,11 @@ msgid "José Millán Soto"
 msgstr ""
 
 #: main.cpp:56
-msgid "INSERT YOUR EMAIL ADDRESS"
+msgid "INSERT YOUR NAME HERE"
 msgstr ""
 
 #: main.cpp:56
-msgid "INSERT YOUR NAME HERE"
+msgid "INSERT YOUR EMAIL ADDRESS"
 msgstr ""
 
 #: mmdata.h:25
@@ -3695,6 +3561,11 @@ msgid ""
 "Note: Krecipes must be restarted for most server preferences to take effect."
 msgstr ""
 
+#: pref.cpp:419 widgets/propertylistview.cpp:131 krecipesview.cpp:377
+#: krecipesview.cpp:487
+msgid "Units"
+msgstr "Unuoj"
+
 #: pref.cpp:420
 msgid "Use abbreviations"
 msgstr ""
@@ -3766,76 +3637,6 @@ msgstr ""
 #: pref.cpp:584
 msgctxt "Unlimited elements"
 msgid "Unlimited"
-msgstr ""
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Axel Rousseau"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "axel@esperanto-jeunes.org"
-
-#. i18n: file: krecipesui.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:5
-msgid "&File"
-msgstr "&Dosiero"
-
-#. i18n: file: krecipesui.rc:12
-#. i18n: ectx: Menu (edit)
-#: rc.cpp:8
-msgid "&Edit"
-msgstr "&Redakti"
-
-#. i18n: file: krecipesui.rc:22
-#. i18n: ectx: Menu (tools)
-#: rc.cpp:11
-msgid "&Tools"
-msgstr "&Iloj"
-
-#. i18n: file: widgets/ratingdisplaywidget.ui:115
-#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
-#: rc.cpp:17
-msgid "Criteria"
-msgstr "Kriterio"
-
-#. i18n: file: widgets/ratingdisplaywidget.ui:126
-#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
-#: rc.cpp:20
-msgid "Stars"
-msgstr "Steloj"
-
-#. i18n: file: widgets/ratingdisplaywidget.ui:146
-#. i18n: ectx: property (text), widget (QLabel, comment)
-#: rc.cpp:23
-msgid "Comments"
-msgstr "Komentoj"
-
-#. i18n: file: widgets/ratingdisplaywidget.ui:177
-#. i18n: ectx: property (text), widget (KPushButton, buttonRemove)
-#: rc.cpp:26
-msgid "Remove"
-msgstr "Forigi"
-
-#. i18n: file: widgets/ratingdisplaywidget.ui:187
-#. i18n: ectx: property (text), widget (KPushButton, buttonEdit)
-#: rc.cpp:29
-msgid "Edit..."
-msgstr "Redakti..."
-
-#. i18n: file: widgets/kregenericlistwidget.ui:43
-#. i18n: ectx: property (toolTip), widget (KPushButton, m_previousButton)
-#: rc.cpp:32
-msgid "Previous Page"
-msgstr ""
-
-#. i18n: file: widgets/kregenericlistwidget.ui:59
-#. i18n: ectx: property (toolTip), widget (KPushButton, m_nextButton)
-#: rc.cpp:35
-msgid "Next Page"
 msgstr ""
 
 #: setupassistant.cpp:45
@@ -4106,16 +3907,6 @@ msgctxt "@option do not specify a date"
 msgid "No Date"
 msgstr ""
 
-#: widgets/kregenericlistwidget.cpp:88
-msgctxt "@label:textbox"
-msgid "Type here the text to search"
-msgstr ""
-
-#: widgets/kregenericlistwidget.cpp:92
-msgctxt "@label:textbox"
-msgid "Type here the text to search in the current page"
-msgstr ""
-
 #: widgets/kremenu.cpp:130
 msgctxt "@action:button Up to top menu"
 msgid "Up..."
@@ -4165,6 +3956,21 @@ msgstr ""
 msgid "Recipe"
 msgstr ""
 
+#: widgets/recipelistview.cpp:149 krecipesview.cpp:815
+msgctxt "Recipe created"
+msgid "Created:"
+msgstr ""
+
+#: widgets/recipelistview.cpp:150 krecipesview.cpp:816
+msgctxt "Recipe modified"
+msgid "Modified:"
+msgstr ""
+
+#: widgets/recipelistview.cpp:151 krecipesview.cpp:817
+msgctxt "Recipe last accessed"
+msgid "Last Accessed:"
+msgstr ""
+
 #: widgets/recipelistview.cpp:236
 msgid "Loading recipes"
 msgstr ""
@@ -4211,6 +4017,200 @@ msgstr ""
 
 #: widgets/weightinput.cpp:23
 msgid "-No Preparation-"
+msgstr ""
+
+#: widgets/kregenericlistwidget.cpp:88
+msgctxt "@label:textbox"
+msgid "Type here the text to search"
+msgstr ""
+
+#: widgets/kregenericlistwidget.cpp:92
+msgctxt "@label:textbox"
+msgid "Type here the text to search in the current page"
+msgstr ""
+
+#: krecipesview.cpp:101 krecipesview.cpp:373 krecipesview.cpp:440
+msgid "Find/Edit Recipes"
+msgstr ""
+
+#: krecipesview.cpp:126
+msgid "Data..."
+msgstr ""
+
+#: krecipesview.cpp:332
+msgid ""
+"\n"
+"You are using SQLite; this error is often caused by using an SQLite 2 "
+"database with Krecipes supporting SQLite 3, if this is the case you could "
+"run the SQLite converter.\n"
+"What do you want to do?"
+msgstr ""
+
+#: krecipesview.cpp:337
+msgid "Run the setup assistant"
+msgstr ""
+
+#: krecipesview.cpp:338
+msgid "Run the SQLite converter"
+msgstr ""
+
+#: krecipesview.cpp:347 krecipesview.cpp:362
+msgctxt "Exiting Krecipes"
+msgid "Exiting"
+msgstr ""
+
+#: krecipesview.cpp:354
+msgid ""
+"\n"
+"Would you like to run the setup wizard again? Otherwise, the application "
+"will be closed."
+msgstr ""
+
+#: krecipesview.cpp:378 krecipesview.cpp:495
+msgid "Preparation Methods"
+msgstr ""
+
+#: krecipesview.cpp:381 krecipesview.cpp:454
+msgid "Diet Helper"
+msgstr ""
+
+#: krecipesview.cpp:382 krecipesview.cpp:462
+msgid "Ingredient Matcher"
+msgstr ""
+
+#: krecipesview.cpp:522
+msgid "View Recipe"
+msgstr ""
+
+#: krecipesview.cpp:768
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before editing another "
+"recipe?"
+msgstr ""
+
+#: krecipesview.cpp:770 krecipesview.cpp:857
+msgid "Unsaved changes"
+msgstr ""
+
+#: krecipesview.cpp:788
+#, kde-format
+msgid "Are you sure you want to permanently remove the recipe, %1?"
+msgstr ""
+
+#: krecipesview.cpp:789 krecipesview.cpp:837
+msgid "Confirm remove"
+msgstr ""
+
+#: krecipesview.cpp:836
+msgid "Are you sure you want to permanently remove the selected recipes?"
+msgstr ""
+
+#: krecipesview.cpp:855
+msgid ""
+"A recipe contains unsaved changes.\n"
+"Do you want to save changes made to this recipe before creating a new recipe?"
+msgstr ""
+
+#: krecipesview.cpp:1001
+msgid "Unable to setup database"
+msgstr ""
+
+#: krecipesview.cpp:1013
+msgid "Code error. No DB support has been included. Exiting"
+msgstr ""
+
+#: krecipesview.cpp:1175 krecipesview.cpp:1201
+msgid "Code error. No DB support was built in. Exiting"
+msgstr ""
+
+#: krecipesview.cpp:1184
+msgid "Unable to open database"
+msgstr ""
+
+#: krecipesview.cpp:1206
+msgid "DB started correctly\n"
+msgstr ""
+
+#: krecipesview.cpp:1214
+#, kde-format
+msgid "The configured database type (%1) is unsupported."
+msgstr ""
+
+#: krecipesview.cpp:1214
+msgid ""
+"Unsupported database type. Database must be either MySQL, SQLite, or "
+"PostgreSQL."
+msgstr ""
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Axel Rousseau"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "axel@esperanto-jeunes.org"
+
+#. i18n: file: krecipesui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:5
+msgid "&File"
+msgstr "&Dosiero"
+
+#. i18n: file: krecipesui.rc:12
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:8
+msgid "&Edit"
+msgstr "&Redakti"
+
+#. i18n: file: krecipesui.rc:22
+#. i18n: ectx: Menu (tools)
+#: rc.cpp:11
+msgid "&Tools"
+msgstr "&Iloj"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:115
+#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
+#: rc.cpp:17
+msgid "Criteria"
+msgstr "Kriterio"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:126
+#. i18n: ectx: property (text), widget (K3ListView, criteriaListView)
+#: rc.cpp:20
+msgid "Stars"
+msgstr "Steloj"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:146
+#. i18n: ectx: property (text), widget (QLabel, comment)
+#: rc.cpp:23
+msgid "Comments"
+msgstr "Komentoj"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:177
+#. i18n: ectx: property (text), widget (KPushButton, buttonRemove)
+#: rc.cpp:26
+msgid "Remove"
+msgstr "Forigi"
+
+#. i18n: file: widgets/ratingdisplaywidget.ui:187
+#. i18n: ectx: property (text), widget (KPushButton, buttonEdit)
+#: rc.cpp:29
+msgid "Edit..."
+msgstr "Redakti..."
+
+#. i18n: file: widgets/kregenericlistwidget.ui:43
+#. i18n: ectx: property (toolTip), widget (KPushButton, m_previousButton)
+#: rc.cpp:32
+msgid "Previous Page"
+msgstr ""
+
+#. i18n: file: widgets/kregenericlistwidget.ui:59
+#. i18n: ectx: property (toolTip), widget (KPushButton, m_nextButton)
+#: rc.cpp:35
+msgid "Next Page"
 msgstr ""
 
 #~ msgid "Kretest"
