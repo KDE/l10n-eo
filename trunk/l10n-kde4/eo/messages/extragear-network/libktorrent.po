@@ -74,14 +74,6 @@ msgstr "Ne povas konverti %1 en entjeron"
 msgid "Torrent is incomplete."
 msgstr "Torento estas nekompleta!"
 
-#: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
-#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
-msgid "Cannot open file %1: %2"
-msgstr "Ne povas malfermi dosieron %1: %2"
-
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
 msgstr ""
@@ -96,30 +88,20 @@ msgstr "Kontrolas datumojn"
 msgid "Checking Data"
 msgstr "Kontrolas datumojn"
 
-#: src/diskio/movedatafilesjob.cpp:140
-msgid "Waiting for other move jobs to finish"
-msgstr ""
+#: src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
+#, kde-format
+msgid "Cannot open file %1: %2"
+msgstr "Ne povas malfermi dosieron %1: %2"
 
-#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
-#, fuzzy
-#| msgid "Score"
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "Poentoj"
-
-#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
-#, fuzzy
-#| msgid "Scrape"
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "Informpeti"
-
-#: src/diskio/movedatafilesjob.cpp:180
-#, fuzzy
-#| msgid "Moving average"
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Movanta averaĝo"
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
+#, fuzzy, kde-format
+#| msgid "Failed to create %1 : %2"
+msgid "Failed to create %1: %2"
+msgstr "Ne povas krei %1 : %2"
 
 #: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:354
 #: src/util/fileops.cpp:399
@@ -181,6 +163,12 @@ msgstr "Ne povas krei %1 : %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Ne povas antaŭdisponigi diskspacon : %1"
 
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#, fuzzy, kde-format
+#| msgid "Cannot open index file %1 : %2"
+msgid "Cannot open index file %1: %2"
+msgstr "Ne povas malfermi indekshavan dosieron %1 : %2"
+
 #: src/diskio/dndfile.cpp:89
 #, fuzzy, kde-format
 #| msgid "Cannot create file %1 : %2"
@@ -199,9 +187,30 @@ msgstr "Malsukcesis skribi unuan pecon al DND-dosiero : %1"
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Malsukcesis skribi lastan pecon al DND-dosiero : %1"
 
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
+#: src/diskio/movedatafilesjob.cpp:140
+msgid "Waiting for other move jobs to finish"
 msgstr ""
+
+#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
+#, fuzzy
+#| msgid "Score"
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "Poentoj"
+
+#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
+#, fuzzy
+#| msgid "Scrape"
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "Informpeti"
+
+#: src/diskio/movedatafilesjob.cpp:180
+#, fuzzy
+#| msgid "Moving average"
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Movanta averaĝo"
 
 #: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
 #, fuzzy, kde-format
@@ -209,18 +218,9 @@ msgstr ""
 msgid "Failed to open %1: %2"
 msgstr "Ne povas malfermi %1 : %2"
 
-#: src/diskio/multifilecache.cpp:118 src/diskio/singlefilecache.cpp:85
-#: src/diskio/cache.cpp:170
-#, fuzzy, kde-format
-#| msgid "Failed to create %1 : %2"
-msgid "Failed to create %1: %2"
-msgstr "Ne povas krei %1 : %2"
-
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, fuzzy, kde-format
-#| msgid "Cannot open index file %1 : %2"
-msgid "Cannot open index file %1: %2"
-msgstr "Ne povas malfermi indekshavan dosieron %1 : %2"
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
 
 #: src/download/chunkdownload.cpp:383
 #, fuzzy, kde-format
@@ -341,11 +341,6 @@ msgstr "La dosierujo %1 ne ekzistas"
 msgid "Unknown client"
 msgstr "Nekonata kliento"
 
-#: src/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Ne povas krei indekshavan dosieron: %1"
-
 #: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
 #: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
 #: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
@@ -360,6 +355,56 @@ msgstr "Malbona torento!"
 #| msgid " Unable to open torrent file %1 : %2"
 msgid "Unable to open torrent file %1: %2"
 msgstr "Ne povas malfermi torentan dosieron %1 : %2"
+
+#: src/torrent/torrentcontrol.cpp:302
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:548
+#, fuzzy, kde-format
+#| msgid ""
+#| "An error occurred while loading the torrent. The torrent is probably "
+#| "corrupt or is not a torrent file."
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Eraro okazis dum la ŝargado de la torento. Kompreneble aŭ la torento estas "
+"malbona, aŭ eĉ ne estas torentdosiero."
+
+#: src/torrent/torrentcontrol.cpp:578
+#, kde-format
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:589
+#, fuzzy, kde-format
+#| msgid "Unable to create %1 : %2"
+msgid "Unable to create %1: %2"
+msgstr "Ne povas krei %1 : %2"
+
+#: src/torrent/torrentcontrol.cpp:604
+#, fuzzy, kde-format
+#| msgid ""
+#| "You are already downloading this torrent %1, the list of trackers of both "
+#| "torrents has been merged."
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"Vi jam elŝutas tiun ĉi torenton %1, la listo de kunordigaj serviloj de ambaŭ "
+"jam kunfandiĝis."
+
+#: src/torrent/torrentcontrol.cpp:609
+#, fuzzy, kde-format
+#| msgid "You are already downloading the torrent %1"
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Vi jam elŝutas la torenton %1"
+
+#: src/torrent/torrentcreator.cpp:361
+#, kde-format
+msgid "Cannot create index file: %1"
+msgstr "Ne povas krei indekshavan dosieron: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -422,66 +467,9 @@ msgstr "Paŭzita"
 msgid "Superseeding"
 msgstr "Fontsendas"
 
-#: src/torrent/torrentcontrol.cpp:302
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:548
-#, fuzzy, kde-format
-#| msgid ""
-#| "An error occurred while loading the torrent. The torrent is probably "
-#| "corrupt or is not a torrent file."
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Eraro okazis dum la ŝargado de la torento. Kompreneble aŭ la torento estas "
-"malbona, aŭ eĉ ne estas torentdosiero."
-
-#: src/torrent/torrentcontrol.cpp:578
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:589
-#, fuzzy, kde-format
-#| msgid "Unable to create %1 : %2"
-msgid "Unable to create %1: %2"
-msgstr "Ne povas krei %1 : %2"
-
-#: src/torrent/torrentcontrol.cpp:604
-#, fuzzy, kde-format
-#| msgid ""
-#| "You are already downloading this torrent %1, the list of trackers of both "
-#| "torrents has been merged."
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"Vi jam elŝutas tiun ĉi torenton %1, la listo de kunordigaj serviloj de ambaŭ "
-"jam kunfandiĝis."
-
-#: src/torrent/torrentcontrol.cpp:609
-#, fuzzy, kde-format
-#| msgid "You are already downloading the torrent %1"
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Vi jam elŝutas la torenton %1"
-
 #: src/tracker/httpannouncejob.cpp:142
 msgid "Redirect without a redirect location"
 msgstr ""
-
-#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
-#: src/tracker/httptracker.cpp:558
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr ""
-
-#: src/tracker/udptracker.cpp:401
-#, fuzzy, kde-format
-#| msgid "Unable to create %1 : %2"
-msgid "Unable to resolve hostname %1"
-msgstr "Ne povas krei %1 : %2"
 
 #: src/tracker/httptracker.cpp:287 src/tracker/httptracker.cpp:307
 #: src/tracker/httptracker.cpp:463
@@ -495,6 +483,18 @@ msgstr "Nevalida datumo de servilo"
 #: src/tracker/httptracker.cpp:480
 msgid "Invalid tracker URL"
 msgstr "Nevalida servila retadreso"
+
+#: src/tracker/httptracker.cpp:558 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+#, kde-format
+msgid "Timeout contacting tracker %1"
+msgstr ""
+
+#: src/tracker/udptracker.cpp:401
+#, fuzzy, kde-format
+#| msgid "Unable to create %1 : %2"
+msgid "Unable to resolve hostname %1"
+msgstr "Ne povas krei %1 : %2"
 
 #: src/upnp/httprequest.cpp:96
 #, fuzzy
@@ -539,28 +539,6 @@ msgstr "Ne povas skribi al %1 : %2"
 #, kde-format
 msgid "Cannot read from %1"
 msgstr "Ne povas legi el %1"
-
-#: src/util/functions.cpp:234
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 tago"
-msgstr[1] "%1 tagoj"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr ""
-
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-#| msgid "Error reading from %1"
-msgid "Error when reading from disk"
-msgstr "Eraro okazis dum legado de %1"
 
 #: src/util/fileops.cpp:94
 #, fuzzy, kde-format
@@ -617,6 +595,18 @@ msgstr "Ne povas malpaki dosieron: %1"
 msgid "Cannot seek in file: %1"
 msgstr "Ne povas serĉi dosieron: %1"
 
+#: src/util/functions.cpp:234
+#, kde-format
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+#, kde-format
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 tago"
+msgstr[1] "%1 tagoj"
+
 #: src/util/logsystemmanager.cpp:33
 #, fuzzy
 #| msgid "General:"
@@ -646,6 +636,16 @@ msgstr "Diska en/eligo:"
 #: src/util/logsystemmanager.cpp:38
 msgid "µTP"
 msgstr ""
+
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr ""
+
+#: src/util/signalcatcher.cpp:80
+#, fuzzy
+#| msgid "Error reading from %1"
+msgid "Error when reading from disk"
+msgstr "Eraro okazis dum legado de %1"
 
 #~ msgid "Parse Error"
 #~ msgstr "Sintaksa eraro"

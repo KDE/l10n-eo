@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TextShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-19 05:51+0200\n"
+"POT-Creation-Date: 2012-08-20 05:48+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,22 +16,23 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: TextShapeFactory.cpp:42 TextShapeFactory.cpp:52
-#: commands/ChangeTrackedDeleteCommand.cpp:345 commands/DeleteCommand.cpp:215
-msgid "Text"
-msgstr "Teksto"
-
-#: TextShapeFactory.cpp:44
-msgid "A shape that shows text"
+#: ChangeTrackingTool.cpp:68
+msgid "Tracked change manager"
 msgstr ""
 
-#: TextShapeFactory.cpp:54
-msgid "Text Shape"
-msgstr ""
+#. i18n: ectx: property (text), widget (QPushButton, acceptButton)
+#: ChangeTrackingTool.cpp:373 dialogs/AcceptRejectChangeDialog.ui:44
+msgid "Accept"
+msgstr "Akcepti"
 
-#: commands/TextCutCommand.cpp:34
-msgid "Cut"
-msgstr "Eltondi"
+#. i18n: ectx: property (text), widget (QPushButton, rejectButton)
+#: ChangeTrackingTool.cpp:374 dialogs/AcceptRejectChangeDialog.ui:57
+msgid "Reject"
+msgstr "Malakcepti"
+
+#: ChangeTrackingToolFactory.cpp:33
+msgid "Change Tracking tool"
+msgstr ""
 
 #: commands/AcceptChangeCommand.cpp:45
 msgid "Accept change"
@@ -43,10 +44,6 @@ msgstr ""
 
 #: commands/ChangeListLevelCommand.cpp:42
 msgid "Change List Level"
-msgstr ""
-
-#: commands/ListItemNumberingCommand.cpp:35
-msgid "Change List Numbering"
 msgstr ""
 
 #: commands/ChangeTrackedDeleteCommand.cpp:77
@@ -61,25 +58,73 @@ msgstr "Forigi"
 msgid "Key Press"
 msgstr ""
 
+#: commands/ChangeTrackedDeleteCommand.cpp:345 commands/DeleteCommand.cpp:215
+#: TextShapeFactory.cpp:42 TextShapeFactory.cpp:52
+msgid "Text"
+msgstr "Teksto"
+
+#: commands/ListItemNumberingCommand.cpp:35
+msgid "Change List Numbering"
+msgstr ""
+
 #: commands/RejectChangeCommand.cpp:49
 #, fuzzy
 #| msgid "Second"
 msgid "Reject change"
 msgstr "Dua"
 
-#: commands/TextPasteCommand.cpp:48
-msgid "Paste"
-msgstr "Alglui"
-
-#. i18n: file: dialogs/ChangeTrackingOptionsWidget.ui:182
 #. i18n: ectx: property (text), widget (QCheckBox, showChangesCheckBox)
-#: commands/ShowChangesCommand.cpp:56 rc.cpp:409 TextTool.cpp:424
+#: commands/ShowChangesCommand.cpp:56
+#: dialogs/ChangeTrackingOptionsWidget.ui:182 TextTool.cpp:424
 msgid "Show Changes"
 msgstr ""
 
 #: commands/ShowChangesCommand.cpp:58
 msgid "Hide Changes"
 msgstr ""
+
+#: commands/TextCutCommand.cpp:34
+msgid "Cut"
+msgstr "Eltondi"
+
+#: commands/TextPasteCommand.cpp:48
+msgid "Paste"
+msgstr "Alglui"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, AcceptRejectChangeDialog)
+#: dialogs/AcceptRejectChangeDialog.ui:26
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, cancelButton)
+#. i18n: ectx: property (text), widget (QPushButton, bCancel)
+#: dialogs/AcceptRejectChangeDialog.ui:70 dialogs/NewStyleWidget.ui:99
+msgid "Cancel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/AcceptRejectChangeDialog.ui:96
+msgid "Change Log"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/AcceptRejectChangeDialog.ui:109
+msgid "Author"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/AcceptRejectChangeDialog.ui:122
+#, fuzzy
+#| msgid "Paste"
+msgid "Date"
+msgstr "Alglui"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dialogs/AcceptRejectChangeDialog.ui:135
+#, fuzzy
+#| msgid "Type:"
+msgid "Type"
+msgstr "Tipo:"
 
 #: dialogs/ChangeConfigureDialog.cpp:148
 msgid "This is a line of inserted text."
@@ -91,6 +136,335 @@ msgstr ""
 
 #: dialogs/ChangeConfigureDialog.cpp:160
 msgid "This is a line of text whose format has been changed."
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, ChangeConfigureDialog)
+#: dialogs/ChangeConfigureDialog.ui:17
+msgid "Configure Change Tracking"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, insertionGroupBox)
+#: dialogs/ChangeConfigureDialog.ui:52
+#, fuzzy
+#| msgid "Insert"
+msgid "Insertions"
+msgstr "Enmeti"
+
+#. i18n: ectx: property (text), widget (QLabel, insertionColorLabel)
+#. i18n: ectx: property (text), widget (QLabel, deletionColorLabel)
+#. i18n: ectx: property (text), widget (QLabel, formatColorLabel)
+#: dialogs/ChangeConfigureDialog.ui:74 dialogs/ChangeConfigureDialog.ui:149
+#: dialogs/ChangeConfigureDialog.ui:221
+#, fuzzy
+#| msgid "Background color"
+msgid "Background Color"
+msgstr "Fona koloro"
+
+#. i18n: ectx: property (text), widget (QPushButton, insertionColorButton)
+#. i18n: ectx: property (text), widget (QPushButton, deletionColorButton)
+#. i18n: ectx: property (text), widget (QPushButton, formatColorButton)
+#. i18n: ectx: property (text), widget (QToolButton, resetBackgroundColor)
+#. i18n: ectx: property (text), widget (QToolButton, applyStyle)
+#. i18n: ectx: property (text), widget (QToolButton, modifyStyle)
+#. i18n: ectx: property (text), widget (QToolButton, newStyle)
+#. i18n: ectx: property (text), widget (QToolButton, deleteStyle)
+#. i18n: ectx: property (text), widget (QToolButton, resetBackground)
+#. i18n: ectx: property (text), widget (QToolButton, resetTextColor)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_5)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_7)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_4)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_8)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_3)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_6)
+#. i18n: ectx: property (text), widget (QToolButton, toolButton_2)
+#. i18n: ectx: property (text), widget (QToolButton, customCharacter)
+#. i18n: ectx: property (text), widget (QToolButton, mergeCells)
+#. i18n: ectx: property (text), widget (QToolButton, splitCells)
+#: dialogs/ChangeConfigureDialog.ui:106 dialogs/ChangeConfigureDialog.ui:178
+#: dialogs/ChangeConfigureDialog.ui:250 dialogs/FontDecorations.ui:48
+#: dialogs/FontDecorations.ui:74 dialogs/FontDecorations.ui:127
+#: dialogs/FontDecorations.ui:140 dialogs/FontDecorations.ui:153
+#: dialogs/FontDecorations.ui:166 dialogs/FontDecorations.ui:179
+#: dialogs/FontDecorations.ui:192 dialogs/FontDecorations.ui:205
+#: dialogs/FontDecorations.ui:218 dialogs/ParagraphBulletsNumbers.ui:77
+#: dialogs/ParagraphDecorations.ui:55 dialogs/SimpleTableWidget.ui:80
+#: dialogs/SimpleTableWidget.ui:87 dialogs/StylesWidget.ui:26
+#: dialogs/StylesWidget.ui:36 dialogs/StylesWidget.ui:59
+#: dialogs/StylesWidget.ui:66
+msgid "..."
+msgstr "..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, deletionGroupBox)
+#: dialogs/ChangeConfigureDialog.ui:127
+#, fuzzy
+#| msgid "Delete"
+msgid "Deletions"
+msgstr "Forigi"
+
+#. i18n: ectx: property (title), widget (QGroupBox, formatGroupBox)
+#: dialogs/ChangeConfigureDialog.ui:199
+#, fuzzy
+#| msgid "Second"
+msgid "Format Changes"
+msgstr "Dua"
+
+#. i18n: ectx: property (html), widget (KTextEdit, previewTextEdit)
+#: dialogs/ChangeConfigureDialog.ui:283
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-"
+"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+"style=\" font-family:'MS Shell Dlg 2'; font-size:11pt; font-weight:600; text-"
+"decoration: underline;\">Preview</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;"
+"\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'MS Shell Dlg 2'; font-size:9pt; font-weight:600;\">Inserted Text</"
+"span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'MS Shell Dlg 2'; font-size:8pt;\">This is a line of text before the "
+"inserted text. This is a line of inserted text. This is a line after the "
+"inserted text.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'MS Shell Dlg 2'; font-size:9pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'MS Shell Dlg 2'; font-size:9pt; font-weight:600;\">Deleted Text</"
+"span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'MS Shell Dlg 2'; font-size:8pt;\">This is a line of text before the "
+"deleted text. This is a line of deleted text. This is a line after the "
+"deleted text.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+"family:'MS Shell Dlg 2'; font-size:9pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'MS Shell Dlg 2'; font-size:9pt; font-weight:600;\">Formatted Text</"
+"span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'MS Shell Dlg 2'; font-size:8pt;\">This is a line of text before the "
+"format-change text. This is a line of text whose format has been changed. "
+"This is a line of text after the format-change text.</span></p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/ChangeConfigureDialog.ui:303
+msgid "Change Visualization Settings"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/ChangeConfigureDialog.ui:323
+#, fuzzy
+#| msgid "General"
+msgid "General Settings"
+msgstr "Ĝeneralo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, odf12RadioButton)
+#: dialogs/ChangeConfigureDialog.ui:336
+msgid "ODF 1.2"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, deltaXmlRadioButton)
+#: dialogs/ChangeConfigureDialog.ui:349
+msgid "DeltaXML (Experimental)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/ChangeConfigureDialog.ui:362
+msgid "Saving Format"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dialogs/ChangeConfigureDialog.ui:385
+msgid "Author Name"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ChangeTrackingOptions)
+#: dialogs/ChangeTrackingOptionsWidget.ui:14
+msgid "Change Tracking Options"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, configureChangeTrackingButton)
+#: dialogs/ChangeTrackingOptionsWidget.ui:142
+msgid "Configure Settings"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, recordChangesCheckBox)
+#: dialogs/ChangeTrackingOptionsWidget.ui:175 TextTool.cpp:429
+#, fuzzy
+#| msgid "Second"
+msgid "Record Changes"
+msgstr "Dua"
+
+#: dialogs/CharacterGeneral.cpp:58 dialogs/FontDia.cpp:103
+#: dialogs/FormattingPreview.cpp:49
+msgid "Font"
+msgstr "Tiparo"
+
+#: dialogs/CharacterGeneral.cpp:59 dialogs/ParagraphGeneral.cpp:68
+msgid "Decorations"
+msgstr ""
+
+#: dialogs/CharacterGeneral.cpp:60
+msgid "Highlighting"
+msgstr ""
+
+#: dialogs/CharacterGeneral.cpp:61
+msgid "Layout"
+msgstr "Aspekto"
+
+#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
+#: dialogs/CharacterGeneral.ui:27 dialogs/ParagraphGeneral.ui:27
+msgid "General"
+msgstr "Ĝeneralo"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/CharacterGeneral.ui:39
+msgid "<b>Character style properties</b>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, lName)
+#: dialogs/CharacterGeneral.ui:46 dialogs/CreateBookmark.ui:35
+#: dialogs/JumpOverview.ui:23 dialogs/NewStyleWidget.ui:20
+#: dialogs/ParagraphGeneral.ui:46 dialogs/StylesWidget.cpp:209
+msgid "Name:"
+msgstr "Nomo:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: dialogs/CharacterHighlighting.ui:16
+msgid "Underlining:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/CharacterHighlighting.ui:62
+msgid "Capitalization"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QRadioButton, normal)
+#: dialogs/CharacterHighlighting.ui:68 dialogs/FontLayoutTab.ui:98
+msgid "Normal"
+msgstr "Normala"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/CharacterHighlighting.ui:78
+msgid "Uppercase"
+msgstr "Majuskla"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/CharacterHighlighting.ui:88
+msgid "Lowercase"
+msgstr "Minuskla"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dialogs/CharacterHighlighting.ui:98
+msgid "Small Caps"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: dialogs/CharacterHighlighting.ui:128
+msgid "Capitalize"
+msgstr "Majuskligi"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: dialogs/CharacterHighlighting.ui:138
+msgid "Strikethrough:"
+msgstr ""
+
+#: dialogs/CreateBookmark.cpp:46 dialogs/JumpOverview.cpp:44
+msgid "Insert Bookmark"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lExplain)
+#: dialogs/CreateBookmark.ui:17
+msgid ""
+"Leaving a bookmark allows quick navigation to this text location at any "
+"later time."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, inUseWarning)
+#: dialogs/CreateBookmark.ui:50
+msgid "Sorry; name is in use"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/FontDecorations.ui:23
+msgid "Colors"
+msgstr "Koloroj"
+
+#. i18n: ectx: property (text), widget (QLabel, textColorLabel)
+#: dialogs/FontDecorations.ui:61
+msgid "Text color:"
+msgstr "Teksta koloro:"
+
+#. i18n: ectx: property (text), widget (QLabel, backgroundColorLabel)
+#: dialogs/FontDecorations.ui:81
+msgid "Background color:"
+msgstr "Fona koloro:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, shadowGroupBox)
+#: dialogs/FontDecorations.ui:107
+msgid "Text Shadow"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, shadowColorLabel)
+#: dialogs/FontDecorations.ui:262
+msgid "Color:"
+msgstr "Koloro:"
+
+#. i18n: ectx: property (text), widget (QLabel, shadowDistanceLabel)
+#: dialogs/FontDecorations.ui:275
+msgid "Distance:"
+msgstr "Distanco:"
+
+#: dialogs/FontDia.cpp:80
+msgid "Select Font"
+msgstr "Elekti tiparon"
+
+#. i18n: ectx: property (title), widget (QGroupBox, positionGroup)
+#: dialogs/FontLayoutTab.ui:31
+msgid "Position"
+msgstr "Pozicio"
+
+#. i18n: ectx: property (text), widget (QLabel, offsetLabel)
+#: dialogs/FontLayoutTab.ui:81
+msgid "Offset:"
+msgstr "Pozicio:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, custom)
+#: dialogs/FontLayoutTab.ui:91
+msgid "Custom"
+msgstr "Propra"
+
+#. i18n: ectx: property (text), widget (QRadioButton, superscript)
+#: dialogs/FontLayoutTab.ui:108 TextTool.cpp:179
+msgid "Superscript"
+msgstr "Superskribo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subscript)
+#: dialogs/FontLayoutTab.ui:115 TextTool.cpp:184
+msgid "Subscript"
+msgstr "Subskribo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, hyphenate)
+#: dialogs/FontLayoutTab.ui:125
+msgid "Automatic hyphenation"
 msgstr ""
 
 #: dialogs/InsertCharacter.cpp:29
@@ -106,6 +480,164 @@ msgctxt "Close dialog"
 msgid "Close"
 msgstr ""
 
+#: dialogs/JumpOverview.cpp:86
+#, kde-format
+msgid "Page %1"
+msgstr ""
+
+#: dialogs/JumpOverview.cpp:112
+msgid "Bookmark"
+msgstr ""
+
+#: dialogs/JumpOverview.cpp:115
+#, fuzzy
+#| msgid "Paste"
+msgid "Page"
+msgstr "Alglui"
+
+#: dialogs/JumpOverview.cpp:118
+msgid "Index locator"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, bDelete)
+#: dialogs/JumpOverview.ui:43 dialogs/StyleManager.ui:98 TextTool.cpp:2007
+msgid "Delete"
+msgstr "Forigi"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/JumpOverview.ui:50
+#, fuzzy
+#| msgid "Text"
+msgid "Text:"
+msgstr "Teksto"
+
+#. i18n: ectx: property (text), widget (QLabel, pageLabel)
+#: dialogs/JumpOverview.ui:60
+#, fuzzy
+#| msgid "Paste"
+msgid "Page:"
+msgstr "Alglui"
+
+#. i18n: ectx: property (text), widget (QLabel, filterLabel)
+#: dialogs/LanguageTab.ui:18
+msgid "Quick search:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/NewStyleWidget.ui:33 dialogs/StylesWidget.cpp:212
+msgid "Type:"
+msgstr "Tipo:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, paragraph)
+#: dialogs/NewStyleWidget.ui:43 dialogs/StylesWidget.cpp:210
+msgid "Paragraph style"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, character)
+#: dialogs/NewStyleWidget.ui:53 dialogs/StylesWidget.cpp:213
+msgid "Character style"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, create)
+#: dialogs/NewStyleWidget.ui:60
+msgid "Create"
+msgstr "Krei"
+
+#: dialogs/ParagraphBulletsNumbers.cpp:42
+msgid "Custom Bullet"
+msgstr ""
+
+#: dialogs/ParagraphBulletsNumbers.cpp:43
+msgid "No Bullet"
+msgstr ""
+
+#: dialogs/ParagraphBulletsNumbers.cpp:47
+msgctxt "Automatic horizontal alignment"
+msgid "Auto"
+msgstr ""
+
+#: dialogs/ParagraphBulletsNumbers.cpp:48
+msgctxt "Text alignment"
+msgid "Left"
+msgstr ""
+
+#: dialogs/ParagraphBulletsNumbers.cpp:49
+msgctxt "Text alignment"
+msgid "Right"
+msgstr ""
+
+#: dialogs/ParagraphBulletsNumbers.cpp:50
+msgctxt "Text alignment"
+msgid "Centered"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: dialogs/ParagraphBulletsNumbers.ui:26
+msgid "Display"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/ParagraphBulletsNumbers.ui:32
+msgid "Prefix:"
+msgstr "Prefikso:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: dialogs/ParagraphBulletsNumbers.ui:45
+msgid "Suffix:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, customCharLabel)
+#: dialogs/ParagraphBulletsNumbers.ui:67
+msgid "Custom character:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, countersGroupbox)
+#: dialogs/ParagraphBulletsNumbers.ui:100
+msgid "Counters format"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/ParagraphBulletsNumbers.ui:106
+#, fuzzy
+#| msgid "Style:"
+msgid "List depth:"
+msgstr "Stilo:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: dialogs/ParagraphBulletsNumbers.ui:126
+msgid "Display Levels:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/ParagraphBulletsNumbers.ui:156
+msgid "Start at:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: dialogs/ParagraphBulletsNumbers.ui:190
+msgid "Alignment:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, restartNumbering)
+#: dialogs/ParagraphBulletsNumbers.ui:205
+msgid "Restart numbering at this paragraph"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, letterSynchronization)
+#: dialogs/ParagraphBulletsNumbers.ui:212
+msgid "Letter Synchronization"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/ParagraphDecorations.ui:31 TextTool.cpp:331
+msgid "Background"
+msgstr "Fono"
+
+#. i18n: ectx: property (text), widget (QLabel, backgroundColorLabel)
+#: dialogs/ParagraphDecorations.ui:65
+msgid "Background color"
+msgstr "Fona koloro"
+
 #: dialogs/ParagraphGeneral.cpp:48
 msgid "Indent/Spacing"
 msgstr ""
@@ -118,81 +650,40 @@ msgstr ""
 msgid "Bullets/Numbers"
 msgstr ""
 
-#: dialogs/ParagraphGeneral.cpp:68 dialogs/CharacterGeneral.cpp:59
-msgid "Decorations"
-msgstr ""
-
 #: dialogs/ParagraphGeneral.cpp:117
 msgctxt "Inherit style"
 msgid "None"
 msgstr ""
 
-#: dialogs/ParagraphSettingsDialog.cpp:37
-msgid "Paragraph Format"
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: dialogs/ParagraphGeneral.ui:39
+msgid "<b>Paragraph style properties</b>"
 msgstr ""
 
-#: dialogs/ParagraphSettingsDialog.cpp:69
-msgid "Paragraph Settings"
-msgstr ""
-
-#: dialogs/StyleManager.cpp:109
-msgid "Document defaults"
-msgstr ""
-
-#: dialogs/StylesWidget.cpp:208 dialogs/StylesWidget.cpp:222
-msgid "new style"
-msgstr ""
-
-#. i18n: file: dialogs/CharacterGeneral.ui:46
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: dialogs/ParagraphGeneral.ui:46
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: dialogs/CreateBookmark.ui:35
-#. i18n: ectx: property (text), widget (QLabel, lName)
-#. i18n: file: dialogs/NewStyleWidget.ui:20
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: dialogs/JumpOverview.ui:23
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/StylesWidget.cpp:209 rc.cpp:97 rc.cpp:151 rc.cpp:175 rc.cpp:424
-#: rc.cpp:448
-msgid "Name:"
-msgstr "Nomo:"
-
-#. i18n: file: dialogs/NewStyleWidget.ui:43
-#. i18n: ectx: property (text), widget (QRadioButton, paragraph)
-#: dialogs/StylesWidget.cpp:210 rc.cpp:430
-msgid "Paragraph style"
-msgstr ""
-
-#. i18n: file: dialogs/NewStyleWidget.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: dialogs/StylesWidget.cpp:212 rc.cpp:427
-msgid "Type:"
-msgstr "Tipo:"
-
-#. i18n: file: dialogs/NewStyleWidget.ui:53
-#. i18n: ectx: property (text), widget (QRadioButton, character)
-#: dialogs/StylesWidget.cpp:213 rc.cpp:433
-msgid "Character style"
+#: dialogs/ParagraphGeneral.ui:56
+msgid "Next style:"
 msgstr ""
 
-#: dialogs/StylesWidget.cpp:217
-msgid "Create New Style"
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/ParagraphGeneral.ui:69
+msgid "Inherit style:"
+msgstr "Heredi stilon:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useCharacterStyle)
+#: dialogs/ParagraphGeneral.ui:82
+msgid "Use named character style"
 msgstr ""
 
-#: dialogs/StylesWidget.cpp:288
-msgid "Edit Paragraph Style"
-msgstr ""
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dialogs/ParagraphGeneral.ui:105
+msgid "Style:"
+msgstr "Stilo:"
 
-#: dialogs/StylesWidget.cpp:288
-msgid "Edit Character Style"
+#. i18n: ectx: property (text), widget (QCheckBox, inToc)
+#: dialogs/ParagraphGeneral.ui:118
+msgid "Include in table of contents"
 msgstr ""
-
-#: dialogs/TableDialog.cpp:27
-#, fuzzy
-#| msgid "Insert page"
-msgid "Insert Table"
-msgstr "Enmeti paĝon"
 
 #: dialogs/ParagraphIndentSpacing.cpp:37
 msgctxt "Line spacing value"
@@ -224,73 +715,127 @@ msgctxt "Line spacing type"
 msgid "Fixed"
 msgstr ""
 
-#: dialogs/StyleManagerDialog.cpp:29 TextTool.cpp:438
-msgid "Style Manager"
+#. i18n: ectx: property (whatsThis), widget (QWidget, ParagraphIndentSpacing)
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: dialogs/ParagraphIndentSpacing.ui:14 dialogs/ParagraphIndentSpacing.ui:149
+msgid "<p><ul><li><b>Single</b>: The normal linespacing</li></ul></p> "
 msgstr ""
 
-#: dialogs/JumpOverview.cpp:44 dialogs/CreateBookmark.cpp:46
-msgid "Insert Bookmark"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/ParagraphIndentSpacing.ui:20
+msgid "Indent"
+msgstr "Deŝovo"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/ParagraphIndentSpacing.ui:26
+msgid "Left:"
+msgstr "Maldekstra:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/ParagraphIndentSpacing.ui:52
+msgid "Right:"
+msgstr "Dekstre:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/ParagraphIndentSpacing.ui:65
+msgid "First Line:"
 msgstr ""
 
-#: dialogs/JumpOverview.cpp:86
-#, kde-format
-msgid "Page %1"
-msgstr ""
-
-#: dialogs/JumpOverview.cpp:112
-msgid "Bookmark"
-msgstr ""
-
-#: dialogs/JumpOverview.cpp:115
+#. i18n: ectx: property (text), widget (QCheckBox, autoTextIndent)
+#: dialogs/ParagraphIndentSpacing.ui:78
 #, fuzzy
-#| msgid "Paste"
-msgid "Page"
-msgstr "Alglui"
+#| msgid "Increase Font Size"
+msgid "Base on text size"
+msgstr "Pligrandigi tiparon"
 
-#: dialogs/JumpOverview.cpp:118
-msgid "Index locator"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: dialogs/ParagraphIndentSpacing.ui:88
+msgid "Paragraph Space"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:42
-msgid "Custom Bullet"
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: dialogs/ParagraphIndentSpacing.ui:94
+msgid "Before:"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:43
-msgid "No Bullet"
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: dialogs/ParagraphIndentSpacing.ui:120
+msgid "After:"
+msgstr "Post:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: dialogs/ParagraphIndentSpacing.ui:152
+msgid "Line Spacing"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:47
-msgctxt "Automatic horizontal alignment"
-msgid "Auto"
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: dialogs/ParagraphIndentSpacing.ui:177
+msgid "Minimum:"
+msgstr "Minimumo:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, proportional)
+#: dialogs/ParagraphIndentSpacing.ui:220
+#, no-c-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useFont)
+#: dialogs/ParagraphIndentSpacing.ui:243
+msgid "Use Font Metrics"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:48
-msgctxt "Text alignment"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/ParagraphLayout.ui:16
+msgid "Alignment"
+msgstr "Alĝustigo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, left)
+#: dialogs/ParagraphLayout.ui:22
 msgid "Left"
-msgstr ""
+msgstr "Maldekstre"
 
-#: dialogs/ParagraphBulletsNumbers.cpp:49
-msgctxt "Text alignment"
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: dialogs/ParagraphLayout.ui:29
+msgid "Center"
+msgstr "Centrigita"
+
+#. i18n: ectx: property (text), widget (QRadioButton, right)
+#: dialogs/ParagraphLayout.ui:36
 msgid "Right"
+msgstr "Dekstra"
+
+#. i18n: ectx: property (text), widget (QRadioButton, justify)
+#: dialogs/ParagraphLayout.ui:43
+msgid "Justify"
 msgstr ""
 
-#: dialogs/ParagraphBulletsNumbers.cpp:50
-msgctxt "Text alignment"
-msgid "Centered"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: dialogs/ParagraphLayout.ui:53
+msgid "Behavior at End of Frame/Page"
 msgstr ""
 
-#: dialogs/CharacterGeneral.cpp:58 dialogs/FormattingPreview.cpp:49
-#: dialogs/FontDia.cpp:103
-msgid "Font"
-msgstr "Tiparo"
-
-#: dialogs/CharacterGeneral.cpp:60
-msgid "Highlighting"
+#. i18n: ectx: property (text), widget (QCheckBox, keepTogether)
+#: dialogs/ParagraphLayout.ui:59
+msgid "Keep lines together"
 msgstr ""
 
-#: dialogs/CharacterGeneral.cpp:61
-msgid "Layout"
-msgstr "Aspekto"
+#. i18n: ectx: property (text), widget (QCheckBox, breakBefore)
+#: dialogs/ParagraphLayout.ui:66
+msgid "Insert break before paragraph"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, breakAfter)
+#: dialogs/ParagraphLayout.ui:73
+msgid "Insert break after paragraph"
+msgstr ""
+
+#: dialogs/ParagraphSettingsDialog.cpp:37
+msgid "Paragraph Format"
+msgstr ""
+
+#: dialogs/ParagraphSettingsDialog.cpp:69
+msgid "Paragraph Settings"
+msgstr ""
 
 #: dialogs/SimpleStyleWidget.cpp:263
 msgctxt "Short for LeftToRight"
@@ -307,9 +852,132 @@ msgctxt "Automatic direction detection"
 msgid "Auto"
 msgstr ""
 
-#: dialogs/FontDia.cpp:80
-msgid "Select Font"
-msgstr "Elekti tiparon"
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dialogs/SimpleStyleWidget.ui:174
+#, fuzzy
+#| msgid "Style:"
+msgid "List Style:"
+msgstr "Stilo:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, listStyleAgain)
+#: dialogs/SimpleStyleWidget.ui:193
+msgid "Apply again"
+msgstr ""
+
+#: dialogs/StyleManager.cpp:109
+msgid "Document defaults"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, paragButton)
+#: dialogs/StyleManager.ui:29
+msgid "P"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, charButton)
+#: dialogs/StyleManager.ui:45
+msgid "C"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, bNew)
+#: dialogs/StyleManager.ui:91
+msgid "&New"
+msgstr "&Nova"
+
+#: dialogs/StyleManagerDialog.cpp:29 TextTool.cpp:438
+msgid "Style Manager"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/StyleManagerWelcome.ui:42
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">It is possible to assign a "
+"named style to text and alter the style properties to change all text with "
+"that style.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Applying a style change "
+"will reformat all text that previously got the named style assigned to it. "
+"Use the Styles docker to apply styles to text.</p></body></html>"
+msgstr ""
+
+#: dialogs/StylesWidget.cpp:208 dialogs/StylesWidget.cpp:222
+msgid "new style"
+msgstr ""
+
+#: dialogs/StylesWidget.cpp:217
+msgid "Create New Style"
+msgstr ""
+
+#: dialogs/StylesWidget.cpp:288
+msgid "Edit Paragraph Style"
+msgstr ""
+
+#: dialogs/StylesWidget.cpp:288
+msgid "Edit Character Style"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, applyStyle)
+#: dialogs/StylesWidget.ui:23
+msgid "Apply selected style to text"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, modifyStyle)
+#: dialogs/StylesWidget.ui:33
+msgid "Show properties"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, newStyle)
+#: dialogs/StylesWidget.ui:56
+msgid "Add a new style"
+msgstr ""
+
+#: dialogs/TableDialog.cpp:27
+#, fuzzy
+#| msgid "Insert page"
+msgid "Insert Table"
+msgstr "Enmeti paĝon"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupLogical)
+#: dialogs/TableDialog.ui:23
+msgid "Columns and rows"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelColumns)
+#: dialogs/TableDialog.ui:32
+msgid "Number of columns:"
+msgstr "Nombro da kolumnoj:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelRows)
+#: dialogs/TableDialog.ui:55
+msgid "Number of rows:"
+msgstr "Nombro de linioj: "
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupPhysical)
+#: dialogs/TableDialog.ui:97
+msgid "Width strategy"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioFixed)
+#: dialogs/TableDialog.ui:112
+msgid "Fixed column width:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioFitContents)
+#: dialogs/TableDialog.ui:125
+msgid "Fit to contents"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioFitAvail)
+#: dialogs/TableDialog.ui:138
+msgid "Fit to available surrounding"
+msgstr ""
 
 #: ListItemsHelper.cpp:179
 msgctxt "Text list-style"
@@ -424,826 +1092,13 @@ msgstr ""
 msgid "ArabicAlphabet"
 msgstr ""
 
-#: TextToolFactory.cpp:29
-msgid "Text editing tool"
+#: TextShapeFactory.cpp:44
+msgid "A shape that shows text"
 msgstr ""
 
-#: ChangeTrackingTool.cpp:68
-msgid "Tracked change manager"
+#: TextShapeFactory.cpp:54
+msgid "Text Shape"
 msgstr ""
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:44
-#. i18n: ectx: property (text), widget (QPushButton, acceptButton)
-#: ChangeTrackingTool.cpp:373 rc.cpp:70
-msgid "Accept"
-msgstr "Akcepti"
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:57
-#. i18n: ectx: property (text), widget (QPushButton, rejectButton)
-#: ChangeTrackingTool.cpp:374 rc.cpp:73
-msgid "Reject"
-msgstr "Malakcepti"
-
-#: ChangeTrackingToolFactory.cpp:33
-msgid "Change Tracking tool"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:17
-#. i18n: ectx: property (windowTitle), widget (QDialog, ChangeConfigureDialog)
-#: rc.cpp:3
-msgid "Configure Change Tracking"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:52
-#. i18n: ectx: property (title), widget (QGroupBox, insertionGroupBox)
-#: rc.cpp:6
-#, fuzzy
-#| msgid "Insert"
-msgid "Insertions"
-msgstr "Enmeti"
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:74
-#. i18n: ectx: property (text), widget (QLabel, insertionColorLabel)
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:149
-#. i18n: ectx: property (text), widget (QLabel, deletionColorLabel)
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:221
-#. i18n: ectx: property (text), widget (QLabel, formatColorLabel)
-#: rc.cpp:9 rc.cpp:18 rc.cpp:27
-#, fuzzy
-#| msgid "Background color"
-msgid "Background Color"
-msgstr "Fona koloro"
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:106
-#. i18n: ectx: property (text), widget (QPushButton, insertionColorButton)
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:178
-#. i18n: ectx: property (text), widget (QPushButton, deletionColorButton)
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:250
-#. i18n: ectx: property (text), widget (QPushButton, formatColorButton)
-#. i18n: file: dialogs/ParagraphDecorations.ui:55
-#. i18n: ectx: property (text), widget (QToolButton, resetBackgroundColor)
-#. i18n: file: dialogs/StylesWidget.ui:26
-#. i18n: ectx: property (text), widget (QToolButton, applyStyle)
-#. i18n: file: dialogs/StylesWidget.ui:36
-#. i18n: ectx: property (text), widget (QToolButton, modifyStyle)
-#. i18n: file: dialogs/StylesWidget.ui:59
-#. i18n: ectx: property (text), widget (QToolButton, newStyle)
-#. i18n: file: dialogs/StylesWidget.ui:66
-#. i18n: ectx: property (text), widget (QToolButton, deleteStyle)
-#. i18n: file: dialogs/FontDecorations.ui:48
-#. i18n: ectx: property (text), widget (QToolButton, resetBackground)
-#. i18n: file: dialogs/FontDecorations.ui:74
-#. i18n: ectx: property (text), widget (QToolButton, resetTextColor)
-#. i18n: file: dialogs/FontDecorations.ui:127
-#. i18n: ectx: property (text), widget (QToolButton, toolButton)
-#. i18n: file: dialogs/FontDecorations.ui:140
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_5)
-#. i18n: file: dialogs/FontDecorations.ui:153
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_7)
-#. i18n: file: dialogs/FontDecorations.ui:166
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_4)
-#. i18n: file: dialogs/FontDecorations.ui:179
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_8)
-#. i18n: file: dialogs/FontDecorations.ui:192
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_3)
-#. i18n: file: dialogs/FontDecorations.ui:205
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_6)
-#. i18n: file: dialogs/FontDecorations.ui:218
-#. i18n: ectx: property (text), widget (QToolButton, toolButton_2)
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:77
-#. i18n: ectx: property (text), widget (QToolButton, customCharacter)
-#. i18n: file: dialogs/SimpleTableWidget.ui:80
-#. i18n: ectx: property (text), widget (QToolButton, mergeCells)
-#. i18n: file: dialogs/SimpleTableWidget.ui:87
-#. i18n: ectx: property (text), widget (QToolButton, splitCells)
-#: rc.cpp:12 rc.cpp:21 rc.cpp:30 rc.cpp:184 rc.cpp:234 rc.cpp:240 rc.cpp:246
-#: rc.cpp:249 rc.cpp:276 rc.cpp:282 rc.cpp:291 rc.cpp:294 rc.cpp:297
-#: rc.cpp:300 rc.cpp:303 rc.cpp:306 rc.cpp:309 rc.cpp:312 rc.cpp:333
-#: rc.cpp:442 rc.cpp:445
-msgid "..."
-msgstr "..."
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:127
-#. i18n: ectx: property (title), widget (QGroupBox, deletionGroupBox)
-#: rc.cpp:15
-#, fuzzy
-#| msgid "Delete"
-msgid "Deletions"
-msgstr "Forigi"
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:199
-#. i18n: ectx: property (title), widget (QGroupBox, formatGroupBox)
-#: rc.cpp:24
-#, fuzzy
-#| msgid "Second"
-msgid "Format Changes"
-msgstr "Dua"
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:283
-#. i18n: ectx: property (html), widget (KTextEdit, previewTextEdit)
-#: rc.cpp:33
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-"
-"left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
-"style=\" font-family:'MS Shell Dlg 2'; font-size:11pt; font-weight:600; text-"
-"decoration: underline;\">Preview</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-"
-"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-"indent:0px; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;"
-"\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'MS Shell Dlg 2'; font-size:9pt; font-weight:600;\">Inserted Text</"
-"span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'MS Shell Dlg 2'; font-size:8pt;\">This is a line of text before the "
-"inserted text. This is a line of inserted text. This is a line after the "
-"inserted text.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
-"family:'MS Shell Dlg 2'; font-size:9pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'MS Shell Dlg 2'; font-size:9pt; font-weight:600;\">Deleted Text</"
-"span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'MS Shell Dlg 2'; font-size:8pt;\">This is a line of text before the "
-"deleted text. This is a line of deleted text. This is a line after the "
-"deleted text.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
-"family:'MS Shell Dlg 2'; font-size:9pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'MS Shell Dlg 2'; font-size:9pt; font-weight:600;\">Formatted Text</"
-"span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'MS Shell Dlg 2'; font-size:8pt;\">This is a line of text before the "
-"format-change text. This is a line of text whose format has been changed. "
-"This is a line of text after the format-change text.</span></p></body></html>"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:303
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:49
-msgid "Change Visualization Settings"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:323
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:52
-#, fuzzy
-#| msgid "General"
-msgid "General Settings"
-msgstr "Ĝeneralo"
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:336
-#. i18n: ectx: property (text), widget (QRadioButton, odf12RadioButton)
-#: rc.cpp:55
-msgid "ODF 1.2"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:349
-#. i18n: ectx: property (text), widget (QRadioButton, deltaXmlRadioButton)
-#: rc.cpp:58
-msgid "DeltaXML (Experimental)"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:362
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:61
-msgid "Saving Format"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeConfigureDialog.ui:385
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:64
-msgid "Author Name"
-msgstr ""
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:26
-#. i18n: ectx: property (windowTitle), widget (QDialog, AcceptRejectChangeDialog)
-#: rc.cpp:67
-msgid "Dialog"
-msgstr ""
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:70
-#. i18n: ectx: property (text), widget (QPushButton, cancelButton)
-#. i18n: file: dialogs/NewStyleWidget.ui:99
-#. i18n: ectx: property (text), widget (QPushButton, bCancel)
-#: rc.cpp:76 rc.cpp:439
-msgid "Cancel"
-msgstr ""
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:96
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:79
-msgid "Change Log"
-msgstr ""
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:109
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:82
-msgid "Author"
-msgstr ""
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:122
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:85
-#, fuzzy
-#| msgid "Paste"
-msgid "Date"
-msgstr "Alglui"
-
-#. i18n: file: dialogs/AcceptRejectChangeDialog.ui:135
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:88
-#, fuzzy
-#| msgid "Type:"
-msgid "Type"
-msgstr "Tipo:"
-
-#. i18n: file: dialogs/CharacterGeneral.ui:27
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#. i18n: file: dialogs/ParagraphGeneral.ui:27
-#. i18n: ectx: attribute (title), widget (QWidget, generalTab)
-#: rc.cpp:91 rc.cpp:145
-msgid "General"
-msgstr "Ĝeneralo"
-
-#. i18n: file: dialogs/CharacterGeneral.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:94
-msgid "<b>Character style properties</b>"
-msgstr ""
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:100
-msgid "Underlining:"
-msgstr ""
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:62
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:103
-msgid "Capitalization"
-msgstr ""
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:68
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: dialogs/FontLayoutTab.ui:98
-#. i18n: ectx: property (text), widget (QRadioButton, normal)
-#: rc.cpp:106 rc.cpp:133
-msgid "Normal"
-msgstr "Normala"
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:109
-msgid "Uppercase"
-msgstr "Majuskla"
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:88
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:112
-msgid "Lowercase"
-msgstr "Minuskla"
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:98
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:115
-msgid "Small Caps"
-msgstr ""
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:128
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:118
-msgid "Capitalize"
-msgstr "Majuskligi"
-
-#. i18n: file: dialogs/CharacterHighlighting.ui:138
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:121
-msgid "Strikethrough:"
-msgstr ""
-
-#. i18n: file: dialogs/FontLayoutTab.ui:31
-#. i18n: ectx: property (title), widget (QGroupBox, positionGroup)
-#: rc.cpp:124
-msgid "Position"
-msgstr "Pozicio"
-
-#. i18n: file: dialogs/FontLayoutTab.ui:81
-#. i18n: ectx: property (text), widget (QLabel, offsetLabel)
-#: rc.cpp:127
-msgid "Offset:"
-msgstr "Pozicio:"
-
-#. i18n: file: dialogs/FontLayoutTab.ui:91
-#. i18n: ectx: property (text), widget (QRadioButton, custom)
-#: rc.cpp:130
-msgid "Custom"
-msgstr "Propra"
-
-#. i18n: file: dialogs/FontLayoutTab.ui:108
-#. i18n: ectx: property (text), widget (QRadioButton, superscript)
-#: rc.cpp:136 TextTool.cpp:179
-msgid "Superscript"
-msgstr "Superskribo"
-
-#. i18n: file: dialogs/FontLayoutTab.ui:115
-#. i18n: ectx: property (text), widget (QRadioButton, subscript)
-#: rc.cpp:139 TextTool.cpp:184
-msgid "Subscript"
-msgstr "Subskribo"
-
-#. i18n: file: dialogs/FontLayoutTab.ui:125
-#. i18n: ectx: property (text), widget (QCheckBox, hyphenate)
-#: rc.cpp:142
-msgid "Automatic hyphenation"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphGeneral.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:148
-msgid "<b>Paragraph style properties</b>"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphGeneral.ui:56
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:154
-msgid "Next style:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphGeneral.ui:69
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:157
-msgid "Inherit style:"
-msgstr "Heredi stilon:"
-
-#. i18n: file: dialogs/ParagraphGeneral.ui:82
-#. i18n: ectx: property (text), widget (QCheckBox, useCharacterStyle)
-#: rc.cpp:160
-msgid "Use named character style"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphGeneral.ui:105
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:163
-msgid "Style:"
-msgstr "Stilo:"
-
-#. i18n: file: dialogs/ParagraphGeneral.ui:118
-#. i18n: ectx: property (text), widget (QCheckBox, inToc)
-#: rc.cpp:166
-msgid "Include in table of contents"
-msgstr ""
-
-#. i18n: file: dialogs/LanguageTab.ui:18
-#. i18n: ectx: property (text), widget (QLabel, filterLabel)
-#: rc.cpp:169
-msgid "Quick search:"
-msgstr ""
-
-#. i18n: file: dialogs/CreateBookmark.ui:17
-#. i18n: ectx: property (text), widget (QLabel, lExplain)
-#: rc.cpp:172
-msgid ""
-"Leaving a bookmark allows quick navigation to this text location at any "
-"later time."
-msgstr ""
-
-#. i18n: file: dialogs/CreateBookmark.ui:50
-#. i18n: ectx: property (text), widget (QLabel, inUseWarning)
-#: rc.cpp:178
-msgid "Sorry; name is in use"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphDecorations.ui:31
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:181 TextTool.cpp:331
-msgid "Background"
-msgstr "Fono"
-
-#. i18n: file: dialogs/ParagraphDecorations.ui:65
-#. i18n: ectx: property (text), widget (QLabel, backgroundColorLabel)
-#: rc.cpp:187
-msgid "Background color"
-msgstr "Fona koloro"
-
-#. i18n: file: dialogs/ParagraphLayout.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:190
-msgid "Alignment"
-msgstr "Alĝustigo"
-
-#. i18n: file: dialogs/ParagraphLayout.ui:22
-#. i18n: ectx: property (text), widget (QRadioButton, left)
-#: rc.cpp:193
-msgid "Left"
-msgstr "Maldekstre"
-
-#. i18n: file: dialogs/ParagraphLayout.ui:29
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: rc.cpp:196
-msgid "Center"
-msgstr "Centrigita"
-
-#. i18n: file: dialogs/ParagraphLayout.ui:36
-#. i18n: ectx: property (text), widget (QRadioButton, right)
-#: rc.cpp:199
-msgid "Right"
-msgstr "Dekstra"
-
-#. i18n: file: dialogs/ParagraphLayout.ui:43
-#. i18n: ectx: property (text), widget (QRadioButton, justify)
-#: rc.cpp:202
-msgid "Justify"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphLayout.ui:53
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:205
-msgid "Behavior at End of Frame/Page"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphLayout.ui:59
-#. i18n: ectx: property (text), widget (QCheckBox, keepTogether)
-#: rc.cpp:208
-msgid "Keep lines together"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphLayout.ui:66
-#. i18n: ectx: property (text), widget (QCheckBox, breakBefore)
-#: rc.cpp:211
-msgid "Insert break before paragraph"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphLayout.ui:73
-#. i18n: ectx: property (text), widget (QCheckBox, breakAfter)
-#: rc.cpp:214
-msgid "Insert break after paragraph"
-msgstr ""
-
-#. i18n: file: dialogs/SimpleStyleWidget.ui:174
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:217
-#, fuzzy
-#| msgid "Style:"
-msgid "List Style:"
-msgstr "Stilo:"
-
-#. i18n: file: dialogs/SimpleStyleWidget.ui:193
-#. i18n: ectx: property (toolTip), widget (QToolButton, listStyleAgain)
-#: rc.cpp:220
-msgid "Apply again"
-msgstr ""
-
-#. i18n: file: dialogs/StyleManagerWelcome.ui:42
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:223
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">It is possible to assign a "
-"named style to text and alter the style properties to change all text with "
-"that style.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Applying a style change "
-"will reformat all text that previously got the named style assigned to it. "
-"Use the Styles docker to apply styles to text.</p></body></html>"
-msgstr ""
-
-#. i18n: file: dialogs/StylesWidget.ui:23
-#. i18n: ectx: property (toolTip), widget (QToolButton, applyStyle)
-#: rc.cpp:231
-msgid "Apply selected style to text"
-msgstr ""
-
-#. i18n: file: dialogs/StylesWidget.ui:33
-#. i18n: ectx: property (toolTip), widget (QToolButton, modifyStyle)
-#: rc.cpp:237
-msgid "Show properties"
-msgstr ""
-
-#. i18n: file: dialogs/StylesWidget.ui:56
-#. i18n: ectx: property (toolTip), widget (QToolButton, newStyle)
-#: rc.cpp:243
-msgid "Add a new style"
-msgstr ""
-
-#. i18n: file: dialogs/TableDialog.ui:23
-#. i18n: ectx: property (title), widget (QGroupBox, groupLogical)
-#: rc.cpp:252
-msgid "Columns and rows"
-msgstr ""
-
-#. i18n: file: dialogs/TableDialog.ui:32
-#. i18n: ectx: property (text), widget (QLabel, labelColumns)
-#: rc.cpp:255
-msgid "Number of columns:"
-msgstr "Nombro da kolumnoj:"
-
-#. i18n: file: dialogs/TableDialog.ui:55
-#. i18n: ectx: property (text), widget (QLabel, labelRows)
-#: rc.cpp:258
-msgid "Number of rows:"
-msgstr "Nombro de linioj: "
-
-#. i18n: file: dialogs/TableDialog.ui:97
-#. i18n: ectx: property (title), widget (QGroupBox, groupPhysical)
-#: rc.cpp:261
-msgid "Width strategy"
-msgstr ""
-
-#. i18n: file: dialogs/TableDialog.ui:112
-#. i18n: ectx: property (text), widget (QRadioButton, radioFixed)
-#: rc.cpp:264
-msgid "Fixed column width:"
-msgstr ""
-
-#. i18n: file: dialogs/TableDialog.ui:125
-#. i18n: ectx: property (text), widget (QRadioButton, radioFitContents)
-#: rc.cpp:267
-msgid "Fit to contents"
-msgstr ""
-
-#. i18n: file: dialogs/TableDialog.ui:138
-#. i18n: ectx: property (text), widget (QRadioButton, radioFitAvail)
-#: rc.cpp:270
-msgid "Fit to available surrounding"
-msgstr ""
-
-#. i18n: file: dialogs/FontDecorations.ui:23
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:273
-msgid "Colors"
-msgstr "Koloroj"
-
-#. i18n: file: dialogs/FontDecorations.ui:61
-#. i18n: ectx: property (text), widget (QLabel, textColorLabel)
-#: rc.cpp:279
-msgid "Text color:"
-msgstr "Teksta koloro:"
-
-#. i18n: file: dialogs/FontDecorations.ui:81
-#. i18n: ectx: property (text), widget (QLabel, backgroundColorLabel)
-#: rc.cpp:285
-msgid "Background color:"
-msgstr "Fona koloro:"
-
-#. i18n: file: dialogs/FontDecorations.ui:107
-#. i18n: ectx: property (title), widget (QGroupBox, shadowGroupBox)
-#: rc.cpp:288
-msgid "Text Shadow"
-msgstr ""
-
-#. i18n: file: dialogs/FontDecorations.ui:262
-#. i18n: ectx: property (text), widget (QLabel, shadowColorLabel)
-#: rc.cpp:315
-msgid "Color:"
-msgstr "Koloro:"
-
-#. i18n: file: dialogs/FontDecorations.ui:275
-#. i18n: ectx: property (text), widget (QLabel, shadowDistanceLabel)
-#: rc.cpp:318
-msgid "Distance:"
-msgstr "Distanco:"
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:26
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:321
-msgid "Display"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:324
-msgid "Prefix:"
-msgstr "Prefikso:"
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:45
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:327
-msgid "Suffix:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:67
-#. i18n: ectx: property (text), widget (QLabel, customCharLabel)
-#: rc.cpp:330
-msgid "Custom character:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:100
-#. i18n: ectx: property (title), widget (QGroupBox, countersGroupbox)
-#: rc.cpp:336
-msgid "Counters format"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:106
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:339
-#, fuzzy
-#| msgid "Style:"
-msgid "List depth:"
-msgstr "Stilo:"
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:126
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:342
-msgid "Display Levels:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:156
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:345
-msgid "Start at:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:190
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:348
-msgid "Alignment:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:205
-#. i18n: ectx: property (text), widget (QCheckBox, restartNumbering)
-#: rc.cpp:351
-msgid "Restart numbering at this paragraph"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphBulletsNumbers.ui:212
-#. i18n: ectx: property (text), widget (QCheckBox, letterSynchronization)
-#: rc.cpp:354
-msgid "Letter Synchronization"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:14
-#. i18n: ectx: property (whatsThis), widget (QWidget, ParagraphIndentSpacing)
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:149
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
-#: rc.cpp:357 rc.cpp:384
-msgid "<p><ul><li><b>Single</b>: The normal linespacing</li></ul></p> "
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:360
-msgid "Indent"
-msgstr "Deŝovo"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:363
-msgid "Left:"
-msgstr "Maldekstra:"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:52
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:366
-msgid "Right:"
-msgstr "Dekstre:"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:65
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:369
-msgid "First Line:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:78
-#. i18n: ectx: property (text), widget (QCheckBox, autoTextIndent)
-#: rc.cpp:372
-#, fuzzy
-#| msgid "Increase Font Size"
-msgid "Base on text size"
-msgstr "Pligrandigi tiparon"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:88
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:375
-msgid "Paragraph Space"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:94
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:378
-msgid "Before:"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:120
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:381
-msgid "After:"
-msgstr "Post:"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:152
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:387
-msgid "Line Spacing"
-msgstr ""
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:177
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:390
-msgid "Minimum:"
-msgstr "Minimumo:"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:220
-#. i18n: ectx: property (suffix), widget (QSpinBox, proportional)
-#: rc.cpp:394
-#, no-c-format
-msgid " %"
-msgstr " %"
-
-#. i18n: file: dialogs/ParagraphIndentSpacing.ui:243
-#. i18n: ectx: property (text), widget (QCheckBox, useFont)
-#: rc.cpp:397
-msgid "Use Font Metrics"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeTrackingOptionsWidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ChangeTrackingOptions)
-#: rc.cpp:400
-msgid "Change Tracking Options"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeTrackingOptionsWidget.ui:142
-#. i18n: ectx: property (text), widget (QPushButton, configureChangeTrackingButton)
-#: rc.cpp:403
-msgid "Configure Settings"
-msgstr ""
-
-#. i18n: file: dialogs/ChangeTrackingOptionsWidget.ui:175
-#. i18n: ectx: property (text), widget (QCheckBox, recordChangesCheckBox)
-#: rc.cpp:406 TextTool.cpp:429
-#, fuzzy
-#| msgid "Second"
-msgid "Record Changes"
-msgstr "Dua"
-
-#. i18n: file: dialogs/StyleManager.ui:29
-#. i18n: ectx: property (text), widget (QToolButton, paragButton)
-#: rc.cpp:412
-msgid "P"
-msgstr ""
-
-#. i18n: file: dialogs/StyleManager.ui:45
-#. i18n: ectx: property (text), widget (QToolButton, charButton)
-#: rc.cpp:415
-msgid "C"
-msgstr ""
-
-#. i18n: file: dialogs/StyleManager.ui:91
-#. i18n: ectx: property (text), widget (QPushButton, bNew)
-#: rc.cpp:418
-msgid "&New"
-msgstr "&Nova"
-
-#. i18n: file: dialogs/StyleManager.ui:98
-#. i18n: ectx: property (text), widget (QPushButton, bDelete)
-#. i18n: file: dialogs/JumpOverview.ui:43
-#. i18n: ectx: property (text), widget (QPushButton, bDelete)
-#: rc.cpp:421 rc.cpp:451 TextTool.cpp:2007
-msgid "Delete"
-msgstr "Forigi"
-
-#. i18n: file: dialogs/NewStyleWidget.ui:60
-#. i18n: ectx: property (text), widget (QPushButton, create)
-#: rc.cpp:436
-msgid "Create"
-msgstr "Krei"
-
-#. i18n: file: dialogs/JumpOverview.ui:50
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:454
-#, fuzzy
-#| msgid "Text"
-msgid "Text:"
-msgstr "Teksto"
-
-#. i18n: file: dialogs/JumpOverview.ui:60
-#. i18n: ectx: property (text), widget (QLabel, pageLabel)
-#: rc.cpp:457
-#, fuzzy
-#| msgid "Paste"
-msgid "Page:"
-msgstr "Alglui"
 
 #: TextTool.cpp:127
 msgid "Bold"
@@ -1536,6 +1391,10 @@ msgstr "Aŭtokorektado"
 
 #: TextTool.cpp:2082
 msgid "Variable Options"
+msgstr ""
+
+#: TextToolFactory.cpp:29
+msgid "Text editing tool"
 msgstr ""
 
 #, fuzzy
