@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krusader\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-30 04:17+0200\n"
+"POT-Creation-Date: 2012-09-01 04:40+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "\n"
-"Make sure that the %1 binary are installed properly on your system."
+"Make sure that the %1 binary is installed properly on your system."
 msgstr ""
 
 #: krArc/krarc.cpp:1805 krArc/krarc.cpp:1830
@@ -358,8 +358,6 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (KKeySequenceWidget, KeyButtonShortcut)
 #: krusader/ActionMan/actionproperty.ui:374
-#: krusader/Konfigurator/kgpanel.cpp:235 krusader/Konfigurator/kgpanel.cpp:248
-#: krusader/Konfigurator/kgpanel.cpp:262
 msgid "None"
 msgstr "Neniu"
 
@@ -722,13 +720,14 @@ msgstr "Eraro"
 
 #: krusader/BookMan/krbookmarkhandler.cpp:211
 #, kde-format
-msgid "%1 instead of "
+msgid "%1 instead of %2"
 msgstr ""
 
 #: krusader/BookMan/krbookmarkhandler.cpp:216
 #: krusader/BookMan/krbookmarkhandler.cpp:222
 #: krusader/BookMan/krbookmarkhandler.cpp:254
-msgid "missing tag "
+#, kde-format
+msgid "missing tag %1"
 msgstr ""
 
 #: krusader/BookMan/krbookmarkhandler.cpp:294
@@ -743,6 +742,7 @@ msgstr ""
 
 #: krusader/BookMan/krbookmarkhandler.cpp:364
 #: krusader/BookMan/krbookmarkhandler.cpp:527
+#: krusader/Dialogs/popularurls.cpp:274
 msgid "Popular URLs"
 msgstr ""
 
@@ -1066,7 +1066,7 @@ msgstr "Forigi"
 msgid "Clears the entire list of selections"
 msgstr ""
 
-#: krusader/Dialogs/krmaskchoice.cpp:135
+#: krusader/Dialogs/krmaskchoice.cpp:135 krusader/Dialogs/packguibase.cpp:311
 msgid "OK"
 msgstr "Bone"
 
@@ -1290,18 +1290,16 @@ msgstr ""
 msgid "Command line switches:"
 msgstr ""
 
-#: krusader/Dialogs/packguibase.cpp:300
+#: krusader/Dialogs/packguibase.cpp:300 krusader/Dialogs/packguibase.cpp:346
 #, fuzzy
 #| msgid "&Advanced"
 msgid "&Advanced >>"
 msgstr "&Plie"
 
-#: krusader/Dialogs/packguibase.cpp:311
-msgid "Ok"
-msgstr "Bone"
-
-#: krusader/Dialogs/packguibase.cpp:346 krusader/Filter/filtertabs.cpp:53
-msgid "&Advanced"
+#: krusader/Dialogs/packguibase.cpp:346
+#, fuzzy
+#| msgid "&Advanced"
+msgid "&Advanced <<"
 msgstr "&Plie"
 
 #: krusader/Dialogs/packguibase.cpp:364
@@ -1343,16 +1341,14 @@ msgid ""
 msgstr ""
 
 #: krusader/Dialogs/popularurls.cpp:93
-msgid "Saved 'Popular Urls' are invalid. List will be cleared"
-msgstr ""
-
-#: krusader/Dialogs/popularurls.cpp:274
-msgid "Popular Urls"
+msgid "The saved 'Popular URLs' are invalid. The list will be cleared."
 msgstr ""
 
 #: krusader/Dialogs/popularurls.cpp:293
-msgid " &Search: "
-msgstr ""
+#, fuzzy
+#| msgid "Search:"
+msgid "&Search:"
+msgstr "Serĉi:"
 
 #: krusader/DiskUsage/diskusage.cpp:112
 msgid "Loading Usage Information"
@@ -1626,8 +1622,10 @@ msgstr "Grupo"
 
 #: krusader/DiskUsage/radialMap/builder.cpp:140
 #, kde-format
-msgid "%1 files: ~ %2"
-msgstr ""
+msgid "%1 file: ~ %2"
+msgid_plural "%1 files: ~ %2"
+msgstr[0] ""
+msgstr[1] ""
 
 #: krusader/DiskUsage/radialMap/segmentTip.cpp:126
 #, kde-format
@@ -1869,6 +1867,10 @@ msgstr ""
 #: krusader/Filter/filtertabs.cpp:48
 msgid "&General"
 msgstr "&Ĝeneralo"
+
+#: krusader/Filter/filtertabs.cpp:53
+msgid "&Advanced"
+msgstr "&Plie"
 
 #: krusader/Filter/filtertabs.cpp:121
 msgid "Couldn't load profile."
@@ -2141,11 +2143,22 @@ msgid "Open the available media list"
 msgstr ""
 
 #: krusader/GUI/mediabutton.cpp:145 krusader/GUI/mediabutton.cpp:577
-msgid "Remote Share"
+#, kde-format
+msgctxt "%1 is the mount point of the remote share"
+msgid "Remote Share [%1]"
 msgstr ""
 
-#: krusader/GUI/mediabutton.cpp:167 krusader/GUI/mediabutton.cpp:170
-#: krusader/VFS/kiojobwrapper.cpp:258
+#: krusader/GUI/mediabutton.cpp:167
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "Unknown label"
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: krusader/GUI/mediabutton.cpp:170
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "Unknown media type"
 msgid "Unknown"
 msgstr "Nekonata"
 
@@ -3010,8 +3023,9 @@ msgid "Add new atomic extension"
 msgstr ""
 
 #: krusader/Konfigurator/kggeneral.cpp:318
-msgid "Extension: "
-msgstr ""
+#, fuzzy
+msgid "Extension:"
+msgstr "Bildoperacioj"
 
 #: krusader/Konfigurator/kggeneral.cpp:322
 msgid ""
@@ -3170,14 +3184,22 @@ msgstr "Nombro:"
 msgid "Frame Color:"
 msgstr ""
 
-#: krusader/Konfigurator/kgpanel.cpp:234 krusader/Konfigurator/kgpanel.cpp:247
-#: krusader/Konfigurator/kgpanel.cpp:261
+#: krusader/Konfigurator/kgpanel.cpp:234
+msgctxt "Frame color"
 msgid "Defined by Layout"
 msgstr ""
+
+#: krusader/Konfigurator/kgpanel.cpp:235
+#, fuzzy
+#| msgid "None"
+msgctxt "Frame color"
+msgid "None"
+msgstr "Neniu"
 
 #: krusader/Konfigurator/kgpanel.cpp:236
 #, fuzzy
 #| msgid "Status"
+msgctxt "Frame color"
 msgid "Statusbar"
 msgstr "Stato"
 
@@ -3185,12 +3207,27 @@ msgstr "Stato"
 msgid "Frame Shape:"
 msgstr ""
 
+#: krusader/Konfigurator/kgpanel.cpp:247
+msgctxt "Frame shape"
+msgid "Defined by Layout"
+msgstr ""
+
+#: krusader/Konfigurator/kgpanel.cpp:248
+#, fuzzy
+#| msgid "None"
+msgctxt "Frame shape"
+msgid "None"
+msgstr "Neniu"
+
 #: krusader/Konfigurator/kgpanel.cpp:249
+msgctxt "Frame shape"
 msgid "Box"
 msgstr ""
 
 #: krusader/Konfigurator/kgpanel.cpp:250
-#: krusader/Konfigurator/konfigurator.cpp:143 krusader/paneltabbar.cpp:44
+#, fuzzy
+#| msgid "Panel"
+msgctxt "Frame shape"
 msgid "Panel"
 msgstr "Panelo"
 
@@ -3198,15 +3235,29 @@ msgstr "Panelo"
 msgid "Frame Shadow:"
 msgstr ""
 
+#: krusader/Konfigurator/kgpanel.cpp:261
+msgctxt "Frame shadow"
+msgid "Defined by Layout"
+msgstr ""
+
+#: krusader/Konfigurator/kgpanel.cpp:262
+#, fuzzy
+#| msgid "None"
+msgctxt "Frame shadow"
+msgid "None"
+msgstr "Neniu"
+
 #: krusader/Konfigurator/kgpanel.cpp:263
 #, fuzzy
 #| msgid "Red"
+msgctxt "Frame shadow"
 msgid "Raised"
 msgstr "Ruĝo"
 
 #: krusader/Konfigurator/kgpanel.cpp:264
 #, fuzzy
 #| msgid "Suspend"
+msgctxt "Frame shadow"
 msgid "Sunken"
 msgstr "Halteti"
 
@@ -3862,6 +3913,10 @@ msgstr "Lanĉo"
 #: krusader/Konfigurator/konfigurator.cpp:141
 msgid "Krusader's settings upon startup"
 msgstr ""
+
+#: krusader/Konfigurator/konfigurator.cpp:143 krusader/paneltabbar.cpp:44
+msgid "Panel"
+msgstr "Panelo"
 
 #: krusader/Konfigurator/konfigurator.cpp:147
 msgid "Basic Operations"
@@ -5736,6 +5791,9 @@ msgid "Mt.Man: working ..."
 msgstr ""
 
 #: krusader/Panel/listpanel.cpp:769
+#, fuzzy
+#| msgid "unknown"
+msgctxt "Unknown file system type"
 msgid "unknown"
 msgstr "nekonata"
 
@@ -5769,7 +5827,7 @@ msgid "Link Here"
 msgstr "Ligi tie"
 
 #: krusader/Panel/listpanel.cpp:1065
-msgid "loading previews"
+msgid "loading previews: %p%"
 msgstr ""
 
 #: krusader/Panel/listpanel.cpp:1112
@@ -5777,12 +5835,15 @@ msgid ">> Reading..."
 msgstr ""
 
 #: krusader/Panel/listpanel.cpp:1132
-msgid "Reading"
-msgstr "Legante"
+#, kde-format
+msgid ">> Reading: %1 % complete..."
+msgstr ""
 
 #: krusader/Panel/listpanel.cpp:1138
-msgid "Reading: "
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Reading"
+msgid ">> Reading: %1"
+msgstr "Legante"
 
 #: krusader/Panel/listpanel.cpp:1177
 #, fuzzy, kde-format
@@ -6225,8 +6286,8 @@ msgstr ""
 msgid "Disk Usage Panel: view the usage of a directory"
 msgstr ""
 
-#: krusader/Panel/panelpopup.cpp:369
-msgid "Disk Usage: "
+#: krusader/Panel/panelpopup.cpp:369 krusader/Panel/panelpopup.cpp:545
+msgid "Disk Usage:"
 msgstr ""
 
 #: krusader/Panel/panelpopup.cpp:379
@@ -6262,10 +6323,6 @@ msgstr ""
 #: krusader/Panel/panelpopup.cpp:538
 msgid "View:"
 msgstr "Rigardo:"
-
-#: krusader/Panel/panelpopup.cpp:545
-msgid "Disk Usage:"
-msgstr ""
 
 #: krusader/Panel/panelpopup.cpp:567
 #, fuzzy, kde-format
@@ -6502,8 +6559,10 @@ msgstr "&Restarti"
 
 #: krusader/Search/krsearchdialog.cpp:402
 #, kde-format
-msgid "Found %1 matches."
-msgstr ""
+msgid "Found %1 match."
+msgid_plural "Found %1 matches."
+msgstr[0] ""
+msgstr[1] ""
 
 #: krusader/Search/krsearchdialog.cpp:427
 msgid ""
@@ -6749,9 +6808,12 @@ msgstr[1] ""
 #: krusader/Synchronizer/synchronizedialog.cpp:64
 #: krusader/Synchronizer/synchronizedialog.cpp:77
 #: krusader/Synchronizer/synchronizedialog.cpp:90
+#: krusader/Synchronizer/synchronizedialog.cpp:172
+#: krusader/Synchronizer/synchronizedialog.cpp:175
+#: krusader/Synchronizer/synchronizedialog.cpp:178
 #, kde-format
 msgid "\tReady: %2/1 file, %3/%4"
-msgid_plural "Ready: %2/%1 files, %3/%4"
+msgid_plural "\tReady: %2/%1 files, %3/%4"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -6784,13 +6846,6 @@ msgstr "&Paŭzi"
 #: krusader/Synchronizer/synchronizedialog.cpp:128
 msgid "&Close"
 msgstr "F&ermi"
-
-#: krusader/Synchronizer/synchronizedialog.cpp:172
-#: krusader/Synchronizer/synchronizedialog.cpp:175
-#: krusader/Synchronizer/synchronizedialog.cpp:178
-#, kde-format
-msgid "\tReady: %1/%2 files, %3/%4"
-msgstr ""
 
 #: krusader/Synchronizer/synchronizedialog.cpp:197
 #: krusader/Synchronizer/synchronizer.cpp:1291
@@ -7683,6 +7738,10 @@ msgstr ""
 msgid "Unpack"
 msgstr ""
 
+#: krusader/VFS/kiojobwrapper.cpp:258
+msgid "Unknown"
+msgstr "Nekonata"
+
 #: krusader/VFS/kiojobwrapper.cpp:287
 msgid "Target"
 msgstr ""
@@ -7743,7 +7802,8 @@ msgid "Failed to pack %1!"
 msgstr ""
 
 #: krusader/VFS/krarchandler.cpp:593
-msgid "Failed to pack: "
+#, kde-format
+msgid "Failed to pack: %1!"
 msgstr ""
 
 #: krusader/VFS/krarchandler.cpp:636
@@ -7840,6 +7900,9 @@ msgstr ""
 #, kde-format
 msgid "Writing to %1 is not supported"
 msgstr ""
+
+#~ msgid "Ok"
+#~ msgstr "Bone"
 
 #~ msgid "="
 #~ msgstr "="
