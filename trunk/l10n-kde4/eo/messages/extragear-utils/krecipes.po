@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-08 04:19+0200\n"
+"POT-Creation-Date: 2012-09-09 04:23+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -286,23 +286,11 @@ msgctxt "Overall Rating"
 msgid "Overall"
 msgstr ""
 
-#: backends/qsqlrecipedb.cpp:70
-msgid "QSqlRecipeDB: Opening Database..."
-msgstr ""
-
 #: backends/qsqlrecipedb.cpp:88
 #, kde-format
 msgid ""
-"The Qt database plug-in (%1) is not installed.  This plug-in is required for "
+"The Qt database plugin (%1) is not installed.  This plugin is required for "
 "using this database backend."
-msgstr ""
-
-#: backends/qsqlrecipedb.cpp:118
-msgid "Parameters set. Calling db->open()"
-msgstr ""
-
-#: backends/qsqlrecipedb.cpp:124
-msgid "Failing to open database. Trying to create it"
 msgstr ""
 
 #: backends/qsqlrecipedb.cpp:130 backends/qsqlrecipedb.cpp:145
@@ -321,10 +309,6 @@ msgstr ""
 #: backends/qsqlrecipedb.cpp:141
 #, kde-format
 msgid "Database message: %1"
-msgstr ""
-
-#: backends/qsqlrecipedb.cpp:142
-msgid "Failing to open database. Exiting\n"
 msgstr ""
 
 #: backends/qsqlrecipedb.cpp:157
@@ -384,7 +368,10 @@ msgid ""
 msgstr ""
 
 #: backends/recipedb.cpp:356
-msgid "Backup failed."
+#, kde-format
+msgid ""
+"Backup failed.\n"
+"%1"
 msgstr ""
 
 #: backends/recipedb.cpp:445
@@ -460,7 +447,7 @@ msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:98
 msgctxt "@action:button Recipe title"
-msgid "Title"
+msgid "Title >>"
 msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:110 dialogs/advancedsearchdialog.cpp:343
@@ -475,7 +462,7 @@ msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:127
 msgctxt "@action:button"
-msgid "Ingredients"
+msgid "Ingredients >>"
 msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:138
@@ -531,7 +518,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Authors"
 msgctxt "@action:button"
-msgid "Authors"
+msgid "Authors >>"
 msgstr "Aŭtoroj"
 
 #: dialogs/advancedsearchdialog.cpp:212
@@ -558,7 +545,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Riel"
 msgctxt "@action:button"
-msgid "Yield"
+msgid "Yield >>"
 msgstr "Riel"
 
 #: dialogs/advancedsearchdialog.cpp:252 dialogs/advancedsearchdialog.cpp:300
@@ -585,7 +572,7 @@ msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:286
 msgctxt "@action:button"
-msgid "Preparation Time"
+msgid "Preparation Time >>"
 msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:312
@@ -602,12 +589,12 @@ msgstr ""
 #, fuzzy
 #| msgid "Instructions"
 msgctxt "@action:button"
-msgid "Instructions"
+msgid "Instructions >>"
 msgstr "Instrukcioj"
 
 #: dialogs/advancedsearchdialog.cpp:361
 msgctxt "@label"
-msgid "Meta Data"
+msgid "Meta Data >>"
 msgstr ""
 
 #: dialogs/advancedsearchdialog.cpp:373
@@ -629,7 +616,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Rating"
 msgctxt "@action:button"
-msgid "Ratings"
+msgid "Ratings >>"
 msgstr "Noto"
 
 #: dialogs/advancedsearchdialog.cpp:425
@@ -1261,7 +1248,8 @@ msgid "USDA Ingredient"
 msgstr ""
 
 #: dialogs/editpropertiesdialog.cpp:167 dialogs/editpropertiesdialog.cpp:258
-#: dialogs/selectpropertydialog.cpp:56
+#: dialogs/selectpropertydialog.cpp:56 widgets/propertylistview.cpp:130
+#: widgets/propertylistview.cpp:164
 #, fuzzy
 #| msgid "Property"
 msgctxt "@title:column"
@@ -1504,12 +1492,14 @@ msgstr ""
 
 #: dialogs/ingredientparserdialog.cpp:66
 #: dialogs/ingredientparserdialog.cpp:115 dialogs/recipeinputdialog.cpp:346
+#: widgets/ingredientlistview.cpp:107 widgets/ingredientlistview.cpp:132
 msgctxt "@title:column"
 msgid "Ingredient"
 msgstr ""
 
 #: dialogs/ingredientparserdialog.cpp:69
 #: dialogs/ingredientparserdialog.cpp:118 dialogs/recipeinputdialog.cpp:350
+#: widgets/prepmethodlistview.cpp:52
 msgctxt "@title:column"
 msgid "Preparation Method"
 msgstr ""
@@ -1764,7 +1754,7 @@ msgctxt "@info:tooltip"
 msgid "Paste Ingredients"
 msgstr ""
 
-#: dialogs/recipeinputdialog.cpp:349
+#: dialogs/recipeinputdialog.cpp:349 widgets/propertylistview.cpp:131
 #, fuzzy
 #| msgid "Units"
 msgctxt "@title:column"
@@ -2103,33 +2093,28 @@ msgctxt "@info"
 msgid "Invalid input"
 msgstr "Nevalida enigo"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, ResizeRecipeDialog)
-#: dialogs/resizerecipedialog.ui:14
-msgid "Form"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QRadioButton, m_yieldButton)
-#: dialogs/resizerecipedialog.ui:23
+#: dialogs/resizerecipedialog.ui:20
 msgid "&Scale by yield"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: dialogs/resizerecipedialog.ui:52
+#: dialogs/resizerecipedialog.ui:49
 msgid "&New yield"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/resizerecipedialog.ui:62
+#: dialogs/resizerecipedialog.ui:59
 msgid "Current &yield:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, m_factorButton)
-#: dialogs/resizerecipedialog.ui:78
+#: dialogs/resizerecipedialog.ui:75
 msgid "Scale b&y factor"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: dialogs/resizerecipedialog.ui:97
+#: dialogs/resizerecipedialog.ui:94
 msgid "&Factor (e.g. 1/2 to half, 3 to triple):"
 msgstr ""
 
@@ -2140,7 +2125,20 @@ msgctxt "@title:window"
 msgid "Authors"
 msgstr "Aŭtoroj"
 
-#: dialogs/selectauthorsdialog.cpp:74 widgets/kreauthorlistwidget.cpp:36
+#: dialogs/selectauthorsdialog.cpp:74 dialogs/selectpropertydialog.cpp:54
+#: dialogs/selectunitdialog.cpp:39 dialogs/shoppinglistdialog.cpp:120
+#: widgets/authorlistview.cpp:57 widgets/authorlistview.cpp:117
+#: widgets/categorylistview.cpp:319 widgets/categorylistview.cpp:383
+#: widgets/headerlistview.cpp:60 widgets/ingredientlistview.cpp:111
+#: widgets/ingredientlistview.cpp:136 widgets/kreauthorlistwidget.cpp:36
+#: widgets/krecategorieslistwidget.cpp:42 widgets/prepmethodlistview.cpp:56
+#: widgets/propertylistview.cpp:135 widgets/unitlistview.cpp:70
+msgctxt "@title:column"
+msgid "Id"
+msgstr ""
+
+#: dialogs/selectauthorsdialog.cpp:74 widgets/authorlistview.cpp:53
+#: widgets/authorlistview.cpp:113 widgets/kreauthorlistwidget.cpp:36
 #, fuzzy
 #| msgid "Author"
 msgctxt "@title:column"
@@ -2303,7 +2301,6 @@ msgid "Title"
 msgstr ""
 
 #: dialogs/setupdisplay.cpp:121 exporters/htmlexporter.cpp:208
-#: exporters/plaintextexporter.cpp:94
 msgid "Preparation Time"
 msgstr ""
 
@@ -2312,14 +2309,12 @@ msgid "Photo"
 msgstr "Foto"
 
 #: dialogs/setupdisplay.cpp:123 exporters/htmlexporter.cpp:233
-#: exporters/plaintextexporter.cpp:76 exporters/xsltexporter.cpp:49
-#: krecipesview.cpp:380 krecipesview.cpp:511
+#: exporters/xsltexporter.cpp:49 krecipesview.cpp:380 krecipesview.cpp:511
 msgid "Authors"
 msgstr "Aŭtoroj"
 
 #: dialogs/setupdisplay.cpp:124 exporters/htmlexporter.cpp:247
-#: exporters/plaintextexporter.cpp:82 exporters/xsltexporter.cpp:46
-#: krecipesview.cpp:379 krecipesview.cpp:503
+#: exporters/xsltexporter.cpp:46 krecipesview.cpp:379 krecipesview.cpp:503
 msgid "Categories"
 msgstr "Kategorioj"
 
@@ -2329,7 +2324,7 @@ msgid "Ingredients"
 msgstr ""
 
 #: dialogs/setupdisplay.cpp:127 exporters/htmlexporter.cpp:396
-#: exporters/plaintextexporter.cpp:139 exporters/xsltexporter.cpp:55
+#: exporters/plaintextexporter.cpp:135 exporters/xsltexporter.cpp:55
 msgid "Ratings"
 msgstr ""
 
@@ -2484,7 +2479,8 @@ msgid "Cancel"
 msgstr "Rezigni"
 
 #: dialogs/similarcategoriesdialog.cpp:192
-#: dialogs/similarcategoriesdialog.cpp:194
+#: dialogs/similarcategoriesdialog.cpp:194 widgets/categorylistview.cpp:312
+#: widgets/categorylistview.cpp:379
 #, fuzzy
 #| msgid "Category"
 msgctxt "@title:column"
@@ -2541,15 +2537,34 @@ msgstr ""
 msgid "Overall Rating"
 msgstr ""
 
-#: exporters/plaintextexporter.cpp:88
-msgid "Yields"
+#: exporters/plaintextexporter.cpp:76
+#, fuzzy, kde-format
+#| msgid "Authors"
+msgid "Authors: %1"
+msgstr "Aŭtoroj"
+
+#: exporters/plaintextexporter.cpp:81
+#, fuzzy, kde-format
+#| msgid "Categories"
+msgid "Categories: %1"
+msgstr "Kategorioj"
+
+#: exporters/plaintextexporter.cpp:86
+#, fuzzy, kde-format
+#| msgid "Riel"
+msgid "Yields: %1"
+msgstr "Riel"
+
+#: exporters/plaintextexporter.cpp:91
+#, kde-format
+msgid "Preparation Time: %1"
 msgstr ""
 
-#: exporters/plaintextexporter.cpp:114 exporters/plaintextexporter.cpp:124
+#: exporters/plaintextexporter.cpp:110 exporters/plaintextexporter.cpp:120
 msgid "or"
 msgstr "aŭ"
 
-#: exporters/plaintextexporter.cpp:152
+#: exporters/plaintextexporter.cpp:148
 #, kde-format
 msgid "1 star"
 msgid_plural "%1 stars"
@@ -2569,8 +2584,7 @@ msgstr ""
 msgid "Amount"
 msgstr "Kvanto"
 
-#: exporters/xsltexporter.cpp:51 widgets/ingredientlistview.cpp:107
-#: widgets/ingredientlistview.cpp:132
+#: exporters/xsltexporter.cpp:51
 msgid "Ingredient"
 msgstr ""
 
@@ -2636,11 +2650,6 @@ msgstr ""
 
 #: importers/kreimporter.cpp:76
 msgid "This file does not appear to be a *.kreml file"
-msgstr ""
-
-#: importers/kreimporter.cpp:82
-#, kde-format
-msgid "KreML version %1"
 msgstr ""
 
 #: importers/mmfimporter.cpp:69 importers/mxpimporter.cpp:55
@@ -2971,11 +2980,6 @@ msgstr ""
 msgid "Run the SQLite converter"
 msgstr ""
 
-#: krecipesview.cpp:347 krecipesview.cpp:362
-msgctxt "Exiting Krecipes"
-msgid "Exiting"
-msgstr ""
-
 #: krecipesview.cpp:354
 msgid ""
 "\n"
@@ -2984,7 +2988,6 @@ msgid ""
 msgstr ""
 
 #: krecipesview.cpp:377 krecipesview.cpp:487 pref.cpp:411
-#: widgets/propertylistview.cpp:131
 msgid "Units"
 msgstr "Unuoj"
 
@@ -3053,20 +3056,8 @@ msgstr ""
 msgid "Unable to setup database"
 msgstr ""
 
-#: krecipesview.cpp:1013
-msgid "Code error. No DB support has been included. Exiting"
-msgstr ""
-
-#: krecipesview.cpp:1175 krecipesview.cpp:1201
-msgid "Code error. No DB support was built in. Exiting"
-msgstr ""
-
 #: krecipesview.cpp:1184
 msgid "Unable to open database"
-msgstr ""
-
-#: krecipesview.cpp:1206
-msgid "DB started correctly\n"
 msgstr ""
 
 #: krecipesview.cpp:1214
@@ -3846,29 +3837,24 @@ msgstr ""
 msgid "Local or Remote PostgreSQL Database"
 msgstr ""
 
-#: widgets/authorlistview.cpp:53 widgets/authorlistview.cpp:113
-msgid "Author"
-msgstr "Aŭtoro"
-
 #: widgets/categorycombobox.cpp:36 widgets/categorycombobox.cpp:63
 msgid "All Categories"
 msgstr ""
 
-#: widgets/categorylistview.cpp:312 widgets/categorylistview.cpp:379
-msgid "Category"
-msgstr "Kategorio"
-
 #: widgets/dblistviewbase.cpp:33
 msgctxt "Previous item"
-msgid "Previous"
+msgid "<< Previous"
 msgstr ""
 
 #: widgets/dblistviewbase.cpp:49
 msgctxt "Next item"
-msgid "Next"
+msgid "Next >>"
 msgstr ""
 
 #: widgets/headerlistview.cpp:55
+#, fuzzy
+#| msgid "Header"
+msgctxt "@title:column"
 msgid "Header"
 msgstr "Kapo"
 
@@ -3977,23 +3963,20 @@ msgctxt "@action:button Up to top menu"
 msgid "Up..."
 msgstr ""
 
-#: widgets/prepmethodlistview.cpp:52
-msgid "Preparation Method"
-msgstr ""
-
-#: widgets/propertylistview.cpp:130 widgets/propertylistview.cpp:164
-msgid "Property"
-msgstr "Eco"
-
 #: widgets/propertylistview.cpp:163
+#, fuzzy
+#| msgid "Enabled"
+msgctxt "@title:column"
 msgid "Enabled"
 msgstr "Ebligita"
 
 #: widgets/propertylistview.cpp:165
+msgctxt "@title:column"
 msgid "Min. Value"
 msgstr ""
 
 #: widgets/propertylistview.cpp:166
+msgctxt "@title:column"
 msgid "Max. Value"
 msgstr ""
 
@@ -4077,6 +4060,15 @@ msgstr ""
 #: widgets/weightinput.cpp:23
 msgid "-No Preparation-"
 msgstr ""
+
+#~ msgid "Author"
+#~ msgstr "Aŭtoro"
+
+#~ msgid "Category"
+#~ msgstr "Kategorio"
+
+#~ msgid "Property"
+#~ msgstr "Eco"
 
 #~ msgid "ISO A3"
 #~ msgstr "ISO A3"
