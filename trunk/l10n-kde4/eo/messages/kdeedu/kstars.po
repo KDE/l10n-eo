@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-25 04:21+0200\n"
+"POT-Creation-Date: 2012-10-26 02:45+0200\n"
 "PO-Revision-Date: 2009-12-21 08:35+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -2617,25 +2617,49 @@ msgid ""
 "the <span style=\" font-weight:600;\">Next</span> button.</p></body></html>"
 msgstr ""
 
-#: ekos/capture.cpp:116
+#: ekos/capture.cpp:27
+msgid "Idle"
+msgstr ""
+
+#: ekos/capture.cpp:27
+#, fuzzy
+#| msgctxt "City name (optional, probably does not need a translation)"
+#| msgid "Prosser"
+msgid "In progress"
+msgstr "Prosser"
+
+#: ekos/capture.cpp:27 ekos/guide/rcalibration.cpp:366
+#: ekos/guide/rcalibration.cpp:384 ekos/guide/rcalibration.cpp:547
+#: ekos/guide/rcalibration.cpp:634
+#, fuzzy
+#| msgid "Write Error"
+msgid "Error"
+msgstr "Skriba eraro"
+
+#: ekos/capture.cpp:27
+#, fuzzy
+msgid "Complete"
+msgstr "Kalkulu"
+
+#: ekos/capture.cpp:143 ekos/capture.cpp:586
 msgid "Auto dark subtract is not supported in batch mode."
 msgstr ""
 
-#: ekos/capture.cpp:335
+#: ekos/capture.cpp:314
 #, kde-format
 msgid "Unable to find FILTER_SLOT property in driver %1"
 msgstr ""
 
-#: ekos/capture.cpp:405
+#: ekos/capture.cpp:387
 #, kde-format
 msgid "Received image %1 out of %2."
 msgstr ""
 
-#: ekos/capture.cpp:454
+#: ekos/capture.cpp:439
 msgid "Failed to set sub frame."
 msgstr ""
 
-#: ekos/capture.cpp:461
+#: ekos/capture.cpp:453
 msgid "Failed to set binning."
 msgstr ""
 
@@ -2649,7 +2673,7 @@ msgstr "Konservu bildon"
 msgid "Capturing image..."
 msgstr "Ŝarĝante KStars..."
 
-#: ekos/capture.cpp:554 ekos/ekosmanager.cpp:977 ekos/focus.cpp:696
+#: ekos/capture.cpp:552 ekos/ekosmanager.cpp:977 ekos/focus.cpp:696
 #: ekos/guide.cpp:287
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
@@ -2657,14 +2681,14 @@ msgid "%1 %2"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, secondsLabel)
-#: ekos/capture.cpp:574 ekos/capture.ui:654
+#: ekos/capture.cpp:572 ekos/capture.ui:799
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Escondido"
 msgid "second left"
 msgstr "Escondido"
 
-#: ekos/capture.cpp:576
+#: ekos/capture.cpp:574
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Escondido"
@@ -2829,24 +2853,25 @@ msgid "Active CCD frame type"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, frameTypeCheck)
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
 #. i18n: ectx: property (text), widget (QTreeWidget, OptionsList)
-#: ekos/capture.ui:381 tools/observinglist.cpp:109 tools/observinglist.cpp:112
-#: tools/optionstreeview.ui:33
+#: ekos/capture.ui:381 ekos/capture.ui:736 tools/observinglist.cpp:109
+#: tools/observinglist.cpp:112 tools/optionstreeview.ui:33
 msgid "Type"
 msgstr "Tipo"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, filterCheck)
-#. i18n: ectx: property (toolTip), widget (QCheckBox, expDurationCheck)
-#: ekos/capture.ui:388 ekos/capture.ui:398
+#: ekos/capture.ui:388
 msgid "Active filter slot"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, filterCheck)
 #. i18n: ectx: property (title), widget (QGroupBox, setupGroup)
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: attribute (title), widget (QWidget, Filter)
-#: ekos/capture.ui:391 ekos/capture.ui:488 ekos/opsekos.ui:178
-#: oal/equipmentwriter.ui:553
+#: ekos/capture.ui:391 ekos/capture.ui:488 ekos/capture.ui:731
+#: ekos/opsekos.ui:178 oal/equipmentwriter.ui:553
 #, fuzzy
 msgid "Filter"
 msgstr "Montru stelojn pli helajn ol"
@@ -2887,24 +2912,60 @@ msgid "Filter:"
 msgstr "Montru stelojn pli helajn ol"
 
 #. i18n: ectx: property (text), widget (QPushButton, previewB)
-#: ekos/capture.ui:580
+#: ekos/capture.ui:665
 #, fuzzy
 #| msgid "Preview of %1"
 msgid "Preview"
 msgstr "Antaŭrigardo de %1"
 
 #. i18n: ectx: property (text), widget (QPushButton, startB)
-#: ekos/capture.ui:590
+#: ekos/capture.ui:675
 msgid "&Start Sequence"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, stopB)
-#: ekos/capture.ui:606
+#: ekos/capture.ui:691
 msgid "S&top"
 msgstr "&Haltigo"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ekos/capture.ui:713
+msgid "Sequence Queue"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#. i18n: ectx: property (text), widget (QTreeWidget, localTreeWidget)
+#. i18n: ectx: property (text), widget (QTreeWidget, clientTreeWidget)
+#: ekos/capture.ui:726 ekos/focus.ui:314 indi/devmanager.ui:194
+#: indi/devmanager.ui:288 indi/drivermanager.ui:190 indi/drivermanager.ui:276
+#, fuzzy
+msgid "Status"
+msgstr "Steloj"
+
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
+#: ekos/capture.ui:741
+#, fuzzy
+#| msgid "in"
+msgid "Bin"
+msgstr "Aiken"
+
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
+#: ekos/capture.ui:746
+#, fuzzy
+#| msgctxt "City in Newfoundland Canada"
+#| msgid "Eastport"
+msgid "Exp"
+msgstr "Eastport"
+
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
+#: ekos/capture.ui:751
+#, fuzzy
+msgid "Count"
+msgstr "Lando:"
+
 #. i18n: ectx: property (title), widget (QGroupBox, progressGroup)
-#: ekos/capture.ui:621
+#: ekos/capture.ui:766
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Prosser"
@@ -2912,14 +2973,14 @@ msgid "Progress"
 msgstr "Prosser"
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel_3)
-#: ekos/capture.ui:631
+#: ekos/capture.ui:776
 #, fuzzy
 #| msgid "Exposure:"
 msgid "Expose:"
 msgstr "Ekspono:"
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel_2)
-#: ekos/capture.ui:661
+#: ekos/capture.ui:806
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Prosser"
@@ -2927,12 +2988,12 @@ msgid "Progress:"
 msgstr "Prosser"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2_3)
-#: ekos/capture.ui:684
+#: ekos/capture.ui:829
 msgid "of"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, completedLabel_2)
-#: ekos/capture.ui:710
+#: ekos/capture.ui:855
 #, fuzzy
 msgid "completed"
 msgstr "Kalkulu"
@@ -3329,15 +3390,6 @@ msgstr "Konservu bildon"
 msgid "Stop"
 msgstr ""
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#. i18n: ectx: property (text), widget (QTreeWidget, localTreeWidget)
-#. i18n: ectx: property (text), widget (QTreeWidget, clientTreeWidget)
-#: ekos/focus.ui:314 indi/devmanager.ui:194 indi/devmanager.ui:288
-#: indi/drivermanager.ui:190 indi/drivermanager.ui:276
-#, fuzzy
-msgid "Status"
-msgstr "Steloj"
-
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ekos/focus.ui:320
 msgid "HFR:"
@@ -3606,13 +3658,6 @@ msgstr ""
 #: ekos/guide/rcalibration.cpp:541 ekos/guide/rcalibration.cpp:628
 msgid "Calibration completed."
 msgstr ""
-
-#: ekos/guide/rcalibration.cpp:366 ekos/guide/rcalibration.cpp:384
-#: ekos/guide/rcalibration.cpp:547 ekos/guide/rcalibration.cpp:634
-#, fuzzy
-#| msgid "Write Error"
-msgid "Error"
-msgstr "Skriba eraro"
 
 #: ekos/guide/rcalibration.cpp:366 ekos/guide/rcalibration.cpp:384
 #: ekos/guide/rcalibration.cpp:547 ekos/guide/rcalibration.cpp:634
@@ -4441,7 +4486,7 @@ msgid ""
 "from the Device Manager in the devices menu."
 msgstr ""
 
-#: indi/indiccd.cpp:695
+#: indi/indiccd.cpp:696
 #, fuzzy, kde-format
 msgid "FITS file saved to %1"
 msgstr "nevalida URLo"
@@ -46285,11 +46330,6 @@ msgstr "Ŝarĝante laktan vojon"
 #, fuzzy
 #~ msgid "Object type"
 #~ msgstr "Objektotipo:"
-
-#~| msgctxt "City name (optional, probably does not need a translation)"
-#~| msgid "Aiken"
-#~ msgid "in"
-#~ msgstr "Aiken"
 
 #~| msgctxt "City name (optional, probably does not need a translation)"
 #~| msgid "Bucarest"
