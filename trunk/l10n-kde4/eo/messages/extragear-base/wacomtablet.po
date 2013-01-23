@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacomtablet\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-11 02:25+0100\n"
+"POT-Creation-Date: 2013-01-23 02:20+0100\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -131,7 +131,27 @@ msgctxt "@action"
 msgid "Toggle the Stylus Tool Relative/Absolute"
 msgstr ""
 
-#: src/kcmodule/generalwidget.cpp:91
+#: src/kcmodule/generalwidget.cpp:91 src/kded/tabletdaemon.cpp:154
+msgctxt "@action"
+msgid "Toggle between fullscreen/first screen/second screen"
+msgstr ""
+
+#: src/kcmodule/generalwidget.cpp:96
+msgctxt "@action"
+msgid "Map to fullscreen"
+msgstr ""
+
+#: src/kcmodule/generalwidget.cpp:101 src/kded/tabletdaemon.cpp:164
+msgctxt "@action"
+msgid "Map to screen 1"
+msgstr ""
+
+#: src/kcmodule/generalwidget.cpp:106 src/kded/tabletdaemon.cpp:169
+msgctxt "@action"
+msgid "Map to screen 2"
+msgstr ""
+
+#: src/kcmodule/generalwidget.cpp:111
 msgid "Wacom Tablet Settings"
 msgstr ""
 
@@ -401,9 +421,25 @@ msgctxt "Action when the Wheel is used downwards"
 msgid "Down:"
 msgstr ""
 
-#: src/kcmodule/padmapping.cpp:326
+#: src/kcmodule/padmapping.cpp:376
 #, kde-format
 msgid "Screen %1"
+msgstr ""
+
+#: src/kcmodule/padmapping.cpp:420
+msgid "Fullscreen TabletArea"
+msgstr ""
+
+#: src/kcmodule/padmapping.cpp:424
+msgid "Part of screen TabletArea"
+msgstr ""
+
+#: src/kcmodule/padmapping.cpp:429
+msgid "Screen 1 TabletArea"
+msgstr ""
+
+#: src/kcmodule/padmapping.cpp:433
+msgid "Screen 2 TabletArea"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PadMapping)
@@ -457,7 +493,7 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, screenAreaBox)
-#: src/kcmodule/padmapping.ui:81 src/kcmodule/padmapping.ui:217
+#: src/kcmodule/padmapping.ui:81 src/kcmodule/padmapping.ui:214
 msgid "Screen Area"
 msgstr ""
 
@@ -497,9 +533,9 @@ msgstr ""
 msgid "Full screen"
 msgstr ""
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_TabletArea)
 #. i18n: ectx: property (title), widget (QGroupBox, tabletAreaBox)
-#: src/kcmodule/padmapping.ui:145 src/kcmodule/padmapping.ui:228
+#: src/kcmodule/padmapping.ui:145 src/kcmodule/padmapping.ui:225
 msgid "Tablet Area"
 msgstr ""
 
@@ -523,35 +559,30 @@ msgstr ""
 msgid "Part of the Tablet"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, forceProportions)
+#. i18n: ectx: property (text), widget (QPushButton, forceProportions)
 #: src/kcmodule/padmapping.ui:174
-msgid "Force the tablet to keep the shape of the used screen area."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, forceProportions)
-#: src/kcmodule/padmapping.ui:177
 msgid "Force Proportions"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, calibrateButton)
-#: src/kcmodule/padmapping.ui:187
+#: src/kcmodule/padmapping.ui:181
 msgid "Opens a fullscreen window to calibrate the tablet."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, calibrateButton)
-#: src/kcmodule/padmapping.ui:190
+#: src/kcmodule/padmapping.ui:184
 msgid "Calibrate"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, screenAreaBox)
-#: src/kcmodule/padmapping.ui:214
+#: src/kcmodule/padmapping.ui:211
 msgid ""
 "Select the screen area that should be mapped onto the tablet. Use the drag "
 "handles to change the selected area."
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, tabletAreaBox)
-#: src/kcmodule/padmapping.ui:225
+#: src/kcmodule/padmapping.ui:222
 msgid ""
 "Select the tablet area that should be used to map the screen space on it. "
 "Use the drag handles to change the selected area."
@@ -1101,11 +1132,16 @@ msgstr ""
 msgid "Tap time:"
 msgstr ""
 
-#: src/kded/tabletdaemon.cpp:163
+#: src/kded/tabletdaemon.cpp:159
+msgctxt "@action"
+msgid "Map to all fullscreen"
+msgstr ""
+
+#: src/kded/tabletdaemon.cpp:183
 msgid "Graphic Tablet Configuration daemon"
 msgstr ""
 
-#: src/kded/tabletdaemon.cpp:164
+#: src/kded/tabletdaemon.cpp:184
 msgid "A Wacom tablet control daemon"
 msgstr ""
 
@@ -1127,11 +1163,11 @@ msgstr ""
 msgid "Tablet %1 removed"
 msgstr ""
 
-#: src/kded/tablethandler.cpp:262
+#: src/kded/tablethandler.cpp:468
 msgid "Graphic Tablet error"
 msgstr ""
 
-#: src/kded/tablethandler.cpp:263
+#: src/kded/tablethandler.cpp:469
 #, kde-format
 msgid "Profile <b>%1</b> does not exist"
 msgstr ""
