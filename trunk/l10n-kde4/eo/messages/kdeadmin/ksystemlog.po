@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemlog\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-11 03:38+0100\n"
+"POT-Creation-Date: 2012-08-20 03:21+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -24,6 +24,60 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
 
+#. i18n: ectx: label, entry (StartupLogMode), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:13
+msgid "Load this log mode at startup."
+msgstr ""
+
+#. i18n: ectx: label, entry (MaxLines), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:18
+msgid "The log view line count limit."
+msgstr ""
+
+#. i18n: ectx: label, entry (DeleteDuplicatedLines), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:23
+msgid "Option is true if the user wants to delete repeated log lines."
+msgstr ""
+
+#. i18n: ectx: label, entry (DeleteProcessIdentifier), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:28
+msgid ""
+"Option is true if the PID in the process column of the SystemLog is to be "
+"omitted."
+msgstr ""
+
+#. i18n: ectx: label, entry (ColorizeLogLines), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:33
+msgid ""
+"Option is true if the log lines are to be colored depending on their log "
+"level."
+msgstr ""
+
+#. i18n: ectx: label, entry (TooltipEnabled), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:39
+msgid "Whether the tooltips are enabled."
+msgstr ""
+
+#. i18n: ectx: label, entry (NewLinesDisplayed), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:44
+msgid "Whether new lines are displayed."
+msgstr ""
+
+#. i18n: ectx: label, entry (ToggleFilterBar), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:49
+msgid "Whether the filter bar is shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (DateFormat), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:54
+msgid "The date format of log lines."
+msgstr ""
+
+#. i18n: ectx: label, entry (SambaPaths), group (KSystemLogGeneral)
+#: src/config/ksystemlog.kcfg:70
+msgid "The Samba log file paths."
+msgstr ""
+
 #: src/configurationDialog.cpp:54
 msgid "Settings"
 msgstr "Agordo"
@@ -32,13 +86,101 @@ msgstr "Agordo"
 msgid "General"
 msgstr "Ĝeneralo"
 
-#: src/detailDialog.cpp:41
+#. i18n: ectx: property (text), widget (QPushButton, previous)
+#: src/detailDialog.cpp:41 src/lib/logViewSearchWidgetBase.ui:68
 msgid "&Previous"
 msgstr "An&taŭa"
 
-#: src/detailDialog.cpp:45
+#. i18n: ectx: property (text), widget (QPushButton, next)
+#: src/detailDialog.cpp:45 src/lib/logViewSearchWidgetBase.ui:58
 msgid "&Next"
 msgstr "Sek&va"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, DetailDialogBase)
+#: src/detailDialogBase.ui:13
+msgid "Log Line Details"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QDialog, DetailDialogBase)
+#: src/detailDialogBase.ui:16
+msgid ""
+"This dialog displays detailed information about the currently selected log "
+"line."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KTextEdit, message)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/detailDialogBase.ui:28 src/loggerDialogBase.ui:33
+#: src/modes/acpid/acpidAnalyzer.h:51 src/modes/apache/apacheAnalyzer.h:55
+#: src/modes/base/syslogAnalyzer.cpp:61 src/modes/cups/cupsAnalyzer.h:56
+#: src/modes/cups/cupsPdfAnalyzer.h:55 src/modes/kernel/kernelAnalyzer.h:60
+#: src/modes/samba/sambaAnalyzer.h:58 src/modes/xorg/xorgAnalyzer.h:61
+#: src/modes/xsession/xsessionAnalyzer.h:55
+msgid "Message"
+msgstr "Mesaĝo"
+
+#. i18n: ectx: property (text), widget (QLabel, icon)
+#: src/detailDialogBase.ui:44
+msgid "Icon"
+msgstr "Piktograma"
+
+#. i18n: ectx: property (text), widget (QLabel, header)
+#: src/detailDialogBase.ui:60
+#, fuzzy
+#| msgid "Information"
+msgid "Main information"
+msgstr "Informo"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, previous)
+#: src/detailDialogBase.ui:90
+msgid "Move to the previous line"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KPushButton, previous)
+#: src/detailDialogBase.ui:93
+msgid ""
+"Moves to the previous line. This button is deactivated if there is no "
+"previous log line."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, previous)
+#: src/detailDialogBase.ui:96
+msgid "&Back"
+msgstr "&Malantaŭen"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, next)
+#: src/detailDialogBase.ui:112
+msgid "Move to the next line"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KPushButton, next)
+#: src/detailDialogBase.ui:115
+msgid ""
+"Moves to the next line. This button is deactivated if there is no next log "
+"line."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, next)
+#: src/detailDialogBase.ui:118
+msgid "&Forward"
+msgstr "&Plusendi"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, closeButton)
+#: src/detailDialogBase.ui:150
+#, fuzzy
+#| msgid "Close the current tab"
+msgid "Close the Detail dialog."
+msgstr "Fermi la nunan folion"
+
+#. i18n: ectx: property (whatsThis), widget (KPushButton, closeButton)
+#: src/detailDialogBase.ui:153
+msgid "Closes this Detail dialog."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, closeButton)
+#: src/detailDialogBase.ui:156
+msgid "&Close"
+msgstr "F&ermi"
 
 #: src/generalConfigurationWidget.cpp:50
 msgid "No Log Mode"
@@ -49,6 +191,168 @@ msgstr ""
 msgctxt "Date format Option (Date example)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/generalConfigurationWidgetBase.ui:17
+msgid "Startup"
+msgstr "Lanĉo"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/generalConfigurationWidgetBase.ui:23
+msgid "Load this log mode at startup:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, startupLogMode)
+#: src/generalConfigurationWidgetBase.ui:33
+msgid "The log mode which is loaded by default at startup"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, startupLogMode)
+#: src/generalConfigurationWidgetBase.ui:36
+msgid ""
+"The log mode loaded by default at startup. Choose 'No Log Mode' if you do "
+"not want this to happen."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/generalConfigurationWidgetBase.ui:46
+msgid "Log Lines List"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, maxLinesLabel)
+#: src/generalConfigurationWidgetBase.ui:54
+msgid "Maximum lines displayed:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, maxLines)
+#: src/generalConfigurationWidgetBase.ui:70
+msgid "Choose here the maximum number of log lines displayed in the main view."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, maxLines)
+#: src/generalConfigurationWidgetBase.ui:73
+msgid ""
+"You can choose here the maximum number of log lines displayed in the main "
+"view."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, deleteDuplicatedLines)
+#: src/generalConfigurationWidgetBase.ui:91
+msgid ""
+"Select this option if you want to delete duplicate log lines <b>(may be slow)"
+"</b>."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, deleteDuplicatedLines)
+#: src/generalConfigurationWidgetBase.ui:94
+msgid ""
+"Select this option if you want to delete duplicate log lines. <b>This option "
+"can slow log reading</b>."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, deleteDuplicatedLines)
+#: src/generalConfigurationWidgetBase.ui:97
+msgid "Remove &duplicate log lines (may be slower)"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/generalConfigurationWidgetBase.ui:107 src/loggerDialogBase.ui:206
+msgid "Options"
+msgstr "Opcioj"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, deleteProcessId)
+#: src/generalConfigurationWidgetBase.ui:113
+msgid "Remove process identifier from process name."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, deleteProcessId)
+#: src/generalConfigurationWidgetBase.ui:116
+msgid ""
+"Select this option if you want to remove the process identifier from the "
+"process name. For example, the <b>Process</b> column may contain entries "
+"such as <i>cron<b>[3433]</b></i>. If this option is activated, the bold part "
+"will be removed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, deleteProcessId)
+#: src/generalConfigurationWidgetBase.ui:119
+msgid "Remove &identifier from process name"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, colorizeLogLines)
+#: src/generalConfigurationWidgetBase.ui:126
+msgid ""
+"This option allows log lines to be colored depending on their log level."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, colorizeLogLines)
+#: src/generalConfigurationWidgetBase.ui:129
+msgid ""
+"This option allows log lines to be colored depending on their log level. For "
+"example, errors will be shown in red, warnings in orange, and so on. This "
+"will help you to see problems more easily."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, colorizeLogLines)
+#: src/generalConfigurationWidgetBase.ui:132
+msgid "&Colored log lines"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/generalConfigurationWidgetBase.ui:142
+msgid "Date Format"
+msgstr "Datoformato"
+
+#. i18n: ectx: property (text), widget (QRadioButton, formatShortDate)
+#: src/generalConfigurationWidgetBase.ui:151
+#, fuzzy
+#| msgid "Date Format"
+msgid "&Short date format"
+msgstr "Datoformato"
+
+#. i18n: ectx: property (text), widget (QRadioButton, formatFancyShortDate)
+#: src/generalConfigurationWidgetBase.ui:158
+msgid "&Fancy short date format"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, formatLongDate)
+#: src/generalConfigurationWidgetBase.ui:165
+#, fuzzy
+#| msgid "Date Format"
+msgid "&Long date format"
+msgstr "Datoformato"
+
+#. i18n: ectx: property (text), widget (QRadioButton, formatFancyLongDate)
+#: src/generalConfigurationWidgetBase.ui:172
+msgid "Fanc&y long date format"
+msgstr ""
+
+#. i18n: ectx: Menu (edit)
+#: src/ksystemlogui.rc:13
+msgid "&Edit"
+msgstr "&Redakti"
+
+#. i18n: ectx: Menu (logs)
+#: src/ksystemlogui.rc:31
+msgid "Logs"
+msgstr ""
+
+#. i18n: ectx: Menu (window)
+#: src/ksystemlogui.rc:36
+msgid "&Window"
+msgstr "Fe&nestro"
+
+#. i18n: ectx: ToolBar (logToolBar)
+#: src/ksystemlogui.rc:55
+#, fuzzy
+#| msgid "Main Toolbar"
+msgid "Logs Toolbar"
+msgstr "Ĉefa ilobreto"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: src/ksystemlogui.rc:60
+msgid "Main Toolbar"
+msgstr "Ĉefa ilobreto"
 
 #: src/lib/analyzer.cpp:146
 #, kde-format
@@ -313,6 +617,21 @@ msgstr ""
 msgid "Phrase not found."
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, searchLabel)
+#: src/lib/logViewSearchWidgetBase.ui:41
+msgid "Find:"
+msgstr "Trovu:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, caseSensitive)
+#: src/lib/logViewSearchWidgetBase.ui:78
+msgid "Match &case"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, highlightAllButton)
+#: src/lib/logViewSearchWidgetBase.ui:85
+msgid "&Highlight all"
+msgstr ""
+
 #: src/lib/logViewWidget.cpp:124
 #, kde-format
 msgid "Display/Hide the '%1' column"
@@ -434,6 +753,73 @@ msgstr ""
 #: src/loggerDialog.cpp:253
 msgid "File not valid"
 msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, LoggerDialogBase)
+#: src/loggerDialogBase.ui:24
+#, fuzzy
+#| msgid "Message"
+msgid "Log Message"
+msgstr "Mesaĝo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, messageActivation)
+#: src/loggerDialogBase.ui:39
+msgid "&Message:"
+msgstr "&Mesaĝo:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, fileActivation)
+#: src/loggerDialogBase.ui:52
+msgid "&File content:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/loggerDialogBase.ui:75
+msgid "Properties"
+msgstr "Ecoj"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: src/loggerDialogBase.ui:101
+msgid "&Priority:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#: src/loggerDialogBase.ui:162
+msgid "&Facility:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, tagActivation)
+#: src/loggerDialogBase.ui:229
+msgid "&Tag:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, useProcessIdentifier)
+#: src/loggerDialogBase.ui:241
+msgid "Log process &identifier"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, loggerManual)
+#: src/loggerDialogBase.ui:290
+msgid "Open the 'logger' command manual."
+msgstr ""
+
+#. i18n: ectx: property (statusTip), widget (QLabel, loggerManual)
+#: src/loggerDialogBase.ui:293
+msgid "This link opens the 'logger' command manual."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, loggerManual)
+#: src/loggerDialogBase.ui:296
+msgid "<a href=\"man:/logger\">Logger Manual</a>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonOK)
+#: src/loggerDialogBase.ui:322
+msgid "&OK"
+msgstr "&Bone"
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
+#: src/loggerDialogBase.ui:338
+msgid "&Cancel"
+msgstr "&Rezigni"
 
 #: src/main.cpp:36
 msgid "KSystemlog"
@@ -782,14 +1168,6 @@ msgstr "Dato"
 msgid "Type"
 msgstr "Tipo"
 
-#: src/modes/acpid/acpidAnalyzer.h:51 src/modes/apache/apacheAnalyzer.h:55
-#: src/modes/base/syslogAnalyzer.cpp:61 src/modes/cups/cupsAnalyzer.h:56
-#: src/modes/cups/cupsPdfAnalyzer.h:55 src/modes/kernel/kernelAnalyzer.h:60
-#: src/modes/samba/sambaAnalyzer.h:58 src/modes/xorg/xorgAnalyzer.h:61
-#: src/modes/xsession/xsessionAnalyzer.h:55
-msgid "Message"
-msgstr "Mesaĝo"
-
 #: src/modes/acpid/acpidConfigurationWidget.h:47
 msgid "Acpid Log"
 msgstr ""
@@ -981,6 +1359,231 @@ msgid ""
 "tried to crack your system."
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, description)
+#: src/modes/base/fileListBase.ui:31 src/modes/base/multipleFileListBase.ui:31
+msgid "File List Description"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, filesBox)
+#: src/modes/base/fileListBase.ui:44 src/modes/base/multipleFileListBase.ui:44
+#, fuzzy
+#| msgid "Log File"
+msgid "Log Files"
+msgstr "Protokolodosiero"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, add)
+#: src/modes/base/fileListBase.ui:55
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Choose a new file</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, add)
+#: src/modes/base/fileListBase.ui:61
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Opens a dialog box to "
+"choose a new file to be added to the list.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, add)
+#: src/modes/base/fileListBase.ui:64
+msgid "&Add File..."
+msgstr "&Aldonu dosieron..."
+
+#. i18n: ectx: property (text), widget (QPushButton, modify)
+#: src/modes/base/fileListBase.ui:71 src/modes/base/multipleFileListBase.ui:70
+#, fuzzy
+#| msgid "&Add File..."
+msgid "&Modify File..."
+msgstr "&Aldonu dosieron..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, remove)
+#: src/modes/base/fileListBase.ui:81 src/modes/base/multipleFileListBase.ui:80
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Delete the current file(s)"
+"</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, remove)
+#: src/modes/base/fileListBase.ui:87
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Deletes the files selected "
+"on the list.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, remove)
+#: src/modes/base/fileListBase.ui:90 src/modes/base/multipleFileListBase.ui:89
+msgid "&Remove"
+msgstr "Fo&rigi"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeAll)
+#: src/modes/base/fileListBase.ui:100
+#: src/modes/base/multipleFileListBase.ui:99
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Remove all files</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, removeAll)
+#: src/modes/base/fileListBase.ui:106
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Remove all the files on "
+"the list, even if they are not selected.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, removeAll)
+#: src/modes/base/fileListBase.ui:109
+#: src/modes/base/multipleFileListBase.ui:108
+msgid "Rem&ove All"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, up)
+#: src/modes/base/fileListBase.ui:122
+#: src/modes/base/multipleFileListBase.ui:121
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Move up the current file(s)"
+"</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, up)
+#: src/modes/base/fileListBase.ui:128
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Moves the selected files "
+"up in the list. This option allows the files to be read <span style=\" font-"
+"weight:600;\">in first</span> by KSystemLog.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, up)
+#: src/modes/base/fileListBase.ui:131
+#: src/modes/base/multipleFileListBase.ui:130
+msgid "Move &Up"
+msgstr "Movu s&upren"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, down)
+#: src/modes/base/fileListBase.ui:141
+#: src/modes/base/multipleFileListBase.ui:140
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Move down the current file"
+"(s)</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, down)
+#: src/modes/base/fileListBase.ui:147
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Moves the selected files "
+"down in the list. This option allows the files to be read <span style=\" "
+"font-weight:600;\">in last</span> by KSystemLog.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, down)
+#: src/modes/base/fileListBase.ui:150
+#: src/modes/base/multipleFileListBase.ui:149
+msgid "Move &Down"
+msgstr "Movi &malsupren"
+
+#. i18n: ectx: property (text), widget (QLabel, notes)
+#: src/modes/base/fileListBase.ui:175
+msgid ""
+"<p style='margin-top:0px;margin-bottom:0px;'><b>Notes:</b></p><ul "
+"style='margin-top:0px'><li>Files are read using the order of this list.</"
+"li><li>Compressed and plain text files are accepted <i>(*.log, *.gz, *."
+"bz2,...)</i>.</li><li>Use the <b>'*'</b> wildcard to select multiple log "
+"files when adding files.</li></ul>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QListWidget, fileList)
+#: src/modes/base/fileListBase.ui:191
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">List of files used by this "
+"log type.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QListWidget, fileList)
+#: src/modes/base/fileListBase.ui:197
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Here is a list of every "
+"file that will be read by KSystemLog to display the current log lines.</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QListWidget, fileList)
+#: src/modes/base/fileListBase.ui:210
+#, fuzzy
+msgid "add"
+msgstr "Aldonu %1..."
+
 #: src/modes/base/fileListHelper.cpp:113
 #, kde-format
 msgid "'%1' is not a local file."
@@ -1025,8 +1628,116 @@ msgid ""
 "The two arrays size are different, skipping the reading of generic paths."
 msgstr ""
 
+#. i18n: ectx: property (windowTitle), widget (QDialog, LogLevelSelectionDialogBase)
+#: src/modes/base/logLevelSelectionDialogBase.ui:13
+msgid "Selecting File Type"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/modes/base/logLevelSelectionDialogBase.ui:22
+msgid "Please select the type of this file:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QListWidget, logLevelsList)
+#: src/modes/base/logLevelSelectionDialogBase.ui:35
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">List of existing log "
+"levels</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QListWidget, logLevelsList)
+#: src/modes/base/logLevelSelectionDialogBase.ui:42
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">This is the list of all "
+"existing log levels. </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Please select one of them "
+"to be used for the files selected on the list.</p></body></html>"
+msgstr ""
+
 #: src/modes/base/multipleFileList.cpp:395
 msgid "No log file..."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, fileList)
+#: src/modes/base/multipleFileListBase.ui:60
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, remove)
+#: src/modes/base/multipleFileListBase.ui:86
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Deletes the selected files "
+"of the list.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, removeAll)
+#: src/modes/base/multipleFileListBase.ui:105
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Remove all files of the "
+"list, even if they are not selected.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, up)
+#: src/modes/base/multipleFileListBase.ui:127
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Moves up the selected "
+"files in the list. This option allows the files to be read <span style=\" "
+"font-weight:600;\">in first</span> by KSystemLog.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, down)
+#: src/modes/base/multipleFileListBase.ui:146
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Moves down the selected "
+"files in the list. This option allows the files to be read <span style=\" "
+"font-weight:600;\">at last</span> by KSystemLog.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, notes)
+#: src/modes/base/multipleFileListBase.ui:174
+msgid ""
+"<p style='margin-top:0px;margin-bottom:0px;'><b>Notes:</b></p><ul "
+"style='margin-top:0px'><li>Files are read using the order of this list.</"
+"li><li>Compressed and plain text files are accepted <i>(*.log, *.gz, *."
+"bz2,...)</i>.</li><li>Use the <b>'*'</b> joker to select multiple log files "
+"when adding files.</li></ul>"
 msgstr ""
 
 #: src/modes/base/parsingHelper.cpp:164
@@ -1538,6 +2249,39 @@ msgstr ""
 msgid "<li><b>%1</b>: ...</li>"
 msgstr "<li><b>%1</b>: ...</li>"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/modes/xsession/xsessionConfigurationWidgetBase.ui:16
+#, fuzzy
+#| msgid "Log File"
+msgid "X Session Log File"
+msgstr "Protokolodosiero"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/modes/xsession/xsessionConfigurationWidgetBase.ui:22
+#, fuzzy
+#| msgid "Log File"
+msgid "Log file:"
+msgstr "Protokolodosiero"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ignoreXorgErrors)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreXorgErrors)
+#: src/modes/xsession/xsessionConfigurationWidgetBase.ui:45
+#: src/modes/xsession/xsessionConfigurationWidgetBase.ui:48
+msgid "Check this option to remove Xorg errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreXorgErrors)
+#: src/modes/xsession/xsessionConfigurationWidgetBase.ui:51
+msgid "Ignore Xorg errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, xorgErrorsDescription)
+#: src/modes/xsession/xsessionConfigurationWidgetBase.ui:58
+msgid ""
+"<p><b>Note:</b> Check this option to remove X.org errors.</p><p style="
+"\"margin-bottom:0px\">The following lines will be ignored:</p>"
+msgstr ""
+
 #: src/modes/xsession/xsessionItemBuilder.h:74
 #: src/modes/xsession/xsessionItemBuilder.h:76
 msgid "Program:"
@@ -1574,67 +2318,3 @@ msgstr "%1 (%2)"
 #: src/tabLogViewsWidget.cpp:109
 msgid "No Log"
 msgstr ""
-
-#~ msgid "Icon"
-#~ msgstr "Piktograma"
-
-#~ msgid "&Back"
-#~ msgstr "&Malantaŭen"
-
-#~ msgid "&Forward"
-#~ msgstr "&Plusendi"
-
-#~ msgid "&Close"
-#~ msgstr "F&ermi"
-
-#~ msgid "Startup"
-#~ msgstr "Lanĉo"
-
-#~ msgid "Options"
-#~ msgstr "Opcioj"
-
-#~ msgid "Date Format"
-#~ msgstr "Datoformato"
-
-#~ msgid "&Edit"
-#~ msgstr "&Redakti"
-
-#~ msgid "&Window"
-#~ msgstr "Fe&nestro"
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Ĉefa ilobreto"
-
-#~ msgid "Find:"
-#~ msgstr "Trovu:"
-
-#~ msgid "&Message:"
-#~ msgstr "&Mesaĝo:"
-
-#~ msgid "Properties"
-#~ msgstr "Ecoj"
-
-#~ msgid "&OK"
-#~ msgstr "&Bone"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Rezigni"
-
-#~ msgid "&Add File..."
-#~ msgstr "&Aldonu dosieron..."
-
-#~ msgid "&Remove"
-#~ msgstr "Fo&rigi"
-
-#~ msgid "Move &Up"
-#~ msgstr "Movu s&upren"
-
-#~ msgid "Move &Down"
-#~ msgstr "Movi &malsupren"
-
-#, fuzzy
-#~ msgid "add"
-#~ msgstr "Aldonu %1..."
-
-#~ msgid "1"
-#~ msgstr "1"
