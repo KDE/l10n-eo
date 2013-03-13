@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-05 08:29+0100\n"
+"POT-Creation-Date: 2013-03-05 03:15+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -27,7 +27,6 @@ msgstr "axel@esperanto-jeunes.org"
 #. i18n: ectx: Menu (insert)
 #: data/konversationui.rc:22
 #, fuzzy
-#| msgid "&Insert"
 msgctxt "Menu title"
 msgid "&Insert"
 msgstr "&Enmeti"
@@ -37,88 +36,105 @@ msgstr "&Enmeti"
 msgid "&Window"
 msgstr "Fe&nestro"
 
-#: data/scripts/cmd:44
+#: data/scripts/cmd:42
 msgid "You need to specify a command."
 msgstr ""
 
-#: data/scripts/cmd:57
+#: data/scripts/cmd:55
 msgid ""
 "The command executed successfully, but did not return any output or only "
 "whitespace."
 msgstr ""
 
-#: data/scripts/media:77
+#: data/scripts/media:116
 msgid "The media script requires Python %1 or higher."
 msgstr ""
 
-#: data/scripts/media:402
+#: data/scripts/media:146
+msgid "An error occurred while trying to list the running media players."
+msgstr ""
+
+#: data/scripts/media:190
+msgid "No running audio players found."
+msgstr ""
+
+#: data/scripts/media:192
+msgid "No running video players found."
+msgstr ""
+
+#: data/scripts/media:194
+msgid "\"%1\" is not running."
+msgstr ""
+
+#: data/scripts/media:196
+msgid "No running media players found."
+msgstr ""
+
+#: data/scripts/media:210
 msgid "Nothing is playing in %1."
 msgstr ""
 
-#: data/scripts/media:405
-msgid "No supported players are running."
+#: data/scripts/media:214
+msgctxt "1 = Comma-separated list of audio players."
+msgid "None of the running audio players (%1) are playing anything."
 msgstr ""
 
-#: data/scripts/media:408
+#: data/scripts/media:219
+msgctxt "1 = Comma-separated list of video players."
+msgid "None of the running video players (%1) are playing anything."
+msgstr ""
+
+#: data/scripts/media:224
+msgctxt "1 = Comma-separated list of media players."
+msgid "None of the running media players (%1) are playing anything."
+msgstr ""
+
+#: data/scripts/media:232
+msgid "An error occurred while trying to retrieve media metadata from %1."
+msgstr ""
+
+#: data/scripts/media:270
+msgctxt "REGEX_FIXUP is the name of a config key in a config file."
 msgid ""
-"No supported audio players are running. Supported audio players are: %1."
+"There is a problem with the regular expression specified in REGEX_FIXUP."
 msgstr ""
 
-#: data/scripts/media:411
-msgid ""
-"No supported video players are running. Supported video players are: %1."
+#: data/scripts/media:279
+msgid "%1 did not report the metadata needed to output a message."
 msgstr ""
 
-#: data/scripts/media:413
-msgid "%1 is not running."
+#: data/scripts/media:295
+msgid "There is a problem in the output format configuration."
 msgstr ""
 
-#: data/scripts/media:431
-msgid "%1 is not a supported player."
-msgstr ""
-
-#: data/scripts/media:487
-msgid ""
-"media v%1 for Konversation. One media command to rule them all, inspired by "
-"Kopete's now listening plugin."
-msgstr ""
-
-#: data/scripts/media:488
+#: data/scripts/media:315
 #, fuzzy
-#| msgid "Username:"
+msgid "media v%1 for Konversation."
+msgstr "Konversation"
+
+#: data/scripts/media:316
+#, fuzzy
 msgid "Usage:"
 msgstr "Uzantnomo:"
 
-#: data/scripts/media:489
+#: data/scripts/media:317
 msgid "\"/media\" - report what the first player found is playing."
 msgstr ""
 
-#: data/scripts/media:490
+#: data/scripts/media:318
 msgid ""
-"\"/media [ 'audio' | 'video' ]\" - report what is playing in a supported "
-"audio or video player."
+"\"/media [ 'audio' | 'video' ]\" - report what is playing in a known audio "
+"or video player."
 msgstr ""
 
-#: data/scripts/media:491
+#: data/scripts/media:319
 msgid ""
 "\"/media { Player }\" - report what is playing in the specified player if it "
-"is supported."
+"is found."
 msgstr ""
 
-#: data/scripts/media:492
-msgid "Supported media players:"
-msgstr ""
-
-#: data/scripts/media:494
-msgid "audio"
-msgstr ""
-
-#: data/scripts/media:494
-msgid "video"
-msgstr ""
-
-#: src/application.cpp:357 src/irc/server.cpp:1565 src/irc/server.cpp:3548
-#: src/irc/server.cpp:3553
+#: src/application.cpp:357 src/irc/server.cpp:1654 src/irc/server.cpp:3679
+#: src/irc/server.cpp:3684
 msgid "D-Bus"
 msgstr "D-Bus"
 
@@ -174,7 +190,7 @@ msgstr ""
 msgid "moderated"
 msgstr "perata"
 
-#: src/common.cpp:39 src/irc/inputfilter.cpp:964
+#: src/common.cpp:39 src/irc/inputfilter.cpp:1008
 msgid "password protected"
 msgstr ""
 
@@ -193,14 +209,15 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
 #: src/config/alias_config.cpp:165 src/config/highlight_config.cpp:261
 #: src/config/quickbuttons_config.cpp:204
-#: src/config/quickbuttons_configui.ui:48 src/urlcatcher.cpp:297
+#: src/config/quickbuttons_configui.ui:89 src/urlcatcher.cpp:297
 msgid "New"
 msgstr "Nova"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, aliasListView)
 #: src/config/alias_configui.ui:36
+#, fuzzy
 msgid "Alias"
-msgstr ""
+msgstr "Aliaso:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, aliasListView)
 #: src/config/alias_configui.ui:41
@@ -210,14 +227,14 @@ msgstr "Septembro"
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
 #. i18n: ectx: property (text), widget (KPushButton, newButton)
 #: src/config/alias_configui.ui:51 src/config/highlight_configui.ui:167
-#: src/config/ignore_configui.ui:123
+#: src/config/ignore_configui.ui:130
 msgid "&New"
 msgstr "&Nova"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (KPushButton, removeButton)
 #: src/config/alias_configui.ui:58 src/config/highlight_configui.ui:180
-#: src/config/ignore_configui.ui:130
+#: src/config/ignore_configui.ui:137
 msgid "&Remove"
 msgstr "Fo&rigi"
 
@@ -228,8 +245,9 @@ msgstr "Aliaso:"
 
 #. i18n: ectx: property (text), widget (QLabel, replacementLabel)
 #: src/config/alias_configui.ui:108
+#, fuzzy
 msgid "Replacement:"
-msgstr ""
+msgstr "Septembro"
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, patternButton)
 #: src/config/autoreplace_config.cpp:42 src/config/highlight_config.cpp:168
@@ -270,55 +288,57 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, patternListView)
 #. i18n: ectx: property (text), widget (QTreeWidget, highlightListView)
-#: src/config/autoreplace_configui.ui:43 src/config/highlight_configui.ui:131
+#: src/config/autoreplace_configui.ui:46 src/config/highlight_configui.ui:131
 msgid "RegEx"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, patternListView)
-#: src/config/autoreplace_configui.ui:48
+#: src/config/autoreplace_configui.ui:51
+#, fuzzy
 msgid "Replace In"
-msgstr ""
+msgstr "Septembro"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, patternListView)
-#: src/config/autoreplace_configui.ui:53
+#: src/config/autoreplace_configui.ui:56
 msgid "Find"
 msgstr "Trovi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, patternListView)
-#: src/config/autoreplace_configui.ui:58
+#: src/config/autoreplace_configui.ui:61
 msgid "Replace With"
 msgstr "Anstataŭigi per"
 
 #. i18n: ectx: property (text), widget (QPushButton, newButton)
-#: src/config/autoreplace_configui.ui:68
+#: src/config/autoreplace_configui.ui:71
 msgid "Ne&w"
 msgstr "&Nova"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: src/config/autoreplace_configui.ui:75
+#: src/config/autoreplace_configui.ui:78
 msgid "R&emove"
 msgstr "&Forigi"
 
 #. i18n: ectx: property (text), widget (QLabel, directionLabel)
-#: src/config/autoreplace_configui.ui:111
+#: src/config/autoreplace_configui.ui:114
+#, fuzzy
 msgid "Replace in:"
-msgstr ""
+msgstr "Anstataŭigi per:"
 
 #. i18n: ectx: property (text), widget (QLabel, patternLabel)
-#: src/config/autoreplace_configui.ui:143
+#: src/config/autoreplace_configui.ui:146
 msgid "Find:"
 msgstr "Trovu:"
 
 #. i18n: ectx: property (text), widget (QPushButton, regExpEditorButton)
 #. i18n: ectx: property (text), widget (KPushButton, patternButton)
 #. i18n: ectx: property (text), widget (QLabel, m_iconLabel)
-#: src/config/autoreplace_configui.ui:177 src/config/highlight_configui.ui:250
+#: src/config/autoreplace_configui.ui:180 src/config/highlight_configui.ui:250
 #: src/irc/invitedialog.ui:23
 msgid "..."
 msgstr "..."
 
 #. i18n: ectx: property (text), widget (QLabel, replacementLabel)
-#: src/config/autoreplace_configui.ui:198
+#: src/config/autoreplace_configui.ui:201
 msgid "Replace with:"
 msgstr "Anstataŭigi per:"
 
@@ -344,8 +364,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: src/config/chatwindowappearance_config.ui:88
+#, fuzzy
 msgid "&Lines: "
-msgstr ""
+msgstr "Linioj:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: src/config/chatwindowappearance_config.ui:130
@@ -473,7 +494,7 @@ msgstr ""
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_ScrollbackMax)
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, kcfg_ReconnectCount)
 #: src/config/chatwindowbehaviour_config.ui:111
-#: src/config/connectionbehavior_config.ui:93
+#: src/config/connectionbehavior_config.ui:96
 msgid "Unlimited"
 msgstr "Senlima"
 
@@ -561,8 +582,9 @@ msgstr "Aktualigintervalo:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: src/config/colorsappearance_config.ui:30
+#, fuzzy
 msgid "Custom Colors"
-msgstr ""
+msgstr "Koloroj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_InputFieldsBackgroundColor)
 #: src/config/colorsappearance_config.ui:36
@@ -576,8 +598,9 @@ msgstr "&Fono"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
 #: src/config/colorsappearance_config.ui:286
+#, fuzzy
 msgid "&Server message:"
-msgstr ""
+msgstr "&Servilo:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: src/config/colorsappearance_config.ui:299
@@ -586,13 +609,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: src/config/colorsappearance_config.ui:312
+#, fuzzy
 msgid "Channel &message:"
-msgstr ""
+msgstr "Kanaloj"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: src/config/colorsappearance_config.ui:325
+#, fuzzy
 msgid "Actio&n:"
-msgstr ""
+msgstr "Konekto"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: src/config/colorsappearance_config.ui:338
@@ -616,13 +641,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_10)
 #: src/config/colorsappearance_config.ui:390
+#, fuzzy
 msgid "A&lternate background:"
-msgstr ""
+msgstr "&Fono"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_UseColoredNicks)
 #: src/config/colorsappearance_config.ui:409
+#, fuzzy
 msgid "Colored Nicks"
-msgstr ""
+msgstr "Koloroj"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel9)
 #. i18n: ectx: property (text), widget (QLabel, textLabel12_6)
@@ -745,49 +772,49 @@ msgstr "Agordi"
 #: src/config/connectionbehavior_config.cpp:39 src/config/dcc_config.cpp:36
 #: src/config/settingsdialog.cpp:113
 #, fuzzy
-#| msgid " seconds"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " sekundoj"
 msgstr[1] " sekundoj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_AutoReconnect)
-#: src/config/connectionbehavior_config.ui:23
+#: src/config/connectionbehavior_config.ui:26
 msgid "Enable Automatic Reconnect"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, reconnectDelayLabel)
-#: src/config/connectionbehavior_config.ui:32
+#: src/config/connectionbehavior_config.ui:35
 msgid "Reconnect delay:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: src/config/connectionbehavior_config.ui:61
+#: src/config/connectionbehavior_config.ui:64
+#, fuzzy
 msgid "Reconnection attempts:"
-msgstr ""
+msgstr "Konekto"
 
 #. i18n: ectx: property (title), widget (QGroupBox, debugGBox)
-#: src/config/connectionbehavior_config.ui:119
+#: src/config/connectionbehavior_config.ui:122
 msgid "Debug"
 msgstr "Sencimigu"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_RawLog)
-#: src/config/connectionbehavior_config.ui:125
+#: src/config/connectionbehavior_config.ui:128
 msgid "Show raw &log window when connecting"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, encryptionGBox)
-#: src/config/connectionbehavior_config.ui:135
+#: src/config/connectionbehavior_config.ui:138
 msgid "Encryption"
 msgstr "Ĉifrado"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/config/connectionbehavior_config.ui:141
+#: src/config/connectionbehavior_config.ui:144
 msgid "Default encryption type:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, kcfg_EncryptionType)
-#: src/config/connectionbehavior_config.ui:150
+#: src/config/connectionbehavior_config.ui:153
 msgid ""
 "ECB or Electronic Codebook mode is supported by many encryption clients like "
 "FiSH and Mircryption however it is generally considered to be insecure.\n"
@@ -800,60 +827,60 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EncryptionType)
-#: src/config/connectionbehavior_config.ui:154
+#: src/config/connectionbehavior_config.ui:157
 msgid "Electronic Codebook (ECB)"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EncryptionType)
-#: src/config/connectionbehavior_config.ui:159
+#: src/config/connectionbehavior_config.ui:162
 msgid "Cipher-Block Chaining (CBC)"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_ProxyEnabled)
-#: src/config/connectionbehavior_config.ui:183
+#: src/config/connectionbehavior_config.ui:186
 msgid "Proxy"
 msgstr "Prokurilo"
 
-#. i18n: ectx: property (text), widget (QLabel, addressLabel)
-#: src/config/connectionbehavior_config.ui:195
-msgid "Address:"
-msgstr "Adreso:"
-
-#. i18n: ectx: property (text), widget (QLabel, portLabel)
-#: src/config/connectionbehavior_config.ui:209
-msgid "Port:"
-msgstr "Pordo:"
-
-#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
-#: src/config/connectionbehavior_config.ui:223
-msgid "Username:"
-msgstr "Uzantnomo:"
-
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: src/config/connectionbehavior_config.ui:237
-msgid "Password:"
-msgstr "Pasvorto:"
-
 #. i18n: ectx: property (text), widget (QLabel, typeLabel)
 #. i18n: ectx: property (text), widget (QLabel, textLabel12)
-#: src/config/connectionbehavior_config.ui:257
-#: src/dcc/transferdetailedinfopanelui.ui:23
+#. i18n: ectx: property (text), widget (QLabel, authTypeLabel)
+#: src/config/connectionbehavior_config.ui:198
+#: src/dcc/transferdetailedinfopanelui.ui:23 src/identitydialog.ui:215
 msgid "Type:"
 msgstr "Tipo:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ProxyType)
-#: src/config/connectionbehavior_config.ui:268
+#: src/config/connectionbehavior_config.ui:209
 msgid "Socks v5"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ProxyType)
-#: src/config/connectionbehavior_config.ui:273
+#: src/config/connectionbehavior_config.ui:214
 msgid "HTTP"
 msgstr "HTTP"
 
+#. i18n: ectx: property (text), widget (QLabel, addressLabel)
+#: src/config/connectionbehavior_config.ui:222
+msgid "Address:"
+msgstr "Adreso:"
+
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: src/config/connectionbehavior_config.ui:236
+msgid "Port:"
+msgstr "Pordo:"
+
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: src/config/connectionbehavior_config.ui:250
+msgid "Username:"
+msgstr "Uzantnomo:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: src/config/connectionbehavior_config.ui:264
+msgid "Password:"
+msgstr "Pasvorto:"
+
 #: src/config/dcc_config.cpp:35
 #, fuzzy
-#| msgid " bytes"
 msgid " byte"
 msgid_plural " bytes"
 msgstr[0] " bitokoj"
@@ -984,40 +1011,43 @@ msgstr ""
 msgid "Automatically accept DCC chat offer"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CustomTextFont)
+#: src/config/fontappearance_config.ui:28
+#, fuzzy
+msgid "Chat text:"
+msgstr "Alglui"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CustomListFont)
+#: src/config/fontappearance_config.ui:45
+#, fuzzy
+msgid "Nickname list:"
+msgstr "Kromnomo:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CustomTabFont)
+#: src/config/fontappearance_config.ui:62
+msgid "Tab bar:"
+msgstr ""
+
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_FixedMOTD)
-#: src/config/fontappearance_config.ui:25
+#: src/config/fontappearance_config.ui:76
 msgid "Show MOTD (Message Of The Day) message in fixed font"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_FixedMOTD)
-#: src/config/fontappearance_config.ui:28
+#: src/config/fontappearance_config.ui:79
 msgid "Enable fi&xed font for MOTD messages"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseBoldNicks)
-#: src/config/fontappearance_config.ui:35
+#: src/config/fontappearance_config.ui:86
 msgid "Show sender nicknames &bold in the chat view"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CustomTextFont)
-#: src/config/fontappearance_config.ui:61
-msgid "Chat text:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CustomListFont)
-#: src/config/fontappearance_config.ui:92
-msgid "Nickname list:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CustomTabFont)
-#: src/config/fontappearance_config.ui:102
-msgid "Tab bar:"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_ShowTrayIcon)
 #: src/config/generalbehavior_configui.ui:26
+#, fuzzy
 msgid "Enable System Tray"
-msgstr ""
+msgstr "Fiksigu en sistemfako"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TrayNotify)
 #: src/config/generalbehavior_configui.ui:38
@@ -1132,19 +1162,19 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
 #: src/config/highlight_configui.ui:109
+#, fuzzy
 msgid "Highlight List"
-msgstr ""
+msgstr "Emfazi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, highlightListView)
 #: src/config/highlight_configui.ui:136
+#, fuzzy
 msgid "Highlights"
-msgstr ""
+msgstr "Emfazi"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, highlightListView)
 #: src/config/highlight_configui.ui:141
 #, fuzzy
-#| msgctxt "Describing the sound of the character"
-#| msgid "Sound: "
 msgid "Sound"
 msgstr "Sono:"
 
@@ -1156,7 +1186,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTreeWidget, highlightListView)
 #: src/config/highlight_configui.ui:151
 #, fuzzy
-#| msgid "Chat Window"
 msgid "Chat Windows"
 msgstr "Babilfenestro"
 
@@ -1172,8 +1201,9 @@ msgstr "Koloro:"
 
 #. i18n: ectx: property (text), widget (QLabel, soundLabel)
 #: src/config/highlight_configui.ui:288
+#, fuzzy
 msgid "&Sound:"
-msgstr ""
+msgstr "Sono:"
 
 #. i18n: ectx: property (filter), widget (KUrlRequester, soundURL)
 #: src/config/highlight_configui.ui:312
@@ -1193,7 +1223,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, chatWindowsLabel)
 #: src/config/highlight_configui.ui:366
 #, fuzzy
-#| msgid "Chat Window"
 msgid "Chat windows:"
 msgstr "Babilfenestro"
 
@@ -1222,23 +1251,24 @@ msgstr "Ŝablono:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpMessageTypes)
 #: src/config/ignore_configui.ui:77
+#, fuzzy
 msgid "Message Types"
-msgstr ""
+msgstr "Mesaĝo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkCTCP)
-#: src/config/ignore_configui.ui:83 src/dcc/chatcontainer.cpp:331
+#: src/config/ignore_configui.ui:83 src/dcc/chatcontainer.cpp:321
 #: src/irc/inputfilter.cpp:269 src/irc/inputfilter.cpp:276
 #: src/irc/inputfilter.cpp:292 src/irc/inputfilter.cpp:299
 #: src/irc/inputfilter.cpp:449 src/irc/inputfilter.cpp:460
 #: src/irc/inputfilter.cpp:481 src/irc/inputfilter.cpp:529
-#: src/irc/inputfilter.cpp:557 src/irc/outputfilter.cpp:851
+#: src/irc/inputfilter.cpp:557 src/irc/outputfilter.cpp:850
 #: src/viewer/ignorelistviewitem.cpp:45
 msgid "CTCP"
 msgstr "CTCP"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkChannel)
-#: src/config/ignore_configui.ui:90 src/irc/inputfilter.cpp:1993
-#: src/irc/inputfilter.cpp:1997 src/irc/invitedialog.cpp:168
+#: src/config/ignore_configui.ui:90 src/irc/inputfilter.cpp:2037
+#: src/irc/inputfilter.cpp:2041 src/irc/invitedialog.cpp:168
 #: src/viewer/ignorelistviewitem.cpp:42
 msgid "Channel"
 msgstr "Kanalo"
@@ -1249,21 +1279,21 @@ msgstr "Kanalo"
 #: src/dcc/chatcontainer.cpp:129 src/dcc/chatcontainer.cpp:136
 #: src/irc/inputfilter.cpp:372 src/irc/inputfilter.cpp:387
 #: src/irc/inputfilter.cpp:402 src/irc/inputfilter.cpp:430
-#: src/irc/inputfilter.cpp:438 src/irc/server.cpp:2119 src/irc/server.cpp:2249
-#: src/irc/server.cpp:2261 src/irc/server.cpp:2273 src/irc/server.cpp:2408
-#: src/irc/server.cpp:2464 src/irc/server.cpp:2535 src/irc/server.cpp:2540
-#: src/irc/server.cpp:2552 src/irc/server.cpp:2555 src/irc/server.cpp:2569
-#: src/irc/server.cpp:2576 src/viewer/ignorelistviewitem.cpp:46
+#: src/irc/inputfilter.cpp:438 src/irc/server.cpp:2220 src/irc/server.cpp:2350
+#: src/irc/server.cpp:2362 src/irc/server.cpp:2374 src/irc/server.cpp:2509
+#: src/irc/server.cpp:2565 src/irc/server.cpp:2636 src/irc/server.cpp:2641
+#: src/irc/server.cpp:2653 src/irc/server.cpp:2656 src/irc/server.cpp:2670
+#: src/irc/server.cpp:2677 src/viewer/ignorelistviewitem.cpp:46
 msgid "DCC"
 msgstr "DCC"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkNotice)
 #: src/config/ignore_configui.ui:104 src/irc/inputfilter.cpp:506
 #: src/irc/inputfilter.cpp:571 src/irc/inputfilter.cpp:576
-#: src/irc/inputfilter.cpp:599 src/irc/inputfilter.cpp:765
-#: src/irc/inputfilter.cpp:1312 src/irc/outputfilter.cpp:666
-#: src/irc/outputfilter.cpp:902 src/irc/server.cpp:4027
-#: src/irc/server.cpp:4056 src/viewer/ignorelistviewitem.cpp:44
+#: src/irc/inputfilter.cpp:582 src/irc/inputfilter.cpp:750
+#: src/irc/inputfilter.cpp:1356 src/irc/outputfilter.cpp:665
+#: src/irc/outputfilter.cpp:901 src/irc/server.cpp:4158
+#: src/irc/server.cpp:4187 src/viewer/ignorelistviewitem.cpp:44
 msgid "Notice"
 msgstr "Rimarku"
 
@@ -1272,10 +1302,17 @@ msgstr "Rimarku"
 msgid "Query"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QCheckBox, chkInvite)
+#: src/config/ignore_configui.ui:118 src/irc/inputfilter.cpp:688
+#: src/irc/inputfilter.cpp:1425 src/viewer/ignorelistviewitem.cpp:47
+msgid "Invite"
+msgstr "Invitu"
+
 #. i18n: ectx: property (text), widget (KPushButton, removeAllButton)
-#: src/config/ignore_configui.ui:137
+#: src/config/ignore_configui.ui:144
+#, fuzzy
 msgid "Remove &All"
-msgstr ""
+msgstr "Forigi"
 
 #. i18n: ectx: label, entry, group (Appearance)
 #: src/config/konversation.kcfg:22
@@ -1283,69 +1320,75 @@ msgid "Limit the size of the tab labels to fit them all on screen"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Appearance)
-#: src/config/konversation.kcfg:227
+#: src/config/konversation.kcfg:232
 msgid "Hide the scrollbar"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (General Options)
-#: src/config/konversation.kcfg:233
+#: src/config/konversation.kcfg:238
 msgid ""
 "Enable if you want all the IRC input lines to check your spelling as you type"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (General Options)
-#: src/config/konversation.kcfg:242
+#: src/config/konversation.kcfg:247
 msgid ""
 "Enabling this will cause the input box to grow vertically when it fills up."
 msgstr ""
 
 #. i18n: ectx: label, entry, group (General Options)
-#: src/config/konversation.kcfg:276
+#: src/config/konversation.kcfg:281
 msgid "Start with hidden main window"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (General Options)
-#: src/config/konversation.kcfg:315
+#: src/config/konversation.kcfg:320
 msgid "&Show real names next to nicknames"
 msgstr ""
 
 #. i18n: ectx: label, entry (OpenWatchedNicksAtStartup), group (Notify List)
-#: src/config/konversation.kcfg:529
+#: src/config/konversation.kcfg:534
 msgid "Open Watched Nicks tab at application startup"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Themes)
-#: src/config/konversation.kcfg:846
+#: src/config/konversation.kcfg:856
 msgid "Enable emoticons"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Themes)
-#: src/config/konversation.kcfg:850
+#: src/config/konversation.kcfg:860
 msgid "Emoticons theme"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Log)
-#: src/config/log_config.ui:23
+#: src/config/log_config.ui:24
+#, fuzzy
 msgid "&Enable Logging"
+msgstr "Protokolado"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrivateOnly)
+#: src/config/log_config.ui:33
+msgid "Only log private conversations (queries, DCC chats)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_LowerLog)
-#: src/config/log_config.ui:32
+#: src/config/log_config.ui:40
 msgid "Enable &lower case logfile names"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AddHostnameToLog)
-#: src/config/log_config.ui:39
+#: src/config/log_config.ui:47
 msgid "&Append hostname to logfile names"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: src/config/log_config.ui:46
+#: src/config/log_config.ui:54
 msgid "Logfile &path:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseExternalLogViewer)
-#: src/config/log_config.ui:69
+#: src/config/log_config.ui:77
 msgid "Use system text editor to open logs"
 msgstr ""
 
@@ -1380,8 +1423,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SortCaseInsensitive)
 #: src/config/nicklistbehavior_configui.ui:39
+#, fuzzy
 msgid "Sort case &insensitive"
-msgstr ""
+msgstr "Usklecodistinga"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SortByActivity)
 #: src/config/nicklistbehavior_configui.ui:46
@@ -1399,27 +1443,30 @@ msgid "(Reorder nick sorting order by drag and drop)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, sortOrder)
-#: src/config/nicklistbehavior_configui.ui:98 src/irc/channel.cpp:1878
-#: src/irc/channelnick.cpp:208 src/irc/channeloptionsdialog.cpp:299
-#: src/irc/inputfilter.cpp:985 src/irc/inputfilter.cpp:989
-#: src/irc/inputfilter.cpp:2144 src/irc/inputfilter.cpp:2198
+#: src/config/nicklistbehavior_configui.ui:98 src/irc/channel.cpp:1813
+#: src/irc/channelnick.cpp:208 src/irc/inputfilter.cpp:1029
+#: src/irc/inputfilter.cpp:1033 src/irc/inputfilter.cpp:2225
+#: src/irc/inputfilter.cpp:2279 src/viewer/channeloptionsdialog.cpp:287
 msgid "Mode"
 msgstr "Moduso"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, sortOrder)
 #: src/config/nicklistbehavior_configui.ui:103
+#, fuzzy
 msgid "Explanation"
-msgstr ""
+msgstr "Escepto"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseOSD)
 #: src/config/osd_configui.ui:35
+#, fuzzy
 msgid "&Enable On Screen Display"
-msgstr ""
+msgstr "&Uzi la vidigilon"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
 #: src/config/osd_configui.ui:45
+#, fuzzy
 msgid "On &Screen Display"
-msgstr ""
+msgstr "&Uzi la vidigilon"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_OSDDrawShadow)
 #: src/config/osd_configui.ui:54
@@ -1474,8 +1521,9 @@ msgstr "&Fonkoloro:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox4)
 #: src/config/osd_configui.ui:249
+#, fuzzy
 msgid "O&ther Settings"
-msgstr ""
+msgstr "Identeca agordo"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: src/config/osd_configui.ui:255
@@ -1496,47 +1544,56 @@ msgstr " ms"
 msgid "Default Identity"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QTreeWidget, buttonListView)
-#: src/config/quickbuttons_configui.ui:33
-msgid "Button Name"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QTreeWidget, buttonListView)
-#: src/config/quickbuttons_configui.ui:38
-msgid "Button Action"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#. i18n: ectx: property (toolTip), widget (KPushButton, m_delBtn)
-#: src/config/quickbuttons_configui.ui:55 src/identitydialog.ui:158
-msgid "Remove"
-msgstr "Forigi"
-
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: src/config/quickbuttons_configui.ui:85
-msgid "Button name:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, actionLabel)
-#: src/config/quickbuttons_configui.ui:111
-msgid "Button action:"
-msgstr ""
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: src/config/quickbuttons_configui.ui:136
+#: src/config/quickbuttons_configui.ui:20
 msgid "Available Placeholders"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, placeholderHelpLabel)
-#: src/config/quickbuttons_configui.ui:153
+#: src/config/quickbuttons_configui.ui:45
 #, no-c-format
 msgid ""
-"%o: Current nickname\n"
 "%c: Current channel\n"
+"%i: Input box contents\n"
+"%k: Channel key\n"
 "%K: Server password\n"
-"%u: List of selected nicknames\n"
-"%s&lt;term>%: term used to separate nicknames in %u\n"
-"%n: Send command directly to the server instead of your input line"
+"%n: Send command directly to the server instead of your input box\n"
+"%o: Current nickname\n"
+"%s<term>%: term used to separate nicknames in %u\n"
+"%u: List of selected nicknames"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, buttonListView)
+#: src/config/quickbuttons_configui.ui:74
+msgid "Button Name"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, buttonListView)
+#: src/config/quickbuttons_configui.ui:79
+#, fuzzy
+msgid "Button Action"
+msgstr "Konekto"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#. i18n: ectx: property (toolTip), widget (KPushButton, m_delBtn)
+#: src/config/quickbuttons_configui.ui:96 src/identitydialog.ui:158
+msgid "Remove"
+msgstr "Forigi"
+
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: src/config/quickbuttons_configui.ui:126
+msgid "Button name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, actionLabel)
+#: src/config/quickbuttons_configui.ui:152
+#, fuzzy
+msgid "Button action:"
+msgstr "Konekto"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowQuickButtonsInContextMenu)
+#: src/config/quickbuttons_configui.ui:177
+msgid "Show quick buttons that operate on nicknames in nickname context menus"
 msgstr ""
 
 #: src/config/settingsdialog.cpp:46
@@ -1568,7 +1625,7 @@ msgstr "Koloroj"
 msgid "Fonts"
 msgstr "Tiparoj"
 
-#: src/config/settingsdialog.cpp:87
+#: src/config/settingsdialog.cpp:87 src/viewer/irccontextmenus.cpp:107
 msgid "Quick Buttons"
 msgstr ""
 
@@ -1583,7 +1640,6 @@ msgstr "Konekto"
 
 #: src/config/settingsdialog.cpp:111
 #, fuzzy
-#| msgid " minutes"
 msgid " line"
 msgid_plural " lines"
 msgstr[0] "minutoj"
@@ -1603,13 +1659,13 @@ msgstr ""
 msgid "Command Aliases"
 msgstr ""
 
-#: src/config/settingsdialog.cpp:130
+#: src/config/settingsdialog.cpp:130 src/mainwindow.cpp:481
 msgid "Auto Replace"
 msgstr ""
 
-#: src/config/settingsdialog.cpp:136 src/irc/outputfilter.cpp:1546
-#: src/irc/outputfilter.cpp:1617 src/viewer/irccontextmenus.cpp:423
-#: src/viewer/irccontextmenus.cpp:590 src/viewer/irccontextmenus.cpp:591
+#: src/config/settingsdialog.cpp:136
+#, fuzzy
+msgctxt "@title:tab"
 msgid "Ignore"
 msgstr "Ignori"
 
@@ -1628,7 +1684,6 @@ msgstr ""
 
 #: src/config/settingsdialog.cpp:170
 #, fuzzy
-#| msgid "&Use On-Screen-Display"
 msgid "On Screen Display"
 msgstr "&Uzi la vidigilon"
 
@@ -1686,8 +1741,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabNotificationsEvents)
 #: src/config/tabnotifications_config.ui:226
+#, fuzzy
 msgid "Channel event"
-msgstr ""
+msgstr "Kanalo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox10)
 #: src/config/tabnotifications_config.ui:275
@@ -1713,8 +1769,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, placementLabel)
 #: src/config/tabs_configui.ui:34
+#, fuzzy
 msgid "Placement:"
-msgstr ""
+msgstr "Septembro"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_TabPlacement)
 #: src/config/tabs_configui.ui:45
@@ -1855,28 +1912,28 @@ msgstr ""
 msgid "Preview:"
 msgstr "Antaŭrigardo:"
 
-#: src/config/warnings_config.cpp:138
+#: src/config/warnings_config.cpp:143
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... a channel invitation is received"
 msgstr ""
 
-#: src/config/warnings_config.cpp:141
+#: src/config/warnings_config.cpp:146
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... saving a log file would save only the visible portion"
 msgstr ""
 
-#: src/config/warnings_config.cpp:144
+#: src/config/warnings_config.cpp:149
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... a log file is about to be deleted"
 msgstr ""
 
-#: src/config/warnings_config.cpp:147
+#: src/config/warnings_config.cpp:152
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
@@ -1884,49 +1941,49 @@ msgid ""
 "... an open query exists for a nickname that has just been marked as ignored"
 msgstr ""
 
-#: src/config/warnings_config.cpp:150
+#: src/config/warnings_config.cpp:155
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... switching a connection to a different server in the same network"
 msgstr ""
 
-#: src/config/warnings_config.cpp:153
+#: src/config/warnings_config.cpp:158
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... creating a new connection to an already connected network"
 msgstr ""
 
-#: src/config/warnings_config.cpp:156
+#: src/config/warnings_config.cpp:161
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... closing a server tab"
 msgstr ""
 
-#: src/config/warnings_config.cpp:159
+#: src/config/warnings_config.cpp:164
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... closing a channel tab"
 msgstr ""
 
-#: src/config/warnings_config.cpp:162
+#: src/config/warnings_config.cpp:167
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... closing a query tab"
 msgstr ""
 
-#: src/config/warnings_config.cpp:165
+#: src/config/warnings_config.cpp:170
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... closing a DCC Chat tab"
 msgstr ""
 
-#: src/config/warnings_config.cpp:168
+#: src/config/warnings_config.cpp:173
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
@@ -1934,56 +1991,56 @@ msgid ""
 "... a source for the channel list cannot be determined from the current tab"
 msgstr ""
 
-#: src/config/warnings_config.cpp:171
+#: src/config/warnings_config.cpp:176
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... you have chosen to hide the menu bar"
 msgstr ""
 
-#: src/config/warnings_config.cpp:174
+#: src/config/warnings_config.cpp:179
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... a channel listing may cause disconnection due to the download size"
 msgstr ""
 
-#: src/config/warnings_config.cpp:177
+#: src/config/warnings_config.cpp:182
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... pasting large portions of text"
 msgstr ""
 
-#: src/config/warnings_config.cpp:180
+#: src/config/warnings_config.cpp:185
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... quitting Konversation via the tray icon"
 msgstr ""
 
-#: src/config/warnings_config.cpp:183
+#: src/config/warnings_config.cpp:188
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... you have chosen to ignore a nickname"
 msgstr ""
 
-#: src/config/warnings_config.cpp:186
+#: src/config/warnings_config.cpp:191
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... you have chosen to stop ignoring a nickname"
 msgstr ""
 
-#: src/config/warnings_config.cpp:189
+#: src/config/warnings_config.cpp:194
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
 msgid "... quitting Konversation while DCC file transfers are active"
 msgstr ""
 
-#: src/config/warnings_config.cpp:192
+#: src/config/warnings_config.cpp:197
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
@@ -1991,7 +2048,7 @@ msgid ""
 "... some characters in a message are incompatible with the active encoding"
 msgstr ""
 
-#: src/config/warnings_config.cpp:195
+#: src/config/warnings_config.cpp:200
 msgctxt ""
 "@item:inlistbox Checkbox item, determines whether warning dialog is shown; "
 "concludes sentence \"Show a warning dialog when...\""
@@ -2083,14 +2140,18 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, notifyDelayLabel)
 #: src/config/watchednicknames_configui.ui:112
+#, fuzzy
 msgid "&Update interval:"
-msgstr ""
+msgstr "Aktualigintervalo:"
 
 #: src/connectionmanager.cpp:224 src/connectionmanager.cpp:257
-#: src/connectionmanager.cpp:267 src/irc/inputfilter.cpp:1320
-#: src/irc/outputfilter.cpp:2029 src/irc/server.cpp:253 src/irc/server.cpp:399
-#: src/irc/server.cpp:458 src/irc/server.cpp:622 src/irc/server.cpp:633
-#: src/irc/server.cpp:899 src/irc/server.cpp:929
+#: src/connectionmanager.cpp:267 src/irc/inputfilter.cpp:1364
+#: src/irc/inputfilter.cpp:2155 src/irc/inputfilter.cpp:2163
+#: src/irc/inputfilter.cpp:2185 src/irc/outputfilter.cpp:2033
+#: src/irc/server.cpp:257 src/irc/server.cpp:404 src/irc/server.cpp:462
+#: src/irc/server.cpp:632 src/irc/server.cpp:667 src/irc/server.cpp:669
+#: src/irc/server.cpp:682 src/irc/server.cpp:699 src/irc/server.cpp:987
+#: src/irc/server.cpp:1017
 msgid "Info"
 msgstr "Informo"
 
@@ -2113,19 +2174,20 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/connectionmanager.cpp:282 src/dcc/chatcontainer.cpp:283
-#: src/irc/inputfilter.cpp:1163 src/irc/inputfilter.cpp:1167
-#: src/irc/inputfilter.cpp:1180 src/irc/inputfilter.cpp:1251
-#: src/irc/inputfilter.cpp:1304 src/irc/inputfilter.cpp:1438
-#: src/irc/inputfilter.cpp:2017 src/irc/inputfilter.cpp:2027
-#: src/irc/inputfilter.cpp:2064 src/irc/inputfilter.cpp:2072
-#: src/irc/inputfilter.cpp:2080 src/irc/inputfilter.cpp:2104
-#: src/irc/outputfilter.cpp:2038 src/irc/outputfilterresolvejob.cpp:85
-#: src/irc/server.cpp:718 src/irc/server.cpp:2087 src/irc/server.cpp:2158
-#: src/irc/server.cpp:2331 src/irc/server.cpp:2367 src/irc/server.cpp:2418
-#: src/irc/server.cpp:2486 src/irc/server.cpp:2505 src/irc/server.cpp:2521
-#: src/irc/server.cpp:3985 src/irc/server.cpp:3997 src/irc/server.cpp:4021
-#: src/irc/server.cpp:4044 src/irc/server.cpp:4060
+#: src/connectionmanager.cpp:282 src/dcc/chatcontainer.cpp:273
+#: src/irc/inputfilter.cpp:1207 src/irc/inputfilter.cpp:1211
+#: src/irc/inputfilter.cpp:1224 src/irc/inputfilter.cpp:1295
+#: src/irc/inputfilter.cpp:1348 src/irc/inputfilter.cpp:1482
+#: src/irc/inputfilter.cpp:2061 src/irc/inputfilter.cpp:2071
+#: src/irc/inputfilter.cpp:2108 src/irc/inputfilter.cpp:2116
+#: src/irc/inputfilter.cpp:2124 src/irc/inputfilter.cpp:2148
+#: src/irc/inputfilter.cpp:2176 src/irc/outputfilter.cpp:2042
+#: src/irc/outputfilterresolvejob.cpp:85 src/irc/server.cpp:690
+#: src/irc/server.cpp:707 src/irc/server.cpp:815 src/irc/server.cpp:2188
+#: src/irc/server.cpp:2259 src/irc/server.cpp:2432 src/irc/server.cpp:2468
+#: src/irc/server.cpp:2519 src/irc/server.cpp:2587 src/irc/server.cpp:2606
+#: src/irc/server.cpp:2622 src/irc/server.cpp:4116 src/irc/server.cpp:4128
+#: src/irc/server.cpp:4152 src/irc/server.cpp:4175 src/irc/server.cpp:4191
 #: src/linkaddressbook/addressbook.cpp:113
 msgid "Error"
 msgstr "Eraro"
@@ -2185,19 +2247,17 @@ msgstr "Identeca agordo"
 msgid "Edit Identity..."
 msgstr ""
 
-#: src/dbus.cpp:143
+#: src/dbus.cpp:142
 #, fuzzy, kde-format
-#| msgid "Debug"
 msgid "Debug: %1"
 msgstr "Sencimigu"
 
-#: src/dbus.cpp:149
+#: src/dbus.cpp:148
 #, fuzzy, kde-format
-#| msgid "Error"
 msgid "Error: %1"
 msgstr "Eraro"
 
-#: src/dbus.cpp:169
+#: src/dbus.cpp:168
 #, kde-format
 msgid "getNickname: Server %1 is not found."
 msgstr ""
@@ -2226,7 +2286,6 @@ msgstr ""
 
 #: src/dcc/chat.cpp:154
 #, fuzzy
-#| msgid "&Accept"
 msgid "Accept"
 msgstr "&Konsentu"
 
@@ -2325,14 +2384,12 @@ msgstr ""
 
 #: src/dcc/chatcontainer.cpp:116
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgctxt "%1=extension like Chat or Whiteboard, %2=partnerNick, %3=port"
 msgid "DCC %1 with %2 on port <numid>%3</numid>."
 msgstr "%1 sur %2"
 
 #: src/dcc/chatcontainer.cpp:123
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgctxt ""
 "%1=extension like Chat or Whiteboard, %2 = nickname, %3 = IP, %4 = port"
 msgid "DCC %1 with %2 on %3:<numid>%4</numid>."
@@ -2344,44 +2401,42 @@ msgctxt "Universal Plug and Play"
 msgid "UPnP"
 msgstr "UPnP"
 
-#: src/dcc/chatcontainer.cpp:189
+#: src/dcc/chatcontainer.cpp:184
 #, kde-format
 msgctxt "%1=extension like Chat or Whiteboard, %2=partnerNick"
 msgid "Do you want to close your DCC %1 with %2?"
 msgstr ""
 
-#: src/dcc/chatcontainer.cpp:192
+#: src/dcc/chatcontainer.cpp:187
 #, fuzzy, kde-format
-#| msgid "Close Tab"
 msgctxt "%1=extension like Chat or Whiteboard"
 msgid "Close DCC %1"
 msgstr "Fermi folion"
 
-#: src/dcc/chatcontainer.cpp:211 src/irc/query.cpp:517
+#: src/dcc/chatcontainer.cpp:206 src/irc/query.cpp:498
 msgid "Talking to yourself"
 msgstr ""
 
-#: src/dcc/chatcontainer.cpp:227
+#: src/dcc/chatcontainer.cpp:222
 #, fuzzy, kde-format
-#| msgid "Default"
 msgctxt "%1=Encoding"
 msgid "Default ( %1 )"
 msgstr "Defaŭlta"
 
-#: src/dcc/chatcontainer.cpp:269 src/irc/outputfilter.cpp:2020
+#: src/dcc/chatcontainer.cpp:259 src/irc/outputfilter.cpp:2024
 msgid "Usage"
 msgstr ""
 
-#: src/dcc/chatcontainer.cpp:269 src/irc/outputfilter.cpp:683
+#: src/dcc/chatcontainer.cpp:259 src/irc/outputfilter.cpp:682
 #, kde-format
 msgid "Usage: %1ME text"
 msgstr ""
 
-#: src/dcc/chatcontainer.cpp:283
+#: src/dcc/chatcontainer.cpp:273
 msgid "Unknown command."
 msgstr ""
 
-#: src/dcc/chatcontainer.cpp:331
+#: src/dcc/chatcontainer.cpp:321
 #, kde-format
 msgid "Received unknown CTCP-%1 request from %2"
 msgstr ""
@@ -2401,7 +2456,6 @@ msgstr ""
 
 #: src/dcc/dccfiledialog.cpp:37
 #, fuzzy
-#| msgid "&Open URL"
 msgid "Open"
 msgstr "Malfermi URL&on"
 
@@ -2409,7 +2463,7 @@ msgstr "Malfermi URL&on"
 msgid "Select Recipient"
 msgstr "Elekti ricevanton"
 
-#: src/dcc/recipientdialog.cpp:64 src/identitydialog.cpp:90
+#: src/dcc/recipientdialog.cpp:64 src/identitydialog.cpp:100
 #: src/irc/servergroupdialog.cpp:79 src/viewer/editnotifydialog.cpp:72
 msgid "&OK"
 msgstr "&Bone"
@@ -2418,7 +2472,7 @@ msgstr "&Bone"
 msgid "Select nickname and close the window"
 msgstr ""
 
-#: src/dcc/recipientdialog.cpp:65 src/identitydialog.cpp:91
+#: src/dcc/recipientdialog.cpp:65 src/identitydialog.cpp:101
 #: src/irc/servergroupdialog.cpp:80
 #: src/linkaddressbook/addressbook_base.cpp:504
 #: src/viewer/editnotifydialog.cpp:73
@@ -2457,67 +2511,63 @@ msgstr "&Antstataŭigu"
 msgid "R&ename"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:34 src/dcc/transferlistmodel.cpp:48
+#: src/dcc/transferdetailedinfopanel.cpp:35 src/dcc/transferlistmodel.cpp:48
 msgid "Status"
 msgstr "Stato"
 
-#: src/dcc/transferdetailedinfopanel.cpp:37
+#: src/dcc/transferdetailedinfopanel.cpp:38
 msgid "Details"
 msgstr "Detaloj"
 
-#: src/dcc/transferdetailedinfopanel.cpp:128
+#: src/dcc/transferdetailedinfopanel.cpp:133
 msgid "DCC Send"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:128
+#: src/dcc/transferdetailedinfopanel.cpp:133
 msgid "DCC Receive"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:131
+#: src/dcc/transferdetailedinfopanel.cpp:136
 msgid " (Reverse DCC)"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:148
-#: src/dcc/transferdetailedinfopanel.cpp:152
+#: src/dcc/transferdetailedinfopanel.cpp:153
+#: src/dcc/transferdetailedinfopanel.cpp:157
 msgid "Unknown server"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:157
+#: src/dcc/transferdetailedinfopanel.cpp:162
 #, kde-format
 msgctxt "%1=partnerNick, %2=IRC Servername, %3=partnerIP, %4=partnerPort"
 msgid "%1 on %2, %3 (port <numid>%4</numid>)"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:163
+#: src/dcc/transferdetailedinfopanel.cpp:168
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgctxt "%1 = PartnerNick, %2 = Partner IRC Servername"
 msgid "%1 on %2"
 msgstr "%1 sur %2"
 
-#: src/dcc/transferdetailedinfopanel.cpp:170
+#: src/dcc/transferdetailedinfopanel.cpp:175
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgctxt "%1=ownIP, %2=ownPort"
 msgid "%1 (port <numid>%2</numid>)"
 msgstr "%1 sur %2"
 
-#: src/dcc/transferdetailedinfopanel.cpp:178
+#: src/dcc/transferdetailedinfopanel.cpp:183
 #, kde-format
 msgctxt "%1=Transferstartposition"
 msgid "Yes, %1"
 msgstr ""
 
-#: src/dcc/transferdetailedinfopanel.cpp:180
+#: src/dcc/transferdetailedinfopanel.cpp:185
 #, fuzzy
-#| msgid "No"
 msgctxt "no - not a resumed transfer"
 msgid "No"
 msgstr "Ne"
 
-#: src/dcc/transferdetailedinfopanel.cpp:246
+#: src/dcc/transferdetailedinfopanel.cpp:251
 #, fuzzy
-#| msgid " sec"
 msgctxt "less than 1 sec"
 msgid "&lt; 1sec"
 msgstr " s"
@@ -2545,8 +2595,6 @@ msgstr "Stato:"
 #. i18n: ectx: property (text), widget (QLabel, textLabel18)
 #: src/dcc/transferdetailedinfopanelui.ui:123
 #, fuzzy
-#| msgctxt "City name (optional, probably does not need a translation)"
-#| msgid "Prosser"
 msgid "Progress:"
 msgstr "Prosser"
 
@@ -2563,14 +2611,14 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel21)
 #: src/dcc/transferdetailedtimeinfopanelui.ui:48
 #, fuzzy
-#| msgid "Tile size"
 msgid "File size:"
 msgstr "Tiligrandeco"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel14)
 #: src/dcc/transferdetailedtimeinfopanelui.ui:68
+#, fuzzy
 msgid "Resumed:"
-msgstr ""
+msgstr "&Restarigi"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: src/dcc/transferdetailedtimeinfopanelui.ui:88
@@ -2639,114 +2687,109 @@ msgstr ""
 msgid "Remaining"
 msgstr "Restanta"
 
-#: src/dcc/transferlistmodel.cpp:444
+#: src/dcc/transferlistmodel.cpp:440
 #, kde-format
 msgid "%1/sec"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:499
+#: src/dcc/transferlistmodel.cpp:495
 msgid "Queued"
 msgstr "Envicigita"
 
-#: src/dcc/transferlistmodel.cpp:501
+#: src/dcc/transferlistmodel.cpp:497
 msgid "Preparing"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:503
+#: src/dcc/transferlistmodel.cpp:499
 #, fuzzy
-#| msgctxt "Preview pending"
-#| msgid "Pending"
 msgctxt "Transfer is waiting for the partner to accept or reject it"
 msgid "Pending"
 msgstr "Pritraktota"
 
-#: src/dcc/transferlistmodel.cpp:505
+#: src/dcc/transferlistmodel.cpp:501
 #, fuzzy
-#| msgid "Connections"
 msgctxt "Transfer is connecting to the partner"
 msgid "Connecting"
 msgstr "Konektoj"
 
-#: src/dcc/transferlistmodel.cpp:510
+#: src/dcc/transferlistmodel.cpp:506
 msgid "Receiving"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:512
+#: src/dcc/transferlistmodel.cpp:508
 msgid "Sending"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:518
+#: src/dcc/transferlistmodel.cpp:514
 #, fuzzy
-#| msgid "Done"
 msgctxt "Transfer has completed successfully"
 msgid "Done"
 msgstr "Preta"
 
-#: src/dcc/transferlistmodel.cpp:520
+#: src/dcc/transferlistmodel.cpp:516
 #, fuzzy
-#| msgid "Files"
 msgctxt "Transfer failed"
 msgid "Failed"
 msgstr "Dosieroj"
 
-#: src/dcc/transferlistmodel.cpp:522
+#: src/dcc/transferlistmodel.cpp:518
 msgid "Aborted"
 msgstr "Ĉesigita"
 
-#: src/dcc/transferlistmodel.cpp:534
+#: src/dcc/transferlistmodel.cpp:530
 msgid "Queued - Transfer is waiting for you to accept or reject it"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:539
+#: src/dcc/transferlistmodel.cpp:535
 msgid "Preparing - Transfer is checking for resumable files"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:541
+#: src/dcc/transferlistmodel.cpp:537
 msgid "Preparing - Transfer is acquiring the data to send"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:547
+#: src/dcc/transferlistmodel.cpp:543
 msgid "Pending - Transfer is waiting for the partner to accept or reject it"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:549
+#: src/dcc/transferlistmodel.cpp:545
 msgid "Connecting - Transfer is connecting to the partner"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:554
+#: src/dcc/transferlistmodel.cpp:550
 msgid "Receiving - Transfer is receiving data from the partner"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:556
+#: src/dcc/transferlistmodel.cpp:552
 msgid "Sending - Transfer is sending data to partner"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:562
+#: src/dcc/transferlistmodel.cpp:558
 msgid "Done - Transfer has completed successfully"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:566
+#: src/dcc/transferlistmodel.cpp:562
 msgid "Failed - Transfer failed with 'unknown reason'"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:570
+#: src/dcc/transferlistmodel.cpp:566
 #, kde-format
 msgid "Failed - Transfer failed with reason '%1'"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:573
+#: src/dcc/transferlistmodel.cpp:569
 msgid "Aborted - Transfer was aborted by the User"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:666
+#: src/dcc/transferlistmodel.cpp:662
 msgid "Incoming Transfers"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:670
+#: src/dcc/transferlistmodel.cpp:666
 msgid "Outgoing Transfers"
 msgstr ""
 
-#: src/dcc/transferpanel.cpp:45 src/viewer/viewcontainer.cpp:2172
+#: src/dcc/transferpanel.cpp:45 src/viewer/viewcontainer.cpp:2249
 msgid "DCC Status"
 msgstr ""
 
@@ -2831,15 +2874,7 @@ msgid_plural "Execute %1 files"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/dcc/transferpanel.cpp:595 src/dcc/transferpanel.cpp:601
-msgid "File Information"
-msgstr ""
-
-#: src/dcc/transferpanel.cpp:601
-msgid "No detailed information for this file found."
-msgstr ""
-
-#: src/dcc/transferpanel.h:54
+#: src/dcc/transferpanel.h:51
 #, kde-format
 msgctxt "%1=filename"
 msgid "File Information for %1"
@@ -3020,7 +3055,7 @@ msgstr ""
 msgid "Unknown error. Code %1"
 msgstr ""
 
-#: src/dcc/transferview.cpp:313
+#: src/dcc/transferview.cpp:315
 msgid "Columns"
 msgstr "Kolumnoj"
 
@@ -3032,56 +3067,48 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:55
 #, fuzzy
-#| msgid "6:"
 msgid "6"
 msgstr "6:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:60
 #, fuzzy
-#| msgid "7:"
 msgid "7"
 msgstr "7:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:65
 #, fuzzy
-#| msgid "8:"
 msgid "8"
 msgstr "8:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:70
 #, fuzzy
-#| msgid "9:"
 msgid "9"
 msgstr "9:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:75
 #, fuzzy
-#| msgid "10:"
 msgid "10"
 msgstr "10:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:80
 #, fuzzy
-#| msgid "11:"
 msgid "11"
 msgstr "11:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:85
 #, fuzzy
-#| msgid "12:"
 msgid "12"
 msgstr "12:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_fontPointComboBox)
 #: src/dcc/whiteboardfontchooserui.ui:90
 #, fuzzy
-#| msgid "14:"
 msgid "14"
 msgstr "14:"
 
@@ -3151,7 +3178,6 @@ msgstr ""
 
 #: src/dcc/whiteboardtoolbar.cpp:43
 #, fuzzy
-#| msgid "Save As..."
 msgid "Save As.."
 msgstr "Konservi kiel..."
 
@@ -3169,19 +3195,16 @@ msgstr "Skizi rektangulon"
 
 #: src/dcc/whiteboardtoolbar.cpp:63
 #, fuzzy
-#| msgid "Draw a rectangle"
 msgid "Draw an ellipse"
 msgstr "Skizi rektangulon"
 
 #: src/dcc/whiteboardtoolbar.cpp:69
 #, fuzzy
-#| msgid "Paste"
 msgid "Draw text"
 msgstr "Alglui"
 
 #: src/dcc/whiteboardtoolbar.cpp:75
 #, fuzzy
-#| msgid "Select Recipient"
 msgctxt "dcc whiteboard selection tool"
 msgid "Selection"
 msgstr "Elekti ricevanton"
@@ -3206,16 +3229,15 @@ msgstr ""
 msgid "Save Image"
 msgstr ""
 
-#: src/identitydialog.cpp:34
+#: src/identitydialog.cpp:33
 msgid "Identities"
 msgstr ""
 
-#: src/identitydialog.cpp:44 src/identitydialog.cpp:51
-#: src/irc/invitedialog.cpp:170
+#: src/identitydialog.cpp:42 src/irc/invitedialog.cpp:170
 msgid "Nickname"
 msgstr ""
 
-#: src/identitydialog.cpp:54
+#: src/identitydialog.cpp:49
 msgid ""
 "This is your list of nicknames. A nickname is the name that other users will "
 "know you by. You may use any name you desire. The first character must be a "
@@ -3227,70 +3249,99 @@ msgid ""
 "is rejected by the server, Konversation will try the alternate nicknames."
 msgstr ""
 
+#: src/identitydialog.cpp:81
+msgid "Standard NickServ"
+msgstr ""
+
 #: src/identitydialog.cpp:82
+#, fuzzy
+msgid "Server Password"
+msgstr "Pasvorto:"
+
+#: src/identitydialog.cpp:83
+msgid "SASL"
+msgstr ""
+
+#: src/identitydialog.cpp:85
+msgid "SSL Client Certificate"
+msgstr ""
+
+#: src/identitydialog.cpp:92
 msgid " minute"
 msgid_plural " minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/identitydialog.cpp:90
+#: src/identitydialog.cpp:100
 msgid "Change identity information"
 msgstr ""
 
-#: src/identitydialog.cpp:91 src/irc/servergroupdialog.cpp:80
+#: src/identitydialog.cpp:101 src/irc/servergroupdialog.cpp:80
 #: src/viewer/editnotifydialog.cpp:73
 msgid "Discards all changes made"
 msgstr ""
 
-#: src/identitydialog.cpp:193
+#: src/identitydialog.cpp:213
 msgid "Add Identity"
 msgstr ""
 
-#: src/identitydialog.cpp:193 src/identitydialog.cpp:216
-#: src/identitydialog.cpp:271
+#: src/identitydialog.cpp:213 src/identitydialog.cpp:236
+#: src/identitydialog.cpp:291
 msgid "Identity name:"
 msgstr ""
 
-#: src/identitydialog.cpp:207 src/identitydialog.cpp:225
-#: src/identitydialog.cpp:284
+#: src/identitydialog.cpp:227 src/identitydialog.cpp:245
+#: src/identitydialog.cpp:304
 msgid "You need to give the identity a name."
 msgstr ""
 
-#: src/identitydialog.cpp:216
+#: src/identitydialog.cpp:236
 msgid "Rename Identity"
 msgstr ""
 
-#: src/identitydialog.cpp:250
+#: src/identitydialog.cpp:270
 msgid ""
 "This identity is in use, if you remove it the network settings using it will "
 "fall back to the default identity. Should it be deleted anyway?"
 msgstr ""
 
-#: src/identitydialog.cpp:255
+#: src/identitydialog.cpp:275
 msgid "Are you sure you want to delete all information for this identity?"
 msgstr ""
 
-#: src/identitydialog.cpp:258
+#: src/identitydialog.cpp:278
 msgid "Delete Identity"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeServerButton)
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeChannelButton)
-#: src/identitydialog.cpp:259 src/irc/servergroupdialogui.ui:168
+#: src/identitydialog.cpp:279 src/irc/servergroupdialogui.ui:168
 #: src/irc/servergroupdialogui.ui:253
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/identitydialog.cpp:271
+#: src/identitydialog.cpp:291
 msgid "Duplicate Identity"
 msgstr ""
 
-#: src/identitydialog.cpp:314
+#: src/identitydialog.cpp:334
 msgid "You must add at least one nick to the identity."
 msgstr ""
 
-#: src/identitydialog.cpp:325
+#: src/identitydialog.cpp:345
 msgid "Please enter a real name."
+msgstr ""
+
+#: src/identitydialog.cpp:396
+msgid ""
+"The password entered here will override the one set in the server settings, "
+"if any."
+msgstr ""
+
+#: src/identitydialog.cpp:410
+msgid ""
+"SSL Client Certificate authentication forces SSL to be enabled for a "
+"connection, overriding any server settings."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -3315,8 +3366,9 @@ msgstr "Alinomi"
 
 #. i18n: ectx: property (text), widget (QLabel, realNameLabel)
 #: src/identitydialog.ui:187
+#, fuzzy
 msgid "&Real name:"
-msgstr ""
+msgstr "Alinomi"
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_realNameEdit)
 #: src/identitydialog.ui:197
@@ -3330,36 +3382,58 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, autoIdentifyGroup)
 #: src/identitydialog.ui:206
+#, fuzzy
 msgid "Auto Identify"
-msgstr ""
+msgstr "Identeco"
 
-#. i18n: ectx: property (text), widget (QLabel, botLabel)
-#: src/identitydialog.ui:212
+#. i18n: ectx: property (text), widget (QLabel, nickservNicknameLabel)
+#: src/identitydialog.ui:228
 msgid "Ser&vice:"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, m_botEdit)
-#: src/identitydialog.ui:222
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, m_nickservNicknameEdit)
+#: src/identitydialog.ui:238
 msgid ""
 "Service name can be <b><i>nickserv</i></b> or a network-dependent name such "
 "as <b><i>nickserv@services.dal.net</i></b>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: src/identitydialog.ui:229
+#. i18n: ectx: property (text), widget (QLabel, nickservCommandLabel)
+#: src/identitydialog.ui:245
+msgid "Command:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, saslAccountLabel)
+#: src/identitydialog.ui:258
+#, fuzzy
+msgid "Account:"
+msgstr "Nombro:"
+
+#. i18n: ectx: property (text), widget (QLabel, authPasswordLabel)
+#: src/identitydialog.ui:271
+#, fuzzy
 msgid "Pa&ssword:"
+msgstr "Pasvorto:"
+
+#. i18n: ectx: property (text), widget (QLabel, pemClientCertFileLabel)
+#: src/identitydialog.ui:288
+msgid "PEM file:"
+msgstr ""
+
+#. i18n: ectx: property (filter), widget (KUrlRequester, m_pemClientCertFile)
+#: src/identitydialog.ui:295
+msgid "*.pem"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, awayWidget)
-#: src/identitydialog.ui:250 src/irc/inputfilter.cpp:1370
-#: src/irc/nicksonline.cpp:247 src/irc/server.cpp:3798 src/irc/server.cpp:3800
-#: src/irc/server.cpp:3825 src/irc/server.cpp:3834
-#: src/linkaddressbook/addressbook.cpp:109
+#: src/identitydialog.ui:306
+#, fuzzy
+msgctxt "@title:tab"
 msgid "Away"
 msgstr "For"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_insertRememberLineOnAwayChBox)
-#: src/identitydialog.ui:256
+#: src/identitydialog.ui:312
 msgid ""
 "If you check this box, whenever you perform an <b>/away</b> command, a "
 "horizontal line will appear in the channel, marking the point where you went "
@@ -3367,17 +3441,17 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_insertRememberLineOnAwayChBox)
-#: src/identitydialog.ui:259
+#: src/identitydialog.ui:315
 msgid "Mark the last position in chat windows when going away"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, awayMessageLabel)
-#: src/identitydialog.ui:266
+#: src/identitydialog.ui:322
 msgid "Default away message:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_awayMessageEdit)
-#: src/identitydialog.ui:276
+#: src/identitydialog.ui:332
 msgid ""
 "The text you enter here is used as the away message when no message is "
 "entered as an argument to the <b>/away</b> or <b>/aaway</b> commands, and "
@@ -3385,12 +3459,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, awayNicknameLabel)
-#: src/identitydialog.ui:283
+#: src/identitydialog.ui:339
+#, fuzzy
 msgid "Away nickname:"
-msgstr ""
+msgstr "Kromnomo:"
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_awayNickEdit)
-#: src/identitydialog.ui:293
+#: src/identitydialog.ui:349
 msgid ""
 "Enter a nickname that indicates you are away. Whenever you perform an <b>/"
 "away msg</b> command in any channel joined with this Identity, Konversation "
@@ -3402,7 +3477,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, automaticAwayGroup)
-#: src/identitydialog.ui:306
+#: src/identitydialog.ui:362
 msgid ""
 "If you check this box, Konversation will automatically set all connections "
 "using this Identity away when the screensaver starts or after a period of "
@@ -3410,22 +3485,22 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, automaticAwayGroup)
-#: src/identitydialog.ui:309
+#: src/identitydialog.ui:365
 msgid "Automatic Away"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, setAwayAfterLabel)
-#: src/identitydialog.ui:327
+#: src/identitydialog.ui:383
 msgid "Set away after"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, timeOfUserInactivityLabel)
-#: src/identitydialog.ui:353
+#: src/identitydialog.ui:409
 msgid "of user inactivity"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_automaticUnawayChBox)
-#: src/identitydialog.ui:360
+#: src/identitydialog.ui:416
 msgid ""
 "If you check this box, Konversation will automatically cancel away for all "
 "connections using this Identity when the screensaver stops or new user "
@@ -3433,12 +3508,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_automaticUnawayChBox)
-#: src/identitydialog.ui:363
+#: src/identitydialog.ui:419
 msgid "Automatically return on activity"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, awayCommandsGroup)
-#: src/identitydialog.ui:379
+#: src/identitydialog.ui:435
 #, no-c-format
 msgid ""
 "If you check this box, Konversation will automatically run the away command "
@@ -3449,32 +3524,32 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, awayCommandsGroup)
-#: src/identitydialog.ui:382
+#: src/identitydialog.ui:438
 msgid "Away Commands"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, awayLabel)
-#: src/identitydialog.ui:394
+#: src/identitydialog.ui:450
 msgid "Away command:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, unAwayLabel)
-#: src/identitydialog.ui:407
+#: src/identitydialog.ui:463
 msgid "Return command:"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedWidget)
-#: src/identitydialog.ui:437
+#: src/identitydialog.ui:493
 msgid "Advanced"
 msgstr "Plie"
 
 #. i18n: ectx: property (text), widget (QLabel, sCommandLabel)
-#: src/identitydialog.ui:449
+#: src/identitydialog.ui:505
 msgid "&Pre-shell command:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_sCommandEdit)
-#: src/identitydialog.ui:459
+#: src/identitydialog.ui:515
 msgid ""
 "Here you can enter a command to be executed before connection to server "
 "starts<br>If you have multiple servers in this identity this command will be "
@@ -3482,12 +3557,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, codecLabel)
-#: src/identitydialog.ui:472
+#: src/identitydialog.ui:528
 msgid "&Encoding:"
 msgstr "Kodprez&ento:"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, m_codecCBox)
-#: src/identitydialog.ui:482
+#: src/identitydialog.ui:538
 msgid ""
 "This setting affects how characters you type are encoded for sending to the "
 "server. It also affects how messages are displayed. When you first open "
@@ -3497,12 +3572,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, loginLabel)
-#: src/identitydialog.ui:495
+#: src/identitydialog.ui:551
+#, fuzzy
 msgid "I&dent:"
-msgstr ""
+msgstr "&Identeco:"
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_loginEdit)
-#: src/identitydialog.ui:505
+#: src/identitydialog.ui:561
 msgid ""
 "When you connect, many servers query your computer for an IDENT response. If "
 "you computer is not running an IDENT server, this response is sent by "
@@ -3510,53 +3586,54 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, quitLabel)
-#: src/identitydialog.ui:518
+#: src/identitydialog.ui:574
 msgid "&Quit reason:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_quitEdit)
-#: src/identitydialog.ui:528
+#: src/identitydialog.ui:584
 msgid "Whenever you leave a server, this message is shown to others."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KLineEdit, m_quitEdit)
 #. i18n: ectx: property (text), widget (KLineEdit, m_partEdit)
-#: src/identitydialog.ui:531 src/identitydialog.ui:557
+#: src/identitydialog.ui:587 src/identitydialog.ui:613
+#, fuzzy
 msgid "Konversation terminated."
-msgstr ""
+msgstr "Konversation"
 
 #. i18n: ectx: property (text), widget (QLabel, partLabel)
-#: src/identitydialog.ui:544
+#: src/identitydialog.ui:600
 msgid "&Part reason:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_partEdit)
-#: src/identitydialog.ui:554
+#: src/identitydialog.ui:610
 msgid "Whenever you leave a channel, this message is sent to the channel."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, kickLabel)
-#: src/identitydialog.ui:570
+#: src/identitydialog.ui:626
 msgid "&Kick reason:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_kickEdit)
-#: src/identitydialog.ui:580
+#: src/identitydialog.ui:636
 msgid ""
 "Whenever you are kicked from a channel (usually by an IRC operator), this "
 "message is sent to the channel."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KLineEdit, m_kickEdit)
-#: src/identitydialog.ui:583
+#: src/identitydialog.ui:639
 msgid "User terminated."
 msgstr ""
 
-#: src/irc/channel.cpp:131
+#: src/irc/channel.cpp:127
 msgid "Edit Channel Settings"
 msgstr ""
 
-#: src/irc/channel.cpp:139
+#: src/irc/channel.cpp:135
 msgid ""
 "<qt><p>Every channel on IRC has a topic associated with it.  This is simply "
 "a message that everybody can see.</p><p>If you are an operator, or the "
@@ -3565,11 +3642,11 @@ msgid ""
 "can also view the history of topics there.</p></qt>"
 msgstr ""
 
-#: src/irc/channel.cpp:178
+#: src/irc/channel.cpp:177
 msgid "Maximum users allowed in channel"
 msgstr ""
 
-#: src/irc/channel.cpp:179
+#: src/irc/channel.cpp:178
 msgid ""
 "<qt><p>This is the channel user limit - the maximum number of users that can "
 "be in the channel at a time.  If you are an operator, you can set this.  The "
@@ -3577,7 +3654,7 @@ msgid ""
 "this.</p></qt>"
 msgstr ""
 
-#: src/irc/channel.cpp:221 src/viewer/statuspanel.cpp:49
+#: src/irc/channel.cpp:220 src/viewer/statuspanel.cpp:49
 msgid ""
 "<qt><p>This shows your current nick, and any alternatives you have set up.  "
 "If you select or type in a different nickname, then a request will be sent "
@@ -3587,738 +3664,744 @@ msgid ""
 "<em>Identities</em> option in the <em>Settings</em> menu.</p></qt>"
 msgstr ""
 
-#: src/irc/channel.cpp:549
+#: src/irc/channel.cpp:545
 msgid "Completion"
 msgstr ""
 
-#: src/irc/channel.cpp:549
+#: src/irc/channel.cpp:545
 #, kde-format
 msgid "Possible completions: %1."
 msgstr ""
 
-#: src/irc/channel.cpp:885
+#: src/irc/channel.cpp:878
 msgid "Channel Password"
 msgstr ""
 
-#: src/irc/channel.cpp:900
+#: src/irc/channel.cpp:893
 msgid "Channel User Limit"
 msgstr ""
 
-#: src/irc/channel.cpp:901
+#: src/irc/channel.cpp:894
 msgid "Enter the new user limit for the channel:"
 msgstr ""
 
-#: src/irc/channel.cpp:1059 src/irc/channel.cpp:1064
-#: src/irc/inputfilter.cpp:1193 src/irc/inputfilter.cpp:1211
-#: src/irc/inputfilter.cpp:1225 src/irc/inputfilter.cpp:1240
-#: src/irc/inputfilter.cpp:2039 src/irc/query.cpp:173
+#: src/irc/channel.cpp:1052 src/irc/channel.cpp:1057
+#: src/irc/inputfilter.cpp:1237 src/irc/inputfilter.cpp:1255
+#: src/irc/inputfilter.cpp:1269 src/irc/inputfilter.cpp:1284
+#: src/irc/inputfilter.cpp:2083 src/irc/query.cpp:173
 msgid "Nick"
 msgstr ""
 
-#: src/irc/channel.cpp:1059
+#: src/irc/channel.cpp:1052
 #, kde-format
 msgid "You are now known as %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1064 src/irc/query.cpp:173
+#: src/irc/channel.cpp:1057 src/irc/query.cpp:173
 #, kde-format
 msgid "%1 is now known as %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1085 src/irc/channel.cpp:1111
-#: src/irc/invitedialog.cpp:166 src/viewer/ircview.cpp:727
+#: src/irc/channel.cpp:1078 src/irc/channel.cpp:1104
+#: src/viewer/ircview.cpp:769
+#, fuzzy
+msgctxt "Message type"
 msgid "Join"
 msgstr "Aliĝu"
 
-#: src/irc/channel.cpp:1086
+#: src/irc/channel.cpp:1079
 #, kde-format
-msgctxt "%1 is the channel and %2 is our hostmask"
-msgid "You have joined the channel %1 (%2)."
+msgctxt "%1 = our hostmask, %2 = channel"
+msgid "You (%1) have joined the channel %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1112
+#: src/irc/channel.cpp:1105
 #, kde-format
 msgctxt "%1 is the nick joining and %2 the hostmask of that nick"
-msgid "%1 has joined this channel (%2)."
+msgid "%1 (%2) has joined this channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1138 src/irc/channel.cpp:1140 src/irc/channel.cpp:1161
-#: src/irc/channel.cpp:1163 src/irc/query.cpp:533 src/irc/query.cpp:540
-#: src/viewer/ircview.cpp:732
+#: src/irc/channel.cpp:1131 src/irc/channel.cpp:1133 src/irc/channel.cpp:1155
+#: src/irc/channel.cpp:1158 src/irc/query.cpp:514 src/irc/query.cpp:522
+#: src/viewer/ircview.cpp:774
+#, fuzzy
+msgctxt "Message type"
 msgid "Quit"
 msgstr "Forlasi"
 
-#: src/irc/channel.cpp:1138
-msgid "You have left this server."
-msgstr ""
-
-#: src/irc/channel.cpp:1140
+#: src/irc/channel.cpp:1131
 #, kde-format
-msgctxt "%1 adds the reason"
-msgid "You have left this server (%1)."
+msgid "You (%1) have left this server."
 msgstr ""
 
-#: src/irc/channel.cpp:1145 src/irc/channel.cpp:1147 src/irc/channel.cpp:1169
-#: src/irc/channel.cpp:1171 src/viewer/ircview.cpp:732
+#: src/irc/channel.cpp:1133
+#, kde-format
+msgctxt "%1 = our hostmask, %2 = reason"
+msgid "You (%1) have left this server (%2)."
+msgstr ""
+
+#: src/irc/channel.cpp:1139 src/irc/channel.cpp:1141 src/irc/channel.cpp:1164
+#: src/irc/channel.cpp:1167 src/viewer/ircview.cpp:774
+msgctxt "Message type"
 msgid "Part"
 msgstr ""
 
-#: src/irc/channel.cpp:1145
+#: src/irc/channel.cpp:1139
 #, kde-format
 msgid "You have left channel %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1148
+#: src/irc/channel.cpp:1142
 #, kde-format
-msgctxt "%1 adds the channel and %2 the reason"
-msgid "You have left channel %1 (%2)."
+msgctxt "%1 = our hostmask, %2 = channel, %3 = reason"
+msgid "You (%1) have left channel %2 (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1161 src/irc/query.cpp:533
+#: src/irc/channel.cpp:1155
 #, kde-format
-msgid "%1 has left this server."
+msgid "%1 (%2) has left this server."
+msgstr ""
+
+#: src/irc/channel.cpp:1159
+#, kde-format
+msgctxt "%1 = nick, %2 = hostname, %3 = reason"
+msgid "%1 (%2) has left this server (%3)."
 msgstr ""
 
 #: src/irc/channel.cpp:1164
 #, kde-format
-msgctxt "%1 adds the nick and %2 the reason"
-msgid "%1 has left this server (%2)."
+msgid "%1 (%2) has left this channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1169
+#: src/irc/channel.cpp:1168
 #, kde-format
-msgid "%1 has left this channel."
+msgctxt "%1 = nick, %2 = hostmask, %3 = reason"
+msgid "%1 (%2) has left this channel (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1172
-#, kde-format
-msgctxt "%1 adds the nick and %2 the reason"
-msgid "%1 has left this channel (%2)."
-msgstr ""
-
-#: src/irc/channel.cpp:1228 src/irc/channel.cpp:1230 src/irc/channel.cpp:1237
-#: src/irc/channel.cpp:1242 src/irc/channel.cpp:1263 src/irc/channel.cpp:1265
-#: src/irc/channel.cpp:1272 src/irc/channel.cpp:1277
-#: src/viewer/irccontextmenus.cpp:389
+#: src/irc/channel.cpp:1216 src/irc/channel.cpp:1218 src/irc/channel.cpp:1225
+#: src/irc/channel.cpp:1230 src/irc/channel.cpp:1251 src/irc/channel.cpp:1253
+#: src/irc/channel.cpp:1260 src/irc/channel.cpp:1265
+#: src/viewer/irccontextmenus.cpp:422
 msgid "Kick"
 msgstr ""
 
-#: src/irc/channel.cpp:1228
+#: src/irc/channel.cpp:1216
 #, kde-format
 msgid "You have kicked yourself from channel %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1231
+#: src/irc/channel.cpp:1219
 #, kde-format
 msgctxt "%1 adds the channel and %2 the reason"
 msgid "You have kicked yourself from channel %1 (%2)."
 msgstr ""
 
-#: src/irc/channel.cpp:1238
+#: src/irc/channel.cpp:1226
 #, kde-format
 msgctxt "%1 adds the channel, %2 adds the kicker"
 msgid "You have been kicked from channel %1 by %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1243
+#: src/irc/channel.cpp:1231
 #, kde-format
 msgctxt "%1 adds the channel, %2 the kicker and %3 the reason"
 msgid "You have been kicked from channel %1 by %2 (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1263
+#: src/irc/channel.cpp:1251
 #, kde-format
 msgid "You have kicked %1 from the channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1266
+#: src/irc/channel.cpp:1254
 #, kde-format
 msgctxt "%1 adds the kicked nick and %2 the reason"
 msgid "You have kicked %1 from the channel (%2)."
 msgstr ""
 
-#: src/irc/channel.cpp:1273
+#: src/irc/channel.cpp:1261
 #, kde-format
 msgctxt "%1 adds the kicked nick, %2 adds the kicker"
 msgid "%1 has been kicked from the channel by %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1278
+#: src/irc/channel.cpp:1266
 #, kde-format
 msgctxt "%1 adds the kicked nick, %2 the kicker and %3 the reason"
 msgid "%1 has been kicked from the channel by %2 (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1345
+#: src/irc/channel.cpp:1333
 #, kde-format
 msgid "%1 nick"
 msgid_plural "%1 nicks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1346
+#: src/irc/channel.cpp:1334
 #, kde-format
 msgid " (%1 op)"
 msgid_plural " (%1 ops)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1361 src/irc/channel.cpp:1388 src/irc/channel.cpp:1392
-#: src/irc/inputfilter.cpp:1108 src/irc/inputfilter.cpp:1124
-#: src/irc/inputfilter.cpp:1132
+#: src/irc/channel.cpp:1352 src/irc/channel.cpp:1366 src/irc/channel.cpp:1368
+#: src/irc/inputfilter.cpp:1152 src/irc/inputfilter.cpp:1168
+#: src/irc/inputfilter.cpp:1176
 msgid "Topic"
 msgstr ""
 
-#: src/irc/channel.cpp:1361
+#: src/irc/channel.cpp:1352
 #, kde-format
 msgid "The channel topic is \"%1\"."
 msgstr ""
 
-#: src/irc/channel.cpp:1388
+#: src/irc/channel.cpp:1366
 #, kde-format
 msgid "You set the channel topic to \"%1\"."
 msgstr ""
 
-#: src/irc/channel.cpp:1392
+#: src/irc/channel.cpp:1368
 #, kde-format
 msgid "%1 sets the channel topic to \"%2\"."
 msgstr ""
 
-#: src/irc/channel.cpp:1487
+#: src/irc/channel.cpp:1422
 #, kde-format
 msgid "You set a quiet on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1488
+#: src/irc/channel.cpp:1423
 #, kde-format
 msgid "%1 sets a quiet on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1492
+#: src/irc/channel.cpp:1427
 #, kde-format
 msgid "You remove the quiet on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1493
+#: src/irc/channel.cpp:1428
 #, kde-format
 msgid "%1 removes the quiet on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1502
+#: src/irc/channel.cpp:1437
 msgid "You give channel owner privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1503
+#: src/irc/channel.cpp:1438
 #, kde-format
 msgid "You give channel owner privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1507
+#: src/irc/channel.cpp:1442
 #, kde-format
 msgid "%1 gives channel owner privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1508
+#: src/irc/channel.cpp:1443
 #, kde-format
 msgid "%1 gives channel owner privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1515
+#: src/irc/channel.cpp:1450
 msgid "You take channel owner privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1516
+#: src/irc/channel.cpp:1451
 #, kde-format
 msgid "You take channel owner privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1520
+#: src/irc/channel.cpp:1455
 #, kde-format
 msgid "%1 takes channel owner privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1521
+#: src/irc/channel.cpp:1456
 #, kde-format
 msgid "%1 takes channel owner privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1537
+#: src/irc/channel.cpp:1472
 msgid "You give channel admin privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1538
+#: src/irc/channel.cpp:1473
 #, kde-format
 msgid "You give channel admin privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1542
+#: src/irc/channel.cpp:1477
 #, kde-format
 msgid "%1 gives channel admin privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1543
+#: src/irc/channel.cpp:1478
 #, kde-format
 msgid "%1 gives channel admin privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1550
+#: src/irc/channel.cpp:1485
 msgid "You take channel admin privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1551
+#: src/irc/channel.cpp:1486
 #, kde-format
 msgid "You take channel admin privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1555
+#: src/irc/channel.cpp:1490
 #, kde-format
 msgid "%1 takes channel admin privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1556
+#: src/irc/channel.cpp:1491
 #, kde-format
 msgid "%1 takes channel admin privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1571
+#: src/irc/channel.cpp:1506
 msgid "You give channel operator privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1572
+#: src/irc/channel.cpp:1507
 #, kde-format
 msgid "You give channel operator privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1576
+#: src/irc/channel.cpp:1511
 #, kde-format
 msgid "%1 gives channel operator privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1577
+#: src/irc/channel.cpp:1512
 #, kde-format
 msgid "%1 gives channel operator privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1584
+#: src/irc/channel.cpp:1519
 msgid "You take channel operator privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1585
+#: src/irc/channel.cpp:1520
 #, kde-format
 msgid "You take channel operator privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1589
+#: src/irc/channel.cpp:1524
 #, kde-format
 msgid "%1 takes channel operator privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1590
+#: src/irc/channel.cpp:1525
 #, kde-format
 msgid "%1 takes channel operator privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1605
+#: src/irc/channel.cpp:1540
 msgid "You give channel halfop privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1606
+#: src/irc/channel.cpp:1541
 #, kde-format
 msgid "You give channel halfop privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1610
+#: src/irc/channel.cpp:1545
 #, kde-format
 msgid "%1 gives channel halfop privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1611
+#: src/irc/channel.cpp:1546
 #, kde-format
 msgid "%1 gives channel halfop privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1618
+#: src/irc/channel.cpp:1553
 msgid "You take channel halfop privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1619
+#: src/irc/channel.cpp:1554
 #, kde-format
 msgid "You take channel halfop privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1623
+#: src/irc/channel.cpp:1558
 #, kde-format
 msgid "%1 takes channel halfop privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1624
+#: src/irc/channel.cpp:1559
 #, kde-format
 msgid "%1 takes channel halfop privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1641
+#: src/irc/channel.cpp:1576
 msgid "You give yourself permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1642
+#: src/irc/channel.cpp:1577
 #, kde-format
 msgid "You give %1 permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1646
+#: src/irc/channel.cpp:1581
 #, kde-format
 msgid "%1 gives you permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1647
+#: src/irc/channel.cpp:1582
 #, kde-format
 msgid "%1 gives %2 permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1654
+#: src/irc/channel.cpp:1589
 msgid "You take the permission to talk from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1655
+#: src/irc/channel.cpp:1590
 #, kde-format
 msgid "You take the permission to talk from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1659
+#: src/irc/channel.cpp:1594
 #, kde-format
 msgid "%1 takes the permission to talk from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1660
+#: src/irc/channel.cpp:1595
 #, kde-format
 msgid "%1 takes the permission to talk from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1672
+#: src/irc/channel.cpp:1607
 msgid "You set the channel mode to 'no colors allowed'."
 msgstr ""
 
-#: src/irc/channel.cpp:1673
+#: src/irc/channel.cpp:1608
 #, kde-format
 msgid "%1 sets the channel mode to 'no colors allowed'."
 msgstr ""
 
-#: src/irc/channel.cpp:1677
+#: src/irc/channel.cpp:1612
 msgid "You set the channel mode to 'allow color codes'."
 msgstr ""
 
-#: src/irc/channel.cpp:1678
+#: src/irc/channel.cpp:1613
 #, kde-format
 msgid "%1 sets the channel mode to 'allow color codes'."
 msgstr ""
 
-#: src/irc/channel.cpp:1685
+#: src/irc/channel.cpp:1620
 msgid "You set the channel mode to 'invite only'."
 msgstr ""
 
-#: src/irc/channel.cpp:1686
+#: src/irc/channel.cpp:1621
 #, kde-format
 msgid "%1 sets the channel mode to 'invite only'."
 msgstr ""
 
-#: src/irc/channel.cpp:1690
+#: src/irc/channel.cpp:1625
 msgid "You remove the 'invite only' mode from the channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1691
+#: src/irc/channel.cpp:1626
 #, kde-format
 msgid "%1 removes the 'invite only' mode from the channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1699
+#: src/irc/channel.cpp:1634
 msgid "You set the channel mode to 'moderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1700
+#: src/irc/channel.cpp:1635
 #, kde-format
 msgid "%1 sets the channel mode to 'moderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1704
+#: src/irc/channel.cpp:1639
 msgid "You set the channel mode to 'unmoderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1705
+#: src/irc/channel.cpp:1640
 #, kde-format
 msgid "%1 sets the channel mode to 'unmoderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1713
+#: src/irc/channel.cpp:1648
 msgid "You set the channel mode to 'no messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1714
+#: src/irc/channel.cpp:1649
 #, kde-format
 msgid "%1 sets the channel mode to 'no messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1718
+#: src/irc/channel.cpp:1653
 msgid "You set the channel mode to 'allow messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1719
+#: src/irc/channel.cpp:1654
 #, kde-format
 msgid "%1 sets the channel mode to 'allow messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1727
+#: src/irc/channel.cpp:1662
 msgid "You set the channel mode to 'private'."
 msgstr ""
 
-#: src/irc/channel.cpp:1728
+#: src/irc/channel.cpp:1663
 #, kde-format
 msgid "%1 sets the channel mode to 'private'."
 msgstr ""
 
-#: src/irc/channel.cpp:1732
+#: src/irc/channel.cpp:1667
 msgid "You set the channel mode to 'public'."
 msgstr ""
 
-#: src/irc/channel.cpp:1733
+#: src/irc/channel.cpp:1668
 #, kde-format
 msgid "%1 sets the channel mode to 'public'."
 msgstr ""
 
-#: src/irc/channel.cpp:1742
+#: src/irc/channel.cpp:1677
 msgid "You set the channel mode to 'secret'."
 msgstr ""
 
-#: src/irc/channel.cpp:1743
+#: src/irc/channel.cpp:1678
 #, kde-format
 msgid "%1 sets the channel mode to 'secret'."
 msgstr ""
 
-#: src/irc/channel.cpp:1747
+#: src/irc/channel.cpp:1682
 msgid "You set the channel mode to 'visible'."
 msgstr ""
 
-#: src/irc/channel.cpp:1748
+#: src/irc/channel.cpp:1683
 #, kde-format
 msgid "%1 sets the channel mode to 'visible'."
 msgstr ""
 
-#: src/irc/channel.cpp:1759
+#: src/irc/channel.cpp:1694
 msgid "You switch on 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1760
+#: src/irc/channel.cpp:1695
 #, kde-format
 msgid "%1 switches on 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1764
+#: src/irc/channel.cpp:1699
 msgid "You switch off 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1765
+#: src/irc/channel.cpp:1700
 #, kde-format
 msgid "%1 switches off 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1773
+#: src/irc/channel.cpp:1708
 #, kde-format
 msgid "You set the channel key to '%1'."
 msgstr ""
 
-#: src/irc/channel.cpp:1774
+#: src/irc/channel.cpp:1709
 #, kde-format
 msgid "%1 sets the channel key to '%2'."
 msgstr ""
 
-#: src/irc/channel.cpp:1778
+#: src/irc/channel.cpp:1713
 msgid "You remove the channel key."
 msgstr ""
 
-#: src/irc/channel.cpp:1779
+#: src/irc/channel.cpp:1714
 #, kde-format
 msgid "%1 removes the channel key."
 msgstr ""
 
-#: src/irc/channel.cpp:1787
+#: src/irc/channel.cpp:1722
 #, kde-format
 msgid "You set the channel limit to 1 nick."
 msgid_plural "You set the channel limit to %1 nicks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1788
+#: src/irc/channel.cpp:1723
 #, kde-format
 msgid "%2 sets the channel limit to 1 nick."
 msgid_plural "%2 sets the channel limit to %1 nicks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1792
+#: src/irc/channel.cpp:1727
 msgid "You remove the channel limit."
 msgstr ""
 
-#: src/irc/channel.cpp:1793
+#: src/irc/channel.cpp:1728
 #, kde-format
 msgid "%1 removes the channel limit."
 msgstr ""
 
-#: src/irc/channel.cpp:1803
+#: src/irc/channel.cpp:1738
 #, kde-format
 msgid "You set a ban on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1804
+#: src/irc/channel.cpp:1739
 #, kde-format
 msgid "%1 sets a ban on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1808
+#: src/irc/channel.cpp:1743
 #, kde-format
 msgid "You remove the ban on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1809
+#: src/irc/channel.cpp:1744
 #, kde-format
 msgid "%1 removes the ban on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1816
+#: src/irc/channel.cpp:1751
 #, kde-format
 msgid "You set a ban exception on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1817
+#: src/irc/channel.cpp:1752
 #, kde-format
 msgid "%1 sets a ban exception on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1821
+#: src/irc/channel.cpp:1756
 #, kde-format
 msgid "You remove the ban exception on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1822
+#: src/irc/channel.cpp:1757
 #, kde-format
 msgid "%1 removes the ban exception on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1829
+#: src/irc/channel.cpp:1764
 #, kde-format
 msgid "You set invitation mask %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1830
+#: src/irc/channel.cpp:1765
 #, kde-format
 msgid "%1 sets invitation mask %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1834
+#: src/irc/channel.cpp:1769
 #, kde-format
 msgid "You remove the invitation mask %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1835
+#: src/irc/channel.cpp:1770
 #, kde-format
 msgid "%1 removes the invitation mask %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1843
+#: src/irc/channel.cpp:1778
 #, kde-format
 msgid "You set the channel mode '%1'."
 msgstr ""
 
-#: src/irc/channel.cpp:1844
+#: src/irc/channel.cpp:1779
 #, kde-format
 msgid "%1 sets the channel mode '%2'."
 msgstr ""
 
-#: src/irc/channel.cpp:1848
+#: src/irc/channel.cpp:1783
 #, kde-format
 msgid "You set channel mode +%1"
 msgstr ""
 
-#: src/irc/channel.cpp:1849
+#: src/irc/channel.cpp:1784
 #, kde-format
 msgid "%1 sets channel mode +%2"
 msgstr ""
 
-#: src/irc/channel.cpp:1856
+#: src/irc/channel.cpp:1791
 #, kde-format
 msgid "You remove the channel mode '%1'."
 msgstr ""
 
-#: src/irc/channel.cpp:1857
+#: src/irc/channel.cpp:1792
 #, kde-format
 msgid "%1 removes the channel mode '%2'."
 msgstr ""
 
-#: src/irc/channel.cpp:1861
+#: src/irc/channel.cpp:1796
 #, kde-format
 msgid "You set channel mode -%1"
 msgstr ""
 
-#: src/irc/channel.cpp:1862
+#: src/irc/channel.cpp:1797
 #, kde-format
 msgid "%1 sets channel mode -%2"
 msgstr ""
 
-#: src/irc/channel.cpp:2263
+#: src/irc/channel.cpp:2191
 msgid "You have to be an operator to change this."
 msgstr ""
 
-#: src/irc/channel.cpp:2265
+#: src/irc/channel.cpp:2193
 #, kde-format
 msgid "Topic can be changed by channel operator only.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2266
+#: src/irc/channel.cpp:2194
 #, kde-format
 msgid "No messages to channel from clients on the outside.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2267
+#: src/irc/channel.cpp:2195
 #, kde-format
 msgid "Secret channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2268
+#: src/irc/channel.cpp:2196
 #, kde-format
 msgid "Invite only channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2269
+#: src/irc/channel.cpp:2197
 #, kde-format
 msgid "Private channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2270
+#: src/irc/channel.cpp:2198
 #, kde-format
 msgid "Moderated channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2271
+#: src/irc/channel.cpp:2199
 msgid "Protect channel with a password."
 msgstr ""
 
-#: src/irc/channel.cpp:2272
+#: src/irc/channel.cpp:2200
 msgid "Set user limit to channel."
 msgstr ""
 
-#: src/irc/channel.cpp:2467
+#: src/irc/channel.cpp:2374
 #, kde-format
 msgid "Do you want to leave %1?"
 msgstr ""
 
-#: src/irc/channel.cpp:2468
+#: src/irc/channel.cpp:2375
 msgid "Leave Channel"
 msgstr ""
 
-#: src/irc/channel.cpp:2469
+#: src/irc/channel.cpp:2376
 msgid "Leave"
 msgstr "Foriri"
 
-#: src/irc/channel.cpp:2607 src/irc/query.cpp:480
-#: src/viewer/statuspanel.cpp:322
+#: src/irc/channel.cpp:2529 src/irc/query.cpp:461
+#: src/viewer/statuspanel.cpp:304
 #, kde-format
 msgid "Identity Default ( %1 )"
 msgstr ""
@@ -4328,18 +4411,19 @@ msgstr ""
 msgid "Pass&word:"
 msgstr "Pas&vorto:"
 
-#. i18n: ectx: property (text), widget (QLabel, channelLbl)
 #. i18n: ectx: property (text), widget (QLabel, channelLabel)
+#. i18n: ectx: property (text), widget (QLabel, channelLbl)
 #: src/irc/channeldialogui.ui:47 src/irc/joinchannelui.ui:26
+#, fuzzy
 msgid "C&hannel:"
-msgstr ""
+msgstr "Kanalo"
 
 #: src/irc/channellistpanel.cpp:87
 msgid "Channel Name"
 msgstr ""
 
-#: src/irc/channellistpanel.cpp:89 src/irc/inputfilter.cpp:1330
-#: src/irc/inputfilter.cpp:1340 src/irc/inputfilter.cpp:2056
+#: src/irc/channellistpanel.cpp:89 src/irc/inputfilter.cpp:1374
+#: src/irc/inputfilter.cpp:1384 src/irc/inputfilter.cpp:2100
 msgid "Users"
 msgstr "Uzantoj"
 
@@ -4349,13 +4433,12 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChannelListWidgetUI)
 #: src/irc/channellistpanel.cpp:146 src/irc/channellistpanelui.ui:14
-#: src/viewer/viewcontainer.cpp:2476 src/viewer/viewcontainer.cpp:2497
+#: src/viewer/viewcontainer.cpp:2553 src/viewer/viewcontainer.cpp:2574
 msgid "Channel List"
 msgstr ""
 
 #: src/irc/channellistpanel.cpp:163
 #, fuzzy
-#| msgid "Save Link As..."
 msgctxt "save list"
 msgid "Save &List..."
 msgstr "Konservi la ligon kiel..."
@@ -4375,7 +4458,6 @@ msgstr ""
 
 #: src/irc/channellistpanel.cpp:168
 #, fuzzy
-#| msgid "Channel"
 msgctxt "join channel"
 msgid "&Join Channel"
 msgstr "Kanalo"
@@ -4415,7 +4497,6 @@ msgstr ""
 
 #: src/irc/channellistpanel.cpp:469
 #, fuzzy
-#| msgid "&Open URL"
 msgid "Open URL"
 msgstr "Malfermi URL&on"
 
@@ -4447,8 +4528,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_channelBox)
 #: src/irc/channellistpanelui.ui:92
+#, fuzzy
 msgid "&Channel"
-msgstr ""
+msgstr "Kanalo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_topicBox)
 #: src/irc/channellistpanelui.ui:108
@@ -4463,7 +4545,6 @@ msgstr ""
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, m_filterLine)
 #: src/irc/channellistpanelui.ui:127
 #, fuzzy
-#| msgid "Search:"
 msgid "Search"
 msgstr "Serĉi:"
 
@@ -4511,205 +4592,6 @@ msgstr ""
 #: src/irc/channelnick.cpp:203
 msgid "Has voice"
 msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:32
-#, kde-format
-msgid "Channel Settings for %1"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:159
-msgid "&Hide Advanced Modes &lt;&lt;"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:163
-msgid "&Show Advanced Modes &gt;&gt;"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:299
-msgid "Parameter"
-msgstr "Parametro"
-
-#: src/irc/channeloptionsdialog.cpp:307
-#, fuzzy, kde-format
-#| msgid "%1 on %2"
-msgctxt "<mode character> (<mode description>)"
-msgid "%1 (%2)"
-msgstr "%1 sur %2"
-
-#: src/irc/channeloptionsdialog.cpp:634
-msgid "Timestamp"
-msgstr "Tempindiko"
-
-#: src/irc/channeloptionsdialog.cpp:636
-msgid "Author"
-msgstr "Aŭtoro"
-
-#: src/irc/channeloptionsdialog.cpp:697
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>The <b>T</b>opic mode means that only the channel "
-"operator can change the topic for the channel.</p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:699
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p><b>N</b>o messages from outside means users who are not "
-"in the channel cannot send messages for everybody in the channel to see.  "
-"Almost all channels have this set to prevent nuisance messages.</p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:701
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>A <b>S</b>ecret channel will not show up in the channel "
-"list, nor will any user be able to see that you are in the channel with the "
-"<em>WHOIS</em> command or anything similar.  Only the people that are in the "
-"same channel will know that you are in this channel, if this mode is set.</"
-"p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:703
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>An <b>I</b>nvite only channel means that people can only "
-"join the channel if they are invited.  To invite someone, a channel operator "
-"needs to issue the command <em>/invite nick</em> from within the channel.</"
-"p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:705
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>A <b>P</b>rivate channel is shown in a listing of all "
-"channels, but the topic is not shown.  A user's <em>WHOIS</em> may or may "
-"not show them as being in a private channel depending on the IRC server.</"
-"p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:707
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>A <b>M</b>oderated channel is one where only operators, "
-"half-operators and those with voice can talk.</p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:709
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>A protected channel requires users to enter a password "
-"in order to join.</p></qt>"
-msgstr ""
-
-#: src/irc/channeloptionsdialog.cpp:711
-msgid ""
-"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
-"change these.</p><p>A channel that has a user <b>L</b>imit means that only "
-"that many users can be in the channel at any one time.  Some channels have a "
-"bot that sits in the channel and changes this automatically depending on how "
-"busy the channel is.</p></qt>"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, topicTab)
-#: src/irc/channeloptionsui.ui:27
-msgid "Topi&c"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, modesPage)
-#: src/irc/channeloptionsui.ui:74
-msgid "Mo&des"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, topicModeChBox)
-#: src/irc/channeloptionsui.ui:80
-msgid "&Topic can only be changed by channel operators"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, messageModeChBox)
-#: src/irc/channeloptionsui.ui:87
-msgid "&No messages from outside the channel"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, secretModeChBox)
-#: src/irc/channeloptionsui.ui:94
-msgid "&Secret channel, the channel is not listed in the channel list"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, inviteModeChBox)
-#: src/irc/channeloptionsui.ui:101
-msgid "Only &invited are allowed to join the channel"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, moderatedModeChBox)
-#: src/irc/channeloptionsui.ui:108
-msgid "&Moderated channel, only people with voice can write to the channel"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, userLimitChBox)
-#: src/irc/channeloptionsui.ui:115
-msgid "User &limit:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, keyModeChBox)
-#: src/irc/channeloptionsui.ui:148
-msgid "Channel &password:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, toggleAdvancedModes)
-#: src/irc/channeloptionsui.ui:162
-msgid "Show &Advanced Modes >>"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
-#: src/irc/channeloptionsui.ui:212
-msgid "&Ban List"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: src/irc/channeloptionsui.ui:226
-msgid "Search:"
-msgstr "Serĉi:"
-
-#. i18n: ectx: property (text), widget (QTreeWidget, banList)
-#: src/irc/channeloptionsui.ui:248
-msgid "Hostmask"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QTreeWidget, banList)
-#: src/irc/channeloptionsui.ui:253
-msgid "Set By"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QTreeWidget, banList)
-#: src/irc/channeloptionsui.ui:258
-msgid "Time Set"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, hostmaskLabel)
-#: src/irc/channeloptionsui.ui:268 src/irc/nickinfo.cpp:365
-msgid "Hostmask:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, updateBan)
-#: src/irc/channeloptionsui.ui:281
-#, fuzzy
-#| msgid "Update interval:"
-msgid "Update Ban"
-msgstr "Aktualigintervalo:"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, addBan)
-#: src/irc/channeloptionsui.ui:300
-#, fuzzy
-#| msgid "Add"
-msgid "Add Ban"
-msgstr "Aldoni"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeBan)
-#: src/irc/channeloptionsui.ui:319
-#, fuzzy
-#| msgid "Remove"
-msgid "Remove Ban"
-msgstr "Forigi"
 
 #: src/irc/inputfilter.cpp:270
 #, kde-format
@@ -4774,7 +4656,6 @@ msgstr ""
 
 #: src/irc/inputfilter.cpp:527
 #, fuzzy
-#| msgid " seconds"
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] " sekundoj"
@@ -4800,309 +4681,311 @@ msgstr ""
 msgid "Received DH1080_FINISH from %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:599 src/irc/inputfilter.cpp:765
+#: src/irc/inputfilter.cpp:582 src/irc/inputfilter.cpp:750
 #, kde-format
 msgid "-%1- %2"
 msgstr "-%1- %2"
 
-#: src/irc/inputfilter.cpp:704 src/irc/inputfilter.cpp:1381
-msgid "Invite"
-msgstr "Invitu"
-
-#: src/irc/inputfilter.cpp:705
+#: src/irc/inputfilter.cpp:689
 #, kde-format
 msgid "%1 invited you to channel %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:813 src/irc/inputfilter.cpp:821
+#: src/irc/inputfilter.cpp:846 src/irc/inputfilter.cpp:854
 msgid "Welcome"
 msgstr "Bonvenon"
 
-#: src/irc/inputfilter.cpp:822
+#: src/irc/inputfilter.cpp:855
 #, kde-format
 msgid "Server %1 (Version %2), User modes: %3, Channel modes: %4"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:848
+#: src/irc/inputfilter.cpp:881
 msgid "Support"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:936
+#: src/irc/inputfilter.cpp:980
 msgid "Your personal modes are:"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:948 src/irc/inputfilter.cpp:990
+#: src/irc/inputfilter.cpp:992 src/irc/inputfilter.cpp:1034
 msgid "Channel modes: "
 msgstr ""
 
-#: src/irc/inputfilter.cpp:970
+#: src/irc/inputfilter.cpp:1014
 #, kde-format
 msgid "limited to %1 user"
 msgid_plural "limited to %1 users"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:999 src/urlcatcher.cpp:178
+#: src/irc/inputfilter.cpp:1043 src/urlcatcher.cpp:178
 msgid "URL"
 msgstr "Retadreso"
 
-#: src/irc/inputfilter.cpp:1000
+#: src/irc/inputfilter.cpp:1044
 #, kde-format
 msgid "Channel URL: %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1010
+#: src/irc/inputfilter.cpp:1054
 msgid "Created"
 msgstr "Kreita"
 
-#: src/irc/inputfilter.cpp:1011
+#: src/irc/inputfilter.cpp:1055
 #, kde-format
 msgid "This channel was created on %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1024 src/irc/inputfilter.cpp:1150
-#: src/irc/inputfilter.cpp:1413 src/irc/inputfilter.cpp:1469
-#: src/irc/inputfilter.cpp:1479 src/irc/inputfilter.cpp:1621
-#: src/irc/inputfilter.cpp:1629 src/irc/inputfilter.cpp:1636
-#: src/irc/inputfilter.cpp:1643 src/irc/inputfilter.cpp:1650
-#: src/irc/inputfilter.cpp:1657 src/irc/inputfilter.cpp:1683
-#: src/irc/inputfilter.cpp:1698 src/irc/inputfilter.cpp:1714
-#: src/irc/inputfilter.cpp:1716 src/irc/inputfilter.cpp:1759
-#: src/irc/inputfilter.cpp:1771 src/irc/inputfilter.cpp:1781
-#: src/irc/inputfilter.cpp:1788 src/irc/inputfilter.cpp:1794
-#: src/irc/inputfilter.cpp:1812
+#: src/irc/inputfilter.cpp:1068 src/irc/inputfilter.cpp:1194
+#: src/irc/inputfilter.cpp:1457 src/irc/inputfilter.cpp:1513
+#: src/irc/inputfilter.cpp:1523 src/irc/inputfilter.cpp:1665
+#: src/irc/inputfilter.cpp:1673 src/irc/inputfilter.cpp:1680
+#: src/irc/inputfilter.cpp:1687 src/irc/inputfilter.cpp:1694
+#: src/irc/inputfilter.cpp:1701 src/irc/inputfilter.cpp:1727
+#: src/irc/inputfilter.cpp:1742 src/irc/inputfilter.cpp:1758
+#: src/irc/inputfilter.cpp:1760 src/irc/inputfilter.cpp:1803
+#: src/irc/inputfilter.cpp:1815 src/irc/inputfilter.cpp:1825
+#: src/irc/inputfilter.cpp:1832 src/irc/inputfilter.cpp:1838
+#: src/irc/inputfilter.cpp:1856
 msgid "Whois"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1024
+#: src/irc/inputfilter.cpp:1068
 #, kde-format
 msgid "%1 is logged in as %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1057 src/irc/inputfilter.cpp:1074
+#: src/irc/inputfilter.cpp:1101 src/irc/inputfilter.cpp:1118
 #, fuzzy
 msgid "Names"
 msgstr "Nomoj:"
 
-#: src/irc/inputfilter.cpp:1074
+#: src/irc/inputfilter.cpp:1118
 msgid "End of NAMES list."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1087
+#: src/irc/inputfilter.cpp:1131
 msgid "TOPIC"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1087
+#: src/irc/inputfilter.cpp:1131
 #, kde-format
 msgid "The channel %1 has no topic set."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1108
+#: src/irc/inputfilter.cpp:1152
 #, kde-format
 msgid "The channel topic for %1 is: \"%2\""
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1125
+#: src/irc/inputfilter.cpp:1169
 #, kde-format
 msgid "The topic was set by %1 on %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1132
+#: src/irc/inputfilter.cpp:1176
 #, kde-format
 msgid "The topic for %1 was set by %2 on %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1150
+#: src/irc/inputfilter.cpp:1194
 #, kde-format
 msgid "%1 is actually using the host %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1163
+#: src/irc/inputfilter.cpp:1207
 #, kde-format
 msgid "%1: No such nick/channel."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1167
+#: src/irc/inputfilter.cpp:1211
 #, kde-format
 msgid "No such nick: %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1180
+#: src/irc/inputfilter.cpp:1224
 #, kde-format
 msgid "%1: No such channel."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1193
+#: src/irc/inputfilter.cpp:1237
 msgid "Nickname already in use, try a different one."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1211
+#: src/irc/inputfilter.cpp:1255
 #, kde-format
 msgid "Nickname already in use. Trying %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1240
+#: src/irc/inputfilter.cpp:1284
 #, kde-format
 msgid "Erroneus nickname. Changing nick to %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1251
+#: src/irc/inputfilter.cpp:1295
 #, kde-format
 msgid "You are not on %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1262 src/irc/inputfilter.cpp:1271
-#: src/irc/inputfilter.cpp:1280 src/viewer/ircview.cpp:691
+#: src/irc/inputfilter.cpp:1306 src/irc/inputfilter.cpp:1315
+#: src/irc/inputfilter.cpp:1324 src/viewer/ircview.cpp:733
 msgid "MOTD"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1262
+#: src/irc/inputfilter.cpp:1306
 msgid "Message of the day:"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1280
+#: src/irc/inputfilter.cpp:1324
 msgid "End of message of the day"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1304
+#: src/irc/inputfilter.cpp:1348
 #, kde-format
 msgid "You need to be a channel operator in %1 to do that."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1312
+#: src/irc/inputfilter.cpp:1356
 msgid "You are now an IRC operator on this server."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1320
+#: src/irc/inputfilter.cpp:1364
 #, kde-format
 msgid "'%1' is now your hidden host (set by services)."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1330
+#: src/irc/inputfilter.cpp:1374
 #, kde-format
 msgid "Current users on the network: %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1340
+#: src/irc/inputfilter.cpp:1384
 #, kde-format
 msgid "Current users on %1: %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1371
+#: src/irc/inputfilter.cpp:1414 src/irc/nicksonline.cpp:247
+#: src/irc/server.cpp:3929 src/irc/server.cpp:3931 src/irc/server.cpp:3956
+#: src/irc/server.cpp:3965 src/linkaddressbook/addressbook.cpp:109
+msgid "Away"
+msgstr "For"
+
+#: src/irc/inputfilter.cpp:1415
 #, kde-format
 msgid "%1 is away: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1382
+#: src/irc/inputfilter.cpp:1426
 #, kde-format
 msgid "You invited %1 to channel %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1404 src/irc/inputfilter.cpp:1496
+#: src/irc/inputfilter.cpp:1448 src/irc/inputfilter.cpp:1540
 #, kde-format
 msgid "%1@%2"
 msgstr "%1@%2"
 
-#: src/irc/inputfilter.cpp:1414
+#: src/irc/inputfilter.cpp:1458
 #, kde-format
 msgid "%1 is %2@%3 (%4)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1429 src/irc/outputfilterresolvejob.cpp:83
+#: src/irc/inputfilter.cpp:1473 src/irc/outputfilterresolvejob.cpp:83
 msgid "DNS"
 msgstr "DNS"
 
-#: src/irc/inputfilter.cpp:1430
+#: src/irc/inputfilter.cpp:1474
 #, kde-format
 msgid "Resolved %1 (%2) to address: %3"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1439
+#: src/irc/inputfilter.cpp:1483
 #, kde-format
 msgid "Unable to resolve address for %1 (%2)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1469
+#: src/irc/inputfilter.cpp:1513
 #, kde-format
 msgid "%1 is an identified user."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1479
+#: src/irc/inputfilter.cpp:1523
 #, kde-format
 msgid "%1 is using a secure connection."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1510 src/irc/inputfilter.cpp:1535
+#: src/irc/inputfilter.cpp:1554 src/irc/inputfilter.cpp:1579
 msgid "Who"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1511
+#: src/irc/inputfilter.cpp:1555
 #, kde-format
 msgid "%1 is %2@%3 (%4)%5"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1515
+#: src/irc/inputfilter.cpp:1559
 msgid " (Away)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1536
+#: src/irc/inputfilter.cpp:1580
 #, kde-format
 msgid "End of /WHO list for %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1622
+#: src/irc/inputfilter.cpp:1666
 #, kde-format
 msgid "%1 is a user on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1630
+#: src/irc/inputfilter.cpp:1674
 #, kde-format
 msgid "%1 has voice on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1637
+#: src/irc/inputfilter.cpp:1681
 #, kde-format
 msgid "%1 is a halfop on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1644
+#: src/irc/inputfilter.cpp:1688
 #, kde-format
 msgid "%1 is an operator on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1651
+#: src/irc/inputfilter.cpp:1695
 #, kde-format
 msgid "%1 is owner of channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1658
+#: src/irc/inputfilter.cpp:1702
 #, kde-format
 msgid "%1 is admin on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1684
+#: src/irc/inputfilter.cpp:1728
 #, kde-format
 msgid "%1 is online via %2 (%3)."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1699
+#: src/irc/inputfilter.cpp:1743
 #, kde-format
 msgid "%1 is available for help."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1714
+#: src/irc/inputfilter.cpp:1758
 #, kde-format
 msgid "%1 is an IRC Operator."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1754 src/statusbar.cpp:180
+#: src/irc/inputfilter.cpp:1798 src/statusbar.cpp:180
 #, kde-format
 msgid "1 day"
 msgid_plural "%1 days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1755 src/irc/inputfilter.cpp:1768
+#: src/irc/inputfilter.cpp:1799 src/irc/inputfilter.cpp:1812
 #: src/statusbar.cpp:181 src/statusbar.cpp:189
 #, kde-format
 msgid "1 hour"
@@ -5110,8 +4993,8 @@ msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1756 src/irc/inputfilter.cpp:1769
-#: src/irc/inputfilter.cpp:1779 src/statusbar.cpp:182 src/statusbar.cpp:190
+#: src/irc/inputfilter.cpp:1800 src/irc/inputfilter.cpp:1813
+#: src/irc/inputfilter.cpp:1823 src/statusbar.cpp:182 src/statusbar.cpp:190
 #: src/statusbar.cpp:197
 #, kde-format
 msgid "1 minute"
@@ -5119,8 +5002,8 @@ msgid_plural "%1 minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1757 src/irc/inputfilter.cpp:1770
-#: src/irc/inputfilter.cpp:1780 src/statusbar.cpp:183 src/statusbar.cpp:191
+#: src/irc/inputfilter.cpp:1801 src/irc/inputfilter.cpp:1814
+#: src/irc/inputfilter.cpp:1824 src/statusbar.cpp:183 src/statusbar.cpp:191
 #: src/statusbar.cpp:198
 #, kde-format
 msgid "1 second"
@@ -5128,7 +5011,7 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1761
+#: src/irc/inputfilter.cpp:1805
 #, kde-format
 msgctxt ""
 "%1 = name of person, %2 = (x days), %3 = (x hours), %4 = (x minutes), %5 = "
@@ -5136,144 +5019,161 @@ msgctxt ""
 msgid "%1 has been idle for %2, %3, %4, and %5."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1773
+#: src/irc/inputfilter.cpp:1817
 #, kde-format
 msgctxt ""
 "%1 = name of person, %2 = (x hours), %3 = (x minutes), %4 = (x seconds)"
 msgid "%1 has been idle for %2, %3, and %4."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1783
+#: src/irc/inputfilter.cpp:1827
 #, kde-format
 msgctxt "%1 = name of person, %2 = (x minutes), %3 = (x seconds)"
 msgid "%1 has been idle for %2 and %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1789
+#: src/irc/inputfilter.cpp:1833
 #, kde-format
 msgid "%2 has been idle for 1 second."
 msgid_plural "%2 has been idle for %1 seconds."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1795
+#: src/irc/inputfilter.cpp:1839
 #, kde-format
 msgid "%1 has been online since %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1812
+#: src/irc/inputfilter.cpp:1856
 msgid "End of WHOIS list."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1852
+#: src/irc/inputfilter.cpp:1896
 msgid "Userhost"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1853
+#: src/irc/inputfilter.cpp:1897
 #, kde-format
 msgctxt "%1 = nick, %2 = shows if nick is op, %3 = hostmask, %4 = shows away"
 msgid "%1%2 is %3%4."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1855
+#: src/irc/inputfilter.cpp:1899
 msgid " (IRC Operator)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1857
+#: src/irc/inputfilter.cpp:1901
 msgid " (away)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1875 src/irc/inputfilter.cpp:1888
-#: src/irc/inputfilter.cpp:1904
+#: src/irc/inputfilter.cpp:1919 src/irc/inputfilter.cpp:1932
+#: src/irc/inputfilter.cpp:1948
 msgid "List"
 msgstr "Listo"
 
-#: src/irc/inputfilter.cpp:1875
+#: src/irc/inputfilter.cpp:1919
 msgid "List of channels:"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1887
+#: src/irc/inputfilter.cpp:1931
 #, kde-format
 msgid "%2 (%1 user): %3"
 msgid_plural "%2 (%1 users): %3"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1904
+#: src/irc/inputfilter.cpp:1948
 msgid "End of channel list."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1961
+#: src/irc/inputfilter.cpp:2005
 #, fuzzy
-#| msgid "(unknown)"
 msgctxt ""
 "The server didn't respond with the identity of the ban creator, so we say "
 "unknown (in brackets to avoid confusion with a real nickname)"
 msgid "(unknown)"
 msgstr "(nekonata)"
 
-#: src/irc/inputfilter.cpp:1963 src/irc/inputfilter.cpp:1981
+#: src/irc/inputfilter.cpp:2007 src/irc/inputfilter.cpp:2025
 #, kde-format
 msgid "BanList:%1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1964
+#: src/irc/inputfilter.cpp:2008
 #, kde-format
 msgctxt "BanList message: e.g. *!*@aol.com set by MrGrim on <date>"
 msgid "%1 set by %2 on %3"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1981
+#: src/irc/inputfilter.cpp:2025
 msgid "End of Ban List."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2017
+#: src/irc/inputfilter.cpp:2061
 #, kde-format
 msgid "No such server: %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2027
+#: src/irc/inputfilter.cpp:2071
 #, kde-format
 msgid "%1 is currently unavailable."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2040
+#: src/irc/inputfilter.cpp:2084
 #, kde-format
 msgid "Nickname %1 is unavailable. Trying %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2064
+#: src/irc/inputfilter.cpp:2108
 #, kde-format
 msgid "%1: Unknown command."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2072
+#: src/irc/inputfilter.cpp:2116
 msgid "Not registered."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2080
+#: src/irc/inputfilter.cpp:2124
 #, kde-format
 msgid "%1: This command requires more parameters."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2104
+#: src/irc/inputfilter.cpp:2148
 #, kde-format
 msgid ""
 "Cannot join %1: The channel is password-protected and either a wrong or no "
 "password was given."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2136
+#: src/irc/inputfilter.cpp:2155
+#, kde-format
+msgid "You are now logged in as %1."
+msgstr ""
+
+#: src/irc/inputfilter.cpp:2163
+msgid "SASL authentication successful."
+msgstr ""
+
+#: src/irc/inputfilter.cpp:2176
+msgid "SASL authentication attempt failed."
+msgstr ""
+
+#: src/irc/inputfilter.cpp:2185
+#, fuzzy
+msgid "SASL authentication aborted."
+msgstr "Servilo-Aŭtentigo"
+
+#: src/irc/inputfilter.cpp:2217
 #, kde-format
 msgid "You have set personal modes: %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2140
+#: src/irc/inputfilter.cpp:2221
 #, kde-format
 msgid "%1 has changed your personal modes: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2159
+#: src/irc/inputfilter.cpp:2240
 #, kde-format
 msgid "%1 sets mode: %2"
 msgstr ""
@@ -5281,6 +5181,10 @@ msgstr ""
 #: src/irc/invitedialog.cpp:31
 msgid "Channel Invites"
 msgstr ""
+
+#: src/irc/invitedialog.cpp:166
+msgid "Join"
+msgstr "Aliĝu"
 
 #. i18n: ectx: property (text), widget (QLabel, m_textLabel)
 #: src/irc/invitedialog.ui:33
@@ -5291,18 +5195,19 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_joinPreferences)
 #: src/irc/invitedialog.ui:44
+#, fuzzy
 msgid "Always Ask"
-msgstr ""
+msgstr "Ignori"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_joinPreferences)
 #: src/irc/invitedialog.ui:49
+#, fuzzy
 msgid "Always Join"
-msgstr ""
+msgstr "Ignori"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_joinPreferences)
 #: src/irc/invitedialog.ui:54
 #, fuzzy
-#| msgid "Ignore"
 msgid "Always Ignore"
 msgstr "Ignori"
 
@@ -5314,7 +5219,6 @@ msgstr ""
 #: src/irc/joinchanneldialog.cpp:42 src/irc/joinchanneldialog.cpp:112
 #: src/irc/joinchanneldialog.cpp:135
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgctxt "network (nickname)"
 msgid "%1 (%2)"
 msgstr "%1 sur %2"
@@ -5327,7 +5231,6 @@ msgstr "&Pasvorto:"
 #. i18n: ectx: property (text), widget (QLabel, textLabel8)
 #: src/irc/joinchannelui.ui:81
 #, fuzzy
-#| msgid "Connection"
 msgid "Connection:"
 msgstr "Konekto"
 
@@ -5340,6 +5243,11 @@ msgstr ""
 #: src/linkaddressbook/linkaddressbookui_base.ui:97
 msgid "Email"
 msgstr "Retpoŝto"
+
+#. i18n: ectx: property (text), widget (QLabel, hostmaskLabel)
+#: src/irc/nickinfo.cpp:365 src/viewer/channeloptionsui.ui:283
+msgid "Hostmask:"
+msgstr ""
 
 #: src/irc/nickinfo.cpp:369
 msgid "Away&nbsp;Message:"
@@ -5363,21 +5271,22 @@ msgid ""
 msgstr ""
 
 #: src/irc/nicklistview.cpp:140
+#, kde-format
 msgid ""
 "<qt><p>This shows all the people in the channel.  The nick for each person "
-"is shown, with a picture showing their status.</p><table><tr><th><img src="
-"\"admin\"/></th><td>This person has administrator privileges.</td></"
-"tr><tr><th><img src=\"owner\"/></th><td>This person is a channel owner.</"
-"td></tr><tr><th><img src=\"op\"/></th><td>This person is a channel operator."
-"</td></tr><tr><th><img src=\"halfop\"/></th><td>This person is a channel "
-"half-operator.</td></tr><tr><th><img src=\"voice\"/></th><td>This person has "
-"voice, and can therefore talk in a moderated channel.</td></tr><tr><th><img "
-"src=\"normal\"/></th><td>This person does not have any special privileges.</"
-"td></tr><tr><th><img src=\"normalaway\"/></th><td>This indicates that this "
-"person is currently away.</td></tr></table><p>The meaning of admin, owner "
-"and halfop varies between different IRC servers.</p><p>Hovering over any "
-"nick shows their current status. See the Konversation Handbook for more "
-"information.</p></qt>"
+"is shown, with a picture showing their status.<br /></p><table><tr><th><img "
+"src=\"%1\"/></th><td>This person has administrator privileges.</td></"
+"tr><tr><th><img src=\"%2\"/></th><td>This person is a channel owner.</td></"
+"tr><tr><th><img src=\"%3\"/></th><td>This person is a channel operator.</"
+"td></tr><tr><th><img src=\"%4\"/></th><td>This person is a channel half-"
+"operator.</td></tr><tr><th><img src=\"%5\"/></th><td>This person has voice, "
+"and can therefore talk in a moderated channel.</td></tr><tr><th><img src="
+"\"%6\"/></th><td>This person does not have any special privileges.</td></"
+"tr><tr><th><img src=\"%7\"/></th><td>This, overlaid on any of the above, "
+"indicates that this person is currently away.</td></tr></table><p>The "
+"meaning of admin, owner and halfop varies between different IRC servers.</"
+"p><p>Hovering over any nick shows their current status. See the Konversation "
+"Handbook for more information.</p></qt>"
 msgstr ""
 
 #: src/irc/nicksonline.cpp:42
@@ -5386,7 +5295,6 @@ msgstr ""
 
 #: src/irc/nicksonline.cpp:47
 #, fuzzy
-#| msgid "Nickname:"
 msgid "&Add Nickname..."
 msgstr "Kromnomo:"
 
@@ -5397,7 +5305,6 @@ msgstr ""
 
 #: src/irc/nicksonline.cpp:49
 #, fuzzy
-#| msgid "&Remove Theme"
 msgid "&Remove Nickname"
 msgstr "Fo&rigi etoson"
 
@@ -5447,7 +5354,7 @@ msgstr ""
 msgid "&Send Email..."
 msgstr ""
 
-#: src/irc/nicksonline.cpp:64 src/viewer/irccontextmenus.cpp:416
+#: src/irc/nicksonline.cpp:64 src/viewer/irccontextmenus.cpp:451
 msgid "&Whois"
 msgstr ""
 
@@ -5515,284 +5422,286 @@ msgctxt "(Offline) nickname details (e.g. real name from address book)"
 msgid "(Offline) %1"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:222
+#: src/irc/outputfilter.cpp:221
 msgid ""
 "The message you are sending includes characters that do not exist in your "
 "current encoding. If you choose to continue anyway those characters will be "
 "replaced by a '?'."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:226
+#: src/irc/outputfilter.cpp:225
 msgid "Encoding Conflict Warning"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:331
+#: src/irc/outputfilter.cpp:330
 msgid "Raw"
 msgstr "Kruda"
 
-#: src/irc/outputfilter.cpp:388
+#: src/irc/outputfilter.cpp:387
 #, kde-format
 msgid "Usage: %1JOIN <channel> [password]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:427
+#: src/irc/outputfilter.cpp:426
 #, kde-format
 msgid "Usage: %1KICK <nick> [reason]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:441
+#: src/irc/outputfilter.cpp:440
 #, kde-format
 msgid "%1KICK only works from within channels."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:461
+#: src/irc/outputfilter.cpp:460
 #, kde-format
 msgid ""
 "%1PART and %1LEAVE without parameters only work from within a channel or a "
 "query."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:486
+#: src/irc/outputfilter.cpp:485
 #, kde-format
 msgid "%1PART without channel name only works from within a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:510
+#: src/irc/outputfilter.cpp:509
 #, kde-format
 msgid "%1TOPIC without parameters only works from within a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:547
+#: src/irc/outputfilter.cpp:546
 #, kde-format
 msgid "%1TOPIC without channel name only works from within a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:603
+#: src/irc/outputfilter.cpp:602
 #, kde-format
 msgid ""
 "%1NAMES with no target may disconnect you from the server. Specify '*' if "
 "you really want this."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:626
+#: src/irc/outputfilter.cpp:625
 #, c-format, kde-format
 msgid ""
 "Usage: %1close [window] closes the named channel or query tab, or the "
 "current tab if none specified."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:662
+#: src/irc/outputfilter.cpp:661
 #, kde-format
 msgid "Usage: %1NOTICE <recipient> <message>"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:669
+#: src/irc/outputfilter.cpp:668
 #, kde-format
 msgctxt "%1 is the message, %2 the recipient nickname"
 msgid "Sending notice \"%1\" to %2."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:681
+#: src/irc/outputfilter.cpp:680
 #, kde-format
 msgid "%1ME only works from a channel, query or DCC chat tab."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:749
+#: src/irc/outputfilter.cpp:748
 msgid "You need to specify a recipient."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:754
+#: src/irc/outputfilter.cpp:753
 msgid "You cannot open queries to channels."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:760
+#: src/irc/outputfilter.cpp:759
 msgid "You need to specify a message."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:843 src/irc/outputfilter.cpp:848
+#: src/irc/outputfilter.cpp:842 src/irc/outputfilter.cpp:847
 #, kde-format
 msgid "Sending CTCP-%1 request to %2."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:860
+#: src/irc/outputfilter.cpp:859
 #, c-format, kde-format
 msgid "Usage: %1AME [-LOCAL] text"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:873
+#: src/irc/outputfilter.cpp:872
 #, c-format, kde-format
 msgid "Usage: %1AMSG [-LOCAL] text"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:886
+#: src/irc/outputfilter.cpp:885
 #, kde-format
 msgid "Usage: %1OMSG text"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:904
+#: src/irc/outputfilter.cpp:903
 #, kde-format
 msgid "Sending notice \"%1\" to %2."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:907
+#: src/irc/outputfilter.cpp:906
 #, kde-format
 msgid "Usage: %1ONOTICE text"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:917
+#: src/irc/outputfilter.cpp:916
 #, kde-format
 msgid "Usage: %1QUOTE command list"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:929
+#: src/irc/outputfilter.cpp:928
 #, c-format, kde-format
 msgid "Usage: %1SAY text"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:985
+#: src/irc/outputfilter.cpp:984
 #, kde-format
 msgid "File \"%1\" does not exist."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:989
+#: src/irc/outputfilter.cpp:988
 #, kde-format
 msgid "Usage: %1DCC [SEND [nickname [filename]]]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1007
+#: src/irc/outputfilter.cpp:1006
 #, kde-format
 msgid "Usage: %1DCC [GET [nickname [filename]]]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1023
+#: src/irc/outputfilter.cpp:1022
 #, kde-format
 msgid "Usage: %1DCC [CHAT [nickname]]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1039
+#: src/irc/outputfilter.cpp:1038
 #, kde-format
 msgid "Usage: %1DCC [WHITEBOARD [nickname]]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1044
+#: src/irc/outputfilter.cpp:1043
 #, kde-format
 msgid ""
 "Unrecognized command %1DCC %2. Possible commands are SEND, CHAT, CLOSE, GET, "
 "WHITEBOARD."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1187
+#: src/irc/outputfilter.cpp:1186
 #, kde-format
 msgid "Usage: %1INVITE <nick> [channel]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1198
+#: src/irc/outputfilter.cpp:1197
 #, kde-format
 msgid "%1INVITE without channel name works only from within channels."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1207
+#: src/irc/outputfilter.cpp:1206
 #, kde-format
 msgid "%1 is not a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1219
+#: src/irc/outputfilter.cpp:1218
 #, c-format, kde-format
 msgid "Usage: %1EXEC [-SHOWPATH] <script> [parameter list]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1228
+#: src/irc/outputfilter.cpp:1227
 #, kde-format
 msgctxt "%2 is a filesystem path to the script file"
 msgid "The script file '%1' was found at: %2"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1235
+#: src/irc/outputfilter.cpp:1234
 msgid "The script name may not contain \"../\"."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1250
+#: src/irc/outputfilter.cpp:1249
 #, kde-format
 msgid "Usage: %1RAW [OPEN | CLOSE]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1292
+#: src/irc/outputfilter.cpp:1291
 #, kde-format
 msgctxt "%1 = Comma-separated list of nicknames"
 msgid "The notify list has been emptied (removed %1)."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1295
+#: src/irc/outputfilter.cpp:1294
 msgid "The notify list is currently empty."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1301
+#: src/irc/outputfilter.cpp:1300
 #, kde-format
 msgctxt "%1 and %2 = Comma-separated lists of nicknames"
 msgid "Current notify list: %1 (added %2)."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1305
+#: src/irc/outputfilter.cpp:1304
 #, kde-format
 msgctxt "%1 and %2 = Comma-separated lists of nicknames"
 msgid "Current notify list: %1 (removed %2)."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1309
+#: src/irc/outputfilter.cpp:1308
 #, kde-format
 msgctxt "%1, %2 and %3 = Comma-separated lists of nicknames"
 msgid "Current notify list: %1 (added %2, removed %3)."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1313
+#: src/irc/outputfilter.cpp:1312
 #, kde-format
 msgctxt "%1 = Comma-separated list of nicknames"
 msgid "Current notify list: %1."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1318 src/irc/server.cpp:2887
-#: src/irc/server.cpp:2904
+#: src/irc/outputfilter.cpp:1317 src/irc/server.cpp:2999
+#: src/irc/server.cpp:3016
+#, fuzzy
+msgctxt "Message type"
 msgid "Notify"
-msgstr ""
+msgstr "Rimarku"
 
-#: src/irc/outputfilter.cpp:1334
+#: src/irc/outputfilter.cpp:1333
 msgid "Enter username and password for IRC operator privileges:"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1336
+#: src/irc/outputfilter.cpp:1335
 msgid "IRC Operator Password"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1400
+#: src/irc/outputfilter.cpp:1399
 #, kde-format
 msgid "%1BAN without channel name works only from inside a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1403
+#: src/irc/outputfilter.cpp:1402
 #, kde-format
 msgid "%1KICKBAN without channel name works only from inside a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1438
+#: src/irc/outputfilter.cpp:1437
 #, kde-format
 msgid ""
 "Usage: %1BAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [channel] <nickname "
 "| mask>"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1441
+#: src/irc/outputfilter.cpp:1440
 #, kde-format
 msgid ""
 "Usage: %1KICKBAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [channel] "
 "<nickname | mask> [reason]"
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1484
+#: src/irc/outputfilter.cpp:1483
 #, kde-format
 msgid "%1UNBAN without channel name works only from inside a channel."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1499
+#: src/irc/outputfilter.cpp:1498
 #, kde-format
 msgid "Usage: %1UNBAN [channel] pattern"
 msgstr ""
@@ -5801,6 +5710,12 @@ msgstr ""
 #, kde-format
 msgid "Added %1 to your ignore list."
 msgstr ""
+
+#: src/irc/outputfilter.cpp:1546 src/irc/outputfilter.cpp:1617
+#: src/viewer/irccontextmenus.cpp:458 src/viewer/irccontextmenus.cpp:634
+#: src/viewer/irccontextmenus.cpp:635
+msgid "Ignore"
+msgstr "Ignori"
 
 #: src/irc/outputfilter.cpp:1555
 #, kde-format
@@ -5957,70 +5872,95 @@ msgid ""
 "is.</p></qt>"
 msgstr ""
 
-#: src/irc/query.cpp:490
+#: src/irc/query.cpp:471
 #, kde-format
 msgid "Do you want to close your query with %1?"
 msgstr ""
 
-#: src/irc/query.cpp:491
+#: src/irc/query.cpp:472
 msgid "Close Query"
 msgstr ""
 
-#: src/irc/query.cpp:540
+#: src/irc/query.cpp:514
 #, kde-format
-msgid "%1 has left this server (%2)."
+msgctxt "%1 = nick, %2 = hostmask"
+msgid "%1 (%2) has left this server."
 msgstr ""
 
-#: src/irc/server.cpp:401 src/irc/server.cpp:411
+#: src/irc/query.cpp:522
+#, kde-format
+msgctxt "%1 = nick, %2 = hostmask, %3 = reason"
+msgid "%1 (%2) has left this server (%3)."
+msgstr ""
+
+#: src/irc/server.cpp:406 src/irc/server.cpp:416
 msgid "Warning"
 msgstr "Averto"
 
-#: src/irc/server.cpp:458
+#: src/irc/server.cpp:462
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgid "Looking for server %1 (port <numid>%2</numid>)..."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:622
+#: src/irc/server.cpp:632
 msgid "Server found, connecting..."
 msgstr ""
 
-#: src/irc/server.cpp:633
-msgid "Connected; logging in..."
+#: src/irc/server.cpp:667
+msgid "Negotiating capabilities with server..."
 msgstr ""
 
-#: src/irc/server.cpp:692 src/irc/server.cpp:789
+#: src/irc/server.cpp:669
+msgid "Requesting SASL capability..."
+msgstr ""
+
+#: src/irc/server.cpp:682
+msgid "Closing capabilities negotiation."
+msgstr ""
+
+#: src/irc/server.cpp:690
+msgid "Capabilities negotiation failed: Appears not supported by server."
+msgstr ""
+
+#: src/irc/server.cpp:699
+msgid ""
+"SASL capability acknowledged by server, attempting SASL PLAIN "
+"authentication..."
+msgstr ""
+
+#: src/irc/server.cpp:707
+msgid "SASL capability denied or not supported by server."
+msgstr ""
+
+#: src/irc/server.cpp:789 src/irc/server.cpp:886
 msgid "SSL Connection Error"
 msgstr ""
 
-#: src/irc/server.cpp:693
+#: src/irc/server.cpp:790
 #, kde-format
 msgid ""
 "Connection to server %1 (port <numid>%2</numid>) lost while waiting for user "
 "response to an SSL error. Will automatically reconnect if error is ignored."
 msgstr ""
 
-#: src/irc/server.cpp:713
+#: src/irc/server.cpp:810
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgid "Connection to server %1 (port <numid>%2</numid>) lost: %3."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:750
+#: src/irc/server.cpp:847
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgid ""
 "The SSL certificate for the server %1 (port <numid>%2</numid>) failed the "
 "authenticity check."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:754
+#: src/irc/server.cpp:851
 #, fuzzy
-#| msgid "Connection"
 msgid "SSL Connection Warning"
 msgstr "Konekto"
 
-#: src/irc/server.cpp:784
+#: src/irc/server.cpp:881
 #, kde-format
 msgid ""
 "Could not connect to %1 (port <numid>%2</numid>) using SSL encryption. "
@@ -6028,17 +5968,16 @@ msgid ""
 "you rejected the certificate. %3"
 msgstr ""
 
-#: src/irc/server.cpp:899
+#: src/irc/server.cpp:987
 msgid "Delayed connect aborted."
 msgstr ""
 
-#: src/irc/server.cpp:929
+#: src/irc/server.cpp:1017
 #, fuzzy, kde-format
-#| msgid "%1 on %2"
 msgid "Disconnected from %1 (port <numid>%2</numid>)."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:1101
+#: src/irc/server.cpp:1188
 #, kde-format
 msgid ""
 "No nicknames from the \"%1\" identity were accepted by the connection "
@@ -6046,67 +5985,67 @@ msgid ""
 "Please enter a new one or press Cancel to disconnect:"
 msgstr ""
 
-#: src/irc/server.cpp:1102
+#: src/irc/server.cpp:1189
 msgid "Nickname error"
 msgstr ""
 
-#: src/irc/server.cpp:1915
+#: src/irc/server.cpp:2016
 #, kde-format
 msgid "Select File(s) to Send to %1"
 msgstr ""
 
-#: src/irc/server.cpp:2088
+#: src/irc/server.cpp:2189
 #, kde-format
 msgctxt "%1=nickname"
 msgid "Received invalid DCC SEND request from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2120
+#: src/irc/server.cpp:2221
 #, kde-format
 msgid "%1 offers to send you \"%2\" (%3)..."
 msgstr ""
 
-#: src/irc/server.cpp:2123 src/irc/server.cpp:2253 src/irc/server.cpp:2265
-#: src/irc/server.cpp:2414 src/irc/server.cpp:2470 src/irc/server.cpp:2579
+#: src/irc/server.cpp:2224 src/irc/server.cpp:2354 src/irc/server.cpp:2366
+#: src/irc/server.cpp:2515 src/irc/server.cpp:2571 src/irc/server.cpp:2680
 msgid "unknown size"
 msgstr ""
 
-#: src/irc/server.cpp:2159
+#: src/irc/server.cpp:2260
 #, kde-format
 msgctxt "%1=nickname"
 msgid "Received invalid DCC CHAT request from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2250
+#: src/irc/server.cpp:2351
 #, kde-format
 msgid "Asking %1 to accept upload of \"%2\" (%3)..."
 msgstr ""
 
-#: src/irc/server.cpp:2262
+#: src/irc/server.cpp:2363
 #, kde-format
 msgid "Asking %1 to accept passive upload of \"%2\" (%3)..."
 msgstr ""
 
-#: src/irc/server.cpp:2274
+#: src/irc/server.cpp:2375
 #, kde-format
 msgctxt "%1=name, %2=dcc extension, chat or wboard for example"
 msgid "Asking %1 to accept %2..."
 msgstr ""
 
-#: src/irc/server.cpp:2333
+#: src/irc/server.cpp:2434
 #, kde-format
 msgctxt "%1 = nickname"
 msgid "Received invalid passive DCC chat acceptance message from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2369
+#: src/irc/server.cpp:2470
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid ""
 "Received invalid passive DCC send acceptance message for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2410
+#: src/irc/server.cpp:2511
 #, kde-format
 msgctxt ""
 "%1 = file name, %2 = nickname of sender, %3 = percentage of file size, %4 = "
@@ -6114,13 +6053,13 @@ msgctxt ""
 msgid "Resuming download of \"%1\" from %2 starting at %3% of %4..."
 msgstr ""
 
-#: src/irc/server.cpp:2420
+#: src/irc/server.cpp:2521
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid "Received invalid resume acceptance message for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2466
+#: src/irc/server.cpp:2567
 #, kde-format
 msgctxt ""
 "%1 = file name, %2 = nickname of recipient, %3 = percentage of file size, %4 "
@@ -6128,136 +6067,136 @@ msgctxt ""
 msgid "Resuming upload of \"%1\" to %2 starting at %3% of %4..."
 msgstr ""
 
-#: src/irc/server.cpp:2488
+#: src/irc/server.cpp:2589
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid "Received invalid resume request for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2507
+#: src/irc/server.cpp:2608
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid "Received invalid reject request for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2523
+#: src/irc/server.cpp:2624
 #, kde-format
 msgctxt "%1 = nickname"
 msgid "Received invalid reject request from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2536
+#: src/irc/server.cpp:2637
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of sender"
 msgid "Download of \"%1\" from %2 finished."
 msgstr ""
 
-#: src/irc/server.cpp:2541
+#: src/irc/server.cpp:2642
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of sender"
 msgid "Download of \"%1\" from %2 failed. Reason: %3."
 msgstr ""
 
-#: src/irc/server.cpp:2553
+#: src/irc/server.cpp:2654
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of recipient"
 msgid "Upload of \"%1\" to %2 finished."
 msgstr ""
 
-#: src/irc/server.cpp:2556
+#: src/irc/server.cpp:2657
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of recipient"
 msgid "Upload of \"%1\" to %2 failed. Reason: %3."
 msgstr ""
 
-#: src/irc/server.cpp:2570
+#: src/irc/server.cpp:2671
 #, kde-format
 msgctxt "%1 = file name, %2 nickname of recipient"
 msgid "Sending \"%1\" to %2..."
 msgstr ""
 
-#: src/irc/server.cpp:2577
+#: src/irc/server.cpp:2678
 #, kde-format
 msgctxt "%1 = file name, %2 = file size, %3 = nickname of sender"
 msgid "Downloading \"%1\" (%2) from %3..."
 msgstr ""
 
-#: src/irc/server.cpp:2887 src/notificationhandler.cpp:307
+#: src/irc/server.cpp:2999 src/notificationhandler.cpp:321
 #, kde-format
 msgid "%1 is online (%2)."
 msgstr ""
 
-#: src/irc/server.cpp:2904 src/notificationhandler.cpp:321
+#: src/irc/server.cpp:3016 src/notificationhandler.cpp:335
 #, kde-format
 msgid "%1 went offline (%2)."
 msgstr ""
 
-#: src/irc/server.cpp:3548
+#: src/irc/server.cpp:3679
 #, kde-format
 msgid "Error: Could not find script \"%1\"."
 msgstr ""
 
-#: src/irc/server.cpp:3553
+#: src/irc/server.cpp:3684
 #, kde-format
 msgid "Error: Could not execute script \"%1\". Check file permissions."
 msgstr ""
 
-#: src/irc/server.cpp:3767
+#: src/irc/server.cpp:3898
 msgid "Gone away for now"
 msgstr ""
 
-#: src/irc/server.cpp:3798
+#: src/irc/server.cpp:3929
 #, kde-format
 msgid "You are now marked as being away (reason: %1)."
 msgstr ""
 
-#: src/irc/server.cpp:3800
+#: src/irc/server.cpp:3931
 msgid "You are now marked as being away."
 msgstr ""
 
-#: src/irc/server.cpp:3825
+#: src/irc/server.cpp:3956
 msgid "You are no longer marked as being away."
 msgstr ""
 
-#: src/irc/server.cpp:3834
+#: src/irc/server.cpp:3965
 msgid "You are not marked as being away."
 msgstr ""
 
-#: src/irc/server.cpp:3985
+#: src/irc/server.cpp:4116
 #, kde-format
 msgid "Failed to initiate key exchange with %1."
 msgstr ""
 
-#: src/irc/server.cpp:3997
+#: src/irc/server.cpp:4128
 #, kde-format
 msgid "Unable to perform key exchange with %1."
 msgstr ""
 
-#: src/irc/server.cpp:4021
+#: src/irc/server.cpp:4152
 #, kde-format
 msgid "Failed to parse the DH1080_INIT of %1. Key exchange failed."
 msgstr ""
 
-#: src/irc/server.cpp:4027
+#: src/irc/server.cpp:4158
 #, kde-format
 msgid ""
 "Your key is set and your messages will now be encrypted, sending "
 "DH1080_FINISH to %1."
 msgstr ""
 
-#: src/irc/server.cpp:4044
+#: src/irc/server.cpp:4175
 #, kde-format
 msgid "Unable to complete key exchange with %1."
 msgstr ""
 
-#: src/irc/server.cpp:4056
+#: src/irc/server.cpp:4187
 #, kde-format
 msgid ""
 "Successfully parsed DH1080_FINISH sent by %1. Your key is set and your "
 "messages will now be encrypted."
 msgstr ""
 
-#: src/irc/server.cpp:4060
+#: src/irc/server.cpp:4191
 #, kde-format
 msgid "Failed to parse DH1080_FINISH sent by %1. Key exchange failed."
 msgstr ""
@@ -6338,13 +6277,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_networkLabel)
 #: src/irc/servergroupdialogui.ui:20
+#, fuzzy
 msgid "Network name:"
-msgstr ""
+msgstr "Reta interfaco"
 
 #. i18n: ectx: property (text), widget (QLabel, m_identityLabel)
 #: src/irc/servergroupdialogui.ui:36
 #, fuzzy
-#| msgid "&Identity:"
 msgid "Identity:"
 msgstr "&Identeco:"
 
@@ -6359,7 +6298,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, m_editIdentityButton)
 #. i18n: ectx: property (text), widget (QPushButton, m_editButton)
 #: src/irc/servergroupdialogui.ui:71 src/irc/serverlistdialogui.ui:162
-#: src/viewer/ircinput.cpp:497
+#: src/viewer/ircinput.cpp:566
 msgid "&Edit..."
 msgstr "&Redakto"
 
@@ -6389,14 +6328,12 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/irc/servergroupdialogui.ui:108
 #, fuzzy
-#| msgid "Servers"
 msgid "Servers:"
 msgstr "Serviloj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/irc/servergroupdialogui.ui:118
 #, fuzzy
-#| msgid "Channel"
 msgid "Auto Join Channels:"
 msgstr "Kanalo"
 
@@ -6429,8 +6366,9 @@ msgstr "&Aldonu"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_changeServerButton)
 #: src/irc/servergroupdialogui.ui:158
+#, fuzzy
 msgid "E&dit..."
-msgstr ""
+msgstr "&Redakto"
 
 #. i18n: ectx: property (whatsThis), widget (KListWidget, m_channelLBox)
 #: src/irc/servergroupdialogui.ui:226
@@ -6447,8 +6385,9 @@ msgstr "Aldoni..."
 
 #. i18n: ectx: property (text), widget (KPushButton, m_changeChannelButton)
 #: src/irc/servergroupdialogui.ui:243
+#, fuzzy
 msgid "Ed&it..."
-msgstr ""
+msgstr "&Redakto"
 
 #: src/irc/serverlistdialog.cpp:65 src/quickconnectdialog.cpp:87
 msgid "C&onnect"
@@ -6548,12 +6487,30 @@ msgstr "&Nova..."
 msgid "&Delete"
 msgstr "&Forigi"
 
-#: src/konsolepanel.cpp:27 src/viewer/viewcontainer.cpp:2130
-#: src/viewer/viewcontainer.cpp:2131
+#: src/irc/topichistorymodel.cpp:46
+#, fuzzy
+msgid "Unknown"
+msgstr "nekonata"
+
+#: src/irc/topichistorymodel.cpp:190
+msgid "Text"
+msgstr ""
+
+#: src/irc/topichistorymodel.cpp:193
+msgid "Author"
+msgstr "Aŭtoro"
+
+#: src/irc/topichistorymodel.cpp:196
+#, fuzzy
+msgid "Time"
+msgstr "Tempindiko"
+
+#: src/konsolepanel.cpp:28 src/viewer/viewcontainer.cpp:2207
+#: src/viewer/viewcontainer.cpp:2208
 msgid "Konsole"
 msgstr "Konzolo"
 
-#: src/konsolepanel.cpp:39
+#: src/konsolepanel.cpp:40
 msgid "Manage Konsole Profiles"
 msgstr ""
 
@@ -6563,7 +6520,6 @@ msgstr ""
 
 #: src/linkaddressbook/addressbook.cpp:107
 #, fuzzy
-#| msgid "Connections"
 msgid "Connecting"
 msgstr "Konektoj"
 
@@ -6793,7 +6749,7 @@ msgstr "Nomo"
 msgid "S&earch:"
 msgstr "S&erĉi:"
 
-#: src/main.cpp:37 src/viewer/trayicon.cpp:23
+#: src/main.cpp:37 src/viewer/trayicon.cpp:24
 msgid "Konversation"
 msgstr "Konversation"
 
@@ -6808,746 +6764,764 @@ msgstr ""
 #: src/main.cpp:42
 msgid ""
 "Konversation is a client for the Internet Relay Chat (IRC) protocol.\n"
-"Meet friends on the net, make new acquaintances and lose yourself in\n"
-"talk about your favorite subject."
+"\n"
+"Meet friends on the net, make new acquaintances and lose yourself in talk "
+"about your favorite subject."
 msgstr ""
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 msgid "Dario Abatianni"
 msgstr "Dario Abatianni"
 
-#: src/main.cpp:47
+#: src/main.cpp:46
 msgid "Original Author, Project Founder"
 msgstr ""
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 msgid "Peter Simonsson"
 msgstr "Peter Simonsson"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 msgid "Maintainer"
 msgstr "Prizorganto"
 
-#: src/main.cpp:49
+#: src/main.cpp:48
 msgid "Eike Hein"
 msgstr "Eike Hein"
 
-#: src/main.cpp:49
+#: src/main.cpp:48
 msgid ""
 "Maintainer, Release Manager, User interface, Connection management, Protocol "
 "handling, Auto-away"
 msgstr ""
 
-#: src/main.cpp:50
+#: src/main.cpp:49
 msgid "Shintaro Matsuoka"
 msgstr "Shintaro Matsuoka"
 
-#: src/main.cpp:50
+#: src/main.cpp:49
 msgid "DCC, Encoding handling, OSD positioning"
 msgstr ""
 
-#: src/main.cpp:51
+#: src/main.cpp:50
 msgid "Eli MacKenzie"
 msgstr "Eli MacKenzie"
 
-#: src/main.cpp:51
+#: src/main.cpp:50
 msgid "Protocol handling, Input line"
 msgstr ""
 
-#: src/main.cpp:52
+#: src/main.cpp:51
 msgid "İsmail Dönmez"
 msgstr "İsmail Dönmez"
 
-#: src/main.cpp:52
+#: src/main.cpp:51
 msgid "Blowfish, SSL support, KNetwork port, Colored nicks, Nicklist themes"
 msgstr ""
 
-#: src/main.cpp:53
+#: src/main.cpp:52
 msgid "John Tapsell"
 msgstr "John Tapsell"
 
-#: src/main.cpp:53
+#: src/main.cpp:52
 msgid "Refactoring, KAddressBook/Kontact integration"
 msgstr ""
 
-#: src/main.cpp:54
+#: src/main.cpp:53
 msgid "Bernd Buschinski"
 msgstr "Bernd Buschinski"
 
-#: src/main.cpp:54
+#: src/main.cpp:53
 msgid "DCC port to KDE 4, various DCC improvements"
 msgstr ""
 
-#: src/main.cpp:56
+#: src/main.cpp:55
 msgid "Olivier Bédard"
 msgstr "Olivier Bédard"
 
-#: src/main.cpp:56
+#: src/main.cpp:55
 msgid "Website hosting"
 msgstr ""
 
-#: src/main.cpp:57
+#: src/main.cpp:56
 msgid "Jędrzej Lisowski"
 msgstr "Jędrzej Lisowski"
 
-#: src/main.cpp:57
+#: src/main.cpp:56
 msgid "Website maintenance"
 msgstr ""
 
-#: src/main.cpp:58
+#: src/main.cpp:57
 msgid "Christian Muehlhaeuser"
 msgstr "Christian Muehlhaeuser"
 
-#: src/main.cpp:58
+#: src/main.cpp:57
 msgid "Multiple modes extension, Close widget placement, OSD functionality"
 msgstr ""
 
-#: src/main.cpp:59
+#: src/main.cpp:58
 msgid "Gary Cramblitt"
 msgstr "Gary Cramblitt"
 
-#: src/main.cpp:59
+#: src/main.cpp:58
 msgid "Documentation, Watched Nicks improvements, Custom web browser extension"
 msgstr ""
 
-#: src/main.cpp:60
+#: src/main.cpp:59
 msgid "Matthias Gierlings"
 msgstr "Matthias Gierlings"
 
-#: src/main.cpp:60
+#: src/main.cpp:59
 msgid "Color configurator, Highlight dialog"
 msgstr ""
 
-#: src/main.cpp:61
+#: src/main.cpp:60
 msgid "Alex Zepeda"
 msgstr "Alex Zepeda"
 
-#: src/main.cpp:61
+#: src/main.cpp:60
 msgid "DCOP interface"
 msgstr "DCOP-interfaco"
 
-#: src/main.cpp:62
+#: src/main.cpp:61
 msgid "Stanislav Karchebny"
 msgstr "Stanislav Karchebny"
 
-#: src/main.cpp:62
+#: src/main.cpp:61
 msgid "Non-Latin1-Encodings"
 msgstr ""
 
-#: src/main.cpp:63
+#: src/main.cpp:62
 msgid "Mickael Marchand"
 msgstr "Mickael Marchand"
 
-#: src/main.cpp:63
+#: src/main.cpp:62
 msgid "Konsole part view"
 msgstr ""
 
-#: src/main.cpp:64
+#: src/main.cpp:63
 msgid "Michael Goettsche"
 msgstr "Michael Goettsche"
 
-#: src/main.cpp:64
+#: src/main.cpp:63
 msgid "Quick connect, Ported new OSD, other features and bugfixes"
 msgstr ""
 
-#: src/main.cpp:65
+#: src/main.cpp:64
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: src/main.cpp:65
+#: src/main.cpp:64
 msgid "A Handful of fixes and code cleanup"
 msgstr ""
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 msgid "Jakub Stachowski"
 msgstr "Jakub Stachowski"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 msgid "Drag&Drop improvements"
 msgstr ""
 
-#: src/main.cpp:67
+#: src/main.cpp:66
 msgid "Sebastian Sariego"
 msgstr "Sebastian Sariego"
 
-#: src/main.cpp:67
+#: src/main.cpp:66
 msgid "Artwork"
 msgstr "Artaĵoj"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 msgid "Renchi Raju"
 msgstr "Renchi Raju"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 msgid "Firefox style searchbar"
 msgstr ""
 
-#: src/main.cpp:69
+#: src/main.cpp:68
 msgid "Michael Kreitzer"
 msgstr "Michael Kreitzer"
 
-#: src/main.cpp:69
+#: src/main.cpp:68
 msgid "Raw modes, Tab grouping per server, Ban list"
 msgstr ""
 
-#: src/main.cpp:70
+#: src/main.cpp:69
 msgid "Frauke Oster"
 msgstr "Frauke Oster"
 
-#: src/main.cpp:70
+#: src/main.cpp:69
 msgid "System tray patch"
 msgstr ""
 
-#: src/main.cpp:71
+#: src/main.cpp:70
 msgid "Lucijan Busch"
 msgstr "Lucijan Busch"
 
-#: src/main.cpp:71 src/main.cpp:77 src/main.cpp:80
+#: src/main.cpp:70 src/main.cpp:76 src/main.cpp:79
 msgid "Bug fixes"
 msgstr "Cimokorektado"
 
-#: src/main.cpp:72
+#: src/main.cpp:71
 msgid "Sascha Cunz"
 msgstr "Sascha Cunz"
 
-#: src/main.cpp:72
+#: src/main.cpp:71
 msgid "Extended user modes patch"
 msgstr ""
 
-#: src/main.cpp:73
+#: src/main.cpp:72
 msgid "Steve Wollkind"
 msgstr "Steve Wollkind"
 
-#: src/main.cpp:73
+#: src/main.cpp:72
 msgid "Close visible tab with shortcut patch"
 msgstr ""
 
-#: src/main.cpp:74
+#: src/main.cpp:73
 msgid "Thomas Nagy"
 msgstr "Thomas Nagy"
 
-#: src/main.cpp:74
+#: src/main.cpp:73
 msgid "Cycle tabs with mouse scroll wheel"
 msgstr ""
 
-#: src/main.cpp:75
+#: src/main.cpp:74
 msgid "Tobias Olry"
 msgstr "Tobias Olry"
 
-#: src/main.cpp:75
+#: src/main.cpp:74
 msgid "Channel ownership mode patch"
 msgstr ""
 
-#: src/main.cpp:76
+#: src/main.cpp:75
 msgid "Ruud Nabben"
 msgstr "Ruud Nabben"
 
-#: src/main.cpp:76
+#: src/main.cpp:75
 msgid "Option to enable IRC color filtering"
 msgstr ""
 
-#: src/main.cpp:77
+#: src/main.cpp:76
 msgid "Lothar Braun"
 msgstr "Lothar Braun"
 
-#: src/main.cpp:78
+#: src/main.cpp:77
 msgid "Ivor Hewitt"
 msgstr "Ivor Hewitt"
 
-#: src/main.cpp:78
+#: src/main.cpp:77
 msgid "Bug fixes, OSD work, clearing topics"
 msgstr ""
 
-#: src/main.cpp:79
+#: src/main.cpp:78
 msgid "Emil Obermayr"
 msgstr "Emil Obermayr"
 
-#: src/main.cpp:79
+#: src/main.cpp:78
 msgid "Sysinfo script"
 msgstr ""
 
-#: src/main.cpp:80
+#: src/main.cpp:79
 msgid "Stanislav Nikolov"
 msgstr "Stanislav Nikolov"
 
-#: src/main.cpp:81
+#: src/main.cpp:80
 msgid "Juan Carlos Torres"
 msgstr "Juan Carlos Torres"
 
-#: src/main.cpp:81
+#: src/main.cpp:80
 msgid "Auto-join context menu"
 msgstr ""
 
-#: src/main.cpp:82
+#: src/main.cpp:81
 msgid "Travis McHenry"
 msgstr "Travis McHenry"
 
-#: src/main.cpp:82
+#: src/main.cpp:81
 msgid ""
 "Various fixes, ported encryption to QCA2, added DH1080 key exchange support."
 msgstr ""
 
-#: src/main.cpp:83
+#: src/main.cpp:82
 msgid "Modestas Vainius"
 msgstr "Modestas Vainius"
 
-#: src/main.cpp:83
+#: src/main.cpp:82
 msgid "Bug fixes and enhancements."
 msgstr ""
 
-#: src/main.cpp:84
+#: src/main.cpp:83
 msgid "Abdurrahman AVCI"
 msgstr ""
 
-#: src/main.cpp:84
+#: src/main.cpp:83
 msgid "Various bug fixes and enhancements."
 msgstr ""
 
-#: src/main.cpp:85
+#: src/main.cpp:84
 msgid "Martin Blumenstingl"
 msgstr ""
 
-#: src/main.cpp:85
+#: src/main.cpp:84
 msgid "KStatusNotifierItem support, KIdleTime support, other enhancements"
 msgstr ""
 
-#: src/main.cpp:89
+#: src/main.cpp:88
 msgid "irc:// URL or server hostname"
 msgstr ""
 
-#: src/main.cpp:90
+#: src/main.cpp:89
 msgid "Server to connect"
 msgstr ""
 
-#: src/main.cpp:91
+#: src/main.cpp:90
 msgid "Port to use"
 msgstr ""
 
-#: src/main.cpp:92
+#: src/main.cpp:91
 msgid "Channel to join after connection"
 msgstr ""
 
-#: src/main.cpp:93
+#: src/main.cpp:92
 msgid "Nickname to use"
 msgstr ""
 
-#: src/main.cpp:94
+#: src/main.cpp:93
 msgid "Password for connection"
 msgstr ""
 
-#: src/main.cpp:95
+#: src/main.cpp:94
 msgid "Use SSL for connection"
 msgstr ""
 
-#: src/main.cpp:96
+#: src/main.cpp:95
 msgid "Disable auto-connecting to any IRC networks"
 msgstr ""
 
-#: src/main.cpp:97
+#: src/main.cpp:96
 msgid ""
 "Delay D-Bus activity and UI creation by the specified amount of miliseconds"
 msgstr ""
 
-#: src/main.cpp:98
+#: src/main.cpp:97
 msgid "Quits and restarts Konversation (if running, otherwise has no effect)"
 msgstr ""
 
-#: src/mainwindow.cpp:121
-msgid "Restart"
+#: src/main.cpp:99
+msgid ""
+"Sets KUniqueApplication::NonUniqueInstance (debug only, use with caution)"
 msgstr ""
 
 #: src/mainwindow.cpp:123
+msgid "Restart"
+msgstr ""
+
+#: src/mainwindow.cpp:125
 msgid "Quit and restart the application"
 msgstr ""
 
-#: src/mainwindow.cpp:128
+#: src/mainwindow.cpp:130
 msgid "&Server List..."
 msgstr ""
 
-#: src/mainwindow.cpp:131
+#: src/mainwindow.cpp:133
 msgid "Manage networks and servers"
 msgstr ""
 
-#: src/mainwindow.cpp:136
+#: src/mainwindow.cpp:138
 msgid "Quick &Connect..."
 msgstr ""
 
-#: src/mainwindow.cpp:139
+#: src/mainwindow.cpp:141
 msgid "Type in the address of a new IRC server to connect to"
 msgstr ""
 
-#: src/mainwindow.cpp:144
+#: src/mainwindow.cpp:146
 msgid "&Reconnect"
 msgstr ""
 
-#: src/mainwindow.cpp:147
+#: src/mainwindow.cpp:149
 msgid "Reconnect to the current server."
 msgstr ""
 
-#: src/mainwindow.cpp:153
+#: src/mainwindow.cpp:155
 msgid "&Disconnect"
 msgstr "&Malkonektu"
 
-#: src/mainwindow.cpp:156
+#: src/mainwindow.cpp:158
 msgid "Disconnect from the current server."
 msgstr ""
 
-#: src/mainwindow.cpp:161
+#: src/mainwindow.cpp:163
 msgid "&Identities..."
 msgstr ""
 
-#: src/mainwindow.cpp:164
+#: src/mainwindow.cpp:166
 msgid "Manage your nick, away and other identity settings"
 msgstr ""
 
-#: src/mainwindow.cpp:169
+#: src/mainwindow.cpp:171
 #, fuzzy
-#| msgid "&Remove"
 msgid "&Watched Nicks"
 msgstr "Fo&rigi"
 
-#: src/mainwindow.cpp:177
+#: src/mainwindow.cpp:179
 msgid "&DCC Status"
 msgstr ""
 
-#: src/mainwindow.cpp:186 src/mainwindow.cpp:773
-#: src/viewer/viewcontainer.cpp:596
+#: src/mainwindow.cpp:188 src/mainwindow.cpp:786
+#: src/viewer/viewcontainer.cpp:624
 msgid "&Open Logfile"
 msgstr ""
 
-#: src/mainwindow.cpp:190
+#: src/mainwindow.cpp:192
 msgid "Open the known history for this channel in a new tab"
 msgstr ""
 
-#: src/mainwindow.cpp:195 src/viewer/viewcontainer.cpp:617
+#: src/mainwindow.cpp:197 src/viewer/viewcontainer.cpp:645
 msgid "&Channel Settings..."
 msgstr ""
 
-#: src/mainwindow.cpp:198
+#: src/mainwindow.cpp:200
 msgid "Open the channel settings dialog for this tab"
 msgstr ""
 
-#: src/mainwindow.cpp:203 src/viewer/viewcontainer.cpp:587
+#: src/mainwindow.cpp:205 src/viewer/viewcontainer.cpp:615
 msgid "Channel &List"
 msgstr ""
 
-#: src/mainwindow.cpp:207
+#: src/mainwindow.cpp:209
 msgid "Show a list of all the known channels on this server"
 msgstr ""
 
-#: src/mainwindow.cpp:212
+#: src/mainwindow.cpp:214
 msgid "&URL Catcher"
 msgstr ""
 
-#: src/mainwindow.cpp:215
+#: src/mainwindow.cpp:217
 msgid "List all URLs that have been mentioned recently in a new tab"
 msgstr ""
 
-#: src/mainwindow.cpp:222
+#: src/mainwindow.cpp:224
 msgid "New &Konsole"
 msgstr ""
 
-#: src/mainwindow.cpp:224
+#: src/mainwindow.cpp:226
 msgid "Open a terminal in a new tab"
 msgstr ""
 
-#: src/mainwindow.cpp:250
+#: src/mainwindow.cpp:252
 msgid "&Next Tab"
 msgstr ""
 
-#: src/mainwindow.cpp:258
+#: src/mainwindow.cpp:260
 msgid "&Previous Tab"
 msgstr ""
 
-#: src/mainwindow.cpp:266
+#: src/mainwindow.cpp:268
 msgid "Close &Tab"
 msgstr ""
 
-#: src/mainwindow.cpp:274
+#: src/mainwindow.cpp:276
 msgid "Last Focused Tab"
 msgstr ""
 
-#: src/mainwindow.cpp:281
+#: src/mainwindow.cpp:283
 msgid "Next Active Tab"
 msgstr ""
 
-#: src/mainwindow.cpp:291 src/viewer/viewcontainer.cpp:221
+#: src/mainwindow.cpp:293 src/viewer/viewcontainer.cpp:226
 msgid "Move Tab Up"
 msgstr ""
 
-#: src/mainwindow.cpp:302 src/viewer/viewcontainer.cpp:229
+#: src/mainwindow.cpp:304 src/viewer/viewcontainer.cpp:234
 msgid "Move Tab Down"
 msgstr ""
 
-#: src/mainwindow.cpp:313 src/mainwindow.cpp:343
-#: src/viewer/viewcontainer.cpp:330
+#: src/mainwindow.cpp:315 src/mainwindow.cpp:345
+#: src/viewer/viewcontainer.cpp:335
 msgid "Move Tab Right"
 msgstr "Movi la folion dekstren"
 
-#: src/mainwindow.cpp:322 src/mainwindow.cpp:334
-#: src/viewer/viewcontainer.cpp:322
+#: src/mainwindow.cpp:324 src/mainwindow.cpp:336
+#: src/viewer/viewcontainer.cpp:327
 msgid "Move Tab Left"
 msgstr "Movi la folion maldekstren"
 
-#: src/mainwindow.cpp:357
+#: src/mainwindow.cpp:359
 msgid "Rejoin Channel"
 msgstr ""
 
-#: src/mainwindow.cpp:363 src/mainwindow.cpp:779
+#: src/mainwindow.cpp:365 src/mainwindow.cpp:792
 msgid "Enable Notifications"
 msgstr ""
 
-#: src/mainwindow.cpp:369
+#: src/mainwindow.cpp:371
 msgid "Join on Connect"
 msgstr ""
 
-#: src/mainwindow.cpp:374
+#: src/mainwindow.cpp:376
+msgid "Connect at Startup"
+msgstr ""
+
+#: src/mainwindow.cpp:381
 msgid "Default"
 msgstr "Defaŭlta"
 
-#: src/mainwindow.cpp:379
+#: src/mainwindow.cpp:386
 msgid "Set Encoding"
 msgstr ""
 
-#: src/mainwindow.cpp:391
+#: src/mainwindow.cpp:398
 #, kde-format
 msgid "Go to Tab %1"
 msgstr ""
 
-#: src/mainwindow.cpp:400
+#: src/mainwindow.cpp:407
 msgid "Clear &Marker Lines"
 msgstr ""
 
-#: src/mainwindow.cpp:403
+#: src/mainwindow.cpp:410
 msgid "Clear marker lines in the current tab"
 msgstr ""
 
-#: src/mainwindow.cpp:408
+#: src/mainwindow.cpp:415
 msgid "&Clear Window"
 msgstr ""
 
-#: src/mainwindow.cpp:411
+#: src/mainwindow.cpp:418
 msgid "Clear the contents of the current tab"
 msgstr ""
 
-#: src/mainwindow.cpp:416
+#: src/mainwindow.cpp:423
 msgid "Clear &All Windows"
 msgstr ""
 
-#: src/mainwindow.cpp:419
+#: src/mainwindow.cpp:426
 msgid "Clear the contents of all open tabs"
 msgstr ""
 
-#: src/mainwindow.cpp:424
+#: src/mainwindow.cpp:431
 msgid "Global Away"
 msgstr ""
 
-#: src/mainwindow.cpp:432 src/viewer/irccontextmenus.cpp:316
+#: src/mainwindow.cpp:439 src/viewer/irccontextmenus.cpp:349
 msgid "&Join Channel..."
 msgstr ""
 
-#: src/mainwindow.cpp:448 src/mainwindow.cpp:781
+#: src/mainwindow.cpp:455 src/mainwindow.cpp:794
 msgid "&IRC Color..."
 msgstr ""
 
-#: src/mainwindow.cpp:452
+#: src/mainwindow.cpp:459
 msgid "Set the color of your current IRC message"
 msgstr ""
 
-#: src/mainwindow.cpp:457 src/mainwindow.cpp:783
+#: src/mainwindow.cpp:464 src/mainwindow.cpp:796
 msgid "&Marker Line"
 msgstr ""
 
-#: src/mainwindow.cpp:460
+#: src/mainwindow.cpp:467
 msgid "Insert a horizontal line into the current tab that only you can see"
 msgstr ""
 
-#: src/mainwindow.cpp:465 src/mainwindow.cpp:782
+#: src/mainwindow.cpp:472 src/mainwindow.cpp:795
 msgid "Special &Character..."
 msgstr ""
 
-#: src/mainwindow.cpp:469
+#: src/mainwindow.cpp:476
 msgid "Insert any character into your current IRC message"
 msgstr ""
 
-#: src/mainwindow.cpp:474
+#: src/mainwindow.cpp:487
 msgid "Focus Input Box"
 msgstr ""
 
-#: src/mainwindow.cpp:481
+#: src/mainwindow.cpp:494
 msgid "Close &All Open Queries"
 msgstr ""
 
-#: src/mainwindow.cpp:490
+#: src/mainwindow.cpp:503
 msgid "Show Nicklist"
 msgstr ""
 
-#: src/mainwindow.cpp:496
+#: src/mainwindow.cpp:509
 #, fuzzy
-#| msgid "Konversation"
 msgid "Show/Hide Konversation"
 msgstr "Konversation"
 
-#: src/mainwindow.cpp:504
+#: src/mainwindow.cpp:517
 #, fuzzy
-#| msgid "&Use On-Screen-Display"
 msgid "Enable On Screen Display"
 msgstr "&Uzi la vidigilon"
 
-#: src/mainwindow.cpp:510
+#: src/mainwindow.cpp:523
 msgid "Bookmarks"
 msgstr "Legosignoj"
 
-#: src/mainwindow.cpp:561
+#: src/mainwindow.cpp:574
 msgid ""
 "<qt>You have active DCC file transfers. Are you sure you want to quit "
 "<b>Konversation</b>?</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:562 src/mainwindow.cpp:572
+#: src/mainwindow.cpp:575 src/mainwindow.cpp:585
 msgid "Confirm Quit"
 msgstr ""
 
-#: src/mainwindow.cpp:571
+#: src/mainwindow.cpp:584
 msgid "<qt>Are you sure you want to quit <b>Konversation</b>?</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:607
+#: src/mainwindow.cpp:620
 msgid ""
 "<p>Closing the main window will keep Konversation running in the system "
 "tray. Use <b>Quit</b> from the <b>Konversation</b> menu to quit the "
 "application.</p>"
 msgstr ""
 
-#: src/mainwindow.cpp:609
+#: src/mainwindow.cpp:622
 msgid "Docking in System Tray"
 msgstr "Fiksigu en sistemfako"
 
-#: src/mainwindow.cpp:724
+#: src/mainwindow.cpp:737
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:725
+#: src/mainwindow.cpp:738
 msgid "Hide menu bar"
 msgstr ""
 
-#: src/mainwindow.cpp:765
+#: src/mainwindow.cpp:778
 msgid "Toggle Notifications"
 msgstr ""
 
-#: src/mainwindow.cpp:766
+#: src/mainwindow.cpp:779
 msgid "Toggle Away Globally"
 msgstr ""
 
-#: src/mainwindow.cpp:767
+#: src/mainwindow.cpp:780
 msgid "Insert &IRC Color..."
 msgstr ""
 
-#: src/mainwindow.cpp:768
+#: src/mainwindow.cpp:781
 msgid "Insert Special &Character..."
 msgstr ""
 
-#: src/mainwindow.cpp:769
+#: src/mainwindow.cpp:782
 msgid "Insert &Marker Line"
 msgstr ""
 
-#: src/mainwindow.cpp:771
+#: src/mainwindow.cpp:784
 msgid "&Channel List"
 msgstr ""
 
-#: src/mainwindow.cpp:780
+#: src/mainwindow.cpp:793
 msgid "Set &Away Globally"
 msgstr ""
 
-#: src/mainwindow.cpp:792
+#: src/mainwindow.cpp:805
 msgid "Server List"
 msgstr ""
 
-#: src/notificationhandler.cpp:103
+#: src/notificationhandler.cpp:104
 #, kde-format
 msgid "[HighLight] (%1) &lt;%2&gt;"
 msgstr ""
 
-#: src/notificationhandler.cpp:117 src/notificationhandler.cpp:382
+#: src/notificationhandler.cpp:118 src/notificationhandler.cpp:396
 #, kde-format
 msgid "[HighLight] (%1) &lt;%2&gt; %3"
 msgstr ""
 
-#: src/notificationhandler.cpp:144
+#: src/notificationhandler.cpp:145
 #, kde-format
 msgid "[Query] &lt;%1&gt;"
 msgstr ""
 
-#: src/notificationhandler.cpp:158
+#: src/notificationhandler.cpp:159
 #, kde-format
 msgid "[Query] &lt;%1&gt; %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:186 src/notificationhandler.cpp:193
+#: src/notificationhandler.cpp:187 src/notificationhandler.cpp:194
 #, kde-format
 msgid "%1 joined %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:205 src/notificationhandler.cpp:212
+#: src/notificationhandler.cpp:206 src/notificationhandler.cpp:213
 #, kde-format
 msgid "%1 parted %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:224
+#: src/notificationhandler.cpp:225
 #, kde-format
 msgid "%1 quit %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:235
+#: src/notificationhandler.cpp:236
 #, kde-format
 msgid "%1 changed nickname to %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:246
+#: src/notificationhandler.cpp:247
 #, kde-format
 msgid "%1 wants to send a file to you"
 msgstr ""
 
-#: src/notificationhandler.cpp:257
+#: src/notificationhandler.cpp:258
 #, kde-format
 msgid "An error has occurred in a DCC transfer: %1"
 msgstr ""
 
-#: src/notificationhandler.cpp:268
+#: src/notificationhandler.cpp:271 src/notificationhandler.cpp:276
 #, kde-format
 msgctxt "%1 - filename"
 msgid "%1 File Transfer is complete"
 msgstr ""
 
-#: src/notificationhandler.cpp:294
+#: src/notificationhandler.cpp:278
+#, fuzzy
+msgctxt "Opens the file from the finished dcc transfer"
+msgid "Open"
+msgstr "Malfermi URL&on"
+
+#: src/notificationhandler.cpp:293
+#, kde-format
+msgid "%1 changed modes in %2: %3"
+msgstr ""
+
+#: src/notificationhandler.cpp:308
 #, kde-format
 msgid "%1 has started a conversation (query) with you."
 msgstr ""
 
-#: src/notificationhandler.cpp:335
+#: src/notificationhandler.cpp:349
 #, kde-format
 msgid "You are kicked by %1 from %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:349
+#: src/notificationhandler.cpp:363
 #, kde-format
 msgid "%1 started a DCC chat with you"
 msgstr ""
 
-#: src/notificationhandler.cpp:379
+#: src/notificationhandler.cpp:393
 #, kde-format
 msgid "[HighLight] (%1) *** %2"
 msgstr ""
 
-#: src/notificationhandler.cpp:392
+#: src/notificationhandler.cpp:406
 #, kde-format
 msgid "Failed to connect to %1"
 msgstr ""
 
-#: src/notificationhandler.cpp:405
+#: src/notificationhandler.cpp:419
 #, kde-format
 msgid "You have joined %1."
 msgstr ""
@@ -7561,7 +7535,7 @@ msgid ""
 "This cannot be undone, are you sure you wish to reset to default values?"
 msgstr ""
 
-#: src/queuetuner.cpp:240
+#: src/queuetuner.cpp:241
 msgid "Reset Values"
 msgstr ""
 
@@ -7572,8 +7546,9 @@ msgstr "Fermi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_slowBox)
 #: src/queuetunerbase.ui:96
+#, fuzzy
 msgid "Slow Queue"
-msgstr ""
+msgstr "Envicigita"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_slowType)
 #. i18n: ectx: property (text), item, widget (KComboBox, m_normalType)
@@ -7648,8 +7623,9 @@ msgstr "Linioj:"
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
 #: src/queuetunerbase.ui:226 src/queuetunerbase.ui:341
 #: src/queuetunerbase.ui:571
+#, fuzzy
 msgid "Bytes:"
-msgstr ""
+msgstr "Bajtoj"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_normalBox)
 #: src/queuetunerbase.ui:267
@@ -7658,13 +7634,15 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_fastBox)
 #: src/queuetunerbase.ui:438
+#, fuzzy
 msgid "Fast Queue"
-msgstr ""
+msgstr "Envicigita"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_globalBox)
 #: src/queuetunerbase.ui:612
+#, fuzzy
 msgid "All Queues"
-msgstr ""
+msgstr "Envicigita"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel13)
 #: src/queuetunerbase.ui:632
@@ -7789,7 +7767,6 @@ msgstr[1] ""
 
 #: src/upnp/upnprouter.cpp:134
 #, fuzzy, kde-format
-#| msgid "Failed to open %1 : %2"
 msgid "Failed to download %1: %2"
 msgstr "Ne povas malfermi %1 : %2"
 
@@ -7797,13 +7774,12 @@ msgstr "Ne povas malfermi %1 : %2"
 msgid "Error parsing router description."
 msgstr ""
 
-#: src/urlcatcher.cpp:84 src/viewer/viewcontainer.cpp:2141
+#: src/urlcatcher.cpp:84 src/viewer/viewcontainer.cpp:2218
 msgid "URL Catcher"
 msgstr ""
 
 #: src/urlcatcher.cpp:105
 #, fuzzy
-#| msgid "&Open URL"
 msgctxt "open url"
 msgid "&Open"
 msgstr "Malfermi URL&on"
@@ -7822,7 +7798,6 @@ msgstr ""
 
 #: src/urlcatcher.cpp:112
 #, fuzzy
-#| msgid "Save As..."
 msgid "&Save..."
 msgstr "Konservi kiel..."
 
@@ -7832,13 +7807,11 @@ msgstr ""
 
 #: src/urlcatcher.cpp:118
 #, fuzzy
-#| msgid "Bookmarks"
 msgid "Add Bookmark..."
 msgstr "Legosignoj"
 
 #: src/urlcatcher.cpp:126
 #, fuzzy
-#| msgid "&Copy"
 msgctxt "copy url"
 msgid "&Copy"
 msgstr "&Kopii"
@@ -7855,7 +7828,6 @@ msgstr ""
 
 #: src/urlcatcher.cpp:133
 #, fuzzy
-#| msgid "&Delete"
 msgctxt "delete url"
 msgid "&Delete"
 msgstr "&Forigi"
@@ -7872,14 +7844,12 @@ msgstr ""
 
 #: src/urlcatcher.cpp:143
 #, fuzzy
-#| msgid "Save Link As..."
 msgctxt "save url list"
 msgid "&Save List..."
 msgstr "Konservi la ligon kiel..."
 
 #: src/urlcatcher.cpp:145
 #, fuzzy
-#| msgid "Save Link As..."
 msgid "Save list."
 msgstr "Konservi la ligon kiel..."
 
@@ -7912,7 +7882,6 @@ msgstr "El"
 
 #: src/urlcatcher.cpp:180
 #, fuzzy
-#| msgid "Paste"
 msgid "Date"
 msgstr "Alglui"
 
@@ -7924,7 +7893,6 @@ msgstr ""
 
 #: src/urlcatcher.cpp:237 src/urlcatcher.cpp:259
 #, fuzzy
-#| msgid "&Open URL"
 msgid "Open URLs"
 msgstr "Malfermi URL&on"
 
@@ -7934,7 +7902,7 @@ msgid ""
 "will open for each. Do you really want to save several URLs at once?"
 msgstr ""
 
-#: src/urlcatcher.cpp:273 src/viewer/irccontextmenus.cpp:963
+#: src/urlcatcher.cpp:273 src/viewer/irccontextmenus.cpp:987
 msgid "Save link as"
 msgstr ""
 
@@ -7969,7 +7937,193 @@ msgstr ""
 msgid "Enter new away message:"
 msgstr ""
 
-#: src/viewer/chatwindow.cpp:444
+#: src/viewer/channeloptionsdialog.cpp:35
+#, kde-format
+msgid "Channel Settings for %1"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:196
+msgid "&Hide Advanced Modes &lt;&lt;"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:200
+msgid "&Show Advanced Modes &gt;&gt;"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:287
+msgid "Parameter"
+msgstr "Parametro"
+
+#: src/viewer/channeloptionsdialog.cpp:295
+#, fuzzy, kde-format
+msgctxt "<mode character> (<mode description>)"
+msgid "%1 (%2)"
+msgstr "%1 sur %2"
+
+#: src/viewer/channeloptionsdialog.cpp:566
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>The <b>T</b>opic mode means that only the channel "
+"operator can change the topic for the channel.</p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:568
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p><b>N</b>o messages from outside means users who are not "
+"in the channel cannot send messages for everybody in the channel to see.  "
+"Almost all channels have this set to prevent nuisance messages.</p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:570
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>A <b>S</b>ecret channel will not show up in the channel "
+"list, nor will any user be able to see that you are in the channel with the "
+"<em>WHOIS</em> command or anything similar.  Only the people that are in the "
+"same channel will know that you are in this channel, if this mode is set.</"
+"p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:572
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>An <b>I</b>nvite only channel means that people can only "
+"join the channel if they are invited.  To invite someone, a channel operator "
+"needs to issue the command <em>/invite nick</em> from within the channel.</"
+"p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:574
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>A <b>P</b>rivate channel is shown in a listing of all "
+"channels, but the topic is not shown.  A user's <em>WHOIS</em> may or may "
+"not show them as being in a private channel depending on the IRC server.</"
+"p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:576
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>A <b>M</b>oderated channel is one where only operators, "
+"half-operators and those with voice can talk.</p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:578
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>A protected channel requires users to enter a password "
+"in order to join.</p></qt>"
+msgstr ""
+
+#: src/viewer/channeloptionsdialog.cpp:580
+msgid ""
+"<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
+"change these.</p><p>A channel that has a user <b>L</b>imit means that only "
+"that many users can be in the channel at any one time.  Some channels have a "
+"bot that sits in the channel and changes this automatically depending on how "
+"busy the channel is.</p></qt>"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, topicTab)
+#: src/viewer/channeloptionsui.ui:27
+msgid "Topi&c"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: src/viewer/channeloptionsui.ui:51 src/viewer/channeloptionsui.ui:241
+msgid "Search:"
+msgstr "Serĉi:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, modesPage)
+#: src/viewer/channeloptionsui.ui:89
+msgid "Mo&des"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, topicModeChBox)
+#: src/viewer/channeloptionsui.ui:95
+msgid "&Topic can only be changed by channel operators"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, messageModeChBox)
+#: src/viewer/channeloptionsui.ui:102
+msgid "&No messages from outside the channel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, secretModeChBox)
+#: src/viewer/channeloptionsui.ui:109
+msgid "&Secret channel, the channel is not listed in the channel list"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, inviteModeChBox)
+#: src/viewer/channeloptionsui.ui:116
+msgid "Only &invited are allowed to join the channel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, moderatedModeChBox)
+#: src/viewer/channeloptionsui.ui:123
+msgid "&Moderated channel, only people with voice can write to the channel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, userLimitChBox)
+#: src/viewer/channeloptionsui.ui:130
+msgid "User &limit:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, keyModeChBox)
+#: src/viewer/channeloptionsui.ui:163
+#, fuzzy
+msgid "Channel &password:"
+msgstr "&Pasvorto:"
+
+#. i18n: ectx: property (text), widget (QPushButton, toggleAdvancedModes)
+#: src/viewer/channeloptionsui.ui:177
+msgid "Show &Advanced Modes >>"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
+#: src/viewer/channeloptionsui.ui:227
+#, fuzzy
+msgid "&Ban List"
+msgstr "Konservi la ligon kiel..."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, banList)
+#: src/viewer/channeloptionsui.ui:263
+msgid "Hostmask"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, banList)
+#: src/viewer/channeloptionsui.ui:268
+msgid "Set By"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, banList)
+#: src/viewer/channeloptionsui.ui:273
+#, fuzzy
+msgid "Time Set"
+msgstr "Tempindiko"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, updateBan)
+#: src/viewer/channeloptionsui.ui:296
+#, fuzzy
+msgid "Update Ban"
+msgstr "Aktualigintervalo:"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, addBan)
+#: src/viewer/channeloptionsui.ui:315
+#, fuzzy
+msgid "Add Ban"
+msgstr "Aldoni"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeBan)
+#: src/viewer/channeloptionsui.ui:334
+#, fuzzy
+msgid "Remove Ban"
+msgstr "Forigi"
+
+#: src/viewer/chatwindow.cpp:476
 #, kde-format
 msgid ""
 "\n"
@@ -8001,7 +8155,6 @@ msgstr ""
 
 #: src/viewer/editnotifydialog.cpp:58
 #, fuzzy
-#| msgid "Network"
 msgid "All Networks"
 msgstr "Reto"
 
@@ -8009,7 +8162,7 @@ msgstr "Reto"
 msgid "Change notify information"
 msgstr ""
 
-#: src/viewer/ignorelistviewitem.cpp:47
+#: src/viewer/ignorelistviewitem.cpp:48
 msgid "Exception"
 msgstr "Escepto"
 
@@ -8098,213 +8251,215 @@ msgid ""
 "to see this.</b></qt>"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:112
+#: src/viewer/irccontextmenus.cpp:156
 msgid "Copy Link Address"
 msgstr "Kopii ligilan adreson"
 
-#: src/viewer/irccontextmenus.cpp:116
+#: src/viewer/irccontextmenus.cpp:160
 msgid "Add to Bookmarks"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:117
+#: src/viewer/irccontextmenus.cpp:161
 msgid "Open With..."
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:118
+#: src/viewer/irccontextmenus.cpp:162
 msgid "Save Link As..."
 msgstr "Konservi la ligon kiel..."
 
-#: src/viewer/irccontextmenus.cpp:258
+#: src/viewer/irccontextmenus.cpp:302
 #, kde-format
 msgid "Search for '%1' with"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:273
+#: src/viewer/irccontextmenus.cpp:317
 msgid "Configure Web Shortcuts..."
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:319
+#: src/viewer/irccontextmenus.cpp:352
 msgid "Get &topic"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:320
+#: src/viewer/irccontextmenus.cpp:353
 msgid "Get &user list"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:366
+#: src/viewer/irccontextmenus.cpp:399
 msgid "Open Query"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:378
+#: src/viewer/irccontextmenus.cpp:411
 msgid "Modes"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:379
+#: src/viewer/irccontextmenus.cpp:412
 msgid "Give Op"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:380
+#: src/viewer/irccontextmenus.cpp:413
 msgid "Take Op"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:381
+#: src/viewer/irccontextmenus.cpp:414
 msgid "Give HalfOp"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:382
+#: src/viewer/irccontextmenus.cpp:415
 msgid "Take HalfOp"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:383
+#: src/viewer/irccontextmenus.cpp:416
 msgid "Give Voice"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:384
+#: src/viewer/irccontextmenus.cpp:417
 msgid "Take Voice"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:388
+#: src/viewer/irccontextmenus.cpp:421
 msgid "Kick / Ban"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:390
+#: src/viewer/irccontextmenus.cpp:423
 msgid "Kickban"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:391
+#: src/viewer/irccontextmenus.cpp:424
 msgid "Ban Nickname"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:393
+#: src/viewer/irccontextmenus.cpp:426
 msgid "Ban *!*@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:394
+#: src/viewer/irccontextmenus.cpp:427
 msgid "Ban *!*@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:395
+#: src/viewer/irccontextmenus.cpp:428
 msgid "Ban *!user@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:396
+#: src/viewer/irccontextmenus.cpp:429
 msgid "Ban *!user@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:398
+#: src/viewer/irccontextmenus.cpp:431
 msgid "Kickban *!*@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:399
+#: src/viewer/irccontextmenus.cpp:432
 msgid "Kickban *!*@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:400
+#: src/viewer/irccontextmenus.cpp:433
 msgid "Kickban *!user@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:401
+#: src/viewer/irccontextmenus.cpp:434
 msgid "Kickban *!user@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:417
+#: src/viewer/irccontextmenus.cpp:452
 msgid "&Version"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:418
+#: src/viewer/irccontextmenus.cpp:453
 msgid "&Ping"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:425 src/viewer/irccontextmenus.cpp:621
-#: src/viewer/irccontextmenus.cpp:622
+#: src/viewer/irccontextmenus.cpp:460 src/viewer/irccontextmenus.cpp:665
+#: src/viewer/irccontextmenus.cpp:666
 msgid "Unignore"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:428
+#: src/viewer/irccontextmenus.cpp:463
 msgid "Add to Watched Nicks"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:430
+#: src/viewer/irccontextmenus.cpp:465
 #, fuzzy
-#| msgid "&Remove"
 msgid "Remove From Watched Nicks"
 msgstr "Fo&rigi"
 
-#: src/viewer/irccontextmenus.cpp:448
+#: src/viewer/irccontextmenus.cpp:483
 msgid "Send &File..."
 msgstr "Sendu &dosieron"
 
-#: src/viewer/irccontextmenus.cpp:450
+#: src/viewer/irccontextmenus.cpp:485
 msgid "Open DCC Chat"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:451
+#: src/viewer/irccontextmenus.cpp:486
 msgid "Open DCC Whiteboard"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:583
+#: src/viewer/irccontextmenus.cpp:627
 #, kde-format
 msgid "Do you want to ignore %1?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:585
+#: src/viewer/irccontextmenus.cpp:629
 msgid "Do you want to ignore the selected users?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:614
+#: src/viewer/irccontextmenus.cpp:658
 #, kde-format
 msgid "Do you want to stop ignoring %1?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:616
+#: src/viewer/irccontextmenus.cpp:660
 msgid "Do you want to stop ignoring the selected users?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:825
+#: src/viewer/irccontextmenus.cpp:869
 msgid "Address Book Association"
 msgid_plural "Address Book Associations"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/irccontextmenus.cpp:862
+#: src/viewer/irccontextmenus.cpp:906
 #, fuzzy
-#| msgid "&Edit Contact..."
 msgid "Edit Contact..."
 msgid_plural "Edit Contacts..."
 msgstr[0] "&Redakti kontakton..."
 msgstr[1] "&Redakti kontakton..."
 
-#: src/viewer/irccontextmenus.cpp:870
+#: src/viewer/irccontextmenus.cpp:914
 msgid "Choose/Change Association..."
 msgid_plural "Choose/Change Associations..."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/irccontextmenus.cpp:876
+#: src/viewer/irccontextmenus.cpp:920
 msgid "Choose Contact..."
 msgid_plural "Choose Contacts..."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/irccontextmenus.cpp:882
+#: src/viewer/irccontextmenus.cpp:926
 msgid "Change Association..."
 msgid_plural "Change Associations..."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/irccontextmenus.cpp:889
+#: src/viewer/irccontextmenus.cpp:933
 msgid "Create New Contact..."
 msgid_plural "Create New Contacts..."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/irccontextmenus.cpp:896
+#: src/viewer/irccontextmenus.cpp:940
 msgid "Delete Association"
 msgid_plural "Delete Associations"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/ircinput.cpp:59
+#: src/viewer/irccontextmenus.cpp:1007
+msgid "Query author"
+msgstr ""
+
+#: src/viewer/ircinput.cpp:61
 msgid ""
 "<qt><p>The input line is where you type messages to be sent the channel, "
 "query, or server.  A message sent to a channel is seen by everyone on the "
@@ -8320,21 +8475,25 @@ msgid ""
 "p><p>A message cannot contain multiple lines.</p></qt>"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:485
+#: src/viewer/ircinput.cpp:95
+msgid "Spell Checking Language"
+msgstr ""
+
+#: src/viewer/ircinput.cpp:554
 #, kde-format
 msgid "1 byte"
 msgid_plural "%1 bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/ircinput.cpp:486
+#: src/viewer/ircinput.cpp:555
 #, kde-format
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/ircinput.cpp:492
+#: src/viewer/ircinput.cpp:561
 #, kde-format
 msgctxt ""
 "%1 is, for instance, '200 bytes'.  %2 is, for instance, '7 lines'.  Both are "
@@ -8345,73 +8504,78 @@ msgid ""
 "continue?</qt>"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:495
+#: src/viewer/ircinput.cpp:564
 msgid "Large Paste Warning"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:496
+#: src/viewer/ircinput.cpp:565
 msgid "Paste"
 msgstr "Alglui"
 
-#: src/viewer/ircview.cpp:2054
+#: src/viewer/ircview.cpp:2095
 #, kde-format
 msgid "Open a query with %1"
 msgstr ""
 
-#: src/viewer/ircview.cpp:2063 src/viewer/topiclabel.cpp:301
+#: src/viewer/ircview.cpp:2104 src/viewer/topiclabel.cpp:290
 #, kde-format
 msgid "Join the channel %1"
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:46
+#: src/viewer/logfilereader.cpp:39
+#, kde-format
+msgid "Logfile of %1"
+msgstr ""
+
+#: src/viewer/logfilereader.cpp:47
 msgid "Save As..."
 msgstr "Konservi kiel..."
 
-#: src/viewer/logfilereader.cpp:47
+#: src/viewer/logfilereader.cpp:48
 msgid "Reload"
 msgstr "Reŝargi"
 
-#: src/viewer/logfilereader.cpp:48 src/viewer/logfilereader.cpp:145
+#: src/viewer/logfilereader.cpp:49 src/viewer/logfilereader.cpp:146
 msgid "Clear Logfile"
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:50
+#: src/viewer/logfilereader.cpp:51
 msgid "Show last:"
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:56
+#: src/viewer/logfilereader.cpp:57
 msgid ""
 "Use this box to set the maximum size of the log file. This setting does not "
 "take effect until you restart Konversation. Each log file may have a "
 "separate setting."
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:58
+#: src/viewer/logfilereader.cpp:59
 msgid " KB"
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:65
+#: src/viewer/logfilereader.cpp:66
 msgid ""
 "The messages in the log file are displayed here. The oldest messages are at "
 "the top and the most recent are at the bottom."
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:144
+#: src/viewer/logfilereader.cpp:145
 msgid ""
 "Do you really want to permanently discard all log information of this file?"
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:158
+#: src/viewer/logfilereader.cpp:159
 msgid ""
 "Note: By saving the logfile you will save all data in the file, not only the "
 "part you can see in this viewer."
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:159
+#: src/viewer/logfilereader.cpp:160
 msgid "Save Logfile"
 msgstr ""
 
-#: src/viewer/logfilereader.cpp:165
+#: src/viewer/logfilereader.cpp:166
 msgid "Choose Destination Folder"
 msgstr ""
 
@@ -8425,7 +8589,6 @@ msgstr ""
 
 #: src/viewer/pasteeditor.cpp:32
 #, fuzzy
-#| msgid "Speed"
 msgid "&Send"
 msgstr "Rapido"
 
@@ -8436,173 +8599,193 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, m_removeNewlinesButton)
 #: src/viewer/pasteeditor.ui:20
+#, fuzzy
 msgid "&Remove Newlines"
-msgstr ""
+msgstr "Fo&rigi etoson"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_addQuotesButton)
 #: src/viewer/pasteeditor.ui:27
 msgid "Add &Quotation Indicators"
 msgstr ""
 
-#: src/viewer/rawlog.cpp:25 src/viewer/viewcontainer.cpp:2258
+#: src/viewer/rawlog.cpp:25 src/viewer/viewcontainer.cpp:2335
 msgid "Raw Log"
 msgstr ""
 
-#: src/viewer/searchbar.cpp:64
+#: src/viewer/searchbar.cpp:66
 msgid "Find Forward"
 msgstr ""
 
-#: src/viewer/searchbar.cpp:67
+#: src/viewer/searchbar.cpp:69
 msgid "Match Case"
 msgstr ""
 
-#: src/viewer/searchbar.cpp:70
+#: src/viewer/searchbar.cpp:72
 msgid "Whole Words Only"
 msgstr ""
 
-#: src/viewer/searchbar.cpp:73
+#: src/viewer/searchbar.cpp:75
 msgid "From Cursor"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_findLabel)
 #: src/viewer/searchbarbase.ui:46
 #, fuzzy
-#| msgid "Find:"
 msgid "F&ind:"
 msgstr "Trovu:"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_findNextButton)
 #: src/viewer/searchbarbase.ui:62
 #, fuzzy
-#| msgid "Ne&w"
 msgid "&Next"
 msgstr "&Nova"
 
 #. i18n: ectx: property (text), widget (KPushButton, m_findPreviousButton)
 #: src/viewer/searchbarbase.ui:72
 #, fuzzy
-#| msgid "Find Previous"
 msgid "&Previous"
 msgstr "Trovi antaŭan"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_optionsButton)
 #: src/viewer/searchbarbase.ui:98
 #, fuzzy
-#| msgid "Options"
 msgid "&Options"
 msgstr "Opcioj"
 
-#: src/viewer/statuspanel.cpp:231
+#: src/viewer/statuspanel.cpp:227
 #, kde-format
 msgid ""
 "Do you really want to close '%1'?\n"
 "\n"
-" All associated tabs will be closed as well."
+"All associated tabs will be closed as well."
 msgstr ""
 
-#: src/viewer/statuspanel.cpp:232
+#: src/viewer/statuspanel.cpp:228
 msgid "Close Tab"
 msgstr "Fermi folion"
 
-#: src/viewer/statuspanel.cpp:241
+#: src/viewer/statuspanel.cpp:237
 #, kde-format
 msgid ""
 "Do you want to disconnect from '%1'?\n"
 "\n"
-" All associated tabs will be closed as well."
+"All associated tabs will be closed as well."
 msgstr ""
 
-#: src/viewer/statuspanel.cpp:242
+#: src/viewer/statuspanel.cpp:238
 msgid "Disconnect From Server"
 msgstr ""
 
-#: src/viewer/statuspanel.cpp:243
+#: src/viewer/statuspanel.cpp:239
 msgid "Disconnect"
 msgstr "Malkonekti"
 
-#: src/viewer/trayicon.cpp:23
+#: src/viewer/topicedit.cpp:172
+msgid "Delete excess text"
+msgstr ""
+
+#: src/viewer/topicedit.cpp:186
+#, kde-format
+msgid "Text past the server limit of %1 characters is shown in color."
+msgstr ""
+
+#: src/viewer/topichistoryview.cpp:54
+#, kde-format
+msgctxt "%1 is a timestamp, %2 is the author's name"
+msgid "On %1 by %2"
+msgstr ""
+
+#: src/viewer/topichistoryview.cpp:228
+msgid ""
+"This is a list of all topics that have been set for this channel while its "
+"tab was open.\n"
+"\n"
+"If the same topic is set multiple times consecutively by someone, only the "
+"final occurrence is shown.\n"
+"\n"
+"When you select a topic in the list, the edit field below it will receive "
+"its text. Once you start modifying the contents of the field, however, the "
+"list will switch from the regular entry selection mode to allowing you to "
+"perform text selection on the entries in case you may wish to incorporate "
+"some of their text into the new topic. To return to entry selection mode and "
+"a synchronized edit field, undo back to the original text or close and "
+"reopen the dialog."
+msgstr ""
+
+#: src/viewer/trayicon.cpp:24
 msgid "Konversation - IRC Client"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:561
+#: src/viewer/viewcontainer.cpp:589
 msgid "Find Text..."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:563
+#: src/viewer/viewcontainer.cpp:591
 msgid "Search for text in the current tab"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:581
+#: src/viewer/viewcontainer.cpp:609
 #, kde-format
 msgid "Channel &List for %1"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:601
+#: src/viewer/viewcontainer.cpp:629
 #, kde-format
 msgid "&Open Logfile for %1"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:612
+#: src/viewer/viewcontainer.cpp:640
 #, kde-format
 msgid "&Channel Settings for %1..."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:1673
+#: src/viewer/viewcontainer.cpp:1730
 msgid "Rename Tab"
 msgstr "Renomi la langeton"
 
-#: src/viewer/viewcontainer.cpp:1674
+#: src/viewer/viewcontainer.cpp:1731
 msgid "Enter new tab name:"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:1743
+#: src/viewer/viewcontainer.cpp:1800
 #, kde-format
 msgctxt "Default encoding"
 msgid "Default ( %1 )"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:1778
+#: src/viewer/viewcontainer.cpp:1836
 msgid "&Rename Tab..."
 msgstr "&Renomi la langeton..."
 
-#: src/viewer/viewcontainer.cpp:1923
+#: src/viewer/viewcontainer.cpp:1990
 msgid "You can only search in text fields."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:1924
+#: src/viewer/viewcontainer.cpp:1991
 msgid "Find Text Information"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2121
-#, kde-format
-msgid "Logfile of %1"
-msgstr ""
-
-#: src/viewer/viewcontainer.cpp:2493
+#: src/viewer/viewcontainer.cpp:2570
 msgid ""
 "To know which server to display the channel list for, the list can only be "
 "opened from a query, channel or status window."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2523
+#: src/viewer/viewcontainer.cpp:2600
 msgid ""
 "Using this function may result in a lot of network traffic. If your "
 "connection is not fast enough, it is possible that your client will be "
 "disconnected by the server."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2527
+#: src/viewer/viewcontainer.cpp:2604
 msgid "Channel List Warning"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2557
+#: src/viewer/viewcontainer.cpp:2634
 #, fuzzy
-#| msgid "&Remove"
 msgid "Watched Nicks"
 msgstr "Fo&rigi"
-
-#~ msgid "Nickname:"
-#~ msgstr "Kromnomo:"
 
 #~ msgid "Keep Open"
 #~ msgstr "Gardi malfermata"
@@ -8613,14 +8796,8 @@ msgstr "Fo&rigi"
 #~ msgid "Select All"
 #~ msgstr "Elekti ĉion"
 
-#~ msgid "unknown"
-#~ msgstr "nekonata"
-
 #~ msgid " sec"
 #~ msgstr " s"
-
-#~ msgid "Server Authentication"
-#~ msgstr "Servilo-Aŭtentigo"
 
 #, fuzzy
 #~| msgid "From"
