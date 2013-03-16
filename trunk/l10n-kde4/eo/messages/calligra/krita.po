@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-14 03:09+0100\n"
+"POT-Creation-Date: 2013-03-16 02:24+0100\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1439,6 +1439,7 @@ msgstr "Krada Interspaco"
 #. i18n: ectx: Menu (Image)
 #: krita.rc:75
 #: plugins/extensions/colorspaceconversion/colorspaceconversion.rc:4
+#: plugins/extensions/offsetimage/offsetimage.rc:5
 #: plugins/extensions/rotateimage/rotateimage.rc:4
 #: plugins/extensions/shearimage/shearimage.rc:4
 #: sdk/templates/view/APPNAMELC.rc:4
@@ -1809,6 +1810,7 @@ msgstr "Konverti Ebenotipon"
 #: plugins/extensions/colorspaceconversion/colorspaceconversion.rc:7
 #: plugins/extensions/dropshadow/dropshadow.rc:4
 #: plugins/extensions/metadataeditor/metadataeditor.rc:4
+#: plugins/extensions/offsetimage/offsetimage.rc:10
 #: plugins/extensions/rotateimage/rotateimage.rc:17
 #: plugins/extensions/shearimage/shearimage.rc:7
 msgid "La&yer"
@@ -3474,7 +3476,10 @@ msgid "Height"
 msgstr "&Alteco:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, grpAngle)
 #: plugins/extensions/imagesize/wdg_canvassize.ui:138
+#: plugins/extensions/offsetimage/kis_offset_processing_visitor.cpp:109
+#: plugins/extensions/offsetimage/wdg_offsetimage.ui:20
 msgid "Offset"
 msgstr "Deŝovo"
 
@@ -4550,12 +4555,54 @@ msgstr "Malgrandigi elekton per"
 msgid "Shrink from image border"
 msgstr ""
 
+#: plugins/extensions/offsetimage/dlg_offsetimage.cpp:28
+#: plugins/extensions/offsetimage/offsetimage.cpp:72
+#, fuzzy
+#| msgid "Offset X:"
+msgid "Offset Image"
+msgstr "Deŝovo X:"
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:47
+#, fuzzy
+#| msgid "&Shear Image..."
+msgid "&Offset Image..."
+msgstr "&Tondi Bildon..."
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:51
+#, fuzzy
+#| msgid "&Shear Layer..."
+msgid "&Offset Layer..."
+msgstr "&Tondi Ebenon..."
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:96
+#, fuzzy
+#| msgid "Offset X:"
+msgid "Offset Layer"
+msgstr "Deŝovo X:"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgRotateImage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgOffsetImage)
+#: plugins/extensions/offsetimage/wdg_offsetimage.ui:14
 #: plugins/extensions/rotateimage/dlg_rotateimage.cc:31
 #: plugins/extensions/rotateimage/rotateimage.cc:108
 #: plugins/extensions/rotateimage/wdg_rotateimage.ui:16
 msgid "Rotate Image"
 msgstr "Rotacii Bildon"
+
+#. i18n: ectx: property (text), widget (QLabel, xLabel)
+#: plugins/extensions/offsetimage/wdg_offsetimage.ui:31
+msgid "X:"
+msgstr "X:"
+
+#. i18n: ectx: property (text), widget (QLabel, yLabel)
+#: plugins/extensions/offsetimage/wdg_offsetimage.ui:52
+msgid "Y:"
+msgstr "Y:"
+
+#. i18n: ectx: property (text), widget (QPushButton, middleOffsetBtn)
+#: plugins/extensions/offsetimage/wdg_offsetimage.ui:80
+msgid "Offset by x/2, y/2"
+msgstr ""
 
 #: plugins/extensions/rotateimage/rotateimage.cc:46
 msgid "&Rotate Image..."
@@ -12709,14 +12756,8 @@ msgstr "&Koloroprenilo"
 #~ msgid "Overview"
 #~ msgstr "Superrigardo"
 
-#~ msgid "X:"
-#~ msgstr "X:"
-
 #~ msgid "00000"
 #~ msgstr "00000"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
 
 #~ msgid "1:1"
 #~ msgstr "1:1"
