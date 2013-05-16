@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libksieve\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-15 03:53+0200\n"
+"POT-Creation-Date: 2013-05-16 04:13+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -131,11 +131,16 @@ msgstr ""
 msgid "Discard"
 msgstr ""
 
+#: ksieveui/autocreatescripts/sieveactions/sieveactiondiscard.cpp:39
+msgid "Discard is used to silently throw away the message."
+msgstr ""
+
 #: ksieveui/autocreatescripts/sieveactions/sieveactionenclose.cpp:31
 msgid "Enclose"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionenclose.cpp:48
+#: ksieveui/autocreatescripts/sieveactions/sieveactionreplace.cpp:47
 msgid "Subject:"
 msgstr ""
 
@@ -146,7 +151,12 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionenclose.cpp:62
 #: ksieveui/autocreatescripts/sieveactions/sieveactionreject.cpp:44
+#: ksieveui/autocreatescripts/sieveactions/sieveactionreplace.cpp:61
 msgid "text:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionextracttext.cpp:29
+msgid "Extra Text"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionfileinto.cpp:29
@@ -164,6 +174,13 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionkeep.cpp:23
 msgid "Keep"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionkeep.cpp:39
+msgid ""
+"The \"keep\" action is whatever action is taken in lieu of all other "
+"actions, if no filtering happens at all; generally, this simply means to "
+"file the message into the user's main mailbox."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionnotify.cpp:32
@@ -186,12 +203,26 @@ msgstr ""
 msgid "Remove Flags"
 msgstr ""
 
+#: ksieveui/autocreatescripts/sieveactions/sieveactionreplace.cpp:31
+msgid "Replace"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionreplace.cpp:54
+msgid "from:"
+msgstr ""
+
 #: ksieveui/autocreatescripts/sieveactions/sieveactionsetflags.cpp:26
 msgid "Set Flags"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionstop.cpp:25
 msgid "Stop"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionstop.cpp:41
+msgid ""
+"The \"stop\" action ends all processing.  If the implicit keep has not been "
+"cancelled, then it is taken."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionvacation.cpp:38
@@ -255,8 +286,13 @@ msgstr ""
 msgid "seconds"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveactionwidgetlister.cpp:60
+#: ksieveui/autocreatescripts/sieveactionwidgetlister.cpp:62
 msgid "Please select an action."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactionwidgetlister.cpp:112
+#: ksieveui/autocreatescripts/sieveconditionwidgetlister.cpp:110
+msgid "Help"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionaddress.cpp:34
@@ -364,6 +400,13 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionsize.cpp:54
 msgid "kb"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionsize.cpp:71
+msgid ""
+"The \"size\" test deals with the size of a message.  It takes either a "
+"tagged argument of \":over\" or \":under\", followed by a number "
+"representing the size of the message."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionspamtest.cpp:32
@@ -558,39 +601,64 @@ msgstr ""
 msgid "Not equal to"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditionwidgetlister.cpp:57
+#: ksieveui/autocreatescripts/sieveconditionwidgetlister.cpp:59
 msgid "Please select an condition."
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:40
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:45
+msgid "personal"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:46
+msgid "global"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:86
+msgid "Include:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:91
+msgid "Optional"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:94
+msgid "Once"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:97
+#: ksieveui/templates/sievetemplateeditdialog.cpp:47
+msgid "Name:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:39
 msgid "Conditions"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:43
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:42
 msgid "Match all messages"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:44
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:43
 msgid "Match a&ll of the following"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:45
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:44
 msgid "Match an&y of the following"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:68
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:67
 msgid "Actions"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:76
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:75
 msgid "Add new block:"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:80
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:79
 msgid "\"elsif\" block"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:81
+#: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:80
 msgid "\"else\" block"
 msgstr ""
 
@@ -658,20 +726,24 @@ msgstr ""
 msgid "Script name: %1"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:64
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:42
+msgid "Includes"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:76
 msgid ""
 "Script should always have just one \"Else\" block. We cannot add another one."
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:75
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:90
 msgid "Main block"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:77
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:92
 msgid "Block \"Elsif\""
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:79
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:94
 msgid "Block \"Else\""
 msgstr ""
 
@@ -1045,10 +1117,6 @@ msgstr ""
 
 #: ksieveui/templates/sievetemplateeditdialog.cpp:36
 msgid "Template"
-msgstr ""
-
-#: ksieveui/templates/sievetemplateeditdialog.cpp:47
-msgid "Name:"
 msgstr ""
 
 #: ksieveui/templates/sievetemplatewidget.cpp:85
