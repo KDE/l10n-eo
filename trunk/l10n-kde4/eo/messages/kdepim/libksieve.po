@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libksieve\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-25 01:45+0000\n"
+"POT-Creation-Date: 2013-05-30 01:54+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -214,7 +214,7 @@ msgid "Parameters:"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionconvert.cpp:109
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditionconvert.cpp:109
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionconvert.cpp:107
 msgid ""
 "The \"convert\" action specifies that all body parts with a media type equal "
 "to \"media-type\" be converted to the media type in \"media-type\" using "
@@ -388,6 +388,9 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionsetvariable.cpp:50
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionenvironment.cpp:66
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionhasflag.cpp:57
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadata.cpp:65
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadata.cpp:65
 msgid "Value:"
 msgstr ""
 
@@ -531,25 +534,58 @@ msgstr ""
 msgid "Use ; to separate emails"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditionbody.cpp:31
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionaddress.cpp:99
+msgid ""
+"The \"address\" test matches Internet addresses in structured headers that "
+"contain addresses.  It returns true if any header contains any key in the "
+"specified part of the address, as modified by the comparator and the match "
+"keyword."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionbody.cpp:32
 msgid "Body"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditioncurrentdate.cpp:29
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionbody.cpp:95
+msgid ""
+"The body test matches content in the body of an email message, that is, "
+"anything following the first empty line after the header.  (The empty line "
+"itself, if present, is not considered to be part of the body.)"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditioncurrentdate.cpp:30
 msgid "Currentdate"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditiondate.cpp:32
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditioncurrentdate.cpp:86
+msgid ""
+"The currentdate test is similar to the date test, except that it operates on "
+"the current date/time rather than a value extracted from the message header."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditiondate.cpp:33
 #: ksieveui/autocreatescripts/sieveconditions/widgets/selectdatewidget.cpp:55
 msgid "Date"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditiondate.cpp:52
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditiondate.cpp:53
 msgid "header"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditiondate.cpp:99
+msgid ""
+"The date test matches date/time information derived from headers containing "
+"date-time values."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionenvelope.cpp:36
 msgid "Envelope"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionenvelope.cpp:112
+msgid ""
+"The \"envelope\" test is true if the specified part of the [SMTP] (or "
+"equivalent) envelope matches the specified key."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionenvironment.cpp:31
@@ -558,6 +594,13 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionenvironment.cpp:46
 msgid "Item:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionenvironment.cpp:104
+msgid ""
+"The environment test retrieves the item of environment information specified "
+"by the name string and matches it to the values specified in the key-list "
+"argument."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionexists.cpp:33
@@ -591,17 +634,32 @@ msgstr ""
 msgid "The \"false\" test always evaluates to false."
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditionhasflag.cpp:29
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadata.cpp:29
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionhasflag.cpp:31
 msgid "Has Flag"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditionheader.cpp:32
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionhasflag.cpp:50
+msgid "Variable name (if empty it uses internal variable):"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionhasflag.cpp:104
+msgid ""
+"The hasflag test evaluates to true if any of the variables matches any flag "
+"name."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionheader.cpp:33
 msgid "Header"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveconditions/sieveconditionheader.cpp:56
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionheader.cpp:57
 msgid "With value:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionheader.cpp:83
+msgid ""
+"The \"header\" test evaluates to true if the value of any of the named "
+"headers, ignoring leading and trailing whitespace, matches any key."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionihave.cpp:31
@@ -620,6 +678,72 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionmailboxexists.cpp:30
 msgid "Mailbox exist"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmailboxexists.cpp:78
+msgid ""
+"The \"mailboxexists\" test is true if all mailboxes listed in the \"mailbox-"
+"names\" argument exist in the mailstore, and each allows the user in whose "
+"context the Sieve script runs to \"deliver\" messages into it."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadata.cpp:32
+msgid "Meta Data"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadata.cpp:51
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadataexists.cpp:45
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadata.cpp:51
+msgid "Mailbox:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadata.cpp:58
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadata.cpp:58
+msgid "Annotations:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadata.cpp:118
+msgid ""
+"This test retrieves the value of the mailbox annotation \"annotation-name\" "
+"for the mailbox \"mailbox\". The retrieved value is compared to the \"key-"
+"list\". The test returns true if the annotation exists and its value matches "
+"any of the keys."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadataexists.cpp:29
+msgid "Metadata exists"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadataexists.cpp:52
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadataexists.cpp:45
+msgid "Annotation:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionmetadataexists.cpp:89
+msgid ""
+"The \"metadataexists\" test is true if all of the annotations listed in the "
+"\"annotation-names\" argument exist for the specified mailbox."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadata.cpp:31
+msgid "Server Meta Data"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadata.cpp:118
+msgid ""
+"This test retrieves the value of the server annotation \"annotation-name\".  "
+"The retrieved value is compared to the \"key-list\". The test returns true "
+"if the annotation exists and its value matches any of the keys."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadataexists.cpp:29
+msgid "Server Meta Data Exists"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionservermetadataexists.cpp:79
+msgid ""
+"The \"servermetadataexists\" test is true if all of the server annotations "
+"listed in the \"annotation-names\" argument exist."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionsize.cpp:29
@@ -649,6 +773,14 @@ msgstr ""
 msgid "Spam Test"
 msgstr ""
 
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionspamtest.cpp:96
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionspamtestplus.cpp:103
+msgid ""
+"Sieve implementations that implement the \"spamtest\" test use an identifier "
+"of either \"spamtest\" or \"spamtestplus\" for use with the capability "
+"mechanism."
+msgstr ""
+
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionspamtestplus.cpp:32
 msgid "Spam Test Plus extension"
 msgstr ""
@@ -665,8 +797,18 @@ msgstr ""
 msgid "true"
 msgstr ""
 
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditiontrue.cpp:56
+msgid "The \"true\" test always evaluates to true."
+msgstr ""
+
 #: ksieveui/autocreatescripts/sieveconditions/sieveconditionvirustest.cpp:33
 msgid "Virus Test"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveconditions/sieveconditionvirustest.cpp:97
+msgid ""
+"Sieve implementations that implement the \"virustest\" test have an "
+"identifier of \"virustest\" for use with the capability mechanism."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveconditions/widgets/selectaddresspartcombobox.cpp:38
