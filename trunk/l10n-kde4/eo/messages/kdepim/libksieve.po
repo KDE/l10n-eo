@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libksieve\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-01 01:34+0000\n"
+"POT-Creation-Date: 2013-06-05 02:11+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -185,7 +185,7 @@ msgid "Break"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionbreak.cpp:44
-#: ksieveui/autocreatescripts/sieveforeverypartwidget.cpp:39
+#: ksieveui/autocreatescripts/sieveforeverypartwidget.cpp:51
 msgid "Name (optional):"
 msgstr ""
 
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/sieveactionfileinto.cpp:114
 msgid ""
-"If the optional \":create\" argument is specified , it instructs the Sieve "
+"If the optional \":create\" argument is specified, it instructs the Sieve "
 "interpreter to create the specified mailbox, if needed, before attempting to "
 "deliver the message into the specified mailbox."
 msgstr ""
@@ -390,6 +390,16 @@ msgid ""
 "the text supplied in the command."
 msgstr ""
 
+#: ksieveui/autocreatescripts/sieveactions/sieveactionreturn.cpp:28
+msgid "Return"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionreturn.cpp:44
+msgid ""
+"The \"return\" command stops processing of the immediately included script "
+"only and returns processing control to the script that includes it."
+msgstr ""
+
 #: ksieveui/autocreatescripts/sieveactions/sieveactionsetflags.cpp:26
 msgid "Set Flags"
 msgstr ""
@@ -458,6 +468,20 @@ msgid ""
 "vacation command available under many versions of Unix. Its purpose is to "
 "provide correspondents with notification that the user is away for an "
 "extended period of time and that they should not expect quick responses."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionvacation.cpp:150
+msgid ""
+"Through the \":days\" parameter, it limits the number of auto-replies to the "
+"same sender to one per [n] days, for a specified number of days. But there "
+"are cases when one needs more granularity, if one would like to generate "
+"\"vacation\" replies more frequently."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveactions/sieveactionvacation.cpp:151
+msgid ""
+"This extension defines a \":seconds\" parameter to provide more granularity "
+"for such situations."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactions/widgets/selectaddheaderpositioncombobox.cpp:36
@@ -535,6 +559,9 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sieveactionwidgetlister.cpp:112
 #: ksieveui/autocreatescripts/sieveconditionwidgetlister.cpp:110
+#: ksieveui/autocreatescripts/sieveforeverypartwidget.cpp:43
+#: ksieveui/autocreatescripts/sieveglobalvariablewidget.cpp:104
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:143
 msgid "Help"
 msgstr ""
 
@@ -993,33 +1020,60 @@ msgstr ""
 msgid "Please select an condition."
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveforeverypartwidget.cpp:36
+#: ksieveui/autocreatescripts/sieveforeverypartwidget.cpp:48
 msgid "Add ForEveryPart loop"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveincludewidget.cpp:45
+#: ksieveui/autocreatescripts/sieveforeverypartwidget.cpp:69
+msgid ""
+"\"foreverypart\", which is an iterator that walks though every MIME part of "
+"a message, including nested parts, depth first, and applies the commands in "
+"the specified block to each of them."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveglobalvariablewidget.cpp:61
+msgid "Variable name:"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveglobalvariablewidget.cpp:121
+msgid ""
+"A variable has global scope in all scripts that have declared it with the "
+"\"global\" command.  If a script uses that variable name without declaring "
+"it global, the name specifies a separate, non-global variable within that "
+"script."
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:48
 msgid "personal"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveincludewidget.cpp:46
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:49
 msgid "global"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveincludewidget.cpp:86
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:89
 msgid "Include:"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveincludewidget.cpp:91
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:94
 #: ksieveui/templates/sievetemplateeditdialog.cpp:47
 msgid "Name:"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveincludewidget.cpp:97
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:100
 msgid "Optional"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sieveincludewidget.cpp:100
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:103
 msgid "Once"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sieveincludewidget.cpp:160
+msgid ""
+"The \"include\" command takes an optional \"location\" parameter, an "
+"optional \":once\" parameter, an optional \":optional\" parameter, and a "
+"single string argument representing the name of the script to include for "
+"processing at that point."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sievescriptblockwidget.cpp:39
@@ -1118,28 +1172,32 @@ msgstr ""
 msgid "Script name: %1"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:44
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:45
 msgid "Includes"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:50
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:48
+msgid "Global Variable"
+msgstr ""
+
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:53
 msgid "ForEveryPart"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:85
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:88
 msgid ""
 "Script should always have just one \"Else\" block. We cannot add another one."
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:100
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:103
 msgid "Main block"
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:102
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:105
 msgid "Block \"Elsif\""
 msgstr ""
 
-#: ksieveui/autocreatescripts/sievescriptpage.cpp:104
+#: ksieveui/autocreatescripts/sievescriptpage.cpp:107
 msgid "Block \"Else\""
 msgstr ""
 
