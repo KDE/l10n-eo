@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 01:32+0000\n"
+"POT-Creation-Date: 2013-07-17 01:33+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -134,8 +134,7 @@ msgstr "Kondiĉoj"
 msgid "Active status"
 msgstr ""
 
-#: debugger/breakpoint/breakpointmodel.cpp:176
-#: shell/sessioncontroller.cpp:1010
+#: debugger/breakpoint/breakpointmodel.cpp:176 shell/sessioncontroller.cpp:854
 #, fuzzy
 #| msgid "Status"
 msgid "State"
@@ -951,43 +950,37 @@ msgstr ""
 msgid "Collapse all"
 msgstr ""
 
-#: language/duchain/repositories/itemrepository.cpp:265
+#: language/duchain/repositories/itemrepository.h:214
+#: language/duchain/repositories/itemrepository.h:2133
+#, kde-format
+msgid "Failed writing to %1, probably the disk is full"
+msgstr ""
+
+#: language/duchain/repositories/itemrepositoryregistry.cpp:262
 #, kde-format
 msgid "Session crashed %1 time in a row"
 msgid_plural "Session crashed %1 times in a row"
 msgstr[0] ""
 msgstr[1] ""
 
-#: language/duchain/repositories/itemrepository.cpp:270
-msgid "Clear cache: [Y/n] "
+#: language/duchain/repositories/itemrepositoryregistry.cpp:263
+msgctxt "@action"
+msgid "Clear cache"
 msgstr ""
 
-#: language/duchain/repositories/itemrepository.cpp:282
-#, fuzzy, kde-format
+#: language/duchain/repositories/itemrepositoryregistry.cpp:264
+#, fuzzy
 #| msgid "Revision"
-msgid "The Session crashed once."
-msgid_plural "The Session crashed %1 times in a row."
-msgstr[0] "Revizio"
-msgstr[1] "Revizio"
+msgctxt "@title"
+msgid "Session crashed"
+msgstr "Revizio"
 
-#: language/duchain/repositories/itemrepository.cpp:282
+#: language/duchain/repositories/itemrepositoryregistry.cpp:265
 msgid ""
 "The crash may be caused by a corruption of cached data.\n"
 "\n"
 "Press OK if you want KDevelop to clear the cache, otherwise press Cancel if "
 "you are sure the crash has another origin."
-msgstr ""
-
-#: language/duchain/repositories/itemrepository.cpp:283
-#, fuzzy
-#| msgid "Revision"
-msgid "Session crashed"
-msgstr "Revizio"
-
-#: language/duchain/repositories/itemrepository.h:424
-#: language/duchain/repositories/itemrepository.h:2343
-#, kde-format
-msgid "Failed writing to %1, probably the disk is full"
 msgstr ""
 
 #: language/interfaces/iproblem.cpp:132
@@ -1301,10 +1294,11 @@ msgstr ""
 msgid "Select an item..."
 msgstr ""
 
-#: project/projectproxymodel.cpp:69
-#, kde-format
-msgid "%1 (%2 Filtered)"
-msgstr ""
+#: project/projectproxymodel.cpp:70
+#, fuzzy, kde-format
+#| msgid "<b>%1</b> (%2)"
+msgid "%1 (%2 hidden)"
+msgstr "<b>%1</b> (%2)"
 
 #: project/projectutils.cpp:87
 #, kde-format
@@ -2743,37 +2737,99 @@ msgstr ""
 msgid "Discard all modifications"
 msgstr ""
 
-#: shell/session.cpp:172
+#: shell/session.cpp:173
 #, fuzzy
 #| msgid "Protected"
 msgid "(no projects)"
 msgstr "Protektata"
 
-#: shell/sessioncontroller.cpp:189
+#: shell/sessionchooserdialog.cpp:48
+#, fuzzy
+#| msgid "Delete all"
+msgctxt "@info"
+msgid "Delete session"
+msgstr "Forigi ĉiujn"
+
+#: shell/sessionchooserdialog.cpp:61
+#, fuzzy
+#| msgid "Revision"
+msgid "Pick a Session"
+msgstr "Revizio"
+
+#: shell/sessionchooserdialog.cpp:63
+#, fuzzy
+#| msgid "Run"
+msgid "Run"
+msgstr "Lanĉi"
+
+#: shell/sessionchooserdialog.cpp:95
+#, kde-format
+msgid ""
+"Active session.\n"
+"pid %1, app %2, host %3"
+msgstr ""
+
+#: shell/sessionchooserdialog.cpp:97
+msgid "Running"
+msgstr ""
+
+#: shell/sessionchooserdialog.cpp:182
+#, fuzzy
+#| msgid "Remove Expression"
+msgctxt "@title"
+msgid "Cannot Delete Session"
+msgstr "Forigi esprimon"
+
+#: shell/sessionchooserdialog.cpp:183
+msgctxt "@info"
+msgid "<p>Cannot delete a locked session."
+msgstr ""
+
+#: shell/sessionchooserdialog.cpp:186
+#, kde-format
+msgctxt "@info"
+msgid "<p>The session is locked by %1 on %2 (PID %3)."
+msgstr ""
+
+#: shell/sessionchooserdialog.cpp:194
+msgctxt "@info"
+msgid ""
+"The session and all contained settings will be deleted. The projects will "
+"stay unaffected. Do you really want to continue?"
+msgstr ""
+
+#: shell/sessionchooserdialog.cpp:195
+#, fuzzy
+#| msgid "Remove Expression"
+msgctxt "@title"
+msgid "Delete Session"
+msgstr "Forigi esprimon"
+
+#: shell/sessioncontroller.cpp:187
 msgid ""
 "The current session and all contained settings will be deleted. The projects "
 "will stay unaffected. Do you really want to continue?"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:201
+#: shell/sessioncontroller.cpp:199
 #, fuzzy
 #| msgid "Remove Expression"
 msgid "Rename Session"
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:205
+#: shell/sessioncontroller.cpp:203
 #, fuzzy
 #| msgid "Revision"
 msgid "New Session Name"
 msgstr "Revizio"
 
-#: shell/sessioncontroller.cpp:415
+#: shell/sessioncontroller.cpp:384
 #, fuzzy
 #| msgid "Remove"
 msgid "Recover"
 msgstr "Forigi"
 
-#: shell/sessioncontroller.cpp:419
+#: shell/sessioncontroller.cpp:388
 #, kde-format
 msgctxt "%1: date of the last snapshot"
 msgid ""
@@ -2781,24 +2837,24 @@ msgid ""
 "can be recovered from a backup from %1."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:421
+#: shell/sessioncontroller.cpp:390
 #, fuzzy
 #| msgid "Remove"
 msgid "Crash Recovery"
 msgstr "Forigi"
 
-#: shell/sessioncontroller.cpp:441
+#: shell/sessioncontroller.cpp:410
 #, kde-format
 msgid "Could not recover %1, the recovery file is empty"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:441
+#: shell/sessioncontroller.cpp:410
 #, fuzzy
 #| msgid "Remove"
 msgid "Recovery"
 msgstr "Forigi"
 
-#: shell/sessioncontroller.cpp:550
+#: shell/sessioncontroller.cpp:519
 #, kde-format
 msgid ""
 "Failed to write recovery copies to %1. Please make sure that your home "
@@ -2807,243 +2863,82 @@ msgid ""
 "crashes until you free up some space."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:551
+#: shell/sessioncontroller.cpp:520
 #, fuzzy
 #| msgid "Remove"
 msgid "Recovery Error"
 msgstr "Forigi"
 
-#: shell/sessioncontroller.cpp:596
+#: shell/sessioncontroller.cpp:565
 #, fuzzy
 #| msgid "Remove Expression"
 msgctxt "@action:inmenu"
 msgid "Start New Session"
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:597
+#: shell/sessioncontroller.cpp:566
 msgctxt "@info:tooltip"
 msgid "Start a new KDevelop instance with an empty session"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:601
+#: shell/sessioncontroller.cpp:570
 #, fuzzy
 #| msgid "Remove Expression"
 msgid "Rename Current Session..."
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:605
+#: shell/sessioncontroller.cpp:574
 #, fuzzy
 #| msgid "Remove Expression"
 msgid "Delete Current Session..."
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:609
+#: shell/sessioncontroller.cpp:578
 msgid "Quit"
 msgstr "Forlasi"
 
-#: shell/sessioncontroller.cpp:615
+#: shell/sessioncontroller.cpp:584
 msgid "Configure Sessions..."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:616
+#: shell/sessioncontroller.cpp:585
 msgid "Create/Delete/Activate Sessions"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:617
+#: shell/sessioncontroller.cpp:586
 msgid "Shows a dialog to Create/Delete Sessions and set a new active session."
 msgstr ""
 
-#: shell/sessioncontroller.cpp:786
+#: shell/sessioncontroller.cpp:774
 #, kde-format
 msgid "Copy of %1"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:918
-#, fuzzy
-#| msgid "Delete all"
-msgctxt "@info"
-msgid "Delete session"
-msgstr "Forigi ĉiujn"
-
-#: shell/sessioncontroller.cpp:931
-#, fuzzy
-#| msgid "Revision"
-msgid "Pick a Session"
-msgstr "Revizio"
-
-#: shell/sessioncontroller.cpp:933
-#, fuzzy
-#| msgid "Run"
-msgid "Run"
-msgstr "Lanĉi"
-
-#: shell/sessioncontroller.cpp:965
-#, kde-format
-msgid ""
-"Active session.\n"
-"pid %1, app %2, host %3"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:966
-msgid "Running"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:985
+#: shell/sessioncontroller.cpp:829
 msgid "Search"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:1008
+#: shell/sessioncontroller.cpp:852
 msgid "Identity"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:1009
+#: shell/sessioncontroller.cpp:853
 #, fuzzy
 #| msgid "Context"
 msgid "Contents"
 msgstr "Kunteksto"
 
-#: shell/sessioncontroller.cpp:1016
+#: shell/sessioncontroller.cpp:860
 msgid "Filter:"
 msgstr ""
 
-#: shell/sessioncontroller.cpp:1056
+#: shell/sessioncontroller.cpp:900
 #, fuzzy
 #| msgid "Remove Expression"
 msgid "Create New Session"
 msgstr "Forigi esprimon"
 
-#: shell/sessioncontroller.cpp:1105
-msgctxt "@info"
-msgid "The session lock-file is stale."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1109
-msgctxt "@info"
-msgid "Error while taking the session lock-file."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1113
-#, fuzzy
-#| msgid "Revision"
-msgctxt "@info"
-msgid "The session lock-file is owned."
-msgstr "Revizio"
-
-#: shell/sessioncontroller.cpp:1135
-#, kde-format
-msgctxt "@info:shell"
-msgid "made running %1 instance (PID: %2) visible"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1138
-#, kde-format
-msgctxt "@info:shell"
-msgid "running %1 instance (PID: %2) is apparently hung"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1142
-msgctxt "@info"
-msgid ""
-"The given application did not respond to a DBUS call, it may have crashed or "
-"is hanging."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1148
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Failed to lock the session <em>%1</em>, already locked by %2 on %3 (PID %4)."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1152
-#, kde-format
-msgctxt "@info"
-msgid "Failed to lock the session <em>%1</em> (lock-file unavailable)."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1159
-#, kde-format
-msgctxt "@info %1 is program name"
-msgid ""
-"<p>Do you want to remove the lock file and force a new %1 instance?<br/"
-"><strong>Beware:</strong> Only do this if you are sure there is no running "
-"process using this session.</p><p>Otherwise, close the offending application "
-"instance or choose another session to launch.</p>"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1167
-msgctxt "@info"
-msgid ""
-"<p>Please, close the offending application instance or choose another "
-"session to launch.</p>"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1180
-#, fuzzy
-#| msgid "Remove All"
-msgctxt "@action:button"
-msgid "Remove lock file"
-msgstr "Forigi ĉiujn"
-
-#: shell/sessioncontroller.cpp:1182
-#, fuzzy
-#| msgid "&Restart"
-msgctxt "@action:button"
-msgid "Retry startup"
-msgstr "&Relanĉo"
-
-#: shell/sessioncontroller.cpp:1185
-#, fuzzy
-#| msgid "Delete all"
-msgctxt "@action:button"
-msgid "Choose another session"
-msgstr "Forigi ĉiujn"
-
-#: shell/sessioncontroller.cpp:1187
-#, kde-format
-msgctxt "@title:window"
-msgid "Failed to Lock Session %1"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1198
-#, kde-format
-msgctxt "@info"
-msgid "The session %1 is already active in another running instance."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1285
-#, fuzzy
-#| msgid "Remove Expression"
-msgctxt "@title"
-msgid "Cannot Delete Session"
-msgstr "Forigi esprimon"
-
-#: shell/sessioncontroller.cpp:1286
-msgctxt "@info"
-msgid "<p>Cannot delete a locked session."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1289
-#, kde-format
-msgctxt "@info"
-msgid "<p>The session is locked by %1 on %2 (PID %3)."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1298
-msgctxt "@info"
-msgid ""
-"The session and all contained settings will be deleted. The projects will "
-"stay unaffected. Do you really want to continue?"
-msgstr ""
-
-#: shell/sessioncontroller.cpp:1299
-#, fuzzy
-#| msgid "Remove Expression"
-msgctxt "@title"
-msgid "Delete Session"
-msgstr "Forigi esprimon"
-
-#: shell/sessiondialog.cpp:183
+#: shell/sessiondialog.cpp:186
 msgid "Configure Sessions"
 msgstr ""
 
@@ -3062,6 +2957,71 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, activateButton)
 #: shell/sessiondialog.ui:59
 msgid "Make Active"
+msgstr ""
+
+#: shell/sessionlock.cpp:167
+#, kde-format
+msgctxt "@info:shell"
+msgid "made running %1 instance (PID: %2) visible"
+msgstr ""
+
+#: shell/sessionlock.cpp:170
+#, kde-format
+msgctxt "@info:shell"
+msgid "running %1 instance (PID: %2) is apparently hung"
+msgstr ""
+
+#: shell/sessionlock.cpp:176
+msgctxt "@info"
+msgid ""
+"The given application did not respond to a DBUS call, it may have crashed or "
+"is hanging."
+msgstr ""
+
+#: shell/sessionlock.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to lock the session <em>%1</em>, already locked by %2 on %3 (PID %4)."
+msgstr ""
+
+#: shell/sessionlock.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid "Failed to lock the session <em>%1</em> (lock-file unavailable)."
+msgstr ""
+
+#: shell/sessionlock.cpp:189
+msgctxt "@info"
+msgid ""
+"<p>Please, close the offending application instance or choose another "
+"session to launch.</p>"
+msgstr ""
+
+#: shell/sessionlock.cpp:195
+#, fuzzy
+#| msgid "&Restart"
+msgctxt "@action:button"
+msgid "Retry startup"
+msgstr "&Relanĉo"
+
+#: shell/sessionlock.cpp:198
+#, fuzzy
+#| msgid "Delete all"
+msgctxt "@action:button"
+msgid "Choose another session"
+msgstr "Forigi ĉiujn"
+
+#: shell/sessionlock.cpp:201
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to Lock Session %1"
+msgstr ""
+
+#: shell/sessionlock.cpp:209
+#, kde-format
+msgctxt "@info"
+msgid "The session %1 is already active in another running instance."
 msgstr ""
 
 #: shell/settings/bgpreferences.cpp:40
@@ -4561,6 +4521,25 @@ msgstr ""
 #: vcs/widgets/vcseventwidget.ui:74
 msgid "Message:"
 msgstr "Mesaĝo:"
+
+#, fuzzy
+#~| msgid "Revision"
+#~ msgid "The Session crashed once."
+#~ msgid_plural "The Session crashed %1 times in a row."
+#~ msgstr[0] "Revizio"
+#~ msgstr[1] "Revizio"
+
+#, fuzzy
+#~| msgid "Revision"
+#~ msgctxt "@info"
+#~ msgid "The session lock-file is owned."
+#~ msgstr "Revizio"
+
+#, fuzzy
+#~| msgid "Remove All"
+#~ msgctxt "@action:button"
+#~ msgid "Remove lock file"
+#~ msgstr "Forigi ĉiujn"
 
 #, fuzzy
 #~| msgid "Do Nothing"
