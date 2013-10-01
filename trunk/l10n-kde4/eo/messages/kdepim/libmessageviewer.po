@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-30 01:43+0000\n"
+"POT-Creation-Date: 2013-10-01 01:40+0000\n"
 "PO-Revision-Date: 2007-11-17 19:41+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -32,19 +32,45 @@ msgstr "Abono"
 msgid "Select List:"
 msgstr "Forigu leterujon"
 
-#: adblock/adblockblockableitemsdialog.cpp:30
+#: adblock/adblockblockableitemsdialog.cpp:33
 msgid "Blockable Items"
 msgstr ""
 
-#: adblock/adblockblockableitemsdialog.cpp:34 viewer/mimetreemodel.cpp:249
+#: adblock/adblockblockableitemswidget.cpp:56 viewer/mimetreemodel.cpp:249
 msgid "Type"
 msgstr "Tipo"
 
-#: adblock/adblockblockableitemsdialog.cpp:34
+#: adblock/adblockblockableitemswidget.cpp:56
+#, fuzzy
+#| msgid "Filter %1"
+msgid "Filter"
+msgstr "Filtrilo %1"
+
+#: adblock/adblockblockableitemswidget.cpp:56
 #, fuzzy
 #| msgid "&Address Book"
 msgid "Address"
 msgstr "&Adresaro"
+
+#: adblock/adblockblockableitemswidget.cpp:90
+msgid "Image"
+msgstr ""
+
+#: adblock/adblockblockableitemswidget.cpp:107
+#, fuzzy
+#| msgid "&Copy Here"
+msgid "Copy url"
+msgstr "&Kopii ĉi tien"
+
+#: adblock/adblockblockableitemswidget.cpp:108
+msgid "Block item..."
+msgstr ""
+
+#: adblock/adblockblockableitemswidget.cpp:111
+#, fuzzy
+#| msgid "Rename Filter"
+msgid "Remove filter"
+msgstr "Alinomi filtrilon"
 
 #: adblock/adblocklistwidget.cpp:61
 #, fuzzy
@@ -52,13 +78,13 @@ msgstr "&Adresaro"
 msgid "Not subscription added..."
 msgstr "Abono"
 
-#: adblock/adblocksettingwidget.cpp:57
+#: adblock/adblocksettingwidget.cpp:59
 msgid ""
 "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
 "\"filterhelp\">more information</a>):"
 msgstr ""
 
-#: adblock/adblocksettingwidget.cpp:72
+#: adblock/adblocksettingwidget.cpp:74
 #, fuzzy
 #| msgid " days"
 msgid " day"
@@ -66,7 +92,7 @@ msgid_plural " days"
 msgstr[0] " tago(j)"
 msgstr[1] " tago(j)"
 
-#: adblock/adblocksettingwidget.cpp:99
+#: adblock/adblocksettingwidget.cpp:103
 msgid ""
 "<qt><p>Enter an expression to filter. Filters can be defined as either:"
 "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
@@ -77,15 +103,20 @@ msgid ""
 "filter."
 msgstr ""
 
-#: adblock/adblocksettingwidget.cpp:300
-msgid "Do you want to delete current list?"
+#: adblock/adblocksettingwidget.cpp:306
+#, kde-format
+msgid "Do you want to delete list \"%1\"?"
 msgstr ""
 
-#: adblock/adblocksettingwidget.cpp:300
+#: adblock/adblocksettingwidget.cpp:306
 #, fuzzy
 #| msgid "Collapse the current thread"
 msgid "Delete current list"
 msgstr "Faldi nunan fadenon"
+
+#: adblock/adblocksettingwidget.cpp:331 adblock/adblocksettingwidget.cpp:356
+msgid "*|all files (*)"
+msgstr ""
 
 #: adblock/adblockshowlistdialog.cpp:37
 #, fuzzy
@@ -107,6 +138,44 @@ msgstr ""
 #: adblock/networkaccessmanager.cpp:52
 msgid "Blocked by ad filter"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: adblock/ui/adblockcreatefilterwidget.ui:19
+#, fuzzy
+#| msgid "Filter %1"
+msgid "Filters:"
+msgstr "Filtrilo %1"
+
+#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
+#: adblock/ui/adblockcreatefilterwidget.ui:37
+#, fuzzy
+#| msgid "Removing folder"
+msgid "Blocking filter"
+msgstr "Forigante leterujon"
+
+#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
+#: adblock/ui/adblockcreatefilterwidget.ui:44
+#, fuzzy
+#| msgid "Key Export Failed"
+msgid "Exception Filter"
+msgstr "Ŝlosileksporto fiaskis"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: adblock/ui/adblockcreatefilterwidget.ui:55
+msgid "Accept pattern only:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
+#: adblock/ui/adblockcreatefilterwidget.ui:66
+msgid "At the beginning of the address"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
+#: adblock/ui/adblockcreatefilterwidget.ui:73
+#, fuzzy
+#| msgid "Send CC: to 'address'"
+msgid "At the end of address"
+msgstr "Sendi Kopion al 'adreso'"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
 #: adblock/ui/settings_adblock.ui:17
@@ -165,8 +234,22 @@ msgstr "Uzeblaj filtriloj"
 msgid "Search:"
 msgstr "&Serĉi:"
 
+#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
+#: adblock/ui/settings_adblock.ui:149
+#, fuzzy
+#| msgid "Key Export Failed"
+msgid "Export filters..."
+msgstr "Ŝlosileksporto fiaskis"
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: adblock/ui/settings_adblock.ui:156
+#, fuzzy
+#| msgid "vCard Import Failed"
+msgid "Import Filters..."
+msgstr "vCard-importo fiaskis"
+
 #. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/ui/settings_adblock.ui:161
+#: adblock/ui/settings_adblock.ui:188
 #, fuzzy
 #| msgid "Add Permissions"
 msgid "Add filter expression"
@@ -174,14 +257,14 @@ msgstr "Aldoni rajtojn"
 
 #. i18n: ectx: property (text), widget (QToolButton, insertButton)
 #. i18n: ectx: property (text), widget (QToolButton, removeButton)
-#: adblock/ui/settings_adblock.ui:164 adblock/ui/settings_adblock.ui:174
+#: adblock/ui/settings_adblock.ui:191 adblock/ui/settings_adblock.ui:201
 #, fuzzy
 #| msgid "Add..."
 msgid "..."
 msgstr "Aldoni..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, removeButton)
-#: adblock/ui/settings_adblock.ui:171
+#: adblock/ui/settings_adblock.ui:198
 msgid "Remove filter expression"
 msgstr ""
 
@@ -1562,52 +1645,52 @@ msgstr ""
 msgid "Show Raw Message"
 msgstr "Plusendi mesaĝon"
 
-#: viewer/objecttreeparser.cpp:2067 viewer/viewer_p.cpp:2917
+#: viewer/objecttreeparser.cpp:2067 viewer/viewer_p.cpp:2921
 msgid ""
 "Chiasmus backend does not offer the \"x-obtain-keys\" function. Please "
 "report this bug."
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2073 viewer/viewer_p.cpp:2919
-#: viewer/viewer_p.cpp:2924 viewer/viewer_p.cpp:2933 viewer/viewer_p.cpp:2942
-#: viewer/viewer_p.cpp:2960 viewer/viewer_p.cpp:2972 viewer/viewer_p.cpp:3012
+#: viewer/objecttreeparser.cpp:2073 viewer/viewer_p.cpp:2923
+#: viewer/viewer_p.cpp:2928 viewer/viewer_p.cpp:2937 viewer/viewer_p.cpp:2946
+#: viewer/viewer_p.cpp:2964 viewer/viewer_p.cpp:2976 viewer/viewer_p.cpp:3016
 msgid "Chiasmus Backend Error"
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2079 viewer/viewer_p.cpp:2930
+#: viewer/objecttreeparser.cpp:2079 viewer/viewer_p.cpp:2934
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-obtain-keys\" "
 "function did not return a string list. Please report this bug."
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2087 viewer/viewer_p.cpp:2939
+#: viewer/objecttreeparser.cpp:2087 viewer/viewer_p.cpp:2943
 msgid ""
 "No keys have been found. Please check that a valid key path has been set in "
 "the Chiasmus configuration."
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2093 viewer/viewer_p.cpp:2946
+#: viewer/objecttreeparser.cpp:2093 viewer/viewer_p.cpp:2950
 msgid "Chiasmus Decryption Key Selection"
 msgstr "Elekto de \"Chiasmus\"-malĉifroŝlosilo"
 
-#: viewer/objecttreeparser.cpp:2106 viewer/viewer_p.cpp:2958
+#: viewer/objecttreeparser.cpp:2106 viewer/viewer_p.cpp:2962
 msgid ""
 "Chiasmus backend does not offer the \"x-decrypt\" function. Please report "
 "this bug."
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2114 viewer/viewer_p.cpp:2970
+#: viewer/objecttreeparser.cpp:2114 viewer/viewer_p.cpp:2974
 msgid ""
 "The \"x-decrypt\" function does not accept the expected parameters. Please "
 "report this bug."
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2120 viewer/viewer_p.cpp:2977
-#: viewer/viewer_p.cpp:3004
+#: viewer/objecttreeparser.cpp:2120 viewer/viewer_p.cpp:2981
+#: viewer/viewer_p.cpp:3008
 msgid "Chiasmus Decryption Error"
 msgstr ""
 
-#: viewer/objecttreeparser.cpp:2126 viewer/viewer_p.cpp:3009
+#: viewer/objecttreeparser.cpp:2126 viewer/viewer_p.cpp:3013
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-decrypt\" function "
 "did not return a byte array. Please report this bug."
@@ -2028,7 +2111,7 @@ msgstr "Malfermi en adresaro"
 msgid "&Copy Email Address"
 msgstr "Retpoŝta adreso"
 
-#: viewer/urlhandlermanager.cpp:737 viewer/viewer_p.cpp:2774
+#: viewer/urlhandlermanager.cpp:737 viewer/viewer_p.cpp:2778
 msgid "Address copied to clipboard."
 msgstr "Adreso kopiita al interdeponejo"
 
@@ -2092,7 +2175,7 @@ msgid ""
 msgstr ""
 
 #: viewer/viewer_p.cpp:418 viewer/viewer_p.cpp:424 viewer/viewer_p.cpp:661
-#: viewer/viewer_p.cpp:1890
+#: viewer/viewer_p.cpp:1894
 #, fuzzy
 #| msgid "&Remove Attachment"
 msgid "Delete Attachment"
@@ -2110,7 +2193,7 @@ msgid ""
 "message."
 msgstr ""
 
-#: viewer/viewer_p.cpp:489 viewer/viewer_p.cpp:655 viewer/viewer_p.cpp:1894
+#: viewer/viewer_p.cpp:489 viewer/viewer_p.cpp:655 viewer/viewer_p.cpp:1898
 #, fuzzy
 #| msgid "Attachment"
 msgid "Edit Attachment"
@@ -2142,12 +2225,12 @@ msgctxt "@title:menu"
 msgid "&Open With..."
 msgstr "M&alfermi per..."
 
-#: viewer/viewer_p.cpp:617 viewer/viewer_p.cpp:1867
+#: viewer/viewer_p.cpp:617 viewer/viewer_p.cpp:1871
 msgctxt "to open"
 msgid "Open"
 msgstr "Fermu"
 
-#: viewer/viewer_p.cpp:625 viewer/viewer_p.cpp:1874
+#: viewer/viewer_p.cpp:625 viewer/viewer_p.cpp:1878
 msgctxt "to view something"
 msgid "View"
 msgstr "Rigardu"
@@ -2156,7 +2239,7 @@ msgstr "Rigardu"
 msgid "Scroll To"
 msgstr ""
 
-#: viewer/viewer_p.cpp:643 viewer/viewer_p.cpp:1886
+#: viewer/viewer_p.cpp:643 viewer/viewer_p.cpp:1890
 #, fuzzy
 msgid "Copy"
 msgstr "&Kopiu al"
@@ -2167,7 +2250,7 @@ msgstr "&Kopiu al"
 msgid "Decrypt With Chiasmus..."
 msgstr "Ĉifri mesaĝon per \"Chiasmus\"..."
 
-#: viewer/viewer_p.cpp:672 viewer/viewer_p.cpp:1899
+#: viewer/viewer_p.cpp:672 viewer/viewer_p.cpp:1903
 #, fuzzy
 msgid "Properties"
 msgstr "&Ecoj..."
@@ -2334,7 +2417,7 @@ msgstr "Aŭtomate"
 msgid "Select All Text"
 msgstr "Elekti kompletan tekston"
 
-#: viewer/viewer_p.cpp:1695 viewer/viewer_p.cpp:2164
+#: viewer/viewer_p.cpp:1695 viewer/viewer_p.cpp:2168
 msgid "Copy Link Address"
 msgstr "Kopii ligan adreson"
 
@@ -2440,66 +2523,70 @@ msgstr ""
 msgid "Block image"
 msgstr ""
 
-#: viewer/viewer_p.cpp:1863
+#: viewer/viewer_p.cpp:1841
+msgid "Open Blockable Items..."
+msgstr ""
+
+#: viewer/viewer_p.cpp:1867
 msgid "Save &As..."
 msgstr "&Konservi kiel..."
 
-#: viewer/viewer_p.cpp:1873
+#: viewer/viewer_p.cpp:1877
 msgid "Open With..."
 msgstr "Malfermi per..."
 
-#: viewer/viewer_p.cpp:1879
+#: viewer/viewer_p.cpp:1883
 msgid "Save All Attachments..."
 msgstr "&Konservi kunsendaĵon..."
 
-#: viewer/viewer_p.cpp:2162
+#: viewer/viewer_p.cpp:2166
 #, fuzzy
 #| msgid "Email Address"
 msgid "Copy Email Address"
 msgstr "Retpoŝta adreso"
 
-#: viewer/viewer_p.cpp:2228
+#: viewer/viewer_p.cpp:2232
 msgid "Message as Plain Text"
 msgstr "Mesaĝo kiel plena teksto"
 
-#: viewer/viewer_p.cpp:2495
+#: viewer/viewer_p.cpp:2499
 #, fuzzy
 #| msgctxt "Config->Composer->Attachments"
 #| msgid "A&ttachments"
 msgid "Attachments:"
 msgstr "A&ldonoj"
 
-#: viewer/viewer_p.cpp:2779
+#: viewer/viewer_p.cpp:2783
 msgid "URL copied to clipboard."
 msgstr "URL kopiita al interdeponejo"
 
-#: viewer/viewer_p.cpp:3071
+#: viewer/viewer_p.cpp:3075
 msgid "Hide full address list"
 msgstr ""
 
-#: viewer/viewer_p.cpp:3075
+#: viewer/viewer_p.cpp:3079
 #, fuzzy
 #| msgid "Show alway&s"
 msgid "Show full address list"
 msgstr "Montri ĉi&am"
 
-#: viewer/viewer_p.cpp:3098
+#: viewer/viewer_p.cpp:3102
 #, fuzzy, kde-format
 #| msgid "Message was signed by %1."
 msgid "Message loading failed: %1."
 msgstr "Mesaĝo subskribita de %1."
 
-#: viewer/viewer_p.cpp:3103
+#: viewer/viewer_p.cpp:3107
 #, fuzzy
 #| msgid "Message was signed by %1."
 msgid "Message not found."
 msgstr "Mesaĝo subskribita de %1."
 
-#: viewer/viewer_p.cpp:3227
+#: viewer/viewer_p.cpp:3231
 msgid "Caret Browsing will be activated. Switch off with F7 shortcut."
 msgstr ""
 
-#: viewer/viewer_p.cpp:3228
+#: viewer/viewer_p.cpp:3232
 msgid "Activate Caret Browsing"
 msgstr ""
 
@@ -5327,9 +5414,6 @@ msgstr "An&taŭa karto"
 #~ msgid "No duplicate messages found."
 #~ msgstr "Neniu kopimesaĝo trovita."
 
-#~ msgid "Filter %1"
-#~ msgstr "Filtrilo %1"
-
 #~ msgid "&Troubleshoot IMAP Cache..."
 #~ msgstr "&Korektigi kaŝmemoron..."
 
@@ -6923,9 +7007,6 @@ msgstr "An&taŭa karto"
 
 #~ msgid "&Move Here"
 #~ msgstr "&Movi ĉi tien"
-
-#~ msgid "&Copy Here"
-#~ msgstr "&Kopii ĉi tien"
 
 #~ msgid "C&ancel"
 #~ msgstr "Re&zigni"
@@ -11097,9 +11178,6 @@ msgstr "An&taŭa karto"
 #~ "La postaj filtrilioj ne estas konservitaj, ĉar ili estas malkorektaj "
 #~ "(ekzemple ili ne havas agojn aŭ rulojn)."
 
-#~ msgid "Rename Filter"
-#~ msgstr "Alinomi filtrilon"
-
 #~ msgid ""
 #~ "Rename filter \"%1\" to:\n"
 #~ "(leave the field empty for automatic naming)"
@@ -11736,16 +11814,6 @@ msgstr "An&taŭa karto"
 #~ msgstr "Elekti leterujon"
 
 #, fuzzy
-#~| msgid "vCard Import Failed"
-#~ msgid "Import Filters"
-#~ msgstr "vCard-importo fiaskis"
-
-#, fuzzy
-#~| msgid "Key Export Failed"
-#~ msgid "Export Filters"
-#~ msgstr "Ŝlosileksporto fiaskis"
-
-#, fuzzy
 #~| msgctxt ""
 #~| "%1: name; %2: number appended to it to make it unique among a list of "
 #~| "names"
@@ -12013,9 +12081,6 @@ msgstr "An&taŭa karto"
 #~ msgid "Set subject of message"
 #~ msgstr "Difini temon de la mesaĝo"
 
-#~ msgid "Send CC: to 'address'"
-#~ msgstr "Sendi Kopion al 'adreso'"
-
 #~ msgid "Send BCC: to 'address'"
 #~ msgstr "Sendi kaŝitan kopion al 'adreso'"
 
@@ -12044,9 +12109,6 @@ msgstr "An&taŭa karto"
 #~ msgstr ""
 #~ "Sendu mesaĝon al 'adreso' respektive kunsendu la dosieron, al kiu la "
 #~ "'URLo' montras"
-
-#~ msgid "Removing folder"
-#~ msgstr "Forigante leterujon"
 
 #~ msgid "Error while removing a folder."
 #~ msgstr "Eraro dum legado de dosiero."
