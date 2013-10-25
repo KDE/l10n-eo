@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-10-19 01:31+0000\n"
+"POT-Creation-Date: 2013-10-25 01:27+0000\n"
 "PO-Revision-Date: 2009-12-21 08:35+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -879,7 +879,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, BVIndex)
 #. i18n: ectx: property (text), item, widget (QComboBox, filterCombo)
-#: dialogs/details_data.ui:312 ekos/capture.ui:429 ekos/focus.ui:197
+#: dialogs/details_data.ui:312 ekos/capture.ui:429 ekos/focus.ui:284
 #: ekos/guide.ui:106
 msgid "--"
 msgstr ""
@@ -1465,15 +1465,15 @@ msgstr "Filtru per tipo: "
 msgid "Set Coordinates Manually"
 msgstr "Mane enigu centron"
 
-#: dialogs/focusdialog.cpp:88 tools/flagmanager.cpp:164
+#: dialogs/focusdialog.cpp:88 ekos/align.cpp:293 tools/flagmanager.cpp:164
 msgid "The Right Ascension value must be between 0.0 and 24.0."
 msgstr ""
 
-#: dialogs/focusdialog.cpp:90 tools/flagmanager.cpp:166
+#: dialogs/focusdialog.cpp:90 ekos/align.cpp:295 tools/flagmanager.cpp:166
 msgid "The Declination value must be between -90.0 and 90.0."
 msgstr ""
 
-#: dialogs/focusdialog.cpp:92 dialogs/focusdialog.cpp:114
+#: dialogs/focusdialog.cpp:92 dialogs/focusdialog.cpp:114 ekos/align.cpp:298
 #: tools/flagmanager.cpp:168
 #, fuzzy
 msgid "Invalid Coordinate Data"
@@ -1488,14 +1488,14 @@ msgid "The Altitude value must be between -90.0 and 90.0."
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, rdTab)
-#: dialogs/focusdialog.ui:27
+#: dialogs/focusdialog.ui:36
 #, fuzzy
 msgid "RA/Dec"
 msgstr "Dek (%1):"
 
 #. i18n: ectx: property (text), widget (KLineEdit, epochBox)
 #. i18n: ectx: property (text), widget (QLabel, EpochTarget)
-#: dialogs/focusdialog.ui:52 tools/flagmanager.ui:79
+#: dialogs/focusdialog.ui:70 tools/flagmanager.ui:79
 #: tools/modcalcapcoord.ui:182
 msgid "2000.0"
 msgstr "2000.0"
@@ -1505,7 +1505,7 @@ msgstr "2000.0"
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel)
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel2)
 #. i18n: ectx: property (text), widget (QCheckBox, EpochCheckBatch)
-#: dialogs/focusdialog.ui:59 tools/flagmanager.ui:66 tools/modcalcaltaz.ui:393
+#: dialogs/focusdialog.ui:77 tools/flagmanager.ui:66 tools/modcalcaltaz.ui:393
 #: tools/modcalcapcoord.ui:88 tools/modcalcapcoord.ui:167
 #: tools/modcalcapcoord.ui:434 tools/modcalceclipticcoords.ui:257
 #: tools/modcalcgalcoord.ui:214 tools/modcalcvlsr.ui:521
@@ -1513,19 +1513,19 @@ msgid "Epoch:"
 msgstr "Epoko:"
 
 #. i18n: ectx: property (text), widget (QLabel, decLabel)
-#: dialogs/focusdialog.ui:66
+#: dialogs/focusdialog.ui:84
 #, fuzzy
 msgid "New declination:"
 msgstr "Dek"
 
 #. i18n: ectx: property (text), widget (QLabel, raLabel)
-#: dialogs/focusdialog.ui:73
+#: dialogs/focusdialog.ui:91
 #, fuzzy
 msgid "New right ascension:"
 msgstr "RA"
 
 #. i18n: ectx: attribute (title), widget (QWidget, aaTab)
-#: dialogs/focusdialog.ui:87
+#: dialogs/focusdialog.ui:105
 #, fuzzy
 #| msgctxt "Altitude"
 #| msgid "Alt"
@@ -1533,13 +1533,13 @@ msgid "Az/Alt"
 msgstr "Alt"
 
 #. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: dialogs/focusdialog.ui:112
+#: dialogs/focusdialog.ui:139
 #, fuzzy
 msgid "New altitude:"
 msgstr "Altitudo:"
 
 #. i18n: ectx: property (text), widget (QLabel, azLabel)
-#: dialogs/focusdialog.ui:119
+#: dialogs/focusdialog.ui:146
 #, fuzzy
 msgid "New azimuth:"
 msgstr "Azimuto:"
@@ -2572,6 +2572,539 @@ msgid ""
 "the <span style=\" font-weight:600;\">Next</span> button.</p></body></html>"
 msgstr ""
 
+#: ekos/align.cpp:79 ekos/focus.cpp:71
+msgid "Idle."
+msgstr ""
+
+#: ekos/align.cpp:158
+msgid ""
+"Telescope aperture and focal length are missing. Please check your driver "
+"settings and try again."
+msgstr ""
+
+#: ekos/align.cpp:177
+#, fuzzy
+msgid "Telescope does not support syncing."
+msgstr "Plutono"
+
+#: ekos/align.cpp:218
+msgid ""
+"CCD pixel size is missing. Please check your driver settings and try again."
+msgstr ""
+
+#: ekos/align.cpp:308
+#, fuzzy
+msgid "Invalid radius value"
+msgstr "nevalida dosiernomo"
+
+#: ekos/align.cpp:356 ekos/focus.cpp:215 ekos/guide.cpp:224
+msgid "Error: Lost connection to CCD."
+msgstr ""
+
+#: ekos/align.cpp:374 ekos/capture.cpp:487 ekos/focus.cpp:229
+#: ekos/guide/rcalibration.cpp:679
+#, fuzzy
+msgid "Capturing image..."
+msgstr "Ŝarĝante KStars..."
+
+#: ekos/align.cpp:387
+#, fuzzy
+msgid "Image received."
+msgstr "Konservu bildon"
+
+#: ekos/align.cpp:420
+#, fuzzy
+#| msgctxt "City name (optional, probably does not need a translation)"
+#| msgid "Farmington"
+msgid "Starting solver..."
+msgstr "Farmington"
+
+#: ekos/align.cpp:441
+#, fuzzy
+msgid "Capture aborted."
+msgstr "Konservu bildon"
+
+#: ekos/align.cpp:446
+#, kde-format
+msgid "Solver aborted after %1 second."
+msgid_plural "Solver aborted after %1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ekos/align.cpp:460
+msgid "Solver failed. Try again."
+msgstr ""
+
+#: ekos/align.cpp:479
+msgid "WCS header missing or corrupted. Solver failed."
+msgstr ""
+
+#: ekos/align.cpp:517
+#, kde-format
+msgid "Solver completed in %1 second."
+msgid_plural "Solver completed in %1 seconds."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ekos/align.cpp:543 ekos/capture.cpp:563 ekos/ekosmanager.cpp:1032
+#: ekos/focus.cpp:750 ekos/guide.cpp:289
+#, kde-format
+msgctxt "log entry; %1 is the date, %2 is the text"
+msgid "%1 %2"
+msgstr ""
+
+#: ekos/align.cpp:586
+#, kde-format
+msgid ""
+"Slew complete. Please adjust your mount's' azimuth knob %1 until the target "
+"is in the center of the view."
+msgstr ""
+
+#: ekos/align.cpp:587
+#, fuzzy
+#| msgctxt "City in Alaska USA"
+#| msgid "Seward"
+msgid "eastward"
+msgstr "Seward"
+
+#: ekos/align.cpp:587
+#, fuzzy
+#| msgctxt "City in Alaska USA"
+#| msgid "Seward"
+msgid "westward"
+msgstr "Seward"
+
+#: ekos/align.cpp:614
+#, kde-format
+msgid ""
+"Slew complete. Please %1 the altitude knob on your mount until the target is "
+"in the center of the view."
+msgstr ""
+
+#: ekos/align.cpp:615
+#, fuzzy
+#| msgctxt "City in California USA"
+#| msgid "Bellflower"
+msgid "lower"
+msgstr "Bellflower"
+
+#: ekos/align.cpp:615
+msgid "raise"
+msgstr ""
+
+#: ekos/align.cpp:648
+msgid "Syncing successful."
+msgstr ""
+
+#: ekos/align.cpp:650
+msgid "Syncing failed."
+msgstr ""
+
+#: ekos/align.cpp:661
+msgid "Slewing to target."
+msgstr ""
+
+#: ekos/align.cpp:682
+msgid "Processing solution for polar alignment..."
+msgstr ""
+
+#: ekos/align.cpp:711
+#, fuzzy
+msgid "southern"
+msgstr "&Sudo"
+
+#: ekos/align.cpp:711
+#, fuzzy
+msgid "northern"
+msgstr "&Nordo"
+
+#: ekos/align.cpp:719
+#, kde-format
+msgid "Point the telescope at the %1 meridian. Press continue when ready."
+msgstr ""
+
+#: ekos/align.cpp:720 ekos/align.cpp:804
+msgid "Polar Alignment Measurement"
+msgstr ""
+
+#: ekos/align.cpp:721 ekos/align.cpp:805
+msgid "Don't ask again"
+msgstr ""
+
+#: ekos/align.cpp:724
+msgid "Solving first frame near the meridian."
+msgstr ""
+
+#: ekos/align.cpp:749 ekos/align.cpp:835
+msgid "Slewing 30 arcminutes in RA..."
+msgstr ""
+
+#: ekos/align.cpp:755
+msgid "Solving second frame near the meridian."
+msgstr ""
+
+#: ekos/align.cpp:766
+msgid "Calculating azimuth alignment error..."
+msgstr ""
+
+#: ekos/align.cpp:778 ekos/align.cpp:864
+msgid "Slewing back to original position..."
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, FocusEdit)
+#: ekos/align.cpp:795 tools/arglooktoward.ui:62
+#, fuzzy
+msgid "east"
+msgstr "&Okzidento"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, FocusEdit)
+#: ekos/align.cpp:795 tools/arglooktoward.ui:82
+#, fuzzy
+msgid "west"
+msgstr "&Okzidento"
+
+#: ekos/align.cpp:803
+#, kde-format
+msgid ""
+"Point the telescope to the %1 with a minimum altitude of 20 degrees. Press "
+"continue when ready."
+msgstr ""
+
+#: ekos/align.cpp:808
+msgid "Solving first frame."
+msgstr ""
+
+#: ekos/align.cpp:841
+msgid "Solving second frame."
+msgstr ""
+
+#: ekos/align.cpp:851
+msgid "Calculating altitude alignment error..."
+msgstr ""
+
+#: ekos/align.cpp:974 ekos/align.cpp:980
+#, fuzzy, kde-format
+#| msgid "1"
+msgid "%1"
+msgstr "1"
+
+#: ekos/align.cpp:974 ekos/align.cpp:980
+#, kde-format
+msgid "%1° %2"
+msgstr ""
+
+#: ekos/align.cpp:1012 ekos/align.cpp:1042
+msgid ""
+"Slewing to calibration position, please wait until telescope is finished "
+"slewing."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, controlBox)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_Control)
+#: ekos/align.ui:21 ekos/focus.ui:88 ekos/guide/guider.ui:524
+#, fuzzy
+#| msgctxt "City in Quebec Canada"
+#| msgid "Montreal"
+msgid "Control"
+msgstr "Montreal"
+
+#. i18n: ectx: property (text), widget (QPushButton, solveB)
+#: ekos/align.ui:32
+#, fuzzy
+msgid "Capture && Solve"
+msgstr "Konservu bildon"
+
+#. i18n: ectx: property (text), widget (QPushButton, stopB)
+#. i18n: ectx: property (text), widget (QPushButton, stopFocusB)
+#: ekos/align.ui:42 ekos/focus.ui:149 ekos/guide/guider.cpp:361
+#: ekos/guide/rcalibration.cpp:329
+msgid "Stop"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, modeBox)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (text), widget (QTreeWidget, localTreeWidget)
+#. i18n: ectx: property (title), widget (QGroupBox, INDIMode)
+#: ekos/align.ui:67 indi/devmanager.ui:52 indi/devmanager.ui:199
+#: indi/drivermanager.ui:48 indi/drivermanager.ui:195 tools/argstartindi.ui:42
+msgid "Mode"
+msgstr "Moduso"
+
+#. i18n: ectx: property (text), widget (QRadioButton, gotoR)
+#. i18n: ectx: property (title), widget (QGroupBox, gotoBox)
+#: ekos/align.ui:78 ekos/align.ui:538
+msgid "GOTO"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, polarR)
+#. i18n: ectx: property (title), widget (QGroupBox, alignmentBox)
+#: ekos/align.ui:91 ekos/align.ui:602
+msgid "Polar Alignment"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: ekos/align.ui:134
+#, fuzzy
+msgid "Plate Solve Options"
+msgstr "opcioj de la constelaciaj nomoj"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_6)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ekos/align.ui:150 ekos/ekosmanager.ui:86 ekos/focus.ui:33
+msgid "CCD:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_15)
+#: ekos/align.ui:157
+msgid "estimated RA of target center to limit the solver's search area"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_15)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QCheckBox, RACheckBatch)
+#: ekos/align.ui:160 ekos/align.ui:401 ekos/align.ui:480 tools/altvstime.ui:97
+#: tools/argsetradec.ui:37 tools/argsettargetcoordindi.ui:38
+#: tools/modcalcgalcoord.ui:288 tools/modcalcplanets.ui:202
+#: tools/modcalcvlsr.ui:508
+msgid "RA:"
+msgstr "RA:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: ectx: property (text), widget (QLabel, exposureLabel_2)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ekos/align.ui:185 ekos/capture.ui:68 ekos/focus.ui:239 ekos/guide.ui:65
+msgid "Exposure:"
+msgstr "Ekspono:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_16)
+#: ekos/align.ui:192
+msgid "estimated DEC of target center to limit the solver's search area"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_16)
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#. i18n: ectx: property (text), widget (QCheckBox, decCheckBatch)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QCheckBox, DecCheckBatch)
+#: ekos/align.ui:195 tools/altvstime.ui:129 tools/argsetradec.ui:30
+#: tools/argsettargetcoordindi.ui:45 tools/modcalcgalcoord.ui:275
+#: tools/modcalcplanets.ui:195 tools/modcalcvlsr.ui:485
+#, fuzzy
+msgid "Dec:"
+msgstr "Dek (%1):"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: ekos/align.ui:233 ekos/focus.ui:262
+msgid "secs"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_17)
+#: ekos/align.ui:242
+#, fuzzy
+#| msgctxt "City in Quebec Canada"
+#| msgid "Radisson"
+msgid "Radius:"
+msgstr "Radisson"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, radiusBox)
+#: ekos/align.ui:255
+msgid "The solver's search radius in degrees round the estimated RA and DEC"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLineEdit, radiusBox)
+#: ekos/align.ui:261
+#, fuzzy
+#| msgid "0"
+msgid "30"
+msgstr "0"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, syncBoxesB)
+#: ekos/align.ui:286
+msgid ""
+"<html><head/><body><p>Fill RA &amp; DEC values from telescope coordinates "
+"and update options</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, clearBoxesB)
+#: ekos/align.ui:320
+msgid "Clear RA & DEC values and reset solver options"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: ekos/align.ui:344
+#, fuzzy
+msgid "Options:"
+msgstr "Stela nomo"
+
+#. i18n: ectx: property (statusTip), widget (QLineEdit, solverOptions)
+#: ekos/align.ui:351
+msgid "Additional options to be the solver"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: ekos/align.ui:395
+#, fuzzy
+msgid "Solution Coordinates"
+msgstr "originala koordinato"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: ekos/align.ui:415 ekos/align.ui:494
+msgid "DEC:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: ekos/align.ui:429
+msgid "FOV:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: ekos/align.ui:446
+msgid "Rot:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: ekos/align.ui:462
+msgctxt "East of North"
+msgid "E of N"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: ekos/align.ui:474
+#, fuzzy
+msgid "Telescope Coordinates"
+msgstr "Koordinatoj"
+
+#. i18n: ectx: property (statusTip), widget (QGroupBox, gotoBox)
+#: ekos/align.ui:535
+msgid "Select what action to take once a solution is found."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, syncR)
+#: ekos/align.ui:544
+msgid "Sync the telescope to the solution coordinates"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, syncR)
+#: ekos/align.ui:550
+msgid "Sync"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, slewR)
+#: ekos/align.ui:560
+msgid "Slew the telescope to the target coordinates"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, slewR)
+#: ekos/align.ui:566
+#, fuzzy
+msgid "Slew to Target"
+msgstr "Elektu lokon"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, nothingR)
+#: ekos/align.ui:573
+msgid "Just solve"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, nothingR)
+#: ekos/align.ui:579
+#, fuzzy
+#| msgid "nothing"
+msgid "Nothing"
+msgstr "nenio"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ekos/align.ui:612
+#, fuzzy
+#| msgctxt "City name (optional, probably does not need a translation)"
+#| msgid "Fisher"
+msgid "Hemisphere:"
+msgstr "Fisher"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, hemisphereCombo)
+#: ekos/align.ui:620
+#, fuzzy
+#| msgid "&North"
+msgid "Northern"
+msgstr "&Nordo"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, hemisphereCombo)
+#: ekos/align.ui:625
+#, fuzzy
+#| msgctxt "City in Indiana USA"
+#| msgid "South Bend"
+msgid "Southern"
+msgstr "South Bend"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_9)
+#: ekos/align.ui:633
+msgid ""
+"Direction of the mount when measuring altitude error. It is either east or "
+"west of the meridian"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: ekos/align.ui:639
+#, fuzzy
+msgid "Altitude Direction:"
+msgstr "Altitudo:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, altDirCombo)
+#: ekos/align.ui:647
+#, fuzzy
+#| msgid "&East"
+msgid "East"
+msgstr "Ori&ento"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, altDirCombo)
+#: ekos/align.ui:652
+#, fuzzy
+#| msgid "&West"
+msgid "West"
+msgstr "&Okzidento"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ekos/align.ui:671
+#, fuzzy
+#| msgid "Write Error"
+msgid "Az Error:"
+msgstr "Skriba eraro"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ekos/align.ui:685
+#, fuzzy
+#| msgid "Write Error"
+msgid "Alt Error:"
+msgstr "Skriba eraro"
+
+#. i18n: ectx: property (text), widget (QPushButton, measureAzB)
+#: ekos/align.ui:715
+msgid "Measure Az Error"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, measureAltB)
+#: ekos/align.ui:725
+msgid "Measure Alt Error"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, correctAzB)
+#: ekos/align.ui:735
+msgid "Correct Az Error"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, correctAltB)
+#: ekos/align.ui:745
+msgid "Correct Alt Error"
+msgstr ""
+
 #: ekos/capture.cpp:27
 msgid "Idle"
 msgstr ""
@@ -2623,20 +3156,8 @@ msgstr ""
 msgid "Capturing dark frame..."
 msgstr "Konservu bildon"
 
-#: ekos/capture.cpp:487 ekos/focus.cpp:229 ekos/guide/rcalibration.cpp:679
-#, fuzzy
-msgid "Capturing image..."
-msgstr "Ŝarĝante KStars..."
-
-#: ekos/capture.cpp:563 ekos/ekosmanager.cpp:1007 ekos/focus.cpp:750
-#: ekos/guide.cpp:289
-#, kde-format
-msgctxt "log entry; %1 is the date, %2 is the text"
-msgid "%1 %2"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, secondsLabel)
-#: ekos/capture.cpp:583 ekos/capture.ui:820
+#: ekos/capture.cpp:583 ekos/capture.ui:843
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Escondido"
@@ -2652,7 +3173,7 @@ msgstr "Escondido"
 
 #. i18n: ectx: property (title), widget (QGroupBox, setupGroup_3)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ekos/capture.ui:39 ekos/ekosmanager.cpp:1036 ekos/opsekos.ui:157
+#: ekos/capture.ui:39 ekos/ekosmanager.cpp:1064 ekos/opsekos.ui:157
 #, fuzzy
 #| msgid "CCD B"
 msgid "CCD"
@@ -2662,7 +3183,7 @@ msgstr "CCD B"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_5_3)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ekos/capture.ui:55 ekos/capture.ui:463 tools/argsetdeviceindi.ui:30
+#: ekos/capture.ui:55 ekos/capture.ui:696 tools/argsetdeviceindi.ui:30
 #: tools/argshutdownindi.ui:38 tools/argstartindi.ui:30
 #, fuzzy
 msgid "Device:"
@@ -2672,13 +3193,6 @@ msgstr "Dek (%1):"
 #: ekos/capture.ui:62
 msgid "Set the exposure time in seconds for individual images, if applicable"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, exposureLabel_2)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/capture.ui:68 ekos/focus.ui:152 ekos/guide.ui:65
-msgid "Exposure:"
-msgstr "Ekspono:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_9)
 #: ekos/capture.ui:81
@@ -2718,7 +3232,7 @@ msgstr "Prefikso:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_4)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_3)
-#: ekos/capture.ui:127 ekos/capture.ui:470
+#: ekos/capture.ui:127 ekos/capture.ui:703
 msgid "Number of images to capture"
 msgstr ""
 
@@ -2740,12 +3254,12 @@ msgid "Delay:"
 msgstr "Rigardopcioj"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_8)
-#: ekos/capture.ui:153 ekos/focus.ui:186 ekos/guide.ui:95
+#: ekos/capture.ui:153 ekos/focus.ui:273 ekos/guide.ui:95
 msgid "Apply filter to image after capture to enhance it"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ekos/capture.ui:156 ekos/focus.ui:189 ekos/guide.ui:98
+#: ekos/capture.ui:156 ekos/focus.ui:276 ekos/guide.ui:98
 #, fuzzy
 msgid "Filters:"
 msgstr "Montru stelojn pli helajn ol"
@@ -2811,7 +3325,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QTableWidget, queueTable)
 #. i18n: ectx: property (text), widget (QTreeWidget, OptionsList)
 #. i18n: ectx: property (text), widget (QLabel, typeLabel)
-#: ekos/capture.ui:386 ekos/capture.ui:610 tools/observinglist.cpp:112
+#: ekos/capture.ui:386 ekos/capture.ui:486 tools/observinglist.cpp:112
 #: tools/observinglist.cpp:118 tools/optionstreeview.ui:33
 #: tools/whatsinteresting/wiequipsettings.ui:315
 msgid "Type"
@@ -2823,11 +3337,11 @@ msgid "Active filter slot"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, filterCheck)
-#. i18n: ectx: property (title), widget (QGroupBox, setupGroup)
 #. i18n: ectx: property (text), widget (QTableWidget, queueTable)
+#. i18n: ectx: property (title), widget (QGroupBox, setupGroup)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: attribute (title), widget (QWidget, Filter)
-#: ekos/capture.ui:396 ekos/capture.ui:447 ekos/capture.ui:605
+#: ekos/capture.ui:396 ekos/capture.ui:481 ekos/capture.ui:680
 #: ekos/opsekos.ui:178 oal/equipmentwriter.ui:553
 #, fuzzy
 msgid "Filter"
@@ -2839,37 +3353,8 @@ msgstr "Montru stelojn pli helajn ol"
 msgid "Expose Duration"
 msgstr "Daŭro de tago"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2_3)
-#. i18n: ectx: property (text), widget (QLabel, label_18)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ekos/capture.ui:476 oal/execute.ui:377 tools/argsetfilternumindi.ui:30
-#, fuzzy
-msgid "Filter:"
-msgstr "Montru stelojn pli helajn ol"
-
-#. i18n: ectx: property (text), widget (QCheckBox, darkSubCheck)
-#: ekos/capture.ui:516
-msgid "Auto dark subtract"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, ISOCheck)
-#: ekos/capture.ui:526
-msgid "Add time stamp to the file name"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, ISOCheck)
-#: ekos/capture.ui:529
-msgid "Add ISO 8601 time stamp"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, displayCheck)
-#: ekos/capture.ui:542
-#, fuzzy
-msgid "Display in FITS Viewer"
-msgstr "Bonvenon ĉe KStars"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ekos/capture.ui:578
+#: ekos/capture.ui:454
 msgid "Sequence Queue"
 msgstr ""
 
@@ -2877,21 +3362,21 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #. i18n: ectx: property (text), widget (QTreeWidget, localTreeWidget)
 #. i18n: ectx: property (text), widget (QTreeWidget, clientTreeWidget)
-#: ekos/capture.ui:600 ekos/focus.ui:314 indi/devmanager.ui:194
+#: ekos/capture.ui:476 ekos/focus.ui:322 indi/devmanager.ui:194
 #: indi/devmanager.ui:288 indi/drivermanager.ui:190 indi/drivermanager.ui:276
 #, fuzzy
 msgid "Status"
 msgstr "Steloj"
 
 #. i18n: ectx: property (text), widget (QTableWidget, queueTable)
-#: ekos/capture.ui:615
+#: ekos/capture.ui:491
 #, fuzzy
 #| msgid "in"
 msgid "Bin"
 msgstr "Aiken"
 
 #. i18n: ectx: property (text), widget (QTableWidget, queueTable)
-#: ekos/capture.ui:620
+#: ekos/capture.ui:496
 #, fuzzy
 #| msgctxt "City in Newfoundland Canada"
 #| msgid "Eastport"
@@ -2899,30 +3384,59 @@ msgid "Exp"
 msgstr "Eastport"
 
 #. i18n: ectx: property (text), widget (QTableWidget, queueTable)
-#: ekos/capture.ui:625
+#: ekos/capture.ui:501
 #, fuzzy
 msgid "Count"
 msgstr "Lando:"
 
 #. i18n: ectx: property (text), widget (QPushButton, previewB)
-#: ekos/capture.ui:742
+#: ekos/capture.ui:618
 #, fuzzy
 #| msgid "Preview of %1"
 msgid "Preview"
 msgstr "Antaŭrigardo de %1"
 
 #. i18n: ectx: property (text), widget (QPushButton, startB)
-#: ekos/capture.ui:752
+#: ekos/capture.ui:628
 msgid "&Start Sequence"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, stopB)
-#: ekos/capture.ui:768
+#: ekos/capture.ui:644
 msgid "S&top"
 msgstr "&Haltigo"
 
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2_3)
+#. i18n: ectx: property (text), widget (QLabel, label_18)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: ekos/capture.ui:709 oal/execute.ui:377 tools/argsetfilternumindi.ui:30
+#, fuzzy
+msgid "Filter:"
+msgstr "Montru stelojn pli helajn ol"
+
+#. i18n: ectx: property (text), widget (QCheckBox, darkSubCheck)
+#: ekos/capture.ui:748
+msgid "Auto dark subtract"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ISOCheck)
+#: ekos/capture.ui:758
+msgid "Add time stamp to the file name"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, ISOCheck)
+#: ekos/capture.ui:761
+msgid "Add ISO 8601 time stamp"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, displayCheck)
+#: ekos/capture.ui:774
+#, fuzzy
+msgid "Display in FITS Viewer"
+msgstr "Bonvenon ĉe KStars"
+
 #. i18n: ectx: property (title), widget (QGroupBox, progressGroup)
-#: ekos/capture.ui:787
+#: ekos/capture.ui:810
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Prosser"
@@ -2930,14 +3444,14 @@ msgid "Progress"
 msgstr "Prosser"
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel_3)
-#: ekos/capture.ui:797
+#: ekos/capture.ui:820
 #, fuzzy
 #| msgid "Exposure:"
 msgid "Expose:"
 msgstr "Ekspono:"
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel_2)
-#: ekos/capture.ui:827
+#: ekos/capture.ui:850
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Prosser"
@@ -2945,42 +3459,42 @@ msgid "Progress:"
 msgstr "Prosser"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2_3)
-#: ekos/capture.ui:850
+#: ekos/capture.ui:873
 msgid "of"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, completedLabel_2)
-#: ekos/capture.ui:876
+#: ekos/capture.ui:899
 #, fuzzy
 msgid "completed"
 msgstr "Kalkulu"
 
 #. i18n: ectx: property (text), widget (KPushButton, processINDIB)
-#: ekos/ekosmanager.cpp:252 ekos/ekosmanager.cpp:613 ekos/ekosmanager.ui:216
+#: ekos/ekosmanager.cpp:254 ekos/ekosmanager.cpp:615 ekos/ekosmanager.ui:216
 #, fuzzy
 msgid "Start INDI"
 msgstr "Steloj"
 
-#: ekos/ekosmanager.cpp:401
+#: ekos/ekosmanager.cpp:403
 msgid "Ekos requires at least one CCD or Guider to operate."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:465
+#: ekos/ekosmanager.cpp:467
 msgid "INDI services started. Please connect devices."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:478
+#: ekos/ekosmanager.cpp:480
 #, kde-format
 msgid "INDI services started. Connection to %1 at %2 is successful."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:488
+#: ekos/ekosmanager.cpp:490
 #, fuzzy
 #| msgid "INDI"
 msgid "Stop INDI"
 msgstr "INDI"
 
-#: ekos/ekosmanager.cpp:499
+#: ekos/ekosmanager.cpp:501
 #, kde-format
 msgid "Unable to completely establish remote devices. %1 device remaining."
 msgid_plural ""
@@ -2988,42 +3502,46 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ekos/ekosmanager.cpp:546
+#: ekos/ekosmanager.cpp:548
 msgid "Connecting INDI devices..."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:589
+#: ekos/ekosmanager.cpp:591
 msgid "Disconnecting INDI devices..."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:619
+#: ekos/ekosmanager.cpp:621
 msgid "INDI services stopped."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:726
+#: ekos/ekosmanager.cpp:728
 msgid "Remote devices established. Please connect devices."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:803 ekos/ekosmanager.cpp:826 ekos/ekosmanager.cpp:839
-#: ekos/ekosmanager.cpp:863 ekos/ekosmanager.cpp:883 indi/indistd.cpp:410
+#: ekos/ekosmanager.cpp:805 ekos/ekosmanager.cpp:828 ekos/ekosmanager.cpp:841
+#: ekos/ekosmanager.cpp:873 ekos/ekosmanager.cpp:893 indi/indistd.cpp:396
 #, kde-format
 msgid "%1 is online."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:904
+#: ekos/ekosmanager.cpp:914
 #, kde-format
 msgid "%1 is offline."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:1047 fitsviewer/fitsviewer.cpp:225
+#: ekos/ekosmanager.cpp:1076
+msgid "Alignment"
+msgstr ""
+
+#: ekos/ekosmanager.cpp:1088 fitsviewer/fitsviewer.cpp:225
 msgid "Focus"
 msgstr ""
 
-#: ekos/ekosmanager.cpp:1063 fitsviewer/fitsviewer.cpp:229
+#: ekos/ekosmanager.cpp:1104 fitsviewer/fitsviewer.cpp:229
 msgid "Guide"
 msgstr ""
 
-#: ekos/ekosmanager.cpp:1071
+#: ekos/ekosmanager.cpp:1112
 #, kde-format
 msgid "Guider port from %1 is ready."
 msgstr ""
@@ -3035,7 +3553,7 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, setupTab)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Configuration)
-#: ekos/ekosmanager.ui:24 ekos/guide/guider.ui:103
+#: ekos/ekosmanager.ui:24 ekos/guide/guider.ui:452
 msgid "Setup"
 msgstr ""
 
@@ -3072,12 +3590,6 @@ msgstr "Landfiltrilo:"
 #, fuzzy
 msgid "Telescope:"
 msgstr "Plutono"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_6)
-#: ekos/ekosmanager.ui:86 ekos/focus.ui:33
-msgid "CCD:"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -3139,20 +3651,15 @@ msgstr "Kalkulu"
 msgid "Disconnect"
 msgstr "Kalkulu"
 
-#. i18n: ectx: attribute (title), widget (QWidget, alignTab)
-#: ekos/ekosmanager.ui:282
-msgid "Align"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QCheckBox, enableLoggingCheck)
-#: ekos/ekosmanager.ui:299
+#: ekos/ekosmanager.ui:319
 msgid "Enable logging"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, clearB)
 #. i18n: ectx: property (text), widget (KPushButton, ClearButton)
 #. i18n: ectx: property (text), widget (KPushButton, Clear)
-#: ekos/ekosmanager.ui:322 indi/guimanager.cpp:71 indi/indimenu.cpp:74
+#: ekos/ekosmanager.ui:342 indi/guimanager.cpp:71 indi/indimenu.cpp:74
 #: tools/conjunctions.ui:211 tools/modcalcgeod.ui:160
 #, fuzzy
 msgid "Clear"
@@ -3168,16 +3675,8 @@ msgstr ""
 msgid "Absolute Position"
 msgstr "Kalkulu"
 
-#: ekos/focus.cpp:71
-msgid "Idle."
-msgstr ""
-
 #: ekos/focus.cpp:184
 msgid "Autofocus in progress..."
-msgstr ""
-
-#: ekos/focus.cpp:215 ekos/guide.cpp:224
-msgid "Error: Lost connection to CCD."
 msgstr ""
 
 #: ekos/focus.cpp:241 ekos/focus.cpp:272
@@ -3268,78 +3767,26 @@ msgstr "Vanuatu"
 msgid "Auto"
 msgstr "Azimuto:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: ekos/focus.ui:81
-msgid "Autofocus Options"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, label)
-#: ekos/focus.ui:89
-msgid "Delay between two consequent focus images"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/focus.ui:92
-msgid "Step:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/focus.ui:115
-#, fuzzy
-#| msgctxt "City in Manitoba Canada"
-#| msgid "Erickson"
-msgid "ticks"
-msgstr "Erickson"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/focus.ui:122
-#, fuzzy
-#| msgctxt "City in California USA"
-#| msgid "Torrance"
-msgid "Tolerance:"
-msgstr "Torrance"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ekos/focus.ui:129
-#, fuzzy, no-c-format
-#| msgid "1"
-msgid "%"
-msgstr "1"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ekos/focus.ui:175
-msgid "secs"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_Control)
-#: ekos/focus.ui:228 ekos/guide/guider.ui:289
-#, fuzzy
-#| msgctxt "City in Quebec Canada"
-#| msgid "Montreal"
-msgid "Control"
-msgstr "Montreal"
-
 #. i18n: ectx: property (text), widget (QPushButton, focusOutB)
-#: ekos/focus.ui:239
+#: ekos/focus.ui:99
 msgid "Focus Out"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, startFocusB)
-#: ekos/focus.ui:249
+#: ekos/focus.ui:109
 #, fuzzy
 msgid "Start Focus"
 msgstr "Steloj"
 
 #. i18n: ectx: property (text), widget (QPushButton, focusInB)
-#: ekos/focus.ui:259
+#: ekos/focus.ui:119
 #, fuzzy
 #| msgid "Focused on: "
 msgid "Focus In"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (text), widget (QPushButton, startLoopB)
-#: ekos/focus.ui:269
+#: ekos/focus.ui:129
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Farmington"
@@ -3347,24 +3794,57 @@ msgid "Start Framing"
 msgstr "Farmington"
 
 #. i18n: ectx: property (text), widget (QPushButton, captureB)
-#: ekos/focus.ui:279 ekos/guide/guider.ui:109 ekos/guide/rcalibration.ui:55
+#: ekos/focus.ui:139 ekos/guide/guider.ui:460 ekos/guide/rcalibration.ui:55
 #, fuzzy
 msgid "Capture"
 msgstr "Konservu bildon"
 
-#. i18n: ectx: property (text), widget (QPushButton, stopFocusB)
-#: ekos/focus.ui:289 ekos/guide/guider.cpp:361 ekos/guide/rcalibration.cpp:329
-msgid "Stop"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: ekos/focus.ui:168
+msgid "Autofocus Options"
 msgstr ""
 
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: ekos/focus.ui:176
+msgid "Delay between two consequent focus images"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ekos/focus.ui:179
+msgid "Step:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ekos/focus.ui:202
+#, fuzzy
+#| msgctxt "City in Manitoba Canada"
+#| msgid "Erickson"
+msgid "ticks"
+msgstr "Erickson"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ekos/focus.ui:209
+#, fuzzy
+#| msgctxt "City in California USA"
+#| msgid "Torrance"
+msgid "Tolerance:"
+msgstr "Torrance"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ekos/focus.ui:216
+#, fuzzy, no-c-format
+#| msgid "1"
+msgid "%"
+msgstr "1"
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ekos/focus.ui:332
+#: ekos/focus.ui:340
 msgid "HFR:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/focus.ui:346 xplanet/opsxplanet.ui:120
+#: ekos/focus.ui:354 xplanet/opsxplanet.ui:120
 msgid "pixels"
 msgstr ""
 
@@ -3384,11 +3864,9 @@ msgid "Autoguiding started."
 msgstr "Trovu objekton"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton_StartStop)
-#. i18n: ectx: property (text), widget (QPushButton, pushButton_StartCalibration)
-#: ekos/guide/guider.cpp:373 ekos/guide/guider.ui:632
-#: ekos/guide/rcalibration.cpp:307 ekos/guide/rcalibration.ui:113
+#: ekos/guide/guider.cpp:373 ekos/guide/guider.ui:467
 #, fuzzy
-msgid "Start"
+msgid "Start Autoguide"
 msgstr "Steloj"
 
 #: ekos/guide/guider.cpp:374
@@ -3402,7 +3880,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, guiderClass)
-#: ekos/guide/guider.ui:26
+#: ekos/guide/guider.ui:32
 #, fuzzy
 #| msgctxt "City in Germany"
 #| msgid "Erding"
@@ -3410,53 +3888,39 @@ msgid "Guiding"
 msgstr "Erding"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Drift)
-#: ekos/guide/guider.ui:34
+#: ekos/guide/guider.ui:42
 #, fuzzy
 msgid "Drift graphics"
 msgstr "Geografia loko"
 
 #. i18n: ectx: property (text), widget (QLabel, l_1)
-#: ekos/guide/guider.ui:58
+#: ekos/guide/guider.ui:84
 msgid "X scale(frm.)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_2)
-#: ekos/guide/guider.ui:75
+#: ekos/guide/guider.ui:101
 msgid "Y scale(\")"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, l_18)
-#: ekos/guide/guider.ui:118
-#, fuzzy
-msgid "Square size"
-msgstr "Ekvatoro"
-
-#. i18n: ectx: property (text), widget (QLabel, l_19)
-#: ekos/guide/guider.ui:128
-#, fuzzy
-#| msgctxt "star name"
-#| msgid "Algorab"
-msgid "Algorithm"
-msgstr "Algorab"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Info)
-#: ekos/guide/guider.ui:147
+#: ekos/guide/guider.ui:153
 #, fuzzy
 msgid "Info"
 msgstr "&Informkestoj"
 
 #. i18n: ectx: property (text), widget (QLabel, l_3)
-#: ekos/guide/guider.ui:155
+#: ekos/guide/guider.ui:161
 msgid "Guiding rate,x15\"/sec"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_RecommendedGain)
-#: ekos/guide/guider.ui:178
+#: ekos/guide/guider.ui:184
 msgid "P=xxxxx"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_5)
-#: ekos/guide/guider.ui:189
+#: ekos/guide/guider.ui:195
 #, fuzzy
 msgid "Focal,mm"
 msgstr "LT:"
@@ -3465,94 +3929,41 @@ msgstr "LT:"
 #. i18n: ectx: property (text), widget (QLabel, l_FbyD)
 #. i18n: ectx: property (text), widget (QLabel, l_ErrRA)
 #. i18n: ectx: property (text), widget (QLabel, l_ErrDEC)
-#: ekos/guide/guider.ui:202 ekos/guide/guider.ui:251 ekos/guide/guider.ui:585
-#: ekos/guide/guider.ui:615
+#: ekos/guide/guider.ui:208 ekos/guide/guider.ui:257 ekos/guide/guider.ui:402
+#: ekos/guide/guider.ui:432
 msgid "xxx"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_6)
-#: ekos/guide/guider.ui:215
+#: ekos/guide/guider.ui:221
 #, fuzzy
 msgid "Aperture,mm"
 msgstr "Koordinatoj"
 
 #. i18n: ectx: property (text), widget (QLabel, l_Aperture)
-#: ekos/guide/guider.ui:228
+#: ekos/guide/guider.ui:234
 #, fuzzy
 #| msgid "x"
 msgid "xx"
 msgstr "x"
 
 #. i18n: ectx: property (text), widget (QLabel, l_7)
-#: ekos/guide/guider.ui:238
+#: ekos/guide/guider.ui:244
 msgid "F/D"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_8)
-#: ekos/guide/guider.ui:261
+#: ekos/guide/guider.ui:267
 msgid "FOV,'"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_FOV)
-#: ekos/guide/guider.ui:274
+#: ekos/guide/guider.ui:280
 msgid "YYxYY"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, l_9)
-#: ekos/guide/guider.ui:297
-#, fuzzy
-msgid "Enable directions"
-msgstr "Dek"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirRA)
-#: ekos/guide/guider.ui:304
-#, fuzzy
-#| msgctxt "Right Ascension"
-#| msgid "RA"
-msgid "RA"
-msgstr "RA"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirDEC)
-#: ekos/guide/guider.ui:311
-#, fuzzy
-#| msgctxt "Region/state in USA"
-#| msgid "DC"
-msgid "DEC"
-msgstr "DC"
-
-#. i18n: ectx: property (text), widget (QLabel, l_10)
-#: ekos/guide/guider.ui:318
-msgid "Accumulate frames"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, l_11)
-#: ekos/guide/guider.ui:350
-msgid "Proportional gain"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, l_12)
-#: ekos/guide/guider.ui:377
-#, fuzzy
-msgid "Integral gain"
-msgstr "Oregono"
-
-#. i18n: ectx: property (text), widget (QLabel, l_13)
-#: ekos/guide/guider.ui:404
-msgid "Derivative gain"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, l_14)
-#: ekos/guide/guider.ui:431
-msgid "Maximum pulse"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, l_15)
-#: ekos/guide/guider.ui:452
-msgid "Minimum pulse"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, l_16)
-#: ekos/guide/guider.ui:484
+#: ekos/guide/guider.ui:301
 #, fuzzy
 #| msgctxt "City in Utah USA"
 #| msgid "Delta"
@@ -3563,25 +3974,92 @@ msgstr "Delta"
 #. i18n: ectx: property (text), widget (QLabel, l_DeltaDEC)
 #. i18n: ectx: property (text), widget (QLabel, l_PulseRA)
 #. i18n: ectx: property (text), widget (QLabel, l_PulseDEC)
-#: ekos/guide/guider.ui:499 ekos/guide/guider.ui:515 ekos/guide/guider.ui:542
-#: ekos/guide/guider.ui:558
+#: ekos/guide/guider.ui:316 ekos/guide/guider.ui:332 ekos/guide/guider.ui:359
+#: ekos/guide/guider.ui:375
 msgid "xxxx"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_17)
-#: ekos/guide/guider.ui:527
+#: ekos/guide/guider.ui:344
 #, fuzzy
 msgid "Pulse duration, ms"
 msgstr "Daŭro de tago"
 
 #. i18n: ectx: property (text), widget (QLabel, l_20)
-#: ekos/guide/guider.ui:572
+#: ekos/guide/guider.ui:389
 msgid "Sig(RA)\""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_21)
-#: ekos/guide/guider.ui:602
+#: ekos/guide/guider.ui:419
 msgid "Sig(DEC)\""
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, l_18)
+#: ekos/guide/guider.ui:474
+#, fuzzy
+msgid "Square size"
+msgstr "Ekvatoro"
+
+#. i18n: ectx: property (text), widget (QLabel, l_19)
+#: ekos/guide/guider.ui:484
+#, fuzzy
+#| msgctxt "star name"
+#| msgid "Algorab"
+msgid "Algorithm"
+msgstr "Algorab"
+
+#. i18n: ectx: property (text), widget (QLabel, l_9)
+#: ekos/guide/guider.ui:532
+#, fuzzy
+msgid "Enable directions"
+msgstr "Dek"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirRA)
+#: ekos/guide/guider.ui:539
+#, fuzzy
+#| msgctxt "Right Ascension"
+#| msgid "RA"
+msgid "RA"
+msgstr "RA"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirDEC)
+#: ekos/guide/guider.ui:546
+#, fuzzy
+#| msgctxt "Region/state in USA"
+#| msgid "DC"
+msgid "DEC"
+msgstr "DC"
+
+#. i18n: ectx: property (text), widget (QLabel, l_10)
+#: ekos/guide/guider.ui:553
+msgid "Accumulate frames"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, l_11)
+#: ekos/guide/guider.ui:585
+msgid "Proportional gain"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, l_12)
+#: ekos/guide/guider.ui:612
+#, fuzzy
+msgid "Integral gain"
+msgstr "Oregono"
+
+#. i18n: ectx: property (text), widget (QLabel, l_13)
+#: ekos/guide/guider.ui:639
+msgid "Derivative gain"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, l_14)
+#: ekos/guide/guider.ui:666
+msgid "Maximum pulse"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, l_15)
+#: ekos/guide/guider.ui:687
+msgid "Minimum pulse"
 msgstr ""
 
 #: ekos/guide/rcalibration.cpp:40
@@ -3601,6 +4079,12 @@ msgid ""
 "Lost track of the guide star. Try increasing the square size or reducing "
 "pulse duration."
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton_StartCalibration)
+#: ekos/guide/rcalibration.cpp:307 ekos/guide/rcalibration.ui:113
+#, fuzzy
+msgid "Start"
+msgstr "Steloj"
 
 #: ekos/guide/rcalibration.cpp:325
 #, fuzzy
@@ -4024,28 +4508,28 @@ msgstr "Ŝarĝante KStars..."
 msgid "Could not open file %1 (fits_get_img_param). Error %2"
 msgstr "Ne eblis malfermi dosieron"
 
-#: fitsviewer/fitsimage.cpp:138 fitsviewer/fitsimage.cpp:157
-#: fitsviewer/fitsimage.cpp:164 fitsviewer/fitsimage.cpp:175
+#: fitsviewer/fitsimage.cpp:138 fitsviewer/fitsimage.cpp:156
+#: fitsviewer/fitsimage.cpp:163 fitsviewer/fitsimage.cpp:174
 #: fitsviewer/fitsview.cpp:233
 #, fuzzy
 msgid "FITS Open"
 msgstr "Azimuto:"
 
-#: fitsviewer/fitsimage.cpp:157
+#: fitsviewer/fitsimage.cpp:156
 #, fuzzy, kde-format
 msgid "FITS file open error (fits_get_img_param): %1"
 msgstr "nevalida URLo"
 
-#: fitsviewer/fitsimage.cpp:164
+#: fitsviewer/fitsimage.cpp:163
 msgid "1D FITS images are not supported in KStars."
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:175
+#: fitsviewer/fitsimage.cpp:174
 #, fuzzy, kde-format
 msgid "FITS file open error (fits_get_img_type): %1"
 msgstr "nevalida URLo"
 
-#: fitsviewer/fitstab.cpp:57 fitsviewer/fitsviewer.cpp:409
+#: fitsviewer/fitstab.cpp:57 fitsviewer/fitsviewer.cpp:419
 #, fuzzy
 msgid "Save Changes to FITS?"
 msgstr "Konservado de la bildo %1 malsukcesis!"
@@ -4091,7 +4575,7 @@ msgstr "nevalida URLo"
 msgid "FITS image is saturated and cannot be displayed."
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:466 fitsviewer/fitsviewer.cpp:277
+#: fitsviewer/fitsview.cpp:466 fitsviewer/fitsviewer.cpp:287
 #, kde-format
 msgid "%1 star detected."
 msgid_plural "%1 stars detected."
@@ -4129,7 +4613,7 @@ msgstr "Bonvenon ĉe KStars"
 msgid "Statistics"
 msgstr "Statistikoj"
 
-#: fitsviewer/fitsviewer.cpp:151 fitsviewer/fitsviewer.cpp:514
+#: fitsviewer/fitsviewer.cpp:151 fitsviewer/fitsviewer.cpp:525
 #, fuzzy
 #| msgctxt "City name (optional, probably does not need a translation)"
 #| msgid "Merkers"
@@ -4148,12 +4632,12 @@ msgstr "Bonvenon ĉe KStars"
 msgid "Calibrate"
 msgstr "Caliente"
 
-#: fitsviewer/fitsviewer.cpp:410
+#: fitsviewer/fitsviewer.cpp:420
 #, kde-format
 msgid "%1 has unsaved changes.  Would you like to save before closing it?"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:519
+#: fitsviewer/fitsviewer.cpp:530
 msgid "Unmark Stars"
 msgstr ""
 
@@ -4316,14 +4800,6 @@ msgstr "Dek (%1):"
 #: indi/devmanager.ui:34 indi/drivermanager.ui:30
 msgid "Local/Server"
 msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#. i18n: ectx: property (text), widget (QTreeWidget, localTreeWidget)
-#. i18n: ectx: property (title), widget (QGroupBox, INDIMode)
-#: indi/devmanager.ui:52 indi/devmanager.ui:199 indi/drivermanager.ui:48
-#: indi/drivermanager.ui:195 tools/argstartindi.ui:42
-msgid "Mode"
-msgstr "Moduso"
 
 #. i18n: ectx: property (text), widget (QRadioButton, serverR)
 #. i18n: ectx: property (text), widget (QRadioButton, ServerButton)
@@ -4509,26 +4985,26 @@ msgid ""
 "from the Device Manager in the devices menu."
 msgstr ""
 
-#: indi/indiccd.cpp:701
+#: indi/indiccd.cpp:729
 #, fuzzy, kde-format
 msgid "FITS file saved to %1"
 msgstr "nevalida URLo"
 
-#: indi/indielement.cpp:330
+#: indi/indielement.cpp:332
 msgid "INDI DATA STREAM"
 msgstr ""
 
-#: indi/indielement.cpp:619
+#: indi/indielement.cpp:621
 #, fuzzy, kde-format
 msgid "Cannot open file %1 for reading"
 msgstr "Ne eblis malfermi dosieron"
 
-#: indi/indielement.cpp:631
+#: indi/indielement.cpp:633
 #, kde-format
 msgid "Not enough memory to load %1"
 msgstr ""
 
-#: indi/indielement.cpp:641
+#: indi/indielement.cpp:643
 #, kde-format
 msgid "Not enough memory to convert file %1 to base64"
 msgstr ""
@@ -4575,15 +5051,10 @@ msgstr ""
 msgid "Upload"
 msgstr "Upsala"
 
-#: indi/indistd.cpp:341
+#: indi/indistd.cpp:340
 #, fuzzy, kde-format
 msgid "Data file saved to %1"
 msgstr "nevalida URLo"
-
-#: indi/indistd.cpp:419
-#, kde-format
-msgid "%1 is online and ready."
-msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, telescopeLabel)
 #. i18n: ectx: property (toolTip), widget (QLabel, telescopeLabel_2)
@@ -8084,8 +8555,19 @@ msgid ""
 "Increase the value if no stars are detected."
 msgstr ""
 
-#. i18n: ectx: label, entry (remoteScopeName), group (Ekos)
+#. i18n: ectx: label, entry (AlignExposure), group (Ekos)
 #: kstars.kcfg:1244
+msgid "Default alignment exposure value"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (AlignExposure), group (Ekos)
+#: kstars.kcfg:1245
+msgid ""
+"Specifies exposure value of CCD in seconds when performing plate solving."
+msgstr ""
+
+#. i18n: ectx: label, entry (remoteScopeName), group (Ekos)
+#: kstars.kcfg:1249
 #, fuzzy
 #| msgctxt "Constellation Name"
 #| msgid "Constell. Name"
@@ -8093,12 +8575,12 @@ msgid "Remote Scope Name"
 msgstr "Konstelacia nomo"
 
 #. i18n: ectx: whatsthis, entry (remoteScopeName), group (Ekos)
-#: kstars.kcfg:1245
+#: kstars.kcfg:1250
 msgid "Name of the remote INDI telescope device."
 msgstr ""
 
 #. i18n: ectx: label, entry (remoteCCDName), group (Ekos)
-#: kstars.kcfg:1248
+#: kstars.kcfg:1253
 #, fuzzy
 #| msgctxt "Constellation Name"
 #| msgid "Constell. Name"
@@ -8106,12 +8588,12 @@ msgid "Remote CCD Name"
 msgstr "Konstelacia nomo"
 
 #. i18n: ectx: whatsthis, entry (remoteCCDName), group (Ekos)
-#: kstars.kcfg:1249
+#: kstars.kcfg:1254
 msgid "Name of the remote INDI CCD device."
 msgstr ""
 
 #. i18n: ectx: label, entry (remoteGuiderName), group (Ekos)
-#: kstars.kcfg:1252
+#: kstars.kcfg:1257
 #, fuzzy
 #| msgctxt "Constellation Name"
 #| msgid "Constell. Name"
@@ -8119,14 +8601,14 @@ msgid "Remote Guider Name"
 msgstr "Konstelacia nomo"
 
 #. i18n: ectx: whatsthis, entry (remoteGuiderName), group (Ekos)
-#: kstars.kcfg:1253
+#: kstars.kcfg:1258
 msgid ""
 "Name of the remote INDI Guider device. If the CCD and Guider are the same "
 "device, it must be specified here as well."
 msgstr ""
 
 #. i18n: ectx: label, entry (remoteFocuserName), group (Ekos)
-#: kstars.kcfg:1256
+#: kstars.kcfg:1261
 #, fuzzy
 #| msgctxt "Constellation Name"
 #| msgid "Constell. Name"
@@ -8134,12 +8616,12 @@ msgid "Remote Focuser Name"
 msgstr "Konstelacia nomo"
 
 #. i18n: ectx: whatsthis, entry (remoteFocuserName), group (Ekos)
-#: kstars.kcfg:1257
+#: kstars.kcfg:1262
 msgid "Name of the remote INDI focuser device."
 msgstr ""
 
 #. i18n: ectx: label, entry (remoteFilterName), group (Ekos)
-#: kstars.kcfg:1260
+#: kstars.kcfg:1265
 #, fuzzy
 #| msgctxt "Constellation Name"
 #| msgid "Constell. Name"
@@ -8147,12 +8629,12 @@ msgid "Remote Filter Name"
 msgstr "Konstelacia nomo"
 
 #. i18n: ectx: whatsthis, entry (remoteFilterName), group (Ekos)
-#: kstars.kcfg:1261
+#: kstars.kcfg:1266
 msgid "Name of the remote INDI Filter device."
 msgstr ""
 
 #. i18n: ectx: label, entry (remoteAuxName), group (Ekos)
-#: kstars.kcfg:1264
+#: kstars.kcfg:1269
 #, fuzzy
 #| msgctxt "Constellation Name"
 #| msgid "Constell. Name"
@@ -8160,61 +8642,61 @@ msgid "Remote Auxiliary Name"
 msgstr "Konstelacia nomo"
 
 #. i18n: ectx: whatsthis, entry (remoteAuxName), group (Ekos)
-#: kstars.kcfg:1265
+#: kstars.kcfg:1270
 msgid "Name of the remote INDI Auxiliary device."
 msgstr ""
 
 #. i18n: ectx: label, entry (remoteHost), group (Ekos)
-#: kstars.kcfg:1268
+#: kstars.kcfg:1273
 msgid "Remote INDI host"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (remoteHost), group (Ekos)
-#: kstars.kcfg:1269
+#: kstars.kcfg:1274
 msgid "Hostname of the remote INDI server for Ekos."
 msgstr ""
 
 #. i18n: ectx: label, entry (remotePort), group (Ekos)
-#: kstars.kcfg:1272
+#: kstars.kcfg:1277
 #, fuzzy
 msgid "Remote Port"
 msgstr "Bildo"
 
 #. i18n: ectx: whatsthis, entry (remotePort), group (Ekos)
-#: kstars.kcfg:1273
+#: kstars.kcfg:1278
 msgid "Port of the remote INDI server for Ekos."
 msgstr ""
 
 #. i18n: ectx: label, entry (localMode), group (Ekos)
 #. i18n: ectx: label, entry (remoteMode), group (Ekos)
-#: kstars.kcfg:1276 kstars.kcfg:1281
+#: kstars.kcfg:1281 kstars.kcfg:1286
 #, fuzzy
 msgid "Ekos connection mode"
 msgstr "Kalkulu"
 
 #. i18n: ectx: whatsthis, entry (localMode), group (Ekos)
-#: kstars.kcfg:1277
+#: kstars.kcfg:1282
 msgid "Ekos is started in local mode."
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (remoteMode), group (Ekos)
-#: kstars.kcfg:1282
+#: kstars.kcfg:1287
 msgid "Ekos is started in remote mode."
 msgstr ""
 
 #. i18n: ectx: label, entry (neverLoadConfig), group (Ekos)
-#: kstars.kcfg:1286
+#: kstars.kcfg:1291
 #, fuzzy
 msgid "Never load device configuration?"
 msgstr "Dek"
 
 #. i18n: ectx: label, entry (loadConfigOnConnection), group (Ekos)
-#: kstars.kcfg:1290
+#: kstars.kcfg:1295
 msgid "Load device configuration upon successful connection?"
 msgstr ""
 
 #. i18n: ectx: label, entry (loadDefaultConfig), group (Ekos)
-#: kstars.kcfg:1294
+#: kstars.kcfg:1299
 msgid "Always load device default configuration upon successful connection?"
 msgstr ""
 
@@ -42001,34 +42483,11 @@ msgstr ""
 msgid "Find Object..."
 msgstr "&Trovu objekton..."
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QCheckBox, RACheckBatch)
-#: tools/altvstime.ui:97 tools/argsetradec.ui:37
-#: tools/argsettargetcoordindi.ui:38 tools/modcalcgalcoord.ui:288
-#: tools/modcalcplanets.ui:202 tools/modcalcvlsr.ui:508
-msgid "RA:"
-msgstr "RA:"
-
 #. i18n: ectx: property (text), widget (KPushButton, addButton)
 #: tools/altvstime.ui:116
 #, fuzzy
 msgid "Plot"
 msgstr "Plutono"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#. i18n: ectx: property (text), widget (QCheckBox, decCheckBatch)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: ectx: property (text), widget (QCheckBox, DecCheckBatch)
-#: tools/altvstime.ui:129 tools/argsetradec.ui:30
-#: tools/argsettargetcoordindi.ui:45 tools/modcalcgalcoord.ui:275
-#: tools/modcalcplanets.ui:195 tools/modcalcvlsr.ui:485
-#, fuzzy
-msgid "Dec:"
-msgstr "Dek (%1):"
 
 #. i18n: ectx: property (text), widget (KPushButton, clearFieldsButton)
 #: tools/altvstime.ui:151
@@ -42208,12 +42667,6 @@ msgid "northeast"
 msgstr "&Nordo"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, FocusEdit)
-#: tools/arglooktoward.ui:62
-#, fuzzy
-msgid "east"
-msgstr "&Okzidento"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, FocusEdit)
 #: tools/arglooktoward.ui:67
 #, fuzzy
 msgid "southeast"
@@ -42230,12 +42683,6 @@ msgstr "&Sudo"
 #, fuzzy
 msgid "southwest"
 msgstr "&Sudo"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, FocusEdit)
-#: tools/arglooktoward.ui:82
-#, fuzzy
-msgid "west"
-msgstr "&Okzidento"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, FocusEdit)
 #: tools/arglooktoward.ui:87
@@ -46876,9 +47323,6 @@ msgstr "Ŝarĝante laktan vojon"
 #~ msgid "Could not save the observer list to the file."
 #~ msgstr "Ne eblis malfermi dosieron"
 
-#~ msgid "Write Error"
-#~ msgstr "Skriba eraro"
-
 #, fuzzy
 #~| msgctxt "City name (optional, probably does not need a translation)"
 #~| msgid "Arcetri"
@@ -46929,11 +47373,6 @@ msgstr "Ŝarĝante laktan vojon"
 #~| msgid "Mode"
 #~ msgid "INDI Mode"
 #~ msgstr "Moduso"
-
-#, fuzzy
-#~| msgid "1"
-#~ msgid "%1"
-#~ msgstr "1"
 
 #, fuzzy
 #~ msgid "Captuing image..."
@@ -47125,10 +47564,6 @@ msgstr "Ŝarĝante laktan vojon"
 
 #, fuzzy
 #~ msgid "Telescope label is missing."
-#~ msgstr "Plutono"
-
-#, fuzzy
-#~ msgid "Telescope driver is missing."
 #~ msgstr "Plutono"
 
 #, fuzzy
