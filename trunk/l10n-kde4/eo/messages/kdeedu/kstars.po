@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-13 01:28+0000\n"
+"POT-Creation-Date: 2013-11-18 01:36+0000\n"
 "PO-Revision-Date: 2009-12-21 08:35+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -2638,7 +2638,7 @@ msgstr ""
 msgid "Invalid radius value"
 msgstr "nevalida dosiernomo"
 
-#: ekos/align.cpp:474 ekos/focus.cpp:237 ekos/guide.cpp:224
+#: ekos/align.cpp:474 ekos/focus.cpp:237 ekos/guide.cpp:225
 msgid "Error: Lost connection to CCD."
 msgstr ""
 
@@ -2688,7 +2688,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ekos/align.cpp:660 ekos/capture.cpp:666 ekos/ekosmanager.cpp:1033
-#: ekos/focus.cpp:829 ekos/guide.cpp:295
+#: ekos/focus.cpp:829 ekos/guide.cpp:303
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
 msgid "%1 %2"
@@ -2828,7 +2828,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, controlBox)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Control)
-#: ekos/align.ui:21 ekos/focus.ui:189 ekos/guide/guider.ui:524
+#: ekos/align.ui:21 ekos/focus.ui:189 ekos/guide/guider.ui:548
 #, fuzzy
 #| msgctxt "City in Quebec Canada"
 #| msgid "Montreal"
@@ -2843,7 +2843,7 @@ msgstr "Konservu bildon"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopB)
 #. i18n: ectx: property (text), widget (QPushButton, stopFocusB)
-#: ekos/align.ui:42 ekos/focus.ui:250 ekos/guide/guider.cpp:361
+#: ekos/align.ui:42 ekos/focus.ui:250 ekos/guide/guider.cpp:364
 #: ekos/guide/rcalibration.cpp:329
 msgid "Stop"
 msgstr ""
@@ -3848,7 +3848,7 @@ msgid "Start Framing"
 msgstr "Farmington"
 
 #. i18n: ectx: property (text), widget (QPushButton, captureB)
-#: ekos/focus.ui:240 ekos/guide/guider.ui:460 ekos/guide/rcalibration.ui:55
+#: ekos/focus.ui:240 ekos/guide/guider.ui:462 ekos/guide/rcalibration.ui:55
 #, fuzzy
 msgid "Capture"
 msgstr "Konservu bildon"
@@ -3926,35 +3926,54 @@ msgstr ""
 msgid "HFR:"
 msgstr ""
 
+#: ekos/guide.cpp:391
+msgid "The CCD does not support Rapid Guiding. Aborting..."
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ekos/guide.ui:42
 msgid "Via:"
 msgstr ""
 
-#: ekos/guide/guider.cpp:151 ekos/guide/guider.cpp:258
+#: ekos/guide/guider.cpp:154 ekos/guide/guider.cpp:261
 #, fuzzy, kde-format
 msgid "P: %1"
 msgstr "Sunsubiro:"
 
-#: ekos/guide/guider.cpp:362
+#: ekos/guide/guider.cpp:365
 #, fuzzy
 msgid "Autoguiding started."
 msgstr "Trovu objekton"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton_StartStop)
-#: ekos/guide/guider.cpp:373 ekos/guide/guider.ui:467
+#: ekos/guide/guider.cpp:379 ekos/guide/guider.ui:469
 #, fuzzy
 msgid "Start Autoguide"
 msgstr "Steloj"
 
-#: ekos/guide/guider.cpp:374
+#: ekos/guide/guider.cpp:380
 msgid "Autoguiding stopped."
 msgstr ""
 
-#: ekos/guide/guider.cpp:406
+#: ekos/guide/guider.cpp:410
 msgid ""
 "Lost track of the guide star. Try increasing the square size and check the "
 "mount."
+msgstr ""
+
+#: ekos/guide/guider.cpp:477
+msgid "You must stop auto guiding before changing this setting."
+msgstr ""
+
+#: ekos/guide/guider.cpp:485
+msgid ""
+"Rapid Guiding is enabled. Guide star will be determined automatically by the "
+"CCD driver. No frames are sent to Ekos unless explicity enabled by the user "
+"in the CCD driver settings."
+msgstr ""
+
+#: ekos/guide/guider.cpp:488
+msgid "Rapid Guiding is disabled."
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, guiderClass)
@@ -4074,27 +4093,32 @@ msgid "Sig(DEC)\""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_18)
-#: ekos/guide/guider.ui:474
+#: ekos/guide/guider.ui:476
 #, fuzzy
 msgid "Square size"
 msgstr "Ekvatoro"
 
 #. i18n: ectx: property (text), widget (QLabel, l_19)
-#: ekos/guide/guider.ui:484
+#: ekos/guide/guider.ui:486
 #, fuzzy
 #| msgctxt "star name"
 #| msgid "Algorab"
 msgid "Algorithm"
 msgstr "Algorab"
 
+#. i18n: ectx: property (text), widget (QCheckBox, kfcg_useRapidGuide)
+#: ekos/guide/guider.ui:496
+msgid "Use Rapid Guide"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, l_9)
-#: ekos/guide/guider.ui:532
+#: ekos/guide/guider.ui:556
 #, fuzzy
 msgid "Enable directions"
 msgstr "Dek"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirRA)
-#: ekos/guide/guider.ui:539
+#: ekos/guide/guider.ui:563
 #, fuzzy
 #| msgctxt "Right Ascension"
 #| msgid "RA"
@@ -4102,7 +4126,7 @@ msgid "RA"
 msgstr "RA"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirDEC)
-#: ekos/guide/guider.ui:546
+#: ekos/guide/guider.ui:570
 #, fuzzy
 #| msgctxt "Region/state in USA"
 #| msgid "DC"
@@ -4110,33 +4134,33 @@ msgid "DEC"
 msgstr "DC"
 
 #. i18n: ectx: property (text), widget (QLabel, l_10)
-#: ekos/guide/guider.ui:553
+#: ekos/guide/guider.ui:577
 msgid "Accumulate frames"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_11)
-#: ekos/guide/guider.ui:585
+#: ekos/guide/guider.ui:609
 msgid "Proportional gain"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_12)
-#: ekos/guide/guider.ui:612
+#: ekos/guide/guider.ui:636
 #, fuzzy
 msgid "Integral gain"
 msgstr "Oregono"
 
 #. i18n: ectx: property (text), widget (QLabel, l_13)
-#: ekos/guide/guider.ui:639
+#: ekos/guide/guider.ui:663
 msgid "Derivative gain"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_14)
-#: ekos/guide/guider.ui:666
+#: ekos/guide/guider.ui:690
 msgid "Maximum pulse"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, l_15)
-#: ekos/guide/guider.ui:687
+#: ekos/guide/guider.ui:711
 msgid "Minimum pulse"
 msgstr ""
 
@@ -5122,13 +5146,13 @@ msgid ""
 "from the Device Manager in the devices menu."
 msgstr ""
 
-#: indi/indiccd.cpp:704
+#: indi/indiccd.cpp:742
 #, kde-format
 msgid ""
 "FITS directory %1 does not exist. Please update the directory in the options."
 msgstr ""
 
-#: indi/indiccd.cpp:761
+#: indi/indiccd.cpp:799
 #, fuzzy, kde-format
 msgid "FITS file saved to %1"
 msgstr "nevalida URLo"
