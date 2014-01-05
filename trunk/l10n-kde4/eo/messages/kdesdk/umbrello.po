@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umbrello\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-31 01:34+0000\n"
+"POT-Creation-Date: 2014-01-05 01:44+0000\n"
 "PO-Revision-Date: 2007-12-06 23:25+0100\n"
 "Last-Translator: Oliver M. Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -171,27 +171,27 @@ msgstr ""
 "refoje."
 
 #: classifier.cpp:407 classifier.cpp:784 entity.cpp:125 entity.cpp:178
-#: entity.cpp:228 entity.cpp:277 enum.cpp:107 object_factory.cpp:202
-#: package.cpp:174 umldoc.cpp:1375 umldoc.cpp:1409
+#: entity.cpp:228 entity.cpp:277 enum.cpp:107 object_factory.cpp:211
+#: package.cpp:174 umldoc.cpp:1381 umldoc.cpp:1415
 msgid "That is an invalid name."
 msgstr "Tio ne estis valida nomo."
 
 #: classifier.cpp:407 classifier.cpp:784 dialogs/umlviewdialog.cpp:230
 #: entity.cpp:125 entity.cpp:178 entity.cpp:228 entity.cpp:277 enum.cpp:107
-#: object_factory.cpp:203 package.cpp:175 umldoc.cpp:1280 umldoc.cpp:1345
-#: umldoc.cpp:1375 umldoc.cpp:1409
+#: object_factory.cpp:212 package.cpp:175 umldoc.cpp:1280 umldoc.cpp:1351
+#: umldoc.cpp:1381 umldoc.cpp:1415
 msgid "Invalid Name"
 msgstr "Nevalida Nomo"
 
 #: classifier.cpp:410 classifier.cpp:786 entity.cpp:127 entity.cpp:180
-#: entity.cpp:230 entity.cpp:279 object_factory.cpp:213 umldoc.cpp:1382
-#: umldoc.cpp:1420
+#: entity.cpp:230 entity.cpp:279 object_factory.cpp:222 umldoc.cpp:1388
+#: umldoc.cpp:1426
 msgid "That name is already being used."
 msgstr "Tiu nomo estas jam uzata."
 
 #: classifier.cpp:410 classifier.cpp:786 entity.cpp:127 entity.cpp:180
-#: entity.cpp:230 entity.cpp:279 object_factory.cpp:214 umldoc.cpp:1284
-#: umldoc.cpp:1354 umldoc.cpp:1382 umldoc.cpp:1420
+#: entity.cpp:230 entity.cpp:279 object_factory.cpp:223 umldoc.cpp:1284
+#: umldoc.cpp:1360 umldoc.cpp:1388 umldoc.cpp:1426
 msgid "Not a Unique Name"
 msgstr "Nomo Ne Unika"
 
@@ -217,17 +217,11 @@ msgstr "Kei statodiagramon"
 msgid "Change text : %1 to %2"
 msgstr "Ŝanĝi tekston"
 
-#: cmds/cmd_moveWidget.cpp:27
+#: cmds/cmd_removeDiagram.cpp:36
 #, fuzzy, kde-format
-#| msgid "Move widget :"
-msgid "Move widget : %1"
-msgstr "Movi "
-
-#: cmds/cmd_resizeWidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create widget :"
-msgid "Resize widget : %1"
-msgstr "Krei fenestraĵon :"
+#| msgid "Create state diagram"
+msgid "Remove diagram %1"
+msgstr "Kei statodiagramon"
 
 #: cmds/cmd_setStereotype.cpp:25
 #, kde-format
@@ -240,15 +234,17 @@ msgstr ""
 msgid "Change visibility : %1"
 msgstr "Ŝanĝi videblecon : "
 
-#: cmds/generic/cmd_createUMLObject.cpp:37
+#: cmds/generic/cmd_createUMLObject.cpp:32 object_factory.cpp:143
 #, fuzzy, kde-format
 #| msgid "Create uml object :"
 msgid "Create UML object : %1"
 msgstr "Krei UML-objekton :"
 
-#: cmds/generic/cmd_createUMLObject.cpp:44
-msgid "Create UML object : CANNOT DO THAT, OBJECT IS NULL!"
-msgstr ""
+#: cmds/generic/cmd_removeUMLObject.cpp:30
+#, fuzzy, kde-format
+#| msgid "Create uml object :"
+msgid "Remove UML object : %1"
+msgstr "Krei UML-objekton :"
 
 #: cmds/generic/cmd_renameUMLObject.cpp:25
 #, fuzzy, kde-format
@@ -256,25 +252,25 @@ msgstr ""
 msgid "Rename object : %1 to %2"
 msgstr "Alinomi objekton"
 
-#: cmds/widget/cmd_changeFillColor.cpp:28
+#: cmds/widget/cmd_changeFillColor.cpp:26
 #, fuzzy, kde-format
 #| msgid "Change Fill Color"
 msgid "Change fill color : %1"
 msgstr "Ŝanĝi Plenigan Koloron"
 
-#: cmds/widget/cmd_changeFont.cpp:23
+#: cmds/widget/cmd_changeFont.cpp:24
 #, fuzzy, kde-format
 #| msgid "Change Font"
 msgid "Change font : %1"
 msgstr "Ŝanĝi Tiparon"
 
-#: cmds/widget/cmd_changeLineColor.cpp:28
+#: cmds/widget/cmd_changeLineColor.cpp:26
 #, fuzzy, kde-format
 #| msgid "Change Line Color"
 msgid "Change line color : %1"
 msgstr "Ŝanĝi Linikoloron"
 
-#: cmds/widget/cmd_changeLineWidth.cpp:28
+#: cmds/widget/cmd_changeLineWidth.cpp:27
 #, fuzzy, kde-format
 #| msgid "Change Line Color"
 msgid "Change line width : %1"
@@ -286,34 +282,52 @@ msgstr "Ŝanĝi Linikoloron"
 msgid "Change multiplicity : %1 to %2"
 msgstr "Ŝanĝi Multecon"
 
-#: cmds/widget/cmd_changeTextColor.cpp:27
+#: cmds/widget/cmd_changeTextColor.cpp:26
 #, fuzzy, kde-format
 #| msgid "Change Line Color"
 msgid "Change text color : %1"
 msgstr "Ŝanĝi Linikoloron"
 
-#: cmds/widget/cmd_changeUseFillColor.cpp:27
+#: cmds/widget/cmd_changeUseFillColor.cpp:26
 #, fuzzy, kde-format
 #| msgid "Change Fill Color"
 msgid "Use fill color : %1"
 msgstr "Ŝanĝi Plenigan Koloron"
 
-#: cmds/widget/cmd_changeUseFillColor.cpp:29
+#: cmds/widget/cmd_changeUseFillColor.cpp:28
 #, fuzzy, kde-format
 #| msgid "Change Fill Color"
 msgid "No fill color : %1"
 msgstr "Ŝanĝi Plenigan Koloron"
 
-#: cmds/widget/cmd_changeVisualProperty.cpp:32
+#: cmds/widget/cmd_changeVisualProperty.cpp:31
 #, fuzzy, kde-format
 #| msgid "Change visibility : "
 msgid "Change visual property : %1"
 msgstr "Ŝanĝi videblecon : "
 
-#: cmds/widget/cmd_createWidget.cpp:27
+#: cmds/widget/cmd_createWidget.cpp:29
 #, fuzzy, kde-format
 #| msgid "Create widget :"
 msgid "Create widget : %1"
+msgstr "Krei fenestraĵon :"
+
+#: cmds/widget/cmd_moveWidget.cpp:26
+#, fuzzy, kde-format
+#| msgid "Move widget :"
+msgid "Move widget : %1"
+msgstr "Movi "
+
+#: cmds/widget/cmd_removeWidget.cpp:29
+#, fuzzy, kde-format
+#| msgid "Move widget :"
+msgid "Remove widget : %1"
+msgstr "Movi "
+
+#: cmds/widget/cmd_resizeWidget.cpp:26
+#, fuzzy, kde-format
+#| msgid "Create widget :"
+msgid "Resize widget : %1"
 msgstr "Krei fenestraĵon :"
 
 #: cmds/widget/cmd_setName.cpp:25
@@ -1755,12 +1769,12 @@ msgstr "Renomi"
 msgid "New Activity"
 msgstr "Nova Aktiveco"
 
-#: dialogs/activitypage.cpp:175 toolbarstateother.cpp:251 umlscene.cpp:3026
+#: dialogs/activitypage.cpp:175 toolbarstateother.cpp:251 umlscene.cpp:3062
 #: widgets/activitywidget.cpp:364 widgets/statewidget.cpp:497
 msgid "Enter the name of the new activity:"
 msgstr "Enigu la nomon de la nova aktiveco:"
 
-#: dialogs/activitypage.cpp:175 toolbarstateother.cpp:251 umlscene.cpp:3027
+#: dialogs/activitypage.cpp:175 toolbarstateother.cpp:251 umlscene.cpp:3063
 #: widgets/statewidget.cpp:498
 msgid "new activity"
 msgstr "nova aktiveco"
@@ -2248,7 +2262,7 @@ msgstr "N&ova Limigo..."
 #: dialogs/classifierlistpage.cpp:206
 #: dialogs/umlforeignkeyconstraintdialog.cpp:321
 #: dialogs/umloperationdialog.cpp:166
-#: dialogs/umluniqueconstraintdialog.cpp:122 umldoc.cpp:1466 umlscene.cpp:3245
+#: dialogs/umluniqueconstraintdialog.cpp:122 umldoc.cpp:1477 umlscene.cpp:3281
 msgid "&Delete"
 msgstr "&Forigi"
 
@@ -3581,7 +3595,7 @@ msgstr "La nomo kiun vi enigis estas nevalida."
 msgid "The name you have entered is not unique."
 msgstr "La nomo kiun vi enigis estis neunika."
 
-#: dialogs/umlviewdialog.cpp:240 umldoc.cpp:1415
+#: dialogs/umlviewdialog.cpp:240 umldoc.cpp:1421
 msgid "Name Not Unique"
 msgstr "Nomo Ne Unika"
 
@@ -3764,8 +3778,8 @@ msgstr "Indenta tipo:"
 msgid "Flag whether documentation was modified"
 msgstr ""
 
-#: enumliteral.cpp:104 object_factory.cpp:197 stereotype.cpp:112
-#: umldoc.cpp:1272 umldoc.cpp:1339 umldoc.cpp:1370 umldoc.cpp:1404
+#: enumliteral.cpp:104 object_factory.cpp:206 stereotype.cpp:112
+#: umldoc.cpp:1272 umldoc.cpp:1345 umldoc.cpp:1376 umldoc.cpp:1410
 msgid "Enter name:"
 msgstr "Enigi nomon:"
 
@@ -4527,21 +4541,21 @@ msgstr "Nekonata rezultotipo"
 msgid "Unspecified error"
 msgstr "Nespecifita eraro"
 
-#: object_factory.cpp:197
+#: object_factory.cpp:206
 #, fuzzy
 #| msgid "Name"
 msgctxt "UMLObject name"
 msgid "Name"
 msgstr "Nomo"
 
-#: object_factory.cpp:208
+#: object_factory.cpp:217
 msgid ""
 "This is a reserved keyword for the language of the configured code generator."
 msgstr ""
 "Tio estas rezervita ŝlosilvorto de la programlingvo de la aktiva "
 "kodgeneratoro."
 
-#: object_factory.cpp:209
+#: object_factory.cpp:218
 msgid "Reserved Keyword"
 msgstr "Rezervita Ŝlosilvorto"
 
@@ -4627,7 +4641,7 @@ msgstr "Neĝusta uzo de asocioj."
 msgid "Association Error"
 msgstr "Eraro pri Asocio"
 
-#: toolbarstateother.cpp:250 umlscene.cpp:3025 widgets/activitywidget.cpp:363
+#: toolbarstateother.cpp:250 umlscene.cpp:3061 widgets/activitywidget.cpp:363
 msgid "Enter Activity Name"
 msgstr "Enigi Nomon de Aktiveco"
 
@@ -4667,15 +4681,15 @@ msgstr "Enigu la Kombinitan Fragmenton"
 msgid "new Combined Fragment"
 msgstr "nova Kombinita Fragmento"
 
-#: toolbarstateother.cpp:279 umlscene.cpp:2990 widgets/statewidget.cpp:483
+#: toolbarstateother.cpp:279 umlscene.cpp:3026 widgets/statewidget.cpp:483
 msgid "Enter State Name"
 msgstr "Enigi Nomon de Stato"
 
-#: toolbarstateother.cpp:280 umlscene.cpp:2991 widgets/statewidget.cpp:484
+#: toolbarstateother.cpp:280 umlscene.cpp:3027 widgets/statewidget.cpp:484
 msgid "Enter the name of the new state:"
 msgstr "Enigi nomon de nova stato"
 
-#: toolbarstateother.cpp:280 umlscene.cpp:2992
+#: toolbarstateother.cpp:280 umlscene.cpp:3028
 msgid "new state"
 msgstr "nova stato"
 
@@ -5871,8 +5885,8 @@ msgstr "Malfermanta dosieron..."
 
 #: uml.cpp:922 uml.cpp:1217 umldoc.cpp:282 umldoc.cpp:371 umldoc.cpp:422
 #: umldoc.cpp:444 umldoc.cpp:482 umldoc.cpp:494 umldoc.cpp:508 umldoc.cpp:520
-#: umldoc.cpp:532 umldoc.cpp:698 umldoc.cpp:705 umldoc.cpp:2863
-#: umldoc.cpp:2866
+#: umldoc.cpp:532 umldoc.cpp:698 umldoc.cpp:705 umldoc.cpp:2891
+#: umldoc.cpp:2894
 msgid "Untitled"
 msgstr "Sentitola"
 
@@ -6029,7 +6043,7 @@ msgstr "nova_fkey_limigo"
 msgid "new_check_constraint"
 msgstr "nova_kontrol_limigo"
 
-#: umldoc.cpp:80 umldoc.cpp:1969
+#: umldoc.cpp:80 umldoc.cpp:1997
 msgid "UML Model"
 msgstr "UML Modelo"
 
@@ -6098,13 +6112,13 @@ msgid "There was a problem loading file: %1"
 msgstr "Problemo dum la ŝarĝado de la dosiero: %1"
 
 #: umldoc.cpp:619 umldoc.cpp:629 umldoc.cpp:646 umldoc.cpp:679 umldoc.cpp:697
-#: umllistview.cpp:494 umlviewimageexportermodel.cpp:257
+#: umllistview.cpp:495 umlviewimageexportermodel.cpp:257
 #, kde-format
 msgid "There was a problem saving file: %1"
 msgstr "Problemo dum la savado de la dosiero: %1"
 
 #: umldoc.cpp:619 umldoc.cpp:629 umldoc.cpp:646 umldoc.cpp:679 umldoc.cpp:697
-#: umldoc.cpp:704 umllistview.cpp:495
+#: umldoc.cpp:704 umllistview.cpp:496
 msgid "Save Error"
 msgstr "Savo-Eraro"
 
@@ -6156,36 +6170,36 @@ msgctxt "diagram name"
 msgid "Name"
 msgstr "Nomo"
 
-#: umldoc.cpp:1280 umldoc.cpp:1345
+#: umldoc.cpp:1280 umldoc.cpp:1351
 msgid "That is an invalid name for a diagram."
 msgstr "Tio estas nevalida nomo por diagramo."
 
-#: umldoc.cpp:1284 umldoc.cpp:1354
+#: umldoc.cpp:1284 umldoc.cpp:1360
 msgid "A diagram is already using that name."
 msgstr "Iu diagramo jam uzas tiun nomon."
 
-#: umldoc.cpp:1339
+#: umldoc.cpp:1345
 #, fuzzy
 #| msgid "Name"
 msgctxt "renaming diagram"
 msgid "Name"
 msgstr "Nomo"
 
-#: umldoc.cpp:1370
+#: umldoc.cpp:1376
 #, fuzzy
 #| msgid "Name"
 msgctxt "renaming uml object"
 msgid "Name"
 msgstr "Nomo"
 
-#: umldoc.cpp:1404
+#: umldoc.cpp:1410
 #, fuzzy
 #| msgid "Name"
 msgctxt "renaming child uml object"
 msgid "Name"
 msgstr "Nomo"
 
-#: umldoc.cpp:1414
+#: umldoc.cpp:1420
 msgid ""
 "The name you entered was not unique.\n"
 "Is this what you wanted?"
@@ -6193,93 +6207,93 @@ msgstr ""
 "La nomo kiun vi enigis estis neunika.\n"
 "Ĉu tion vi intencis?"
 
-#: umldoc.cpp:1415
+#: umldoc.cpp:1421
 msgid "Use Name"
 msgstr "Uzi Nomon"
 
-#: umldoc.cpp:1415
+#: umldoc.cpp:1421
 msgid "Enter New Name"
 msgstr "Enigi Novan Nomon"
 
-#: umldoc.cpp:1464
+#: umldoc.cpp:1475
 #, kde-format
 msgid "Are you sure you want to delete diagram %1?"
 msgstr "Chu vi certas ke vi volas forigi la diagramon %1?"
 
-#: umldoc.cpp:1465
+#: umldoc.cpp:1476
 msgid "Delete Diagram"
 msgstr "Forigi Diagramon"
 
-#: umldoc.cpp:2050
+#: umldoc.cpp:2078
 msgid "Setting up the document..."
 msgstr "Preparanta la dokumenton..."
 
-#: umldoc.cpp:2080
+#: umldoc.cpp:2108
 msgid "Resolving object references..."
 msgstr "Solvanta objektreferencojn..."
 
-#: umldoc.cpp:2131
+#: umldoc.cpp:2159
 msgid "Loading UML elements..."
 msgstr "Ŝarĝanta UML elementojn..."
 
-#: umldoc.cpp:2355
+#: umldoc.cpp:2383
 msgid "Loading diagrams..."
 msgstr "Ŝarĝanta diagramojn..."
 
-#: umldoc.cpp:2864
+#: umldoc.cpp:2892
 #, kde-format
 msgid "/autosave%1"
 msgstr "/autosave%1"
 
-#: umllistview.cpp:455
+#: umllistview.cpp:456
 msgid "Externalize Folder"
 msgstr "Eksterigi Tekon"
 
-#: umllistview.cpp:476
+#: umllistview.cpp:477
 #, kde-format
 msgid "Folder %1 must be relative to the main model directory, %2."
 msgstr ""
 
-#: umllistview.cpp:477
+#: umllistview.cpp:478
 #, fuzzy
 #| msgid "Paste Error"
 msgid "Path Error"
 msgstr "Eraro dum Regluado"
 
-#: umllistview.cpp:485
+#: umllistview.cpp:486
 #, kde-format
 msgid ""
 "File %1 already exists!\n"
 "The existing file will be overwritten."
 msgstr ""
 
-#: umllistview.cpp:486
+#: umllistview.cpp:487
 #, fuzzy
 #| msgid "File Already Exists"
 msgid "File Exist"
 msgstr "Dosiero Jam Ekzistas"
 
-#: umllistview.cpp:526
+#: umllistview.cpp:527
 msgid "Enter Model Name"
 msgstr "Enigi Modelnomon"
 
-#: umllistview.cpp:527
+#: umllistview.cpp:528
 msgid "Enter the new name of the model:"
 msgstr "Enigu la novan nomon de la modelo:"
 
-#: umllistview.cpp:1263
+#: umllistview.cpp:1264
 msgid "Views"
 msgstr "Perspektivoj"
 
-#: umllistview.cpp:2197
+#: umllistview.cpp:2198
 msgid "Loading listview..."
 msgstr "Ŝarĝanta Listoperspektivon..."
 
-#: umllistview.cpp:2581
+#: umllistview.cpp:2582
 msgid "The folder must be emptied before it can be deleted."
 msgstr "La teko devas esti maplena antaŭ ĝia forigo."
 
-#: umllistview.cpp:2582
+#: umllistview.cpp:2583
 msgid "Folder Not Empty"
 msgstr "Teko Ne Malplena"
 
@@ -6313,57 +6327,69 @@ msgstr "Nomo Ne Valida"
 msgid "Diagram: %2 Page %1"
 msgstr "Diagramo: %2 Paĝo %1"
 
-#: umlscene.cpp:1285
+#: umlscene.cpp:1311
 #, fuzzy
 #| msgid "&Use fill color"
 msgid "Use fill color"
 msgstr "&Uzi plenigan koloron"
 
-#: umlscene.cpp:1287
+#: umlscene.cpp:1313
 #, fuzzy
 #| msgid "Fill Color"
 msgid "No fill color"
 msgstr "Pleniga Koloro"
 
-#: umlscene.cpp:1302
+#: umlscene.cpp:1328
 #, fuzzy
 #| msgid "Change Font"
 msgid "Change font"
 msgstr "Ŝanĝi Tiparon"
 
-#: umlscene.cpp:1316
+#: umlscene.cpp:1342
 #, fuzzy
 #| msgid "Change Line Color"
 msgid "Change line color"
 msgstr "Ŝanĝi Linikoloron"
 
-#: umlscene.cpp:1334
+#: umlscene.cpp:1360
 #, fuzzy
 #| msgid "Line width:"
 msgid "Change line width"
 msgstr "Larĝeco de linio:"
 
-#: umlscene.cpp:1354
+#: umlscene.cpp:1380
 #, fuzzy
 #| msgid "Change Fill Color"
 msgid "Change fill color"
 msgstr "Ŝanĝi Plenigan Koloron"
 
-#: umlscene.cpp:1369
+#: umlscene.cpp:1395
 #, fuzzy
 #| msgid "Role Properties"
 msgid "Change visual property"
 msgstr "Roltrajtoj"
 
-#: umlscene.cpp:3063
+#: umlscene.cpp:1415
+#, fuzzy
+#| msgid "Delete"
+msgid "Delete widgets"
+msgstr "Forigi"
+
+#: umlscene.cpp:1466
+#, fuzzy
+#| msgid "Create widget :"
+msgid "Resize widgets"
+msgstr "Krei fenestraĵon :"
+
+#: umlscene.cpp:3099
 msgid "Enter Diagram Name"
 msgstr "Enigi Nomon de Diagramo"
 
-#: umlscene.cpp:3064
+#: umlscene.cpp:3100
 msgid "Enter the new name of the diagram:"
 msgstr "Enigu la novan nomon de la diagramo:"
 
-#: umlscene.cpp:3243
+#: umlscene.cpp:3279
 msgid ""
 "You are about to delete the entire diagram.\n"
 "Are you sure?"
@@ -6371,7 +6397,7 @@ msgstr ""
 "Vi estas forigonta la tutan diagramon.\n"
 "Ĉu vi certas?"
 
-#: umlscene.cpp:3244
+#: umlscene.cpp:3280
 msgid "Delete Diagram?"
 msgstr "Forigi Diagramon?"
 
@@ -6598,11 +6624,11 @@ msgstr "Enigu Objektfluan Staton"
 msgid "Enter State (keep '-' if there is no state for the object) "
 msgstr ""
 
-#: widgets/objectwidget.cpp:194
+#: widgets/objectwidget.cpp:168
 msgid "Rename Object"
 msgstr "Renomi Objekton"
 
-#: widgets/objectwidget.cpp:195
+#: widgets/objectwidget.cpp:169
 msgid "Enter object name:"
 msgstr "Enigu objektnomon:"
 
@@ -6649,7 +6675,7 @@ msgstr "Enigu la antaŭkondiĉon"
 msgid "new precondition"
 msgstr "nova_antaŭkondiĉo"
 
-#: widgets/umlwidget.cpp:427
+#: widgets/umlwidget.cpp:449
 msgid ""
 "Hold shift or ctrl to move in X axis. Hold shift and control to move in Y "
 "axis. Right button click to cancel move."
@@ -6657,7 +6683,13 @@ msgstr ""
 "Tenu aŭ Shift aŭ Ctrl por moviĝi X-akse. Tenu kaj Shift kaj Ctrl por moviĝi "
 "Y-akse.Dekstra musbutono nuligas la movon."
 
-#: widgets/umlwidget.cpp:1213
+#: widgets/umlwidget.cpp:532
+#, fuzzy
+#| msgid "Move widget :"
+msgid "Move widgets"
+msgstr "Movi "
+
+#: widgets/umlwidget.cpp:1243
 msgid ""
 "Hold shift or ctrl to move in X axis. Hold shift and control to move in Y "
 "axis. Right button click to cancel resize."
