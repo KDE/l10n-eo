@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-01-02 01:25+0000\n"
+"POT-Creation-Date: 2014-01-06 01:30+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -63,8 +63,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, toLabel)
 #. i18n: ectx: property (text), widget (QLabel, kDateEndLabel)
-#: backup/skgpropertyeditor.ui:78
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:596
+#: backup/skgpropertyeditor.ui:78 skgbasegui/skgperiodedit.ui:212
 msgid "to"
 msgstr "al"
 
@@ -620,19 +619,19 @@ msgstr ""
 #. i18n: ectx: property (statusTip), widget (QToolButton, kAddWidget)
 #. i18n: ectx: property (text), widget (KPushButton, kAdd)
 #. i18n: ectx: property (text), widget (KPushButton, kAddButton)
-#. i18n: ectx: property (toolTip), widget (QToolButton, kLineAdd)
-#. i18n: ectx: property (statusTip), widget (QToolButton, kLineAdd)
 #. i18n: ectx: property (toolTip), widget (QToolButton, kLineUp)
 #. i18n: ectx: property (statusTip), widget (QToolButton, kLineUp)
+#. i18n: ectx: property (toolTip), widget (QToolButton, kLineAdd)
+#. i18n: ectx: property (statusTip), widget (QToolButton, kLineAdd)
 #. i18n: ectx: property (text), widget (KPushButton, kUnitAdd)
 #: plugins/generic/skg_dashboard/skgdashboardpluginwidget_base.ui:34
 #: plugins/generic/skg_dashboard/skgdashboardpluginwidget_base.ui:37
 #: plugins/skrooge/skrooge_calculator/skgcalculatorpluginwidget_base.ui:753
 #: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:145
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:299
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:302
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:346
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:349
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:352
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:539
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:542
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget_base.ui:296
 #: plugins/skrooge/skrooge_tracker/skgtrackerpluginwidget_base.ui:145
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget_base.ui:716
@@ -2722,10 +2721,10 @@ msgstr ""
 
 #: plugins/skrooge/skrooge_bank/skgbankplugin.cpp:117
 #: plugins/skrooge/skrooge_categories/skgcategoriesplugin.cpp:136
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:62
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:63
 #: plugins/skrooge/skrooge_report/skgreportboardwidget.cpp:44
 #: plugins/skrooge/skrooge_report/skgreportplugin.cpp:85
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:109
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:107
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Verb"
@@ -5625,73 +5624,55 @@ msgstr ""
 msgid "Compute balances"
 msgstr ""
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:35
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:36
 msgctxt "Dashboard widget title"
 msgid "Income & Expenditure"
 msgstr ""
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:70
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:73
 msgctxt "Noun, a type of operations"
 msgid "Transfers"
 msgstr ""
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:76
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:79
 #, fuzzy
 #| msgid "Searches"
 msgctxt "Noun, a type of operations"
 msgid "Tracked"
 msgstr "Serĉoj"
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:82
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:85
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Noun, a type of operations"
 msgid "On suboperations"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:149
-#, fuzzy
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:207
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:213
+#, fuzzy, kde-format
+#| msgid "Lines:"
+msgctxt "Title of a list of operations"
+msgid "Incomes of %1"
+msgstr "Linioj:"
+
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:209
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:215
+#, fuzzy, kde-format
 #| msgid "Current"
 msgctxt "Title of a list of operations"
-msgid "Incomes of current month"
+msgid "Expenses of %1"
 msgstr "Aktuala"
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:151
-#, fuzzy
-#| msgid "Current"
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:211
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:217
+#, fuzzy, kde-format
+#| msgid "Document to open"
 msgctxt "Title of a list of operations"
-msgid "Expenses of current month"
-msgstr "Aktuala"
+msgid "Savings of %1"
+msgstr "La dosiero malfermiĝi"
 
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:153
-#, fuzzy
-#| msgid "Current"
-msgctxt "Title of a list of operations"
-msgid "Savings of current month"
-msgstr "Aktuala"
-
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:155
-#, fuzzy
-#| msgid "&Previous"
-msgctxt "Title of a list of operations"
-msgid "Incomes of previous month"
-msgstr "An&taŭa"
-
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:157
-#, fuzzy
-#| msgid "&Previous"
-msgctxt "Title of a list of operations"
-msgid "Expenses of previous month"
-msgstr "An&taŭa"
-
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:159
-#, fuzzy
-#| msgid "&Previous"
-msgctxt "Title of a list of operations"
-msgid "Savings of previous month"
-msgstr "An&taŭa"
-
-#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:191
+#: plugins/skrooge/skrooge_operation/skgoperationboardwidget.cpp:246
 msgctxt "Noun, the title of a section"
 msgid "Income & Expenditure"
 msgstr ""
@@ -6994,54 +6975,40 @@ msgstr ""
 msgid "Update selected operations (Shift+Enter)"
 msgstr "Operacioj"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:36
-#, fuzzy
-#| msgid "Current"
-msgid "Current month"
-msgstr "Aktuala"
-
 #. i18n: ectx: property (format), widget (SKGProgressBar, kIncome)
 #. i18n: ectx: property (format), widget (SKGProgressBar, kExpense)
 #. i18n: ectx: property (format), widget (SKGProgressBar, kIncome_previous)
 #. i18n: ectx: property (format), widget (SKGProgressBar, kExpense_previous)
 #. i18n: ectx: property (format), widget (SKGProgressBar, kSaving)
 #. i18n: ectx: property (format), widget (SKGProgressBar, kSaving_previous)
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:52
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:81
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:124
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:153
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:189
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:205
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:49
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:78
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:121
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:150
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:186
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:202
 #, no-c-format
 msgid "%p"
 msgstr "%p"
 
 #. i18n: ectx: property (text), widget (QLabel, kExpenseLabel)
 #. i18n: ectx: property (text), widget (QLabel, kExpense_previousLabel)
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:65
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:137
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:62
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:134
 msgid "Expenditure:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:95
-#, fuzzy
-#| msgid "&Previous"
-msgid "Previous month"
-msgstr "An&taŭa"
-
 #. i18n: ectx: property (text), widget (QLabel, kIncome_previousLabel)
 #. i18n: ectx: property (text), widget (QLabel, kIncomeLabel)
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:108
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:166
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:105
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:163
 msgid "Income:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, kSavingLabel)
 #. i18n: ectx: property (text), widget (QLabel, kSaving_previousLabel)
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:173
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:212
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:170
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_board.ui:209
 msgid "Saving:"
 msgstr ""
 
@@ -7414,107 +7381,107 @@ msgid ""
 "graph report. Check if these operations are normal."
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:77
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:75
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Display graph values as the sum of operations amount"
 msgid "Sum of operations"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:78
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:76
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Display graph values as the cumulated sum of operations amount"
 msgid "Cumulated sum of operations"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:79
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:77
 msgctxt "Display graph values in base 100"
 msgid "Base 100"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:80
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:78
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Display graph values in base 100"
 msgid "Cumulated sum in base 100"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:81
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:79
 #, fuzzy
 #| msgid "Columns"
 msgctxt "Display graph values in percentage"
 msgid "Percent of columns"
 msgstr "Kolumnoj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:82
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:80
 msgctxt "Display graph values in percentage"
 msgid "Absolute percent of columns"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:83
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:81
 #, fuzzy
 #| msgid "Current"
 msgctxt "Display graph values in percentage"
 msgid "Percent of lines"
 msgstr "Aktuala"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:84
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:82
 msgctxt "Display graph values in percentage"
 msgid "Absolute percent of lines"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:85
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:83
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Display graph values as a number of operations (or transaction)"
 msgid "Count number of operations"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:87
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:85
 msgctxt "Noun"
 msgid "None"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:88
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:86
 msgctxt "Noun"
 msgid "Moving average"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:89
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:87
 msgctxt "Noun"
 msgid "Weighted moving average"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:91
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:89
 msgctxt "Noun"
 msgid "Schedule"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:92
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:90
 #, fuzzy
 #| msgid "Operation"
 msgctxt "Noun"
 msgid "Budget"
 msgstr "Operacio"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:94
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:92
 msgid "Setup Report"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:94
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:92
 msgid "Display the edit panel for report"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:455
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:452
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Noun, a list of items"
 msgid "Sub operations with "
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:474
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:1171
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:471
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:934
 #: skgbankmodeler/skgdocumentbank.cpp:762
 #, fuzzy
 #| msgid "All"
@@ -7522,381 +7489,267 @@ msgctxt "Noun"
 msgid "All"
 msgstr "Ĉiuj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:500
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:528
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:497
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:525
 #, kde-format
 msgctxt "Noun"
 msgid "'%1' with '%2'"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:517
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:539
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:514
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:536
 #, fuzzy
 #| msgid " and "
 msgctxt "Noun"
 msgid " and "
 msgstr " kaj "
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:524
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:521
 #, kde-format
 msgctxt "Noun"
 msgid "'%1' are empty"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:555
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:544
 #, fuzzy
 #| msgid "Lines:"
 msgctxt "Noun"
 msgid "incomes"
 msgstr "Linioj:"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:558
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:547
 msgctxt "Noun"
 msgid "expenses"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:561
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:550
 msgctxt "Noun"
 msgid "transfers"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:563
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:552
 msgctxt "Noun"
 msgid "grouped"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:566
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:555
 #, fuzzy
 #| msgid "Standard"
 msgctxt "Noun"
 msgid "tracked"
 msgstr "Defaŭlta"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:569
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:558
 #, kde-format
 msgctxt "Noun"
 msgid "during '%1' for '%2'"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:609
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:598
 #, kde-format
 msgid "(%1) or (%2)"
 msgstr ""
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:1086
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:849
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Progression step"
 msgid "Create scheduled operations"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:1112
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:875
 #, fuzzy
 #| msgid "Operations"
 msgctxt "Progression step"
 msgid "Create budgeted operations"
 msgstr "Operacioj"
 
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:1271
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:1034
 #, kde-format
 msgctxt "Noun"
 msgid "N %1"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, kLinesLabel)
+#. i18n: ectx: property (text), widget (QLabel, kColumnsLabel)
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:99
-msgid "Lines:"
-msgstr "Linioj:"
+msgid "Columns:"
+msgstr "Kolumnoj:"
 
-#. i18n: ectx: property (toolTip), widget (SKGComboBox, kLines)
-#. i18n: ectx: property (statusTip), widget (SKGComboBox, kLines)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:112
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:115
-msgid "Select what you want to see in the rows"
+#. i18n: ectx: property (toolTip), widget (SKGComboBox, kCorrectedByMode)
+#. i18n: ectx: property (statusTip), widget (SKGComboBox, kCorrectedByMode)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:118
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:121
+msgid "Select how you want to correct values"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (SKGComboBox, kColumns)
-#. i18n: ectx: property (statusTip), widget (SKGComboBox, kColumns)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:138
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:141
-msgid "Select what you want to see in the columns"
+#. i18n: ectx: property (toolTip), widget (QToolButton, kColDown)
+#. i18n: ectx: property (statusTip), widget (QToolButton, kColDown)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:143
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:146
+msgid "Reduce level"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (SKGComboBox, kMode)
-#. i18n: ectx: property (statusTip), widget (SKGComboBox, kMode)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:151
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:154
-msgid "Select what you want to do with values"
+#. i18n: ectx: property (toolTip), widget (QToolButton, kLineDown)
+#. i18n: ectx: property (statusTip), widget (QToolButton, kLineDown)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:168
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:171
+#, fuzzy
+#| msgid "Operations"
+msgid "Remove the last one"
+msgstr "Operacioj"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, kLineRemove)
+#. i18n: ectx: property (statusTip), widget (QToolButton, kLineRemove)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:193
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:196
+msgid "Remove"
+msgstr "Forigi"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kGrouped)
+#. i18n: ectx: property (statusTip), widget (QCheckBox, kGrouped)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:209
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:212
+msgid "Include grouped operations or not in report"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kExpenses)
-#. i18n: ectx: property (statusTip), widget (QCheckBox, kExpenses)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:164
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:167
-msgid "Include expenses or not in report"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kExpenses)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:170
-msgid "Expenses"
+#. i18n: ectx: property (text), widget (QCheckBox, kGrouped)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:215
+msgid "Grouped"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kTracked)
 #. i18n: ectx: property (statusTip), widget (QCheckBox, kTracked)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:180
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:183
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:225
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:228
 #, fuzzy
 #| msgid "Operations"
 msgid "Include tracked operations or not in report"
 msgstr "Operacioj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kTracked)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:186
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:231
 #, fuzzy
 #| msgid "Searches"
 msgid "Tracked"
 msgstr "Serĉoj"
 
-#. i18n: ectx: property (text), widget (QLabel, kColumnsLabel)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:202
-msgid "Columns:"
-msgstr "Kolumnoj:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:215
-msgid "Data"
-msgstr "Datumo"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:232
-#, fuzzy
-#| msgid "Date"
-msgid "Dates"
-msgstr "Dato"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:249
-msgid "Operation Types"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, kLineRemove)
-#. i18n: ectx: property (statusTip), widget (QToolButton, kLineRemove)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:271
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:274
-msgid "Remove"
-msgstr "Forigi"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, kLineDown)
-#. i18n: ectx: property (statusTip), widget (QToolButton, kLineDown)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:327
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:330
-#, fuzzy
-#| msgid "Operations"
-msgid "Remove the last one"
-msgstr "Operacioj"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kIncomes)
 #. i18n: ectx: property (statusTip), widget (QCheckBox, kIncomes)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:359
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:362
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:241
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:244
 #, fuzzy
 #| msgid "Operations"
 msgid "Include incomes or not in report"
 msgstr "Operacioj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kIncomes)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:365
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:247
 msgid "Incomes"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:257
+msgid "Corrected by:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:267
+msgid "Data"
+msgstr "Datumo"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:277
+msgid "Operation Types"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (SKGComboBox, kLines)
+#. i18n: ectx: property (statusTip), widget (SKGComboBox, kLines)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:307
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:310
+msgid "Select what you want to see in the rows"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kExpenses)
+#. i18n: ectx: property (statusTip), widget (QCheckBox, kExpenses)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:320
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:323
+msgid "Include expenses or not in report"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kExpenses)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:326
+msgid "Expenses"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:362
+#, fuzzy
+#| msgid "Date"
+msgid "Dates"
+msgstr "Dato"
+
 #. i18n: ectx: property (text), widget (QLabel, kModeLabel)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:381
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:391
 msgid "Mode:"
 msgstr "Moduso:"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, kColUp)
-#. i18n: ectx: property (statusTip), widget (QToolButton, kColUp)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:413
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:416
-msgid "Increase level"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, kColDown)
-#. i18n: ectx: property (statusTip), widget (QToolButton, kColDown)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:438
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:441
-msgid "Reduce level"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:460
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:413
 msgid "Forecast:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (SKGComboBox, kForecastCmb)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:487
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:440
 msgid ""
 "Choose forecast method:\n"
 "- Schedule: Use the scheduled operations in forecast.\n"
 "- Average: Use average of the three previous months in forecast"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QLabel, kDateBeginLabel)
-#. i18n: ectx: property (statusTip), widget (QLabel, kDateBeginLabel)
-#. i18n: ectx: property (toolTip), widget (SKGDateEdit, kDateBegin)
-#. i18n: ectx: property (statusTip), widget (SKGDateEdit, kDateBegin)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:537
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:540
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:571
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:574
-msgid "Begin date"
+#. i18n: ectx: property (toolTip), widget (SKGUnitComboBox, kCorrectedBy)
+#. i18n: ectx: property (statusTip), widget (SKGUnitComboBox, kCorrectedBy)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:472
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:475
+msgid "Select the index to correct the values"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, kDateBeginLabel)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:543
-msgid "from"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, kDateEndLabel)
-#. i18n: ectx: property (statusTip), widget (QLabel, kDateEndLabel)
-#. i18n: ectx: property (toolTip), widget (SKGDateEdit, kDateEnd)
-#. i18n: ectx: property (statusTip), widget (SKGDateEdit, kDateEnd)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:590
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:593
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:621
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:624
-#, fuzzy
-#| msgid "date"
-msgid "End date"
-msgstr "dato"
-
-#. i18n: ectx: property (toolTip), widget (SKGComboBox, kPeriod)
-#. i18n: ectx: property (statusTip), widget (SKGComboBox, kPeriod)
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kNbIntervals)
-#. i18n: ectx: property (statusTip), widget (KIntSpinBox, kNbIntervals)
-#. i18n: ectx: property (toolTip), widget (SKGComboBox, kInterval)
-#. i18n: ectx: property (statusTip), widget (SKGComboBox, kInterval)
-#. i18n: ectx: property (toolTip), widget (QSlider, kTimeline)
-#. i18n: ectx: property (statusTip), widget (QSlider, kTimeline)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:652
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:655
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:701
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:704
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:717
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:720
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:756
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:759
-msgid "Select the period of the graph"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kPeriod)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:662
-msgid "All Dates"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kPeriod)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:667
-msgid "Current..."
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kPeriod)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:672
-msgid "Previous..."
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kPeriod)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:677
-msgid "Last..."
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kPeriod)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:682
-msgid "Custom..."
-msgstr "Propra..."
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kPeriod)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:687
-msgid "Timeline..."
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kInterval)
-#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:727
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:129
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:126
-msgid "day(s)"
-msgstr "tago(j)"
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kInterval)
-#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:732
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:134
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:131
-msgid "week(s)"
-msgstr "semajno(j)"
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kInterval)
-#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:737
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:139
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:136
-msgid "month(s)"
-msgstr "monato(j)"
-
-#. i18n: ectx: property (text), item, widget (SKGComboBox, kInterval)
-#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:742
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:144
-#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:141
-msgid "year(s)"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:812
-msgid "Corrected by:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kGrouped)
-#. i18n: ectx: property (statusTip), widget (QCheckBox, kGrouped)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:822
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:825
-msgid "Include grouped operations or not in report"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kGrouped)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:828
-msgid "Grouped"
+#. i18n: ectx: property (toolTip), widget (QToolButton, kColUp)
+#. i18n: ectx: property (statusTip), widget (QToolButton, kColUp)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:488
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:491
+msgid "Increase level"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kTransfers)
 #. i18n: ectx: property (statusTip), widget (QCheckBox, kTransfers)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:838
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:841
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:501
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:504
 msgid "Include transfers or not in report"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kTransfers)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:844
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:507
 msgid "Transfers"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (SKGComboBox, kCorrectedByMode)
-#. i18n: ectx: property (statusTip), widget (SKGComboBox, kCorrectedByMode)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:857
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:860
-msgid "Select how you want to correct values"
+#. i18n: ectx: property (toolTip), widget (SKGComboBox, kMode)
+#. i18n: ectx: property (statusTip), widget (SKGComboBox, kMode)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:514
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:517
+msgid "Select what you want to do with values"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (SKGUnitComboBox, kCorrectedBy)
-#. i18n: ectx: property (statusTip), widget (SKGUnitComboBox, kCorrectedBy)
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:870
-#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:873
-msgid "Select the index to correct the values"
+#. i18n: ectx: property (toolTip), widget (SKGComboBox, kColumns)
+#. i18n: ectx: property (statusTip), widget (SKGComboBox, kColumns)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:555
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:558
+msgid "Select what you want to see in the columns"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, kLinesLabel)
+#: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:574
+msgid "Lines:"
+msgstr "Linioj:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget_pref.ui:17
@@ -8218,6 +8071,34 @@ msgstr ""
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:96
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:105
 msgid "Once every:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:129
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:126
+msgid "day(s)"
+msgstr "tago(j)"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:134
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:131
+msgid "week(s)"
+msgstr "semajno(j)"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:139
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:136
+msgid "month(s)"
+msgstr "monato(j)"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kOnceEveryUnit)
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_once_every_unit)
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:144
+#: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_pref.ui:141
+msgid "year(s)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kAutoWrite)
@@ -12711,6 +12592,112 @@ msgctxt "Noun, name of the user action"
 msgid "Move bookmark"
 msgstr "Legosignoj"
 
+#: skgbasegui/skgperiodedit.cpp:33
+#, fuzzy
+#| msgid "Date"
+msgctxt "Period mode"
+msgid "All Dates"
+msgstr "Dato"
+
+#: skgbasegui/skgperiodedit.cpp:34
+#, fuzzy
+#| msgid "Current"
+msgctxt "Period mode"
+msgid "Current..."
+msgstr "Aktuala"
+
+#: skgbasegui/skgperiodedit.cpp:35
+#, fuzzy
+#| msgid "&Previous"
+msgctxt "Period mode"
+msgid "Previous..."
+msgstr "An&taŭa"
+
+#: skgbasegui/skgperiodedit.cpp:36
+msgctxt "Period mode"
+msgid "Last..."
+msgstr ""
+
+#: skgbasegui/skgperiodedit.cpp:37
+#, fuzzy
+#| msgid "Custom..."
+msgctxt "Period mode"
+msgid "Custom..."
+msgstr "Propra..."
+
+#: skgbasegui/skgperiodedit.cpp:38
+msgctxt "Period mode"
+msgid "Timeline..."
+msgstr ""
+
+#: skgbasegui/skgperiodedit.cpp:40
+#, fuzzy
+#| msgid "day(s)"
+msgctxt "Period interval"
+msgid "day(s)"
+msgstr "tago(j)"
+
+#: skgbasegui/skgperiodedit.cpp:41
+#, fuzzy
+#| msgid "week(s)"
+msgctxt "Period interval"
+msgid "week(s)"
+msgstr "semajno(j)"
+
+#: skgbasegui/skgperiodedit.cpp:42
+#, fuzzy
+#| msgid "month(s)"
+msgctxt "Period interval"
+msgid "month(s)"
+msgstr "monato(j)"
+
+#: skgbasegui/skgperiodedit.cpp:43
+#, fuzzy
+#| msgid "day(s)"
+msgctxt "Period interval"
+msgid "year(s)"
+msgstr "tago(j)"
+
+#. i18n: ectx: property (toolTip), widget (SKGComboBox, kPeriod)
+#. i18n: ectx: property (statusTip), widget (SKGComboBox, kPeriod)
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, kNbIntervals)
+#. i18n: ectx: property (statusTip), widget (KIntSpinBox, kNbIntervals)
+#. i18n: ectx: property (toolTip), widget (SKGComboBox, kInterval)
+#. i18n: ectx: property (statusTip), widget (SKGComboBox, kInterval)
+#. i18n: ectx: property (toolTip), widget (QSlider, kTimeline)
+#. i18n: ectx: property (statusTip), widget (QSlider, kTimeline)
+#: skgbasegui/skgperiodedit.ui:31 skgbasegui/skgperiodedit.ui:34
+#: skgbasegui/skgperiodedit.ui:50 skgbasegui/skgperiodedit.ui:53
+#: skgbasegui/skgperiodedit.ui:66 skgbasegui/skgperiodedit.ui:69
+#: skgbasegui/skgperiodedit.ui:85 skgbasegui/skgperiodedit.ui:88
+msgid "Select the period of the graph"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, kDateBeginLabel)
+#. i18n: ectx: property (statusTip), widget (QLabel, kDateBeginLabel)
+#. i18n: ectx: property (toolTip), widget (SKGDateEdit, kDateBegin)
+#. i18n: ectx: property (statusTip), widget (SKGDateEdit, kDateBegin)
+#: skgbasegui/skgperiodedit.ui:156 skgbasegui/skgperiodedit.ui:159
+#: skgbasegui/skgperiodedit.ui:187 skgbasegui/skgperiodedit.ui:190
+msgid "Begin date"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, kDateBeginLabel)
+#: skgbasegui/skgperiodedit.ui:162
+msgid "from"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, kDateEndLabel)
+#. i18n: ectx: property (statusTip), widget (QLabel, kDateEndLabel)
+#. i18n: ectx: property (toolTip), widget (SKGDateEdit, kDateEnd)
+#. i18n: ectx: property (statusTip), widget (SKGDateEdit, kDateEnd)
+#: skgbasegui/skgperiodedit.ui:206 skgbasegui/skgperiodedit.ui:209
+#: skgbasegui/skgperiodedit.ui:234 skgbasegui/skgperiodedit.ui:237
+#, fuzzy
+#| msgid "date"
+msgid "End date"
+msgstr "dato"
+
 #: skgbasegui/skgshow.cpp:390
 #, fuzzy, kde-format
 #| msgid "Show splash screen"
@@ -13491,6 +13478,46 @@ msgid "xxx Settings:"
 msgstr ""
 
 #, fuzzy
+#~| msgid "Current"
+#~ msgctxt "Title of a list of operations"
+#~ msgid "Incomes of current month"
+#~ msgstr "Aktuala"
+
+#, fuzzy
+#~| msgid "Current"
+#~ msgctxt "Title of a list of operations"
+#~ msgid "Savings of current month"
+#~ msgstr "Aktuala"
+
+#, fuzzy
+#~| msgid "&Previous"
+#~ msgctxt "Title of a list of operations"
+#~ msgid "Incomes of previous month"
+#~ msgstr "An&taŭa"
+
+#, fuzzy
+#~| msgid "&Previous"
+#~ msgctxt "Title of a list of operations"
+#~ msgid "Expenses of previous month"
+#~ msgstr "An&taŭa"
+
+#, fuzzy
+#~| msgid "&Previous"
+#~ msgctxt "Title of a list of operations"
+#~ msgid "Savings of previous month"
+#~ msgstr "An&taŭa"
+
+#, fuzzy
+#~| msgid "Current"
+#~ msgid "Current month"
+#~ msgstr "Aktuala"
+
+#, fuzzy
+#~| msgid "&Previous"
+#~ msgid "Previous month"
+#~ msgstr "An&taŭa"
+
+#, fuzzy
 #~| msgid "Delete failed"
 #~ msgctxt "Error message"
 #~ msgid "Printer initialization failed"
@@ -13630,11 +13657,6 @@ msgstr ""
 #~ msgstr "Redakti"
 
 #, fuzzy
-#~| msgid "Lines:"
-#~ msgid "Income only"
-#~ msgstr "Linioj:"
-
-#, fuzzy
 #~| msgid "Operations"
 #~ msgctxt "Noun, a list of items"
 #~ msgid "Recurrent operations"
@@ -13721,12 +13743,6 @@ msgstr ""
 #~ msgctxt "Import step"
 #~ msgid "Import xhb file"
 #~ msgstr "Dosiero"
-
-#, fuzzy
-#~| msgid "Document to open"
-#~ msgctxt "Report header"
-#~ msgid "5 main variations of %1"
-#~ msgstr "La dosiero malfermiĝi"
 
 #, fuzzy
 #~| msgid "Operation"
