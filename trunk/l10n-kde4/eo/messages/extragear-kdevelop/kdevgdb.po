@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgdb\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-01-11 01:28+0000\n"
+"POT-Creation-Date: 2014-01-17 01:33+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -44,13 +44,18 @@ msgstr "Agordo de sencimigilo"
 msgid "Debugger"
 msgstr "Sencimigilo"
 
+#. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
+#: debuggerconfigwidget.ui:38
+msgid "Debugger executable:"
+msgstr "Sencimigilprogramo:"
+
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_gdbPath)
-#: debuggerconfigwidget.ui:32
+#: debuggerconfigwidget.ui:51
 msgid "Gdb executable"
 msgstr "Gdb-programo"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_gdbPath)
-#: debuggerconfigwidget.ui:35
+#: debuggerconfigwidget.ui:54
 msgid ""
 "To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, "
 "for example, for a different architecture, enter the executable name here. "
@@ -58,40 +63,30 @@ msgid ""
 "\"), by typing the name here, or specify full path to the gdb executable."
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
 #. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
-#: debuggerconfigwidget.ui:42 debuggerconfigwidget.ui:77
-msgid "Run gdb in a special shell (mainly for automake projects)"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
-#: debuggerconfigwidget.ui:45
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
+#: debuggerconfigwidget.ui:67 debuggerconfigwidget.ui:86
 msgid ""
-"If you want gdb to be executed by a special shell or tool insert it here. "
-"The main use-case is for Automake based projects where the application is "
-"actually only a script and <b>libtool</b> is needed to get it to run inside "
-"gdb."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
-#: debuggerconfigwidget.ui:58
-msgid "Debugger executable:"
-msgstr "Sencimigilprogramo:"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, debuggingShell_label)
-#: debuggerconfigwidget.ui:80
-msgid ""
-"If you want gdb to be executed by a special shell or tool insert it here. "
-"The main use-case is for Automake based projects where the application is "
-"actually only a script and libtool is needed to get it to run inside gdb."
+"<html><head/><body><p>If you want gdb to be executed by a special shell "
+"script, which for example properly sets the library path, insert it here e."
+"g.: /path/to/script.sh --scriptArguments</p><p>Note: your script'll be "
+"invoked like this: /path/to/script.sh --scriptArguments debbuger --"
+"debuggerArguments. So script.sh <span style=\" font-weight:600;\">must</"
+"span> invoke \"debugger\" executable manually.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
-#: debuggerconfigwidget.ui:83
+#: debuggerconfigwidget.ui:73
 #, fuzzy
-#| msgid "Debugging &shell:"
-msgid "Debugging &shell:"
-msgstr "&Sencimigila ŝelo:"
+#| msgctxt "Shell script to be executed at run time"
+#| msgid "R&un shell script:"
+msgid "&Shell script:"
+msgstr "Lanĉi ŝelskript&on:"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
+#: debuggerconfigwidget.ui:89
+msgid "<html><head/><body><p><br/></p></body></html>"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: debuggerconfigwidget.ui:99
@@ -168,69 +163,55 @@ msgstr ""
 msgid "Remote Debugging"
 msgstr "Fora sencimigado"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, runShellScript_label)
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
+#: debuggerconfigwidget.ui:199 debuggerconfigwidget.ui:215
+msgid ""
+"<html><head/><body><p>Script to start remote application</p><p></p><p>This "
+"shell script is run after the Gdb Config script has been sourced by gdb.</"
+"p><p>It's purpose is to actually start the remote process.</p><p>1) Find a "
+"way to execute a command remotely - rsh, ssh, telnet, ...</p><p>2a) Execute "
+"\"gdbserver ... application\" on target.</p><p>or if your executable "
+"contains the gdb stub:</p><p>2b) Execute \"application\" on target.</p></"
+"body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, runShellScript_label)
 #: debuggerconfigwidget.ui:202
 msgctxt "Shell script to be executed at run time"
 msgid "R&un shell script:"
 msgstr "Lanĉi ŝelskript&on:"
 
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
-#: debuggerconfigwidget.ui:215
-msgid "Script to start remote application"
-msgstr "Skripto por starti foran aplikaĵon"
-
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_runShellScript)
-#: debuggerconfigwidget.ui:224
+#. i18n: ectx: property (toolTip), widget (QLabel, configGdbScript_label)
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
+#: debuggerconfigwidget.ui:225 debuggerconfigwidget.ui:267
 msgid ""
-"This shell script is run after the Config gdb script has been sourced by "
-"gdb.\n"
-"When debugging remotely this script is intended to actually start the remote "
-"process.\n"
-"[It is expected that the debug executable can be reached on the target, "
-"maybe by downloading it as a final build step]\n"
-"1) Find a way to execute a command remotely - rsh, ssh, telnet, ...\n"
-"2a) Execute \"gdbserver ... application\" on target.\n"
-"or if your executable contains the gdb stub\n"
-"2b) Execute \"application\" on target."
+"<html><head/><body><p>This script is sourced by gdb when the debugging "
+"starts.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
-#: debuggerconfigwidget.ui:231
-msgid "&Config gdb script:"
-msgstr "&Gdb-a agordskripto:"
+#: debuggerconfigwidget.ui:228
+#, fuzzy
+#| msgid "Gdb configure script"
+msgid "Gdb &config script:"
+msgstr "Gdb-agordoskripto"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runGdbScript)
-#: debuggerconfigwidget.ui:244
-msgid "Script to connect with remote application"
-msgstr "Skripto por konekti al fora aplikaĵo"
-
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_runGdbScript)
-#: debuggerconfigwidget.ui:251
+#. i18n: ectx: property (toolTip), widget (QLabel, runGdbScript_label)
+#: debuggerconfigwidget.ui:241 debuggerconfigwidget.ui:251
 msgid ""
-"This script is sourced by gdb after the two preceding scripts have been "
-"executed.\n"
-"This script is intended for the actual commands needed to connect to a "
-"remotely running executable.\n"
-"\tshell sleep 5\twait for remote program to start\n"
-"\ttarget remote ...\tconnect to the remote debugger\n"
-"\tcontinue\t[optional] run debugging to the first breakpoint."
+"<html><head/><body><p>Script to connect with remote application</p><p>For "
+"example:</p><p>\tshell sleep 5\t #wait for remote program to start</p><p>"
+"\ttarget remote ...\t#connect to the remote debugger</p><p>\tcontinue\t#"
+"[optional] run debugging to the first breakpoint.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
-#: debuggerconfigwidget.ui:258
+#: debuggerconfigwidget.ui:254
 msgctxt "Gdb script to be executed at run time."
 msgid "Run &gdb script:"
 msgstr "Lanĉi &gdb-skripton:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
-#: debuggerconfigwidget.ui:271
-msgid "Gdb configure script"
-msgstr "Gdb-agordoskripto"
-
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_configGdbScript)
-#: debuggerconfigwidget.ui:274
-msgid "This script is sourced by gdb when the debugging starts."
-msgstr ""
 
 #: debuggerplugin.cpp:93
 msgid "GDB Support"
@@ -945,6 +926,20 @@ msgid ""
 "accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do "
 "sleep 3600;done\""
 msgstr ""
+
+#, fuzzy
+#~| msgid "Debugging &shell:"
+#~ msgid "Debugging &shell:"
+#~ msgstr "&Sencimigila ŝelo:"
+
+#~ msgid "Script to start remote application"
+#~ msgstr "Skripto por starti foran aplikaĵon"
+
+#~ msgid "&Config gdb script:"
+#~ msgstr "&Gdb-a agordskripto:"
+
+#~ msgid "Script to connect with remote application"
+#~ msgstr "Skripto por konekti al fora aplikaĵo"
 
 #~ msgid "Disassemble"
 #~ msgstr "Malkompili"
