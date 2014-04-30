@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-11 06:54+0000\n"
+"POT-Creation-Date: 2014-04-30 06:10+0000\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -728,8 +728,12 @@ msgstr ""
 msgid "M_06"
 msgstr ""
 
-#: i18ndata:129 i18ndata:130
+#: i18ndata:129
 msgid "M_07"
+msgstr ""
+
+#: i18ndata:130
+msgid "M_08"
 msgstr ""
 
 #: i18ndata:131
@@ -1331,7 +1335,7 @@ msgstr "Konverti Bildotipon"
 msgid "Convert Projection Color Space"
 msgstr ""
 
-#: image/kis_image.cc:918 ui/kis_layer_manager.cc:710
+#: image/kis_image.cc:918 ui/kis_layer_manager.cc:704
 msgid "Flatten Image"
 msgstr "Platigi Bildon"
 
@@ -2895,7 +2899,7 @@ msgid "&Select Opaque"
 msgstr "Elektomoduso:"
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:458
-#: ui/kis_layer_manager.cc:285
+#: ui/kis_layer_manager.cc:284
 msgid "&Merge with Layer Below"
 msgstr "&Kunigi kun Ebeno Malsupra"
 
@@ -3220,7 +3224,7 @@ msgstr "%"
 msgid "25%"
 msgstr "D75"
 
-#: plugins/extensions/dockers/imagedocker/imagedocker_dock.cpp:163
+#: plugins/extensions/dockers/imagedocker/imagedocker_dock.cpp:177
 #, fuzzy
 #| msgid "Reference image:"
 msgid "Reference Images"
@@ -7002,7 +7006,9 @@ msgid "Deform Mode"
 msgstr "Kvanto:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, growBtn)
+#. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
 #: plugins/paintops/deform/wdgdeformoptions.ui:44
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:108
 msgid "Grow"
 msgstr "Kreskigi"
 
@@ -9571,21 +9577,21 @@ msgstr "Movi Ebenon"
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:223
 #, fuzzy
 #| msgid "Grid"
-msgid "Show Axis"
+msgid "Show Axes"
 msgstr "Krado"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:227
-msgid "Axis point"
+msgid "Axes point"
 msgstr ""
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:233
-msgid "Set axis angle (degrees)"
+msgid "Set axes angle (degrees)"
 msgstr ""
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:238
 #, fuzzy
 #| msgid "Angle:"
-msgid "Axis Angle:"
+msgid "Axes Angle:"
 msgstr "Angulo:"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:241
@@ -9908,24 +9914,19 @@ msgstr "Triangula ondo"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolCenter)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:95
-msgid "resize keeping center fixed"
+msgid "Resize keeping center fixed"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolCenter)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:98
 #, fuzzy
 #| msgid "Center:"
-msgid "center"
+msgid "Center"
 msgstr "Centro:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolGrow)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:105
-msgid "allow growing the image by dragging outside bounds of the image"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:108
-msgid "grow"
+msgid "Allow growing the image by dragging outside bounds of the image"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolWidth)
@@ -11844,21 +11845,21 @@ msgstr "Teksto"
 msgid "Unknown Input"
 msgstr "Uzu nunan koloraĵon"
 
-#: ui/input/config/kis_action_shortcuts_model.cpp:194
+#: ui/input/config/kis_action_shortcuts_model.cpp:186
 #, fuzzy
 #| msgid "Text:"
 msgctxt "Type of shortcut"
 msgid "Type"
 msgstr "Teksto:"
 
-#: ui/input/config/kis_action_shortcuts_model.cpp:197
+#: ui/input/config/kis_action_shortcuts_model.cpp:189
 #, fuzzy
 #| msgid "Input"
 msgctxt "Input for shortcut"
 msgid "Input"
 msgstr "Enigo"
 
-#: ui/input/config/kis_action_shortcuts_model.cpp:200
+#: ui/input/config/kis_action_shortcuts_model.cpp:192
 #, fuzzy
 #| msgid "Action:"
 msgctxt "Action to trigger with shortcut"
@@ -11923,7 +11924,7 @@ msgstr "Neniu"
 #, fuzzy
 #| msgid "Input"
 msgctxt "Waiting for user input"
-msgid "Input ..."
+msgid "Input..."
 msgstr "Enigo"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -12063,7 +12064,7 @@ msgstr ""
 #: ui/input/kis_input_manager.cpp:490
 #, fuzzy
 #| msgid "Crop Image"
-msgid "Set Mirror Axis"
+msgid "Set Mirror Axes"
 msgstr "Tondi Bildon"
 
 #: ui/input/kis_pan_action.cpp:50
@@ -12155,92 +12156,129 @@ msgstr ""
 msgid "Toggle Select Layer Mode"
 msgstr "Rotacii Dekstrume"
 
-#: ui/input/kis_shortcut_configuration.cpp:238
+#: ui/input/kis_shortcut_configuration.cpp:234
+msgctxt "Separator in the list of mouse buttons for shortcut"
+msgid " + "
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:239
 #, fuzzy
 #| msgid "Left:"
 msgctxt "Left Mouse Button"
 msgid "Left"
 msgstr "Live:"
 
-#: ui/input/kis_shortcut_configuration.cpp:247
+#: ui/input/kis_shortcut_configuration.cpp:248
 #, fuzzy
 #| msgid "Right:"
 msgctxt "Right Mouse Button"
 msgid "Right"
 msgstr "Dekstre:"
 
-#: ui/input/kis_shortcut_configuration.cpp:255
+#: ui/input/kis_shortcut_configuration.cpp:256
 #, fuzzy
 #| msgid "Middle"
 msgctxt "Middle Mouse Button"
 msgid "Middle"
 msgstr "Meza"
 
-#: ui/input/kis_shortcut_configuration.cpp:263
+#: ui/input/kis_shortcut_configuration.cpp:264
 msgctxt "Mouse Back Button"
 msgid "Back"
 msgstr ""
 
-#: ui/input/kis_shortcut_configuration.cpp:271
+#: ui/input/kis_shortcut_configuration.cpp:272
 #, fuzzy
 #| msgid "Four bars"
 msgctxt "Mouse Forward Button"
 msgid "Forward"
 msgstr "Kvar bretoj"
 
-#: ui/input/kis_shortcut_configuration.cpp:275
-#: ui/input/kis_shortcut_configuration.cpp:320
-#: ui/input/kis_shortcut_configuration.cpp:346
+#: ui/input/kis_shortcut_configuration.cpp:276
 #, fuzzy
 #| msgid "None"
-msgctxt "No input"
+msgctxt "No mouse buttons for shortcut"
 msgid "None"
 msgstr "Neniu"
 
-#: ui/input/kis_shortcut_configuration.cpp:279
-msgctxt "Mouse Buttons"
-msgid "Button"
-msgid_plural "Buttons"
+#: ui/input/kis_shortcut_configuration.cpp:282
+#, kde-format
+msgctxt ""
+"%1 = List of mouse buttons for shortcut. Plural form is chosen upon the "
+"number of buttons in that list."
+msgid "%1 Button"
+msgid_plural "%1 Buttons"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/input/kis_shortcut_configuration.cpp:296
+#: ui/input/kis_shortcut_configuration.cpp:294
+msgctxt "Separator in the list of keys for shortcut"
+msgid " + "
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:299
 msgctxt "Ctrl key"
 msgid "Ctrl"
 msgstr ""
 
-#: ui/input/kis_shortcut_configuration.cpp:300
+#: ui/input/kis_shortcut_configuration.cpp:303
 msgctxt "Meta key"
 msgid "Meta"
 msgstr ""
 
-#: ui/input/kis_shortcut_configuration.cpp:304
+#: ui/input/kis_shortcut_configuration.cpp:307
 #, fuzzy
 #| msgid "All"
 msgctxt "Alt key"
 msgid "Alt"
 msgstr "Ĉiuj"
 
-#: ui/input/kis_shortcut_configuration.cpp:308
+#: ui/input/kis_shortcut_configuration.cpp:311
 #, fuzzy
 msgctxt "Shift key"
 msgid "Shift"
 msgstr "&Blanka"
 
-#: ui/input/kis_shortcut_configuration.cpp:330
+#: ui/input/kis_shortcut_configuration.cpp:323
+#, fuzzy
+#| msgid "None"
+msgctxt "No keys for shortcut"
+msgid "None"
+msgstr "Neniu"
+
+#: ui/input/kis_shortcut_configuration.cpp:333
 msgid "Mouse Wheel Up"
 msgstr ""
 
-#: ui/input/kis_shortcut_configuration.cpp:334
+#: ui/input/kis_shortcut_configuration.cpp:337
 msgid "Mouse Wheel Down"
 msgstr ""
 
-#: ui/input/kis_shortcut_configuration.cpp:338
+#: ui/input/kis_shortcut_configuration.cpp:341
 msgid "Mouse Wheel Left"
 msgstr ""
 
-#: ui/input/kis_shortcut_configuration.cpp:342
+#: ui/input/kis_shortcut_configuration.cpp:345
 msgid "Mouse Wheel Right"
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:349
+#, fuzzy
+#| msgid "None"
+msgctxt "No mouse wheel buttons for shortcut"
+msgid "None"
+msgstr "Neniu"
+
+#: ui/input/kis_shortcut_configuration.cpp:361
+#, kde-format
+msgctxt "%1 = modifier keys in shortcut; %2 = mouse buttons in shortcut"
+msgid "%1 + %2"
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:377
+#, kde-format
+msgctxt "%1 = modifier keys in shortcut; %2 = mouse wheel buttons in shortcut"
+msgid "%1 + %2"
 msgstr ""
 
 #: ui/input/kis_show_palette_action.cpp:33
@@ -12667,87 +12705,87 @@ msgstr "Ebeno-proprecoj..."
 msgid "Import Image"
 msgstr "Importi Bildon"
 
-#: ui/kis_layer_manager.cc:280
+#: ui/kis_layer_manager.cc:279
 #, fuzzy
 msgid "&Flatten image"
 msgstr "Forigu bildon"
 
-#: ui/kis_layer_manager.cc:290
+#: ui/kis_layer_manager.cc:289
 #, fuzzy
 #| msgid "&Filters Gallery"
 msgid "&Flatten Layer"
 msgstr "&Filtrilgalerio"
 
-#: ui/kis_layer_manager.cc:294 ui/kis_layer_manager.cc:779
+#: ui/kis_layer_manager.cc:293 ui/kis_layer_manager.cc:773
 #, fuzzy
 #| msgid "Rotate Layer"
 msgid "Rasterize Layer"
 msgstr "Turni Ebenon"
 
-#: ui/kis_layer_manager.cc:300
+#: ui/kis_layer_manager.cc:299
 #, fuzzy
 #| msgid "Shear Layer"
 msgid "Save Group Layers..."
 msgstr "Tondi Ebenon"
 
-#: ui/kis_layer_manager.cc:304
+#: ui/kis_layer_manager.cc:303
 #, fuzzy
 #| msgid "Resize Image to Size of Current Layer"
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Adapti Bildon al Grandeco de Aktuala Ebeno"
 
-#: ui/kis_layer_manager.cc:359
+#: ui/kis_layer_manager.cc:353
 #, fuzzy
 #| msgid "Layer Properties"
 msgid "Filter Layer Properties"
 msgstr "Ecoj de Ebeno"
 
-#: ui/kis_layer_manager.cc:404
+#: ui/kis_layer_manager.cc:398
 #, fuzzy
 #| msgid "Layer Properties"
 msgid "Generator Layer Properties"
 msgstr "Ecoj de Ebeno"
 
-#: ui/kis_layer_manager.cc:485
+#: ui/kis_layer_manager.cc:479
 #, fuzzy
 #| msgid "Convert Current Layer From"
 msgid "Convert to a Paint Layer"
 msgstr "Konverti Aktualan Ebenon De"
 
-#: ui/kis_layer_manager.cc:564
+#: ui/kis_layer_manager.cc:558
 #, fuzzy
 msgid "New Filter Layer"
 msgstr "&Blanka"
 
-#: ui/kis_layer_manager.cc:623
+#: ui/kis_layer_manager.cc:617
 msgid "Could not add layer to image."
 msgstr ""
 
-#: ui/kis_layer_manager.cc:623
+#: ui/kis_layer_manager.cc:617
 msgid "Layer Error"
 msgstr "Eben-eraro"
 
-#: ui/kis_layer_manager.cc:709
+#: ui/kis_layer_manager.cc:703
 msgid "The image contains hidden layers that will be lost."
 msgstr ""
 
-#: ui/kis_layer_manager.cc:711
+#: ui/kis_layer_manager.cc:705
 msgid "&Flatten Image"
 msgstr "&Platigi Bildon"
 
-#: ui/kis_layer_manager.cc:815
+#: ui/kis_layer_manager.cc:809
 msgid "Convert Invisible Groups"
 msgstr ""
 
-#: ui/kis_layer_manager.cc:818
+#: ui/kis_layer_manager.cc:812
 msgid "Export Only Toplevel Groups"
 msgstr ""
 
-#: ui/kis_layer_manager.cc:876
+#: ui/kis_layer_manager.cc:870
 msgid "No file name specified."
 msgstr ""
 
-#: ui/kis_layer_manager.cc:876
+#: ui/kis_layer_manager.cc:870
 msgid "No file specified"
 msgstr ""
 
@@ -12923,27 +12961,27 @@ msgstr "Elekto"
 msgid "Remove Last Layer"
 msgstr "Forigi Ebenon"
 
-#: ui/kis_node_manager.cpp:666
+#: ui/kis_node_manager.cpp:669
 msgid "Mirror Layer X"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_node_manager.cpp:668
+#: ui/kis_node_manager.cpp:671
 #, fuzzy
 #| msgid "Mirror Layer X"
 msgid "Mirror Mask X"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_node_manager.cpp:679
+#: ui/kis_node_manager.cpp:682
 msgid "Mirror Layer Y"
 msgstr "Speguli Ebenon Y"
 
-#: ui/kis_node_manager.cpp:681
+#: ui/kis_node_manager.cpp:684
 #, fuzzy
 #| msgid "Mirror Layer X"
 msgid "Mirror Mask Y"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_node_manager.cpp:802
+#: ui/kis_node_manager.cpp:805
 #, fuzzy
 msgid "Export Node"
 msgstr "Koloromoduso"
@@ -13588,6 +13626,12 @@ msgstr ""
 #, fuzzy
 msgid "&Close"
 msgstr "Koloro"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "No input"
+#~ msgid "None"
+#~ msgstr "Neniu"
 
 #, fuzzy
 #~| msgid "Yellows"
