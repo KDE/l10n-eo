@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: smb4k\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-25 01:51+0000\n"
+"POT-Creation-Date: 2014-06-22 01:42+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1061,8 +1061,9 @@ msgstr "Identigilo de uzanto:"
 #: smb4k.kcfg:536
 msgid ""
 "This is the user ID (a number) that the files and directories of the mounted "
-"share will have. If you are using the CIFS file system and the remote server "
-"supports the CIFS Unix Extensions, this setting will be ignored."
+"share will have. If you are using the CIFS filesystem under Linux and the "
+"remote server supports the CIFS Unix Extensions, this setting will be "
+"ignored unless the assignment of the user ID is forced."
 msgstr ""
 
 #. i18n: ectx: label, entry (GroupID), group (Samba)
@@ -1074,9 +1075,9 @@ msgstr ""
 #: smb4k.kcfg:541
 msgid ""
 "This is the group ID (a number) that the files and directories of the "
-"mounted share will have. If you are using the CIFS file system and the "
-"remote server supports the CIFS Unix Extensions, this setting will be "
-"ignored."
+"mounted share will have. If you are using the CIFS filesystem under Linux "
+"and the remote server supports the CIFS Unix Extensions, this setting will "
+"be ignored unless the assignment of the group ID is forced."
 msgstr ""
 
 #. i18n: ectx: label, entry (FileMask), group (Samba)
@@ -1157,7 +1158,7 @@ msgid ""
 "In case the server supports the CIFS Unix Extensions, the client side (i.e. "
 "your side) attempts to set the effective UID and GID of the current process "
 "on newly created files, directories and devices. If this feature is turned "
-"off, the default UID and GID defined for the share will be used. It is "
+"off, the server will set the UID and GID to the default for the share. It is "
 "recommended that you read the manual page of mount.cifs before you change "
 "this setting."
 msgstr ""
@@ -1175,26 +1176,49 @@ msgid ""
 "client side."
 msgstr ""
 
-#. i18n: ectx: label, entry (NoInodeDataCaching), group (Samba)
+#. i18n: ectx: label, entry (CacheMode), group (Samba)
 #: smb4k.kcfg:583
-msgid "Do not cache inode data"
+msgid "Cache mode:"
 msgstr ""
 
-#. i18n: ectx: whatsthis, entry (NoInodeDataCaching), group (Samba)
+#. i18n: ectx: whatsthis, entry (CacheMode), group (Samba)
 #: smb4k.kcfg:584
 msgid ""
-"Directly read from and write to files opened on the share. In some cases "
-"this can provide better performance than the default behavior which caches "
-"reads and writes."
+"Define how read and write requests are handled. In case you choose to not "
+"cache file data at all, the client never utilizes the cache for normal reads "
+"and writes. It always accesses the server directly to satisfy a read or "
+"write request. If you choose to follow the CIFS/SMB2 protocol strictly, the "
+"cache is only trusted if the client holds an oplock. If the client does not "
+"hold an oplock, then the client bypasses the cache and accesses the server "
+"directly to satisfy a read or write request. Choosing to allow loose caching "
+"semantics can sometimes provide better performance on the expense of cache "
+"coherency. This option might cause data corruption, if several clients "
+"access the same set of files on the server at the same time. Because of "
+"this, the strict cache mode is recommended."
+msgstr ""
+
+#. i18n: ectx: label, entry (CacheMode), group (Samba)
+#: smb4k.kcfg:587
+msgid "Do not cache file data at all"
+msgstr ""
+
+#. i18n: ectx: label, entry (CacheMode), group (Samba)
+#: smb4k.kcfg:590
+msgid "Follow the CIFS/SMB2 protocol strictly"
+msgstr ""
+
+#. i18n: ectx: label, entry (CacheMode), group (Samba)
+#: smb4k.kcfg:593
+msgid "Allow loose caching semantics"
 msgstr ""
 
 #. i18n: ectx: label, entry (TranslateReservedChars), group (Samba)
-#: smb4k.kcfg:588
+#: smb4k.kcfg:599
 msgid "Translate reserved characters"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (TranslateReservedChars), group (Samba)
-#: smb4k.kcfg:589
+#: smb4k.kcfg:600
 msgid ""
 "Translate six of the seven reserved characters (including the colon, "
 "question mark, pipe, asterisk, greater than and less than characters but not "
@@ -1204,22 +1228,22 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (NoLocking), group (Samba)
-#: smb4k.kcfg:593
+#: smb4k.kcfg:604
 msgid "Do not use locking"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (NoLocking), group (Samba)
-#: smb4k.kcfg:594
+#: smb4k.kcfg:605
 msgid "Do not use locking. Do not start lockd."
 msgstr ""
 
 #. i18n: ectx: label, entry (CustomCIFSOptions), group (Samba)
-#: smb4k.kcfg:598
+#: smb4k.kcfg:609
 msgid "Additional options:"
 msgstr "Kromaj opcioj:"
 
 #. i18n: ectx: whatsthis, entry (CustomCIFSOptions), group (Samba)
-#: smb4k.kcfg:599
+#: smb4k.kcfg:610
 msgid ""
 "Here you can enter advanced options for the CIFS file system in a comma-"
 "separated list (refer to the manual page of mount.cifs to learn more). The "
@@ -1228,14 +1252,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ProtocolHint), group (Samba)
-#: smb4k.kcfg:603
+#: smb4k.kcfg:614
 #, fuzzy
 #| msgid "Protocol:"
 msgid "Protocol hint:"
 msgstr "Protokolo:"
 
 #. i18n: ectx: whatsthis, entry (ProtocolHint), group (Samba)
-#: smb4k.kcfg:604
+#: smb4k.kcfg:615
 msgid ""
 "Here you can choose the protocol that will be used by the net command for "
 "the communication with remote servers if appropriate. In most cases the "
@@ -1248,34 +1272,34 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ProtocolHint), group (Samba)
-#: smb4k.kcfg:607
+#: smb4k.kcfg:618
 #, fuzzy
 #| msgid "automatic"
 msgid "Automatic detection"
 msgstr "aŭtomata"
 
 #. i18n: ectx: label, entry (ProtocolHint), group (Samba)
-#: smb4k.kcfg:610
+#: smb4k.kcfg:621
 msgid "RPC: Modern operating systems"
 msgstr ""
 
 #. i18n: ectx: label, entry (ProtocolHint), group (Samba)
-#: smb4k.kcfg:613
+#: smb4k.kcfg:624
 msgid "RAP: Older operating systems"
 msgstr ""
 
 #. i18n: ectx: label, entry (ProtocolHint), group (Samba)
-#: smb4k.kcfg:616
+#: smb4k.kcfg:627
 msgid "ADS: Active Directory environment (LDAP/Kerberos)"
 msgstr ""
 
 #. i18n: ectx: label, entry (NameResolveOrder), group (Samba)
-#: smb4k.kcfg:622
+#: smb4k.kcfg:633
 msgid "Name resolve order:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (NameResolveOrder), group (Samba)
-#: smb4k.kcfg:623
+#: smb4k.kcfg:634
 msgid ""
 "This option is used to determine what naming services and in what order are "
 "used to resolve host names and IP addresses. It takes a space-separated list "
@@ -1284,12 +1308,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (BufferSize), group (Samba)
-#: smb4k.kcfg:627
+#: smb4k.kcfg:638
 msgid "Buffer size:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (BufferSize), group (Samba)
-#: smb4k.kcfg:628
+#: smb4k.kcfg:639
 msgid ""
 "This option changes the transmit/send buffer size when getting or putting a "
 "file from/to the server. The default is 65520 bytes. Setting this value "
@@ -1298,14 +1322,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (BroadcastAddress), group (Samba)
-#: smb4k.kcfg:634
+#: smb4k.kcfg:645
 #, fuzzy
 #| msgid "IP address:"
 msgid "Broadcast address:"
 msgstr "IP-adreso:"
 
 #. i18n: ectx: whatsthis, entry (BroadcastAddress), group (Samba)
-#: smb4k.kcfg:635
+#: smb4k.kcfg:646
 msgid ""
 "Queries performed with nmblookup will be send to the given broadcast "
 "address. Without this option the default behavior is to send the queries to "
@@ -1314,12 +1338,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UsePort137), group (Samba)
-#: smb4k.kcfg:639
+#: smb4k.kcfg:650
 msgid "Try and bind to UDP port 137 to send and receive UDP datagrams"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UsePort137), group (Samba)
-#: smb4k.kcfg:640
+#: smb4k.kcfg:651
 msgid ""
 "Try and bind to UDP port 137 to send and receive UDP datagrams. The reason "
 "for this option is a bug in Windows 95 where it ignores the source port of "
@@ -1329,99 +1353,157 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (SmbtreeSendBroadcasts), group (Samba)
-#: smb4k.kcfg:644
+#: smb4k.kcfg:655
 msgid "Send requests as broadcasts"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SmbtreeSendBroadcasts), group (Samba)
-#: smb4k.kcfg:645
+#: smb4k.kcfg:656
 msgid ""
 "Let smbtree query the network nodes by sending requests as broadcasts "
 "instead of querying the local master browser."
 msgstr ""
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:649
+#: smb4k.kcfg:660
 msgid "Security mode:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:650
+#: smb4k.kcfg:661
 msgid ""
 "Security mode for mount.cifs. To be able to use this mode, the CIFS kernel "
 "module 1.40 or later is required."
 msgstr ""
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:653
+#: smb4k.kcfg:664
 msgid "Connect as a null user (no name)"
 msgstr ""
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:656
+#: smb4k.kcfg:667
 #, fuzzy
 #| msgid "Authentication"
 msgid "Kerberos 5 authentication"
 msgstr "Aŭtentigo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:659
+#: smb4k.kcfg:670
 #, fuzzy
 #| msgid "Authentication"
 msgid "Kerberos 5 authentication and packet signing"
 msgstr "Aŭtentigo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:662
+#: smb4k.kcfg:673
 #, fuzzy
 #| msgid "Protocol"
 msgid "NTLM protocol"
 msgstr "Protokolo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:665
+#: smb4k.kcfg:676
 #, fuzzy
 #| msgid "Authentication"
 msgid "NTLM protocol and packet signing"
 msgstr "Aŭtentigo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:668
+#: smb4k.kcfg:679
 #, fuzzy
 #| msgid "Protocol"
 msgid "NTLMv2 protocol"
 msgstr "Protokolo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:671
+#: smb4k.kcfg:682
 #, fuzzy
 #| msgid "Authentication"
 msgid "NTLMv2 protocol and packet signing"
 msgstr "Aŭtentigo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:674
+#: smb4k.kcfg:685
 #, fuzzy
 #| msgid "Protocol"
 msgid "NTLMSSP protocol"
 msgstr "Protokolo"
 
 #. i18n: ectx: label, entry (SecurityMode), group (Samba)
-#: smb4k.kcfg:677
+#: smb4k.kcfg:688
 #, fuzzy
 #| msgid "Authentication"
 msgid "NTLMSSP protocol and packet signing"
 msgstr "Aŭtentigo"
 
+#. i18n: ectx: label, entry (SmbProtocolVersion), group (Samba)
+#: smb4k.kcfg:694
+#, fuzzy
+#| msgid "Protocol:"
+msgid "SMB protocol version:"
+msgstr "Protokolo:"
+
+#. i18n: ectx: whatsthis, entry (SmbProtocolVersion), group (Samba)
+#: smb4k.kcfg:695
+msgid "Define which version of the SMB protocol is to be used."
+msgstr ""
+
+#. i18n: ectx: label, entry (SmbProtocolVersion), group (Samba)
+#: smb4k.kcfg:698
+msgid "1.0 (Classic CIFS/SMBv1 protocol)"
+msgstr ""
+
+#. i18n: ectx: label, entry (SmbProtocolVersion), group (Samba)
+#: smb4k.kcfg:701
+msgid "2.0 (Windows Vista SP1/Windows Server 2008)"
+msgstr ""
+
+#. i18n: ectx: label, entry (SmbProtocolVersion), group (Samba)
+#: smb4k.kcfg:704
+msgid "2.1 (Windows 7/Windows Server 2008R2)"
+msgstr ""
+
+#. i18n: ectx: label, entry (SmbProtocolVersion), group (Samba)
+#: smb4k.kcfg:707
+msgid "3.0 (Windows 8/Windows Server 2012)"
+msgstr ""
+
+#. i18n: ectx: label, entry (ForceUID), group (Samba)
+#: smb4k.kcfg:713
+msgid "Definitely assign the UID"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ForceUID), group (Samba)
+#: smb4k.kcfg:714
+msgid ""
+"Instruct the client (i.e. your side) to ignore any user ID (UID) provided by "
+"the server for files and directories and to always assign the owner to be "
+"the value of the transmitted UID."
+msgstr ""
+
+#. i18n: ectx: label, entry (ForceGID), group (Samba)
+#: smb4k.kcfg:718
+msgid "Definitely assign the GID"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (ForceGID), group (Samba)
+#: smb4k.kcfg:719
+msgid ""
+"Instruct the client (i.e. your side) to ignore any group ID (GID) provided "
+"by the server for files and directories and to always assign the owner to be "
+"the value of the transmitted GID."
+msgstr ""
+
 #. i18n: ectx: label, entry (RsyncPrefix), group (Synchronization)
-#: smb4k.kcfg:691
+#: smb4k.kcfg:731
 #, fuzzy
 #| msgid "Synchronize"
 msgid "Synchronization prefix:"
 msgstr "Sinkronigu"
 
 #. i18n: ectx: whatsthis, entry (RsyncPrefix), group (Synchronization)
-#: smb4k.kcfg:692
+#: smb4k.kcfg:732
 msgid ""
 "Under this prefix the destination directory for the synchronization will be "
 "created. However, if you want to store the data of a particular share "
@@ -1430,44 +1512,44 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ArchiveMode), group (Synchronization)
-#: smb4k.kcfg:696
+#: smb4k.kcfg:736
 msgid "Archive mode"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ArchiveMode), group (Synchronization)
-#: smb4k.kcfg:697
+#: smb4k.kcfg:737
 msgid "Use archive mode (-a, --archive). This is a short form of -rlptgoD."
 msgstr ""
 
 #. i18n: ectx: label, entry (RecurseIntoDirectories), group (Synchronization)
-#: smb4k.kcfg:701
+#: smb4k.kcfg:741
 msgid "Recurse into subdirectories"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (RecurseIntoDirectories), group (Synchronization)
-#: smb4k.kcfg:702
+#: smb4k.kcfg:742
 msgid "Recurse into directories (-r, --recursive)."
 msgstr ""
 
 #. i18n: ectx: label, entry (UpdateTarget), group (Synchronization)
-#: smb4k.kcfg:706
+#: smb4k.kcfg:746
 msgid "Update files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UpdateTarget), group (Synchronization)
-#: smb4k.kcfg:707
+#: smb4k.kcfg:747
 msgid ""
 "Update files in the destination directory that are older than in the source "
 "directory (-u, --update)."
 msgstr ""
 
 #. i18n: ectx: label, entry (UpdateInPlace), group (Synchronization)
-#: smb4k.kcfg:711
+#: smb4k.kcfg:751
 msgid "Update files in place"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UpdateInPlace), group (Synchronization)
-#: smb4k.kcfg:712
+#: smb4k.kcfg:752
 msgid ""
 "Update destination files in-place (--inplace). By default, rsync first "
 "creates a new copy of a file and moves it into place after its transfer "
@@ -1477,12 +1559,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (RelativePathNames), group (Synchronization)
-#: smb4k.kcfg:716
+#: smb4k.kcfg:756
 msgid "Use relative path names"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (RelativePathNames), group (Synchronization)
-#: smb4k.kcfg:717
+#: smb4k.kcfg:757
 msgid ""
 "Use relative paths (-R, --relative). This means that the full path names "
 "specified on the command line are sent to the server rather than just the "
@@ -1490,12 +1572,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (NoImpliedDirectories), group (Synchronization)
-#: smb4k.kcfg:721
+#: smb4k.kcfg:761
 msgid "Do not send implied directories"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (NoImpliedDirectories), group (Synchronization)
-#: smb4k.kcfg:722
+#: smb4k.kcfg:762
 msgid ""
 "Do not send implied directories with --relative (--no-implied-dirs). This "
 "means that the corresponding path elements on the destination system are "
@@ -1506,24 +1588,24 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (TransferDirectories), group (Synchronization)
-#: smb4k.kcfg:726
+#: smb4k.kcfg:766
 msgid "Transfer directories without recursing"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (TransferDirectories), group (Synchronization)
-#: smb4k.kcfg:727
+#: smb4k.kcfg:767
 msgid ""
 "Transfer directories without recursing (-d, --dirs). This means that all top-"
 "level subdirectories are transferred but without their contents."
 msgstr ""
 
 #. i18n: ectx: label, entry (CompressData), group (Synchronization)
-#: smb4k.kcfg:732
+#: smb4k.kcfg:772
 msgid "Compress data during transfer"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (CompressData), group (Synchronization)
-#: smb4k.kcfg:733
+#: smb4k.kcfg:773
 msgid ""
 "Compress data during transfer (-z, --compress). This significantly reduces "
 "the amount of data that is being transferred. You may want to use this "
@@ -1531,33 +1613,33 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PreserveSymlinks), group (Synchronization)
-#: smb4k.kcfg:737
+#: smb4k.kcfg:777
 msgid "Preserve symlinks"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreserveSymlinks), group (Synchronization)
-#: smb4k.kcfg:738
+#: smb4k.kcfg:778
 msgid "Copy symlinks as symlinks (-l, --links)."
 msgstr ""
 
 #. i18n: ectx: label, entry (TransformSymlinks), group (Synchronization)
-#: smb4k.kcfg:742
+#: smb4k.kcfg:782
 msgid "Transform symlinks"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (TransformSymlinks), group (Synchronization)
-#: smb4k.kcfg:743
+#: smb4k.kcfg:783
 msgid ""
 "Transform symlinks into the items they are pointing to (-L, --copy-links)."
 msgstr ""
 
 #. i18n: ectx: label, entry (TransformUnsafeSymlinks), group (Synchronization)
-#: smb4k.kcfg:747
+#: smb4k.kcfg:787
 msgid "Only transform unsafe symlinks"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (TransformUnsafeSymlinks), group (Synchronization)
-#: smb4k.kcfg:748
+#: smb4k.kcfg:788
 msgid ""
 "Transform unsafe symlinks into the items they are pointing to (--copy-unsafe-"
 "links). This means that only those symlinks are transformed that point to "
@@ -1567,12 +1649,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreUnsafeSymlinks), group (Synchronization)
-#: smb4k.kcfg:752
+#: smb4k.kcfg:792
 msgid "Ignore unsafe symlinks"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (IgnoreUnsafeSymlinks), group (Synchronization)
-#: smb4k.kcfg:753
+#: smb4k.kcfg:793
 msgid ""
 "Ignore symlinks that point outside the copied tree (--safe-links). All "
 "absolute symlinks are also ignored. If you use this option in conjunction "
@@ -1580,12 +1662,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PreserveHardLinks), group (Synchronization)
-#: smb4k.kcfg:757
+#: smb4k.kcfg:797
 msgid "Preserve hard links"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreserveHardLinks), group (Synchronization)
-#: smb4k.kcfg:758
+#: smb4k.kcfg:798
 msgid ""
 "Preserve hard links (-H, --hard-links). This options causes rsync to "
 "preserve the hard links that are found during the transfer. Without it, hard "
@@ -1593,12 +1675,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (KeepDirectorySymlinks), group (Synchronization)
-#: smb4k.kcfg:762
+#: smb4k.kcfg:802
 msgid "Keep directory symlinks"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (KeepDirectorySymlinks), group (Synchronization)
-#: smb4k.kcfg:763
+#: smb4k.kcfg:803
 msgid ""
 "Treat symlinked directories on the receiving side as though they were real "
 "ones (-K, --keep-dirlinks). This only works if the symlink matches a real "
@@ -1607,12 +1689,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PreservePermissions), group (Synchronization)
-#: smb4k.kcfg:767
+#: smb4k.kcfg:807
 msgid "Preserve permissions"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreservePermissions), group (Synchronization)
-#: smb4k.kcfg:768
+#: smb4k.kcfg:808
 msgid ""
 "Preserve permissions (-p, --perms). The permissions of the destination file "
 "will be same as the source file. For what happens if this option is switched "
@@ -1620,24 +1702,24 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PreserveGroup), group (Synchronization)
-#: smb4k.kcfg:772
+#: smb4k.kcfg:812
 msgid "Preserve group"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreserveGroup), group (Synchronization)
-#: smb4k.kcfg:773
+#: smb4k.kcfg:813
 msgid ""
 "Preserve the group (-g, --group). The group of the destination file will be "
 "set to the same value as the source file."
 msgstr ""
 
 #. i18n: ectx: label, entry (PreserveOwner), group (Synchronization)
-#: smb4k.kcfg:777
+#: smb4k.kcfg:817
 msgid "Preserve owner"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreserveOwner), group (Synchronization)
-#: smb4k.kcfg:778
+#: smb4k.kcfg:818
 msgid ""
 "Preserve the owner (-o, --owner). The owner of the destination file will be "
 "set to the same value as the source file, but only if the receiving rsync is "
@@ -1646,12 +1728,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PreserveDevicesAndSpecials), group (Synchronization)
-#: smb4k.kcfg:782
+#: smb4k.kcfg:822
 msgid "Preserve device and special files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreserveDevicesAndSpecials), group (Synchronization)
-#: smb4k.kcfg:783
+#: smb4k.kcfg:823
 msgid ""
 "Preserve device and special files (-D, --devices --specials). This option "
 "causes rsync to transfer character and block devices as well as special "
@@ -1660,12 +1742,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PreserveTimes), group (Synchronization)
-#: smb4k.kcfg:787
+#: smb4k.kcfg:827
 msgid "Preserve times"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreserveTimes), group (Synchronization)
-#: smb4k.kcfg:788
+#: smb4k.kcfg:828
 msgid ""
 "Preserve times (-t, --times). The modification times are transferred along "
 "with the files. For what happens if this option is switched off, please read "
@@ -1673,12 +1755,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (OmitDirectoryTimes), group (Synchronization)
-#: smb4k.kcfg:792
+#: smb4k.kcfg:832
 msgid "Omit directories when preserving times"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (OmitDirectoryTimes), group (Synchronization)
-#: smb4k.kcfg:793
+#: smb4k.kcfg:833
 msgid ""
 "Omit directories when preserving times (-O, --omit-dir-times). This means "
 "that directories are omitted when modification times are being preserved. "
@@ -1686,12 +1768,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (RemoveSourceFiles), group (Synchronization)
-#: smb4k.kcfg:797
+#: smb4k.kcfg:837
 msgid "Remove synchronized source files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (RemoveSourceFiles), group (Synchronization)
-#: smb4k.kcfg:798
+#: smb4k.kcfg:838
 msgid ""
 "Remove all synchronized source files (--remove-source-files). This tells "
 "rsync to remove from the sending side the non-directory items that are a "
@@ -1700,12 +1782,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (DeleteExtraneous), group (Synchronization)
-#: smb4k.kcfg:802
+#: smb4k.kcfg:842
 msgid "Delete extraneous files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DeleteExtraneous), group (Synchronization)
-#: smb4k.kcfg:803
+#: smb4k.kcfg:843
 msgid ""
 "Delete extraneous files from destination (--delete). This tells rsync to "
 "delete all files from the receiving side that are not present on the sending "
@@ -1713,12 +1795,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (DeleteBefore), group (Synchronization)
-#: smb4k.kcfg:807
+#: smb4k.kcfg:847
 msgid "Delete files before transfer"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DeleteBefore), group (Synchronization)
-#: smb4k.kcfg:808
+#: smb4k.kcfg:848
 msgid ""
 "Delete files on the receiving side before the transfer starts (--delete-"
 "before). This is the default behavior if --delete or --delete-excluded is "
@@ -1726,24 +1808,24 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (DeleteAfter), group (Synchronization)
-#: smb4k.kcfg:812
+#: smb4k.kcfg:852
 msgid "Delete files after transfer"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DeleteAfter), group (Synchronization)
-#: smb4k.kcfg:813
+#: smb4k.kcfg:853
 msgid ""
 "Delete files on the receiving side after the transfer has completed (--"
 "delete-after, --del)."
 msgstr ""
 
 #. i18n: ectx: label, entry (DeleteDuring), group (Synchronization)
-#: smb4k.kcfg:817
+#: smb4k.kcfg:857
 msgid "Delete files during transfer"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DeleteDuring), group (Synchronization)
-#: smb4k.kcfg:818
+#: smb4k.kcfg:858
 msgid ""
 "Delete files on the receiving side during the transfer (--delete-during). "
 "This method is faster than --delete-before or --delete-after, but it is only "
@@ -1751,12 +1833,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (DeleteExcluded), group (Synchronization)
-#: smb4k.kcfg:822
+#: smb4k.kcfg:862
 msgid "Also delete excluded files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DeleteExcluded), group (Synchronization)
-#: smb4k.kcfg:823
+#: smb4k.kcfg:863
 msgid ""
 "Also delete excluded files from destination directory (--delete-excluded). "
 "In addition to deleting the files on the receiving side that are not on the "
@@ -1765,24 +1847,24 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreErrors), group (Synchronization)
-#: smb4k.kcfg:827
+#: smb4k.kcfg:867
 msgid "Delete even if I/O errors occur"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (IgnoreErrors), group (Synchronization)
-#: smb4k.kcfg:828
+#: smb4k.kcfg:868
 msgid ""
 "Delete even if I/O errors occur (--ignore-errors). This option has to be "
 "specified in conjunction with --delete to take effect."
 msgstr ""
 
 #. i18n: ectx: label, entry (ForceDirectoryDeletion), group (Synchronization)
-#: smb4k.kcfg:832
+#: smb4k.kcfg:872
 msgid "Force deletion of non-void directories"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (ForceDirectoryDeletion), group (Synchronization)
-#: smb4k.kcfg:833
+#: smb4k.kcfg:873
 msgid ""
 "Force deletion of directories even if they are not empty (--force). This "
 "option tells rsync to delete a non-empty directory when it is to be replaced "
@@ -1790,12 +1872,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UseMaximumDelete), group (Synchronization)
-#: smb4k.kcfg:837
+#: smb4k.kcfg:877
 msgid "Do not delete more than this many files:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseMaximumDelete), group (Synchronization)
-#: smb4k.kcfg:838
+#: smb4k.kcfg:878
 msgid ""
 "Only delete as many files as defined here (--max-delete=NUM). This tells "
 "rsync not to delete more than NUM files or directories (NUM must be non-"
@@ -1803,63 +1885,63 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (MaximumDeleteValue), group (Synchronization)
-#: smb4k.kcfg:842
+#: smb4k.kcfg:882
 msgid "Value for DeleteMaximum config entry"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseMinimalTransferSize), group (Synchronization)
-#: smb4k.kcfg:848
+#: smb4k.kcfg:888
 msgid "Do not transfer any file smaller than:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseMinimalTransferSize), group (Synchronization)
-#: smb4k.kcfg:849
+#: smb4k.kcfg:889
 msgid ""
 "This option causes rsync to not transfer any file that is smaller than the "
 "specified size (--min-size=SIZE)."
 msgstr ""
 
 #. i18n: ectx: label, entry (MinimalTransferSize), group (Synchronization)
-#: smb4k.kcfg:853
+#: smb4k.kcfg:893
 msgid "Value for MinimalTransferSize config entry"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseMaximalTransferSize), group (Synchronization)
-#: smb4k.kcfg:859
+#: smb4k.kcfg:899
 msgid "Do not transfer any file larger than:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseMaximalTransferSize), group (Synchronization)
-#: smb4k.kcfg:860
+#: smb4k.kcfg:900
 msgid ""
 "This option causes rsync to not transfer any file that is larger than the "
 "specified size (--max-size=SIZE)."
 msgstr ""
 
 #. i18n: ectx: label, entry (MaximalTransferSize), group (Synchronization)
-#: smb4k.kcfg:864
+#: smb4k.kcfg:904
 msgid "Value for MaximalTransferSize config entry"
 msgstr ""
 
 #. i18n: ectx: label, entry (KeepPartial), group (Synchronization)
-#: smb4k.kcfg:870
+#: smb4k.kcfg:910
 msgid "Keep partially transferred files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (KeepPartial), group (Synchronization)
-#: smb4k.kcfg:871
+#: smb4k.kcfg:911
 msgid ""
 "Keep partially transferred files (--partial). The default behavior is that "
 "any partially transferred file is deleted if the transfer is interrupted."
 msgstr ""
 
 #. i18n: ectx: label, entry (UsePartialDirectory), group (Synchronization)
-#: smb4k.kcfg:875
+#: smb4k.kcfg:915
 msgid "Put partially transferred files into:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UsePartialDirectory), group (Synchronization)
-#: smb4k.kcfg:876
+#: smb4k.kcfg:916
 msgid ""
 "Put a partially transferred file into this directory (--partial-dir=DIR). "
 "This is a better way than the --partial option to keep partial files, "
@@ -1868,17 +1950,17 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (PartialDirectory), group (Synchronization)
-#: smb4k.kcfg:880
+#: smb4k.kcfg:920
 msgid "The data for the UsePartialDirectory option"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseCVSExclude), group (Synchronization)
-#: smb4k.kcfg:885
+#: smb4k.kcfg:925
 msgid "Auto-ignore files in the same way CVS does"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseCVSExclude), group (Synchronization)
-#: smb4k.kcfg:886
+#: smb4k.kcfg:926
 msgid ""
 "Auto-ignore files in the same way CVS does (-C, --cvs-exclude). This is a "
 "useful shorthand for excluding a broad range of files that you often do not "
@@ -1887,12 +1969,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UseExcludePattern), group (Synchronization)
-#: smb4k.kcfg:890
+#: smb4k.kcfg:930
 msgid "Exclude files matching this pattern:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseExcludePattern), group (Synchronization)
-#: smb4k.kcfg:891
+#: smb4k.kcfg:931
 msgid ""
 "Exclude files that match a certain pattern (--exclude=PATTERN). This is a "
 "special filter rule. For further information on filter rules see rsync's "
@@ -1900,17 +1982,17 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ExcludePattern), group (Synchronization)
-#: smb4k.kcfg:895
+#: smb4k.kcfg:935
 msgid "Pattern that is used for file exclusion"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseExcludeFrom), group (Synchronization)
-#: smb4k.kcfg:900
+#: smb4k.kcfg:940
 msgid "Read exclude patterns from:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseExcludeFrom), group (Synchronization)
-#: smb4k.kcfg:901
+#: smb4k.kcfg:941
 msgid ""
 "Read exclude patterns from a file (--exclude-from=FILE). This option is "
 "similar to the --exclude=PATTERN option except that the exclude patterns are "
@@ -1919,17 +2001,17 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ExcludeFrom), group (Synchronization)
-#: smb4k.kcfg:905
+#: smb4k.kcfg:945
 msgid "The file from which the exclude patterns are read"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseIncludePattern), group (Synchronization)
-#: smb4k.kcfg:910
+#: smb4k.kcfg:950
 msgid "Do not exclude files matching this pattern:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseIncludePattern), group (Synchronization)
-#: smb4k.kcfg:911
+#: smb4k.kcfg:951
 msgid ""
 "Do not exclude files matching a certain pattern (--include=PATTERN). This is "
 "a special filter rule. For further information on filter rules see rsync's "
@@ -1937,17 +2019,17 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (IncludePattern), group (Synchronization)
-#: smb4k.kcfg:915
+#: smb4k.kcfg:955
 msgid "Pattern that is used for file inclusion"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseIncludeFrom), group (Synchronization)
-#: smb4k.kcfg:920
+#: smb4k.kcfg:960
 msgid "Read include patterns from:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseIncludeFrom), group (Synchronization)
-#: smb4k.kcfg:921
+#: smb4k.kcfg:961
 msgid ""
 "Read include patterns from a file (--include-from=FILE). This option is "
 "similar to the --include=PATTERN option except that the include patterns are "
@@ -1956,19 +2038,19 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (IncludeFrom), group (Synchronization)
-#: smb4k.kcfg:925
+#: smb4k.kcfg:965
 msgid "The file from which the include patterns are read"
 msgstr ""
 
 #. i18n: ectx: label, entry (CustomFilteringRules), group (Synchronization)
-#: smb4k.kcfg:930
+#: smb4k.kcfg:970
 #, fuzzy
 #| msgid "Filter Rules"
 msgid "Custom filter rules:"
 msgstr "Filtroreguloj"
 
 #. i18n: ectx: whatsthis, entry (CustomFilteringRules), group (Synchronization)
-#: smb4k.kcfg:931
+#: smb4k.kcfg:971
 msgid ""
 "Add custom file-filtering rules (-f, --filter=RULE). This option allows you "
 "to add rules to selectively exclude certain files from the list of files to "
@@ -1977,12 +2059,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UseFFilterRule), group (Synchronization)
-#: smb4k.kcfg:935
+#: smb4k.kcfg:975
 msgid "Use --filter='dir-merge /.rsync-filter' filter rule"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseFFilterRule), group (Synchronization)
-#: smb4k.kcfg:936
+#: smb4k.kcfg:976
 msgid ""
 "This filter rule tells rsync to look for per-directory .rsync-filter files "
 "that have been sprinkled through the hierarchy and use their rules to filter "
@@ -1991,12 +2073,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UseFFFilterRule), group (Synchronization)
-#: smb4k.kcfg:940
+#: smb4k.kcfg:980
 msgid "Use --filter='exclude .rsync-filter' filter rule"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseFFFilterRule), group (Synchronization)
-#: smb4k.kcfg:941
+#: smb4k.kcfg:981
 msgid ""
 "This rule filters out the .rsync-filter files from the transfer. These files "
 "normally contain filter rules that can be activated by choosing the --"
@@ -2004,12 +2086,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (EfficientSparseFileHandling), group (Synchronization)
-#: smb4k.kcfg:945
+#: smb4k.kcfg:985
 msgid "Handle sparse files efficiently"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EfficientSparseFileHandling), group (Synchronization)
-#: smb4k.kcfg:946
+#: smb4k.kcfg:986
 msgid ""
 "Handle sparse files efficiently (-S, --sparse) so that they take up less "
 "space on the destination. This option conflicts with --inplace. For further "
@@ -2017,24 +2099,24 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (CopyFilesWhole), group (Synchronization)
-#: smb4k.kcfg:950
+#: smb4k.kcfg:990
 msgid "Copy files whole (no rsync algorithm)"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (CopyFilesWhole), group (Synchronization)
-#: smb4k.kcfg:951
+#: smb4k.kcfg:991
 msgid ""
 "Copy files whole (-W, --whole-file). With this option the incremental rsync "
 "algorithm is not used and the whole file is sent as-is instead."
 msgstr ""
 
 #. i18n: ectx: label, entry (OneFileSystem), group (Synchronization)
-#: smb4k.kcfg:955
+#: smb4k.kcfg:995
 msgid "Do not cross file system boundaries"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (OneFileSystem), group (Synchronization)
-#: smb4k.kcfg:956
+#: smb4k.kcfg:996
 msgid ""
 "Do not cross file system boundaries (-x, --one-file-system). This tells "
 "rsync to avoid crossing a filesystem boundary when recursing. For further "
@@ -2042,12 +2124,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UpdateExisting), group (Synchronization)
-#: smb4k.kcfg:960
+#: smb4k.kcfg:1000
 msgid "Only update files that already exist"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UpdateExisting), group (Synchronization)
-#: smb4k.kcfg:961
+#: smb4k.kcfg:1001
 msgid ""
 "Skip creating new files on the receiving side (--existing). This tells rsync "
 "to skip creating files (including directories) that do not exist yet on the "
@@ -2057,24 +2139,24 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreExisting), group (Synchronization)
-#: smb4k.kcfg:965
+#: smb4k.kcfg:1005
 msgid "Ignore files that already exist"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (IgnoreExisting), group (Synchronization)
-#: smb4k.kcfg:966
+#: smb4k.kcfg:1006
 msgid ""
 "Skip updating files that already exist on the receiving side (--ignore-"
 "existing). Existing directories are not ignored."
 msgstr ""
 
 #. i18n: ectx: label, entry (DelayUpdates), group (Synchronization)
-#: smb4k.kcfg:970
+#: smb4k.kcfg:1010
 msgid "Delay updates until the end of transfer"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DelayUpdates), group (Synchronization)
-#: smb4k.kcfg:971
+#: smb4k.kcfg:1011
 msgid ""
 "Delay updates until the end of the transfer (--delay-updates). This option "
 "puts the temporary file from each updated file into a holding directory "
@@ -2083,12 +2165,12 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (MakeBackups), group (Synchronization)
-#: smb4k.kcfg:975
+#: smb4k.kcfg:1015
 msgid "Make backups"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (MakeBackups), group (Synchronization)
-#: smb4k.kcfg:976
+#: smb4k.kcfg:1016
 msgid ""
 "Make backups (-b, --backup). With this option, preexisting destination files "
 "are renamed as each file is transferred or deleted. You can control where "
@@ -2097,63 +2179,63 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UseBackupSuffix), group (Synchronization)
-#: smb4k.kcfg:980
+#: smb4k.kcfg:1020
 #, fuzzy
 #| msgid "Backup"
 msgid "Backup suffix:"
 msgstr "Sekurkopio"
 
 #. i18n: ectx: whatsthis, entry (UseBackupSuffix), group (Synchronization)
-#: smb4k.kcfg:981
+#: smb4k.kcfg:1021
 msgid "Use this suffix for backups (--suffix=SUFFIX)."
 msgstr ""
 
 #. i18n: ectx: label, entry (BackupSuffix), group (Synchronization)
-#: smb4k.kcfg:985
+#: smb4k.kcfg:1025
 #, fuzzy
 #| msgid "Backup"
 msgid "Backup suffix"
 msgstr "Sekurkopio"
 
 #. i18n: ectx: label, entry (UseBackupDirectory), group (Synchronization)
-#: smb4k.kcfg:990
+#: smb4k.kcfg:1030
 msgid "Backup directory:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseBackupDirectory), group (Synchronization)
-#: smb4k.kcfg:991
+#: smb4k.kcfg:1031
 msgid "Store backups in this directory (--backup-dir=DIR)."
 msgstr ""
 
 #. i18n: ectx: label, entry (BackupDirectory), group (Synchronization)
-#: smb4k.kcfg:995
+#: smb4k.kcfg:1035
 msgid "Backup directory"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseBlockSize), group (Synchronization)
-#: smb4k.kcfg:1000
+#: smb4k.kcfg:1040
 msgid "Force fixed checksum block size:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseBlockSize), group (Synchronization)
-#: smb4k.kcfg:1001
+#: smb4k.kcfg:1041
 msgid ""
 "Force a fixed checksum block-size (-B, --block-size=SIZE). This forces the "
 "block size used in the rsync algorithm to a fixed value."
 msgstr ""
 
 #. i18n: ectx: label, entry (BlockSize), group (Synchronization)
-#: smb4k.kcfg:1005
+#: smb4k.kcfg:1045
 msgid "The block size"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseChecksumSeed), group (Synchronization)
-#: smb4k.kcfg:1011
+#: smb4k.kcfg:1051
 msgid "Set block/file checksum seed:"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseChecksumSeed), group (Synchronization)
-#: smb4k.kcfg:1012
+#: smb4k.kcfg:1052
 msgid ""
 "Set block/file checksum seed (--checksum-seed=NUM). Set the MD4 checksum "
 "seed to this integer. This 4 byte checksum seed is included in each block "
@@ -2162,17 +2244,17 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ChecksumSeed), group (Synchronization)
-#: smb4k.kcfg:1016
+#: smb4k.kcfg:1056
 msgid "The checksum seed"
 msgstr ""
 
 #. i18n: ectx: label, entry (UseChecksum), group (Synchronization)
-#: smb4k.kcfg:1022
+#: smb4k.kcfg:1062
 msgid "Skip files based on checksum"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseChecksum), group (Synchronization)
-#: smb4k.kcfg:1023
+#: smb4k.kcfg:1063
 msgid ""
 "Skip files based on a checksum and not based on modification time and size (-"
 "c, --checksum). For further information on how this feature works read "
@@ -2180,48 +2262,48 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (UnmountWhenSleepButtonPressed), group (LaptopSupport)
-#: smb4k.kcfg:1033
+#: smb4k.kcfg:1073
 msgid "Unmount all shares when the sleep button is pressed"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UnmountWhenSleepButtonPressed), group (LaptopSupport)
-#: smb4k.kcfg:1034
+#: smb4k.kcfg:1074
 msgid ""
 "Unmount all mounted shares after the hardware sleep button is pressed. The "
 "shares will automatically be remounted after the computer wakes up again."
 msgstr ""
 
 #. i18n: ectx: label, entry (UnmountWhenLidButtonPressed), group (LaptopSupport)
-#: smb4k.kcfg:1038
+#: smb4k.kcfg:1078
 msgid "Unmount all shares when the lid is closed"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UnmountWhenLidButtonPressed), group (LaptopSupport)
-#: smb4k.kcfg:1039
+#: smb4k.kcfg:1079
 msgid ""
 "Unmount all mounted shares after the lid of the laptop is closed. The shares "
 "will automatically be remounted after the computer wakes up again."
 msgstr ""
 
 #. i18n: ectx: label, entry (UnmountWhenPowerButtonPressed), group (LaptopSupport)
-#: smb4k.kcfg:1043
+#: smb4k.kcfg:1083
 msgid "Unmount all shares when the power button is pressed"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UnmountWhenPowerButtonPressed), group (LaptopSupport)
-#: smb4k.kcfg:1044
+#: smb4k.kcfg:1084
 msgid ""
 "Unmount all mounted shares after the hardware power button is pressed. The "
 "shares will automatically be remounted after the computer wakes up again."
 msgstr ""
 
 #. i18n: ectx: label, entry (UnmountWhenNetworkDisconnected), group (LaptopSupport)
-#: smb4k.kcfg:1048
+#: smb4k.kcfg:1088
 msgid "Unmount all shares when the network is disconnected"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UnmountWhenNetworkDisconnected), group (LaptopSupport)
-#: smb4k.kcfg:1049
+#: smb4k.kcfg:1089
 msgid ""
 "Unmount all mounted shares when the user disconnects from the network or the "
 "connection is lost due to a different reason. Using this option in "
@@ -2287,7 +2369,7 @@ msgid "Login:"
 msgstr "Aliĝu"
 
 #: smb4kbookmarkhandler_p.cpp:462 smb4kcustomoptionsmanager_p.cpp:131
-#: smb4kmounter_p.cpp:1378 smb4kprint_p.cpp:411
+#: smb4kmounter_p.cpp:1470 smb4kprint_p.cpp:411
 msgid "IP Address:"
 msgstr ""
 
@@ -2317,7 +2399,7 @@ msgstr ""
 msgid "General"
 msgstr "Ĝeneralo"
 
-#: smb4kcustomoptionsmanager_p.cpp:127 smb4kmounter_p.cpp:1367
+#: smb4kcustomoptionsmanager_p.cpp:127 smb4kmounter_p.cpp:1459
 #: smb4kprint_p.cpp:409
 #, fuzzy
 #| msgid "IP Address"
@@ -2418,26 +2500,26 @@ msgstr ""
 msgid "Unmounting shares. Please wait."
 msgstr ""
 
-#: smb4kmounter_p.cpp:1308
+#: smb4kmounter_p.cpp:1400
 #, fuzzy
 #| msgid "Mount point:"
 msgid "Mount Share"
 msgstr "Surmetingo:"
 
-#: smb4kmounter_p.cpp:1353
+#: smb4kmounter_p.cpp:1445
 msgid ""
 "Enter the location (UNC address) and optionally the IP address and workgroup "
 "to mount a share."
 msgstr ""
 
-#: smb4kmounter_p.cpp:1369
+#: smb4kmounter_p.cpp:1461
 msgid ""
 "The Uniform Naming Convention (UNC) address describes the location of the "
 "share. It has the following syntax: //[USER@]HOST/SHARE. The username is "
 "optional."
 msgstr ""
 
-#: smb4kmounter_p.cpp:1380
+#: smb4kmounter_p.cpp:1472
 msgid ""
 "The Internet Protocol (IP) address identifies the host in the network and "
 "indicates where it is. It has two valid formats, the one known as IP version "
@@ -2445,21 +2527,21 @@ msgid ""
 "2001:0db8:85a3:08d3:1319:8a2e:0370:7334)."
 msgstr ""
 
-#: smb4kmounter_p.cpp:1389 smb4kprint_p.cpp:415
+#: smb4kmounter_p.cpp:1481 smb4kprint_p.cpp:415
 msgid "Workgroup:"
 msgstr "Laborgrupo:"
 
-#: smb4kmounter_p.cpp:1391
+#: smb4kmounter_p.cpp:1483
 msgid ""
 "The workgroup or domain identifies the peer-to-peer computer network the "
 "host is located in."
 msgstr ""
 
-#: smb4kmounter_p.cpp:1405
+#: smb4kmounter_p.cpp:1497
 msgid "Add this share to the bookmarks"
 msgstr ""
 
-#: smb4kmounter_p.cpp:1406
+#: smb4kmounter_p.cpp:1498
 msgid ""
 "If you tick this checkbox, the share will be bookmarked and you can access "
 "it e.g. through the \"Bookmarks\" menu entry in the main window."
