@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevpatchreview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-07 05:06+0000\n"
+"POT-Creation-Date: 2014-06-26 05:39+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -81,70 +81,120 @@ msgstr ""
 msgid "Could not write to the temporary file."
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, patchSelection)
-#: localpatchsource.cpp:38 patchreview.ui:146
+#: localpatchsource.cpp:43
 msgid "Custom Patch"
 msgstr ""
 
-#: patchhighlighter.cpp:74
+#. i18n: ectx: property (title), widget (QGroupBox, localPatchOptions)
+#: localpatchwidget.ui:17
+msgid "Patch"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: localpatchwidget.ui:26
+msgid "Base:"
+msgstr ""
+
+#. i18n: ectx: property (clickMessage), widget (KUrlRequester, baseDir)
+#: localpatchwidget.ui:33
+msgid "Patch base..."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, fileTab)
+#: localpatchwidget.ui:44
+#, fuzzy
+msgid "From File"
+msgstr "Dosiero"
+
+#. i18n: ectx: property (clickMessage), widget (KUrlRequester, filename)
+#: localpatchwidget.ui:50
+msgid "Patch location..."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, commandTab)
+#: localpatchwidget.ui:58
+msgid "From Command"
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, command)
+#: localpatchwidget.ui:64
+msgid "Command's output..."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, applied)
+#: localpatchwidget.ui:75
+msgid "Patch is already applied on local version"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, applied)
+#: localpatchwidget.ui:78
+msgid "Already applied"
+msgstr ""
+
+#: patchhighlighter.cpp:81
 msgid "<b><span style=\"color:red\">Conflict</span></b><br/>"
 msgstr ""
 
-#: patchhighlighter.cpp:80
-msgid "<b>Reverted.</b><br/>"
+#: patchhighlighter.cpp:89
+msgid "Applied.<br/>"
 msgstr ""
 
-#: patchhighlighter.cpp:82
-msgid "<b>Applied.</b><br/>"
+#: patchhighlighter.cpp:92 patchhighlighter.cpp:107
+msgid "Insertion<br/>"
 msgstr ""
 
-#: patchhighlighter.cpp:87 patchhighlighter.cpp:99
-msgid "<b>Insertion</b><br/>"
+#: patchhighlighter.cpp:95 patchhighlighter.cpp:104
+msgid "Removal<br/>"
 msgstr ""
 
-#: patchhighlighter.cpp:90 patchhighlighter.cpp:96
-msgid "<b>Removal</b><br/>"
-msgstr ""
-
-#: patchhighlighter.cpp:91
-msgid "<b>Previous:</b><br/>"
+#: patchhighlighter.cpp:96
+msgid "Previous:<br/>"
 msgstr ""
 
 #: patchhighlighter.cpp:101
-msgid "<b>Alternative:</b><br/>"
+msgid "Reverted.<br/>"
 msgstr ""
 
-#: patchhighlighter.cpp:204
+#: patchhighlighter.cpp:109
+msgid "Alternative:<br/>"
+msgstr ""
+
+#: patchhighlighter.cpp:213
 #, kde-format
 msgid "Could not apply the change: Text should be \"%1\", but is \"%2\"."
 msgstr ""
 
-#: patchhighlighter.cpp:360 patchhighlighter.cpp:367
+#: patchhighlighter.cpp:369 patchhighlighter.cpp:376
 msgid "Insertion"
 msgstr ""
 
-#: patchhighlighter.cpp:362 patchhighlighter.cpp:369
+#: patchhighlighter.cpp:371 patchhighlighter.cpp:378
 msgid "Removal"
 msgstr ""
 
-#: patchhighlighter.cpp:364 patchhighlighter.cpp:371
+#: patchhighlighter.cpp:373 patchhighlighter.cpp:380
 msgid "Change"
 msgstr "Ŝanĝi"
 
-#: patchreview.cpp:271 patchreview.cpp:273
+#: patchreview.cpp:267 patchreview.cpp:269
 msgid "Kompare Model Update"
 msgstr ""
 
-#: patchreview.cpp:284 patchreview.cpp:478 patchreview.cpp:514
+#: patchreview.cpp:280 patchreview.cpp:462 patchreview.cpp:501
 msgid "Patch Review"
 msgstr ""
 
-#: patchreview.cpp:284
+#: patchreview.cpp:280
 msgid "Highlights code affected by a patch"
 msgstr ""
 
-#: patchreview.cpp:440
+#: patchreview.cpp:424
 msgid "Overview"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, finishReview)
+#: patchreview.cpp:487 patchreview.ui:134
+msgid "Finish Review"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditPatch)
@@ -153,7 +203,7 @@ msgid "Edit Patch"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, previousFile)
-#: patchreview.ui:22
+#: patchreview.ui:24
 #, fuzzy
 msgid "Previous file"
 msgstr "Dosiero"
@@ -162,107 +212,51 @@ msgstr "Dosiero"
 #. i18n: ectx: property (text), widget (QToolButton, previousHunk)
 #. i18n: ectx: property (text), widget (QToolButton, nextHunk)
 #. i18n: ectx: property (text), widget (QToolButton, nextFile)
-#: patchreview.ui:25 patchreview.ui:35 patchreview.ui:45 patchreview.ui:55
+#: patchreview.ui:27 patchreview.ui:37 patchreview.ui:47 patchreview.ui:57
 msgid "..."
 msgstr "..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, previousHunk)
-#: patchreview.ui:32
+#: patchreview.ui:34
 msgid "Previous difference"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, nextHunk)
-#: patchreview.ui:42
+#: patchreview.ui:44
 msgid "Next difference"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, nextFile)
-#: patchreview.ui:52
+#: patchreview.ui:54
 msgid "Next file"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, updateButton)
-#: patchreview.ui:81
+#: patchreview.ui:83
 msgid "Update"
 msgstr "Ĝisdatigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, testsButton)
-#: patchreview.ui:88
+#: patchreview.ui:90
 msgid "Run Tests"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QToolButton, exportReview)
-#: patchreview.ui:111
+#: patchreview.ui:117
 msgid "Export Diff..."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, cancelReview)
-#: patchreview.ui:121
+#: patchreview.ui:127
 msgid "Cancel Review"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, finishReview)
-#: patchreview.ui:128 patchreviewtoolview.cpp:147
-msgid "Finish Review"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, localPatchOptions)
-#: patchreview.ui:137
-msgid "Patch"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, showButton)
-#: patchreview.ui:160
-msgid "Show"
-msgstr "Montri"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: patchreview.ui:169
-msgid "Base:"
-msgstr ""
-
-#. i18n: ectx: property (clickMessage), widget (KUrlRequester, baseDir)
-#: patchreview.ui:176
-msgid "Patch base..."
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, fileTab)
-#: patchreview.ui:187
-#, fuzzy
-msgid "From File"
-msgstr "Dosiero"
-
-#. i18n: ectx: property (clickMessage), widget (KUrlRequester, filename)
-#: patchreview.ui:193
-msgid "Patch location..."
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, commandTab)
-#: patchreview.ui:201
-msgid "From Command"
-msgstr ""
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, command)
-#: patchreview.ui:207
-msgid "Command's output..."
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, applied)
-#: patchreview.ui:218
-msgid "Patch is already applied on local version"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, applied)
-#: patchreview.ui:221
-msgid "Already applied"
-msgstr ""
-
 #. i18n: ectx: property (title), widget (QGroupBox, filesGroup)
-#: patchreview.ui:244
+#: patchreview.ui:153
 msgid "Changes"
 msgstr ""
 
-#: patchreviewtoolview.cpp:71
+#: patchreviewtoolview.cpp:72
 #, kde-format
 msgctxt "%1: number of changed hunks, %2: file name"
 msgid "%2 (1 hunk)"
@@ -270,26 +264,26 @@ msgid_plural "%2 (%1 hunks)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: patchreviewtoolview.cpp:283
+#: patchreviewtoolview.cpp:228
 msgid "Select All"
 msgstr ""
 
-#: patchreviewtoolview.cpp:285
+#: patchreviewtoolview.cpp:230
 msgid "Deselect All"
 msgstr ""
 
-#: patchreviewtoolview.cpp:563
+#: patchreviewtoolview.cpp:509
 msgid "Running tests: %p%"
 msgstr ""
 
-#: patchreviewtoolview.cpp:591
+#: patchreviewtoolview.cpp:537
 #, kde-format
 msgid "Test passed"
 msgid_plural "All %1 tests passed"
 msgstr[0] ""
 msgstr[1] ""
 
-#: patchreviewtoolview.cpp:595
+#: patchreviewtoolview.cpp:541
 #, kde-format
 msgid "Test results: %1 passed, %2 failed, %3 errors"
 msgstr ""
@@ -310,6 +304,9 @@ msgstr ""
 #: standardpatchexport.cpp:89
 msgid "Side view (Kompare)..."
 msgstr ""
+
+#~ msgid "Show"
+#~ msgstr "Montri"
 
 #, fuzzy
 #~ msgctxt "VCS file status"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgrepview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-01 05:39+0000\n"
+"POT-Creation-Date: 2014-06-26 05:39+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -37,13 +37,13 @@ msgstr ""
 msgid "Search..."
 msgstr "Serĉi"
 
-#: grepdialog.cpp:121 grepdialog.cpp:470 grepviewplugin.cpp:48
-#: grepviewplugin.cpp:73
+#: grepdialog.cpp:121 grepdialog.cpp:465 grepviewplugin.cpp:50
+#: grepviewplugin.cpp:104
 #, fuzzy
 msgid "Find/Replace in Files"
 msgstr "Trovi en dosieroj"
 
-#: grepdialog.cpp:467
+#: grepdialog.cpp:462
 #, kde-format
 msgid "%2, and %1 more item"
 msgid_plural "%2, and %1 more items"
@@ -101,34 +101,34 @@ msgstr ""
 msgid "Line %1: "
 msgstr ""
 
-#: grepoutputmodel.cpp:378
+#: grepoutputmodel.cpp:379
 #, kde-format
 msgid "<b>1</b> match"
 msgid_plural "<b>%1</b> matches"
 msgstr[0] ""
 msgstr[1] ""
 
-#: grepoutputmodel.cpp:379
+#: grepoutputmodel.cpp:380
 #, kde-format
 msgid "<b>1</b> file"
 msgid_plural "<b>%1</b> files"
 msgstr[0] ""
 msgstr[1] ""
 
-#: grepoutputmodel.cpp:381
+#: grepoutputmodel.cpp:382
 #, kde-format
 msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
 msgid "<h3>%1 in %2</h3>"
 msgstr ""
 
-#: grepoutputmodel.cpp:383
+#: grepoutputmodel.cpp:384
 #, kde-format
 msgid "<big>%2 <i>(one match)</i></big>"
 msgid_plural "<big>%2 <i>(%1 matches)</i></big>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: grepoutputmodel.cpp:453
+#: grepoutputmodel.cpp:454
 #, kde-format
 msgctxt ""
 "%1 is the old text, %2 is the new text, %3 is the file path, %4 and %5 are "
@@ -159,68 +159,65 @@ msgid "&Expand All"
 msgstr ""
 
 #: grepoutputview.cpp:83
-msgid "&Change Search Settings"
-msgstr ""
+#, fuzzy
+msgid "New &Search"
+msgstr "Serĉi"
 
 #: grepoutputview.cpp:84
 msgid "Clear Search History"
 msgstr ""
 
-#: grepoutputview.cpp:183
+#: grepoutputview.cpp:184
 #, kde-format
 msgid "Search \"%1\" in %2 (at time %3)"
 msgstr ""
 
-#: grepoutputview.cpp:263
+#: grepoutputview.cpp:264
 msgid "Do you want to replace with an empty string?"
 msgstr ""
 
-#: grepoutputview.cpp:264
+#: grepoutputview.cpp:265
 msgid "Start replacement"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, replacementLabel)
 #: grepoutputview.ui:41
 #, fuzzy
-msgid "Replacement Text:"
+msgid "Replacement &Text:"
 msgstr "Ŝablono:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, replacementCombo)
-#: grepoutputview.ui:54
+#: grepoutputview.ui:57
 msgid "Enter the replacement pattern."
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, applyButton)
-#: grepoutputview.ui:73
+#: grepoutputview.ui:76
 msgid "Apply replacement on selected items."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, applyButton)
-#: grepoutputview.ui:76
+#: grepoutputview.ui:79
 #, fuzzy
-msgid "Replace"
+msgid "&Replace"
 msgstr "Ŝablono:"
 
-#: grepviewplugin.cpp:48
+#: grepviewplugin.cpp:50
 msgid ""
 "Allows fast searching of multiple files using patterns or regular "
 "expressions. And allow to replace it too."
 msgstr ""
 
-#: grepviewplugin.cpp:59
+#: grepviewplugin.cpp:90
 #, fuzzy
 msgid "Find/Replace in Fi&les..."
 msgstr "Trovi en Dos&ieroj..."
 
-#: grepviewplugin.cpp:60
-msgid "Ctrl+Alt+f"
-msgstr ""
-
-#: grepviewplugin.cpp:62
+#: grepviewplugin.cpp:93
 msgid "Search for expressions over several files"
 msgstr ""
 
-#: grepviewplugin.cpp:63
+#: grepviewplugin.cpp:94
 msgid ""
 "Opens the 'Find/Replace in files' dialog. There you can enter a regular "
 "expression which is then searched for within all files in the directories "
@@ -228,12 +225,12 @@ msgid ""
 "You can also do replacement."
 msgstr ""
 
-#: grepviewplugin.cpp:103 grepviewplugin.cpp:124
+#: grepviewplugin.cpp:134 grepviewplugin.cpp:155
 #, fuzzy
 msgid "Find/Replace in This Folder"
 msgstr "Trovi en dosieroj"
 
-#: grepviewplugin.cpp:114
+#: grepviewplugin.cpp:145
 #, fuzzy
 msgid "&Find/Replace in Files"
 msgstr "Trovi en dosieroj"
@@ -355,44 +352,49 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KPushButton, syncButton)
-#: grepwidget.ui:110
-msgid "Synchronize with current document directory."
+#: grepwidget.ui:104
+msgid "Quickly select location from a set of directories"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KPushButton, syncButton)
+#: grepwidget.ui:107
+msgid "Quick Select"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, depthLabel)
-#: grepwidget.ui:117
+#: grepwidget.ui:114
 msgid "Depth:"
 msgstr ""
 
 #. i18n: Full recursion will be used. For folder-based searches, that means searching in the target folder and all the subfolders, their subfolders, and so on.
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, depthSpin)
-#: grepwidget.ui:133
+#: grepwidget.ui:130
 msgid "Full"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: grepwidget.ui:146
+#: grepwidget.ui:143
 msgid "Pattern:"
 msgstr "Ŝablono:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: grepwidget.ui:159
+#: grepwidget.ui:156
 msgid "Files:"
 msgstr "Dosieroj:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: grepwidget.ui:172
+#: grepwidget.ui:169
 msgid "Case Sensitive:"
 msgstr "Usklecdistinga:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, caseSensitiveCheck)
-#: grepwidget.ui:191
+#: grepwidget.ui:188
 #, fuzzy
 msgid "Case-sensitive searching."
 msgstr "Usklecdistinga:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: grepwidget.ui:204
+#: grepwidget.ui:201
 msgid "Location(s):"
 msgstr ""
 
@@ -463,11 +465,6 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QPushButton, directorySelector)
 #: grepwidget.ui:432
 msgid "Select a directory to search in."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, directorySelector)
-#: grepwidget.ui:435
-msgid "..."
 msgstr ""
 
 #. i18n: ectx: Menu (edit)
