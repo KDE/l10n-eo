@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katepart4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-07-17 08:32+0000\n"
+"POT-Creation-Date: 2014-07-18 08:54+0000\n"
 "PO-Revision-Date: 2008-01-03 15:40-0600\n"
 "Last-Translator: Cindy McKee <cfmckee@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -462,8 +462,8 @@ msgstr "Laŭ &pozicio"
 #. i18n: ectx: property (text), widget (QTableWidget, tblNormalModeMappings)
 #. i18n: ectx: property (text), widget (QTableWidget, tblInsertModeMappings)
 #. i18n: ectx: property (text), widget (QTableWidget, tblVisualModeMappings)
-#: dialogs/commandmenuconfigwidget.ui:27 vimode/viinputmodeconfigwidget.ui:95
-#: vimode/viinputmodeconfigwidget.ui:133 vimode/viinputmodeconfigwidget.ui:171
+#: dialogs/commandmenuconfigwidget.ui:27 vimode/config/configwidget.ui:95
+#: vimode/config/configwidget.ui:133 vimode/config/configwidget.ui:171
 msgid "Command"
 msgstr "Komando"
 
@@ -548,7 +548,7 @@ msgstr "&Kategorio:"
 #. i18n: ectx: property (title), widget (QGroupBox, gbViInputMode)
 #: dialogs/completionconfigtab.ui:20 dialogs/katedialogs.cpp:520
 #: dialogs/katedialogs.cpp:650 dialogs/katedialogs.cpp:840
-#: vimode/viinputmodeconfigwidget.ui:29
+#: vimode/config/configwidget.ui:29
 msgid "General"
 msgstr "Ĝenerala"
 
@@ -2246,7 +2246,7 @@ msgid "recording"
 msgstr "Kodopreze&nto"
 
 #: inputmode/kateviinputmodefactory.cpp:55 utils/kateglobal.cpp:108
-#: vimode/kateviinputmodeconfigtab.cpp:233
+#: vimode/config/configtab.cpp:240
 msgid "Vi Input Mode"
 msgstr ""
 
@@ -8195,6 +8195,129 @@ msgstr "Fiksi defaŭltan markotipon"
 msgid "Disable Annotation Bar"
 msgstr ""
 
+#: vimode/config/configtab.cpp:216
+#, fuzzy
+#| msgid "Unable to open %1"
+msgid "Unable to open the config file for reading."
+msgstr "Ne eblis malfermi %1"
+
+#: vimode/config/configtab.cpp:216
+#, fuzzy
+#| msgid "Unable to open %1"
+msgid "Unable to open file"
+msgstr "Ne eblis malfermi %1"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, chkViCommandsOverride)
+#: vimode/config/configwidget.ui:35
+msgid ""
+"When selected, vi commands will override Kate's built-in commands. For "
+"example: Ctrl+R will redo, and override the standard action (showing the "
+"search and replace dialog)."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkViCommandsOverride)
+#: vimode/config/configwidget.ui:38
+msgid "Let Vi commands override Kate shortcuts"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, chkViRelLineNumbers)
+#: vimode/config/configwidget.ui:45
+#, fuzzy
+#| msgid "Show/hide the line numbers on the left hand side of the view."
+msgid ""
+"Show the line number relative to the line with the cursor in front of each "
+"line."
+msgstr "Montri/kaŝi la lininombrojn ĉe la maldekstra flanko de la rigardo."
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkViRelLineNumbers)
+#: vimode/config/configwidget.ui:48
+#, fuzzy
+#| msgid "Print line &numbers"
+msgid "Display relative line numbers"
+msgstr "Presi lini&nombrojn"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
+#: vimode/config/configwidget.ui:63
+msgid ""
+"Key mapping is used to change the meaning of typed keys. This allows you to "
+"move commands to other keys or make special keypresses for doing a series of "
+"commands.\n"
+"\n"
+"Example:\n"
+"\"<F2>\" → \"I-- <esc>\"\n"
+"\n"
+"This will prepend \"-- \" to a line when pressing F2."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: vimode/config/configwidget.ui:66
+msgid "Key Mapping"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, normalTab)
+#: vimode/config/configwidget.ui:76
+#, fuzzy
+#| msgid "Normal Text"
+msgid "Normal mode"
+msgstr "Normala teksto"
+
+#. i18n: ectx: property (text), widget (QTableWidget, tblNormalModeMappings)
+#. i18n: ectx: property (text), widget (QTableWidget, tblInsertModeMappings)
+#. i18n: ectx: property (text), widget (QTableWidget, tblVisualModeMappings)
+#: vimode/config/configwidget.ui:100 vimode/config/configwidget.ui:138
+#: vimode/config/configwidget.ui:176
+#, fuzzy
+#| msgid "Replace"
+msgid "Replacement"
+msgstr "Anstataŭigi"
+
+#. i18n: ectx: property (text), widget (QTableWidget, tblNormalModeMappings)
+#. i18n: ectx: property (text), widget (QTableWidget, tblInsertModeMappings)
+#. i18n: ectx: property (text), widget (QTableWidget, tblVisualModeMappings)
+#: vimode/config/configwidget.ui:105 vimode/config/configwidget.ui:143
+#: vimode/config/configwidget.ui:181
+msgid "Recursive?"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, insertTab)
+#: vimode/config/configwidget.ui:114
+#, fuzzy
+#| msgid "Insert: %1"
+msgid "Insert mode"
+msgstr "Enmeti: %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, visualTab)
+#: vimode/config/configwidget.ui:152
+#, fuzzy
+#| msgid "Normal Text"
+msgid "Visual mode"
+msgstr "Normala teksto"
+
+#. i18n: ectx: property (text), widget (QPushButton, btnRemoveSelectedRows)
+#: vimode/config/configwidget.ui:195
+#, fuzzy
+#| msgctxt "@title:column Text style"
+#| msgid "Selected"
+msgid "Remove selected"
+msgstr "Elektita"
+
+#. i18n: ectx: property (text), widget (QPushButton, btnAddNewRow)
+#: vimode/config/configwidget.ui:202
+msgid "Add new mapping"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, btnImportNormal)
+#: vimode/config/configwidget.ui:209
+msgid ""
+"Read a vimrc file and attempt to import mappings specified with the \"[n]"
+"noremap\" command."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, btnImportNormal)
+#: vimode/config/configwidget.ui:212
+msgid "Import from vimrc file"
+msgstr ""
+
 #: vimode/kateviappcommands.cpp:74
 #, fuzzy
 #| msgid "Document to open"
@@ -8357,19 +8480,7 @@ msgid ""
 "associated with the document, a file dialog will be shown.</p>"
 msgstr ""
 
-#: vimode/kateviinputmodeconfigtab.cpp:209
-#, fuzzy
-#| msgid "Unable to open %1"
-msgid "Unable to open the config file for reading."
-msgstr "Ne eblis malfermi %1"
-
-#: vimode/kateviinputmodeconfigtab.cpp:209
-#, fuzzy
-#| msgid "Unable to open %1"
-msgid "Unable to open file"
-msgstr "Ne eblis malfermi %1"
-
-#: vimode/kateviinsertmode.cpp:274 vimode/katevimodebase.cpp:840
+#: vimode/kateviinsertmode.cpp:275 vimode/katevimodebase.cpp:841
 #: vimode/katevinormalmode.cpp:3810
 #, kde-format
 msgid "Nothing in register %1"
@@ -8397,117 +8508,6 @@ msgstr "Marka tipo %1"
 #| msgid "Go to the next bookmark."
 msgid "There are no more chars for the next bookmark."
 msgstr "Iri al la sekva legosigno"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, chkViCommandsOverride)
-#: vimode/viinputmodeconfigwidget.ui:35
-msgid ""
-"When selected, vi commands will override Kate's built-in commands. For "
-"example: Ctrl+R will redo, and override the standard action (showing the "
-"search and replace dialog)."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, chkViCommandsOverride)
-#: vimode/viinputmodeconfigwidget.ui:38
-msgid "Let Vi commands override Kate shortcuts"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, chkViRelLineNumbers)
-#: vimode/viinputmodeconfigwidget.ui:45
-#, fuzzy
-#| msgid "Show/hide the line numbers on the left hand side of the view."
-msgid ""
-"Show the line number relative to the line with the cursor in front of each "
-"line."
-msgstr "Montri/kaŝi la lininombrojn ĉe la maldekstra flanko de la rigardo."
-
-#. i18n: ectx: property (text), widget (QCheckBox, chkViRelLineNumbers)
-#: vimode/viinputmodeconfigwidget.ui:48
-#, fuzzy
-#| msgid "Print line &numbers"
-msgid "Display relative line numbers"
-msgstr "Presi lini&nombrojn"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: vimode/viinputmodeconfigwidget.ui:63
-msgid ""
-"Key mapping is used to change the meaning of typed keys. This allows you to "
-"move commands to other keys or make special keypresses for doing a series of "
-"commands.\n"
-"\n"
-"Example:\n"
-"\"<F2>\" → \"I-- <esc>\"\n"
-"\n"
-"This will prepend \"-- \" to a line when pressing F2."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: vimode/viinputmodeconfigwidget.ui:66
-msgid "Key Mapping"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, normalTab)
-#: vimode/viinputmodeconfigwidget.ui:76
-#, fuzzy
-#| msgid "Normal Text"
-msgid "Normal mode"
-msgstr "Normala teksto"
-
-#. i18n: ectx: property (text), widget (QTableWidget, tblNormalModeMappings)
-#. i18n: ectx: property (text), widget (QTableWidget, tblInsertModeMappings)
-#. i18n: ectx: property (text), widget (QTableWidget, tblVisualModeMappings)
-#: vimode/viinputmodeconfigwidget.ui:100 vimode/viinputmodeconfigwidget.ui:138
-#: vimode/viinputmodeconfigwidget.ui:176
-#, fuzzy
-#| msgid "Replace"
-msgid "Replacement"
-msgstr "Anstataŭigi"
-
-#. i18n: ectx: property (text), widget (QTableWidget, tblNormalModeMappings)
-#. i18n: ectx: property (text), widget (QTableWidget, tblInsertModeMappings)
-#. i18n: ectx: property (text), widget (QTableWidget, tblVisualModeMappings)
-#: vimode/viinputmodeconfigwidget.ui:105 vimode/viinputmodeconfigwidget.ui:143
-#: vimode/viinputmodeconfigwidget.ui:181
-msgid "Recursive?"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, insertTab)
-#: vimode/viinputmodeconfigwidget.ui:114
-#, fuzzy
-#| msgid "Insert: %1"
-msgid "Insert mode"
-msgstr "Enmeti: %1"
-
-#. i18n: ectx: attribute (title), widget (QWidget, visualTab)
-#: vimode/viinputmodeconfigwidget.ui:152
-#, fuzzy
-#| msgid "Normal Text"
-msgid "Visual mode"
-msgstr "Normala teksto"
-
-#. i18n: ectx: property (text), widget (QPushButton, btnRemoveSelectedRows)
-#: vimode/viinputmodeconfigwidget.ui:195
-#, fuzzy
-#| msgctxt "@title:column Text style"
-#| msgid "Selected"
-msgid "Remove selected"
-msgstr "Elektita"
-
-#. i18n: ectx: property (text), widget (QPushButton, btnAddNewRow)
-#: vimode/viinputmodeconfigwidget.ui:202
-msgid "Add new mapping"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, btnImportNormal)
-#: vimode/viinputmodeconfigwidget.ui:209
-msgid ""
-"Read a vimrc file and attempt to import mappings specified with the \"[n]"
-"noremap\" command."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, btnImportNormal)
-#: vimode/viinputmodeconfigwidget.ui:212
-msgid "Import from vimrc file"
-msgstr ""
 
 #, fuzzy
 #~| msgid "Unable to open %1"
