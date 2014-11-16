@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-11-10 01:36+0000\n"
+"POT-Creation-Date: 2014-11-16 01:45+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -271,7 +271,7 @@ msgid "OK dialog"
 msgstr ""
 
 #: AnnotationDialog/Dialog.cpp:1170 AnnotationDialog/ListSelect.cpp:319
-#: Settings/CategoryPage.cpp:121
+#: Settings/CategoryPage.cpp:78
 msgid "Delete"
 msgstr "Forigi"
 
@@ -841,50 +841,50 @@ msgstr "2 horoj"
 msgid "10 Minutes"
 msgstr ""
 
-#: DB/Category.cpp:139 DB/Category.cpp:147
+#: DB/Category.cpp:140 DB/Category.cpp:148
 msgid "People"
 msgstr ""
 
-#: DB/Category.cpp:140 DB/Category.cpp:148
+#: DB/Category.cpp:141 DB/Category.cpp:149
 msgid "Places"
 msgstr "Lokoj"
 
-#: DB/Category.cpp:141
+#: DB/Category.cpp:142
 #, fuzzy
 msgid "Events"
 msgstr "Eventoj:"
 
-#: DB/Category.cpp:142
+#: DB/Category.cpp:143 Settings/CategoryPage.cpp:217
 msgid "Folder"
 msgstr "Leterujo"
 
-#: DB/Category.cpp:143
+#: DB/Category.cpp:144 Settings/CategoryPage.cpp:218
 msgid "Tokens"
 msgstr ""
 
-#: DB/Category.cpp:144
+#: DB/Category.cpp:145 Settings/CategoryPage.cpp:219
 msgid "Media Type"
 msgstr "Papertipo"
 
-#: DB/Category.cpp:149
+#: DB/Category.cpp:150 Settings/CategoryPage.cpp:220
 msgid "Keywords"
 msgstr "Ĉefvortoj"
 
-#: DB/Category.cpp:198
+#: DB/Category.cpp:234
 #, kde-format
 msgid "Unable to create directory '%1'."
 msgstr ""
 
-#: DB/Category.cpp:198
+#: DB/Category.cpp:234
 msgid "Unable to Create Directory"
 msgstr ""
 
-#: DB/Category.cpp:205
+#: DB/Category.cpp:241
 #, kde-format
 msgid "Error when saving image '%1'."
 msgstr ""
 
-#: DB/Category.cpp:205
+#: DB/Category.cpp:241
 msgid "Error Saving Image"
 msgstr ""
 
@@ -3140,7 +3140,7 @@ msgid ""
 "Remote Control protocol version: %2"
 msgstr ""
 
-#: Settings/CategoryItem.cpp:171
+#: Settings/CategoryItem.cpp:159
 msgid ""
 "<p>Due to a shortcoming in KPhotoAlbum, you need to save your database after "
 "renaming categories; otherwise all the filenames of the category thumbnails "
@@ -3149,60 +3149,144 @@ msgid ""
 "</p>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:57
-msgid "Label:"
-msgstr "Etikedo:"
-
-#: Settings/CategoryPage.cpp:70
-msgid "Positionable tags:"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:73
-msgid "Coordinates can be added to tags in this category"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:81
-msgid "Icon:"
-msgstr "Piktogramo:"
-
-#: Settings/CategoryPage.cpp:93
-msgid "Thumbnail Size: "
-msgstr ""
-
-#: Settings/CategoryPage.cpp:105
-msgid "Preferred view:"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:111
-msgid "List View"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:111
-msgid "List View with Custom Thumbnails"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:111
-msgid "Icon View"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:111
-msgid "Icon View with Custom Thumbnails"
-msgstr ""
-
-#: Settings/CategoryPage.cpp:118
+#: Settings/CategoryPage.cpp:74
 msgid "New"
 msgstr "Nova"
 
-#: Settings/CategoryPage.cpp:166
-#, kde-format
-msgid ""
-"<p>Do you really want to make '%1' non-positionable?</p><p>All areas linked "
-"against this category will be deleted!</p>"
+#: Settings/CategoryPage.cpp:82
+#, fuzzy
+#| msgid "Rename..."
+msgid "Rename"
+msgstr "Renomi..."
+
+#: Settings/CategoryPage.cpp:113
+msgid "Positionable tags:"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:216
+#: Settings/CategoryPage.cpp:115
+msgid "Coordinates can be added to tags in this category"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:121
+msgid "Icon:"
+msgstr "Piktogramo:"
+
+#: Settings/CategoryPage.cpp:131
+msgid "Thumbnail Size:"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:142
+msgid "Preferred view:"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:147
+msgid "List View"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:148
+msgid "List View with Custom Thumbnails"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:149
+msgid "Icon View"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:150
+msgid "Icon View with Custom Thumbnails"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:171
+msgid "<i>Choose a category to edit it</i>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:185
+msgid "Settings for category"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:188
 #, kde-format
-msgid "<p>Really delete category '%1'?</p>"
+msgid "<i>Pending change: rename to \"%1\"</i>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:224
+#, kde-format
+msgid ""
+"<p>Can't change the name of category \"%1\" to \"%2\":</p><p>\"%2\" is a "
+"special category name which is reserved and can't be used for a normal "
+"category.</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:228 Settings/CategoryPage.cpp:239
+#: Settings/CategoryPage.cpp:261 Settings/CategoryPage.cpp:278
+msgid "Invalid category name"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:236
+#, kde-format
+msgid ""
+"<p>Can't change the name of category \"%1\" to \"%2\":</p><p>A category with "
+"this name already exists.</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:256
+#, kde-format
+msgid ""
+"<p>Can't change the name of category \"%1\" to \"%2\":</p><p>\"%2\" is a "
+"standard category which comes with a localized name. The localized name for "
+"\"%2\" is \"%1\", so this category already has this name.</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:273
+#, kde-format
+msgid ""
+"<p>Can't change the name of category \"%1\" to \"%2\":</p><p>\"%2\" is a "
+"standard category which comes with a localized name. The localized name for "
+"\"%2\" is \"%3\" and this category already exists.</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:284
+#, kde-format
+msgid ""
+"<p>\"%1\" is a standard category which comes with a localized name. The "
+"localized name for \"%1\" is \"%2\", this name will be used instead.</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:288
+msgid "Localized category name entered"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:304
+#, kde-format
+msgid ""
+"<p>Can't change the name of category \"%1\" to \"%2\":</p><p>There's a "
+"pending rename action on the category \"%2\". Please save this change first."
+"</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:308
+msgid "Unsaved pending renaming action"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:337
+#, kde-format
+msgid ""
+"<p>Do you really want to make \"%1\" non-positionable?</p><p>All areas "
+"linked against this category will be deleted!</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:386
+#, fuzzy
+#| msgid "Category"
+msgid "New category"
+msgstr "Kategorio"
+
+#: Settings/CategoryPage.cpp:418
+#, kde-format
+msgid "<p>Really delete category \"%1\"?</p>"
+msgstr ""
+
+#: Settings/CategoryPage.cpp:431
+msgid "<i>choose a category to edit it</i>"
 msgstr ""
 
 #: Settings/DatabaseBackendPage.cpp:36
@@ -3313,11 +3397,11 @@ msgid ""
 "adopted by the recognition database until the changes are saved!"
 msgstr ""
 
-#: Settings/FaceManagementPage.cpp:205
+#: Settings/FaceManagementPage.cpp:206
 msgid "Do you really want to delete the selected tags?"
 msgstr ""
 
-#: Settings/FaceManagementPage.cpp:230
+#: Settings/FaceManagementPage.cpp:231
 msgid "Do you really want to erase the database?"
 msgstr ""
 
@@ -4930,6 +5014,9 @@ msgstr ""
 #: XMLDB/XmlReader.cpp:95
 msgid "Error while reading database file"
 msgstr ""
+
+#~ msgid "Label:"
+#~ msgstr "Etikedo:"
 
 #~ msgid "Version %1"
 #~ msgstr "Versio %1"
