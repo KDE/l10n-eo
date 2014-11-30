@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-11-13 07:49+0000\n"
+"POT-Creation-Date: 2014-11-30 07:50+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -126,6 +126,14 @@ msgstr ""
 msgid "Gpg4win"
 msgstr "Gpg4win"
 
+#: commands/adduseridcommand.cpp:248
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to add the user-id: <message>%1</"
+"message></para>"
+msgstr ""
+
 #: commands/adduseridcommand.cpp:251
 msgctxt "@title:window"
 msgid "Add User-ID Error"
@@ -139,6 +147,14 @@ msgstr ""
 #: commands/adduseridcommand.cpp:257
 msgctxt "@title:window"
 msgid "Add User-ID Succeeded"
+msgstr ""
+
+#: commands/certifycertificatecommand.cpp:204
+msgctxt "@info"
+msgid ""
+"To certify other certificates, you first need to create an OpenPGP "
+"certificate for yourself. Choose <interface>File->New Certificate...</"
+"interface> to create one."
 msgstr ""
 
 #: commands/certifycertificatecommand.cpp:205
@@ -478,10 +494,32 @@ msgstr ""
 msgid "Could not write to file %1."
 msgstr "Ne eblis skribi al dosiero %1."
 
+#: commands/exportopenpgpcertstoservercommand.cpp:88
+msgctxt "@info"
+msgid ""
+"<para>No OpenPGP directory services have been configured.</para><para>Since "
+"none is configured, <application>Kleopatra</application> will use "
+"<resource>keys.gnupg.net</resource> as the server to export to.</"
+"para><para>You can configure OpenPGP directory servers in "
+"<application>Kleopatra</application>'s configuration dialog.</para><para>Do "
+"you want to continue with <resource>keys.gnupg.net</resource> as the server "
+"to export to?</para>"
+msgstr ""
+
 #: commands/exportopenpgpcertstoservercommand.cpp:95
 #: commands/exportopenpgpcertstoservercommand.cpp:108
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Export"
+msgstr ""
+
+#: commands/exportopenpgpcertstoservercommand.cpp:103
+msgctxt "@info"
+msgid ""
+"<para>When OpenPGP certificates have been exported to a public directory "
+"server, it is nearly impossible to remove them again.</para><para>Before "
+"exporting your certificate to a public directory server, make sure that you "
+"have created a revocation certificate so you can revoke the certificate if "
+"needed later.</para><para>Are you sure you want to continue?</para>"
 msgstr ""
 
 #: commands/exportopenpgpcertstoservercommand.cpp:130
@@ -492,6 +530,23 @@ msgstr ""
 #: commands/exportopenpgpcertstoservercommand.cpp:135
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Export Finished"
+msgstr ""
+
+#: commands/exportopenpgpcertstoservercommand.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to export OpenPGP certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+
+#: commands/exportopenpgpcertstoservercommand.cpp:149
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to export OpenPGP certificates.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
 msgstr ""
 
 #: commands/exportopenpgpcertstoservercommand.cpp:156
@@ -507,6 +562,23 @@ msgstr ""
 #: commands/exportsecretkeycommand.cpp:142
 msgctxt "@title:window"
 msgid "Secret Key Export Finished"
+msgstr ""
+
+#: commands/exportsecretkeycommand.cpp:148
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG or GpgSM process that tried to export the secret key ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+
+#: commands/exportsecretkeycommand.cpp:156
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to export the secret key.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
 msgstr ""
 
 #: commands/exportsecretkeycommand.cpp:163
@@ -762,6 +834,15 @@ msgstr ""
 msgid "Finished Learning SmartCard"
 msgstr ""
 
+#: commands/learncardkeyscommand.cpp:89
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG or GpgSM process that tried to learn the smart card ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+
 #: commands/lookupcertificatescommand.cpp:259
 msgid ""
 "<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
@@ -797,9 +878,28 @@ msgid ""
 "%1"
 msgstr ""
 
+#: commands/lookupcertificatescommand.cpp:394
+msgctxt "@info"
+msgid ""
+"<para>The query result has been truncated.</para><para>Either the local or a "
+"remote limit on the maximum number of returned hits has been exceeded.</"
+"para><para>You can try to increase the local limit in the configuration "
+"dialog, but if one of the configured servers is the limiting factor, you "
+"have to refine your search.</para>"
+msgstr ""
+
 #: commands/lookupcertificatescommand.cpp:402
 msgctxt "@title"
 msgid "Result Truncated"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:434
+msgctxt "@info"
+msgid ""
+"<para>You do not have any directory servers configured.</para><para>You need "
+"to configure at least one directory server to search on one.</para><para>You "
+"can configure directory servers here: <interface>Settings->Configure "
+"Kleopatra</interface>.</para>"
 msgstr ""
 
 #: commands/lookupcertificatescommand.cpp:439
@@ -807,10 +907,34 @@ msgctxt "@title"
 msgid "No Directory Servers Configured"
 msgstr ""
 
+#: commands/refreshopenpgpcertscommand.cpp:77
+msgctxt "@info"
+msgid ""
+"<para>No OpenPGP directory services have been configured.</para><para>If not "
+"all of the certificates carry the name of their preferred certificate server "
+"(few do), a fallback server is needed to fetch from.</para><para>Since none "
+"is configured, <application>Kleopatra</application> will use <resource>keys."
+"gnupg.net</resource> as the fallback.</para><para>You can configure OpenPGP "
+"directory servers in Kleopatra's configuration dialog.</para><para>Do you "
+"want to continue with <resource>keys.gnupg.net</resource> as fallback server?"
+"</para>"
+msgstr ""
+
 #: commands/refreshopenpgpcertscommand.cpp:86
 #: commands/refreshopenpgpcertscommand.cpp:100
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Refresh"
+msgstr ""
+
+#: commands/refreshopenpgpcertscommand.cpp:94
+msgctxt "@info"
+msgid ""
+"<para>Refreshing OpenPGP certificates implies downloading all certificates "
+"anew, to check if any of them have been revoked in the meantime.</"
+"para><para>This can put a severe strain on your own as well as other "
+"people's network connections, and can take up to an hour or more to "
+"complete, depending on your network connection, and the number of "
+"certificates to check.</para> <para>Are you sure you want to continue?</para>"
 msgstr ""
 
 #: commands/refreshopenpgpcertscommand.cpp:119
@@ -823,9 +947,37 @@ msgctxt "@title:window"
 msgid "OpenPGP Certificate Refresh Finished"
 msgstr ""
 
+#: commands/refreshopenpgpcertscommand.cpp:130
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to refresh OpenPGP certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+
+#: commands/refreshopenpgpcertscommand.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to refresh OpenPGP certificates.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+
 #: commands/refreshopenpgpcertscommand.cpp:145
 msgctxt "@info"
 msgid "OpenPGP certificates refreshed successfully."
+msgstr ""
+
+#: commands/refreshx509certscommand.cpp:63
+msgctxt "@info"
+msgid ""
+"<para>Refreshing X.509 certificates implies downloading CRLs for all "
+"certificates, even if they might otherwise still be valid.</para><para>This "
+"can put a severe strain on your own as well as other people's network "
+"connections, and can take up to an hour or more to complete, depending on "
+"your network connection, and the number of certificates to check.</para> "
+"<para>Are you sure you want to continue?</para>"
 msgstr ""
 
 #: commands/refreshx509certscommand.cpp:69
@@ -841,6 +993,24 @@ msgstr ""
 #: commands/refreshx509certscommand.cpp:87
 msgctxt "@title:window"
 msgid "X.509 Certificate Refresh Finished"
+msgstr ""
+
+#: commands/refreshx509certscommand.cpp:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GpgSM process that tried to refresh X.509 certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+
+#: commands/refreshx509certscommand.cpp:101
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to refresh X.509 certificates.</"
+"para><para>The output from <command>%1</command> was: <message>%2</message></"
+"para>"
 msgstr ""
 
 #: commands/refreshx509certscommand.cpp:108
@@ -1968,6 +2138,17 @@ msgctxt "base name of an archive file, e.g. archive.zip or archive.tar.gz"
 msgid "archive"
 msgstr ""
 
+#: crypto/gui/newsignencryptfileswizard.cpp:599
+msgctxt "@info"
+msgid ""
+"<para>Archiving in combination with sign-only currently requires what are "
+"known as opaque signatures - unlike detached ones, these embed the content "
+"in the signature.</para><para>This format is rather unusual. You might want "
+"to archive the files separately, and then sign the archive as one file with "
+"Kleopatra.</para><para>Future versions of Kleopatra are expected to also "
+"support detached signatures in this case.</para>"
+msgstr ""
+
 #: crypto/gui/newsignencryptfileswizard.cpp:604
 msgctxt "@title:window"
 msgid "Unusual Signature Warning"
@@ -2002,10 +2183,27 @@ msgctxt "@action"
 msgid "Encrypt"
 msgstr ""
 
+#: crypto/gui/newsignencryptfileswizard.cpp:813
+msgctxt "@info"
+msgid ""
+"<para>None of the recipients you are encrypting to seems to be your own.</"
+"para><para>This means that you will not be able to decrypt the data anymore, "
+"once encrypted.</para><para>Do you want to continue, or cancel to change the "
+"recipient selection?</para>"
+msgstr ""
+
 #: crypto/gui/newsignencryptfileswizard.cpp:816
 #: crypto/gui/newsignencryptfileswizard.cpp:827
 msgctxt "@title:window"
 msgid "Encrypt-To-Self Warning"
+msgstr ""
+
+#: crypto/gui/newsignencryptfileswizard.cpp:825
+msgctxt "@info"
+msgid ""
+"<para>You have requested the unencrypted data to be removed after encryption."
+"</para><para>Are you really sure you do not need to access the data anymore "
+"in decrypted form?</para>"
 msgstr ""
 
 #: crypto/gui/newsignencryptfileswizard.cpp:879
@@ -2543,6 +2741,53 @@ msgstr ""
 msgid "(optional)"
 msgstr ""
 
+#: dialogs/adduseriddialog.cpp:303
+#: newcertificatewizard/newcertificatewizard.cpp:1385
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is required, but empty."
+msgstr ""
+
+#: dialogs/adduseriddialog.cpp:305
+#: newcertificatewizard/newcertificatewizard.cpp:1387
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is required, but empty.<nl/>Local Admin rule: "
+"<icode>%2</icode>"
+msgstr ""
+
+#: dialogs/adduseriddialog.cpp:311
+#: newcertificatewizard/newcertificatewizard.cpp:1393
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is incomplete."
+msgstr ""
+
+#: dialogs/adduseriddialog.cpp:313
+#: newcertificatewizard/newcertificatewizard.cpp:1395
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is incomplete.<nl/>Local Admin rule: <icode>%2</"
+"icode>"
+msgstr ""
+
+#: dialogs/adduseriddialog.cpp:318
+#: newcertificatewizard/newcertificatewizard.cpp:1400
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is invalid."
+msgstr ""
+
+#: dialogs/adduseriddialog.cpp:320
+#: newcertificatewizard/newcertificatewizard.cpp:1402
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is invalid.<nl/>Local Admin rule: <icode>%2</icode>"
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddUserIDDialog)
 #: dialogs/adduseriddialog.ui:5
 msgid "Add New User-ID"
@@ -2551,6 +2796,14 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: dialogs/adduseriddialog.ui:48
 msgid "This is how the new User-ID will be stored in the certificate:"
+msgstr ""
+
+#: dialogs/certificatedetailsdialog.cpp:295
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while loading the certifications: <message>%1</"
+"message></para>"
 msgstr ""
 
 #: dialogs/certificatedetailsdialog.cpp:298
@@ -2857,6 +3110,25 @@ msgstr ""
 
 #: dialogs/deletecertificatesdialog.cpp:115
 msgid "These are the certificates you have selected for deletion:"
+msgstr ""
+
+#: dialogs/deletecertificatesdialog.cpp:117
+msgid ""
+"These certificates will be deleted even though you did <emphasis>not</"
+"emphasis><nl/> explicitly select them (<a href=\"whatsthis://\">Why?</a>):"
+msgstr ""
+
+#: dialogs/deletecertificatesdialog.cpp:138
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Why do you want to delete more certificates than I selected?</"
+"title><para>When you delete CA certificates (both root CAs and intermediate "
+"CAs), the certificates issued by them will also be deleted.</para><para>This "
+"can be nicely seen in <application>Kleopatra</application>'s hierarchical "
+"view mode: In this mode, if you delete a certificate that has children, "
+"those children will also be deleted. Think of CA certificates as folders "
+"containing other certificates: When you delete the folder, you delete its "
+"contents, too.</para>"
 msgstr ""
 
 #: dialogs/deletecertificatesdialog.cpp:150
@@ -3262,9 +3534,22 @@ msgstr ""
 msgid "Run these tests at startup"
 msgstr ""
 
+#: dialogs/setinitialpindialog.cpp:92
+msgctxt "@info"
+msgid ""
+"No NullPin found. <warning>If this PIN was not set by you personally, the "
+"card might have been tampered with.</warning>"
+msgstr ""
+
 #: dialogs/setinitialpindialog.cpp:99
 msgctxt "@info"
 msgid "Canceled setting PIN."
+msgstr ""
+
+#: dialogs/setinitialpindialog.cpp:103
+#, kde-format
+msgctxt "@info"
+msgid "There was an error setting the PIN: <message>%1</message>."
 msgstr ""
 
 #: dialogs/setinitialpindialog.cpp:106
@@ -3709,37 +3994,47 @@ msgstr ""
 msgid "File(s) to process"
 msgstr ""
 
-#: main.cpp:155
+#: main.cpp:154
 msgid "Performing Self-Check..."
 msgstr ""
 
-#: main.cpp:172
+#: main.cpp:171
 msgctxt "did not pass"
 msgid "Self-Check Failed"
 msgstr ""
 
-#: main.cpp:177
+#: main.cpp:176
 msgid "Self-Check Passed"
 msgstr ""
 
-#: main.cpp:195
+#: main.cpp:194
 msgid "Loading certificate cache..."
 msgstr ""
 
-#: main.cpp:202
+#: main.cpp:201
 msgid "Certificate cache loaded."
 msgstr ""
 
-#: main.cpp:252
+#: main.cpp:247
+msgctxt "@info"
+msgid ""
+"<para>The version of the <application>GpgME</application> library you are "
+"running against is older than the one that the <application>GpgME++</"
+"application> library was built against.</para><para><application>Kleopatra</"
+"application> will not function in this setting.</para><para>Please ask your "
+"administrator for help in resolving this issue.</para>"
+msgstr ""
+
+#: main.cpp:251
 msgctxt "@title"
 msgid "GpgME Too Old"
 msgstr ""
 
-#: main.cpp:348
+#: main.cpp:347
 msgid "GPG UI Server Error"
 msgstr ""
 
-#: main.cpp:349
+#: main.cpp:348
 #, kde-format
 msgid ""
 "<qt>The Kleopatra GPG UI Server Module could not be initialized.<br/>The "
@@ -4174,9 +4469,25 @@ msgstr ""
 msgid "PKCS#10 Requests (*.p10)"
 msgstr ""
 
+#: newcertificatewizard/newcertificatewizard.cpp:848
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not copy temporary file <filename>%1</filename> to file <filename>%2</"
+"filename>: <message>%3</message>"
+msgstr ""
+
 #: newcertificatewizard/newcertificatewizard.cpp:851
 msgctxt "@title"
 msgid "Error Saving Request"
+msgstr ""
+
+#: newcertificatewizard/newcertificatewizard.cpp:855
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Successfully wrote request to <filename>%1</filename>.</para><para>You "
+"should now send the request to the Certification Authority (CA).</para>"
 msgstr ""
 
 #: newcertificatewizard/newcertificatewizard.cpp:858
@@ -4202,6 +4513,18 @@ msgstr ""
 
 #: newcertificatewizard/newcertificatewizard.cpp:899
 msgid "Please find attached my new OpenPGP certificate."
+msgstr ""
+
+#: newcertificatewizard/newcertificatewizard.cpp:933
+msgctxt "@info"
+msgid ""
+"<para><application>Kleopatra</application> tried to send a mail via your "
+"default mail client.</para><para>Some mail clients are known not to support "
+"attachments when invoked this way.</para><para>If your mail client does not "
+"have an attachment, then drag the <application>Kleopatra</application> icon "
+"and drop it on the message compose window of your mail client.</"
+"para><para>If that does not work, either, save the request to a file, and "
+"then attach that.</para>"
 msgstr ""
 
 #: newcertificatewizard/newcertificatewizard.cpp:937
@@ -4459,20 +4782,102 @@ msgctxt "@title"
 msgid "GpgConf (Configuration) installation"
 msgstr ""
 
+#: selftest/enginecheck.cpp:104
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>A problem was detected with the <application>%1</application> backend."
+"</para>"
+msgstr ""
+
 #: selftest/enginecheck.cpp:109
 msgid "not supported"
 msgstr "ne subtenata"
 
+#: selftest/enginecheck.cpp:111
+msgctxt "@info"
+msgid ""
+"<para>It seems that the <icode>gpgme</icode> library was compiled without "
+"support for this backend.</para>"
+msgstr ""
+
+#: selftest/enginecheck.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Replace the <icode>gpgme</icode> library with a version compiled with "
+"<application>%1</application> support.</para>"
+msgstr ""
+
 #: selftest/enginecheck.cpp:118
 msgid "not properly installed"
+msgstr ""
+
+#: selftest/enginecheck.cpp:120
+#, kde-format
+msgctxt "@info"
+msgid "<para>Backend <command>%1</command> is not installed properly.</para>"
+msgstr ""
+
+#: selftest/enginecheck.cpp:122
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Please check the output of <command>%1 --version</command> manually.</"
+"para>"
 msgstr ""
 
 #: selftest/enginecheck.cpp:125
 msgid "too old"
 msgstr ""
 
+#: selftest/enginecheck.cpp:127
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Backend <command>%1</command> is installed in version %2, but at least "
+"version %3 is required.</para>"
+msgstr ""
+
+#: selftest/enginecheck.cpp:133 selftest/enginecheck.cpp:218
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Install <application>%1</application> version %2 or higher.</para>"
+msgstr ""
+
 #: selftest/enginecheck.cpp:136
 msgid "unknown problem"
+msgstr ""
+
+#: selftest/enginecheck.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Make sure <application>%1</application> is installed and in "
+"<envar>PATH</envar>.</para>"
+msgstr ""
+
+#: selftest/enginecheck.cpp:215
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para><application>%1</application> v%2.%3.%4 is required for this test, but "
+"only %5 is installed.</para>"
+msgstr ""
+
+#: selftest/enginecheck.cpp:223
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para><application>%1</application> is required for this test, but does not "
+"seem available.</para><para>See tests further up for more information.</para>"
+msgstr ""
+
+#: selftest/enginecheck.cpp:227
+#, kde-format
+msgctxt "@info %1: test name"
+msgid "<para>See \"%1\" above.</para>"
 msgstr ""
 
 #: selftest/gpgagentcheck.cpp:65
@@ -4491,16 +4896,56 @@ msgid ""
 "compiled against an older GpgME that did not support connecting to gpg-agent."
 msgstr ""
 
+#: selftest/gpgagentcheck.cpp:82
+msgctxt "@info"
+msgid ""
+"Upgrade to <application>gpgme</application> 1.2.0 or higher, and ensure that "
+"gpgme++ was compiled against it."
+msgstr ""
+
 #: selftest/gpgagentcheck.cpp:89
 msgid "GpgME does not support gpg-agent"
+msgstr ""
+
+#: selftest/gpgagentcheck.cpp:91
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The <application>GpgME</application> library is new enough to support "
+"<application>gpg-agent</application>, but does not seem to do so in this "
+"installation.</para><para>The error returned was: <message>%1</message>.</"
+"para>"
 msgstr ""
 
 #: selftest/gpgagentcheck.cpp:104 selftest/uiservercheck.cpp:82
 msgid "not reachable"
 msgstr ""
 
+#: selftest/gpgagentcheck.cpp:106
+#, kde-format
+msgctxt "@info"
+msgid "Could not connect to GpgAgent: <message>%1</message>"
+msgstr ""
+
+#: selftest/gpgagentcheck.cpp:109
+msgctxt "@info"
+msgid ""
+"<para>Check that gpg-agent is running and that the "
+"<environment>GPG_AGENT_INFO</environment> variable is set and up-to-date.</"
+"para>"
+msgstr ""
+
 #: selftest/gpgagentcheck.cpp:113
 msgid "unexpected error"
+msgstr ""
+
+#: selftest/gpgagentcheck.cpp:115
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Unexpected error while asking <application>gpg-agent</application> for "
+"its version.</para><para>The error returned was: <message>%1</message>.</"
+"para>"
 msgstr ""
 
 #: selftest/gpgconfcheck.cpp:64
@@ -4562,6 +5007,14 @@ msgstr ""
 msgid "Errors found"
 msgstr ""
 
+#: selftest/libkleopatrarccheck.cpp:80
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Kleopatra detected the following errors in the libkleopatrarc "
+"configuration:</para>%1"
+msgstr ""
+
 #: selftest/registrycheck.cpp:62
 msgctxt "@title"
 msgid "Windows Registry"
@@ -4569,6 +5022,29 @@ msgstr ""
 
 #: selftest/registrycheck.cpp:76
 msgid "Obsolete registry entries found"
+msgstr ""
+
+#: selftest/registrycheck.cpp:80
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Kleopatra detected an obsolete registry key (<resource>%1\\%2</"
+"resource>), added by either a previous <application>Gpg4win</application> "
+"version or applications such as <application>WinPT</application> or "
+"<application>EnigMail</application>.</para><para>Keeping the entry might "
+"lead to an old GnuPG backend being used.</para>"
+msgstr ""
+
+#: selftest/registrycheck.cpp:86
+#, kde-format
+msgctxt "@info"
+msgid "<para>Delete registry key <resource>%1\\%2</resource>.</para>"
+msgstr ""
+
+#: selftest/registrycheck.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid "Could not delete the registry key <resource>%1\\%2</resource>"
 msgstr ""
 
 #: selftest/registrycheck.cpp:113
@@ -4581,8 +5057,36 @@ msgctxt "@title"
 msgid "UiServer Connectivity"
 msgstr ""
 
+#: selftest/uiservercheck.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "Could not connect to UiServer: <message>%1</message>"
+msgstr ""
+
+#: selftest/uiservercheck.cpp:87
+msgctxt "@info"
+msgid ""
+"<para>Check that your firewall is not set to block local connections (allow "
+"connections to <resource>localhost</resource> or <resource>127.0.0.1</"
+"resource>).</para>"
+msgstr ""
+
 #: selftest/uiservercheck.cpp:91
 msgid "multiple instances"
+msgstr ""
+
+#: selftest/uiservercheck.cpp:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"It seems another <application>Kleopatra</application> is running (with "
+"process-id %1)"
+msgstr ""
+
+#: selftest/uiservercheck.cpp:96
+msgctxt "@info"
+msgid ""
+"Quit any other running instances of <application>Kleopatra</application>."
 msgstr ""
 
 #: systrayicon.cpp:158
