@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-12-07 01:41+0000\n"
+"POT-Creation-Date: 2014-12-08 01:46+0000\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -177,7 +177,8 @@ msgstr "B&ildo"
 
 #. i18n: ectx: Menu (Layer)
 #: gemini/kritagemini.rc:91 krita.rc:118
-#: plugins/extensions/histogram/histogram.rc:4 sketch/kritasketch.rc:91
+#: plugins/extensions/histogram/histogram.rc:4
+#: plugins/extensions/layersplit/layersplit.rc:4 sketch/kritasketch.rc:91
 msgid "&Layer"
 msgstr "&Ebeno"
 
@@ -266,12 +267,12 @@ msgstr ""
 
 #: gemini/MainWindow.cpp:292 gemini/MainWindow.cpp:654
 #: sketch/MainWindow.cpp:151 ui/KisDocument.cpp:1961 ui/KisDocument.cpp:2562
-#: ui/KisMainWindow.cpp:1342 ui/KisView.cpp:801
+#: ui/KisMainWindow.cpp:1342 ui/KisView.cpp:799
 msgid "Untitled"
 msgstr ""
 
 #: gemini/MainWindow.cpp:657 ui/KisDocument.cpp:1964 ui/KisMainWindow.cpp:1345
-#: ui/KisView.cpp:804
+#: ui/KisView.cpp:802
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
@@ -2546,8 +2547,10 @@ msgstr "Konverti Ebenotipon"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpImage)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgImagesplit)
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgLayerSplit)
 #: plugins/extensions/colorspaceconversion/dlg_colorspaceconversion.cc:43
 #: plugins/extensions/imagesplit/wdg_imagesplit.ui:14
+#: plugins/extensions/layersplit/wdg_layersplit.ui:14
 #: ui/forms/wdgnewimage.ui:46
 msgid "Image Size"
 msgstr "Bildgrandecoo"
@@ -4754,6 +4757,87 @@ msgstr "Movi ebenon supren"
 #| msgid "Move layer up"
 msgid "Move into next group"
 msgstr "Movi ebenon supren"
+
+#: plugins/extensions/layersplit/dlg_layersplit.cpp:40
+#, fuzzy
+#| msgid "Scale Layer"
+msgid "Split Layer"
+msgstr "Skali Ebenon"
+
+#: plugins/extensions/layersplit/layersplit.cpp:58
+#, fuzzy
+msgid "Split Layer..."
+msgstr "Aldonu ebenon..."
+
+#: plugins/extensions/layersplit/layersplit.cpp:91
+#, fuzzy
+#| msgid "&Filters Gallery"
+msgid "Split into Layers"
+msgstr "&Filtrilgalerio"
+
+#: plugins/extensions/layersplit/layersplit.cpp:183
+#, fuzzy
+#| msgid "Scale Layer"
+msgctxt "(qtundo-format)"
+msgid "Split Layer"
+msgstr "Skali Ebenon"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. i18n: ectx: property (title), widget (QGroupBox, grpMode)
+#: plugins/extensions/layersplit/layersplit.cpp:197
+#: plugins/generators/solid/colorgenerator.h:53
+#: ui/dialogs/kis_dlg_preferences.cc:637 ui/forms/wdganimationselector.ui:290
+#: ui/forms/wdgnewimage.ui:388 ui/kis_paintop_option.cpp:31
+msgid "Color"
+msgstr "Koloro"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkCreateGroupLayer)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:25
+msgid "Put all new layers in a group layer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkSeparateGroupLayers)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:35
+msgid "Put every layer in its own, separate group layer."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkAlphaLock)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:42
+msgid "Alpha-lock every new layer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkHideOriginal)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:52
+#, fuzzy
+#| msgid "Show original layer"
+msgid "Hide the original layer"
+msgstr "Montri originan ebenon"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkSortLayers)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:62
+msgid "Sort layers by amount of non-transparent pixels"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:72
+#, fuzzy
+msgid "Fuzziness:"
+msgstr "Nur heligu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkDisregardOpacity)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:85
+#, fuzzy
+#| msgid "Distance: "
+msgid "Disregard opacity"
+msgstr "Distanco:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:97
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Split a layer "
+"according to color</span></p><p>Creates a new layer for every color in the "
+"active layer.</p></body></html>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/extensions/metadataeditor/editors/dublincore.ui:19
@@ -8314,14 +8398,6 @@ msgstr "Koloro:"
 #| msgid "Add New Color..."
 msgid "&Solid Color..."
 msgstr "Aldoni Novan Koloron..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#. i18n: ectx: property (title), widget (QGroupBox, grpMode)
-#: plugins/generators/solid/colorgenerator.h:53
-#: ui/dialogs/kis_dlg_preferences.cc:637 ui/forms/wdganimationselector.ui:290
-#: ui/forms/wdgnewimage.ui:388 ui/kis_paintop_option.cpp:31
-msgid "Color"
-msgstr "Koloro"
 
 #: plugins/paintops/chalk/chalk_paintop_plugin.cpp:42
 #, fuzzy
@@ -14494,7 +14570,7 @@ msgstr ""
 msgid "Confirm"
 msgstr "Anguloj:"
 
-#: ui/input/kis_tool_invocation_action.cpp:53 ui/KisView.cpp:465
+#: ui/input/kis_tool_invocation_action.cpp:53 ui/KisView.cpp:463
 #, fuzzy
 msgid "Cancel"
 msgstr "Kanaloj"
@@ -18761,27 +18837,27 @@ msgstr ""
 msgid "Undo %1"
 msgstr ""
 
-#: ui/KisView.cpp:457
+#: ui/KisView.cpp:455
 #, fuzzy
 #| msgid "I&nsert Image as Layer..."
 msgid "Insert as New Layer"
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: ui/KisView.cpp:458
+#: ui/KisView.cpp:456
 #, fuzzy
 #| msgid "I&nsert Image as Layer..."
 msgid "Insert Many Layers"
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: ui/KisView.cpp:460
+#: ui/KisView.cpp:458
 msgid "Open in New Document"
 msgstr ""
 
-#: ui/KisView.cpp:461
+#: ui/KisView.cpp:459
 msgid "Open Many Documents"
 msgstr ""
 
-#: ui/KisView.cpp:463
+#: ui/KisView.cpp:461
 msgid "Replace Current Document"
 msgstr ""
 
