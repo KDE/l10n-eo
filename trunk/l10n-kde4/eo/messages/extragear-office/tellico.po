@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-01-14 01:53+0000\n"
+"POT-Creation-Date: 2015-01-25 01:55+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -220,6 +220,8 @@ msgstr "Titolo"
 #: src/configdialog.cpp:182 src/configdialog.cpp:209 src/configdialog.cpp:227
 #: src/fetch/allocinefetcher.cpp:267 src/fetch/allocinefetcher.cpp:273
 #: src/fetch/animenfofetcher.cpp:296 src/fetch/animenfofetcher.cpp:300
+#: src/fetch/discogsfetcher.cpp:244 src/fetch/discogsfetcher.cpp:249
+#: src/fetch/discogsfetcher.cpp:254 src/fetch/discogsfetcher.cpp:261
 #: src/fetch/filmasterfetcher.cpp:236 src/fetch/freebasefetcher.cpp:390
 #: src/fetch/googlebookfetcher.cpp:260 src/fetch/googlebookfetcher.cpp:265
 #: src/fetch/imdbfetcher.cpp:963 src/fetch/imdbfetcher.cpp:1341
@@ -1456,7 +1458,8 @@ msgstr ""
 msgid "Region"
 msgstr "Regiono"
 
-#: src/collections/videocollection.cpp:95 src/fetch/discogsfetcher.cpp:214
+#: src/collections/videocollection.cpp:95 src/fetch/discogsfetcher.cpp:253
+#: src/fetch/discogsfetcher.cpp:407
 msgid "Nationality"
 msgstr ""
 
@@ -1498,7 +1501,8 @@ msgstr ""
 msgid "Director"
 msgstr ""
 
-#: src/collections/videocollection.cpp:123 src/fetch/discogsfetcher.cpp:213
+#: src/collections/videocollection.cpp:123 src/fetch/discogsfetcher.cpp:260
+#: src/fetch/discogsfetcher.cpp:406
 msgid "Producer"
 msgstr "Faristo"
 
@@ -2648,10 +2652,11 @@ msgid "Amazon.com Web Services"
 msgstr ""
 
 #: src/fetch/amazonfetcher.cpp:929 src/fetch/bibliosharefetcher.cpp:160
-#: src/fetch/crossreffetcher.cpp:311 src/fetch/doubanfetcher.cpp:226
-#: src/fetch/freebasefetcher.cpp:954 src/fetch/giantbombfetcher.cpp:206
-#: src/fetch/googlebookfetcher.cpp:387 src/fetch/isbndbfetcher.cpp:364
-#: src/fetch/themoviedbfetcher.cpp:443 src/fetch/winecomfetcher.cpp:297
+#: src/fetch/crossreffetcher.cpp:311 src/fetch/discogsfetcher.cpp:419
+#: src/fetch/doubanfetcher.cpp:226 src/fetch/freebasefetcher.cpp:954
+#: src/fetch/giantbombfetcher.cpp:206 src/fetch/googlebookfetcher.cpp:387
+#: src/fetch/isbndbfetcher.cpp:364 src/fetch/themoviedbfetcher.cpp:443
+#: src/fetch/winecomfetcher.cpp:297
 #, kde-format
 msgid ""
 "Registration is required for accessing the %1 data source. If you agree to "
@@ -2781,14 +2786,14 @@ msgstr ""
 #: src/fetch/animenfofetcher.cpp:491 src/fetch/arxivfetcher.cpp:329
 #: src/fetch/bibsonomyfetcher.cpp:183 src/fetch/boardgamegeekfetcher.cpp:184
 #: src/fetch/citebasefetcher.cpp:234 src/fetch/dblpfetcher.cpp:126
-#: src/fetch/discogsfetcher.cpp:222 src/fetch/dvdfrfetcher.cpp:184
-#: src/fetch/entrezfetcher.cpp:481 src/fetch/filmasterfetcher.cpp:322
-#: src/fetch/googlescholarfetcher.cpp:267 src/fetch/hathitrustfetcher.cpp:318
-#: src/fetch/ibsfetcher.cpp:445 src/fetch/masfetcher.cpp:328
-#: src/fetch/moviemeterfetcher.cpp:367 src/fetch/mrlookupfetcher.cpp:220
-#: src/fetch/musicbrainzfetcher.cpp:337 src/fetch/openlibraryfetcher.cpp:429
-#: src/fetch/springerfetcher.cpp:179 src/fetch/thegamesdbfetcher.cpp:161
-#: src/fetch/vndbfetcher.cpp:328 src/fetch/yahoofetcher.cpp:396
+#: src/fetch/dvdfrfetcher.cpp:184 src/fetch/entrezfetcher.cpp:481
+#: src/fetch/filmasterfetcher.cpp:322 src/fetch/googlescholarfetcher.cpp:267
+#: src/fetch/hathitrustfetcher.cpp:318 src/fetch/ibsfetcher.cpp:445
+#: src/fetch/masfetcher.cpp:328 src/fetch/moviemeterfetcher.cpp:367
+#: src/fetch/mrlookupfetcher.cpp:220 src/fetch/musicbrainzfetcher.cpp:337
+#: src/fetch/openlibraryfetcher.cpp:429 src/fetch/springerfetcher.cpp:179
+#: src/fetch/thegamesdbfetcher.cpp:161 src/fetch/vndbfetcher.cpp:328
+#: src/fetch/yahoofetcher.cpp:396
 msgid "This source has no options."
 msgstr ""
 
@@ -2839,12 +2844,24 @@ msgstr ""
 msgid "Email: "
 msgstr ""
 
-#: src/fetch/discogsfetcher.cpp:204
+#: src/fetch/discogsfetcher.cpp:96
+msgid "Access to data from Discogs.com requires a personal token."
+msgstr ""
+
+#: src/fetch/discogsfetcher.cpp:248 src/fetch/discogsfetcher.cpp:408
+msgid "Discogs Link"
+msgstr ""
+
+#: src/fetch/discogsfetcher.cpp:271
+msgid "The Discogs.com server reports a token error."
+msgstr ""
+
+#: src/fetch/discogsfetcher.cpp:397
 msgid "Discogs Audio Search"
 msgstr ""
 
-#: src/fetch/discogsfetcher.cpp:215
-msgid "Discogs Link"
+#: src/fetch/discogsfetcher.cpp:432
+msgid "User token: "
 msgstr ""
 
 #: src/fetch/doubanfetcher.cpp:214
@@ -5474,15 +5491,15 @@ msgstr ""
 msgid "XML"
 msgstr "XML"
 
-#: src/translators/tellicoxmlexporter.cpp:515
+#: src/translators/tellicoxmlexporter.cpp:516
 msgid "Tellico XML Options"
 msgstr ""
 
-#: src/translators/tellicoxmlexporter.cpp:518
+#: src/translators/tellicoxmlexporter.cpp:519
 msgid "Include images in XML document"
 msgstr ""
 
-#: src/translators/tellicoxmlexporter.cpp:520
+#: src/translators/tellicoxmlexporter.cpp:521
 msgid ""
 "If checked, the images in the document will be included in the XML stream as "
 "base64 encoded elements."
