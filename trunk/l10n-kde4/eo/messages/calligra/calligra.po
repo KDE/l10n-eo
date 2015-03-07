@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-03-06 01:51+0000\n"
+"POT-Creation-Date: 2015-03-07 01:58+0000\n"
 "PO-Revision-Date: 2007-11-04 20:12+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -281,7 +281,7 @@ msgstr ""
 msgid "Could not alter table \"%1\" using the same table as destination."
 msgstr "Ne povis legi la komencon de la dosiero."
 
-#: db/connection.cpp:1975 db/expression.cpp:855
+#: db/connection.cpp:1975 db/expression.cpp:909
 #, kde-format
 msgid "Unknown table \"%1\"."
 msgstr ""
@@ -602,31 +602,31 @@ msgstr "Ne eblis legi la pakaĵon \"%1\"."
 msgid "Could not find service <resource>%1</resource>."
 msgstr "Ne eblis legi la pakaĵon \"%1\"."
 
-#: db/expression.cpp:257
-msgid "Three arguments required"
+#: db/expression.cpp:306 db/expression.cpp:1066
+msgid "Incorrect number of arguments"
 msgstr ""
 
-#: db/expression.cpp:258
+#: db/expression.cpp:307
 #, kde-format
 msgctxt "@info BETWEEN..AND error"
 msgid "%1 operator requires exactly three arguments."
 msgstr ""
 
-#: db/expression.cpp:272
+#: db/expression.cpp:321
 msgid "Incompatible types of arguments"
 msgstr ""
 
-#: db/expression.cpp:273
+#: db/expression.cpp:322
 #, kde-format
 msgctxt "@info BETWEEN..AND type error"
 msgid "%1 operator requires compatible types of arguments."
 msgstr ""
 
-#: db/expression.cpp:792
+#: db/expression.cpp:846
 msgid "Ambiguous field name"
 msgstr ""
 
-#: db/expression.cpp:794
+#: db/expression.cpp:848
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -635,60 +635,94 @@ msgid ""
 "placeholder>.%4</resource> notation to specify table name."
 msgstr ""
 
-#: db/expression.cpp:804 db/expression.cpp:880
+#: db/expression.cpp:858 db/expression.cpp:934
 #, fuzzy
 #| msgid "File not found"
 msgid "Field not found"
 msgstr "Dosiero ne trovita"
 
-#: db/expression.cpp:805
+#: db/expression.cpp:859
 #, kde-format
 msgid "Table containing \"%1\" field not found."
 msgstr ""
 
-#: db/expression.cpp:831
+#: db/expression.cpp:885
 #, fuzzy
 #| msgid "Could not create the file for saving"
 msgid "Could not access the table directly using its name"
 msgstr "Ne eblis krei la dosieron por savi"
 
-#: db/expression.cpp:832
+#: db/expression.cpp:886
 #, kde-format
 msgid ""
 "Table name <resource>%1</resource> is covered by aliases. Instead of "
 "<resource>%2</resource>, you can write <resource>%3</resource>."
 msgstr ""
 
-#: db/expression.cpp:854
+#: db/expression.cpp:908
 #, fuzzy
 #| msgid "File not found"
 msgid "Table not found"
 msgstr "Dosiero ne trovita"
 
-#: db/expression.cpp:868
+#: db/expression.cpp:922
 #, kde-format
 msgid "Ambiguous \"%1.*\" expression"
 msgstr ""
 
-#: db/expression.cpp:869
+#: db/expression.cpp:923
 #, kde-format
 msgid "More than one \"%1\" table or alias defined."
 msgstr ""
 
-#: db/expression.cpp:881
+#: db/expression.cpp:935
 #, fuzzy, kde-format
 #| msgid "The file %1 does not exist."
 msgid "Table \"%1\" has no \"%2\" field."
 msgstr "La dosiero %1 ne ekzistas."
 
-#: db/expression.cpp:888
+#: db/expression.cpp:942
 #, kde-format
 msgid "Ambiguous \"%1.%2\" expression"
 msgstr ""
 
-#: db/expression.cpp:889
+#: db/expression.cpp:943
 #, kde-format
 msgid "More than one \"%1\" table or alias defined containing \"%2\" field."
+msgstr ""
+
+#: db/expression.cpp:1067
+#, kde-format
+msgctxt "@info Number of arguments error"
+msgid "%1() function requires 2 or 3 arguments."
+msgstr ""
+
+#: db/expression.cpp:1072 db/expression.cpp:1082 db/expression.cpp:1094
+msgid "Incorrect type of argument"
+msgstr ""
+
+#: db/expression.cpp:1073
+#, kde-format
+msgctxt "@info Type error"
+msgid ""
+"%1() function's first argument should be of type \"%2\". Specified argument "
+"is of type \"%3\"."
+msgstr ""
+
+#: db/expression.cpp:1083
+#, kde-format
+msgctxt "@info Type error"
+msgid ""
+"%1() function's second argument should be of type \"%2\". Specified argument "
+"is of type \"%3\"."
+msgstr ""
+
+#: db/expression.cpp:1095
+#, kde-format
+msgctxt "@info Type error"
+msgid ""
+"%1() function's third argument should be of type \"%2\". Specified argument "
+"is of type \"%3\"."
 msgstr ""
 
 #: db/field.cpp:729
@@ -705,7 +739,7 @@ msgstr ""
 msgid "Short Integer Number"
 msgstr "Nombro:"
 
-#: db/field.cpp:732 db/field.cpp:762
+#: db/field.cpp:732 db/field.cpp:763
 #, fuzzy
 #| msgid "Number:"
 msgid "Integer Number"
@@ -746,7 +780,7 @@ msgstr ""
 msgid "Double Precision Number"
 msgstr ""
 
-#: db/field.cpp:740 db/field.cpp:761
+#: db/field.cpp:740 db/field.cpp:762
 #: koreport/items/text/KoReportTextPlugin.cpp:34
 #: widgets/KoCsvImportDialog.cpp:217 widgets/KoCsvImportDialog.cpp:581
 #: widgets/KoModeBox.cpp:600
@@ -759,27 +793,27 @@ msgstr "Teksto"
 msgid "Long Text"
 msgstr "Teksto"
 
-#: db/field.cpp:742 db/field.cpp:766 rdf/KoSopranoTableModel.cpp:136
+#: db/field.cpp:742 db/field.cpp:767 rdf/KoSopranoTableModel.cpp:136
 msgid "Object"
 msgstr "Objekto"
 
-#: db/field.cpp:760
+#: db/field.cpp:761
 #, fuzzy
 #| msgid "Add Group"
 msgid "Invalid Group"
 msgstr "Aldoni grupon"
 
-#: db/field.cpp:763
+#: db/field.cpp:764
 #, fuzzy
 #| msgid "Change parameter"
 msgid "Floating Point Number"
 msgstr "Ŝanĝi parametron"
 
-#: db/field.cpp:764
+#: db/field.cpp:765
 msgid "Yes/No"
 msgstr ""
 
-#: db/field.cpp:765
+#: db/field.cpp:766
 #, fuzzy
 #| msgid "Date & Time"
 msgid "Date/Time"
