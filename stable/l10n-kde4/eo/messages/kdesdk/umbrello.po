@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umbrello\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-03-10 08:55+0000\n"
+"POT-Creation-Date: 2015-03-17 08:38+0000\n"
 "PO-Revision-Date: 2007-12-06 23:25+0100\n"
 "Last-Translator: Oliver M. Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -211,7 +211,7 @@ msgid ""
 "item of the same name already exists.  Any other items have been pasted."
 msgstr ""
 
-#: clipboard/umlclipboard.cpp:792 uml.cpp:1573
+#: clipboard/umlclipboard.cpp:792 uml.cpp:1567
 msgid "Paste Error"
 msgstr "Eraro dum Regluado"
 
@@ -1255,8 +1255,9 @@ msgid "Status"
 msgstr "Starto"
 
 #. i18n: ectx: property (text), widget (QTableWidget, ui_tableWidgetStatus)
+#. i18n: ectx: property (text), widget (QRadioButton, ui_categoryClass)
 #: codegenwizard/codegenstatuspage.ui:40 codeimpwizard/codeimpstatuspage.ui:54
-#: widgets/widgetbase.cpp:1028
+#: dialogs/finddialog.ui:89 widgets/widgetbase.cpp:1028
 msgid "Class"
 msgstr "Klaso"
 
@@ -1902,15 +1903,13 @@ msgstr "Uzi &tekojn"
 msgid "Find"
 msgstr ""
 
-#: dialogs/finddialog.cpp:21
+#: dialogs/finddialog.cpp:22
 msgid "Search"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/finddialog.ui:21
-#, fuzzy
-#| msgid "Filter"
-msgid "Filter:"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: dialogs/finddialog.ui:25 dialogs/pages/diagramprintpage.cpp:49
+msgid "Filter"
 msgstr "Filtrilo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, ui_treeView)
@@ -1930,8 +1929,41 @@ msgstr "&Aktuala diagramo"
 msgid "&All diagrams"
 msgstr "Ĉiuj di&agramoj"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: dialogs/finddialog.ui:74 listpopupmenu.cpp:801 widgets/widgetbase.cpp:1019
+#: worktoolbar.cpp:369
+msgid "Category"
+msgstr "Kategorio"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_categoryAll)
+#: dialogs/finddialog.ui:82
+msgid "All"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_categoryPackage)
+#: dialogs/finddialog.ui:96 listpopupmenu.cpp:929 listpopupmenu.cpp:1138
+#: widgets/widgetbase.cpp:1064 worktoolbar.cpp:339
+msgid "Package"
+msgstr "Pako"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_categoryInterface)
+#: dialogs/finddialog.ui:103 listpopupmenu.cpp:926 widgets/widgetbase.cpp:1046
+#: worktoolbar.cpp:343
+msgid "Interface"
+msgstr "Interfaco"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_categoryOperation)
+#: dialogs/finddialog.ui:110 listpopupmenu.cpp:1456 listpopupmenu.cpp:1460
+msgid "Operation"
+msgstr "Operacio"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_categoryAttribute)
+#: dialogs/finddialog.ui:117 listpopupmenu.cpp:1455
+msgid "Attribute"
+msgstr "Atributo"
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: dialogs/finddialog.ui:69
+#: dialogs/finddialog.ui:131
 msgid "Search Term:"
 msgstr ""
 
@@ -2108,13 +2140,13 @@ msgid "New Activity"
 msgstr "Nova Aktiveco"
 
 #: dialogs/pages/activitypage.cpp:176 toolbarstateother.cpp:251
-#: umlscene.cpp:3079 widgets/activitywidget.cpp:373
+#: umlscene.cpp:3090 widgets/activitywidget.cpp:373
 #: widgets/statewidget.cpp:497
 msgid "Enter the name of the new activity:"
 msgstr "Enigu la nomon de la nova aktiveco:"
 
 #: dialogs/pages/activitypage.cpp:176 toolbarstateother.cpp:251
-#: umlscene.cpp:3080 widgets/statewidget.cpp:498
+#: umlscene.cpp:3091 widgets/statewidget.cpp:498
 msgid "new activity"
 msgstr "nova aktiveco"
 
@@ -2348,7 +2380,7 @@ msgstr "N&ova Limigo..."
 #: dialogs/pages/classifierlistpage.cpp:206
 #: dialogs/umlforeignkeyconstraintdialog.cpp:311
 #: dialogs/umloperationdialog.cpp:147
-#: dialogs/umluniqueconstraintdialog.cpp:115 umldoc.cpp:1517 umlscene.cpp:3256
+#: dialogs/umluniqueconstraintdialog.cpp:115 umldoc.cpp:1517 umlscene.cpp:3267
 msgid "&Delete"
 msgstr "&Forigi"
 
@@ -2470,10 +2502,6 @@ msgstr "<p align=\"center\">Neniu Opcio Disponebla.</p>"
 #: dialogs/pages/diagramprintpage.cpp:44
 msgid "&Diagrams"
 msgstr "&Diagramoj"
-
-#: dialogs/pages/diagramprintpage.cpp:49
-msgid "Filter"
-msgstr "Filtrilo"
 
 #: dialogs/pages/diagramprintpage.cpp:63
 msgid "&Select diagrams"
@@ -2680,93 +2708,93 @@ msgstr "Frostita"
 msgid "Add only"
 msgstr "Nur aldoni"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:86
+#: dialogs/pages/umlwidgetstylepage.cpp:95
 #, fuzzy
 #| msgid "Color"
 msgctxt "title of color group"
 msgid "Color"
 msgstr "Koloro"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:91
+#: dialogs/pages/umlwidgetstylepage.cpp:100
 msgctxt "text color"
 msgid "&Text:"
 msgstr ""
 
-#: dialogs/pages/umlwidgetstylepage.cpp:98
+#: dialogs/pages/umlwidgetstylepage.cpp:107
 #, fuzzy
 #| msgid "&Default"
 msgctxt "default text color button"
 msgid "Defaul&t"
 msgstr "&Apriora"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:101
+#: dialogs/pages/umlwidgetstylepage.cpp:110
 #, fuzzy
 #| msgid "&Line:"
 msgctxt "line color"
 msgid "&Line:"
 msgstr "&Linio:"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:108
+#: dialogs/pages/umlwidgetstylepage.cpp:117
 #, fuzzy
 #| msgid "&Default"
 msgctxt "default line color button"
 msgid "&Default"
 msgstr "&Apriora"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:111
+#: dialogs/pages/umlwidgetstylepage.cpp:120
 msgid "&Fill:"
 msgstr "&Plenigi:"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:118
+#: dialogs/pages/umlwidgetstylepage.cpp:127
 #, fuzzy
 #| msgid "&Default"
 msgctxt "default fill color button"
 msgid "D&efault"
 msgstr "&Apriora"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:121
+#: dialogs/pages/umlwidgetstylepage.cpp:130
 msgid "&Use fill"
 msgstr "&Uzi plenigon"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:131
+#: dialogs/pages/umlwidgetstylepage.cpp:140
 msgctxt "background color"
 msgid "&Background:"
 msgstr ""
 
-#: dialogs/pages/umlwidgetstylepage.cpp:138
+#: dialogs/pages/umlwidgetstylepage.cpp:147
 #, fuzzy
 #| msgid "&Default"
 msgctxt "default background color button"
 msgid "De&fault"
 msgstr "&Apriora"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:141
+#: dialogs/pages/umlwidgetstylepage.cpp:150
 msgctxt "grid dot color"
 msgid "&Grid dot:"
 msgstr ""
 
-#: dialogs/pages/umlwidgetstylepage.cpp:148
+#: dialogs/pages/umlwidgetstylepage.cpp:157
 #, fuzzy
 #| msgid "&Default"
 msgctxt "default grid dot color button"
 msgid "Def&ault"
 msgstr "&Apriora"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:156
+#: dialogs/pages/umlwidgetstylepage.cpp:165
 #, fuzzy
 #| msgid "Width"
 msgctxt "title of width group"
 msgid "Width"
 msgstr "Larĝeco"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:161
+#: dialogs/pages/umlwidgetstylepage.cpp:170
 #, fuzzy
 #| msgid "Line width:  "
 msgctxt "line width"
 msgid "Line &width:"
 msgstr "Amplekso de linioj:"
 
-#: dialogs/pages/umlwidgetstylepage.cpp:167
+#: dialogs/pages/umlwidgetstylepage.cpp:176
 #, fuzzy
 #| msgid "&Default"
 msgctxt "default line width button"
@@ -3850,10 +3878,6 @@ msgstr "Teko"
 msgid "Entity"
 msgstr "Ento"
 
-#: listpopupmenu.cpp:801 widgets/widgetbase.cpp:1019 worktoolbar.cpp:369
-msgid "Category"
-msgstr "Kategorio"
-
 #: listpopupmenu.cpp:804 widgets/widgetbase.cpp:1007 worktoolbar.cpp:322
 msgid "Actor"
 msgstr "Aktoro"
@@ -3880,10 +3904,6 @@ msgctxt "new class menu item"
 msgid "Class"
 msgstr "Klaso"
 
-#: listpopupmenu.cpp:926 widgets/widgetbase.cpp:1046 worktoolbar.cpp:343
-msgid "Interface"
-msgstr "Interfaco"
-
 #: listpopupmenu.cpp:927 widgets/widgetbase.cpp:1031 worktoolbar.cpp:344
 msgid "Datatype"
 msgstr "Datumtipo"
@@ -3891,11 +3911,6 @@ msgstr "Datumtipo"
 #: listpopupmenu.cpp:928 widgets/widgetbase.cpp:1037 worktoolbar.cpp:345
 msgid "Enum"
 msgstr "Enum"
-
-#: listpopupmenu.cpp:929 listpopupmenu.cpp:1138 widgets/widgetbase.cpp:1064
-#: worktoolbar.cpp:339
-msgid "Package"
-msgstr "Pako"
 
 #: listpopupmenu.cpp:963
 #, fuzzy
@@ -4196,14 +4211,6 @@ msgstr "Kategorio..."
 msgid "Object..."
 msgstr "Objekto..."
 
-#: listpopupmenu.cpp:1455
-msgid "Attribute"
-msgstr "Atributo"
-
-#: listpopupmenu.cpp:1456 listpopupmenu.cpp:1460
-msgid "Operation"
-msgstr "Operacio"
-
 #: listpopupmenu.cpp:1457 listpopupmenu.cpp:1461
 msgid "Template"
 msgstr "Ŝablono"
@@ -4499,7 +4506,7 @@ msgstr "Neĝusta uzo de asocioj."
 msgid "Association Error"
 msgstr "Eraro pri Asocio"
 
-#: toolbarstateother.cpp:250 umlscene.cpp:3078 widgets/activitywidget.cpp:372
+#: toolbarstateother.cpp:250 umlscene.cpp:3089 widgets/activitywidget.cpp:372
 msgid "Enter Activity Name"
 msgstr "Enigi Nomon de Aktiveco"
 
@@ -4539,15 +4546,15 @@ msgstr "Enigu la Kombinitan Fragmenton"
 msgid "new Combined Fragment"
 msgstr "nova Kombinita Fragmento"
 
-#: toolbarstateother.cpp:279 umlscene.cpp:3043 widgets/statewidget.cpp:483
+#: toolbarstateother.cpp:279 umlscene.cpp:3054 widgets/statewidget.cpp:483
 msgid "Enter State Name"
 msgstr "Enigi Nomon de Stato"
 
-#: toolbarstateother.cpp:280 umlscene.cpp:3044 widgets/statewidget.cpp:484
+#: toolbarstateother.cpp:280 umlscene.cpp:3055 widgets/statewidget.cpp:484
 msgid "Enter the name of the new state:"
 msgstr "Enigi nomon de nova stato"
 
-#: toolbarstateother.cpp:280 umlscene.cpp:3045
+#: toolbarstateother.cpp:280 umlscene.cpp:3056
 msgid "new state"
 msgstr "nova stato"
 
@@ -5865,43 +5872,43 @@ msgstr "Fermanta dosieron..."
 msgid "No search term entered"
 msgstr ""
 
-#: uml.cpp:1364
+#: uml.cpp:1358
 #, kde-format
 msgid "'%1': %2 found"
 msgstr ""
 
-#: uml.cpp:1414
+#: uml.cpp:1408
 #, fuzzy
 #| msgid "Exporting view..."
 msgid "Print Preview..."
 msgstr "Eksportanta diagramon..."
 
-#: uml.cpp:1441
+#: uml.cpp:1435
 msgid "Printing..."
 msgstr "Presado..."
 
-#: uml.cpp:1448
+#: uml.cpp:1442
 #, kde-format
 msgid "Print %1"
 msgstr "Presi %1"
 
-#: uml.cpp:1468
+#: uml.cpp:1462
 msgid "Exiting..."
 msgstr "Eliĝanta..."
 
-#: uml.cpp:1531
+#: uml.cpp:1525
 msgid "Cutting selection..."
 msgstr "Eltondanta elekton..."
 
-#: uml.cpp:1554
+#: uml.cpp:1548
 msgid "Copying selection to clipboard..."
 msgstr "Kopianta elekton al tondujo..."
 
-#: uml.cpp:1566
+#: uml.cpp:1560
 msgid "Inserting clipboard contents..."
 msgstr "Enmetanta tondujan enhavon..."
 
-#: uml.cpp:1571
+#: uml.cpp:1565
 msgid ""
 "Umbrello could not paste the clipboard contents.  The objects in the "
 "clipboard may be of the wrong type to be pasted here."
@@ -5909,38 +5916,38 @@ msgstr ""
 "Umbrello ne povis reglui la tondujan enhavon.  La objektoj en la tondujo "
 "povus esti de maltaŭga tipo por ĉi regluado."
 
-#: uml.cpp:1597 umlviewimageexporter.cpp:80 umlviewimageexporterall.cpp:84
+#: uml.cpp:1591 umlviewimageexporter.cpp:80 umlviewimageexporterall.cpp:84
 #, fuzzy
 #| msgid "Ready."
 msgctxt "reset status bar"
 msgid "Ready."
 msgstr "Preta."
 
-#: uml.cpp:2205
+#: uml.cpp:2199
 msgid "Cannot view code until you generate some first."
 msgstr "Maleblas inspekti fontkodon dum kiam vi ankoraŭ ne generis ĝin"
 
-#: uml.cpp:2205 uml.cpp:2208
+#: uml.cpp:2199 uml.cpp:2202
 msgid "Cannot View Code"
 msgstr "Kodmontrado Neebla"
 
-#: uml.cpp:2208
+#: uml.cpp:2202
 msgid "Cannot view code from simple code writer."
 msgstr "Ne eblas inspekti kodon uzante simplan generilon"
 
-#: uml.cpp:2657
+#: uml.cpp:2651
 #, fuzzy
 #| msgid "Select Code to Import"
 msgid "Select file(s) to import:"
 msgstr "Selekti Kodon por Importado"
 
-#: uml.cpp:2686
+#: uml.cpp:2680
 #, fuzzy
 #| msgid "Select Code to Import"
 msgid "Select directory to import:"
 msgstr "Selekti Kodon por Importado"
 
-#: uml.cpp:3208
+#: uml.cpp:3202
 msgid "XHTML Generation failed ."
 msgstr ""
 
@@ -6317,74 +6324,74 @@ msgstr "Stereotipnomo:"
 msgid "Use case &name:"
 msgstr "Uzkazo&nomo:"
 
-#: umlscene.cpp:525
+#: umlscene.cpp:528
 #, kde-format
 msgid "Diagram: %2 Page %1"
 msgstr "Diagramo: %2 Paĝo %1"
 
-#: umlscene.cpp:1330
+#: umlscene.cpp:1341
 #, fuzzy
 #| msgid "&Use fill color"
 msgid "Use fill color"
 msgstr "&Uzi plenigan koloron"
 
-#: umlscene.cpp:1332
+#: umlscene.cpp:1343
 #, fuzzy
 #| msgid "Fill Color"
 msgid "No fill color"
 msgstr "Pleniga Koloro"
 
-#: umlscene.cpp:1347
+#: umlscene.cpp:1358
 #, fuzzy
 #| msgid "Change Font"
 msgid "Change font"
 msgstr "Ŝanĝi Tiparon"
 
-#: umlscene.cpp:1361
+#: umlscene.cpp:1372
 #, fuzzy
 #| msgid "Change Line Color"
 msgid "Change line color"
 msgstr "Ŝanĝi Linikoloron"
 
-#: umlscene.cpp:1379
+#: umlscene.cpp:1390
 #, fuzzy
 #| msgid "Line width:"
 msgid "Change line width"
 msgstr "Larĝeco de linio:"
 
-#: umlscene.cpp:1399
+#: umlscene.cpp:1410
 #, fuzzy
 #| msgid "Change Fill Color"
 msgid "Change fill color"
 msgstr "Ŝanĝi Plenigan Koloron"
 
-#: umlscene.cpp:1414
+#: umlscene.cpp:1425
 #, fuzzy
 #| msgid "Role Properties"
 msgid "Change visual property"
 msgstr "Roltrajtoj"
 
-#: umlscene.cpp:1434
+#: umlscene.cpp:1445
 #, fuzzy
 #| msgid "Delete"
 msgid "Delete widgets"
 msgstr "Forigi"
 
-#: umlscene.cpp:1485
+#: umlscene.cpp:1496
 #, fuzzy
 #| msgid "Create widget :"
 msgid "Resize widgets"
 msgstr "Krei fenestraĵon :"
 
-#: umlscene.cpp:3116
+#: umlscene.cpp:3127
 msgid "Enter Diagram Name"
 msgstr "Enigi Nomon de Diagramo"
 
-#: umlscene.cpp:3117
+#: umlscene.cpp:3128
 msgid "Enter the new name of the diagram:"
 msgstr "Enigu la novan nomon de la diagramo:"
 
-#: umlscene.cpp:3254
+#: umlscene.cpp:3265
 msgid ""
 "You are about to delete the entire diagram.\n"
 "Are you sure?"
@@ -6392,7 +6399,7 @@ msgstr ""
 "Vi estas forigonta la tutan diagramon.\n"
 "Ĉu vi certas?"
 
-#: umlscene.cpp:3255
+#: umlscene.cpp:3266
 msgid "Delete Diagram?"
 msgstr "Forigi Diagramon?"
 
@@ -6888,6 +6895,11 @@ msgstr "Objektnodo"
 #: worktoolbar.cpp:368
 msgid "Pre/Post condition"
 msgstr "Antaŭa/Posta kondiĉo"
+
+#, fuzzy
+#~| msgid "Filter"
+#~ msgid "Filter:"
+#~ msgstr "Filtrilo"
 
 #, fuzzy
 #~| msgid "Change Font"
