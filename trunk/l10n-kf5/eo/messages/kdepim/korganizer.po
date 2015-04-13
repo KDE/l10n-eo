@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-11 08:57+0000\n"
+"POT-Creation-Date: 2015-04-13 08:22+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -40,7 +40,10 @@ msgid ""
 "Copyright © 2006–2012 Allen Winter"
 msgstr ""
 
-#: aboutdata.cpp:51
+#: aboutdata.cpp:51 kontactplugin/korganizer/kcmapptsummary.cpp:170
+#: kontactplugin/korganizer/kcmtodosummary.cpp:166
+#: kontactplugin/specialdates/kcmsdsummary.cpp:184
+#: kontactplugin/specialdates/specialdates_plugin.cpp:63
 msgid "Allen Winter"
 msgstr "Allen Winter"
 
@@ -692,11 +695,11 @@ msgstr ""
 msgid "&Show To-do"
 msgstr ""
 
-#: actionmanager.cpp:1497
+#: actionmanager.cpp:1497 kontactplugin/korganizer/todosummarywidget.cpp:353
 msgid "&Edit To-do..."
 msgstr ""
 
-#: actionmanager.cpp:1501
+#: actionmanager.cpp:1501 kontactplugin/korganizer/todosummarywidget.cpp:354
 msgid "&Delete To-do"
 msgstr ""
 
@@ -1657,7 +1660,10 @@ msgstr ""
 msgid "(c) 2004 Tobias Koenig"
 msgstr "Tobias König"
 
-#: kcmdesignerfields.cpp:160
+#: kcmdesignerfields.cpp:160 kontactplugin/korganizer/kcmapptsummary.cpp:169
+#: kontactplugin/korganizer/kcmtodosummary.cpp:164
+#: kontactplugin/specialdates/kcmsdsummary.cpp:182
+#: kontactplugin/specialdates/specialdates_plugin.cpp:65
 #, fuzzy
 #| msgid "Tobias König"
 msgid "Tobias Koenig"
@@ -1824,6 +1830,939 @@ msgstr ""
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ApptSummaryConfig_Base)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:8
+msgid "Event Summary Configuration"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mDaysButtonGroup)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:14
+msgid "Show Upcoming Events Starting"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:20
+msgid "Show events for today only"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:23
+msgid "Check this box if you want to see events occurring on this date only."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:26
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:34
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:34
+#, fuzzy
+#| msgid "Today"
+msgid "&Today only"
+msgstr "Hodiaŭ"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:36
+msgid "Show events starting within the next month"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:39
+msgid ""
+"Check this box if you want to see events that start sometime during the next "
+"31 days."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:42
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:50
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:50
+msgid "Within the next &month (31 days)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:57
+msgid "Select the days for showing upcoming events"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:60
+msgid ""
+"Check this box if you want to specify the number of days in the future for "
+"upcoming events."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:63
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:74
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:71
+msgid "Within the &next:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mCustomDays)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:76
+msgid "Set the number of days to show upcoming events"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mCustomDays)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:79
+msgid ""
+"Use this spinbox to set the number of days to show upcoming events up to 1 "
+"year in the future."
+msgstr ""
+
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, mCustomDays)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:82
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:93
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:90
+msgid "1 day"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mCustomDays)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:85
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:96
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:93
+msgctxt "days to show in summary"
+msgid " days"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mShowButtonGroup)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:122
+msgid "Show These Upcoming Events From Your Calendar"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowBirthdaysFromCal)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:128
+msgid "Show birthdays from your calendar when also using the Birthday resource"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowBirthdaysFromCal)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:131
+msgid ""
+"Enable this option to include birthdays from your calendar in the upcoming "
+"events summary. This option is only available if you are using the Birthdays "
+"resource in your calendar."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowBirthdaysFromCalBox)
+#. i18n: ectx: property (text), widget (QCheckBox, mShowBirthdaysFromCal)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:134
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:142
+msgid "Show &birthdays"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowAnniversariesFromCal)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:141
+msgid ""
+"Shows anniversaries from your calendar when using the Birthdays resource"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowAnniversariesFromCal)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:144
+msgid ""
+"Enable this option to include anniversaries from your calendar in the "
+"upcoming events summary. This option is only available if you are using the "
+"Birthdays resource in your calendar."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowAnniversariesFromCalBox)
+#. i18n: ectx: property (text), widget (QCheckBox, mShowAnniversariesFromCal)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:147
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:158
+msgid "Show &anniversaries"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, mGroupwareGroup)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:157
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:216
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:244
+msgid "Groupware Settings"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowMineOnly)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:163
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:250
+msgid "Show events belonging to my calendars only"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowMineOnly)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:166
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:253
+msgid ""
+"Check this box if you want the summary to show events belonging to your "
+"calendars only."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowMineOnly)
+#: kontactplugin/korganizer/apptsummaryconfig_base.ui:169
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:256
+msgid "Show &my events only"
+msgstr ""
+
+#: kontactplugin/korganizer/apptsummarywidget.cpp:62
+msgid "Upcoming Events"
+msgstr ""
+
+#: kontactplugin/korganizer/apptsummarywidget.cpp:217
+#, kde-format
+msgid "No upcoming events starting within the next day"
+msgid_plural "No upcoming events starting within the next %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/apptsummarywidget.cpp:253
+#, fuzzy
+#| msgid "Categories"
+msgid "&Edit Appointment..."
+msgstr "Kategorioj"
+
+#: kontactplugin/korganizer/apptsummarywidget.cpp:255
+msgid "&Delete Appointment"
+msgstr ""
+
+#: kontactplugin/korganizer/apptsummarywidget.cpp:275
+#, kde-format
+msgid "Edit Event: \"%1\""
+msgstr ""
+
+#: kontactplugin/korganizer/journalplugin.cpp:51
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "@action:inmenu"
+msgid "New Journal..."
+msgstr "Axel Rousseau"
+
+#: kontactplugin/korganizer/journalplugin.cpp:54
+msgctxt "@info:status"
+msgid "Create a new journal"
+msgstr ""
+
+#: kontactplugin/korganizer/journalplugin.cpp:60
+msgctxt "@info:whatsthis"
+msgid ""
+"You will be presented with a dialog where you can create a new journal entry."
+msgstr ""
+
+#: kontactplugin/korganizer/journalplugin.cpp:67
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "@action:inmenu"
+msgid "Sync Journal"
+msgstr "Axel Rousseau"
+
+#: kontactplugin/korganizer/journalplugin.cpp:69
+msgctxt "@info:status"
+msgid "Synchronize groupware journal"
+msgstr ""
+
+#: kontactplugin/korganizer/journalplugin.cpp:75
+msgctxt "@info:whatsthis"
+msgid "Choose this option to synchronize your groupware journal entries."
+msgstr ""
+
+#: kontactplugin/korganizer/kcmapptsummary.cpp:84
+#: kontactplugin/korganizer/kcmtodosummary.cpp:77
+#: kontactplugin/specialdates/kcmsdsummary.cpp:83
+msgid " day"
+msgid_plural " days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/kcmapptsummary.cpp:164
+msgid "Upcoming Events Configuration Dialog"
+msgstr ""
+
+#: kontactplugin/korganizer/kcmapptsummary.cpp:166
+#: kontactplugin/korganizer/kcmtodosummary.cpp:161
+msgid ""
+"Copyright © 2003–2004 Tobias Koenig\n"
+"Copyright © 2005–2010 Allen Winter"
+msgstr ""
+
+#: kontactplugin/korganizer/kcmtodosummary.cpp:159
+msgid "Pending To-dos Configuration Dialog"
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:66
+#, fuzzy
+#| msgid "&iCalendar..."
+msgctxt "@action:inmenu"
+msgid "New Event..."
+msgstr "&iCalendar..."
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:69
+msgctxt "@info:status"
+msgid "Create a new event"
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:75
+msgctxt "@info:whatsthis"
+msgid ""
+"You will be presented with a dialog where you can create a new event item."
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:81
+#, fuzzy
+#| msgid "Calendar"
+msgctxt "@action:inmenu"
+msgid "Sync Calendar"
+msgstr "Kalendaro"
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:83
+msgctxt "@info:status"
+msgid "Synchronize groupware calendar"
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:89
+msgctxt "@info:whatsthis"
+msgid "Choose this option to synchronize your groupware events."
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:214
+#: kontactplugin/korganizer/todoplugin.cpp:217
+#, fuzzy
+#| msgid "&Settings"
+msgctxt "@item"
+msgid "Meeting"
+msgstr "A&gordo"
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:230
+#: kontactplugin/korganizer/todoplugin.cpp:232
+#, fuzzy, kde-format
+#| msgid "Notes:"
+msgctxt "@item"
+msgid "Note: %1"
+msgstr "Notoj:"
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:254
+#: kontactplugin/korganizer/todoplugin.cpp:255
+msgctxt "@info"
+msgid "Dropping multiple mails is not supported."
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:257
+#: kontactplugin/korganizer/todoplugin.cpp:258
+#, kde-format
+msgctxt "@item"
+msgid ""
+"From: %1\n"
+"To: %2\n"
+"Subject: %3"
+msgstr ""
+
+#: kontactplugin/korganizer/korganizerplugin.cpp:266
+#: kontactplugin/korganizer/todoplugin.cpp:268
+#, fuzzy, kde-format
+#| msgid "KMail"
+msgctxt "@item"
+msgid "Mail: %1"
+msgstr "KMail"
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:201
+#, fuzzy
+#| msgid "Today"
+msgctxt "the appointment is today"
+msgid "Today"
+msgstr "Hodiaŭ"
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:204
+msgctxt "the appointment is tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:228
+#: kontactplugin/korganizer/todosummarywidget.cpp:231
+#: kontactplugin/specialdates/sdsummarywidget.cpp:522
+#, kde-format
+msgid "in 1 day"
+msgid_plural "in %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:241
+msgctxt "eg. in 1 hour 2 minutes"
+msgid "in "
+msgstr ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:245
+#, kde-format
+msgctxt "use abbreviation for hour to keep the text short"
+msgid "1 hr"
+msgid_plural "%1 hrs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:252
+#, kde-format
+msgctxt "use abbreviation for minute to keep the text short"
+msgid "1 min"
+msgid_plural "%1 mins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:255
+#: kontactplugin/specialdates/sdsummarywidget.cpp:520
+msgid "now"
+msgstr ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:258
+msgid "all day"
+msgstr ""
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:294
+#, fuzzy, kde-format
+#| msgid "%1 - %2"
+msgctxt "Time from - to"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: kontactplugin/korganizer/summaryeventinfo.cpp:312
+#, fuzzy, kde-format
+#| msgid "Undo: %1"
+msgctxt "next occurrence"
+msgid "Next: %1"
+msgstr "Malfari: %1"
+
+#: kontactplugin/korganizer/todoplugin.cpp:64
+msgctxt "@action:inmenu"
+msgid "New To-do..."
+msgstr ""
+
+#: kontactplugin/korganizer/todoplugin.cpp:67
+#, fuzzy
+#| msgid "Calendar"
+msgctxt "@info:status"
+msgid "Create a new to-do"
+msgstr "Kalendaro"
+
+#: kontactplugin/korganizer/todoplugin.cpp:73
+msgctxt "@info:whatsthis"
+msgid ""
+"You will be presented with a dialog where you can create a new to-do item."
+msgstr ""
+
+#: kontactplugin/korganizer/todoplugin.cpp:79
+msgctxt "@action:inmenu"
+msgid "Sync To-do List"
+msgstr ""
+
+#: kontactplugin/korganizer/todoplugin.cpp:80
+msgctxt "@info:status"
+msgid "Synchronize groupware to-do list"
+msgstr ""
+
+#: kontactplugin/korganizer/todoplugin.cpp:85
+msgctxt "@info:whatsthis"
+msgid "Choose this option to synchronize your groupware to-do list."
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TodoSummaryConfig_Base)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:16
+msgid "To-do Summary Configuration"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mDaysGroup)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:22
+msgid "Show To-dos Due"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:28
+msgid "Show To-dos due today only"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:31
+msgid "Check this box if you want to see To-dos due on this date only."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:44
+msgid "Show To-dos due within the next month"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:47
+msgid ""
+"Check this box if you want to see To-dos that are due sometime during the "
+"next 31 days."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:65
+msgid "Select the days for showing pending To-dos"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:71
+msgid ""
+"Check this box if you want specify the number of days in the future for "
+"pending To-dos."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mCustomDays)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:87
+msgid "Set the number of days to show pending To-dos"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mCustomDays)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:90
+msgid ""
+"Use this spinbox to set the number of days to show pending To-dos up to 1 "
+"year in the future."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mHideGroup)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:133
+msgid "Hide Following To-do Types"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mHideCompletedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:139
+msgid "Hide completed To-dos"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHideCompletedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:142
+msgid ""
+"Check this box if you do not want to see To-dos that have already been "
+"completed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mHideCompletedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:145
+#, fuzzy
+#| msgid "Completed"
+msgid "&Completed"
+msgstr "Preta"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mHideOpenEndedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:155
+msgid "Hide To-dos without a due date"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHideOpenEndedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:158
+msgid "Check this box if you do not want to see open-ended To-dos."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mHideOpenEndedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:161
+msgid "&Open-ended (no due date)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mHideUnstartedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:171
+msgid "Hide unstarted To-dos"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHideUnstartedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:174
+msgid ""
+"Check this box if you do not want to see To-dos with a start date in the "
+"future."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mHideUnstartedBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:177
+msgid "&Unstarted (start date is in the future)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mHideInProgressBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:184
+msgid "Hide in-progress To-dos"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHideInProgressBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:187
+msgid ""
+"Check this box if you do not want to see To-dos that have been started but "
+"are not yet completed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mHideInProgressBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:190
+msgid "&In-progress (started but not completed)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mHideOverdueBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:197
+msgid "Hide overdue To-dos"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHideOverdueBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:203
+msgid ""
+"Check this box if you do not want to see To-dos that are past their due date "
+"but have not yet been completed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mHideOverdueBox)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:206
+msgid "Over&due (not completed and beyond due-date)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowMineOnly)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:222
+msgid "Show To-dos belonging to my calendars only"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowMineOnly)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:225
+msgid ""
+"Check this box if you want the summary to show To-dos belonging to your "
+"calendars only."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowMineOnly)
+#: kontactplugin/korganizer/todosummaryconfig_base.ui:228
+msgid "Show &my To-dos only"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:63
+msgid "Pending To-dos"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:209
+#, fuzzy
+#| msgid "Today"
+msgctxt "the to-do is due today"
+msgid "Today"
+msgstr "Hodiaŭ"
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:211
+msgctxt "the to-do is due tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:233
+#, kde-format
+msgid "1 day ago"
+msgid_plural "%1 days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:235
+msgctxt "the to-do is due"
+msgid "due"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:299
+#, kde-format
+msgid "No pending to-dos due within the next day"
+msgid_plural "No pending to-dos due within the next %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:361
+#, fuzzy
+#| msgid "Completed"
+msgid "&Mark To-do Completed"
+msgstr "Preta"
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:382
+#, kde-format
+msgid "Edit To-do: \"%1\""
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:407
+msgid "open-ended"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:410
+msgctxt "the to-do is overdue"
+msgid "overdue"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:413
+msgctxt "the to-do starts today"
+msgid "starts today"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:417
+msgctxt "the to-do has not been started yet"
+msgid "not-started"
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:419
+#, fuzzy
+#| msgid "Completed"
+msgctxt "the to-do is completed"
+msgid "completed"
+msgstr "Preta"
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:421
+msgctxt "the to-do is in-progress"
+msgid "in-progress "
+msgstr ""
+
+#: kontactplugin/korganizer/todosummarywidget.cpp:426
+#, fuzzy
+#| msgctxt "@item:intext delimiter for joining holiday names"
+#| msgid ","
+msgctxt "Separator for status like this: overdue, completed"
+msgid ","
+msgstr ","
+
+#: kontactplugin/specialdates/kcmsdsummary.cpp:177
+msgid "Upcoming Special Dates Configuration Dialog"
+msgstr ""
+
+#: kontactplugin/specialdates/kcmsdsummary.cpp:179
+msgid ""
+"Copyright © 2004 Tobias Koenig\n"
+"Copyright © 2004–2010 Allen Winter"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, SDSummaryConfig_Base)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:16
+msgid "Special Dates Summary Configuration"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mDaysGroup)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:22
+msgid "Show Special Dates Starting"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:28
+msgid "Show special occasions for today only"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateTodayButton)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:31
+msgid ""
+"Check this box if you want to see special occasions occurring on this date "
+"only."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:44
+msgid "Show special occasions starting within the next month"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateMonthButton)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:47
+msgid ""
+"Check this box if you want to see special occasions that start sometime "
+"during the next 31 days."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:65
+msgid "Select the days for showing upcoming special occasions"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, mDateRangeButton)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:68
+msgid ""
+"Check this box if you want to specify the number of days in the future for "
+"upcoming special occasions."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mCustomDays)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:84
+msgid "Set the number of days to show upcoming special occasions"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mCustomDays)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:87
+msgid ""
+"Use this spinbox to set the number of days to show upcoming special "
+"occasions up to one year in the future."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mShowFromCalGroup)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:130
+msgid "Show These Special Dates From Your Calendar"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowBirthdaysFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:136
+msgid "Show birthdays from your calendar"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowBirthdaysFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:139
+msgid ""
+"Enable this option to include birthdays from your calendar in the upcoming "
+"special occasions summary. Typically, these are events with the \"Birthday\" "
+"category."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowAnniversariesFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:152
+msgid "Show anniversaries from your calendar"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowAnniversariesFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:155
+msgid ""
+"Enable this option to include anniversaries from your calendar in the "
+"upcoming special occasions summary. Typically, these are events with the "
+"\"Anniversary\" category."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowHolidaysFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:168
+msgid "Show holidays from your calendar"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowHolidaysFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:171
+msgid ""
+"Enable this option to include holidays from your calendar in the upcoming "
+"special occasions summary. These are events from your configured holiday "
+"region, or events with the \"Holiday\" category."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowHolidaysFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:174
+msgid "Show &holidays"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowSpecialsFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:184
+msgid "Show special occasions from your calendar"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowSpecialsFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:187
+msgid ""
+"Enable this option to include events from your calendar with the \"special "
+"occasion\" category."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowSpecialsFromCalBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:190
+msgid "Show s&pecial occasions"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mShowFromKABButtonGroup)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:203
+msgid "Show These Special Dates From Your Contact List"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowBirthdaysFromKABBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:209
+msgid "Show birthdays from your address book"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowBirthdaysFromKABBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:212
+msgid ""
+"Enable this option to include birthdays from your address book in the "
+"upcoming special occasions summary."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowBirthdaysFromKABBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:215
+msgid "Show birth&days"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mShowAnniversariesFromKABBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:225
+msgid "Show anniversaries from your address book"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowAnniversariesFromKABBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:228
+msgid ""
+"Enable this option to include anniversaries from your address book in the "
+"upcoming special occasions summary."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mShowAnniversariesFromKABBox)
+#: kontactplugin/specialdates/sdsummaryconfig_base.ui:231
+msgid "Show anni&versaries"
+msgstr ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:142
+msgid "Upcoming Special Dates"
+msgstr ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:493
+#, fuzzy
+#| msgid "Today"
+msgctxt "the special day is today"
+msgid "Today"
+msgstr "Hodiaŭ"
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:495
+msgctxt "the special day is tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:533
+msgid "Birthday"
+msgstr ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:536
+msgid "Anniversary"
+msgstr ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:539
+#, fuzzy
+#| msgid "Today"
+msgid "Holiday"
+msgstr "Hodiaŭ"
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:542
+msgid "Special Occasion"
+msgstr ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:582
+#, kde-format
+msgid "one year"
+msgid_plural "%1 years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:593
+#, kde-format
+msgid "No special dates within the next 1 day"
+msgid_plural "No special dates pending within the next %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:689
+#, fuzzy
+#| msgid "Send Email"
+msgid "Send &Mail"
+msgstr "Sendi retleteron"
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:692
+#, fuzzy
+#| msgid "View Columns"
+msgid "View &Contact"
+msgstr "Rigardi kolumnojn"
+
+#: kontactplugin/specialdates/sdsummarywidget.cpp:707
+#, kde-format
+msgid "Mail to:\"%1\""
+msgstr ""
+
+#: kontactplugin/specialdates/specialdates_plugin.cpp:57
+msgid "Special Dates Summary"
+msgstr ""
+
+#: kontactplugin/specialdates/specialdates_plugin.cpp:59
+msgid "Kontact Special Dates Summary"
+msgstr ""
+
+#: kontactplugin/specialdates/specialdates_plugin.cpp:61
+msgid ""
+"Copyright © 2003 Tobias Koenig\n"
+"Copyright © 2004–2010 Allen Winter"
+msgstr ""
+
+#: kontactplugin/specialdates/specialdates_plugin.cpp:64
+#, fuzzy
+#| msgid "Maintainer"
+msgid "Current Maintainer"
+msgstr "Prizorganto"
 
 #: korganizer.cpp:232 settings/htmlexportsettings.kcfg:35
 #: settings/htmlexportsettings.kcfg:99
@@ -5168,9 +6107,6 @@ msgstr "%1"
 #~ msgid ", "
 #~ msgstr ", "
 
-#~ msgid "Notes:"
-#~ msgstr "Notoj:"
-
 #~ msgctxt "subitem counter"
 #~ msgid "%1: "
 #~ msgstr "%1: "
@@ -5472,9 +6408,6 @@ msgstr "%1"
 #~ msgid "%1"
 #~ msgstr "%1"
 
-#~ msgid "View Columns"
-#~ msgstr "Rigardi kolumnojn"
-
 #~ msgctxt "date, from - to"
 #~ msgid "%1, %2 - %3"
 #~ msgstr "%1, %2 - %3"
@@ -5531,9 +6464,6 @@ msgstr "%1"
 #~ msgid "%1 %2"
 #~ msgstr "%1 %2"
 
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
 #~ msgid "- %1"
 #~ msgstr "- %1"
 
@@ -5550,11 +6480,6 @@ msgstr "%1"
 #, fuzzy
 #~ msgid "Properties..."
 #~ msgstr "Ebeno-proprecoj..."
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgid "New Calendar..."
-#~ msgstr "&iCalendar..."
 
 #~ msgid "Mike Arthur"
 #~ msgstr "Mike Arthur"
@@ -5596,11 +6521,6 @@ msgstr "%1"
 #~ msgid "Category"
 #~ msgstr "Kategorioj"
 
-#, fuzzy
-#~| msgid "Categories"
-#~ msgid "&Edit Categories..."
-#~ msgstr "Kategorioj"
-
 #~ msgid "Time"
 #~ msgstr "Tempo"
 
@@ -5623,25 +6543,10 @@ msgstr "%1"
 #~ msgstr "Apliki"
 
 #, fuzzy
-#~| msgid "&Settings"
-#~ msgctxt "incidence category"
-#~ msgid "Meeting"
-#~ msgstr "A&gordo"
-
-#, fuzzy
 #~| msgid "Locations"
 #~ msgctxt "incidence category"
 #~ msgid "Education"
 #~ msgstr "Lokoj"
-
-#, fuzzy
-#~| msgid "Today"
-#~ msgctxt ""
-#~ "incidence category: official or unofficial observance of religious/"
-#~ "national/cultural/other significance, often accompanied by celebrations "
-#~ "or festivities"
-#~ msgid "Holiday"
-#~ msgstr "Hodiaŭ"
 
 #, fuzzy
 #~| msgid "Locations"
@@ -5664,24 +6569,11 @@ msgstr "%1"
 #~ msgid "text/calendar"
 #~ msgstr "Kalendaro"
 
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Copy Calendar"
-#~ msgid_plural "Copy %1 Calendars"
-#~ msgstr[0] "Kalendaro"
-#~ msgstr[1] "Kalendaro"
-
 #~ msgid "Invalid URL"
 #~ msgstr "Nevalida URL"
 
-#~ msgid "Send Email"
-#~ msgstr "Sendi retleteron"
-
 #~ msgid "Save Error"
 #~ msgstr "Konservo-eraro"
-
-#~ msgid "KMail"
-#~ msgstr "KMail"
 
 #~ msgid "Sendmail"
 #~ msgstr "per Sendmail"
