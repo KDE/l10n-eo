@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-12 02:19+0000\n"
+"POT-Creation-Date: 2015-05-22 01:55+0000\n"
 "PO-Revision-Date: 2015-03-25 21:27+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -62,13 +62,13 @@ msgstr "&Filtrilgalerio"
 #: plugins/extensions/gmic/kis_gmic_widget.cpp:424
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:170
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:178
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:167
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:194
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:198
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:296
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:166
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:193
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:197
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:295
 #: plugins/formats/jp2/jp2_converter.cc:343
 #: plugins/formats/jp2/jp2_converter.cc:354
-#: plugins/formats/jpeg/kis_jpeg_converter.cc:96
+#: plugins/formats/jpeg/kis_jpeg_converter.cc:97
 #: plugins/formats/tiff/kis_tiff_writer_visitor.cpp:73
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:238
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:243
@@ -77,16 +77,16 @@ msgstr "&Filtrilgalerio"
 #: ui/dialogs/kis_dlg_preferences.cc:212 ui/input/kis_input_manager.cpp:545
 #: ui/kis_filter_manager.cc:217 ui/kis_filter_manager.cc:226
 #: ui/kis_layer_manager.cc:658 ui/kis_layer_manager.cc:909
-#: ui/KisApplication.cpp:357 ui/KisApplication.cpp:362
-#: ui/KisApplication.cpp:392 ui/KisDocument.cpp:746 ui/KisDocument.cpp:748
-#: ui/KisDocument.cpp:1214 ui/KisDocument.cpp:1258 ui/KisDocument.cpp:1398
-#: ui/KisDocument.cpp:2028 ui/KisDocument.cpp:2031
+#: ui/KisApplication.cpp:383 ui/KisApplication.cpp:388
+#: ui/KisApplication.cpp:420 ui/KisDocument.cpp:747 ui/KisDocument.cpp:749
+#: ui/KisDocument.cpp:1215 ui/KisDocument.cpp:1259 ui/KisDocument.cpp:1399
+#: ui/KisDocument.cpp:2029 ui/KisDocument.cpp:2032
 #: ui/KisImportExportManager.cpp:230 ui/KisImportExportManager.cpp:241
-#: ui/KisImportExportManager.cpp:531 ui/KisMainWindow.cpp:658
-#: ui/KisMainWindow.cpp:709 ui/KisMainWindow.cpp:723 ui/KisMainWindow.cpp:1391
-#: ui/KisMainWindow.cpp:1574 ui/KisMainWindow.cpp:1586
+#: ui/KisImportExportManager.cpp:531 ui/KisMainWindow.cpp:661
+#: ui/KisMainWindow.cpp:712 ui/KisMainWindow.cpp:726 ui/KisMainWindow.cpp:1394
+#: ui/KisMainWindow.cpp:1577 ui/KisMainWindow.cpp:1589
 #: ui/KisTemplateCreateDia.cpp:322 ui/KisView.cpp:792
-#: ui/opengl/kis_opengl.cpp:91 ui/opengl/kis_opengl_canvas2.cpp:504
+#: ui/opengl/kis_opengl.cpp:91 ui/opengl/kis_opengl_canvas2.cpp:510
 #: ui/thememanager.cpp:271 ui/widgets/kis_custom_image_widget.cc:245
 #, fuzzy
 #| msgid "Krita"
@@ -1432,7 +1432,7 @@ msgid "Convert Image Type"
 msgstr "Konverti Bildotipon"
 
 #: image/commands/kis_layer_props_command.cpp:42
-#: image/commands/kis_node_property_list_command.cpp:25
+#: image/commands/kis_node_property_list_command.cpp:27
 #, fuzzy
 #| msgid "Property Changes"
 msgctxt "(qtundo-format)"
@@ -1451,6 +1451,12 @@ msgstr "Aldicio"
 msgctxt "(qtundo-format)"
 msgid "Opacity Change"
 msgstr "Travidebleckurbo"
+
+#: image/commands/kis_node_property_list_command.cpp:57
+#: image/commands/kis_node_property_list_command.cpp:63
+#: image/kis_group_layer.cc:286 image/kis_group_layer.cc:293
+msgid "Pass Through"
+msgstr ""
 
 #: image/commands/kis_reselect_global_selection_command.cpp:30
 #, fuzzy
@@ -1556,7 +1562,7 @@ msgstr "Defaŭlta"
 #: image/kis_base_mask_generator.h:33
 #: plugins/extensions/metadataeditor/editors/exif.ui:860
 #: plugins/extensions/metadataeditor/editors/exif.ui:892
-#: plugins/paintops/libpaintop/kis_pressure_softness_option.cpp:31
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:63
 #, fuzzy
 msgid "Soft"
 msgstr "&Blanka"
@@ -1567,14 +1573,14 @@ msgstr "&Blanka"
 msgid "Gaussian"
 msgstr "Brureduto laŭ Gaŭss"
 
-#: image/kis_base_node.cpp:139 ui/kis_node_model.cpp:467
+#: image/kis_base_node.cpp:139 ui/kis_node_model.cpp:477
 #, fuzzy
 msgid "Visible"
 msgstr "Blua"
 
 #: image/kis_base_node.cpp:140
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:68
-#: ui/kis_node_model.cpp:468
+#: ui/kis_node_model.cpp:478
 msgid "Locked"
 msgstr "Ŝlosita"
 
@@ -1773,33 +1779,43 @@ msgctxt "(qtundo-format)"
 msgid "Crop Selections"
 msgstr "Grandigi Elekton"
 
-#: image/kis_layer.cc:209
+#: image/kis_layer.cc:210
 #, fuzzy, kde-format
 msgid "%1%"
 msgstr "%1%"
 
 #. i18n: ectx: property (text), widget (QCheckBox, opacityCBox)
-#: image/kis_layer.cc:209
+#: image/kis_layer.cc:210
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:230
+#: plugins/paintops/chalk/kis_chalk_paintop_settings_widget.cpp:36
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:49
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:35
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:56
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:47
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:42
+#: plugins/paintops/experiment/kis_experiment_paintop_settings_widget.cpp:37
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:50
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:42
 #: plugins/paintops/hairy/wdghairyeoptions.ui:297
 #: plugins/paintops/hairy/wdgInkOptions.ui:58
-#: plugins/paintops/libpaintop/kis_pressure_flow_opacity_option.cpp:32
-#: plugins/paintops/libpaintop/kis_pressure_opacity_option.cpp:26
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:58
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:46
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:44
 msgid "Opacity"
 msgstr "Travidebleco"
 
-#: image/kis_layer.cc:211
+#: image/kis_layer.cc:213
 #, fuzzy
 msgid "Composite Mode"
 msgstr "Aldicio"
 
-#: image/kis_paint_layer.cc:150 image/kis_paint_layer.cc:159
-#: ui/kis_node_model.cpp:476
-msgid "Alpha Locked"
+#: image/kis_layer.cc:216 image/kis_layer.cc:226
+msgid "Inherit Alpha"
 msgstr ""
 
-#: image/kis_paint_layer.cc:151 image/kis_paint_layer.cc:162
-msgid "Inherit Alpha"
+#: image/kis_paint_layer.cc:150 image/kis_paint_layer.cc:158
+#: ui/kis_node_model.cpp:486
+msgid "Alpha Locked"
 msgstr ""
 
 #: image/kis_processing_visitor.cpp:33
@@ -1810,7 +1826,7 @@ msgstr "Premo"
 
 #. i18n: ectx: property (text), widget (QLineEdit, palettename)
 #: image/kis_psd_layer_style.cpp:103 ui/forms/wdgcustompalette.ui:18
-#: ui/KisDocument.cpp:2480 ui/KisMainWindow.cpp:841 ui/KisPart.cpp:593
+#: ui/KisDocument.cpp:2481 ui/KisMainWindow.cpp:844 ui/KisPart.cpp:593
 #: ui/KisPart.cpp:609
 #, fuzzy
 #| msgctxt "Username for audioscrobbler login"
@@ -1873,7 +1889,7 @@ msgctxt "(qtundo-format)"
 msgid "Invert Selection"
 msgstr "Elekto"
 
-#: image/kis_selection_mask.cpp:116 ui/kis_node_model.cpp:469
+#: image/kis_selection_mask.cpp:116 ui/kis_node_model.cpp:479
 #, fuzzy
 msgid "Active"
 msgstr "Forigita ebeno"
@@ -2054,7 +2070,7 @@ msgstr "Importi Bildon"
 
 #. i18n: ectx: Menu (LayerConvert)
 #: krita.rc:149
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:511
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:513
 #, fuzzy
 #| msgid "Invert"
 msgid "&Convert"
@@ -2062,7 +2078,7 @@ msgstr "Inversigite"
 
 #. i18n: ectx: Menu (LayerSplitAlpha)
 #: krita.rc:157
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:518
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:519
 #, fuzzy
 #| msgid "Color to Alpha"
 msgid "S&plit Alpha"
@@ -2735,10 +2751,10 @@ msgstr ""
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:70
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:73
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:76
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:73
 #: plugins/paintops/hairy/wdghairyeoptions.ui:310
-#: plugins/paintops/hairy/wdgInkOptions.ui:71
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:30
-#: ui/forms/wdgapplyprofile.ui:116 ui/forms/wdgcolorsettings.ui:117
+#: plugins/paintops/hairy/wdgInkOptions.ui:71 ui/forms/wdgapplyprofile.ui:116
+#: ui/forms/wdgcolorsettings.ui:117
 msgid "Saturation"
 msgstr "Satureco"
 
@@ -2812,7 +2828,6 @@ msgstr "&Blanka"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_general)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:24
 #: ui/dialogs/kis_dlg_preferences.cc:751 ui/dialogs/kis_dlg_preferences.cc:752
-#: ui/kis_paintop_option.cpp:26
 msgid "General"
 msgstr "Ĝenerale"
 
@@ -3240,7 +3255,7 @@ msgstr "Montri kolorojn en procentoj"
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1028
 #: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:30
 #: plugins/formats/pdf/pdfimportwidgetbase.ui:214
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:103
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:100
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1776
 #: ui/forms/wdgdisplaysettings.ui:72 ui/kis_paintop_box.cc:199
 #: ui/kis_paintop_box.cc:204
@@ -3387,7 +3402,7 @@ msgstr "Simila Elekto"
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:69
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:72
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:75
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:25
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:72
 msgid "Hue"
 msgstr "Valoro"
 
@@ -3396,7 +3411,8 @@ msgstr "Valoro"
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1250
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:68
 #: plugins/extensions/metadataeditor/kis_meta_data_model.cpp:108
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:35
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:34
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:74
 #: plugins/tools/defaulttools/wdgcolorpicker.ui:29
 msgid "Value"
 msgstr "Valoro"
@@ -3642,14 +3658,27 @@ msgid ""
 "interface> docker"
 msgstr ""
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:507
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:509
 #: ui/kis_layer_manager.cc:300
 msgid "&Merge with Layer Below"
 msgstr "&Kunigi kun Ebeno Malsupra"
 
 #. i18n: ectx: property (toolTip), widget (KisCompositeOpComboBox, cmbComposite)
 #: plugins/extensions/dockers/defaultdockers/wdglayerbox.ui:44
-#: plugins/paintops/libpaintop/kis_compositeop_option.cpp:34
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:48
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:38
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:55
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:46
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:41
+#: plugins/paintops/dynadraw/kis_dyna_paintop_settings_widget.cpp:32
+#: plugins/paintops/experiment/kis_experiment_paintop_settings_widget.cpp:36
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:49
+#: plugins/paintops/gridbrush/kis_grid_paintop_settings_widget.cpp:39
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:41
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:54
+#: plugins/paintops/particle/kis_particle_paintop_settings_widget.cpp:36
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:45
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:46
 #: ui/widgets/kis_cmb_composite.cc:70
 #, fuzzy
 #| msgid "Selection mode:"
@@ -3885,16 +3914,29 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, bnZoom100)
 #: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:48
-#: plugins/paintops/curvebrush/kis_curves_opacity_option.cpp:26
-#: plugins/paintops/curvebrush/kis_linewidth_option.cpp:26
-#: plugins/paintops/libpaintop/kis_pressure_flow_option.cpp:29
-#: plugins/paintops/libpaintop/kis_pressure_gradient_option.cpp:29
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:50
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:61
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:36
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:37
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:57
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:58
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:48
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:43
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:51
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:43
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:59
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:32
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:43
 #: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:58
-#: plugins/paintops/libpaintop/kis_pressure_size_option.cpp:29
-#: plugins/paintops/libpaintop/kis_pressure_spacing_option.cpp:31
-#: plugins/paintops/sketch/kis_density_option.cpp:26
-#: plugins/paintops/sketch/kis_linewidth_option.cpp:26
-#: plugins/paintops/sketch/kis_offset_scale_option.cpp:26
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:70
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:85
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:97
+#: plugins/paintops/libpaintop/kis_pressure_spacing_option_widget.cpp:35
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:47
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:49
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:50
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:51
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:45
 #, fuzzy, no-c-format
 msgid "100%"
 msgstr "&10x10"
@@ -4104,12 +4146,12 @@ msgstr "Superrigardo"
 
 #: plugins/extensions/dockers/palettedocker/colorsetchooser.cpp:97
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:61
-#: ui/KisMainWindow.cpp:623 ui/widgets/kis_workspace_chooser.cpp:92
+#: ui/KisMainWindow.cpp:626 ui/widgets/kis_workspace_chooser.cpp:93
 msgid "Save"
 msgstr "Konservi"
 
 #: plugins/extensions/dockers/palettedocker/colorsetchooser.cpp:101
-#: ui/widgets/kis_workspace_chooser.cpp:96
+#: ui/widgets/kis_workspace_chooser.cpp:97
 #, fuzzy
 #| msgid "Layer name:"
 msgid "Insert name"
@@ -4166,7 +4208,7 @@ msgstr "Aldoni Novan Koloron..."
 #: plugins/extensions/dockers/patterndocker/patterndocker_dock.cpp:31
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:247
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:103
-#: ui/kis_control_frame.cpp:156
+#: ui/kis_control_frame.cpp:155
 msgid "Patterns"
 msgstr "Ŝablonoj"
 
@@ -4839,8 +4881,7 @@ msgstr "Skali Ebenon"
 #: plugins/extensions/layersplit/layersplit.cpp:198
 #: plugins/generators/solid/colorgenerator.h:53
 #: ui/dialogs/kis_dlg_preferences.cc:768 ui/forms/wdgnewimage.ui:361
-#: ui/kis_paintop_option.cpp:31 ui/layerstyles/WdgColorOverlay.ui:26
-#: ui/layerstyles/WdgStroke.ui:137
+#: ui/layerstyles/WdgColorOverlay.ui:26 ui/layerstyles/WdgStroke.ui:137
 msgid "Color"
 msgstr "Koloro"
 
@@ -5117,6 +5158,7 @@ msgstr "Elekto"
 #: plugins/extensions/metadataeditor/editors/exif.ui:464
 #: plugins/extensions/metadataeditor/editors/exif.ui:569
 #: plugins/extensions/metadataeditor/editors/exif.ui:708
+#: ui/kis_paintop_options_model.cpp:47
 msgid "Unknown"
 msgstr "Nekonata"
 
@@ -5148,8 +5190,11 @@ msgstr "Multipliku"
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbStyle)
 #: plugins/extensions/metadataeditor/editors/exif.ui:432
 #: plugins/generators/pattern/patterngenerator.h:53
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:63
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:78
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:51
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:64
 #: plugins/paintops/libpaintop/kis_color_source_option.cpp:59
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:138
 #: plugins/tools/tool_text/wdgtextoptions.ui:48
 #: ui/forms/wdgdlgblacklistcleanup.ui:83 ui/forms/wdggeometryoptions.ui:89
 msgid "Pattern"
@@ -5430,7 +5475,7 @@ msgstr "Normala"
 #. i18n: ectx: property (text), item, widget (QComboBox, editContrast)
 #: plugins/extensions/metadataeditor/editors/exif.ui:865
 #: plugins/extensions/metadataeditor/editors/exif.ui:897
-#: plugins/paintops/libpaintop/kis_pressure_softness_option.cpp:32
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:63
 msgid "Hard"
 msgstr "Malfacila"
 
@@ -5762,8 +5807,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, cbRemoveGradients)
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:244
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:102
-#: ui/forms/wdgdlgblacklistcleanup.ui:73 ui/kis_control_frame.cpp:89
-#: ui/kis_control_frame.cpp:90 ui/kis_control_frame.cpp:194
+#: ui/forms/wdgdlgblacklistcleanup.ui:73 ui/kis_control_frame.cpp:88
+#: ui/kis_control_frame.cpp:89 ui/kis_control_frame.cpp:193
 msgid "Gradients"
 msgstr "Kolortransiroj"
 
@@ -5818,141 +5863,141 @@ msgstr "Rektangulo"
 msgid "Select file to use as dynamic file layer."
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:116
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:115
 msgid "Import Resources or Bundles..."
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:120
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:119
 #, fuzzy
 #| msgid "Source"
 msgid "Create Resource Bundle..."
 msgstr "Fonto"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:124
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:123
 #, fuzzy
 #| msgid "Source"
 msgid "Manage Resources..."
 msgstr "Fonto"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:137
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:136
 #, fuzzy
 #| msgid "Source"
 msgid "Add Resources"
 msgstr "Fonto"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:140
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:139
 #, fuzzy
 msgid "Krita Brush Presets (*.kpp)"
 msgstr "Ebeno-proprecoj..."
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:141
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:140
 #, fuzzy
 #| msgid "Brush size"
 msgid "GIMP Brushes (*.gbr)"
 msgstr "Penikograndeco"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:142
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:141
 #, fuzzy
 #| msgid "Brush size"
 msgid "Imagepipe Brushes (*.gih)"
 msgstr "Penikograndeco"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:143
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:142
 msgid "Photoshop Brushes (*.abr)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:144
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:143
 #, fuzzy
 #| msgid "Brush size"
 msgid "PNG Brushes (*.png)"
 msgstr "Penikograndeco"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:145
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:144
 #, fuzzy
 #| msgid "Brush size"
 msgid "SVG Brushes (*.svg)"
 msgstr "Penikograndeco"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:146
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:145
 msgid "GIMP Gradients (*.ggr)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:147
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:146
 #, fuzzy
 #| msgid "Gradients"
 msgid "SVG Gradients (*.svg)"
 msgstr "Kolortransiroj"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:148
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:147
 #, fuzzy
 #| msgid "Gradients"
 msgid "Karbon Gradients (*.kgr)"
 msgstr "Kolortransiroj"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:149
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:148
 #, fuzzy
 #| msgid "Source"
 msgid "Resource Bundles (*.bundle)"
 msgstr "Fonto"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:150
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:149
 msgid "GIMP Patterns (*.pat)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:151
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:150
 #, fuzzy
 #| msgid "Fill Patterns"
 msgid "JPEG Patterns (*.jpg)"
 msgstr "Plenigŝablonoj"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:152
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:151
 #, fuzzy
 #| msgid "Fill Patterns"
 msgid "GIF Patterns (*.gif)"
 msgstr "Plenigŝablonoj"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:153
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:152
 msgid "PNG Patterns (*.png)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:154
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:153
 #, fuzzy
 #| msgid "Fill Patterns"
 msgid "TIFF Patterns (*.tif)"
 msgstr "Plenigŝablonoj"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:155
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:154
 msgid "XPM Patterns (*.xpm)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:156
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:155
 msgid "BMP Patterns (*.bmp)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:157
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:156
 msgid "Palettes (*.gpl *.pal *.act *.aco *.colors)"
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:158
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:157
 #, fuzzy
 msgid "Workspaces (*.kts)"
 msgstr "&Koloroprenilo"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:167
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:166
 msgid "The selected resource type is unknown."
 msgstr ""
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:194
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:193
 #, fuzzy, kde-format
 msgid "Could not install the resources for bundle %1."
 msgstr "Anguloj:"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:198
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:197
 #, fuzzy, kde-format
 msgid "Could not load bundle %1."
 msgstr "Forigu elekton"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:296
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:295
 msgid "Could not create the new bundle."
 msgstr ""
 
@@ -6242,7 +6287,7 @@ msgstr "Aktuala kolormoduso:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpSource)
 #: plugins/extensions/separate_channels/wdg_separations.ui:46
-#: plugins/paintops/libpaintop/kis_color_source_option_widget.cpp:39
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:69
 msgid "Source"
 msgstr "Fonto"
 
@@ -6425,7 +6470,7 @@ msgstr "Radiuso"
 
 #. i18n: ectx: property (label), widget (KIntNumInput, irisRotationSlider)
 #: plugins/filters/blur/wdg_lens_blur.ui:58
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:115
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:112
 #, fuzzy
 msgid "Rotation:"
 msgstr "Rotaciu je &90°"
@@ -6562,7 +6607,7 @@ msgstr "Koloro:"
 #: plugins/filters/colors/wdgcolortoalphabase.ui:131
 #: plugins/filters/unsharp/wdgunsharp.ui:103
 #: plugins/paintops/hairy/wdgbristleoptions.ui:180
-#: plugins/paintops/libpaintop/kis_pressure_sharpness_option_widget.cpp:37
+#: plugins/paintops/libpaintop/kis_pressure_sharpness_option_widget.cpp:39
 msgid "Threshold:"
 msgstr "Pentrosojlo:"
 
@@ -7168,11 +7213,12 @@ msgid "&Oilpaint..."
 msgstr "&Oleofarbo..."
 
 #: plugins/filters/oilpaintfilter/kis_oilpaint_filter.cpp:206
-#: plugins/paintops/chalk/kis_chalkop_option.cpp:32
-#: plugins/paintops/dynadraw/kis_dynaop_option.cpp:42
-#: plugins/paintops/gridbrush/kis_gridop_option.cpp:33
-#: plugins/paintops/particle/kis_particleop_option.cpp:36
-#: plugins/paintops/sketch/kis_sketchop_option.cpp:32
+#: plugins/paintops/chalk/kis_chalk_paintop_settings_widget.cpp:35
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:39
+#: plugins/paintops/dynadraw/kis_dyna_paintop_settings_widget.cpp:31
+#: plugins/paintops/gridbrush/kis_grid_paintop_settings_widget.cpp:37
+#: plugins/paintops/particle/kis_particle_paintop_settings_widget.cpp:35
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:44
 msgid "Brush size"
 msgstr "Penikograndeco"
 
@@ -7751,7 +7797,7 @@ msgstr ""
 msgid "Number of resolutions:"
 msgstr "Elekto"
 
-#: plugins/formats/jpeg/kis_jpeg_converter.cc:96
+#: plugins/formats/jpeg/kis_jpeg_converter.cc:97
 #, kde-format
 msgid ""
 "Cannot export images in %1.\n"
@@ -8192,19 +8238,26 @@ msgid ""
 "colorspace as the image."
 msgstr ""
 
-#: plugins/formats/psd/psd_loader.cpp:159
+#: plugins/formats/psd/psd_loader.cpp:163
 msgid "Duotone Colormode Block"
 msgstr ""
 
-#: plugins/formats/psd/psd_loader.cpp:172
-#: plugins/paintops/libpaintop/kis_pressure_mix_option.cpp:28
+#: plugins/formats/psd/psd_loader.cpp:176
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:71
 msgid "Background"
 msgstr "Fono"
 
-#: plugins/formats/psd/psd_loader.cpp:230 ui/kis_mask_manager.cc:195
+#: plugins/formats/psd/psd_loader.cpp:257 ui/kis_mask_manager.cc:195
 #, fuzzy
 msgid "Transparency Mask"
 msgstr "Malfono ĝis travidebla"
+
+#: plugins/formats/psd/psd_loader.cpp:303 ui/kra/kis_kra_loader.cpp:348
+#, kde-format
+msgctxt ""
+"Auto-generated layer style collection name for embedded styles (collection)"
+msgid "<%1> (embedded)"
+msgstr ""
 
 #: plugins/formats/psd/psd_resource_block.h:82
 #, fuzzy
@@ -8454,6 +8507,62 @@ msgstr "Aldoni Novan Koloron..."
 msgid "Chalk"
 msgstr "Peniko"
 
+#: plugins/paintops/chalk/kis_chalk_paintop_settings_widget.cpp:36
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:49
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:35
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:47
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:42
+#: plugins/paintops/experiment/kis_experiment_paintop_settings_widget.cpp:37
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:50
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:42
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:58
+#: plugins/paintops/libpaintop/kis_pressure_flow_opacity_option_widget.cpp:38
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:46
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:44
+msgid "Opaque"
+msgstr "Netravidebla"
+
+#: plugins/paintops/chalk/kis_chalk_paintop_settings_widget.cpp:36
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:49
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:35
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:47
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:42
+#: plugins/paintops/experiment/kis_experiment_paintop_settings_widget.cpp:37
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:50
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:42
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:58
+#: plugins/paintops/libpaintop/kis_pressure_flow_opacity_option_widget.cpp:38
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:46
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:44
+msgid "Transparent"
+msgstr "Travidebla"
+
+#: plugins/paintops/chalk/kis_chalk_paintop_settings_widget.cpp:37
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:75
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:45
+#: plugins/paintops/dynadraw/kis_dyna_paintop_settings_widget.cpp:33
+#: plugins/paintops/particle/kis_particle_paintop_settings_widget.cpp:37
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:52
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:52
+#, fuzzy
+msgid "Airbrush"
+msgstr "Peniko"
+
+#: plugins/paintops/chalk/kis_chalk_paintop_settings_widget.cpp:38
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:39
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:76
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:50
+#: plugins/paintops/dynadraw/kis_dyna_paintop_settings_widget.cpp:34
+#: plugins/paintops/gridbrush/kis_grid_paintop_settings_widget.cpp:41
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:45
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:62
+#: plugins/paintops/particle/kis_particle_paintop_settings_widget.cpp:38
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:59
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:53
+#, fuzzy
+msgid "Painting Mode"
+msgstr "Anguloj:"
+
 #. i18n: ectx: property (text), widget (QLabel, radiusLabel)
 #: plugins/paintops/chalk/wdgchalkoptions.ui:46
 #, fuzzy
@@ -8464,7 +8573,7 @@ msgstr "Nebulig-radiuso:"
 #. i18n: ectx: attribute (title), widget (QWidget, inkTab)
 #. i18n: ectx: property (text), widget (QCheckBox, inkDepletionCHBox)
 #: plugins/paintops/chalk/wdgchalkoptions.ui:61
-#: plugins/paintops/hairy/kis_hairy_ink_option.cpp:34
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:40
 #: plugins/paintops/hairy/wdghairyeoptions.ui:259
 #, fuzzy
 #| msgid "Shrink Selection"
@@ -8490,45 +8599,197 @@ msgstr "Satureco"
 msgid "Color Smudge"
 msgstr "Peniko"
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:51
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:50
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:61
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:36
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:37
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:57
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:58
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:48
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:43
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:51
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:43
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:59
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:33
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:44
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:59
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:71
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:86
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:98
+#: plugins/paintops/libpaintop/kis_pressure_spacing_option_widget.cpp:35
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:47
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:49
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:50
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:51
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:45
 #, fuzzy
-msgid "Length: "
-msgstr "Pliantaŭen nunan %1"
+#| msgid "%"
+msgid "0%"
+msgstr "%"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgRectangleConstraints)
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:50
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:58
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:48
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:43
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:51
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:43
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:59
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:47
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:45
+#: ui/forms/wdgrectangleconstraints.ui:20
+msgid "Size"
+msgstr "Grandeco"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:51
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:59
+#, fuzzy
+msgid "Spacing"
+msgstr "Spaco:"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:60
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:49
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:53
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:60
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:276
+#: ui/kis_paintop_box.cc:308
+#, fuzzy
+#| msgid "Crop Image"
+msgid "Mirror"
+msgstr "Tondi Bildon"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:54
 #, fuzzy
 msgid "Smudge Length"
 msgstr "Peniko"
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
-#, fuzzy
-#| msgid "Radius"
-msgid "Radius(%): "
-msgstr "Radiuso"
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:55
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:56
+#: plugins/paintops/colorsmudge/kis_smudge_option_widget.cpp:33
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:70
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:55
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:56
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:57
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:35
+#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:33
+#: plugins/paintops/libpaintop/kis_pressure_sharpness_option_widget.cpp:35
+msgid "0.0"
+msgstr ""
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:55
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:56
+#: plugins/paintops/colorsmudge/kis_smudge_option_widget.cpp:33
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:70
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:55
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:56
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:57
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:36
+#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:33
+#: plugins/paintops/libpaintop/kis_pressure_sharpness_option_widget.cpp:35
+msgid "1.0"
+msgstr ""
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:55
 #, fuzzy
 msgid "Smudge Radius"
 msgstr "Peniko"
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:56
 #, fuzzy
 #| msgid "Color Range"
 msgid "Color Rate"
 msgstr "Kolorgamo"
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:58
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:65
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:44
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:52
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:44
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_drawing_angle.cpp:36
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:53
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:83
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:90
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:48
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:51
 #, fuzzy
-msgid "Rate: "
-msgstr "Ripeto:"
+#| msgid "°"
+msgid "0°"
+msgstr "°"
 
-#: plugins/paintops/colorsmudge/kis_overlay_mode_option.h:30
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:58
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:65
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:44
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:52
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:44
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_drawing_angle.cpp:37
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:54
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:84
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:48
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:51
+msgid "360°"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, rotationGroup)
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:58
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:65
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:44
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:52
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:44
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:46
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:48
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:51
+#: plugins/tools/tool_transform2/wdg_tool_transform.ui:647
+msgid "Rotation"
+msgstr "Rotacio"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:59
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:66
+#, fuzzy
+msgid "Scatter"
+msgstr "Koloraĵoj"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:60
 #, fuzzy
 #| msgid "Curved"
 msgid "Overlay Mode"
 msgstr "Kurbita"
 
-#: plugins/paintops/colorsmudge/kis_overlay_mode_option.h:51
+#. i18n: ectx: property (text), item, widget (QComboBox, cmbFillType)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#. i18n: ectx: property (text), item, widget (QComboBox, cmbStyle)
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:61
+#: plugins/paintops/libpaintop/kis_color_source_option.cpp:56
+#: plugins/tools/tool_text/wdgtextoptions.ui:53
+#: ui/layerstyles/WdgGradientOverlay.ui:26 ui/layerstyles/WdgStroke.ui:142
+msgid "Gradient"
+msgstr "Kolortransiro"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:64
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:79
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:52
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:65
+#, fuzzy
+#| msgid "Strength:"
+msgid "Strength"
+msgstr "Forteco:"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:64
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:79
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:52
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:65
+#, fuzzy
+msgid "Strong"
+msgstr "Ligita"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:64
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:79
+#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:52
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:65
+msgid "Weak"
+msgstr ""
+
+#: plugins/paintops/colorsmudge/kis_overlay_mode_option.h:54
 msgid ""
 "Paints on the current layer\n"
 "            but uses all layers that are currently visible for smudge input\n"
@@ -8556,41 +8817,17 @@ msgstr "Peniko"
 msgid "Curve"
 msgstr "Kurbita"
 
-#. i18n: ectx: property (text), item, widget (KComboBox, selectMainStyle)
-#. i18n: ectx: property (text), item, widget (KComboBox, selectSubdivisionStyle)
-#. i18n: ectx: property (text), widget (QRadioButton, linesRBox)
-#: plugins/paintops/curvebrush/kis_curve_line_option.cpp:41
-#: plugins/paintops/dynadraw/wdgdynaoptions.ui:198
-#: ui/forms/wdggridsettings.ui:229 ui/forms/wdggridsettings.ui:248
-msgid "Lines"
-msgstr "Linioj"
-
-#: plugins/paintops/curvebrush/kis_curves_opacity_option.cpp:23
-#, fuzzy
-msgid "Curves opacity"
-msgstr "Travidebleco:"
-
-#: plugins/paintops/curvebrush/kis_curves_opacity_option.cpp:25
-#: plugins/paintops/curvebrush/kis_linewidth_option.cpp:25
-#: plugins/paintops/libpaintop/kis_pressure_flow_option.cpp:28
-#: plugins/paintops/libpaintop/kis_pressure_gradient_option.cpp:28
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:59
-#: plugins/paintops/libpaintop/kis_pressure_size_option.cpp:28
-#: plugins/paintops/libpaintop/kis_pressure_spacing_option.cpp:30
-#: plugins/paintops/sketch/kis_density_option.cpp:25
-#: plugins/paintops/sketch/kis_linewidth_option.cpp:25
-#: plugins/paintops/sketch/kis_offset_scale_option.cpp:25
-#, fuzzy
-#| msgid "%"
-msgid "0%"
-msgstr "%"
-
-#: plugins/paintops/curvebrush/kis_linewidth_option.cpp:23
-#: plugins/paintops/sketch/kis_linewidth_option.cpp:23
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:36
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:49
 #, fuzzy
 #| msgid "Width:"
 msgid "Line width"
 msgstr "Larĝeco:"
+
+#: plugins/paintops/curvebrush/kis_curve_paintop_settings_widget.cpp:37
+#, fuzzy
+msgid "Curves opacity"
+msgstr "Travidebleco:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, lineWidthLbl)
@@ -8629,6 +8866,35 @@ msgstr "Elekto"
 msgid "Smoothing"
 msgstr "Glatigi..."
 
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:57
+msgid "Flow"
+msgstr "Fluo"
+
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:63
+#, fuzzy
+msgid "Softness"
+msgstr "Linilarĝeco:"
+
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:64
+#, fuzzy
+msgid "Sharpness"
+msgstr "Akuteco:"
+
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:70
+msgid "Darken"
+msgstr "Malheligi"
+
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:71
+#, fuzzy
+#| msgid "Foreground Color"
+msgid "Foreground"
+msgstr "Malfona Koloro"
+
+#: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:71
+#, fuzzy
+msgid "Mix"
+msgstr "Miksiloj"
+
 #: plugins/paintops/defaultpaintops/defaultpaintops_plugin.cc:48
 #, fuzzy
 #| msgid "Pixelize"
@@ -8640,12 +8906,6 @@ msgstr "Rastrumerigi"
 msgctxt "clone paintbrush (previously \"Duplicate\")"
 msgid "Clone"
 msgstr ""
-
-#: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_option.cpp:45
-#: plugins/paintops/libpaintop/kis_paint_action_type_option.cpp:37
-#, fuzzy
-msgid "Painting Mode"
-msgstr "Anguloj:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbHealing)
 #: plugins/paintops/defaultpaintops/duplicate/wdgduplicateop.ui:21
@@ -8708,7 +8968,7 @@ msgstr ""
 msgid "Deform"
 msgstr "Kvanto:"
 
-#: plugins/paintops/deform/kis_deform_option.cpp:34
+#: plugins/paintops/deform/kis_deform_paintop_settings_widget.cpp:40
 #, fuzzy
 #| msgid "Geometry Options"
 msgid "Deform Options"
@@ -8852,6 +9112,14 @@ msgstr "Formo"
 msgid "Two"
 msgstr "Du"
 
+#. i18n: ectx: property (text), item, widget (KComboBox, selectMainStyle)
+#. i18n: ectx: property (text), item, widget (KComboBox, selectSubdivisionStyle)
+#. i18n: ectx: property (text), widget (QRadioButton, linesRBox)
+#: plugins/paintops/dynadraw/wdgdynaoptions.ui:198
+#: ui/forms/wdggridsettings.ui:229 ui/forms/wdggridsettings.ui:248
+msgid "Lines"
+msgstr "Linioj"
+
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, lineSpacingSPBox)
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:205
 #, fuzzy
@@ -8903,7 +9171,7 @@ msgstr "Paletro"
 msgid "Fixed angle"
 msgstr "Triangulo"
 
-#: plugins/paintops/experiment/kis_experimentop_option.cpp:48
+#: plugins/paintops/experiment/kis_experiment_paintop_settings_widget.cpp:35
 #, fuzzy
 #| msgid "Radius"
 msgid "Experiment option"
@@ -8959,6 +9227,13 @@ msgctxt "type of a brush engine, shown in the list of brush engines"
 msgid "Filter"
 msgstr "Filtri"
 
+#: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:56
+#, fuzzy
+#| msgid "Filter"
+msgctxt "option name"
+msgid "Filter"
+msgstr "Filtri"
+
 #: plugins/paintops/gridbrush/grid_paintop_plugin.cpp:40
 #, fuzzy
 #| msgid "Grid"
@@ -8966,10 +9241,16 @@ msgctxt "type of a brush engine, shown in the list of brush engines"
 msgid "Grid"
 msgstr "Krado"
 
-#: plugins/paintops/gridbrush/kis_grid_shape_option.cpp:33
+#: plugins/paintops/gridbrush/kis_grid_paintop_settings_widget.cpp:38
 #, fuzzy
 msgid "Particle type"
 msgstr "Triangula ondo"
+
+#: plugins/paintops/gridbrush/kis_grid_paintop_settings_widget.cpp:40
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:49
+#, fuzzy
+msgid "Color options"
+msgstr "Alfo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
 #: plugins/paintops/gridbrush/wdggridbrushshapeoptions.ui:47
@@ -9060,16 +9341,10 @@ msgstr "Tiligrandeco"
 msgid "Bristle"
 msgstr "Blua"
 
-#: plugins/paintops/hairy/kis_hairy_bristle_option.cpp:46
+#: plugins/paintops/hairy/kis_hairy_paintop_settings_widget.cpp:39
 #, fuzzy
 msgid "Bristle options"
 msgstr "Blua"
-
-#: plugins/paintops/hairy/kis_hairy_shape_option.cpp:33
-#, fuzzy
-#| msgid "Brush Shapes"
-msgid "Brush shape"
-msgstr "Penikformoj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/paintops/hairy/wdgbristleoptions.ui:62
@@ -9302,32 +9577,32 @@ msgstr "Malgrandigi Elekton"
 msgid "Hatching"
 msgstr "Peniko"
 
-#: plugins/paintops/hatching/kis_hatching_options.cpp:57
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:52
 #, fuzzy
 msgid "Hatching options"
 msgstr "Peniko"
 
-#: plugins/paintops/hatching/kis_hatching_preferences.cpp:34
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:53
 #, fuzzy
 msgid "Hatching preferences"
 msgstr "Peniko"
 
-#: plugins/paintops/hatching/kis_hatching_pressure_crosshatching_option.cpp:28
-#, fuzzy
-#| msgid "Crosshair"
-msgid "Crosshatching"
-msgstr "Kruc-haro"
-
-#: plugins/paintops/hatching/kis_hatching_pressure_separation_option.cpp:29
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:55
 #, fuzzy
 #| msgid "Saturation"
 msgid "Separation"
 msgstr "Satureco"
 
-#: plugins/paintops/hatching/kis_hatching_pressure_thickness_option.cpp:29
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:56
 #, fuzzy
 msgid "Thickness"
 msgstr "Graseco:"
+
+#: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:57
+#, fuzzy
+#| msgid "Crosshair"
+msgid "Crosshatching"
+msgstr "Kruc-haro"
 
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #: plugins/paintops/hatching/wdghatchingoptions.ui:90
@@ -9506,7 +9781,7 @@ msgstr "Fajreroj"
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:96
 #: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:81
 #: plugins/paintops/libpaintop/forms/wdgtextbrush.ui:90
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:122
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:119
 #: plugins/paintops/spray/wdgsprayoptions.ui:138
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1735
 #, fuzzy
@@ -9566,7 +9841,7 @@ msgstr "Forigi Segmenton"
 #. i18n: ectx: property (text), widget (QCheckBox, colorAsmask)
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:116
 #: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:101
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:127
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:124
 msgid "Use color as mask"
 msgstr ""
 
@@ -9825,37 +10100,29 @@ msgstr ""
 msgid "Pipe mode"
 msgstr "Ligita"
 
-#: plugins/paintops/libpaintop/kis_airbrush_option.cpp:43
-#, fuzzy
-msgid "Airbrush"
-msgstr "Peniko"
-
-#: plugins/paintops/libpaintop/kis_bidirectional_mixing_option_widget.cpp:27
-msgid "Mixing"
-msgstr ""
-
 #: plugins/paintops/libpaintop/kis_bidirectional_mixing_option_widget.cpp:30
 msgid "The mixing option mixes the paint on the brush with that on the canvas."
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:164
+#: plugins/paintops/libpaintop/kis_brush_based_paintop_options_widget.cpp:27
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:43
+#, fuzzy
+#| msgid "Brush size"
+msgid "Brush Tip"
+msgstr "Penikograndeco"
+
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:161
 #, fuzzy
 #| msgid "Predefined Brushes"
 msgid "Reset Predefined Tip"
 msgstr "Antaŭdifitaj Penikoj"
 
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:165
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:162
 msgid ""
 "Reloads Spacing from file\n"
 "Sets Scale to 1.0\n"
 "Sets Rotation to 0.0"
 msgstr ""
-
-#: plugins/paintops/libpaintop/kis_brush_option_widget.cpp:29
-#, fuzzy
-#| msgid "Brush size"
-msgid "Brush Tip"
-msgstr "Penikograndeco"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:60
 #, fuzzy
@@ -9936,38 +10203,17 @@ msgid ""
 "The slowest performance. Best quality."
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_brush_size_option.cpp:38
-#, fuzzy
-#| msgid "Brush size"
-msgid "Brush tip"
-msgstr "Penikograndeco"
-
 #: plugins/paintops/libpaintop/kis_clipboard_brush_widget.cpp:105
 msgid ""
 "Nothing copied\n"
 " to Clipboard"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_color_option.cpp:44
-#, fuzzy
-msgid "Color options"
-msgstr "Alfo"
-
 #: plugins/paintops/libpaintop/kis_color_source_option.cpp:55
 #, fuzzy
 #| msgid "Canvas color:"
 msgid "Plain color"
 msgstr "Kanvaskoloro:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, cmbFillType)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#. i18n: ectx: property (text), item, widget (QComboBox, cmbStyle)
-#: plugins/paintops/libpaintop/kis_color_source_option.cpp:56
-#: plugins/paintops/libpaintop/kis_pressure_gradient_option.cpp:26
-#: plugins/tools/tool_text/wdgtextoptions.ui:53
-#: ui/layerstyles/WdgGradientOverlay.ui:26 ui/layerstyles/WdgStroke.ui:142
-msgid "Gradient"
-msgstr "Kolortransiro"
 
 #: plugins/paintops/libpaintop/kis_color_source_option.cpp:57
 msgid "Uniform random"
@@ -9983,16 +10229,6 @@ msgstr ""
 msgid "Locked pattern"
 msgstr "Uzi ŝablonon"
 
-#: plugins/paintops/libpaintop/kis_curve_option.cpp:42
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:34
-msgid "0.0"
-msgstr ""
-
-#: plugins/paintops/libpaintop/kis_curve_option.cpp:43
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:35
-msgid "1.0"
-msgstr ""
-
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:40
 msgid "Fuzzy"
 msgstr ""
@@ -10005,13 +10241,6 @@ msgstr "Tempo"
 #, fuzzy
 msgid "Drawing angle"
 msgstr "Rektangulo"
-
-#. i18n: ectx: property (title), widget (QGroupBox, rotationGroup)
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:46
-#: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:29
-#: plugins/tools/tool_transform2/wdg_tool_transform.ui:647
-msgid "Rotation"
-msgstr "Rotacio"
 
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:48
 #, fuzzy
@@ -10044,192 +10273,88 @@ msgstr "Montri Elekton"
 msgid "Tangential pressure"
 msgstr "Premo"
 
-#: plugins/paintops/libpaintop/kis_filter_option.cpp:50
-#, fuzzy
-#| msgid "Filter"
-msgctxt "option category"
-msgid "Filter"
-msgstr "Filtri"
-
-#: plugins/paintops/libpaintop/kis_filter_option.cpp:50
-#, fuzzy
-#| msgid "Filter"
-msgctxt "option name"
-msgid "Filter"
-msgstr "Filtri"
-
-#: plugins/paintops/libpaintop/kis_pressure_darken_option.cpp:28
-msgid "Darken"
-msgstr "Malheligi"
-
-#: plugins/paintops/libpaintop/kis_pressure_flow_opacity_option.cpp:39
-#: plugins/paintops/libpaintop/kis_pressure_opacity_option.cpp:29
-msgid "Transparent"
-msgstr "Travidebla"
-
-#: plugins/paintops/libpaintop/kis_pressure_flow_opacity_option.cpp:40
-#: plugins/paintops/libpaintop/kis_pressure_opacity_option.cpp:30
-msgid "Opaque"
-msgstr "Netravidebla"
-
-#: plugins/paintops/libpaintop/kis_pressure_flow_option.cpp:25
-msgid "Flow"
-msgstr "Fluo"
-
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:30
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:41
 #: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:56
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:68
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:83
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:95
 #, no-c-format
 msgid "(50% is active color)"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:62
-msgid "CW hue"
-msgstr ""
-
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:63
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:35
 msgid "CCW hue"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:66
-#, fuzzy
-#| msgid "Tile saturation"
-msgid "More saturation"
-msgstr "Tilisatureco"
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:46
+msgid "CW hue"
+msgstr ""
 
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:67
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:61
 #, fuzzy
 #| msgid "Saturation"
 msgid "Less saturation "
 msgstr "Satureco"
 
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:71
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:73
 #, fuzzy
-msgid "Higher value"
-msgstr "Nur heligu"
+#| msgid "Tile saturation"
+msgid "More saturation"
+msgstr "Tilisatureco"
 
-#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:72
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:88
 #, fuzzy
 #| msgid "Color Range"
 msgid "Lower value "
 msgstr "Kolorgamo"
 
-#: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:30
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:276
-#: ui/kis_paintop_box.cc:308
+#: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:100
 #, fuzzy
-#| msgid "Crop Image"
-msgid "Mirror"
-msgstr "Tondi Bildon"
+msgid "Higher value"
+msgstr "Nur heligu"
 
-#: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:34
-#, fuzzy
-msgid "Not mirrored"
-msgstr "indeksita"
-
-#: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:35
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:32
 #, fuzzy
 #| msgid "Crop Image"
 msgid "Mirrored"
 msgstr "Tondi Bildon"
 
-#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:32
+#, fuzzy
+msgid "Not mirrored"
+msgstr "indeksita"
+
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:296
 #, fuzzy
 msgid "Horizontally"
 msgstr "Triangula ondo"
 
-#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
+#: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:39
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:298
 #, fuzzy
 msgid "Vertically"
 msgstr "Triangula ondo"
 
-#: plugins/paintops/libpaintop/kis_pressure_mix_option.cpp:25
-#, fuzzy
-msgid "Mix"
-msgstr "Miksiloj"
-
-#: plugins/paintops/libpaintop/kis_pressure_mix_option.cpp:27
-#, fuzzy
-#| msgid "Foreground Color"
-msgid "Foreground"
-msgstr "Malfona Koloro"
-
-#: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:34
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_drawing_angle.cpp:36
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:53
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:83
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:90
-#, fuzzy
-#| msgid "°"
-msgid "0°"
-msgstr "°"
-
-#: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:35
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_drawing_angle.cpp:37
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:54
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensors.cc:84
-msgid "360°"
-msgstr ""
-
-#: plugins/paintops/libpaintop/kis_pressure_scatter_option.cpp:40
-#, fuzzy
-msgid "Scatter"
-msgstr "Koloraĵoj"
-
-#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:36
+#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:38
 msgid "Axis X"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:38
+#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:40
 msgid "Axis Y"
 msgstr ""
 
-#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:41
+#: plugins/paintops/libpaintop/kis_pressure_scatter_option_widget.cpp:43
 #, fuzzy
 msgid "Scatter amount"
 msgstr "Koloraĵoj"
-
-#: plugins/paintops/libpaintop/kis_pressure_sharpness_option.cpp:32
-#, fuzzy
-msgid "Sharpness"
-msgstr "Akuteco:"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, WdgRectangleConstraints)
-#: plugins/paintops/libpaintop/kis_pressure_size_option.cpp:26
-#: ui/forms/wdgrectangleconstraints.ui:20
-msgid "Size"
-msgstr "Grandeco"
-
-#: plugins/paintops/libpaintop/kis_pressure_softness_option.cpp:23
-#, fuzzy
-msgid "Softness"
-msgstr "Linilarĝeco:"
-
-#: plugins/paintops/libpaintop/kis_pressure_spacing_option.cpp:27
-#, fuzzy
-msgid "Spacing"
-msgstr "Spaco:"
 
 #: plugins/paintops/libpaintop/kis_pressure_spacing_option_widget.cpp:37
 #, fuzzy
 #| msgid "Grid Spacing"
 msgid "Isotropic Spacing"
 msgstr "Krada Interspaco"
-
-#: plugins/paintops/libpaintop/kis_pressure_texture_strength_option.cpp:24
-#, fuzzy
-#| msgid "Strength:"
-msgid "Strength"
-msgstr "Forteco:"
-
-#: plugins/paintops/libpaintop/kis_pressure_texture_strength_option.cpp:26
-msgid "Weak"
-msgstr ""
-
-#: plugins/paintops/libpaintop/kis_pressure_texture_strength_option.cpp:27
-#, fuzzy
-msgid "Strong"
-msgstr "Ligita"
 
 #: plugins/paintops/libpaintop/kis_spacing_selection_widget.cpp:62
 #, fuzzy
@@ -10348,7 +10473,7 @@ msgstr "Deŝovo"
 msgid "%1"
 msgstr "%1%"
 
-#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_fuzzy.cpp:38
+#: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_fuzzy.cpp:39
 msgid ""
 "Positive and\n"
 "Negative\n"
@@ -10479,17 +10604,17 @@ msgstr "&Skali"
 msgid "dy scale:"
 msgstr "&Skali"
 
-#. i18n: ectx: property (text), widget (QRadioButton, densityRadioButton)
-#: plugins/paintops/sketch/kis_density_option.cpp:23
-#: plugins/paintops/spray/wdgsprayoptions.ui:181
-msgid "Density"
-msgstr "Denseco"
-
-#: plugins/paintops/sketch/kis_offset_scale_option.cpp:23
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:50
 #, fuzzy
 #| msgid "Offset X:"
 msgid "Offset scale"
 msgstr "Deŝovo X:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, densityRadioButton)
+#: plugins/paintops/sketch/kis_sketch_paintop_settings_widget.cpp:51
+#: plugins/paintops/spray/wdgsprayoptions.ui:181
+msgid "Density"
+msgstr "Denseco"
 
 #: plugins/paintops/sketch/sketch_paintop_plugin.cpp:42
 #, fuzzy
@@ -10535,21 +10660,17 @@ msgstr "Hazarda"
 msgid "Distance opacity"
 msgstr "Distanco:"
 
-#: plugins/paintops/spray/kis_spray_shape_dynamics.cpp:33
-#, fuzzy
-#| msgid "Shapes"
-msgid "Shape dynamics"
-msgstr "Formoj"
-
-#: plugins/paintops/spray/kis_spray_shape_option.cpp:38
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:41
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:42
 #, fuzzy
 msgid "Spray shape"
 msgstr "Peniko"
 
-#: plugins/paintops/spray/kis_sprayop_option.cpp:33
+#: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:48
 #, fuzzy
-msgid "Spray area"
-msgstr "Peniko"
+#| msgid "Shapes"
+msgid "Shape dynamics"
+msgstr "Formoj"
 
 #: plugins/paintops/spray/spray_paintop_plugin.cpp:40
 #, fuzzy
@@ -12384,64 +12505,64 @@ msgstr "Fona Koloro"
 msgid "Layer Properties"
 msgstr "Ecoj de Ebeno"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:66
+#: ui/dialogs/kis_dlg_layer_style.cpp:67
 #, fuzzy
 #| msgid "Layer Size"
 msgid "Layer Styles"
 msgstr "Ebengrandeco"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:231
+#: ui/dialogs/kis_dlg_layer_style.cpp:232
 msgctxt "@title:window"
 msgid "Enter new style name"
 msgstr ""
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:232
+#: ui/dialogs/kis_dlg_layer_style.cpp:233
 #, fuzzy
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nomo:"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:233
+#: ui/dialogs/kis_dlg_layer_style.cpp:234
 #, fuzzy
 #| msgid "Styles"
 msgctxt "Default name for a new style"
 msgid "New Style"
 msgstr "Stiloj"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:246
-#: ui/dialogs/kis_dlg_layer_style.cpp:260
+#: ui/dialogs/kis_dlg_layer_style.cpp:247
+#: ui/dialogs/kis_dlg_layer_style.cpp:261
 #, fuzzy
 msgid "Select ASL file"
 msgstr "Elekto"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:248
+#: ui/dialogs/kis_dlg_layer_style.cpp:249
 #, fuzzy
 msgid "Layer style library (*.asl)"
 msgstr "Anguloj:"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:262
+#: ui/dialogs/kis_dlg_layer_style.cpp:263
 #, fuzzy
 msgid "Layer style configuration (*.asl)"
 msgstr "Anguloj:"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:721 ui/widgets/kis_cmb_contour.cpp:25
+#: ui/dialogs/kis_dlg_layer_style.cpp:722 ui/widgets/kis_cmb_contour.cpp:25
 #, fuzzy
 #| msgid "Not implemented"
 msgid "Not Implemented Yet"
 msgstr "Ne realigita"
 
 #. i18n: ectx: property (text), item, widget (QListWidget, lstStyleSelector)
-#: ui/dialogs/kis_dlg_layer_style.cpp:811 ui/layerstyles/wdglayerstyles.ui:39
+#: ui/dialogs/kis_dlg_layer_style.cpp:812 ui/layerstyles/wdglayerstyles.ui:39
 #, fuzzy
 #| msgid "Shadows"
 msgid "Inner Shadow"
 msgstr "Ombroj"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:812
+#: ui/dialogs/kis_dlg_layer_style.cpp:813
 msgid "Choke"
 msgstr ""
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:1044
+#: ui/dialogs/kis_dlg_layer_style.cpp:1045
 msgctxt "layer styles parameter"
 msgid "Spread"
 msgstr ""
@@ -17209,27 +17330,27 @@ msgstr ""
 msgid "Favorites"
 msgstr "Plej ŝatataj"
 
-#: ui/kis_control_frame.cpp:81 ui/kis_control_frame.cpp:82
+#: ui/kis_control_frame.cpp:80 ui/kis_control_frame.cpp:81
 msgid "Fill Patterns"
 msgstr "Plenigŝablonoj"
 
-#: ui/kis_control_frame.cpp:84
+#: ui/kis_control_frame.cpp:83
 msgid "&Patterns"
 msgstr "&Ŝablonoj"
 
-#: ui/kis_control_frame.cpp:92
+#: ui/kis_control_frame.cpp:91
 msgid "&Gradients"
 msgstr "&Kolortransiroj"
 
-#: ui/kis_control_frame.cpp:105
+#: ui/kis_control_frame.cpp:104
 msgid "&Color"
 msgstr "&Koloro"
 
-#: ui/kis_control_frame.cpp:121
+#: ui/kis_control_frame.cpp:120
 msgid "&Painter's Tools"
 msgstr "&Pentriloj"
 
-#: ui/kis_control_frame.cpp:159 ui/kis_control_frame.cpp:161
+#: ui/kis_control_frame.cpp:158 ui/kis_control_frame.cpp:160
 msgid "Custom Pattern"
 msgstr "Propra Ŝablono"
 
@@ -17619,90 +17740,90 @@ msgstr "Koloro al Alfo"
 msgid "Save Merged..."
 msgstr "Forigu bildon"
 
-#: ui/kis_node_manager.cpp:545
+#: ui/kis_node_manager.cpp:547
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Convert to a Selection Mask"
 msgstr "Elekto"
 
-#: ui/kis_node_manager.cpp:800
+#: ui/kis_node_manager.cpp:802
 #, fuzzy
 #| msgid "Remove Layer"
 msgctxt "(qtundo-format)"
 msgid "Remove Last Layer"
 msgstr "Forigi Ebenon"
 
-#: ui/kis_node_manager.cpp:814
+#: ui/kis_node_manager.cpp:816
 msgctxt "(qtundo-format)"
 msgid "Remove Multiple Layers and Masks"
 msgstr ""
 
-#: ui/kis_node_manager.cpp:842
+#: ui/kis_node_manager.cpp:844
 #, fuzzy
 #| msgid "Mirror Layer X"
 msgctxt "(qtundo-format)"
 msgid "Mirror Layer X"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_node_manager.cpp:844
+#: ui/kis_node_manager.cpp:846
 #, fuzzy
 #| msgid "Mirror Layer X"
 msgctxt "(qtundo-format)"
 msgid "Mirror Mask X"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_node_manager.cpp:855
+#: ui/kis_node_manager.cpp:857
 #, fuzzy
 #| msgid "Mirror Layer Y"
 msgctxt "(qtundo-format)"
 msgid "Mirror Layer Y"
 msgstr "Speguli Ebenon Y"
 
-#: ui/kis_node_manager.cpp:857
+#: ui/kis_node_manager.cpp:859
 #, fuzzy
 #| msgid "Mirror Layer X"
 msgctxt "(qtundo-format)"
 msgid "Mirror Mask Y"
 msgstr "Speguli ebenon X"
 
-#: ui/kis_node_manager.cpp:956
+#: ui/kis_node_manager.cpp:958
 #, fuzzy
 #| msgid "Crop Image"
 msgid "Merged"
 msgstr "Tondi Bildon"
 
-#: ui/kis_node_manager.cpp:959
+#: ui/kis_node_manager.cpp:961
 #, fuzzy
 #| msgid "Remove Selected Color"
 msgctxt "(qtundo-format)"
 msgid "Merge Selected Nodes"
 msgstr "Forigi Elektitan Koloron"
 
-#: ui/kis_node_manager.cpp:1059
+#: ui/kis_node_manager.cpp:1061
 #, fuzzy, kde-format
 msgid "Export \"%1\""
 msgstr "Eksportu bildon..."
 
-#: ui/kis_node_manager.cpp:1132
+#: ui/kis_node_manager.cpp:1134
 msgctxt "(qtundo-format)"
 msgid "Split Alpha into a Mask"
 msgstr ""
 
-#: ui/kis_node_manager.cpp:1162
+#: ui/kis_node_manager.cpp:1164
 #, fuzzy, kde-format
 #| msgid "Layer Size"
 msgctxt "@title:window"
 msgid "Layer %1 is not editable"
 msgstr "Ebengrandeco"
 
-#: ui/kis_node_manager.cpp:1163
+#: ui/kis_node_manager.cpp:1165
 #, kde-format
 msgid ""
 "Cannot write alpha channel of the parent layer \"%1\".\n"
 "The operation will be cancelled."
 msgstr ""
 
-#: ui/kis_node_manager.cpp:1194
+#: ui/kis_node_manager.cpp:1196
 #, fuzzy
 #| msgid "Create a new layer"
 msgctxt "(qtundo-format)"
@@ -17803,16 +17924,35 @@ msgstr "Filtriloj"
 msgid "Switch to Previous Preset"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QListWidget, lstStyleSelector)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ui/kis_paintop_option.cpp:36 ui/layerstyles/wdglayerstyles.ui:79
-#: ui/layerstyles/wdgTexture.ui:20
+#: ui/kis_paintop_options_model.cpp:35
+#, fuzzy
+#| msgid "General"
+msgctxt "option category"
+msgid "General"
+msgstr "Ĝenerale"
+
+#: ui/kis_paintop_options_model.cpp:38
+#, fuzzy
+#| msgid "Color"
+msgctxt "option category"
+msgid "Color"
+msgstr "Koloro"
+
+#: ui/kis_paintop_options_model.cpp:41
 #, fuzzy
 #| msgid "Text"
+msgctxt "option category"
 msgid "Texture"
 msgstr "Teksto"
 
-#: ui/kis_popup_palette.cpp:455
+#: ui/kis_paintop_options_model.cpp:44
+#, fuzzy
+#| msgid "Filter"
+msgctxt "option category"
+msgid "Filter"
+msgstr "Filtri"
+
+#: ui/kis_popup_palette.cpp:453
 msgid ""
 "There are no tags available to show in this popup. To add presets, you need "
 "to tag them and then select the tag here."
@@ -17983,36 +18123,45 @@ msgctxt "floating message about zoom"
 msgid "Zoom: %1 \\%"
 msgstr "Enzomi"
 
-#: ui/KisApplication.cpp:205
+#: ui/KisApplication.cpp:202 ui/KisApplication.cpp:219
 #, fuzzy
-#| msgid "Vertical Wave"
+#| msgid "Sander Koning"
 msgctxt "@title:window"
-msgid "Krita: Critical Error"
-msgstr "Vertikala Ondo"
+msgid "Krita: Warning"
+msgstr "Sander Koning"
 
-#: ui/KisApplication.cpp:206
+#: ui/KisApplication.cpp:203
 msgid ""
 "You are running a 32 bits build on a 64 bits Windows.\n"
 "This is not recommended.\n"
 "Please download and install the x64 build instead."
 msgstr ""
 
-#: ui/KisApplication.cpp:357
+#: ui/KisApplication.cpp:220
+msgid ""
+"You have an Intel(R) HD Graphics video adapter.\n"
+"If you experience problems like a black or blank screen,\n"
+"please update your display driver to 10.18.14 or later.\n"
+"You can also disable OpenGL rendering which reduces performance.\n"
+"Do you want to disable OpenGL?"
+msgstr ""
+
+#: ui/KisApplication.cpp:383
 #, kde-format
 msgid "No template found for: %1"
 msgstr ""
 
-#: ui/KisApplication.cpp:362
+#: ui/KisApplication.cpp:388
 #, kde-format
 msgid "Too many templates found for: %1"
 msgstr "Tro da ŝablonoj trovitaj por: %1"
 
-#: ui/KisApplication.cpp:392
+#: ui/KisApplication.cpp:420
 #, kde-format
 msgid "Template %1 failed to load."
 msgstr ""
 
-#: ui/KisApplication.cpp:424
+#: ui/KisApplication.cpp:452
 msgid "Mimetype not found, try using the -mimetype option"
 msgstr ""
 
@@ -18029,15 +18178,15 @@ msgstr ""
 msgid "The following autosave files can be recovered:"
 msgstr ""
 
-#: ui/KisDocument.cpp:703
+#: ui/KisDocument.cpp:704
 msgid "Making backup..."
 msgstr ""
 
-#: ui/KisDocument.cpp:718
+#: ui/KisDocument.cpp:719
 msgid "Saving..."
 msgstr "Konservanta..."
 
-#: ui/KisDocument.cpp:746
+#: ui/KisDocument.cpp:747
 #, kde-format
 msgid ""
 "Could not save\n"
@@ -18047,11 +18196,11 @@ msgstr ""
 "%1Ne eblis konservi\n"
 "%1"
 
-#: ui/KisDocument.cpp:746
+#: ui/KisDocument.cpp:747
 msgid "Most likely a layer is still processing effects."
 msgstr ""
 
-#: ui/KisDocument.cpp:748
+#: ui/KisDocument.cpp:749
 #, kde-format
 msgid ""
 "Could not save %1\n"
@@ -18060,30 +18209,30 @@ msgstr ""
 "Ne eblis konservigi %1\n"
 "Kialo: %2"
 
-#: ui/KisDocument.cpp:858
+#: ui/KisDocument.cpp:859
 msgid ""
 "The password of this encrypted document is not known. Autosave aborted! "
 "Please save your work manually."
 msgstr ""
 
-#: ui/KisDocument.cpp:861
+#: ui/KisDocument.cpp:862
 msgid "Autosaving..."
 msgstr ""
 
-#: ui/KisDocument.cpp:873
+#: ui/KisDocument.cpp:874
 msgid "Error during autosave! Partition full?"
 msgstr ""
 
-#: ui/KisDocument.cpp:960
+#: ui/KisDocument.cpp:961
 msgid "Could not create the file for saving"
 msgstr "Ne eblis krei la dosieron por savi"
 
-#: ui/KisDocument.cpp:985
+#: ui/KisDocument.cpp:986
 #, kde-format
 msgid "Not able to write '%1'. Partition full?"
 msgstr ""
 
-#: ui/KisDocument.cpp:1200
+#: ui/KisDocument.cpp:1201
 #, kde-format
 msgid ""
 "Malformed URL\n"
@@ -18092,94 +18241,94 @@ msgstr ""
 "Ne valida ligo (URL)\n"
 "%1"
 
-#: ui/KisDocument.cpp:1215
+#: ui/KisDocument.cpp:1216
 msgid ""
 "An autosaved file exists for this document.\n"
 "Do you want to open it instead?"
 msgstr ""
 
-#: ui/KisDocument.cpp:1258
+#: ui/KisDocument.cpp:1259
 #, kde-format
 msgid "File %1 does not exist."
 msgstr "Dosiero %1 ne ekzistas."
 
-#: ui/KisDocument.cpp:1322
+#: ui/KisDocument.cpp:1323
 msgid "Opening Document"
 msgstr ""
 
-#: ui/KisDocument.cpp:1337
+#: ui/KisDocument.cpp:1338
 msgid "Could not create the filter plugin"
 msgstr ""
 
-#: ui/KisDocument.cpp:1340
+#: ui/KisDocument.cpp:1341
 msgid "Could not create the output document"
 msgstr ""
 
-#: ui/KisDocument.cpp:1343
+#: ui/KisDocument.cpp:1344
 msgid "File not found"
 msgstr "Dosiero ne trovita"
 
-#: ui/KisDocument.cpp:1346
+#: ui/KisDocument.cpp:1347
 msgid "Cannot create storage"
 msgstr ""
 
-#: ui/KisDocument.cpp:1349
+#: ui/KisDocument.cpp:1350
 msgid "Bad MIME type"
 msgstr ""
 
-#: ui/KisDocument.cpp:1352
+#: ui/KisDocument.cpp:1353
 msgid "Error in embedded document"
 msgstr "Eraro en enkonstruita dokumentoj"
 
-#: ui/KisDocument.cpp:1355
+#: ui/KisDocument.cpp:1356
 msgid "Format not recognized"
 msgstr ""
 
-#: ui/KisDocument.cpp:1358
+#: ui/KisDocument.cpp:1359
 msgid "Not implemented"
 msgstr "Ne realigita"
 
-#: ui/KisDocument.cpp:1361
+#: ui/KisDocument.cpp:1362
 msgid "Parsing error"
 msgstr ""
 
-#: ui/KisDocument.cpp:1364
+#: ui/KisDocument.cpp:1365
 msgid "Document is password protected"
 msgstr ""
 
-#: ui/KisDocument.cpp:1367
+#: ui/KisDocument.cpp:1368
 #, fuzzy
 #| msgid "Image Size"
 msgid "Invalid file format"
 msgstr "Bildgrandecoo"
 
-#: ui/KisDocument.cpp:1374
+#: ui/KisDocument.cpp:1375
 #, fuzzy
 #| msgid "Integral step:"
 msgid "Internal error"
 msgstr "Entjera paŝo:"
 
-#: ui/KisDocument.cpp:1377
+#: ui/KisDocument.cpp:1378
 msgid "Out of memory"
 msgstr ""
 
-#: ui/KisDocument.cpp:1380
+#: ui/KisDocument.cpp:1381
 msgid "Empty Filter Plugin"
 msgstr ""
 
-#: ui/KisDocument.cpp:1383
+#: ui/KisDocument.cpp:1384
 msgid "Trying to load into the wrong kind of document"
 msgstr ""
 
-#: ui/KisDocument.cpp:1386
+#: ui/KisDocument.cpp:1387
 msgid "Failed to download remote file"
 msgstr ""
 
-#: ui/KisDocument.cpp:1393
+#: ui/KisDocument.cpp:1394
 msgid "Unknown error"
 msgstr "Nekonata eraro"
 
-#: ui/KisDocument.cpp:1397
+#: ui/KisDocument.cpp:1398
 #, kde-format
 msgid ""
 "Could not open %2.\n"
@@ -18187,12 +18336,12 @@ msgid ""
 "%3"
 msgstr ""
 
-#: ui/KisDocument.cpp:1511
+#: ui/KisDocument.cpp:1512
 #, kde-format
 msgid "Could not find %1"
 msgstr "Ne eblis trovi %1"
 
-#: ui/KisDocument.cpp:1523
+#: ui/KisDocument.cpp:1524
 #, kde-format
 msgid ""
 "Parsing error in %1 at line %2, column %3\n"
@@ -18201,25 +18350,25 @@ msgstr ""
 "Eraro dum analizado en %1 ĉe linio %2, kolumno %3\n"
 "Erarmesaĝo: %4"
 
-#: ui/KisDocument.cpp:1538 ui/KisMainWindow.cpp:658
+#: ui/KisDocument.cpp:1539 ui/KisMainWindow.cpp:661
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "La dosiero %1 ne ekzistas."
 
-#: ui/KisDocument.cpp:1545
+#: ui/KisDocument.cpp:1546
 #, kde-format
 msgid "%1 is not a file."
 msgstr "%1 ne estas dosiero."
 
-#: ui/KisDocument.cpp:1560
+#: ui/KisDocument.cpp:1561
 msgid "Could not open the file for reading (check read permissions)."
 msgstr "Ne povis malfermi dosieron por legi (kontrolu lego-permesojn)."
 
-#: ui/KisDocument.cpp:1571
+#: ui/KisDocument.cpp:1572
 msgid "Could not read the beginning of the file."
 msgstr "Ne povis legi la komencon de la dosiero."
 
-#: ui/KisDocument.cpp:1601
+#: ui/KisDocument.cpp:1602
 #, kde-format
 msgid ""
 "parsing error in the main document at line %1, column %2\n"
@@ -18228,79 +18377,79 @@ msgstr ""
 "Eraro dum analizado de la ĉefdokumento en linio %1, kolumno %2\n"
 "Erarmesaĝo: %3"
 
-#: ui/KisDocument.cpp:1617
+#: ui/KisDocument.cpp:1618
 #, fuzzy, kde-format
 #| msgid "Layer Size"
 msgid "Not a valid Krita file: %1"
 msgstr "Ebengrandeco"
 
-#: ui/KisDocument.cpp:1682
+#: ui/KisDocument.cpp:1683
 msgid "Invalid document: no file 'maindoc.xml'."
 msgstr "Ne valida dokumento: neniu dosiero 'maindoc.xml'"
 
-#: ui/KisDocument.cpp:1739 ui/KisDocument.cpp:1747
+#: ui/KisDocument.cpp:1740 ui/KisDocument.cpp:1748
 msgid "Krita does not support the OpenDocument file format."
 msgstr ""
 
-#: ui/KisDocument.cpp:1835 ui/KisDocument.cpp:1954
+#: ui/KisDocument.cpp:1836 ui/KisDocument.cpp:1955
 msgid "Unknown error."
 msgstr "Nekonata eraro."
 
-#: ui/KisDocument.cpp:1929
+#: ui/KisDocument.cpp:1930
 msgid "The format is not supported or the file is corrupted"
 msgstr ""
 
-#: ui/KisDocument.cpp:1935
+#: ui/KisDocument.cpp:1936
 #, kde-format
 msgid "The file is too new for this version of Krita (%1)."
 msgstr ""
 
-#: ui/KisDocument.cpp:1940
+#: ui/KisDocument.cpp:1941
 msgid "The file has no layers."
 msgstr ""
 
-#: ui/KisDocument.cpp:1965
+#: ui/KisDocument.cpp:1966
 msgid "The file does not contain an image."
 msgstr ""
 
-#: ui/KisDocument.cpp:2028
+#: ui/KisDocument.cpp:2029
 #, fuzzy, kde-format
 msgid ""
 "Could not open\n"
 "%1"
 msgstr "Forigu elekton"
 
-#: ui/KisDocument.cpp:2031
+#: ui/KisDocument.cpp:2032
 #, kde-format
 msgid ""
 "Could not open %1\n"
 "Reason: %2"
 msgstr ""
 
-#: ui/KisDocument.cpp:2100
+#: ui/KisDocument.cpp:2101
 #, fuzzy
 #| msgid "Pressure"
 msgid "a word processing"
 msgstr "Premo"
 
-#: ui/KisDocument.cpp:2101
+#: ui/KisDocument.cpp:2102
 msgid "a spreadsheet"
 msgstr ""
 
-#: ui/KisDocument.cpp:2102
+#: ui/KisDocument.cpp:2103
 #, fuzzy
 msgid "a presentation"
 msgstr "Kolortransiro:"
 
-#: ui/KisDocument.cpp:2103
+#: ui/KisDocument.cpp:2104
 msgid "a chart"
 msgstr ""
 
-#: ui/KisDocument.cpp:2104
+#: ui/KisDocument.cpp:2105
 msgid "a drawing"
 msgstr ""
 
-#: ui/KisDocumentSectionDelegate.cpp:534
+#: ui/KisDocumentSectionDelegate.cpp:539
 #, kde-format
 msgid "%1 %"
 msgstr ""
@@ -18367,176 +18516,176 @@ msgstr "Montri originan ebenon"
 msgid "Hide %1 Toolbar"
 msgstr "Iloj"
 
-#: ui/KisMainWindow.cpp:613
+#: ui/KisMainWindow.cpp:616
 msgid "(write protected)"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:621
+#: ui/KisMainWindow.cpp:624
 #, fuzzy, kde-format
 #| msgid "Scale Layer"
 msgid "Save as %1"
 msgstr "Skali Ebenon"
 
-#: ui/KisMainWindow.cpp:822
+#: ui/KisMainWindow.cpp:825
 msgid "untitled"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1131
+#: ui/KisMainWindow.cpp:1134
 #, fuzzy
 #| msgid "Import Image"
 msgid "Import Images"
 msgstr "Importi Bildon"
 
-#: ui/KisMainWindow.cpp:1131
+#: ui/KisMainWindow.cpp:1134
 #, fuzzy
 #| msgid "Image"
 msgid "Open Images"
 msgstr "Bildo"
 
-#: ui/KisMainWindow.cpp:1349
+#: ui/KisMainWindow.cpp:1352
 #, fuzzy
 #| msgid "Export Layer"
 msgid "Export as PDF"
 msgstr "Eksporti Paletron"
 
-#: ui/KisMainWindow.cpp:1391
+#: ui/KisMainWindow.cpp:1394
 msgid "Cannot export to the specified file"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1544
+#: ui/KisMainWindow.cpp:1547
 msgid "Document"
 msgstr "Dokumento"
 
-#: ui/KisMainWindow.cpp:1552
+#: ui/KisMainWindow.cpp:1555
 #, kde-format
 msgid "Document - %1"
 msgstr "Dokumento - %1"
 
-#: ui/KisMainWindow.cpp:1575
+#: ui/KisMainWindow.cpp:1578
 msgid ""
 "You will lose all changes made since your last save\n"
 "Do you want to continue?"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1586
+#: ui/KisMainWindow.cpp:1589
 #, fuzzy
 msgid "Error: Could not reload this document"
 msgstr "Forigu elekton"
 
-#: ui/KisMainWindow.cpp:1842
+#: ui/KisMainWindow.cpp:1847
 #, kde-format
 msgid "&%1 %2"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1846
+#: ui/KisMainWindow.cpp:1851
 #, kde-format
 msgid "%1 %2"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1932
+#: ui/KisMainWindow.cpp:1937
 msgid ""
 "The Calligra LittleCMS color management plugin is not installed. Krita will "
 "quit now."
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1940
+#: ui/KisMainWindow.cpp:1945
 msgid "Krita cannot find any brush presets! Krita will quit now."
 msgstr ""
 
-#: ui/KisMainWindow.cpp:1949
+#: ui/KisMainWindow.cpp:1954
 #, fuzzy
 msgctxt "@title:window"
 msgid "Installation error"
 msgstr "Ebeno %1"
 
-#: ui/KisMainWindow.cpp:2008
+#: ui/KisMainWindow.cpp:2013
 #, kde-format
 msgid "%1 unsaved document (%2)"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:2044
+#: ui/KisMainWindow.cpp:2049
 #, fuzzy
 #| msgid "Export Layer"
 msgctxt "@action:inmenu"
 msgid "Export as PDF..."
 msgstr "Eksporti Paletron"
 
-#: ui/KisMainWindow.cpp:2052
+#: ui/KisMainWindow.cpp:2057
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Close All"
 msgstr "Koloro"
 
-#: ui/KisMainWindow.cpp:2063
+#: ui/KisMainWindow.cpp:2068
 msgctxt "@action:inmenu"
 msgid "Open ex&isting Document as Untitled Document..."
 msgstr ""
 
-#: ui/KisMainWindow.cpp:2067
+#: ui/KisMainWindow.cpp:2072
 msgctxt "@action:inmenu"
 msgid "E&xport..."
 msgstr "Eks&porti..."
 
-#: ui/KisMainWindow.cpp:2074
+#: ui/KisMainWindow.cpp:2079
 msgctxt "@action:inmenu"
 msgid "Document Information"
 msgstr "Dokumentinformo"
 
-#: ui/KisMainWindow.cpp:2082
+#: ui/KisMainWindow.cpp:2087
 msgctxt "@action:inmenu"
 msgid "&Themes"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:2088
+#: ui/KisMainWindow.cpp:2093
 #, fuzzy
 #| msgid "Show Rulers"
 msgctxt "@action:inmenu"
 msgid "Show Dockers"
 msgstr "Montri Liniilojn"
 
-#: ui/KisMainWindow.cpp:2094
+#: ui/KisMainWindow.cpp:2099
 #, fuzzy
 #| msgid "Show Rulers"
 msgctxt "@action:inmenu"
 msgid "Show Docker Titlebars"
 msgstr "Montri Liniilojn"
 
-#: ui/KisMainWindow.cpp:2104
+#: ui/KisMainWindow.cpp:2109
 msgctxt "@action:inmenu"
 msgid "Cascade"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:2109
+#: ui/KisMainWindow.cpp:2114
 msgctxt "@action:inmenu"
 msgid "Tile"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:2114
+#: ui/KisMainWindow.cpp:2119
 msgctxt "@action:inmenu"
 msgid "Next"
 msgstr ""
 
-#: ui/KisMainWindow.cpp:2119
+#: ui/KisMainWindow.cpp:2124
 #, fuzzy
 #| msgid "Filters"
 msgctxt "@action:inmenu"
 msgid "Previous"
 msgstr "Filtriloj"
 
-#: ui/KisMainWindow.cpp:2124
+#: ui/KisMainWindow.cpp:2129
 #, fuzzy
 #| msgid "&Filters Gallery"
 msgctxt "@action:inmenu"
 msgid "&New Window"
 msgstr "&Filtrilgalerio"
 
-#: ui/KisMainWindow.cpp:2128
+#: ui/KisMainWindow.cpp:2133
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Close"
 msgstr "Koloro"
 
-#: ui/KisMainWindow.cpp:2136
+#: ui/KisMainWindow.cpp:2141
 msgid "Expanding Spacer"
 msgstr ""
 
@@ -18702,122 +18851,122 @@ msgstr ""
 msgid "Open Many Documents"
 msgstr ""
 
-#: ui/KisViewManager.cpp:647
+#: ui/KisViewManager.cpp:646
 #, fuzzy
 #| msgid "Incremental"
 msgid "Save Incremental &Version"
 msgstr "Alkrementa"
 
-#: ui/KisViewManager.cpp:653
+#: ui/KisViewManager.cpp:652
 #, fuzzy
 #| msgid "Incremental"
 msgid "Save Incremental Backup"
 msgstr "Alkrementa"
 
-#: ui/KisViewManager.cpp:664
+#: ui/KisViewManager.cpp:663
 msgid "Toggle Tablet Debugger"
 msgstr ""
 
-#: ui/KisViewManager.cpp:669
+#: ui/KisViewManager.cpp:668
 #, fuzzy
 #| msgid "&Rotate Image..."
 msgid "&Create Template From Image..."
 msgstr "&Rotacii Bildon..."
 
-#: ui/KisViewManager.cpp:674
+#: ui/KisViewManager.cpp:673
 msgid "Open Resources Folder"
 msgstr ""
 
-#: ui/KisViewManager.cpp:675 ui/KisViewManager.cpp:676
+#: ui/KisViewManager.cpp:674 ui/KisViewManager.cpp:675
 msgid ""
 "Opens a file browser at the location Krita saves resources such as brushes "
 "to."
 msgstr ""
 
-#: ui/KisViewManager.cpp:680
+#: ui/KisViewManager.cpp:679
 msgid "Rotate Canvas Right"
 msgstr ""
 
-#: ui/KisViewManager.cpp:685
+#: ui/KisViewManager.cpp:684
 #, fuzzy
 #| msgid "Rotate Image"
 msgid "Rotate Canvas Left"
 msgstr "Rotacii Bildon"
 
-#: ui/KisViewManager.cpp:690
+#: ui/KisViewManager.cpp:689
 msgid "Wrap Around Mode"
 msgstr ""
 
-#: ui/KisViewManager.cpp:696
+#: ui/KisViewManager.cpp:695
 #, fuzzy
 #| msgid "Show original layer"
 msgid "Show Status Bar"
 msgstr "Montri originan ebenon"
 
-#: ui/KisViewManager.cpp:699
+#: ui/KisViewManager.cpp:698
 msgid "Shows or hides the status bar"
 msgstr ""
 
-#: ui/KisViewManager.cpp:704
+#: ui/KisViewManager.cpp:703
 #, fuzzy
 #| msgid "Canvas color:"
 msgid "Show Canvas Only"
 msgstr "Kanvaskoloro:"
 
-#: ui/KisViewManager.cpp:707
+#: ui/KisViewManager.cpp:706
 msgid "Shows just the canvas or the whole window"
 msgstr ""
 
-#: ui/KisViewManager.cpp:723
+#: ui/KisViewManager.cpp:722
 msgid "Cleanup removed files..."
 msgstr ""
 
-#: ui/KisViewManager.cpp:727
+#: ui/KisViewManager.cpp:726
 msgid "Show Rulers"
 msgstr "Montri Liniilojn"
 
-#: ui/KisViewManager.cpp:731
+#: ui/KisViewManager.cpp:730
 msgid ""
 "The rulers show the horizontal and vertical positions of the mouse on the "
 "image and can be used to position your mouse at the right place on the "
 "canvas. <p>Uncheck this to hide the rulers.</p>"
 msgstr ""
 
-#: ui/KisViewManager.cpp:737
+#: ui/KisViewManager.cpp:736
 #, fuzzy
 #| msgid "Show Rulers"
 msgid "Show Guides"
 msgstr "Montri Liniilojn"
 
-#: ui/KisViewManager.cpp:741
+#: ui/KisViewManager.cpp:740
 msgid "Shows or hides guides"
 msgstr ""
 
-#: ui/KisViewManager.cpp:744
+#: ui/KisViewManager.cpp:743
 #, fuzzy
 #| msgid "&Reselect"
 msgid "Reset zoom"
 msgstr "&Reelekti"
 
-#: ui/KisViewManager.cpp:955 ui/KisViewManager.cpp:1026
+#: ui/KisViewManager.cpp:954 ui/KisViewManager.cpp:1025
 msgid "Alternative names exhausted, try manually saving with a higher number"
 msgstr ""
 
-#: ui/KisViewManager.cpp:955
+#: ui/KisViewManager.cpp:954
 #, fuzzy
 #| msgid "Incremental"
 msgctxt "@title:window"
 msgid "Couldn't save incremental version"
 msgstr "Alkrementa"
 
-#: ui/KisViewManager.cpp:1026
+#: ui/KisViewManager.cpp:1025
 #, fuzzy
 #| msgid "Incremental"
 msgctxt "@title:window"
 msgid "Couldn't save incremental backup"
 msgstr "Alkrementa"
 
-#: ui/KisViewManager.cpp:1158
+#: ui/KisViewManager.cpp:1157
 #, kde-format
 msgid ""
 "Going into Canvas-Only mode.\n"
@@ -18884,13 +19033,6 @@ msgstr ""
 msgid "Image specifies an unsupported color model: %1."
 msgstr ""
 
-#: ui/kra/kis_kra_loader.cpp:348
-#, kde-format
-msgctxt ""
-"Auto-generated layer style collection name for embedded styles (collection)"
-msgid "<%1> (embedded)"
-msgstr ""
-
 #: ui/kra/kis_kra_loader.cpp:487
 #, kde-format
 msgid "Layer %1 specifies an unsupported color model: %2."
@@ -18911,7 +19053,7 @@ msgstr ""
 msgid "Failure loading layer %1 of type: %2."
 msgstr ""
 
-#: ui/kra/kis_kra_loader.cpp:656
+#: ui/kra/kis_kra_loader.cpp:665
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -18919,7 +19061,7 @@ msgid ""
 "><nl/>Expected path:<nl/>%2<nl/><nl/>Do you want to locate it manually?"
 msgstr ""
 
-#: ui/kra/kis_kra_loader.cpp:661
+#: ui/kra/kis_kra_loader.cpp:670
 msgctxt "@title:window"
 msgid "File not found"
 msgstr "Dosiero ne trovita"
@@ -19716,6 +19858,14 @@ msgstr "Stiloj"
 msgid "Outer Glow"
 msgstr ""
 
+#. i18n: ectx: property (text), item, widget (QListWidget, lstStyleSelector)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ui/layerstyles/wdglayerstyles.ui:79 ui/layerstyles/wdgTexture.ui:20
+#, fuzzy
+#| msgid "Text"
+msgid "Texture"
+msgstr "Teksto"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (text), item, widget (QListWidget, lstStyleSelector)
 #: ui/layerstyles/wdglayerstyles.ui:87 ui/layerstyles/WdgSatin.ui:20
@@ -19877,7 +20027,7 @@ msgstr "&Filtrilgalerio"
 msgid "Cannot use OpenGL: Krita needs at least OpenGL 2.0 or ES 2.0."
 msgstr ""
 
-#: ui/opengl/kis_opengl_canvas2.cpp:505
+#: ui/opengl/kis_opengl_canvas2.cpp:511
 #, kde-format
 msgid ""
 "Krita could not initialize the OpenGL canvas:\n"
@@ -20006,12 +20156,12 @@ msgstr ""
 msgid "Local selection is locked."
 msgstr "Skali Elekton"
 
-#: ui/tool/kis_tool_paint.cc:107
+#: ui/tool/kis_tool_paint.cc:108
 #, fuzzy
 msgid "Increase Brush Size"
 msgstr "Peniko"
 
-#: ui/tool/kis_tool_paint.cc:113
+#: ui/tool/kis_tool_paint.cc:114
 #, fuzzy
 #| msgid "Brush size"
 msgid "Decrease Brush Size"
@@ -20263,11 +20413,11 @@ msgstr ""
 msgid "x%1"
 msgstr "%1%"
 
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:56
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:55
 msgid "Thumbnails"
 msgstr "Miniaturoj"
 
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:61
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:60
 msgid "Details"
 msgstr "Detaloj"
 
@@ -20317,15 +20467,48 @@ msgstr "Elekto"
 msgid "No configuration options."
 msgstr "Anguloj:"
 
-#: ui/widgets/kis_workspace_chooser.cpp:127
+#: ui/widgets/kis_workspace_chooser.cpp:128
 #, fuzzy
 msgid "Workspace"
 msgstr "&Koloroprenilo"
 
-#: ui/widgets/kis_workspace_chooser.cpp:138
+#: ui/widgets/kis_workspace_chooser.cpp:139
 #, fuzzy, kde-format
 msgid "Workspace %1"
 msgstr "&Koloroprenilo"
+
+#, fuzzy
+#~ msgid "Length: "
+#~ msgstr "Pliantaŭen nunan %1"
+
+#, fuzzy
+#~| msgid "Radius"
+#~ msgid "Radius(%): "
+#~ msgstr "Radiuso"
+
+#, fuzzy
+#~ msgid "Rate: "
+#~ msgstr "Ripeto:"
+
+#, fuzzy
+#~| msgid "Brush Shapes"
+#~ msgid "Brush shape"
+#~ msgstr "Penikformoj"
+
+#, fuzzy
+#~| msgid "Brush size"
+#~ msgid "Brush tip"
+#~ msgstr "Penikograndeco"
+
+#, fuzzy
+#~ msgid "Spray area"
+#~ msgstr "Peniko"
+
+#, fuzzy
+#~| msgid "Vertical Wave"
+#~ msgctxt "@title:window"
+#~ msgid "Krita: Critical Error"
+#~ msgstr "Vertikala Ondo"
 
 #, fuzzy
 #~| msgid "Brush Outline"
