@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-04 08:42+0000\n"
+"POT-Creation-Date: 2015-05-27 08:49+0000\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -395,7 +395,7 @@ msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr ""
 
-#: attachmenteditdialog.cpp:129
+#: attachmenteditdialog.cpp:128
 msgctxt "@label"
 msgid "New attachment"
 msgstr ""
@@ -487,49 +487,113 @@ msgstr ""
 msgid "Type:"
 msgstr "Tipo:"
 
-#: attendeeline.cpp:166 attendeeline.cpp:180
+#: attendeeline.cpp:170 attendeeline.cpp:184 incidenceattendee.cpp:91
+#: incidenceattendee.cpp:105
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr ""
 
-#: attendeeline.cpp:168 attendeeline.cpp:182
+#: attendeeline.cpp:172 attendeeline.cpp:186 incidenceattendee.cpp:93
+#: incidenceattendee.cpp:107
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr ""
 
-#: attendeeline.cpp:186
+#: attendeeline.cpp:190 attendeelineeditdelegate.cpp:40
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr ""
 
-#: attendeeline.cpp:190
+#: attendeeline.cpp:194 incidenceattendee.cpp:111
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr ""
 
-#: attendeeline.cpp:193 schedulingdialog.cpp:139
+#: attendeeline.cpp:197 incidenceattendee.cpp:114 schedulingdialog.cpp:139
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr ""
 
-#: attendeeline.cpp:196
+#: attendeeline.cpp:200 attendeelineeditdelegate.cpp:42
 msgctxt "@info:whatsthis"
 msgid ""
 "The email address or name of the attendee. An invitation can be sent to the "
 "user if an email address is provided."
 msgstr ""
 
-#: attendeeline.cpp:201
+#: attendeeline.cpp:205 incidenceattendee.cpp:116
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr ""
 
-#: attendeeline.cpp:203
+#: attendeeline.cpp:207 incidenceattendee.cpp:118
 msgctxt "@info:whatsthis"
 msgid ""
 "Edits whether to send an email to the attendee to request a response "
 "concerning attendance."
 msgstr ""
+
+#: attendeetablemodel.cpp:81
+msgid "Free"
+msgstr ""
+
+#: attendeetablemodel.cpp:83
+msgid "Busy"
+msgstr ""
+
+#: attendeetablemodel.cpp:85
+msgid "Accepted"
+msgstr ""
+
+#: attendeetablemodel.cpp:87 attendeetablemodel.cpp:89
+msgid "Unknown"
+msgstr ""
+
+#: attendeetablemodel.cpp:168
+msgctxt "vcard attendee role"
+msgid "Role"
+msgstr ""
+
+#: attendeetablemodel.cpp:170
+msgctxt "attendees  (name+emailaddress)"
+msgid "Fullname"
+msgstr ""
+
+#: attendeetablemodel.cpp:172
+msgctxt "is attendee available for incidence"
+msgid "Available"
+msgstr ""
+
+#: attendeetablemodel.cpp:174
+msgctxt ""
+"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgid "Status"
+msgstr ""
+
+#: attendeetablemodel.cpp:176
+#, fuzzy
+#| msgid "Type"
+msgctxt "Type of resource (vCard attribute)"
+msgid "cuType"
+msgstr "Tipo"
+
+#: attendeetablemodel.cpp:178
+msgctxt "has attendee to respond to the invitation"
+msgid "Response"
+msgstr ""
+
+#: attendeetablemodel.cpp:180
+msgctxt "attendee name"
+msgid "name"
+msgstr ""
+
+#: attendeetablemodel.cpp:182
+#, fuzzy
+#| msgctxt "EMAIL OF TRANSLATORS"
+#| msgid "Your emails"
+msgctxt "attendee email"
+msgid "email"
+msgstr "axel@esperanto-jeunes.org"
 
 #: categorydialog.cpp:59
 msgid "Click to add a new category"
@@ -579,13 +643,13 @@ msgid ""
 "more information about the settings."
 msgstr ""
 
-#: categoryeditdialog.cpp:146
+#: categoryeditdialog.cpp:139
 #, fuzzy
 #| msgid "Category"
 msgid "New category"
 msgstr "Kategorio"
 
-#: categoryeditdialog.cpp:162
+#: categoryeditdialog.cpp:155
 #, fuzzy
 #| msgid "Category"
 msgid "New subcategory"
@@ -1010,25 +1074,25 @@ msgid "Attendees"
 msgstr "&Elekti..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: dialogdesktop.ui:722
+#: dialogdesktop.ui:732
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: dialogdesktop.ui:732
+#: dialogdesktop.ui:742
 msgctxt "@label participants of this event or to-do"
 msgid "Participants:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
-#: dialogdesktop.ui:751
+#: dialogdesktop.ui:761
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
-#: dialogdesktop.ui:754
+#: dialogdesktop.ui:764
 msgctxt "@info:whatsthis"
 msgid ""
 "Opens the scheduling dialog, which will assist in picking a time slot that "
@@ -1036,27 +1100,32 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
-#: dialogdesktop.ui:757
+#: dialogdesktop.ui:767
 #, fuzzy
 #| msgid "&Select..."
 msgctxt "@action:button"
 msgid "Schedule..."
 msgstr "&Elekti..."
 
+#. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
+#: dialogdesktop.ui:790
+msgid "Substitute with group members"
+msgstr ""
+
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
-#: dialogdesktop.ui:777
+#: dialogdesktop.ui:797
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
-#: dialogdesktop.ui:780
+#: dialogdesktop.ui:800
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
-#: dialogdesktop.ui:783
+#: dialogdesktop.ui:803
 #, fuzzy
 #| msgid "&Select..."
 msgctxt "@action:button"
@@ -1064,13 +1133,13 @@ msgid "Select Attendees..."
 msgstr "&Elekti..."
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, mOrganizerCombo)
-#: dialogdesktop.ui:833 dialogmoremobile.ui:188
+#: dialogdesktop.ui:843 dialogmoremobile.ui:188
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, mOrganizerCombo)
-#: dialogdesktop.ui:836 dialogmoremobile.ui:191
+#: dialogdesktop.ui:846 dialogmoremobile.ui:191
 msgctxt "@info:whatsthis"
 msgid ""
 "Sets the identity corresponding to the organizer of this to-do or event. "
@@ -1083,20 +1152,35 @@ msgid ""
 "configuration."
 msgstr ""
 
+#. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
+#: dialogdesktop.ui:887
+msgid "Resources"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
+#: dialogdesktop.ui:927
+msgid "Book resource"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
+#: dialogdesktop.ui:956
+msgid "Find Resources..."
+msgstr ""
+
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
-#: dialogdesktop.ui:877
+#: dialogdesktop.ui:966
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
-#: dialogdesktop.ui:889
+#: dialogdesktop.ui:978
 msgctxt "@label"
 msgid "Add default reminder:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
-#: dialogdesktop.ui:912
+#: dialogdesktop.ui:1001
 #, fuzzy
 #| msgid "&Add"
 msgctxt "@action:button Adds an reminder"
@@ -1104,7 +1188,7 @@ msgid "Add"
 msgstr "&Aldoni"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
-#: dialogdesktop.ui:939 dialogmoremobile.ui:326
+#: dialogdesktop.ui:1028 dialogmoremobile.ui:326
 #, fuzzy
 #| msgid "&New..."
 msgctxt "@action:button Create a new reminder"
@@ -1112,19 +1196,19 @@ msgid "New"
 msgstr "&Nova..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
-#: dialogdesktop.ui:946
+#: dialogdesktop.ui:1035
 msgctxt "@action:button Configures selected reminder"
 msgid "Configure"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
-#: dialogdesktop.ui:953
+#: dialogdesktop.ui:1042
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
-#: dialogdesktop.ui:960
+#: dialogdesktop.ui:1049
 #, fuzzy
 #| msgid "Remove"
 msgctxt "@action:button removes selected reminders"
@@ -1132,13 +1216,13 @@ msgid "Remove"
 msgstr "Forigi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
-#: dialogdesktop.ui:981
+#: dialogdesktop.ui:1070
 msgctxt "@title:tab"
 msgid "Recurrence"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
-#: dialogdesktop.ui:993
+#: dialogdesktop.ui:1082
 #, fuzzy
 #| msgid "Repeat"
 msgctxt "@label whether or not this event or to-do repeats"
@@ -1146,13 +1230,13 @@ msgid "Repeats:"
 msgstr "Ripeti"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: dialogdesktop.ui:1012
+#: dialogdesktop.ui:1101
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Never"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: dialogdesktop.ui:1017
+#: dialogdesktop.ui:1106
 #, fuzzy
 #| msgid "Dirty"
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
@@ -1160,60 +1244,60 @@ msgid "Daily"
 msgstr "Malpura"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: dialogdesktop.ui:1022
+#: dialogdesktop.ui:1111
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Weekly"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: dialogdesktop.ui:1027
+#: dialogdesktop.ui:1116
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Monthly"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceTypeCombo)
-#: dialogdesktop.ui:1032
+#: dialogdesktop.ui:1121
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Yearly"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
-#: dialogdesktop.ui:1046
+#: dialogdesktop.ui:1135
 msgctxt "@label repeats every [various options]"
 msgid "every"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
-#: dialogdesktop.ui:1078
+#: dialogdesktop.ui:1167
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
-#: dialogdesktop.ui:1085 dialogmoremobile.ui:768
+#: dialogdesktop.ui:1174 dialogmoremobile.ui:768
 msgid "This and future occurrences."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
-#: dialogdesktop.ui:1256
+#: dialogdesktop.ui:1345
 msgctxt "@label recurrence ends on|after"
 msgid "Ends:"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceEndCombo)
-#: dialogdesktop.ui:1278
+#: dialogdesktop.ui:1367
 msgctxt "@item:inlistbox Speficies when a recurring events end"
 msgid "never"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceEndCombo)
-#: dialogdesktop.ui:1283
+#: dialogdesktop.ui:1372
 msgctxt "@item:inlistbox Speficies when a recurring events end"
 msgid "on"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, mRecurrenceEndCombo)
-#: dialogdesktop.ui:1288
+#: dialogdesktop.ui:1377
 #, fuzzy
 #| msgid "Category"
 msgctxt "@item:inlistbox Speficies when a recurring events end"
@@ -1221,19 +1305,19 @@ msgid "after"
 msgstr "Kategorio"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
-#: dialogdesktop.ui:1343
+#: dialogdesktop.ui:1432
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
-#: dialogdesktop.ui:1398 dialogmoremobile.ui:668
+#: dialogdesktop.ui:1487 dialogmoremobile.ui:668
 msgctxt "@label"
 msgid "occurrence(s)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
-#: dialogdesktop.ui:1417
+#: dialogdesktop.ui:1506
 #, fuzzy
 #| msgid "Duration:"
 msgctxt "@label exceptions for the recurrence"
@@ -1241,7 +1325,7 @@ msgid "Exceptions:"
 msgstr "Daŭro:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
-#: dialogdesktop.ui:1442
+#: dialogdesktop.ui:1531
 #, fuzzy
 #| msgid "&Add"
 msgctxt "@action:button adds an exception on the recurrence"
@@ -1249,13 +1333,13 @@ msgid "Add"
 msgstr "&Aldoni"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
-#: dialogdesktop.ui:1477
+#: dialogdesktop.ui:1566
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
-#: dialogdesktop.ui:1492
+#: dialogdesktop.ui:1581
 #, fuzzy
 #| msgid "Remove"
 msgctxt "@action:button removes an exception"
@@ -1263,19 +1347,19 @@ msgid "Remove"
 msgstr "Forigi"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
-#: dialogdesktop.ui:1515
+#: dialogdesktop.ui:1604
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
-#: dialogdesktop.ui:1537 dialogmoremobile.ui:807
+#: dialogdesktop.ui:1626 dialogmoremobile.ui:807
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
-#: dialogdesktop.ui:1540 dialogmoremobile.ui:810
+#: dialogdesktop.ui:1629 dialogmoremobile.ui:810
 msgctxt "@info:whatsthis"
 msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
@@ -1283,7 +1367,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
-#: dialogdesktop.ui:1543
+#: dialogdesktop.ui:1632
 #, fuzzy
 #| msgid "&Add"
 msgctxt "@action:button adds an attachment"
@@ -1291,20 +1375,20 @@ msgid "Add"
 msgstr "&Aldoni"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: dialogdesktop.ui:1559 dialogmoremobile.ui:829
+#: dialogdesktop.ui:1648 dialogmoremobile.ui:829
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
-#: dialogdesktop.ui:1562 dialogmoremobile.ui:832
+#: dialogdesktop.ui:1651 dialogmoremobile.ui:832
 msgctxt "@info:whatsthis"
 msgid ""
 "Removes the attachment selected in the list above from this event or to-do."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
-#: dialogdesktop.ui:1565
+#: dialogdesktop.ui:1654
 #, fuzzy
 #| msgid "Remove"
 msgctxt "@action:button remove an attachment"
@@ -1745,17 +1829,17 @@ msgstr "Deŝovo"
 msgid "Repeat"
 msgstr "Ripeti"
 
-#: editoritemmanager.cpp:227
+#: editoritemmanager.cpp:240
 msgid ""
 "The item has been changed by another application.\n"
 "What should be done?"
 msgstr ""
 
-#: editoritemmanager.cpp:229
+#: editoritemmanager.cpp:242
 msgid "Take over changes"
 msgstr ""
 
-#: editoritemmanager.cpp:230
+#: editoritemmanager.cpp:243
 msgid "Ignore and Overwrite changes"
 msgstr ""
 
@@ -1774,18 +1858,14 @@ msgctxt "@info:tooltip"
 msgid "Location:"
 msgstr ""
 
-#: freebusyganttproxymodel.cpp:98 freeperiodmodel.cpp:203
+#: freebusyganttproxymodel.cpp:98
 msgctxt "@info:tooltip period start time"
 msgid "Start:"
 msgstr ""
 
-#: freebusyganttproxymodel.cpp:101 freeperiodmodel.cpp:206
+#: freebusyganttproxymodel.cpp:101
 msgctxt "@info:tooltip period end time"
 msgid "End:"
-msgstr ""
-
-#: freebusyitemmodel.cpp:231
-msgid "Attendee"
 msgstr ""
 
 #: freebusyurldialog.cpp:46
@@ -1796,41 +1876,6 @@ msgstr ""
 #, kde-format
 msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
 msgstr ""
-
-#: freeperiodmodel.cpp:149
-#, kde-format
-msgctxt "@label Day of the week name, example: Monday,"
-msgid "%1,"
-msgstr ""
-
-#: freeperiodmodel.cpp:165
-#, kde-format
-msgctxt ""
-"@label A time period duration. It is preceded/followed (based on the "
-"orientation) by the name of the week, see the message above. example: 12 "
-"June, 8:00am to 9:30am"
-msgid "%1 %2, %3 to %4"
-msgstr ""
-
-#: freeperiodmodel.cpp:187
-#, kde-format
-msgctxt ""
-"@label A time period duration. KLocale is used to format the components. "
-"example: Monday, 12 June, 8:00am to 9:30am"
-msgid "%1, %2 %3, %4 to %5"
-msgstr ""
-
-#: freeperiodmodel.cpp:201
-msgctxt "@info:tooltip"
-msgid "Free Period"
-msgstr ""
-
-#: freeperiodmodel.cpp:209
-#, fuzzy
-#| msgid "Duration:"
-msgctxt "@info:tooltip period duration"
-msgid "Duration:"
-msgstr "Daŭro:"
 
 #: incidencealarm.cpp:283
 msgctxt "Disable currently selected reminder"
@@ -2073,7 +2118,7 @@ msgid ""
 "or to-do."
 msgstr ""
 
-#: incidenceattendee.cpp:194
+#: incidenceattendee.cpp:260
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2081,12 +2126,12 @@ msgid ""
 "this participant?"
 msgstr ""
 
-#: incidenceattendee.cpp:197
+#: incidenceattendee.cpp:263
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr ""
 
-#: incidenceattendee.cpp:440
+#: incidenceattendee.cpp:657
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -2094,7 +2139,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: incidenceattendee.cpp:531
+#: incidenceattendee.cpp:832
 msgctxt "@option"
 msgid ""
 "You are changing the organizer of this event. Since the organizer is also "
@@ -2107,61 +2152,61 @@ msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr ""
 
-#: incidencedatetime.cpp:666
+#: incidencedatetime.cpp:664
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr ""
 
-#: incidencedatetime.cpp:842 incidencedatetime.cpp:843
+#: incidencedatetime.cpp:840 incidencedatetime.cpp:841
 #, fuzzy, kde-format
 #| msgid "&Start:"
 msgid "Starts: %1"
 msgstr "&Komenco:"
 
-#: incidencedatetime.cpp:845
+#: incidencedatetime.cpp:843
 msgid "Starting Date"
 msgstr ""
 
-#: incidencedatetime.cpp:846
+#: incidencedatetime.cpp:844
 msgid "Starting Time"
 msgstr ""
 
-#: incidencedatetime.cpp:860 incidencedatetime.cpp:861
+#: incidencedatetime.cpp:858 incidencedatetime.cpp:859
 #, kde-format
 msgid "Due on: %1"
 msgstr ""
 
-#: incidencedatetime.cpp:863 incidencedatetime.cpp:864
+#: incidencedatetime.cpp:861 incidencedatetime.cpp:862
 #, kde-format
 msgid "Ends: %1"
 msgstr ""
 
-#: incidencedatetime.cpp:868
+#: incidencedatetime.cpp:866
 msgid "Due Date"
 msgstr ""
 
-#: incidencedatetime.cpp:869
+#: incidencedatetime.cpp:867
 #, fuzzy
 #| msgid "Time"
 msgid "Due Time"
 msgstr "Tempo"
 
-#: incidencedatetime.cpp:871
+#: incidencedatetime.cpp:869
 msgid "Ending Date"
 msgstr ""
 
-#: incidencedatetime.cpp:872
+#: incidencedatetime.cpp:870
 msgid "Ending Time"
 msgstr ""
 
-#: incidencedatetime.cpp:933
+#: incidencedatetime.cpp:931
 msgctxt "@info"
 msgid ""
 "The event ends before it starts.\n"
 "Please correct dates and times."
 msgstr ""
 
-#: incidencedatetime.cpp:938
+#: incidencedatetime.cpp:936
 msgctxt "@info"
 msgid ""
 "The to-do is due before it starts.\n"
@@ -2193,91 +2238,102 @@ msgctxt "@action Enable or disable rich text editting"
 msgid "Disable rich text"
 msgstr ""
 
-#: incidencedialog.cpp:206
+#: incidencedialog.cpp:216
 msgid "Select a valid collection first."
 msgstr ""
 
-#: incidencedialog.cpp:222
+#: incidencedialog.cpp:232
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr ""
 
-#: incidencedialog.cpp:226
+#: incidencedialog.cpp:236
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr ""
 
-#: incidencedialog.cpp:236
+#: incidencedialog.cpp:246
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr ""
 
-#: incidencedialog.cpp:246
+#: incidencedialog.cpp:256
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr ""
 
-#: incidencedialog.cpp:249
+#: incidencedialog.cpp:259
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr ""
 
-#: incidencedialog.cpp:252
+#: incidencedialog.cpp:262
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr ""
 
-#: incidencedialog.cpp:255
+#: incidencedialog.cpp:265
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr ""
 
-#: incidencedialog.cpp:258
+#: incidencedialog.cpp:268
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr ""
 
-#: incidencedialog.cpp:297
+#: incidencedialog.cpp:307
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr ""
 
-#: incidencedialog.cpp:305
+#: incidencedialog.cpp:315
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr ""
 
-#: incidencedialog.cpp:313
+#: incidencedialog.cpp:323
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr ""
 
-#: incidencedialog.cpp:417
+#: incidencedialog.cpp:427
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr ""
 
-#: incidencedialog.cpp:422
+#: incidencedialog.cpp:432
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr ""
 
-#: incidencedialog.cpp:432
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr ""
 
-#: incidencedialog.cpp:437
+#: incidencedialog.cpp:447
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr ""
 
+#: incidencedialog.cpp:457
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources (%1)"
+msgstr ""
+
 #: incidencedialog.cpp:462
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources"
+msgstr ""
+
+#: incidencedialog.cpp:487
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2286,32 +2342,32 @@ msgid ""
 " Reason: %1"
 msgstr ""
 
-#: incidencedialog.cpp:656
+#: incidencedialog.cpp:687
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr ""
 
-#: incidencedialog.cpp:658
+#: incidencedialog.cpp:689
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr ""
 
-#: incidencedialog.cpp:660
+#: incidencedialog.cpp:691
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr ""
 
-#: incidencedialog.cpp:664
+#: incidencedialog.cpp:695
 msgctxt "@action:button"
 msgid "&Templates..."
 msgstr ""
 
-#: incidencedialog.cpp:668
+#: incidencedialog.cpp:699
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr ""
 
-#: incidencedialog.cpp:671
+#: incidencedialog.cpp:702
 msgctxt "@info:whatsthis"
 msgid ""
 "Push this button to show a dialog that helps you manage a set of templates. "
@@ -2319,12 +2375,12 @@ msgid ""
 "favorite default values into the editor automatically."
 msgstr ""
 
-#: incidencedialog.cpp:792 incidencedialog.cpp:814
+#: incidencedialog.cpp:823 incidencedialog.cpp:845
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr ""
 
-#: incidencedialog.cpp:793 incidencedialog.cpp:815
+#: incidencedialog.cpp:824 incidencedialog.cpp:846
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr ""
@@ -2493,41 +2549,106 @@ msgctxt "@info"
 msgid "Please specify a title."
 msgstr ""
 
-#: individualmailcomponentfactory.h:66 individualmailcomponentfactory.h:73
-#: individualmailcomponentfactory.h:79
+#: individualmailcomponentfactory.h:69 individualmailcomponentfactory.h:76
+#: individualmailcomponentfactory.h:82
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr ""
 
-#: individualmailcomponentfactory.h:67 individualmailcomponentfactory.h:74
-#: individualmailcomponentfactory.h:80
+#: individualmailcomponentfactory.h:70 individualmailcomponentfactory.h:77
+#: individualmailcomponentfactory.h:83
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr ""
 
-#: individualmaildialog.cpp:34
+#: individualmaildialog.cpp:37
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr ""
 
-#: individualmaildialog.cpp:36
+#: individualmaildialog.cpp:39
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings"
 msgstr ""
 
-#: individualmaildialog.cpp:45
+#: individualmaildialog.cpp:48
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send update"
 msgstr ""
 
-#: individualmaildialog.cpp:46
+#: individualmaildialog.cpp:49
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send no update"
 msgstr ""
 
-#: individualmaildialog.cpp:47
+#: individualmaildialog.cpp:50
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
+msgstr ""
+
+#: ldaputils.cpp:29
+msgctxt "ldap attribute cn"
+msgid "Common name"
+msgstr ""
+
+#: ldaputils.cpp:31
+msgctxt "ldap attribute mail"
+msgid "Email"
+msgstr ""
+
+#: ldaputils.cpp:33
+msgctxt "ldap attribute givenname"
+msgid "Given name"
+msgstr ""
+
+#: ldaputils.cpp:35
+#, fuzzy
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "ldap attribute sn"
+msgid "Surname"
+msgstr "Axel Rousseau"
+
+#: ldaputils.cpp:37
+msgctxt "ldap attribute ou"
+msgid "Organization"
+msgstr ""
+
+#: ldaputils.cpp:39
+msgctxt "ldap attribute objectClass"
+msgid "Object class"
+msgstr ""
+
+#: ldaputils.cpp:41
+#, fuzzy
+#| msgid "Duration:"
+msgctxt "ldap attribute description"
+msgid "Description"
+msgstr "Daŭro:"
+
+#: ldaputils.cpp:43
+msgctxt "ldap attribute telephoneNumber"
+msgid "Telephone"
+msgstr ""
+
+#: ldaputils.cpp:45
+msgctxt "ldap attribute mobile"
+msgid "Mobile"
+msgstr ""
+
+#: ldaputils.cpp:54
+msgctxt "kolabldap"
+msgid "Number of seats"
+msgstr ""
+
+#: ldaputils.cpp:56
+msgctxt "kolabldap"
+msgid "Beamer"
+msgstr ""
+
+#: ldaputils.cpp:58
+msgctxt "kolabldap"
+msgid "Conference phone"
 msgstr ""
 
 #: main.cpp:44
@@ -2652,6 +2773,26 @@ msgstr ""
 #: opencomposerjob.cpp:141
 msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
+msgstr ""
+
+#: resourcemanagement.cpp:122
+msgctxt "@action:button add resource to attendeelist"
+msgid "Book resource"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, resourceManagement)
+#: resourcemanagement.ui:14
+msgid "Form"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
+#: resourcemanagement.ui:55
+msgid "Details"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
+#: resourcemanagement.ui:73
+msgid "Owner"
 msgstr ""
 
 #: schedulingdialog.cpp:210
@@ -2798,6 +2939,14 @@ msgstr ""
 msgid "Remove Template"
 msgstr "Forigi ŝablonon"
 
+#: tests/resourcemanagment_gui.cpp:34
+msgid "resourcemanagement_Gui"
+msgstr ""
+
+#: tests/resourcemanagment_gui.cpp:35
+msgid "Test for resourceManagement"
+msgstr ""
+
 #: visualfreebusywidget.cpp:163
 msgctxt "@label"
 msgid "Scale: "
@@ -2907,13 +3056,11 @@ msgid ""
 "Free/Busy Information."
 msgstr ""
 
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Axel Rousseau"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "axel@esperanto-jeunes.org"
+#, fuzzy
+#~| msgid "Duration:"
+#~ msgctxt "@info:tooltip period duration"
+#~ msgid "Duration:"
+#~ msgstr "Daŭro:"
 
 #, fuzzy
 #~| msgid "Category"
@@ -2934,9 +3081,6 @@ msgstr ""
 
 #~ msgid "&Start:"
 #~ msgstr "&Komenco:"
-
-#~ msgid "Duration:"
-#~ msgstr "Daŭro:"
 
 #, fuzzy
 #~ msgid "2"
