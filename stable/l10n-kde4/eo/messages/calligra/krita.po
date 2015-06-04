@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-03 05:53+0000\n"
+"POT-Creation-Date: 2015-06-04 06:21+0000\n"
 "PO-Revision-Date: 2007-11-02 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -74,7 +74,7 @@ msgstr "&Filtrilgalerio"
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:243
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:284
 #: plugins/tools/tool_transform2/kis_free_transform_strategy_gsl_helpers.cpp:338
-#: ui/dialogs/kis_dlg_preferences.cc:213 ui/input/kis_input_manager.cpp:545
+#: ui/dialogs/kis_dlg_preferences.cc:219 ui/input/kis_input_manager.cpp:545
 #: ui/kis_filter_manager.cc:218 ui/kis_filter_manager.cc:227
 #: ui/kis_layer_manager.cc:658 ui/kis_layer_manager.cc:909
 #: ui/KisApplication.cpp:215 ui/KisApplication.cpp:218
@@ -3675,6 +3675,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, bnLandscape)
 #. i18n: ectx: property (text), widget (QToolButton, m_bnFileName)
 #. i18n: ectx: property (text), widget (QToolButton, btnSelectFile)
+#. i18n: ectx: property (text), widget (QToolButton, bnSwapFile)
 #. i18n: ectx: property (text), widget (QToolButton, bnBackgroundColor)
 #. i18n: ectx: property (text), widget (QToolButton, m_bnSelectConfigurationFile)
 #. i18n: ectx: property (text), widget (QToolButton, m_bnSelectLut)
@@ -3718,10 +3719,10 @@ msgstr ""
 #: ui/forms/wdggeneralsettings.ui:137 ui/forms/wdgimageproperties.ui:113
 #: ui/forms/wdgnewimage.ui:158 ui/forms/wdgnewimage.ui:180
 #: ui/forms/wdgpaintactioneditor.ui:46 ui/forms/wdgpaintactioneditor.ui:69
-#: ui/forms/wdgselectionoptions.ui:40 ui/forms/wdgselectionoptions.ui:56
-#: ui/forms/wdgselectionoptions.ui:72 ui/forms/wdgselectionoptions.ui:91
-#: ui/forms/wdgselectionoptions.ui:130 ui/forms/wdgselectionoptions.ui:149
-#: ui/layerstyles/wdgBevelAndEmboss.ui:318
+#: ui/forms/wdgperformancesettings.ui:210 ui/forms/wdgselectionoptions.ui:40
+#: ui/forms/wdgselectionoptions.ui:56 ui/forms/wdgselectionoptions.ui:72
+#: ui/forms/wdgselectionoptions.ui:91 ui/forms/wdgselectionoptions.ui:130
+#: ui/forms/wdgselectionoptions.ui:149 ui/layerstyles/wdgBevelAndEmboss.ui:318
 #: ui/layerstyles/wdgBevelAndEmboss.ui:371
 #: ui/layerstyles/WdgColorOverlay.ui:60 ui/layerstyles/wdgInnerGlow.ui:128
 #: ui/layerstyles/WdgSatin.ui:57 ui/layerstyles/WdgStroke.ui:169
@@ -4835,7 +4836,7 @@ msgstr "Skali Ebenon"
 #. i18n: ectx: property (title), widget (QGroupBox, grpMode)
 #: plugins/extensions/layersplit/layersplit.cpp:198
 #: plugins/generators/solid/colorgenerator.h:53
-#: ui/dialogs/kis_dlg_preferences.cc:769 ui/forms/wdgnewimage.ui:364
+#: ui/dialogs/kis_dlg_preferences.cc:886 ui/forms/wdgnewimage.ui:364
 #: ui/layerstyles/WdgColorOverlay.ui:26 ui/layerstyles/WdgStroke.ui:137
 msgid "Color"
 msgstr "Koloro"
@@ -6102,10 +6103,12 @@ msgid "Save to:"
 msgstr "Skali Ebenon"
 
 #. i18n: ectx: property (text), widget (QLabel, lblVersion)
+#. i18n: ectx: property (text), widget (QLabel, lblSwapFileLocation)
 #. i18n: ectx: property (text), widget (QLabel, lblDescription)
 #. i18n: ectx: property (text), widget (QLabel, lblSaveLocation)
 #: plugins/extensions/resourcemanager/wdgdlgcreatebundle.ui:342
-#: ui/forms/wdgimageproperties.ui:193 ui/wdgsplash.ui:343
+#: ui/forms/wdgimageproperties.ui:193 ui/forms/wdgperformancesettings.ui:200
+#: ui/wdgsplash.ui:343
 msgid "TextLabel"
 msgstr "TextLabel"
 
@@ -11609,7 +11612,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:288
-#: ui/dialogs/kis_dlg_preferences.cc:92
+#: ui/dialogs/kis_dlg_preferences.cc:98
 msgid "Crosshair"
 msgstr "Kruc-haro"
 
@@ -12564,7 +12567,7 @@ msgid "Image Properties"
 msgstr "Ecoj de Bildo"
 
 #: ui/dialogs/kis_dlg_image_properties.cc:72
-#: ui/dialogs/kis_dlg_preferences.cc:544 ui/kis_image_manager.cc:90
+#: ui/dialogs/kis_dlg_preferences.cc:661 ui/kis_image_manager.cc:90
 #, fuzzy
 #| msgid "Background Color"
 msgid "Change the background color of the image"
@@ -12635,162 +12638,179 @@ msgctxt "layer styles parameter"
 msgid "Spread"
 msgstr ""
 
-#: ui/dialogs/kis_dlg_preferences.cc:88
+#: ui/dialogs/kis_dlg_preferences.cc:94
 #, fuzzy
 msgid "No Cursor"
 msgstr "Penikoj"
 
-#: ui/dialogs/kis_dlg_preferences.cc:89
+#: ui/dialogs/kis_dlg_preferences.cc:95
 msgid "Tool Icon"
 msgstr "Ilpiktogramo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:90
+#: ui/dialogs/kis_dlg_preferences.cc:96
 msgid "Arrow"
 msgstr "Sago"
 
-#: ui/dialogs/kis_dlg_preferences.cc:91
+#: ui/dialogs/kis_dlg_preferences.cc:97
 #, fuzzy
 #| msgid "Circle"
 msgid "Small Circle"
 msgstr "Cirklo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:93
+#: ui/dialogs/kis_dlg_preferences.cc:99
 msgid "Triangle Righthanded"
 msgstr ""
 
-#: ui/dialogs/kis_dlg_preferences.cc:94
+#: ui/dialogs/kis_dlg_preferences.cc:100
 msgid "Triangle Lefthanded"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
-#: ui/dialogs/kis_dlg_preferences.cc:96 ui/forms/wdggeometryoptions.ui:47
+#: ui/dialogs/kis_dlg_preferences.cc:102 ui/forms/wdggeometryoptions.ui:47
 #, fuzzy
 msgid "No Outline"
 msgstr "Penikoj"
 
-#: ui/dialogs/kis_dlg_preferences.cc:97
+#: ui/dialogs/kis_dlg_preferences.cc:103
 #, fuzzy
 #| msgid "Brush Outline"
 msgid "Circle Outline"
 msgstr "Penikokonturo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:98
+#: ui/dialogs/kis_dlg_preferences.cc:104
 #, fuzzy
 #| msgid "Pr&eview"
 msgid "Preview Outline"
 msgstr "Antaŭ&rigardo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:207
+#: ui/dialogs/kis_dlg_preferences.cc:213
 #, fuzzy
 #| msgid "background"
 msgid "Select a Background Image"
 msgstr "fono"
 
-#: ui/dialogs/kis_dlg_preferences.cc:213
+#: ui/dialogs/kis_dlg_preferences.cc:219
 #, fuzzy, kde-format
 #| msgid "Layer Size"
 msgid "%1 is not a valid image file!"
 msgstr "Ebengrandeco"
 
-#: ui/dialogs/kis_dlg_preferences.cc:256
+#: ui/dialogs/kis_dlg_preferences.cc:262
 #: ui/widgets/kis_color_space_selector.cc:62
 #, fuzzy
 #| msgid "Layer Properties"
 msgid "Open Color Profile"
 msgstr "Ecoj de Ebeno"
 
-#: ui/dialogs/kis_dlg_preferences.cc:266 ui/dialogs/kis_dlg_preferences.cc:425
+#: ui/dialogs/kis_dlg_preferences.cc:272 ui/dialogs/kis_dlg_preferences.cc:431
 #, fuzzy, kde-format
 #| msgid "&Resize"
 msgctxt "The number of the screen"
 msgid "Screen: %1"
 msgstr "Ŝanĝi g&randecon"
 
-#: ui/dialogs/kis_dlg_preferences.cc:312
+#: ui/dialogs/kis_dlg_preferences.cc:318
 #: ui/widgets/kis_color_space_selector.cc:180
 #, fuzzy
 #| msgid "Layer Properties"
 msgid "Install Color Profiles"
 msgstr "Ecoj de Ebeno"
 
-#: ui/dialogs/kis_dlg_preferences.cc:358
+#: ui/dialogs/kis_dlg_preferences.cc:364
 #, fuzzy, kde-format
 #| msgid "&Resize"
 msgctxt "The display/screen we got from Qt"
 msgid "Screen %1:"
 msgstr "Ŝanĝi g&randecon"
 
-#: ui/dialogs/kis_dlg_preferences.cc:744
+#: ui/dialogs/kis_dlg_preferences.cc:501
+#, kde-format
+msgid "%1 MiB"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, intSwapSize)
+#: ui/dialogs/kis_dlg_preferences.cc:550
+#: ui/forms/wdgperformancesettings.ui:176
+msgid " GiB"
+msgstr ""
+
+#: ui/dialogs/kis_dlg_preferences.cc:607
+#, fuzzy
+msgctxt "@title:window"
+msgid "Select a swap directory"
+msgstr "Rektangulo"
+
+#: ui/dialogs/kis_dlg_preferences.cc:861
 msgid "Preferences"
 msgstr "Agordo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:752 ui/dialogs/kis_dlg_preferences.cc:753
+#: ui/dialogs/kis_dlg_preferences.cc:869 ui/dialogs/kis_dlg_preferences.cc:870
 msgid "General"
 msgstr "Ĝenerale"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgDisplayBlacklist)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgDisplaySettings)
 #. i18n: ectx: property (title), widget (QGroupBox, grpDisplay)
-#: ui/dialogs/kis_dlg_preferences.cc:760 ui/dialogs/kis_dlg_preferences.cc:761
+#: ui/dialogs/kis_dlg_preferences.cc:877 ui/dialogs/kis_dlg_preferences.cc:878
 #: ui/forms/wdgcolorsettings.ui:53 ui/forms/wdgdisplaysettings.ui:20
 #: ui/forms/wdgdlgblacklistcleanup.ui:20
 msgid "Display"
 msgstr "Montrado"
 
-#: ui/dialogs/kis_dlg_preferences.cc:768
+#: ui/dialogs/kis_dlg_preferences.cc:885
 msgid "Color Management"
 msgstr "Koloradministrado"
 
-#: ui/dialogs/kis_dlg_preferences.cc:777 ui/dialogs/kis_dlg_preferences.cc:778
+#: ui/dialogs/kis_dlg_preferences.cc:893 ui/dialogs/kis_dlg_preferences.cc:894
 msgid "Performance"
 msgstr "Rendimento"
 
-#: ui/dialogs/kis_dlg_preferences.cc:786 ui/dialogs/kis_dlg_preferences.cc:787
+#: ui/dialogs/kis_dlg_preferences.cc:901 ui/dialogs/kis_dlg_preferences.cc:902
 msgid "Grid"
 msgstr "Krado"
 
-#: ui/dialogs/kis_dlg_preferences.cc:794
+#: ui/dialogs/kis_dlg_preferences.cc:909
 #, fuzzy
 #| msgid "Color Settings"
 msgid "Tablet settings"
 msgstr "Koloragordo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:795
+#: ui/dialogs/kis_dlg_preferences.cc:910
 msgid "Tablet"
 msgstr "Tabulo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:803
+#: ui/dialogs/kis_dlg_preferences.cc:918
 #, fuzzy
 #| msgid "Color Settings"
 msgid "Canvas-only settings"
 msgstr "Koloragordo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:804
+#: ui/dialogs/kis_dlg_preferences.cc:919
 #, fuzzy
 #| msgid "Canvas color:"
 msgid "Canvas-only"
 msgstr "Kanvaskoloro:"
 
-#: ui/dialogs/kis_dlg_preferences.cc:811
+#: ui/dialogs/kis_dlg_preferences.cc:926
 #, fuzzy
 #| msgid "Anchor"
 msgctxt "@title:tab Author page"
 msgid "Author"
 msgstr "Ankro"
 
-#: ui/dialogs/kis_dlg_preferences.cc:812
+#: ui/dialogs/kis_dlg_preferences.cc:927
 #, fuzzy
 #| msgid "Anchor"
 msgid "Author"
 msgstr "Ankro"
 
-#: ui/dialogs/kis_dlg_preferences.cc:818
+#: ui/dialogs/kis_dlg_preferences.cc:933
 #, fuzzy
 #| msgid "Color Settings"
 msgid "Canvas Input Settings"
 msgstr "Koloragordo"
 
-#: ui/dialogs/kis_dlg_preferences.cc:819
+#: ui/dialogs/kis_dlg_preferences.cc:934
 #, fuzzy
 #| msgid "Canvas color:"
 msgid "Canvas Input"
@@ -14197,21 +14217,113 @@ msgstr ""
 msgid "Eraser switch size"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#. i18n: ectx: property (whatsThis), widget (KIntNumInput, m_maxTiles)
-#: ui/forms/wdgperformancesettings.ui:32 ui/forms/wdgperformancesettings.ui:46
-msgid ""
-"The maximum number of \"tiles\" that are kept in memory. For regular RGBA8 "
-"images, each tile is about 16 kB in size. Thus, for a value of 500 tiles "
-"this usually means about 8 megabytes are used for image data. If you "
-"regularly handle large images, a greater value here might be useful.\n"
-"Note that this number is only a guideline for Krita, and is not guaranteed "
-"to be the actual number of tiles in memory."
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: ui/forms/wdgperformancesettings.ui:17
+msgid "RAM (needs restarting Krita)"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ui/forms/wdgperformancesettings.ui:35
-msgid "Maximum number of tiles kept in memory:"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/forms/wdgperformancesettings.ui:23
+#, fuzzy
+#| msgid "Palette"
+msgid "Memory available:"
+msgstr "Paletro"
+
+#. i18n: ectx: property (text), widget (QLabel, lblTotalMemory)
+#: ui/forms/wdgperformancesettings.ui:36
+msgid "XXX MiB"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#. i18n: ectx: property (toolTip), widget (KisDoubleSliderSpinBox, sliderMemoryLimit)
+#: ui/forms/wdgperformancesettings.ui:46 ui/forms/wdgperformancesettings.ui:64
+msgid "Krita will not use more memory than this limit."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/forms/wdgperformancesettings.ui:49
+msgid "Memory Limit:"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, intMemoryLimit)
+#. i18n: ectx: property (suffix), widget (QSpinBox, intPoolLimit)
+#. i18n: ectx: property (suffix), widget (QSpinBox, intUndoLimit)
+#: ui/forms/wdgperformancesettings.ui:71 ui/forms/wdgperformancesettings.ui:99
+#: ui/forms/wdgperformancesettings.ui:133
+msgid " MiB"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/forms/wdgperformancesettings.ui:80
+#, fuzzy
+#| msgid "Integral step:"
+msgid "Internal Pool:"
+msgstr "Entjera paŝo:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_4)
+#. i18n: ectx: property (toolTip), widget (KisDoubleSliderSpinBox, sliderUndoLimit)
+#: ui/forms/wdgperformancesettings.ui:108
+#: ui/forms/wdgperformancesettings.ui:126
+msgid ""
+"When undo information reaches this limit, it will be stored in a temporary "
+"file and memory will be freed. Undo will be slower."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ui/forms/wdgperformancesettings.ui:111
+msgid "Swap Undo After:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: ui/forms/wdgperformancesettings.ui:145
+msgid "Swap File Size (needs restarting Krita)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
+#. i18n: ectx: property (toolTip), widget (KisSliderSpinBox, sliderSwapSize)
+#: ui/forms/wdgperformancesettings.ui:151
+#: ui/forms/wdgperformancesettings.ui:169
+msgid "The swap file will not be bigger than this limit."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: ui/forms/wdgperformancesettings.ui:154
+#, fuzzy
+#| msgid "Tile size"
+msgid "File Size Limit:"
+msgstr "Tiligrandeco"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/forms/wdgperformancesettings.ui:185
+#, fuzzy
+#| msgid "Saturation"
+msgid "Swap File Location:"
+msgstr "Satureco"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, bnSwapFile)
+#: ui/forms/wdgperformancesettings.ui:207
+msgid "Select the location where Krita writes its swap files."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: ui/forms/wdgperformancesettings.ui:222
+#, fuzzy
+#| msgid "Selection mode:"
+msgid "Advanced"
+msgstr "Elektomoduso:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkPerformanceLogging)
+#: ui/forms/wdgperformancesettings.ui:228
+msgid "Enable performace logging (needs restarting Krita)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/forms/wdgperformancesettings.ui:238
+msgid ""
+"<html><head/><body><p>When performance logging is enabed Krita saves timing "
+"information into the '&lt;working_dir&gt;/log' folder. If you experience "
+"performance problems and want to help us, enable this option and add the "
+"contents of the directory to a bug report.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, leftScrollBtn)
@@ -21943,11 +22055,6 @@ msgstr "&Koloroprenilo"
 #, fuzzy
 #~ msgid "Add to Palette"
 #~ msgstr "Aldonu novan bildon..."
-
-#, fuzzy
-#~| msgid "Tile size"
-#~ msgid "File size:"
-#~ msgstr "Tiligrandeco"
 
 #, fuzzy
 #~| msgid "Star"
