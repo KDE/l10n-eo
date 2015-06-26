@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-08 08:43+0000\n"
+"POT-Creation-Date: 2015-06-26 08:54+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -188,20 +188,39 @@ msgstr ""
 msgid "Collection attributes synchronization timed out."
 msgstr ""
 
+#: core/jobs/collectioncopyjob.cpp:62
+#, fuzzy
+msgid "Invalid collection to copy"
+msgstr "Ne eblis krei dosierujon %1"
+
+#: core/jobs/collectioncopyjob.cpp:68
+#, fuzzy
+msgid "Invalid destination collection"
+msgstr "Ne eblis krei dosierujon %1"
+
 #: core/jobs/collectioncreatejob.cpp:58
 msgid "Invalid parent"
 msgstr ""
 
-#: core/jobs/collectiondeletejob.cpp:59
+#: core/jobs/collectioncreatejob.cpp:105
+msgid "Failed to parse Collection from response"
+msgstr ""
+
+#: core/jobs/collectiondeletejob.cpp:60
 msgid "Invalid collection"
 msgstr ""
 
-#: core/jobs/collectionfetchjob.cpp:231
+#: core/jobs/collectionfetchjob.cpp:233
 msgid "Invalid collection given."
 msgstr ""
 
-#: core/jobs/collectionselectjob.cpp:73
-msgid "Invalid collection specified"
+#: core/jobs/collectionmovejob.cpp:59 core/jobs/itemmovejob.cpp:85
+msgid "No objects specified for moving"
+msgstr ""
+
+#: core/jobs/collectionmovejob.cpp:66 core/jobs/itemmovejob.cpp:92
+#: core/jobs/linkjobimpl_p.h:54
+msgid "No valid destination specified"
 msgstr ""
 
 #: core/jobs/invalidatecachejob.cpp:65
@@ -209,33 +228,30 @@ msgstr ""
 msgid "Invalid collection."
 msgstr "Ne eblis krei dosierujon %1"
 
-#: core/jobs/job.cpp:308
+#: core/jobs/itemcreatejob.cpp:100
+#, fuzzy
+msgid "Invalid parent collection"
+msgstr "Ne eblis krei dosierujon %1"
+
+#: core/jobs/job.cpp:304
 msgid "Cannot connect to the Akonadi service."
 msgstr ""
 
-#: core/jobs/job.cpp:311
+#: core/jobs/job.cpp:307
 msgid ""
 "The protocol version of the Akonadi server is incompatible. Make sure you "
 "have a compatible version installed."
 msgstr ""
 
-#: core/jobs/job.cpp:314
+#: core/jobs/job.cpp:310
 msgid "User canceled operation."
 msgstr ""
 
-#: core/jobs/job.cpp:319
+#: core/jobs/job.cpp:315
 msgid "Unknown error."
 msgstr "Nekonata eraro."
 
-#: core/jobs/linkjobimpl_p.h:52 core/jobs/movejobimpl_p.h:52
-msgid "No valid destination specified"
-msgstr ""
-
-#: core/jobs/movejobimpl_p.h:46
-msgid "No objects specified for moving"
-msgstr ""
-
-#: core/jobs/relationcreatejob.cpp:52 core/jobs/relationdeletejob.cpp:52
+#: core/jobs/relationcreatejob.cpp:54 core/jobs/relationdeletejob.cpp:54
 msgid "Failed to create relation."
 msgstr ""
 
@@ -449,9 +465,18 @@ msgstr "Sennoma kromprogrameto"
 msgid "No description available"
 msgstr "Neniu priskribo uzebla"
 
-#: core/session.cpp:292
+#: core/session.cpp:307
 #, kde-format
-msgid "Protocol version %1 found, expected at least %2"
+msgid ""
+"Protocol version mismatch. Server version is newer (%1) than ours (%2). If "
+"you updated your system recently please restart the Akonadi server."
+msgstr ""
+
+#: core/session.cpp:313
+#, kde-format
+msgid ""
+"Protocol version mismatch. Server version is older (%1) than ours (%2). If "
+"you updated your system recently please restart all KDE PIM applications."
 msgstr ""
 
 #: selftest/main.cpp:31
@@ -1167,37 +1192,40 @@ msgstr ""
 msgid "Server protocol version is too old."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:446
+#: widgets/selftestdialog.cpp:446 widgets/selftestdialog.cpp:452
 #, kde-format
 msgid ""
-"The server protocol version is %1, but at least version %2 is required. "
-"Install a newer version of the Akonadi server."
+"The server protocol version is %1, but version %2 is required by the client. "
+"If you recently updated KDE PIM, please make sure to restart both Akonadi "
+"and KDE PIM applications."
 msgstr ""
 
 #: widgets/selftestdialog.cpp:451
-msgid "Server protocol version is recent enough."
+msgid "Server protocol version is too new."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:452
+#: widgets/selftestdialog.cpp:457
+msgid "Server protocol version matches."
+msgstr ""
+
+#: widgets/selftestdialog.cpp:458
 #, kde-format
-msgid ""
-"The server Protocol version is %1, which equal or newer than the required "
-"version %2."
+msgid "The current Protocol version is %1."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:472
+#: widgets/selftestdialog.cpp:477
 msgid "Resource agents found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:472
+#: widgets/selftestdialog.cpp:477
 msgid "At least one resource agent has been found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:474
+#: widgets/selftestdialog.cpp:479
 msgid "No resource agents found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:475
+#: widgets/selftestdialog.cpp:480
 #, kde-format
 msgid ""
 "No resource agents have been found, Akonadi is not usable without at least "
@@ -1207,114 +1235,114 @@ msgid ""
 "all paths where Akonadi agents are installed."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:493
+#: widgets/selftestdialog.cpp:498
 msgid "No current Akonadi server error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:494
+#: widgets/selftestdialog.cpp:499
 msgid ""
 "The Akonadi server did not report any errors during its current startup."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:496
+#: widgets/selftestdialog.cpp:501
 msgid "Current Akonadi server error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:497
+#: widgets/selftestdialog.cpp:502
 #, kde-format
 msgid ""
 "The Akonadi server reported errors during its current startup. The log can "
 "be found in %1."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:504
+#: widgets/selftestdialog.cpp:509
 msgid "No previous Akonadi server error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:505
+#: widgets/selftestdialog.cpp:510
 msgid ""
 "The Akonadi server did not report any errors during its previous startup."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:507
+#: widgets/selftestdialog.cpp:512
 msgid "Previous Akonadi server error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:508
+#: widgets/selftestdialog.cpp:513
 #, kde-format
 msgid ""
 "The Akonadi server reported errors during its previous startup. The log can "
 "be found in %1."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:519
+#: widgets/selftestdialog.cpp:524
 msgid "No current Akonadi control error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:520
+#: widgets/selftestdialog.cpp:525
 msgid ""
 "The Akonadi control process did not report any errors during its current "
 "startup."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:522
+#: widgets/selftestdialog.cpp:527
 msgid "Current Akonadi control error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:523
+#: widgets/selftestdialog.cpp:528
 #, kde-format
 msgid ""
 "The Akonadi control process reported errors during its current startup. The "
 "log can be found in %1."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:530
+#: widgets/selftestdialog.cpp:535
 msgid "No previous Akonadi control error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:531
+#: widgets/selftestdialog.cpp:536
 msgid ""
 "The Akonadi control process did not report any errors during its previous "
 "startup."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:533
+#: widgets/selftestdialog.cpp:538
 msgid "Previous Akonadi control error log found."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:534
+#: widgets/selftestdialog.cpp:539
 #, kde-format
 msgid ""
 "The Akonadi control process reported errors during its previous startup. The "
 "log can be found in %1."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:543
+#: widgets/selftestdialog.cpp:548
 msgid "Akonadi was started as root"
 msgstr ""
 
-#: widgets/selftestdialog.cpp:543
+#: widgets/selftestdialog.cpp:548
 msgid ""
 "Running Internet-facing applications as root/administrator exposes you to "
 "many security risks. MySQL, used by this Akonadi installation, will not "
 "allow itself to run as root, to protect you from these risks."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:545
+#: widgets/selftestdialog.cpp:550
 msgid "Akonadi is not running as root"
 msgstr ""
 
-#: widgets/selftestdialog.cpp:545
+#: widgets/selftestdialog.cpp:550
 msgid ""
 "Akonadi is not running as a root/administrator user, which is the "
 "recommended setup for a secure system."
 msgstr ""
 
-#: widgets/selftestdialog.cpp:623
+#: widgets/selftestdialog.cpp:628
 msgid "Save Test Report"
 msgstr ""
 
-#: widgets/selftestdialog.cpp:630
+#: widgets/selftestdialog.cpp:635
 #, kde-format
 msgid "Could not open file '%1'"
 msgstr "Ne eblis malfermi dosieron '%1'"
