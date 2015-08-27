@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: marble_qt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-10 08:30+0000\n"
+"POT-Creation-Date: 2015-08-27 09:03+0000\n"
 "PO-Revision-Date: 2015-03-26 02:22-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -915,10 +915,11 @@ msgid "Please specify a URL for this link."
 msgstr "Bonvolu defini URL por tiu ligilo"
 
 #: src/lib/marble/AddLinkDialog.cpp:75
-#: src/lib/marble/EditPlacemarkDialog.cpp:326
+#: src/lib/marble/EditPlacemarkDialog.cpp:375
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:85
 #: src/plugins/render/annotate/EditGroundOverlayDialog.cpp:118
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:250
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:240
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:297
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:288
 msgid "No name specified"
 msgstr "Neniu nomo definita"
 
@@ -1285,49 +1286,67 @@ msgstr "Taksita grandeco de la elŝuto: %1 MB"
 msgid "Estimated download size: %1 kB"
 msgstr "Taksita grandeco de la elŝuto: %1 kb"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:105
+#: src/lib/marble/EditPlacemarkDialog.cpp:128
 msgid "Untitled Placemark"
 msgstr "Sentitola Marko"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:145
+#: src/lib/marble/EditPlacemarkDialog.cpp:170
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:98
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:97
+#, fuzzy
+#| msgid "Tags:"
+msgid "Tags"
+msgstr "Etikedoj"
+
+#: src/lib/marble/EditPlacemarkDialog.cpp:176
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:104
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:103
+#, fuzzy
+#| msgid "Elevation"
+msgid "Relations"
+msgstr "Alto"
+
+#: src/lib/marble/EditPlacemarkDialog.cpp:185
 #: src/plugins/render/annotate/NodeModel.cpp:92
 msgid "Elevation"
 msgstr "Alto"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:327
+#: src/lib/marble/EditPlacemarkDialog.cpp:376
 msgid "Please specify a name for this placemark."
 msgstr "Bonvolu specifi nomon por tiu marko."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:330
+#: src/lib/marble/EditPlacemarkDialog.cpp:379
 msgid "No ID specified"
 msgstr "Neniu identigilo specifita"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:331
+#: src/lib/marble/EditPlacemarkDialog.cpp:380
 msgid "Please specify a ID for this placemark."
 msgstr "Bonvolu specifi identigilon por tiu marko."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:334
+#: src/lib/marble/EditPlacemarkDialog.cpp:383
 msgid "ID is invalid"
 msgstr "Identigilo ne validas"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:335
+#: src/lib/marble/EditPlacemarkDialog.cpp:384
 msgid "Please specify a valid ID for this placemark."
 msgstr "Bonvolu specifi validan identigilon por tiu marko."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:338
+#: src/lib/marble/EditPlacemarkDialog.cpp:387
 #: src/plugins/render/annotate/EditGroundOverlayDialog.cpp:122
 msgid "No image specified"
 msgstr "Neniu bildo specifita"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:339
-msgid "Please specify an icon for this placemark."
+#: src/lib/marble/EditPlacemarkDialog.cpp:388
+#, fuzzy
+#| msgid "Please specify an icon for this placemark."
+msgid "Please specify an icon for this placemark or add a valid tag."
 msgstr "Bonvolu specifi piktogramon por tiu marko."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:342
+#: src/lib/marble/EditPlacemarkDialog.cpp:391
 msgid "Invalid icon path"
 msgstr "Ne valida piktograma vojo"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:343
+#: src/lib/marble/EditPlacemarkDialog.cpp:392
 msgid "Please specify a valid path for the icon file."
 msgstr "Bonvolu specifi validan vojon por la piktogramo."
 
@@ -1505,6 +1524,7 @@ msgstr "Tio estas nevalida dosiero"
 
 #: src/lib/marble/GeoDataTreeModel.cpp:214
 #: src/lib/marble/MapThemeManager.cpp:407
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:39
 #: src/plugins/runner/monav/MonavMapsModel.cpp:46
 msgid "Name"
 msgstr "Nomo"
@@ -1575,10 +1595,12 @@ msgstr "Instali"
 
 #: src/lib/marble/MapThemeDownloadDialog.cpp:247
 #: src/lib/marble/MapThemeDownloadDialog.cpp:286
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:131
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:139
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1046
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1160
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1294
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1535
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1165
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1299
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1544
 msgid "Remove"
 msgstr "Forigi"
 
@@ -2711,7 +2733,7 @@ msgstr "Dosiera Vido"
 msgid "Current Location"
 msgstr "Aktuala Logiko"
 
-#: src/lib/marble/MarbleGlobal.h:268
+#: src/lib/marble/MarbleGlobal.h:269
 msgid "not available"
 msgstr "Ne disponebla"
 
@@ -2775,8 +2797,8 @@ msgstr ""
 
 #: src/lib/marble/MarbleWebView.cpp:23
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1042
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1290
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1531
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1295
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1540
 msgid "Copy"
 msgstr "Kopii"
 
@@ -2925,6 +2947,45 @@ msgstr ""
 #: src/lib/marble/NewstuffModel.cpp:718 src/lib/marble/NewstuffModel.cpp:727
 msgid "Installation aborted by user."
 msgstr "Instalado ĉesigita de la uzanto"
+
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:86
+#, fuzzy
+#| msgid "Please specify a name for this link."
+msgid "Please specify a name for this relation."
+msgstr "Bonvolu defini nomon por tiu ligilo"
+
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:90
+#, fuzzy
+#| msgid "No image specified"
+msgid "No type tag specified"
+msgstr "Neniu bildo specifita"
+
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:91
+#, fuzzy
+#| msgid "Please specify a URL for this link."
+msgid "Please add a type tag for this relation."
+msgstr "Bonvolu defini URL por tiu ligilo"
+
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:57
+#: src/lib/marble/osm/OsmRelationManagerWidget_p.cpp:111
+msgid "New Relation"
+msgstr ""
+
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:132
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:143
+#, fuzzy
+#| msgid "&Edit"
+msgid "Edit"
+msgstr "&Redakti"
+
+#: src/lib/marble/osm/OsmTagEditorWidget.cpp:86
+#: src/lib/marble/osm/OsmTagEditorWidget_p.cpp:128
+msgid "value"
+msgstr ""
+
+#: src/lib/marble/osm/OsmTagEditorWidget_p.cpp:30
+msgid "Add custom tag..."
+msgstr ""
 
 #: src/lib/marble/PlacemarkEditHeader.cpp:222
 msgid "All Supported Files (*.png)"
@@ -3893,8 +3954,8 @@ msgstr ""
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:767
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:772
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:777
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1424
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1508
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1431
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1517
 msgid "Operation not permitted"
 msgstr "Operacio malpermesita"
 
@@ -3961,34 +4022,34 @@ msgid "Paste"
 msgstr "plej rapida"
 
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1038
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1286
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1527
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1291
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1536
 msgid "Cut"
 msgstr "Eltondi"
 
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1052
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1154
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1300
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1541
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1159
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1305
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1550
 msgid "Properties"
 msgstr "Ecoj"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1179
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1184
 msgid "Untitled Ground Overlay"
 msgstr "sentitola grunda tego"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1276
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1517
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1281
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1526
 msgid "Deselect All Nodes"
 msgstr "Malelekti ĉiujn nodojn"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1280
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1521
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1285
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1530
 msgid "Delete All Selected Nodes"
 msgstr "Forigi la elektajn nodojn"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1425
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1509
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1432
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1518
 msgid ""
 "Cannot delete one of the selected nodes. Most probably this would make the "
 "polygon's outer boundary not contain all its inner boundary nodes."
@@ -3996,16 +4057,16 @@ msgstr ""
 "Ne eblas forigi unu el la elektitaj nodojn. Problable ĉar la ekstera limo de "
 "la poligono ne enhavas ĉiujn nodojn el la interna limo."
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1451
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1472
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1460
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1481
 msgid "Select Node"
 msgstr "Elekti nodon"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1455
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1464
 msgid "Delete Node"
 msgstr "Forigi Nodon"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1472
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1481
 msgid "Deselect Node"
 msgstr "Malelekti Nodon"
 
@@ -4025,33 +4086,33 @@ msgstr "Ne valida bilda vojo"
 msgid "Please specify a valid path for the image file."
 msgstr "Bonvolu specifi validan vojon por la bilddosiero."
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:84
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:122
 msgid "Untitled Polygon"
 msgstr "Sentitola Poligono"
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:251
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:298
 msgid "Please specify a name for this polygon."
 msgstr "Bonvolu specifi nomon por tiu poligono."
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:258
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:248
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:305
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:296
 msgid "Not enough nodes specified."
 msgstr "Ne sufiĉas nodojn difinitajn."
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:259
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:306
 msgid "Please specify at least 3 nodes for the polygon by clicking on the map."
 msgstr ""
 "Bonvolu specifi almenaŭ tri nodojn por la poligono klikante sur la mapo."
 
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:82
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:117
 msgid "Untitled Path"
 msgstr "Sentitola Vojo"
 
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:241
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:289
 msgid "Please specify a name for this polyline."
 msgstr "Bonvolu specifi nomon por tiu polilinio."
 
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:249
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:297
 msgid "Please specify at least 2 nodes for the path by clicking on the map."
 msgstr "Bonvolu specifi almenaŭ du nodojn por la vojo klikante sur la mapo."
 
