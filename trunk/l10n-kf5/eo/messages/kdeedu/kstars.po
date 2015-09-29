@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-09-28 08:13+0000\n"
+"POT-Creation-Date: 2015-09-29 09:44+0000\n"
 "PO-Revision-Date: 2015-03-19 04:30-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -37410,8 +37410,12 @@ msgstr "Dek"
 
 #: kstarsinit.cpp:430
 #, fuzzy
-msgid "Mananger Observer..."
+msgid "Manage Observer..."
 msgstr "Dyer Observatory"
+
+#: kstarsinit.cpp:435
+msgid "Artificial Horizon..."
+msgstr ""
 
 #: kstarsinit.cpp:439
 #, fuzzy
@@ -43136,7 +43140,7 @@ msgctxt "North"
 msgid "N"
 msgstr "N"
 
-#: skycomponents/linelistindex.cpp:226
+#: skycomponents/linelistindex.cpp:242
 #, fuzzy, kde-format
 msgid "Loading %1"
 msgstr "Ŝarĝante KStars..."
@@ -45341,28 +45345,44 @@ msgstr "Koordinatoj"
 msgid "Delete"
 msgstr "Delta"
 
-#: tools/horizonmanager.cpp:52
+#: tools/horizonmanager.cpp:54 tools/horizonmanager.cpp:393
+msgid "Region is invalid. The polygon must be closed"
+msgstr ""
+
+#: tools/horizonmanager.cpp:56
 msgid "Artificial Horizon Manager"
 msgstr ""
 
-#: tools/horizonmanager.cpp:64 tools/horizonmanager.cpp:213
+#: tools/horizonmanager.cpp:70 tools/horizonmanager.cpp:184
 #, fuzzy
 #| msgctxt "City in Saskatchewan Canada"
 #| msgid "Regina"
 msgid "Region"
 msgstr "Regina"
 
-#: tools/horizonmanager.cpp:64 tools/horizonmanager.cpp:75
-#: tools/observinglist.cpp:124 widgets/infoboxwidget.cpp:137
+#: tools/horizonmanager.cpp:70 tools/observinglist.cpp:124
+#: widgets/infoboxwidget.cpp:137
 msgctxt "Azimuth"
 msgid "Az"
 msgstr "Az"
 
-#: tools/horizonmanager.cpp:64 tools/horizonmanager.cpp:75
-#: tools/observinglist.cpp:123 widgets/infoboxwidget.cpp:138
+#: tools/horizonmanager.cpp:70 tools/observinglist.cpp:123
+#: widgets/infoboxwidget.cpp:138
 msgctxt "Altitude"
 msgid "Alt"
 msgstr "Alt"
+
+#: tools/horizonmanager.cpp:256
+#, kde-format
+msgid "Region %1 polygon is invalid."
+msgstr ""
+
+#: tools/horizonmanager.cpp:387
+#, fuzzy
+#| msgctxt "City in Saskatchewan Canada"
+#| msgid "Regina"
+msgid "Region is valid"
+msgstr "Regina"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, HorizonManager)
 #: tools/horizonmanager.ui:14
@@ -45377,21 +45397,67 @@ msgstr ""
 msgid "Regions"
 msgstr "Regina"
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, addRegionB)
+#: tools/horizonmanager.ui:45
+#, fuzzy
+#| msgctxt "City in Saskatchewan Canada"
+#| msgid "Regina"
+msgid "Add Region"
+msgstr "Regina"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeRegionB)
+#: tools/horizonmanager.ui:70
+#, fuzzy
+msgid "Remove Region"
+msgstr "Bildo"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, saveB)
+#: tools/horizonmanager.ui:108
+#, fuzzy
+msgid "Save Regions"
+msgstr "Slave Lake"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: tools/horizonmanager.ui:123
+#: tools/horizonmanager.ui:132
 #, fuzzy
 msgid "Points"
 msgstr "Kalkulu"
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, addPointB)
+#: tools/horizonmanager.ui:155
+#, fuzzy
+msgid "Add Point"
+msgstr "Trovu objekton"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, removePointB)
+#: tools/horizonmanager.ui:180
+#, fuzzy
+msgid "Remove Point"
+msgstr "Bildo"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, clearPointsB)
+#: tools/horizonmanager.ui:205
+#, fuzzy
+#| msgctxt "City in Texas USA"
+#| msgid "Clear Lake City"
+msgid "Clear all points"
+msgstr "Clear Lake City"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, selectPointsB)
+#: tools/horizonmanager.ui:262
+#, fuzzy
+msgid "Select points from the sky map"
+msgstr "Montru konstelaciajn nomojn"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/horizonmanager.ui:263
+#: tools/horizonmanager.ui:309
 msgid ""
 "<html><head/><body><p>Artificial horizon is used to define <span style=\" "
 "font-weight:600;\">Regions</span> that are <span style=\" font-style:italic;"
 "\">blocked</span> from view from your vantage point (e.g. Tall trees or "
 "buildings). To define a <span style=\" font-weight:600;\">Region</span>, you "
 "need to define a list of <span style=\" font-weight:600;\">Points</span> "
-"that encompases the blocked area. Each point is a static Azimuth/Altitude "
+"that encompasses the blocked area. Each point is a static Azimuth/Altitude "
 "pair that you can enter manually, or by selecting points from the Sky Map "
 "after clicking <span style=\" font-style:italic;\">Select Points</span> "
 "button. Polygons must be closed to be considered valid regions.</p></body></"
