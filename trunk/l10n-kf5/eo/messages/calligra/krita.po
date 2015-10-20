@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-18 08:20+0000\n"
+"POT-Creation-Date: 2015-10-20 09:46+0000\n"
 "PO-Revision-Date: 2015-03-25 21:27+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -8500,6 +8500,750 @@ msgstr ""
 #| msgid "Source"
 msgid "Unparsed Resource Block"
 msgstr "Fonto"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:222
+msgctxt "@option:check"
+msgid "16 bits color depth"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:223
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>If enabled, all RAW files will be decoded in 16-bit color depth using "
+"a linear gamma curve. To prevent dark picture rendering in the editor, it is "
+"recommended to use Color Management in this mode.</para><para>If disabled, "
+"all RAW files will be decoded in 8-bit color depth with a BT.709 gamma curve "
+"and a 99th-percentile white point. This mode is faster than 16-bit decoding."
+"</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:242
+#, fuzzy
+#| msgid "Create"
+msgctxt "@option:check"
+msgid "Interpolate RGB as four colors"
+msgstr "Krei"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:243
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Interpolate RGB as four colors</title><para>The default is to assume "
+"that all green pixels are the same. If even-row green pixels are more "
+"sensitive to ultraviolet light than odd-row this difference causes a mesh "
+"pattern in the output; using this option solves this problem with minimal "
+"loss of detail.</para><para>To resume, this option blurs the image a little, "
+"but it eliminates false 2x2 mesh patterns with VNG quality method or mazes "
+"with AHD quality method.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:257
+msgctxt "@info:tooltip"
+msgid "Visit LibRaw project website"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:267
+msgctxt "@option:check"
+msgid "Do not stretch or rotate pixels"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:269
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Do not stretch or rotate pixels</title><para>For Fuji Super CCD "
+"cameras, show the image tilted 45 degrees. For cameras with non-square "
+"pixels, do not stretch the image to its correct aspect ratio. In any case, "
+"this option guarantees that each output pixel corresponds to one RAW pixel.</"
+"para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:277
+#, fuzzy
+#| msgid "Opacity:"
+msgctxt "@label:listbox"
+msgid "Quality:"
+msgstr "Travidebleco:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:281
+#, fuzzy
+#| msgid "Bi-Linear"
+msgctxt "@item:inlistbox Quality"
+msgid "Bilinear"
+msgstr "Dulineara"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:282
+msgctxt "@item:inlistbox Quality"
+msgid "VNG"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:283
+msgctxt "@item:inlistbox Quality"
+msgid "PPG"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:284
+msgctxt "@item:inlistbox Quality"
+msgid "AHD"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:287
+msgctxt "@item:inlistbox Quality"
+msgid "DCB"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:288
+msgctxt "@item:inlistbox Quality"
+msgid "AHD v2"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:289
+msgctxt "@item:inlistbox Quality"
+msgid "AFD"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:290
+#, fuzzy
+#| msgid "CD"
+msgctxt "@item:inlistbox Quality"
+msgid "VCD"
+msgstr "CD"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:291
+msgctxt "@item:inlistbox Quality"
+msgid "VCD & AHD"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:292
+msgctxt "@item:inlistbox Quality"
+msgid "LMMSE"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:294
+msgctxt "@item:inlistbox Quality"
+msgid "AMaZE"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:311
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Quality (interpolation)</title><para>Select here the demosaicing "
+"method to use when decoding RAW images. A demosaicing algorithm is a digital "
+"image process used to interpolate a complete image from the partial raw data "
+"received from the color-filtered image sensor, internal to many digital "
+"cameras, in form of a matrix of colored pixels. Also known as CFA "
+"interpolation or color reconstruction, another common spelling is "
+"demosaicing. The following methods are available for demosaicing RAW images:"
+"</para><para><list><item><emphasis strong='true'>Bilinear</emphasis>: use "
+"high-speed but low-quality bilinear interpolation (default - for slow "
+"computers). In this method, the red value of a non-red pixel is computed as "
+"the average of the adjacent red pixels, and similarly for blue and green.</"
+"item><item><emphasis strong='true'>VNG</emphasis>: use Variable Number of "
+"Gradients interpolation. This method computes gradients near the pixel of "
+"interest and uses the lower gradients (representing smoother and more "
+"similar parts of the image) to make an estimate.</item><item><emphasis "
+"strong='true'>PPG</emphasis>: use Patterned-Pixel-Grouping interpolation. "
+"Pixel Grouping uses assumptions about natural scenery in making estimates. "
+"It has fewer color artifacts on natural images than the Variable Number of "
+"Gradients method.</item><item><emphasis strong='true'>AHD</emphasis>: use "
+"Adaptive Homogeneity-Directed interpolation. This method selects the "
+"direction of interpolation so as to maximize a homogeneity metric, thus "
+"typically minimizing color artifacts.</item><item><emphasis "
+"strong='true'>DCB</emphasis>: DCB interpolation from linuxphoto.org project."
+"</item><item><emphasis strong='true'>AHD v2</emphasis>: modified AHD "
+"interpolation using Variance of Color Differences method.</"
+"item><item><emphasis strong='true'>AFD</emphasis>: Adaptive Filtered "
+"Demosaicing interpolation through 5 pass median filter from PerfectRaw "
+"project.</item><item><emphasis strong='true'>VCD</emphasis>: Variance of "
+"Color Differences interpolation.</item><item><emphasis strong='true'>VCD & "
+"AHD</emphasis>: Mixed demosaicing between VCD and AHD.</item><item><emphasis "
+"strong='true'>LMMSE</emphasis>: color demosaicing via directional linear "
+"minimum mean-square error estimation interpolation from PerfectRaw.</"
+"item><item><emphasis strong='true'>AMaZE</emphasis>: Aliasing Minimization "
+"interpolation and Zipper Elimination to apply color aberration removal from "
+"RawTherapee project.</item></list></para><para>Note: some methods can be "
+"unavailable if RAW decoder have been built without extension packs.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:380
+#, fuzzy
+msgctxt "@label:slider"
+msgid "Pass:"
+msgstr "Aldonu maskon"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:381
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Pass</title><para>Set here the passes used by the median filter "
+"applied after interpolation to Red-Green and Blue-Green channels.</"
+"para><para>This setting is only available for specific Quality options: "
+"<emphasis strong='true'>Bilinear</emphasis>, <emphasis strong='true'>VNG</"
+"emphasis>, <emphasis strong='true'>PPG</emphasis>, <emphasis "
+"strong='true'>AHD</emphasis>, <emphasis strong='true'>DCB</emphasis>, and "
+"<emphasis strong='true'>VCD & AHD</emphasis>.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:393
+#, fuzzy
+#| msgid "&Use linear interpolation"
+msgctxt "@option:check"
+msgid "Refine interpolation"
+msgstr "&Uzi linearan interpolon"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:394
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Refine interpolation</title><para>This setting is available only for "
+"few Quality options:</para><para><list><item><emphasis strong='true'>DCB</"
+"emphasis>: turn on the enhance interpolated colors filter.</"
+"item><item><emphasis strong='true'>VCD & AHD</emphasis>: turn on the "
+"enhanced effective color interpolation (EECI) refine to improve sharpness.</"
+"item></list></para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:411
+#, fuzzy
+msgctxt "@label"
+msgid "Demosaicing"
+msgstr "Spaco:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:419
+#, fuzzy
+#| msgid "Method"
+msgctxt "@label:listbox"
+msgid "Method:"
+msgstr "Metodo"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:421
+#, fuzzy
+#| msgid "Default"
+msgctxt "@item:inlistbox"
+msgid "Default D65"
+msgstr "Defaŭlta"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:422
+#, fuzzy
+msgctxt "@item:inlistbox"
+msgid "Camera"
+msgstr "Importu bildon..."
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:423
+#, fuzzy
+#| msgid "Auto"
+msgctxt "@item:inlistbox set while balance automatically"
+msgid "Automatic"
+msgstr "Aŭtomate"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:424
+#, fuzzy
+msgctxt "@item:inlistbox set white balance manually"
+msgid "Manual"
+msgstr "violkolora"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:426
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>White Balance</title><para>Configure the raw white balance:</"
+"para><para><list><item><emphasis strong='true'>Default D65</emphasis>: Use a "
+"standard daylight D65 white balance.</item><item><emphasis "
+"strong='true'>Camera</emphasis>: Use the white balance specified by the "
+"camera. If not available, reverts to default neutral white balance.</"
+"item><item><emphasis strong='true'>Automatic</emphasis>: Calculates an "
+"automatic white balance averaging the entire image.</item><item><emphasis "
+"strong='true'>Manual</emphasis>: Set a custom temperature and green level "
+"values.</item></list></para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:441
+msgctxt "@label:slider"
+msgid "T(K):"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:442
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Temperature</title><para>Set here the color temperature in Kelvin.</"
+"para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:449
+#, fuzzy
+#| msgid "Green':"
+msgctxt "@label:slider Green component"
+msgid "Green:"
+msgstr "Verda':"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:450
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Set here the green component to set magenta color cast removal level.</"
+"para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:453
+#, fuzzy
+msgctxt "@label:listbox"
+msgid "Highlights:"
+msgstr "&Alteco:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:455
+#, fuzzy
+#| msgid "Solid Noise"
+msgctxt "@item:inlistbox"
+msgid "Solid white"
+msgstr "Bruo"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:456
+msgctxt "@item:inlistbox"
+msgid "Unclip"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:457
+#, fuzzy
+#| msgid "Blend mode:"
+msgctxt "@item:inlistbox"
+msgid "Blend"
+msgstr "Elektomoduso:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:458
+msgctxt "@item:inlistbox"
+msgid "Rebuild"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:460
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Highlights</title><para>Select here the highlight clipping method:</"
+"para><para><list><item><emphasis strong='true'>Solid white</emphasis>: clip "
+"all highlights to solid white</item><item><emphasis strong='true'>Unclip</"
+"emphasis>: leave highlights unclipped in various shades of pink</"
+"item><item><emphasis strong='true'>Blend</emphasis>:Blend clipped and "
+"unclipped values together for a gradual fade to white</item><item><emphasis "
+"strong='true'>Rebuild</emphasis>: reconstruct highlights using a level "
+"value</item></list></para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:471
+#, fuzzy
+#| msgid "Level:"
+msgctxt "@label:slider Highlight reconstruct level"
+msgid "Level:"
+msgstr "Nivelo:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:475
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Level</title><para>Specify the reconstruct highlight level. Low "
+"values favor whites and high values favor colors.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:479
+#, fuzzy
+#| msgid "Lens Correction"
+msgctxt "@option:check"
+msgid "Exposure Correction (E.V)"
+msgstr "&Lenskorekto..."
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:480
+msgctxt "@info:whatsthis"
+msgid "<para>Turn on the exposure correction before interpolation.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:483
+#, fuzzy
+#| msgid "Width:"
+msgctxt "@label:slider"
+msgid "Linear Shift:"
+msgstr "Larĝeco:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:488
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Shift</title><para>Linear Shift of exposure correction before "
+"interpolation in E.V</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:491
+#, fuzzy
+msgctxt "@label:slider"
+msgid "Highlight:"
+msgstr "&Alteco:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:496
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Highlight</title><para>Amount of highlight preservation for exposure "
+"correction before interpolation in E.V. Only take effect if Shift Correction "
+"is > 1.0 E.V</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:500
+msgctxt "@option:check"
+msgid "Correct false colors in highlights"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:501
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>If enabled, images with overblown channels are processed much more "
+"accurately, without 'pink clouds' (and blue highlights under tungsten lamps)."
+"</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:505
+#, fuzzy
+msgctxt "@option:check"
+msgid "Auto Brightness"
+msgstr "Nur heligu"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:506
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>If disable, use a fixed white level and ignore the image histogram to "
+"adjust brightness.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:509
+#, fuzzy
+msgctxt "@label:slider"
+msgid "Brightness:"
+msgstr "Nur heligu"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:514
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Brightness</title><para>Specify the brightness level of output image. "
+"The default value is 1.0 (works in 8-bit mode only).</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:524
+msgctxt "@option:check Black point"
+msgid "Black:"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:525
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Black point</title><para>Use a specific black point value to decode "
+"RAW pictures. If you set this option to off, the Black Point value will be "
+"automatically computed.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:532
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Black point value</title><para>Specify specific black point value of "
+"the output image.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:535
+#, fuzzy
+msgctxt "@option:check White point"
+msgid "White:"
+msgstr "Alfo"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:536
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>White point</title><para>Use a specific white point value to decode "
+"RAW pictures. If you set this option to off, the White Point value will be "
+"automatically computed.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:543
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>White point value</title><para>Specify specific white point value of "
+"the output image.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:580
+#, fuzzy
+#| msgid "Color Range"
+msgctxt "@label"
+msgid "White Balance"
+msgstr "Kolorgamo"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:588
+#, fuzzy
+#| msgctxt "@label:listbox Bevel direction"
+#| msgid "Direction:"
+msgctxt "@label:listbox"
+msgid "Noise reduction:"
+msgstr "Direkto"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:590
+#, fuzzy
+#| msgid "None"
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "None"
+msgstr "Neniu"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:591
+#, fuzzy
+#| msgid "Wavelength:"
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "Wavelets"
+msgstr "Ondlongo:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:592
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "FBDD"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:593
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "CFA Line Denoise"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:594
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "Impulse Denoise"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:596
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Noise Reduction</title><para>Select here the noise reduction method "
+"to apply during RAW decoding.</para><para><list><item><emphasis "
+"strong='true'>None</emphasis>: no noise reduction.</item><item><emphasis "
+"strong='true'>Wavelets</emphasis>: wavelets correction to erase noise while "
+"preserving real detail. It's applied after interpolation.</"
+"item><item><emphasis strong='true'>FBDD</emphasis>: Fake Before Demosaicing "
+"Denoising noise reduction. It's applied before interpolation.</"
+"item><item><emphasis strong='true'>CFA Line Denoise</emphasis>: Banding "
+"noise suppression. It's applied after interpolation.</item><item><emphasis "
+"strong='true'>Impulse Denoise</emphasis>: Impulse noise suppression. It's "
+"applied after interpolation.</item></list></para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:622
+msgctxt "@option:check"
+msgid "Enable Chromatic Aberration correction"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:623
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Enable Chromatic Aberration correction</title><para>Enlarge the raw "
+"red-green and blue-yellow axis by the given factors (automatic by default).</"
+"para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:628
+msgctxt "@option:check"
+msgid "Automatic color axis adjustments"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:629
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Automatic Chromatic Aberration correction</title><para>If this option "
+"is turned on, it will try to shift image channels slightly and evaluate "
+"Chromatic Aberration change. Note that if you shot blue-red pattern, the "
+"method may fail. In this case, disable this option and tune manually color "
+"factors.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:636
+#, fuzzy
+#| msgid "Green':"
+msgctxt "@label:slider"
+msgid "Red-Green:"
+msgstr "Verda':"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:641
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Red-Green multiplier</title><para>Set here the amount of correction "
+"on red-green axis</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:644
+#, fuzzy
+#| msgid "Yellow"
+msgctxt "@label:slider"
+msgid "Blue-Yellow:"
+msgstr "Flava"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:649
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Blue-Yellow multiplier</title><para>Set here the amount of correction "
+"on blue-yellow axis</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:668
+#, fuzzy
+#| msgid "Lens Correction"
+msgctxt "@label"
+msgid "Corrections"
+msgstr "&Lenskorekto..."
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:676
+#, fuzzy
+#| msgid "Layer Profile:"
+msgctxt "@label:listbox"
+msgid "Camera Profile:"
+msgstr "Ecoj de Ebeno"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:678
+#, fuzzy
+#| msgid "None"
+msgctxt "@item:inlistbox Camera Profile"
+msgid "None"
+msgstr "Neniu"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:679
+msgctxt "@item:inlistbox Camera Profile"
+msgid "Embedded"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:680
+#, fuzzy
+#| msgid "Custom"
+msgctxt "@item:inlistbox Camera Profile"
+msgid "Custom"
+msgstr "Propra"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:682
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Camera Profile</title><para>Select here the input color space used to "
+"decode RAW data.</para><para><list><item><emphasis strong='true'>None</"
+"emphasis>: no input color profile is used during RAW decoding.</"
+"item><item><emphasis strong='true'>Embedded</emphasis>: use embedded color "
+"profile from RAW file, if it exists.</item><item><emphasis "
+"strong='true'>Custom</emphasis>: use a custom input color space profile.</"
+"item></list></para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:693
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:727
+msgid "ICC Files (*.icc; *.icm)"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:695
+#, fuzzy
+msgctxt "@label:listbox"
+msgid "Workspace:"
+msgstr "&Koloroprenilo"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:697
+msgctxt "@item:inlistbox Workspace"
+msgid "Raw (no profile)"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:698
+msgctxt "@item:inlistbox Workspace"
+msgid "sRGB"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:699
+#, fuzzy
+#| msgid "Random"
+msgctxt "@item:inlistbox Workspace"
+msgid "Adobe RGB"
+msgstr "Hazarda"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:700
+msgctxt "@item:inlistbox Workspace"
+msgid "Wide Gamut"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:701
+msgctxt "@item:inlistbox Workspace"
+msgid "Pro-Photo"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:702
+#, fuzzy
+#| msgid "Custom"
+msgctxt "@item:inlistbox Workspace"
+msgid "Custom"
+msgstr "Propra"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:704
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Workspace</title><para>Select here the output color space used to "
+"decode RAW data.</para><para><list><item><emphasis strong='true'>Raw (linear)"
+"</emphasis>: in this mode, no output color space is used during RAW decoding."
+"</item><item><emphasis strong='true'>sRGB</emphasis>: this is an RGB color "
+"space, created cooperatively by Hewlett-Packard and Microsoft. It is the "
+"best choice for images destined for the Web and portrait photography.</"
+"item><item><emphasis strong='true'>Adobe RGB</emphasis>: this color space is "
+"an extended RGB color space, developed by Adobe. It is used for photography "
+"applications such as advertising and fine art.</item><item><emphasis "
+"strong='true'>Wide Gamut</emphasis>: this color space is an expanded version "
+"of the Adobe RGB color space.</item><item><emphasis strong='true'>Pro-Photo</"
+"emphasis>: this color space is an RGB color space, developed by Kodak, that "
+"offers an especially large gamut designed for use with photographic outputs "
+"in mind.</item><item><emphasis strong='true'>Custom</emphasis>: use a custom "
+"output color space profile.</item></list></para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:739
+#, fuzzy
+#| msgid "Color Management"
+msgctxt "@label"
+msgid "Color Management"
+msgstr "Koloradministrado"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:945
+#, fuzzy
+#| msgid "Threshold:"
+msgctxt "@label"
+msgid "Threshold:"
+msgstr "Pentrosojlo:"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:946
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Threshold</title><para>Set here the noise reduction threshold value "
+"to use.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:959
+#, fuzzy
+#| msgid "Enhance"
+msgctxt "@label"
+msgid "Luminance:"
+msgstr "Plibonigi"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:960
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Luminance</title><para>Amount of Luminance impulse noise reduction.</"
+"para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:962
+#, fuzzy
+#| msgid "Enhance"
+msgctxt "@label"
+msgid "Chrominance:"
+msgstr "Plibonigi"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:963
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Chrominance</title><para>Amount of Chrominance impulse noise "
+"reduction.</para>"
+msgstr ""
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/rcombobox.cpp:72
+#: plugins/formats/raw/3rdparty/libkdcraw/src/rnuminput.cpp:82
+#: plugins/formats/raw/3rdparty/libkdcraw/src/rnuminput.cpp:181
+#, fuzzy
+#| msgid "Default"
+msgctxt "@info:tooltip"
+msgid "Reset to default value"
+msgstr "Defaŭlta"
+
+#: plugins/formats/raw/3rdparty/libkdcraw/src/rwidgetutils.cpp:357
+#, fuzzy
+#| msgid "Browse"
+msgid "Browse..."
+msgstr "Foliumi"
 
 #. i18n: ectx: property (text), widget (QLabel, preview)
 #: plugins/formats/raw/wdgrawimport.ui:92
@@ -19456,9 +20200,6 @@ msgstr "&Koloroprenilo"
 #~ msgid "HDR Layer"
 #~ msgstr "Ebeno"
 
-#~ msgid "Method"
-#~ msgstr "Metodo"
-
 #, fuzzy
 #~| msgid "&Filters Gallery"
 #~ msgid "Project Maintainer"
@@ -21122,10 +21863,6 @@ msgstr "&Koloroprenilo"
 #~ msgid "Target Colorspace:"
 #~ msgstr "&Cela kolorspaco:"
 
-#~| msgid "Layer Properties"
-#~ msgid "Layer Profile:"
-#~ msgstr "Ecoj de Ebeno"
-
 #, fuzzy
 #~ msgid "Opacity: "
 #~ msgstr "Travidebleco:"
@@ -21222,10 +21959,6 @@ msgstr "&Koloroprenilo"
 #~| msgid "Named Colors"
 #~ msgid "HR Water Color"
 #~ msgstr "Nomataj Koloroj"
-
-#~| msgid "Noise"
-#~ msgid "Solid Noise"
-#~ msgstr "Bruo"
 
 #~| msgid "Channel"
 #~ msgid "Alpha Channel Locked"
@@ -21606,9 +22339,6 @@ msgstr "&Koloroprenilo"
 
 #~ msgid "Caribbean Blues"
 #~ msgstr "Karibeaj Bluoj"
-
-#~ msgid "CD"
-#~ msgstr "CD"
 
 #~ msgid "CD Half"
 #~ msgstr "CD Duono"
@@ -22216,10 +22946,6 @@ msgstr "&Koloroprenilo"
 #~ msgid "&Lens Correction..."
 #~ msgstr "&Lenskorekto..."
 
-#~| msgid "&Lens Correction..."
-#~ msgid "Lens Correction"
-#~ msgstr "&Lenskorekto..."
-
 #, fuzzy
 #~ msgid "slider"
 #~ msgstr "Ligita"
@@ -22231,10 +22957,6 @@ msgstr "&Koloroprenilo"
 #~| msgid "Palette"
 #~ msgid "diameter"
 #~ msgstr "Paletro"
-
-#, fuzzy
-#~ msgid "spacing"
-#~ msgstr "Spaco:"
 
 #~| msgid "Radius"
 #~ msgid "Deform Radius"
