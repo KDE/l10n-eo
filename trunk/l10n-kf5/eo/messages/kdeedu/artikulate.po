@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: artikulate\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-24 08:26+0000\n"
+"POT-Creation-Date: 2015-10-25 08:15+0000\n"
 "PO-Revision-Date: 2015-03-21 07:04-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto\n"
@@ -89,7 +89,7 @@ msgid "Spanish"
 msgstr "Hispana"
 
 #: liblearnerprofile/src/models/learninggoalmodel.cpp:175
-#: src/models/coursemodel.cpp:124 src/models/languageresourcemodel.cpp:107
+#: src/models/coursemodel.cpp:129 src/models/languageresourcemodel.cpp:107
 #: src/models/phonemegroupmodel.cpp:99 src/models/phonememodel.cpp:80
 #: src/models/phonemeunitmodel.cpp:122 src/models/phraselistmodel.cpp:114
 #: src/models/profilemodel.cpp:104 src/models/skeletonmodel.cpp:98
@@ -169,7 +169,7 @@ msgstr ""
 "Agordi kaj 'qtmultimediabackend' kaj 'qtgstreamerbackend', elektita dum "
 "lanĉado, se disponeblas."
 
-#: src/core/course.cpp:194
+#: src/core/course.cpp:194 src/qml/Editor.qml:233
 msgid "New Unit"
 msgstr "Nova unuo"
 
@@ -280,7 +280,7 @@ msgstr ""
 msgid "Unnamed Identity"
 msgstr "Sennoma identaĵo"
 
-#: src/mainwindow.cpp:140 src/mainwindow_editor.cpp:117
+#: src/mainwindow.cpp:140 src/mainwindow_editor.cpp:127
 msgctxt "@item:inmenu"
 msgid "Configure Artikulate"
 msgstr "Agordi Artikulate"
@@ -295,37 +295,43 @@ msgctxt "@item:inmenu"
 msgid "Learner Profile"
 msgstr "Profilo de lernanto"
 
-#: src/mainwindow.cpp:178 src/mainwindow_editor.cpp:142
+#: src/mainwindow.cpp:178 src/mainwindow_editor.cpp:152
 msgctxt "@item:inmenu"
 msgid "Sound Devices"
 msgstr "Son-aparatoj"
 
-#: src/mainwindow.cpp:178 src/mainwindow_editor.cpp:142
+#: src/mainwindow.cpp:178 src/mainwindow_editor.cpp:152
 msgctxt "@title:tab"
 msgid "Sound Device Settings"
 msgstr "Agordoj pri Son-aparatoj"
 
-#: src/mainwindow.cpp:179 src/mainwindow_editor.cpp:143
+#: src/mainwindow.cpp:179 src/mainwindow_editor.cpp:153
 msgctxt "@item:inmenu"
 msgid "Fonts"
 msgstr "Tiparoj"
 
-#: src/mainwindow.cpp:179 src/mainwindow_editor.cpp:143
+#: src/mainwindow.cpp:179 src/mainwindow_editor.cpp:153
 msgctxt "@title:tab"
 msgid "Training Phrase Font"
 msgstr "Tiparo de trejna frazo"
 
-#: src/mainwindow.cpp:180 src/mainwindow_editor.cpp:144
+#: src/mainwindow.cpp:180 src/mainwindow_editor.cpp:154
 msgctxt "@item:inmenu"
 msgid "Course Resources"
 msgstr "Kursaj risurcoj"
 
-#: src/mainwindow.cpp:180 src/mainwindow_editor.cpp:144
+#: src/mainwindow.cpp:180 src/mainwindow_editor.cpp:154
 msgctxt "@title:tab"
 msgid "Resource Repository Settings"
 msgstr "Agordoj de risurca deponejo"
 
-#: src/mainwindow_editor.cpp:172
+#: src/mainwindow_editor.cpp:104 src/mainwindow_editor.cpp:106
+#, fuzzy, kde-format
+#| msgid "Course Contributor Repository:"
+msgid "Course Repository: %1"
+msgstr "Deponejo de kurso-kontribuantoj"
+
+#: src/mainwindow_editor.cpp:182
 msgctxt "@info"
 msgid ""
 "The currently open course contains unsaved changes. Do you want to save them?"
@@ -333,7 +339,7 @@ msgstr ""
 "La nuna malferma kurso enhavas nekonservatajn ŝanĝojn. Ĉu vi volas konservi "
 "ilin?"
 
-#: src/models/coursemodel.cpp:199
+#: src/models/coursemodel.cpp:206
 msgctxt "@title:column"
 msgid "Course"
 msgstr "Kurso"
@@ -374,7 +380,7 @@ msgctxt "@title:column"
 msgid "Phoneme Unit"
 msgstr "Fonema unuo"
 
-#: src/models/phraselistmodel.cpp:190 src/models/phrasemodel.cpp:235
+#: src/models/phraselistmodel.cpp:190 src/models/phrasemodel.cpp:272
 msgctxt "@title:column"
 msgid "Phrase"
 msgstr "Frazo"
@@ -394,33 +400,40 @@ msgctxt "@title:column"
 msgid "Unit"
 msgstr "Unuoj"
 
-#: src/qml/Editor.qml:64
+#: src/qml/Editor.qml:80
 #, fuzzy
-#| msgid "Course Contributor Repository:"
-msgid "Course Repository:"
-msgstr "Deponejo de kurso-kontribuantoj"
+#| msgid "Update from Course Prototype"
+msgid "Course Prototype:"
+msgstr "Ĝisdatigi el Prototipo de Kurso"
 
-#: src/qml/Editor.qml:92
+#: src/qml/Editor.qml:96
 #, fuzzy
-#| msgctxt "@title:column"
-#| msgid "Language"
-msgid "Language"
-msgstr "Lingvo"
+#| msgid "Edit State:"
+msgid "Edit Prototype"
+msgstr "Redakti staton:"
 
-#: src/qml/Editor.qml:112
+#: src/qml/Editor.qml:105
+msgid "Prototype Mode"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelLanguage)
+#: src/qml/Editor.qml:116 src/ui/newcoursedialog.ui:17
+msgid "Language:"
+msgstr "Lingvo:"
+
+#: src/qml/Editor.qml:148
 #, fuzzy
-#| msgid "Edit Skeletons"
-msgid "Edit Skeleton"
-msgstr "Redakti skeletojn"
+#| msgid "There are no courses for the selected language."
+msgid "There is no course in the selected language."
+msgstr "Neniu kurso ekzistas por la elektata lingvo."
 
-#: src/qml/Editor.qml:120
+#: src/qml/Editor.qml:168
 #, fuzzy
-#| msgctxt "@title:column"
-#| msgid "Course"
-msgid "Course"
-msgstr "Kurso"
+#| msgid "Create New Course"
+msgid "Create Course"
+msgstr "Krei novan kurson"
 
-#: src/qml/Editor.qml:182
+#: src/qml/Editor.qml:193
 msgid "Units & Phrases"
 msgstr ""
 
@@ -635,6 +648,12 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
+#: src/qml/UnitEditor.qml:39
+#, fuzzy
+#| msgid "Title:"
+msgid "Unit Title:"
+msgstr "Titolo:"
+
 #: src/ui/newcoursedialog.cpp:42
 msgid "Create New Course"
 msgstr "Krei novan kurson"
@@ -646,11 +665,6 @@ msgstr "neniu"
 #: src/ui/newcoursedialog.cpp:75
 msgid "New Course"
 msgstr "Nova kurso"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLanguage)
-#: src/ui/newcoursedialog.ui:17
-msgid "Language:"
-msgstr "Lingvo:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelTitle)
 #: src/ui/newcoursedialog.ui:30
@@ -769,6 +783,23 @@ msgid "Volume"
 msgstr "Laŭteco"
 
 #, fuzzy
+#~| msgctxt "@title:column"
+#~| msgid "Language"
+#~ msgid "Language"
+#~ msgstr "Lingvo"
+
+#, fuzzy
+#~| msgid "Edit Skeletons"
+#~ msgid "Edit Skeleton"
+#~ msgstr "Redakti skeletojn"
+
+#, fuzzy
+#~| msgctxt "@title:column"
+#~| msgid "Course"
+#~ msgid "Course"
+#~ msgstr "Kurso"
+
+#, fuzzy
 #~| msgctxt "@item:inmenu"
 #~| msgid "Configure Artikulate"
 #~ msgid "Configure Shortcuts..."
@@ -783,14 +814,8 @@ msgstr "Laŭteco"
 #~ msgid "Please select a language."
 #~ msgstr "Bonvolu elekti lingvon."
 
-#~ msgid "There are no courses for the selected language."
-#~ msgstr "Neniu kurso ekzistas por la elektata lingvo."
-
 #~ msgid "Unselected"
 #~ msgstr "Malelektita"
-
-#~ msgid "Update from Course Prototype"
-#~ msgstr "Ĝisdatigi el Prototipo de Kurso"
 
 #~ msgid "OK"
 #~ msgstr "Bone"
