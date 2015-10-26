@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arkn\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-20 10:17+0000\n"
+"POT-Creation-Date: 2015-10-26 08:07+0000\n"
 "PO-Revision-Date: 2007-10-21 17:10+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -183,42 +183,47 @@ msgid ""
 "Destination folder to extract to. Defaults to current path if not specified."
 msgstr ""
 
-#: app/main.cpp:140
+#. i18n: ectx: label, entry (openDestinationFolderAfterExtraction), group (Extraction)
+#: app/main.cpp:140 kerfuffle/ark.kcfg:9
+msgid "Open destination folder after extraction."
+msgstr ""
+
+#: app/main.cpp:143
 msgid ""
 "Query the user for an archive filename and add specified files to it. Quit "
 "when finished."
 msgstr ""
 
-#: app/main.cpp:143
+#: app/main.cpp:146
 msgid ""
 "Add the specified files to 'filename'. Create archive if it does not exist. "
 "Quit when finished."
 msgstr ""
 
-#: app/main.cpp:147
+#: app/main.cpp:150
 msgid ""
 "Change the current dir to the first entry and add all other entries relative "
 "to this one."
 msgstr ""
 
-#: app/main.cpp:150
+#: app/main.cpp:153
 msgid ""
 "Automatically choose a filename, with the selected suffix (for example rar, "
 "tar.gz, zip or any other supported types)"
 msgstr ""
 
-#: app/main.cpp:154
+#: app/main.cpp:157
 msgid ""
 "Use the batch interface instead of the usual dialog. This option is implied "
 "if more than one url is specified."
 msgstr ""
 
-#: app/main.cpp:157
+#: app/main.cpp:160
 msgid ""
 "The destination argument will be set to the path of the first file supplied."
 msgstr ""
 
-#: app/main.cpp:160
+#: app/main.cpp:163
 msgid ""
 "Archive contents will be read, and if detected to not be a single folder "
 "archive, a subfolder with the name of the archive will be created."
@@ -289,11 +294,6 @@ msgstr ""
 
 #: kerfuffle/addtoarchive.cpp:186
 msgid "It is not possible to create archives of this type."
-msgstr ""
-
-#. i18n: ectx: label, entry (openDestinationFolderAfterExtraction), group (Extraction)
-#: kerfuffle/ark.kcfg:9
-msgid "Open destination folder after extraction."
 msgstr ""
 
 #. i18n: ectx: label, entry (closeAfterExtraction), group (Extraction)
@@ -975,7 +975,7 @@ msgctxt "@info"
 msgid "The archive <filename>%1</filename> was not found."
 msgstr ""
 
-#: part/part.cpp:439 part/part.cpp:495 part/part.cpp:557
+#: part/part.cpp:439 part/part.cpp:458 part/part.cpp:465 part/part.cpp:530
 #, fuzzy
 #| msgid "Open an archive"
 msgctxt "@title:window"
@@ -991,52 +991,38 @@ msgid ""
 "possible to read from it."
 msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
-#: part/part.cpp:477
-msgctxt "@title:window"
-msgid "Invalid Archive Type"
-msgstr ""
-
-#: part/part.cpp:478
-msgctxt "@info"
-msgid ""
-"Ark cannot create archives of the type you have chosen.<br />Please choose "
-"another archive type below."
-msgstr ""
-
-#: part/part.cpp:481
-msgctxt "@title:window"
-msgid "Unable to Determine Archive Type"
-msgstr ""
-
-#: part/part.cpp:482
-msgctxt "@info"
-msgid ""
-"Ark was unable to determine the archive type of the filename.<br />Please "
-"choose the correct archive type below."
-msgstr ""
-
-#: part/part.cpp:495
+#: part/part.cpp:455
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgctxt "@info"
 msgid ""
-"Ark was not able to open the archive <filename>%1</filename>. No plugin "
-"capable of handling the file was found."
+"Ark was not able to open <filename>%1</filename>. No suitable plugin found."
+"<nl/><nl/>Ark does not seem to support this file type."
 msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
-#: part/part.cpp:538
+#: part/part.cpp:462
+#, fuzzy, kde-format
+#| msgid "Click to add files to the archive"
+msgctxt "@info"
+msgid ""
+"Ark was not able to open <filename>%1</filename>. Failed to load a suitable "
+"plugin.<nl/><nl/>Make sure any executables needed to handle the archive type "
+"are installed."
+msgstr "Klaku por aldoni dosierojn al la arĥivo"
+
+#: part/part.cpp:511
 #, fuzzy
 msgid "Extraction settings"
 msgstr "Ekstraktante unu dosieron"
 
-#: part/part.cpp:539
+#: part/part.cpp:512
 #, fuzzy
 #| msgctxt "to preview a file inside an archive"
 #| msgid "Pre&view"
 msgid "Preview settings"
 msgstr "&Antaŭrigardu"
 
-#: part/part.cpp:554
+#: part/part.cpp:527
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1044,11 +1030,11 @@ msgid ""
 "<nl/><nl/><message>%2</message>"
 msgstr ""
 
-#: part/part.cpp:619
+#: part/part.cpp:592
 msgid "Ark cannot open symlinks."
 msgstr ""
 
-#: part/part.cpp:731
+#: part/part.cpp:704
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgid ""
@@ -1056,39 +1042,39 @@ msgid ""
 "archive?"
 msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
-#: part/part.cpp:733
+#: part/part.cpp:706
 msgid "File modified"
 msgstr ""
 
-#: part/part.cpp:992
+#: part/part.cpp:965
 msgctxt "@title:window"
 msgid "Add Files"
 msgstr "Aldonu dosierojn"
 
-#: part/part.cpp:999
+#: part/part.cpp:972
 msgctxt "@title:window"
 msgid "Add Folder"
 msgstr "Aldonu dosierujon"
 
-#: part/part.cpp:1024
+#: part/part.cpp:997
 msgid "Deleting these files is not undoable. Are you sure you want to do this?"
 msgstr ""
 
-#: part/part.cpp:1025
+#: part/part.cpp:998
 #, fuzzy
 #| msgid "Add Files"
 msgctxt "@title:window"
 msgid "Delete files"
 msgstr "Aldonu dosierojn"
 
-#: part/part.cpp:1057
+#: part/part.cpp:1030
 #, fuzzy
 #| msgid "Open an archive"
 msgctxt "@title:window"
 msgid "Save Archive As"
 msgstr "Malfermu arkivon"
 
-#: part/part.cpp:1064
+#: part/part.cpp:1037
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1096,7 +1082,7 @@ msgid ""
 "want to overwrite it?"
 msgstr ""
 
-#: part/part.cpp:1078
+#: part/part.cpp:1051
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1104,7 +1090,7 @@ msgid ""
 "location. The archive does not exist anymore."
 msgstr ""
 
-#: part/part.cpp:1092
+#: part/part.cpp:1065
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgctxt "@info"
