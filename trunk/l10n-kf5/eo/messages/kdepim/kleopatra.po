@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-06 09:36+0000\n"
+"POT-Creation-Date: 2015-11-11 08:06+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -842,34 +842,14 @@ msgid ""
 "output of <icode>%1</icode> for details.</para>"
 msgstr ""
 
-#: commands/lookupcertificatescommand.cpp:259
-msgid ""
-"<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
-"keyservers expect different ways to search for these. Some require a \"0x\" "
-"prefix, while others require there be no such prefix.</p><p>If your search "
-"does not yield any results, try removing the 0x prefix from your search.</p>"
-msgstr ""
-
-#: commands/lookupcertificatescommand.cpp:263
-msgid ""
-"<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
-"keyservers expect different ways to search for these. Some require a \"0x\" "
-"prefix, while others require there be no such prefix.</p><p>If your search "
-"does not yield any results, try adding the 0x prefix to your search.</p>"
-msgstr ""
-
-#: commands/lookupcertificatescommand.cpp:267
-msgid "Hex-String Search"
-msgstr ""
-
-#: commands/lookupcertificatescommand.cpp:347
-#: commands/lookupcertificatescommand.cpp:352
+#: commands/lookupcertificatescommand.cpp:337
+#: commands/lookupcertificatescommand.cpp:342
 #, kde-format
 msgctxt "@title %1:\"OpenPGP\" or \"CMS\""
 msgid "%1 Certificate Server"
 msgstr ""
 
-#: commands/lookupcertificatescommand.cpp:385
+#: commands/lookupcertificatescommand.cpp:375
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -877,7 +857,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: commands/lookupcertificatescommand.cpp:394
+#: commands/lookupcertificatescommand.cpp:384
 msgctxt "@info"
 msgid ""
 "<para>The query result has been truncated.</para><para>Either the local or a "
@@ -887,12 +867,12 @@ msgid ""
 "have to refine your search.</para>"
 msgstr ""
 
-#: commands/lookupcertificatescommand.cpp:402
+#: commands/lookupcertificatescommand.cpp:392
 msgctxt "@title"
 msgid "Result Truncated"
 msgstr ""
 
-#: commands/lookupcertificatescommand.cpp:434
+#: commands/lookupcertificatescommand.cpp:424
 msgctxt "@info"
 msgid ""
 "<para>You do not have any directory servers configured.</para><para>You need "
@@ -901,9 +881,29 @@ msgid ""
 "Kleopatra</interface>.</para>"
 msgstr ""
 
-#: commands/lookupcertificatescommand.cpp:439
+#: commands/lookupcertificatescommand.cpp:429
 msgctxt "@title"
 msgid "No Directory Servers Configured"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:438
+msgid ""
+"<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
+"keyservers expect different ways to search for these. Some require a \"0x\" "
+"prefix, while others require there be no such prefix.</p><p>If your search "
+"does not yield any results, try removing the 0x prefix from your search.</p>"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:442
+msgid ""
+"<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
+"keyservers expect different ways to search for these. Some require a \"0x\" "
+"prefix, while others require there be no such prefix.</p><p>If your search "
+"does not yield any results, try adding the 0x prefix to your search.</p>"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:446
+msgid "Hex-String Search"
 msgstr ""
 
 #: commands/refreshopenpgpcertscommand.cpp:77
@@ -3756,15 +3756,24 @@ msgstr ""
 msgid "Decrypt and/or verify file(s)"
 msgstr ""
 
-#: kleopatra_options.h:82
-msgid "Search for Certificate by fingerprint"
+#: kleopatra_options.h:81
+msgid "Search for a certificate on a keyserver"
 msgstr ""
 
-#: kleopatra_options.h:85
+#: kleopatra_options.h:87
+msgctxt ""
+"If a certificate is already known it shows the certificate details dialog."
+"Otherwise it brings up the certificate search dialog."
+msgid ""
+"Show details of a local certificate or search for it on a keyserver by "
+"fingerprint"
+msgstr ""
+
+#: kleopatra_options.h:91
 msgid "Parent Window Id for dialogs"
 msgstr ""
 
-#: kleopatra_options.h:93
+#: kleopatra_options.h:99
 msgid "File(s) to process"
 msgstr ""
 
@@ -3776,21 +3785,25 @@ msgstr ""
 msgid "Ambiguous protocol: --openpgp and --cms"
 msgstr ""
 
-#: kleopatraapplication.cpp:281
+#: kleopatraapplication.cpp:298
+msgid "No search string specified for --search"
+msgstr ""
+
+#: kleopatraapplication.cpp:310
 msgid "No fingerprint argument specified for --query"
 msgstr ""
 
-#: kleopatraapplication.cpp:333
+#: kleopatraapplication.cpp:345
 #, kde-format
 msgid "Ambiguous commands \"%1\" and \"%2\""
 msgstr ""
 
-#: kleopatraapplication.cpp:339
+#: kleopatraapplication.cpp:351
 #, kde-format
 msgid "No files specified for \"%1\" command"
 msgstr ""
 
-#: kleopatraapplication.cpp:350
+#: kleopatraapplication.cpp:362
 msgid "No command provided but arguments present"
 msgstr ""
 
