@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-02-24 01:50+0000\n"
+"POT-Creation-Date: 2016-02-25 01:46+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -295,7 +295,7 @@ msgstr ""
 
 #: actionshandlers/kreunitactionshandler.cpp:146
 #: actionshandlers/unitactionshandler.cpp:139 dialogs/setupdisplay.cpp:126
-#: exporters/htmlexporter.cpp:389 exporters/xsltexporter.cpp:54
+#: exporters/htmlexporter.cpp:388 exporters/xsltexporter.cpp:53
 #: krecipesview.cpp:374 krecipesview.cpp:478
 msgid "Properties"
 msgstr "Ecoj"
@@ -1350,7 +1350,7 @@ msgstr "Eco"
 #: dialogs/editpropertiesdialog.cpp:168 dialogs/editpropertiesdialog.cpp:259
 #: dialogs/recipeinput/ingredientparserdialog.cpp:67
 #: dialogs/recipeinput/ingredientparserdialog.cpp:116
-#: dialogs/recipeinput/recipeinputdialog.cpp:304
+#: dialogs/recipeinput/recipeinputdialog.cpp:168
 #: dialogs/refineshoppinglistdialog.cpp:91
 #: dialogs/refineshoppinglistdialog.cpp:124
 msgctxt "@title:column"
@@ -1513,8 +1513,8 @@ msgid_plural "You are missing %1 ingredients for:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: dialogs/ingredientmatcherdialog.h:53 exporters/htmlexporter.cpp:308
-#: exporters/htmlexporter.cpp:331 exporters/xsltexporter.cpp:56
+#: dialogs/ingredientmatcherdialog.h:53 exporters/htmlexporter.cpp:307
+#: exporters/htmlexporter.cpp:330 exporters/xsltexporter.cpp:55
 #: widgets/inglistviewitem.cpp:28 widgets/inglistviewitem.cpp:40
 #: widgets/ingredientinputwidget.cpp:97
 msgid "OR"
@@ -1526,7 +1526,7 @@ msgid "Property Information"
 msgstr ""
 
 #: dialogs/ingredientsdialog.cpp:79
-#: dialogs/recipeinput/recipeinputdialog.cpp:383
+#: dialogs/recipeinput/recipeinputdialog.cpp:247
 msgctxt "@title:tab"
 msgid "Ingredients"
 msgstr ""
@@ -1678,7 +1678,7 @@ msgstr ""
 
 #: dialogs/recipeinput/ingredientparserdialog.cpp:66
 #: dialogs/recipeinput/ingredientparserdialog.cpp:115
-#: dialogs/recipeinput/recipeinputdialog.cpp:303
+#: dialogs/recipeinput/recipeinputdialog.cpp:167
 #: widgets/ingredientlistview.cpp:107 widgets/ingredientlistview.cpp:132
 #: widgets/kreingredientlistwidget.cpp:27
 msgctxt "@title:column"
@@ -1687,7 +1687,7 @@ msgstr ""
 
 #: dialogs/recipeinput/ingredientparserdialog.cpp:69
 #: dialogs/recipeinput/ingredientparserdialog.cpp:118
-#: dialogs/recipeinput/recipeinputdialog.cpp:307
+#: dialogs/recipeinput/recipeinputdialog.cpp:171
 #: widgets/kreprepmethodlistwidget.cpp:25 widgets/prepmethodlistview.cpp:52
 msgctxt "@title:column"
 msgid "Preparation Method"
@@ -1745,8 +1745,10 @@ msgid "Parse Text"
 msgstr "Plena teksto"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, Form)
+#. i18n: ectx: property (windowTitle), widget (QWidget, RecipeGeneralInfoEditor)
 #. i18n: ectx: property (windowTitle), widget (QWidget, IngredientsEditor)
 #: dialogs/recipeinput/ingredientseditor.ui:14
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:14
 #: mockups/advancedsearchdialog.ui:20 mockups/editratingdialog.ui:14
 msgid "Form"
 msgstr ""
@@ -1822,196 +1824,202 @@ msgctxt "@action:button"
 msgid "Add Rating..."
 msgstr "Noto"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:129
-msgctxt "@info:tooltip"
-msgid "Select photo"
-msgstr ""
+#: dialogs/recipeinput/recipegeneralinfoeditor.cpp:130
+#: dialogs/recipeinput/recipegeneralinfoeditor.cpp:162
+msgid "Images"
+msgstr "Bildoj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:133
-msgctxt "action:button"
+#: dialogs/recipeinput/recipegeneralinfoeditor.cpp:164
+msgctxt "@title:window"
 msgid "Save photo as..."
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:137
-msgctxt "@info:tooltip"
-msgid "Clear photo"
+#: dialogs/recipeinput/recipegeneralinfoeditor.cpp:173
+msgctxt "@info"
+msgid "The file already exists, do you want to overwrite it?"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:150
-msgctxt "@label"
+#: dialogs/recipeinput/recipegeneralinfoeditor.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "The photo cannot be saved in %1"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:38
 msgid "Recipe Name"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:166
-msgctxt "@label"
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:70
+msgid "Recipe Photo"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:137
+#: dialogs/setupdisplay.cpp:123 exporters/htmlexporter.cpp:232
+#: exporters/xsltexporter.cpp:48 krecipesview.cpp:378 krecipesview.cpp:510
+#: mockups/advancedsearchdialog.ui:96
 msgid "Authors"
 msgstr "Aŭtoroj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:183
-msgctxt "@label"
+#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:171
+#: dialogs/setupdisplay.cpp:124 exporters/htmlexporter.cpp:246
+#: exporters/xsltexporter.cpp:45 krecipesview.cpp:377 krecipesview.cpp:502
+#: mockups/advancedsearchdialog.ui:86
 msgid "Categories"
 msgstr "Kategorioj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:204
+#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:214
+#: dialogs/setupdisplay.cpp:128 exporters/htmlexporter.cpp:201
+#: exporters/xsltexporter.cpp:46 mockups/advancedsearchdialog.ui:106
 #, fuzzy
 #| msgid "Riel"
-msgctxt ""
-"@label How much food you will produce with a given cooking recipe (e.g. 2 "
-"servings or 3 bottles)"
 msgid "Yield"
 msgstr "Riel"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:208
-msgctxt "@label The amount for yield"
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:226
+#: exporters/xsltexporter.cpp:49
 msgid "Amount"
 msgstr "Kvanto"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:211
-msgctxt "@label The type of yield (e.g. servings, bottles..."
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:236
+#, fuzzy
+#| msgctxt "@label The type of yield (e.g. servings, bottles..."
+#| msgid "Type"
 msgid "Type"
 msgstr "Tipo"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:223
-msgctxt "@label"
+#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: dialogs/recipeinput/recipegeneralinfoeditor.ui:290
+#: dialogs/setupdisplay.cpp:121 exporters/htmlexporter.cpp:207
+#: mockups/advancedsearchdialog.ui:116
 msgid "Preparation Time"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:295
+#: dialogs/recipeinput/recipeinputdialog.cpp:159
 msgctxt "@info:tooltip"
 msgid "Add ingredient"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:296
+#: dialogs/recipeinput/recipeinputdialog.cpp:160
 msgctxt "@info:tooltip"
 msgid "Move ingredient up"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:297
+#: dialogs/recipeinput/recipeinputdialog.cpp:161
 msgctxt "@info:tooltip"
 msgid "Move ingredient down"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:298
+#: dialogs/recipeinput/recipeinputdialog.cpp:162
 msgctxt "@info:tooltip"
 msgid "Remove ingredient"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:299
+#: dialogs/recipeinput/recipeinputdialog.cpp:163
 msgctxt "@info:tooltip"
 msgid "Paste Ingredients"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:306
+#: dialogs/recipeinput/recipeinputdialog.cpp:170
 #: widgets/krepropertylistwidget.cpp:35 widgets/propertylistview.cpp:131
 msgctxt "@title:column"
 msgid "Units"
 msgstr "Unuoj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:322
+#: dialogs/recipeinput/recipeinputdialog.cpp:186
 #, fuzzy
 #| msgid "Property"
 msgctxt "@label"
 msgid "Property Status:"
 msgstr "Eco"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:326
+#: dialogs/recipeinput/recipeinputdialog.cpp:190
 msgctxt "@action:button"
 msgid "Details..."
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:337
+#: dialogs/recipeinput/recipeinputdialog.cpp:201
 msgctxt "@action:inmenu Updates the loaded information"
 msgid "Update"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:344
+#: dialogs/recipeinput/recipeinputdialog.cpp:208
 #, fuzzy
 #| msgid "Properties"
 msgctxt "@title:window "
 msgid "Property details"
 msgstr "Ecoj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:382
+#: dialogs/recipeinput/recipeinputdialog.cpp:246
 msgctxt "@title:tab"
 msgid "Recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:384
+#: dialogs/recipeinput/recipeinputdialog.cpp:248
 msgctxt "@title:tab"
 msgid "Instructions"
 msgstr "Instrukcioj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:385
+#: dialogs/recipeinput/recipeinputdialog.cpp:249
 #, fuzzy
 #| msgid "Rating"
 msgctxt "@title:tab"
 msgid "Ratings"
 msgstr "Noto"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:405
+#: dialogs/recipeinput/recipeinputdialog.cpp:269
 msgctxt "@action:button"
 msgid "Save recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:406
+#: dialogs/recipeinput/recipeinputdialog.cpp:270
 msgctxt "@info:tooltip"
 msgid "Save recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:408
+#: dialogs/recipeinput/recipeinputdialog.cpp:272
 msgctxt "@action:button"
 msgid "Show recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:409
+#: dialogs/recipeinput/recipeinputdialog.cpp:273
 msgctxt "@info:tooltip"
 msgid "Show recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:411
+#: dialogs/recipeinput/recipeinputdialog.cpp:275
 #: dialogs/recipeviewdialog.cpp:62
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Fermi"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:412
+#: dialogs/recipeinput/recipeinputdialog.cpp:276
 #: dialogs/recipeviewdialog.cpp:63
 msgctxt "@info:tooltip"
 msgid "Close"
 msgstr "Fermi"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:414
+#: dialogs/recipeinput/recipeinputdialog.cpp:278
 msgctxt "@action:button"
 msgid "Resize recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:415
+#: dialogs/recipeinput/recipeinputdialog.cpp:279
 msgctxt "@info:tooltip"
 msgid "Resize recipe"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:629
-#: dialogs/recipeinput/recipeinputdialog.cpp:671
-msgid "Images"
-msgstr "Bildoj"
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:673
-msgctxt "@title:window"
-msgid "Save photo as..."
-msgstr ""
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:681
-msgctxt "@info"
-msgid "The file already exists, do you want to overwrite it?"
-msgstr ""
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:688
-#, kde-format
-msgctxt "@info"
-msgid "The photo cannot be saved in %1"
-msgstr ""
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:971
+#: dialogs/recipeinput/recipeinputdialog.cpp:692
 #, kde-format
 msgctxt "@info"
 msgid "Unit name cannot be longer than 1 character."
@@ -2019,7 +2027,7 @@ msgid_plural "Unit name cannot be longer than %1 characters."
 msgstr[0] ""
 msgstr[1] ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1010
+#: dialogs/recipeinput/recipeinputdialog.cpp:731
 #, kde-format
 msgctxt "@info"
 msgid "Preparation method cannot be longer than 1 character."
@@ -2027,59 +2035,47 @@ msgid_plural "Preparation method cannot be longer than %1 characters."
 msgstr[0] ""
 msgstr[1] ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1060
-#, kde-format
-msgctxt "@info"
-msgid "Recipe title cannot be longer than 1 character."
-msgid_plural "Recipe title cannot be longer than %1 characters."
-msgstr[0] ""
-msgstr[1] ""
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:1060
-msgid "Unable to save recipe"
-msgstr ""
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:1100
-msgctxt "@label:textbox"
-msgid "Write the recipe instructions here"
-msgstr ""
-
-#: dialogs/recipeinput/recipeinputdialog.cpp:1102
+#: dialogs/recipeinput/recipeinputdialog.cpp:801
 msgctxt "@label:textbox"
 msgid "Write the recipe title here"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1211
+#: dialogs/recipeinput/recipeinputdialog.cpp:803
+msgctxt "@label:textbox"
+msgid "Write the recipe instructions here"
+msgstr ""
+
+#: dialogs/recipeinput/recipeinputdialog.cpp:848
 msgctxt "@info"
 msgid ""
 "This recipe contains unsaved changes.\n"
 "Would you like to save it before closing?"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1211
-#: dialogs/recipeinput/recipeinputdialog.cpp:1236
-#: dialogs/recipeinput/recipeinputdialog.cpp:1246
+#: dialogs/recipeinput/recipeinputdialog.cpp:848
+#: dialogs/recipeinput/recipeinputdialog.cpp:873
+#: dialogs/recipeinput/recipeinputdialog.cpp:883
 #, fuzzy
 #| msgid "Unsaved Changes"
 msgctxt "@title:window"
 msgid "Unsaved changes"
 msgstr "Nekonservitaj ŝanĝoj"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1236
+#: dialogs/recipeinput/recipeinputdialog.cpp:873
 msgctxt "@info"
 msgid ""
 "You need to save the recipe before displaying it. Would you like to save it "
 "now?"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1246
+#: dialogs/recipeinput/recipeinputdialog.cpp:883
 msgctxt "@info"
 msgid ""
 "This recipe has changes that will not be displayed unless the recipe is "
 "saved. Would you like to save it now?"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1415
+#: dialogs/recipeinput/recipeinputdialog.cpp:1061
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2087,25 +2083,25 @@ msgid ""
 "%2\">Provide nutrient information.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1436
+#: dialogs/recipeinput/recipeinputdialog.cpp:1082
 #, kde-format
 msgctxt "@info"
 msgid "<b>%3:</b> Unit conversion missing for conversion from '%1' to '%2'"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1437
+#: dialogs/recipeinput/recipeinputdialog.cpp:1083
 msgid "-No unit-"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1451
-#: dialogs/recipeinput/recipeinputdialog.cpp:1454
-#: dialogs/recipeinput/recipeinputdialog.cpp:1457
-#: dialogs/recipeinput/recipeinputdialog.cpp:1460
+#: dialogs/recipeinput/recipeinputdialog.cpp:1097
+#: dialogs/recipeinput/recipeinputdialog.cpp:1100
+#: dialogs/recipeinput/recipeinputdialog.cpp:1103
+#: dialogs/recipeinput/recipeinputdialog.cpp:1106
 msgctxt "@info"
 msgid "-No unit-"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1465
+#: dialogs/recipeinput/recipeinputdialog.cpp:1111
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2114,7 +2110,7 @@ msgid ""
 "following conversions: %2"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1477
+#: dialogs/recipeinput/recipeinputdialog.cpp:1123
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2122,7 +2118,7 @@ msgid ""
 "ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1484
+#: dialogs/recipeinput/recipeinputdialog.cpp:1130
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2130,7 +2126,7 @@ msgid ""
 "method is specified. <a href=\"ingredient#%2\">Provide ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1490
+#: dialogs/recipeinput/recipeinputdialog.cpp:1136
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2139,7 +2135,7 @@ msgid ""
 "</a>"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1499
+#: dialogs/recipeinput/recipeinputdialog.cpp:1145
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2148,33 +2144,33 @@ msgid ""
 "method specified): %2<a href=\"ingredient#%3\">Provide ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1523
+#: dialogs/recipeinput/recipeinputdialog.cpp:1169
 #, fuzzy
 #| msgid "Comment"
 msgctxt "@info Property information for a recipe is complete"
 msgid "Complete"
 msgstr "Komento"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1530
+#: dialogs/recipeinput/recipeinputdialog.cpp:1176
 msgctxt "@info Property information for a recipe is complete, but..."
 msgid "Complete, but approximations made"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1538
+#: dialogs/recipeinput/recipeinputdialog.cpp:1184
 #, fuzzy
 #| msgid "Comment"
 msgctxt "@info Property information for a recipe is incomplete"
 msgid "Incomplete"
 msgstr "Komento"
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1553
+#: dialogs/recipeinput/recipeinputdialog.cpp:1199
 msgctxt "@info"
 msgid ""
 "The nutrient information for this recipe is incomplete because the following "
 "information is missing:"
 msgstr ""
 
-#: dialogs/recipeinput/recipeinputdialog.cpp:1564
+#: dialogs/recipeinput/recipeinputdialog.cpp:1210
 msgctxt "@info"
 msgid ""
 "The following approximations will be made when determining nutrient "
@@ -2374,7 +2370,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
 #: dialogs/setupdisplay.cpp:73 dialogs/setupdisplay.cpp:120
-#: exporters/htmlexporter.cpp:197 exporters/xsltexporter.cpp:44
+#: exporters/htmlexporter.cpp:196 exporters/xsltexporter.cpp:43
 #: mockups/advancedsearchdialog.ui:126
 msgid "Instructions"
 msgstr "Instrukcioj"
@@ -2421,51 +2417,23 @@ msgctxt "Recipe title"
 msgid "Title"
 msgstr "Titolo"
 
-#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
-#: dialogs/setupdisplay.cpp:121 exporters/htmlexporter.cpp:208
-#: mockups/advancedsearchdialog.ui:116
-msgid "Preparation Time"
-msgstr ""
-
 #: dialogs/setupdisplay.cpp:122
 msgid "Photo"
 msgstr "Foto"
 
 #. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
-#: dialogs/setupdisplay.cpp:123 exporters/htmlexporter.cpp:233
-#: exporters/xsltexporter.cpp:49 krecipesview.cpp:378 krecipesview.cpp:510
-#: mockups/advancedsearchdialog.ui:96
-msgid "Authors"
-msgstr "Aŭtoroj"
-
-#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
-#: dialogs/setupdisplay.cpp:124 exporters/htmlexporter.cpp:247
-#: exporters/xsltexporter.cpp:46 krecipesview.cpp:377 krecipesview.cpp:502
-#: mockups/advancedsearchdialog.ui:86
-msgid "Categories"
-msgstr "Kategorioj"
-
-#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
-#: dialogs/setupdisplay.cpp:125 exporters/htmlexporter.cpp:342
-#: exporters/xsltexporter.cpp:52 krecipesview.cpp:373 krecipesview.cpp:470
+#: dialogs/setupdisplay.cpp:125 exporters/htmlexporter.cpp:341
+#: exporters/xsltexporter.cpp:51 krecipesview.cpp:373 krecipesview.cpp:470
 #: mockups/advancedsearchdialog.ui:76
 msgid "Ingredients"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
-#: dialogs/setupdisplay.cpp:127 exporters/htmlexporter.cpp:396
-#: exporters/plaintextexporter.cpp:135 exporters/xsltexporter.cpp:55
+#: dialogs/setupdisplay.cpp:127 exporters/htmlexporter.cpp:395
+#: exporters/plaintextexporter.cpp:135 exporters/xsltexporter.cpp:54
 #: mockups/advancedsearchdialog.ui:146
 msgid "Ratings"
 msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QTreeWidget, treeWidget)
-#: dialogs/setupdisplay.cpp:128 exporters/htmlexporter.cpp:202
-#: exporters/xsltexporter.cpp:47 mockups/advancedsearchdialog.ui:106
-#, fuzzy
-#| msgid "Riel"
-msgid "Yield"
-msgstr "Riel"
 
 #: dialogs/setupdisplay.cpp:437
 msgid "Background Color..."
@@ -2649,11 +2617,11 @@ msgctxt "@title:window"
 msgid "Finding Unit Ratios"
 msgstr ""
 
-#: exporters/htmlexporter.cpp:132
+#: exporters/htmlexporter.cpp:131
 msgid "Krecipes Recipes"
 msgstr ""
 
-#: exporters/htmlexporter.cpp:431 exporters/xsltexporter.cpp:45
+#: exporters/htmlexporter.cpp:430 exporters/xsltexporter.cpp:44
 msgid "Overall Rating"
 msgstr ""
 
@@ -2694,34 +2662,30 @@ msgctxt "Total preparation time"
 msgid "Total"
 msgstr "Sumo"
 
-#: exporters/xsltexporter.cpp:48
+#: exporters/xsltexporter.cpp:47
 msgid "Prep"
 msgstr ""
 
 #: exporters/xsltexporter.cpp:50
-msgid "Amount"
-msgstr "Kvanto"
-
-#: exporters/xsltexporter.cpp:51
 msgid "Ingredient"
 msgstr ""
 
-#: exporters/xsltexporter.cpp:53
+#: exporters/xsltexporter.cpp:52
 msgid "Preparation"
 msgstr ""
 
-#: exporters/xsltexporter.cpp:57
+#: exporters/xsltexporter.cpp:56
 msgid "reviews"
 msgstr ""
 
-#: exporters/xsltexporter.cpp:226
+#: exporters/xsltexporter.cpp:225
 msgid ""
 "<html><b>Error:</b> Problem with KreML exporter.  Please export the recipe "
 "you are trying to view as KreML and attach it to a bug report to a Krecipes "
 "developer.</html>"
 msgstr ""
 
-#: exporters/xsltexporter.cpp:233
+#: exporters/xsltexporter.cpp:232
 #, kde-format
 msgid ""
 "<html><b>Error:</b> Bad template: %1.  Use \"Settings->Page Setup...\" to "
@@ -4306,6 +4270,26 @@ msgstr ""
 #: widgets/weightinput.cpp:23
 msgid "-No Preparation-"
 msgstr ""
+
+#~ msgctxt "@label"
+#~ msgid "Authors"
+#~ msgstr "Aŭtoroj"
+
+#~ msgctxt "@label"
+#~ msgid "Categories"
+#~ msgstr "Kategorioj"
+
+#, fuzzy
+#~| msgid "Riel"
+#~ msgctxt ""
+#~ "@label How much food you will produce with a given cooking recipe (e.g. 2 "
+#~ "servings or 3 bottles)"
+#~ msgid "Yield"
+#~ msgstr "Riel"
+
+#~ msgctxt "@label The amount for yield"
+#~ msgid "Amount"
+#~ msgstr "Kvanto"
 
 #~ msgctxt "@title:column Recipe title"
 #~ msgid "Title"
