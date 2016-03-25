@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arkn\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-03-20 07:35+0000\n"
+"POT-Creation-Date: 2016-03-25 11:27+0000\n"
 "PO-Revision-Date: 2007-10-21 17:10+0200\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -330,11 +330,17 @@ msgstr ""
 msgid "Preview file size limit in megabytes."
 msgstr ""
 
-#: kerfuffle/cliinterface.cpp:303
-msgid "Extraction failed due to a wrong password."
+#: kerfuffle/cliinterface.cpp:197
+msgid "Extraction failed. Make sure that enough space is available."
 msgstr ""
 
-#: kerfuffle/cliinterface.cpp:313 kerfuffle/cliinterface.cpp:327
+#: kerfuffle/cliinterface.cpp:200
+msgid ""
+"Extraction failed. Make sure you provided the correct password and that "
+"enough space is available."
+msgstr ""
+
+#: kerfuffle/cliinterface.cpp:215 kerfuffle/cliinterface.cpp:229
 #, fuzzy
 #| msgid "Click to preview the selected file"
 msgctxt "@info"
@@ -343,7 +349,7 @@ msgid_plural "Could not move the extracted files to the destination directory."
 msgstr[0] "Klaku por antaŭrigardi la elektan dosieron"
 msgstr[1] "Klaku por antaŭrigardi la elektan dosieron"
 
-#: kerfuffle/cliinterface.cpp:495
+#: kerfuffle/cliinterface.cpp:397
 #, fuzzy, kde-format
 #| msgid "Click to add a folder to the archive"
 msgctxt "@info"
@@ -352,46 +358,51 @@ msgid_plural "Failed to locate programs <filename>%2</filename> on disk."
 msgstr[0] "Klaku por aldoni dosierujon al la arĥivo"
 msgstr[1] "Klaku por aldoni dosierujon al la arĥivo"
 
-#: kerfuffle/cliinterface.cpp:866
+#: kerfuffle/cliinterface.cpp:891
+msgctxt "@info"
+msgid "Extraction failed because the disk is full."
+msgstr ""
+
+#: kerfuffle/cliinterface.cpp:899
 msgctxt "@info"
 msgid "Extraction failed: Incorrect password"
 msgstr ""
 
-#: kerfuffle/cliinterface.cpp:873 kerfuffle/cliinterface.cpp:915
+#: kerfuffle/cliinterface.cpp:906 kerfuffle/cliinterface.cpp:948
 msgid "Extraction failed because of an unexpected error."
 msgstr ""
 
-#: kerfuffle/cliinterface.cpp:908
+#: kerfuffle/cliinterface.cpp:941
 msgid "Incorrect password."
 msgstr ""
 
-#: kerfuffle/createdialog.cpp:166
+#: kerfuffle/createdialog.cpp:165
 msgid "The chosen password does not match the given verification password."
 msgstr ""
 
-#: kerfuffle/createdialog.cpp:169
+#: kerfuffle/createdialog.cpp:168
 msgid "The password cannot be empty."
 msgstr ""
 
-#: kerfuffle/createdialog.cpp:188
+#: kerfuffle/createdialog.cpp:187
 #, kde-format
 msgid ""
 "Protection of the archive with password is not possible with the %1 format."
 msgstr ""
 
-#: kerfuffle/createdialog.cpp:201
+#: kerfuffle/createdialog.cpp:200
 #, kde-format
 msgid "Protection of the list of files is not possible with the %1 format."
 msgstr ""
 
-#: kerfuffle/createdialog.cpp:227
+#: kerfuffle/createdialog.cpp:226
 #, fuzzy
 #| msgid "Deleting a file from the archive"
 #| msgid_plural "Deleting %1 files"
 msgid "Please select a filename for the archive."
 msgstr "Forigante unu dosieron el la arkivo"
 
-#: kerfuffle/createdialog.cpp:227
+#: kerfuffle/createdialog.cpp:226
 #, fuzzy
 #| msgid "One file selected"
 #| msgid_plural "%1 files selected"
@@ -1186,27 +1197,16 @@ msgctxt "@info"
 msgid "<filename>%1</filename> is a directory."
 msgstr ""
 
-#: part/part.cpp:592
-#, kde-format
+#: part/part.cpp:594
+#, fuzzy, kde-format
+#| msgid "Click to add files to the archive"
 msgctxt "@info"
 msgid ""
-"The archive <filename>%1</filename> already exists. Would you like to open "
-"it instead?"
-msgstr ""
+"Could not overwrite <filename>%1</filename>. Check whether you have write "
+"permission."
+msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
-#: part/part.cpp:592
-msgctxt "@title:window"
-msgid "File Exists"
-msgstr "La dosiero ekzistas"
-
-#: part/part.cpp:592
-#, fuzzy
-#| msgctxt "action, to open an archive"
-#| msgid "Open"
-msgid "Open File"
-msgstr "Malfermu"
-
-#: part/part.cpp:598
+#: part/part.cpp:600
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgctxt "@info"
@@ -1215,13 +1215,13 @@ msgid ""
 "file."
 msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
-#: part/part.cpp:601
+#: part/part.cpp:603
 #, kde-format
 msgctxt "@info"
 msgid "The archive <filename>%1</filename> was not found."
 msgstr ""
 
-#: part/part.cpp:606
+#: part/part.cpp:608
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgctxt "@info"
@@ -1230,7 +1230,28 @@ msgid ""
 "possible to read from it."
 msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
+#: part/part.cpp:621
+#, fuzzy, kde-format
+#| msgid "Click to add files to the archive"
+msgctxt "@info"
+msgid ""
+"The archive <filename>%1</filename> already exists. Do you wish to overwrite "
+"it?"
+msgstr "Klaku por aldoni dosierojn al la arĥivo"
+
 #: part/part.cpp:623
+msgctxt "@title:window"
+msgid "File Exists"
+msgstr "La dosiero ekzistas"
+
+#: part/part.cpp:624
+#, fuzzy
+#| msgid "Overwrite"
+msgctxt "@action:button"
+msgid "Overwrite"
+msgstr "Anstataŭigu"
+
+#: part/part.cpp:645
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1238,21 +1259,21 @@ msgid ""
 "<nl/><message>%2</message>"
 msgstr ""
 
-#: part/part.cpp:666
+#: part/part.cpp:688
 msgctxt "@info"
 msgid "The archive is empty or Ark could not open its content."
 msgstr ""
 
-#: part/part.cpp:671
+#: part/part.cpp:693
 msgctxt "@info"
 msgid "Ark does not currently support ISO files with UDF filesystem."
 msgstr ""
 
-#: part/part.cpp:718
+#: part/part.cpp:748
 msgid "Ark cannot open symlinks."
 msgstr ""
 
-#: part/part.cpp:830
+#: part/part.cpp:860
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgid ""
@@ -1260,22 +1281,22 @@ msgid ""
 "archive?"
 msgstr "Klaku por aldoni dosierojn al la arĥivo"
 
-#: part/part.cpp:832
+#: part/part.cpp:862
 msgctxt "@title:window"
 msgid "File Modified"
 msgstr ""
 
-#: part/part.cpp:1101
+#: part/part.cpp:1131
 msgctxt "@title:window"
 msgid "Add Files"
 msgstr "Aldonu dosierojn"
 
-#: part/part.cpp:1108
+#: part/part.cpp:1138
 msgctxt "@title:window"
 msgid "Add Folder"
 msgstr "Aldonu dosierujon"
 
-#: part/part.cpp:1135
+#: part/part.cpp:1165
 msgctxt "@info"
 msgid "Deleting this file is not undoable. Are you sure you want to do this?"
 msgid_plural ""
@@ -1283,7 +1304,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: part/part.cpp:1138
+#: part/part.cpp:1168
 #, fuzzy
 #| msgid "Add Files"
 msgctxt "@title:window"
@@ -1292,14 +1313,14 @@ msgid_plural "Delete Files"
 msgstr[0] "Aldonu dosierojn"
 msgstr[1] "Aldonu dosierojn"
 
-#: part/part.cpp:1177
+#: part/part.cpp:1207
 #, fuzzy
 #| msgid "Open an archive"
 msgctxt "@title:window"
 msgid "Save Archive As"
 msgstr "Malfermu arkivon"
 
-#: part/part.cpp:1184
+#: part/part.cpp:1214
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1307,7 +1328,7 @@ msgid ""
 "want to overwrite it?"
 msgstr ""
 
-#: part/part.cpp:1198
+#: part/part.cpp:1228
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1315,7 +1336,7 @@ msgid ""
 "location. The archive does not exist anymore."
 msgstr ""
 
-#: part/part.cpp:1212
+#: part/part.cpp:1242
 #, fuzzy, kde-format
 #| msgid "Click to add files to the archive"
 msgctxt "@info"
@@ -1454,6 +1475,12 @@ msgid ""
 "There was an error while reading <filename>%1</filename> during extraction."
 msgstr ""
 
+#, fuzzy
+#~| msgctxt "action, to open an archive"
+#~| msgid "Open"
+#~ msgid "Open File"
+#~ msgstr "Malfermu"
+
 #~ msgid "Main Toolbar"
 #~ msgstr "Ĉefa ilobreto"
 
@@ -1589,9 +1616,6 @@ msgstr ""
 #~ msgid_plural "%1 items"
 #~ msgstr[0] "Unu ero"
 #~ msgstr[1] "%1 eroj"
-
-#~ msgid "Overwrite"
-#~ msgstr "Anstataŭigu"
 
 #, fuzzy
 #~| msgid "Click to add files to the archive"
