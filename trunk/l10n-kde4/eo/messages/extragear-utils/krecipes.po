@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-03-29 01:59+0000\n"
+"POT-Creation-Date: 2016-03-30 01:46+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1679,20 +1679,25 @@ msgid "Spell checking Options"
 msgstr ""
 
 #: dialogs/preferences/mysqlserverprefs.cpp:32
-#: dialogs/preferences/postgresqlserverprefs.cpp:32 setupassistant.cpp:509
+#: dialogs/preferences/postgresqlserverprefs.cpp:32
+#: dialogs/setupassistant/serversetuppage.cpp:130
 msgid "Server:"
 msgstr "Servilo:"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:35
-#: dialogs/preferences/postgresqlserverprefs.cpp:35 setupassistant.cpp:232
-#: setupassistant.cpp:360 setupassistant.cpp:465
+#: dialogs/preferences/postgresqlserverprefs.cpp:35
+#: dialogs/setupassistant/permissionssetuppage.cpp:105
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:109
+#: dialogs/setupassistant/serversetuppage.cpp:86
 msgctxt "@label:textbox Database Username"
 msgid "Username:"
 msgstr "Uzantnomo:"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:39
-#: dialogs/preferences/postgresqlserverprefs.cpp:39 setupassistant.cpp:236
-#: setupassistant.cpp:364 setupassistant.cpp:472
+#: dialogs/preferences/postgresqlserverprefs.cpp:39
+#: dialogs/setupassistant/permissionssetuppage.cpp:109
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:113
+#: dialogs/setupassistant/serversetuppage.cpp:93
 msgid "Password:"
 msgstr "Pasvorto:"
 
@@ -1703,12 +1708,14 @@ msgid "Default"
 msgstr "Defaŭlta"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:44
-#: dialogs/preferences/postgresqlserverprefs.cpp:44 setupassistant.cpp:520
+#: dialogs/preferences/postgresqlserverprefs.cpp:44
+#: dialogs/setupassistant/serversetuppage.cpp:141
 msgid "Port:"
 msgstr "Pordo:"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:47
-#: dialogs/preferences/postgresqlserverprefs.cpp:47 setupassistant.cpp:479
+#: dialogs/preferences/postgresqlserverprefs.cpp:47
+#: dialogs/setupassistant/serversetuppage.cpp:100
 msgid "Database name:"
 msgstr "Datumbaza nomo:"
 
@@ -1817,7 +1824,8 @@ msgid ""
 "Note: Krecipes must be restarted for most server preferences to take effect."
 msgstr ""
 
-#: dialogs/preferences/sqliteserverprefs.cpp:32 setupassistant.cpp:611
+#: dialogs/preferences/sqliteserverprefs.cpp:32
+#: dialogs/setupassistant/sqlitesetuppage.cpp:65
 msgid "Database file:"
 msgstr ""
 
@@ -1845,7 +1853,8 @@ msgstr ""
 msgid "Path to SQLite new version command:"
 msgstr ""
 
-#: dialogs/preferences/sqliteserverprefs.cpp:75 setupassistant.cpp:641
+#: dialogs/preferences/sqliteserverprefs.cpp:75
+#: dialogs/setupassistant/sqlitesetuppage.cpp:95
 msgid "Select SQLite database file"
 msgstr ""
 
@@ -2015,7 +2024,7 @@ msgctxt "@title:column"
 msgid "Id"
 msgstr ""
 
-#: dialogs/recipeinput/ingredientseditor.cpp:545
+#: dialogs/recipeinput/ingredientseditor.cpp:549
 msgctxt "@title"
 msgid "Nutritive information status"
 msgstr ""
@@ -2043,6 +2052,21 @@ msgstr "Kapo"
 msgid "Paste from text"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_moveUpButton)
+#: dialogs/recipeinput/ingredientseditor.ui:109
+msgid "Move ingredient up"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_moveDownButton)
+#: dialogs/recipeinput/ingredientseditor.ui:120
+msgid "Move ingredient down"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_deleteButton)
+#: dialogs/recipeinput/ingredientseditor.ui:144
+msgid "Remove ingredient"
+msgstr ""
+
 #: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:88
 #: dialogs/recipeinput/recipeinputdialog.cpp:1202
 msgctxt "@info"
@@ -2060,15 +2084,15 @@ msgid ""
 msgstr ""
 
 #: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:125
-#: dialogs/recipeinput/recipeinputdialog.cpp:1064
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:137
 #, kde-format
 msgctxt "@info"
 msgid ""
-"<b>%1:</b> No nutrient information available. <a href=\"ingredient#"
-"%2\">Provide nutrient information.</a>"
+"<b>%1:</b> No nutrient information available. <a href=\"%2\">Provide "
+"nutrient information.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:159
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:170
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2076,7 +2100,7 @@ msgid ""
 "\"ingredient#%2\">Provide this ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:167
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:178
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2084,7 +2108,7 @@ msgid ""
 "%5\">Provide this conversion.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:196
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:207
 #: dialogs/recipeinput/recipeinputdialog.cpp:1114
 #, kde-format
 msgctxt "@info"
@@ -2094,7 +2118,7 @@ msgid ""
 "following conversions: %2"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:207
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:218
 #: dialogs/recipeinput/recipeinputdialog.cpp:1126
 #, kde-format
 msgctxt "@info"
@@ -2103,7 +2127,7 @@ msgid ""
 "ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:216
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:227
 #: dialogs/recipeinput/recipeinputdialog.cpp:1133
 #, kde-format
 msgctxt "@info"
@@ -2112,7 +2136,7 @@ msgid ""
 "method is specified. <a href=\"ingredient#%2\">Provide ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:223
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:234
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2121,7 +2145,7 @@ msgid ""
 "ingredient weight.</a>"
 msgstr ""
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:233
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -2502,6 +2526,14 @@ msgid ""
 "saved. Would you like to save it now?"
 msgstr ""
 
+#: dialogs/recipeinput/recipeinputdialog.cpp:1064
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> No nutrient information available. <a href=\"ingredient#"
+"%2\">Provide nutrient information.</a>"
+msgstr ""
+
 #: dialogs/recipeinput/recipeinputdialog.cpp:1085
 #, kde-format
 msgctxt "@info"
@@ -2706,6 +2738,177 @@ msgstr ""
 #: dialogs/selectunitdialog.cpp:31
 msgctxt "@title:group"
 msgid "Choose Unit"
+msgstr ""
+
+#: dialogs/setupassistant/datainitializepage.cpp:43
+msgid ""
+"<p>Krecipes comes with some delicious default recipes and useful data.</"
+"p><p>Would you like to initialize your database with those? Note that this "
+"will erase all your previous recipes if you have any.</p>"
+msgstr ""
+
+#: dialogs/setupassistant/datainitializepage.cpp:68
+msgid "Yes please, initialize the database with the examples"
+msgstr ""
+
+#: dialogs/setupassistant/datainitializepage.cpp:77
+msgid ""
+"<p>Krecipes can import nutrient data from the USDA's nutrient database for "
+"over 400 foods.  A total of 43 food properties are included for each food, "
+"such as energy, fat, vitamin C, etc.</p><p>Would you like to import this "
+"data now?  Note that this operation is safe to use on an existing database, "
+"and no data loss will occur.  This operation may take several minutes.</p>"
+msgstr ""
+
+#: dialogs/setupassistant/datainitializepage.cpp:91
+msgid "Yes please, load the database with nutrient data for 400+ foods."
+msgstr ""
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:49
+msgid ""
+"Choose the type of database that you want to use. Most users will want to "
+"choose a simple local database here. However, you can also use remote "
+"servers by means of a MySQL or PostgreSQL database."
+msgstr ""
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:66
+msgid "Simple Local File (SQLite)"
+msgstr ""
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:69
+msgid "Local or Remote MySQL Database"
+msgstr ""
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:72
+msgid "Local or Remote PostgreSQL Database"
+msgstr ""
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:53
+msgid ""
+"<p>This dialog will allow you to specify a MySQL account that has the "
+"necessary permissions to access the Krecipes MySQL database.</p><p><b><font "
+"size=\"+1\">Most users that use Krecipes and MySQL for the first time can "
+"just leave the default parameters and press 'Next'.</font></b></p> <p>If you "
+"set a MySQL root password before, or you have already permissions as normal "
+"user, click on the appropriate option. Otherwise the account 'root' will be "
+"used, with no password.</p><p>[For security reasons, we strongly encourage "
+"you to setup a MySQL root password if you have not done so yet. Just type as "
+"root: mysqladmin password <i>your_password</i>]</p>"
+msgstr ""
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:71
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:74
+msgid "I have already set the necessary permissions"
+msgstr ""
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:88
+msgid "I have already set a MySQL root/admin account"
+msgstr ""
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:100
+msgid "MySQL Administrator Account"
+msgstr ""
+
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:55
+msgid ""
+"<p>This dialog will allow you to specify a PostgreSQL account that has the "
+"necessary permissions to access the Krecipes PostgreSQL database.  This "
+"account may either be a <b>PostgreSQL superuser</b> or have the ability to "
+"both <b>create new PostgreSQL users and databases</b>.</p><p>If no superuser "
+"or privileged account is given, the account 'postgres' will be attempted, "
+"with no password.  If this is insufficient for your PostgreSQL setup, you "
+"<b>must</b> select the appropriate option below to enter the information of "
+"a privileged PostgreSQL account.</p>"
+msgstr ""
+
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:91
+msgid "I have already set a superuser or privileged account"
+msgstr ""
+
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:104
+msgid "PostgreSQL Superuser or Privileged Account"
+msgstr ""
+
+#: dialogs/setupassistant/savepage.cpp:41
+msgid ""
+"Congratulations; all the necessary configuration setup is done. Press "
+"'Finish' to continue, and enjoy cooking!"
+msgstr ""
+
+#: dialogs/setupassistant/serversetuppage.cpp:56
+msgid ""
+"<p>In this dialog you can adjust the database server settings.</"
+"p><p><b>Warning: Passwords are stored in plain text and could potentially be "
+"compromised.  We recommend that you create a username and password "
+"combination solely for use by Krecipes.</b></p>"
+msgstr ""
+
+#: dialogs/setupassistant/serversetuppage.cpp:110
+msgid "The server is remote"
+msgstr ""
+
+#: dialogs/setupassistant/serversetuppage.cpp:122
+msgid "Server / Client Settings"
+msgstr ""
+
+#: dialogs/setupassistant/serversetuppage.cpp:135
+msgid "Client:"
+msgstr ""
+
+#: dialogs/setupassistant/serversetuppage.cpp:140
+msgctxt "@label:textbox Default Port"
+msgid "Default"
+msgstr "Defaŭlta"
+
+#: dialogs/setupassistant/setupassistant.cpp:40
+msgid "Welcome to Krecipes"
+msgstr ""
+
+#: dialogs/setupassistant/setupassistant.cpp:44
+msgid "Database Type"
+msgstr ""
+
+#: dialogs/setupassistant/setupassistant.cpp:48
+msgid "Database Management System Settings"
+msgstr ""
+
+#: dialogs/setupassistant/setupassistant.cpp:52
+#: dialogs/setupassistant/setupassistant.cpp:56
+msgid "Database Permissions"
+msgstr ""
+
+#: dialogs/setupassistant/setupassistant.cpp:60
+msgid "Server Settings"
+msgstr "Servila Agordo"
+
+#: dialogs/setupassistant/setupassistant.cpp:64
+msgid "Initialize Database"
+msgstr ""
+
+#: dialogs/setupassistant/setupassistant.cpp:68
+msgid "Finish & Save Settings"
+msgstr ""
+
+#: dialogs/setupassistant/setupassistant.cpp:87
+msgid ""
+"There is currently no localized ingredient data for this locale.\n"
+"Would you like to load the English ingredients instead?"
+msgstr ""
+
+#: dialogs/setupassistant/sqlitesetuppage.cpp:51
+msgid "In this dialog you can adjust SQLite settings."
+msgstr ""
+
+#: dialogs/setupassistant/sqlitesetuppage.cpp:73
+msgid "Open file dialog"
+msgstr "Malfermi dosieran dialogujon"
+
+#: dialogs/setupassistant/welcomepage.cpp:42
+msgid ""
+"<p><b><font size=\"+1\">Thank you very much for choosing Krecipes.</font></"
+"b></p><p>It looks like this is the first time you are using it. This wizard "
+"will help you with the initial setup so that you can start using it quickly."
+"</p><p>Welcome, and enjoy cooking!</p>"
 msgstr ""
 
 #: dialogs/setupdisplay.cpp:69
@@ -4075,175 +4278,6 @@ msgstr "&Forigi"
 #: mockups/editratingdialog.ui:198
 msgid "Comments:"
 msgstr "Komentoj:"
-
-#: setupassistant.cpp:43
-msgid "Welcome to Krecipes"
-msgstr ""
-
-#: setupassistant.cpp:47
-msgid "Database Type"
-msgstr ""
-
-#: setupassistant.cpp:51
-msgid "Database Management System Settings"
-msgstr ""
-
-#: setupassistant.cpp:55 setupassistant.cpp:59
-msgid "Database Permissions"
-msgstr ""
-
-#: setupassistant.cpp:63
-msgid "Server Settings"
-msgstr "Servila Agordo"
-
-#: setupassistant.cpp:67
-msgid "Initialize Database"
-msgstr ""
-
-#: setupassistant.cpp:71
-msgid "Finish & Save Settings"
-msgstr ""
-
-#: setupassistant.cpp:90
-msgid ""
-"There is currently no localized ingredient data for this locale.\n"
-"Would you like to load the English ingredients instead?"
-msgstr ""
-
-#: setupassistant.cpp:146
-msgid ""
-"<p><b><font size=\"+1\">Thank you very much for choosing Krecipes.</font></"
-"b></p><p>It looks like this is the first time you are using it. This wizard "
-"will help you with the initial setup so that you can start using it quickly."
-"</p><p>Welcome, and enjoy cooking!</p>"
-msgstr ""
-
-#: setupassistant.cpp:179
-msgid ""
-"<p>This dialog will allow you to specify a MySQL account that has the "
-"necessary permissions to access the Krecipes MySQL database.</p><p><b><font "
-"size=\"+1\">Most users that use Krecipes and MySQL for the first time can "
-"just leave the default parameters and press 'Next'.</font></b></p> <p>If you "
-"set a MySQL root password before, or you have already permissions as normal "
-"user, click on the appropriate option. Otherwise the account 'root' will be "
-"used, with no password.</p><p>[For security reasons, we strongly encourage "
-"you to setup a MySQL root password if you have not done so yet. Just type as "
-"root: mysqladmin password <i>your_password</i>]</p>"
-msgstr ""
-
-#: setupassistant.cpp:198 setupassistant.cpp:325
-msgid "I have already set the necessary permissions"
-msgstr ""
-
-#: setupassistant.cpp:215
-msgid "I have already set a MySQL root/admin account"
-msgstr ""
-
-#: setupassistant.cpp:227
-msgid "MySQL Administrator Account"
-msgstr ""
-
-#: setupassistant.cpp:306
-msgid ""
-"<p>This dialog will allow you to specify a PostgreSQL account that has the "
-"necessary permissions to access the Krecipes PostgreSQL database.  This "
-"account may either be a <b>PostgreSQL superuser</b> or have the ability to "
-"both <b>create new PostgreSQL users and databases</b>.</p><p>If no superuser "
-"or privileged account is given, the account 'postgres' will be attempted, "
-"with no password.  If this is insufficient for your PostgreSQL setup, you "
-"<b>must</b> select the appropriate option below to enter the information of "
-"a privileged PostgreSQL account.</p>"
-msgstr ""
-
-#: setupassistant.cpp:342
-msgid "I have already set a superuser or privileged account"
-msgstr ""
-
-#: setupassistant.cpp:355
-msgid "PostgreSQL Superuser or Privileged Account"
-msgstr ""
-
-#: setupassistant.cpp:435
-msgid ""
-"<p>In this dialog you can adjust the database server settings.</"
-"p><p><b>Warning: Passwords are stored in plain text and could potentially be "
-"compromised.  We recommend that you create a username and password "
-"combination solely for use by Krecipes.</b></p>"
-msgstr ""
-
-#: setupassistant.cpp:489
-msgid "The server is remote"
-msgstr ""
-
-#: setupassistant.cpp:501
-msgid "Server / Client Settings"
-msgstr ""
-
-#: setupassistant.cpp:514
-msgid "Client:"
-msgstr ""
-
-#: setupassistant.cpp:519
-msgctxt "@label:textbox Default Port"
-msgid "Default"
-msgstr "Defaŭlta"
-
-#: setupassistant.cpp:597
-msgid "In this dialog you can adjust SQLite settings."
-msgstr ""
-
-#: setupassistant.cpp:619
-msgid "Open file dialog"
-msgstr "Malfermi dosieran dialogujon"
-
-#: setupassistant.cpp:671
-msgid ""
-"Congratulations; all the necessary configuration setup is done. Press "
-"'Finish' to continue, and enjoy cooking!"
-msgstr ""
-
-#: setupassistant.cpp:768
-msgid ""
-"<p>Krecipes comes with some delicious default recipes and useful data.</"
-"p><p>Would you like to initialize your database with those? Note that this "
-"will erase all your previous recipes if you have any.</p>"
-msgstr ""
-
-#: setupassistant.cpp:793
-msgid "Yes please, initialize the database with the examples"
-msgstr ""
-
-#: setupassistant.cpp:802
-msgid ""
-"<p>Krecipes can import nutrient data from the USDA's nutrient database for "
-"over 400 foods.  A total of 43 food properties are included for each food, "
-"such as energy, fat, vitamin C, etc.</p><p>Would you like to import this "
-"data now?  Note that this operation is safe to use on an existing database, "
-"and no data loss will occur.  This operation may take several minutes.</p>"
-msgstr ""
-
-#: setupassistant.cpp:816
-msgid "Yes please, load the database with nutrient data for 400+ foods."
-msgstr ""
-
-#: setupassistant.cpp:864
-msgid ""
-"Choose the type of database that you want to use. Most users will want to "
-"choose a simple local database here. However, you can also use remote "
-"servers by means of a MySQL or PostgreSQL database."
-msgstr ""
-
-#: setupassistant.cpp:881
-msgid "Simple Local File (SQLite)"
-msgstr ""
-
-#: setupassistant.cpp:884
-msgid "Local or Remote MySQL Database"
-msgstr ""
-
-#: setupassistant.cpp:887
-msgid "Local or Remote PostgreSQL Database"
-msgstr ""
 
 #: widgets/categorycombobox.cpp:36 widgets/categorycombobox.cpp:63
 msgid "All Categories"
