@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-04-06 07:43+0000\n"
+"POT-Creation-Date: 2016-04-08 07:41+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -276,7 +276,7 @@ msgstr ""
 #: src/commands/encryptclipboardcommand.cpp:180
 #: src/commands/signclipboardcommand.cpp:169
 #: src/commands/signclipboardcommand.cpp:183
-#: src/commands/signencryptfilescommand.cpp:258
+#: src/commands/signencryptfilescommand.cpp:260
 #, kde-format
 msgid "An error occurred: %1"
 msgstr ""
@@ -636,18 +636,18 @@ msgstr ""
 msgid "Subprocess Diagnostics"
 msgstr ""
 
-#: src/commands/gnupgprocesscommand.cpp:276
+#: src/commands/gnupgprocesscommand.cpp:275
 #, kde-format
 msgid "Unable to start process %1. Please check your installation."
 msgstr ""
 
-#: src/commands/gnupgprocesscommand.cpp:282
+#: src/commands/gnupgprocesscommand.cpp:281
 #, fuzzy, kde-format
 #| msgid "String"
 msgid "Starting %1..."
 msgstr "Signoĉeno"
 
-#: src/commands/gnupgprocesscommand.cpp:302
+#: src/commands/gnupgprocesscommand.cpp:301
 msgid "Process finished"
 msgstr ""
 
@@ -1088,11 +1088,11 @@ msgstr ""
 msgid "Sign Clipboard Error"
 msgstr ""
 
-#: src/commands/signencryptfilescommand.cpp:260
+#: src/commands/signencryptfilescommand.cpp:262
 msgid "Sign/Encrypt Files Error"
 msgstr ""
 
-#: src/commands/signencryptfilescommand.cpp:273
+#: src/commands/signencryptfilescommand.cpp:275
 msgid "Select One or More Files to Sign and/or Encrypt"
 msgstr ""
 
@@ -2162,11 +2162,13 @@ msgstr ""
 #: src/crypto/gui/newsignencryptfileswizard.cpp:398
 #: src/newcertificatewizard/newcertificatewizard.cpp:1574
 #: src/newcertificatewizard/newcertificatewizard.cpp:1603
+#: src/utils/formatting.cpp:748
 msgid "Encrypt"
 msgstr "Ĉifradi"
 
 #: src/crypto/gui/newsignencryptfileswizard.cpp:399
 #: src/newcertificatewizard/newcertificatewizard.cpp:1570
+#: src/utils/formatting.cpp:745
 msgid "Sign"
 msgstr "Subskribi"
 
@@ -2971,12 +2973,12 @@ msgid "Certifications"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, expandAllCertificationsPB)
-#: src/dialogs/certificatedetailsdialog.ui:229 src/view/tabwidget.cpp:480
+#: src/dialogs/certificatedetailsdialog.ui:229 src/view/tabwidget.cpp:789
 msgid "Expand All"
 msgstr "Etendi ĉiujn"
 
 #. i18n: ectx: property (text), widget (QPushButton, collapseAllCertificationsPB)
-#: src/dialogs/certificatedetailsdialog.ui:239 src/view/tabwidget.cpp:484
+#: src/dialogs/certificatedetailsdialog.ui:239 src/view/tabwidget.cpp:793
 msgid "Collapse All"
 msgstr "Maletendi ĉiujn"
 
@@ -3096,6 +3098,7 @@ msgstr ""
 
 #: src/dialogs/certifycertificatedialog.cpp:202
 #: src/newcertificatewizard/newcertificatewizard.cpp:1578
+#: src/utils/formatting.cpp:742
 msgid "Certify"
 msgstr ""
 
@@ -4114,6 +4117,10 @@ msgstr "Stato"
 msgid "Strength"
 msgstr ""
 
+#: src/models/subkeylistmodel.cpp:176
+msgid "Usage"
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QDialog, Kleo::NewCertificateUi::AdvancedSettingsDialog)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:14
 msgid "Advanced Settings"
@@ -4465,6 +4472,7 @@ msgid "Certificate Creation Wizard"
 msgstr ""
 
 #: src/newcertificatewizard/newcertificatewizard.cpp:1581
+#: src/utils/formatting.cpp:751
 msgid "Authenticate"
 msgstr ""
 
@@ -6089,56 +6097,68 @@ msgstr "Serĉi"
 msgid "Search...<%1>"
 msgstr "Serĉi"
 
-#: src/view/tabwidget.cpp:448
-msgid "New Tab"
-msgstr ""
-
-#: src/view/tabwidget.cpp:448
-msgid "Open a new tab"
-msgstr "Malfermi novan langeton"
-
-#: src/view/tabwidget.cpp:456
-msgid "Rename Tab..."
-msgstr ""
-
-#: src/view/tabwidget.cpp:456
-msgid "Rename this tab"
-msgstr ""
-
-#: src/view/tabwidget.cpp:460
-msgid "Duplicate Tab"
-msgstr ""
-
-#: src/view/tabwidget.cpp:460
-msgid "Duplicate this tab"
-msgstr ""
-
-#: src/view/tabwidget.cpp:464
-msgid "Close Tab"
-msgstr "Fermi langeton"
-
-#: src/view/tabwidget.cpp:464
-msgid "Close this tab"
-msgstr ""
-
-#: src/view/tabwidget.cpp:468
-msgid "Move Tab Left"
-msgstr "Movi la langeton maldekstren"
-
-#: src/view/tabwidget.cpp:472
-msgid "Move Tab Right"
-msgstr "Movi la langeton dekstren"
-
-#: src/view/tabwidget.cpp:476
-msgid "Hierarchical Certificate List"
-msgstr ""
-
-#: src/view/tabwidget.cpp:630
+#: src/view/tabwidget.cpp:572
 msgid "Rename Tab"
 msgstr "Renomi la langeton"
 
-#: src/view/tabwidget.cpp:630
+#: src/view/tabwidget.cpp:572
 msgid "New tab title:"
+msgstr ""
+
+#: src/view/tabwidget.cpp:757
+msgid "New Tab"
+msgstr ""
+
+#: src/view/tabwidget.cpp:757
+msgid "Open a new tab"
+msgstr "Malfermi novan langeton"
+
+#: src/view/tabwidget.cpp:765
+msgid "Rename Tab..."
+msgstr ""
+
+#: src/view/tabwidget.cpp:765
+msgid "Rename this tab"
+msgstr ""
+
+#: src/view/tabwidget.cpp:769
+msgid "Duplicate Tab"
+msgstr ""
+
+#: src/view/tabwidget.cpp:769
+msgid "Duplicate this tab"
+msgstr ""
+
+#: src/view/tabwidget.cpp:773
+msgid "Close Tab"
+msgstr "Fermi langeton"
+
+#: src/view/tabwidget.cpp:773
+msgid "Close this tab"
+msgstr ""
+
+#: src/view/tabwidget.cpp:777
+msgid "Move Tab Left"
+msgstr "Movi la langeton maldekstren"
+
+#: src/view/tabwidget.cpp:777
+#, fuzzy
+#| msgid "Move Tab Left"
+msgid "Move this tab left"
+msgstr "Movi la langeton maldekstren"
+
+#: src/view/tabwidget.cpp:781
+msgid "Move Tab Right"
+msgstr "Movi la langeton dekstren"
+
+#: src/view/tabwidget.cpp:781
+#, fuzzy
+#| msgid "Move Tab Right"
+msgid "Move this tab right"
+msgstr "Movi la langeton dekstren"
+
+#: src/view/tabwidget.cpp:785
+msgid "Hierarchical Certificate List"
 msgstr ""
 
 #, fuzzy
