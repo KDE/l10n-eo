@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-05-24 09:19+0000\n"
+"POT-Creation-Date: 2016-06-14 08:33+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -276,7 +276,7 @@ msgstr ""
 #: src/commands/encryptclipboardcommand.cpp:180
 #: src/commands/signclipboardcommand.cpp:169
 #: src/commands/signclipboardcommand.cpp:183
-#: src/commands/signencryptfilescommand.cpp:260
+#: src/commands/signencryptfilescommand.cpp:295
 #, kde-format
 msgid "An error occurred: %1"
 msgstr ""
@@ -1088,12 +1088,16 @@ msgstr ""
 msgid "Sign Clipboard Error"
 msgstr ""
 
-#: src/commands/signencryptfilescommand.cpp:262
+#: src/commands/signencryptfilescommand.cpp:297
 msgid "Sign/Encrypt Files Error"
 msgstr ""
 
-#: src/commands/signencryptfilescommand.cpp:275
+#: src/commands/signencryptfilescommand.cpp:310
 msgid "Select One or More Files to Sign and/or Encrypt"
+msgstr ""
+
+#: src/commands/signencryptfoldercommand.cpp:60
+msgid "Select Folder to Sign and/or Encrypt"
 msgstr ""
 
 #: src/conf/appearanceconfigwidget.cpp:153
@@ -2041,7 +2045,7 @@ msgstr ""
 #: src/crypto/encryptemailcontroller.cpp:178
 #: src/crypto/newsignencryptemailcontroller.cpp:419
 #: src/crypto/signemailcontroller.cpp:191
-#: src/crypto/signencryptfilescontroller.cpp:299
+#: src/crypto/signencryptfilescontroller.cpp:298
 msgid "User cancel"
 msgstr ""
 
@@ -2636,14 +2640,14 @@ msgstr ""
 msgid "Sign/Encrypt Files"
 msgstr ""
 
-#: src/crypto/signencryptfilescontroller.cpp:513
+#: src/crypto/signencryptfilescontroller.cpp:512
 #, kde-format
 msgid ""
 "Caught unexpected exception in SignEncryptFilesController::Private::"
 "slotWizardOperationPrepared: %1"
 msgstr ""
 
-#: src/crypto/signencryptfilescontroller.cpp:517
+#: src/crypto/signencryptfilescontroller.cpp:516
 msgid ""
 "Caught unknown exception in SignEncryptFilesController::Private::"
 "slotWizardOperationPrepared"
@@ -2842,7 +2846,7 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, CertificateDetailsDialog)
 #: src/dialogs/certificatedetailsdialog.ui:14
-#: src/view/keylistcontroller.cpp:422
+#: src/view/keylistcontroller.cpp:427
 msgid "Certificate Details"
 msgstr ""
 
@@ -2858,7 +2862,7 @@ msgstr "Agoj"
 
 #. i18n: ectx: property (text), widget (QPushButton, changePassphrasePB)
 #: src/dialogs/certificatedetailsdialog.ui:33
-#: src/view/keylistcontroller.cpp:451
+#: src/view/keylistcontroller.cpp:456
 msgid "Change Passphrase..."
 msgstr ""
 
@@ -2869,7 +2873,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, changeExpiryDatePB)
 #: src/dialogs/certificatedetailsdialog.ui:53
-#: src/view/keylistcontroller.cpp:435
+#: src/view/keylistcontroller.cpp:440
 msgid "Change Expiry Date..."
 msgstr ""
 
@@ -3698,38 +3702,38 @@ msgid "&File"
 msgstr "&Dosiero"
 
 #. i18n: ectx: Menu (view)
-#: src/kleopatra.rc:25
+#: src/kleopatra.rc:26
 msgid "&View"
 msgstr "&Rigardi"
 
 #. i18n: ectx: Menu (certMenu)
 #. i18n: ectx: Menu (listview_popup)
-#: src/kleopatra.rc:37 src/kleopatra.rc:99
+#: src/kleopatra.rc:38 src/kleopatra.rc:100
 msgid "&Certificates"
 msgstr ""
 
 #. i18n: ectx: Menu (tools)
-#: src/kleopatra.rc:52
+#: src/kleopatra.rc:53
 msgid "&Tools"
 msgstr "&Iloj"
 
 #. i18n: ectx: Menu (settings)
-#: src/kleopatra.rc:66
+#: src/kleopatra.rc:67
 msgid "&Settings"
 msgstr "A&gordo"
 
 #. i18n: ectx: Menu (window)
-#: src/kleopatra.rc:70
+#: src/kleopatra.rc:71
 msgid "&Window"
 msgstr "Fe&nestro"
 
 #. i18n: ectx: Menu (help)
-#: src/kleopatra.rc:81
+#: src/kleopatra.rc:82
 msgid "&Help"
 msgstr "&Helpo"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/kleopatra.rc:87 src/kwatchgnupg/kwatchgnupgui.rc:13
+#: src/kleopatra.rc:88 src/kwatchgnupg/kwatchgnupgui.rc:13
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
 
@@ -5939,105 +5943,109 @@ msgstr ""
 msgid "Cannot remove file %1: %2"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:369
+#: src/view/keylistcontroller.cpp:370
 msgid "New Certificate..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:373
+#: src/view/keylistcontroller.cpp:374
 msgid "Export Certificates..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:377
+#: src/view/keylistcontroller.cpp:378
 msgid "Export Certificates to Server..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:381
+#: src/view/keylistcontroller.cpp:382
 msgid "Export Secret Keys..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:385
+#: src/view/keylistcontroller.cpp:386
 msgid "Print Secret Key..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:389
+#: src/view/keylistcontroller.cpp:390
 msgid "Lookup Certificates on Server..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:393
+#: src/view/keylistcontroller.cpp:394
 msgid "Import Certificates..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:397
+#: src/view/keylistcontroller.cpp:398
 msgid "Decrypt/Verify Files..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:401
+#: src/view/keylistcontroller.cpp:402
 msgid "Sign/Encrypt Files..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:405
+#: src/view/keylistcontroller.cpp:406
+msgid "Sign/Encrypt Folder..."
+msgstr ""
+
+#: src/view/keylistcontroller.cpp:410
 msgid "Create Checksum Files..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:409
+#: src/view/keylistcontroller.cpp:414
 msgid "Verify Checksum Files..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:414
+#: src/view/keylistcontroller.cpp:419
 msgid "Redisplay"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:418
+#: src/view/keylistcontroller.cpp:423
 msgid "Stop Operation"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:427
+#: src/view/keylistcontroller.cpp:432
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/view/keylistcontroller.cpp:431
+#: src/view/keylistcontroller.cpp:436
 msgid "Certify Certificate..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:439
+#: src/view/keylistcontroller.cpp:444
 msgid "Change Owner Trust..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:443
+#: src/view/keylistcontroller.cpp:448
 #, fuzzy
 #| msgid "Show certificate 0x%1"
 msgid "Trust Root Certificate"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/view/keylistcontroller.cpp:447
+#: src/view/keylistcontroller.cpp:452
 msgid "Distrust Root Certificate"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:455
+#: src/view/keylistcontroller.cpp:460
 msgid "Add User-ID..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:459
+#: src/view/keylistcontroller.cpp:464
 msgid "Dump Certificate"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:464
+#: src/view/keylistcontroller.cpp:469
 msgid "Refresh X.509 Certificates"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:468
+#: src/view/keylistcontroller.cpp:473
 msgid "Refresh OpenPGP Certificates"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:472
+#: src/view/keylistcontroller.cpp:477
 msgid "Clear CRL Cache"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:476
+#: src/view/keylistcontroller.cpp:481
 msgid "Dump CRL Cache"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:480
+#: src/view/keylistcontroller.cpp:485
 msgid "Import CRL From File..."
 msgstr ""
 
