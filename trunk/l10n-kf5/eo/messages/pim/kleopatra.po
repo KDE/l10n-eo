@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-07-07 07:39+0000\n"
+"POT-Creation-Date: 2016-07-15 07:43+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -254,7 +254,6 @@ msgid "Cannot set restrictive permissions on file %1: %2"
 msgstr ""
 
 #: src/commands/changeroottrustcommand.cpp:353
-#: src/crypto/createchecksumscontroller.cpp:625
 #, kde-format
 msgid "Failed to move file %1 to its final destination, %2: %3"
 msgstr ""
@@ -271,7 +270,7 @@ msgstr ""
 #: src/commands/checksumcreatefilescommand.cpp:174
 #: src/commands/checksumverifyfilescommand.cpp:174
 #: src/commands/decryptverifyclipboardcommand.cpp:179
-#: src/commands/decryptverifyfilescommand.cpp:185
+#: src/commands/decryptverifyfilescommand.cpp:197
 #: src/commands/encryptclipboardcommand.cpp:166
 #: src/commands/encryptclipboardcommand.cpp:180
 #: src/commands/signclipboardcommand.cpp:169
@@ -334,15 +333,15 @@ msgstr ""
 msgid "Decrypt/Verify Clipboard Error"
 msgstr ""
 
-#: src/commands/decryptverifyfilescommand.cpp:79
+#: src/commands/decryptverifyfilescommand.cpp:82
 msgid "Decrypt/Verify Failed"
 msgstr ""
 
-#: src/commands/decryptverifyfilescommand.cpp:187
+#: src/commands/decryptverifyfilescommand.cpp:199
 msgid "Decrypt/Verify Files Error"
 msgstr ""
 
-#: src/commands/decryptverifyfilescommand.cpp:200
+#: src/commands/decryptverifyfilescommand.cpp:212
 msgid "Select One or More Files to Decrypt and/or Verify"
 msgstr ""
 
@@ -1200,68 +1199,41 @@ msgstr ""
 msgid "Configure"
 msgstr "Agordi"
 
-#. i18n: ectx: attribute (title), widget (QWidget, emailOperationsTab)
-#: src/conf/cryptooperationsconfigwidget.ui:18
+#: src/conf/cryptooperationsconfigwidget.cpp:72
 msgid "EMail Operations"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickSignCB)
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickEncryptCB)
-#: src/conf/cryptooperationsconfigwidget.ui:24
-#: src/conf/cryptooperationsconfigwidget.ui:34
-msgctxt "@info:whatsthis"
+#: src/conf/cryptooperationsconfigwidget.cpp:74
 msgid ""
-"When 'Quick Mode' is enabled, no dialog is shown when signing (encrypting) "
-"emails, respectively, unless there is a conflict that needs manual "
-"resolution."
+"Don't confirm signing certificate if there are is only one valid certificate "
+"for the identity"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, quickSignCB)
-#: src/conf/cryptooperationsconfigwidget.ui:27
-msgid "Use 'Quick Mode' when signing"
+#: src/conf/cryptooperationsconfigwidget.cpp:75
+msgid ""
+"Don't confirm encryption certificates if there is exactly one valid "
+"certificate for each recipient"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, quickEncryptCB)
-#: src/conf/cryptooperationsconfigwidget.ui:37
-msgid "Use 'Quick Mode' when encrypting"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, fileOperationsTab)
-#: src/conf/cryptooperationsconfigwidget.ui:58
+#: src/conf/cryptooperationsconfigwidget.cpp:81
 msgid "File Operations"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, pgpFileExtCB)
-#: src/conf/cryptooperationsconfigwidget.ui:66
-msgctxt "@info:whatsthis"
-msgid ""
-"<p>Check this if you want to have OpenPGP encrypted files created by "
-"Kleopatra have the .pgp file extension.</p>\n"
-"<p>This will not modify any contents of the created files.</p>\n"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, pgpFileExtCB)
-#: src/conf/cryptooperationsconfigwidget.ui:69
+#: src/conf/cryptooperationsconfigwidget.cpp:83
 msgid ""
 "Create OpenPGP encrypted files with \".pgp\" file extensions instead of \"."
 "gpg\""
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, label)
-#. i18n: ectx: property (whatsThis), widget (QComboBox, checksumDefinitionCB)
-#: src/conf/cryptooperationsconfigwidget.ui:80
-#: src/conf/cryptooperationsconfigwidget.ui:92
-msgctxt "@info:whatsthis"
+#. i18n: ectx: label, entry (AutoDecryptVerify), group (FileOperations)
+#: src/conf/cryptooperationsconfigwidget.cpp:84
+#: src/kcfg/fileoperationspreferences.kcfg:15
 msgid ""
-"<p>Choose here which of the configured checksum programs should be used when "
-"creating checksum files.</p>\n"
-"<p>When verifying checksums, the program to use is automatically found, "
-"based on the names of the checksum files found.</p>\n"
+"Automatically start operation based on input detection for decrypt/verify."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: src/conf/cryptooperationsconfigwidget.ui:83
-msgid "Checksum program to use:"
+#: src/conf/cryptooperationsconfigwidget.cpp:88
+msgid "Checksum program to use when creating checksum files:"
 msgstr ""
 
 #: src/conf/dirservconfigpage.cpp:174
@@ -1592,6 +1564,58 @@ msgstr ""
 msgid "The GpgSM process ended prematurely because of an unexpected error."
 msgstr ""
 
+#: src/crypto/autodecryptverifyfilescontroller.cpp:146
+msgid ""
+"Failed to find encrypted or signed data in one or more files.<nl/>You can "
+"manually select what to do with the files now.<nl/>If they contain signed or "
+"encrypted data please report a bug (see Help->Report Bug)."
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:181
+#: src/utils/output.cpp:454
+#, kde-format
+msgid ""
+"The file <b>%1</b> already exists.\n"
+"Overwrite?"
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:183
+#: src/utils/output.cpp:456
+msgid "Overwrite Existing File?"
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:185
+#: src/utils/output.cpp:458
+msgid "Overwrite All"
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:197
+#, kde-format
+msgid "Failed to delete <filename>%1</filename>."
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:204
+#, kde-format
+msgid "Failed to move <filename>%1</filename> to <filename>%2</filename>."
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:227
+#, kde-format
+msgid "Cannot open <filename>%1</filename> for reading."
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:232
+#, kde-format
+msgid ""
+"The file <filename>%1</filename> contains certificates and can't be "
+"decrypted or verified."
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:238
+#, kde-format
+msgid "Select the file to verify with \"%1\""
+msgstr ""
+
 #: src/crypto/createchecksumscontroller.cpp:88
 msgctxt "@info"
 msgid "No checksum files have been created."
@@ -1631,22 +1655,22 @@ msgctxt "@title:window"
 msgid "Create Checksum Progress"
 msgstr ""
 
-#: src/crypto/createchecksumscontroller.cpp:600
-#, kde-format
-msgid "Failed to open file \"%1\" for reading and writing: %2"
-msgstr ""
-
-#: src/crypto/createchecksumscontroller.cpp:617
+#: src/crypto/createchecksumscontroller.cpp:615
 #: src/crypto/verifychecksumscontroller.cpp:594 src/utils/output.cpp:580
 #, kde-format
 msgid "Error while running %1: %2"
 msgstr ""
 
-#: src/crypto/createchecksumscontroller.cpp:620
+#: src/crypto/createchecksumscontroller.cpp:618
 #: src/crypto/verifychecksumscontroller.cpp:597 src/utils/input.cpp:388
 #: src/utils/output.cpp:583
 #, kde-format
 msgid "Failed to execute %1: %2"
+msgstr ""
+
+#: src/crypto/createchecksumscontroller.cpp:628
+#, kde-format
+msgid "Failed to overwrite <filename>%1</filename>."
 msgstr ""
 
 #: src/crypto/createchecksumscontroller.cpp:655
@@ -1680,7 +1704,6 @@ msgid "Status and progress of the crypto operations is shown here."
 msgstr ""
 
 #: src/crypto/decryptverifyemailcontroller.cpp:167
-#: src/crypto/decryptverifyfilescontroller.cpp:200
 msgid "User canceled"
 msgstr ""
 
@@ -1725,7 +1748,8 @@ msgstr ""
 msgid "No usable inputs found"
 msgstr ""
 
-#: src/crypto/decryptverifyfilescontroller.cpp:248
+#: src/crypto/decryptverifyfilescontroller.cpp:247
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:107
 msgid "Decrypt/Verify Files"
 msgstr ""
 
@@ -2069,6 +2093,64 @@ msgstr ""
 msgid "Encryption succeeded."
 msgstr ""
 
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:71
+#: src/crypto/gui/decryptverifyfileswizard.cpp:225
+msgid "&Output folder:"
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:114
+#, fuzzy
+#| msgid "Overwrite File"
+msgid "Verify Files"
+msgstr "Anstataŭigi la dosieron"
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:138
+#: src/crypto/gui/newresultpage.cpp:136 src/crypto/gui/resultpage.cpp:119
+#, kde-format
+msgid "%1: All operations completed."
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:140
+#: src/crypto/gui/newresultpage.cpp:138 src/crypto/gui/resultpage.cpp:121
+msgid "All operations completed."
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:153
+#: src/crypto/gui/newresultpage.cpp:164
+#: src/crypto/gui/resultlistwidget.cpp:234 src/crypto/gui/resultpage.cpp:138
+#, kde-format
+msgctxt "number, operation description"
+msgid "Operation %1: %2"
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:155
+#: src/crypto/gui/newresultpage.cpp:166 src/crypto/gui/resultpage.cpp:140
+#, kde-format
+msgctxt "tag( \"OpenPGP\" or \"CMS\"),  operation description"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:201
+msgid "Please select an output folder."
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:202
+msgid "No output folder."
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:216
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:225
+msgid "Please select a different output folder."
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:217
+msgid "Failed to create output folder."
+msgstr ""
+
+#: src/crypto/gui/decryptverifyfilesdialog.cpp:226
+msgid "Invalid output folder."
+msgstr ""
+
 #: src/crypto/gui/decryptverifyfileswizard.cpp:214
 msgid "<b>Choose operations to be performed</b>"
 msgstr ""
@@ -2085,10 +2167,6 @@ msgstr ""
 
 #: src/crypto/gui/decryptverifyfileswizard.cpp:224
 msgid "Create all output files in a single folder"
-msgstr ""
-
-#: src/crypto/gui/decryptverifyfileswizard.cpp:225
-msgid "&Output folder:"
 msgstr ""
 
 #: src/crypto/gui/decryptverifyoperationwidget.cpp:94
@@ -2115,28 +2193,6 @@ msgstr ""
 #: src/crypto/gui/newresultpage.cpp:102 src/crypto/gui/resultpage.cpp:91
 msgid "Keep open after operation completed"
 msgstr ""
-
-#: src/crypto/gui/newresultpage.cpp:136 src/crypto/gui/resultpage.cpp:119
-#, kde-format
-msgid "%1: All operations completed."
-msgstr ""
-
-#: src/crypto/gui/newresultpage.cpp:138 src/crypto/gui/resultpage.cpp:121
-msgid "All operations completed."
-msgstr ""
-
-#: src/crypto/gui/newresultpage.cpp:164
-#: src/crypto/gui/resultlistwidget.cpp:234 src/crypto/gui/resultpage.cpp:138
-#, kde-format
-msgctxt "number, operation description"
-msgid "Operation %1: %2"
-msgstr ""
-
-#: src/crypto/gui/newresultpage.cpp:166 src/crypto/gui/resultpage.cpp:140
-#, kde-format
-msgctxt "tag( \"OpenPGP\" or \"CMS\"),  operation description"
-msgid "%1: %2"
-msgstr "%1: %2"
 
 #: src/crypto/gui/newresultpage.cpp:172 src/crypto/gui/resultpage.cpp:146
 msgid "<b>Results</b>"
@@ -3662,6 +3718,14 @@ msgid ""
 "Set this to make kleopatra default to pgp file extensions for OpenPGP files."
 msgstr ""
 
+#. i18n: ectx: whatsthis, entry (AutoDecryptVerify), group (FileOperations)
+#: src/kcfg/fileoperationspreferences.kcfg:16
+msgid ""
+"With this option set Kleopatra no longer asks you what you want to do with "
+"input files but instead automatically starts the operations it detects as "
+"applicable to the input."
+msgstr ""
+
 #. i18n: ectx: label, entry (RefreshInterval), group (SMime Validation)
 #: src/kcfg/smimevalidationpreferences.kcfg:6
 msgid "Certificate refresh interval (in hours). Zero (0) disables."
@@ -3796,7 +3860,11 @@ msgstr ""
 msgid "Search for a certificate on a keyserver"
 msgstr ""
 
-#: src/kleopatra_options.h:87
+#: src/kleopatra_options.h:84
+msgid "Create or check a checksum file"
+msgstr ""
+
+#: src/kleopatra_options.h:89
 msgctxt ""
 "If a certificate is already known it shows the certificate details dialog."
 "Otherwise it brings up the certificate search dialog."
@@ -3805,41 +3873,41 @@ msgid ""
 "fingerprint"
 msgstr ""
 
-#: src/kleopatra_options.h:91
+#: src/kleopatra_options.h:93
 msgid "Parent Window Id for dialogs"
 msgstr ""
 
-#: src/kleopatra_options.h:99
+#: src/kleopatra_options.h:101
 msgid "File(s) to process"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:238
+#: src/kleopatraapplication.cpp:240
 msgid "Failed to execute command"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:275
+#: src/kleopatraapplication.cpp:277
 msgid "Ambiguous protocol: --openpgp and --cms"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:301
+#: src/kleopatraapplication.cpp:303
 msgid "No search string specified for --search"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:313
+#: src/kleopatraapplication.cpp:315
 msgid "No fingerprint argument specified for --query"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:337
+#: src/kleopatraapplication.cpp:340
 #, kde-format
 msgid "Ambiguous commands \"%1\" and \"%2\""
 msgstr ""
 
-#: src/kleopatraapplication.cpp:343
+#: src/kleopatraapplication.cpp:346
 #, kde-format
 msgid "No files specified for \"%1\" command"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:358
+#: src/kleopatraapplication.cpp:361
 #, kde-format
 msgid "Cannot read \"%1\""
 msgstr ""
@@ -5862,21 +5930,6 @@ msgstr ""
 msgid "Could not create temporary file for output \"%1\""
 msgstr ""
 
-#: src/utils/output.cpp:454
-#, kde-format
-msgid ""
-"The file <b>%1</b> already exists.\n"
-"Overwrite?"
-msgstr ""
-
-#: src/utils/output.cpp:456
-msgid "Overwrite Existing File?"
-msgstr ""
-
-#: src/utils/output.cpp:458
-msgid "Overwrite All"
-msgstr ""
-
 #: src/utils/output.cpp:504
 msgid "Overwriting declined"
 msgstr ""
@@ -6255,9 +6308,6 @@ msgstr ""
 
 #~ msgid "C&lear History"
 #~ msgstr "For&viŝi la historion"
-
-#~ msgid "Overwrite File"
-#~ msgstr "Anstataŭigi la dosieron"
 
 #~ msgid "Search Toolbar"
 #~ msgstr "Serĉa ilobreto"
