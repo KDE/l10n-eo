@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kphotoalbum\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-08-12 01:37+0000\n"
+"POT-Creation-Date: 2016-08-14 01:39+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -434,6 +434,11 @@ msgstr ""
 msgid "No Item Selected"
 msgstr ""
 
+#: AnnotationDialog/ListSelect.cpp:332
+#, kde-format
+msgid "<b>%1</b>"
+msgstr ""
+
 #: AnnotationDialog/ListSelect.cpp:339
 msgid "Rename..."
 msgstr "Renomi..."
@@ -538,10 +543,31 @@ msgstr ""
 msgid "Name for the tag to be added to this tag group:"
 msgstr ""
 
-#: AnnotationDialog/ProposedFaceDialog.cpp:58
-#, kde-format
+#: AnnotationDialog/ListSelect.cpp:731
+#, fuzzy, kde-format
+#| msgctxt "%1 is the tag name and %2 is the tag's category"
+#| msgid "%1 (%2)"
+msgctxt ""
+"Category name, then min-max of selected tags across several images. E.g. "
+"'People (1-2)'"
+msgid "%1 (%2-%3)"
+msgstr "%1 (%2)"
+
+#: AnnotationDialog/ListSelect.cpp:744
+#, fuzzy, kde-format
+#| msgctxt "%1 is the tag name and %2 is the tag's category"
+#| msgid "%1 (%2)"
+msgctxt "Category name, then number of selected tags. E.g. 'People (1)'"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: AnnotationDialog/ProposedFaceDialog.cpp:59
+#, fuzzy, kde-format
+#| msgctxt "%1 is the tag name and %2 is the tag's category"
+#| msgid "%1 (%2)"
+msgctxt "Identifying a person; e.g. 'Is this <Person A> (<Category People>)'"
 msgid "Is this %1 (%2)?"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: AnnotationDialog/ResizableFrame.cpp:84
 msgctxt "area of an image; rectangle that is overlayed upon the image"
@@ -560,23 +586,23 @@ msgid "Remove tag %1 (%2)"
 msgstr ""
 
 #: AnnotationDialog/ResizableFrame.cpp:350
-#: AnnotationDialog/ResizableFrame.cpp:370
 msgid "Associate with"
 msgstr ""
 
-#: AnnotationDialog/ResizableFrame.cpp:379
+#: AnnotationDialog/ResizableFrame.cpp:372
+#: AnnotationDialog/ResizableFrame.cpp:381
 msgctxt ""
 "As in: associate [this marked area of the image] with one of the following "
 "choices/menu items"
 msgid "Associate with"
 msgstr ""
 
-#: AnnotationDialog/ResizableFrame.cpp:402
+#: AnnotationDialog/ResizableFrame.cpp:404
 #, kde-format
 msgid "Train the recognition database with the face of %1"
 msgstr ""
 
-#: AnnotationDialog/ResizableFrame.cpp:427
+#: AnnotationDialog/ResizableFrame.cpp:429
 #, kde-format
 msgctxt ""
 "%1 is a prefix like 'Associate with', %2 is the tag name and %3 is the tag's "
@@ -584,7 +610,7 @@ msgctxt ""
 msgid "%1 %2 (%3)"
 msgstr "%1 %2 (%3)"
 
-#: AnnotationDialog/ResizableFrame.cpp:430
+#: AnnotationDialog/ResizableFrame.cpp:433
 #, kde-format
 msgctxt "%1 is the tag name and %2 is the tag's category"
 msgid "%1 (%2)"
@@ -1690,7 +1716,7 @@ msgstr ""
 msgid "This directory is reserved for category images."
 msgstr ""
 
-#: ImportExport/ImportDialog.cpp:265 Settings/CategoryPage.cpp:270
+#: ImportExport/ImportDialog.cpp:265 Settings/CategoryPage.cpp:268
 #: ThumbnailView/CellGeometry.cpp:77 ThumbnailView/ThumbnailModel.cpp:348
 #: XMLDB/FileReader.cpp:86
 msgid "Folder"
@@ -1701,7 +1727,7 @@ msgstr "Leterujo"
 msgid "Tokens"
 msgstr ""
 
-#: ImportExport/ImportDialog.cpp:267 Settings/CategoryPage.cpp:272
+#: ImportExport/ImportDialog.cpp:267 Settings/CategoryPage.cpp:270
 #: ThumbnailView/CellGeometry.cpp:77 ThumbnailView/ThumbnailModel.cpp:348
 #: XMLDB/Database.cpp:223 XMLDB/Database.cpp:570 XMLDB/FileReader.cpp:134
 msgid "Media Type"
@@ -3360,16 +3386,17 @@ msgstr ""
 msgid "Save the DB now"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:218
-msgid "Settings for category"
+#: Settings/CategoryPage.cpp:217
+#, kde-format
+msgid "Settings for category <b>%1</b>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:221
+#: Settings/CategoryPage.cpp:220
 #, kde-format
 msgid "<i>Pending change: rename to \"%1\"</i>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:277
+#: Settings/CategoryPage.cpp:275
 #, kde-format
 msgid ""
 "<p>Can't change the name of category \"%1\" to \"%2\":</p><p>\"%2\" is a "
@@ -3377,18 +3404,18 @@ msgid ""
 "category.</p>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:281 Settings/CategoryPage.cpp:292
+#: Settings/CategoryPage.cpp:279 Settings/CategoryPage.cpp:290
 msgid "Invalid category name"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:289
+#: Settings/CategoryPage.cpp:287
 #, kde-format
 msgid ""
 "<p>Can't change the name of category \"%1\" to \"%2\":</p><p>A category with "
 "this name already exists.</p>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:306
+#: Settings/CategoryPage.cpp:304
 #, kde-format
 msgid ""
 "<p>Can't change the name of category \"%1\" to \"%2\":</p><p>There's a "
@@ -3396,29 +3423,29 @@ msgid ""
 "</p>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:310
+#: Settings/CategoryPage.cpp:308
 msgid "Unsaved pending renaming action"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:342
+#: Settings/CategoryPage.cpp:340
 #, kde-format
 msgid ""
 "<p>Do you really want to make \"%1\" non-positionable?</p><p>All areas "
 "linked against this category will be deleted!</p>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:391
+#: Settings/CategoryPage.cpp:389
 #, fuzzy
 #| msgid "Category"
 msgid "New category"
 msgstr "Kategorio"
 
-#: Settings/CategoryPage.cpp:423
+#: Settings/CategoryPage.cpp:421
 #, kde-format
 msgid "<p>Really delete category \"%1\"?</p>"
 msgstr ""
 
-#: Settings/CategoryPage.cpp:581
+#: Settings/CategoryPage.cpp:579
 msgid "<i>choose a category to edit it</i>"
 msgstr ""
 
