@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libksieve\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-09-30 07:25+0000\n"
+"POT-Creation-Date: 2016-11-01 07:48+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -56,7 +56,7 @@ msgid ""
 "same as your email password):"
 msgstr ""
 
-#: kmanagesieve/sessionthread.cpp:308
+#: kmanagesieve/sessionthread.cpp:307
 #, kde-format
 msgid ""
 "Authentication failed.\n"
@@ -65,7 +65,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: kmanagesieve/sievejob.cpp:137 kmanagesieve/sievejob.cpp:142
+#: kmanagesieve/sievejob.cpp:152 kmanagesieve/sievejob.cpp:157
 #, kde-format
 msgid ""
 "The script did not upload successfully.\n"
@@ -74,7 +74,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: kmanagesieve/sievejob.cpp:146
+#: kmanagesieve/sievejob.cpp:161
 msgid ""
 "The script did not upload successfully.\n"
 "The script may contain errors."
@@ -1309,13 +1309,13 @@ msgstr ""
 
 #: ksieveui/autocreatescripts/sievescriptlistbox.cpp:150
 #: ksieveui/autocreatescripts/sievescriptlistbox.cpp:230
-#: ksieveui/widgets/managesievewidget.cpp:226
-#: ksieveui/widgets/managesievewidget.cpp:241
+#: ksieveui/widgets/managesievewidget.cpp:229
+#: ksieveui/widgets/managesievewidget.cpp:244
 msgid "New Script"
 msgstr ""
 
 #: ksieveui/autocreatescripts/sievescriptlistbox.cpp:157
-#: ksieveui/widgets/managesievewidget.cpp:166
+#: ksieveui/widgets/managesievewidget.cpp:169
 msgid "Delete Script"
 msgstr ""
 
@@ -1324,6 +1324,7 @@ msgid "Rename..."
 msgstr ""
 
 #: ksieveui/autocreatescripts/sievescriptlistbox.cpp:161
+#: ksieveui/widgets/managesievewidget.cpp:409
 msgid "Rename Script"
 msgstr ""
 
@@ -1465,7 +1466,7 @@ msgstr ""
 
 #: ksieveui/debug/sievedebugdialog.cpp:171
 #: ksieveui/managescriptsjob/parseuserscriptjob.cpp:69
-#: ksieveui/managesievescriptsdialog.cpp:183
+#: ksieveui/managesievescriptsdialog.cpp:184
 #, kde-format
 msgid ""
 "Retrieving the script failed.\n"
@@ -1774,54 +1775,70 @@ msgstr ""
 msgid "Script parsing error"
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:80
+#: ksieveui/managescriptsjob/renamescriptjob.cpp:76
+msgid "Impossible to start job"
+msgstr ""
+
+#: ksieveui/managescriptsjob/renamescriptjob.cpp:86
+msgid "An error occurred during loading the sieve script."
+msgstr ""
+
+#: ksieveui/managescriptsjob/renamescriptjob.cpp:102
+msgid "An error occurred during saving the sieve script."
+msgstr ""
+
+#: ksieveui/managescriptsjob/renamescriptjob.cpp:113
+msgid "An error occurred during deleting the sieve script."
+msgstr ""
+
+#: ksieveui/managesievescriptsdialog.cpp:81
 msgid "Manage Sieve Scripts"
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:101
+#: ksieveui/managesievescriptsdialog.cpp:102
 msgctxt "create a new sieve script"
 msgid "New..."
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:105
+#: ksieveui/managesievescriptsdialog.cpp:106
 msgid "Edit..."
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:109
+#: ksieveui/managesievescriptsdialog.cpp:110
 msgid "Delete"
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:113
+#: ksieveui/managesievescriptsdialog.cpp:114
 msgid "Deactivate"
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:184
-#: ksieveui/managesievescriptsdialog.cpp:268
-#: ksieveui/widgets/managesievewidget.cpp:401
+#: ksieveui/managesievescriptsdialog.cpp:185
+#: ksieveui/managesievescriptsdialog.cpp:276
+#: ksieveui/widgets/managesievewidget.cpp:461
 msgid "Sieve Error"
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:213
+#: ksieveui/managesievescriptsdialog.cpp:214
 msgid "Uploading script to server for checking it, please wait..."
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:244
+#: ksieveui/managesievescriptsdialog.cpp:250
 msgid "No errors found."
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:248
+#: ksieveui/managesievescriptsdialog.cpp:254
 msgid "An unknown error was encountered."
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:261
+#: ksieveui/managesievescriptsdialog.cpp:269
 msgid "The Sieve script was successfully uploaded."
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:262
+#: ksieveui/managesievescriptsdialog.cpp:270
 msgid "Sieve Script Upload"
 msgstr ""
 
-#: ksieveui/managesievescriptsdialog.cpp:267
+#: ksieveui/managesievescriptsdialog.cpp:275
 #, kde-format
 msgid ""
 "Uploading the Sieve script failed.\n"
@@ -2166,49 +2183,61 @@ msgstr ""
 msgid "Network down."
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:165
+#: ksieveui/widgets/managesievewidget.cpp:166
 msgid "Edit Script..."
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:169
+#: ksieveui/widgets/managesievewidget.cpp:167
+msgid "Rename Script..."
+msgstr ""
+
+#: ksieveui/widgets/managesievewidget.cpp:172
 msgid "Deactivate Script"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:174
+#: ksieveui/widgets/managesievewidget.cpp:177
 msgid "New Script..."
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:218
+#: ksieveui/widgets/managesievewidget.cpp:221
 msgid "New Sieve Script"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:219
+#: ksieveui/widgets/managesievewidget.cpp:222
 msgid "Please enter a name for the new Sieve script:"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:220
+#: ksieveui/widgets/managesievewidget.cpp:223
 msgid "unnamed"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:226
+#: ksieveui/widgets/managesievewidget.cpp:229
 msgid "You cannot use protected name."
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:240
+#: ksieveui/widgets/managesievewidget.cpp:243
 #, kde-format
 msgid "Script name already used \"%1\"."
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:386
+#: ksieveui/widgets/managesievewidget.cpp:385
+msgid "New Script Name"
+msgstr ""
+
+#: ksieveui/widgets/managesievewidget.cpp:385
+msgid "Script Name:"
+msgstr ""
+
+#: ksieveui/widgets/managesievewidget.cpp:442
 #, kde-format
 msgid "Really delete script \"%1\" from the server?"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:387
+#: ksieveui/widgets/managesievewidget.cpp:443
 msgid "Delete Sieve Script Confirmation"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:400
+#: ksieveui/widgets/managesievewidget.cpp:460
 #, kde-format
 msgid ""
 "Deleting the script failed.\n"
@@ -2216,7 +2245,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: ksieveui/widgets/managesievewidget.cpp:443
+#: ksieveui/widgets/managesievewidget.cpp:503
 msgid "Failed to fetch the list of scripts"
 msgstr ""
 
