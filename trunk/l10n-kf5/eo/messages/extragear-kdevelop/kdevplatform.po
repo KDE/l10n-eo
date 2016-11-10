@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-11-07 07:10+0000\n"
+"POT-Creation-Date: 2016-11-10 07:10+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -686,7 +686,7 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, RenameDialog)
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: language/codegen/basicrefactoring.ui:14 vcs/dvcs/ui/branchmanager.ui:55
+#: language/codegen/basicrefactoring.ui:14 vcs/dvcs/ui/branchmanager.ui:39
 #, fuzzy
 #| msgid "Open File"
 msgid "Rename"
@@ -4453,57 +4453,69 @@ msgstr ""
 msgid "Revision Graph..."
 msgstr "Revizio"
 
-#: vcs/dvcs/ui/branchmanager.cpp:50
+#: vcs/dvcs/ui/branchmanager.cpp:52
 msgid "Branch Manager"
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:103
+#: vcs/dvcs/ui/branchmanager.cpp:107
 msgid ""
 "You must select a base branch from the list before creating a new branch."
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:108
+#: vcs/dvcs/ui/branchmanager.cpp:112
 msgid "New branch"
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:108
+#: vcs/dvcs/ui/branchmanager.cpp:112
 msgid "Name of the new branch:"
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:116
+#: vcs/dvcs/ui/branchmanager.cpp:120
 #, kde-format
 msgid ""
 "Branch \"%1\" already exists.\n"
 "Please, choose another name."
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:131
+#: vcs/dvcs/ui/branchmanager.cpp:135
 #, kde-format
 msgid ""
 "Currently at the branch \"%1\".\n"
 "To remove it, please change to another branch."
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:138
+#: vcs/dvcs/ui/branchmanager.cpp:142
 #, fuzzy, kde-format
 #| msgid "Are you sure you want to reopen the current project?"
 msgid "Are you sure you want to irreversibly remove the branch '%1'?"
 msgstr "Ĉu vi certas ke vi volas remalfermi la aktualan projekton?"
 
-#: vcs/dvcs/ui/branchmanager.cpp:158
+#: vcs/dvcs/ui/branchmanager.cpp:162 vcs/dvcs/ui/branchmanager.cpp:202
 #, kde-format
 msgid "Already on branch \"%1\"\n"
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:179
+#: vcs/dvcs/ui/branchmanager.cpp:183
 #, kde-format
 msgid ""
 "Branch \"%1\" doesn't exists.\n"
 "Please, choose another name."
 msgstr ""
 
-#: vcs/dvcs/ui/branchmanager.cpp:189
+#: vcs/dvcs/ui/branchmanager.cpp:193
 msgid "You must select a branch to merge into current one from the list."
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:225
+msgid "Unable to retrieve diff."
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:232
+msgid "There are no committed differences."
+msgstr ""
+
+#: vcs/dvcs/ui/branchmanager.cpp:233 vcs/vcspluginhelper.cpp:277
+msgid "VCS support"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, newButton)
@@ -4516,18 +4528,31 @@ msgstr ""
 msgid "The same as git branch -D"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, checkoutButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, diffButton)
 #: vcs/dvcs/ui/branchmanager.ui:62
+msgid ""
+"<p>Show changes between the <span style=\" font-style:italic;\">staging "
+"area</span> (if not clean or last commit on current branch, otherwise) and "
+"the last commit on the selected branch.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, diffButton)
+#: vcs/dvcs/ui/branchmanager.ui:65
+msgid "Compare to Branch"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, checkoutButton)
+#: vcs/dvcs/ui/branchmanager.ui:88
 msgid "Checkout to the selected branch"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, checkoutButton)
-#: vcs/dvcs/ui/branchmanager.ui:65
+#: vcs/dvcs/ui/branchmanager.ui:91
 msgid "Checkout"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mergeButton)
-#: vcs/dvcs/ui/branchmanager.ui:72
+#: vcs/dvcs/ui/branchmanager.ui:98
 msgid "Merge"
 msgstr ""
 
@@ -4704,10 +4729,6 @@ msgstr "Publika"
 
 #: vcs/vcspluginhelper.cpp:276
 msgid "There are no differences."
-msgstr ""
-
-#: vcs/vcspluginhelper.cpp:277
-msgid "VCS support"
 msgstr ""
 
 #: vcs/vcspluginhelper.cpp:283
