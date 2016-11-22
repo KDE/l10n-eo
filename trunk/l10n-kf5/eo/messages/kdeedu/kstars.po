@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-11-21 03:02+0100\n"
+"POT-Creation-Date: 2016-11-21 11:58+0100\n"
 "PO-Revision-Date: 2015-03-19 04:30-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -617,23 +617,25 @@ msgid ""
 "Support/ !"
 msgstr ""
 
-#: auxiliary/ksutils.cpp:663
+#: auxiliary/ksutils.cpp:664
 #, kde-format
 msgid ""
 "Do you want to set up the internal Astrometry.net for plate solving images?"
 msgstr ""
 
-#: auxiliary/ksutils.cpp:678
+#: auxiliary/ksutils.cpp:679
 #, kde-format
-msgid "Error!  The Astrometry Index File Directory was not able to be created."
+msgid ""
+"Error!  The Astrometry Index File Directory does not exist and was not able "
+"to be created."
 msgstr ""
 
-#: auxiliary/ksutils.cpp:685
+#: auxiliary/ksutils.cpp:688
 #, kde-format
 msgid "Internal Astrometry Configuration File Read Error."
 msgstr ""
 
-#: auxiliary/ksutils.cpp:711
+#: auxiliary/ksutils.cpp:714
 #, kde-format
 msgid "Internal Astrometry Configuration File Write Error."
 msgstr ""
@@ -4295,19 +4297,19 @@ msgstr ""
 msgid "Correct Alt Error"
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:64
+#: ekos/align/offlineastrometryparser.cpp:71
 #, kde-format
 msgid ""
 "Failed to find astrometry.net binaries. Please ensure astrometry.net is "
 "installed and try again."
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:65
+#: ekos/align/offlineastrometryparser.cpp:72
 #, kde-format
 msgid "Missing astrometry files"
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:147
+#: ekos/align/offlineastrometryparser.cpp:154
 #, kde-format
 msgid ""
 "Index file %1 is missing. Astrometry.net would not be able to adequately "
@@ -4315,7 +4317,7 @@ msgid ""
 "files from http://www.astrometry.net"
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:150
+#: ekos/align/offlineastrometryparser.cpp:157
 #, kde-format
 msgid ""
 "Index files %1 to %2 are missing. Astrometry.net would not be able to "
@@ -4323,40 +4325,40 @@ msgid ""
 "the index files from http://www.astrometry.net"
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:169
+#: ekos/align/offlineastrometryparser.cpp:176
 #, kde-format
 msgid ""
 "Astrometry configuration file corrupted or missing: %1\n"
 "Please set the configuration file full path in INDI options."
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:189
+#: ekos/align/offlineastrometryparser.cpp:196
 #, kde-format
 msgid "Unable to find data dir in astrometry configuration file."
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:222
+#: ekos/align/offlineastrometryparser.cpp:229
 #, fuzzy, kde-format
 msgid "Error starting solver: %1"
 msgstr "Ne eblis malfermi dosieron"
 
-#: ekos/align/offlineastrometryparser.cpp:240
+#: ekos/align/offlineastrometryparser.cpp:247
 #, fuzzy, kde-format
 msgid "Starting solver..."
 msgstr "Farmington"
 
-#: ekos/align/offlineastrometryparser.cpp:269
+#: ekos/align/offlineastrometryparser.cpp:276
 #: ekos/align/remoteastrometryparser.cpp:131
 #, kde-format
 msgid "Solver failed. Try again."
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:294
+#: ekos/align/offlineastrometryparser.cpp:301
 #, kde-format
 msgid "WCS header missing or corrupted. Solver failed."
 msgstr ""
 
-#: ekos/align/offlineastrometryparser.cpp:327
+#: ekos/align/offlineastrometryparser.cpp:334
 #: ekos/align/onlineastrometryparser.cpp:455
 #: ekos/align/remoteastrometryparser.cpp:160
 #, kde-format
@@ -11459,25 +11461,30 @@ msgid "Tracking"
 msgstr "Trako"
 
 #. i18n: ectx: label, entry (indiServerIsInternal), group (indi)
-#: indi/opsindi.cpp:50 kstars.kcfg:188
+#: indi/opsindi.cpp:52 kstars.kcfg:188
 #, kde-format
 msgid "Internal or External INDI Server?"
 msgstr ""
 
-#: indi/opsindi.cpp:52
+#: indi/opsindi.cpp:54
 #, kde-format
 msgid "Internal or External INDI Drivers?"
 msgstr ""
 
-#: indi/opsindi.cpp:96
+#: indi/opsindi.cpp:103
 #, fuzzy, kde-format
 msgid "FITS Default Directory"
 msgstr "Azimuto:"
 
-#: indi/opsindi.cpp:104
+#: indi/opsindi.cpp:111
 #, fuzzy, kde-format
 msgid "INDI Drivers Directory"
 msgstr "St. Peter Port"
+
+#: indi/opsindi.cpp:135
+#, kde-format
+msgid "%1 is not a valid INDI server binary!"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, videoLabel_2)
 #. i18n: ectx: property (toolTip), widget (QLabel, videoLabel_3)
@@ -52867,20 +52874,21 @@ msgstr ""
 msgid "Creating horizon"
 msgstr "Kalkulante lunon"
 
-#: skycomponents/linelistindex.cpp:249
+#: skycomponents/linelistindex.cpp:251
 #, fuzzy, kde-format
 msgid "Loading %1"
 msgstr "Ŝarĝante KStars..."
 
-#: skycomponents/milkyway.cpp:49
+#. i18n("Loading Milky Way"));
+#. Magellanic clouds
+#. loadContours("lmc.dat", i18n("Loading Large Magellanic Clouds"));
+#. loadContours("smc.dat", i18n("Loading Small Magellanic Clouds"));
+#. summary();
+#: skycomponents/milkyway.cpp:55
 #, kde-format
 msgid "Loading Milky Way"
 msgstr "Ŝarĝante laktan vojon"
 
-#. i18n("Loading Large Magellanic Clouds"));
-#. loadContours("smc.dat", i18n("Loading Small Magellanic Clouds"));
-#. summary();
-#. QtConcurrent::run(this, &MilkyWay::loadContours, QString("milkyway.dat"), i18n("Loading Milky Way"));
 #: skycomponents/milkyway.cpp:56
 #, fuzzy, kde-format
 msgid "Loading Large Magellanic Clouds"
