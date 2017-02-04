@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-03 04:10+0100\n"
+"POT-Creation-Date: 2017-02-04 03:56+0100\n"
 "PO-Revision-Date: 2015-03-19 04:30-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -1635,7 +1635,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, BVIndex)
 #. i18n: ectx: property (text), item, widget (QComboBox, filterCombo)
 #: dialogs/details_data.ui:384 ekos/capture/capture.ui:1609
-#: ekos/focus/focus.ui:399 ekos/guide/guide.ui:214
+#: ekos/focus/focus.ui:412 ekos/guide/guide.ui:214
 #, kde-format
 msgid "--"
 msgstr "--"
@@ -2248,20 +2248,20 @@ msgstr ""
 msgid "Set Coordinates Manually"
 msgstr "Mane enigu centron"
 
-#: dialogs/focusdialog.cpp:107 ekos/align/align.cpp:550
+#: dialogs/focusdialog.cpp:107 ekos/align/align.cpp:573
 #: tools/flagmanager.cpp:189
 #, kde-format
 msgid "The Right Ascension value must be between 0.0 and 24.0."
 msgstr ""
 
-#: dialogs/focusdialog.cpp:109 ekos/align/align.cpp:552
+#: dialogs/focusdialog.cpp:109 ekos/align/align.cpp:575
 #: tools/flagmanager.cpp:191
 #, kde-format
 msgid "The Declination value must be between -90.0 and 90.0."
 msgstr ""
 
 #: dialogs/focusdialog.cpp:111 dialogs/focusdialog.cpp:135
-#: ekos/align/align.cpp:555 tools/flagmanager.cpp:193
+#: ekos/align/align.cpp:578 tools/flagmanager.cpp:193
 #, fuzzy, kde-format
 msgid "Invalid Coordinate Data"
 msgstr "Koordinatoj"
@@ -3266,9 +3266,10 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLineEdit, FOVEditOffsetX)
 #. i18n: ectx: property (text), widget (QLineEdit, FOVEditOffsetY)
 #. i18n: ectx: property (text), widget (QLineEdit, FOVEditRotation)
+#. i18n: ectx: property (text), widget (QLabel, PAHErrorLabel)
 #. i18n: ectx: property (text), widget (QLabel, PositionAngle)
 #: dialogs/newfov.ui:1074 dialogs/newfov.ui:1101 dialogs/newfov.ui:1128
-#: tools/modcalcangdist.ui:353
+#: ekos/align/align.ui:1195 tools/modcalcangdist.ui:353
 #, kde-format
 msgid "0"
 msgstr "0"
@@ -3612,357 +3613,376 @@ msgid ""
 "location on Earth.</p><p>To get started, press the <b>Next</b> button.</p>"
 msgstr ""
 
-#: ekos/align/align.cpp:147 ekos/focus/focus.cpp:229
+#: ekos/align/align.cpp:149 ekos/focus/focus.cpp:229
 #, kde-format
 msgid "Idle."
 msgstr ""
 
-#: ekos/align/align.cpp:207
+#: ekos/align/align.cpp:219
 #, kde-format
 msgid ""
 "Warning: If using astrometry.net v0.68 or above, remove the --no-fits2fits "
 "from the astrometry options."
 msgstr ""
 
-#: ekos/align/align.cpp:243
+#: ekos/align/align.cpp:255
 #, fuzzy, kde-format
 msgid "Solver timed out"
 msgstr "Trovu objekton"
 
-#: ekos/align/align.cpp:372
+#: ekos/align/align.cpp:384
 #, fuzzy, kde-format
 msgid "Mount does not support syncing."
 msgstr "Plutono"
 
-#: ekos/align/align.cpp:565
+#. i18n: ectx: property (toolTip), widget (QStackedWidget, PAHWidgets)
+#: ekos/align/align.cpp:510 ekos/align/align.ui:847
+#, kde-format
+msgid ""
+"<p>Polar Alignment Helper tool requires the following:</p><p>1. German "
+"Equatorial Mount</p><p>2. Wide FOV &gt; 1 degrees</p><p>For small FOVs, use "
+"the Legacy Polar Alignment Tool.</p>"
+msgstr ""
+
+#: ekos/align/align.cpp:588
 #, fuzzy, kde-format
 msgid "Invalid radius value"
 msgstr "nevalida dosiernomo"
 
-#: ekos/align/align.cpp:626 ekos/capture/capture.cpp:1263
-#: ekos/focus/focus.cpp:844 ekos/guide/guide.cpp:606
+#: ekos/align/align.cpp:649 ekos/capture/capture.cpp:1263
+#: ekos/focus/focus.cpp:849 ekos/guide/guide.cpp:606
 #, fuzzy, kde-format
 msgid "Error: Lost connection to CCD."
 msgstr "Kalkulu"
 
-#: ekos/align/align.cpp:627
+#: ekos/align/align.cpp:650
 #, kde-format
 msgid "Astrometry alignment failed"
 msgstr ""
 
-#: ekos/align/align.cpp:636
+#: ekos/align/align.cpp:659
 #, kde-format
 msgid ""
 "Telescope aperture and focal length are missing. Please check your driver "
 "settings and try again."
 msgstr ""
 
-#: ekos/align/align.cpp:642
+#: ekos/align/align.cpp:665
 #, kde-format
 msgid ""
 "CCD pixel size is missing. Please check your driver settings and try again."
 msgstr ""
 
-#: ekos/align/align.cpp:659 ekos/capture/capture.cpp:1877
+#: ekos/align/align.cpp:682 ekos/capture/capture.cpp:1877
 #, kde-format
 msgid ""
 "Image transfer is disabled for this camera. Would you like to enable it?"
 msgstr ""
 
-#: ekos/align/align.cpp:676
+#: ekos/align/align.cpp:699
 #, kde-format
 msgid "Cannot capture while focus module is busy! Retrying..."
 msgstr ""
 
-#: ekos/align/align.cpp:683
+#: ekos/align/align.cpp:706
 #, kde-format
 msgid "Cannot capture while CCD exposure is in progress! Retrying..."
 msgstr ""
 
-#: ekos/align/align.cpp:739 ekos/capture/capture.cpp:1341
-#: ekos/focus/focus.cpp:908 ekos/guide/internalguide/rcalibration.cpp:876
+#: ekos/align/align.cpp:766 ekos/capture/capture.cpp:1341
+#: ekos/focus/focus.cpp:913 ekos/guide/internalguide/rcalibration.cpp:876
 #, fuzzy, kde-format
 msgid "Capturing image..."
 msgstr "Ŝarĝante KStars..."
 
-#: ekos/align/align.cpp:753 ekos/focus/focus.cpp:1058
+#: ekos/align/align.cpp:780 ekos/focus/focus.cpp:1063
 #, fuzzy, kde-format
 msgid "Image received."
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:836
+#: ekos/align/align.cpp:888
 #, kde-format
 msgid "Using solver options: %1"
 msgstr ""
 
-#: ekos/align/align.cpp:840
+#: ekos/align/align.cpp:892
 #, fuzzy, kde-format
 #| msgctxt "City in Ontario Canada"
 #| msgid "Blind River"
 msgid "Blind solver"
 msgstr "Blind River"
 
-#: ekos/align/align.cpp:840
+#: ekos/align/align.cpp:892
 #, kde-format
 msgid ""
 "Blind solver takes a very long time to solve but can reliably solve any "
 "image any where in the sky given enough time."
 msgstr ""
 
-#: ekos/align/align.cpp:841
+#: ekos/align/align.cpp:893
 #, kde-format
 msgid "Use existing settings"
 msgstr ""
 
-#: ekos/align/align.cpp:841
+#: ekos/align/align.cpp:893
 #, kde-format
 msgid ""
 "Mount must be pointing close to the target location and current field of "
 "view must match the image's field of view."
 msgstr ""
 
-#: ekos/align/align.cpp:842
+#: ekos/align/align.cpp:894
 #, kde-format
 msgid ""
 "No metadata is available in this image. Do you want to use the blind solver "
 "or the existing solver settings?"
 msgstr ""
 
-#: ekos/align/align.cpp:842
+#: ekos/align/align.cpp:894
 #, kde-format
 msgid "Astrometry solver"
 msgstr ""
 
-#: ekos/align/align.cpp:880
+#: ekos/align/align.cpp:932
 #, kde-format
 msgid "Solver iteration #%1"
 msgstr ""
 
-#: ekos/align/align.cpp:905
+#: ekos/align/align.cpp:957
 #, kde-format
 msgid "Solver RA (%1) DEC (%2) Orientation (%3) Pixel Scale (%4)"
 msgstr ""
 
-#: ekos/align/align.cpp:912
+#: ekos/align/align.cpp:964
 #, kde-format
 msgid ""
 "Current focal length is %1 mm while computed focal length from the solver is "
 "%2 mm. Please update the mount focal length to obtain accurate results."
 msgstr ""
 
-#: ekos/align/align.cpp:960
+#: ekos/align/align.cpp:1012
 #, kde-format
 msgid ""
 "WCS information updated. Images captured from this point forward shall have "
 "valid WCS."
 msgstr ""
 
-#: ekos/align/align.cpp:975
+#: ekos/align/align.cpp:1027
 #, kde-format
 msgid ""
 "Solution coordinates: RA (%1) DEC (%2) Telescope Coordinates: RA (%3) DEC "
 "(%4)"
 msgstr ""
 
-#: ekos/align/align.cpp:979
+#: ekos/align/align.cpp:1031
 #, kde-format
 msgid "Target is within %1 degrees of solution coordinates."
 msgstr ""
 
-#: ekos/align/align.cpp:1000
+#: ekos/align/align.cpp:1052
 #, kde-format
 msgid "Maximum number of iterations reached. Solver failed."
 msgstr ""
 
-#: ekos/align/align.cpp:1010
+#: ekos/align/align.cpp:1062
 #, kde-format
 msgid "Target is within acceptable range. Astrometric solver is successful."
 msgstr ""
 
-#: ekos/align/align.cpp:1018 ekos/align/align.cpp:1163
+#: ekos/align/align.cpp:1070 ekos/align/align.cpp:1256
 #, fuzzy, kde-format
 msgid "Astrometry alignment completed successfully"
 msgstr "Koordinatoj"
 
-#: ekos/align/align.cpp:1029
+#: ekos/align/align.cpp:1101
 #, kde-format
 msgid "Astrometry alignment failed with errors"
 msgstr ""
 
-#: ekos/align/align.cpp:1086 ekos/focus/focus.cpp:779
+#: ekos/align/align.cpp:1160
+#, fuzzy, kde-format
+msgid "Refresh is complete."
+msgstr "Kalkulu"
+
+#: ekos/align/align.cpp:1167 ekos/focus/focus.cpp:784
 #, fuzzy, kde-format
 msgid "Capture aborted."
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:1091
+#: ekos/align/align.cpp:1172
 #, kde-format
 msgid "Solver aborted after %1 second."
 msgid_plural "Solver aborted after %1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ekos/align/align.cpp:1109 ekos/capture/capture.cpp:1449
-#: ekos/ekosmanager.cpp:1373 ekos/focus/focus.cpp:2078 ekos/guide/guide.cpp:828
+#: ekos/align/align.cpp:1191 ekos/capture/capture.cpp:1449
+#: ekos/ekosmanager.cpp:1373 ekos/focus/focus.cpp:2087 ekos/guide/guide.cpp:828
 #: ekos/mount/mount.cpp:305 ekos/scheduler/scheduler.cpp:278
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: ekos/align/align.cpp:1162
+#: ekos/align/align.cpp:1233
+#, fuzzy, kde-format
+msgid "Mount rotation is complete."
+msgstr "Caliente"
+
+#: ekos/align/align.cpp:1255
 #, kde-format
 msgid ""
 "Mount is synced to solution coordinates. Astrometric solver is successful."
 msgstr ""
 
-#: ekos/align/align.cpp:1190
+#: ekos/align/align.cpp:1283
 #, kde-format
 msgid "Slew complete. Target accuracy is not met, running solver again..."
 msgstr ""
 
-#: ekos/align/align.cpp:1221
+#: ekos/align/align.cpp:1314
 #, fuzzy, kde-format
 msgid "Syncing failed!"
 msgstr "montru nomon"
 
-#: ekos/align/align.cpp:1223
+#: ekos/align/align.cpp:1316
 #, fuzzy, kde-format
 msgid "Slewing failed!"
 msgstr "montru nomon"
 
-#: ekos/align/align.cpp:1270
+#: ekos/align/align.cpp:1363
 #, kde-format
 msgid ""
 "Slew complete. Please adjust azimuth knob until the target is in the center "
 "of the view."
 msgstr ""
 
-#: ekos/align/align.cpp:1297
+#: ekos/align/align.cpp:1390
 #, kde-format
 msgid ""
 "Slew complete. Please adjust altitude knob until the target is in the center "
 "of the view."
 msgstr ""
 
-#: ekos/align/align.cpp:1337
+#: ekos/align/align.cpp:1430
 #, fuzzy, kde-format
 msgid "Syncing to RA (%1) DEC (%2)"
 msgstr "Koordinatoj"
 
-#: ekos/align/align.cpp:1343
+#: ekos/align/align.cpp:1436
 #, kde-format
 msgid "Syncing failed."
 msgstr ""
 
-#: ekos/align/align.cpp:1354
+#: ekos/align/align.cpp:1447
 #, fuzzy, kde-format
 msgid "Slewing to target coordinates: RA (%1) DEC (%2)."
 msgstr "Koordinatoj"
 
-#: ekos/align/align.cpp:1370
+#: ekos/align/align.cpp:1463
 #, kde-format
 msgid "Processing solution for polar alignment..."
 msgstr ""
 
-#: ekos/align/align.cpp:1411
+#: ekos/align/align.cpp:1504
 #, kde-format
 msgid ""
 "Point the telescope at the southern meridian. Press continue when ready."
 msgstr ""
 
-#: ekos/align/align.cpp:1412
+#: ekos/align/align.cpp:1505
 #, kde-format
 msgid ""
 "Point the telescope at the northern meridian. Press continue when ready."
 msgstr ""
 
-#: ekos/align/align.cpp:1413 ekos/align/align.cpp:1506
+#: ekos/align/align.cpp:1506 ekos/align/align.cpp:1599
 #, kde-format
 msgid "Polar Alignment Measurement"
 msgstr ""
 
-#: ekos/align/align.cpp:1417
+#: ekos/align/align.cpp:1510
 #, kde-format
 msgid "Solving first frame near the meridian."
 msgstr ""
 
-#: ekos/align/align.cpp:1446 ekos/align/align.cpp:1541
+#: ekos/align/align.cpp:1539 ekos/align/align.cpp:1634
 #, kde-format
 msgid "Slewing 30 arcminutes in RA..."
 msgstr ""
 
-#: ekos/align/align.cpp:1452
+#: ekos/align/align.cpp:1545
 #, kde-format
 msgid "Solving second frame near the meridian."
 msgstr ""
 
-#: ekos/align/align.cpp:1462
+#: ekos/align/align.cpp:1555
 #, kde-format
 msgid "Calculating azimuth alignment error..."
 msgstr ""
 
-#: ekos/align/align.cpp:1478 ekos/align/align.cpp:1573
+#: ekos/align/align.cpp:1571 ekos/align/align.cpp:1666
 #, kde-format
 msgid "Slewing back to original position..."
 msgstr ""
 
-#: ekos/align/align.cpp:1505
+#: ekos/align/align.cpp:1598
 #, kde-format
 msgid ""
 "Point the telescope to the eastern or western horizon with a minimum "
 "altitude of 20 degrees. Press continue when ready."
 msgstr ""
 
-#: ekos/align/align.cpp:1510
+#: ekos/align/align.cpp:1603
 #, kde-format
 msgid "Solving first frame."
 msgstr ""
 
-#: ekos/align/align.cpp:1547
+#: ekos/align/align.cpp:1640
 #, kde-format
 msgid "Solving second frame."
 msgstr ""
 
-#: ekos/align/align.cpp:1556
+#: ekos/align/align.cpp:1649
 #, kde-format
 msgid "Calculating altitude alignment error..."
 msgstr ""
 
-#: ekos/align/align.cpp:1618 ekos/align/align.cpp:1656
+#: ekos/align/align.cpp:1711 ekos/align/align.cpp:1749
 #, fuzzy, kde-format
 msgid "%1 too far east"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:1620 ekos/align/align.cpp:1654
+#: ekos/align/align.cpp:1713 ekos/align/align.cpp:1747
 #, fuzzy, kde-format
 msgid "%1 too far west"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:1629 ekos/align/align.cpp:1640
-#: ekos/align/align.cpp:1667 ekos/align/align.cpp:1673
+#: ekos/align/align.cpp:1722 ekos/align/align.cpp:1733
+#: ekos/align/align.cpp:1760 ekos/align/align.cpp:1766
 #, fuzzy, kde-format
 msgid "%1 too far high"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:1631 ekos/align/align.cpp:1638
-#: ekos/align/align.cpp:1665 ekos/align/align.cpp:1675
+#: ekos/align/align.cpp:1724 ekos/align/align.cpp:1731
+#: ekos/align/align.cpp:1758 ekos/align/align.cpp:1768
 #, fuzzy, kde-format
 msgid "%1 too far low"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:1759 ekos/align/align.cpp:1802
+#: ekos/align/align.cpp:1852 ekos/align/align.cpp:1895
 #, kde-format
 msgid ""
 "Slewing to calibration position, please wait until telescope completes "
 "slewing."
 msgstr ""
 
-#: ekos/align/align.cpp:1822
+#: ekos/align/align.cpp:1915
 #, fuzzy, kde-format
 msgid "Load Image"
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:1942
+#: ekos/align/align.cpp:2035
 #, kde-format
 msgid ""
 "World Coordinate System (WCS) is enabled. CCD rotation must be set either "
@@ -3970,60 +3990,65 @@ msgid ""
 "capture any further images, otherwise the WCS information may be invalid."
 msgstr ""
 
-#: ekos/align/align.cpp:1949
+#: ekos/align/align.cpp:2042
 #, kde-format
 msgid "World Coordinate System (WCS) is disabled."
 msgstr ""
 
-#: ekos/align/align.cpp:1966
+#: ekos/align/align.cpp:2059
 #, fuzzy, kde-format
 msgid "Capture error! Aborting..."
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:1972 ekos/capture/capture.cpp:1491
+#: ekos/align/align.cpp:2065 ekos/capture/capture.cpp:1491
 #, kde-format
 msgid "Restarting capture attempt #%1"
 msgstr ""
 
-#: ekos/align/align.cpp:2010
+#: ekos/align/align.cpp:2103
 #, kde-format
 msgid "FITS header: Cannot find NAXIS1."
 msgstr ""
 
-#: ekos/align/align.cpp:2018
+#: ekos/align/align.cpp:2111
 #, kde-format
 msgid "FITS header: Cannot find NAXIS2."
 msgstr ""
 
-#: ekos/align/align.cpp:2029
+#: ekos/align/align.cpp:2122
 #, kde-format
 msgid "FITS header: Cannot find OBJCTRA. Using current mount coordinates."
 msgstr ""
 
-#: ekos/align/align.cpp:2038
+#: ekos/align/align.cpp:2131
 #, kde-format
 msgid "FITS header: Cannot find OBJCTDEC. Using current mount coordinates."
 msgstr ""
 
-#: ekos/align/align.cpp:2054
+#: ekos/align/align.cpp:2147
 #, kde-format
 msgid "FITS header: Cannot find FOCALLEN."
 msgstr ""
 
-#: ekos/align/align.cpp:2062
+#: ekos/align/align.cpp:2155
 #, kde-format
 msgid "FITS header: Cannot find PIXSIZE1."
 msgstr ""
 
-#: ekos/align/align.cpp:2070
+#: ekos/align/align.cpp:2163
 #, kde-format
 msgid "FITS header: Cannot find PIXSIZE2."
 msgstr ""
 
-#: ekos/align/align.cpp:2151 ekos/focus/focus.cpp:2529
+#: ekos/align/align.cpp:2244 ekos/focus/focus.cpp:2538
 #, fuzzy, kde-format
 msgid "Focus Frame"
 msgstr "Centrigita al: "
+
+#: ekos/align/align.cpp:2324
+#, kde-format
+msgid "Please wait until mount completes rotating to RA (%1) DE (%2)"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, controlBox)
 #: ekos/align/align.ui:44
@@ -4051,7 +4076,7 @@ msgstr "Aldonu katalogon"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopB)
 #. i18n: ectx: property (text), widget (QPushButton, stopFocusB)
-#: ekos/align/align.ui:93 ekos/capture/capture.cpp:2058 ekos/focus/focus.ui:163
+#: ekos/align/align.ui:93 ekos/capture/capture.cpp:2058 ekos/focus/focus.ui:140
 #: ekos/guide/guide.ui:140 ekos/guide/internalguide/guider.cpp:242
 #: ekos/guide/internalguide/guider.cpp:258
 #: ekos/guide/internalguide/guider.cpp:329
@@ -4258,14 +4283,14 @@ msgid "Camera binning"
 msgstr "Virovitica"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, showFITSViewerB)
-#: ekos/align/align.ui:469 ekos/focus/focus.ui:278 ekos/guide/guide.ui:87
+#: ekos/align/align.ui:469 ekos/focus/focus.ui:291 ekos/guide/guide.ui:87
 #, fuzzy, kde-format
 msgid "Show in FITS Viewer"
 msgstr "Bonvenon ĉe KStars"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/align/align.ui:482 ekos/focus/focus.ui:213 ekos/guide/guide.ui:203
+#: ekos/align/align.ui:482 ekos/focus/focus.ui:226 ekos/guide/guide.ui:203
 #, kde-format
 msgid "Exp:"
 msgstr ""
@@ -4284,14 +4309,14 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/align/align.ui:536 ekos/focus/focus.ui:290 ekos/guide/guide.ui:225
+#: ekos/align/align.ui:536 ekos/focus/focus.ui:303 ekos/guide/guide.ui:225
 #, kde-format
 msgid "Bin:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_6)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ekos/align/align.ui:549 ekos/capture/capture.ui:79 ekos/focus/focus.ui:200
+#: ekos/align/align.ui:549 ekos/capture/capture.ui:79 ekos/focus/focus.ui:213
 #: ekos/profileeditor.ui:245
 #, kde-format
 msgid "CCD:"
@@ -4322,7 +4347,7 @@ msgid "30"
 msgstr "30"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, toggleFullScreenB)
-#: ekos/align/align.ui:614 ekos/focus/focus.ui:256
+#: ekos/align/align.ui:614 ekos/focus/focus.ui:269
 #, fuzzy, kde-format
 msgid "Toggle Full Screen"
 msgstr "Bonvenon ĉe KStars"
@@ -4435,58 +4460,200 @@ msgid "Polar Alignment Helper"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ekos/align/align.ui:851
+#: ekos/align/align.ui:875
 #, kde-format
 msgid ""
-"<html><head/><body><p>Polar Alignment Helper provides a simple method to "
-"polar align a German equatorial mount. Click <span style=\" font-weight:600;"
-"\">Start</span> to begin the process.</p></body></html>"
+"<html><head/><body><p>This tool provides a simple method to polar align a "
+"German equatorial mount. <span style=\" font-weight:600;\">Unpark</span> "
+"your mount, <span style=\" font-weight:600;\">Point</span> toward the "
+"celestial pole, and <span style=\" font-weight:600;\">Engage </span>sidereal "
+"tracking.</p><p>Click <span style=\" font-weight:600;\">Start</span> to "
+"begin the process.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: ekos/align/align.ui:876 ekos/guide/internalguide/rcalibration.cpp:372
+#. i18n: ectx: property (text), widget (QPushButton, PAHStartB)
+#: ekos/align/align.ui:903 ekos/guide/internalguide/rcalibration.cpp:372
 #, fuzzy, kde-format
 msgid "Start"
 msgstr "Steloj"
 
-#. i18n: ectx: property (title), widget (QGroupBox, polarAlignmentGroup)
-#: ekos/align/align.ui:890
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ekos/align/align.ui:931
+#, kde-format
+msgid ""
+"<html><head/><body><p>An image shall now be captured and solved. Click <span "
+"style=\" font-weight:600;\">Capture</span> to start.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, PAHFirstCaptureB)
+#. i18n: ectx: property (text), widget (QPushButton, PAHSecondCaptureB)
+#. i18n: ectx: property (title), widget (QGroupBox, captureGroup)
+#. i18n: ectx: property (text), widget (QPushButton, captureB)
+#. i18n: ectx: attribute (title), widget (QWidget, captureTab)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CaptureLogging)
+#: ekos/align/align.ui:959 ekos/align/align.ui:1111 ekos/ekosmanager.ui:431
+#: ekos/focus/focus.ui:76 ekos/guide/guide.ui:68
+#: ekos/guide/internalguide/guider.ui:213 ekos/opsekos.ui:186
+#: options/opsadvanced.ui:466
 #, fuzzy, kde-format
-msgid "Polar Alignment Errors"
+msgid "Capture"
+msgstr "Konservu bildon"
+
+#. i18n: ectx: property (text), widget (QLabel, label_19)
+#: ekos/align/align.ui:987
+#, kde-format
+msgid ""
+"<html><head/><body><p>Select direction and range of mount rotation, then "
+"click <span style=\" font-weight:600;\">Rotate</span> to continue.</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, PAHWestMeridianR)
+#: ekos/align/align.ui:1002
+#, fuzzy, kde-format
+msgid "West"
+msgstr "&Okzidento"
+
+#. i18n: ectx: property (text), widget (QRadioButton, PAHEastMeridianR)
+#: ekos/align/align.ui:1012
+#, fuzzy, kde-format
+msgid "East"
+msgstr "Ori&ento"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: ekos/align/align.ui:1035 ekos/scheduler/scheduler.ui:921
+#: ekos/scheduler/scheduler.ui:951
+#, kde-format
+msgid "°"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, PAHRotateB)
+#: ekos/align/align.ui:1055
+#, fuzzy, kde-format
+#| msgctxt "star name"
+#| msgid "Rotanev"
+msgid "Rotate"
+msgstr "Rotanev"
+
+#. i18n: ectx: property (text), widget (QLabel, label_20)
+#: ekos/align/align.ui:1083
+#, kde-format
+msgid "Capture a second image to measure polar alignment error."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, PAHErrorDescriptionLabel)
+#: ekos/align/align.ui:1139
+#, kde-format
+msgid "Error Occured"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#. i18n: ectx: property (text), widget (QPushButton, PAHRestartB)
+#: ekos/align/align.ui:1167 ekos/align/align.ui:1327
+#, fuzzy, kde-format
+msgid "Restart"
+msgstr "stelo"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_23)
+#: ekos/align/align.ui:1185
+#, kde-format
+msgid ""
+"<html><head/><body><p>Angle between expected perfectly aligned mount center "
+"and and actual center</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_23)
+#: ekos/align/align.ui:1188
+#, kde-format
+msgid "Displacement Angle"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_26)
+#: ekos/align/align.ui:1228
+#, kde-format
+msgid ""
+"<html><head/><body><p>Correction vector is plotted above. Select a bright "
+"star to reposition the the correction vector. Click <span style=\" font-"
+"weight:600;\">Next</span> when done.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, PAHCorrectionsNextB)
+#. i18n: ectx: property (text), widget (QPushButton, NextButton)
+#: ekos/align/align.ui:1238 kstarslite/qml/modules/tutorial/TutorialPane.qml:57
+#: tools/starhopperdialog.ui:53 tools/whatsinteresting/qml/wiview.qml:591
+#, fuzzy, kde-format, kde-kuit-format
+msgid "Next"
+msgstr "&Okzidento"
+
+#. i18n: ectx: property (text), widget (QLabel, label_24)
+#: ekos/align/align.ui:1266
+#, kde-format
+msgid ""
+"<html><head/><body><p>Adjust mount's Altitude and Azimuth knobs until the "
+"selected star is centered within the crosshair. Click <span style=\" font-"
+"weight:600;\">Refresh</span> to begin continious capture. Click <span style="
+"\" font-weight:600;\">Done</span> when star is centered.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, PAHRefreshB)
+#: ekos/align/align.ui:1281
+#, kde-format
+msgid "Refresh"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, PAHExposure)
+#: ekos/align/align.ui:1288
+#, kde-format
+msgid "Exposure duration in seconds during refresh phase"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, PAHDoneB)
+#: ekos/align/align.ui:1314
+#, fuzzy, kde-format
+#| msgctxt "City in Ulster Ireland"
+#| msgid "Donegal"
+msgid "Done"
+msgstr "Donegal"
+
+#. i18n: ectx: property (title), widget (QGroupBox, polarAlignmentGroup)
+#: ekos/align/align.ui:1334
+#, fuzzy, kde-format
+msgid "Legacy Polar Alignment Tool"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/align/align.ui:903
+#: ekos/align/align.ui:1350
 #, fuzzy, kde-format
 msgid "Az Error:"
 msgstr "Skriba eraro"
 
 #. i18n: ectx: property (text), widget (QPushButton, measureAzB)
-#: ekos/align/align.ui:922
+#: ekos/align/align.ui:1369
 #, kde-format
 msgid "Measure Az Error"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, correctAzB)
-#: ekos/align/align.ui:932
+#: ekos/align/align.ui:1379
 #, kde-format
 msgid "Correct Az Error"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/align/align.ui:952
+#: ekos/align/align.ui:1402
 #, fuzzy, kde-format
 msgid "Alt Error:"
 msgstr "Skriba eraro"
 
 #. i18n: ectx: property (text), widget (QPushButton, measureAltB)
-#: ekos/align/align.ui:971
+#: ekos/align/align.ui:1421
 #, kde-format
 msgid "Measure Alt Error"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, correctAltB)
-#: ekos/align/align.ui:981
+#: ekos/align/align.ui:1431
 #, kde-format
 msgid "Correct Alt Error"
 msgstr ""
@@ -5418,7 +5585,7 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, CCDFWGroup)
 #. i18n: ectx: property (title), widget (QGroupBox, ccdGroup)
-#: ekos/capture/capture.ui:47 ekos/focus/focus.ui:173
+#: ekos/capture/capture.ui:47 ekos/focus/focus.ui:186
 #, fuzzy, kde-format
 msgid "CCD && Filter Wheel"
 msgstr "Montru stelojn pli helajn ol"
@@ -5426,14 +5593,14 @@ msgstr "Montru stelojn pli helajn ol"
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_5_3)
 #. i18n: ectx: property (toolTip), widget (QLabel, FilterCaptureLabel)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_9)
-#: ekos/capture/capture.ui:89 ekos/focus/focus.ui:324 ekos/profileeditor.ui:365
+#: ekos/capture/capture.ui:89 ekos/focus/focus.ui:337 ekos/profileeditor.ui:365
 #, fuzzy, kde-format
 msgid "Filter Wheel"
 msgstr "Montru stelojn pli helajn ol"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_5_3)
 #. i18n: ectx: property (text), widget (QLabel, FilterCaptureLabel)
-#: ekos/capture/capture.ui:95 ekos/focus/focus.ui:330
+#: ekos/capture/capture.ui:95 ekos/focus/focus.ui:343
 #, kde-format
 msgid "FW:"
 msgstr ""
@@ -5485,7 +5652,7 @@ msgstr "Koordinatoj"
 #. i18n: ectx: property (text), widget (QPushButton, setTemperatureB)
 #. i18n: ectx: property (text), widget (QPushButton, setAbsTicksB)
 #. i18n: ectx: property (text), widget (QPushButton, setButton)
-#: ekos/capture/capture.ui:196 ekos/focus/focus.ui:130
+#: ekos/capture/capture.ui:196 ekos/focus/focus.ui:150
 #: indi/indiproperty.cpp:258 indi/indiproperty.cpp:290
 #: kstarslite/qml/indi/modules/KSINDITextField.qml:39 tools/altvstime.ui:345
 #, fuzzy, kde-format, kde-kuit-format
@@ -5515,7 +5682,7 @@ msgstr "Ekspono:"
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: ekos/capture/capture.ui:278 ekos/focus/focus.ui:353
+#: ekos/capture/capture.ui:278 ekos/focus/focus.ui:366
 #: ekos/profileeditor.ui:368 fitsviewer/fitsdebayer.ui:22 oal/execute.ui:358
 #, fuzzy, kde-format
 msgid "Filter:"
@@ -5528,7 +5695,7 @@ msgstr "Montru stelojn pli helajn ol"
 #. i18n: ectx: property (toolTip), widget (QLabel, FilterPosLabel)
 #: ekos/capture/capture.ui:295 ekos/capture/capture.ui:1417
 #: ekos/capture/capture.ui:1497 ekos/capture/capture.ui:1510
-#: ekos/focus/focus.ui:347
+#: ekos/focus/focus.ui:360
 #, kde-format
 msgid "Number of images to capture"
 msgstr ""
@@ -5565,7 +5732,7 @@ msgstr "Caliente"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_12)
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: ekos/capture/capture.ui:419 ekos/focus/focus.ui:407
+#: ekos/capture/capture.ui:419 ekos/focus/focus.ui:420
 #, fuzzy, kde-format
 msgid "Frame:"
 msgstr "Stela nomo"
@@ -5592,7 +5759,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, resetFrameB)
 #. i18n: ectx: property (text), widget (QPushButton, resetB)
-#: ekos/capture/capture.ui:493 ekos/focus/focus.ui:417
+#: ekos/capture/capture.ui:493 ekos/focus/focus.ui:430
 #: ekos/scheduler/mosaic.ui:613
 #, fuzzy, kde-format
 msgid "Reset"
@@ -5918,7 +6085,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, l_22)
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/capture/capture.ui:1423 ekos/focus/focus.ui:797
+#: ekos/capture/capture.ui:1423 ekos/focus/focus.ui:810
 #: ekos/guide/internalguide/guider.ui:288 ekos/guide/opsguide.ui:214
 #: ekos/scheduler/mosaic.ui:188 xplanet/opsxplanet.ui:120
 #, kde-format
@@ -6545,17 +6712,6 @@ msgstr "Kalkulu"
 msgid "Summary"
 msgstr ""
 
-#. i18n: ectx: property (title), widget (QGroupBox, captureGroup)
-#. i18n: ectx: property (text), widget (QPushButton, captureB)
-#. i18n: ectx: attribute (title), widget (QWidget, captureTab)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CaptureLogging)
-#: ekos/ekosmanager.ui:431 ekos/focus/focus.ui:76 ekos/guide/guide.ui:68
-#: ekos/guide/internalguide/guider.ui:213 ekos/opsekos.ui:186
-#: options/opsadvanced.ui:466
-#, fuzzy, kde-format
-msgid "Capture"
-msgstr "Konservu bildon"
-
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
@@ -6680,202 +6836,202 @@ msgstr "Bildo"
 msgid "HFR"
 msgstr "HFR:"
 
-#: ekos/focus/focus.cpp:672 ekos/focus/focus.cpp:832 ekos/focus/focus.cpp:2096
+#: ekos/focus/focus.cpp:677 ekos/focus/focus.cpp:837 ekos/focus/focus.cpp:2105
 #, fuzzy, kde-format
 msgid "No CCD connected."
 msgstr "Kalkulu"
 
-#: ekos/focus/focus.cpp:692
+#: ekos/focus/focus.cpp:697
 #, kde-format
 msgid "Setting dummy central position to 50000"
 msgstr ""
 
-#: ekos/focus/focus.cpp:705
+#: ekos/focus/focus.cpp:710
 #, kde-format
 msgid ""
 "Starting pulse step is too low. Increase the step size to %1 or higher..."
 msgstr ""
 
-#: ekos/focus/focus.cpp:747
+#: ekos/focus/focus.cpp:752
 #, kde-format
 msgid "Autofocus in progress..."
 msgstr ""
 
-#: ekos/focus/focus.cpp:749
+#: ekos/focus/focus.cpp:754
 #, kde-format
 msgid "Please wait until image capture is complete..."
 msgstr ""
 
-#: ekos/focus/focus.cpp:761
+#: ekos/focus/focus.cpp:766
 #, fuzzy, kde-format
 msgid "Autofocus operation started"
 msgstr "Koordinatoj"
 
-#: ekos/focus/focus.cpp:852
+#: ekos/focus/focus.cpp:857
 #, kde-format
 msgid "Error: Lost connection to filter wheel."
 msgstr ""
 
-#: ekos/focus/focus.cpp:860
+#: ekos/focus/focus.cpp:865
 #, kde-format
 msgid "Changing filter to %1"
 msgstr ""
 
-#: ekos/focus/focus.cpp:925 ekos/focus/focus.cpp:965 ekos/focus/focus.cpp:2421
+#: ekos/focus/focus.cpp:930 ekos/focus/focus.cpp:970 ekos/focus/focus.cpp:2430
 #, fuzzy, kde-format
 msgid "Error: Lost connection to Focuser."
 msgstr "Kalkulu"
 
-#: ekos/focus/focus.cpp:942 ekos/focus/focus.cpp:947
+#: ekos/focus/focus.cpp:947 ekos/focus/focus.cpp:952
 #, fuzzy, kde-format
 msgid "Focusing inward..."
 msgstr "Centrigita al: "
 
-#: ekos/focus/focus.cpp:952
+#: ekos/focus/focus.cpp:957
 #, fuzzy, kde-format
 msgid "Focusing inward by %1 ms..."
 msgstr "Centrigita al: "
 
-#: ekos/focus/focus.cpp:982 ekos/focus/focus.cpp:987
+#: ekos/focus/focus.cpp:987 ekos/focus/focus.cpp:992
 #, fuzzy, kde-format
 msgid "Focusing outward..."
 msgstr "Centrigita al: "
 
-#: ekos/focus/focus.cpp:992
+#: ekos/focus/focus.cpp:997
 #, fuzzy, kde-format
 msgid "Focusing outward by %1 ms..."
 msgstr "Centrigita al: "
 
-#: ekos/focus/focus.cpp:1150
+#: ekos/focus/focus.cpp:1155
 #, kde-format
 msgid "FITS received. No stars detected."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1221
+#: ekos/focus/focus.cpp:1226
 #, kde-format
 msgid "No reliable star is detected. Aborting..."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1257
+#: ekos/focus/focus.cpp:1262
 #, kde-format
 msgid "Failed to automatically select a star. Please select a star manually."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1345
+#: ekos/focus/focus.cpp:1350
 #, fuzzy, kde-format
 msgid "Capture complete. Select a star to focus."
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: ekos/focus/focus.cpp:1372 ekos/focus/focus.cpp:1542
-#: ekos/focus/focus.cpp:1878
+#: ekos/focus/focus.cpp:1377 ekos/focus/focus.cpp:1547
+#: ekos/focus/focus.cpp:1883
 #, kde-format
 msgid "No stars detected, capturing again..."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1525
+#: ekos/focus/focus.cpp:1530
 #, kde-format
 msgid "FITS received. HFR %1 @ %2. Delta (%3%)"
 msgstr ""
 
-#: ekos/focus/focus.cpp:1527
+#: ekos/focus/focus.cpp:1532
 #, kde-format
 msgid "FITS received. HFR %1 @ %2."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1531
+#: ekos/focus/focus.cpp:1536
 #, kde-format
 msgid "Autofocus failed to reach proper focus. Try increasing tolerance value."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1554
+#: ekos/focus/focus.cpp:1559
 #, kde-format
 msgid "Failed to detect any stars. Reset frame and try again."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1621
+#: ekos/focus/focus.cpp:1626
 #, kde-format
 msgid ""
 "Change in HFR is too small. Try increasing the step size or decreasing the "
 "tolerance."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1627
+#: ekos/focus/focus.cpp:1632
 #, kde-format
 msgid "Failed to detect focus star in frame. Capture and select a focus star."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1633 ekos/focus/focus.cpp:1801
-#: ekos/focus/focus.cpp:1900
+#: ekos/focus/focus.cpp:1638 ekos/focus/focus.cpp:1806
+#: ekos/focus/focus.cpp:1905
 #, fuzzy, kde-format
 msgid "Autofocus complete."
 msgstr "Kalkulu"
 
-#: ekos/focus/focus.cpp:1811
+#: ekos/focus/focus.cpp:1816
 #, kde-format
 msgid "Deadlock reached. Please try again with different settings."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1863
+#: ekos/focus/focus.cpp:1868
 #, kde-format
 msgid "FITS received. HFR %1. Delta (%2%) Min HFR (%3)"
 msgstr ""
 
-#: ekos/focus/focus.cpp:1867
+#: ekos/focus/focus.cpp:1872
 #, kde-format
 msgid ""
 "Autofocus failed to reach proper focus. Try adjusting the tolerance value."
 msgstr ""
 
-#: ekos/focus/focus.cpp:1989 ekos/focus/focus.cpp:2026
-#: ekos/focus/focus.cpp:2053
+#: ekos/focus/focus.cpp:1995 ekos/focus/focus.cpp:2035
+#: ekos/focus/focus.cpp:2062
 #, fuzzy, kde-format
 msgid "Restarting autofocus process..."
 msgstr "Farmington"
 
-#: ekos/focus/focus.cpp:1999 ekos/focus/focus.cpp:2036
-#: ekos/focus/focus.cpp:2063
+#: ekos/focus/focus.cpp:2005 ekos/focus/focus.cpp:2045
+#: ekos/focus/focus.cpp:2072
 #, kde-format
 msgid "Focuser error, check INDI panel."
 msgstr ""
 
-#: ekos/focus/focus.cpp:2113
+#: ekos/focus/focus.cpp:2122
 #, fuzzy, kde-format
 msgid "Starting continuous exposure..."
 msgstr "Farmington"
 
-#: ekos/focus/focus.cpp:2276
+#: ekos/focus/focus.cpp:2285
 #, fuzzy, kde-format
 msgid "Focus star is selected."
 msgstr "Elektita informkesto"
 
-#: ekos/focus/focus.cpp:2285
+#: ekos/focus/focus.cpp:2294
 #, kde-format
 msgid "Disabling Auto Star Selection as star selection box was moved manually."
 msgstr ""
 
-#: ekos/focus/focus.cpp:2315
+#: ekos/focus/focus.cpp:2324
 #, kde-format
 msgid ""
 "Warning: Only use filters for preview as they may interface with autofocus "
 "operation."
 msgstr ""
 
-#: ekos/focus/focus.cpp:2367
+#: ekos/focus/focus.cpp:2376
 #, kde-format
 msgid "Autofocus failed, moving back to initial focus position %1."
 msgstr ""
 
-#: ekos/focus/focus.cpp:2385
+#: ekos/focus/focus.cpp:2394
 #, fuzzy, kde-format
 msgid "Autofocus operation completed successfully"
 msgstr "Koordinatoj"
 
-#: ekos/focus/focus.cpp:2390
+#: ekos/focus/focus.cpp:2399
 #, kde-format
 msgid "Autofocus operation failed with errors"
 msgstr ""
 
-#: ekos/focus/focus.cpp:2402
+#: ekos/focus/focus.cpp:2411
 #, kde-format
 msgid "No star was selected. Aborting..."
 msgstr ""
@@ -6906,38 +7062,38 @@ msgstr "Centrigita al: "
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: ekos/focus/focus.ui:120 ekos/profileeditor.ui:265
+#: ekos/focus/focus.ui:107 ekos/profileeditor.ui:265
 #, fuzzy, kde-format
 msgid "Focuser:"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (text), widget (QPushButton, startFocusB)
-#: ekos/focus/focus.ui:143
+#: ekos/focus/focus.ui:120
 #, fuzzy, kde-format
 msgid "Auto Focus"
 msgstr "Steloj"
 
 #. i18n: ectx: property (text), widget (QPushButton, focusOutB)
-#: ekos/focus/focus.ui:153
+#: ekos/focus/focus.ui:130
 #, kde-format
 msgid "Focus Out"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_7)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
-#: ekos/focus/focus.ui:210 ekos/guide/guide.ui:200
+#: ekos/focus/focus.ui:223 ekos/guide/guide.ui:200
 #, kde-format
 msgid "Exposure time in seconds"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, ISOLabel)
-#: ekos/focus/focus.ui:307
+#: ekos/focus/focus.ui:320
 #, kde-format
 msgid "ISO:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, lockFilterCheck)
-#: ekos/focus/focus.ui:376
+#: ekos/focus/focus.ui:389
 #, kde-format
 msgid ""
 "If locked, the focus process will always use the specified filter when "
@@ -6947,106 +7103,106 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, lockFilterCheck)
-#: ekos/focus/focus.ui:379
+#: ekos/focus/focus.ui:392
 #, kde-format
 msgid "Lock"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_8)
-#: ekos/focus/focus.ui:388 ekos/guide/guide.ui:164
+#: ekos/focus/focus.ui:401 ekos/guide/guide.ui:164
 #, kde-format
 msgid "Apply filter to image after capture to enhance it"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ekos/focus/focus.ui:391
+#: ekos/focus/focus.ui:404
 #, kde-format
 msgid "Effect:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, resetFrameB)
-#: ekos/focus/focus.ui:414
+#: ekos/focus/focus.ui:427
 #, kde-format
 msgid "Reset focus subframe to full capture"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ekos/focus/focus.ui:427 ekos/guide/opscalibration.ui:32
+#: ekos/focus/focus.ui:440 ekos/guide/opscalibration.ui:32
 #: ekos/guide/opsguide.ui:133
 #, fuzzy, kde-format
 msgid "Settings"
 msgstr "Kettering"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, suspendGuideCheck)
-#: ekos/focus/focus.ui:453
+#: ekos/focus/focus.ui:466
 #, kde-format
 msgid "Suspend Guiding while autofocus in progress"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, suspendGuideCheck)
-#: ekos/focus/focus.ui:456
+#: ekos/focus/focus.ui:469
 #, fuzzy, kde-format
 msgid "Suspend Guiding"
 msgstr "Erding"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_subFrame)
-#: ekos/focus/focus.ui:463
+#: ekos/focus/focus.ui:476
 #, kde-format
 msgid "Subframe around the focus star during the autofocus procedure"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_subFrame)
-#: ekos/focus/focus.ui:466
+#: ekos/focus/focus.ui:479
 #, fuzzy, kde-format
 msgid "Sub Frame"
 msgstr "Stela nomo"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, autoStarCheck)
-#: ekos/focus/focus.ui:476
+#: ekos/focus/focus.ui:489
 #, fuzzy, kde-format
 msgid "Automatically select the best focus star from the image"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoStarCheck)
-#: ekos/focus/focus.ui:479
+#: ekos/focus/focus.ui:492
 #, fuzzy, kde-format
 msgid "Auto Select Star"
 msgstr "Bonvenon ĉe KStars"
 
 #. i18n: ectx: property (text), widget (QCheckBox, darkFrameCheck)
-#: ekos/focus/focus.ui:489
+#: ekos/focus/focus.ui:502
 #, fuzzy, kde-format
 msgid "Dark Frame"
 msgstr "Barkerville"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_12)
-#: ekos/focus/focus.ui:523
+#: ekos/focus/focus.ui:536
 #, kde-format
 msgid "Maximum travel in ticks before the autofocus process aborts"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ekos/focus/focus.ui:526
+#: ekos/focus/focus.ui:539
 #, kde-format
 msgid "Max Travel:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_21)
 #. i18n: ectx: label, entry (FocusAlgorithm), group (Focus)
-#: ekos/focus/focus.ui:533 kstars.kcfg:1563
+#: ekos/focus/focus.ui:546 kstars.kcfg:1563
 #, kde-format
 msgid "Star detection algorithm"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#: ekos/focus/focus.ui:536
+#: ekos/focus/focus.ui:549
 #, fuzzy, kde-format
 msgid "Algorithm:"
 msgstr "Algorab"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, focusAlgorithmCombo)
-#: ekos/focus/focus.ui:544
+#: ekos/focus/focus.ui:557
 #, fuzzy, kde-format
 #| msgctxt "City in Nevada USA"
 #| msgid "Caliente"
@@ -7054,13 +7210,13 @@ msgid "Gradient"
 msgstr "Caliente"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, focusAlgorithmCombo)
-#: ekos/focus/focus.ui:549
+#: ekos/focus/focus.ui:562
 #, fuzzy, kde-format
 msgid "Centroid"
 msgstr "Trovu objekton"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, focusAlgorithmCombo)
-#: ekos/focus/focus.ui:554
+#: ekos/focus/focus.ui:567
 #, fuzzy, kde-format
 #| msgctxt "City in New Jersey USA"
 #| msgid "Freehold"
@@ -7068,7 +7224,7 @@ msgid "Threshold"
 msgstr "Freehold"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_19)
-#: ekos/focus/focus.ui:578
+#: ekos/focus/focus.ui:591
 #, kde-format
 msgid ""
 "Increase to restrict the centroid to bright cores. Decrease to enclose fuzzy "
@@ -7076,7 +7232,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: ekos/focus/focus.ui:581
+#: ekos/focus/focus.ui:594
 #, fuzzy, no-c-format, kde-format
 #| msgctxt "City in New Jersey USA"
 #| msgid "Freehold"
@@ -7084,7 +7240,7 @@ msgid "Threshold (%):"
 msgstr "Freehold"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: ekos/focus/focus.ui:588
+#: ekos/focus/focus.ui:601
 #, kde-format
 msgid ""
 "<b>Initial</b> step size in ticks to cause a noticeable change in HFR value. "
@@ -7093,25 +7249,25 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/focus/focus.ui:594
+#: ekos/focus/focus.ui:607
 #, kde-format
 msgid "Step:"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_10)
-#: ekos/focus/focus.ui:620
+#: ekos/focus/focus.ui:633
 #, kde-format
 msgid "Delay between two consequent focus images"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: ekos/focus/focus.ui:623
+#: ekos/focus/focus.ui:636
 #, fuzzy, kde-format
 msgid "Box Size:"
 msgstr "Sunleviĝo:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_4)
-#: ekos/focus/focus.ui:630
+#: ekos/focus/focus.ui:643
 #, kde-format
 msgid ""
 "Decrease value to narrow optimal focus point solution radius. Increase to "
@@ -7119,44 +7275,44 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/focus/focus.ui:633
+#: ekos/focus/focus.ui:646
 #, fuzzy, no-c-format, kde-format
 msgid "Tolerance (%):"
 msgstr "Torrance"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, focusFramesSpin)
-#: ekos/focus/focus.ui:672 ekos/focus/focus.ui:682
+#: ekos/focus/focus.ui:685 ekos/focus/focus.ui:695
 #, kde-format
 msgid "Number of frames to average"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/focus/focus.ui:675
+#: ekos/focus/focus.ui:688
 #, fuzzy, kde-format
 msgid "Frames:"
 msgstr "Stela nomo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: ekos/focus/focus.ui:741
+#: ekos/focus/focus.ui:754
 #, kde-format
 msgid "V-Curve"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ekos/focus/focus.ui:783
+#: ekos/focus/focus.ui:796
 #, kde-format
 msgid "HFR:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, relativeProfileB)
-#: ekos/focus/focus.ui:820
+#: ekos/focus/focus.ui:833
 #, fuzzy, kde-format
 msgid "Relative Profile..."
 msgstr "Bildo"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearDataB)
-#: ekos/focus/focus.ui:827
+#: ekos/focus/focus.ui:840
 #, kde-format
 msgid "Clear Data"
 msgstr "Forviŝi Datumojn"
@@ -10734,13 +10890,6 @@ msgstr ""
 msgid "Alt > "
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: ekos/scheduler/scheduler.ui:921 ekos/scheduler/scheduler.ui:951
-#, kde-format
-msgid "°"
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, moonSeparationCheck)
 #: ekos/scheduler/scheduler.ui:928
 #, kde-format
@@ -11006,37 +11155,37 @@ msgstr ""
 msgid "Image has invalid dimensions %1x%2"
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:265 fitsviewer/fitsdata.cpp:2919
+#: fitsviewer/fitsdata.cpp:265 fitsviewer/fitsdata.cpp:2980
 #, fuzzy, kde-format
 msgid "Error reading image: %1"
 msgstr "Ne eblis malfermi dosieron"
 
-#: fitsviewer/fitsdata.cpp:2862
+#: fitsviewer/fitsdata.cpp:2923
 #, kde-format
 msgid "Only 8 and 16 bits bayered images supported."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:2862 fitsviewer/fitsdata.cpp:2879
-#: fitsviewer/fitsdata.cpp:2919 fitsviewer/fitsdata.cpp:2948
-#: fitsviewer/fitsdata.cpp:2970 fitsviewer/fitsdata.cpp:2984
-#: fitsviewer/fitsdata.cpp:3021 fitsviewer/fitsdata.cpp:3043
-#: fitsviewer/fitsdata.cpp:3057
+#: fitsviewer/fitsdata.cpp:2923 fitsviewer/fitsdata.cpp:2940
+#: fitsviewer/fitsdata.cpp:2980 fitsviewer/fitsdata.cpp:3009
+#: fitsviewer/fitsdata.cpp:3031 fitsviewer/fitsdata.cpp:3045
+#: fitsviewer/fitsdata.cpp:3082 fitsviewer/fitsdata.cpp:3104
+#: fitsviewer/fitsdata.cpp:3118
 #, fuzzy, kde-format
 msgid "Debayer error"
 msgstr "Dyer Observatory"
 
-#: fitsviewer/fitsdata.cpp:2879
+#: fitsviewer/fitsdata.cpp:2940
 #, kde-format
 msgid "Unsupported bayer pattern %1."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:2948 fitsviewer/fitsdata.cpp:2984
-#: fitsviewer/fitsdata.cpp:3021 fitsviewer/fitsdata.cpp:3057
+#: fitsviewer/fitsdata.cpp:3009 fitsviewer/fitsdata.cpp:3045
+#: fitsviewer/fitsdata.cpp:3082 fitsviewer/fitsdata.cpp:3118
 #, kde-format
 msgid "Unable to allocate memory for temporary bayer buffer."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:2970 fitsviewer/fitsdata.cpp:3043
+#: fitsviewer/fitsdata.cpp:3031 fitsviewer/fitsdata.cpp:3104
 #, kde-format
 msgid "Debayer failed (%1)"
 msgstr ""
@@ -11328,62 +11477,62 @@ msgstr "Konservu bildon"
 msgid "Cannot zoom in further due to active limited memory mode."
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1449
+#: fitsviewer/fitsview.cpp:1450
 #, fuzzy, kde-format
 msgid "Finding stars..."
 msgstr "Trovu objekton"
 
-#: fitsviewer/fitsview.cpp:1456
+#: fitsviewer/fitsview.cpp:1457
 #, kde-format
 msgid "1 star detected."
 msgid_plural "%1 stars detected."
 msgstr[0] ""
 msgstr[1] ""
 
-#: fitsviewer/fitsview.cpp:1647
+#: fitsviewer/fitsview.cpp:1648
 #, kde-format
 msgid "Zoom In"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1649
+#: fitsviewer/fitsview.cpp:1650
 #, kde-format
 msgid "Zoom Out"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1651
+#: fitsviewer/fitsview.cpp:1652
 #, fuzzy, kde-format
 #| msgid "&Default Zoom"
 msgid "Default Zoom"
 msgstr "&Defaŭlta zomo"
 
-#: fitsviewer/fitsview.cpp:1653
+#: fitsviewer/fitsview.cpp:1654
 #, kde-format
 msgid "Zoom to Fit"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1657 fitsviewer/fitsviewer.cpp:210
+#: fitsviewer/fitsview.cpp:1658 fitsviewer/fitsviewer.cpp:210
 #, kde-format
 msgid "Show Cross Hairs"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1661 fitsviewer/fitsviewer.cpp:216
+#: fitsviewer/fitsview.cpp:1662 fitsviewer/fitsviewer.cpp:216
 #, fuzzy, kde-format
 msgid "Show Pixel Gridlines"
 msgstr "Montru konstelaciajn liniojn"
 
-#: fitsviewer/fitsview.cpp:1668 fitsviewer/fitsviewer.cpp:222
+#: fitsviewer/fitsview.cpp:1669 fitsviewer/fitsviewer.cpp:222
 #: fitsviewer/fitsviewer.cpp:874
 #, fuzzy, kde-format
 msgid "Show Equatorial Gridlines"
 msgstr "Koordinatoj"
 
-#: fitsviewer/fitsview.cpp:1671 fitsviewer/fitsviewer.cpp:229
+#: fitsviewer/fitsview.cpp:1672 fitsviewer/fitsviewer.cpp:229
 #: fitsviewer/fitsviewer.cpp:876
 #, fuzzy, kde-format
 msgid "Show Objects in Image"
 msgstr "Trovu objekton"
 
-#: fitsviewer/fitsview.cpp:1674
+#: fitsviewer/fitsview.cpp:1675
 #, fuzzy, kde-format
 msgid "Center Telescope"
 msgstr "Centrigu && sekvu"
@@ -47527,13 +47676,6 @@ msgstr "Yeosu"
 msgid "Exit"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, NextButton)
-#: kstarslite/qml/modules/tutorial/TutorialPane.qml:57
-#: tools/starhopperdialog.ui:53 tools/whatsinteresting/qml/wiview.qml:591
-#, fuzzy, kde-format, kde-kuit-format
-msgid "Next"
-msgstr "&Okzidento"
-
 #: kstarslite/qml/modules/tutorial/TutorialPopup.qml:43
 #, fuzzy, kde-kuit-format
 #| msgid " Welcome to KStars "
@@ -60441,6 +60583,10 @@ msgstr "Fono de informkesto"
 #, fuzzy, kde-format
 msgid "Set the color for the background."
 msgstr "Ŝarĝante laktan vojon"
+
+#, fuzzy
+#~ msgid "Polar Alignment Errors"
+#~ msgstr "Centrigita al: "
 
 #, fuzzy
 #~ msgid "Control:"
