@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-11 03:58+0100\n"
+"POT-Creation-Date: 2017-02-14 09:39+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: config/globalconfigpage.cpp:49 launcher.cpp:58 launcher.cpp:125
+#: config/globalconfigpage.cpp:49 launcher.cpp:59 launcher.cpp:124
 #: plugin.cpp:97 plugin.cpp:98
 #, kde-format
 msgid "Valgrind"
@@ -89,7 +89,7 @@ msgctxt "@title:menu"
 msgid "Analyze"
 msgstr ""
 
-#: launcher.cpp:115
+#: launcher.cpp:114
 #, kde-format
 msgid "Profile application with Valgrind"
 msgstr ""
@@ -107,7 +107,9 @@ msgid "Cachegrind"
 msgstr "&Cachegrind"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
 #: tools/cachegrind/configpage.ui:38 tools/callgrind/configpage.ui:38
+#: tools/helgrind/configpage.ui:72
 #, fuzzy, kde-format
 #| msgid "Extra &Parameters"
 msgid "Extra parameters:"
@@ -447,6 +449,184 @@ msgstr ""
 msgid "Unable to launch the process %1 (%2)"
 msgstr ""
 
+#: tools/helgrind/configpage.cpp:58
+#, fuzzy, kde-format
+#| msgid "&Helgrind"
+msgid "Helgrind"
+msgstr "&Helgrind"
+
+#. i18n: ectx: property (text), widget (QLabel, conflictCacheSizeLabel)
+#: tools/helgrind/configpage.ui:40
+#, kde-format
+msgid "Conflict cache size:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, conflictCacheSize)
+#: tools/helgrind/configpage.ui:56
+#, kde-format
+msgid ""
+"<html><head/><body><p>This flag only has any effect at --history-level=full."
+"</p><p>Information about \"old\" conflicting accesses is stored in a cache "
+"of limited size, with LRU-style management. This is necessary because it "
+"isn't practical to store a stack trace for every single memory access made "
+"by the program. Historical information on not recently accessed locations is "
+"periodically discarded, to free up space in the cache.</p><p>This option "
+"controls the size of the cache, in terms of the number of different memory "
+"addresses for which conflicting access information is stored. If you find "
+"that Helgrind is showing race errors with only one stack instead of the "
+"expected two stacks, try increasing this value.</p><p>The minimum value is "
+"10,000 and the maximum is 30,000,000 (thirty times the default value). "
+"Increasing the value by 1 increases Helgrind's memory requirement by very "
+"roughly 100 bytes, so the maximum value will easily eat up three extra "
+"gigabytes or so of memory.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, historyLevelLabel)
+#: tools/helgrind/configpage.ui:82
+#, kde-format
+msgid "History level:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, historyLevel)
+#: tools/helgrind/configpage.ui:95
+#, kde-format
+msgid ""
+"<html><head/><body><p>--history-level=full (the default) causes Helgrind "
+"collects enough information about \"old\" accesses that it can produce two "
+"stack traces in a race report -- both the stack trace for the current "
+"access, and the trace for the older, conflicting access. To limit memory "
+"usage, \"old\" accesses stack traces are limited to a maximum of 8 entries, "
+"even if --num-callers value is bigger.</p><p>Collecting such information is "
+"expensive in both speed and memory, particularly for programs that do many "
+"inter-thread synchronisation events (locks, unlocks, etc). Without such "
+"information, it is more difficult to track down the root causes of races. "
+"Nonetheless, you may not need it in situations where you just want to check "
+"for the presence or absence of races, for example, when doing regression "
+"testing of a previously race-free program.</p><p>--history-level=none is the "
+"opposite extreme. It causes Helgrind not to collect any information about "
+"previous accesses. This can be dramatically faster than --history-level=full."
+"</p><p>--history-level=approx provides a compromise between these two "
+"extremes. It causes Helgrind to show a full trace for the later access, and "
+"approximate information regarding the earlier access. This approximate "
+"information consists of two stacks, and the earlier access is guaranteed to "
+"have occurred somewhere between program points denoted by the two stacks. "
+"This is not as useful as showing the exact stack for the previous access (as "
+"--history-level=full does), but it is better than nothing, and it is almost "
+"as fast as --history-level=none.</p><p><br/></p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
+#: tools/helgrind/configpage.ui:99
+#, kde-format
+msgid "full"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
+#: tools/helgrind/configpage.ui:104
+#, kde-format
+msgid "approx"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
+#: tools/helgrind/configpage.ui:109
+#, kde-format
+msgid "none"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, trackLockOrders)
+#: tools/helgrind/configpage.ui:129
+#, kde-format
+msgid ""
+"<html><head/><body><p>When enabled (the default), Helgrind performs lock "
+"order consistency checking. For some buggy programs, the large number of "
+"lock order errors reported can become annoying, particularly if you're only "
+"interested in race errors. You may therefore find it helpful to disable lock "
+"order checking.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, trackLockOrders)
+#: tools/helgrind/configpage.ui:132
+#, kde-format
+msgid "Track lock orders"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, checkStackRefs)
+#: tools/helgrind/configpage.ui:146
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:14pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">By default Helgrind checks "
+"all data memory accesses made by your program. This flag enables you to skip "
+"checking for accesses to thread stacks (local variables). This can improve "
+"performance, but comes at the cost of missing races on stack-allocated data."
+"</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkStackRefs)
+#: tools/helgrind/configpage.ui:149
+#, kde-format
+msgid "Check stack refs"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, ignoreThreadCreation)
+#: tools/helgrind/configpage.ui:159
+#, kde-format
+msgid ""
+"<html><head/><body><p>Controls whether all activities during thread creation "
+"should be ignored. By default enabled only on Solaris. Solaris provides "
+"higher throughput, parallelism and scalability than other operating systems, "
+"at the cost of more fine-grained locking activity. This means for example "
+"that when a thread is created under glibc, just one big lock is used for all "
+"thread setup. Solaris libc uses several fine-grained locks and the creator "
+"thread resumes its activities as soon as possible, leaving for example stack "
+"and TLS setup sequence to the created thread. This situation confuses "
+"Helgrind as it assumes there is some false ordering in place between creator "
+"and created thread; and therefore many types of race conditions in the "
+"application would not be reported. To prevent such false ordering, this "
+"command line option is set to yes by default on Solaris. All activity "
+"(loads, stores, client requests) is therefore ignored during:</p><p>* "
+"pthread_create() call in the creator thread</p><p>* thread creation phase "
+"(stack and TLS setup) in the created thread</p><p>Also new memory allocated "
+"during thread creation is untracked, that is race reporting is suppressed "
+"there. DRD does the same thing implicitly. This is necessary because Solaris "
+"libc caches many objects and reuses them for different threads and that "
+"confuses Helgrind.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreThreadCreation)
+#: tools/helgrind/configpage.ui:162
+#, kde-format
+msgid "Ignore thread creation"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, freeIsWrite)
+#: tools/helgrind/configpage.ui:172
+#, kde-format
+msgid ""
+"<html><head/><body><p>When enabled (not the default), Helgrind treats "
+"freeing of heap memory as if the memory was written immediately before the "
+"free. This exposes races where memory is referenced by one thread, and freed "
+"by another, but there is no observable synchronisation event to ensure that "
+"the reference happens before the free.</p><p>This functionality is new in "
+"Valgrind 3.7.0, and is regarded as experimental. It is not enabled by "
+"default because its interaction with custom memory allocators is not well "
+"understood at present. User feedback is welcomed.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, freeIsWrite)
+#: tools/helgrind/configpage.ui:175
+#, fuzzy, kde-format
+#| msgid "Free block list size"
+msgid "Free is write"
+msgstr "Grandeco de la listo de liberaj blokoj"
+
 #: tools/massif/configpage.cpp:66
 #, fuzzy, kde-format
 #| msgid "Massi&f"
@@ -700,11 +880,6 @@ msgstr ""
 #~ msgstr "&Cachegrind"
 
 #, fuzzy
-#~| msgid "&Helgrind"
-#~ msgid "Helgrind"
-#~ msgstr "&Helgrind"
-
-#, fuzzy
 #~| msgid "Extra Synchronization Events"
 #~ msgid "Extra Synchronization Events:"
 #~ msgstr "Pluaj sinkronigoeventoj"
@@ -730,11 +905,6 @@ msgstr ""
 
 #~ msgid " bytes"
 #~ msgstr " bitokoj"
-
-#, fuzzy
-#~| msgid "Free block list size"
-#~ msgid "Freelist size"
-#~ msgstr "Grandeco de la listo de liberaj blokoj"
 
 #, fuzzy
 #~| msgid "Show Reachable Blocks"
