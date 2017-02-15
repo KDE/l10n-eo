@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-14 09:39+0100\n"
+"POT-Creation-Date: 2017-02-15 04:16+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: config/globalconfigpage.cpp:49 launcher.cpp:59 launcher.cpp:124
-#: plugin.cpp:97 plugin.cpp:98
+#: config/globalconfigpage.cpp:49 launchmode.cpp:46 plugin.cpp:99
+#: plugin.cpp:100
 #, kde-format
 msgid "Valgrind"
 msgstr "Valgrind"
@@ -89,18 +89,41 @@ msgctxt "@title:menu"
 msgid "Analyze"
 msgstr ""
 
-#: launcher.cpp:114
-#, kde-format
-msgid "Profile application with Valgrind"
-msgstr ""
-
-#: plugin.cpp:87
+#. i18n: ectx: Menu
+#: kdevvalgrind.rc:7
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind (Current Launch Configuration)"
 msgstr "Fina Situo:"
 
-#: tools/cachegrind/configpage.cpp:58
+#: plugin.cpp:121 tools/memcheck/configpage.cpp:59
+#: tools/memcheck/launcher.cpp:39
+#, kde-format
+msgid "Memcheck"
+msgstr ""
+
+#: plugin.cpp:125 tools/massif/configpage.cpp:66 tools/massif/launcher.cpp:39
+#, fuzzy, kde-format
+#| msgid "Massi&f"
+msgid "Massif"
+msgstr "Massi&f"
+
+#: plugin.cpp:129 tools/helgrind/configpage.cpp:58
+#: tools/helgrind/launcher.cpp:39
+#, fuzzy, kde-format
+#| msgid "&Helgrind"
+msgid "Helgrind"
+msgstr "&Helgrind"
+
+#: plugin.cpp:133 tools/callgrind/configpage.cpp:54
+#: tools/callgrind/launcher.cpp:39
+#, fuzzy, kde-format
+#| msgid "Ca&llgrind"
+msgid "Callgrind"
+msgstr "Ca&llgrind"
+
+#: plugin.cpp:137 tools/cachegrind/configpage.cpp:58
+#: tools/cachegrind/launcher.cpp:39
 #, fuzzy, kde-format
 #| msgid "&Cachegrind"
 msgid "Cachegrind"
@@ -144,6 +167,11 @@ msgstr ""
 msgid "cg_annotate parameters:"
 msgstr "Pluaj &parametroj"
 
+#: tools/cachegrind/launcher.cpp:40
+#, kde-format
+msgid "Analyze application with Cachegrind"
+msgstr ""
+
 #: tools/cachegrind/model.cpp:157 tools/callgrind/model.cpp:292
 #, kde-format
 msgid "Function"
@@ -161,12 +189,6 @@ msgstr ""
 msgid "Percentage values"
 msgstr ""
 
-#: tools/callgrind/configpage.cpp:54
-#, fuzzy, kde-format
-#| msgid "Ca&llgrind"
-msgid "Callgrind"
-msgstr "Ca&llgrind"
-
 #. i18n: ectx: property (text), widget (QCheckBox, launchKCachegrind)
 #: tools/callgrind/configpage.ui:87
 #, fuzzy, kde-format
@@ -180,6 +202,11 @@ msgstr "&Cachegrind"
 #| msgid "&Cachegrind"
 msgid "callgrind_annotate parameters:"
 msgstr "&Cachegrind"
+
+#: tools/callgrind/launcher.cpp:40
+#, kde-format
+msgid "Analyze application with Callgrind"
+msgstr ""
 
 #: tools/callgrind/model.cpp:289 tools/callgrind/model.cpp:383
 #, kde-format
@@ -273,10 +300,10 @@ msgstr ""
 msgid "Source file(s):"
 msgstr ""
 
-#: tools/generic/configpage.cpp:59
+#: tools/generic/configpage.cpp:55
 #, fuzzy, kde-format
 #| msgid "Valgrind"
-msgid "Valgrind global settings"
+msgid "Valgrind generic settings"
 msgstr "Valgrind"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -300,15 +327,8 @@ msgstr "Montri stakon ĝis profun&deco:"
 msgid "&Maximum frame stack size (bytes):"
 msgstr "Maksimuma &framstaka grandeco"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: tools/generic/configpage.ui:97
-#, fuzzy, kde-format
-#| msgid "Valgrind"
-msgid "Default valgrind tool:"
-msgstr "Valgrind"
-
 #. i18n: ectx: property (text), widget (QCheckBox, limitErrors)
-#: tools/generic/configpage.ui:135
+#: tools/generic/configpage.ui:106
 #, kde-format
 msgid "Limit errors if too many"
 msgstr ""
@@ -378,68 +398,68 @@ msgstr ""
 msgid "Indirect branches mispredicted"
 msgstr ""
 
-#: tools/generic/job.cpp:119
+#: tools/generic/job.cpp:90
 #, kde-format
 msgid ""
 "No environment group specified, looks like a broken configuration, please "
 "check run configuration '%1'. Using default environment group."
 msgstr ""
 
-#: tools/generic/job.cpp:236 tools/generic/job.cpp:319
+#: tools/generic/job.cpp:207 tools/generic/job.cpp:290
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Please review your Valgrind launch configuration."
 msgstr "Fina Situo:"
 
-#: tools/generic/job.cpp:238 tools/generic/job.cpp:286
-#: tools/generic/job.cpp:321 tools/generic/utils.cpp:54
+#: tools/generic/job.cpp:209 tools/generic/job.cpp:257
+#: tools/generic/job.cpp:292 tools/generic/utils.cpp:54
 #: tools/memcheck/parser.cpp:167
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind Error"
 msgstr "Fina Situo:"
 
-#: tools/generic/job.cpp:257
+#: tools/generic/job.cpp:228
 #, kde-format
 msgid "Failed to start valgrind from \"%1\"."
 msgstr ""
 
-#: tools/generic/job.cpp:264
+#: tools/generic/job.cpp:235
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind crashed."
 msgstr "Fina Situo:"
 
-#: tools/generic/job.cpp:269
+#: tools/generic/job.cpp:240
 #, fuzzy, kde-format
 #| msgid "Process exited"
 msgid "Valgrind process timed out."
 msgstr "Procezo ĉesiĝis"
 
-#: tools/generic/job.cpp:273
+#: tools/generic/job.cpp:244
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Write to Valgrind process failed."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/job.cpp:277
+#: tools/generic/job.cpp:248
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Read from Valgrind process failed."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/job.cpp:281
+#: tools/generic/job.cpp:252
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Unknown Valgrind process error."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/job.cpp:300
+#: tools/generic/job.cpp:271
 #, kde-format
 msgid "Executing command: "
 msgstr ""
 
-#: tools/generic/job.cpp:315
+#: tools/generic/job.cpp:286
 #, kde-format
 msgid "Failed to execute the command:"
 msgstr ""
@@ -448,12 +468,6 @@ msgstr ""
 #, kde-format
 msgid "Unable to launch the process %1 (%2)"
 msgstr ""
-
-#: tools/helgrind/configpage.cpp:58
-#, fuzzy, kde-format
-#| msgid "&Helgrind"
-msgid "Helgrind"
-msgstr "&Helgrind"
 
 #. i18n: ectx: property (text), widget (QLabel, conflictCacheSizeLabel)
 #: tools/helgrind/configpage.ui:40
@@ -627,11 +641,10 @@ msgstr ""
 msgid "Free is write"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
-#: tools/massif/configpage.cpp:66
-#, fuzzy, kde-format
-#| msgid "Massi&f"
-msgid "Massif"
-msgstr "Massi&f"
+#: tools/helgrind/launcher.cpp:40
+#, kde-format
+msgid "Analyze application with Helgrind"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -723,6 +736,11 @@ msgstr ""
 msgid "Launch Massif Visualizer after finish"
 msgstr "&Cachegrind"
 
+#: tools/massif/launcher.cpp:40
+#, kde-format
+msgid "Analyze application with Massif"
+msgstr ""
+
 #: tools/massif/model.cpp:129
 #, fuzzy, kde-format
 #| msgid "snapshot"
@@ -760,11 +778,6 @@ msgstr "ekranfoto"
 #: tools/massif/view.ui:42
 #, kde-format
 msgid "Heap trees"
-msgstr ""
-
-#: tools/memcheck/configpage.cpp:59
-#, kde-format
-msgid "Memcheck"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -822,6 +835,11 @@ msgstr ""
 msgid "Show instruction pointer"
 msgstr ""
 
+#: tools/memcheck/launcher.cpp:40
+#, kde-format
+msgid "Analyze application with Memcheck"
+msgstr ""
+
 #: tools/memcheck/parser.cpp:163
 #, kde-format
 msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
@@ -844,6 +862,11 @@ msgid ""
 "unaddressable memory to system calls;<br/>mismatched use of malloc/new/new "
 "[] vs free/delete/delete [];<br/>some abuses of the POSIX pthread API.</p>"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Valgrind"
+#~ msgid "Default valgrind tool:"
+#~ msgstr "Valgrind"
 
 #~ msgid "???"
 #~ msgstr "???"
