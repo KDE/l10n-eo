@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-16 04:08+0100\n"
+"POT-Creation-Date: 2017-02-17 04:03+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -102,13 +102,13 @@ msgstr "Fina Situo:"
 msgid "Memcheck"
 msgstr ""
 
-#: plugin.cpp:125 tools/massif/configpage.cpp:66 tools/massif/launcher.cpp:39
+#: plugin.cpp:125 tools/massif/configpage.cpp:71 tools/massif/launcher.cpp:39
 #, fuzzy, kde-format
 #| msgid "Massi&f"
 msgid "Massif"
 msgstr "Massi&f"
 
-#: plugin.cpp:129 tools/helgrind/configpage.cpp:58
+#: plugin.cpp:129 tools/helgrind/configpage.cpp:59
 #: tools/helgrind/launcher.cpp:39
 #, fuzzy, kde-format
 #| msgid "&Helgrind"
@@ -129,39 +129,60 @@ msgstr "Ca&llgrind"
 msgid "Cachegrind"
 msgstr "&Cachegrind"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
-#: tools/cachegrind/configpage.ui:38 tools/callgrind/configpage.ui:38
-#: tools/helgrind/configpage.ui:72
-#, fuzzy, kde-format
-#| msgid "Extra &Parameters"
-msgid "Extra parameters:"
-msgstr "Pluaj &parametroj"
+#. i18n: ectx: property (toolTip), widget (QCheckBox, cacheSimulation)
+#: tools/cachegrind/configpage.ui:36
+#, kde-format
+msgid ""
+"<html><head/><body><p>Enables or disables collection of cache access and "
+"miss counts.</p></body></html>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, cacheSimulation)
-#: tools/cachegrind/configpage.ui:60 tools/callgrind/configpage.ui:60
+#: tools/cachegrind/configpage.ui:39 tools/callgrind/configpage.ui:39
 #, fuzzy, kde-format
 #| msgid "Full Cache Simulation"
 msgid "Cache simulation"
 msgstr "Plena simulado de kaŝmemoro"
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, branchSimulation)
+#: tools/cachegrind/configpage.ui:49
+#, no-c-format, kde-format
+msgid ""
+"<html><head/><body><p>Enables or disables collection of branch instruction "
+"and misprediction counts. By default this is disabled as it slows Cachegrind "
+"down by approximately 25%. Note that you cannot specify <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;\">--cache-sim=no</"
+"span> and <span style=\" font-family:'Monospace'; font-weight:600; font-"
+"style:italic;\">--branch-sim=no</span> together, as that would leave "
+"Cachegrind with no information to collect.</p></body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, branchSimulation)
-#: tools/cachegrind/configpage.ui:70 tools/callgrind/configpage.ui:70
+#: tools/cachegrind/configpage.ui:52 tools/callgrind/configpage.ui:52
 #, fuzzy, kde-format
 #| msgid "Full Cache Simulation"
 msgid "Branch simulation"
 msgstr "Plena simulado de kaŝmemoro"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
-#: tools/cachegrind/configpage.ui:80
+#: tools/cachegrind/configpage.ui:62
 #, kde-format
 msgid ""
 "You cannot disable both cache and branch simulation, as that would leave "
 "Cachegrind with no information to collect."
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
+#: tools/cachegrind/configpage.ui:87 tools/callgrind/configpage.ui:71
+#: tools/helgrind/configpage.ui:104
+#, fuzzy, kde-format
+#| msgid "Extra &Parameters"
+msgid "Extra parameters:"
+msgstr "Pluaj &parametroj"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/cachegrind/configpage.ui:105
+#: tools/cachegrind/configpage.ui:108
 #, fuzzy, kde-format
 #| msgid "Extra &Parameters"
 msgid "cg_annotate parameters:"
@@ -189,18 +210,41 @@ msgstr ""
 msgid "Percentage values"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, launchKCachegrind)
-#: tools/callgrind/configpage.ui:87
-#, fuzzy, kde-format
-#| msgid "&Cachegrind"
-msgid "Launch KCachegrind after finish"
-msgstr "&Cachegrind"
+#. i18n: ectx: property (toolTip), widget (QCheckBox, cacheSimulation)
+#: tools/callgrind/configpage.ui:36
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specify if you want to do full cache simulation. By "
+"default, only instruction read accesses will be counted (\"Ir\"). With cache "
+"simulation, further event counters are enabled: </p><p>Cache misses on "
+"instruction reads (\"I1mr\"/\"ILmr\"), </p><p>data read accesses (\"Dr\") "
+"and related cache misses (\"D1mr\"/\"DLmr\"), </p><p>data write accesses "
+"(\"Dw\") and related cache misses (\"D1mw\"/\"DLmw\").</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, branchSimulation)
+#: tools/callgrind/configpage.ui:49
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specify if you want to do branch prediction "
+"simulation. Further event counters are enabled: Number of executed "
+"conditional branches and related predictor misses (\"Bc\"/\"Bcm\"), executed "
+"indirect jumps and related misses of the jump address predictor (\"Bi\"/\"Bim"
+"\").</p></body></html>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/callgrind/configpage.ui:103
+#: tools/callgrind/configpage.ui:92
 #, fuzzy, kde-format
 #| msgid "&Cachegrind"
 msgid "callgrind_annotate parameters:"
+msgstr "&Cachegrind"
+
+#. i18n: ectx: property (text), widget (QCheckBox, launchKCachegrind)
+#: tools/callgrind/configpage.ui:115
+#, fuzzy, kde-format
+#| msgid "&Cachegrind"
+msgid "Launch KCachegrind after finish"
 msgstr "&Cachegrind"
 
 #: tools/callgrind/launcher.cpp:40
@@ -306,29 +350,80 @@ msgstr ""
 msgid "Valgrind generic settings"
 msgstr "Valgrind"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, numCallersLabel)
 #: tools/generic/configpage.ui:25
-#, fuzzy, kde-format
-#| msgid "Extra &Parameters"
-msgid "&Extra parameters:"
-msgstr "Pluaj &parametroj"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/generic/configpage.ui:45
 #, fuzzy, kde-format
 #| msgid "Display stack to &depth:"
 msgid "Display stac&k to depth:"
 msgstr "Montri stakon ĝis profun&deco:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: tools/generic/configpage.ui:71
+#. i18n: ectx: property (toolTip), widget (QSpinBox, numCallers)
+#: tools/generic/configpage.ui:41
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specifies the maximum number of entries shown in stack "
+"traces that identify program locations. Note that errors are commoned up "
+"using only the top four function locations (the place in the current "
+"function, and that of its three immediate callers). So this doesn't affect "
+"the total number of errors reported.</p><p>The maximum value for this is "
+"500. Note that higher settings will make Valgrind run a bit more slowly and "
+"take a bit more memory, but can be useful when working with programs with "
+"deeply-nested call chains.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, maxStackframeLabel)
+#: tools/generic/configpage.ui:54
 #, fuzzy, kde-format
 #| msgid "Maximum &frame stack size"
-msgid "&Maximum frame stack size (bytes):"
+msgid " Maximum size of a stack frame:"
 msgstr "Maksimuma &framstaka grandeco"
 
+#. i18n: ectx: property (toolTip), widget (QSpinBox, maxStackframe)
+#: tools/generic/configpage.ui:70
+#, kde-format
+msgid ""
+"<html><head/><body><p>The maximum size of a stack frame. If the stack "
+"pointer moves by more than this amount then Valgrind will assume that the "
+"program is switching to a different stack.</p><p>You may need to use this "
+"option if your program has large stack-allocated arrays. Valgrind keeps "
+"track of your program's stack pointer. If it changes by more than the "
+"threshold amount, Valgrind assumes your program is switching to a different "
+"stack, and Memcheck behaves differently than it would for a stack pointer "
+"change smaller than the threshold. Usually this heuristic works well. "
+"However, if your program allocates large structures on the stack, this "
+"heuristic will be fooled, and Memcheck will subsequently report large "
+"numbers of invalid stack accesses. This option allows you to change the "
+"threshold to a different value.</p><p>You should only consider use of this "
+"option if Valgrind's debug output directs you to do so. In that case it will "
+"tell you the new threshold you should specify.</p><p>In general, allocating "
+"large structures on the stack is a bad idea, because you can easily run out "
+"of stack space, especially on systems with limited memory or which expect to "
+"support large numbers of threads each with a small stack, and also because "
+"the error checking performed by Memcheck is more effective for heap-"
+"allocated data than for stack-allocated data. If you have to use this "
+"option, you may wish to consider rewriting your code to allocate on the heap "
+"rather than on the stack.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: tools/generic/configpage.ui:83
+#, fuzzy, kde-format
+#| msgid "Extra &Parameters"
+msgid "&Extra parameters:"
+msgstr "Pluaj &parametroj"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, limitErrors)
+#: tools/generic/configpage.ui:115
+#, kde-format
+msgid ""
+"<html><head/><body><p>When enabled, Valgrind stops reporting errors after "
+"10,000,000 in total, or 1,000 different ones, have been seen. This is to "
+"stop the error tracking machinery from becoming a huge performance overhead "
+"in programs with many errors.</p></body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, limitErrors)
-#: tools/generic/configpage.ui:106
+#: tools/generic/configpage.ui:118
 #, kde-format
 msgid "Limit errors if too many"
 msgstr ""
@@ -405,61 +500,61 @@ msgid ""
 "check run configuration '%1'. Using default environment group."
 msgstr ""
 
-#: tools/generic/job.cpp:207 tools/generic/job.cpp:290
+#: tools/generic/job.cpp:190 tools/generic/job.cpp:273
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Please review your Valgrind launch configuration."
 msgstr "Fina Situo:"
 
-#: tools/generic/job.cpp:209 tools/generic/job.cpp:257
-#: tools/generic/job.cpp:292 tools/generic/utils.cpp:54
+#: tools/generic/job.cpp:192 tools/generic/job.cpp:240
+#: tools/generic/job.cpp:275 tools/generic/utils.cpp:54
 #: tools/memcheck/parser.cpp:167
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind Error"
 msgstr "Fina Situo:"
 
-#: tools/generic/job.cpp:228
+#: tools/generic/job.cpp:211
 #, kde-format
 msgid "Failed to start valgrind from \"%1\"."
 msgstr ""
 
-#: tools/generic/job.cpp:235
+#: tools/generic/job.cpp:218
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind crashed."
 msgstr "Fina Situo:"
 
-#: tools/generic/job.cpp:240
+#: tools/generic/job.cpp:223
 #, fuzzy, kde-format
 #| msgid "Process exited"
 msgid "Valgrind process timed out."
 msgstr "Procezo ĉesiĝis"
 
-#: tools/generic/job.cpp:244
+#: tools/generic/job.cpp:227
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Write to Valgrind process failed."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/job.cpp:248
+#: tools/generic/job.cpp:231
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Read from Valgrind process failed."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/job.cpp:252
+#: tools/generic/job.cpp:235
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Unknown Valgrind process error."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/job.cpp:271
+#: tools/generic/job.cpp:254
 #, kde-format
 msgid "Executing command: "
 msgstr ""
 
-#: tools/generic/job.cpp:286
+#: tools/generic/job.cpp:269
 #, kde-format
 msgid "Failed to execute the command:"
 msgstr ""
@@ -469,87 +564,97 @@ msgstr ""
 msgid "Unable to launch the process %1 (%2)"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, conflictCacheSizeLabel)
-#: tools/helgrind/configpage.ui:40
-#, kde-format
-msgid "Conflict cache size:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, conflictCacheSize)
-#: tools/helgrind/configpage.ui:56
-#, kde-format
-msgid ""
-"<html><head/><body><p>This flag only has any effect at --history-level=full."
-"</p><p>Information about \"old\" conflicting accesses is stored in a cache "
-"of limited size, with LRU-style management. This is necessary because it "
-"isn't practical to store a stack trace for every single memory access made "
-"by the program. Historical information on not recently accessed locations is "
-"periodically discarded, to free up space in the cache.</p><p>This option "
-"controls the size of the cache, in terms of the number of different memory "
-"addresses for which conflicting access information is stored. If you find "
-"that Helgrind is showing race errors with only one stack instead of the "
-"expected two stacks, try increasing this value.</p><p>The minimum value is "
-"10,000 and the maximum is 30,000,000 (thirty times the default value). "
-"Increasing the value by 1 increases Helgrind's memory requirement by very "
-"roughly 100 bytes, so the maximum value will easily eat up three extra "
-"gigabytes or so of memory.</p></body></html>"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, historyLevelLabel)
-#: tools/helgrind/configpage.ui:82
+#: tools/helgrind/configpage.ui:37
 #, kde-format
 msgid "History level:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, historyLevel)
-#: tools/helgrind/configpage.ui:95
+#: tools/helgrind/configpage.ui:50
 #, kde-format
 msgid ""
-"<html><head/><body><p>--history-level=full (the default) causes Helgrind "
-"collects enough information about \"old\" accesses that it can produce two "
-"stack traces in a race report -- both the stack trace for the current "
-"access, and the trace for the older, conflicting access. To limit memory "
-"usage, \"old\" accesses stack traces are limited to a maximum of 8 entries, "
-"even if --num-callers value is bigger.</p><p>Collecting such information is "
-"expensive in both speed and memory, particularly for programs that do many "
-"inter-thread synchronisation events (locks, unlocks, etc). Without such "
-"information, it is more difficult to track down the root causes of races. "
-"Nonetheless, you may not need it in situations where you just want to check "
-"for the presence or absence of races, for example, when doing regression "
-"testing of a previously race-free program.</p><p>--history-level=none is the "
-"opposite extreme. It causes Helgrind not to collect any information about "
-"previous accesses. This can be dramatically faster than --history-level=full."
-"</p><p>--history-level=approx provides a compromise between these two "
+"<html><head/><body><p><span style=\" font-family:'Monospace'; font-"
+"weight:600; font-style:italic;\">--history-level=full</span> (the default) "
+"causes Helgrind collects enough information about \"old\" accesses that it "
+"can produce two stack traces in a race report -- both the stack trace for "
+"the current access, and the trace for the older, conflicting access. To "
+"limit memory usage, \"old\" accesses stack traces are limited to a maximum "
+"of 8 entries, even if <span style=\" font-family:'Monospace'; font-"
+"weight:600; font-style:italic;\">--num-callers</span> value is bigger.</"
+"p><p>Collecting such information is expensive in both speed and memory, "
+"particularly for programs that do many inter-thread synchronisation events "
+"(locks, unlocks, etc). Without such information, it is more difficult to "
+"track down the root causes of races. Nonetheless, you may not need it in "
+"situations where you just want to check for the presence or absence of "
+"races, for example, when doing regression testing of a previously race-free "
+"program.</p><p><span style=\" font-family:'Monospace'; font-weight:600; font-"
+"style:italic;\">--history-level=none</span> is the opposite extreme. It "
+"causes Helgrind not to collect any information about previous accesses. This "
+"can be dramatically faster than <span style=\" font-family:'Monospace'; font-"
+"weight:600; font-style:italic;\">--history-level=full</span>.</p><p><span "
+"style=\" font-family:'Monospace'; font-weight:600; font-style:italic;\">--"
+"history-level=approx</span> provides a compromise between these two "
 "extremes. It causes Helgrind to show a full trace for the later access, and "
 "approximate information regarding the earlier access. This approximate "
 "information consists of two stacks, and the earlier access is guaranteed to "
 "have occurred somewhere between program points denoted by the two stacks. "
 "This is not as useful as showing the exact stack for the previous access (as "
-"--history-level=full does), but it is better than nothing, and it is almost "
-"as fast as --history-level=none.</p><p><br/></p></body></html>"
+"<span style=\" font-family:'Monospace'; font-weight:600; font-style:italic;"
+"\">--history-level=full</span> does), but it is better than nothing, and it "
+"is almost as fast as <span style=\" font-family:'Monospace'; font-"
+"weight:600; font-style:italic;\">--history-level=none</span>.</p></body></"
+"html>"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
-#: tools/helgrind/configpage.ui:99
+#: tools/helgrind/configpage.ui:54
 #, kde-format
 msgid "full"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
-#: tools/helgrind/configpage.ui:104
+#: tools/helgrind/configpage.ui:59
 #, kde-format
 msgid "approx"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
 #. i18n: ectx: property (text), item, widget (QComboBox, keepStacktraces)
-#: tools/helgrind/configpage.ui:109 tools/memcheck/configpage.ui:146
+#: tools/helgrind/configpage.ui:64 tools/memcheck/configpage.ui:146
 #, kde-format
 msgid "none"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, trackLockOrders)
-#: tools/helgrind/configpage.ui:129
+#. i18n: ectx: property (text), widget (QLabel, conflictCacheSizeLabel)
+#: tools/helgrind/configpage.ui:72
+#, kde-format
+msgid "Conflict cache size:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, conflictCacheSize)
+#: tools/helgrind/configpage.ui:88
+#, kde-format
+msgid ""
+"<html><head/><body><p>This flag only has any effect at <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;\">--history-"
+"level=full</span>.</p><p>Information about \"old\" conflicting accesses is "
+"stored in a cache of limited size, with LRU-style management. This is "
+"necessary because it isn't practical to store a stack trace for every single "
+"memory access made by the program. Historical information on not recently "
+"accessed locations is periodically discarded, to free up space in the cache."
+"</p><p>This option controls the size of the cache, in terms of the number of "
+"different memory addresses for which conflicting access information is "
+"stored. If you find that Helgrind is showing race errors with only one stack "
+"instead of the expected two stacks, try increasing this value.</p><p>The "
+"minimum value is 10,000 and the maximum is 30,000,000 (thirty times the "
+"default value). Increasing the value by 1 increases Helgrind's memory "
+"requirement by very roughly 100 bytes, so the maximum value will easily eat "
+"up three extra gigabytes or so of memory.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, trackLockorders)
+#: tools/helgrind/configpage.ui:133
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled (the default), Helgrind performs lock "
@@ -559,14 +664,14 @@ msgid ""
 "order checking.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, trackLockOrders)
-#: tools/helgrind/configpage.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, trackLockorders)
+#: tools/helgrind/configpage.ui:136
 #, kde-format
 msgid "Track lock orders"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, checkStackRefs)
-#: tools/helgrind/configpage.ui:146
+#: tools/helgrind/configpage.ui:150
 #, kde-format
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -585,13 +690,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkStackRefs)
-#: tools/helgrind/configpage.ui:149
+#: tools/helgrind/configpage.ui:153
 #, kde-format
 msgid "Check stack refs"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, ignoreThreadCreation)
-#: tools/helgrind/configpage.ui:159
+#: tools/helgrind/configpage.ui:163
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether all activities during thread creation "
@@ -616,13 +721,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, ignoreThreadCreation)
-#: tools/helgrind/configpage.ui:162
+#: tools/helgrind/configpage.ui:166
 #, kde-format
 msgid "Ignore thread creation"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, freeIsWrite)
-#: tools/helgrind/configpage.ui:172
+#: tools/helgrind/configpage.ui:176
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled (not the default), Helgrind treats "
@@ -636,10 +741,10 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, freeIsWrite)
-#: tools/helgrind/configpage.ui:175
+#: tools/helgrind/configpage.ui:179
 #, fuzzy, kde-format
 #| msgid "Free block list size"
-msgid "Free is write"
+msgid "Free is write (experimental)"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
 #: tools/helgrind/launcher.cpp:40
@@ -647,91 +752,198 @@ msgstr "Grandeco de la listo de liberaj blokoj"
 msgid "Analyze application with Helgrind"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
-#: tools/massif/configpage.ui:25 tools/memcheck/configpage.ui:212
-#, fuzzy, kde-format
-#| msgid "Extra &Parameters"
-msgid "E&xtra parameters:"
-msgstr "Pluaj &parametroj"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/massif/configpage.ui:45
-#, kde-format
-msgid "Snapshot tree depth:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: tools/massif/configpage.ui:68
-#, fuzzy, kde-format
-#| msgid "Threshold:"
-msgid "Threshold:"
-msgstr "Pentrosojlo:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, threshold)
-#. i18n: ectx: property (suffix), widget (QSpinBox, peakInaccuracy)
-#: tools/massif/configpage.ui:81 tools/massif/configpage.ui:104
-#, no-c-format, kde-format
-msgid "%"
-msgstr "%"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: tools/massif/configpage.ui:91
-#, kde-format
-msgid "Peak inaccuracy:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: tools/massif/configpage.ui:117
-#, fuzzy, kde-format
-#| msgid "snapshot"
-msgid "Maximum snapshots:"
-msgstr "ekranfoto"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: tools/massif/configpage.ui:140
-#, kde-format
-msgid "Detailed snapshot frequency:"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: tools/massif/configpage.ui:163
+#: tools/massif/configpage.ui:25
 #, kde-format
 msgid "Time unit:"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QComboBox, timeUnit)
+#: tools/massif/configpage.ui:38
+#, kde-format
+msgid ""
+"<html><head/><body><p>The time unit used for the profiling. There are three "
+"possibilities: </p><p><span style=\" font-weight:600;\">instructions</span> "
+"executed (i), which is good for most cases; </p><p>real (wallclock) time "
+"(ms, i.e. <span style=\" font-weight:600;\">milliseconds</span>), which is "
+"sometimes useful; </p><p>and <span style=\" font-weight:600;\">bytes</span> "
+"allocated/deallocated on the heap and/or stack (B), which is useful for very "
+"short-run programs, and for testing purposes, because it is the most "
+"reproducible across different machines.</p></body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), item, widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:177
+#: tools/massif/configpage.ui:42
 #, kde-format
 msgid "CPU instructions"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:182
+#: tools/massif/configpage.ui:47
 #, kde-format
 msgid "Milliseconds"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:187
+#: tools/massif/configpage.ui:52
 #, kde-format
 msgid "Bytes allocated"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: tools/massif/configpage.ui:60
+#, kde-format
+msgid "Snapshot tree depth:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, depth)
+#: tools/massif/configpage.ui:73
+#, kde-format
+msgid ""
+"<html><head/><body><p>Maximum depth of the allocation trees recorded for "
+"detailed snapshots. Increasing it will make Massif run somewhat more slowly, "
+"use more memory, and produce bigger output files.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: tools/massif/configpage.ui:86
+#, fuzzy, kde-format
+#| msgid "Threshold:"
+msgid "Threshold:"
+msgstr "Pentrosojlo:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, threshold)
+#: tools/massif/configpage.ui:99
+#, kde-format
+msgid ""
+"<html><head/><body><p>The significance threshold for heap allocations, as a "
+"percentage of total memory size. Allocation tree entries that account for "
+"less than this will be aggregated. Note that this should be specified in "
+"tandem with ms_print's option of the same name.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, threshold)
+#. i18n: ectx: property (suffix), widget (QSpinBox, peakInaccuracy)
+#: tools/massif/configpage.ui:102 tools/massif/configpage.ui:128
+#, no-c-format, kde-format
+msgid "%"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: tools/massif/configpage.ui:112
+#, kde-format
+msgid "Peak inaccuracy:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, peakInaccuracy)
+#: tools/massif/configpage.ui:125
+#, no-c-format, kde-format
+msgid ""
+"<html><head/><body><p>Massif does not necessarily record the actual global "
+"memory allocation peak; by default it records a peak only when the global "
+"memory allocation size exceeds the previous peak by at least 1.0%. This is "
+"because there can be many local allocation peaks along the way, and doing a "
+"detailed snapshot for every one would be expensive and wasteful, as all but "
+"one of them will be later discarded. This inaccuracy can be changed (even to "
+"0.0%) via this option, but Massif will run drastically slower as the number "
+"approaches zero.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: tools/massif/configpage.ui:141
+#, fuzzy, kde-format
+#| msgid "snapshot"
+msgid "Maximum snapshots:"
+msgstr "ekranfoto"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, maxSnapshots)
+#: tools/massif/configpage.ui:154
+#, kde-format
+msgid ""
+"<html><head/><body><p>The maximum number of snapshots recorded. If set to N, "
+"for all programs except very short-running ones, the final number of "
+"snapshots will be between N/2 and N.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: tools/massif/configpage.ui:167
+#, kde-format
+msgid "Detailed snapshot frequency:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, snapshotFreq)
+#: tools/massif/configpage.ui:180
+#, kde-format
+msgid ""
+"<html><head/><body><p>Frequency of detailed snapshots. With <span style=\" "
+"font-family:'Monospace'; font-weight:600; font-style:italic;\">--detailed-"
+"freq=1</span>, every snapshot is detailed.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
+#: tools/massif/configpage.ui:193 tools/memcheck/configpage.ui:212
+#, fuzzy, kde-format
+#| msgid "Extra &Parameters"
+msgid "E&xtra parameters:"
+msgstr "Pluaj &parametroj"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, profileHeap)
+#: tools/massif/configpage.ui:225
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specifies whether heap profiling should be done.</p></"
+"body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, profileHeap)
-#: tools/massif/configpage.ui:204
+#: tools/massif/configpage.ui:228
 #, kde-format
 msgid "Profile heap"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, profileStack)
+#: tools/massif/configpage.ui:238
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specifies whether stack profiling should be done. This "
+"option slows Massif down greatly, and so is off by default. Note that Massif "
+"assumes that the main stack has size zero at start-up. This is not true, but "
+"doing otherwise accurately is difficult. Furthermore, starting at zero "
+"better indicates the size of the part of the main stack that a user program "
+"actually has control over.</p></body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, profileStack)
-#: tools/massif/configpage.ui:214
+#: tools/massif/configpage.ui:241
 #, kde-format
 msgid "Profile stack (slows profiling down greatly)"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, pagesAsHeap)
+#: tools/massif/configpage.ui:248
+#, kde-format
+msgid ""
+"<html><head/><body><p>Tells Massif to profile memory at the page level "
+"rather than at the malloc'd block level.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, pagesAsHeap)
+#: tools/massif/configpage.ui:251
+#, kde-format
+msgid "Pages as heap"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: tools/massif/configpage.ui:258
+#, kde-format
+msgid ""
+"<html><head/><body><p>\"Pages as heap\" cannot be used together with "
+"\"Profile stack\".</p></body></html>"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QCheckBox, launchMassifVisualizer)
-#: tools/massif/configpage.ui:228
+#: tools/massif/configpage.ui:281
 #, fuzzy, kde-format
 #| msgid "&Cachegrind"
 msgid "Launch Massif Visualizer after finish"
@@ -963,7 +1175,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, undefValueErrors)
-#: tools/memcheck/configpage.ui:237
+#: tools/memcheck/configpage.ui:241
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether Memcheck reports uses of undefined "
@@ -974,13 +1186,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, undefValueErrors)
-#: tools/memcheck/configpage.ui:240
+#: tools/memcheck/configpage.ui:244
 #, kde-format
 msgid "Show undefined values usage"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, showMismatchedFrees)
-#: tools/memcheck/configpage.ui:250
+#: tools/memcheck/configpage.ui:254
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled, Memcheck checks that heap blocks are "
@@ -1022,13 +1234,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, showMismatchedFrees)
-#: tools/memcheck/configpage.ui:253
+#: tools/memcheck/configpage.ui:257
 #, kde-format
 msgid "Show mismatched frees"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, partialLoadsOk)
-#: tools/memcheck/configpage.ui:260
+#: tools/memcheck/configpage.ui:264
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls how Memcheck handles 32-, 64-, 128- and 256-"
@@ -1048,13 +1260,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, partialLoadsOk)
-#: tools/memcheck/configpage.ui:263
+#: tools/memcheck/configpage.ui:267
 #, kde-format
 msgid "Allow partial loads"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, trackOrigins)
-#: tools/memcheck/configpage.ui:270
+#: tools/memcheck/configpage.ui:274
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether Memcheck tracks the origin of "
@@ -1091,13 +1303,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, trackOrigins)
-#: tools/memcheck/configpage.ui:273
+#: tools/memcheck/configpage.ui:277
 #, kde-format
 msgid "Track origins of all uninitialised values"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, expensiveDefinednessChecks)
-#: tools/memcheck/configpage.ui:280
+#: tools/memcheck/configpage.ui:284
 #, no-c-format, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether Memcheck should employ more precise "
@@ -1112,13 +1324,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, expensiveDefinednessChecks)
-#: tools/memcheck/configpage.ui:283
+#: tools/memcheck/configpage.ui:287
 #, kde-format
 msgid "Expensive definedness checks"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, showInstructionPointer)
-#: tools/memcheck/configpage.ui:297
+#: tools/memcheck/configpage.ui:301
 #, kde-format
 msgid "Show instruction pointer"
 msgstr ""
@@ -1150,6 +1362,11 @@ msgid ""
 "unaddressable memory to system calls;<br/>mismatched use of malloc/new/new "
 "[] vs free/delete/delete [];<br/>some abuses of the POSIX pthread API.</p>"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Maximum &frame stack size"
+#~ msgid "&Maximum frame stack size (bytes):"
+#~ msgstr "Maksimuma &framstaka grandeco"
 
 #, fuzzy
 #~| msgid "Show Reachable Blocks"
@@ -1213,11 +1430,6 @@ msgstr ""
 
 #~ msgid "Display stack to &depth:"
 #~ msgstr "Montri stakon ĝis profun&deco:"
-
-#, fuzzy
-#~| msgid "Maximum &frame stack size"
-#~ msgid "Maximum &frame stack size:"
-#~ msgstr "Maksimuma &framstaka grandeco"
 
 #~ msgid " bytes"
 #~ msgstr " bitokoj"
