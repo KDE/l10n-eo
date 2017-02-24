@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-21 08:43+0100\n"
+"POT-Creation-Date: 2017-02-24 03:55+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -381,7 +381,7 @@ msgstr "Nomo"
 
 #: debugger/variable/variablecollection.cpp:422
 #: debugger/variable/variabletooltip.cpp:102
-#: shell/settings/environmentgroupmodel.cpp:98
+#: shell/settings/environmentprofilemodel.cpp:106
 #, fuzzy, kde-format
 #| msgid "Copy Value"
 msgid "Value"
@@ -1170,7 +1170,7 @@ msgid "Class"
 msgstr "Klaso"
 
 #: language/duchain/navigation/abstractnavigationcontext.cpp:403
-#: shell/settings/environmentgroupmodel.cpp:95
+#: shell/settings/environmentprofilemodel.cpp:104
 #, kde-format
 msgid "Variable"
 msgstr "Variablo"
@@ -3188,7 +3188,7 @@ msgid "Provide a name for the project"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: shell/projectinfopage.ui:30
+#: shell/projectinfopage.ui:30 shell/settings/environmentwidget.cpp:188
 #, kde-format
 msgid "Name:"
 msgstr "Nomo:"
@@ -3783,72 +3783,73 @@ msgstr ""
 msgid "Preview"
 msgstr "Antaŭrigardo"
 
-#: shell/settings/environmentpreferences.cpp:84
+#: shell/settings/environmentpreferences.cpp:86
 #, kde-format
 msgid "Environment"
 msgstr ""
 
-#: shell/settings/environmentpreferences.cpp:89
+#: shell/settings/environmentpreferences.cpp:91
 #, kde-format
 msgid "Configure Environment Variables"
 msgstr ""
 
-#: shell/settings/environmentwidget.cpp:53
+#: shell/settings/environmentprofilelistmodel.cpp:61
+#, kde-format
+msgid "%1 (default profile)"
+msgstr ""
+
+#: shell/settings/environmentwidget.cpp:94
 #, fuzzy, kde-format
 #| msgid "Remove Watch Variable"
-msgid "Enter variable ..."
+msgid "Enter variable..."
 msgstr "Forigi observovariablon"
 
+#: shell/settings/environmentwidget.cpp:182
+#, kde-format
+msgid "Enter Name of New Environment Profile"
+msgstr ""
+
 #. i18n: ectx: property (toolTip), widget (QPushButton, batchModeEditButton)
-#: shell/settings/environmentwidget.cpp:154
-#: shell/settings/environmentwidget.ui:115
+#: shell/settings/environmentwidget.cpp:245
+#: shell/settings/environmentwidget.ui:130
 #, kde-format
 msgid "Batch Edit Mode"
 msgstr ""
 
-#: shell/settings/environmentwidget.cpp:202
-#, fuzzy, kde-format
-#| msgctxt "location (address)"
-#| msgid "%1 (%2)"
-msgctxt "a copy of the existing environment was created"
-msgid "%1 (Cloned %2)"
-msgstr "%1 (%2)"
-
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/settings/environmentwidget.ui:22
 #, kde-format
-msgid "Environment group:"
+msgid "Environment profile:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, addgrpBtn)
-#: shell/settings/environmentwidget.ui:42
-#, fuzzy, kde-format
-#| msgid "Add group"
-msgid "Add Group"
-msgstr "Aldoni grupon"
+#. i18n: ectx: property (toolTip), widget (QPushButton, addProfileButton)
+#: shell/settings/environmentwidget.ui:39
+#, kde-format
+msgid "Add profile..."
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QPushButton, clonegrpBtn)
+#. i18n: ectx: property (toolTip), widget (QPushButton, cloneProfileButton)
 #: shell/settings/environmentwidget.ui:49
 #, fuzzy, kde-format
-#| msgid "Remove group"
-msgid "Clone Group"
-msgstr "Forpreni grupon"
+#| msgid "Clos&e All"
+msgid "Clone profile..."
+msgstr "F&ermi ĉiujn"
 
-#. i18n: ectx: property (text), widget (QPushButton, removegrpBtn)
-#: shell/settings/environmentwidget.ui:56
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeProfileButton)
+#: shell/settings/environmentwidget.ui:59
 #, fuzzy, kde-format
-#| msgid "Remove group"
-msgid "Remove Group"
-msgstr "Forpreni grupon"
+#| msgid "Remove All"
+msgid "Remove profile"
+msgstr "Forigi ĉiujn"
 
-#. i18n: ectx: property (text), widget (QPushButton, setAsDefaultBtn)
-#: shell/settings/environmentwidget.ui:63
+#. i18n: ectx: property (toolTip), widget (QPushButton, setAsDefaultProfileButton)
+#: shell/settings/environmentwidget.ui:69
 #, kde-format
-msgid "Set As Default Group"
+msgid "Set as default"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, deleteButton)
-#: shell/settings/environmentwidget.ui:102
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeVariableButton)
+#: shell/settings/environmentwidget.ui:114
 #, fuzzy, kde-format
 #| msgid "Remove Watch Variable"
 msgid "Remove variable"
@@ -5513,6 +5514,28 @@ msgid "Logview"
 msgstr ""
 
 #, fuzzy
+#~| msgctxt "location (address)"
+#~| msgid "%1 (%2)"
+#~ msgctxt "a copy of the existing environment was created"
+#~ msgid "%1 (Cloned %2)"
+#~ msgstr "%1 (%2)"
+
+#, fuzzy
+#~| msgid "Add group"
+#~ msgid "Add Group"
+#~ msgstr "Aldoni grupon"
+
+#, fuzzy
+#~| msgid "Remove group"
+#~ msgid "Clone Group"
+#~ msgstr "Forpreni grupon"
+
+#, fuzzy
+#~| msgid "Remove group"
+#~ msgid "Remove Group"
+#~ msgstr "Forpreni grupon"
+
+#, fuzzy
 #~| msgid "Remove All"
 #~ msgid "Remove Selected"
 #~ msgstr "Forigi ĉiujn"
@@ -5687,12 +5710,6 @@ msgstr ""
 #~ msgctxt "@info"
 #~ msgid "The session lock-file is owned."
 #~ msgstr "Revizio"
-
-#, fuzzy
-#~| msgid "Remove All"
-#~ msgctxt "@action:button"
-#~ msgid "Remove lock file"
-#~ msgstr "Forigi ĉiujn"
 
 #, fuzzy
 #~| msgid "Do Nothing"
