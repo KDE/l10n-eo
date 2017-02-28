@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-21 09:26+0100\n"
+"POT-Creation-Date: 2017-02-28 09:54+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: config/globalconfigpage.cpp:49 launchmode.cpp:46 plugin.cpp:100
-#: plugin.cpp:101
+#: config/globalconfigpage.cpp:49 launchmode.cpp:46 plugin.cpp:67
+#: problemmodel.cpp:52
 #, kde-format
 msgid "Valgrind"
 msgstr "Valgrind"
@@ -116,37 +116,44 @@ msgstr ""
 msgid "Valgrind (Current Launch Configuration)"
 msgstr "Fina Situo:"
 
-#: plugin.cpp:122 tools/memcheck/launcher.cpp:39
+#: plugin.cpp:87 tools/memcheck/launcher.cpp:37
 #, kde-format
 msgid "Memcheck: a memory error detector"
 msgstr ""
 
-#: plugin.cpp:126 tools/cachegrind/launcher.cpp:39
+#: plugin.cpp:91 tools/cachegrind/launcher.cpp:37
 #, kde-format
 msgid "Cachegrind: a cache and branch-prediction profiler"
 msgstr ""
 
-#: plugin.cpp:130 tools/callgrind/launcher.cpp:39
+#: plugin.cpp:95 tools/callgrind/launcher.cpp:37
 #, kde-format
 msgid "Callgrind: a call-graph generating cache and branch prediction profiler"
 msgstr ""
 
-#: plugin.cpp:134 tools/helgrind/launcher.cpp:39
+#: plugin.cpp:99 tools/helgrind/launcher.cpp:37
 #, kde-format
 msgid "Helgrind: a thread error detector"
 msgstr ""
 
-#: plugin.cpp:138 tools/drd/launcher.cpp:39
+#: plugin.cpp:103 tools/drd/launcher.cpp:37
 #, kde-format
 msgid "DRD: a thread error detector"
 msgstr ""
 
-#: plugin.cpp:142 tools/massif/launcher.cpp:39
+#: plugin.cpp:107 tools/massif/launcher.cpp:37
 #, kde-format
 msgid "Massif: a heap profiler"
 msgstr ""
 
-#: tools/cachegrind/configpage.cpp:58 tools/cachegrind/launcher.cpp:38
+#: problemmodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Valgrind Warning"
+msgctxt "@info:tooltip"
+msgid "Re-run %1 Analyze for Current Launch Configuration"
+msgstr "Fina Situo:"
+
+#: tools/cachegrind/configpage.cpp:58 tools/cachegrind/launcher.cpp:36
 #, fuzzy, kde-format
 #| msgid "&Cachegrind"
 msgid "Cachegrind"
@@ -228,7 +235,7 @@ msgstr ""
 msgid "Percentage values"
 msgstr ""
 
-#: tools/callgrind/configpage.cpp:54 tools/callgrind/launcher.cpp:38
+#: tools/callgrind/configpage.cpp:54 tools/callgrind/launcher.cpp:36
 #, fuzzy, kde-format
 #| msgid "Ca&llgrind"
 msgid "Callgrind"
@@ -370,7 +377,7 @@ msgstr ""
 msgid "Source file(s):"
 msgstr ""
 
-#: tools/drd/configpage.cpp:72 tools/drd/launcher.cpp:38
+#: tools/drd/configpage.cpp:72 tools/drd/launcher.cpp:36
 #, kde-format
 msgid "DRD"
 msgstr ""
@@ -787,62 +794,67 @@ msgstr ""
 msgid "Limit errors if too many"
 msgstr ""
 
-#: tools/generic/core/ijob.cpp:223
+#: tools/generic/core/ijob.cpp:220
 #, kde-format
 msgid "Failed to start valgrind from \"%1\"."
 msgstr ""
 
-#: tools/generic/core/ijob.cpp:230
+#: tools/generic/core/ijob.cpp:227
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind crashed."
 msgstr "Fina Situo:"
 
-#: tools/generic/core/ijob.cpp:235
+#: tools/generic/core/ijob.cpp:232
 #, fuzzy, kde-format
 #| msgid "Process exited"
 msgid "Valgrind process timed out."
 msgstr "Procezo ĉesiĝis"
 
-#: tools/generic/core/ijob.cpp:239
+#: tools/generic/core/ijob.cpp:236
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Write to Valgrind process failed."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/core/ijob.cpp:243
+#: tools/generic/core/ijob.cpp:240
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Read from Valgrind process failed."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/core/ijob.cpp:261 tools/generic/core/ijob.cpp:307
+#: tools/generic/core/ijob.cpp:258 tools/generic/core/ijob.cpp:304
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Please review your Valgrind launch configuration."
 msgstr "Fina Situo:"
 
-#: tools/generic/core/ijob.cpp:263
+#: tools/generic/core/ijob.cpp:260
 #, fuzzy, kde-format
 #| msgid "make-process failed"
 msgid "Unknown Valgrind process error."
 msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/generic/core/ijob.cpp:269 tools/generic/core/ijob.cpp:309
+#: tools/generic/core/ijob.cpp:266 tools/generic/core/ijob.cpp:306
 #: tools/generic/core/xml/parser.cpp:259
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind Error"
 msgstr "Fina Situo:"
 
-#: tools/generic/core/ijob.cpp:285
+#: tools/generic/core/ijob.cpp:282
 #, kde-format
 msgid "Executing command: "
 msgstr ""
 
-#: tools/generic/core/ijob.cpp:303
+#: tools/generic/core/ijob.cpp:300
 #, kde-format
 msgid "Failed to execute the command:"
+msgstr ""
+
+#: tools/generic/core/ilauncher.cpp:84
+#, kde-format
+msgid "%1 Analysis (%2)"
 msgstr ""
 
 #: tools/generic/core/utils.cpp:39
@@ -915,7 +927,7 @@ msgstr ""
 msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
 msgstr ""
 
-#: tools/helgrind/configpage.cpp:60 tools/helgrind/launcher.cpp:38
+#: tools/helgrind/configpage.cpp:60 tools/helgrind/launcher.cpp:36
 #, fuzzy, kde-format
 #| msgid "&Helgrind"
 msgid "Helgrind"
@@ -1098,7 +1110,7 @@ msgstr ""
 msgid "Free is write (experimental)"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
-#: tools/massif/configpage.cpp:71 tools/massif/launcher.cpp:38
+#: tools/massif/configpage.cpp:71 tools/massif/launcher.cpp:36
 #, fuzzy, kde-format
 #| msgid "Massi&f"
 msgid "Massif"
@@ -1347,7 +1359,7 @@ msgstr ""
 msgid "Launch visualizer"
 msgstr "&Cachegrind"
 
-#: tools/memcheck/configpage.cpp:86 tools/memcheck/launcher.cpp:38
+#: tools/memcheck/configpage.cpp:86 tools/memcheck/launcher.cpp:36
 #, kde-format
 msgid "Memcheck"
 msgstr ""
@@ -1688,13 +1700,13 @@ msgstr ""
 msgid "Expensive definedness checks"
 msgstr ""
 
-#: widget.cpp:36
+#: toolviewfactory.cpp:45
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
 msgid "Valgrind Output"
 msgstr "Fina Situo:"
 
-#: widget.cpp:38
+#: toolviewfactory.cpp:47
 #, kde-format
 msgid ""
 "<b>Valgrind</b><p>Shows the output of valgrind. Valgrind detects:<br/>use of "
