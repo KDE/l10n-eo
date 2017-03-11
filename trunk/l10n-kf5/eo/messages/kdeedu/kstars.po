@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-03-10 04:04+0100\n"
+"POT-Creation-Date: 2017-03-11 04:04+0100\n"
 "PO-Revision-Date: 2015-03-19 04:30-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgstr ""
 msgid "Visible Satellites"
 msgstr "Montru HST bildon"
 
-#: auxiliary/colorscheme.cpp:89 dialogs/finddialog.cpp:52 kstarsactions.cpp:736
+#: auxiliary/colorscheme.cpp:89 dialogs/finddialog.cpp:52 kstarsactions.cpp:780
 #: kstarslite/dialogs/finddialoglite.cpp:53
 #, fuzzy, kde-format
 msgid "Satellites"
@@ -196,7 +196,7 @@ msgstr "Satelita Trako"
 msgid "Satellites Labels"
 msgstr "Satelita Trako"
 
-#: auxiliary/colorscheme.cpp:91 dialogs/finddialog.cpp:51 kstarsactions.cpp:739
+#: auxiliary/colorscheme.cpp:91 dialogs/finddialog.cpp:51 kstarsactions.cpp:783
 #: kstarslite/dialogs/finddialoglite.cpp:52
 #, fuzzy, kde-format
 msgid "Supernovae"
@@ -265,12 +265,12 @@ msgstr ""
 #: auxiliary/colorscheme.cpp:268 auxiliary/colorscheme.cpp:270
 #: auxiliary/colorscheme.cpp:287 auxiliary/colorscheme.cpp:289
 #: auxiliary/colorscheme.cpp:300 dialogs/detaildialog.cpp:647
-#: ekos/align/align.cpp:728 ekos/align/align.cpp:861
+#: ekos/align/align.cpp:760 ekos/align/align.cpp:893 ekos/align/align.cpp:959
 #: ekos/capture/capture.cpp:2329 ekos/capture/capture.cpp:2685
 #: ekos/scheduler/scheduler.cpp:3218 ekos/scheduler/scheduler.cpp:3522
 #: ekos/scheduler/scheduler.cpp:4617 ekos/scheduler/scheduler.cpp:4646
 #: ekos/scheduler/scheduler.cpp:4688 indi/drivermanager.cpp:1485
-#: indi/indidriver.cpp:946 kstarsactions.cpp:1028 oal/execute.cpp:317
+#: indi/indidriver.cpp:946 kstarsactions.cpp:1072 oal/execute.cpp:317
 #: options/opscolors.cpp:226 tools/modcalcangdist.cpp:134
 #: tools/modcalcapcoord.cpp:151 tools/modcalcdaylength.cpp:247
 #: tools/modcalcgalcoord.cpp:192 tools/modcalcgeodcoord.cpp:230
@@ -399,7 +399,7 @@ msgid ""
 "This affects only the display and not the saving."
 msgstr ""
 
-#: auxiliary/imageviewer.cpp:157 ekos/align/align.cpp:841
+#: auxiliary/imageviewer.cpp:157 ekos/align/align.cpp:873
 #: ekos/capture/capture.cpp:2653 ekos/scheduler/scheduler.cpp:3501
 #: kstarslite/qml/dialogs/helpers/DetailsAddLink.qml:95
 #: kstarslite/qml/dialogs/helpers/LocationEdit.qml:382
@@ -454,17 +454,17 @@ msgid "Save Image"
 msgstr "Konservi bildon"
 
 #: auxiliary/imageviewer.cpp:336 dialogs/addcatdialog.cpp:212
-#: ekos/align/align.cpp:829 ekos/capture/capture.cpp:2641
-#: ekos/scheduler/scheduler.cpp:3489 kstarsactions.cpp:901
-#: printing/pwizprint.cpp:88 tools/scriptbuilder.cpp:850
+#: ekos/align/align.cpp:861 ekos/align/align.cpp:940
+#: ekos/capture/capture.cpp:2641 ekos/scheduler/scheduler.cpp:3489
+#: kstarsactions.cpp:945 printing/pwizprint.cpp:88 tools/scriptbuilder.cpp:850
 #, kde-format
 msgid "A file named \"%1\" already exists. Overwrite it?"
 msgstr "Dosiero nomita \"%1\" jam ekzistas. Ĉu vi deziras anstataŭigi ĝin?"
 
 #: auxiliary/imageviewer.cpp:338 dialogs/addcatdialog.cpp:214
-#: ekos/align/align.cpp:831 ekos/capture/capture.cpp:2643
-#: ekos/scheduler/scheduler.cpp:3491 kstarsactions.cpp:902
-#: printing/pwizprint.cpp:89 tools/scriptbuilder.cpp:852
+#: ekos/align/align.cpp:863 ekos/align/align.cpp:942
+#: ekos/capture/capture.cpp:2643 ekos/scheduler/scheduler.cpp:3491
+#: kstarsactions.cpp:946 printing/pwizprint.cpp:89 tools/scriptbuilder.cpp:852
 #, kde-format
 msgid "Overwrite File?"
 msgstr "Ĉu anstataŭigi la dosieron?"
@@ -490,8 +490,8 @@ msgstr ""
 #: ekos/guide/internalguide/rcalibration.cpp:680
 #: ekos/guide/internalguide/rcalibration.cpp:819
 #: ekos/scheduler/schedulerjob.cpp:199 indi/drivermanager.cpp:434
-#: indi/drivermanager.cpp:761 indi/inditelescope.cpp:880
-#: indi/inditelescope.cpp:884
+#: indi/drivermanager.cpp:761 indi/inditelescope.cpp:919
+#: indi/inditelescope.cpp:923
 #, kde-format
 msgid "Error"
 msgstr "Eraro"
@@ -1164,11 +1164,12 @@ msgstr ""
 "La URLo ne estas valida. Ĉu vi deziras malfermu\n"
 "la Google-serĉilon en nova rigardilfenestro?"
 
-#: dialogs/addlinkdialog.cpp:66 ekos/align/align.cpp:710
-#: ekos/align/align.cpp:849 ekos/capture/capture.cpp:2311
-#: ekos/capture/capture.cpp:2662 ekos/scheduler/scheduler.cpp:3201
-#: ekos/scheduler/scheduler.cpp:3510 fitsviewer/fitstab.cpp:309
-#: tools/scriptbuilder.cpp:809 tools/scriptbuilder.cpp:895
+#: dialogs/addlinkdialog.cpp:66 ekos/align/align.cpp:742
+#: ekos/align/align.cpp:881 ekos/align/align.cpp:950
+#: ekos/capture/capture.cpp:2311 ekos/capture/capture.cpp:2662
+#: ekos/scheduler/scheduler.cpp:3201 ekos/scheduler/scheduler.cpp:3510
+#: fitsviewer/fitstab.cpp:309 tools/scriptbuilder.cpp:809
+#: tools/scriptbuilder.cpp:895
 #, kde-format
 msgid "Invalid URL"
 msgstr "nevalida URLo"
@@ -1278,7 +1279,7 @@ msgid "General"
 msgstr "Ĝenerala"
 
 #: dialogs/detaildialog.cpp:148 kspopupmenu.cpp:189 kspopupmenu.cpp:284
-#: kstarsinit.cpp:707 kstarslite/dialogs/detaildialoglite.cpp:75
+#: kstarsinit.cpp:710 kstarslite/dialogs/detaildialoglite.cpp:75
 #: kstarsliteinit.cpp:61 printing/detailstable.cpp:87
 #: printing/pwizobjectselection.cpp:114 skycomponents/starcomponent.cpp:482
 #: skyobjects/starobject.cpp:549 tools/observinglist.cpp:565
@@ -1520,7 +1521,7 @@ msgstr ""
 msgid "Could not Open File"
 msgstr "Ne eblis malfermi dosieron"
 
-#: dialogs/detaildialog.cpp:693 kstarsactions.cpp:774
+#: dialogs/detaildialog.cpp:693 kstarsactions.cpp:818
 #, kde-format
 msgid "Advanced"
 msgstr "Plie"
@@ -1557,14 +1558,15 @@ msgstr "Dek"
 
 #: dialogs/detaildialog.cpp:1122 dialogs/detaildialog.cpp:1152
 #: fitsviewer/fitslabel.cpp:311 fitsviewer/fitslabel.cpp:346
-#: tools/flagmanager.cpp:261 tools/flagmanager.cpp:290
-#: tools/observinglist.cpp:691 tools/observinglist.cpp:721
+#: kstarsactions.cpp:274 kstarsactions.cpp:303 tools/flagmanager.cpp:261
+#: tools/flagmanager.cpp:290 tools/observinglist.cpp:691
+#: tools/observinglist.cpp:721
 #, kde-format
 msgid "KStars did not find any active telescopes."
 msgstr ""
 
 #: dialogs/detaildialog.cpp:1138 fitsviewer/fitslabel.cpp:327
-#: tools/flagmanager.cpp:277 tools/observinglist.cpp:707
+#: kstarsactions.cpp:292 tools/flagmanager.cpp:277 tools/observinglist.cpp:707
 #, kde-format
 msgid "Telescope %1 is offline. Please connect and retry again."
 msgstr ""
@@ -2118,7 +2120,7 @@ msgstr "Iu"
 msgid "Stars"
 msgstr "Steloj"
 
-#: dialogs/finddialog.cpp:42 kstarsactions.cpp:733 kstarsinit.cpp:450
+#: dialogs/finddialog.cpp:42 kstarsactions.cpp:777 kstarsinit.cpp:450
 #: kstarslite/dialogs/finddialoglite.cpp:43 tools/astrocalc.cpp:181
 #: tools/conjunctions.cpp:78
 #, fuzzy, kde-format
@@ -3275,7 +3277,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, PAHErrorLabel)
 #. i18n: ectx: property (text), widget (QLabel, PositionAngle)
 #: dialogs/newfov.ui:1074 dialogs/newfov.ui:1101 dialogs/newfov.ui:1128
-#: ekos/align/align.ui:1511 tools/modcalcangdist.ui:353
+#: ekos/align/align.ui:1533 tools/modcalcangdist.ui:353
 #, kde-format
 msgid "0"
 msgstr "0"
@@ -3669,12 +3671,12 @@ msgstr "Haines"
 msgid "dDE (arcsec)"
 msgstr "arksekundoj"
 
-#: ekos/align/align.cpp:703
+#: ekos/align/align.cpp:735
 #, fuzzy, kde-format
 msgid "Open Ekos Alignment List"
 msgstr "Aldonu al listo"
 
-#: ekos/align/align.cpp:709 ekos/align/align.cpp:848
+#: ekos/align/align.cpp:741 ekos/align/align.cpp:880 ekos/align/align.cpp:949
 #: ekos/capture/capture.cpp:2310 ekos/capture/capture.cpp:2661
 #: ekos/scheduler/scheduler.cpp:3200 ekos/scheduler/scheduler.cpp:3509
 #: fitsviewer/fitstab.cpp:308 tools/scriptbuilder.cpp:808
@@ -3683,101 +3685,119 @@ msgstr "Aldonu al listo"
 msgid "Invalid URL: %1"
 msgstr "nevalida URLo"
 
-#: ekos/align/align.cpp:727 ekos/capture/capture.cpp:2328
+#: ekos/align/align.cpp:759 ekos/capture/capture.cpp:2328
 #: ekos/scheduler/scheduler.cpp:3217 ekos/scheduler/scheduler.cpp:4617
 #: ekos/scheduler/scheduler.cpp:4646 ekos/scheduler/scheduler.cpp:4913
 #, fuzzy, kde-format
 msgid "Unable to open file %1"
 msgstr "Ne eblis malfermi dosieron"
 
-#: ekos/align/align.cpp:749 ekos/capture/capture.cpp:2356
+#: ekos/align/align.cpp:781 ekos/capture/capture.cpp:2356
 #, kde-format
 msgid ""
 "Deprecated sequence file format version %1. Please construct a new sequence "
 "file."
 msgstr ""
 
-#: ekos/align/align.cpp:813
+#: ekos/align/align.cpp:845
 #, fuzzy, kde-format
 msgid "Save Ekos Alignment List"
 msgstr "Aldonu al listo"
 
-#: ekos/align/align.cpp:841
+#: ekos/align/align.cpp:873
 #, fuzzy, kde-format
 msgid "Failed to save alignment list"
 msgstr "Ne eblis malfermi dosieron"
 
-#: ekos/align/align.cpp:860 ekos/capture/capture.cpp:2684
-#: ekos/scheduler/scheduler.cpp:3521 ekos/scheduler/scheduler.cpp:4687
+#: ekos/align/align.cpp:892 ekos/align/align.cpp:958
+#: ekos/capture/capture.cpp:2684 ekos/scheduler/scheduler.cpp:3521
+#: ekos/scheduler/scheduler.cpp:4687
 #, fuzzy, kde-format
 msgid "Unable to write to file %1"
 msgstr "Ne eblis malfermi dosieron"
 
-#: ekos/align/align.cpp:889 ekos/capture/capture.cpp:2778
+#: ekos/align/align.cpp:921
 #, fuzzy, kde-format
-msgid "Sequence queue saved to %1"
+msgid "Alignment List saved to %1"
 msgstr "nevalida URLo"
 
-#: ekos/align/align.cpp:900
+#: ekos/align/align.cpp:929
+#, fuzzy, kde-format
+#| msgctxt "City in Texas USA"
+#| msgid "Clear Lake City"
+msgid "Export Solution Points"
+msgstr "Clear Lake City"
+
+#: ekos/align/align.cpp:976
+#, fuzzy, kde-format
+msgid "Error in table structure."
+msgstr "Horizonto"
+
+#: ekos/align/align.cpp:986
+#, fuzzy, kde-format
+msgid "Solution Points Saved as: %1"
+msgstr "originala koordinato"
+
+#: ekos/align/align.cpp:995
 #, kde-format
 msgid "Are you sure you want to clear all of the solution points?"
 msgstr ""
 
-#: ekos/align/align.cpp:900
+#: ekos/align/align.cpp:995
 #, fuzzy, kde-format
 #| msgctxt "City in Texas USA"
 #| msgid "Clear Lake City"
 msgid "Clear Solution Points"
 msgstr "Clear Lake City"
 
-#: ekos/align/align.cpp:919
+#: ekos/align/align.cpp:1014
 #, kde-format
 msgid "Are you sure you want to clear all of the alignment points?"
 msgstr ""
 
-#: ekos/align/align.cpp:919
+#: ekos/align/align.cpp:1014
 #, fuzzy, kde-format
 #| msgctxt "City in Texas USA"
 #| msgid "Clear Lake City"
 msgid "Clear Align Points"
 msgstr "Clear Lake City"
 
-#: ekos/align/align.cpp:1023
+#: ekos/align/align.cpp:1118
 #, kde-format
 msgid "The Mount Model Tool is Reset."
 msgstr ""
 
-#: ekos/align/align.cpp:1054
+#: ekos/align/align.cpp:1149
 #, kde-format
 msgid "Please Check the Alignment Points."
 msgstr ""
 
-#: ekos/align/align.cpp:1066
+#: ekos/align/align.cpp:1161
 #, kde-format
 msgid "The Mount Model Tool is Starting."
 msgstr ""
 
-#: ekos/align/align.cpp:1072
+#: ekos/align/align.cpp:1167
 #, kde-format
 msgid "The Mount Model Tool is Paused."
 msgstr ""
 
-#: ekos/align/align.cpp:1126
+#: ekos/align/align.cpp:1221
 #, kde-format
 msgid "The Mount Model Tool is Finished."
 msgstr ""
 
-#: ekos/align/align.cpp:1151
+#: ekos/align/align.cpp:1246
 #, fuzzy, kde-format
 msgid "Solver timed out"
 msgstr "Trovu objekton"
 
-#: ekos/align/align.cpp:1286
+#: ekos/align/align.cpp:1381
 #, fuzzy, kde-format
 msgid "Mount does not support syncing."
 msgstr "Plutono"
 
-#: ekos/align/align.cpp:1331 ekos/align/align.cpp:1335
+#: ekos/align/align.cpp:1426 ekos/align/align.cpp:1430
 #, kde-format
 msgctxt "F-Number, Focal Length, Aperture"
 msgid ""
@@ -3785,7 +3805,7 @@ msgid ""
 "sup></nobr>"
 msgstr ""
 
-#: ekos/align/align.cpp:1445
+#: ekos/align/align.cpp:1540
 #, kde-format
 msgid ""
 "<p>Polar Alignment Helper tool requires the following:</p><p>1. German "
@@ -3793,174 +3813,174 @@ msgid ""
 "Legacy Polar Alignment Tool.</p>"
 msgstr ""
 
-#: ekos/align/align.cpp:1660 ekos/capture/capture.cpp:1301
+#: ekos/align/align.cpp:1755 ekos/capture/capture.cpp:1301
 #: ekos/focus/focus.cpp:871 ekos/guide/guide.cpp:608
 #, fuzzy, kde-format
 msgid "Error: Lost connection to CCD."
 msgstr "Kalkulu"
 
-#: ekos/align/align.cpp:1661
+#: ekos/align/align.cpp:1756
 #, kde-format
 msgid "Astrometry alignment failed"
 msgstr ""
 
-#: ekos/align/align.cpp:1670
+#: ekos/align/align.cpp:1765
 #, kde-format
 msgid ""
 "Telescope aperture and focal length are missing. Please check your driver "
 "settings and try again."
 msgstr ""
 
-#: ekos/align/align.cpp:1676
+#: ekos/align/align.cpp:1771
 #, kde-format
 msgid ""
 "CCD pixel size is missing. Please check your driver settings and try again."
 msgstr ""
 
-#: ekos/align/align.cpp:1693 ekos/capture/capture.cpp:1918
+#: ekos/align/align.cpp:1788 ekos/capture/capture.cpp:1918
 #, kde-format
 msgid ""
 "Image transfer is disabled for this camera. Would you like to enable it?"
 msgstr ""
 
-#: ekos/align/align.cpp:1710
+#: ekos/align/align.cpp:1805
 #, kde-format
 msgid "Cannot capture while focus module is busy! Retrying..."
 msgstr ""
 
-#: ekos/align/align.cpp:1717
+#: ekos/align/align.cpp:1812
 #, kde-format
 msgid "Cannot capture while CCD exposure is in progress! Retrying..."
 msgstr ""
 
-#: ekos/align/align.cpp:1790 ekos/capture/capture.cpp:1379
+#: ekos/align/align.cpp:1885 ekos/capture/capture.cpp:1379
 #: ekos/focus/focus.cpp:935 ekos/guide/internalguide/rcalibration.cpp:876
 #, fuzzy, kde-format
 msgid "Capturing image..."
 msgstr "Ŝarĝante KStars..."
 
-#: ekos/align/align.cpp:1804 ekos/focus/focus.cpp:1085
+#: ekos/align/align.cpp:1899 ekos/focus/focus.cpp:1085
 #, fuzzy, kde-format
 msgid "Image received."
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:1908
+#: ekos/align/align.cpp:2003
 #, kde-format
 msgid "Using solver options: %1"
 msgstr ""
 
-#: ekos/align/align.cpp:1912
+#: ekos/align/align.cpp:2007
 #, fuzzy, kde-format
 #| msgctxt "City in Ontario Canada"
 #| msgid "Blind River"
 msgid "Blind solver"
 msgstr "Blind River"
 
-#: ekos/align/align.cpp:1912
+#: ekos/align/align.cpp:2007
 #, kde-format
 msgid ""
 "Blind solver takes a very long time to solve but can reliably solve any "
 "image any where in the sky given enough time."
 msgstr ""
 
-#: ekos/align/align.cpp:1913
+#: ekos/align/align.cpp:2008
 #, kde-format
 msgid "Use existing settings"
 msgstr ""
 
-#: ekos/align/align.cpp:1913
+#: ekos/align/align.cpp:2008
 #, kde-format
 msgid ""
 "Mount must be pointing close to the target location and current field of "
 "view must match the image's field of view."
 msgstr ""
 
-#: ekos/align/align.cpp:1914
+#: ekos/align/align.cpp:2009
 #, kde-format
 msgid ""
 "No metadata is available in this image. Do you want to use the blind solver "
 "or the existing solver settings?"
 msgstr ""
 
-#: ekos/align/align.cpp:1914
+#: ekos/align/align.cpp:2009
 #, kde-format
 msgid "Astrometry solver"
 msgstr ""
 
-#: ekos/align/align.cpp:2007
+#: ekos/align/align.cpp:2102
 #, kde-format
 msgid "Solver iteration #%1"
 msgstr ""
 
-#: ekos/align/align.cpp:2038
+#: ekos/align/align.cpp:2133
 #, kde-format
 msgid "Solver RA (%1) DEC (%2) Orientation (%3) Pixel Scale (%4)"
 msgstr ""
 
-#: ekos/align/align.cpp:2045
+#: ekos/align/align.cpp:2140
 #, kde-format
 msgid ""
 "Current focal length is %1 mm while computed focal length from the solver is "
 "%2 mm. Please update the mount focal length to obtain accurate results."
 msgstr ""
 
-#: ekos/align/align.cpp:2144
+#: ekos/align/align.cpp:2239
 #, kde-format
 msgid ""
 "WCS information updated. Images captured from this point forward shall have "
 "valid WCS."
 msgstr ""
 
-#: ekos/align/align.cpp:2159
+#: ekos/align/align.cpp:2254
 #, kde-format
 msgid ""
 "Solution coordinates: RA (%1) DEC (%2) Telescope Coordinates: RA (%3) DEC "
 "(%4)"
 msgstr ""
 
-#: ekos/align/align.cpp:2163
+#: ekos/align/align.cpp:2258
 #, kde-format
 msgid "Target is within %1 degrees of solution coordinates."
 msgstr ""
 
-#: ekos/align/align.cpp:2202
+#: ekos/align/align.cpp:2297
 #, kde-format
 msgid "Maximum number of iterations reached. Solver failed."
 msgstr ""
 
-#: ekos/align/align.cpp:2231
+#: ekos/align/align.cpp:2326
 #, kde-format
 msgid "Target is within acceptable range. Astrometric solver is successful."
 msgstr ""
 
-#: ekos/align/align.cpp:2253 ekos/align/align.cpp:2483
+#: ekos/align/align.cpp:2348 ekos/align/align.cpp:2578
 #, fuzzy, kde-format
 msgid "Astrometry alignment completed successfully"
 msgstr "Koordinatoj"
 
-#: ekos/align/align.cpp:2271
+#: ekos/align/align.cpp:2366
 #, kde-format
 msgid "Astrometry alignment failed with errors"
 msgstr ""
 
-#: ekos/align/align.cpp:2339
+#: ekos/align/align.cpp:2434
 #, fuzzy, kde-format
 msgid "Refresh is complete."
 msgstr "Kalkulu"
 
-#: ekos/align/align.cpp:2346 ekos/focus/focus.cpp:804
+#: ekos/align/align.cpp:2441 ekos/focus/focus.cpp:804
 #, fuzzy, kde-format
 msgid "Capture aborted."
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:2351
+#: ekos/align/align.cpp:2446
 #, kde-format
 msgid "Solver aborted after %1 second."
 msgid_plural "Solver aborted after %1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ekos/align/align.cpp:2378 ekos/capture/capture.cpp:1487
+#: ekos/align/align.cpp:2473 ekos/capture/capture.cpp:1487
 #: ekos/ekosmanager.cpp:1439 ekos/focus/focus.cpp:2202 ekos/guide/guide.cpp:832
 #: ekos/mount/mount.cpp:326 ekos/scheduler/scheduler.cpp:280
 #, kde-format
@@ -3968,187 +3988,187 @@ msgctxt "log entry; %1 is the date, %2 is the text"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: ekos/align/align.cpp:2427
+#: ekos/align/align.cpp:2522
 #, kde-format
 msgid "Mount completed slewing near celestial pole. Capture again to verify."
 msgstr ""
 
-#: ekos/align/align.cpp:2438
+#: ekos/align/align.cpp:2533
 #, fuzzy, kde-format
 msgid "Mount first rotation is complete."
 msgstr "Caliente"
 
-#: ekos/align/align.cpp:2454
+#: ekos/align/align.cpp:2549
 #, fuzzy, kde-format
 msgid "Mount second rotation is complete."
 msgstr "Caliente"
 
-#: ekos/align/align.cpp:2482
+#: ekos/align/align.cpp:2577
 #, kde-format
 msgid ""
 "Mount is synced to solution coordinates. Astrometric solver is successful."
 msgstr ""
 
-#: ekos/align/align.cpp:2511
+#: ekos/align/align.cpp:2606
 #, kde-format
 msgid "Slew complete. Target accuracy is not met, running solver again..."
 msgstr ""
 
-#: ekos/align/align.cpp:2513
+#: ekos/align/align.cpp:2608
 #, kde-format
 msgid "Slew complete. Solving Alignment Point. . ."
 msgstr ""
 
-#: ekos/align/align.cpp:2545
+#: ekos/align/align.cpp:2640
 #, fuzzy, kde-format
 msgid "Syncing failed!"
 msgstr "montru nomon"
 
-#: ekos/align/align.cpp:2547
+#: ekos/align/align.cpp:2642
 #, fuzzy, kde-format
 msgid "Slewing failed!"
 msgstr "montru nomon"
 
-#: ekos/align/align.cpp:2594
+#: ekos/align/align.cpp:2689
 #, kde-format
 msgid ""
 "Slew complete. Please adjust azimuth knob until the target is in the center "
 "of the view."
 msgstr ""
 
-#: ekos/align/align.cpp:2621
+#: ekos/align/align.cpp:2716
 #, kde-format
 msgid ""
 "Slew complete. Please adjust altitude knob until the target is in the center "
 "of the view."
 msgstr ""
 
-#: ekos/align/align.cpp:2662
+#: ekos/align/align.cpp:2757
 #, fuzzy, kde-format
 msgid "Syncing to RA (%1) DEC (%2)"
 msgstr "Koordinatoj"
 
-#: ekos/align/align.cpp:2668
+#: ekos/align/align.cpp:2763
 #, kde-format
 msgid "Syncing failed."
 msgstr ""
 
-#: ekos/align/align.cpp:2679
+#: ekos/align/align.cpp:2774
 #, fuzzy, kde-format
 msgid "Slewing to target coordinates: RA (%1) DEC (%2)."
 msgstr "Koordinatoj"
 
-#: ekos/align/align.cpp:2695
+#: ekos/align/align.cpp:2790
 #, kde-format
 msgid "Processing solution for polar alignment..."
 msgstr ""
 
-#: ekos/align/align.cpp:2727 ekos/align/align.cpp:2829
+#: ekos/align/align.cpp:2822 ekos/align/align.cpp:2924
 #, kde-format
 msgid ""
 "Polar Alignment Helper is still active. Do you want to continue using legacy "
 "polar alignment tool?"
 msgstr ""
 
-#: ekos/align/align.cpp:2742
+#: ekos/align/align.cpp:2837
 #, kde-format
 msgid ""
 "Point the telescope at the southern meridian. Press continue when ready."
 msgstr ""
 
-#: ekos/align/align.cpp:2743
+#: ekos/align/align.cpp:2838
 #, kde-format
 msgid ""
 "Point the telescope at the northern meridian. Press continue when ready."
 msgstr ""
 
-#: ekos/align/align.cpp:2744 ekos/align/align.cpp:2844
+#: ekos/align/align.cpp:2839 ekos/align/align.cpp:2939
 #, kde-format
 msgid "Polar Alignment Measurement"
 msgstr ""
 
-#: ekos/align/align.cpp:2748
+#: ekos/align/align.cpp:2843
 #, kde-format
 msgid "Solving first frame near the meridian."
 msgstr ""
 
-#: ekos/align/align.cpp:2777 ekos/align/align.cpp:2879
+#: ekos/align/align.cpp:2872 ekos/align/align.cpp:2974
 #, kde-format
 msgid "Slewing 30 arcminutes in RA..."
 msgstr ""
 
-#: ekos/align/align.cpp:2783
+#: ekos/align/align.cpp:2878
 #, kde-format
 msgid "Solving second frame near the meridian."
 msgstr ""
 
-#: ekos/align/align.cpp:2793
+#: ekos/align/align.cpp:2888
 #, kde-format
 msgid "Calculating azimuth alignment error..."
 msgstr ""
 
-#: ekos/align/align.cpp:2809 ekos/align/align.cpp:2911
+#: ekos/align/align.cpp:2904 ekos/align/align.cpp:3006
 #, kde-format
 msgid "Slewing back to original position..."
 msgstr ""
 
-#: ekos/align/align.cpp:2843
+#: ekos/align/align.cpp:2938
 #, kde-format
 msgid ""
 "Point the telescope to the eastern or western horizon with a minimum "
 "altitude of 20 degrees. Press continue when ready."
 msgstr ""
 
-#: ekos/align/align.cpp:2848
+#: ekos/align/align.cpp:2943
 #, kde-format
 msgid "Solving first frame."
 msgstr ""
 
-#: ekos/align/align.cpp:2885
+#: ekos/align/align.cpp:2980
 #, kde-format
 msgid "Solving second frame."
 msgstr ""
 
-#: ekos/align/align.cpp:2894
+#: ekos/align/align.cpp:2989
 #, kde-format
 msgid "Calculating altitude alignment error..."
 msgstr ""
 
-#: ekos/align/align.cpp:2954 ekos/align/align.cpp:2992
+#: ekos/align/align.cpp:3049 ekos/align/align.cpp:3087
 #, fuzzy, kde-format
 msgid "%1 too far east"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:2956 ekos/align/align.cpp:2990
+#: ekos/align/align.cpp:3051 ekos/align/align.cpp:3085
 #, fuzzy, kde-format
 msgid "%1 too far west"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:2965 ekos/align/align.cpp:2976
-#: ekos/align/align.cpp:3003 ekos/align/align.cpp:3009
+#: ekos/align/align.cpp:3060 ekos/align/align.cpp:3071
+#: ekos/align/align.cpp:3098 ekos/align/align.cpp:3104
 #, fuzzy, kde-format
 msgid "%1 too far high"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:2967 ekos/align/align.cpp:2974
-#: ekos/align/align.cpp:3001 ekos/align/align.cpp:3011
+#: ekos/align/align.cpp:3062 ekos/align/align.cpp:3069
+#: ekos/align/align.cpp:3096 ekos/align/align.cpp:3106
 #, fuzzy, kde-format
 msgid "%1 too far low"
 msgstr "Transittempo:"
 
-#: ekos/align/align.cpp:3095 ekos/align/align.cpp:3138
+#: ekos/align/align.cpp:3190 ekos/align/align.cpp:3233
 #, kde-format
 msgid ""
 "Slewing to calibration position, please wait until telescope completes "
 "slewing."
 msgstr ""
 
-#: ekos/align/align.cpp:3165
+#: ekos/align/align.cpp:3260
 #, fuzzy, kde-format
 msgid "Load Image"
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:3295
+#: ekos/align/align.cpp:3390
 #, kde-format
 msgid ""
 "World Coordinate System (WCS) is enabled. CCD rotation must be set either "
@@ -4156,117 +4176,117 @@ msgid ""
 "capture any further images, otherwise the WCS information may be invalid."
 msgstr ""
 
-#: ekos/align/align.cpp:3302
+#: ekos/align/align.cpp:3397
 #, kde-format
 msgid "World Coordinate System (WCS) is disabled."
 msgstr ""
 
-#: ekos/align/align.cpp:3319
+#: ekos/align/align.cpp:3414
 #, fuzzy, kde-format
 msgid "Capture error! Aborting..."
 msgstr "Konservu bildon"
 
-#: ekos/align/align.cpp:3325 ekos/capture/capture.cpp:1529
+#: ekos/align/align.cpp:3420 ekos/capture/capture.cpp:1529
 #, kde-format
 msgid "Restarting capture attempt #%1"
 msgstr ""
 
-#: ekos/align/align.cpp:3375
+#: ekos/align/align.cpp:3470
 #, kde-format
 msgid "FITS header: Cannot find NAXIS1."
 msgstr ""
 
-#: ekos/align/align.cpp:3383
+#: ekos/align/align.cpp:3478
 #, kde-format
 msgid "FITS header: Cannot find NAXIS2."
 msgstr ""
 
-#: ekos/align/align.cpp:3397
+#: ekos/align/align.cpp:3492
 #, kde-format
 msgid "FITS header: Cannot find OBJCTRA."
 msgstr ""
 
-#: ekos/align/align.cpp:3414
+#: ekos/align/align.cpp:3509
 #, kde-format
 msgid "FITS header: Cannot find OBJCTDEC."
 msgstr ""
 
-#: ekos/align/align.cpp:3436
+#: ekos/align/align.cpp:3531
 #, kde-format
 msgid "FITS header: Cannot find FOCALLEN."
 msgstr ""
 
-#: ekos/align/align.cpp:3444
+#: ekos/align/align.cpp:3539
 #, kde-format
 msgid "FITS header: Cannot find PIXSIZE1."
 msgstr ""
 
-#: ekos/align/align.cpp:3452
+#: ekos/align/align.cpp:3547
 #, kde-format
 msgid "FITS header: Cannot find PIXSIZE2."
 msgstr ""
 
-#: ekos/align/align.cpp:3544
+#: ekos/align/align.cpp:3639
 #, fuzzy, kde-format
 msgid "Align Frame"
 msgstr "Centrigita al: "
 
-#: ekos/align/align.cpp:3559
+#: ekos/align/align.cpp:3654
 #, kde-format
 msgid ""
 "Warning: Equatorial Grid Lines will not be drawn due to limited resources "
 "mode."
 msgstr ""
 
-#: ekos/align/align.cpp:3561
+#: ekos/align/align.cpp:3656
 #, fuzzy, kde-format
 msgid "Clearing mount Alignment Model..."
 msgstr "Farmington"
 
-#: ekos/align/align.cpp:3574
+#: ekos/align/align.cpp:3669
 #, kde-format
 msgid "Are you sure you want to restart the polar alignment process?"
 msgstr ""
 
-#: ekos/align/align.cpp:3574
+#: ekos/align/align.cpp:3669
 #, fuzzy, kde-format
 msgid "Polar Alignment Assistant"
 msgstr "Centrigita al: "
 
-#: ekos/align/align.cpp:3642
+#: ekos/align/align.cpp:3737
 #, kde-format
 msgid "Please wait until mount completes rotating to RA (%1) DE (%2)"
 msgstr ""
 
-#: ekos/align/align.cpp:3653
+#: ekos/align/align.cpp:3748
 #, kde-format
 msgid "Failed to find a solution. Try again."
 msgstr ""
 
-#: ekos/align/align.cpp:3670
+#: ekos/align/align.cpp:3765
 #, fuzzy, kde-format
 msgid "Failed to find RA Axis center: %1."
 msgstr "Daily Solar Images"
 
-#: ekos/align/align.cpp:3755
+#: ekos/align/align.cpp:3850
 #, kde-format
 msgid ""
 "Mount is synced to celestial pole. You can now continue Polar Alignment "
 "Assistant procedure."
 msgstr ""
 
-#: ekos/align/align.cpp:3779 ekos/align/align.cpp:3829
-#: ekos/align/align.cpp:3857
+#: ekos/align/align.cpp:3874 ekos/align/align.cpp:3924
+#: ekos/align/align.cpp:3952
 #, fuzzy, kde-format
 msgid "Error creating WCS file: %1"
 msgstr "Ne eblis malfermi dosieron"
 
-#: ekos/align/align.cpp:3795
+#: ekos/align/align.cpp:3890
 #, fuzzy, kde-format
 msgid "Failed to process World Coordinate System: %1. Try again."
 msgstr "Elektu lokon"
 
-#: ekos/align/align.cpp:3803
+#: ekos/align/align.cpp:3898
 #, kde-format
 msgid ""
 "Celestial pole is located outside of the field of view. Would you like to "
@@ -4275,24 +4295,24 @@ msgid ""
 "caution."
 msgstr ""
 
-#: ekos/align/align.cpp:3817
+#: ekos/align/align.cpp:3912
 #, kde-format
 msgid ""
 "Warning: Celestial pole is located outside the field of view. Move the mount "
 "closer to the celestial pole."
 msgstr ""
 
-#: ekos/align/align.cpp:3940 ekos/align/align.cpp:3965
+#: ekos/align/align.cpp:4035 ekos/align/align.cpp:4060
 #, kde-format
 msgid "Only one solution is found."
 msgstr ""
 
-#: ekos/align/align.cpp:3946
+#: ekos/align/align.cpp:4041
 #, kde-format
 msgid "Infinite number of solutions found."
 msgstr ""
 
-#: ekos/align/align.cpp:3958
+#: ekos/align/align.cpp:4053
 #, kde-format
 msgid "No solution is found. Points are too far away"
 msgstr ""
@@ -4700,7 +4720,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirRA)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: ekos/align/align.ui:820 ekos/align/mountmodel.ui:280
+#: ekos/align/align.ui:820 ekos/align/mountmodel.ui:286
 #: ekos/align/opsastrometry.ui:448 ekos/guide/guide.ui:855
 #: ekos/guide/internalguide/guider.ui:707 ekos/scheduler/scheduler.ui:122
 #, fuzzy, kde-format
@@ -4712,7 +4732,7 @@ msgstr "RA"
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_DirDEC)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ekos/align/align.ui:828 ekos/align/mountmodel.ui:288
+#: ekos/align/align.ui:828 ekos/align/mountmodel.ui:294
 #: ekos/align/opsastrometry.ui:593 ekos/guide/guide.ui:808
 #: ekos/guide/internalguide/guider.ui:693 ekos/scheduler/scheduler.ui:136
 #, fuzzy, kde-format
@@ -4727,7 +4747,7 @@ msgstr "Trovu objekton"
 
 #. i18n: ectx: property (text), widget (QTableWidget, solutionTable)
 #. i18n: ectx: property (text), widget (QTableWidget, alignTable)
-#: ekos/align/align.ui:844 ekos/align/mountmodel.ui:304
+#: ekos/align/align.ui:844 ekos/align/mountmodel.ui:310
 #, kde-format
 msgid "~~"
 msgstr ""
@@ -4756,8 +4776,17 @@ msgid ""
 "up clutter on both the graph and table.</p></body></html>"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, exportSolutionsCSV)
+#: ekos/align/align.ui:932
+#, kde-format
+msgid ""
+"<html><head/><body><p>Export all of the solutions in the Solution Results "
+"table to CSV file of your choosing for further analysis in a spreadsheet.</"
+"p></body></html>"
+msgstr ""
+
 #. i18n: ectx: property (toolTip), widget (QPushButton, mountModelB)
-#: ekos/align/align.ui:933
+#: ekos/align/align.ui:955
 #, kde-format
 msgid ""
 "<html><head/><body><p>Launch the mount model tool. This tool enables you to "
@@ -4766,7 +4795,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mountModelB)
-#: ekos/align/align.ui:936
+#: ekos/align/align.ui:958
 #, fuzzy, kde-format
 #| msgctxt "City in Italy"
 #| msgid "Mount Mario"
@@ -4774,19 +4803,19 @@ msgid "Mount Model"
 msgstr "Mount Mario"
 
 #. i18n: ectx: attribute (title), widget (QWidget, polarAlignment)
-#: ekos/align/align.ui:970
+#: ekos/align/align.ui:992
 #, fuzzy, kde-format
 msgid "Polar Alignment"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (title), widget (QGroupBox, polarAlignmentHelperGroup)
-#: ekos/align/align.ui:997
+#: ekos/align/align.ui:1019
 #, fuzzy, kde-format
 msgid "Polar Alignment Assistant (Beta)"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (toolTip), widget (QStackedWidget, PAHWidgets)
-#: ekos/align/align.ui:1021
+#: ekos/align/align.ui:1043
 #, kde-format
 msgid ""
 "<p>Polar Alignment Helper tool requires the following:</p><p>1. German "
@@ -4795,7 +4824,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ekos/align/align.ui:1049
+#: ekos/align/align.ui:1071
 #, kde-format
 msgid ""
 "<html><head/><body><p>This tool provides a simple method to polar align a "
@@ -4807,7 +4836,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, FOVDisabledLabel)
-#: ekos/align/align.ui:1064
+#: ekos/align/align.ui:1086
 #, kde-format
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:600; color:#ff5500;"
@@ -4815,13 +4844,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, PAHStartB)
-#: ekos/align/align.ui:1087 ekos/guide/internalguide/rcalibration.cpp:372
+#: ekos/align/align.ui:1109 ekos/guide/internalguide/rcalibration.cpp:372
 #, fuzzy, kde-format
 msgid "Start"
 msgstr "Steloj"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/align/align.ui:1115
+#: ekos/align/align.ui:1137
 #, kde-format
 msgid ""
 "<html><head/><body><p>The assistant requires three images to find a "
@@ -4836,7 +4865,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, captureB)
 #. i18n: ectx: attribute (title), widget (QWidget, captureTab)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CaptureLogging)
-#: ekos/align/align.ui:1143 ekos/align/align.ui:1305 ekos/align/align.ui:1427
+#: ekos/align/align.ui:1165 ekos/align/align.ui:1327 ekos/align/align.ui:1449
 #: ekos/ekosmanager.ui:431 ekos/focus/focus.ui:76 ekos/guide/guide.ui:68
 #: ekos/guide/internalguide/guider.ui:213 ekos/opsekos.ui:186
 #: options/opsadvanced.ui:372
@@ -4845,7 +4874,7 @@ msgid "Capture"
 msgstr "Konservu bildon"
 
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: ekos/align/align.ui:1171
+#: ekos/align/align.ui:1193
 #, kde-format
 msgid ""
 "<html><head/><body><p>Select direction and range of <span style=\" font-"
@@ -4857,14 +4886,14 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, PAHFirstWestMeridianR)
 #. i18n: ectx: property (text), widget (QRadioButton, PAHSecondWestMeridianR)
-#: ekos/align/align.ui:1186 ekos/align/align.ui:1333
+#: ekos/align/align.ui:1208 ekos/align/align.ui:1355
 #, fuzzy, kde-format
 msgid "West"
 msgstr "&Okzidento"
 
 #. i18n: ectx: property (text), widget (QRadioButton, PAHFirstEastMeridianR)
 #. i18n: ectx: property (text), widget (QRadioButton, PAHSecondEastMeridianR)
-#: ekos/align/align.ui:1196 ekos/align/align.ui:1343
+#: ekos/align/align.ui:1218 ekos/align/align.ui:1365
 #, fuzzy, kde-format
 msgid "East"
 msgstr "Ori&ento"
@@ -4872,14 +4901,14 @@ msgstr "Ori&ento"
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: ectx: property (text), widget (QLabel, label_25)
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: ekos/align/align.ui:1219 ekos/align/align.ui:1366
+#: ekos/align/align.ui:1241 ekos/align/align.ui:1388
 #: ekos/scheduler/scheduler.ui:936 ekos/scheduler/scheduler.ui:966
 #, kde-format
 msgid "°"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, PAHAutoModeCheck)
-#: ekos/align/align.ui:1239
+#: ekos/align/align.ui:1261
 #, kde-format
 msgid ""
 "<html><head/><body><p>Perform the remaining steps automatically</p></body></"
@@ -4887,14 +4916,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, PAHAutoModeCheck)
-#: ekos/align/align.ui:1242
+#: ekos/align/align.ui:1264
 #, fuzzy, kde-format
 msgid "Auto Mode"
 msgstr "Azimuto:"
 
 #. i18n: ectx: property (text), widget (QPushButton, PAHFirstRotateB)
 #. i18n: ectx: property (text), widget (QPushButton, PAHSecondRotateB)
-#: ekos/align/align.ui:1249 ekos/align/align.ui:1386
+#: ekos/align/align.ui:1271 ekos/align/align.ui:1408
 #, fuzzy, kde-format
 #| msgctxt "star name"
 #| msgid "Rotanev"
@@ -4902,7 +4931,7 @@ msgid "Rotate"
 msgstr "Rotanev"
 
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: ekos/align/align.ui:1277
+#: ekos/align/align.ui:1299
 #, kde-format
 msgid ""
 "<html><head/><body><p>The second image shall now be captured and solved. "
@@ -4911,7 +4940,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_27)
-#: ekos/align/align.ui:1318
+#: ekos/align/align.ui:1340
 #, kde-format
 msgid ""
 "<html><head/><body><p>Select direction and range of final mount rotation, "
@@ -4920,7 +4949,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_28)
-#: ekos/align/align.ui:1399
+#: ekos/align/align.ui:1421
 #, kde-format
 msgid ""
 "<html><head/><body><p>The final image shall now be captured and solved. "
@@ -4929,20 +4958,20 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, PAHErrorDescriptionLabel)
-#: ekos/align/align.ui:1455
+#: ekos/align/align.ui:1477
 #, kde-format
 msgid "Error Occurred"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #. i18n: ectx: property (text), widget (QPushButton, PAHRestartB)
-#: ekos/align/align.ui:1483 ekos/align/align.ui:1643
+#: ekos/align/align.ui:1505 ekos/align/align.ui:1665
 #, fuzzy, kde-format
 msgid "Restart"
 msgstr "stelo"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_23)
-#: ekos/align/align.ui:1501
+#: ekos/align/align.ui:1523
 #, kde-format
 msgid ""
 "<html><head/><body><p>Angle between expected perfectly aligned mount center "
@@ -4950,13 +4979,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: ekos/align/align.ui:1504
+#: ekos/align/align.ui:1526
 #, fuzzy, kde-format
 msgid "Polar Error:"
 msgstr "Skriba eraro"
 
 #. i18n: ectx: property (text), widget (QLabel, label_26)
-#: ekos/align/align.ui:1544
+#: ekos/align/align.ui:1566
 #, kde-format
 msgid ""
 "<html><head/><body><p>Correction vector is plotted above. Select a bright "
@@ -4966,14 +4995,14 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, PAHCorrectionsNextB)
 #. i18n: ectx: property (text), widget (QPushButton, NextButton)
-#: ekos/align/align.ui:1554 kstarslite/qml/modules/tutorial/TutorialPane.qml:57
+#: ekos/align/align.ui:1576 kstarslite/qml/modules/tutorial/TutorialPane.qml:57
 #: tools/starhopperdialog.ui:53 tools/whatsinteresting/qml/wiview.qml:591
 #, fuzzy, kde-format, kde-kuit-format
 msgid "Next"
 msgstr "&Okzidento"
 
 #. i18n: ectx: property (text), widget (QLabel, label_24)
-#: ekos/align/align.ui:1582
+#: ekos/align/align.ui:1604
 #, kde-format
 msgid ""
 "<html><head/><body><p>Adjust mount's Altitude and Azimuth knobs until the "
@@ -4984,19 +5013,19 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, PAHRefreshB)
 #. i18n: ectx: property (text), widget (QPushButton, refreshB)
-#: ekos/align/align.ui:1597 ekos/opsekos.ui:364
+#: ekos/align/align.ui:1619 ekos/opsekos.ui:364
 #, kde-format
 msgid "Refresh"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, PAHExposure)
-#: ekos/align/align.ui:1604
+#: ekos/align/align.ui:1626
 #, kde-format
 msgid "Exposure duration in seconds during refresh phase"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, PAHDoneB)
-#: ekos/align/align.ui:1630
+#: ekos/align/align.ui:1652
 #, fuzzy, kde-format
 #| msgctxt "City in Ulster Ireland"
 #| msgid "Donegal"
@@ -5004,43 +5033,43 @@ msgid "Done"
 msgstr "Donegal"
 
 #. i18n: ectx: property (title), widget (QGroupBox, polarAlignmentGroup)
-#: ekos/align/align.ui:1650
+#: ekos/align/align.ui:1672
 #, fuzzy, kde-format
 msgid "Legacy Polar Alignment Tool"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ekos/align/align.ui:1666
+#: ekos/align/align.ui:1688
 #, fuzzy, kde-format
 msgid "Az Error:"
 msgstr "Skriba eraro"
 
 #. i18n: ectx: property (text), widget (QPushButton, measureAzB)
-#: ekos/align/align.ui:1685
+#: ekos/align/align.ui:1707
 #, kde-format
 msgid "Measure Az Error"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, correctAzB)
-#: ekos/align/align.ui:1695
+#: ekos/align/align.ui:1717
 #, kde-format
 msgid "Correct Az Error"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/align/align.ui:1718
+#: ekos/align/align.ui:1740
 #, fuzzy, kde-format
 msgid "Alt Error:"
 msgstr "Skriba eraro"
 
 #. i18n: ectx: property (text), widget (QPushButton, measureAltB)
-#: ekos/align/align.ui:1737
+#: ekos/align/align.ui:1759
 #, kde-format
 msgid "Measure Alt Error"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, correctAltB)
-#: ekos/align/align.ui:1747
+#: ekos/align/align.ui:1769
 #, kde-format
 msgid "Correct Alt Error"
 msgstr ""
@@ -5092,75 +5121,67 @@ msgid "Mount Model Wizard"
 msgstr "Mount Mario"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ekos/align/mountmodel.ui:56
+#: ekos/align/mountmodel.ui:39
 #, fuzzy, kde-format
 #| msgctxt "City in Philippines"
 #| msgid "Cubi Point"
 msgid "Number of Points"
 msgstr "Cubi Point"
 
-#. i18n: ectx: property (toolTip), widget (QComboBox, alignPtNum)
-#: ekos/align/mountmodel.ui:63
-#, kde-format
-msgid ""
-"<html><head/><body><p>This is the number of alignment points that the wizard "
-"will add to the table.</p></body></html>"
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (QPushButton, wizardAlignB)
-#: ekos/align/mountmodel.ui:82
+#: ekos/align/mountmodel.ui:65
 #, kde-format
 msgid ""
-"<html><head/><body><p>This button will automatically generate the specified "
-"number of alignment points in the table below.  They will be equally spread "
-"across the sky from 30 degrees above the horizon in the west to 30 degrees "
-"above the horizon in the east.</p></body></html>"
+"<html><head/><body><p>Automatically generate the specified number of "
+"alignment points in the table below.  They will be equally spread across the "
+"sky from 30 degrees above the horizon in the west to 30 degrees above the "
+"horizon in the east.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: ekos/align/mountmodel.ui:97
+#: ekos/align/mountmodel.ui:91
 #, kde-format
 msgid "Currently Visible Stars"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/align/mountmodel.ui:120
+#: ekos/align/mountmodel.ui:97
 #, fuzzy, kde-format
 msgid "Common Names"
 msgstr "Stela nomo"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, starListBox)
-#: ekos/align/mountmodel.ui:127
+#: ekos/align/mountmodel.ui:110
 #, kde-format
 msgid ""
 "<html><head/><body><p>These are the common names for the named stars that "
-"are currently up at your location.  If you select a star, it wil be added to "
-"the table below.</p></body></html>"
+"are currently up at your location.  If you select a star, it will be added "
+"to the table below.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ekos/align/mountmodel.ui:141
+#: ekos/align/mountmodel.ui:130
 #, fuzzy, kde-format
 msgid "Greek"
 msgstr "Grekujo"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, greekStarListBox)
-#: ekos/align/mountmodel.ui:148
+#: ekos/align/mountmodel.ui:143
 #, kde-format
 msgid ""
-"<html><head/><body><p>These are the greek names for the brighter stars that "
-"are currently up at your location.  If you select a star, it wil be added to "
-"the table below.</p></body></html>"
+"<html><head/><body><p>These are the Greek names for the brighter stars that "
+"are currently up at your location.  If you select a star, it will be added "
+"to the table below.</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ekos/align/mountmodel.ui:160
+#: ekos/align/mountmodel.ui:153
 #, fuzzy, kde-format
 msgid "Mount Model Alignment Points"
 msgstr "Centrigita al: "
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, clearAllAlignB)
-#: ekos/align/mountmodel.ui:198
+#: ekos/align/mountmodel.ui:191
 #, kde-format
 msgid ""
 "<html><head/><body><p>Clear the entire table of alignment points below.  "
@@ -5171,7 +5192,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, removeAlignB)
-#: ekos/align/mountmodel.ui:220
+#: ekos/align/mountmodel.ui:213
 #, kde-format
 msgid ""
 "<html><head/><body><p>Remove the selected row from the alignment point table "
@@ -5181,7 +5202,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, addAlignB)
-#: ekos/align/mountmodel.ui:242
+#: ekos/align/mountmodel.ui:235
 #, kde-format
 msgid ""
 "<html><head/><body><p>Add an empty row to the alignment list so that you can "
@@ -5190,7 +5211,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, findAlignB)
-#: ekos/align/mountmodel.ui:264
+#: ekos/align/mountmodel.ui:257
 #, kde-format
 msgid ""
 "<html><head/><body><p>Open the Find Object dialog so that you can select an "
@@ -5199,7 +5220,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QTableWidget, alignTable)
-#: ekos/align/mountmodel.ui:276
+#: ekos/align/mountmodel.ui:282
 #, kde-format
 msgid ""
 "<html><head/><body><p>This is a table of alignment points that you would "
@@ -5215,14 +5236,14 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QTableWidget, alignTable)
 #. i18n: ectx: property (text), widget (QPushButton, FindButton)
-#: ekos/align/mountmodel.ui:296 tools/argfindobject.ui:47
+#: ekos/align/mountmodel.ui:302 tools/argfindobject.ui:47
 #: tools/arglooktoward.ui:116
 #, fuzzy, kde-format
 msgid "Object"
 msgstr "Trovu objekton"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, loadAlignB)
-#: ekos/align/mountmodel.ui:335
+#: ekos/align/mountmodel.ui:341
 #, kde-format
 msgid ""
 "<html><head/><body><p>Load a saved alignment point list so that you can run "
@@ -5231,26 +5252,15 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, saveAsAlignB)
 #. i18n: ectx: property (toolTip), widget (QPushButton, saveAlignB)
-#: ekos/align/mountmodel.ui:357 ekos/align/mountmodel.ui:379
+#: ekos/align/mountmodel.ui:363 ekos/align/mountmodel.ui:385
 #, kde-format
 msgid ""
 "<html><head/><body><p>Save the alignment list so that you can run this "
 "alignment again in the future.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, stopAlignB)
-#: ekos/align/mountmodel.ui:414
-#, kde-format
-msgid ""
-"<html><head/><body><p>Stop the mount model routine.  It will <b>not</b> "
-"clear any points from your telescope's pointing model.  It will stop the "
-"routine and any points currently being solved. If you run the mount model "
-"again after hitting stop, it will start the routine over again with the "
-"first point.</p></body></html>"
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (QPushButton, startAlignB)
-#: ekos/align/mountmodel.ui:436
+#: ekos/align/mountmodel.ui:420
 #, kde-format
 msgid ""
 "<html><head/><body><p>Start or pause the mount model routine.  It will slew "
@@ -5258,6 +5268,17 @@ msgid ""
 "settings in the align module.  If the routine was previously paused, it will "
 "pick up where it left off.  If it was stopped or it had finished it will "
 "start the routine over again.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, stopAlignB)
+#: ekos/align/mountmodel.ui:442
+#, kde-format
+msgid ""
+"<html><head/><body><p>Stop the mount model routine.  It will <b>not</b> "
+"clear any points from your telescope's pointing model.  It will stop the "
+"routine and any points currently being solved. If you run the mount model "
+"again after hitting stop, it will start the routine over again with the "
+"first point.</p></body></html>"
 msgstr ""
 
 #: ekos/align/offlineastrometryparser.cpp:71
@@ -6766,7 +6787,7 @@ msgstr "Spencer"
 #. i18n: ectx: property (text), item, widget (QComboBox, transferFormatCombo)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_FITSLogging)
 #: ekos/capture/capture.cpp:626 ekos/capture/capture.cpp:636
-#: ekos/capture/capture.ui:246 kstarsactions.cpp:750 options/opsadvanced.ui:330
+#: ekos/capture/capture.ui:246 kstarsactions.cpp:794 options/opsadvanced.ui:330
 #, fuzzy, kde-format
 msgid "FITS"
 msgstr "Azimuto:"
@@ -6990,6 +7011,11 @@ msgstr ""
 #, kde-format
 msgid "Failed to save sequence queue"
 msgstr ""
+
+#: ekos/capture/capture.cpp:2778
+#, fuzzy, kde-format
+msgid "Sequence queue saved to %1"
+msgstr "nevalida URLo"
 
 #: ekos/capture/capture.cpp:2785
 #, kde-format
@@ -7967,7 +7993,7 @@ msgstr ""
 #: ekos/ekos.h:48 ekos/ekosmanager.cpp:340 ekos/ekosmanager.cpp:341
 #: ekos/ekosmanager.cpp:342 ekos/ekosmanager.cpp:343 ekos/ekosmanager.ui:467
 #: ekos/ekosmanager.ui:830 ekos/ekosmanager.ui:1023 ekos/ekosmanager.ui:1217
-#: ekos/scheduler/schedulerjob.cpp:171 indi/inditelescope.cpp:860
+#: ekos/scheduler/schedulerjob.cpp:171 indi/inditelescope.cpp:899
 #, kde-format
 msgid "Idle"
 msgstr ""
@@ -8136,7 +8162,7 @@ msgid "Syncing"
 msgstr ""
 
 #: ekos/ekos.h:48 ekos/scheduler/schedulerjob.cpp:284
-#: indi/inditelescope.cpp:872
+#: indi/inditelescope.cpp:911
 #, fuzzy, kde-format
 msgid "Slewing"
 msgstr "Skopje"
@@ -8398,7 +8424,7 @@ msgid "Failed to update site location to %1. City not found."
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EkosManager)
-#: ekos/ekosmanager.ui:26 kstarsactions.cpp:760 kstarsinit.cpp:436
+#: ekos/ekosmanager.ui:26 kstarsactions.cpp:804 kstarsinit.cpp:436
 #, kde-format
 msgid "Ekos"
 msgstr ""
@@ -13853,7 +13879,7 @@ msgstr "Kalkulu"
 msgid "Close"
 msgstr "&Kolorskemoj"
 
-#: indi/guimanager.cpp:148 indi/indimenu.cpp:101
+#: indi/guimanager.cpp:152 indi/indimenu.cpp:101
 #, kde-format, kde-kuit-format
 msgid ""
 "No INDI devices currently running. To run devices, please select devices "
@@ -13944,85 +13970,85 @@ msgstr "Upsala"
 msgid "Data file saved to %1"
 msgstr "nevalida URLo"
 
-#: indi/inditelescope.cpp:119
+#: indi/inditelescope.cpp:129
 #, fuzzy, kde-format
 msgid "Mount is slewing to target location"
 msgstr "Elektu lokon"
 
-#: indi/inditelescope.cpp:123
+#: indi/inditelescope.cpp:133
 #, fuzzy, kde-format
 msgid "Mount arrived at target location"
 msgstr "Elektu lokon"
 
-#: indi/inditelescope.cpp:168
+#: indi/inditelescope.cpp:179
 #, fuzzy, kde-format
 #| msgctxt "City in Italy"
 #| msgid "Mount Ekar"
 msgid "Mount parking failed"
 msgstr "Mount Ekar"
 
-#: indi/inditelescope.cpp:173
+#: indi/inditelescope.cpp:184
 #, fuzzy, kde-format
 msgid "Mount parking is in progress"
 msgstr "Plutono"
 
-#: indi/inditelescope.cpp:178
+#: indi/inditelescope.cpp:190
 #, fuzzy, kde-format
 msgid "Mount unparking is in progress"
 msgstr "Plutono"
 
-#: indi/inditelescope.cpp:183
+#: indi/inditelescope.cpp:195
 #, fuzzy, kde-format
 #| msgctxt "City in Italy"
 #| msgid "Mount Ekar"
 msgid "Mount parked"
 msgstr "Mount Ekar"
 
-#: indi/inditelescope.cpp:188
+#: indi/inditelescope.cpp:201
 #, fuzzy, kde-format
 #| msgctxt "City in Italy"
 #| msgid "Mount Ekar"
 msgid "Mount unparked"
 msgstr "Mount Ekar"
 
-#: indi/inditelescope.cpp:196
+#: indi/inditelescope.cpp:210
 #, fuzzy, kde-format
 msgid "Mount motion was aborted"
 msgstr "Caliente"
 
-#: indi/inditelescope.cpp:447
+#: indi/inditelescope.cpp:486
 #, kde-format
 msgid ""
 "Requested altitude %1 is outside the specified altitude limit boundary (%2,"
 "%3)."
 msgstr ""
 
-#: indi/inditelescope.cpp:448 indi/inditelescope.cpp:455
+#: indi/inditelescope.cpp:487 indi/inditelescope.cpp:494
 #, fuzzy, kde-format
 msgid "Telescope Motion"
 msgstr "Plutono"
 
-#: indi/inditelescope.cpp:455
+#: indi/inditelescope.cpp:494
 #, kde-format
 msgid ""
 "Requested altitude is below the horizon. Are you sure you want to proceed?"
 msgstr ""
 
-#: indi/inditelescope.cpp:864
+#: indi/inditelescope.cpp:903
 #, fuzzy, kde-format
 #| msgctxt "City in Australia"
 #| msgid "Parkes"
 msgid "Parked"
 msgstr "Parkes"
 
-#: indi/inditelescope.cpp:868
+#: indi/inditelescope.cpp:907
 #, fuzzy, kde-format
 #| msgctxt "City in China"
 #| msgid "Peking"
 msgid "Parking"
 msgstr "Peking"
 
-#: indi/inditelescope.cpp:876
+#: indi/inditelescope.cpp:915
 #, fuzzy, kde-format
 #| msgid "Track"
 msgid "Tracking"
@@ -14779,17 +14805,17 @@ msgstr "Bender Cassim"
 msgid "KStars"
 msgstr "Steloj"
 
-#: kstars.cpp:242 kstarsactions.cpp:1181 skymap.cpp:384
+#: kstars.cpp:242 kstarsactions.cpp:1225 skymap.cpp:384
 #, kde-format
 msgid "Stop &Tracking"
 msgstr ""
 
-#: kstars.cpp:247 kstarsactions.cpp:1296 kstarsinit.cpp:259
+#: kstars.cpp:247 kstarsactions.cpp:1340 kstarsinit.cpp:259
 #, fuzzy, kde-format
 msgid "Switch to horizonal view (Horizontal &Coordinates)"
 msgstr "originala koordinato"
 
-#: kstars.cpp:247 kstarsactions.cpp:1302 kstarsinit.cpp:259
+#: kstars.cpp:247 kstarsactions.cpp:1346 kstarsinit.cpp:259
 #, fuzzy, kde-format
 msgid "Switch to star globe view (Equatorial &Coordinates)"
 msgstr "Koordinatoj"
@@ -48028,95 +48054,95 @@ msgctxt "Advanced URLs: description or category"
 msgid "Other"
 msgstr ""
 
-#: kstarsactions.cpp:208
+#: kstarsactions.cpp:210
 #, kde-format
 msgid "Refraction effects disabled"
 msgstr ""
 
-#: kstarsactions.cpp:209
+#: kstarsactions.cpp:211
 #, kde-format
 msgid ""
 "When the horizon is switched off, refraction effects are temporarily "
 "disabled."
 msgstr ""
 
-#: kstarsactions.cpp:435
+#: kstarsactions.cpp:479
 #, fuzzy, kde-format
 msgid "Light Pollution Settings"
 msgstr "Dek"
 
-#: kstarsactions.cpp:436
+#: kstarsactions.cpp:480
 #, kde-format
 msgid "Equipment Settings - Equipment Type and Parameters"
 msgstr ""
 
-#: kstarsactions.cpp:557 kstarsactions.cpp:589 kstarsactions.cpp:618
-#: kstarsactions.cpp:653
+#: kstarsactions.cpp:601 kstarsactions.cpp:633 kstarsactions.cpp:662
+#: kstarsactions.cpp:697
 #, kde-format
 msgid ""
 "Unable to find INDI server. Please make sure the package that provides the "
 "'indiserver' binary is installed."
 msgstr ""
 
-#: kstarsactions.cpp:730
+#: kstarsactions.cpp:774
 #, kde-format
 msgid "Catalogs"
 msgstr "Katalogoj"
 
-#: kstarsactions.cpp:742
+#: kstarsactions.cpp:786
 #, fuzzy, kde-format
 msgid "Guides"
 msgstr "Erding"
 
-#: kstarsactions.cpp:745
+#: kstarsactions.cpp:789
 #, kde-format
 msgid "Colors"
 msgstr "Koloroj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_INDILogging)
-#: kstarsactions.cpp:756 options/opsadvanced.ui:248
+#: kstarsactions.cpp:800 options/opsadvanced.ui:248
 #, kde-format
 msgid "INDI"
 msgstr "INDI"
 
-#: kstarsactions.cpp:770
+#: kstarsactions.cpp:814
 #, kde-format
 msgid "Xplanet"
 msgstr "Xplanet"
 
-#: kstarsactions.cpp:849
+#: kstarsactions.cpp:893
 #, kde-format
 msgid "KStars::slotFind() - Not enough memory for dialog"
 msgstr ""
 
-#: kstarsactions.cpp:867
+#: kstarsactions.cpp:911
 #, fuzzy, kde-format
 msgid "Open FITS"
 msgstr "Ŝarĝante KStars..."
 
-#: kstarsactions.cpp:890
+#: kstarsactions.cpp:934
 #, fuzzy, kde-format
 msgid "Export Image"
 msgstr "Eastport"
 
-#: kstarsactions.cpp:927 tools/scriptbuilder.cpp:775
+#: kstarsactions.cpp:971 tools/scriptbuilder.cpp:775
 #: tools/scriptbuilder.cpp:837
 #, kde-format
 msgctxt "Filter by file type: KStars Scripts."
 msgid "KStars Scripts (*.kstars)"
 msgstr ""
 
-#: kstarsactions.cpp:936
+#: kstarsactions.cpp:980
 #, fuzzy, kde-format
 msgid "Executing remote scripts is not supported."
 msgstr "Kalkulu"
 
-#: kstarsactions.cpp:1027 oal/execute.cpp:316 tools/observinglist.cpp:845
+#: kstarsactions.cpp:1071 oal/execute.cpp:316 tools/observinglist.cpp:845
 #, fuzzy, kde-format
 msgid "Could not open file %1"
 msgstr "Ne eblis malfermi dosieron"
 
-#: kstarsactions.cpp:1053
+#: kstarsactions.cpp:1097
 #, kde-format
 msgid ""
 "The selected script contains unrecognized elements, indicating that it was "
@@ -48125,27 +48151,27 @@ msgid ""
 "it anyway?"
 msgstr ""
 
-#: kstarsactions.cpp:1057
+#: kstarsactions.cpp:1101
 #, fuzzy, kde-format
 msgid "Script Validation Failed"
 msgstr "Stela nomo"
 
-#: kstarsactions.cpp:1057
+#: kstarsactions.cpp:1101
 #, kde-format
 msgid "Run Nevertheless"
 msgstr ""
 
-#: kstarsactions.cpp:1062
+#: kstarsactions.cpp:1106
 #, fuzzy, kde-format
 msgid "Running script: %1"
 msgstr "Sunsubiro:"
 
-#: kstarsactions.cpp:1076
+#: kstarsactions.cpp:1120
 #, fuzzy, kde-format
 msgid "Script finished."
 msgstr "Stela nomo"
 
-#: kstarsactions.cpp:1085
+#: kstarsactions.cpp:1129
 #, kde-format
 msgid ""
 "You can save printer ink by using the \"Star Chart\" color scheme, which "
@@ -48153,66 +48179,66 @@ msgid ""
 "Chart color scheme for printing?"
 msgstr ""
 
-#: kstarsactions.cpp:1090
+#: kstarsactions.cpp:1134
 #, kde-format
 msgid "Switch to Star Chart Colors?"
 msgstr ""
 
-#: kstarsactions.cpp:1091
+#: kstarsactions.cpp:1135
 #, fuzzy, kde-format
 msgid "Switch Color Scheme"
 msgstr "&Kolorskemoj"
 
-#: kstarsactions.cpp:1091
+#: kstarsactions.cpp:1135
 #, fuzzy, kde-format
 msgid "Do Not Switch"
 msgstr "Des Moines"
 
-#: kstarsactions.cpp:1163 kstarsinit.cpp:230
+#: kstarsactions.cpp:1207 kstarsinit.cpp:230
 #, kde-format
 msgid "Engage &Tracking"
 msgstr ""
 
-#: kstarsactions.cpp:1254
+#: kstarsactions.cpp:1298
 #, kde-format
 msgctxt "approximate field of view"
 msgid "Approximate FOV: %1 degrees"
 msgstr ""
 
-#: kstarsactions.cpp:1257
+#: kstarsactions.cpp:1301
 #, kde-format
 msgctxt "approximate field of view"
 msgid "Approximate FOV: %1 arcminutes"
 msgstr ""
 
-#: kstarsactions.cpp:1261
+#: kstarsactions.cpp:1305
 #, kde-format
 msgctxt "approximate field of view"
 msgid "Approximate FOV: %1 arcseconds"
 msgstr ""
 
-#: kstarsactions.cpp:1275
+#: kstarsactions.cpp:1319
 #, kde-format
 msgctxt "The user should enter an angle for the field-of-view of the display"
 msgid "Enter Desired Field-of-View Angle"
 msgstr ""
 
-#: kstarsactions.cpp:1276
+#: kstarsactions.cpp:1320
 #, kde-format
 msgid "Enter a field-of-view angle in degrees: "
 msgstr ""
 
-#: kstarsactions.cpp:1408
+#: kstarsactions.cpp:1452
 #, kde-format
 msgid "Attempt to determine from image"
 msgstr ""
 
-#: kstarsactions.cpp:1409
+#: kstarsactions.cpp:1453
 #, fuzzy, kde-format
 msgid "Eyepiece View: Choose a field-of-view"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsactions.cpp:1409
+#: kstarsactions.cpp:1453
 #, kde-format
 msgid "FOV to render eyepiece view for:"
 msgstr ""
@@ -48894,40 +48920,51 @@ msgstr "Bonvenon ĉe KStars"
 msgid "Toggle FITS Viewer"
 msgstr "Bonvenon ĉe KStars"
 
-#: kstarsinit.cpp:616
+#: kstarsinit.cpp:589
+#, fuzzy, kde-format
+msgctxt "Toggle the telescope center lock in display"
+msgid "Center Telescope"
+msgstr "Centrigu && sekvu"
+
+#: kstarsinit.cpp:591
+#, fuzzy, kde-format
+msgid "Toggle Lock Telescope Center"
+msgstr "Plutono"
+
+#: kstarsinit.cpp:619
 #, kde-format
 msgid "Edit FOV Symbols..."
 msgstr ""
 
-#: kstarsinit.cpp:623
+#: kstarsinit.cpp:626
 #, kde-format
 msgid " Welcome to KStars "
 msgstr "Bonvenon ĉe KStars"
 
-#: kstarsinit.cpp:705 kstarsliteinit.cpp:59 skymap.cpp:333 skymaplite.cpp:304
+#: kstarsinit.cpp:708 kstarsliteinit.cpp:59 skymap.cpp:333 skymaplite.cpp:304
 #: widgets/infoboxwidget.cpp:126
 #, kde-format
 msgid "nothing"
 msgstr "nenio"
 
-#: kstarsinit.cpp:751 kstarsliteinit.cpp:105
+#: kstarsinit.cpp:754 kstarsliteinit.cpp:105
 #, kde-format
 msgid "Initial Position is Below Horizon"
 msgstr ""
 
-#: kstarsinit.cpp:752 kstarsliteinit.cpp:106
+#: kstarsinit.cpp:755 kstarsliteinit.cpp:106
 #, kde-format
 msgid ""
 "The initial position is below the horizon.\n"
 "Would you like to reset to the default position?"
 msgstr ""
 
-#: kstarsinit.cpp:754
+#: kstarsinit.cpp:757
 #, fuzzy, kde-format
 msgid "Reset Position"
 msgstr "Kalkulu"
 
-#: kstarsinit.cpp:754
+#: kstarsinit.cpp:757
 #, fuzzy, kde-format
 msgid "Do Not Reset"
 msgstr "Des Moines"
