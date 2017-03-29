@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-11-19 22:45+0100\n"
+"POT-Creation-Date: 2017-03-29 04:24+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -27,7 +27,7 @@ msgid "Your emails"
 msgstr "axel@esperanto-jeunes.org"
 
 #. i18n: ectx: Menu (insert)
-#: data/konversationui.rc:22
+#: data/konversationui.rc:26
 #, fuzzy, kde-format
 #| msgid "&Insert"
 msgctxt "Menu title"
@@ -35,7 +35,7 @@ msgid "&Insert"
 msgstr "&Enmeti"
 
 #. i18n: ectx: Menu (windows)
-#: data/konversationui.rc:34
+#: data/konversationui.rc:38
 #, kde-format
 msgid "&Window"
 msgstr "Fe&nestro"
@@ -139,8 +139,8 @@ msgid ""
 "is found."
 msgstr ""
 
-#: src/application.cpp:377 src/irc/server.cpp:1680 src/irc/server.cpp:3693
-#: src/irc/server.cpp:3698
+#: src/application.cpp:367 src/irc/server.cpp:1752 src/irc/server.cpp:3797
+#: src/irc/server.cpp:3802
 #, kde-format
 msgid "D-Bus"
 msgstr "D-Bus"
@@ -207,7 +207,7 @@ msgstr ""
 msgid "moderated"
 msgstr "perata"
 
-#: src/common.cpp:41 src/irc/inputfilter.cpp:1007
+#: src/common.cpp:41 src/irc/inputfilter.cpp:1065
 #, kde-format
 msgid "password protected"
 msgstr ""
@@ -463,32 +463,78 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalWidget)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: src/config/chatwindowbehaviour_config.ui:20 src/identitydialog.ui:179
+#: src/config/chatwindowbehaviour_config.ui:29 src/identitydialog.ui:179
 #, kde-format
 msgid "General"
 msgstr "Ĝeneralo"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_Beep)
-#: src/config/chatwindowbehaviour_config.ui:26
+#: src/config/chatwindowbehaviour_config.ui:35
 #, kde-format
 msgid ""
 "Sounds the system bell when you receive an ASCII BEL (0x07) control character"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_Beep)
-#: src/config/chatwindowbehaviour_config.ui:29
+#: src/config/chatwindowbehaviour_config.ui:38
 #, kde-format
 msgid "Enable s&ystem bell on incoming ASCII BEL"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUnimportantEvents)
-#: src/config/chatwindowbehaviour_config.ui:36
+#: src/config/chatwindowbehaviour_config.ui:45
 #, kde-format
 msgid "Hide &Join/Part/Nick events"
 msgstr ""
 
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUnimportantEventsExcludeActive)
+#: src/config/chatwindowbehaviour_config.ui:71
+#, kde-format
+msgid ""
+"If checked, only events concerning active and watched nicks will be "
+"displayed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUnimportantEventsExcludeActive)
+#: src/config/chatwindowbehaviour_config.ui:74
+#, kde-format
+msgid "Except for watched nicks and nicks active within the"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
+#: src/config/chatwindowbehaviour_config.ui:91
+#, kde-format
+msgctxt ""
+"Is prefaced with: Except for watched nicks and nicks active within the"
+msgid "last 10 min"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
+#: src/config/chatwindowbehaviour_config.ui:96
+#, kde-format
+msgctxt ""
+"Is prefaced with: Except for watched nicks and nicks active within the"
+msgid "last hour"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
+#: src/config/chatwindowbehaviour_config.ui:101
+#, kde-format
+msgctxt ""
+"Is prefaced with: Except for watched nicks and nicks active within the"
+msgid "last day"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
+#: src/config/chatwindowbehaviour_config.ui:106
+#, kde-format
+msgctxt ""
+"Is prefaced with: Except for watched nicks and nicks active within the"
+msgid "last week"
+msgstr ""
+
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_DisableExpansion)
-#: src/config/chatwindowbehaviour_config.ui:43
+#: src/config/chatwindowbehaviour_config.ui:127
 #, no-c-format, kde-format
 msgid ""
 "Do not expand variables when sending text to the server. A variable starts "
@@ -497,33 +543,19 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DisableExpansion)
-#: src/config/chatwindowbehaviour_config.ui:46
+#: src/config/chatwindowbehaviour_config.ui:130
 #, no-c-format, kde-format
 msgid "Disable variable (e.g. %C, %B, %G...) e&xpansion"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#. i18n: ectx: property (whatsThis), widget (KPluralHandlingSpinBox, kcfg_ScrollbackMax)
-#: src/config/chatwindowbehaviour_config.ui:69
-#: src/config/chatwindowbehaviour_config.ui:108
-#, kde-format
-msgid "How many lines to keep in buffers, 0 = unlimited"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: src/config/chatwindowbehaviour_config.ui:72
-#, kde-format
-msgid "Scroll&back limit:"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_RedirectServerAndAppMsgToStatusPane)
-#: src/config/chatwindowbehaviour_config.ui:85
+#: src/config/chatwindowbehaviour_config.ui:137
 #, kde-format
 msgid "&Redirect status messages to the server status window"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseLiteralModes)
-#: src/config/chatwindowbehaviour_config.ui:92
+#: src/config/chatwindowbehaviour_config.ui:144
 #, kde-format
 msgid ""
 "Keep channel mode string as a combination of characters instead of "
@@ -532,73 +564,41 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseLiteralModes)
-#: src/config/chatwindowbehaviour_config.ui:95
+#: src/config/chatwindowbehaviour_config.ui:147
 #, kde-format
 msgid "Show raw mode characters (e.g. +o) instead of descriptions"
 msgstr ""
 
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#. i18n: ectx: property (whatsThis), widget (KPluralHandlingSpinBox, kcfg_ScrollbackMax)
+#: src/config/chatwindowbehaviour_config.ui:170
+#: src/config/chatwindowbehaviour_config.ui:192
+#, kde-format
+msgid "How many lines to keep in buffers, 0 = unlimited"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: src/config/chatwindowbehaviour_config.ui:173
+#, kde-format
+msgid "Scrollbac&k limit:"
+msgstr ""
+
 #. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, kcfg_ScrollbackMax)
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, kcfg_ReconnectCount)
-#: src/config/chatwindowbehaviour_config.ui:111
+#: src/config/chatwindowbehaviour_config.ui:195
 #: src/config/connectionbehavior_config.ui:93
 #, kde-format
 msgid "Unlimited"
 msgstr "Senlima"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUnimportantEventsExcludeActive)
-#: src/config/chatwindowbehaviour_config.ui:158
-#, kde-format
-msgid ""
-"If checked, only events concerning active and watched nicks will be "
-"displayed."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUnimportantEventsExcludeActive)
-#: src/config/chatwindowbehaviour_config.ui:161
-#, kde-format
-msgid "Except for watched nicks and nicks active within the"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
-#: src/config/chatwindowbehaviour_config.ui:178
-#, kde-format
-msgctxt ""
-"Is prefaced with: Except for watched nicks and nicks active within the"
-msgid "last 10 min"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
-#: src/config/chatwindowbehaviour_config.ui:183
-#, kde-format
-msgctxt ""
-"Is prefaced with: Except for watched nicks and nicks active within the"
-msgid "last hour"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
-#: src/config/chatwindowbehaviour_config.ui:188
-#, kde-format
-msgctxt ""
-"Is prefaced with: Except for watched nicks and nicks active within the"
-msgid "last day"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_HideUnimportantEventsExcludeActiveThreshold)
-#: src/config/chatwindowbehaviour_config.ui:193
-#, kde-format
-msgctxt ""
-"Is prefaced with: Except for watched nicks and nicks active within the"
-msgid "last week"
-msgstr ""
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox3_2)
-#: src/config/chatwindowbehaviour_config.ui:219
+#: src/config/chatwindowbehaviour_config.ui:224
 #, kde-format
 msgid "Marker Lines"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomaticRememberLine)
-#: src/config/chatwindowbehaviour_config.ui:225
+#: src/config/chatwindowbehaviour_config.ui:230
 #, kde-format
 msgid ""
 "Inserts a remember line into the chat window when you switch to another chat "
@@ -606,39 +606,40 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomaticRememberLine)
-#: src/config/chatwindowbehaviour_config.ui:228
+#: src/config/chatwindowbehaviour_config.ui:233
 #, kde-format
 msgid "Mark the last position in a chat window when it is hidden"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomaticRememberLineOnlyOnTextChange)
-#: src/config/chatwindowbehaviour_config.ui:259
+#: src/config/chatwindowbehaviour_config.ui:262
 #, kde-format
 msgid "Move the line only when new text is about to be shown"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_MarkerLineInAllViews)
-#: src/config/chatwindowbehaviour_config.ui:268
+#: src/config/chatwindowbehaviour_config.ui:269
 #, kde-format
 msgid "Show manually inserted lines in all chat windows"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_AutoWhoContinuousEnabled)
-#: src/config/chatwindowbehaviour_config.ui:278
+#: src/config/chatwindowbehaviour_config.ui:279
 #, kde-format
 msgid "Enable Automatic User Information Look Up (/WHO)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: src/config/chatwindowbehaviour_config.ui:322
+#: src/config/chatwindowbehaviour_config.ui:291
 #, kde-format
-msgid "Max. number of users in a channel:"
+msgid "&Max. number of users in a channel:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, whoIntervalLbl)
-#: src/config/chatwindowbehaviour_config.ui:376
-#, kde-format
-msgid "Update interval:"
+#: src/config/chatwindowbehaviour_config.ui:339
+#, fuzzy, kde-format
+#| msgid "Update interval:"
+msgid "Update inter&val:"
 msgstr "Aktualigintervalo:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
@@ -1447,19 +1448,19 @@ msgstr "Mesaĝo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkCTCP)
 #: src/config/ignore_configui.ui:83 src/dcc/chatcontainer.cpp:320
-#: src/irc/inputfilter.cpp:268 src/irc/inputfilter.cpp:275
-#: src/irc/inputfilter.cpp:291 src/irc/inputfilter.cpp:298
-#: src/irc/inputfilter.cpp:448 src/irc/inputfilter.cpp:459
-#: src/irc/inputfilter.cpp:480 src/irc/inputfilter.cpp:528
-#: src/irc/inputfilter.cpp:556 src/irc/outputfilter.cpp:848
+#: src/irc/inputfilter.cpp:241 src/irc/inputfilter.cpp:249
+#: src/irc/inputfilter.cpp:266 src/irc/inputfilter.cpp:274
+#: src/irc/inputfilter.cpp:428 src/irc/inputfilter.cpp:439
+#: src/irc/inputfilter.cpp:461 src/irc/inputfilter.cpp:510
+#: src/irc/inputfilter.cpp:538 src/irc/outputfilter.cpp:848
 #: src/viewer/ignorelistviewitem.cpp:45
 #, kde-format
 msgid "CTCP"
 msgstr "CTCP"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkChannel)
-#: src/config/ignore_configui.ui:90 src/irc/inputfilter.cpp:2044
-#: src/irc/inputfilter.cpp:2048 src/irc/invitedialog.cpp:179
+#: src/config/ignore_configui.ui:90 src/irc/inputfilter.cpp:2114
+#: src/irc/inputfilter.cpp:2118 src/irc/invitedialog.cpp:181
 #: src/viewer/ignorelistviewitem.cpp:42
 #, kde-format
 msgid "Channel"
@@ -1468,24 +1469,24 @@ msgstr "Kanalo"
 #. i18n: ectx: property (text), widget (QCheckBox, chkDCC)
 #: src/config/ignore_configui.ui:97 src/dcc/chatcontainer.cpp:117
 #: src/dcc/chatcontainer.cpp:124 src/dcc/chatcontainer.cpp:128
-#: src/dcc/chatcontainer.cpp:135 src/irc/inputfilter.cpp:371
-#: src/irc/inputfilter.cpp:386 src/irc/inputfilter.cpp:401
-#: src/irc/inputfilter.cpp:429 src/irc/inputfilter.cpp:437
-#: src/irc/server.cpp:2242 src/irc/server.cpp:2372 src/irc/server.cpp:2384
-#: src/irc/server.cpp:2396 src/irc/server.cpp:2531 src/irc/server.cpp:2587
-#: src/irc/server.cpp:2658 src/irc/server.cpp:2663 src/irc/server.cpp:2675
-#: src/irc/server.cpp:2678 src/irc/server.cpp:2692 src/irc/server.cpp:2699
+#: src/dcc/chatcontainer.cpp:135 src/irc/inputfilter.cpp:348
+#: src/irc/inputfilter.cpp:364 src/irc/inputfilter.cpp:380
+#: src/irc/inputfilter.cpp:409 src/irc/inputfilter.cpp:417
+#: src/irc/server.cpp:2324 src/irc/server.cpp:2454 src/irc/server.cpp:2466
+#: src/irc/server.cpp:2478 src/irc/server.cpp:2613 src/irc/server.cpp:2669
+#: src/irc/server.cpp:2740 src/irc/server.cpp:2745 src/irc/server.cpp:2757
+#: src/irc/server.cpp:2760 src/irc/server.cpp:2774 src/irc/server.cpp:2781
 #: src/viewer/ignorelistviewitem.cpp:46
 #, kde-format
 msgid "DCC"
 msgstr "DCC"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkNotice)
-#: src/config/ignore_configui.ui:104 src/irc/inputfilter.cpp:505
-#: src/irc/inputfilter.cpp:570 src/irc/inputfilter.cpp:575
-#: src/irc/inputfilter.cpp:581 src/irc/inputfilter.cpp:749
-#: src/irc/inputfilter.cpp:1363 src/irc/outputfilter.cpp:663
-#: src/irc/outputfilter.cpp:899 src/irc/server.cpp:4164 src/irc/server.cpp:4193
+#: src/config/ignore_configui.ui:104 src/irc/inputfilter.cpp:487
+#: src/irc/inputfilter.cpp:552 src/irc/inputfilter.cpp:557
+#: src/irc/inputfilter.cpp:563 src/irc/inputfilter.cpp:785
+#: src/irc/inputfilter.cpp:1423 src/irc/outputfilter.cpp:663
+#: src/irc/outputfilter.cpp:899 src/irc/server.cpp:4274 src/irc/server.cpp:4303
 #: src/viewer/ignorelistviewitem.cpp:44
 #, kde-format
 msgid "Notice"
@@ -1499,7 +1500,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkInvite)
 #: src/config/ignore_configui.ui:118 src/irc/inputfilter.cpp:687
-#: src/irc/inputfilter.cpp:1432 src/viewer/ignorelistviewitem.cpp:47
+#: src/irc/inputfilter.cpp:1492 src/viewer/ignorelistviewitem.cpp:47
 #, kde-format
 msgid "Invite"
 msgstr "Invitu"
@@ -1512,51 +1513,51 @@ msgid "Remove &All"
 msgstr "Forigi"
 
 #. i18n: ectx: label, entry, group (Appearance)
-#: src/config/konversation.kcfg:231
+#: src/config/konversation.kcfg:220
 #, kde-format
 msgid "Hide the scrollbar"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (General Options)
-#: src/config/konversation.kcfg:237
+#: src/config/konversation.kcfg:226
 #, kde-format
 msgid ""
 "Enable if you want all the IRC input lines to check your spelling as you type"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (General Options)
-#: src/config/konversation.kcfg:246
+#: src/config/konversation.kcfg:235
 #, kde-format
 msgid ""
 "Enabling this will cause the input box to grow vertically when it fills up."
 msgstr ""
 
 #. i18n: ectx: label, entry, group (General Options)
-#: src/config/konversation.kcfg:280
+#: src/config/konversation.kcfg:269
 #, kde-format
 msgid "Start with hidden main window"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (General Options)
-#: src/config/konversation.kcfg:319
+#: src/config/konversation.kcfg:308
 #, kde-format
 msgid "&Show real names next to nicknames"
 msgstr ""
 
 #. i18n: ectx: label, entry (OpenWatchedNicksAtStartup), group (Notify List)
-#: src/config/konversation.kcfg:533
+#: src/config/konversation.kcfg:522
 #, kde-format
 msgid "Open Watched Nicks tab at application startup"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Themes)
-#: src/config/konversation.kcfg:855
+#: src/config/konversation.kcfg:844
 #, kde-format
 msgid "Enable emoticons"
 msgstr ""
 
 #. i18n: ectx: label, entry, group (Themes)
-#: src/config/konversation.kcfg:859
+#: src/config/konversation.kcfg:848
 #, kde-format
 msgid "Emoticons theme"
 msgstr ""
@@ -1660,10 +1661,10 @@ msgid "(Reorder nick sorting order by drag and drop)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QTreeWidget, sortOrder)
-#: src/config/nicklistbehavior_configui.ui:98 src/irc/channel.cpp:1829
-#: src/irc/channelnick.cpp:206 src/irc/inputfilter.cpp:1028
-#: src/irc/inputfilter.cpp:1032 src/irc/inputfilter.cpp:2232
-#: src/irc/inputfilter.cpp:2286 src/viewer/channeloptionsdialog.cpp:301
+#: src/config/nicklistbehavior_configui.ui:98 src/irc/channel.cpp:1841
+#: src/irc/channelnick.cpp:206 src/irc/inputfilter.cpp:1086
+#: src/irc/inputfilter.cpp:1090 src/irc/inputfilter.cpp:2302
+#: src/irc/inputfilter.cpp:2356 src/viewer/channeloptionsdialog.cpp:312
 #, kde-format
 msgid "Mode"
 msgstr "Moduso"
@@ -1875,7 +1876,7 @@ msgstr "Koloroj"
 msgid "Fonts"
 msgstr "Tiparoj"
 
-#: src/config/settingsdialog.cpp:93 src/viewer/irccontextmenus.cpp:102
+#: src/config/settingsdialog.cpp:93 src/viewer/irccontextmenus.cpp:105
 #, kde-format
 msgid "Quick Buttons"
 msgstr ""
@@ -1921,7 +1922,7 @@ msgstr ""
 msgid "Command Aliases"
 msgstr ""
 
-#: src/config/settingsdialog.cpp:136 src/mainwindow.cpp:480
+#: src/config/settingsdialog.cpp:136 src/mainwindow.cpp:507
 #, kde-format
 msgid "Auto Replace"
 msgstr ""
@@ -2431,7 +2432,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_OpenWatchedNicksAtStartup)
 #: src/config/watchednicknames_configui.ui:40
 #, kde-format
-msgid "Show watched Watched Nicks tab on &application startup"
+msgid "Show Watched Nicks tab on &application startup"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, notifyActionLabel)
@@ -2493,13 +2494,13 @@ msgstr "Aktualigintervalo:"
 
 #. i18n, and in preShellCommandExited and preShellCommandError
 #: src/connectionmanager.cpp:225 src/connectionmanager.cpp:258
-#: src/connectionmanager.cpp:268 src/irc/inputfilter.cpp:1254
-#: src/irc/inputfilter.cpp:1371 src/irc/inputfilter.cpp:2162
-#: src/irc/inputfilter.cpp:2170 src/irc/inputfilter.cpp:2192
-#: src/irc/outputfilter.cpp:2021 src/irc/server.cpp:269 src/irc/server.cpp:415
-#: src/irc/server.cpp:477 src/irc/server.cpp:659 src/irc/server.cpp:694
-#: src/irc/server.cpp:696 src/irc/server.cpp:709 src/irc/server.cpp:726
-#: src/irc/server.cpp:1018 src/irc/server.cpp:1048
+#: src/connectionmanager.cpp:268 src/irc/inputfilter.cpp:1314
+#: src/irc/inputfilter.cpp:1431 src/irc/inputfilter.cpp:2232
+#: src/irc/inputfilter.cpp:2240 src/irc/inputfilter.cpp:2262
+#: src/irc/outputfilter.cpp:2021 src/irc/server.cpp:276 src/irc/server.cpp:419
+#: src/irc/server.cpp:481 src/irc/server.cpp:668 src/irc/server.cpp:699
+#: src/irc/server.cpp:755 src/irc/server.cpp:769 src/irc/server.cpp:784
+#: src/irc/server.cpp:1091 src/irc/server.cpp:1121
 #, kde-format
 msgid "Info"
 msgstr "Informo"
@@ -2524,19 +2525,19 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: src/connectionmanager.cpp:283 src/dcc/chatcontainer.cpp:272
-#: src/irc/inputfilter.cpp:1211 src/irc/inputfilter.cpp:1215
-#: src/irc/inputfilter.cpp:1228 src/irc/inputfilter.cpp:1302
-#: src/irc/inputfilter.cpp:1355 src/irc/inputfilter.cpp:1489
-#: src/irc/inputfilter.cpp:2068 src/irc/inputfilter.cpp:2078
-#: src/irc/inputfilter.cpp:2115 src/irc/inputfilter.cpp:2123
-#: src/irc/inputfilter.cpp:2131 src/irc/inputfilter.cpp:2155
-#: src/irc/inputfilter.cpp:2183 src/irc/outputfilter.cpp:2030
-#: src/irc/outputfilterresolvejob.cpp:85 src/irc/server.cpp:717
-#: src/irc/server.cpp:734 src/irc/server.cpp:833 src/irc/server.cpp:2210
-#: src/irc/server.cpp:2281 src/irc/server.cpp:2454 src/irc/server.cpp:2490
-#: src/irc/server.cpp:2541 src/irc/server.cpp:2609 src/irc/server.cpp:2628
-#: src/irc/server.cpp:2644 src/irc/server.cpp:4122 src/irc/server.cpp:4134
-#: src/irc/server.cpp:4158 src/irc/server.cpp:4181 src/irc/server.cpp:4197
+#: src/irc/inputfilter.cpp:1271 src/irc/inputfilter.cpp:1275
+#: src/irc/inputfilter.cpp:1288 src/irc/inputfilter.cpp:1362
+#: src/irc/inputfilter.cpp:1415 src/irc/inputfilter.cpp:1549
+#: src/irc/inputfilter.cpp:2138 src/irc/inputfilter.cpp:2148
+#: src/irc/inputfilter.cpp:2185 src/irc/inputfilter.cpp:2193
+#: src/irc/inputfilter.cpp:2201 src/irc/inputfilter.cpp:2225
+#: src/irc/inputfilter.cpp:2253 src/irc/outputfilter.cpp:2030
+#: src/irc/outputfilterresolvejob.cpp:85 src/irc/server.cpp:777
+#: src/irc/server.cpp:809 src/irc/server.cpp:906 src/irc/server.cpp:2292
+#: src/irc/server.cpp:2363 src/irc/server.cpp:2536 src/irc/server.cpp:2572
+#: src/irc/server.cpp:2623 src/irc/server.cpp:2691 src/irc/server.cpp:2710
+#: src/irc/server.cpp:2726 src/irc/server.cpp:4232 src/irc/server.cpp:4244
+#: src/irc/server.cpp:4268 src/irc/server.cpp:4291 src/irc/server.cpp:4307
 #, kde-format
 msgid "Error"
 msgstr "Eraro"
@@ -2851,37 +2852,32 @@ msgstr ""
 msgid "Close the window without changes"
 msgstr ""
 
-#: src/dcc/resumedialog.cpp:52
+#: src/dcc/resumedialog.cpp:53
 #, kde-format
 msgid "DCC Receive Question"
 msgstr ""
 
-#: src/dcc/resumedialog.cpp:100
+#: src/dcc/resumedialog.cpp:101
 #, kde-format
 msgid "O&riginal Filename"
 msgstr ""
 
-#: src/dcc/resumedialog.cpp:101
+#: src/dcc/resumedialog.cpp:102
 #, kde-format
 msgid "Suggest &New Filename"
 msgstr ""
 
-#: src/dcc/resumedialog.cpp:115
+#: src/dcc/resumedialog.cpp:116
 #, kde-format
 msgid "Use as new default download folder"
 msgstr ""
 
-#: src/dcc/resumedialog.cpp:126
+#: src/dcc/resumedialog.cpp:127
 #, kde-format
 msgid "&Resume"
 msgstr "&Restarigi"
 
-#: src/dcc/resumedialog.cpp:164
-#, kde-format
-msgid "&Overwrite"
-msgstr "&Antstataŭigu"
-
-#: src/dcc/resumedialog.cpp:173
+#: src/dcc/resumedialog.cpp:175
 #, kde-format
 msgid "R&ename"
 msgstr ""
@@ -3097,22 +3093,22 @@ msgstr ""
 msgid "Remaining"
 msgstr "Restanta"
 
-#: src/dcc/transferlistmodel.cpp:441
+#: src/dcc/transferlistmodel.cpp:440
 #, kde-format
 msgid "%1/sec"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:496
+#: src/dcc/transferlistmodel.cpp:495
 #, kde-format
 msgid "Queued"
 msgstr "Envicigita"
 
-#: src/dcc/transferlistmodel.cpp:498
+#: src/dcc/transferlistmodel.cpp:497
 #, kde-format
 msgid "Preparing"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:500
+#: src/dcc/transferlistmodel.cpp:499
 #, fuzzy, kde-format
 #| msgctxt "Preview pending"
 #| msgid "Pending"
@@ -3120,108 +3116,108 @@ msgctxt "Transfer is waiting for the partner to accept or reject it"
 msgid "Pending"
 msgstr "Pritraktota"
 
-#: src/dcc/transferlistmodel.cpp:502
+#: src/dcc/transferlistmodel.cpp:501
 #, fuzzy, kde-format
 #| msgid "Connections"
 msgctxt "Transfer is connecting to the partner"
 msgid "Connecting"
 msgstr "Konektoj"
 
-#: src/dcc/transferlistmodel.cpp:507
+#: src/dcc/transferlistmodel.cpp:506
 #, kde-format
 msgid "Receiving"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:509
+#: src/dcc/transferlistmodel.cpp:508
 #, kde-format
 msgid "Sending"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:515
+#: src/dcc/transferlistmodel.cpp:514
 #, fuzzy, kde-format
 #| msgid "Done"
 msgctxt "Transfer has completed successfully"
 msgid "Done"
 msgstr "Preta"
 
-#: src/dcc/transferlistmodel.cpp:517
+#: src/dcc/transferlistmodel.cpp:516
 #, fuzzy, kde-format
 #| msgid "Files"
 msgctxt "Transfer failed"
 msgid "Failed"
 msgstr "Dosieroj"
 
-#: src/dcc/transferlistmodel.cpp:519
+#: src/dcc/transferlistmodel.cpp:518
 #, kde-format
 msgid "Aborted"
 msgstr "Ĉesigita"
 
-#: src/dcc/transferlistmodel.cpp:531
+#: src/dcc/transferlistmodel.cpp:530
 #, kde-format
 msgid "Queued - Transfer is waiting for you to accept or reject it"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:536
+#: src/dcc/transferlistmodel.cpp:535
 #, kde-format
 msgid "Preparing - Transfer is checking for resumable files"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:538
+#: src/dcc/transferlistmodel.cpp:537
 #, kde-format
 msgid "Preparing - Transfer is acquiring the data to send"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:544
+#: src/dcc/transferlistmodel.cpp:543
 #, kde-format
 msgid "Pending - Transfer is waiting for the partner to accept or reject it"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:546
+#: src/dcc/transferlistmodel.cpp:545
 #, kde-format
 msgid "Connecting - Transfer is connecting to the partner"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:551
+#: src/dcc/transferlistmodel.cpp:550
 #, kde-format
 msgid "Receiving - Transfer is receiving data from the partner"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:553
+#: src/dcc/transferlistmodel.cpp:552
 #, kde-format
 msgid "Sending - Transfer is sending data to partner"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:559
+#: src/dcc/transferlistmodel.cpp:558
 #, kde-format
 msgid "Done - Transfer has completed successfully"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:563
+#: src/dcc/transferlistmodel.cpp:562
 #, kde-format
 msgid "Failed - Transfer failed with 'unknown reason'"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:567
+#: src/dcc/transferlistmodel.cpp:566
 #, kde-format
 msgid "Failed - Transfer failed with reason '%1'"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:570
+#: src/dcc/transferlistmodel.cpp:569
 #, kde-format
 msgid "Aborted - Transfer was aborted by the User"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:663
+#: src/dcc/transferlistmodel.cpp:662
 #, kde-format
 msgid "Incoming Transfers"
 msgstr ""
 
-#: src/dcc/transferlistmodel.cpp:667
+#: src/dcc/transferlistmodel.cpp:666
 #, kde-format
 msgid "Outgoing Transfers"
 msgstr ""
 
-#: src/dcc/transferpanel.cpp:44 src/viewer/viewcontainer.cpp:2620
+#: src/dcc/transferpanel.cpp:44 src/viewer/viewcontainer.cpp:2647
 #, kde-format
 msgid "DCC Status"
 msgstr ""
@@ -3719,7 +3715,7 @@ msgstr ""
 msgid "Identities"
 msgstr ""
 
-#: src/identitydialog.cpp:54 src/irc/invitedialog.cpp:181
+#: src/identitydialog.cpp:54 src/irc/invitedialog.cpp:183
 #, kde-format
 msgid "Nickname"
 msgstr ""
@@ -3765,25 +3761,13 @@ msgid_plural " minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/identitydialog.cpp:108 src/irc/servergroupdialog.cpp:94
-#: src/viewer/editnotifydialog.cpp:89
-#, kde-format
-msgid "&OK"
-msgstr "&Bone"
-
 #: src/identitydialog.cpp:108
 #, kde-format
 msgid "Change identity information"
 msgstr ""
 
-#: src/identitydialog.cpp:109 src/irc/servergroupdialog.cpp:95
-#: src/viewer/editnotifydialog.cpp:90
-#, kde-format
-msgid "&Cancel"
-msgstr "&Rezigni"
-
-#: src/identitydialog.cpp:109 src/irc/servergroupdialog.cpp:95
-#: src/viewer/editnotifydialog.cpp:90
+#: src/identitydialog.cpp:109 src/irc/servergroupdialog.cpp:94
+#: src/viewer/editnotifydialog.cpp:89
 #, kde-format
 msgid "Discards all changes made"
 msgstr ""
@@ -3826,14 +3810,6 @@ msgstr ""
 #, kde-format
 msgid "Delete Identity"
 msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeServerButton)
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeChannelButton)
-#: src/identitydialog.cpp:287 src/irc/servergroupdialogui.ui:165
-#: src/irc/servergroupdialogui.ui:250
-#, kde-format
-msgid "Delete"
-msgstr "Forigi"
 
 #: src/identitydialog.cpp:299
 #, kde-format
@@ -3934,7 +3910,7 @@ msgid "Command:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, saslAccountLabel)
-#: src/identitydialog.ui:258
+#: src/identitydialog.ui:258 src/irc/nickinfo.cpp:228
 #, fuzzy, kde-format
 #| msgid "Count:"
 msgid "Account:"
@@ -4194,12 +4170,12 @@ msgstr ""
 msgid "User terminated."
 msgstr ""
 
-#: src/irc/channel.cpp:123
+#: src/irc/channel.cpp:124
 #, kde-format
 msgid "Edit Channel Settings"
 msgstr ""
 
-#: src/irc/channel.cpp:131
+#: src/irc/channel.cpp:132
 #, kde-format
 msgid ""
 "<qt><p>Every channel on IRC has a topic associated with it.  This is simply "
@@ -4209,12 +4185,12 @@ msgid ""
 "can also view the history of topics there.</p></qt>"
 msgstr ""
 
-#: src/irc/channel.cpp:184
+#: src/irc/channel.cpp:185
 #, kde-format
 msgid "Maximum users allowed in channel"
 msgstr ""
 
-#: src/irc/channel.cpp:185
+#: src/irc/channel.cpp:186
 #, kde-format
 msgid ""
 "<qt><p>This is the channel user limit - the maximum number of users that can "
@@ -4223,7 +4199,7 @@ msgid ""
 "this.</p></qt>"
 msgstr ""
 
-#: src/irc/channel.cpp:232 src/viewer/statuspanel.cpp:53
+#: src/irc/channel.cpp:233 src/viewer/statuspanel.cpp:53
 #, kde-format
 msgid ""
 "<qt><p>This shows your current nick, and any alternatives you have set up.  "
@@ -4234,783 +4210,783 @@ msgid ""
 "<em>Identities</em> option in the <em>Settings</em> menu.</p></qt>"
 msgstr ""
 
-#: src/irc/channel.cpp:559
+#: src/irc/channel.cpp:571
 #, kde-format
 msgid "Completion"
 msgstr ""
 
-#: src/irc/channel.cpp:559
+#: src/irc/channel.cpp:571
 #, kde-format
 msgid "Possible completions: %1."
 msgstr ""
 
-#: src/irc/channel.cpp:892
+#: src/irc/channel.cpp:904
 #, kde-format
 msgid "Channel Password"
 msgstr ""
 
-#: src/irc/channel.cpp:907
+#: src/irc/channel.cpp:919
 #, kde-format
 msgid "Channel User Limit"
 msgstr ""
 
-#: src/irc/channel.cpp:908
+#: src/irc/channel.cpp:920
 #, kde-format
 msgid "Enter the new user limit for the channel:"
 msgstr ""
 
-#: src/irc/channel.cpp:1066 src/irc/channel.cpp:1071
-#: src/irc/inputfilter.cpp:1241 src/irc/inputfilter.cpp:1262
-#: src/irc/inputfilter.cpp:1276 src/irc/inputfilter.cpp:1291
-#: src/irc/inputfilter.cpp:2090 src/irc/query.cpp:168
+#: src/irc/channel.cpp:1078 src/irc/channel.cpp:1083
+#: src/irc/inputfilter.cpp:1301 src/irc/inputfilter.cpp:1322
+#: src/irc/inputfilter.cpp:1336 src/irc/inputfilter.cpp:1351
+#: src/irc/inputfilter.cpp:2160 src/irc/query.cpp:168
 #, kde-format
 msgid "Nick"
 msgstr ""
 
-#: src/irc/channel.cpp:1066
+#: src/irc/channel.cpp:1078
 #, kde-format
 msgid "You are now known as %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1071 src/irc/query.cpp:168
+#: src/irc/channel.cpp:1083 src/irc/query.cpp:168
 #, kde-format
 msgid "%1 is now known as %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1092 src/irc/channel.cpp:1120 src/viewer/ircview.cpp:730
+#: src/irc/channel.cpp:1104 src/irc/channel.cpp:1132 src/viewer/ircview.cpp:699
 #, fuzzy, kde-format
 #| msgid "Join"
 msgctxt "Message type"
 msgid "Join"
 msgstr "Aliĝu"
 
-#: src/irc/channel.cpp:1093
+#: src/irc/channel.cpp:1105
 #, kde-format
 msgctxt "%1 = our hostmask, %2 = channel"
 msgid "You (%1) have joined the channel %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1121
+#: src/irc/channel.cpp:1133
 #, kde-format
 msgctxt "%1 is the nick joining and %2 the hostmask of that nick"
 msgid "%1 (%2) has joined this channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1147 src/irc/channel.cpp:1149 src/irc/channel.cpp:1171
-#: src/irc/channel.cpp:1174 src/irc/query.cpp:464 src/irc/query.cpp:472
-#: src/viewer/ircview.cpp:735
+#: src/irc/channel.cpp:1159 src/irc/channel.cpp:1161 src/irc/channel.cpp:1183
+#: src/irc/channel.cpp:1186 src/irc/query.cpp:464 src/irc/query.cpp:472
+#: src/viewer/ircview.cpp:704
 #, fuzzy, kde-format
 #| msgid "Quit"
 msgctxt "Message type"
 msgid "Quit"
 msgstr "Forlasi"
 
-#: src/irc/channel.cpp:1147
+#: src/irc/channel.cpp:1159
 #, kde-format
 msgid "You (%1) have left this server."
 msgstr ""
 
-#: src/irc/channel.cpp:1149
+#: src/irc/channel.cpp:1161
 #, kde-format
 msgctxt "%1 = our hostmask, %2 = reason"
 msgid "You (%1) have left this server (%2)."
 msgstr ""
 
-#: src/irc/channel.cpp:1155 src/irc/channel.cpp:1157 src/irc/channel.cpp:1180
-#: src/irc/channel.cpp:1183 src/viewer/ircview.cpp:735
+#: src/irc/channel.cpp:1167 src/irc/channel.cpp:1169 src/irc/channel.cpp:1192
+#: src/irc/channel.cpp:1195 src/viewer/ircview.cpp:704
 #, kde-format
 msgctxt "Message type"
 msgid "Part"
 msgstr ""
 
-#: src/irc/channel.cpp:1155
+#: src/irc/channel.cpp:1167
 #, kde-format
 msgid "You have left channel %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1158
+#: src/irc/channel.cpp:1170
 #, kde-format
 msgctxt "%1 = our hostmask, %2 = channel, %3 = reason"
 msgid "You (%1) have left channel %2 (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1171
+#: src/irc/channel.cpp:1183
 #, kde-format
 msgid "%1 (%2) has left this server."
 msgstr ""
 
-#: src/irc/channel.cpp:1175
+#: src/irc/channel.cpp:1187
 #, kde-format
 msgctxt "%1 = nick, %2 = hostname, %3 = reason"
 msgid "%1 (%2) has left this server (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1180
+#: src/irc/channel.cpp:1192
 #, kde-format
 msgid "%1 (%2) has left this channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1184
+#: src/irc/channel.cpp:1196
 #, kde-format
 msgctxt "%1 = nick, %2 = hostmask, %3 = reason"
 msgid "%1 (%2) has left this channel (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1232 src/irc/channel.cpp:1234 src/irc/channel.cpp:1241
-#: src/irc/channel.cpp:1246 src/irc/channel.cpp:1267 src/irc/channel.cpp:1269
-#: src/irc/channel.cpp:1276 src/irc/channel.cpp:1281
-#: src/viewer/irccontextmenus.cpp:408
+#: src/irc/channel.cpp:1244 src/irc/channel.cpp:1246 src/irc/channel.cpp:1253
+#: src/irc/channel.cpp:1258 src/irc/channel.cpp:1279 src/irc/channel.cpp:1281
+#: src/irc/channel.cpp:1288 src/irc/channel.cpp:1293
+#: src/viewer/irccontextmenus.cpp:411
 #, kde-format
 msgid "Kick"
 msgstr ""
 
-#: src/irc/channel.cpp:1232
+#: src/irc/channel.cpp:1244
 #, kde-format
 msgid "You have kicked yourself from channel %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1235
+#: src/irc/channel.cpp:1247
 #, kde-format
 msgctxt "%1 adds the channel and %2 the reason"
 msgid "You have kicked yourself from channel %1 (%2)."
 msgstr ""
 
-#: src/irc/channel.cpp:1242
+#: src/irc/channel.cpp:1254
 #, kde-format
 msgctxt "%1 adds the channel, %2 adds the kicker"
 msgid "You have been kicked from channel %1 by %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1247
+#: src/irc/channel.cpp:1259
 #, kde-format
 msgctxt "%1 adds the channel, %2 the kicker and %3 the reason"
 msgid "You have been kicked from channel %1 by %2 (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1267
+#: src/irc/channel.cpp:1279
 #, kde-format
 msgid "You have kicked %1 from the channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1270
+#: src/irc/channel.cpp:1282
 #, kde-format
 msgctxt "%1 adds the kicked nick and %2 the reason"
 msgid "You have kicked %1 from the channel (%2)."
 msgstr ""
 
-#: src/irc/channel.cpp:1277
+#: src/irc/channel.cpp:1289
 #, kde-format
 msgctxt "%1 adds the kicked nick, %2 adds the kicker"
 msgid "%1 has been kicked from the channel by %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1282
+#: src/irc/channel.cpp:1294
 #, kde-format
 msgctxt "%1 adds the kicked nick, %2 the kicker and %3 the reason"
 msgid "%1 has been kicked from the channel by %2 (%3)."
 msgstr ""
 
-#: src/irc/channel.cpp:1349
+#: src/irc/channel.cpp:1361
 #, kde-format
 msgid "%1 nick"
 msgid_plural "%1 nicks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1350
+#: src/irc/channel.cpp:1362
 #, kde-format
 msgid " (%1 op)"
 msgid_plural " (%1 ops)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1368 src/irc/channel.cpp:1382 src/irc/channel.cpp:1384
-#: src/irc/inputfilter.cpp:1156 src/irc/inputfilter.cpp:1172
-#: src/irc/inputfilter.cpp:1180
+#: src/irc/channel.cpp:1380 src/irc/channel.cpp:1394 src/irc/channel.cpp:1396
+#: src/irc/inputfilter.cpp:1215 src/irc/inputfilter.cpp:1231
+#: src/irc/inputfilter.cpp:1240
 #, kde-format
 msgid "Topic"
 msgstr ""
 
-#: src/irc/channel.cpp:1368
+#: src/irc/channel.cpp:1380
 #, kde-format
 msgid "The channel topic is \"%1\"."
 msgstr ""
 
-#: src/irc/channel.cpp:1382
+#: src/irc/channel.cpp:1394
 #, kde-format
 msgid "You set the channel topic to \"%1\"."
 msgstr ""
 
-#: src/irc/channel.cpp:1384
+#: src/irc/channel.cpp:1396
 #, kde-format
 msgid "%1 sets the channel topic to \"%2\"."
 msgstr ""
 
-#: src/irc/channel.cpp:1438
+#: src/irc/channel.cpp:1450
 #, kde-format
 msgid "You set a quiet on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1439
+#: src/irc/channel.cpp:1451
 #, kde-format
 msgid "%1 sets a quiet on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1443
+#: src/irc/channel.cpp:1455
 #, kde-format
 msgid "You remove the quiet on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1444
+#: src/irc/channel.cpp:1456
 #, kde-format
 msgid "%1 removes the quiet on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1453
+#: src/irc/channel.cpp:1465
 #, kde-format
 msgid "You give channel owner privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1454
+#: src/irc/channel.cpp:1466
 #, kde-format
 msgid "You give channel owner privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1458
+#: src/irc/channel.cpp:1470
 #, kde-format
 msgid "%1 gives channel owner privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1459
+#: src/irc/channel.cpp:1471
 #, kde-format
 msgid "%1 gives channel owner privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1466
+#: src/irc/channel.cpp:1478
 #, kde-format
 msgid "You take channel owner privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1467
+#: src/irc/channel.cpp:1479
 #, kde-format
 msgid "You take channel owner privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1471
+#: src/irc/channel.cpp:1483
 #, kde-format
 msgid "%1 takes channel owner privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1472
+#: src/irc/channel.cpp:1484
 #, kde-format
 msgid "%1 takes channel owner privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1488
+#: src/irc/channel.cpp:1500
 #, kde-format
 msgid "You give channel admin privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1489
+#: src/irc/channel.cpp:1501
 #, kde-format
 msgid "You give channel admin privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1493
+#: src/irc/channel.cpp:1505
 #, kde-format
 msgid "%1 gives channel admin privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1494
+#: src/irc/channel.cpp:1506
 #, kde-format
 msgid "%1 gives channel admin privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1501
+#: src/irc/channel.cpp:1513
 #, kde-format
 msgid "You take channel admin privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1502
+#: src/irc/channel.cpp:1514
 #, kde-format
 msgid "You take channel admin privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1506
+#: src/irc/channel.cpp:1518
 #, kde-format
 msgid "%1 takes channel admin privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1507
+#: src/irc/channel.cpp:1519
 #, kde-format
 msgid "%1 takes channel admin privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1522
+#: src/irc/channel.cpp:1534
 #, kde-format
 msgid "You give channel operator privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1523
+#: src/irc/channel.cpp:1535
 #, kde-format
 msgid "You give channel operator privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1527
+#: src/irc/channel.cpp:1539
 #, kde-format
 msgid "%1 gives channel operator privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1528
+#: src/irc/channel.cpp:1540
 #, kde-format
 msgid "%1 gives channel operator privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1535
+#: src/irc/channel.cpp:1547
 #, kde-format
 msgid "You take channel operator privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1536
+#: src/irc/channel.cpp:1548
 #, kde-format
 msgid "You take channel operator privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1540
+#: src/irc/channel.cpp:1552
 #, kde-format
 msgid "%1 takes channel operator privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1541
+#: src/irc/channel.cpp:1553
 #, kde-format
 msgid "%1 takes channel operator privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1556
+#: src/irc/channel.cpp:1568
 #, kde-format
 msgid "You give channel halfop privileges to yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1557
+#: src/irc/channel.cpp:1569
 #, kde-format
 msgid "You give channel halfop privileges to %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1561
+#: src/irc/channel.cpp:1573
 #, kde-format
 msgid "%1 gives channel halfop privileges to you."
 msgstr ""
 
-#: src/irc/channel.cpp:1562
+#: src/irc/channel.cpp:1574
 #, kde-format
 msgid "%1 gives channel halfop privileges to %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1569
+#: src/irc/channel.cpp:1581
 #, kde-format
 msgid "You take channel halfop privileges from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1570
+#: src/irc/channel.cpp:1582
 #, kde-format
 msgid "You take channel halfop privileges from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1574
+#: src/irc/channel.cpp:1586
 #, kde-format
 msgid "%1 takes channel halfop privileges from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1575
+#: src/irc/channel.cpp:1587
 #, kde-format
 msgid "%1 takes channel halfop privileges from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1592
+#: src/irc/channel.cpp:1604
 #, kde-format
 msgid "You give yourself permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1593
+#: src/irc/channel.cpp:1605
 #, kde-format
 msgid "You give %1 permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1597
+#: src/irc/channel.cpp:1609
 #, kde-format
 msgid "%1 gives you permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1598
+#: src/irc/channel.cpp:1610
 #, kde-format
 msgid "%1 gives %2 permission to talk."
 msgstr ""
 
-#: src/irc/channel.cpp:1605
+#: src/irc/channel.cpp:1617
 #, kde-format
 msgid "You take the permission to talk from yourself."
 msgstr ""
 
-#: src/irc/channel.cpp:1606
+#: src/irc/channel.cpp:1618
 #, kde-format
 msgid "You take the permission to talk from %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1610
+#: src/irc/channel.cpp:1622
 #, kde-format
 msgid "%1 takes the permission to talk from you."
 msgstr ""
 
-#: src/irc/channel.cpp:1611
+#: src/irc/channel.cpp:1623
 #, kde-format
 msgid "%1 takes the permission to talk from %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1623
+#: src/irc/channel.cpp:1635
 #, kde-format
 msgid "You set the channel mode to 'no colors allowed'."
 msgstr ""
 
-#: src/irc/channel.cpp:1624
+#: src/irc/channel.cpp:1636
 #, kde-format
 msgid "%1 sets the channel mode to 'no colors allowed'."
 msgstr ""
 
-#: src/irc/channel.cpp:1628
+#: src/irc/channel.cpp:1640
 #, kde-format
 msgid "You set the channel mode to 'allow color codes'."
 msgstr ""
 
-#: src/irc/channel.cpp:1629
+#: src/irc/channel.cpp:1641
 #, kde-format
 msgid "%1 sets the channel mode to 'allow color codes'."
 msgstr ""
 
-#: src/irc/channel.cpp:1636
+#: src/irc/channel.cpp:1648
 #, kde-format
 msgid "You set the channel mode to 'invite only'."
 msgstr ""
 
-#: src/irc/channel.cpp:1637
+#: src/irc/channel.cpp:1649
 #, kde-format
 msgid "%1 sets the channel mode to 'invite only'."
 msgstr ""
 
-#: src/irc/channel.cpp:1641
+#: src/irc/channel.cpp:1653
 #, kde-format
 msgid "You remove the 'invite only' mode from the channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1642
+#: src/irc/channel.cpp:1654
 #, kde-format
 msgid "%1 removes the 'invite only' mode from the channel."
 msgstr ""
 
-#: src/irc/channel.cpp:1650
+#: src/irc/channel.cpp:1662
 #, kde-format
 msgid "You set the channel mode to 'moderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1651
+#: src/irc/channel.cpp:1663
 #, kde-format
 msgid "%1 sets the channel mode to 'moderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1655
+#: src/irc/channel.cpp:1667
 #, kde-format
 msgid "You set the channel mode to 'unmoderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1656
+#: src/irc/channel.cpp:1668
 #, kde-format
 msgid "%1 sets the channel mode to 'unmoderated'."
 msgstr ""
 
-#: src/irc/channel.cpp:1664
+#: src/irc/channel.cpp:1676
 #, kde-format
 msgid "You set the channel mode to 'no messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1665
+#: src/irc/channel.cpp:1677
 #, kde-format
 msgid "%1 sets the channel mode to 'no messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1669
+#: src/irc/channel.cpp:1681
 #, kde-format
 msgid "You set the channel mode to 'allow messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1670
+#: src/irc/channel.cpp:1682
 #, kde-format
 msgid "%1 sets the channel mode to 'allow messages from outside'."
 msgstr ""
 
-#: src/irc/channel.cpp:1678
+#: src/irc/channel.cpp:1690
 #, kde-format
 msgid "You set the channel mode to 'private'."
 msgstr ""
 
-#: src/irc/channel.cpp:1679
+#: src/irc/channel.cpp:1691
 #, kde-format
 msgid "%1 sets the channel mode to 'private'."
 msgstr ""
 
-#: src/irc/channel.cpp:1683
+#: src/irc/channel.cpp:1695
 #, kde-format
 msgid "You set the channel mode to 'public'."
 msgstr ""
 
-#: src/irc/channel.cpp:1684
+#: src/irc/channel.cpp:1696
 #, kde-format
 msgid "%1 sets the channel mode to 'public'."
 msgstr ""
 
-#: src/irc/channel.cpp:1693
+#: src/irc/channel.cpp:1705
 #, kde-format
 msgid "You set the channel mode to 'secret'."
 msgstr ""
 
-#: src/irc/channel.cpp:1694
+#: src/irc/channel.cpp:1706
 #, kde-format
 msgid "%1 sets the channel mode to 'secret'."
 msgstr ""
 
-#: src/irc/channel.cpp:1698
+#: src/irc/channel.cpp:1710
 #, kde-format
 msgid "You set the channel mode to 'visible'."
 msgstr ""
 
-#: src/irc/channel.cpp:1699
+#: src/irc/channel.cpp:1711
 #, kde-format
 msgid "%1 sets the channel mode to 'visible'."
 msgstr ""
 
-#: src/irc/channel.cpp:1710
+#: src/irc/channel.cpp:1722
 #, kde-format
 msgid "You switch on 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1711
+#: src/irc/channel.cpp:1723
 #, kde-format
 msgid "%1 switches on 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1715
+#: src/irc/channel.cpp:1727
 #, kde-format
 msgid "You switch off 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1716
+#: src/irc/channel.cpp:1728
 #, kde-format
 msgid "%1 switches off 'topic protection'."
 msgstr ""
 
-#: src/irc/channel.cpp:1724
+#: src/irc/channel.cpp:1736
 #, kde-format
 msgid "You set the channel key to '%1'."
 msgstr ""
 
-#: src/irc/channel.cpp:1725
+#: src/irc/channel.cpp:1737
 #, kde-format
 msgid "%1 sets the channel key to '%2'."
 msgstr ""
 
-#: src/irc/channel.cpp:1729
+#: src/irc/channel.cpp:1741
 #, kde-format
 msgid "You remove the channel key."
 msgstr ""
 
-#: src/irc/channel.cpp:1730
+#: src/irc/channel.cpp:1742
 #, kde-format
 msgid "%1 removes the channel key."
 msgstr ""
 
-#: src/irc/channel.cpp:1738
+#: src/irc/channel.cpp:1750
 #, kde-format
 msgid "You set the channel limit to 1 nick."
 msgid_plural "You set the channel limit to %1 nicks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1739
+#: src/irc/channel.cpp:1751
 #, kde-format
 msgid "%2 sets the channel limit to 1 nick."
 msgid_plural "%2 sets the channel limit to %1 nicks."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/channel.cpp:1743
+#: src/irc/channel.cpp:1755
 #, kde-format
 msgid "You remove the channel limit."
 msgstr ""
 
-#: src/irc/channel.cpp:1744
+#: src/irc/channel.cpp:1756
 #, kde-format
 msgid "%1 removes the channel limit."
 msgstr ""
 
-#: src/irc/channel.cpp:1754
+#: src/irc/channel.cpp:1766
 #, kde-format
 msgid "You set a ban on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1755
+#: src/irc/channel.cpp:1767
 #, kde-format
 msgid "%1 sets a ban on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1759
+#: src/irc/channel.cpp:1771
 #, kde-format
 msgid "You remove the ban on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1760
+#: src/irc/channel.cpp:1772
 #, kde-format
 msgid "%1 removes the ban on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1767
+#: src/irc/channel.cpp:1779
 #, kde-format
 msgid "You set a ban exception on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1768
+#: src/irc/channel.cpp:1780
 #, kde-format
 msgid "%1 sets a ban exception on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1772
+#: src/irc/channel.cpp:1784
 #, kde-format
 msgid "You remove the ban exception on %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1773
+#: src/irc/channel.cpp:1785
 #, kde-format
 msgid "%1 removes the ban exception on %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1780
+#: src/irc/channel.cpp:1792
 #, kde-format
 msgid "You set invitation mask %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1781
+#: src/irc/channel.cpp:1793
 #, kde-format
 msgid "%1 sets invitation mask %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1785
+#: src/irc/channel.cpp:1797
 #, kde-format
 msgid "You remove the invitation mask %1."
 msgstr ""
 
-#: src/irc/channel.cpp:1786
+#: src/irc/channel.cpp:1798
 #, kde-format
 msgid "%1 removes the invitation mask %2."
 msgstr ""
 
-#: src/irc/channel.cpp:1794
+#: src/irc/channel.cpp:1806
 #, kde-format
 msgid "You set the channel mode '%1'."
 msgstr ""
 
-#: src/irc/channel.cpp:1795
+#: src/irc/channel.cpp:1807
 #, kde-format
 msgid "%1 sets the channel mode '%2'."
 msgstr ""
 
-#: src/irc/channel.cpp:1799
+#: src/irc/channel.cpp:1811
 #, kde-format
 msgid "You set channel mode +%1"
 msgstr ""
 
-#: src/irc/channel.cpp:1800
+#: src/irc/channel.cpp:1812
 #, kde-format
 msgid "%1 sets channel mode +%2"
 msgstr ""
 
-#: src/irc/channel.cpp:1807
+#: src/irc/channel.cpp:1819
 #, kde-format
 msgid "You remove the channel mode '%1'."
 msgstr ""
 
-#: src/irc/channel.cpp:1808
+#: src/irc/channel.cpp:1820
 #, kde-format
 msgid "%1 removes the channel mode '%2'."
 msgstr ""
 
-#: src/irc/channel.cpp:1812
+#: src/irc/channel.cpp:1824
 #, kde-format
 msgid "You set channel mode -%1"
 msgstr ""
 
-#: src/irc/channel.cpp:1813
+#: src/irc/channel.cpp:1825
 #, kde-format
 msgid "%1 sets channel mode -%2"
 msgstr ""
 
-#: src/irc/channel.cpp:2207
+#: src/irc/channel.cpp:2225
 #, kde-format
 msgid "You have to be an operator to change this."
 msgstr ""
 
-#: src/irc/channel.cpp:2209
+#: src/irc/channel.cpp:2227
 #, kde-format
 msgid "Topic can be changed by channel operator only.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2210
+#: src/irc/channel.cpp:2228
 #, kde-format
 msgid "No messages to channel from clients on the outside.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2211
+#: src/irc/channel.cpp:2229
 #, kde-format
 msgid "Secret channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2212
+#: src/irc/channel.cpp:2230
 #, kde-format
 msgid "Invite only channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2213
+#: src/irc/channel.cpp:2231
 #, kde-format
 msgid "Private channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2214
+#: src/irc/channel.cpp:2232
 #, kde-format
 msgid "Moderated channel.  %1"
 msgstr ""
 
-#: src/irc/channel.cpp:2215
+#: src/irc/channel.cpp:2233
 #, kde-format
 msgid "Protect channel with a password."
 msgstr ""
 
-#: src/irc/channel.cpp:2216
+#: src/irc/channel.cpp:2234
 #, kde-format
 msgid "Set user limit to channel."
 msgstr ""
 
-#: src/irc/channel.cpp:2390
+#: src/irc/channel.cpp:2408
 #, kde-format
 msgid "Do you want to leave %1?"
 msgstr ""
 
-#: src/irc/channel.cpp:2391
+#: src/irc/channel.cpp:2409
 #, kde-format
 msgid "Leave Channel"
 msgstr ""
 
-#: src/irc/channel.cpp:2392
+#: src/irc/channel.cpp:2410
 #, kde-format
 msgid "Leave"
 msgstr "Foriri"
 
-#: src/irc/channel.cpp:2545 src/irc/query.cpp:411
+#: src/irc/channel.cpp:2581 src/irc/query.cpp:411
 #: src/viewer/statuspanel.cpp:310
 #, kde-format
 msgid "Identity Default ( %1 )"
@@ -5035,8 +5011,8 @@ msgstr "Kanalo"
 msgid "Channel Name"
 msgstr ""
 
-#: src/irc/channellistpanel.cpp:90 src/irc/inputfilter.cpp:1381
-#: src/irc/inputfilter.cpp:1391 src/irc/inputfilter.cpp:2107
+#: src/irc/channellistpanel.cpp:90 src/irc/inputfilter.cpp:1441
+#: src/irc/inputfilter.cpp:1451 src/irc/inputfilter.cpp:2177
 #, kde-format
 msgid "Users"
 msgstr "Uzantoj"
@@ -5048,7 +5024,7 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChannelListWidgetUI)
 #: src/irc/channellistpanel.cpp:148 src/irc/channellistpanelui.ui:14
-#: src/viewer/viewcontainer.cpp:2932 src/viewer/viewcontainer.cpp:2953
+#: src/viewer/viewcontainer.cpp:2959 src/viewer/viewcontainer.cpp:2980
 #, kde-format
 msgid "Channel List"
 msgstr ""
@@ -5235,68 +5211,68 @@ msgstr ""
 msgid "Has voice"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:269
+#: src/irc/inputfilter.cpp:242
 #, kde-format
 msgid "Received CTCP-PING request from %1 to channel %2, sending answer."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:276 src/irc/inputfilter.cpp:449
-#: src/irc/inputfilter.cpp:460
+#: src/irc/inputfilter.cpp:250 src/irc/inputfilter.cpp:429
+#: src/irc/inputfilter.cpp:440
 #, kde-format
 msgid "Received CTCP-%1 request from %2, sending answer."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:292
+#: src/irc/inputfilter.cpp:267
 #, kde-format
 msgid "Received Version request from %1 to channel %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:299
+#: src/irc/inputfilter.cpp:275
 #, kde-format
 msgid "Received Version request from %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:372
+#: src/irc/inputfilter.cpp:349
 #, kde-format
 msgid "Received invalid DCC SEND request from %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:387
+#: src/irc/inputfilter.cpp:365
 #, kde-format
 msgid "Received invalid DCC ACCEPT request from %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:402
+#: src/irc/inputfilter.cpp:381
 #, kde-format
 msgid "Received invalid DCC RESUME request from %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:430
+#: src/irc/inputfilter.cpp:410
 #, kde-format
 msgid "Received invalid DCC CHAT request from %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:438
+#: src/irc/inputfilter.cpp:418
 #, kde-format
 msgid "Unknown DCC command %1 received from %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:476
+#: src/irc/inputfilter.cpp:456
 #, kde-format
 msgid "Received unknown CTCP-%1 request from %2 to Channel %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:481
+#: src/irc/inputfilter.cpp:462
 #, kde-format
 msgid "Received unknown CTCP-%1 request from %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:506
+#: src/irc/inputfilter.cpp:488
 #, kde-format
 msgid "-%1 to %2- %3"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:526
+#: src/irc/inputfilter.cpp:508
 #, fuzzy, kde-format
 #| msgid " seconds"
 msgid "second"
@@ -5304,27 +5280,27 @@ msgid_plural "seconds"
 msgstr[0] " sekundoj"
 msgstr[1] " sekundoj"
 
-#: src/irc/inputfilter.cpp:529
+#: src/irc/inputfilter.cpp:511
 #, kde-format
 msgid "Received CTCP-PING reply from %1: %2 %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:557
+#: src/irc/inputfilter.cpp:539
 #, kde-format
 msgid "Received CTCP-%1 reply from %2: %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:570
+#: src/irc/inputfilter.cpp:552
 #, kde-format
 msgid "Received DH1080_INIT from %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:575
+#: src/irc/inputfilter.cpp:557
 #, kde-format
 msgid "Received DH1080_FINISH from %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:581 src/irc/inputfilter.cpp:749
+#: src/irc/inputfilter.cpp:563 src/irc/inputfilter.cpp:785
 #, kde-format
 msgid "-%1- %2"
 msgstr "-%1- %2"
@@ -5334,328 +5310,333 @@ msgstr "-%1- %2"
 msgid "%1 invited you to channel %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:845 src/irc/inputfilter.cpp:853
+#: src/irc/inputfilter.cpp:846
+#, kde-format
+msgid "Capabilities"
+msgstr ""
+
+#: src/irc/inputfilter.cpp:898 src/irc/inputfilter.cpp:906
 #, kde-format
 msgid "Welcome"
 msgstr "Bonvenon"
 
-#: src/irc/inputfilter.cpp:854
+#: src/irc/inputfilter.cpp:907
 #, kde-format
 msgid "Server %1 (Version %2), User modes: %3, Channel modes: %4"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:880
+#: src/irc/inputfilter.cpp:934
 #, kde-format
 msgid "Support"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:979
+#: src/irc/inputfilter.cpp:1037
 #, kde-format
 msgid "Your personal modes are:"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:991 src/irc/inputfilter.cpp:1033
+#: src/irc/inputfilter.cpp:1049 src/irc/inputfilter.cpp:1091
 #, kde-format
 msgid "Channel modes: "
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1013
+#: src/irc/inputfilter.cpp:1071
 #, kde-format
 msgid "limited to %1 user"
 msgid_plural "limited to %1 users"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1042 src/urlcatcher.cpp:179
+#: src/irc/inputfilter.cpp:1100 src/urlcatcher.cpp:179
 #, kde-format
 msgid "URL"
 msgstr "Retadreso"
 
-#: src/irc/inputfilter.cpp:1043
+#: src/irc/inputfilter.cpp:1101
 #, kde-format
 msgid "Channel URL: %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1053
+#: src/irc/inputfilter.cpp:1111
 #, kde-format
 msgid "Created"
 msgstr "Kreita"
 
-#: src/irc/inputfilter.cpp:1054
+#: src/irc/inputfilter.cpp:1112
 #, kde-format
 msgid "This channel was created on %1."
 msgstr ""
 
 #. i18n("Whois"),parameterList.join(" ").section(' ',1)+' '+trailing);
 #. The above line works fine, but can't be i18n'ised. So use the below instead.. I hope this is okay.
-#: src/irc/inputfilter.cpp:1072 src/irc/inputfilter.cpp:1198
-#: src/irc/inputfilter.cpp:1464 src/irc/inputfilter.cpp:1520
-#: src/irc/inputfilter.cpp:1530 src/irc/inputfilter.cpp:1672
-#: src/irc/inputfilter.cpp:1680 src/irc/inputfilter.cpp:1687
-#: src/irc/inputfilter.cpp:1694 src/irc/inputfilter.cpp:1701
-#: src/irc/inputfilter.cpp:1708 src/irc/inputfilter.cpp:1734
-#: src/irc/inputfilter.cpp:1749 src/irc/inputfilter.cpp:1765
-#: src/irc/inputfilter.cpp:1767 src/irc/inputfilter.cpp:1810
-#: src/irc/inputfilter.cpp:1822 src/irc/inputfilter.cpp:1832
-#: src/irc/inputfilter.cpp:1839 src/irc/inputfilter.cpp:1845
-#: src/irc/inputfilter.cpp:1863
+#: src/irc/inputfilter.cpp:1131 src/irc/inputfilter.cpp:1258
+#: src/irc/inputfilter.cpp:1524 src/irc/inputfilter.cpp:1580
+#: src/irc/inputfilter.cpp:1590 src/irc/inputfilter.cpp:1742
+#: src/irc/inputfilter.cpp:1750 src/irc/inputfilter.cpp:1757
+#: src/irc/inputfilter.cpp:1764 src/irc/inputfilter.cpp:1771
+#: src/irc/inputfilter.cpp:1778 src/irc/inputfilter.cpp:1804
+#: src/irc/inputfilter.cpp:1819 src/irc/inputfilter.cpp:1835
+#: src/irc/inputfilter.cpp:1837 src/irc/inputfilter.cpp:1880
+#: src/irc/inputfilter.cpp:1892 src/irc/inputfilter.cpp:1902
+#: src/irc/inputfilter.cpp:1909 src/irc/inputfilter.cpp:1915
+#: src/irc/inputfilter.cpp:1933
 #, kde-format
 msgid "Whois"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1072
+#: src/irc/inputfilter.cpp:1131
 #, kde-format
 msgid "%1 is logged in as %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1105 src/irc/inputfilter.cpp:1122
+#: src/irc/inputfilter.cpp:1164 src/irc/inputfilter.cpp:1181
 #, fuzzy, kde-format
 msgid "Names"
 msgstr "Nomoj:"
 
-#: src/irc/inputfilter.cpp:1122
+#: src/irc/inputfilter.cpp:1181
 #, kde-format
 msgid "End of NAMES list."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1135
+#: src/irc/inputfilter.cpp:1194
 #, kde-format
 msgid "TOPIC"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1135
+#: src/irc/inputfilter.cpp:1194
 #, kde-format
 msgid "The channel %1 has no topic set."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1156
+#: src/irc/inputfilter.cpp:1215
 #, kde-format
 msgid "The channel topic for %1 is: \"%2\""
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1173
+#: src/irc/inputfilter.cpp:1232
 #, kde-format
 msgid "The topic was set by %1 on %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1180
+#: src/irc/inputfilter.cpp:1240
 #, kde-format
 msgid "The topic for %1 was set by %2 on %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1198
+#: src/irc/inputfilter.cpp:1258
 #, kde-format
 msgid "%1 is actually using the host %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1211
+#: src/irc/inputfilter.cpp:1271
 #, kde-format
 msgid "%1: No such nick/channel."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1215
+#: src/irc/inputfilter.cpp:1275
 #, kde-format
 msgid "No such nick: %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1228
+#: src/irc/inputfilter.cpp:1288
 #, kde-format
 msgid "%1: No such channel."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1241
+#: src/irc/inputfilter.cpp:1301
 #, kde-format
 msgid "Nickname already in use, try a different one."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1254
+#: src/irc/inputfilter.cpp:1314
 #, kde-format
 msgid ""
 "The nickname %1 was already in use, but the connection failed before you "
 "responded."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1262
+#: src/irc/inputfilter.cpp:1322
 #, kde-format
 msgid "Nickname already in use. Trying %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1291
+#: src/irc/inputfilter.cpp:1351
 #, kde-format
-msgid "Erroneus nickname. Changing nick to %1."
+msgid "Erroneous nickname. Changing nick to %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1302
+#: src/irc/inputfilter.cpp:1362
 #, kde-format
 msgid "You are not on %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1313 src/irc/inputfilter.cpp:1322
-#: src/irc/inputfilter.cpp:1331 src/viewer/ircview.cpp:694
+#: src/irc/inputfilter.cpp:1373 src/irc/inputfilter.cpp:1382
+#: src/irc/inputfilter.cpp:1391 src/viewer/ircview.cpp:675
 #, kde-format
 msgid "MOTD"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1313
+#: src/irc/inputfilter.cpp:1373
 #, kde-format
 msgid "Message of the day:"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1331
+#: src/irc/inputfilter.cpp:1391
 #, kde-format
 msgid "End of message of the day"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1355
+#: src/irc/inputfilter.cpp:1415
 #, kde-format
 msgid "You need to be a channel operator in %1 to do that."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1363
+#: src/irc/inputfilter.cpp:1423
 #, kde-format
 msgid "You are now an IRC operator on this server."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1371
+#: src/irc/inputfilter.cpp:1431
 #, kde-format
 msgid "'%1' is now your hidden host (set by services)."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1381
+#: src/irc/inputfilter.cpp:1441
 #, kde-format
 msgid "Current users on the network: %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1391
+#: src/irc/inputfilter.cpp:1451
 #, kde-format
 msgid "Current users on %1: %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1421 src/irc/nicksonline.cpp:220
-#: src/irc/server.cpp:3943 src/irc/server.cpp:3945 src/irc/server.cpp:3970
-#: src/irc/server.cpp:3979
+#: src/irc/inputfilter.cpp:1481 src/irc/nicksonline.cpp:220
+#: src/irc/server.cpp:4053 src/irc/server.cpp:4055 src/irc/server.cpp:4080
+#: src/irc/server.cpp:4089
 #, kde-format
 msgid "Away"
 msgstr "For"
 
-#: src/irc/inputfilter.cpp:1422
+#: src/irc/inputfilter.cpp:1482
 #, kde-format
 msgid "%1 is away: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1433
+#: src/irc/inputfilter.cpp:1493
 #, kde-format
 msgid "You invited %1 to channel %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1455 src/irc/inputfilter.cpp:1547
+#: src/irc/inputfilter.cpp:1515 src/irc/inputfilter.cpp:1613
 #, kde-format
 msgid "%1@%2"
 msgstr "%1@%2"
 
-#: src/irc/inputfilter.cpp:1465
+#: src/irc/inputfilter.cpp:1525
 #, kde-format
 msgid "%1 is %2@%3 (%4)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1480 src/irc/outputfilterresolvejob.cpp:83
+#: src/irc/inputfilter.cpp:1540 src/irc/outputfilterresolvejob.cpp:83
 #, kde-format
 msgid "DNS"
 msgstr "DNS"
 
-#: src/irc/inputfilter.cpp:1481
+#: src/irc/inputfilter.cpp:1541
 #, kde-format
 msgid "Resolved %1 (%2) to address: %3"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1490
+#: src/irc/inputfilter.cpp:1550
 #, kde-format
 msgid "Unable to resolve address for %1 (%2)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1520
+#: src/irc/inputfilter.cpp:1580
 #, kde-format
 msgid "%1 is an identified user."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1530
+#: src/irc/inputfilter.cpp:1590
 #, kde-format
 msgid "%1 is using a secure connection."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1561 src/irc/inputfilter.cpp:1586
+#: src/irc/inputfilter.cpp:1631 src/irc/inputfilter.cpp:1656
 #, kde-format
 msgid "Who"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1562
+#: src/irc/inputfilter.cpp:1632
 #, kde-format
 msgid "%1 is %2@%3 (%4)%5"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1566
+#: src/irc/inputfilter.cpp:1636
 #, kde-format
 msgid " (Away)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1587
+#: src/irc/inputfilter.cpp:1657
 #, kde-format
 msgid "End of /WHO list for %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1673
+#: src/irc/inputfilter.cpp:1743
 #, kde-format
 msgid "%1 is a user on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1681
+#: src/irc/inputfilter.cpp:1751
 #, kde-format
 msgid "%1 has voice on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1688
+#: src/irc/inputfilter.cpp:1758
 #, kde-format
 msgid "%1 is a halfop on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1695
+#: src/irc/inputfilter.cpp:1765
 #, kde-format
 msgid "%1 is an operator on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1702
+#: src/irc/inputfilter.cpp:1772
 #, kde-format
 msgid "%1 is owner of channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1709
+#: src/irc/inputfilter.cpp:1779
 #, kde-format
 msgid "%1 is admin on channels: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1735
+#: src/irc/inputfilter.cpp:1805
 #, kde-format
 msgid "%1 is online via %2 (%3)."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1750
+#: src/irc/inputfilter.cpp:1820
 #, kde-format
 msgid "%1 is available for help."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1765
+#: src/irc/inputfilter.cpp:1835
 #, kde-format
 msgid "%1 is an IRC Operator."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1805 src/statusbar.cpp:181
+#: src/irc/inputfilter.cpp:1875 src/statusbar.cpp:181
 #, kde-format
 msgid "1 day"
 msgid_plural "%1 days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1806 src/irc/inputfilter.cpp:1819
+#: src/irc/inputfilter.cpp:1876 src/irc/inputfilter.cpp:1889
 #: src/statusbar.cpp:182 src/statusbar.cpp:190
 #, kde-format
 msgid "1 hour"
@@ -5663,8 +5644,8 @@ msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1807 src/irc/inputfilter.cpp:1820
-#: src/irc/inputfilter.cpp:1830 src/statusbar.cpp:183 src/statusbar.cpp:191
+#: src/irc/inputfilter.cpp:1877 src/irc/inputfilter.cpp:1890
+#: src/irc/inputfilter.cpp:1900 src/statusbar.cpp:183 src/statusbar.cpp:191
 #: src/statusbar.cpp:198
 #, kde-format
 msgid "1 minute"
@@ -5672,8 +5653,8 @@ msgid_plural "%1 minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1808 src/irc/inputfilter.cpp:1821
-#: src/irc/inputfilter.cpp:1831 src/statusbar.cpp:184 src/statusbar.cpp:192
+#: src/irc/inputfilter.cpp:1878 src/irc/inputfilter.cpp:1891
+#: src/irc/inputfilter.cpp:1901 src/statusbar.cpp:184 src/statusbar.cpp:192
 #: src/statusbar.cpp:199
 #, kde-format
 msgid "1 second"
@@ -5681,7 +5662,7 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1812
+#: src/irc/inputfilter.cpp:1882
 #, kde-format
 msgctxt ""
 "%1 = name of person, %2 = (x days), %3 = (x hours), %4 = (x minutes), %5 = "
@@ -5689,81 +5670,81 @@ msgctxt ""
 msgid "%1 has been idle for %2, %3, %4, and %5."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1824
+#: src/irc/inputfilter.cpp:1894
 #, kde-format
 msgctxt ""
 "%1 = name of person, %2 = (x hours), %3 = (x minutes), %4 = (x seconds)"
 msgid "%1 has been idle for %2, %3, and %4."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1834
+#: src/irc/inputfilter.cpp:1904
 #, kde-format
 msgctxt "%1 = name of person, %2 = (x minutes), %3 = (x seconds)"
 msgid "%1 has been idle for %2 and %3."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1840
+#: src/irc/inputfilter.cpp:1910
 #, kde-format
 msgid "%2 has been idle for 1 second."
 msgid_plural "%2 has been idle for %1 seconds."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1846
+#: src/irc/inputfilter.cpp:1916
 #, kde-format
 msgid "%1 has been online since %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1863
+#: src/irc/inputfilter.cpp:1933
 #, kde-format
 msgid "End of WHOIS list."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1903
+#: src/irc/inputfilter.cpp:1973
 #, kde-format
 msgid "Userhost"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1904
+#: src/irc/inputfilter.cpp:1974
 #, kde-format
 msgctxt "%1 = nick, %2 = shows if nick is op, %3 = hostmask, %4 = shows away"
 msgid "%1%2 is %3%4."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1906
+#: src/irc/inputfilter.cpp:1976
 #, kde-format
 msgid " (IRC Operator)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1908
+#: src/irc/inputfilter.cpp:1978
 #, kde-format
 msgid " (away)"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1926 src/irc/inputfilter.cpp:1939
-#: src/irc/inputfilter.cpp:1955
+#: src/irc/inputfilter.cpp:1996 src/irc/inputfilter.cpp:2009
+#: src/irc/inputfilter.cpp:2025
 #, kde-format
 msgid "List"
 msgstr "Listo"
 
-#: src/irc/inputfilter.cpp:1926
+#: src/irc/inputfilter.cpp:1996
 #, kde-format
 msgid "List of channels:"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:1938
+#: src/irc/inputfilter.cpp:2008
 #, kde-format
 msgid "%2 (%1 user): %3"
 msgid_plural "%2 (%1 users): %3"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/irc/inputfilter.cpp:1955
+#: src/irc/inputfilter.cpp:2025
 #, kde-format
 msgid "End of channel list."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2012
+#: src/irc/inputfilter.cpp:2082
 #, fuzzy, kde-format
 #| msgid "(unknown)"
 msgctxt ""
@@ -5772,91 +5753,91 @@ msgctxt ""
 msgid "(unknown)"
 msgstr "(nekonata)"
 
-#: src/irc/inputfilter.cpp:2014 src/irc/inputfilter.cpp:2032
+#: src/irc/inputfilter.cpp:2084 src/irc/inputfilter.cpp:2102
 #, kde-format
 msgid "BanList:%1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2015
+#: src/irc/inputfilter.cpp:2085
 #, kde-format
 msgctxt "BanList message: e.g. *!*@aol.com set by MrGrim on <date>"
 msgid "%1 set by %2 on %3"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2032
+#: src/irc/inputfilter.cpp:2102
 #, kde-format
 msgid "End of Ban List."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2068
+#: src/irc/inputfilter.cpp:2138
 #, kde-format
 msgid "No such server: %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2078
+#: src/irc/inputfilter.cpp:2148
 #, kde-format
 msgid "%1 is currently unavailable."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2091
+#: src/irc/inputfilter.cpp:2161
 #, kde-format
 msgid "Nickname %1 is unavailable. Trying %2."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2115
+#: src/irc/inputfilter.cpp:2185
 #, kde-format
 msgid "%1: Unknown command."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2123
+#: src/irc/inputfilter.cpp:2193
 #, kde-format
 msgid "Not registered."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2131
+#: src/irc/inputfilter.cpp:2201
 #, kde-format
 msgid "%1: This command requires more parameters."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2155
+#: src/irc/inputfilter.cpp:2225
 #, kde-format
 msgid ""
 "Cannot join %1: The channel is password-protected and either a wrong or no "
 "password was given."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2162
+#: src/irc/inputfilter.cpp:2232
 #, kde-format
 msgid "You are now logged in as %1."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2170
+#: src/irc/inputfilter.cpp:2240
 #, kde-format
 msgid "SASL authentication successful."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2183
+#: src/irc/inputfilter.cpp:2253
 #, kde-format
 msgid "SASL authentication attempt failed."
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2192
+#: src/irc/inputfilter.cpp:2262
 #, fuzzy, kde-format
 #| msgid "Server Authentication"
 msgid "SASL authentication aborted."
 msgstr "Servilo-Aŭtentigo"
 
-#: src/irc/inputfilter.cpp:2224
+#: src/irc/inputfilter.cpp:2294
 #, kde-format
 msgid "You have set personal modes: %1"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2228
+#: src/irc/inputfilter.cpp:2298
 #, kde-format
 msgid "%1 has changed your personal modes: %2"
 msgstr ""
 
-#: src/irc/inputfilter.cpp:2247
+#: src/irc/inputfilter.cpp:2317
 #, kde-format
 msgid "%1 sets mode: %2"
 msgstr ""
@@ -5866,7 +5847,7 @@ msgstr ""
 msgid "Channel Invites"
 msgstr ""
 
-#: src/irc/invitedialog.cpp:177
+#: src/irc/invitedialog.cpp:179
 #, kde-format
 msgid "Join"
 msgstr "Aliĝu"
@@ -5938,17 +5919,17 @@ msgstr "Konekto"
 msgid "Hostmask:"
 msgstr ""
 
-#: src/irc/nickinfo.cpp:228
+#: src/irc/nickinfo.cpp:232
 #, kde-format
 msgid "Away&nbsp;Message:"
 msgstr ""
 
-#: src/irc/nickinfo.cpp:232
+#: src/irc/nickinfo.cpp:236
 #, kde-format
 msgid "(unknown)"
 msgstr "(nekonata)"
 
-#: src/irc/nickinfo.cpp:237
+#: src/irc/nickinfo.cpp:241
 #, kde-format
 msgid "Online&nbsp;Since:"
 msgstr ""
@@ -6001,7 +5982,7 @@ msgid ""
 "Click to remove a nick from the list of nicknames that appear on this screen."
 msgstr ""
 
-#: src/irc/nicksonline.cpp:50 src/viewer/irccontextmenus.cpp:437
+#: src/irc/nicksonline.cpp:50 src/viewer/irccontextmenus.cpp:440
 #, kde-format
 msgid "&Whois"
 msgstr ""
@@ -6316,8 +6297,8 @@ msgctxt "%1 = Comma-separated list of nicknames"
 msgid "Current notify list: %1."
 msgstr ""
 
-#: src/irc/outputfilter.cpp:1315 src/irc/server.cpp:3018
-#: src/irc/server.cpp:3032
+#: src/irc/outputfilter.cpp:1315 src/irc/server.cpp:3112
+#: src/irc/server.cpp:3126
 #, fuzzy, kde-format
 #| msgid "Notice"
 msgctxt "Message type"
@@ -6374,8 +6355,8 @@ msgid "Added %1 to your ignore list."
 msgstr ""
 
 #: src/irc/outputfilter.cpp:1544 src/irc/outputfilter.cpp:1615
-#: src/viewer/irccontextmenus.cpp:444 src/viewer/irccontextmenus.cpp:600
-#: src/viewer/irccontextmenus.cpp:601
+#: src/viewer/irccontextmenus.cpp:447 src/viewer/irccontextmenus.cpp:603
+#: src/viewer/irccontextmenus.cpp:604
 #, kde-format
 msgid "Ignore"
 msgstr "Ignori"
@@ -6558,90 +6539,90 @@ msgctxt "%1 = nick, %2 = hostmask, %3 = reason"
 msgid "%1 (%2) has left this server (%3)."
 msgstr ""
 
-#: src/irc/server.cpp:269
+#: src/irc/server.cpp:276
 #, kde-format
 msgctxt "The command mentioned is executed in a shell prior to connecting."
 msgid "Running pre-connect shell command..."
 msgstr ""
 
-#: src/irc/server.cpp:415
+#: src/irc/server.cpp:419
 #, kde-format
 msgid "Pre-shell command executed successfully!"
 msgstr ""
 
-#: src/irc/server.cpp:418 src/irc/server.cpp:430
+#: src/irc/server.cpp:422 src/irc/server.cpp:434
 #, kde-format
 msgctxt "An error message from KDE or Qt is appended."
 msgid "There was a problem while executing the command: "
 msgstr ""
 
-#: src/irc/server.cpp:419 src/irc/server.cpp:431
+#: src/irc/server.cpp:423 src/irc/server.cpp:435
 #, kde-format
 msgid "Warning"
 msgstr "Averto"
 
-#: src/irc/server.cpp:477
+#: src/irc/server.cpp:481
 #, fuzzy, kde-format
 #| msgid "%1 on %2"
 msgid "Looking for server %1 (port %2)..."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:659
+#: src/irc/server.cpp:668
 #, kde-format
 msgid "Server found, connecting..."
 msgstr ""
 
-#: src/irc/server.cpp:694
+#: src/irc/server.cpp:699
 #, kde-format
 msgid "Negotiating capabilities with server..."
 msgstr ""
 
-#: src/irc/server.cpp:696
+#: src/irc/server.cpp:755
 #, kde-format
-msgid "Requesting SASL capability..."
+msgid "Requesting capabilities: %1"
 msgstr ""
 
-#: src/irc/server.cpp:709
+#: src/irc/server.cpp:769
 #, kde-format
 msgid "Closing capabilities negotiation."
 msgstr ""
 
-#: src/irc/server.cpp:717
+#: src/irc/server.cpp:777
 #, kde-format
 msgid "Capabilities negotiation failed: Appears not supported by server."
 msgstr ""
 
-#: src/irc/server.cpp:726
+#: src/irc/server.cpp:784
 #, kde-format
 msgid ""
 "SASL capability acknowledged by server, attempting SASL PLAIN "
 "authentication..."
 msgstr ""
 
-#: src/irc/server.cpp:734
+#: src/irc/server.cpp:809
 #, kde-format
 msgid "SASL capability denied or not supported by server."
 msgstr ""
 
-#: src/irc/server.cpp:807 src/irc/server.cpp:915
+#: src/irc/server.cpp:880 src/irc/server.cpp:988
 #, kde-format
 msgid "SSL Connection Error"
 msgstr ""
 
-#: src/irc/server.cpp:808
+#: src/irc/server.cpp:881
 #, kde-format
 msgid ""
 "Connection to server %1 (port %2) lost while waiting for user response to an "
 "SSL error. Will automatically reconnect if error is ignored."
 msgstr ""
 
-#: src/irc/server.cpp:828
+#: src/irc/server.cpp:901
 #, fuzzy, kde-format
 #| msgid "%1 on %2"
 msgid "Connection to server %1 (port %2) lost: %3."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:876
+#: src/irc/server.cpp:949
 #, fuzzy, kde-format
 #| msgid "%1 on %2"
 msgid ""
@@ -6649,13 +6630,13 @@ msgid ""
 "check."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:880
+#: src/irc/server.cpp:953
 #, fuzzy, kde-format
 #| msgid "Connection"
 msgid "SSL Connection Warning"
 msgstr "Konekto"
 
-#: src/irc/server.cpp:910
+#: src/irc/server.cpp:983
 #, kde-format
 msgid ""
 "Could not connect to %1 (port %2) using SSL encryption. Either the server "
@@ -6663,18 +6644,18 @@ msgid ""
 "certificate. %3"
 msgstr ""
 
-#: src/irc/server.cpp:1018
+#: src/irc/server.cpp:1091
 #, kde-format
 msgid "Delayed connect aborted."
 msgstr ""
 
-#: src/irc/server.cpp:1048
+#: src/irc/server.cpp:1121
 #, fuzzy, kde-format
 #| msgid "%1 on %2"
 msgid "Disconnected from %1 (port %2)."
 msgstr "%1 sur %2"
 
-#: src/irc/server.cpp:1215
+#: src/irc/server.cpp:1288
 #, kde-format
 msgid ""
 "No nicknames from the \"%1\" identity were accepted by the connection "
@@ -6682,69 +6663,69 @@ msgid ""
 "Please enter a new one or press Cancel to disconnect:"
 msgstr ""
 
-#: src/irc/server.cpp:1216
+#: src/irc/server.cpp:1289
 #, kde-format
 msgid "Nickname error"
 msgstr ""
 
-#: src/irc/server.cpp:2038
+#: src/irc/server.cpp:2120
 #, kde-format
 msgid "Select File(s) to Send to %1"
 msgstr ""
 
-#: src/irc/server.cpp:2211
+#: src/irc/server.cpp:2293
 #, kde-format
 msgctxt "%1=nickname"
 msgid "Received invalid DCC SEND request from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2243
+#: src/irc/server.cpp:2325
 #, kde-format
 msgid "%1 offers to send you \"%2\" (%3)..."
 msgstr ""
 
-#: src/irc/server.cpp:2246 src/irc/server.cpp:2376 src/irc/server.cpp:2388
-#: src/irc/server.cpp:2537 src/irc/server.cpp:2593 src/irc/server.cpp:2702
+#: src/irc/server.cpp:2328 src/irc/server.cpp:2458 src/irc/server.cpp:2470
+#: src/irc/server.cpp:2619 src/irc/server.cpp:2675 src/irc/server.cpp:2784
 #, kde-format
 msgid "unknown size"
 msgstr ""
 
-#: src/irc/server.cpp:2282
+#: src/irc/server.cpp:2364
 #, kde-format
 msgctxt "%1=nickname"
 msgid "Received invalid DCC CHAT request from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2373
+#: src/irc/server.cpp:2455
 #, kde-format
 msgid "Asking %1 to accept upload of \"%2\" (%3)..."
 msgstr ""
 
-#: src/irc/server.cpp:2385
+#: src/irc/server.cpp:2467
 #, kde-format
 msgid "Asking %1 to accept passive upload of \"%2\" (%3)..."
 msgstr ""
 
-#: src/irc/server.cpp:2397
+#: src/irc/server.cpp:2479
 #, kde-format
 msgctxt "%1=name, %2=dcc extension, chat or wboard for example"
 msgid "Asking %1 to accept %2..."
 msgstr ""
 
-#: src/irc/server.cpp:2456
+#: src/irc/server.cpp:2538
 #, kde-format
 msgctxt "%1 = nickname"
 msgid "Received invalid passive DCC chat acceptance message from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2492
+#: src/irc/server.cpp:2574
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid ""
 "Received invalid passive DCC send acceptance message for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2533
+#: src/irc/server.cpp:2615
 #, kde-format
 msgctxt ""
 "%1 = file name, %2 = nickname of sender, %3 = percentage of file size, %4 = "
@@ -6752,13 +6733,13 @@ msgctxt ""
 msgid "Resuming download of \"%1\" from %2 starting at %3% of %4..."
 msgstr ""
 
-#: src/irc/server.cpp:2543
+#: src/irc/server.cpp:2625
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid "Received invalid resume acceptance message for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2589
+#: src/irc/server.cpp:2671
 #, kde-format
 msgctxt ""
 "%1 = file name, %2 = nickname of recipient, %3 = percentage of file size, %4 "
@@ -6766,140 +6747,140 @@ msgctxt ""
 msgid "Resuming upload of \"%1\" to %2 starting at %3% of %4..."
 msgstr ""
 
-#: src/irc/server.cpp:2611
+#: src/irc/server.cpp:2693
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid "Received invalid resume request for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2630
+#: src/irc/server.cpp:2712
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname"
 msgid "Received invalid reject request for \"%1\" from %2."
 msgstr ""
 
-#: src/irc/server.cpp:2646
+#: src/irc/server.cpp:2728
 #, kde-format
 msgctxt "%1 = nickname"
 msgid "Received invalid reject request from %1."
 msgstr ""
 
-#: src/irc/server.cpp:2659
+#: src/irc/server.cpp:2741
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of sender"
 msgid "Download of \"%1\" from %2 finished."
 msgstr ""
 
-#: src/irc/server.cpp:2664
+#: src/irc/server.cpp:2746
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of sender"
 msgid "Download of \"%1\" from %2 failed. Reason: %3."
 msgstr ""
 
-#: src/irc/server.cpp:2676
+#: src/irc/server.cpp:2758
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of recipient"
 msgid "Upload of \"%1\" to %2 finished."
 msgstr ""
 
-#: src/irc/server.cpp:2679
+#: src/irc/server.cpp:2761
 #, kde-format
 msgctxt "%1 = file name, %2 = nickname of recipient"
 msgid "Upload of \"%1\" to %2 failed. Reason: %3."
 msgstr ""
 
-#: src/irc/server.cpp:2693
+#: src/irc/server.cpp:2775
 #, kde-format
 msgctxt "%1 = file name, %2 nickname of recipient"
 msgid "Sending \"%1\" to %2..."
 msgstr ""
 
-#: src/irc/server.cpp:2700
+#: src/irc/server.cpp:2782
 #, kde-format
 msgctxt "%1 = file name, %2 = file size, %3 = nickname of sender"
 msgid "Downloading \"%1\" (%2) from %3..."
 msgstr ""
 
-#: src/irc/server.cpp:3018 src/notificationhandler.cpp:328
+#: src/irc/server.cpp:3112 src/notificationhandler.cpp:328
 #, kde-format
 msgid "%1 is online (%2)."
 msgstr ""
 
-#: src/irc/server.cpp:3032 src/notificationhandler.cpp:342
+#: src/irc/server.cpp:3126 src/notificationhandler.cpp:342
 #, kde-format
 msgid "%1 went offline (%2)."
 msgstr ""
 
-#: src/irc/server.cpp:3693
+#: src/irc/server.cpp:3797
 #, kde-format
 msgid "Error: Could not find script \"%1\"."
 msgstr ""
 
-#: src/irc/server.cpp:3698
+#: src/irc/server.cpp:3802
 #, kde-format
 msgid "Error: Could not execute script \"%1\". Check file permissions."
 msgstr ""
 
-#: src/irc/server.cpp:3912
+#: src/irc/server.cpp:4022
 #, kde-format
 msgid "Gone away for now"
 msgstr ""
 
-#: src/irc/server.cpp:3943
+#: src/irc/server.cpp:4053
 #, kde-format
 msgid "You are now marked as being away (reason: %1)."
 msgstr ""
 
-#: src/irc/server.cpp:3945
+#: src/irc/server.cpp:4055
 #, kde-format
 msgid "You are now marked as being away."
 msgstr ""
 
-#: src/irc/server.cpp:3970
+#: src/irc/server.cpp:4080
 #, kde-format
 msgid "You are no longer marked as being away."
 msgstr ""
 
-#: src/irc/server.cpp:3979
+#: src/irc/server.cpp:4089
 #, kde-format
 msgid "You are not marked as being away."
 msgstr ""
 
-#: src/irc/server.cpp:4122
+#: src/irc/server.cpp:4232
 #, kde-format
 msgid "Failed to initiate key exchange with %1."
 msgstr ""
 
-#: src/irc/server.cpp:4134
+#: src/irc/server.cpp:4244
 #, kde-format
 msgid "Unable to perform key exchange with %1."
 msgstr ""
 
-#: src/irc/server.cpp:4158
+#: src/irc/server.cpp:4268
 #, kde-format
 msgid "Failed to parse the DH1080_INIT of %1. Key exchange failed."
 msgstr ""
 
-#: src/irc/server.cpp:4164
+#: src/irc/server.cpp:4274
 #, kde-format
 msgid ""
 "Your key is set and your messages will now be encrypted, sending "
 "DH1080_FINISH to %1."
 msgstr ""
 
-#: src/irc/server.cpp:4181
+#: src/irc/server.cpp:4291
 #, kde-format
 msgid "Unable to complete key exchange with %1."
 msgstr ""
 
-#: src/irc/server.cpp:4193
+#: src/irc/server.cpp:4303
 #, kde-format
 msgid ""
 "Successfully parsed DH1080_FINISH sent by %1. Your key is set and your "
 "messages will now be encrypted."
 msgstr ""
 
-#: src/irc/server.cpp:4197
+#: src/irc/server.cpp:4307
 #, kde-format
 msgid "Failed to parse DH1080_FINISH sent by %1. Key exchange failed."
 msgstr ""
@@ -6962,47 +6943,47 @@ msgstr ""
 msgid "&Use global proxy"
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:94
+#: src/irc/servergroupdialog.cpp:93
 #, kde-format
 msgid "Change network information"
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:179
+#: src/irc/servergroupdialog.cpp:178
 #, kde-format
 msgid "Add Server"
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:197
+#: src/irc/servergroupdialog.cpp:196
 #, kde-format
 msgid "Edit Server"
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:302
+#: src/irc/servergroupdialog.cpp:301
 #, kde-format
 msgid "Add Channel"
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:320
+#: src/irc/servergroupdialog.cpp:319
 #, kde-format
 msgid "Edit Channel"
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:435
+#: src/irc/servergroupdialog.cpp:434
 #, kde-format
 msgid "The network name is required."
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:439
+#: src/irc/servergroupdialog.cpp:438
 #, kde-format
 msgid "You need to add at least one server to the network."
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:506
+#: src/irc/servergroupdialog.cpp:505
 #, kde-format
 msgid "The server address is required."
 msgstr ""
 
-#: src/irc/servergroupdialog.cpp:566
+#: src/irc/servergroupdialog.cpp:565
 #, kde-format
 msgid "The channel name is required."
 msgstr ""
@@ -7033,7 +7014,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_editButton)
 #. i18n: ectx: property (text), widget (QPushButton, m_editIdentityButton)
 #: src/irc/servergroupdialogui.ui:68 src/irc/serverlistdialogui.ui:64
-#: src/viewer/ircinput.cpp:498
+#: src/viewer/ircinput.cpp:494
 #, kde-format
 msgid "&Edit..."
 msgstr "&Redakto"
@@ -7115,6 +7096,13 @@ msgstr "&Aldonu"
 #| msgid "&Edit..."
 msgid "E&dit..."
 msgstr "&Redakto"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeServerButton)
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeChannelButton)
+#: src/irc/servergroupdialogui.ui:165 src/irc/servergroupdialogui.ui:250
+#, kde-format
+msgid "Delete"
+msgstr "Forigi"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, m_channelLBox)
 #: src/irc/servergroupdialogui.ui:223
@@ -7272,8 +7260,8 @@ msgstr "Aŭtoro"
 msgid "Time"
 msgstr "Tempindiko"
 
-#: src/konsolepanel.cpp:30 src/viewer/viewcontainer.cpp:2577
-#: src/viewer/viewcontainer.cpp:2578
+#: src/konsolepanel.cpp:30 src/viewer/viewcontainer.cpp:2604
+#: src/viewer/viewcontainer.cpp:2605
 #, kde-format
 msgid "Konsole"
 msgstr "Konzolo"
@@ -7283,22 +7271,22 @@ msgstr "Konzolo"
 msgid "Manage Konsole Profiles"
 msgstr ""
 
-#: src/main.cpp:52 src/viewer/trayicon.cpp:24
+#: src/main.cpp:51 src/viewer/trayicon.cpp:24
 #, kde-format
 msgid "Konversation"
 msgstr "Konversation"
 
-#: src/main.cpp:54
+#: src/main.cpp:53
 #, kde-format
 msgid "A user-friendly IRC client"
 msgstr ""
 
-#: src/main.cpp:56
+#: src/main.cpp:55
 #, kde-format
-msgid "(C) 2002-2016 by the Konversation team"
+msgid "(C) 2002-2017 by the Konversation team"
 msgstr ""
 
-#: src/main.cpp:57
+#: src/main.cpp:56
 #, kde-format
 msgid ""
 "Konversation is a client for the Internet Relay Chat (IRC) protocol.\n"
@@ -7307,460 +7295,465 @@ msgid ""
 "about your favorite subject."
 msgstr ""
 
-#: src/main.cpp:61
+#: src/main.cpp:60
 #, kde-format
 msgid "Dario Abatianni"
 msgstr "Dario Abatianni"
 
-#: src/main.cpp:61
+#: src/main.cpp:60
 #, kde-format
 msgid "Original Author, Project Founder"
 msgstr ""
 
-#: src/main.cpp:62
+#: src/main.cpp:61
 #, kde-format
 msgid "Peter Simonsson"
 msgstr "Peter Simonsson"
 
-#: src/main.cpp:62
+#: src/main.cpp:61
 #, kde-format
 msgid "Maintainer"
 msgstr "Prizorganto"
 
-#: src/main.cpp:63
+#: src/main.cpp:62
 #, kde-format
 msgid "Eike Hein"
 msgstr "Eike Hein"
 
-#: src/main.cpp:63
+#: src/main.cpp:62
 #, kde-format
 msgid ""
 "Maintainer, Release Manager, User interface, Connection management, Protocol "
 "handling, Auto-away"
 msgstr ""
 
-#: src/main.cpp:64
+#: src/main.cpp:63
 #, kde-format
 msgid "Shintaro Matsuoka"
 msgstr "Shintaro Matsuoka"
 
-#: src/main.cpp:64
+#: src/main.cpp:63
 #, kde-format
 msgid "DCC, Encoding handling, OSD positioning"
 msgstr ""
 
-#: src/main.cpp:65
+#: src/main.cpp:64
 #, kde-format
 msgid "Eli MacKenzie"
 msgstr "Eli MacKenzie"
 
-#: src/main.cpp:65
+#: src/main.cpp:64
 #, kde-format
 msgid "Protocol handling, Input line"
 msgstr ""
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "İsmail Dönmez"
 msgstr "İsmail Dönmez"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "Blowfish, SSL support, KNetwork port, Colored nicks, Nicklist themes"
 msgstr ""
 
-#: src/main.cpp:67
+#: src/main.cpp:66
 #, kde-format
 msgid "John Tapsell"
 msgstr "John Tapsell"
 
-#: src/main.cpp:67
+#: src/main.cpp:66
 #, kde-format
 msgid "Refactoring, KAddressBook/Kontact integration"
 msgstr ""
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "Bernd Buschinski"
 msgstr "Bernd Buschinski"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "DCC port to KDE 4, various DCC improvements"
 msgstr ""
 
-#: src/main.cpp:70
+#: src/main.cpp:69
 #, kde-format
 msgid "Olivier Bédard"
 msgstr "Olivier Bédard"
 
-#: src/main.cpp:70
+#: src/main.cpp:69
 #, kde-format
 msgid "Website hosting"
 msgstr ""
 
-#: src/main.cpp:71
+#: src/main.cpp:70
 #, kde-format
 msgid "Jędrzej Lisowski"
 msgstr "Jędrzej Lisowski"
 
-#: src/main.cpp:71
+#: src/main.cpp:70
 #, kde-format
 msgid "Website maintenance"
 msgstr ""
 
-#: src/main.cpp:72
+#: src/main.cpp:71
 #, kde-format
 msgid "Christian Muehlhaeuser"
 msgstr "Christian Muehlhaeuser"
 
-#: src/main.cpp:72
+#: src/main.cpp:71
 #, kde-format
 msgid "Multiple modes extension, Close widget placement, OSD functionality"
 msgstr ""
 
-#: src/main.cpp:73
+#: src/main.cpp:72
 #, kde-format
 msgid "Gary Cramblitt"
 msgstr "Gary Cramblitt"
 
-#: src/main.cpp:73
+#: src/main.cpp:72
 #, kde-format
 msgid "Documentation, Watched Nicks improvements, Custom web browser extension"
 msgstr ""
 
-#: src/main.cpp:74
+#: src/main.cpp:73
 #, kde-format
 msgid "Matthias Gierlings"
 msgstr "Matthias Gierlings"
 
-#: src/main.cpp:74
+#: src/main.cpp:73
 #, kde-format
 msgid "Color configurator, Highlight dialog"
 msgstr ""
 
-#: src/main.cpp:75
+#: src/main.cpp:74
 #, kde-format
 msgid "Alex Zepeda"
 msgstr "Alex Zepeda"
 
-#: src/main.cpp:75
+#: src/main.cpp:74
 #, kde-format
 msgid "DCOP interface"
 msgstr "DCOP-interfaco"
 
-#: src/main.cpp:76
+#: src/main.cpp:75
 #, kde-format
 msgid "Stanislav Karchebny"
 msgstr "Stanislav Karchebny"
 
-#: src/main.cpp:76
+#: src/main.cpp:75
 #, kde-format
 msgid "Non-Latin1-Encodings"
 msgstr ""
 
-#: src/main.cpp:77
+#: src/main.cpp:76
 #, kde-format
 msgid "Mickael Marchand"
 msgstr "Mickael Marchand"
 
-#: src/main.cpp:77
+#: src/main.cpp:76
 #, kde-format
 msgid "Konsole part view"
 msgstr ""
 
-#: src/main.cpp:78
+#: src/main.cpp:77
 #, kde-format
 msgid "Michael Goettsche"
 msgstr "Michael Goettsche"
 
-#: src/main.cpp:78
+#: src/main.cpp:77
 #, kde-format
 msgid "Quick connect, Ported new OSD, other features and bugfixes"
 msgstr ""
 
-#: src/main.cpp:79
+#: src/main.cpp:78
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: src/main.cpp:79
+#: src/main.cpp:78
 #, kde-format
 msgid "A Handful of fixes and code cleanup"
 msgstr ""
 
-#: src/main.cpp:80
+#: src/main.cpp:79
 #, kde-format
 msgid "Jakub Stachowski"
 msgstr "Jakub Stachowski"
 
-#: src/main.cpp:80
+#: src/main.cpp:79
 #, kde-format
 msgid "Drag&Drop improvements"
 msgstr ""
 
-#: src/main.cpp:81
+#: src/main.cpp:80
 #, kde-format
 msgid "Sebastian Sariego"
 msgstr "Sebastian Sariego"
 
-#: src/main.cpp:81
+#: src/main.cpp:80
 #, kde-format
 msgid "Artwork"
 msgstr "Artaĵoj"
 
-#: src/main.cpp:82
+#: src/main.cpp:81
 #, kde-format
 msgid "Renchi Raju"
 msgstr "Renchi Raju"
 
-#: src/main.cpp:82
+#: src/main.cpp:81
 #, kde-format
 msgid "Firefox style searchbar"
 msgstr ""
 
-#: src/main.cpp:83
+#: src/main.cpp:82
 #, kde-format
 msgid "Michael Kreitzer"
 msgstr "Michael Kreitzer"
 
-#: src/main.cpp:83
+#: src/main.cpp:82
 #, kde-format
 msgid "Raw modes, Tab grouping per server, Ban list"
 msgstr ""
 
-#: src/main.cpp:84
+#: src/main.cpp:83
 #, kde-format
 msgid "Frauke Oster"
 msgstr "Frauke Oster"
 
-#: src/main.cpp:84
+#: src/main.cpp:83
 #, kde-format
 msgid "System tray patch"
 msgstr ""
 
-#: src/main.cpp:85
+#: src/main.cpp:84
 #, kde-format
 msgid "Lucijan Busch"
 msgstr "Lucijan Busch"
 
-#: src/main.cpp:85 src/main.cpp:91 src/main.cpp:94
+#: src/main.cpp:84 src/main.cpp:90 src/main.cpp:93
 #, kde-format
 msgid "Bug fixes"
 msgstr "Cimokorektado"
 
-#: src/main.cpp:86
+#: src/main.cpp:85
 #, kde-format
 msgid "Sascha Cunz"
 msgstr "Sascha Cunz"
 
-#: src/main.cpp:86
+#: src/main.cpp:85
 #, kde-format
 msgid "Extended user modes patch"
 msgstr ""
 
-#: src/main.cpp:87
+#: src/main.cpp:86
 #, kde-format
 msgid "Steve Wollkind"
 msgstr "Steve Wollkind"
 
-#: src/main.cpp:87
+#: src/main.cpp:86
 #, kde-format
 msgid "Close visible tab with shortcut patch"
 msgstr ""
 
-#: src/main.cpp:88
+#: src/main.cpp:87
 #, kde-format
 msgid "Thomas Nagy"
 msgstr "Thomas Nagy"
 
-#: src/main.cpp:88
+#: src/main.cpp:87
 #, kde-format
 msgid "Cycle tabs with mouse scroll wheel"
 msgstr ""
 
-#: src/main.cpp:89
+#: src/main.cpp:88
 #, kde-format
 msgid "Tobias Olry"
 msgstr "Tobias Olry"
 
-#: src/main.cpp:89
+#: src/main.cpp:88
 #, kde-format
 msgid "Channel ownership mode patch"
 msgstr ""
 
-#: src/main.cpp:90
+#: src/main.cpp:89
 #, kde-format
 msgid "Ruud Nabben"
 msgstr "Ruud Nabben"
 
-#: src/main.cpp:90
+#: src/main.cpp:89
 #, kde-format
 msgid "Option to enable IRC color filtering"
 msgstr ""
 
-#: src/main.cpp:91
+#: src/main.cpp:90
 #, kde-format
 msgid "Lothar Braun"
 msgstr "Lothar Braun"
 
-#: src/main.cpp:92
+#: src/main.cpp:91
 #, kde-format
 msgid "Ivor Hewitt"
 msgstr "Ivor Hewitt"
 
-#: src/main.cpp:92
+#: src/main.cpp:91
 #, kde-format
 msgid "Bug fixes, OSD work, clearing topics"
 msgstr ""
 
-#: src/main.cpp:93
+#: src/main.cpp:92
 #, kde-format
 msgid "Emil Obermayr"
 msgstr "Emil Obermayr"
 
-#: src/main.cpp:93
+#: src/main.cpp:92
 #, kde-format
 msgid "Sysinfo script"
 msgstr ""
 
-#: src/main.cpp:94
+#: src/main.cpp:93
 #, kde-format
 msgid "Stanislav Nikolov"
 msgstr "Stanislav Nikolov"
 
-#: src/main.cpp:95
+#: src/main.cpp:94
 #, kde-format
 msgid "Juan Carlos Torres"
 msgstr "Juan Carlos Torres"
 
-#: src/main.cpp:95
+#: src/main.cpp:94
 #, kde-format
 msgid "Auto-join context menu"
 msgstr ""
 
-#: src/main.cpp:96
+#: src/main.cpp:95
 #, kde-format
 msgid "Travis McHenry"
 msgstr "Travis McHenry"
 
-#: src/main.cpp:96
+#: src/main.cpp:95
 #, kde-format
 msgid ""
 "Various fixes, ported encryption to QCA2, added DH1080 key exchange support."
 msgstr ""
 
-#: src/main.cpp:97
+#: src/main.cpp:96
 #, kde-format
 msgid "Modestas Vainius"
 msgstr "Modestas Vainius"
 
-#: src/main.cpp:97
+#: src/main.cpp:96
 #, kde-format
 msgid "Bug fixes and enhancements."
 msgstr ""
 
-#: src/main.cpp:98
+#: src/main.cpp:97
 #, kde-format
 msgid "Abdurrahman AVCI"
 msgstr ""
 
-#: src/main.cpp:98
+#: src/main.cpp:97
 #, kde-format
 msgid "Various bug fixes and enhancements."
 msgstr ""
 
-#: src/main.cpp:99
+#: src/main.cpp:98
 #, kde-format
 msgid "Martin Blumenstingl"
 msgstr ""
 
-#: src/main.cpp:99
+#: src/main.cpp:98
 #, kde-format
 msgid "KStatusNotifierItem support, KIdleTime support, other enhancements"
 msgstr ""
 
-#: src/main.cpp:116
+#: src/main.cpp:115
 #, kde-format
 msgid "irc:// URL or server hostname"
 msgstr ""
 
-#: src/main.cpp:117
+#: src/main.cpp:116
 #, kde-format
 msgid "Server to connect"
 msgstr ""
 
-#: src/main.cpp:117
+#: src/main.cpp:116
 #, fuzzy, kde-format
 #| msgid "Server:"
 msgid "server"
 msgstr "Servilo:"
 
-#: src/main.cpp:118
+#: src/main.cpp:117
 #, kde-format
 msgid "Port to use"
 msgstr ""
 
-#: src/main.cpp:118
+#: src/main.cpp:117
 #, kde-format
 msgid "port"
 msgstr ""
 
-#: src/main.cpp:119
+#: src/main.cpp:118
 #, kde-format
 msgid "Channel to join after connection"
 msgstr ""
 
-#: src/main.cpp:119
+#: src/main.cpp:118
 #, fuzzy, kde-format
 #| msgid "Channel"
 msgid "channel"
 msgstr "Kanalo"
 
-#: src/main.cpp:120
+#: src/main.cpp:119
 #, kde-format
 msgid "Nickname to use"
 msgstr ""
 
-#: src/main.cpp:120
+#: src/main.cpp:119
 #, fuzzy, kde-format
 #| msgid "Nickname:"
 msgid "nickname"
 msgstr "Kromnomo:"
 
-#: src/main.cpp:121
+#: src/main.cpp:120
 #, kde-format
 msgid "Password for connection"
 msgstr ""
 
-#: src/main.cpp:121
+#: src/main.cpp:120
 #, fuzzy, kde-format
 #| msgid "Password:"
 msgid "password"
 msgstr "Pasvorto:"
 
-#: src/main.cpp:122
+#: src/main.cpp:121
 #, kde-format
 msgid "Use SSL for connection"
 msgstr ""
 
-#: src/main.cpp:123
+#: src/main.cpp:122
 #, kde-format
 msgid "Disable auto-connecting to any IRC networks"
 msgstr ""
 
-#: src/main.cpp:124
+#: src/main.cpp:123
 #, kde-format
 msgid ""
-"Delay D-Bus activity and UI creation by the specified amount of miliseconds"
+"Delay D-Bus activity and UI creation by the specified amount of milliseconds"
 msgstr ""
 
-#: src/main.cpp:124
+#: src/main.cpp:123
 #, kde-format
 msgid "msec"
 msgstr ""
 
-#: src/main.cpp:127
+#: src/main.cpp:124
+#, kde-format
+msgid "Quits and restarts Konversation (if running, otherwise has no effect)"
+msgstr ""
+
+#: src/main.cpp:126
 #, kde-format
 msgid ""
 "Sets KUniqueApplication::NonUniqueInstance (debug only, use with caution)"
@@ -7837,8 +7830,8 @@ msgstr "Fo&rigi"
 msgid "&DCC Status"
 msgstr ""
 
-#: src/mainwindow.cpp:187 src/mainwindow.cpp:795
-#: src/viewer/viewcontainer.cpp:917
+#: src/mainwindow.cpp:187 src/mainwindow.cpp:822
+#: src/viewer/viewcontainer.cpp:941
 #, kde-format
 msgid "&Open Logfile"
 msgstr ""
@@ -7848,7 +7841,7 @@ msgstr ""
 msgid "Open the known history for this channel in a new tab"
 msgstr ""
 
-#: src/mainwindow.cpp:196 src/viewer/viewcontainer.cpp:938
+#: src/mainwindow.cpp:196 src/viewer/viewcontainer.cpp:962
 #, kde-format
 msgid "&Channel Settings..."
 msgstr ""
@@ -7858,7 +7851,7 @@ msgstr ""
 msgid "Open the channel settings dialog for this tab"
 msgstr ""
 
-#: src/mainwindow.cpp:204 src/viewer/viewcontainer.cpp:908
+#: src/mainwindow.cpp:204 src/viewer/viewcontainer.cpp:932
 #, kde-format
 msgid "Channel &List"
 msgstr ""
@@ -7913,7 +7906,7 @@ msgstr ""
 msgid "Next Active Tab"
 msgstr ""
 
-#: src/mainwindow.cpp:292 src/viewer/viewcontainer.cpp:289
+#: src/mainwindow.cpp:292 src/viewer/viewcontainer.cpp:306
 #, kde-format
 msgid "Move Tab Up"
 msgstr ""
@@ -7924,19 +7917,19 @@ msgstr ""
 msgid "Move this tab"
 msgstr ""
 
-#: src/mainwindow.cpp:303 src/viewer/viewcontainer.cpp:297
+#: src/mainwindow.cpp:303 src/viewer/viewcontainer.cpp:314
 #, kde-format
 msgid "Move Tab Down"
 msgstr ""
 
 #: src/mainwindow.cpp:314 src/mainwindow.cpp:344
-#: src/viewer/viewcontainer.cpp:343
+#: src/viewer/viewcontainer.cpp:360
 #, kde-format
 msgid "Move Tab Right"
 msgstr "Movi la langeton dekstren"
 
 #: src/mainwindow.cpp:323 src/mainwindow.cpp:335
-#: src/viewer/viewcontainer.cpp:335
+#: src/viewer/viewcontainer.cpp:352
 #, kde-format
 msgid "Move Tab Left"
 msgstr "Movi la langeton maldekstren"
@@ -7946,7 +7939,7 @@ msgstr "Movi la langeton maldekstren"
 msgid "Rejoin Channel"
 msgstr ""
 
-#: src/mainwindow.cpp:364 src/mainwindow.cpp:801
+#: src/mainwindow.cpp:364 src/mainwindow.cpp:828
 #, kde-format
 msgid "Enable Notifications"
 msgstr ""
@@ -7988,119 +7981,149 @@ msgstr ""
 
 #: src/mainwindow.cpp:414
 #, kde-format
+msgid "Enlarge Font Size"
+msgstr ""
+
+#: src/mainwindow.cpp:418
+#, kde-format
+msgid "Increase the current font size"
+msgstr ""
+
+#: src/mainwindow.cpp:423
+#, kde-format
+msgid "Reset Font Size"
+msgstr ""
+
+#: src/mainwindow.cpp:427
+#, kde-format
+msgid "Reset the current font size to settings values"
+msgstr ""
+
+#: src/mainwindow.cpp:432
+#, kde-format
+msgid "Decrease Font Size"
+msgstr ""
+
+#: src/mainwindow.cpp:436
+#, kde-format
+msgid "Decrease the current font size"
+msgstr ""
+
+#: src/mainwindow.cpp:441
+#, kde-format
 msgid "&Clear Window"
 msgstr ""
 
-#: src/mainwindow.cpp:417
+#: src/mainwindow.cpp:444
 #, kde-format
 msgid "Clear the contents of the current tab"
 msgstr ""
 
-#: src/mainwindow.cpp:422
+#: src/mainwindow.cpp:449
 #, kde-format
 msgid "Clear &All Windows"
 msgstr ""
 
-#: src/mainwindow.cpp:425
+#: src/mainwindow.cpp:452
 #, kde-format
 msgid "Clear the contents of all open tabs"
 msgstr ""
 
-#: src/mainwindow.cpp:430
+#: src/mainwindow.cpp:457
 #, kde-format
 msgid "Global Away"
 msgstr ""
 
-#: src/mainwindow.cpp:438 src/viewer/irccontextmenus.cpp:344
+#: src/mainwindow.cpp:465 src/viewer/irccontextmenus.cpp:347
 #, kde-format
 msgid "&Join Channel..."
 msgstr ""
 
-#: src/mainwindow.cpp:442
+#: src/mainwindow.cpp:469
 #, kde-format
 msgid "Join a new channel on this server"
 msgstr ""
 
-#: src/mainwindow.cpp:454 src/mainwindow.cpp:803
+#: src/mainwindow.cpp:481 src/mainwindow.cpp:830
 #, kde-format
 msgid "&IRC Color..."
 msgstr ""
 
-#: src/mainwindow.cpp:458
+#: src/mainwindow.cpp:485
 #, kde-format
 msgid "Set the color of your current IRC message"
 msgstr ""
 
-#: src/mainwindow.cpp:463 src/mainwindow.cpp:805
+#: src/mainwindow.cpp:490 src/mainwindow.cpp:832
 #, kde-format
 msgid "&Marker Line"
 msgstr ""
 
-#: src/mainwindow.cpp:466
+#: src/mainwindow.cpp:493
 #, kde-format
 msgid "Insert a horizontal line into the current tab that only you can see"
 msgstr ""
 
-#: src/mainwindow.cpp:471 src/mainwindow.cpp:804
+#: src/mainwindow.cpp:498 src/mainwindow.cpp:831
 #, kde-format
 msgid "Special &Character..."
 msgstr ""
 
-#: src/mainwindow.cpp:475
+#: src/mainwindow.cpp:502
 #, kde-format
 msgid "Insert any character into your current IRC message"
 msgstr ""
 
-#: src/mainwindow.cpp:486
+#: src/mainwindow.cpp:513
 #, kde-format
 msgid "Focus Input Box"
 msgstr ""
 
-#: src/mainwindow.cpp:493
+#: src/mainwindow.cpp:520
 #, kde-format
 msgid "Close &All Open Queries"
 msgstr ""
 
-#: src/mainwindow.cpp:502
+#: src/mainwindow.cpp:529
 #, kde-format
 msgid "Show Nicklist"
 msgstr ""
 
-#: src/mainwindow.cpp:508
+#: src/mainwindow.cpp:535
 #, fuzzy, kde-format
 #| msgid "Konversation"
 msgid "Show/Hide Konversation"
 msgstr "Konversation"
 
-#: src/mainwindow.cpp:516
+#: src/mainwindow.cpp:543
 #, fuzzy, kde-format
 #| msgid "&Use On-Screen-Display"
 msgid "Enable On Screen Display"
 msgstr "&Uzi la vidigilon"
 
-#: src/mainwindow.cpp:523
+#: src/mainwindow.cpp:550
 #, kde-format
 msgid "Bookmarks"
 msgstr "Legosignoj"
 
-#: src/mainwindow.cpp:568
+#: src/mainwindow.cpp:595
 #, kde-format
 msgid ""
 "<qt>You have active DCC file transfers. Are you sure you want to quit "
 "<b>Konversation</b>?</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:569 src/mainwindow.cpp:579
+#: src/mainwindow.cpp:596 src/mainwindow.cpp:606
 #, kde-format
 msgid "Confirm Quit"
 msgstr ""
 
-#: src/mainwindow.cpp:578
+#: src/mainwindow.cpp:605
 #, kde-format
 msgid "<qt>Are you sure you want to quit <b>Konversation</b>?</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:625
+#: src/mainwindow.cpp:652
 #, kde-format
 msgid ""
 "<p>Closing the main window will keep Konversation running in the system "
@@ -8108,59 +8131,59 @@ msgid ""
 "application.</p>"
 msgstr ""
 
-#: src/mainwindow.cpp:627
+#: src/mainwindow.cpp:654
 #, kde-format
 msgid "Docking in System Tray"
 msgstr "Fiksigu en sistemfako"
 
-#: src/mainwindow.cpp:746
+#: src/mainwindow.cpp:773
 #, kde-format
 msgid ""
 "<qt>This will hide the menu bar completely. You can show it again by typing "
 "%1.</qt>"
 msgstr ""
 
-#: src/mainwindow.cpp:747
+#: src/mainwindow.cpp:774
 #, kde-format
 msgid "Hide menu bar"
 msgstr ""
 
-#: src/mainwindow.cpp:787
+#: src/mainwindow.cpp:814
 #, kde-format
 msgid "Toggle Notifications"
 msgstr ""
 
-#: src/mainwindow.cpp:788
+#: src/mainwindow.cpp:815
 #, kde-format
 msgid "Toggle Away Globally"
 msgstr ""
 
-#: src/mainwindow.cpp:789
+#: src/mainwindow.cpp:816
 #, kde-format
 msgid "Insert &IRC Color..."
 msgstr ""
 
-#: src/mainwindow.cpp:790
+#: src/mainwindow.cpp:817
 #, kde-format
 msgid "Insert Special &Character..."
 msgstr ""
 
-#: src/mainwindow.cpp:791
+#: src/mainwindow.cpp:818
 #, kde-format
 msgid "Insert &Marker Line"
 msgstr ""
 
-#: src/mainwindow.cpp:793
+#: src/mainwindow.cpp:820
 #, kde-format
 msgid "&Channel List"
 msgstr ""
 
-#: src/mainwindow.cpp:802
+#: src/mainwindow.cpp:829
 #, kde-format
 msgid "Set &Away Globally"
 msgstr ""
 
-#: src/mainwindow.cpp:814
+#: src/mainwindow.cpp:841
 #, kde-format
 msgid "Server List"
 msgstr ""
@@ -8179,12 +8202,12 @@ msgstr ""
 
 #: src/notificationhandler.cpp:109
 #, kde-format
-msgid "[HighLight] (%1) &lt;%2&gt;"
+msgid "[HighLight] (%1) <%2>"
 msgstr ""
 
 #: src/notificationhandler.cpp:123 src/notificationhandler.cpp:409
 #, kde-format
-msgid "[HighLight] (%1) &lt;%2&gt; %3"
+msgid "[HighLight] (%1) <%2> %3"
 msgstr ""
 
 #: src/notificationhandler.cpp:142
@@ -8195,12 +8218,12 @@ msgstr ""
 
 #: src/notificationhandler.cpp:152
 #, kde-format
-msgid "[Query] &lt;%1&gt;"
+msgid "[Query] <%1>"
 msgstr ""
 
 #: src/notificationhandler.cpp:166
 #, kde-format
-msgid "[Query] &lt;%1&gt; %2"
+msgid "[Query] <%1> %2"
 msgstr ""
 
 #: src/notificationhandler.cpp:194 src/notificationhandler.cpp:201
@@ -8575,7 +8598,7 @@ msgstr "Ne povas malfermi %1 : %2"
 msgid "Error parsing router description."
 msgstr ""
 
-#: src/urlcatcher.cpp:85 src/viewer/viewcontainer.cpp:2588
+#: src/urlcatcher.cpp:85 src/viewer/viewcontainer.cpp:2615
 #, kde-format
 msgid "URL Catcher"
 msgstr ""
@@ -8728,7 +8751,7 @@ msgid ""
 "will open for each. Do you really want to save several URLs at once?"
 msgstr ""
 
-#: src/urlcatcher.cpp:273 src/viewer/irccontextmenus.cpp:767
+#: src/urlcatcher.cpp:273 src/viewer/irccontextmenus.cpp:770
 #, kde-format
 msgid "Save link as"
 msgstr ""
@@ -8775,28 +8798,28 @@ msgstr ""
 msgid "Channel Settings for %1"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:210
+#: src/viewer/channeloptionsdialog.cpp:217
 #, kde-format
 msgid "&Hide Advanced Modes <<"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:214
+#: src/viewer/channeloptionsdialog.cpp:221
 #, kde-format
 msgid "&Show Advanced Modes >>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:301
+#: src/viewer/channeloptionsdialog.cpp:312
 #, kde-format
 msgid "Parameter"
 msgstr "Parametro"
 
-#: src/viewer/channeloptionsdialog.cpp:309
+#: src/viewer/channeloptionsdialog.cpp:320
 #, kde-format
 msgctxt "<mode character> (<mode description>)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/viewer/channeloptionsdialog.cpp:580
+#: src/viewer/channeloptionsdialog.cpp:591
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8804,7 +8827,7 @@ msgid ""
 "operator can change the topic for the channel.</p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:582
+#: src/viewer/channeloptionsdialog.cpp:593
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8813,7 +8836,7 @@ msgid ""
 "Almost all channels have this set to prevent nuisance messages.</p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:584
+#: src/viewer/channeloptionsdialog.cpp:595
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8824,7 +8847,7 @@ msgid ""
 "p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:586
+#: src/viewer/channeloptionsdialog.cpp:597
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8834,7 +8857,7 @@ msgid ""
 "p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:588
+#: src/viewer/channeloptionsdialog.cpp:599
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8844,7 +8867,7 @@ msgid ""
 "p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:590
+#: src/viewer/channeloptionsdialog.cpp:601
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8852,7 +8875,7 @@ msgid ""
 "half-operators and those with voice can talk.</p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:592
+#: src/viewer/channeloptionsdialog.cpp:603
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8860,7 +8883,7 @@ msgid ""
 "in order to join.</p></qt>"
 msgstr ""
 
-#: src/viewer/channeloptionsdialog.cpp:594
+#: src/viewer/channeloptionsdialog.cpp:605
 #, kde-format
 msgid ""
 "<qt><p>These control the <em>mode</em> of the channel.  Only an operator can "
@@ -8994,39 +9017,39 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/viewer/editnotifydialog.cpp:36
+#: src/viewer/editnotifydialog.cpp:35
 #, kde-format
 msgid "Edit Watched Nickname"
 msgstr ""
 
-#: src/viewer/editnotifydialog.cpp:55
+#: src/viewer/editnotifydialog.cpp:54
 #, kde-format
 msgid "&Network name:"
 msgstr ""
 
-#: src/viewer/editnotifydialog.cpp:57
+#: src/viewer/editnotifydialog.cpp:56
 #, kde-format
 msgid "Pick the server network you will connect to here."
 msgstr ""
 
-#: src/viewer/editnotifydialog.cpp:64
+#: src/viewer/editnotifydialog.cpp:63
 #, kde-format
 msgid "N&ickname:"
 msgstr ""
 
-#: src/viewer/editnotifydialog.cpp:66
+#: src/viewer/editnotifydialog.cpp:65
 #, kde-format
 msgid ""
 "<qt>The nickname to watch for when connected to a server in the network.</qt>"
 msgstr ""
 
-#: src/viewer/editnotifydialog.cpp:74
+#: src/viewer/editnotifydialog.cpp:73
 #, fuzzy, kde-format
 #| msgid "Network"
 msgid "All Networks"
 msgstr "Reto"
 
-#: src/viewer/editnotifydialog.cpp:89
+#: src/viewer/editnotifydialog.cpp:88
 #, kde-format
 msgid "Change notify information"
 msgstr ""
@@ -9135,209 +9158,209 @@ msgid ""
 "to see this.</b></qt>"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:151
+#: src/viewer/irccontextmenus.cpp:154
 #, kde-format
 msgid "Copy Link Address"
 msgstr "Kopii ligilan adreson"
 
-#: src/viewer/irccontextmenus.cpp:155
+#: src/viewer/irccontextmenus.cpp:158
 #, kde-format
 msgid "Add to Bookmarks"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:156
+#: src/viewer/irccontextmenus.cpp:159
 #, kde-format
 msgid "Open With..."
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:157
+#: src/viewer/irccontextmenus.cpp:160
 #, kde-format
 msgid "Save Link As..."
 msgstr "Konservi la ligon kiel..."
 
-#: src/viewer/irccontextmenus.cpp:297
+#: src/viewer/irccontextmenus.cpp:300
 #, kde-format
 msgid "Search for '%1' with"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:312
+#: src/viewer/irccontextmenus.cpp:315
 #, kde-format
 msgid "Configure Web Shortcuts..."
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:347
+#: src/viewer/irccontextmenus.cpp:350
 #, kde-format
 msgid "Get &topic"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:348
+#: src/viewer/irccontextmenus.cpp:351
 #, kde-format
 msgid "Get &user list"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:385
+#: src/viewer/irccontextmenus.cpp:388
 #, kde-format
 msgid "Open Query"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:397
+#: src/viewer/irccontextmenus.cpp:400
 #, kde-format
 msgid "Modes"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:398
+#: src/viewer/irccontextmenus.cpp:401
 #, kde-format
 msgid "Give Op"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:399
+#: src/viewer/irccontextmenus.cpp:402
 #, kde-format
 msgid "Take Op"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:400
+#: src/viewer/irccontextmenus.cpp:403
 #, kde-format
 msgid "Give HalfOp"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:401
+#: src/viewer/irccontextmenus.cpp:404
 #, kde-format
 msgid "Take HalfOp"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:402
+#: src/viewer/irccontextmenus.cpp:405
 #, kde-format
 msgid "Give Voice"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:403
+#: src/viewer/irccontextmenus.cpp:406
 #, kde-format
 msgid "Take Voice"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:407
+#: src/viewer/irccontextmenus.cpp:410
 #, kde-format
 msgid "Kick / Ban"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:409
+#: src/viewer/irccontextmenus.cpp:412
 #, kde-format
 msgid "Kickban"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:410
+#: src/viewer/irccontextmenus.cpp:413
 #, kde-format
 msgid "Ban Nickname"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:412
+#: src/viewer/irccontextmenus.cpp:415
 #, kde-format
 msgid "Ban *!*@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:413
+#: src/viewer/irccontextmenus.cpp:416
 #, kde-format
 msgid "Ban *!*@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:414
+#: src/viewer/irccontextmenus.cpp:417
 #, kde-format
 msgid "Ban *!user@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:415
+#: src/viewer/irccontextmenus.cpp:418
 #, kde-format
 msgid "Ban *!user@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:417
+#: src/viewer/irccontextmenus.cpp:420
 #, kde-format
 msgid "Kickban *!*@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:418
+#: src/viewer/irccontextmenus.cpp:421
 #, kde-format
 msgid "Kickban *!*@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:419
+#: src/viewer/irccontextmenus.cpp:422
 #, kde-format
 msgid "Kickban *!user@*.host"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:420
+#: src/viewer/irccontextmenus.cpp:423
 #, kde-format
 msgid "Kickban *!user@domain"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:438
+#: src/viewer/irccontextmenus.cpp:441
 #, kde-format
 msgid "&Version"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:439
+#: src/viewer/irccontextmenus.cpp:442
 #, kde-format
 msgid "&Ping"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:446 src/viewer/irccontextmenus.cpp:631
-#: src/viewer/irccontextmenus.cpp:632
+#: src/viewer/irccontextmenus.cpp:449 src/viewer/irccontextmenus.cpp:634
+#: src/viewer/irccontextmenus.cpp:635
 #, kde-format
 msgid "Unignore"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:449
+#: src/viewer/irccontextmenus.cpp:452
 #, kde-format
 msgid "Add to Watched Nicks"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:451
+#: src/viewer/irccontextmenus.cpp:454
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgid "Remove From Watched Nicks"
 msgstr "Fo&rigi"
 
-#: src/viewer/irccontextmenus.cpp:458
+#: src/viewer/irccontextmenus.cpp:461
 #, kde-format
 msgid "Send &File..."
 msgstr "Sendu &dosieron"
 
-#: src/viewer/irccontextmenus.cpp:460
+#: src/viewer/irccontextmenus.cpp:463
 #, kde-format
 msgid "Open DCC Chat"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:461
+#: src/viewer/irccontextmenus.cpp:464
 #, kde-format
 msgid "Open DCC Whiteboard"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:593
+#: src/viewer/irccontextmenus.cpp:596
 #, kde-format
 msgid "Do you want to ignore %1?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:595
+#: src/viewer/irccontextmenus.cpp:598
 #, kde-format
 msgid "Do you want to ignore the selected users?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:624
+#: src/viewer/irccontextmenus.cpp:627
 #, kde-format
 msgid "Do you want to stop ignoring %1?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:626
+#: src/viewer/irccontextmenus.cpp:629
 #, kde-format
 msgid "Do you want to stop ignoring the selected users?"
 msgstr ""
 
-#: src/viewer/irccontextmenus.cpp:786
+#: src/viewer/irccontextmenus.cpp:789
 #, kde-format
 msgid "Query author"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:62
+#: src/viewer/ircinput.cpp:58
 #, kde-format
 msgid ""
 "<qt><p>The input line is where you type messages to be sent the channel, "
@@ -9354,21 +9377,21 @@ msgid ""
 "p><p>A message cannot contain multiple lines.</p></qt>"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:486
+#: src/viewer/ircinput.cpp:482
 #, kde-format
 msgid "1 byte"
 msgid_plural "%1 bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/ircinput.cpp:487
+#: src/viewer/ircinput.cpp:483
 #, kde-format
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/viewer/ircinput.cpp:493
+#: src/viewer/ircinput.cpp:489
 #, kde-format
 msgctxt ""
 "%1 is, for instance, '200 bytes'.  %2 is, for instance, '7 lines'.  Both are "
@@ -9379,22 +9402,22 @@ msgid ""
 "continue?</qt>"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:496
+#: src/viewer/ircinput.cpp:492
 #, kde-format
 msgid "Large Paste Warning"
 msgstr ""
 
-#: src/viewer/ircinput.cpp:497
+#: src/viewer/ircinput.cpp:493
 #, kde-format
 msgid "Paste"
 msgstr "Alglui"
 
-#: src/viewer/ircview.cpp:2068
+#: src/viewer/ircview.cpp:2040
 #, kde-format
 msgid "Open a query with %1"
 msgstr ""
 
-#: src/viewer/ircview.cpp:2077 src/viewer/topiclabel.cpp:302
+#: src/viewer/ircview.cpp:2049 src/viewer/topiclabel.cpp:302
 #, kde-format
 msgid "Join the channel %1"
 msgstr ""
@@ -9497,29 +9520,19 @@ msgstr ""
 msgid "&Remove Newlines"
 msgstr "Fo&rigi etoson"
 
-#: src/viewer/rawlog.cpp:25 src/viewer/viewcontainer.cpp:2712
+#: src/viewer/rawlog.cpp:25 src/viewer/viewcontainer.cpp:2739
 #, kde-format
 msgid "Raw Log"
 msgstr ""
 
-#: src/viewer/searchbar.cpp:68
-#, kde-format
-msgid "Find Forward"
-msgstr ""
-
-#: src/viewer/searchbar.cpp:71
+#: src/viewer/searchbar.cpp:67
 #, kde-format
 msgid "Match Case"
 msgstr ""
 
-#: src/viewer/searchbar.cpp:74
+#: src/viewer/searchbar.cpp:70
 #, kde-format
 msgid "Whole Words Only"
-msgstr ""
-
-#: src/viewer/searchbar.cpp:77
-#, kde-format
-msgid "From Cursor"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_findLabel)
@@ -9529,22 +9542,40 @@ msgstr ""
 msgid "F&ind:"
 msgstr "Trovu:"
 
-#. i18n: ectx: property (text), widget (QPushButton, m_findNextButton)
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_findNextButton)
+#: src/viewer/searchbarbase.ui:68
+#, kde-format
+msgid "Jump to next match"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_findNextButton)
 #: src/viewer/searchbarbase.ui:71
 #, fuzzy, kde-format
 #| msgid "Ne&w"
 msgid "&Next"
 msgstr "&Nova"
 
-#. i18n: ectx: property (text), widget (QPushButton, m_findPreviousButton)
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_findPreviousButton)
 #: src/viewer/searchbarbase.ui:81
+#, kde-format
+msgid "Jump to previous match"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_findPreviousButton)
+#: src/viewer/searchbarbase.ui:84
 #, fuzzy, kde-format
 #| msgid "Find Previous"
 msgid "&Previous"
 msgstr "Trovi antaŭan"
 
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_optionsButton)
+#: src/viewer/searchbarbase.ui:110
+#, kde-format
+msgid "Modify search behavior"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QToolButton, m_optionsButton)
-#: src/viewer/searchbarbase.ui:107
+#: src/viewer/searchbarbase.ui:113
 #, fuzzy, kde-format
 #| msgid "Options"
 msgid "&Options"
@@ -9620,70 +9651,70 @@ msgstr ""
 msgid "Konversation - IRC Client"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:882
+#: src/viewer/viewcontainer.cpp:906
 #, kde-format
 msgid "Find Text..."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:884
+#: src/viewer/viewcontainer.cpp:908
 #, kde-format
 msgid "Search for text in the current tab"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:902
+#: src/viewer/viewcontainer.cpp:926
 #, kde-format
 msgid "Channel &List for %1"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:922
+#: src/viewer/viewcontainer.cpp:946
 #, kde-format
 msgid "&Open Logfile for %1"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:933
+#: src/viewer/viewcontainer.cpp:957
 #, kde-format
 msgid "&Channel Settings for %1..."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2089
+#: src/viewer/viewcontainer.cpp:2116
 #, kde-format
 msgid "Rename Tab"
 msgstr "Renomi la langeton"
 
-#: src/viewer/viewcontainer.cpp:2090
+#: src/viewer/viewcontainer.cpp:2117
 #, kde-format
 msgid "Enter new tab name:"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2162
+#: src/viewer/viewcontainer.cpp:2189
 #, kde-format
 msgctxt "Default encoding"
 msgid "Default ( %1 )"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2203
+#: src/viewer/viewcontainer.cpp:2230
 #, kde-format
 msgid "&Rename Tab..."
 msgstr "&Renomi la langeton..."
 
-#: src/viewer/viewcontainer.cpp:2356
+#: src/viewer/viewcontainer.cpp:2383
 #, kde-format
 msgid "You can only search in text fields."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2357
+#: src/viewer/viewcontainer.cpp:2384
 #, kde-format
 msgid "Find Text Information"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2949
+#: src/viewer/viewcontainer.cpp:2976
 #, kde-format
 msgid ""
 "To know which server to display the channel list for, the list can only be "
 "opened from a query, channel or status window."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2979
+#: src/viewer/viewcontainer.cpp:3006
 #, kde-format
 msgid ""
 "Using this function may result in a lot of network traffic. If your "
@@ -9691,16 +9722,25 @@ msgid ""
 "disconnected by the server."
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:2983
+#: src/viewer/viewcontainer.cpp:3010
 #, kde-format
 msgid "Channel List Warning"
 msgstr ""
 
-#: src/viewer/viewcontainer.cpp:3013
+#: src/viewer/viewcontainer.cpp:3040
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgid "Watched Nicks"
 msgstr "Fo&rigi"
+
+#~ msgid "&Overwrite"
+#~ msgstr "&Antstataŭigu"
+
+#~ msgid "&OK"
+#~ msgstr "&Bone"
+
+#~ msgid "&Cancel"
+#~ msgstr "&Rezigni"
 
 #~ msgid "Configure"
 #~ msgstr "Agordi"
