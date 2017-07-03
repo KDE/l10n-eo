@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-07-02 02:57+0200\n"
+"POT-Creation-Date: 2017-07-03 02:56+0200\n"
 "PO-Revision-Date: 2015-03-03 14:36+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2226,9 +2226,11 @@ msgstr "Nomo:"
 msgid "Date:"
 msgstr "Dato:"
 
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: app/utils/tooltipfiller.cpp:97
 #: showfoto/thumbbar/showfototooltipfiller.cpp:84
 #: utilities/assistants/htmlgallery/wizard/htmlimagesettingspage.cpp:200
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:596
 #: utilities/imageeditor/tools/transform/ratiocroptool.cpp:369
 #: utilities/importui/items/importtooltipfiller.cpp:82
 #: utilities/queuemanager/tools/transform/crop.cpp:117
@@ -7835,6 +7837,9 @@ msgstr "Ebligita"
 #: libs/dimg/filters/lens/lensfunfilter.cpp:343
 #: libs/dimg/filters/lens/lensfunfilter.cpp:345
 #: libs/dimg/filters/lens/lensfunfilter.cpp:347
+#: utilities/assistants/printcreator/wizard/advprintoptionspage.cpp:162
+#: utilities/assistants/printcreator/wizard/advprintoptionspage.cpp:163
+#: utilities/assistants/printcreator/wizard/advprintoptionspage.cpp:164
 #, fuzzy, kde-format
 msgid "disabled"
 msgstr "Ebligita"
@@ -16207,6 +16212,7 @@ msgstr ""
 
 #: libs/widgets/metadata/metadatawidget.cpp:139
 #: utilities/advancedrename/parser/options/dateoption.cpp:61
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:118
 #: utilities/queuemanager/tools/transform/rotate.cpp:103
 #, fuzzy, kde-format
 msgid "Custom"
@@ -17911,7 +17917,9 @@ msgid "Create Template for Calendar"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, previewGroupBox)
+#. i18n: ectx: property (text), widget (QLabel, LblPreview)
 #: utilities/assistants/calendar/ui/caltemplate.ui:26
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:315
 #: utilities/imageeditor/tools/enhance/hotpixels/blackframelistview.cpp:53
 #, kde-format
 msgid "Preview"
@@ -19524,6 +19532,7 @@ msgstr "Parametroj"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PrintOptionsPage)
 #: utilities/assistants/htmlgallery/wizard/htmlwizard.cpp:103
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:14
 #: utilities/imageeditor/printiface/printoptionspage.ui:13
 #, kde-format
 msgid "Image Settings"
@@ -20016,6 +20025,631 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Panorama Creator Wizard"
+msgstr ""
+
+#: utilities/assistants/printcreator/tools/advprintutils.cpp:79
+#, kde-format
+msgid ""
+"Unable to create a temporary folder. Please make sure you have proper "
+"permissions to this folder and try again."
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_disableCrop)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:19
+#, kde-format
+msgid "Do not crop photos, just scale them."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_disableCrop)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:22
+#, fuzzy, kde-format
+#| msgid "Do not change"
+msgid "Do not crop"
+msgstr "Ne ŝanĝu"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, BtnCropRotateLeft)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, BtnCropRotateLeft)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:42
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:45
+#, kde-format
+msgid "Rotate photo to the left"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, BtnCropRotateLeft)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:48
+#, fuzzy, kde-format
+#| msgid "Rotate Left"
+msgid "&Rotate left"
+msgstr "Turni maldekstre"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, BtnCropRotateRight)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, BtnCropRotateRight)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:55
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:58
+#, kde-format
+msgid "Rotate photo to the right"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, BtnCropRotateRight)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:61
+#, fuzzy, kde-format
+#| msgid "Rotate Right"
+msgid "&Rotate right"
+msgstr "Turni dekstre"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, BtnPreviewPageDown)
+#. i18n: ectx: property (whatsThis), widget (QToolButton, BtnPreviewPageDown)
+#. i18n: ectx: property (toolTip), widget (QPushButton, BtnCropPrev)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, BtnCropPrev)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:84
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:87
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:287
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:290
+#, fuzzy, kde-format
+msgid "Previous photo"
+msgstr "Antaŭa"
+
+#. i18n: ectx: property (text), widget (QPushButton, BtnCropPrev)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:90
+#, fuzzy, kde-format
+msgid "<< Pr&evious"
+msgstr "Antaŭa"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, BtnCropNext)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, BtnCropNext)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:97
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:100
+#, fuzzy, kde-format
+#| msgid "Next M&onth"
+msgid "Next photo"
+msgstr "Venonta M&onato"
+
+#. i18n: ectx: property (text), widget (QPushButton, BtnCropNext)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:103
+#, kde-format
+msgid "Ne&xt >>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, LblCropPhoto)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:132
+#, kde-format
+msgid "Photo 0 of 0"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (Digikam::AdvPrintCropFrame, cropFrame)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:155
+#, kde-format
+msgid ""
+"Move the box in order to crop photos so that they fit inside the photo sizes "
+"you have given.  \n"
+"You can crop each image differently, or just click the 'Next' button to use "
+"the default crop \n"
+"setting for each photo.\n"
+"Enable \"Do not crop\" to avoid cropping all of the photos."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, BtnSaveAs)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:167
+#, fuzzy, kde-format
+#| msgid "Save"
+msgid "Save As"
+msgstr "Konservi"
+
+#. i18n: ectx: property (shortcut), widget (QPushButton, BtnSaveAs)
+#: utilities/assistants/printcreator/ui/advprintcroppage.ui:170
+#, kde-format
+msgid "Ctrl+S"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLayout)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:26
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:723
+#, fuzzy, kde-format
+msgid "Custom layout"
+msgstr "Aŭtomate"
+
+#. i18n: ectx: property (text), widget (QRadioButton, m_photoGridCheck)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:48
+#, fuzzy, kde-format
+#| msgid "Show grid"
+msgid "Photo grid"
+msgstr "Montri kradon"
+
+#. i18n: ectx: property (text), widget (QRadioButton, m_fitAsManyCheck)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:73
+#, kde-format
+msgid "Fit as many as possible"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, m_photosXPageCheck)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:95
+#, fuzzy, kde-format
+msgid "Photos per page"
+msgstr "Dosierecoj"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:122
+#, kde-format
+msgid "Rows"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:164
+#, kde-format
+msgid "Columns"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:227
+#, fuzzy, kde-format
+msgid "Photo size"
+msgstr "Dosierformato"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:267
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:439
+#, fuzzy, kde-format
+#| msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
+#| msgid "x"
+msgid "x"
+msgstr "x"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_photoUnits)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:309
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2093
+#, kde-format
+msgid "cm"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_photoUnits)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:314
+#, kde-format
+msgid "mm"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_photoUnits)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:319
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2088
+#, fuzzy, kde-format
+#| msgid "Inches"
+msgid "inches"
+msgstr "Coloj"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintAutoRotate)
+#. i18n: ectx: property (text), widget (QCheckBox, m_autorotate)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:433
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:73
+#: utilities/imageeditor/printiface/printoptionspage.ui:49
+#, kde-format
+msgid "Auto rotate"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, m_doneButton)
+#: utilities/assistants/printcreator/ui/advprintcustomlayout.ui:453
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, BtnPreviewPageDown)
+#. i18n: ectx: property (text), widget (QPushButton, mLeftButton)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:57
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:293
+#, kde-format
+msgid "<"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, BtnPreviewPageUp)
+#. i18n: ectx: property (text), widget (QPushButton, mRightButton)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:64
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:337
+#, kde-format
+msgid ">"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, mGroupImage)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:83
+#, fuzzy, kde-format
+#| msgid "Position:"
+msgid "Position"
+msgstr "Pozicio:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, mGroupScaling)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:108
+#: utilities/imageeditor/printiface/printoptionspage.ui:74
+#, kde-format
+msgid "Scaling"
+msgstr "Skalado"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mNoScale)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:114
+#: utilities/imageeditor/printiface/printoptionspage.ui:89
+#, kde-format
+msgid "&No scaling"
+msgstr "&Neniu skalado"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mScaleToPage)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:124
+#: utilities/imageeditor/printiface/printoptionspage.ui:99
+#, kde-format
+msgid "&Fit image to page"
+msgstr "&Adapti la bildon laŭ paĝo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintEnlargeSmallerImages)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:155
+#: utilities/imageeditor/printiface/printoptionspage.ui:136
+#, kde-format
+msgid "Enlarge smaller images"
+msgstr "Pligrandigi la malgrandajn bildojn"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mScaleTo)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:180
+#: utilities/imageeditor/printiface/printoptionspage.ui:161
+#, kde-format
+msgid "&Scale to:"
+msgstr "&Skali al:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:219
+#: utilities/imageeditor/printiface/printoptionspage.ui:202
+#, kde-format
+msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
+msgid "x"
+msgstr "x"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_PrintUnit)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:246
+#: utilities/imageeditor/printiface/printoptionspage.ui:229
+#, kde-format
+msgid "Millimeters"
+msgstr "Milimetroj"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_PrintUnit)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:251
+#: utilities/imageeditor/printiface/printoptionspage.ui:234
+#, kde-format
+msgid "Centimeters"
+msgstr "Centimetroj"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_PrintUnit)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:256
+#: utilities/imageeditor/printiface/printoptionspage.ui:239
+#, kde-format
+msgid "Inches"
+msgstr "Coloj"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintKeepRatio)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:300
+#: utilities/imageeditor/printiface/printoptionspage.ui:250
+#, kde-format
+msgid "Keep ratio"
+msgstr "Konservi la proporciojn"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSaveSettings)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:345
+#, kde-format
+msgid "Use these scaling options as default. "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, m_setDefault)
+#. i18n: ectx: property (text), widget (QPushButton, mSaveSettings)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:348
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:542
+#, fuzzy, kde-format
+msgid "Use as default"
+msgstr "Uzi defaŭltan stilon"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:366
+#, fuzzy, kde-format
+msgid "Photos per page:"
+msgstr "Dosierecoj"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: utilities/assistants/printcreator/ui/advprintoptionspage.ui:376
+#, kde-format
+msgid "Multiple pages:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4_2)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:47
+#, kde-format
+msgid "Photos:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, LblPhotoCount)
+#. i18n: ectx: property (text), widget (QLabel, LblSheetsPrinted)
+#. i18n: ectx: property (text), widget (QLabel, LblEmptySlots)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:54
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:84
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:114
+#, kde-format
+msgid "<p align=\"right\">0</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:77
+#, kde-format
+msgid "Sheets:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:107
+#, kde-format
+msgid "Empty slots:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_printer_choice)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:185
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1843
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2337
+#, fuzzy, kde-format
+msgid "Print to PDF"
+msgstr "Diversaj opcioj"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_printer_choice)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:190
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1844
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2295
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2365
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2588
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2688
+#, fuzzy, kde-format
+msgid "Print to JPG"
+msgstr "Diversaj opcioj"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_printer_choice)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:195
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1845
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2589
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2658
+#, fuzzy, kde-format
+msgid "Print to gimp"
+msgstr "Diversaj opcioj"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_pagesetup)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:209
+#, fuzzy, kde-format
+msgid "Page settings"
+msgstr "Bilda agordo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, BtnPreviewPageUp)
+#. i18n: ectx: property (whatsThis), widget (QToolButton, BtnPreviewPageUp)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:331
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:334
+#, fuzzy, kde-format
+msgid "Next page"
+msgstr "Bildo"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:436
+#, fuzzy, kde-format
+msgid "Captions:"
+msgstr "Loko:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_captions)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:447
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1943
+#, fuzzy, kde-format
+#| msgid "Location"
+msgid "No captions"
+msgstr "Loko"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_captions)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:452
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Image file names"
+msgstr "Bildaj dosieroj"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_captions)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:457
+#, fuzzy, kde-format
+msgid "Exif date-time"
+msgstr "Elektu lokon"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_captions)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:462
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "Bilda pozicio"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_captions)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:467
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1949
+#, kde-format
+msgid "Free"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_free_label)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:501
+#, no-c-format, kde-format
+msgid ""
+"%f  filename, %t exposure time, %c comment, %i ISO, %d date-time, %r "
+"resolution, %a aperture, %l focal length, \\n newline"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_sameCaption)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:532
+#, kde-format
+msgid "same to all"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:555
+#, kde-format
+msgid "Family:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: utilities/assistants/printcreator/ui/advprintphotopage.ui:572
+#, fuzzy, kde-format
+#| msgctxt "font color"
+#| msgid "Color:"
+msgid "Color:"
+msgstr "Koloro:"
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:51
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:52
+#, kde-format
+msgid "Choose your grid size"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:53
+#, kde-format
+msgid "Number of rows"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:54
+#, kde-format
+msgid "Insert number of rows"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:55
+#, kde-format
+msgid "Number of columns"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:56
+#, kde-format
+msgid "Insert number of columns"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:58
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:59
+#, kde-format
+msgid "Choose to have a custom photo size album"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:60
+#, fuzzy, kde-format
+msgid "Photo height"
+msgstr "Bloomington"
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:61
+#, kde-format
+msgid "Insert photo height"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:62
+#, kde-format
+msgid "Photo width"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:63
+#, kde-format
+msgid "Insert photo width"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintcustomdlg.cpp:65
+#, fuzzy, kde-format
+msgid "Auto rotate photo"
+msgstr "Anguloj:"
+
+#: utilities/assistants/printcreator/wizard/advprintintropage.cpp:53
+#, kde-format
+msgid ""
+"<qt><p><h1><b>Welcome to Print Creator</b></h1></p><p>This assistant will "
+"guide you to assemble images to be printed following specific templates as "
+"Photo Album, Photo Collage, or Framed Photo.</p><p>An adaptative photo "
+"collection page layout can be also used, based on Atkins algorithm.</p></qt>"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:115
+#, fuzzy, kde-format
+msgid "Select page layout"
+msgstr "Elektu lokon"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:116
+#, kde-format
+msgid "Crop photos"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:174
+#, fuzzy, kde-format
+#| msgid "Calendar"
+msgid "Print Creator"
+msgstr "Kalendaro"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:177
+#, fuzzy, kde-format
+msgid "Welcome to Print Creator"
+msgstr "Elekti eron"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:690
+#, fuzzy, kde-format
+msgid "Unsupported Paper Size"
+msgstr "Nekonata"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1192
+#, kde-format
+msgid "Photo %1 of %2"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1279
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1286
+#, kde-format
+msgid "Page %1 of %2"
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1536
+#, fuzzy, kde-format
+msgid "Add again"
+msgstr "Plia agordo"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:1550
+#: utilities/facemanagement/assignnamewidget.cpp:261
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:360
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Fo&rigi"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2267
+#, fuzzy, kde-format
+msgid "Output Path"
+msgstr "Kanalo:"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2473
+#, fuzzy, kde-format
+#| msgid "Overwrite File?"
+msgid "Overwrite File"
+msgstr "Ĉu anstataŭigi la dosieron?"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2474
+#, fuzzy, kde-format
+#| msgid ""
+#| "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
+msgid ""
+"The following file will be overwritten. Are you sure you want to overwrite "
+"it?"
+msgstr "Dosiero nomita \"%1\" jam ekzistas. Ĉu vi vere volas anstataŭigi ĝin?"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2504
+#, kde-format
+msgid "Could not save file, please check your output entry."
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2530
+#, fuzzy, kde-format
+msgid "Could not remove the GIMP's temporary files."
+msgstr "Dosiernomo"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2614
+#, fuzzy, kde-format
+#| msgid "Pakistan"
+msgid "Print assistant"
+msgstr "Pakistano"
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2684
+#, kde-format
+msgid ""
+"There was an error launching the GIMP. Please make sure it is properly "
+"installed."
+msgstr ""
+
+#: utilities/assistants/printcreator/wizard/advprintwizard.cpp:2696
+#, kde-format
+msgid "Empty output path."
 msgstr ""
 
 #: utilities/assistants/sendbymail/manager/imageresizejob.cpp:99
@@ -20831,12 +21465,6 @@ msgstr ""
 #, kde-format
 msgid "Confirm"
 msgstr "Konfirmi"
-
-#: utilities/facemanagement/assignnamewidget.cpp:261
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:360
-#, fuzzy, kde-format
-msgid "Remove"
-msgstr "Fo&rigi"
 
 #: utilities/facemanagement/assignnamewidget.cpp:502
 #, kde-format
@@ -23668,73 +24296,6 @@ msgid ""
 "<p>Color Management is disabled.</p> <p>You can enable it now by clicking on "
 "the \"Settings\" button.</p>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintAutoRotate)
-#: utilities/imageeditor/printiface/printoptionspage.ui:49
-#, kde-format
-msgid "Auto rotate"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: utilities/imageeditor/printiface/printoptionspage.ui:74
-#, kde-format
-msgid "Scaling"
-msgstr "Skalado"
-
-#. i18n: ectx: property (text), widget (QRadioButton, mNoScale)
-#: utilities/imageeditor/printiface/printoptionspage.ui:89
-#, kde-format
-msgid "&No scaling"
-msgstr "&Neniu skalado"
-
-#. i18n: ectx: property (text), widget (QRadioButton, mScaleToPage)
-#: utilities/imageeditor/printiface/printoptionspage.ui:99
-#, kde-format
-msgid "&Fit image to page"
-msgstr "&Adapti la bildon laŭ paĝo"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintEnlargeSmallerImages)
-#: utilities/imageeditor/printiface/printoptionspage.ui:136
-#, kde-format
-msgid "Enlarge smaller images"
-msgstr "Pligrandigi la malgrandajn bildojn"
-
-#. i18n: ectx: property (text), widget (QRadioButton, mScaleTo)
-#: utilities/imageeditor/printiface/printoptionspage.ui:161
-#, kde-format
-msgid "&Scale to:"
-msgstr "&Skali al:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: utilities/imageeditor/printiface/printoptionspage.ui:202
-#, kde-format
-msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
-msgid "x"
-msgstr "x"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_PrintUnit)
-#: utilities/imageeditor/printiface/printoptionspage.ui:229
-#, kde-format
-msgid "Millimeters"
-msgstr "Milimetroj"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_PrintUnit)
-#: utilities/imageeditor/printiface/printoptionspage.ui:234
-#, kde-format
-msgid "Centimeters"
-msgstr "Centimetroj"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_PrintUnit)
-#: utilities/imageeditor/printiface/printoptionspage.ui:239
-#, kde-format
-msgid "Inches"
-msgstr "Coloj"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintKeepRatio)
-#: utilities/imageeditor/printiface/printoptionspage.ui:250
-#, kde-format
-msgid "Keep ratio"
-msgstr "Konservi la proporciojn"
 
 #: utilities/imageeditor/rawimport/rawimport.cpp:73
 #, kde-format
@@ -37815,10 +38376,6 @@ msgstr "Ekrano %1"
 
 #, fuzzy
 #~ msgid "Show item date"
-#~ msgstr "Dosierformato"
-
-#, fuzzy
-#~ msgid "Show item size"
 #~ msgstr "Dosierformato"
 
 #, fuzzy
