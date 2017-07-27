@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-07-26 07:06+0200\n"
+"POT-Creation-Date: 2017-07-27 03:33+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -199,23 +199,23 @@ msgstr ""
 #: src/commands/changeownertrustcommand.cpp:247
 #, kde-format
 msgid ""
-"<p>An error occurred while trying to change the owner trust for <b>%1</b>:</"
-"p><p>%2</p>"
+"<p>An error occurred while trying to change the certification trust for <b>"
+"%1</b>:</p><p>%2</p>"
 msgstr ""
 
 #: src/commands/changeownertrustcommand.cpp:251
 #, kde-format
-msgid "Owner Trust Change Error"
+msgid "Certification Trust Change Error"
 msgstr ""
 
 #: src/commands/changeownertrustcommand.cpp:256
 #, kde-format
-msgid "Owner trust changed successfully."
+msgid "Certification trust changed successfully."
 msgstr ""
 
 #: src/commands/changeownertrustcommand.cpp:257
 #, kde-format
-msgid "Owner Trust Change Succeeded"
+msgid "Certification Trust Change Succeeded"
 msgstr ""
 
 #: src/commands/changepassphrasecommand.cpp:210
@@ -445,8 +445,8 @@ msgid ""
 "%1</b></p></qt>"
 msgstr ""
 
-#: src/commands/dumpcertificatecommand.cpp:94
-#: src/commands/dumpcrlcachecommand.cpp:113
+#: src/commands/dumpcertificatecommand.cpp:95
+#: src/commands/dumpcrlcachecommand.cpp:114
 #, kde-format
 msgctxt "@action:button Update the log text widget"
 msgid "&Update"
@@ -1596,6 +1596,14 @@ msgstr ""
 msgid "Configure"
 msgstr "Agordi"
 
+#: src/conf/cryptooperationsconfigwidget.cpp:120
+#: src/conf/cryptooperationsconfigwidget.cpp:200
+#: src/newcertificatewizard/newcertificatewizard.cpp:1696
+#: src/newcertificatewizard/newcertificatewizard.cpp:1706
+#, kde-format
+msgid "default"
+msgstr "norma"
+
 #: src/conf/cryptooperationsconfigwidget.cpp:123
 #, kde-format
 msgid ""
@@ -1608,60 +1616,65 @@ msgstr ""
 msgid "Apply profile"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:152
-#, kde-format
-msgctxt "@info"
-msgid "The configuration profile is now applied."
-msgstr ""
-
 #: src/conf/cryptooperationsconfigwidget.cpp:153
 #, kde-format
-msgid "Configuration profile applied"
+msgctxt "%1 is the name of the profile"
+msgid "The configuration profile \"%1\" was applied."
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:187
+#: src/conf/cryptooperationsconfigwidget.cpp:154
+#, fuzzy, kde-format
+msgid "GnuPG Profile - Kleopatra"
+msgstr "Forigu propran katalogon"
+
+#: src/conf/cryptooperationsconfigwidget.cpp:188
 #, kde-format
 msgctxt "@title"
 msgid "General Operations"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:191
+#: src/conf/cryptooperationsconfigwidget.cpp:192
 #, fuzzy, kde-format
 msgid "GnuPG Profile:"
 msgstr "Forigu propran katalogon"
 
-#: src/conf/cryptooperationsconfigwidget.cpp:192
+#: src/conf/cryptooperationsconfigwidget.cpp:193
 #, kde-format
 msgid ""
 "A profile consists of various settings that can apply to multiple components "
 "of the GnuPG system."
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:221
+#: src/conf/cryptooperationsconfigwidget.cpp:205
+#, kde-format
+msgid "Apply"
+msgstr ""
+
+#: src/conf/cryptooperationsconfigwidget.cpp:222
 #, kde-format
 msgid "EMail Operations"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:223
+#: src/conf/cryptooperationsconfigwidget.cpp:224
 #, kde-format
 msgid ""
 "Don't confirm signing certificate if there is only one valid certificate for "
 "the identity"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:224
+#: src/conf/cryptooperationsconfigwidget.cpp:225
 #, kde-format
 msgid ""
 "Don't confirm encryption certificates if there is exactly one valid "
 "certificate for each recipient"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:230
+#: src/conf/cryptooperationsconfigwidget.cpp:231
 #, kde-format
 msgid "File Operations"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:232
+#: src/conf/cryptooperationsconfigwidget.cpp:233
 #, kde-format
 msgid ""
 "Create OpenPGP encrypted files with \".pgp\" file extensions instead of \"."
@@ -1669,13 +1682,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (AddASCIIArmor), group (FileOperations)
-#: src/conf/cryptooperationsconfigwidget.cpp:233
+#: src/conf/cryptooperationsconfigwidget.cpp:234
 #: src/kcfg/fileoperationspreferences.kcfg:25
 #, kde-format
 msgid "Create signed or encrypted files as text files."
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:234
+#: src/conf/cryptooperationsconfigwidget.cpp:235
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1685,19 +1698,19 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (AutoDecryptVerify), group (FileOperations)
-#: src/conf/cryptooperationsconfigwidget.cpp:237
+#: src/conf/cryptooperationsconfigwidget.cpp:238
 #: src/kcfg/fileoperationspreferences.kcfg:15
 #, kde-format
 msgid ""
 "Automatically start operation based on input detection for decrypt/verify."
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:243
+#: src/conf/cryptooperationsconfigwidget.cpp:244
 #, kde-format
 msgid "Checksum program to use when creating checksum files:"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:248
+#: src/conf/cryptooperationsconfigwidget.cpp:249
 #, kde-format
 msgid "Archive command to use when archiving files:"
 msgstr ""
@@ -2143,7 +2156,7 @@ msgid ""
 "to be checksummed, not a mixture of both."
 msgstr ""
 
-#: src/crypto/createchecksumscontroller.cpp:349 src/mainwindow.cpp:624
+#: src/crypto/createchecksumscontroller.cpp:349 src/mainwindow.cpp:625
 #, kde-format
 msgid "Cancel"
 msgstr "Rezigni"
@@ -2392,20 +2405,21 @@ msgstr "Vidigi atestilon 0x%1"
 #, fuzzy, kde-format
 #| msgid "Good signature"
 msgctxt ""
-"VS-conforming is a German standard for restricted documents for which "
+"VS-NfD-conforming is a German standard for restricted documents for which "
 "special restrictions about algorithms apply.  The string states that a "
 "signature is compliant with that."
-msgid "The signature is VS-compliant."
+msgid "The signature is VS-NfD-compliant."
 msgstr "Korekta subskribo"
 
 #: src/crypto/decryptverifytask.cpp:307
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Good signature"
 msgctxt ""
-"VS-conforming is a German standard for restricted documents for which "
+"VS-NfD-conforming is a German standard for restricted documents for which "
 "special restrictions about algorithms apply.  The string states that a "
 "signature is not compliant with that."
-msgid "The signature <b>is not</b> VS-compliant."
-msgstr ""
+msgid "The signature <b>is not</b> VS-NfD-compliant."
+msgstr "Korekta subskribo"
 
 #: src/crypto/decryptverifytask.cpp:323 src/crypto/signencryptfilestask.cpp:71
 #, kde-format
@@ -2531,22 +2545,24 @@ msgid ""
 msgstr ""
 
 #: src/crypto/decryptverifytask.cpp:556
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Good signature"
 msgctxt ""
-"VS-conforming is a German standard for restricted documents for which "
+"VS-NfD-conforming is a German standard for restricted documents for which "
 "special restrictions about algorithms apply.  The string states that the "
 "decryption is compliant with that."
-msgid "The decryption is VS-compliant."
-msgstr ""
+msgid "The decryption is VS-NfD-compliant."
+msgstr "Korekta subskribo"
 
 #: src/crypto/decryptverifytask.cpp:558
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Good signature"
 msgctxt ""
-"VS-conforming is a German standard for restricted documents for which "
+"VS-NfD-conforming is a German standard for restricted documents for which "
 "special restrictions about algorithms apply.  The string states that the "
 "decryption is compliant with that."
-msgid "The decryption <b>is not</b> VS-compliant."
-msgstr ""
+msgid "The decryption <b>is not</b> VS-NfD-compliant."
+msgstr "Korekta subskribo"
 
 #: src/crypto/decryptverifytask.cpp:564
 #, kde-format
@@ -3001,22 +3017,22 @@ msgstr ""
 #: src/crypto/gui/signencryptfileswizard.cpp:303
 #, kde-format
 msgctxt ""
-"VS-conforming is a German standard for restricted documents for which "
+"VS-NfD-conforming is a German standard for restricted documents for which "
 "special restrictions about algorithms apply.  The string states that all "
 "cryptographic operations necessary for the communication are compliant with "
 "that."
-msgid "VS-compliant communication possible."
+msgid "VS-NfD-compliant communication possible."
 msgstr ""
 
 #: src/crypto/gui/signencryptemailconflictdialog.cpp:306
 #: src/crypto/gui/signencryptfileswizard.cpp:305
 #, kde-format
 msgctxt ""
-"VS-conforming is a German standard for restricted documents for which "
+"VS-NfD-conforming is a German standard for restricted documents for which "
 "special restrictions about algorithms apply.  The string states that all "
 "cryptographic operations necessary for the communication are compliant with "
 "that."
-msgid "VS-compliant communication not possible."
+msgid "VS-NfD-compliant communication not possible."
 msgstr ""
 
 #: src/crypto/gui/signencryptemailconflictdialog.cpp:388
@@ -3182,7 +3198,7 @@ msgid "Sign as:"
 msgstr "Subskribi"
 
 #: src/crypto/gui/signencryptwidget.cpp:130
-#: src/crypto/gui/signencryptwidget.cpp:314
+#: src/crypto/gui/signencryptwidget.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Encrypt"
@@ -3215,14 +3231,14 @@ msgid ""
 "Even if you pick a very strong password."
 msgstr ""
 
-#: src/crypto/gui/signencryptwidget.cpp:312
+#: src/crypto/gui/signencryptwidget.cpp:311
 #, fuzzy, kde-format
 #| msgid "Encrypt"
 msgctxt "@action"
 msgid "Sign / Encrypt"
 msgstr "Ĉifradi"
 
-#: src/crypto/gui/signencryptwidget.cpp:316
+#: src/crypto/gui/signencryptwidget.cpp:315
 #, kde-format
 msgctxt "@action"
 msgid "Sign"
@@ -3547,14 +3563,14 @@ msgid "(optional)"
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:301
-#: src/newcertificatewizard/newcertificatewizard.cpp:1544
+#: src/newcertificatewizard/newcertificatewizard.cpp:1545
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is required, but empty."
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:303
-#: src/newcertificatewizard/newcertificatewizard.cpp:1546
+#: src/newcertificatewizard/newcertificatewizard.cpp:1547
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -3563,14 +3579,14 @@ msgid ""
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:309
-#: src/newcertificatewizard/newcertificatewizard.cpp:1552
+#: src/newcertificatewizard/newcertificatewizard.cpp:1553
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is incomplete."
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:311
-#: src/newcertificatewizard/newcertificatewizard.cpp:1554
+#: src/newcertificatewizard/newcertificatewizard.cpp:1555
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -3579,14 +3595,14 @@ msgid ""
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:316
-#: src/newcertificatewizard/newcertificatewizard.cpp:1559
+#: src/newcertificatewizard/newcertificatewizard.cpp:1560
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is invalid."
 msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:318
-#: src/newcertificatewizard/newcertificatewizard.cpp:1561
+#: src/newcertificatewizard/newcertificatewizard.cpp:1562
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -3953,7 +3969,7 @@ msgid ""
 msgstr ""
 
 #: src/dialogs/certifycertificatedialog.cpp:200
-#: src/newcertificatewizard/newcertificatewizard.cpp:1615
+#: src/newcertificatewizard/newcertificatewizard.cpp:1618
 #, kde-format
 msgid "Certify"
 msgstr ""
@@ -4228,7 +4244,7 @@ msgid "ASCII armor"
 msgstr ""
 
 #: src/dialogs/gencardkeydialog.cpp:78
-#: src/newcertificatewizard/newcertificatewizard.cpp:1676
+#: src/newcertificatewizard/newcertificatewizard.cpp:1680
 #, fuzzy, kde-format
 #| msgid "Name"
 msgid "Name:"
@@ -5218,7 +5234,7 @@ msgstr ""
 msgid "Really Quit?"
 msgstr ""
 
-#: src/mainwindow.cpp:198
+#: src/mainwindow.cpp:199
 #, kde-format
 msgctxt ""
 "Compliance means that GnuPG is running in a more restricted mode e.g. to "
@@ -5226,19 +5242,19 @@ msgctxt ""
 msgid "Compliance: %1"
 msgstr ""
 
-#: src/mainwindow.cpp:217
+#: src/mainwindow.cpp:218
 #, kde-format
 msgid ""
 "Could not start the GnuPG Log Viewer (kwatchgnupg). Please check your "
 "installation."
 msgstr ""
 
-#: src/mainwindow.cpp:219
+#: src/mainwindow.cpp:220
 #, kde-format
 msgid "Error Starting KWatchGnuPG"
 msgstr ""
 
-#: src/mainwindow.cpp:233
+#: src/mainwindow.cpp:234
 #, kde-format
 msgctxt ""
 "The Gpg4win compendium is only availableat this point (24.7.2017) in german "
@@ -5246,86 +5262,86 @@ msgctxt ""
 msgid "gpg4win-compendium-en.pdf"
 msgstr ""
 
-#: src/mainwindow.cpp:394
+#: src/mainwindow.cpp:395
 #, fuzzy, kde-format
 #| msgid "GnuPG Log Viewer..."
 msgid "GnuPG Log Viewer"
 msgstr "GnuPGa protokolvidigilo..."
 
-#: src/mainwindow.cpp:400
+#: src/mainwindow.cpp:401
 #, kde-format
 msgid "Check for updates"
 msgstr ""
 
-#: src/mainwindow.cpp:404
+#: src/mainwindow.cpp:405
 #, kde-format
 msgid "Gpg4win Compendium"
 msgstr ""
 
-#: src/mainwindow.cpp:411
+#: src/mainwindow.cpp:412
 #, kde-format
 msgid "Configure GnuPG Backend..."
 msgstr ""
 
-#: src/mainwindow.cpp:417
+#: src/mainwindow.cpp:418
 #, kde-format
 msgid "Perform Self-Test"
 msgstr ""
 
-#: src/mainwindow.cpp:421
+#: src/mainwindow.cpp:422
 #, kde-format
 msgid "Manage Smartcards"
 msgstr ""
 
-#: src/mainwindow.cpp:422
+#: src/mainwindow.cpp:423
 #, kde-format
 msgid "Edit or initialize a crypto hardware token."
 msgstr ""
 
-#: src/mainwindow.cpp:440
+#: src/mainwindow.cpp:441
 #, kde-format
 msgid "Set Focus to Quick Search"
 msgstr ""
 
-#: src/mainwindow.cpp:461
+#: src/mainwindow.cpp:462
 #, kde-format
 msgid "Could not configure the cryptography backend (gpgconf tool not found)"
 msgstr ""
 
-#: src/mainwindow.cpp:461
+#: src/mainwindow.cpp:462
 #, kde-format
 msgid "Configuration Error"
 msgstr ""
 
-#: src/mainwindow.cpp:496
+#: src/mainwindow.cpp:497
 #, kde-format
 msgid ""
 "There are still some background operations ongoing. These will be terminated "
 "when closing the window. Proceed?"
 msgstr ""
 
-#: src/mainwindow.cpp:499
+#: src/mainwindow.cpp:500
 #, kde-format
 msgid "Ongoing Background Tasks"
 msgstr ""
 
-#: src/mainwindow.cpp:608 src/view/keylistcontroller.cpp:406
+#: src/mainwindow.cpp:609 src/view/keylistcontroller.cpp:406
 #, kde-format
 msgid "Sign/Encrypt..."
 msgstr ""
 
-#: src/mainwindow.cpp:609 src/utils/clipboardmenu.cpp:49
+#: src/mainwindow.cpp:610 src/utils/clipboardmenu.cpp:49
 #: src/view/keylistcontroller.cpp:402
 #, kde-format
 msgid "Decrypt/Verify..."
 msgstr ""
 
-#: src/mainwindow.cpp:614 src/view/welcomewidget.cpp:87
+#: src/mainwindow.cpp:615 src/view/welcomewidget.cpp:87
 #, kde-format
 msgid "Import Certificates"
 msgstr ""
 
-#: src/mainwindow.cpp:615
+#: src/mainwindow.cpp:616
 #, kde-format
 msgid "Import CRLs"
 msgstr ""
@@ -5405,7 +5421,7 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, personalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:250
-#: src/newcertificatewizard/newcertificatewizard.cpp:1932
+#: src/newcertificatewizard/newcertificatewizard.cpp:1943
 #, kde-format
 msgid "Personal Details"
 msgstr ""
@@ -5717,51 +5733,51 @@ msgctxt "@title"
 msgid "Certificate Creation Wizard"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1607
+#: src/newcertificatewizard/newcertificatewizard.cpp:1610
 #, kde-format
 msgid "Sign"
 msgstr "Subskribi"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1611
-#: src/newcertificatewizard/newcertificatewizard.cpp:1640
+#: src/newcertificatewizard/newcertificatewizard.cpp:1614
+#: src/newcertificatewizard/newcertificatewizard.cpp:1643
 #, kde-format
 msgid "Encrypt"
 msgstr "Ĉifradi"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1618
+#: src/newcertificatewizard/newcertificatewizard.cpp:1621
 #, kde-format
 msgid "Authenticate"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1678
+#: src/newcertificatewizard/newcertificatewizard.cpp:1684
 #, kde-format
 msgid "Email Address:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1680
+#: src/newcertificatewizard/newcertificatewizard.cpp:1687
 #, kde-format
 msgid "Subject-DN:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1683
+#: src/newcertificatewizard/newcertificatewizard.cpp:1690
 #, kde-format
 msgid "Key Type:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1685
-#: src/newcertificatewizard/newcertificatewizard.cpp:1695
+#: src/newcertificatewizard/newcertificatewizard.cpp:1692
+#: src/newcertificatewizard/newcertificatewizard.cpp:1702
 #, kde-format
 msgid "Key Curve:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1687
-#: src/newcertificatewizard/newcertificatewizard.cpp:1689
+#: src/newcertificatewizard/newcertificatewizard.cpp:1694
+#: src/newcertificatewizard/newcertificatewizard.cpp:1696
 #, kde-format
 msgid "Key Strength:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1687
-#: src/newcertificatewizard/newcertificatewizard.cpp:1697
+#: src/newcertificatewizard/newcertificatewizard.cpp:1694
+#: src/newcertificatewizard/newcertificatewizard.cpp:1704
 #, fuzzy, kde-format
 #| msgctxt "Format string for the labels in the \"Your Personal Data\" page"
 #| msgid "%1 (%2):"
@@ -5770,61 +5786,55 @@ msgid_plural "%1 bits"
 msgstr[0] "%1 (%2):"
 msgstr[1] "%1 (%2):"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1689
-#: src/newcertificatewizard/newcertificatewizard.cpp:1699
-#, kde-format
-msgid "default"
-msgstr "norma"
-
-#: src/newcertificatewizard/newcertificatewizard.cpp:1691
+#: src/newcertificatewizard/newcertificatewizard.cpp:1698
 #, kde-format
 msgid "Certificate Usage:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1691
-#: src/newcertificatewizard/newcertificatewizard.cpp:1701
+#: src/newcertificatewizard/newcertificatewizard.cpp:1698
+#: src/newcertificatewizard/newcertificatewizard.cpp:1708
 #, kde-format
 msgctxt "separator for key usages"
 msgid ",&nbsp;"
 msgstr ",&nbsp;"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1693
+#: src/newcertificatewizard/newcertificatewizard.cpp:1700
 #, kde-format
 msgid "Subkey Type:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1697
-#: src/newcertificatewizard/newcertificatewizard.cpp:1699
+#: src/newcertificatewizard/newcertificatewizard.cpp:1704
+#: src/newcertificatewizard/newcertificatewizard.cpp:1706
 #, kde-format
 msgid "Subkey Strength:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1701
+#: src/newcertificatewizard/newcertificatewizard.cpp:1708
 #, kde-format
 msgid "Subkey Usage:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1705
+#: src/newcertificatewizard/newcertificatewizard.cpp:1712
 #, kde-format
 msgid "Valid Until:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1709
+#: src/newcertificatewizard/newcertificatewizard.cpp:1716
 #, kde-format
 msgid "Add. Email Address:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1712
+#: src/newcertificatewizard/newcertificatewizard.cpp:1719
 #, kde-format
 msgid "DNS Name:"
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1715
+#: src/newcertificatewizard/newcertificatewizard.cpp:1722
 #, kde-format
 msgid "URI:"
 msgstr "URL:"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1791
+#: src/newcertificatewizard/newcertificatewizard.cpp:1802
 #, kde-format
 msgctxt "%2: some admin-supplied text, %1: key size in bits"
 msgid "%2 (1 bit; default)"
@@ -5832,7 +5842,7 @@ msgid_plural "%2 (%1 bits; default)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1792
+#: src/newcertificatewizard/newcertificatewizard.cpp:1803
 #, fuzzy, kde-format
 #| msgctxt "Format string for the labels in the \"Your Personal Data\" page"
 #| msgid "%1 (%2):"
@@ -5842,7 +5852,7 @@ msgid_plural "%2 (%1 bits)"
 msgstr[0] "%1 (%2):"
 msgstr[1] "%1 (%2):"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1794
+#: src/newcertificatewizard/newcertificatewizard.cpp:1805
 #, fuzzy, kde-format
 #| msgid "default"
 msgctxt "%1: key size in bits"
@@ -5851,7 +5861,7 @@ msgid_plural "%1 bits (default)"
 msgstr[0] "norma"
 msgstr[1] "norma"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1795
+#: src/newcertificatewizard/newcertificatewizard.cpp:1806
 #, kde-format
 msgctxt "%1: key size in bits"
 msgid "1 bit"
@@ -5859,7 +5869,7 @@ msgid_plural "%1 bits"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1937
+#: src/newcertificatewizard/newcertificatewizard.cpp:1948
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Adding more than one User ID is not yet implemented."
@@ -7182,7 +7192,7 @@ msgstr ""
 
 #: src/view/keylistcontroller.cpp:448
 #, kde-format
-msgid "Change Owner Trust..."
+msgid "Change Certification Trust..."
 msgstr ""
 
 #: src/view/keylistcontroller.cpp:452
