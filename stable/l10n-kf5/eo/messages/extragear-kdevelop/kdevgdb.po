@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgdb\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-06-15 04:46+0200\n"
+"POT-Creation-Date: 2017-08-29 05:14+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,18 +16,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: pology\n"
 
-#: debuggerplugin.cpp:55 debuggerplugin.cpp:87 gdbconfigpage.cpp:141
+#: debuggerplugin.cpp:56 debuggerplugin.cpp:130 gdbconfigpage.cpp:131
 #, kde-format
 msgid "GDB"
 msgstr "GDB"
 
-#: debuggerplugin.cpp:83
+#: debuggerplugin.cpp:126
 #, fuzzy, kde-format
 #| msgid "Disassemble View"
 msgid "Disassemble/Registers"
 msgstr "Retrokompila rigardo"
 
-#: debuggerplugin.cpp:96
+#: debuggerplugin.cpp:139
 #, fuzzy, kde-format
 #| msgid "Memory view"
 msgid "Memory"
@@ -82,8 +82,8 @@ msgstr "Propra formatoteksto"
 #: debugsession.cpp:184
 #, kde-format
 msgid ""
-"No environment group specified, looks like a broken configuration, please "
-"check run configuration '%1'. Using default environment group."
+"No environment profile specified, looks like a broken configuration, please "
+"check run configuration '%1'. Using default environment profile."
 msgstr ""
 
 #: debugsession.cpp:294
@@ -114,30 +114,30 @@ msgid ""
 "<p><tt>%1"
 msgstr ""
 
-#: gdb.cpp:79
+#: gdb.cpp:78
 #, kde-format
 msgid "Could not locate the debugging shell '%1'."
 msgstr "Ne eblis trovi la sencimigilŝelon '%1'."
 
-#: gdb.cpp:80
+#: gdb.cpp:79
 #, fuzzy, kde-format
 #| msgid "Debugging &shell:"
 msgid "Debugging Shell Not Found"
 msgstr "&Sencimigila ŝelo:"
 
-#: gdbconfigpage.cpp:118
+#: gdbconfigpage.cpp:108
 #, kde-format
 msgid "GDB Configuration"
 msgstr ""
 
-#: gdbconfigpage.cpp:159
+#: gdbconfigpage.cpp:149
 #, kde-format
 msgid ""
 "A program is already being debugged. Do you want to abort the currently "
 "running debug session and continue with the launch?"
 msgstr ""
 
-#: gdbconfigpage.cpp:185
+#: gdbconfigpage.cpp:175
 #, kde-format
 msgid "Executes a native application in GDB"
 msgstr ""
@@ -171,10 +171,11 @@ msgstr "Gdb-programo"
 #: gdbconfigpage.ui:48
 #, kde-format
 msgid ""
-"To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, "
-"for example, for a different architecture, enter the executable name here. "
-"You can either run gdb from $PATH, but with a different name (say, \"arm-gdb"
-"\"), by typing the name here, or specify full path to the gdb executable."
+"To run \"gdb\" executable from $PATH, leave this field empty. To run custom "
+"gdb, for example, for a different architecture, enter the executable name "
+"here. You can either run gdb from $PATH, but with a different name (say, "
+"\"arm-gdb\"), by typing the name here, or specify full path to the gdb "
+"executable."
 msgstr ""
 
 #. i18n: ectx: property (placeholderText), widget (KUrlRequester, kcfg_gdbPath)
@@ -253,9 +254,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: gdbconfigpage.ui:146
-#, kde-format
-msgid "S&tart Debugger with:"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Special debugger views"
+msgid "S&tart debugger with:"
+msgstr "Specialaj sencimigilrigardoj"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
 #: gdbconfigpage.ui:157
@@ -348,34 +350,34 @@ msgctxt "Gdb script to be executed at run time."
 msgid "Run &gdb script:"
 msgstr "Lanĉi &gdb-skripton:"
 
-#: gdboutputwidget.cpp:63
+#: gdboutputwidget.cpp:62
 #, kde-format
 msgid "GDB Output"
 msgstr "GDB-eligo"
 
-#: gdboutputwidget.cpp:64
+#: gdboutputwidget.cpp:63
 #, kde-format
 msgid ""
 "<b>GDB output</b><p>Shows all gdb commands being executed. You can also "
 "issue any other gdb command while debugging.</p>"
 msgstr ""
 
-#: gdboutputwidget.cpp:73
+#: gdboutputwidget.cpp:72
 #, kde-format
 msgid "&GDB cmd:"
 msgstr "&GDB kdo:"
 
-#: gdboutputwidget.cpp:78
+#: gdboutputwidget.cpp:77
 #, kde-format
 msgid "Pause execution of the app to enter gdb commands"
 msgstr ""
 
-#: gdboutputwidget.cpp:391 gdboutputwidget.cpp:441
+#: gdboutputwidget.cpp:390 gdboutputwidget.cpp:440
 #, kde-format
 msgid "Show Internal Commands"
 msgstr "Montri internajn komandojn"
 
-#: gdboutputwidget.cpp:398 gdboutputwidget.cpp:448
+#: gdboutputwidget.cpp:397 gdboutputwidget.cpp:447
 #, kde-format
 msgid ""
 "Controls if commands issued internally by KDevelop will be shown or not."
@@ -383,154 +385,149 @@ msgid ""
 "already issued commands from the view."
 msgstr ""
 
-#: gdboutputwidget.cpp:403
+#: gdboutputwidget.cpp:402
 #, kde-format
 msgid "Copy All"
 msgstr "Kopii ĉiujn"
 
-#. i18n: ectx: Menu (run)
-#: kdevgdbui.rc:5
-#, kde-format
-msgctxt "@title:menu"
-msgid "Run"
-msgstr "Lanĉi"
-
 #. i18n: ectx: ToolBar (debugToolBar)
-#: kdevgdbui.rc:16
+#: kdevgdbui.rc:19
 #, kde-format
 msgid "Debugger Toolbar"
 msgstr "Sencimigila ilobreto"
 
-#: memviewdlg.cpp:74
-#, kde-format
-msgid "Start"
+#: memviewdlg.cpp:73
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Start:"
 msgstr "Lanĉi"
 
-#: memviewdlg.cpp:80
-#, kde-format
-msgid "Amount"
+#: memviewdlg.cpp:76
+#, fuzzy, kde-format
+#| msgid "Amount"
+msgid "Amount:"
 msgstr "Kvanto"
 
-#: memviewdlg.cpp:92
-#, kde-format
-msgid "OK"
-msgstr "Bone"
-
-#: memviewdlg.cpp:95
-#, kde-format
-msgid "Cancel"
-msgstr "Rezigni"
-
-#: memviewdlg.cpp:119
+#: memviewdlg.cpp:103
 #, kde-format
 msgid "Memory view"
 msgstr "Memorrigardo"
 
-#: memviewdlg.cpp:265
+#: memviewdlg.cpp:232
 #, kde-format
 msgid "%2 (1 byte)"
 msgid_plural "%2 (%1 bytes)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: memviewdlg.cpp:312
+#: memviewdlg.cpp:271
 #, fuzzy, kde-format
 #| msgid "Reload"
 msgid "&Reload"
 msgstr "Reŝargi"
 
-#: memviewdlg.cpp:321
+#: memviewdlg.cpp:280
 #, kde-format
 msgid "&Format"
 msgstr ""
 
-#: memviewdlg.cpp:324
+#: memviewdlg.cpp:283
 #, kde-format
 msgid "&Binary"
 msgstr ""
 
-#: memviewdlg.cpp:329
+#: memviewdlg.cpp:288
 #, kde-format
 msgid "&Octal"
 msgstr ""
 
-#: memviewdlg.cpp:334
+#: memviewdlg.cpp:293
 #, kde-format
 msgid "&Decimal"
 msgstr ""
 
-#: memviewdlg.cpp:339
+#: memviewdlg.cpp:298
 #, kde-format
 msgid "&Hexadecimal"
 msgstr ""
 
-#: memviewdlg.cpp:353
+#: memviewdlg.cpp:312
 #, kde-format
 msgid "&Grouping"
 msgstr ""
 
-#: memviewdlg.cpp:356
+#: memviewdlg.cpp:315
 #, kde-format
 msgid "&0"
 msgstr "&0"
 
-#: memviewdlg.cpp:361
+#: memviewdlg.cpp:320
 #, kde-format
 msgid "&1"
 msgstr "&1"
 
-#: memviewdlg.cpp:366
+#: memviewdlg.cpp:325
 #, kde-format
 msgid "&2"
 msgstr "&2"
 
-#: memviewdlg.cpp:371
+#: memviewdlg.cpp:330
 #, kde-format
 msgid "&4"
 msgstr "&4"
 
-#: memviewdlg.cpp:376
+#: memviewdlg.cpp:335
 #, kde-format
 msgid "&8"
 msgstr "&8"
 
-#: memviewdlg.cpp:381
+#: memviewdlg.cpp:340
 #, kde-format
 msgid "1&6"
 msgstr "1&6"
 
-#: memviewdlg.cpp:394
+#: memviewdlg.cpp:353
 #, kde-format
 msgid "Write changes"
 msgstr ""
 
-#: memviewdlg.cpp:398
+#: memviewdlg.cpp:357
 #, kde-format
 msgid "Change memory range"
 msgstr "Ŝanĝi memorgamon"
 
-#: memviewdlg.cpp:402
+#: memviewdlg.cpp:361
 #, kde-format
 msgid "Close this view"
 msgstr "Fermi tiun rigardon"
 
-#: memviewdlg.cpp:469
+#: memviewdlg.cpp:428
 #, fuzzy, kde-format
 #| msgid "Memory view"
 msgid "Memory viewer"
 msgstr "Memorrigardo"
 
-#: memviewdlg.cpp:473
+#: memviewdlg.cpp:432
 #, fuzzy, kde-format
 #| msgid "Memory view"
 msgid "New memory viewer"
 msgstr "Memorrigardo"
 
-#: memviewdlg.cpp:474
+#: memviewdlg.cpp:433
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Open a new memory viewer."
 msgstr ""
+
+#~ msgctxt "@title:menu"
+#~ msgid "Run"
+#~ msgstr "Lanĉi"
+
+#~ msgid "OK"
+#~ msgstr "Bone"
+
+#~ msgid "Cancel"
+#~ msgstr "Rezigni"
 
 #~ msgid "Examine Core File..."
 #~ msgstr "Ekzameni kerndosieron..."
@@ -677,9 +674,6 @@ msgstr ""
 
 #~ msgid "Offset"
 #~ msgstr "Deŝovo"
-
-#~ msgid "Special debugger views"
-#~ msgstr "Specialaj sencimigilrigardoj"
 
 #~ msgid "Watches"
 #~ msgstr "Observoj"
