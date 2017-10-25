@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-10-19 03:02+0200\n"
+"POT-Creation-Date: 2017-10-25 05:31+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -6040,7 +6040,7 @@ msgid "Remove operation"
 msgstr "Operacioj"
 
 #: plugins/skrooge/skrooge_importexport/skgimportexportplugin.cpp:985
-#: skgbasemodeler/skgservices.cpp:1643
+#: skgbasemodeler/skgservices.cpp:1685
 #, fuzzy, kde-format
 #| msgid "Operation canceled"
 msgctxt "An erro message"
@@ -9966,7 +9966,7 @@ msgstr ""
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget.cpp:75
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget_base.ui:114
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget_base.ui:403
-#: skgbankgui/skgquerycreator.ui:42 skgbasegui/skgtablewithgraph.cpp:121
+#: skgbankgui/skgquerycreator.ui:39 skgbasegui/skgtablewithgraph.cpp:121
 #, fuzzy, kde-format
 #| msgid "Searches"
 msgid "Search"
@@ -11650,48 +11650,16 @@ msgctxt "Noun, an item's attribute"
 msgid "attribute"
 msgstr ""
 
-#: skgbankgui/skgquerycreator.cpp:54 skgbankgui/skgquerycreator.cpp:86
+#: skgbankgui/skgquerycreator.cpp:53 skgbankgui/skgquerycreator.cpp:116
 #, fuzzy, kde-format
 #| msgid "Delete failed"
 msgctxt "A tool tip"
 msgid "Switch in advanced mode"
 msgstr "La forigado fiaskis"
 
-#: skgbankgui/skgquerycreator.cpp:80
-#, fuzzy, kde-format
-#| msgid "Delete failed"
-msgctxt "A tool tip"
-msgid "Switch in simple mode"
-msgstr "La forigado fiaskis"
-
-#: skgbankgui/skgquerycreator.cpp:149
-#, fuzzy, kde-format
-#| msgid "Configure..."
-msgctxt "Operator contains"
-msgid "or"
-msgstr "Agordu..."
-
-#: skgbankgui/skgquerycreator.cpp:154
+#: skgbankgui/skgquerycreator.cpp:71 skgbasegui/skgfilteredtableview.cpp:212
 #, kde-format
-msgctxt "Operator contains"
-msgid "but not"
-msgstr ""
-
-#: skgbankgui/skgquerycreator.cpp:177
-#, kde-format
-msgctxt "Operator contains"
-msgid "Contains"
-msgstr ""
-
-#: skgbankgui/skgquerycreator.cpp:182
-#, kde-format
-msgctxt "Noun"
-msgid "Regular expression"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (KLineEdit, kFilterEdit)
-#: skgbankgui/skgquerycreator.ui:36
-#, kde-format
+msgctxt "Tooltip"
 msgid ""
 "<html><head/><body><p>Searching is case-insensitive. So table, Table, and "
 "TABLE are all the same.<br/>If you just put a word or series of words in the "
@@ -11699,30 +11667,67 @@ msgid ""
 "these words (logical operator AND). <br/>If you want to add (logical "
 "operator OR) some lines, you must prefix your word by '+'.<br/>If you want "
 "to remove (logical operator NOT) some lines, you must prefix your word by "
-"'-'.<br/>If you want to search only on one column, you must prefix your word "
-"by the column name like: col1:word.<br/>If you want to use the character ':' "
-"in value, you must specify the column name like this: col1:value:rest.<br/"
-">If you want to search for a phrase or something that contains spaces, you "
-"must put it in quotes, like: 'yes, this is a phrase'.</p><p>You can also use "
-"operators '&lt;', '&gt;', '&lt;=', '&gt;=', '=' and '#' (for regular "
-"expression).</p><p><span style=\" font-weight:600; text-decoration: "
-"underline;\">Examples:</span><br/>+val1 +val2 =&gt; Keep lines containing "
-"val1 OR val2<br/>+val1 -val2 =&gt; Keep lines containing val1 but NOT "
-"val2<br/>'abc def' =&gt; Keep lines containing the sentence 'abc def' <br/>'-"
-"att:abc def' =&gt; Remove lines having a column name starting by abc and "
-"containing 'abc def' <br/>abc:def =&gt; Keep lines having a column name "
-"starting by abc and containing def<br/>:abc:def =&gt; Keep lines containing "
-"'abc:def'<br/>Date&gt;2015-03-01 =&gt; Keep lines where Date attribute is "
-"greater than 2015-03-01<br/>Amount&lt;10 =&gt;Keep lines where Amount "
-"attribute is less than 10<br/>Amount=10 =&gt;Keep lines where Amount "
-"attribute is equal to 10<br/>Amount&lt;=10 =&gt;Keep lines where Amount "
-"attribute is less or equal to 10<br/>abc#^d.*f$ =&gt; Keep lines having a "
-"column name starting by abc and matching the regular expression ^d.*f$</p></"
-"body></html>"
+"'-'.<br/>If you want to search only on some columns, you must prefix your "
+"word by the beginning of column name like: col1:word.<br/>If you want to "
+"search only on one column, you must prefix your word by the column name and "
+"a dot like: col1.:word.<br/>If you want to use the character ':' in value, "
+"you must specify the column name like this: col1:value:rest.<br/>If you want "
+"to search for a phrase or something that contains spaces, you must put it in "
+"quotes, like: 'yes, this is a phrase'.</p><p>You can also use operators "
+"'&lt;', '&gt;', '&lt;=', '&gt;=', '=' and '#' (for regular expression).</"
+"p><p><span style=\"font-weight:600; text-decoration: underline;\">Examples:</"
+"span><br/>+val1 +val2 =&gt; Keep lines containing val1 OR val2<br/>+val1 -"
+"val2 =&gt; Keep lines containing val1 but NOT val2<br/>'abc def' =&gt; Keep "
+"lines containing the sentence 'abc def' <br/>'-att:abc def' =&gt; Remove "
+"lines having a column name starting by abc and containing 'abc def' <br/>abc:"
+"def =&gt; Keep lines having a column name starting by abc and containing "
+"def<br/>:abc:def =&gt; Keep lines containing 'abc:def'<br/"
+">Date&gt;2015-03-01 =&gt; Keep lines where at least one attribute starting "
+"by Date is greater than 2015-03-01<br/>Date.&gt;2015-03-01 =&gt; Keep lines "
+"where at the Date attribute is greater than 2015-03-01<br/>Amount&lt;10 =&gt;"
+"Keep lines where at least one attribute starting by Amount is less than "
+"10<br/>Amount=10 =&gt;Keep lines where at least one attribute starting by "
+"Amount is equal to 10<br/>Amount&lt;=10 =&gt;Keep lines where at least one "
+"attribute starting by Amount is less or equal to 10<br/>abc#^d.*f$ =&gt; "
+"Keep lines having a column name starting by abc and matching the regular "
+"expression ^d.*f$</p><span style=\"font-weight:600; text-decoration: "
+"underline;\">Your filter is understood like this:</span><br/>%1</body></html>"
+msgstr ""
+
+#: skgbankgui/skgquerycreator.cpp:110
+#, fuzzy, kde-format
+#| msgid "Delete failed"
+msgctxt "A tool tip"
+msgid "Switch in simple mode"
+msgstr "La forigado fiaskis"
+
+#: skgbankgui/skgquerycreator.cpp:179
+#, fuzzy, kde-format
+#| msgid "Configure..."
+msgctxt "Operator contains"
+msgid "or"
+msgstr "Agordu..."
+
+#: skgbankgui/skgquerycreator.cpp:184
+#, kde-format
+msgctxt "Operator contains"
+msgid "but not"
+msgstr ""
+
+#: skgbankgui/skgquerycreator.cpp:207
+#, kde-format
+msgctxt "Operator contains"
+msgid "Contains"
+msgstr ""
+
+#: skgbankgui/skgquerycreator.cpp:212
+#, kde-format
+msgctxt "Noun"
+msgid "Regular expression"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (SKGTableWidget, kList)
-#: skgbankgui/skgquerycreator.ui:86
+#: skgbankgui/skgquerycreator.ui:83
 #, kde-format
 msgid ""
 "Double click on items in the list on the left to add them to the query "
@@ -11730,7 +11735,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (SKGTableWidget, kList)
-#: skgbankgui/skgquerycreator.ui:93
+#: skgbankgui/skgquerycreator.ui:90
 #, kde-format
 msgid ""
 "Define your query here. Double click on items in the list on the left to add "
@@ -11743,7 +11748,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, kToolHelp)
-#: skgbankgui/skgquerycreator.ui:118
+#: skgbankgui/skgquerycreator.ui:115
 #, kde-format
 msgid "This menu can help you to build your query"
 msgstr ""
@@ -14652,39 +14657,6 @@ msgid ""
 "CTRL + up or CTRL + down to add or remove one month"
 msgstr ""
 
-#: skgbasegui/skgfilteredtableview.cpp:162
-#, kde-format
-msgctxt "Tooltip"
-msgid ""
-"<html><head/><body><p>Searching is case-insensitive. So table, Table, and "
-"TABLE are all the same.<br/>If you just put a word or series of words in the "
-"search box, the application will filter the table to keep all lines having "
-"these words (logical operator AND). <br/>If you want to add (logical "
-"operator OR) some lines, you must prefix your word by '+'.<br/>If you want "
-"to remove (logical operator NOT) some lines, you must prefix your word by "
-"'-'.<br/>If you want to search only on one column, you must prefix your word "
-"by the column name like: col1:word.<br/>If you want to use the character ':' "
-"in value, you must specify the column name like this: col1:value:rest.<br/"
-">If you want to search for a phrase or something that contains spaces, you "
-"must put it in quotes, like: 'yes, this is a phrase'.</p><p>You can also use "
-"operators '&lt;', '&gt;', '&lt;=', '&gt;=', '=' and '#' (for regular "
-"expression).</p><p><span style=\"font-weight:600; text-decoration: underline;"
-"\">Examples:</span><br/>+val1 +val2 =&gt; Keep lines containing val1 OR "
-"val2<br/>+val1 -val2 =&gt; Keep lines containing val1 but NOT val2<br/>'abc "
-"def' =&gt; Keep lines containing the sentence 'abc def' <br/>'-att:abc def' "
-"=&gt; Remove lines having a column name starting by abc and containing 'abc "
-"def' <br/>abc:def =&gt; Keep lines having a column name starting by abc and "
-"containing def<br/>:abc:def =&gt; Keep lines containing 'abc:def'<br/"
-">Date&gt;2015-03-01 =&gt; Keep lines where Date attribute is greater than "
-"2015-03-01<br/>Amount&lt;10 =&gt;Keep lines where Amount attribute is less "
-"than 10<br/>Amount=10 =&gt;Keep lines where Amount attribute is equal to "
-"10<br/>Amount&lt;=10 =&gt;Keep lines where Amount attribute is less or equal "
-"to 10<br/>abc#^d.*f$ =&gt; Keep lines having a column name starting by abc "
-"and matching the regular expression ^d.*f$</p><span style=\"font-weight:600; "
-"text-decoration: underline;\">Your filter is understood like this:</span><br/"
-">%1</body></html>"
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (QToolButton, kResetInternalFilter)
 #. i18n: ectx: property (statusTip), widget (QToolButton, kResetInternalFilter)
 #: skgbasegui/skgfilteredtableview.ui:56 skgbasegui/skgfilteredtableview.ui:59
@@ -15890,32 +15862,6 @@ msgctxt "The year before the current year"
 msgid "Last year"
 msgstr "Valoroj"
 
-#: skgbasegui/skgsortfilterproxymodel.cpp:271
-#, fuzzy, kde-format
-#| msgctxt "logical operator in a search query"
-#| msgid " or "
-msgctxt "Logical condition"
-msgid "%1 or %2"
-msgstr " aŭ "
-
-#: skgbasegui/skgsortfilterproxymodel.cpp:280
-#, kde-format
-msgctxt "Logical condition"
-msgid "(%1) and (%2)"
-msgstr ""
-
-#: skgbasegui/skgsortfilterproxymodel.cpp:284
-#, kde-format
-msgctxt "Logical condition"
-msgid "not (%1)"
-msgstr ""
-
-#: skgbasegui/skgsortfilterproxymodel.cpp:286
-#, kde-format
-msgctxt "Logical condition"
-msgid "(%1) and not (%2)"
-msgstr ""
-
 #: skgbasegui/skgtablewithgraph.cpp:124 skgbasegui/skgtablewithgraph.cpp:162
 #, kde-format
 msgctxt "Noun, a type of graph, with bars stacked upon each other"
@@ -16341,7 +16287,7 @@ msgid "Impossible to recover this file"
 msgstr ""
 
 #: skgbasemodeler/skgdocument.cpp:1335 skgbasemodeler/skgdocument.cpp:1387
-#: skgbasemodeler/skgservices.cpp:1167 skgbasemodeler/skgservices.cpp:1226
+#: skgbasemodeler/skgservices.cpp:1209 skgbasemodeler/skgservices.cpp:1268
 #, fuzzy, kde-format
 #| msgid "Password:"
 msgctxt "Error message"
@@ -16423,8 +16369,8 @@ msgctxt "Error message: Could not create a backup file"
 msgid "Creation of backup file %1 failed"
 msgstr "Operacio rezignita"
 
-#: skgbasemodeler/skgdocument.cpp:1651 skgbasemodeler/skgservices.cpp:1253
-#: skgbasemodeler/skgservices.cpp:1261
+#: skgbasemodeler/skgdocument.cpp:1651 skgbasemodeler/skgservices.cpp:1295
+#: skgbasemodeler/skgservices.cpp:1303
 #, fuzzy, kde-format
 #| msgid "Delete failed"
 msgctxt "Error message: writing a file failed"
@@ -16558,47 +16504,73 @@ msgctxt "Welcome message"
 msgid "Welcome to %1"
 msgstr ""
 
-#: skgbasemodeler/skgservices.cpp:1073
+#: skgbasemodeler/skgservices.cpp:128
+#, fuzzy, kde-format
+#| msgctxt "logical operator in a search query"
+#| msgid " or "
+msgctxt "Logical condition"
+msgid "%1 or %2"
+msgstr " aŭ "
+
+#: skgbasemodeler/skgservices.cpp:168 skgbasemodeler/skgservices.cpp:188
+#, kde-format
+msgctxt "Logical condition"
+msgid "(%1) and (%2)"
+msgstr ""
+
+#: skgbasemodeler/skgservices.cpp:192
+#, kde-format
+msgctxt "Logical condition"
+msgid "not (%1)"
+msgstr ""
+
+#: skgbasemodeler/skgservices.cpp:194
+#, kde-format
+msgctxt "Logical condition"
+msgid "(%1) and not (%2)"
+msgstr ""
+
+#: skgbasemodeler/skgservices.cpp:1115
 #, fuzzy, kde-format
 #| msgid "Operation canceled"
 msgctxt "An information message"
 msgid "Open file '%1' failed"
 msgstr "Operacio rezignita"
 
-#: skgbasemodeler/skgservices.cpp:1108 skgbasemodeler/skgservices.cpp:1115
+#: skgbasemodeler/skgservices.cpp:1150 skgbasemodeler/skgservices.cpp:1157
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to copy '%1' to '%2'"
 msgstr ""
 
-#: skgbasemodeler/skgservices.cpp:1138
+#: skgbasemodeler/skgservices.cpp:1180
 #, kde-format
 msgctxt "An error message about encryption"
 msgid "AES128 encryption is not supported (%1). Please install qca-ossl."
 msgstr ""
 
-#: skgbasemodeler/skgservices.cpp:1191 skgbasemodeler/skgservices.cpp:1210
+#: skgbasemodeler/skgservices.cpp:1233 skgbasemodeler/skgservices.cpp:1252
 #, fuzzy, kde-format
 #| msgid "Operation canceled"
 msgctxt "Error message about encrypting a file"
 msgid "Encryption failed"
 msgstr "Operacio rezignita"
 
-#: skgbasemodeler/skgservices.cpp:1427
+#: skgbasemodeler/skgservices.cpp:1469
 #, fuzzy, kde-format
 #| msgid "Operation canceled"
 msgctxt "An error message: creating a file failed"
 msgid "Creation file '%1' failed"
 msgstr "Operacio rezignita"
 
-#: skgbasemodeler/skgservices.cpp:1430
+#: skgbasemodeler/skgservices.cpp:1472
 #, fuzzy, kde-format
 #| msgid "Delete failed"
 msgctxt "Error message: something failed"
 msgid "%1 failed"
 msgstr "La forigado fiaskis"
 
-#: skgbasemodeler/skgservices.cpp:1481
+#: skgbasemodeler/skgservices.cpp:1523
 #, kde-format
 msgctxt "Error message"
 msgid "Creation failed. The object already exists."
