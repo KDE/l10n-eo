@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-11-09 03:13+0100\n"
+"POT-Creation-Date: 2017-11-15 05:53+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -752,7 +752,7 @@ msgid "Revocation Certificates "
 msgstr "Vidigi atestilon 0x%1"
 
 #: src/commands/genrevokecommand.cpp:139
-#: src/crypto/autodecryptverifyfilescontroller.cpp:188 src/utils/output.cpp:497
+#: src/crypto/autodecryptverifyfilescontroller.cpp:218 src/utils/output.cpp:497
 #, kde-format
 msgid ""
 "The file <b>%1</b> already exists.\n"
@@ -760,7 +760,7 @@ msgid ""
 msgstr ""
 
 #: src/commands/genrevokecommand.cpp:141
-#: src/crypto/autodecryptverifyfilescontroller.cpp:190 src/utils/output.cpp:499
+#: src/crypto/autodecryptverifyfilescontroller.cpp:220 src/utils/output.cpp:499
 #, kde-format
 msgid "Overwrite Existing File?"
 msgstr ""
@@ -1100,7 +1100,7 @@ msgid "Import CRL Finished"
 msgstr ""
 
 #: src/commands/importpaperkeycommand.cpp:110
-#: src/crypto/autodecryptverifyfilescontroller.cpp:278
+#: src/crypto/autodecryptverifyfilescontroller.cpp:308
 #, kde-kuit-format
 msgid "Cannot open <filename>%1</filename> for reading."
 msgstr ""
@@ -2103,29 +2103,30 @@ msgid ""
 "encrypted data please report a bug (see Help->Report Bug)."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:192 src/utils/output.cpp:501
-#, kde-format
-msgid "Overwrite All"
-msgstr ""
-
-#: src/crypto/autodecryptverifyfilescontroller.cpp:204
-#, kde-kuit-format
-msgid "Failed to delete <filename>%1</filename>."
-msgstr ""
-
-#: src/crypto/autodecryptverifyfilescontroller.cpp:211
+#: src/crypto/autodecryptverifyfilescontroller.cpp:207
+#: src/crypto/autodecryptverifyfilescontroller.cpp:241
 #, kde-kuit-format
 msgid "Failed to move <filename>%1</filename> to <filename>%2</filename>."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:286
+#: src/crypto/autodecryptverifyfilescontroller.cpp:222 src/utils/output.cpp:501
+#, kde-format
+msgid "Overwrite All"
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:234
+#, kde-kuit-format
+msgid "Failed to delete <filename>%1</filename>."
+msgstr ""
+
+#: src/crypto/autodecryptverifyfilescontroller.cpp:316
 #, kde-kuit-format
 msgid ""
 "The file <filename>%1</filename> contains certificates and can't be "
 "decrypted or verified."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:336
+#: src/crypto/autodecryptverifyfilescontroller.cpp:366
 #, kde-kuit-format
 msgid "Select the file to verify with \"%1\""
 msgstr ""
@@ -2184,7 +2185,7 @@ msgid "Error while running %1: %2"
 msgstr ""
 
 #: src/crypto/createchecksumscontroller.cpp:630
-#: src/crypto/verifychecksumscontroller.cpp:610 src/utils/input.cpp:348
+#: src/crypto/verifychecksumscontroller.cpp:610 src/utils/input.cpp:349
 #: src/utils/output.cpp:634
 #, kde-format
 msgid "Failed to execute %1: %2"
@@ -2533,6 +2534,9 @@ msgstr ""
 #: src/crypto/decryptverifytask.cpp:536 src/crypto/decryptverifytask.cpp:557
 #: src/crypto/signencryptfilestask.cpp:245
 #: src/crypto/signencryptfilestask.cpp:262
+#: src/crypto/signencryptfilestask.cpp:561
+#: src/crypto/signencryptfilestask.cpp:589
+#: src/crypto/signencryptfilestask.cpp:617
 #, fuzzy, kde-format
 msgid "Input error: %1"
 msgstr "Forigu propran katalogon"
@@ -6902,71 +6906,71 @@ msgstr ""
 msgid "Premature end of hex-encoded char in input stream"
 msgstr ""
 
-#: src/utils/input.cpp:198
+#: src/utils/input.cpp:199
 #, kde-format
 msgid "Could not open FD %1 for reading"
 msgstr ""
 
-#: src/utils/input.cpp:228 src/utils/input.cpp:244
+#: src/utils/input.cpp:229 src/utils/input.cpp:245
 #, kde-format
 msgid "Could not open file \"%1\" for reading"
 msgstr ""
 
-#: src/utils/input.cpp:241
+#: src/utils/input.cpp:242
 #, kde-format
 msgid "File \"%1\" is already open, but not for reading"
 msgstr ""
 
-#: src/utils/input.cpp:309 src/utils/output.cpp:601
+#: src/utils/input.cpp:310 src/utils/output.cpp:601
 #, kde-format
 msgid "Command not specified"
 msgstr ""
 
-#: src/utils/input.cpp:314 src/utils/output.cpp:607
+#: src/utils/input.cpp:315 src/utils/output.cpp:607
 #, kde-format
 msgid "Could not start %1 process: %2"
 msgstr ""
 
-#: src/utils/input.cpp:319
+#: src/utils/input.cpp:320
 #, kde-format
 msgid "Failed to write input to %1 process: %2"
 msgstr ""
 
-#: src/utils/input.cpp:332
+#: src/utils/input.cpp:333
 #, kde-format
 msgctxt "e.g. \"Output of tar xf - file1 ...\""
 msgid "Output of %1 ..."
 msgstr ""
 
-#: src/utils/input.cpp:334
+#: src/utils/input.cpp:335
 #, kde-format
 msgctxt "e.g. \"Output of tar xf - file\""
 msgid "Output of %1"
 msgstr ""
 
-#: src/utils/input.cpp:345
+#: src/utils/input.cpp:346
 #, kde-format
 msgid ""
 "Error while running %1:\n"
 "%2"
 msgstr ""
 
-#: src/utils/input.cpp:376
+#: src/utils/input.cpp:383
 #, kde-format
 msgid "Could not open clipboard for reading"
 msgstr ""
 
-#: src/utils/input.cpp:388
+#: src/utils/input.cpp:395
 #, kde-format
 msgid "Clipboard contents"
 msgstr ""
 
-#: src/utils/input.cpp:390
+#: src/utils/input.cpp:397
 #, kde-format
 msgid "FindBuffer contents"
 msgstr ""
 
-#: src/utils/input.cpp:392
+#: src/utils/input.cpp:399
 #, kde-format
 msgid "Current selection"
 msgstr ""
