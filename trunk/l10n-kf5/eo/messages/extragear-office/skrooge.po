@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-12-18 03:19+0100\n"
+"POT-Creation-Date: 2018-01-09 03:11+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1359,7 +1359,7 @@ msgid "Impossible to copy file from '%1' to '%2'"
 msgstr ""
 
 #: plugins/generic/skg_monthly/skgmonthlypluginwidget.cpp:226
-#: skgbankmodeler/skgunitobject.cpp:822
+#: skgbankmodeler/skgunitobject.cpp:2208
 #, fuzzy, kde-format
 #| msgid "Operation canceled"
 msgctxt "Error message"
@@ -1502,7 +1502,7 @@ msgstr "Operacio"
 #: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:169
 #: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:261
 #: plugins/import/skrooge_import_pdf/skgimportpluginpdf.cpp:136
-#: skgbankmodeler/skgunitobject.cpp:967 skgbasegui/skgmainpanel.cpp:2657
+#: skgbankmodeler/skgunitobject.cpp:2353 skgbasegui/skgmainpanel.cpp:2657
 #: skgbasegui/skgmainpanel.cpp:2664 skgbasemodeler/skgdocument.cpp:1255
 #, kde-format
 msgctxt "Error message"
@@ -2489,7 +2489,7 @@ msgstr "Operacioj"
 #: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:63
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:871
 #: plugins/import/skrooge_import_xml/skgimportpluginxml.cpp:62
-#: skgbankmodeler/skgunitobject.cpp:770 skgbasegui/skgtablewithgraph.cpp:2668
+#: skgbankmodeler/skgunitobject.cpp:2156 skgbasegui/skgtablewithgraph.cpp:2668
 #: skgbasegui/skgtablewithgraph.cpp:2685 skgbasegui/skgtreeview.cpp:1170
 #: skgbasegui/skgtreeview.cpp:1219 skgbasegui/skgtreeview.cpp:1248
 #, fuzzy, kde-format
@@ -11834,7 +11834,7 @@ msgstr "Operacio rezignita"
 #: skgbankmodeler/skgoperationobject.cpp:417
 #: skgbankmodeler/skgoperationobject.cpp:470
 #: skgbankmodeler/skgoperationobject.cpp:483
-#: skgbankmodeler/skgunitobject.cpp:530
+#: skgbankmodeler/skgunitobject.cpp:1916
 #, kde-format
 msgctxt "Error message"
 msgid "%1 failed because linked object is not yet saved in the database."
@@ -14047,50 +14047,708 @@ msgctxt "Noun, a currency"
 msgid "Bitcoin"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:272
+#: skgbankmodeler/skgunitobject.cpp:272 skgbankmodeler/skgunitobject.cpp:286
+#: skgbankmodeler/skgunitobject.cpp:300 skgbankmodeler/skgunitobject.cpp:314
+#: skgbankmodeler/skgunitobject.cpp:328 skgbankmodeler/skgunitobject.cpp:342
+#: skgbankmodeler/skgunitobject.cpp:356 skgbankmodeler/skgunitobject.cpp:370
+#: skgbankmodeler/skgunitobject.cpp:384 skgbankmodeler/skgunitobject.cpp:398
+#: skgbankmodeler/skgunitobject.cpp:412 skgbankmodeler/skgunitobject.cpp:426
+#: skgbankmodeler/skgunitobject.cpp:440 skgbankmodeler/skgunitobject.cpp:454
+#: skgbankmodeler/skgunitobject.cpp:468 skgbankmodeler/skgunitobject.cpp:482
+#: skgbankmodeler/skgunitobject.cpp:496 skgbankmodeler/skgunitobject.cpp:510
+#: skgbankmodeler/skgunitobject.cpp:524 skgbankmodeler/skgunitobject.cpp:538
+#: skgbankmodeler/skgunitobject.cpp:552 skgbankmodeler/skgunitobject.cpp:566
+#: skgbankmodeler/skgunitobject.cpp:580 skgbankmodeler/skgunitobject.cpp:594
+#: skgbankmodeler/skgunitobject.cpp:608 skgbankmodeler/skgunitobject.cpp:622
+#: skgbankmodeler/skgunitobject.cpp:636 skgbankmodeler/skgunitobject.cpp:650
+#: skgbankmodeler/skgunitobject.cpp:664 skgbankmodeler/skgunitobject.cpp:678
+#: skgbankmodeler/skgunitobject.cpp:692 skgbankmodeler/skgunitobject.cpp:706
+#: skgbankmodeler/skgunitobject.cpp:720 skgbankmodeler/skgunitobject.cpp:734
+#: skgbankmodeler/skgunitobject.cpp:748 skgbankmodeler/skgunitobject.cpp:762
+#: skgbankmodeler/skgunitobject.cpp:776 skgbankmodeler/skgunitobject.cpp:790
+#: skgbankmodeler/skgunitobject.cpp:804 skgbankmodeler/skgunitobject.cpp:818
+#: skgbankmodeler/skgunitobject.cpp:832 skgbankmodeler/skgunitobject.cpp:846
+#: skgbankmodeler/skgunitobject.cpp:860 skgbankmodeler/skgunitobject.cpp:874
+#: skgbankmodeler/skgunitobject.cpp:888 skgbankmodeler/skgunitobject.cpp:902
+#: skgbankmodeler/skgunitobject.cpp:916 skgbankmodeler/skgunitobject.cpp:930
+#: skgbankmodeler/skgunitobject.cpp:944 skgbankmodeler/skgunitobject.cpp:958
+#: skgbankmodeler/skgunitobject.cpp:972 skgbankmodeler/skgunitobject.cpp:986
+#: skgbankmodeler/skgunitobject.cpp:1000 skgbankmodeler/skgunitobject.cpp:1014
+#: skgbankmodeler/skgunitobject.cpp:1028 skgbankmodeler/skgunitobject.cpp:1042
+#: skgbankmodeler/skgunitobject.cpp:1056 skgbankmodeler/skgunitobject.cpp:1070
+#: skgbankmodeler/skgunitobject.cpp:1084 skgbankmodeler/skgunitobject.cpp:1098
+#: skgbankmodeler/skgunitobject.cpp:1112 skgbankmodeler/skgunitobject.cpp:1126
+#: skgbankmodeler/skgunitobject.cpp:1140 skgbankmodeler/skgunitobject.cpp:1154
+#: skgbankmodeler/skgunitobject.cpp:1168 skgbankmodeler/skgunitobject.cpp:1182
+#: skgbankmodeler/skgunitobject.cpp:1196 skgbankmodeler/skgunitobject.cpp:1210
+#: skgbankmodeler/skgunitobject.cpp:1224 skgbankmodeler/skgunitobject.cpp:1238
+#: skgbankmodeler/skgunitobject.cpp:1252 skgbankmodeler/skgunitobject.cpp:1266
+#: skgbankmodeler/skgunitobject.cpp:1280 skgbankmodeler/skgunitobject.cpp:1294
+#: skgbankmodeler/skgunitobject.cpp:1308 skgbankmodeler/skgunitobject.cpp:1322
+#: skgbankmodeler/skgunitobject.cpp:1336 skgbankmodeler/skgunitobject.cpp:1350
+#: skgbankmodeler/skgunitobject.cpp:1364 skgbankmodeler/skgunitobject.cpp:1378
+#: skgbankmodeler/skgunitobject.cpp:1392 skgbankmodeler/skgunitobject.cpp:1406
+#: skgbankmodeler/skgunitobject.cpp:1420 skgbankmodeler/skgunitobject.cpp:1434
+#: skgbankmodeler/skgunitobject.cpp:1448 skgbankmodeler/skgunitobject.cpp:1462
+#: skgbankmodeler/skgunitobject.cpp:1476 skgbankmodeler/skgunitobject.cpp:1490
+#: skgbankmodeler/skgunitobject.cpp:1504 skgbankmodeler/skgunitobject.cpp:1518
+#: skgbankmodeler/skgunitobject.cpp:1532 skgbankmodeler/skgunitobject.cpp:1546
+#: skgbankmodeler/skgunitobject.cpp:1560 skgbankmodeler/skgunitobject.cpp:1574
+#: skgbankmodeler/skgunitobject.cpp:1588 skgbankmodeler/skgunitobject.cpp:1602
+#: skgbankmodeler/skgunitobject.cpp:1616 skgbankmodeler/skgunitobject.cpp:1630
+#: skgbankmodeler/skgunitobject.cpp:1644 skgbankmodeler/skgunitobject.cpp:1658
 #, kde-format
 msgctxt "Noun, the country of bitcoin"
 msgid "Internet"
 msgstr "Interreto"
 
-#: skgbankmodeler/skgunitobject.cpp:351
+#: skgbankmodeler/skgunitobject.cpp:283
+#, fuzzy, kde-format
+#| msgid "Other"
+msgctxt "Noun, a cryptocurrency"
+msgid "Ethereum"
+msgstr "Alia"
+
+#: skgbankmodeler/skgunitobject.cpp:297
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Ripple"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:311
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Bitcoin Cash"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:325
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Cardano"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:339
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "NEM"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:353
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Litecoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:367
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Stellar"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:381
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "IOTA"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:395
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "TRON"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:409
+#, fuzzy, kde-format
+#| msgctxt "Noun, bookmark name"
+#| msgid "Dashboard"
+msgctxt "Noun, a cryptocurrency"
+msgid "Dash"
+msgstr "Stirtablo"
+
+#: skgbankmodeler/skgunitobject.cpp:423
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "NEO"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:437
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Monero"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:451
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "EOS"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:465
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Qtum"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:479
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "ICON"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:493
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Bitcoin Gold"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:507
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Lisk"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:521
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "RaiBlocks"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:535
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Ethereum Classic"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:549
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Verge"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:563
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Siacoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:577
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "OmiseGO"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:591
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Bytecoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:605
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "BitConnect"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:619
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Populous"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:633
+#, fuzzy, kde-format
+#| msgid "Status"
+msgctxt "Noun, a cryptocurrency"
+msgid "Stratis"
+msgstr "Stato"
+
+#: skgbankmodeler/skgunitobject.cpp:647
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Zcash"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:661
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Dentacoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:675
+#, fuzzy, kde-format
+#| msgid "Share"
+msgctxt "Noun, a cryptocurrency"
+msgid "BitShares"
+msgstr "Komunigi"
+
+#: skgbankmodeler/skgunitobject.cpp:689
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Binance Coin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:703
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Dogecoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:717
+#, fuzzy, kde-format
+#| msgid "Status"
+msgctxt "Noun, a cryptocurrency"
+msgid "Status"
+msgstr "Stato"
+
+#: skgbankmodeler/skgunitobject.cpp:731
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Ardor"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:745
+#, fuzzy, kde-format
+#| msgid "Share"
+msgctxt "Noun, a cryptocurrency"
+msgid "KuCoin Shares"
+msgstr "Komunigi"
+
+#: skgbankmodeler/skgunitobject.cpp:759
+#, fuzzy, kde-format
+#| msgid "Other"
+msgctxt "Noun, a cryptocurrency"
+msgid "Tether"
+msgstr "Alia"
+
+#: skgbankmodeler/skgunitobject.cpp:773
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Steem"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:787
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Waves"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:801
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "VeChain"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:815
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "DigiByte"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:829
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Komodo"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:843
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Dragonchain"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:857
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Augur"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:871
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Golem"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:885
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Veritaseum"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:899
+#, fuzzy, kde-format
+#| msgctxt "Noun, a financial share, as in a stock market"
+#| msgid "Share"
+msgctxt "Noun, a cryptocurrency"
+msgid "Hshare"
+msgstr "Komunigi"
+
+#: skgbankmodeler/skgunitobject.cpp:913
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Kin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:927
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "SALT"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:941
+#, fuzzy, kde-format
+#| msgid "Selection"
+msgctxt "Noun, a cryptocurrency"
+msgid "Electroneum"
+msgstr "Elekto"
+
+#: skgbankmodeler/skgunitobject.cpp:955
+#, fuzzy, kde-format
+#| msgid "Ask"
+msgctxt "Noun, a cryptocurrency"
+msgid "Ark"
+msgstr "Demandi"
+
+#: skgbankmodeler/skgunitobject.cpp:969
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Dent"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:983
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Ethos"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:997
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Basic Attention Token"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1011
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "ReddCoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1025
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "0x"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1039
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Decred"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1053
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Nexus"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1067
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Experience Points"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1081
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "QASH"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1095
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Kyber Network"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1109
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "PIVX"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1123
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "FunFair"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1137
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Factom"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1151
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Neblio"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1165
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Request Network"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1179
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Aeternity"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1193
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Substratum"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1207
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Power Ledger"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1221
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "WAX"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1235
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "aelf"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1249
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Bytom"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1263
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Aion"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1277
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "RChain"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1291
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "DigitalNote"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1305
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Enigma"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1319
+#, fuzzy, kde-format
+#| msgid "&Next"
+msgctxt "Noun, a cryptocurrency"
+msgid "Nxt"
+msgstr "Sek&va"
+
+#: skgbankmodeler/skgunitobject.cpp:1333
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Time New Bank"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1347
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "BitcoinDark"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1361
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "MonaCoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1375
+#, fuzzy, kde-format
+#| msgid "Quit"
+msgctxt "Noun, a cryptocurrency"
+msgid "Quantstamp"
+msgstr "Forlasi"
+
+#: skgbankmodeler/skgunitobject.cpp:1389
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "MaidSafeCoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1403
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Byteball Bytes"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1417
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Gas"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1431
+#, fuzzy, kde-format
+#| msgid "Lines:"
+msgctxt "Noun, a cryptocurrency"
+msgid "ChainLink"
+msgstr "Linioj:"
+
+#: skgbankmodeler/skgunitobject.cpp:1445
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Syscoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1459
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Santiment Network Token"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1473
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Cobinhood"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1487
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Red Pulse"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1501
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "DigixDAO"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1515
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "TenX"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1529
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Iconomi"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1543
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Po.et"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1557
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "ZCoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1571
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Gnosis"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1585
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "BLOCKv"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1599
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Walton"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1613
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "PACcoin"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1627
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "DeepBrain Chain"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1641
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "ETHLend"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1655
+#, kde-format
+msgctxt "Noun, a cryptocurrency"
+msgid "Civic"
+msgstr ""
+
+#: skgbankmodeler/skgunitobject.cpp:1737
 #, kde-format
 msgctxt "Error message"
 msgid "Unknown unit '%1'"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:514
+#: skgbankmodeler/skgunitobject.cpp:1900
 #, kde-format
 msgctxt "Error message"
 msgid "Reference unit of a unit cannot be itself."
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:546
+#: skgbankmodeler/skgunitobject.cpp:1932
 #, kde-format
 msgctxt "Progression step"
 msgid "Simplify unit"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:549
+#: skgbankmodeler/skgunitobject.cpp:1935
 #, kde-format
 msgctxt "Progression step"
 msgid "Analyze unit"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:588
+#: skgbankmodeler/skgunitobject.cpp:1974
 #, fuzzy, kde-format
 #| msgid "Delete failed"
 msgctxt "Progression step"
 msgid "Remove useless values"
 msgstr "La forigado fiaskis"
 
-#: skgbankmodeler/skgunitobject.cpp:731
+#: skgbankmodeler/skgunitobject.cpp:2117
 #, kde-format
 msgctxt "Error message"
 msgid "Invalid ratio. Ratio must be greater than 0."
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:775
+#: skgbankmodeler/skgunitobject.cpp:2161
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid ""
@@ -14098,19 +14756,19 @@ msgid ""
 "code of the unit"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:777
+#: skgbankmodeler/skgunitobject.cpp:2163
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid "%1 will be replaced by the current day in format yyyy-MM-dd"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:779
+#: skgbankmodeler/skgunitobject.cpp:2165
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid "%1 will be replaced by the previous date in format yyyy-MM-dd"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:786
+#: skgbankmodeler/skgunitobject.cpp:2172
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid ""
@@ -14119,56 +14777,56 @@ msgid ""
 "extracted. CSVR means CSV in reverse mode."
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:790
+#: skgbankmodeler/skgunitobject.cpp:2176
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid "The regular expression for the price (see %1)"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:794
+#: skgbankmodeler/skgunitobject.cpp:2180
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid "The regular expression for the date (see %1)"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:798
+#: skgbankmodeler/skgunitobject.cpp:2184
 #, kde-format
 msgctxt "Description test for a text file used to define a source of download"
 msgid "The format of the date (see %1) or \"UNIX\" for unix time"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:926 skgbankmodeler/skgunitobject.cpp:1073
+#: skgbankmodeler/skgunitobject.cpp:2312 skgbankmodeler/skgunitobject.cpp:2459
 #, kde-format
 msgctxt "Error message"
 msgid "Source of download %1 is not installed."
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:1035
+#: skgbankmodeler/skgunitobject.cpp:2421
 #, kde-format
 msgctxt "Information message"
 msgid "Price not found for '%1' with regular expression '%2' in line '%3'"
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:1039
+#: skgbankmodeler/skgunitobject.cpp:2425
 #, fuzzy, kde-format
 #| msgid "Operation canceled"
 msgctxt "An information message"
 msgid "Open url '%1' failed"
 msgstr "Operacio rezignita"
 
-#: skgbankmodeler/skgunitobject.cpp:1047
+#: skgbankmodeler/skgunitobject.cpp:2433
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to download unit %1 with Internet code %2."
 msgstr ""
 
-#: skgbankmodeler/skgunitobject.cpp:1066
+#: skgbankmodeler/skgunitobject.cpp:2452
 #, kde-format
 msgctxt "Native download source (Yahoo)"
 msgid "Yahoo"
 msgstr "Jahuo"
 
-#: skgbankmodeler/skgunitobject.cpp:1099
+#: skgbankmodeler/skgunitobject.cpp:2485
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to open unit %1 with Internet code %2."
