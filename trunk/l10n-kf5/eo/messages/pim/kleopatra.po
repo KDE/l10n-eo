@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-01-09 03:18+0100\n"
+"POT-Creation-Date: 2018-01-10 05:06+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -752,7 +752,7 @@ msgid "Revocation Certificates "
 msgstr "Vidigi atestilon 0x%1"
 
 #: src/commands/genrevokecommand.cpp:139
-#: src/crypto/autodecryptverifyfilescontroller.cpp:217 src/utils/output.cpp:497
+#: src/crypto/autodecryptverifyfilescontroller.cpp:224 src/utils/output.cpp:497
 #, kde-format
 msgid ""
 "The file <b>%1</b> already exists.\n"
@@ -760,7 +760,7 @@ msgid ""
 msgstr ""
 
 #: src/commands/genrevokecommand.cpp:141
-#: src/crypto/autodecryptverifyfilescontroller.cpp:219 src/utils/output.cpp:499
+#: src/crypto/autodecryptverifyfilescontroller.cpp:226 src/utils/output.cpp:499
 #, kde-format
 msgid "Overwrite Existing File?"
 msgstr ""
@@ -1100,7 +1100,7 @@ msgid "Import CRL Finished"
 msgstr ""
 
 #: src/commands/importpaperkeycommand.cpp:110
-#: src/crypto/autodecryptverifyfilescontroller.cpp:307
+#: src/crypto/autodecryptverifyfilescontroller.cpp:314
 #, kde-kuit-format
 msgid "Cannot open <filename>%1</filename> for reading."
 msgstr ""
@@ -1712,12 +1712,25 @@ msgid ""
 "Automatically start operation based on input detection for decrypt/verify."
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:242
+#. i18n: ectx: label, entry (DontUseTmpDir), group (FileOperations)
+#: src/conf/cryptooperationsconfigwidget.cpp:237
+#: src/kcfg/fileoperationspreferences.kcfg:30
+#, kde-format
+msgid "Create temporary decrypted files in the folder of the encrypted file."
+msgstr ""
+
+#: src/conf/cryptooperationsconfigwidget.cpp:238
+#, kde-format
+msgctxt "@info"
+msgid "Set this option to avoid using the users temporary directory."
+msgstr ""
+
+#: src/conf/cryptooperationsconfigwidget.cpp:246
 #, kde-format
 msgid "Checksum program to use when creating checksum files:"
 msgstr ""
 
-#: src/conf/cryptooperationsconfigwidget.cpp:247
+#: src/conf/cryptooperationsconfigwidget.cpp:251
 #, kde-format
 msgid "Archive command to use when archiving files:"
 msgstr ""
@@ -2097,7 +2110,7 @@ msgstr ""
 msgid "The GpgSM process ended prematurely because of an unexpected error."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:153
+#: src/crypto/autodecryptverifyfilescontroller.cpp:159
 #, kde-kuit-format
 msgid ""
 "Failed to find encrypted or signed data in one or more files.<nl/>You can "
@@ -2105,30 +2118,30 @@ msgid ""
 "encrypted data please report a bug (see Help->Report Bug)."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:206
-#: src/crypto/autodecryptverifyfilescontroller.cpp:240
+#: src/crypto/autodecryptverifyfilescontroller.cpp:213
+#: src/crypto/autodecryptverifyfilescontroller.cpp:247
 #, kde-kuit-format
 msgid "Failed to move <filename>%1</filename> to <filename>%2</filename>."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:221 src/utils/output.cpp:501
+#: src/crypto/autodecryptverifyfilescontroller.cpp:228 src/utils/output.cpp:501
 #, kde-format
 msgid "Overwrite All"
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:233
+#: src/crypto/autodecryptverifyfilescontroller.cpp:240
 #, kde-kuit-format
 msgid "Failed to delete <filename>%1</filename>."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:315
+#: src/crypto/autodecryptverifyfilescontroller.cpp:322
 #, kde-kuit-format
 msgid ""
 "The file <filename>%1</filename> contains certificates and can't be "
 "decrypted or verified."
 msgstr ""
 
-#: src/crypto/autodecryptverifyfilescontroller.cpp:365
+#: src/crypto/autodecryptverifyfilescontroller.cpp:372
 #, kde-kuit-format
 msgid "Select the file to verify with \"%1\""
 msgstr ""
@@ -4951,6 +4964,12 @@ msgid ""
 "Set this option to encode encrypted or signed files as base64 encoded text. "
 "So that they can be opened with an editor or sent in a mail body. This will "
 "increase file size by one third."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (DontUseTmpDir), group (FileOperations)
+#: src/kcfg/fileoperationspreferences.kcfg:31
+#, kde-format
+msgid "Set this option to avoid using the users temporary directory."
 msgstr ""
 
 #. i18n: ectx: label, entry (RefreshInterval), group (SMime Validation)
