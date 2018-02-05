@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-01-29 01:47+0100\n"
+"POT-Creation-Date: 2018-02-05 01:46+0100\n"
 "PO-Revision-Date: 2015-03-25 21:45+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -8212,29 +8212,21 @@ msgstr "%1 - %2"
 #, kde-format
 msgid ""
 "The bitrate is a measure of the quantity of data used to represent a second "
-"of the audio track.<br>The <b>AAC</b> encoder used by Amarok supports a <a "
-"href=http://en.wikipedia.org/wiki/"
-"Variable_bitrate#Advantages_and_disadvantages_of_VBR>variable bitrate (VBR)</"
-"a> setting, which means that the bitrate value fluctuates along the track "
-"based on the complexity of the audio content. More complex intervals of data "
-"are encoded with a higher bitrate than less complex ones; this approach "
-"yields overall better quality and a smaller file than having a constant "
-"bitrate throughout the track.<br>For this reason, the bitrate measure in "
-"this slider is just an estimate of the <a href=http://www.ffmpeg.org/faq."
-"html#SEC21>average bitrate</a> of the encoded track.<br><b>150kb/s</b> is a "
-"good choice for music listening on a portable player.<br/>Anything below "
-"<b>120kb/s</b> might be unsatisfactory for music and anything above <b>200kb/"
-"s</b> is probably overkill."
+"of the audio track.<br>The encoder used by Amarok operates better with a "
+"constant bitrate.<br>VBR is experimental and likely to get even worse "
+"results than the CBR.<br>For this reason, the bitrate measure in this slider "
+"is a pretty accurate estimate of the bitrate of the encoded track.<br>The "
+"encoder is transparent at 128kbps for most samples tested with artifacts "
+"only appearing in extreme cases."
 msgstr ""
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:58
-#: core/transcoding/formats/TranscodingMp3Format.cpp:55
-#: core/transcoding/formats/TranscodingOpusFormat.cpp:64
+#: core/transcoding/formats/TranscodingAacFormat.cpp:48
+#: core/transcoding/formats/TranscodingWmaFormat.cpp:59
 #, kde-format
-msgid "Expected average bitrate for variable bitrate encoding"
+msgid "Bitrate target for constant bitrate encoding"
 msgstr ""
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:59
+#: core/transcoding/formats/TranscodingAacFormat.cpp:49
 #: core/transcoding/formats/TranscodingFlacFormat.cpp:42
 #: core/transcoding/formats/TranscodingMp3Format.cpp:56
 #: core/transcoding/formats/TranscodingOpusFormat.cpp:65
@@ -8245,7 +8237,7 @@ msgstr ""
 msgid "Smaller file"
 msgstr "pli malgranda ol"
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:59
+#: core/transcoding/formats/TranscodingAacFormat.cpp:49
 #: core/transcoding/formats/TranscodingMp3Format.cpp:56
 #: core/transcoding/formats/TranscodingOpusFormat.cpp:65
 #: core/transcoding/formats/TranscodingVorbisFormat.cpp:60
@@ -8254,12 +8246,12 @@ msgstr "pli malgranda ol"
 msgid "Better sound quality"
 msgstr ""
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:66
+#: core/transcoding/formats/TranscodingAacFormat.cpp:56
 #, kde-format
-msgid "AAC (Non-Free)"
+msgid "AAC"
 msgstr ""
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:74
+#: core/transcoding/formats/TranscodingAacFormat.cpp:64
 #, kde-format
 msgctxt ""
 "Feel free to redirect the english Wikipedia link to a local version, if it "
@@ -8268,8 +8260,7 @@ msgid ""
 "<a href=http://en.wikipedia.org/wiki/Advanced_Audio_Coding>Advanced Audio "
 "Coding</a> (AAC) is a patented lossy codec for digital audio.<br>AAC "
 "generally achieves better sound quality than MP3 at similar bit rates. It is "
-"a reasonable choice for the iPod and some other portable music players. Non-"
-"Free implementation."
+"a reasonable choice for the iPod and some other portable music players."
 msgstr ""
 
 #: core/transcoding/formats/TranscodingAlacFormat.cpp:33
@@ -8343,6 +8334,12 @@ msgid ""
 "s</b> is a good choice for music listening on a portable player.<br/"
 ">Anything below <b>120kb/s</b> might be unsatisfactory for music and "
 "anything above <b>205kb/s</b> is probably overkill."
+msgstr ""
+
+#: core/transcoding/formats/TranscodingMp3Format.cpp:55
+#: core/transcoding/formats/TranscodingOpusFormat.cpp:64
+#, kde-format
+msgid "Expected average bitrate for variable bitrate encoding"
 msgstr ""
 
 #: core/transcoding/formats/TranscodingMp3Format.cpp:71
@@ -8439,11 +8436,6 @@ msgid ""
 "choice for music listening on a portable player.<br/>Anything below <b>112kb/"
 "s</b> might be unsatisfactory for music and anything above <b>182kb/s</b> is "
 "probably overkill."
-msgstr ""
-
-#: core/transcoding/formats/TranscodingWmaFormat.cpp:59
-#, kde-format
-msgid "Bitrate target for constant bitrate encoding"
 msgstr ""
 
 #: core/transcoding/formats/TranscodingWmaFormat.cpp:67
@@ -17508,13 +17500,13 @@ msgstr "Laŭteco: %1%"
 msgid "Transcode Tracks"
 msgstr "Aldoni al la ludlisto"
 
-#: transcoding/TranscodingAssistantDialog.cpp:50
+#: transcoding/TranscodingAssistantDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Transcoding"
 msgid "Transc&ode"
 msgstr "Transkodado"
 
-#: transcoding/TranscodingAssistantDialog.cpp:61
+#: transcoding/TranscodingAssistantDialog.cpp:60
 #, kde-format
 msgid ""
 "While copying, you can choose to transcode your music files into another "
@@ -17523,17 +17515,17 @@ msgid ""
 "program."
 msgstr ""
 
-#: transcoding/TranscodingAssistantDialog.cpp:66
+#: transcoding/TranscodingAssistantDialog.cpp:65
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopii"
 
-#: transcoding/TranscodingAssistantDialog.cpp:67
+#: transcoding/TranscodingAssistantDialog.cpp:66
 #, kde-format
 msgid "Just copy the tracks without transcoding them."
 msgstr ""
 
-#: transcoding/TranscodingAssistantDialog.cpp:71
+#: transcoding/TranscodingAssistantDialog.cpp:70
 #, kde-format
 msgid ""
 "While moving, you can choose to transcode your music files into another "
@@ -17543,24 +17535,24 @@ msgid ""
 "original location."
 msgstr ""
 
-#: transcoding/TranscodingAssistantDialog.cpp:77
+#: transcoding/TranscodingAssistantDialog.cpp:76
 #, kde-format
 msgid "&Move"
 msgstr "&Movi"
 
-#: transcoding/TranscodingAssistantDialog.cpp:78
+#: transcoding/TranscodingAssistantDialog.cpp:77
 #, kde-format
 msgid "Just move the tracks without transcoding them."
 msgstr ""
 
-#: transcoding/TranscodingAssistantDialog.cpp:145
+#: transcoding/TranscodingAssistantDialog.cpp:144
 #, fuzzy, kde-format
 #| msgid "No description available..."
 msgctxt "Tooltip of a disabled transcoding encoder option"
 msgid "Not currently available on your system."
 msgstr "Nenia priskribo trovebla..."
 
-#: transcoding/TranscodingAssistantDialog.cpp:152
+#: transcoding/TranscodingAssistantDialog.cpp:151
 #, kde-format
 msgid "Target collection indicates this format would not be playable."
 msgstr ""
