@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tellico\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-02-06 05:56+0100\n"
+"POT-Creation-Date: 2018-02-08 05:49+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -644,8 +644,9 @@ msgstr "Ĝeneralo"
 #: src/collections/bibtexcollection.cpp:39
 #: src/collections/bookcollection.cpp:32
 #: src/collections/comicbookcollection.cpp:32
-#: src/fetch/bedethequefetcher.cpp:326 src/translators/grs1importer.cpp:73
-#: src/translators/grs1importer.cpp:78 src/translators/pdfimporter.cpp:212
+#: src/fetch/bedethequefetcher.cpp:326 src/fetch/isbndbfetcher.cpp:297
+#: src/translators/grs1importer.cpp:73 src/translators/grs1importer.cpp:78
+#: src/translators/pdfimporter.cpp:212
 #, kde-format
 msgid "Publishing"
 msgstr ""
@@ -3048,9 +3049,10 @@ msgstr ""
 #: src/fetch/allocinefetcher.cpp:238 src/fetch/amazonfetcher.cpp:760
 #: src/fetch/discogsfetcher.cpp:192 src/fetch/filmasterfetcher.cpp:142
 #: src/fetch/googlebookfetcher.cpp:196 src/fetch/igdbfetcher.cpp:180
-#: src/fetch/kinofetcher.cpp:328 src/fetch/kinopoiskfetcher.cpp:383
-#: src/fetch/moviemeterfetcher.cpp:162 src/fetch/omdbfetcher.cpp:177
-#: src/fetch/themoviedbfetcher.cpp:210 src/fetch/vndbfetcher.cpp:156
+#: src/fetch/isbndbfetcher.cpp:232 src/fetch/kinofetcher.cpp:328
+#: src/fetch/kinopoiskfetcher.cpp:383 src/fetch/moviemeterfetcher.cpp:162
+#: src/fetch/omdbfetcher.cpp:177 src/fetch/themoviedbfetcher.cpp:210
+#: src/fetch/vndbfetcher.cpp:156
 #, kde-format
 msgid "The cover image could not be loaded."
 msgstr ""
@@ -3169,13 +3171,13 @@ msgid ""
 msgstr ""
 
 #: src/fetch/amazonfetcher.cpp:203 src/fetch/discogsfetcher.cpp:92
-#: src/fetch/igdbfetcher.cpp:103 src/fetch/omdbfetcher.cpp:101
-#: src/fetch/themoviedbfetcher.cpp:127
+#: src/fetch/igdbfetcher.cpp:103 src/fetch/isbndbfetcher.cpp:94
+#: src/fetch/omdbfetcher.cpp:101 src/fetch/themoviedbfetcher.cpp:127
 #, kde-format
 msgid "Those values must be entered in the data source settings."
 msgstr ""
 
-#: src/fetch/amazonfetcher.cpp:598 src/fetch/isbndbfetcher.cpp:286
+#: src/fetch/amazonfetcher.cpp:598
 #, kde-format
 msgid "Results from %1: %2/%3"
 msgstr ""
@@ -3188,7 +3190,7 @@ msgstr ""
 #: src/fetch/amazonfetcher.cpp:921 src/fetch/bibliosharefetcher.cpp:166
 #: src/fetch/crossreffetcher.cpp:313 src/fetch/discogsfetcher.cpp:426
 #: src/fetch/giantbombfetcher.cpp:214 src/fetch/googlebookfetcher.cpp:378
-#: src/fetch/igdbfetcher.cpp:573 src/fetch/isbndbfetcher.cpp:368
+#: src/fetch/igdbfetcher.cpp:580 src/fetch/isbndbfetcher.cpp:338
 #: src/fetch/omdbfetcher.cpp:374 src/fetch/themoviedbfetcher.cpp:459
 #, kde-format
 msgid ""
@@ -3199,7 +3201,7 @@ msgstr ""
 
 #: src/fetch/amazonfetcher.cpp:934 src/fetch/bibliosharefetcher.cpp:179
 #: src/fetch/giantbombfetcher.cpp:227 src/fetch/googlebookfetcher.cpp:391
-#: src/fetch/igdbfetcher.cpp:586 src/fetch/isbndbfetcher.cpp:381
+#: src/fetch/igdbfetcher.cpp:593 src/fetch/isbndbfetcher.cpp:351
 #: src/fetch/omdbfetcher.cpp:387 src/fetch/themoviedbfetcher.cpp:472
 #, kde-format
 msgid "Access key: "
@@ -3374,8 +3376,7 @@ msgid "Bedetheque Link"
 msgstr "Bedetheque.com"
 
 #: src/fetch/bibliosharefetcher.cpp:185 src/fetch/giantbombfetcher.cpp:233
-#: src/fetch/googlebookfetcher.cpp:397 src/fetch/isbndbfetcher.cpp:387
-#: src/fetch/themoviedbfetcher.cpp:478
+#: src/fetch/googlebookfetcher.cpp:397 src/fetch/themoviedbfetcher.cpp:478
 #, kde-format
 msgid ""
 "The default Tellico key may be used, but searching may fail due to reaching "
@@ -3434,7 +3435,8 @@ msgid "Danish Bibliographic Center (DBC.dk)"
 msgstr ""
 
 #: src/fetch/discogsfetcher.cpp:90 src/fetch/igdbfetcher.cpp:101
-#: src/fetch/omdbfetcher.cpp:99 src/fetch/themoviedbfetcher.cpp:125
+#: src/fetch/isbndbfetcher.cpp:92 src/fetch/omdbfetcher.cpp:99
+#: src/fetch/themoviedbfetcher.cpp:125
 #, kde-format
 msgid "An access key is required to use this data source."
 msgstr ""
@@ -3627,7 +3629,7 @@ msgid "GiantBomb Link"
 msgstr ""
 
 #: src/fetch/giantbombfetcher.cpp:202 src/fetch/igdbfetcher.cpp:234
-#: src/fetch/igdbfetcher.cpp:560
+#: src/fetch/igdbfetcher.cpp:559
 #, fuzzy, kde-format
 #| msgid "Rating"
 msgid "PEGI Rating"
@@ -3648,15 +3650,15 @@ msgstr ""
 msgid "Illustrator"
 msgstr ""
 
-#: src/fetch/hathitrustfetcher.cpp:305 src/fetch/isbndbfetcher.cpp:356
+#: src/fetch/hathitrustfetcher.cpp:305 src/fetch/isbndbfetcher.cpp:319
 #: src/fetch/srufetcher.cpp:500 src/fetch/z3950fetcher.cpp:565
 #, kde-format
 msgctxt "Dewey Decimal classification system"
 msgid "Dewey Decimal"
 msgstr ""
 
-#: src/fetch/hathitrustfetcher.cpp:306 src/fetch/isbndbfetcher.cpp:357
-#: src/fetch/srufetcher.cpp:501 src/fetch/z3950fetcher.cpp:566
+#: src/fetch/hathitrustfetcher.cpp:306 src/fetch/srufetcher.cpp:501
+#: src/fetch/z3950fetcher.cpp:566
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "Library of Congress classification system"
@@ -3675,12 +3677,12 @@ msgid ""
 "com</a>."
 msgstr ""
 
-#: src/fetch/igdbfetcher.cpp:240 src/fetch/igdbfetcher.cpp:561
+#: src/fetch/igdbfetcher.cpp:240 src/fetch/igdbfetcher.cpp:560
 #, kde-format
 msgid "IGDB Link"
 msgstr ""
 
-#: src/fetch/igdbfetcher.cpp:551
+#: src/fetch/igdbfetcher.cpp:550
 #, fuzzy, kde-format
 #| msgid "Internet Movie Database"
 msgid "Internet Game Database (IGDB.com)"
@@ -3740,15 +3742,12 @@ msgstr ""
 msgid "Download cover &image"
 msgstr ""
 
-#: src/fetch/isbndbfetcher.cpp:239
+#: src/fetch/isbndbfetcher.cpp:296
 #, kde-format
-msgid ""
-"<qt><p><b>The ISBNndb.com server reports an access key error.</b></p>You may "
-"have reached the maximum number of searches for today with this key, or you "
-"may have entered the access key incorrectly.</qt>"
+msgid "Dewey Decimal"
 msgstr ""
 
-#: src/fetch/isbndbfetcher.cpp:346
+#: src/fetch/isbndbfetcher.cpp:309
 #, kde-format
 msgid "ISBNdb.com"
 msgstr "ISBNdb.com"
