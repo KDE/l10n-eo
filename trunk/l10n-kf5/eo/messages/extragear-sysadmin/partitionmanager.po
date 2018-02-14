@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-02-06 03:18+0100\n"
+"POT-Creation-Date: 2018-02-14 03:11+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2524,13 +2524,14 @@ msgctxt "@label partition state"
 msgid "mounted"
 msgstr ""
 
-#: gui/partpropsdialog.cpp:133
+#: gui/partpropsdialog.cpp:133 gui/partpropsdialog.cpp:136
+#: gui/partpropsdialog.cpp:137
 #, kde-kuit-format
 msgctxt "@item uuid"
 msgid "(none)"
 msgstr ""
 
-#: gui/partpropsdialog.cpp:336
+#: gui/partpropsdialog.cpp:350
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -2541,26 +2542,26 @@ msgid ""
 "filename> will unrecoverably be lost.</para>"
 msgstr ""
 
-#: gui/partpropsdialog.cpp:338
+#: gui/partpropsdialog.cpp:352
 #, kde-kuit-format
 msgctxt "@title:window"
 msgid "Really Recreate <filename>%1</filename> with File System %2?"
 msgstr ""
 
-#: gui/partpropsdialog.cpp:339
+#: gui/partpropsdialog.cpp:353
 #, fuzzy, kde-kuit-format
 #| msgid "File System"
 msgctxt "@action:button"
 msgid "Change the File System"
 msgstr "Dosiersistemo"
 
-#: gui/partpropsdialog.cpp:340
+#: gui/partpropsdialog.cpp:354
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Do Not Change the File System"
 msgstr ""
 
-#: gui/partpropsdialog.cpp:359
+#: gui/partpropsdialog.cpp:373
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -2571,51 +2572,43 @@ msgid ""
 "para>"
 msgstr ""
 
-#: gui/partpropsdialog.cpp:361
+#: gui/partpropsdialog.cpp:375
 #, fuzzy, kde-kuit-format
 #| msgid "Mount Point"
 msgctxt "@title:window"
 msgid "Really Recreate File System on <filename>%1</filename>?"
 msgstr "Kroĉpunkto"
 
-#: gui/partpropsdialog.cpp:362
+#: gui/partpropsdialog.cpp:376
 #, fuzzy, kde-kuit-format
 #| msgid "File System"
 msgctxt "@action:button"
 msgid "Recreate the File System"
 msgstr "Dosiersistemo"
 
-#: gui/partpropsdialog.cpp:363
+#: gui/partpropsdialog.cpp:377
 #, kde-kuit-format
 msgctxt "@action:button"
 msgid "Do Not Recreate the File System"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelFileSystem)
-#: gui/partpropswidgetbase.ui:49
+#: gui/partpropswidgetbase.ui:33
 #, fuzzy, kde-format
 #| msgid "File System"
 msgctxt "@label:listbox"
 msgid "File syste&m:"
 msgstr "Dosiersistemo"
 
-#. i18n: ectx: property (text), widget (QLabel, m_LabelTextLabel)
-#: gui/partpropswidgetbase.ui:65
-#, fuzzy, kde-format
-#| msgid "Label"
-msgctxt "@label"
-msgid "&Label:"
-msgstr "Etikedo"
-
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextNoSetLabel)
-#: gui/partpropswidgetbase.ui:81 gui/sizedialogwidgetbase.ui:144
+#: gui/partpropswidgetbase.ui:49 gui/sizedialogwidgetbase.ui:144
 #, kde-format
 msgctxt "@label"
 msgid "This file system does not support setting a label."
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_CheckRecreate)
-#: gui/partpropswidgetbase.ui:91
+#: gui/partpropswidgetbase.ui:62
 #, kde-format
 msgid ""
 "This will reformat the filesystem, losing all contents, but keeping the same "
@@ -2623,25 +2616,33 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_CheckRecreate)
-#: gui/partpropswidgetbase.ui:94
+#: gui/partpropswidgetbase.ui:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Recreate existing file system"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextMountPoint)
-#: gui/partpropswidgetbase.ui:108
+#: gui/partpropswidgetbase.ui:95
 #, kde-format
 msgctxt "@label"
 msgid "Mount point:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextRole)
-#: gui/partpropswidgetbase.ui:125
+#: gui/partpropswidgetbase.ui:112
 #, kde-format
 msgctxt "@label"
 msgid "Partition type:"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_LabelTextLabel)
+#: gui/partpropswidgetbase.ui:122
+#, fuzzy, kde-format
+#| msgid "Label"
+msgctxt "@label"
+msgid "&Label:"
+msgstr "Etikedo"
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextStatus)
 #: gui/partpropswidgetbase.ui:142
@@ -2701,10 +2702,26 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_LabelTextFlags)
 #: gui/partpropswidgetbase.ui:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Flags:"
 msgctxt "@label"
-msgid "Fla&gs:"
-msgstr ""
+msgid "&Flags:"
+msgstr "Flagoj:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_LabelTextPartitionLabel)
+#: gui/partpropswidgetbase.ui:356
+#, fuzzy, kde-format
+#| msgid "Mount Point"
+msgid "Partition Label:"
+msgstr "Kroĉpunkto"
+
+#. i18n: ectx: property (text), widget (QLabel, m_LabelTextPartitionUuid)
+#: gui/partpropswidgetbase.ui:366
+#, fuzzy, kde-format
+#| msgid "Mount Point"
+msgid "Partition UUID:"
+msgstr "Kroĉpunkto"
 
 #: gui/parttablewidget.cpp:37
 #, kde-kuit-format
@@ -3398,10 +3415,6 @@ msgstr "Kolumnoj"
 #~ msgctxt "@info"
 #~ msgid "Do you want to overwrite the existing file <filename>%1</filename>?"
 #~ msgstr "Kroĉpunkto"
-
-#~ msgctxt "@label"
-#~ msgid "Flags:"
-#~ msgstr "Flagoj:"
 
 #, fuzzy
 #~| msgid "Mount Point"
