@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacomtablet\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-02-10 03:07+0100\n"
+"POT-Creation-Date: 2018-03-08 03:21+0100\n"
 "PO-Revision-Date: 2010-06-20 20:01+0200\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -213,7 +213,7 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroupBox)
 #: src/kcmodule/buttonpagewidget.ui:29
-#: src/kcmodule/kcmwacomtabletwidget.cpp:427
+#: src/kcmodule/kcmwacomtabletwidget.cpp:434
 #, kde-format
 msgid "Express Buttons"
 msgstr ""
@@ -409,6 +409,20 @@ msgstr ""
 msgid "No Tablet Found"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QCommandLinkButton, buttonRunTabletFinder)
+#: src/kcmodule/errorwidget.ui:107
+#, kde-format
+msgid "Manually register a tablet device"
+msgstr ""
+
+#. i18n: ectx: property (description), widget (QCommandLinkButton, buttonRunTabletFinder)
+#: src/kcmodule/errorwidget.ui:110
+#, kde-format
+msgid ""
+"This will open another window, prompting you to describe your tablet device. "
+"After you're done, please restart your desktop session."
+msgstr ""
+
 #: src/kcmodule/generalpagewidget.cpp:79
 #, kde-format
 msgid "Wacom Tablet Settings"
@@ -482,53 +496,64 @@ msgstr ""
 msgid "In this module you can configure your Wacom tablet profiles"
 msgstr ""
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:156
+#: src/kcmodule/kcmwacomtabletwidget.cpp:160
 #, kde-format
 msgid "KDE tablet service not found"
 msgstr ""
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:157
+#: src/kcmodule/kcmwacomtabletwidget.cpp:161
 #, kde-format
 msgid ""
 "Please start the KDE wacom tablet service to use this configuration dialog.\n"
 "The service is required for tablet detection and profile support."
 msgstr ""
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:162
+#: src/kcmodule/kcmwacomtabletwidget.cpp:165
+#, kde-format
+msgid "Unsupported platform detected"
+msgstr ""
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:166
+#, kde-format
+msgid "Currently only X11 is supported."
+msgstr ""
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:169
 #, kde-format
 msgid "No tablet device detected"
 msgstr ""
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:163
+#: src/kcmodule/kcmwacomtabletwidget.cpp:170
 #, kde-format
 msgid ""
 "Please connect a tablet device to continue.\n"
-"If your device is already connected it is currently unsupported."
+"If your device is already connected, it is currently not in the device "
+"database."
 msgstr ""
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:216
+#: src/kcmodule/kcmwacomtabletwidget.cpp:222
 #, kde-format
 msgid "Add new profile"
 msgstr ""
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:217
+#: src/kcmodule/kcmwacomtabletwidget.cpp:223
 #, kde-format
 msgid "Profile name:"
 msgstr "Nomo de profilo:"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:411
+#: src/kcmodule/kcmwacomtabletwidget.cpp:418
 #, kde-format
 msgctxt "Name of the default profile that will be created if none exist."
 msgid "Default"
 msgstr "Defaŭlta"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:420
+#: src/kcmodule/kcmwacomtabletwidget.cpp:427
 #, kde-format
 msgctxt "Basic overview page for the tablet hardware"
 msgid "General"
 msgstr "Ĝenerale"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:421
+#: src/kcmodule/kcmwacomtabletwidget.cpp:428
 #, fuzzy, kde-format
 #| msgid "Eraser"
 msgid "Stylus"
@@ -536,7 +561,7 @@ msgstr "Skrapgumo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, generalGroupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, tabletGroupBox)
-#: src/kcmodule/kcmwacomtabletwidget.cpp:430
+#: src/kcmodule/kcmwacomtabletwidget.cpp:437
 #: src/kcmodule/tabletareaselectionview.ui:160
 #: src/kcmodule/tabletpagewidget.ui:17
 #, kde-format
@@ -544,9 +569,14 @@ msgid "Tablet"
 msgstr "Tabulo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, touchGroupBox)
-#: src/kcmodule/kcmwacomtabletwidget.cpp:436 src/kcmodule/touchpagewidget.ui:17
+#: src/kcmodule/kcmwacomtabletwidget.cpp:443 src/kcmodule/touchpagewidget.ui:17
 #, kde-format
 msgid "Touch"
+msgstr ""
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:496
+#, kde-format
+msgid "Failed to launch Wacom tablet finder tool. Check your installation."
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KCMWacomTabletWidget)
@@ -1239,13 +1269,13 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/tabletfinder/dialog.ui:162
 #, kde-format
-msgid "GroupBox"
-msgstr "GrupoSkatolo"
+msgid "Button mapping"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/tabletfinder/dialog.ui:170
 #, kde-format
-msgid "Number of available Express Keys:"
+msgid "Number of available buttons (including pen tip):"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mapButtons)
@@ -1259,12 +1289,12 @@ msgstr ""
 msgid "Please press Button %1 on the tablet now."
 msgstr ""
 
-#: src/tabletfinder/hwbuttondialog.cpp:81
+#: src/tabletfinder/hwbuttondialog.cpp:89
 #, kde-format
 msgid "Hardware button %1 detected."
 msgstr ""
 
-#: src/tabletfinder/hwbuttondialog.cpp:93
+#: src/tabletfinder/hwbuttondialog.cpp:101
 #, kde-format
 msgid "All buttons detected. Please close dialog"
 msgstr ""
@@ -1282,6 +1312,9 @@ msgid ""
 "Move the mouse cursor inside the dialog but <b>do not</b> click into it with "
 "the mouse."
 msgstr ""
+
+#~ msgid "GroupBox"
+#~ msgstr "GrupoSkatolo"
 
 #~ msgid "Company:"
 #~ msgstr "Firmao:"
