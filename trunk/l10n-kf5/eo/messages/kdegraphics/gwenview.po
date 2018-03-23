@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwenview\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-03-22 03:27+0100\n"
+"POT-Creation-Date: 2018-03-23 03:27+0100\n"
 "PO-Revision-Date: 2007-11-27 20:43+0100\n"
 "Last-Translator: Pierre-Marie Pédrot <pedrotpmx@wanadoo.fr>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -731,7 +731,7 @@ msgstr "Regrandigi"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, CropWidget)
 #: app/imageopscontextmanageritem.cpp:110 lib/crop/cropimageoperation.cpp:71
-#: lib/crop/cropwidget.cpp:191 lib/crop/cropwidget.ui:20
+#: lib/crop/cropwidget.cpp:246 lib/crop/cropwidget.ui:20
 #, kde-format
 msgid "Crop"
 msgstr "Stuci"
@@ -1848,46 +1848,52 @@ msgstr "Nuna bildo ŝanĝiĝis"
 msgid "Developer"
 msgstr "Precipa programisto"
 
-#: lib/crop/cropwidget.cpp:140
+#: lib/crop/cropwidget.cpp:183
+#, fuzzy, kde-format
+#| msgid "Print Image"
+msgid "Current Image"
+msgstr "Printi bildon"
+
+#: lib/crop/cropwidget.cpp:186
 #, fuzzy, kde-format
 #| msgid "Save"
 msgid "Square"
 msgstr "Konservi"
 
-#: lib/crop/cropwidget.cpp:141
+#: lib/crop/cropwidget.cpp:187
 #, kde-format
 msgid "This Screen"
 msgstr ""
 
-#: lib/crop/cropwidget.cpp:142
+#: lib/crop/cropwidget.cpp:188
 #, kde-format
 msgid "Landscape"
 msgstr ""
 
-#: lib/crop/cropwidget.cpp:147 lib/crop/cropwidget.cpp:154
+#: lib/crop/cropwidget.cpp:193 lib/crop/cropwidget.cpp:200
 #, kde-format
-msgid "ISO Size (A4, A3...)"
+msgid "ISO (A4, A3...)"
 msgstr ""
 
-#: lib/crop/cropwidget.cpp:148 lib/crop/cropwidget.cpp:155
+#: lib/crop/cropwidget.cpp:194 lib/crop/cropwidget.cpp:201
 #, kde-format
 msgid "US Letter"
 msgstr ""
 
-#: lib/crop/cropwidget.cpp:149
+#: lib/crop/cropwidget.cpp:195
 #, kde-format
 msgid "Portrait"
 msgstr ""
 
 #. i18n("%1:%2") because ':' should not be translated, it is
 #. used to parse the ratio string.
-#: lib/crop/cropwidget.cpp:164
+#: lib/crop/cropwidget.cpp:210
 #, fuzzy, kde-format
 #| msgid "&Width:"
 msgid "Width"
 msgstr "&Larĝo:"
 
-#: lib/crop/cropwidget.cpp:164
+#: lib/crop/cropwidget.cpp:210
 #, fuzzy, kde-format
 #| msgid "&Height:"
 msgid "Height"
@@ -1903,9 +1909,9 @@ msgstr "Bilda agordo"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: lib/crop/cropwidget.ui:55
 #, fuzzy, kde-format
-#| msgid "&Settings"
-msgid "Ratio:"
-msgstr "&Agordo"
+#| msgid "Keep ratio"
+msgid "Aspect ratio:"
+msgstr "Konservi la proporciojn"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: lib/crop/cropwidget.ui:84
@@ -1920,6 +1926,13 @@ msgstr "Dosiera grandeco"
 #| msgid "Image Position"
 msgid "Position:"
 msgstr "Bilda pozicio"
+
+#. i18n: ectx: property (text), widget (QCheckBox, preserveAspectRatioCheckBox)
+#: lib/crop/cropwidget.ui:166
+#, fuzzy, kde-format
+#| msgid "Keep ratio"
+msgid "Preserve aspect ratio"
+msgstr "Konservi la proporciojn"
 
 #: lib/document/document.cpp:305
 #, fuzzy, kde-format
@@ -2124,6 +2137,30 @@ msgstr "Komenca dosiero aŭ dosierujo"
 #: lib/gwenviewconfig.kcfg:288
 #, kde-format
 msgid "Interval between images (in seconds)"
+msgstr ""
+
+#. i18n: ectx: label, entry (CropPreserveAspectRatio), group (Crop)
+#: lib/gwenviewconfig.kcfg:304
+#, kde-format
+msgid "Restrict crop to image ratio when Advanced Settings disabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (CropRatioIndex), group (Crop)
+#: lib/gwenviewconfig.kcfg:308
+#, kde-format
+msgid "Index representing selected ratio in the Advanced settings combobox"
+msgstr ""
+
+#. i18n: ectx: label, entry (CropRatioWidth), group (Crop)
+#: lib/gwenviewconfig.kcfg:312
+#, kde-format
+msgid "Last used crop ratio width when Advanced Settings enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (CropRatioHeight), group (Crop)
+#: lib/gwenviewconfig.kcfg:316
+#, kde-format
+msgid "Last used crop ratio height when Advanced Settings enabled"
 msgstr ""
 
 #: lib/historymodel.cpp:148
@@ -2415,6 +2452,11 @@ msgstr "&Vidi"
 #, kde-format
 msgid "&View"
 msgstr "&Vidi"
+
+#, fuzzy
+#~| msgid "&Settings"
+#~ msgid "Ratio:"
+#~ msgstr "&Agordo"
 
 #, fuzzy
 #~| msgid "Stop slideshow"
