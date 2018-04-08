@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-04-04 06:03+0200\n"
+"POT-Creation-Date: 2018-04-08 06:13+0200\n"
 "PO-Revision-Date: 2015-03-25 21:27+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -7388,7 +7388,7 @@ msgid "Undo"
 msgstr ""
 
 #: libs/command/kundo2group.cpp:359 libs/command/kundo2stack.cpp:1115
-#: libs/ui/KisUndoStackAction.cpp:54
+#: libs/ui/KisUndoActionsUpdateManager.cpp:59
 #, kde-format
 msgid "Undo %1"
 msgstr ""
@@ -7400,7 +7400,7 @@ msgid "Redo"
 msgstr "Refari"
 
 #: libs/command/kundo2group.cpp:386 libs/command/kundo2stack.cpp:1141
-#: libs/ui/KisUndoStackAction.cpp:54
+#: libs/ui/KisUndoActionsUpdateManager.cpp:64
 #, kde-format
 msgid "Redo %1"
 msgstr ""
@@ -7411,14 +7411,14 @@ msgstr ""
 msgid "<empty>"
 msgstr "<malplena>"
 
-#: libs/command/kundo2stack.cpp:1386 libs/ui/KisUndoStackAction.cpp:46
+#: libs/command/kundo2stack.cpp:1386
 #: libs/widgetutils/xmlgui/kundoactions.cpp:45
 #, kde-format
 msgid "Redo"
 msgstr "Refari"
 
 #. i18n: ectx: property (text), widget (QToolButton, liquifyUndo)
-#: libs/command/kundo2stack.cpp:1405 libs/ui/KisUndoStackAction.cpp:38
+#: libs/command/kundo2stack.cpp:1405
 #: libs/widgetutils/xmlgui/kundoactions.cpp:64
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1828
 #, kde-format
@@ -7857,7 +7857,7 @@ msgid "No 'text' node found!"
 msgstr ""
 
 #: libs/flake/text/KoSvgTextShapeMarkupConverter.cpp:366
-#: libs/flake/text/KoSvgTextShapeMarkupConverter.cpp:678
+#: libs/flake/text/KoSvgTextShapeMarkupConverter.cpp:702
 #, kde-format
 msgid "Unknown error writing SVG text element"
 msgstr ""
@@ -8868,59 +8868,59 @@ msgstr "Simila Elekto"
 msgid "Open File"
 msgstr "Malfermi paletron"
 
-#: libs/image/kis_layer_utils.cpp:390
+#: libs/image/kis_layer_utils.cpp:430
 #, fuzzy, kde-format
 msgid "Merged"
 msgstr "Tondi Bildon"
 
-#: libs/image/kis_layer_utils.cpp:871
+#: libs/image/kis_layer_utils.cpp:923
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Merge Down"
 msgstr "Alfo"
 
-#: libs/image/kis_layer_utils.cpp:1072
+#: libs/image/kis_layer_utils.cpp:1124
 #, kde-format
 msgid "Copy of"
 msgstr ""
 
-#: libs/image/kis_layer_utils.cpp:1134
+#: libs/image/kis_layer_utils.cpp:1186
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change projection color"
 msgstr "Konverti Bildotipon"
 
-#: libs/image/kis_layer_utils.cpp:1231
+#: libs/image/kis_layer_utils.cpp:1285
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Merge Selected Nodes"
 msgstr "Forigi Elektitan Koloron"
 
-#: libs/image/kis_layer_utils.cpp:1239
+#: libs/image/kis_layer_utils.cpp:1293
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "New From Visible"
 msgstr "Nomo:"
 
-#: libs/image/kis_layer_utils.cpp:1239
+#: libs/image/kis_layer_utils.cpp:1293
 #, fuzzy, kde-format
 msgctxt "New layer created from all the visible layers"
 msgid "Visible"
 msgstr "Blua"
 
-#: libs/image/kis_layer_utils.cpp:1318
+#: libs/image/kis_layer_utils.cpp:1372
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Merge Selection Masks"
 msgstr "Elekto"
 
-#: libs/image/kis_layer_utils.cpp:1341
+#: libs/image/kis_layer_utils.cpp:1395
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Flatten Layer"
 msgstr "Platigi Bildon"
 
-#: libs/image/kis_layer_utils.cpp:1349
+#: libs/image/kis_layer_utils.cpp:1403
 msgctxt "(qtundo-format)"
 msgid "Flatten Image"
 msgstr "Platigi Bildon"
@@ -8931,8 +8931,8 @@ msgid "Processing"
 msgstr "Premo"
 
 #: libs/image/kis_psd_layer_style.cpp:99
-#: libs/ui/KisApplicationArguments.cpp:335 libs/ui/KisMainWindow.cpp:1079
-#: libs/ui/KisMainWindow.cpp:1388 libs/ui/KisMainWindow.cpp:1407
+#: libs/ui/KisApplicationArguments.cpp:335 libs/ui/KisMainWindow.cpp:1082
+#: libs/ui/KisMainWindow.cpp:1392 libs/ui/KisMainWindow.cpp:1411
 #: plugins/impex/libkra/kis_kra_saver.cpp:83
 #, fuzzy, kde-format
 msgid "Unnamed"
@@ -9062,13 +9062,13 @@ msgstr "Kurbita"
 msgid "Satin (style)"
 msgstr "Satureco"
 
-#: libs/image/lazybrush/kis_colorize_mask.cpp:929
+#: libs/image/lazybrush/kis_colorize_mask.cpp:936
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Key Stroke Color"
 msgstr "Konverti Bildotipon"
 
-#: libs/image/lazybrush/kis_colorize_mask.cpp:956
+#: libs/image/lazybrush/kis_colorize_mask.cpp:963
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Remove Key Stroke"
@@ -10718,13 +10718,13 @@ msgstr "Kombini padojn"
 #: libs/pigment/resources/KoColorSet.cpp:801
 #: libs/pigment/resources/KoColorSet.cpp:1228
 #: libs/ui/actions/kis_selection_action_factories.cpp:392
-#: libs/ui/KisView.cpp:707
+#: libs/ui/KisView.cpp:690
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:65
 #, kde-format
 msgid "Untitled"
 msgstr "Sentitola"
 
-#: libs/pigment/resources/KoStopGradient.cpp:442
+#: libs/pigment/resources/KoStopGradient.cpp:454
 #, kde-format
 msgid "SVG Gradient"
 msgstr ""
@@ -10931,56 +10931,56 @@ msgctxt "(qtundo-format)"
 msgid "Edit Guides"
 msgstr "Kapti per Krado"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:736
+#: libs/ui/canvas/kis_guides_manager.cpp:747
 #, fuzzy, kde-format
 msgid "Snap to:"
 msgstr "Kapti per Krado"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: libs/ui/canvas/kis_guides_manager.cpp:737
+#: libs/ui/canvas/kis_guides_manager.cpp:748
 #: plugins/dockers/griddocker/grid_config_widget.ui:39
 #, kde-format
 msgid "Grid"
 msgstr "Krado"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: libs/ui/canvas/kis_guides_manager.cpp:738
+#: libs/ui/canvas/kis_guides_manager.cpp:749
 #: plugins/dockers/griddocker/grid_config_widget.ui:564
 #, fuzzy, kde-format
 msgid "Guides"
 msgstr "Montri &Kradon"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:739
+#: libs/ui/canvas/kis_guides_manager.cpp:750
 #, kde-format
 msgid "Orthogonal"
 msgstr ""
 
-#: libs/ui/canvas/kis_guides_manager.cpp:741
+#: libs/ui/canvas/kis_guides_manager.cpp:752
 #, fuzzy, kde-format
 msgid "Node"
 msgstr "Neniu"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:742
+#: libs/ui/canvas/kis_guides_manager.cpp:753
 #, fuzzy, kde-format
 msgid "Extension"
 msgstr "Dimensioj"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:743
+#: libs/ui/canvas/kis_guides_manager.cpp:754
 #, fuzzy, kde-format
 msgid "Intersection"
 msgstr "Anguloj:"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:745
+#: libs/ui/canvas/kis_guides_manager.cpp:756
 #, fuzzy, kde-format
 msgid "Bounding Box"
 msgstr "Elektomoduso:"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:746
+#: libs/ui/canvas/kis_guides_manager.cpp:757
 #, fuzzy, kde-format
 msgid "Image Bounds"
 msgstr "Bildoj"
 
-#: libs/ui/canvas/kis_guides_manager.cpp:747
+#: libs/ui/canvas/kis_guides_manager.cpp:758
 #, fuzzy, kde-format
 msgid "Image Center"
 msgstr "Centrigita"
@@ -11076,7 +11076,7 @@ msgstr "Fermi"
 #: libs/ui/forms/wdgnewimage.ui:626 libs/ui/forms/wdgpaintopsettings.ui:197
 #: libs/ui/forms/wdgsavebrushpreset.ui:208
 #: libs/ui/input/kis_tool_invocation_action.cpp:58 libs/ui/kis_clipboard.cc:274
-#: libs/ui/KisView.cpp:534
+#: libs/ui/KisView.cpp:517
 #: plugins/flake/textshape/dialogs/AcceptRejectChangeDialog.ui:70
 #, kde-format
 msgid "Cancel"
@@ -11179,7 +11179,7 @@ msgid "Numerical"
 msgstr "Triangula ondo"
 
 #: libs/ui/dialogs/kis_dlg_import_image_sequence.cpp:125
-#: libs/ui/KisMainWindow.cpp:874
+#: libs/ui/KisMainWindow.cpp:877
 #, fuzzy, kde-format
 msgid "Import Images"
 msgstr "Importi Bildon"
@@ -11224,7 +11224,7 @@ msgctxt "@title:window"
 msgid "Enter new style name"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_layer_style.cpp:251 libs/ui/KisMainWindow.cpp:2035
+#: libs/ui/dialogs/kis_dlg_layer_style.cpp:251 libs/ui/KisMainWindow.cpp:2039
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -11406,15 +11406,15 @@ msgstr "fono"
 #: libs/ui/KisApplication.cpp:754 libs/ui/KisApplication.cpp:757
 #: libs/ui/KisApplication.cpp:779 libs/ui/KisApplication.cpp:805
 #: libs/ui/KisApplication.cpp:826 libs/ui/KisDocument.cpp:611
-#: libs/ui/KisDocument.cpp:1005 libs/ui/KisDocument.cpp:1087
-#: libs/ui/KisDocument.cpp:1128 libs/ui/KisDocument.cpp:1136
-#: libs/ui/KisMainWindow.cpp:811 libs/ui/KisMainWindow.cpp:897
-#: libs/ui/KisMainWindow.cpp:910 libs/ui/KisMainWindow.cpp:960
-#: libs/ui/KisMainWindow.cpp:1698 libs/ui/KisMainWindow.cpp:1728
-#: libs/ui/KisMainWindow.cpp:1805 libs/ui/KisMainWindow.cpp:1817
+#: libs/ui/KisDocument.cpp:1015 libs/ui/KisDocument.cpp:1097
+#: libs/ui/KisDocument.cpp:1138 libs/ui/KisDocument.cpp:1146
+#: libs/ui/KisMainWindow.cpp:814 libs/ui/KisMainWindow.cpp:900
+#: libs/ui/KisMainWindow.cpp:913 libs/ui/KisMainWindow.cpp:963
+#: libs/ui/KisMainWindow.cpp:1702 libs/ui/KisMainWindow.cpp:1732
+#: libs/ui/KisMainWindow.cpp:1809 libs/ui/KisMainWindow.cpp:1821
 #: libs/ui/KisPart.cpp:417 libs/ui/KisPart.cpp:420
 #: libs/ui/KisRemoteFileFetcher.cpp:56 libs/ui/KisTemplateCreateDia.cpp:298
-#: libs/ui/KisTemplateCreateDia.cpp:404 libs/ui/KisView.cpp:710
+#: libs/ui/KisTemplateCreateDia.cpp:404 libs/ui/KisView.cpp:693
 #: libs/ui/opengl/kis_opengl_canvas2.cpp:342
 #: libs/ui/opengl/kis_opengl_image_textures.cpp:652
 #: libs/ui/widgets/kis_custom_image_widget.cc:267
@@ -13597,7 +13597,7 @@ msgstr "Peniko"
 #. i18n: ectx: property (text), widget (QPushButton, savePresetButton)
 #: libs/ui/forms/wdgpaintopsettings.ui:184
 #: libs/ui/forms/wdgsavebrushpreset.ui:215 libs/ui/KisColorsetChooser.cpp:106
-#: libs/ui/KisMainWindow.cpp:775 libs/ui/widgets/kis_workspace_chooser.cpp:98
+#: libs/ui/KisMainWindow.cpp:778 libs/ui/widgets/kis_workspace_chooser.cpp:98
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:61
 #, kde-format
 msgid "Save"
@@ -16092,28 +16092,28 @@ msgstr ""
 msgid "Finished saving %1"
 msgstr "&Poligonilo"
 
-#: libs/ui/KisDocument.cpp:766
+#: libs/ui/KisDocument.cpp:776
 #, fuzzy, kde-format
 msgid "Autosaving... %1"
 msgstr "Konservanta..."
 
-#: libs/ui/KisDocument.cpp:769
+#: libs/ui/KisDocument.cpp:779
 #, kde-format
 msgid "Autosaving..."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:792
+#: libs/ui/KisDocument.cpp:802
 #, kde-format
 msgctxt "%1 --- failing file name, %2 --- error message"
 msgid "Error during autosaving %1: %2"
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:805
+#: libs/ui/KisDocument.cpp:815
 #, kde-format
 msgid "Finished autosaving %1"
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:990
+#: libs/ui/KisDocument.cpp:1000
 #, kde-format
 msgid ""
 "Malformed URL\n"
@@ -16122,7 +16122,7 @@ msgstr ""
 "Ne valida ligo (URL)\n"
 "%1"
 
-#: libs/ui/KisDocument.cpp:1006
+#: libs/ui/KisDocument.cpp:1016
 #, fuzzy, kde-format
 #| msgid ""
 #| "An autosaved file exists for this document.\n"
@@ -16134,18 +16134,18 @@ msgstr ""
 "Ekzistas jam dosiero por aŭtomata sekurigo de tiu dokumento.\n"
 "Ĉu vi volas malfermi ĝin anstataŭe?"
 
-#: libs/ui/KisDocument.cpp:1087
+#: libs/ui/KisDocument.cpp:1097
 #, kde-format
 msgid "File %1 does not exist."
 msgstr "Dosiero %1 ne ekzistas."
 
-#: libs/ui/KisDocument.cpp:1117
+#: libs/ui/KisDocument.cpp:1127
 #, fuzzy, kde-format
 #| msgid "Open Document"
 msgid "Opening document"
 msgstr "Malfermi dokumenton"
 
-#: libs/ui/KisDocument.cpp:1129
+#: libs/ui/KisDocument.cpp:1139
 #, fuzzy, kde-format
 msgid ""
 "Could not open %2.\n"
@@ -16155,18 +16155,18 @@ msgstr ""
 "%2.\n"
 "Kialo: %1"
 
-#: libs/ui/KisDocument.cpp:1137
+#: libs/ui/KisDocument.cpp:1147
 #, kde-format
 msgid "There were problems opening %1."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:1254
+#: libs/ui/KisDocument.cpp:1264
 #, fuzzy, kde-format
 #| msgid "Not Filled"
 msgid "Not Saved"
 msgstr "Malplenigita:"
 
-#: libs/ui/KisDocument.cpp:1598
+#: libs/ui/KisDocument.cpp:1608
 #, kde-format
 msgctxt ""
 "progress dialog message when the user closes the document that is being saved"
@@ -16360,75 +16360,75 @@ msgstr ""
 msgid "Also save your image as a Krita file."
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:176
+#: libs/ui/KisMainWindow.cpp:177
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&Dockers"
 msgstr "Montri Liniilojn"
 
-#: libs/ui/KisMainWindow.cpp:177
+#: libs/ui/KisMainWindow.cpp:178
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&Window"
 msgstr "&Filtrilgalerio"
 
-#: libs/ui/KisMainWindow.cpp:178
+#: libs/ui/KisMainWindow.cpp:179
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "New &View"
 msgstr "Bildgrandecoo"
 
-#: libs/ui/KisMainWindow.cpp:179
+#: libs/ui/KisMainWindow.cpp:180
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "Wor&kspace"
 msgstr "&Koloroprenilo"
 
-#: libs/ui/KisMainWindow.cpp:457
+#: libs/ui/KisMainWindow.cpp:460
 #: plugins/tools/svgtexttool/SvgTextEditor.cpp:133
 #, fuzzy, kde-format
 msgid "Show %1 Toolbar"
 msgstr "Montri originan ebenon"
 
-#: libs/ui/KisMainWindow.cpp:459
+#: libs/ui/KisMainWindow.cpp:462
 #: plugins/tools/svgtexttool/SvgTextEditor.cpp:135
 #, fuzzy, kde-format
 msgid "Hide %1 Toolbar"
 msgstr "Iloj"
 
-#: libs/ui/KisMainWindow.cpp:739
+#: libs/ui/KisMainWindow.cpp:742
 #, fuzzy, kde-format
 #| msgid "(write protected)"
 msgid "Write Protected"
 msgstr "(skriboprotektita)"
 
-#: libs/ui/KisMainWindow.cpp:743
+#: libs/ui/KisMainWindow.cpp:746
 #, fuzzy, kde-format
 msgid "Recovered"
 msgstr "Rektangulo"
 
-#: libs/ui/KisMainWindow.cpp:752
+#: libs/ui/KisMainWindow.cpp:755
 #, fuzzy, kde-format
 #| msgid "Modified:"
 msgid "Modified"
 msgstr "Modifita:"
 
-#: libs/ui/KisMainWindow.cpp:773
+#: libs/ui/KisMainWindow.cpp:776
 #, fuzzy, kde-format
 msgid "Save as %1"
 msgstr "Skali Ebenon"
 
-#: libs/ui/KisMainWindow.cpp:811
+#: libs/ui/KisMainWindow.cpp:814
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "La dosiero %1 ne ekzistas."
 
-#: libs/ui/KisMainWindow.cpp:874
+#: libs/ui/KisMainWindow.cpp:877
 #, fuzzy, kde-format
 msgid "Open Images"
 msgstr "Bildo"
 
-#: libs/ui/KisMainWindow.cpp:961
+#: libs/ui/KisMainWindow.cpp:964
 #, kde-format
 msgid ""
 "You are saving a file while the image is still rendering. The saved file may "
@@ -16437,43 +16437,43 @@ msgid ""
 "Please select a location where the original file will not be overridden!"
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:1026
+#: libs/ui/KisMainWindow.cpp:1029
 #, fuzzy, kde-format
 msgid "Exporting"
 msgstr "Eksportu bildon..."
 
-#: libs/ui/KisMainWindow.cpp:1026
+#: libs/ui/KisMainWindow.cpp:1029
 #, fuzzy, kde-format
 msgid "Saving As"
 msgstr "Konservi dokumenton"
 
-#: libs/ui/KisMainWindow.cpp:1367
+#: libs/ui/KisMainWindow.cpp:1371
 #: libs/widgetutils/config/kstandardaction_p.h:41
 #, fuzzy, kde-format
 msgid "Create new document"
 msgstr "Lastatempaj dokumentoj"
 
-#: libs/ui/KisMainWindow.cpp:1409
+#: libs/ui/KisMainWindow.cpp:1413
 #, fuzzy, kde-format
 msgid "Create from Clipboard"
 msgstr "Krei"
 
-#: libs/ui/KisMainWindow.cpp:1656
+#: libs/ui/KisMainWindow.cpp:1660
 #, fuzzy, kde-format
 msgid "Export as PDF"
 msgstr "Eksporti Paletron"
 
-#: libs/ui/KisMainWindow.cpp:1698
+#: libs/ui/KisMainWindow.cpp:1702
 #, kde-format
 msgid "Cannot export to the specified file"
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:1720
+#: libs/ui/KisMainWindow.cpp:1724
 #, fuzzy, kde-format
 msgid "Import frames"
 msgstr "Importi Bildon"
 
-#: libs/ui/KisMainWindow.cpp:1728
+#: libs/ui/KisMainWindow.cpp:1732
 #, fuzzy, kde-format
 msgid ""
 "Could not finish import animation:\n"
@@ -16483,92 +16483,92 @@ msgstr ""
 "%1Ne eblis malfermi\n"
 "%1"
 
-#: libs/ui/KisMainWindow.cpp:1806
+#: libs/ui/KisMainWindow.cpp:1810
 #, kde-format
 msgid ""
 "You will lose all changes made since your last save\n"
 "Do you want to continue?"
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:1817
+#: libs/ui/KisMainWindow.cpp:1821
 #, fuzzy, kde-format
 msgid "Error: Could not reload this document"
 msgstr "Forigu elekton"
 
-#: libs/ui/KisMainWindow.cpp:2013
+#: libs/ui/KisMainWindow.cpp:2017
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&Import Workspace..."
 msgstr "&Koloroprenilo"
 
-#: libs/ui/KisMainWindow.cpp:2025 libs/widgets/KoResourceItemChooser.cpp:209
+#: libs/ui/KisMainWindow.cpp:2029 libs/widgets/KoResourceItemChooser.cpp:209
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Choose File to Add"
 msgstr "Elekti filtrilon"
 
-#: libs/ui/KisMainWindow.cpp:2031
+#: libs/ui/KisMainWindow.cpp:2035
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "&New Workspace..."
 msgstr "&Koloroprenilo"
 
-#: libs/ui/KisMainWindow.cpp:2034
+#: libs/ui/KisMainWindow.cpp:2038
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "New Workspace..."
 msgstr "&Koloroprenilo"
 
-#: libs/ui/KisMainWindow.cpp:2048 libs/ui/widgets/kis_workspace_chooser.cpp:133
+#: libs/ui/KisMainWindow.cpp:2052 libs/ui/widgets/kis_workspace_chooser.cpp:133
 #, fuzzy, kde-format
 msgid "Workspace"
 msgstr "&Koloroprenilo"
 
-#: libs/ui/KisMainWindow.cpp:2059 libs/ui/widgets/kis_workspace_chooser.cpp:144
+#: libs/ui/KisMainWindow.cpp:2063 libs/ui/widgets/kis_workspace_chooser.cpp:144
 #, fuzzy, kde-format
 msgid "Workspace %1"
 msgstr "&Koloroprenilo"
 
-#: libs/ui/KisMainWindow.cpp:2087
+#: libs/ui/KisMainWindow.cpp:2091
 #, kde-format
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2090
+#: libs/ui/KisMainWindow.cpp:2094
 #, kde-format
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2199
+#: libs/ui/KisMainWindow.cpp:2203
 #, kde-format
 msgid ""
 "The Krita LittleCMS color management plugin is not installed. Krita will "
 "quit now."
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:2207
+#: libs/ui/KisMainWindow.cpp:2211
 #, kde-format
 msgid "Krita cannot find any brush presets! Krita will quit now."
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:2216
+#: libs/ui/KisMainWindow.cpp:2220
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Installation error"
 msgstr "Ebeno %1"
 
-#: libs/ui/KisMainWindow.cpp:2277
+#: libs/ui/KisMainWindow.cpp:2281
 #, kde-format
 msgid "%1 unsaved document (%2)"
 msgstr "%1 nekonservita dokumento (%2)"
 
-#: libs/ui/KisMainWindow.cpp:2342
+#: libs/ui/KisMainWindow.cpp:2349
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Themes"
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:2375
+#: libs/ui/KisMainWindow.cpp:2382
 #, kde-format
 msgid "Expanding Spacer"
 msgstr ""
@@ -16744,37 +16744,37 @@ msgstr "Neniu bildo uzebla."
 msgid "Use This Template"
 msgstr "Uzi tiun ŝablonon"
 
-#: libs/ui/KisView.cpp:525
+#: libs/ui/KisView.cpp:508
 #, fuzzy, kde-format
 msgid "Insert as New Layer"
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: libs/ui/KisView.cpp:526
+#: libs/ui/KisView.cpp:509
 #, fuzzy, kde-format
 msgid "Insert Many Layers"
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: libs/ui/KisView.cpp:528
+#: libs/ui/KisView.cpp:511
 #, fuzzy, kde-format
 msgid "Insert as New File Layer"
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: libs/ui/KisView.cpp:529
+#: libs/ui/KisView.cpp:512
 #, fuzzy, kde-format
 msgid "Insert Many File Layers"
 msgstr "E&nmetu bildon kiel ebeno..."
 
-#: libs/ui/KisView.cpp:531
+#: libs/ui/KisView.cpp:514
 #, kde-format
 msgid "Open in New Document"
 msgstr ""
 
-#: libs/ui/KisView.cpp:532
+#: libs/ui/KisView.cpp:515
 #, kde-format
 msgid "Open Many Documents"
 msgstr ""
 
-#: libs/ui/KisView.cpp:711
+#: libs/ui/KisView.cpp:694
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
@@ -16783,37 +16783,37 @@ msgstr ""
 "<p>La dokumento <b>'%1'</b> estas ŝanĝita.</p><p>Ĉu vi volas sekurigi ĝin?</"
 "p>"
 
-#: libs/ui/KisView.cpp:849
+#: libs/ui/KisView.cpp:832
 #, kde-format
 msgid "Soft Proofing doesn't work in floating point."
 msgstr ""
 
-#: libs/ui/KisView.cpp:854
+#: libs/ui/KisView.cpp:837
 #, kde-format
 msgid "Soft Proofing turned on."
 msgstr ""
 
-#: libs/ui/KisView.cpp:856
+#: libs/ui/KisView.cpp:839
 #, kde-format
 msgid "Soft Proofing turned off."
 msgstr ""
 
-#: libs/ui/KisView.cpp:868
+#: libs/ui/KisView.cpp:851
 #, kde-format
 msgid "Gamut Warnings don't work in floating point."
 msgstr ""
 
-#: libs/ui/KisView.cpp:874
+#: libs/ui/KisView.cpp:857
 #, kde-format
 msgid "Gamut Warnings turned on."
 msgstr ""
 
-#: libs/ui/KisView.cpp:876
+#: libs/ui/KisView.cpp:859
 #, kde-format
 msgid "But Soft Proofing is still off."
 msgstr ""
 
-#: libs/ui/KisView.cpp:879
+#: libs/ui/KisView.cpp:862
 #, kde-format
 msgid "Gamut Warnings turned off."
 msgstr ""
@@ -17938,7 +17938,7 @@ msgstr "Peniko"
 msgid "Decrease Brush Size"
 msgstr "Penikograndeco"
 
-#: libs/ui/tool/kis_tool_utils.cpp:122
+#: libs/ui/tool/kis_tool_utils.cpp:120
 #: plugins/dockers/animation/kis_animation_utils.cpp:89
 #, fuzzy
 msgctxt "(qtundo-format)"
@@ -31844,13 +31844,13 @@ msgid ""
 "destination streams of the ffmpeg"
 msgstr ""
 
-#: plugins/impex/video/video_saver.cpp:273
+#: plugins/impex/video/video_saver.cpp:277
 #, fuzzy, kde-format
 msgid "Fetching palette..."
 msgstr "Aldoni Novan Paletronon..."
 
-#: plugins/impex/video/video_saver.cpp:301
-#: plugins/impex/video/video_saver.cpp:344
+#: plugins/impex/video/video_saver.cpp:305
+#: plugins/impex/video/video_saver.cpp:348
 #, fuzzy, kde-format
 #| msgid "Export only keyframes"
 msgid "Encoding frames..."
@@ -34921,13 +34921,13 @@ msgid "Measure Tool"
 msgstr "Ebeno-proprecoj..."
 
 #: plugins/tools/basictools/kis_tool_move.cc:209
-#: plugins/tools/basictools/kis_tool_move.cc:376
+#: plugins/tools/basictools/kis_tool_move.cc:367
 #, kde-format
 msgctxt "floating message in move tool"
 msgid "X: %1 px, Y: %2 px"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_move.h:164
+#: plugins/tools/basictools/kis_tool_move.h:165
 #, fuzzy, kde-format
 msgid "Move Tool"
 msgstr "&Pentriloj"
@@ -36834,19 +36834,19 @@ msgctxt "floating message in transformation tool"
 msgid "Selected layer cannot be transformed with active transformation mode "
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:846
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:850
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:857
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:861
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "Transformi..."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:883
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:890
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
