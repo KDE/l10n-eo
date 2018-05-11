@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: smb4k\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-04-22 03:32+0200\n"
+"POT-Creation-Date: 2018-05-11 03:42+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -93,13 +93,13 @@ msgid "&File"
 msgstr "&Dosiero"
 
 #. i18n: ectx: Menu (network)
-#: smb4k/smb4k_shell.rc:9 smb4k/smb4knetworkbrowser_part.rc:4
+#: smb4k/smb4k_shell.rc:9
 #, kde-format
 msgid "&Network"
 msgstr "&Reto"
 
 #. i18n: ectx: Menu (search)
-#: smb4k/smb4k_shell.rc:11 smb4k/smb4knetworksearch_part.cpp:153
+#: smb4k/smb4k_shell.rc:11 smb4k/smb4knetworksearchdockwidget.cpp:186
 #, kde-format
 msgid "&Search"
 msgstr "&Serĉi"
@@ -217,18 +217,20 @@ msgstr "Laborgrupo:"
 msgid "Bookmarks"
 msgstr "Legosignoj"
 
-#: smb4k/smb4kbookmarkmenu.cpp:164 smb4k/smb4kbookmarkmenu.cpp:187
+#: smb4k/smb4kbookmarkmenu.cpp:162 smb4k/smb4kbookmarkmenu.cpp:185
 #, kde-format
 msgid "&Edit Bookmarks"
 msgstr "&Redakti legosignojn"
 
-#: smb4k/smb4kbookmarkmenu.cpp:173 smb4k/smb4kmainwindow.cpp:131
-#: smb4k/smb4knetworkbrowser_part.cpp:207 smb4k/smb4ksharesview_part.cpp:233
+#: smb4k/smb4kbookmarkmenu.cpp:171 smb4k/smb4kmainwindow.cpp:136
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:134
+#: smb4k/smb4knetworksearchdockwidget.cpp:204
+#: smb4k/smb4ksharesviewdockwidget.cpp:199
 #, kde-format
 msgid "Add &Bookmark"
 msgstr "Aldoni &legosignon"
 
-#: smb4k/smb4kbookmarkmenu.cpp:216 smb4k/smb4kbookmarkmenu.cpp:282
+#: smb4k/smb4kbookmarkmenu.cpp:214 smb4k/smb4kbookmarkmenu.cpp:280
 #, fuzzy, kde-format
 #| msgid "&Edit Bookmarks"
 msgid "Mount All Bookmarks"
@@ -240,14 +242,11 @@ msgid "User Interface"
 msgstr "Uzant-interfaco"
 
 #: smb4k/smb4kconfigdialog.cpp:164 smb4k/smb4knetworkbrowser.cpp:68
-#: smb4k/smb4knetworkbrowser_part.cpp:267
-#: smb4k/smb4knetworkbrowser_part.cpp:407
 #, kde-format
 msgid "Network"
 msgstr "Reto"
 
-#: smb4k/smb4kconfigdialog.cpp:165 smb4k/smb4ksharesview_part.cpp:274
-#: smb4k/smb4ksharesview_part.cpp:375
+#: smb4k/smb4kconfigdialog.cpp:165
 #, kde-format
 msgid "Shares"
 msgstr ""
@@ -724,7 +723,7 @@ msgstr "Kolumnoj"
 msgid "Tooltips"
 msgstr ""
 
-#: smb4k/smb4kconfigpageuserinterface.cpp:107 smb4k/smb4kmainwindow.cpp:253
+#: smb4k/smb4kconfigpageuserinterface.cpp:107 smb4k/smb4kmainwindow.cpp:242
 #, kde-format
 msgid "Network Neighborhood"
 msgstr ""
@@ -734,7 +733,7 @@ msgstr ""
 msgid "View Mode"
 msgstr ""
 
-#: smb4k/smb4kconfigpageuserinterface.cpp:152 smb4k/smb4kmainwindow.cpp:352
+#: smb4k/smb4kconfigpageuserinterface.cpp:152 smb4k/smb4kmainwindow.cpp:287
 #: smb4k/smb4ksharesmenu.cpp:55
 #, kde-format
 msgid "Mounted Shares"
@@ -745,138 +744,121 @@ msgstr ""
 msgid "Miscellaneous Settings"
 msgstr "Diversa agordo"
 
-#: smb4k/smb4kmainwindow.cpp:121
+#: smb4k/smb4kmainwindow.cpp:126
 #, kde-format
 msgid "Dock Widgets"
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:273
-#, kde-format
-msgid "The network browser could not be created."
-msgstr ""
-
-#: smb4k/smb4kmainwindow.cpp:302
+#: smb4k/smb4kmainwindow.cpp:262
 #, kde-format
 msgid "Network Search"
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:322
-#, kde-format
-msgid "The search dialog could not be created."
-msgstr ""
-
-#: smb4k/smb4kmainwindow.cpp:372
-#, kde-format
-msgid "The shares view could not be created."
-msgstr ""
-
-#: smb4k/smb4kmainwindow.cpp:560
+#: smb4k/smb4kmainwindow.cpp:489
 #, kde-format
 msgid ""
 "<qt>Closing the main window will keep Smb4K running in the system tray. Use "
 "<i>Quit</i> from the <i>File</i> menu to quit the application.</qt>"
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:562
+#: smb4k/smb4kmainwindow.cpp:491
 #, kde-format
 msgid "Docking"
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:579
+#: smb4k/smb4kmainwindow.cpp:551
 #, kde-format
 msgid "There are currently no shares mounted."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:584
+#: smb4k/smb4kmainwindow.cpp:556
 #, kde-format
 msgid "There is currently %1 share mounted."
 msgid_plural "There are currently %1 shares mounted."
 msgstr[0] ""
 msgstr[1] ""
 
-#: smb4k/smb4kmainwindow.cpp:681
+#: smb4k/smb4kmainwindow.cpp:830
 #, kde-format
 msgid "The wallet is used."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:687
+#: smb4k/smb4kmainwindow.cpp:836
 #, kde-format
 msgid "The password dialog is used."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:700 smb4k/smb4knetworkbrowser_part.cpp:1484
+#: smb4k/smb4kmainwindow.cpp:849
 #, kde-format
 msgid "Looking for workgroups and domains..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:706 smb4k/smb4knetworkbrowser_part.cpp:1497
+#: smb4k/smb4kmainwindow.cpp:855
 #, kde-format
 msgid "Looking for hosts in domain %1..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:712 smb4k/smb4knetworkbrowser_part.cpp:1510
+#: smb4k/smb4kmainwindow.cpp:861
 #, kde-format
 msgid "Looking for shares provided by host %1..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:717
+#: smb4k/smb4kmainwindow.cpp:866
 #, kde-format
 msgid "Waking up remote hosts..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:743 smb4k/smb4kmainwindow.cpp:796
-#: smb4k/smb4kmainwindow.cpp:973 smb4k/smb4kmainwindow.cpp:1003
-#: smb4k/smb4kmainwindow.cpp:1033 smb4k/smb4kmainwindow.cpp:1065
-#: smb4k/smb4knetworkbrowser_part.cpp:1568
-#: smb4k/smb4knetworksearch_part.cpp:604 smb4k/smb4ksharesview_part.cpp:741
+#: smb4k/smb4kmainwindow.cpp:892 smb4k/smb4kmainwindow.cpp:945
+#: smb4k/smb4kmainwindow.cpp:1122 smb4k/smb4kmainwindow.cpp:1152
+#: smb4k/smb4kmainwindow.cpp:1182 smb4k/smb4kmainwindow.cpp:1214
 #, kde-format
 msgid "Done."
 msgstr "Farita."
 
-#: smb4k/smb4kmainwindow.cpp:760 smb4k/smb4ksharesview_part.cpp:723
+#: smb4k/smb4kmainwindow.cpp:909
 #, fuzzy, kde-format
 #| msgid "Mount point:"
 msgid "Mounting..."
 msgstr "Surmetingo:"
 
-#: smb4k/smb4kmainwindow.cpp:765 smb4k/smb4ksharesview_part.cpp:728
+#: smb4k/smb4kmainwindow.cpp:914
 #, fuzzy, kde-format
 #| msgid "Unmount"
 msgid "Unmounting..."
 msgstr "Malkroĉu"
 
-#: smb4k/smb4kmainwindow.cpp:770
+#: smb4k/smb4kmainwindow.cpp:919
 #, kde-format
 msgid "Waking up host..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:813
+#: smb4k/smb4kmainwindow.cpp:962
 #, kde-format
 msgid "%1 has been mounted successfully."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:867
+#: smb4k/smb4kmainwindow.cpp:1016
 #, kde-format
 msgid "%1 has been unmounted successfully."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:954 smb4k/smb4knetworksearch_part.cpp:576
+#: smb4k/smb4kmainwindow.cpp:1103
 #, kde-format
 msgid "Searching for \"%1\"..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:984
+#: smb4k/smb4kmainwindow.cpp:1133
 #, kde-format
 msgid "Sending file to printer %1..."
 msgstr ""
 
-#: smb4k/smb4kmainwindow.cpp:1014
+#: smb4k/smb4kmainwindow.cpp:1163
 #, fuzzy, kde-format
 #| msgid "Synchronize"
 msgid "Synchronizing %1"
 msgstr "Sinkronigu"
 
-#: smb4k/smb4kmainwindow.cpp:1046
+#: smb4k/smb4kmainwindow.cpp:1195
 #, kde-format
 msgid "Retrieving preview from %1..."
 msgstr ""
@@ -899,135 +881,88 @@ msgstr "IP-adreso"
 msgid "Comment"
 msgstr "Komento"
 
-#: smb4k/smb4knetworkbrowser_part.cpp:190
-#: smb4k/smb4knetworkbrowser_part.cpp:535
-#: smb4k/smb4knetworkbrowser_part.cpp:548
-#: smb4k/smb4knetworkbrowser_part.cpp:572
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:123
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:509
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:524
 #, kde-format
 msgid "Scan Netwo&rk"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:191
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:124
 #, kde-format
 msgid "&Abort"
 msgstr "&Haltigu"
 
-#: smb4k/smb4knetworkbrowser_part.cpp:198 smb4k/smb4ksystemtray.cpp:87
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:140 smb4k/smb4ksystemtray.cpp:87
 #, kde-format
 msgid "&Open Mount Dialog"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:201
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:146
 #, kde-format
 msgid "Au&thentication"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:204
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:152
 #, kde-format
 msgid "&Custom Options"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:210
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:158
 #, kde-format
 msgid "Pre&view"
 msgstr "&Antaŭrigardu"
 
-#: smb4k/smb4knetworkbrowser_part.cpp:213
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:164
 #, kde-format
 msgid "&Print File"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:217 smb4k/smb4knetworksearch_part.cpp:166
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:171
+#: smb4k/smb4knetworksearchdockwidget.cpp:211
 #, kde-format
 msgid "&Mount"
 msgstr "&Kroĉi"
 
-#: smb4k/smb4knetworkbrowser_part.cpp:218 smb4k/smb4knetworksearch_part.cpp:167
-#: smb4k/smb4ksharesview_part.cpp:213
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:172
+#: smb4k/smb4knetworksearchdockwidget.cpp:212
+#: smb4k/smb4ksharesviewdockwidget.cpp:187
 #, kde-format
 msgid "&Unmount"
 msgstr "&Malkroĉi"
 
-#: smb4k/smb4knetworkbrowser_part.cpp:340
-#, kde-format
-msgid "Smb4KNetworkBrowserPart"
-msgstr "Smb4KNetworkBrowserPart"
-
-#: smb4k/smb4knetworkbrowser_part.cpp:341
-#, kde-format
-msgid "The network neighborhood browser KPart of Smb4K"
-msgstr ""
-
-#: smb4k/smb4knetworkbrowser_part.cpp:342 smb4k/smb4knetworksearch_part.cpp:203
-#: smb4k/smb4ksharesview_part.cpp:310
-#, kde-format
-msgid "© 2007-2015, Alexander Reinholdt"
-msgstr ""
-
-#: smb4k/smb4knetworkbrowser_part.cpp:431
-#: smb4k/smb4knetworkbrowser_part.cpp:447
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:405
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:421
 #, kde-format
 msgid "Scan Compute&r"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:492
+#: smb4k/smb4knetworkbrowserdockwidget.cpp:459
 #, kde-format
 msgid "Scan Wo&rkgroup"
 msgstr ""
 
-#: smb4k/smb4knetworkbrowser_part.cpp:1522
-#, kde-format
-msgid "Waking up remote servers..."
-msgstr ""
-
-#: smb4k/smb4knetworksearch.cpp:56
-#, kde-format
-msgid "Search item:"
-msgstr ""
-
-#: smb4k/smb4knetworksearch.cpp:59
+#: smb4k/smb4knetworksearch.cpp:55
 #, kde-format
 msgid "Enter the search string here."
 msgstr ""
 
-#: smb4k/smb4knetworksearch_part.cpp:154
+#: smb4k/smb4knetworksearchdockwidget.cpp:187
 #, kde-format
 msgid "Abort"
 msgstr "Ĉesigi"
 
-#: smb4k/smb4knetworksearch_part.cpp:162
+#: smb4k/smb4knetworksearchdockwidget.cpp:198
 #, kde-format
 msgid "&Clear"
 msgstr "&Forigi"
-
-#: smb4k/smb4knetworksearch_part.cpp:201
-#, fuzzy, kde-format
-#| msgid "Smb4KNetworkBrowserPart"
-msgid "Smb4KNetworkSearchPart"
-msgstr "Smb4KNetworkBrowserPart"
-
-#: smb4k/smb4knetworksearch_part.cpp:202
-#, kde-format
-msgid "The network search KPart of Smb4K"
-msgstr ""
-
-#: smb4k/smb4knetworksearch_part.cpp:537 smb4k/smb4knetworksearch_part.cpp:545
-#, kde-format
-msgid "Search Results"
-msgstr "Serĉrezultoj"
-
-#. i18n: ectx: Menu (search)
-#: smb4k/smb4knetworksearch_part.rc:4
-#, kde-format
-msgid "Search"
-msgstr "Serĉi"
 
 #: smb4k/smb4knetworksearchitem.cpp:86
 #, kde-format
 msgid "The search returned no results."
 msgstr ""
 
-#: smb4k/smb4ksharesmenu.cpp:122 smb4k/smb4ksharesview_part.cpp:216
+#: smb4k/smb4ksharesmenu.cpp:122 smb4k/smb4ksharesviewdockwidget.cpp:193
 #, kde-format
 msgid "U&nmount All"
 msgstr ""
@@ -1057,66 +992,44 @@ msgstr ""
 msgid "Open with File Manager"
 msgstr ""
 
-#: smb4k/smb4ksharesview_part.cpp:179
+#: smb4k/smb4ksharesviewdockwidget.cpp:150
 #, kde-format
 msgid "View Modes"
 msgstr ""
 
-#: smb4k/smb4ksharesview_part.cpp:185
+#: smb4k/smb4ksharesviewdockwidget.cpp:156
 #, fuzzy, kde-format
 #| msgid "View"
 msgid "Icon View"
 msgstr "Vido"
 
-#: smb4k/smb4ksharesview_part.cpp:190
+#: smb4k/smb4ksharesviewdockwidget.cpp:161
 #, fuzzy, kde-format
 #| msgid "View"
 msgid "List View"
 msgstr "Vido"
 
-#: smb4k/smb4ksharesview_part.cpp:219
+#: smb4k/smb4ksharesviewdockwidget.cpp:205
 #, kde-format
 msgid "S&ynchronize"
 msgstr ""
 
-#: smb4k/smb4ksharesview_part.cpp:222
-#, kde-format
-msgid "Open With"
-msgstr "Malfermu per"
-
-#: smb4k/smb4ksharesview_part.cpp:224
+#: smb4k/smb4ksharesviewdockwidget.cpp:211
 #, kde-format
 msgid "Open with Konso&le"
 msgstr ""
 
-#: smb4k/smb4ksharesview_part.cpp:227
+#: smb4k/smb4ksharesviewdockwidget.cpp:214
 #, kde-format
 msgid "Open with F&ile Manager"
 msgstr ""
 
-#: smb4k/smb4ksharesview_part.cpp:308
-#, kde-format
-msgid "Smb4KSharesViewPart"
-msgstr ""
-
-#: smb4k/smb4ksharesview_part.cpp:309
-#, kde-format
-msgid "The shares view KPart of Smb4K"
-msgstr ""
-
-#: smb4k/smb4ksharesview_part.cpp:492
+#: smb4k/smb4ksharesviewdockwidget.cpp:405
 #, kde-format
 msgid ""
 "<qt>There is no active connection to the share <b>%1</b>! You cannot drop "
 "any files here.</qt>"
 msgstr ""
-
-#. i18n: ectx: Menu (shares)
-#: smb4k/smb4ksharesview_part.rc:4
-#, fuzzy, kde-format
-#| msgid "Share"
-msgid "&Shares"
-msgstr "Komunigi"
 
 #: smb4k/smb4ktooltip.cpp:187 smb4k/smb4ktooltip.cpp:470
 #: smb4k/smb4ktooltip.cpp:751
@@ -1197,6 +1110,28 @@ msgstr ""
 #, kde-format
 msgid "%1 free of %2 (%3 used)"
 msgstr ""
+
+#~ msgid "Smb4KNetworkBrowserPart"
+#~ msgstr "Smb4KNetworkBrowserPart"
+
+#, fuzzy
+#~| msgid "Smb4KNetworkBrowserPart"
+#~ msgid "Smb4KNetworkSearchPart"
+#~ msgstr "Smb4KNetworkBrowserPart"
+
+#~ msgid "Search Results"
+#~ msgstr "Serĉrezultoj"
+
+#~ msgid "Search"
+#~ msgstr "Serĉi"
+
+#~ msgid "Open With"
+#~ msgstr "Malfermu per"
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgid "&Shares"
+#~ msgstr "Komunigi"
 
 #, fuzzy
 #~| msgid "Share"
