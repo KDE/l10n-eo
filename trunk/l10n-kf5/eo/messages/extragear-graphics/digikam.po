@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-07-02 03:20+0200\n"
+"POT-Creation-Date: 2018-07-03 03:21+0200\n"
 "PO-Revision-Date: 2015-03-03 14:36+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -10414,6 +10414,629 @@ msgstr ""
 msgid "Show detailed progress window"
 msgstr ""
 
+#: core/libs/rawengine/drawdecoderwidget.cpp:232
+#, kde-format
+msgctxt "@option:check"
+msgid "16 bits color depth"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:233
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>If enabled, all RAW files will be decoded in 16-bit color depth using "
+"a linear gamma curve. To prevent dark picture rendering in the editor, it is "
+"recommended to use Color Management in this mode.</para><para>If disabled, "
+"all RAW files will be decoded in 8-bit color depth with a BT.709 gamma curve "
+"and a 99th-percentile white point. This mode is faster than 16-bit decoding."
+"</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:252
+#, kde-format
+msgctxt "@option:check"
+msgid "Interpolate RGB as four colors"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:253
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Interpolate RGB as four colors</title><para>The default is to assume "
+"that all green pixels are the same. If even-row green pixels are more "
+"sensitive to ultraviolet light than odd-row this difference causes a mesh "
+"pattern in the output; using this option solves this problem with minimal "
+"loss of detail.</para><para>To resume, this option blurs the image a little, "
+"but it eliminates false 2x2 mesh patterns with VNG quality method or mazes "
+"with AHD quality method.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:267
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Visit LibRaw project website"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:277
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not stretch or rotate pixels"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:279
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Do not stretch or rotate pixels</title><para>For Fuji Super CCD "
+"cameras, show the image tilted 45 degrees. For cameras with non-square "
+"pixels, do not stretch the image to its correct aspect ratio. In any case, "
+"this option guarantees that each output pixel corresponds to one RAW pixel.</"
+"para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:287
+#, fuzzy, kde-format
+msgctxt "@label:listbox"
+msgid "Quality:"
+msgstr "Travideblo:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:291
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Quality"
+msgid "Bilinear"
+msgstr "Lineara"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:292
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Quality"
+msgid "VNG"
+msgstr "LibPNG"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:293
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Quality"
+msgid "PPG"
+msgstr "LibPNG"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:294
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Quality"
+msgid "AHD"
+msgstr "KAJ"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:295
+#, kde-format
+msgctxt "@item:inlistbox Quality"
+msgid "DCB"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:296
+#, fuzzy, kde-format
+#| msgid "DTD"
+msgctxt "@item:inlistbox Quality"
+msgid "DHT"
+msgstr "DTD"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:297
+#, kde-format
+msgctxt "@item:inlistbox Quality"
+msgid "AAHD"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:301
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Quality (interpolation)</title><para>Select here the demosaicing "
+"method to use when decoding RAW images. A demosaicing algorithm is a digital "
+"image process used to interpolate a complete image from the partial raw data "
+"received from the color-filtered image sensor, internal to many digital "
+"cameras, in form of a matrix of colored pixels. Also known as CFA "
+"interpolation or color reconstruction, another common spelling is "
+"demosaicing. The following methods are available for demosaicing RAW images:"
+"</para><para><list><item><emphasis strong='true'>Bilinear</emphasis>: use "
+"high-speed but low-quality bilinear interpolation (default - for slow "
+"computers). In this method, the red value of a non-red pixel is computed as "
+"the average of the adjacent red pixels, and similarly for blue and green.</"
+"item><item><emphasis strong='true'>VNG</emphasis>: use Variable Number of "
+"Gradients interpolation. This method computes gradients near the pixel of "
+"interest and uses the lower gradients (representing smoother and more "
+"similar parts of the image) to make an estimate.</item><item><emphasis "
+"strong='true'>PPG</emphasis>: use Patterned-Pixel-Grouping interpolation. "
+"Pixel Grouping uses assumptions about natural scenery in making estimates. "
+"It has fewer color artifacts on natural images than the Variable Number of "
+"Gradients method.</item><item><emphasis strong='true'>AHD</emphasis>: use "
+"Adaptive Homogeneity-Directed interpolation. This method selects the "
+"direction of interpolation so as to maximize a homogeneity metric, thus "
+"typically minimizing color artifacts.</item><item><emphasis "
+"strong='true'>DCB</emphasis>: DCB interpolation from linuxphoto.org project."
+"</item><item><emphasis strong='true'>DHT</emphasis>: DHT interpolation.See "
+"https://www.libraw.org/node/2306 for details.</item><item><emphasis "
+"strong='true'>AAHD</emphasis>: modified AHD interpolation.</item></list></"
+"para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:349
+#, fuzzy, kde-format
+msgctxt "@label:slider"
+msgid "Pass:"
+msgstr "Pasvorto"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:350
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Pass</title><para>Set here the passes used by the median filter "
+"applied after interpolation to Red-Green and Blue-Green channels.</"
+"para><para>This setting is only available for specific Quality options: "
+"<emphasis strong='true'>Bilinear</emphasis>, <emphasis strong='true'>VNG</"
+"emphasis>, <emphasis strong='true'>PPG</emphasis>, <emphasis "
+"strong='true'>AHD</emphasis>, <emphasis strong='true'>DCB</emphasis>, and "
+"<emphasis strong='true'>VCD & AHD</emphasis>.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:362
+#, fuzzy, kde-format
+msgctxt "@option:check"
+msgid "Refine interpolation"
+msgstr "Elekto"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:363
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Refine interpolation</title><para>This setting is available only for "
+"few Quality options:</para><para><list><item><emphasis strong='true'>DCB</"
+"emphasis>: turn on the enhance interpolated colors filter.</"
+"item><item><emphasis strong='true'>VCD & AHD</emphasis>: turn on the "
+"enhanced effective color interpolation (EECI) refine to improve sharpness.</"
+"item></list></para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:376
+#, kde-format
+msgctxt "@label"
+msgid "Demosaicing"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:384
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Method:"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:386
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "Default D65"
+msgstr "Defaŭlta"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:387
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "Camera"
+msgstr "Caserta"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:388
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox set while balance automatically"
+msgid "Automatic"
+msgstr "Aŭtomate"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:389
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox set white balance manually"
+msgid "Manual"
+msgstr "Manuma"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:391
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>White Balance</title><para>Configure the raw white balance:</"
+"para><para><list><item><emphasis strong='true'>Default D65</emphasis>: Use a "
+"standard daylight D65 white balance.</item><item><emphasis "
+"strong='true'>Camera</emphasis>: Use the white balance specified by the "
+"camera. If not available, reverts to default neutral white balance.</"
+"item><item><emphasis strong='true'>Automatic</emphasis>: Calculates an "
+"automatic white balance averaging the entire image.</item><item><emphasis "
+"strong='true'>Manual</emphasis>: Set a custom temperature and green level "
+"values.</item></list></para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:406
+#, kde-format
+msgctxt "@label:slider"
+msgid "T(K):"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:407
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Temperature</title><para>Set here the color temperature in Kelvin.</"
+"para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:414
+#, fuzzy, kde-format
+msgctxt "@label:slider Green component"
+msgid "Green:"
+msgstr "Verdo:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:415
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Set here the green component to set magenta color cast removal level.</"
+"para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:418
+#, fuzzy, kde-format
+msgctxt "@label:listbox"
+msgid "Highlights:"
+msgstr "Alteco:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:420
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "Solid white"
+msgstr "Solida"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:421
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Unclip"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:422
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "Blend"
+msgstr "Kalendaro"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:423
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Rebuild"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:425
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Highlights</title><para>Select here the highlight clipping method:</"
+"para><para><list><item><emphasis strong='true'>Solid white</emphasis>: clip "
+"all highlights to solid white</item><item><emphasis strong='true'>Unclip</"
+"emphasis>: leave highlights unclipped in various shades of pink</"
+"item><item><emphasis strong='true'>Blend</emphasis>:Blend clipped and "
+"unclipped values together for a gradual fade to white</item><item><emphasis "
+"strong='true'>Rebuild</emphasis>: reconstruct highlights using a level "
+"value</item></list></para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:436
+#, fuzzy, kde-format
+msgctxt "@label:slider Highlight reconstruct level"
+msgid "Level:"
+msgstr "Nivelo:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:440
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Level</title><para>Specify the reconstruct highlight level. Low "
+"values favor whites and high values favor colors.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:444
+#, fuzzy, kde-format
+msgctxt "@option:check"
+msgid "Exposure Correction (E.V)"
+msgstr "Eksportu bildon..."
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:445
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid "<para>Turn on the exposure correction before interpolation.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:448
+#, fuzzy, kde-format
+msgctxt "@label:slider"
+msgid "Linear Shift:"
+msgstr "Lineara"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:453
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Shift</title><para>Linear Shift of exposure correction before "
+"interpolation in E.V</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:456
+#, fuzzy, kde-format
+msgctxt "@label:slider"
+msgid "Highlight:"
+msgstr "Alteco:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:461
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Highlight</title><para>Amount of highlight preservation for exposure "
+"correction before interpolation in E.V. Only take effect if Shift Correction "
+"is > 1.0 E.V</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:465
+#, kde-format
+msgctxt "@option:check"
+msgid "Correct false colors in highlights"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:466
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>If enabled, images with overblown channels are processed much more "
+"accurately, without 'pink clouds' (and blue highlights under tungsten lamps)."
+"</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:470
+#, fuzzy, kde-format
+msgctxt "@option:check"
+msgid "Auto Brightness"
+msgstr "Brileco:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:471
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>If disable, use a fixed white level and ignore the image histogram to "
+"adjust brightness.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:474
+#, fuzzy, kde-format
+msgctxt "@label:slider"
+msgid "Brightness:"
+msgstr "Brileco:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:479
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Brightness</title><para>Specify the brightness level of output image. "
+"The default value is 1.0 (works in 8-bit mode only).</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:489
+#, fuzzy, kde-format
+msgctxt "@option:check Black point"
+msgid "Black:"
+msgstr "Nigra"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:490
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Black point</title><para>Use a specific black point value to decode "
+"RAW pictures. If you set this option to off, the Black Point value will be "
+"automatically computed.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:497
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Black point value</title><para>Specify specific black point value of "
+"the output image.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:500
+#, fuzzy, kde-format
+msgctxt "@option:check White point"
+msgid "White:"
+msgstr "Titolo"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:501
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>White point</title><para>Use a specific white point value to decode "
+"RAW pictures. If you set this option to off, the White Point value will be "
+"automatically computed.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:508
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>White point value</title><para>Specify specific white point value of "
+"the output image.</para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:547
+#, kde-format
+msgctxt "@label"
+msgid "White Balance"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:555
+#, fuzzy, kde-format
+msgctxt "@label:listbox"
+msgid "Noise reduction:"
+msgstr "Elektaĵo"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:557
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "None"
+msgstr "Neniu"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:558
+#, kde-format
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "Wavelets"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:559
+#, kde-format
+msgctxt "@item:inlistbox Noise Reduction"
+msgid "FBDD"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:561
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Noise Reduction</title><para>Select here the noise reduction method "
+"to apply during RAW decoding.</para><para><list><item><emphasis "
+"strong='true'>None</emphasis>: no noise reduction.</item><item><emphasis "
+"strong='true'>Wavelets</emphasis>: wavelets correction to erase noise while "
+"preserving real detail. It is applied after interpolation.</"
+"item><item><emphasis strong='true'>FBDD</emphasis>: Fake Before Demosaicing "
+"Denoising noise reduction. It is applied before interpolation.</item></"
+"list></para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:586
+#, fuzzy, kde-format
+msgctxt "@label"
+msgid "Corrections"
+msgstr "Kolekto"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:594
+#, fuzzy, kde-format
+msgctxt "@label:listbox"
+msgid "Camera Profile:"
+msgstr "Caserta"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:596
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Camera Profile"
+msgid "None"
+msgstr "Neniu"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:597
+#, kde-format
+msgctxt "@item:inlistbox Camera Profile"
+msgid "Embedded"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:598
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Camera Profile"
+msgid "Custom"
+msgstr "Aŭtomate"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:600
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Camera Profile</title><para>Select here the input color space used to "
+"decode RAW data.</para><para><list><item><emphasis strong='true'>None</"
+"emphasis>: no input color profile is used during RAW decoding.</"
+"item><item><emphasis strong='true'>Embedded</emphasis>: use embedded color "
+"profile from RAW file, if it exists.</item><item><emphasis "
+"strong='true'>Custom</emphasis>: use a custom input color space profile.</"
+"item></list></para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:611
+#: core/libs/rawengine/drawdecoderwidget.cpp:645
+#, kde-format
+msgid "ICC Files (*.icc *.icm)"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:613
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Workspace:"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:615
+#, kde-format
+msgctxt "@item:inlistbox Workspace"
+msgid "Raw (no profile)"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:616
+#, kde-format
+msgctxt "@item:inlistbox Workspace"
+msgid "sRGB"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:617
+#, kde-format
+msgctxt "@item:inlistbox Workspace"
+msgid "Adobe RGB"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:618
+#, kde-format
+msgctxt "@item:inlistbox Workspace"
+msgid "Wide Gamut"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:619
+#, kde-format
+msgctxt "@item:inlistbox Workspace"
+msgid "Pro-Photo"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:620
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox Workspace"
+msgid "Custom"
+msgstr "Aŭtomate"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:622
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Workspace</title><para>Select here the output color space used to "
+"decode RAW data.</para><para><list><item><emphasis strong='true'>Raw "
+"(linear)</emphasis>: in this mode, no output color space is used during RAW "
+"decoding.</item><item><emphasis strong='true'>sRGB</emphasis>: this is an "
+"RGB color space, created cooperatively by Hewlett-Packard and Microsoft. It "
+"is the best choice for images destined for the Web and portrait photography."
+"</item><item><emphasis strong='true'>Adobe RGB</emphasis>: this color space "
+"is an extended RGB color space, developed by Adobe. It is used for "
+"photography applications such as advertising and fine art.</"
+"item><item><emphasis strong='true'>Wide Gamut</emphasis>: this color space "
+"is an expanded version of the Adobe RGB color space.</item><item><emphasis "
+"strong='true'>Pro-Photo</emphasis>: this color space is an RGB color space, "
+"developed by Kodak, that offers an especially large gamut designed for use "
+"with photographic outputs in mind.</item><item><emphasis "
+"strong='true'>Custom</emphasis>: use a custom output color space profile.</"
+"item></list></para>"
+msgstr ""
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:657
+#, fuzzy, kde-format
+msgctxt "@label"
+msgid "Color Management"
+msgstr "Koloradministrado"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:850
+#, fuzzy, kde-format
+msgctxt "@label"
+msgid "Threshold:"
+msgstr "Sojlo:"
+
+#: core/libs/rawengine/drawdecoderwidget.cpp:851
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Threshold</title><para>Set here the noise reduction threshold value "
+"to use.</para>"
+msgstr ""
+
 #: core/libs/settings/applicationsettings_miscs.cpp:368
 #, kde-format
 msgid "Do you want to do this operation on all group items?"
@@ -11913,764 +12536,6 @@ msgstr "Kanalo:"
 #, fuzzy, kde-format
 msgid "Browse..."
 msgstr "Miaj etikedoj"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:254
-#, kde-format
-msgctxt "@option:check"
-msgid "16 bits color depth"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:255
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<para>If enabled, all RAW files will be decoded in 16-bit color depth using "
-"a linear gamma curve. To prevent dark picture rendering in the editor, it is "
-"recommended to use Color Management in this mode.</para><para>If disabled, "
-"all RAW files will be decoded in 8-bit color depth with a BT.709 gamma curve "
-"and a 99th-percentile white point. This mode is faster than 16-bit decoding."
-"</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:274
-#, kde-format
-msgctxt "@option:check"
-msgid "Interpolate RGB as four colors"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:275
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Interpolate RGB as four colors</title><para>The default is to assume "
-"that all green pixels are the same. If even-row green pixels are more "
-"sensitive to ultraviolet light than odd-row this difference causes a mesh "
-"pattern in the output; using this option solves this problem with minimal "
-"loss of detail.</para><para>To resume, this option blurs the image a little, "
-"but it eliminates false 2x2 mesh patterns with VNG quality method or mazes "
-"with AHD quality method.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:289
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Visit LibRaw project website"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:299
-#, kde-format
-msgctxt "@option:check"
-msgid "Do not stretch or rotate pixels"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:301
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Do not stretch or rotate pixels</title><para>For Fuji Super CCD "
-"cameras, show the image tilted 45 degrees. For cameras with non-square "
-"pixels, do not stretch the image to its correct aspect ratio. In any case, "
-"this option guarantees that each output pixel corresponds to one RAW pixel.</"
-"para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:309
-#, fuzzy, kde-format
-msgctxt "@label:listbox"
-msgid "Quality:"
-msgstr "Travideblo:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:313
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "Bilinear"
-msgstr "Lineara"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:314
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "VNG"
-msgstr "LibPNG"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:315
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "PPG"
-msgstr "LibPNG"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:316
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "AHD"
-msgstr "KAJ"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:319
-#, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "DCB"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:320
-#, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "AHD v2"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:321
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "AFD"
-msgstr "KAJ"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:322
-#, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "VCD"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:323
-#, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "VCD & AHD"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:324
-#, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "LMMSE"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:326
-#, kde-format
-msgctxt "@item:inlistbox Quality"
-msgid "AMaZE"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:330
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Quality (interpolation)</title><para>Select here the demosaicing "
-"method to use when decoding RAW images. A demosaicing algorithm is a digital "
-"image process used to interpolate a complete image from the partial raw data "
-"received from the color-filtered image sensor, internal to many digital "
-"cameras, in form of a matrix of colored pixels. Also known as CFA "
-"interpolation or color reconstruction, another common spelling is "
-"demosaicing. The following methods are available for demosaicing RAW images:"
-"</para><para><list><item><emphasis strong='true'>Bilinear</emphasis>: use "
-"high-speed but low-quality bilinear interpolation (default - for slow "
-"computers). In this method, the red value of a non-red pixel is computed as "
-"the average of the adjacent red pixels, and similarly for blue and green.</"
-"item><item><emphasis strong='true'>VNG</emphasis>: use Variable Number of "
-"Gradients interpolation. This method computes gradients near the pixel of "
-"interest and uses the lower gradients (representing smoother and more "
-"similar parts of the image) to make an estimate.</item><item><emphasis "
-"strong='true'>PPG</emphasis>: use Patterned-Pixel-Grouping interpolation. "
-"Pixel Grouping uses assumptions about natural scenery in making estimates. "
-"It has fewer color artifacts on natural images than the Variable Number of "
-"Gradients method.</item><item><emphasis strong='true'>AHD</emphasis>: use "
-"Adaptive Homogeneity-Directed interpolation. This method selects the "
-"direction of interpolation so as to maximize a homogeneity metric, thus "
-"typically minimizing color artifacts.</item><item><emphasis "
-"strong='true'>DCB</emphasis>: DCB interpolation from linuxphoto.org project."
-"</item><item><emphasis strong='true'>AHD v2</emphasis>: modified AHD "
-"interpolation using Variance of Color Differences method.</"
-"item><item><emphasis strong='true'>AFD</emphasis>: Adaptive Filtered "
-"Demosaicing interpolation through 5 pass median filter from PerfectRaw "
-"project.</item><item><emphasis strong='true'>VCD</emphasis>: Variance of "
-"Color Differences interpolation.</item><item><emphasis strong='true'>VCD & "
-"AHD</emphasis>: Mixed demosaicing between VCD and AHD.</item><item><emphasis "
-"strong='true'>LMMSE</emphasis>: color demosaicing via directional linear "
-"minimum mean-square error estimation interpolation from PerfectRaw.</"
-"item><item><emphasis strong='true'>AMaZE</emphasis>: Aliasing Minimization "
-"interpolation and Zipper Elimination to apply color aberration removal from "
-"RawTherapee project.</item></list></para><para>Note: some methods can be "
-"unavailable if RAW decoder have been built without extension packs.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:399
-#, fuzzy, kde-format
-msgctxt "@label:slider"
-msgid "Pass:"
-msgstr "Pasvorto"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:400
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Pass</title><para>Set here the passes used by the median filter "
-"applied after interpolation to Red-Green and Blue-Green channels.</"
-"para><para>This setting is only available for specific Quality options: "
-"<emphasis strong='true'>Bilinear</emphasis>, <emphasis strong='true'>VNG</"
-"emphasis>, <emphasis strong='true'>PPG</emphasis>, <emphasis "
-"strong='true'>AHD</emphasis>, <emphasis strong='true'>DCB</emphasis>, and "
-"<emphasis strong='true'>VCD & AHD</emphasis>.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:412
-#, fuzzy, kde-format
-msgctxt "@option:check"
-msgid "Refine interpolation"
-msgstr "Elekto"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:413
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Refine interpolation</title><para>This setting is available only for "
-"few Quality options:</para><para><list><item><emphasis strong='true'>DCB</"
-"emphasis>: turn on the enhance interpolated colors filter.</"
-"item><item><emphasis strong='true'>VCD & AHD</emphasis>: turn on the "
-"enhanced effective color interpolation (EECI) refine to improve sharpness.</"
-"item></list></para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:426
-#, kde-format
-msgctxt "@label"
-msgid "Demosaicing"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:434
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Method:"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:436
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox"
-msgid "Default D65"
-msgstr "Defaŭlta"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:437
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox"
-msgid "Camera"
-msgstr "Caserta"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:438
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox set while balance automatically"
-msgid "Automatic"
-msgstr "Aŭtomate"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:439
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox set white balance manually"
-msgid "Manual"
-msgstr "Manuma"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:441
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>White Balance</title><para>Configure the raw white balance:</"
-"para><para><list><item><emphasis strong='true'>Default D65</emphasis>: Use a "
-"standard daylight D65 white balance.</item><item><emphasis "
-"strong='true'>Camera</emphasis>: Use the white balance specified by the "
-"camera. If not available, reverts to default neutral white balance.</"
-"item><item><emphasis strong='true'>Automatic</emphasis>: Calculates an "
-"automatic white balance averaging the entire image.</item><item><emphasis "
-"strong='true'>Manual</emphasis>: Set a custom temperature and green level "
-"values.</item></list></para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:456
-#, kde-format
-msgctxt "@label:slider"
-msgid "T(K):"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:457
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Temperature</title><para>Set here the color temperature in Kelvin.</"
-"para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:464
-#, fuzzy, kde-format
-msgctxt "@label:slider Green component"
-msgid "Green:"
-msgstr "Verdo:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:465
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<para>Set here the green component to set magenta color cast removal level.</"
-"para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:468
-#, fuzzy, kde-format
-msgctxt "@label:listbox"
-msgid "Highlights:"
-msgstr "Alteco:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:470
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox"
-msgid "Solid white"
-msgstr "Solida"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:471
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Unclip"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:472
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox"
-msgid "Blend"
-msgstr "Kalendaro"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:473
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Rebuild"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:475
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Highlights</title><para>Select here the highlight clipping method:</"
-"para><para><list><item><emphasis strong='true'>Solid white</emphasis>: clip "
-"all highlights to solid white</item><item><emphasis strong='true'>Unclip</"
-"emphasis>: leave highlights unclipped in various shades of pink</"
-"item><item><emphasis strong='true'>Blend</emphasis>:Blend clipped and "
-"unclipped values together for a gradual fade to white</item><item><emphasis "
-"strong='true'>Rebuild</emphasis>: reconstruct highlights using a level "
-"value</item></list></para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:486
-#, fuzzy, kde-format
-msgctxt "@label:slider Highlight reconstruct level"
-msgid "Level:"
-msgstr "Nivelo:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:490
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Level</title><para>Specify the reconstruct highlight level. Low "
-"values favor whites and high values favor colors.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:494
-#, fuzzy, kde-format
-msgctxt "@option:check"
-msgid "Exposure Correction (E.V)"
-msgstr "Eksportu bildon..."
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:495
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid "<para>Turn on the exposure correction before interpolation.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:498
-#, fuzzy, kde-format
-msgctxt "@label:slider"
-msgid "Linear Shift:"
-msgstr "Lineara"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:503
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Shift</title><para>Linear Shift of exposure correction before "
-"interpolation in E.V</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:506
-#, fuzzy, kde-format
-msgctxt "@label:slider"
-msgid "Highlight:"
-msgstr "Alteco:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:511
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Highlight</title><para>Amount of highlight preservation for exposure "
-"correction before interpolation in E.V. Only take effect if Shift Correction "
-"is > 1.0 E.V</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:515
-#, kde-format
-msgctxt "@option:check"
-msgid "Correct false colors in highlights"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:516
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<para>If enabled, images with overblown channels are processed much more "
-"accurately, without 'pink clouds' (and blue highlights under tungsten lamps)."
-"</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:520
-#, fuzzy, kde-format
-msgctxt "@option:check"
-msgid "Auto Brightness"
-msgstr "Brileco:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:521
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<para>If disable, use a fixed white level and ignore the image histogram to "
-"adjust brightness.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:524
-#, fuzzy, kde-format
-msgctxt "@label:slider"
-msgid "Brightness:"
-msgstr "Brileco:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:529
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Brightness</title><para>Specify the brightness level of output image. "
-"The default value is 1.0 (works in 8-bit mode only).</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:539
-#, fuzzy, kde-format
-msgctxt "@option:check Black point"
-msgid "Black:"
-msgstr "Nigra"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:540
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Black point</title><para>Use a specific black point value to decode "
-"RAW pictures. If you set this option to off, the Black Point value will be "
-"automatically computed.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:547
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Black point value</title><para>Specify specific black point value of "
-"the output image.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:550
-#, fuzzy, kde-format
-msgctxt "@option:check White point"
-msgid "White:"
-msgstr "Titolo"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:551
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>White point</title><para>Use a specific white point value to decode "
-"RAW pictures. If you set this option to off, the White Point value will be "
-"automatically computed.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:558
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>White point value</title><para>Specify specific white point value of "
-"the output image.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:597
-#, kde-format
-msgctxt "@label"
-msgid "White Balance"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:605
-#, fuzzy, kde-format
-msgctxt "@label:listbox"
-msgid "Noise reduction:"
-msgstr "Elektaĵo"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:607
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Noise Reduction"
-msgid "None"
-msgstr "Neniu"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:608
-#, kde-format
-msgctxt "@item:inlistbox Noise Reduction"
-msgid "Wavelets"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:609
-#, kde-format
-msgctxt "@item:inlistbox Noise Reduction"
-msgid "FBDD"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:610
-#, kde-format
-msgctxt "@item:inlistbox Noise Reduction"
-msgid "CFA Line Denoise"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:611
-#, kde-format
-msgctxt "@item:inlistbox Noise Reduction"
-msgid "Impulse Denoise"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:613
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Noise Reduction</title><para>Select here the noise reduction method "
-"to apply during RAW decoding.</para><para><list><item><emphasis "
-"strong='true'>None</emphasis>: no noise reduction.</item><item><emphasis "
-"strong='true'>Wavelets</emphasis>: wavelets correction to erase noise while "
-"preserving real detail. It is applied after interpolation.</"
-"item><item><emphasis strong='true'>FBDD</emphasis>: Fake Before Demosaicing "
-"Denoising noise reduction. It is applied before interpolation.</"
-"item><item><emphasis strong='true'>CFA Line Denoise</emphasis>: Banding "
-"noise suppression. It is applied after interpolation.</item><item><emphasis "
-"strong='true'>Impulse Denoise</emphasis>: Impulse noise suppression. It is "
-"applied after interpolation.</item></list></para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:639
-#, kde-format
-msgctxt "@option:check"
-msgid "Enable Chromatic Aberration correction"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:640
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Enable Chromatic Aberration correction</title><para>Enlarge the raw "
-"red-green and blue-yellow axis by the given factors (automatic by default).</"
-"para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:645
-#, fuzzy, kde-format
-msgctxt "@option:check"
-msgid "Automatic color axis adjustments"
-msgstr "Elektaĵo"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:646
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Automatic Chromatic Aberration correction</title><para>If this option "
-"is turned on, it will try to shift image channels slightly and evaluate "
-"Chromatic Aberration change. Note that if you shot blue-red pattern, the "
-"method may fail. In this case, disable this option and tune manually color "
-"factors.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:653
-#, fuzzy, kde-format
-msgctxt "@label:slider"
-msgid "Red-Green:"
-msgstr "Verdo:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:658
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Red-Green multiplier</title><para>Set here the amount of correction "
-"on red-green axis</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:661
-#, fuzzy, kde-format
-msgctxt "@label:slider"
-msgid "Blue-Yellow:"
-msgstr "Flava"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:666
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Blue-Yellow multiplier</title><para>Set here the amount of correction "
-"on blue-yellow axis</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:685
-#, fuzzy, kde-format
-msgctxt "@label"
-msgid "Corrections"
-msgstr "Kolekto"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:693
-#, fuzzy, kde-format
-msgctxt "@label:listbox"
-msgid "Camera Profile:"
-msgstr "Caserta"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:695
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Camera Profile"
-msgid "None"
-msgstr "Neniu"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:696
-#, kde-format
-msgctxt "@item:inlistbox Camera Profile"
-msgid "Embedded"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:697
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Camera Profile"
-msgid "Custom"
-msgstr "Aŭtomate"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:699
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Camera Profile</title><para>Select here the input color space used to "
-"decode RAW data.</para><para><list><item><emphasis strong='true'>None</"
-"emphasis>: no input color profile is used during RAW decoding.</"
-"item><item><emphasis strong='true'>Embedded</emphasis>: use embedded color "
-"profile from RAW file, if it exists.</item><item><emphasis "
-"strong='true'>Custom</emphasis>: use a custom input color space profile.</"
-"item></list></para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:710
-#: core/libs/widgets/files/drawdecoderwidget.cpp:744
-#, kde-format
-msgid "ICC Files (*.icc *.icm)"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:712
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Workspace:"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:714
-#, kde-format
-msgctxt "@item:inlistbox Workspace"
-msgid "Raw (no profile)"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:715
-#, kde-format
-msgctxt "@item:inlistbox Workspace"
-msgid "sRGB"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:716
-#, kde-format
-msgctxt "@item:inlistbox Workspace"
-msgid "Adobe RGB"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:717
-#, kde-format
-msgctxt "@item:inlistbox Workspace"
-msgid "Wide Gamut"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:718
-#, kde-format
-msgctxt "@item:inlistbox Workspace"
-msgid "Pro-Photo"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:719
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox Workspace"
-msgid "Custom"
-msgstr "Aŭtomate"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:721
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Workspace</title><para>Select here the output color space used to "
-"decode RAW data.</para><para><list><item><emphasis strong='true'>Raw "
-"(linear)</emphasis>: in this mode, no output color space is used during RAW "
-"decoding.</item><item><emphasis strong='true'>sRGB</emphasis>: this is an "
-"RGB color space, created cooperatively by Hewlett-Packard and Microsoft. It "
-"is the best choice for images destined for the Web and portrait photography."
-"</item><item><emphasis strong='true'>Adobe RGB</emphasis>: this color space "
-"is an extended RGB color space, developed by Adobe. It is used for "
-"photography applications such as advertising and fine art.</"
-"item><item><emphasis strong='true'>Wide Gamut</emphasis>: this color space "
-"is an expanded version of the Adobe RGB color space.</item><item><emphasis "
-"strong='true'>Pro-Photo</emphasis>: this color space is an RGB color space, "
-"developed by Kodak, that offers an especially large gamut designed for use "
-"with photographic outputs in mind.</item><item><emphasis "
-"strong='true'>Custom</emphasis>: use a custom output color space profile.</"
-"item></list></para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:756
-#, fuzzy, kde-format
-msgctxt "@label"
-msgid "Color Management"
-msgstr "Koloradministrado"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:966
-#, fuzzy, kde-format
-msgctxt "@label"
-msgid "Threshold:"
-msgstr "Sojlo:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:967
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Threshold</title><para>Set here the noise reduction threshold value "
-"to use.</para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:980
-#, fuzzy, kde-format
-msgctxt "@label"
-msgid "Luminance:"
-msgstr "Distanco:"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:981
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Luminance</title><para>Amount of Luminance impulse noise reduction.</"
-"para>"
-msgstr ""
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:983
-#, fuzzy, kde-format
-msgctxt "@label"
-msgid "Chrominance:"
-msgstr "Ŝtato (Usono) / Provinco"
-
-#: core/libs/widgets/files/drawdecoderwidget.cpp:984
-#, kde-kuit-format
-msgctxt "@info:whatsthis"
-msgid ""
-"<title>Chrominance</title><para>Amount of Chrominance impulse noise "
-"reduction.</para>"
-msgstr ""
 
 #: core/libs/widgets/files/filesaveconflictbox.cpp:71
 #, kde-format
@@ -41143,6 +41008,36 @@ msgstr "Ŝalti ekranon"
 msgctxt "%1 is the screen number (0, 1, ...)"
 msgid "Screen %1"
 msgstr "Ekrano %1"
+
+#, fuzzy
+#~ msgctxt "@item:inlistbox Quality"
+#~ msgid "AFD"
+#~ msgstr "KAJ"
+
+#, fuzzy
+#~ msgctxt "@option:check"
+#~ msgid "Automatic color axis adjustments"
+#~ msgstr "Elektaĵo"
+
+#, fuzzy
+#~ msgctxt "@label:slider"
+#~ msgid "Red-Green:"
+#~ msgstr "Verdo:"
+
+#, fuzzy
+#~ msgctxt "@label:slider"
+#~ msgid "Blue-Yellow:"
+#~ msgstr "Flava"
+
+#, fuzzy
+#~ msgctxt "@label"
+#~ msgid "Luminance:"
+#~ msgstr "Distanco:"
+
+#, fuzzy
+#~ msgctxt "@label"
+#~ msgid "Chrominance:"
+#~ msgstr "Ŝtato (Usono) / Provinco"
 
 #, fuzzy
 #~| msgid "Copyright"
