@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ChartShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-07-24 03:31+0200\n"
+"POT-Creation-Date: 2018-08-07 03:32+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -179,8 +179,8 @@ msgid "Gap Between Bars"
 msgstr ""
 
 #: BubbleConfigWidget.cpp:110 DataSetConfigWidget.cpp:661
-#: PlotAreaConfigWidget.cpp:615 PlotAreaConfigWidget.cpp:665
-#: PlotAreaConfigWidget.cpp:822
+#: PlotAreaConfigWidget.cpp:620 PlotAreaConfigWidget.cpp:671
+#: PlotAreaConfigWidget.cpp:829
 #, fuzzy, kde-format
 #| msgid "Database"
 msgid "Data Set %1"
@@ -220,14 +220,18 @@ msgstr "Kategorio"
 msgid "Number"
 msgstr "Nombro"
 
+#. i18n: ectx: property (text), widget (QToolButton, chartAreaPercent)
+#. i18n: ectx: property (text), widget (QToolButton, chartLinePercent)
+#. i18n: ectx: property (text), widget (QToolButton, chartBarPercent)
 #. i18n: ectx: property (text), widget (QCheckBox, datasetShowPercent)
 #. i18n: ectx: property (text), widget (QCheckBox, dataSetShowPercent)
 #. i18n: ectx: property (text), widget (QCheckBox, dataPointShowPercent)
-#: BubbleConfigWidget.ui:156 DataSetConfigWidget.cpp:218
-#: DataSetConfigWidget.cpp:223 DataSetConfigWidget.cpp:228
-#: DataSetConfigWidget.ui:245 PieConfigWidget.ui:189
-#: PlotAreaConfigWidget.cpp:246 PlotAreaConfigWidget.cpp:252
-#: PlotAreaConfigWidget.cpp:258
+#: BubbleConfigWidget.ui:156 ChartCreationWidget.ui:423
+#: ChartCreationWidget.ui:458 ChartCreationWidget.ui:493
+#: DataSetConfigWidget.cpp:218 DataSetConfigWidget.cpp:223
+#: DataSetConfigWidget.cpp:228 DataSetConfigWidget.ui:245
+#: PieConfigWidget.ui:189 PlotAreaConfigWidget.cpp:246
+#: PlotAreaConfigWidget.cpp:252 PlotAreaConfigWidget.cpp:258
 #, kde-format
 msgid "Percent"
 msgstr "Elcento"
@@ -240,49 +244,271 @@ msgstr "Elcento"
 msgid "Symbol"
 msgstr "Simbolo"
 
-#: ChartShape.cpp:323
+#. i18n: ectx: property (windowTitle), widget (QWidget, ChartCreationWidget)
+#: ChartCreationWidget.ui:20 DataSetConfigWidget.cpp:209
+#: PlotAreaConfigWidget.cpp:239
+#, fuzzy, kde-format
+#| msgid "ChartType tool"
+msgid "Chart Type"
+msgstr "DiagramTip-ilo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartBar)
+#: ChartCreationWidget.ui:32
+#, fuzzy, kde-format
+#| msgid "Bar Chart"
+msgid "Bar chart"
+msgstr "Bastondiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartBar)
+#: ChartCreationWidget.ui:35
+#, kde-format
+msgid "Bar"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartLine)
+#: ChartCreationWidget.ui:70
+#, fuzzy, kde-format
+#| msgid "Line Chart"
+msgid "Line chart"
+msgstr "Liniodiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartLine)
+#: ChartCreationWidget.ui:73
+#, kde-format
+msgid "Line"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartArea)
+#: ChartCreationWidget.ui:105
+#, fuzzy, kde-format
+#| msgid "Area Chart"
+msgid "Area chart"
+msgstr "Areodiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartArea)
+#: ChartCreationWidget.ui:108
+#, fuzzy, kde-format
+#| msgid "Database"
+msgid "Area"
+msgstr "Datumbazo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartPie)
+#: ChartCreationWidget.ui:140
+#, fuzzy, kde-format
+#| msgid "Pie Chart"
+msgid "Pie chart"
+msgstr "Tortodiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartPie)
+#: ChartCreationWidget.ui:143
+#, kde-format
+msgid "Pie"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartRing)
+#: ChartCreationWidget.ui:175
+#, fuzzy, kde-format
+#| msgid "Ring Chart"
+msgid "Ring chart"
+msgstr "Ringdiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartRing)
+#: ChartCreationWidget.ui:178
+#, kde-format
+msgid "Ring"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartRadar)
+#: ChartCreationWidget.ui:210
+#, fuzzy, kde-format
+#| msgid "Bar Chart"
+msgid "Radar chart"
+msgstr "Bastondiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartRadar)
+#: ChartCreationWidget.ui:213
+#, fuzzy, kde-format
+#| msgid "Bar Chart"
+msgid "Radar"
+msgstr "Bastondiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartScatter)
+#: ChartCreationWidget.ui:245
+#, fuzzy, kde-format
+#| msgid "Scatter Chart"
+msgid "Scatter chart"
+msgstr "Dispersdiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartScatter)
+#: ChartCreationWidget.ui:248
+#, fuzzy, kde-format
+#| msgid "Scatter Chart"
+msgid "Scatter"
+msgstr "Dispersdiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartBubbles)
+#: ChartCreationWidget.ui:280
+#, fuzzy, kde-format
+#| msgid "Bubble Chart"
+msgid "Bubbles chart"
+msgstr "Vezikdiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartBubbles)
+#: ChartCreationWidget.ui:283
+#, fuzzy, kde-format
+#| msgid "Bubble Chart"
+msgid "Bubbles"
+msgstr "Vezikdiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartBarStacked)
+#: ChartCreationWidget.ui:315
+#, fuzzy, kde-format
+#| msgid "Stock Chart"
+msgid "Stacked bar chart"
+msgstr "Akciodiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartBarStacked)
+#. i18n: ectx: property (text), widget (QToolButton, chartLineStacked)
+#. i18n: ectx: property (text), widget (QToolButton, chartAreaStacked)
+#: ChartCreationWidget.ui:318 ChartCreationWidget.ui:353
+#: ChartCreationWidget.ui:388 DataSetConfigWidget.cpp:217
+#: DataSetConfigWidget.cpp:222 DataSetConfigWidget.cpp:227
+#: PlotAreaConfigWidget.cpp:245 PlotAreaConfigWidget.cpp:251
+#: PlotAreaConfigWidget.cpp:257
+#, kde-format
+msgid "Stacked"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartLineStacked)
+#: ChartCreationWidget.ui:350
+#, fuzzy, kde-format
+#| msgid "Line Chart"
+msgid "Stacked line chart"
+msgstr "Liniodiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartAreaStacked)
+#: ChartCreationWidget.ui:385
+#, fuzzy, kde-format
+#| msgid "Area Chart"
+msgid "Stacked area chart"
+msgstr "Areodiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartAreaPercent)
+#: ChartCreationWidget.ui:420
+#, fuzzy, kde-format
+#| msgid "Area Chart"
+msgid "Percent area chart"
+msgstr "Areodiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartLinePercent)
+#: ChartCreationWidget.ui:455
+#, fuzzy, kde-format
+#| msgid "Line Chart"
+msgid "Percent line chart"
+msgstr "Liniodiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartBarPercent)
+#: ChartCreationWidget.ui:490
+#, fuzzy, kde-format
+#| msgid "Bar Chart"
+msgid "Percent bar chart"
+msgstr "Bastondiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartRadarFilled)
+#: ChartCreationWidget.ui:525
+#, fuzzy, kde-format
+#| msgid "Bar Chart"
+msgid "Filled radar chart"
+msgstr "Bastondiagramo"
+
+#. i18n: ectx: property (text), widget (QToolButton, chartRadarFilled)
+#: ChartCreationWidget.ui:528 DataSetConfigWidget.cpp:235
+#: PlotAreaConfigWidget.cpp:271
+#, kde-format
+msgid "Filled"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartStockHLC)
+#: ChartCreationWidget.ui:560
+#, kde-format
+msgid "High Low Close"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, chartStockHLC)
+#: ChartCreationWidget.ui:563
+#, fuzzy, kde-format
+#| msgid "Stock Chart"
+msgid "Stock HLC"
+msgstr "Akciodiagramo"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartStockOHLC)
+#: ChartCreationWidget.ui:595
+#, kde-format
+msgid "Open High Low Close"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, chartStockOHLC)
+#: ChartCreationWidget.ui:598
+#, kde-format
+msgid "OHLC"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, chartStockCandleStick)
+#: ChartCreationWidget.ui:630
+#, kde-format
+msgid "Japanese candle stick"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, chartStockCandleStick)
+#: ChartCreationWidget.ui:633 DataSetConfigWidget.cpp:240
+#: PlotAreaConfigWidget.cpp:287
+#, kde-format
+msgid "Candlestick"
+msgstr ""
+
+#: ChartShape.cpp:324
 #, kde-format
 msgid ""
 "The plugin needed for displaying text labels in a chart is not available."
 msgstr ""
 
-#: ChartShape.cpp:324
+#: ChartShape.cpp:325
 #, kde-format
 msgid "Plugin Missing"
 msgstr ""
 
-#: ChartShape.cpp:328
+#: ChartShape.cpp:329
 #, kde-format
 msgid ""
 "The plugin needed for displaying text labels is not compatible with the "
 "current version of the chart Flake shape."
 msgstr ""
 
-#: ChartShape.cpp:329
+#: ChartShape.cpp:330
 #, kde-format
 msgid "Plugin Incompatible"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QCheckBox, showTitle)
-#: ChartShape.cpp:347 LegendConfigWidget.ui:123 TitlesConfigWidget.ui:44
+#: ChartShape.cpp:348 LegendConfigWidget.ui:123 TitlesConfigWidget.ui:44
 #, kde-format
 msgid "Title"
 msgstr "Titolo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showSubTitle)
-#: ChartShape.cpp:377 TitlesConfigWidget.ui:85
+#: ChartShape.cpp:378 TitlesConfigWidget.ui:85
 #, kde-format
 msgid "Subtitle"
 msgstr "Subteksto"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showFooter)
-#: ChartShape.cpp:407 TitlesConfigWidget.ui:126
+#: ChartShape.cpp:408 TitlesConfigWidget.ui:126
 #, kde-format
 msgid "Footer"
 msgstr "Piedo"
 
-#: ChartShape.cpp:783
+#: ChartShape.cpp:784
 #, kde-format
 msgid ""
 "This document contains an external link to a remote document\n"
@@ -291,17 +517,17 @@ msgstr ""
 "Tiu dokumento enhavas eksteran ligon al ne-loka dokumento\n"
 "%1"
 
-#: ChartShape.cpp:784
+#: ChartShape.cpp:785
 #, kde-format
 msgid "Confirmation Required"
 msgstr "Bezonas konfirmon"
 
-#: ChartShape.cpp:784
+#: ChartShape.cpp:785
 #, kde-format
 msgid "Download"
 msgstr "Elŝuti"
 
-#: ChartShape.cpp:784
+#: ChartShape.cpp:785
 #, kde-format
 msgid "Skip"
 msgstr "Pasigi"
@@ -771,12 +997,6 @@ msgstr "Orientiĝo"
 msgid "Series %1"
 msgstr ""
 
-#: DataSetConfigWidget.cpp:209 PlotAreaConfigWidget.cpp:239
-#, fuzzy, kde-format
-#| msgid "ChartType tool"
-msgid "Chart Type"
-msgstr "DiagramTip-ilo"
-
 #: DataSetConfigWidget.cpp:215 PlotAreaConfigWidget.cpp:243
 #, kde-format
 msgid "Bar Chart"
@@ -789,13 +1009,6 @@ msgstr "Bastondiagramo"
 #, kde-format
 msgid "Normal"
 msgstr "Normala"
-
-#: DataSetConfigWidget.cpp:217 DataSetConfigWidget.cpp:222
-#: DataSetConfigWidget.cpp:227 PlotAreaConfigWidget.cpp:245
-#: PlotAreaConfigWidget.cpp:251 PlotAreaConfigWidget.cpp:257
-#, kde-format
-msgid "Stacked"
-msgstr ""
 
 #: DataSetConfigWidget.cpp:220 PlotAreaConfigWidget.cpp:249
 #, kde-format
@@ -823,11 +1036,6 @@ msgstr "Ringdiagramo"
 msgid "Polar Chart"
 msgstr "Bastondiagramo"
 
-#: DataSetConfigWidget.cpp:235 PlotAreaConfigWidget.cpp:271
-#, kde-format
-msgid "Filled"
-msgstr ""
-
 #: DataSetConfigWidget.cpp:237 PlotAreaConfigWidget.cpp:282
 #, kde-format
 msgid "Stock Chart"
@@ -841,11 +1049,6 @@ msgstr ""
 #: DataSetConfigWidget.cpp:239 PlotAreaConfigWidget.cpp:285
 #, kde-format
 msgid "OpenHighLowClose"
-msgstr ""
-
-#: DataSetConfigWidget.cpp:240 PlotAreaConfigWidget.cpp:287
-#, kde-format
-msgid "Candlestick"
 msgstr ""
 
 #: DataSetConfigWidget.cpp:242 PlotAreaConfigWidget.cpp:277
