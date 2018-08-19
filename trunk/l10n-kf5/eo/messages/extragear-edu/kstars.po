@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-17 03:43+0200\n"
+"POT-Creation-Date: 2018-08-19 03:33+0200\n"
 "PO-Revision-Date: 2015-03-19 04:30-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -357,6 +357,7 @@ msgid "Error: Unable to save image: %1"
 msgstr "Ne eblis malfermi dosieron"
 
 #: auxiliary/imageexporter.cpp:179 auxiliary/imageviewer.cpp:364
+#: auxiliary/xplanetimageviewer.cpp:1108
 #, fuzzy, kde-format
 msgid "Saved image to %1"
 msgstr "Konservi la bildon surdiske"
@@ -382,7 +383,7 @@ msgstr "Bonvenon ĉe KStars"
 msgid "Invert colors"
 msgstr "Inversigi kolorojn"
 
-#: auxiliary/imageviewer.cpp:142
+#: auxiliary/imageviewer.cpp:142 auxiliary/xplanetimageviewer.cpp:354
 #, kde-format
 msgid ""
 "Reverse colors of the image. This is useful to enhance contrast at times. "
@@ -400,7 +401,7 @@ msgstr ""
 msgid "Save"
 msgstr "Konservi"
 
-#: auxiliary/imageviewer.cpp:145
+#: auxiliary/imageviewer.cpp:145 auxiliary/xplanetimageviewer.cpp:268
 #, kde-format
 msgid "Save the image to disk"
 msgstr "Konservi la bildon surdiske"
@@ -435,27 +436,29 @@ msgstr "Bonvenon ĉe KStars"
 msgid "Loading of the image %1 failed."
 msgstr "Ŝarĝado de la bildo %1 malsukcesis!"
 
-#: auxiliary/imageviewer.cpp:319 indi/clientmanagerlite.cpp:816
-#: printing/foveditordialog.cpp:129
+#: auxiliary/imageviewer.cpp:319 auxiliary/xplanetimageviewer.cpp:1072
+#: indi/clientmanagerlite.cpp:816 printing/foveditordialog.cpp:129
 #, kde-format
 msgid "Save Image"
 msgstr "Konservi bildon"
 
-#: auxiliary/imageviewer.cpp:327 dialogs/addcatdialog.cpp:232
-#: ekos/align/align.cpp:1228 ekos/align/align.cpp:1395 ekos/guide/guide.cpp:740
-#: kstarsactions.cpp:1214 printing/pwizprint.cpp:86 tools/scriptbuilder.cpp:913
+#: auxiliary/imageviewer.cpp:327 auxiliary/xplanetimageviewer.cpp:1082
+#: dialogs/addcatdialog.cpp:232 ekos/align/align.cpp:1228
+#: ekos/align/align.cpp:1395 ekos/guide/guide.cpp:740 kstarsactions.cpp:1214
+#: printing/pwizprint.cpp:86 tools/scriptbuilder.cpp:913
 #, kde-format
 msgid "A file named \"%1\" already exists. Overwrite it?"
 msgstr "Dosiero nomita \"%1\" jam ekzistas. Ĉu vi deziras anstataŭigi ĝin?"
 
-#: auxiliary/imageviewer.cpp:330 dialogs/addcatdialog.cpp:235
-#: ekos/align/align.cpp:1231 ekos/align/align.cpp:1398 ekos/guide/guide.cpp:743
-#: kstarsactions.cpp:1215 printing/pwizprint.cpp:87 tools/scriptbuilder.cpp:916
+#: auxiliary/imageviewer.cpp:330 auxiliary/xplanetimageviewer.cpp:1085
+#: dialogs/addcatdialog.cpp:235 ekos/align/align.cpp:1231
+#: ekos/align/align.cpp:1398 ekos/guide/guide.cpp:743 kstarsactions.cpp:1215
+#: printing/pwizprint.cpp:87 tools/scriptbuilder.cpp:916
 #, kde-format
 msgid "Overwrite File?"
 msgstr "Ĉu anstataŭigi la dosieron?"
 
-#: auxiliary/imageviewer.cpp:355
+#: auxiliary/imageviewer.cpp:355 auxiliary/xplanetimageviewer.cpp:1104
 #, fuzzy, kde-format
 msgid "Saving of the image %1 failed."
 msgstr "Konservado de la bildo %1 malsukcesis!"
@@ -755,6 +758,542 @@ msgstr "Bildo"
 msgid "Unset Image"
 msgstr "Konservu bildon"
 
+#: auxiliary/xplanetimageviewer.cpp:180 auxiliary/xplanetimageviewer.cpp:793
+#, kde-format
+msgid "XPlanet Solar System Simulator: %1"
+msgstr ""
+
+#. i18n?
+#. i18nc("Asteroid name (optional)", "Pluto");
+#. i18nc("Asteroid name (optional)", "Pluto")
+#. i18n: ectx: property (title), widget (QGroupBox, SunBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#: auxiliary/xplanetimageviewer.cpp:202
+#: data/qml/whatisinteresting/wiview.qml:144 skyglpainter.cpp:302
+#: skyobjects/kssun.cpp:28 tools/conjunctions.cpp:82 tools/conjunctions.cpp:282
+#: tools/modcalcdaylength.ui:109 tools/modcalcplanets.cpp:272
+#: tools/modcalcplanets.ui:190 tools/modcalcplanets.ui:614
+#, kde-format, kde-kuit-format
+msgid "Sun"
+msgstr "Suno"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowMercury)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Mercury)
+#: auxiliary/xplanetimageviewer.cpp:202
+#: kstarslite/skyitems/skynodes/planetnode.cpp:41 options/opssolarsystem.ui:204
+#: skycomponents/skymapcomposite.cpp:640 skyglpainter.cpp:310
+#: skymapdrawabstract.cpp:181 skyobjects/ksplanet.cpp:130
+#: skyobjects/ksplanet.cpp:165 skyobjects/ksplanet.cpp:361
+#: skyobjects/ksplanet.cpp:403 skyobjects/ksplanetbase.cpp:160
+#: skyqpainter.cpp:429 tools/conjunctions.cpp:74 tools/ksconjunct.cpp:78
+#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:145
+#: tools/modcalcplanets.ui:564 tools/obslistwizard.cpp:530
+#: tools/obslistwizard.cpp:532 tools/skycalendar.ui:34
+#, kde-format, kde-kuit-format
+msgid "Mercury"
+msgstr "Merkuro"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowVenus)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Venus)
+#: auxiliary/xplanetimageviewer.cpp:202 options/opssolarsystem.ui:140
+#: skycomponents/skymapcomposite.cpp:642 skymapdrawabstract.cpp:183
+#: skyobjects/ksplanet.cpp:133 skyobjects/ksplanet.cpp:167
+#: skyobjects/ksplanet.cpp:367 skyobjects/ksplanet.cpp:407
+#: skyobjects/ksplanetbase.cpp:160 tools/conjunctions.cpp:75
+#: tools/ksconjunct.cpp:78 tools/ksconjunct.cpp:79 tools/modcalcplanets.cpp:270
+#: tools/modcalcplanets.ui:150 tools/modcalcplanets.ui:569
+#: tools/obslistwizard.cpp:544 tools/obslistwizard.cpp:546
+#: tools/skycalendar.ui:41
+#, kde-format
+msgid "Venus"
+msgstr "Venuso"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#: auxiliary/xplanetimageviewer.cpp:203 auxiliary/xplanetimageviewer.cpp:217
+#: auxiliary/xplanetimageviewer.cpp:837
+#: skycomponents/solarsystemcomposite.cpp:35 skyobjects/ksplanet.cpp:411
+#: tools/ksconjunct.cpp:155 tools/modcalcplanets.cpp:77
+#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.cpp:390
+#: tools/modcalcplanets.ui:155 tools/modcalcplanets.ui:574
+#: widgets/moonphasecalendarwidget.cpp:332
+#, kde-format
+msgid "Earth"
+msgstr "Tero"
+
+#. i18n: ectx: property (title), widget (QGroupBox, MoonBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#: auxiliary/xplanetimageviewer.cpp:203
+#: data/qml/whatisinteresting/wiview.qml:175 skyobjects/ksmoon.cpp:70
+#: skyobjects/skyobject.cpp:386 tools/conjunctions.cpp:83
+#: tools/modcalcdaylength.ui:453 tools/modcalcplanets.cpp:272
+#: tools/modcalcplanets.ui:185 tools/modcalcplanets.ui:609
+#, kde-format, kde-kuit-format
+msgid "Moon"
+msgstr "Luno"
+
+#. i18n?
+#. i18n?
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowMars)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Mars)
+#: auxiliary/xplanetimageviewer.cpp:204
+#: kstarslite/skyitems/skynodes/planetnode.cpp:37 options/opssolarsystem.ui:85
+#: skycomponents/skymapcomposite.cpp:646 skyglpainter.cpp:306
+#: skymapdrawabstract.cpp:187 skyobjects/ksplanet.cpp:136
+#: skyobjects/ksplanet.cpp:169 skyobjects/ksplanet.cpp:371
+#: skyobjects/ksplanet.cpp:415 skyobjects/ksplanetbase.cpp:160
+#: skyqpainter.cpp:425 tools/conjunctions.cpp:76 tools/ksconjunct.cpp:75
+#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:160
+#: tools/modcalcplanets.ui:579 tools/obslistwizard.cpp:557
+#: tools/obslistwizard.cpp:559 tools/skycalendar.ui:48
+#, kde-format, kde-kuit-format
+msgid "Mars"
+msgstr "Marso"
+
+#: auxiliary/xplanetimageviewer.cpp:204
+#, kde-format
+msgid "Phobos"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:204
+#, fuzzy, kde-format
+#| msgctxt "star name"
+#| msgid "Mimosa"
+msgid "Deimos"
+msgstr "Mimosa"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowJupiter)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Jupiter)
+#: auxiliary/xplanetimageviewer.cpp:205
+#: kstarslite/skyitems/skynodes/planetnode.cpp:41 options/opssolarsystem.ui:172
+#: skycomponents/skymapcomposite.cpp:648 skyglpainter.cpp:310
+#: skymapdrawabstract.cpp:189 skyobjects/ksplanet.cpp:139
+#: skyobjects/ksplanet.cpp:171 skyobjects/ksplanet.cpp:375
+#: skyobjects/ksplanet.cpp:419 skyobjects/ksplanetbase.cpp:160
+#: skyqpainter.cpp:429 tools/conjunctions.cpp:77 tools/jmoontool.cpp:115
+#: tools/ksconjunct.cpp:71 tools/modcalcplanets.cpp:270
+#: tools/modcalcplanets.ui:165 tools/modcalcplanets.ui:584
+#: tools/obslistwizard.cpp:570 tools/obslistwizard.cpp:572
+#: tools/skycalendar.ui:55
+#, kde-format, kde-kuit-format
+msgid "Jupiter"
+msgstr "Jupitero"
+
+#: auxiliary/xplanetimageviewer.cpp:205 tools/jmoontool.cpp:58
+#, fuzzy, kde-format
+msgid "Ganymede"
+msgstr "Gander"
+
+#: auxiliary/xplanetimageviewer.cpp:205 tools/jmoontool.cpp:56
+#, fuzzy, kde-format
+msgid "Io"
+msgstr "Io"
+
+#: auxiliary/xplanetimageviewer.cpp:205 tools/jmoontool.cpp:59
+#, fuzzy, kde-format
+msgid "Callisto"
+msgstr "Cranston"
+
+#: auxiliary/xplanetimageviewer.cpp:205 tools/jmoontool.cpp:57
+#, fuzzy, kde-format
+msgid "Europa"
+msgstr "Europa"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSaturn)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Saturn)
+#: auxiliary/xplanetimageviewer.cpp:206
+#: kstarslite/skyitems/skynodes/planetnode.cpp:41 options/opssolarsystem.ui:56
+#: skycomponents/skymapcomposite.cpp:650 skyglpainter.cpp:311 skymap.cpp:1277
+#: skymapdrawabstract.cpp:191 skyobjects/ksplanet.cpp:142
+#: skyobjects/ksplanet.cpp:173 skyobjects/ksplanet.cpp:379
+#: skyobjects/ksplanet.cpp:423 skyobjects/ksplanetbase.cpp:161
+#: skyobjects/ksplanetbase.cpp:290 skyqpainter.cpp:430
+#: tools/conjunctions.cpp:78 tools/ksconjunct.cpp:71 tools/ksconjunct.cpp:72
+#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:170
+#: tools/modcalcplanets.ui:589 tools/obslistwizard.cpp:584
+#: tools/obslistwizard.cpp:586 tools/skycalendar.ui:62
+#, kde-format, kde-kuit-format
+msgid "Saturn"
+msgstr "Saturno"
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, kde-format
+msgid "Titan"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, kde-format
+msgid "Mimas"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, fuzzy, kde-format
+msgid "Enceladus"
+msgstr "Islando"
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, kde-format
+msgid "Tethys"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, fuzzy, kde-format
+#| msgctxt "star name"
+#| msgid "Pleione"
+msgid "Dione"
+msgstr "Pleione"
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, kde-format
+msgid "Rhea"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, fuzzy, kde-format
+msgid "Hyperion"
+msgstr "Horizonto"
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, kde-format
+msgid "Iapetus"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:206
+#, fuzzy, kde-format
+#| msgctxt "City in Arizona USA"
+#| msgid "Phoenix"
+msgid "Phoebe"
+msgstr "Phoenix"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowUranus)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Uranus)
+#: auxiliary/xplanetimageviewer.cpp:207 options/opssolarsystem.ui:252
+#: skycomponents/skymapcomposite.cpp:652 skymapdrawabstract.cpp:193
+#: skyobjects/ksplanet.cpp:145 skyobjects/ksplanet.cpp:175
+#: skyobjects/ksplanet.cpp:389 skyobjects/ksplanet.cpp:427
+#: skyobjects/ksplanetbase.cpp:161 tools/conjunctions.cpp:79
+#: tools/ksconjunct.cpp:67 tools/ksconjunct.cpp:68 tools/modcalcplanets.cpp:271
+#: tools/modcalcplanets.ui:175 tools/modcalcplanets.ui:594
+#: tools/obslistwizard.cpp:598 tools/obslistwizard.cpp:600
+#: tools/skycalendar.ui:76
+#, kde-format
+msgid "Uranus"
+msgstr "Urano"
+
+#: auxiliary/xplanetimageviewer.cpp:207
+#, fuzzy, kde-format
+#| msgctxt "City in United Kingdom"
+#| msgid "Cambridge"
+msgid "Umbriel"
+msgstr "Cambridge"
+
+#: auxiliary/xplanetimageviewer.cpp:207
+#, kde-format
+msgid "Ariel"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:207
+#, fuzzy, kde-format
+#| msgctxt "City in North Dakota USA"
+#| msgid "Mandan"
+msgid "Miranda"
+msgstr "Mandan"
+
+#: auxiliary/xplanetimageviewer.cpp:207
+#, fuzzy, kde-format
+msgid "Titania"
+msgstr "Litovujo"
+
+#: auxiliary/xplanetimageviewer.cpp:207
+#, fuzzy, kde-format
+#| msgctxt "City in Ohio USA"
+#| msgid "Oberlin"
+msgid "Oberon"
+msgstr "Oberlin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowNeptune)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Neptune)
+#: auxiliary/xplanetimageviewer.cpp:208 options/opssolarsystem.ui:220
+#: skycomponents/skymapcomposite.cpp:654 skymapdrawabstract.cpp:195
+#: skyobjects/ksplanet.cpp:148 skyobjects/ksplanet.cpp:177
+#: skyobjects/ksplanet.cpp:393 skyobjects/ksplanet.cpp:431
+#: skyobjects/ksplanetbase.cpp:161 tools/conjunctions.cpp:80
+#: tools/ksconjunct.cpp:67 tools/modcalcplanets.cpp:271
+#: tools/modcalcplanets.ui:180 tools/modcalcplanets.ui:599
+#: tools/obslistwizard.cpp:612 tools/obslistwizard.cpp:614
+#: tools/skycalendar.ui:69
+#, kde-format
+msgid "Neptune"
+msgstr "Neptuno"
+
+#: auxiliary/xplanetimageviewer.cpp:208
+#, kde-format
+msgid "Triton"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:212
+#, kde-format
+msgid "This allows you to select a new object/target for XPlanet to view"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:219
+#, kde-format
+msgid "from"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:222
+#, kde-format
+msgid "This allows you to select a viewing location"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, LocationLabel)
+#. i18n: ectx: property (text), widget (QLabel, LocationLabelBatch)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, locationLabel)
+#: auxiliary/xplanetimageviewer.cpp:231 oal/execute.ui:41
+#: tools/modcalcaltaz.ui:109 tools/modcalcdaylength.ui:38
+#: tools/modcalcdaylength.ui:792 tools/modcalcsidtime.ui:130
+#: tools/modcalcsidtime.ui:222 tools/modcalcvlsr.ui:81
+#: tools/observinglist.ui:185
+#, fuzzy, kde-format
+msgid "Location:"
+msgstr "Stela nomo"
+
+#: auxiliary/xplanetimageviewer.cpp:234
+#, kde-format
+msgid ""
+"XPlanet Latitude, only valid when viewing the object from the same object"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:241
+#, kde-format
+msgid ""
+"XPlanet Longitude, only valid when viewing the object from the same object"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:248
+#, kde-format
+msgid ""
+"XPlanet object radius in %, only valid when viewing the object from the same "
+"object"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:259
+#, kde-format
+msgid "Hover over target and freely rotate view with mouse in XPlanet Viewer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: auxiliary/xplanetimageviewer.cpp:277 ekos/align/align.ui:383
+#, kde-format
+msgid "FOV:"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:287
+#, kde-format
+msgid ""
+"Sets the FOV to the Specified value.   Note: has no effect if hovering over "
+"object."
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:296
+#, kde-format
+msgid ""
+"Zoom to the current KStars FOV.   Note: has no effect if hovering over "
+"object."
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:305
+#, kde-format
+msgid ""
+"Optimum FOV for the target, FOV parameter not specified.  Note: has no "
+"effect if hovering over object."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fieldoFviewLabel_4)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: auxiliary/xplanetimageviewer.cpp:311 dialogs/newfov.ui:1095
+#: ekos/scheduler/mosaic.ui:211 tools/eyepiecefield.cpp:109
+#, fuzzy, kde-format
+msgid "Rotation:"
+msgstr "Stela nomo"
+
+#: auxiliary/xplanetimageviewer.cpp:318
+#, kde-format
+msgid "Set the view rotation to the desired angle"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:327
+#, fuzzy, kde-format
+msgid "Rotate the view 180 degrees"
+msgstr "Koordinatoj"
+
+#: auxiliary/xplanetimageviewer.cpp:336
+#, kde-format
+msgid "Reset view rotation to 0"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:345
+#, kde-format
+msgid "Bring up XPlanet Options"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:371
+#, kde-format
+msgid "Allows you to set the XPlanet time to a different date/time from KStars"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:380
+#, kde-format
+msgid "Sets the XPlanet time to the current KStars time"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:385
+#, fuzzy, kde-format
+msgid "Current XPlanet Time"
+msgstr "Subirtempo:"
+
+#: auxiliary/xplanetimageviewer.cpp:393
+#, kde-format
+msgid ""
+"This sets the time step from the current XPlanet time, good for viewing "
+"events"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:399
+#, kde-format
+msgid "This sets the time step from the current XPlanet time"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:406
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:208
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:209
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:210
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:211
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:212
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:213
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:214
+#, fuzzy, kde-format
+#| msgid "year"
+msgid "years"
+msgid_plural "yrs"
+msgstr[0] "jaro"
+msgstr[1] "jaro"
+
+#: auxiliary/xplanetimageviewer.cpp:407
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:202
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:203
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:204
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:205
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:206
+#, fuzzy, kde-format
+msgid "months"
+msgid_plural "mths"
+msgstr[0] "Learmonth"
+msgstr[1] "Learmonth"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: auxiliary/xplanetimageviewer.cpp:408 ekos/opsekos.ui:696
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:191
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:195
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:196
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:197
+#: widgets/timespinbox.cpp:150 widgets/timespinbox.cpp:154
+#: widgets/timespinbox.cpp:155 widgets/timespinbox.cpp:156
+#, kde-format, kde-kuit-format
+msgid "days"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2_6)
+#: auxiliary/xplanetimageviewer.cpp:409 ekos/capture/capture.ui:992
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:186
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:187
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:188
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:189
+#, fuzzy, kde-format
+msgid "hours"
+msgid_plural "hrs"
+msgstr[0] "Tours"
+msgstr[1] "Tours"
+
+#: auxiliary/xplanetimageviewer.cpp:410
+#, fuzzy, kde-format
+msgid "mins"
+msgstr "Ames"
+
+#: auxiliary/xplanetimageviewer.cpp:411
+#, fuzzy, kde-format
+msgid "secs"
+msgstr "arksekundoj"
+
+#: auxiliary/xplanetimageviewer.cpp:413
+#, kde-format
+msgid "Lets you change the units for the timestep in the animation"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:426
+#, kde-format
+msgid "Lets you run the animation"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:435
+#, kde-format
+msgid "Resets the animation to 0 timesteps from the current XPlanet Time"
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:497
+#, kde-format
+msgid "Xplanet binary path is empty in config panel."
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:505
+#, kde-format
+msgid "The configured Xplanet binary does not exist or is not executable."
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:685 auxiliary/xplanetimageviewer.cpp:687
+#, fuzzy, kde-format
+#| msgid "Planet Name"
+msgid "XPlanet View: "
+msgstr "Planeda nomo"
+
+#: auxiliary/xplanetimageviewer.cpp:685 auxiliary/xplanetimageviewer.cpp:687
+#, kde-format
+msgid " from "
+msgstr ""
+
+#: auxiliary/xplanetimageviewer.cpp:687
+#, fuzzy, kde-format
+msgid ", FOV: "
+msgstr "Rock Hill"
+
+#: auxiliary/xplanetimageviewer.cpp:704 indi/servermanager.cpp:90
+#, fuzzy, kde-format
+msgid "Error making FIFO file %1: %2."
+msgstr "Stela nomo"
+
+#: auxiliary/xplanetimageviewer.cpp:1007
+#, fuzzy, kde-format
+msgid "Loading of the image of object %1 failed."
+msgstr "Ŝarĝado de la bildo %1 malsukcesis!"
+
 #. i18n: ectx: Menu (file)
 #: data/fitsviewerui.rc:5 data/kstarsui.rc:5
 #, fuzzy, kde-format
@@ -775,14 +1314,14 @@ msgstr "&Okzidento"
 
 #. i18n: ectx: Menu (help)
 #. i18n: ectx: property (text), widget (QPushButton, helpB)
-#: data/fitsviewerui.rc:42 data/kstarsui.rc:137 indi/telescopewizard.ui:54
+#: data/fitsviewerui.rc:42 data/kstarsui.rc:138 indi/telescopewizard.ui:54
 #, kde-format
 msgid "&Help"
 msgstr "&Helpo"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #. i18n: ectx: ToolBar (kstarsToolBar)
-#: data/fitsviewerui.rc:56 data/kstarsui.rc:152
+#: data/fitsviewerui.rc:56 data/kstarsui.rc:153
 #, fuzzy, kde-format
 msgid "Main Toolbar"
 msgstr "Montru precipan ilobreton"
@@ -824,67 +1363,67 @@ msgid "&Devices"
 msgstr ""
 
 #. i18n: ectx: Menu (data)
-#: data/kstarsui.rc:84
+#: data/kstarsui.rc:85
 #, kde-format
 msgid "&Data"
 msgstr ""
 
 #. i18n: ectx: Menu (updates)
-#: data/kstarsui.rc:87
+#: data/kstarsui.rc:88
 #, fuzzy, kde-format
 msgid "&Updates"
 msgstr "Aldonu al listo"
 
 #. i18n: ectx: Menu (observation)
-#: data/kstarsui.rc:94
+#: data/kstarsui.rc:95
 #, fuzzy, kde-format
 msgid "&Observation"
 msgstr "Dyer Observatory"
 
 #. i18n: ectx: Menu (settings)
-#: data/kstarsui.rc:101
+#: data/kstarsui.rc:102
 #, fuzzy, kde-format
 msgid "&Settings"
 msgstr "Kettering"
 
 #. i18n: ectx: Menu (infopanel)
-#: data/kstarsui.rc:102
+#: data/kstarsui.rc:103
 #, kde-format
 msgid "&Info Boxes"
 msgstr "&Informkestoj"
 
 #. i18n: ectx: Menu (statusbar)
-#: data/kstarsui.rc:110
+#: data/kstarsui.rc:111
 #, fuzzy, kde-format
 msgid "&Statusbar"
 msgstr "Steloj"
 
 #. i18n: ectx: Menu (config_oal)
-#: data/kstarsui.rc:123
+#: data/kstarsui.rc:124
 #, fuzzy, kde-format
 msgid "Configure Observation &Logging"
 msgstr "Dek"
 
 #. i18n: ectx: ToolBar (viewToolBar)
-#: data/kstarsui.rc:170
+#: data/kstarsui.rc:171
 #, kde-format
 msgid "View Toolbar"
 msgstr ""
 
 #. i18n: ectx: ToolBar (INDIToolBar)
-#: data/kstarsui.rc:188
+#: data/kstarsui.rc:189
 #, fuzzy, kde-format
 msgid "INDI Toolbar"
 msgstr "I&lobretoj"
 
 #. i18n: ectx: ToolBar (TelescopeToolBar)
-#: data/kstarsui.rc:197
+#: data/kstarsui.rc:198
 #, fuzzy, kde-format
 msgid "Telescope Toolbar"
 msgstr "Plutono"
 
 #. i18n: ectx: ToolBar (DomeToolBar)
-#: data/kstarsui.rc:208
+#: data/kstarsui.rc:209
 #, fuzzy, kde-format
 msgid "Dome Toolbar"
 msgstr "I&lobretoj"
@@ -898,31 +1437,6 @@ msgstr ""
 #, fuzzy, kde-kuit-format
 msgid "Naked-Eye Objects"
 msgstr "NASA JPL paĝo"
-
-#. i18n?
-#. i18nc("Asteroid name (optional)", "Pluto");
-#. i18nc("Asteroid name (optional)", "Pluto")
-#. i18n: ectx: property (title), widget (QGroupBox, SunBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#: data/qml/whatisinteresting/wiview.qml:144 skyglpainter.cpp:302
-#: skyobjects/kssun.cpp:28 tools/conjunctions.cpp:82 tools/conjunctions.cpp:282
-#: tools/modcalcdaylength.ui:109 tools/modcalcplanets.cpp:272
-#: tools/modcalcplanets.ui:190 tools/modcalcplanets.ui:614
-#, kde-format, kde-kuit-format
-msgid "Sun"
-msgstr "Suno"
-
-#. i18n: ectx: property (title), widget (QGroupBox, MoonBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#: data/qml/whatisinteresting/wiview.qml:175 skyobjects/ksmoon.cpp:70
-#: skyobjects/skyobject.cpp:386 tools/conjunctions.cpp:83
-#: tools/modcalcdaylength.ui:453 tools/modcalcplanets.cpp:272
-#: tools/modcalcplanets.ui:185 tools/modcalcplanets.ui:609
-#, kde-format, kde-kuit-format
-msgid "Moon"
-msgstr "Luno"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: data/qml/whatisinteresting/wiview.qml:208 tools/conjunctions.cpp:65
@@ -1471,7 +1985,7 @@ msgid "Check URL"
 msgstr "Kontrolu URLon"
 
 #. i18n: ectx: property (text), widget (QPushButton, DetailButton)
-#: dialogs/detaildialog.cpp:65 skymap.cpp:874 tools/wutdialog.ui:480
+#: dialogs/detaildialog.cpp:65 skymap.cpp:875 tools/wutdialog.ui:480
 #, kde-format
 msgid "Object Details"
 msgstr "Objektdetaloj"
@@ -1722,7 +2236,7 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, XplanetTabPosition)
 #: dialogs/detaildialog.cpp:499 kstarslite/qml/dialogs/DetailsDialog.qml:45
-#: xplanet/opsxplanet.ui:764
+#: xplanet/opsxplanet.ui:775
 #, kde-format, kde-kuit-format
 msgid "Position"
 msgstr "Pozicio"
@@ -2415,7 +2929,7 @@ msgstr "Kalkulu"
 msgid "Any"
 msgstr "Iu"
 
-#: dialogs/finddialog.cpp:45 kstarsactions.cpp:1023 kstarsinit.cpp:439
+#: dialogs/finddialog.cpp:45 kstarsactions.cpp:1023 kstarsinit.cpp:442
 #: kstarslite/dialogs/finddialoglite.cpp:38 tools/astrocalc.cpp:172
 #: tools/conjunctions.cpp:64
 #, fuzzy, kde-format
@@ -3260,7 +3774,7 @@ msgstr ""
 #: dialogs/newfov.ui:521 ekos/capture/capture.ui:979 ekos/focus/focus.ui:909
 #: ekos/guide/internalguide/guider.ui:288 ekos/guide/manualdither.ui:48
 #: ekos/guide/opsguide.ui:268 ekos/scheduler/mosaic.ui:188
-#: xplanet/opsxplanet.ui:120
+#: xplanet/opsxplanet.ui:137
 #, kde-format
 msgid "pixels"
 msgstr ""
@@ -3460,14 +3974,6 @@ msgstr ""
 msgid "Degrees E of N"
 msgstr "gradoj"
 
-#. i18n: ectx: property (text), widget (QLabel, fieldoFviewLabel_4)
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: dialogs/newfov.ui:1095 ekos/scheduler/mosaic.ui:211
-#: tools/eyepiecefield.cpp:109
-#, fuzzy, kde-format
-msgid "Rotation:"
-msgstr "Stela nomo"
-
 #. i18n: ectx: property (toolTip), widget (QLineEdit, FOVEditX)
 #: dialogs/newfov.ui:1102
 #, kde-format
@@ -3529,7 +4035,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, textLabel8)
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetColor)
-#: dialogs/newfov.ui:1246 oal/equipmentwriter.ui:631 xplanet/opsxplanet.ui:556
+#: dialogs/newfov.ui:1246 oal/equipmentwriter.ui:631 xplanet/opsxplanet.ui:567
 #, fuzzy, kde-format
 msgid "Color:"
 msgstr "&Kolorskemoj"
@@ -4913,12 +5419,6 @@ msgstr ""
 #: ekos/align/align.ui:366
 #, kde-format
 msgid "dRA:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ekos/align/align.ui:383
-#, kde-format
-msgid "FOV:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
@@ -7587,7 +8087,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (windowTitle), widget (QWidget, EkosManager)
 #: ekos/auxiliary/opslogs.ui:146 ekos/ekosmanager.ui:26 kstarsactions.cpp:1050
-#: kstarsinit.cpp:421
+#: kstarsinit.cpp:424
 #, kde-format
 msgid "Ekos"
 msgstr ""
@@ -9084,18 +9584,6 @@ msgstr "Plutono"
 msgid "Limit Settings"
 msgstr "Dek"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2_6)
-#: ekos/capture/capture.ui:992
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:186
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:187
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:188
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:189
-#, fuzzy, kde-format
-msgid "hours"
-msgid_plural "hrs"
-msgstr[0] "Tours"
-msgstr[1] "Tours"
-
 #. i18n: ectx: property (text), widget (QCheckBox, refocusEveryNCheck)
 #: ekos/capture/capture.ui:1024
 #, fuzzy, kde-format
@@ -9368,7 +9856,7 @@ msgstr "Kalkulu"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetGeometryY)
 #: ekos/capture/dslrinfo.ui:80 ekos/capture/dslrinfo.ui:137
-#: ekos/capture/rotatorsettings.ui:290 xplanet/opsxplanet.ui:94
+#: ekos/capture/rotatorsettings.ui:290 xplanet/opsxplanet.ui:111
 #, kde-format
 msgid "x"
 msgstr "x"
@@ -9972,7 +10460,7 @@ msgstr "Kalkulu"
 
 #: ekos/ekosmanager.cpp:1118 ekos/ekosmanager.cpp:1216
 #: ekos/ekosmanager.cpp:1299 ekos/ekosmanager.cpp:1310
-#: ekos/ekosmanager.cpp:1321 indi/indistd.cpp:464
+#: ekos/ekosmanager.cpp:1321 indi/indistd.cpp:469
 #, kde-format
 msgid "%1 is online."
 msgstr ""
@@ -12525,7 +13013,6 @@ msgstr "Trovu objekton"
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetSecondes)
 #: ekos/guide/opsguide.ui:118 ekos/guide/opsguide.ui:295
 #: ekos/guide/opsguide.ui:319
 #: kstarslite/qml/modules/helpers/TimeSpinBox.qml:169
@@ -12536,7 +13023,7 @@ msgstr "Trovu objekton"
 #: kstarslite/qml/modules/helpers/TimeSpinBox.qml:175
 #: kstarslite/qml/modules/helpers/TimeSpinBox.qml:176
 #: kstarslite/qml/modules/helpers/TimeSpinBox.qml:177
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:178 xplanet/opsxplanet.ui:249
+#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:178
 #, fuzzy, kde-format
 msgid "seconds"
 msgid_plural "secs"
@@ -13519,17 +14006,6 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Darks Folder"
 msgstr "Barkerville"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: ekos/opsekos.ui:696 kstarslite/qml/modules/helpers/TimeSpinBox.qml:191
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:195
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:196
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:197
-#: widgets/timespinbox.cpp:150 widgets/timespinbox.cpp:154
-#: widgets/timespinbox.cpp:155 widgets/timespinbox.cpp:156
-#, kde-format, kde-kuit-format
-msgid "days"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, clearExpiredB)
 #: ekos/opsekos.ui:703
@@ -17251,7 +17727,7 @@ msgstr "Ne eblis malfermi dosieron"
 #. i18n: ectx: property (text), item, widget (QComboBox, driverComboBox)
 #. i18n: ectx: property (text), widget (QPushButton, NoneButton)
 #: indi/drivermanager.cpp:1284 indi/indidriver.cpp:747 kstarsactions.cpp:1639
-#: kstarsinit.cpp:697 kstarsinit.cpp:698 oal/equipmentwriter.ui:197
+#: kstarsinit.cpp:700 kstarsinit.cpp:701 oal/equipmentwriter.ui:197
 #: oal/log.cpp:337 tools/exporteyepieceview.cpp:68 tools/eyepiecefield.cpp:112
 #: tools/obslistwizard.ui:183
 #, fuzzy, kde-format, kde-kuit-format
@@ -17513,7 +17989,7 @@ msgstr "Elektu lokon"
 msgid "Mount Location"
 msgstr "Elektu lokon"
 
-#: indi/indistd.cpp:410
+#: indi/indistd.cpp:415
 #, fuzzy, kde-format
 msgid "Data file saved to %1"
 msgstr "nevalida URLo"
@@ -17928,11 +18404,6 @@ msgstr "INDI"
 msgid "File name"
 msgstr "Stela nomo"
 
-#: indi/servermanager.cpp:90
-#, fuzzy, kde-format
-msgid "Error making FIFO file %1: %2."
-msgstr "Stela nomo"
-
 #: indi/servermanager.cpp:129
 #, fuzzy, kde-format
 msgid "INDI server failed to start: %1"
@@ -18220,19 +18691,19 @@ msgstr "Transittempo:"
 msgid "Empty sky"
 msgstr ""
 
-#: kspopupmenu.cpp:146 kspopupmenu.cpp:225 kspopupmenu.cpp:517
+#: kspopupmenu.cpp:146 kspopupmenu.cpp:225 kspopupmenu.cpp:513
 #, kde-format
 msgctxt "Sloan Digital Sky Survey"
 msgid "Show SDSS Image"
 msgstr "Montru SDSS bildon"
 
-#: kspopupmenu.cpp:147 kspopupmenu.cpp:226 kspopupmenu.cpp:518
+#: kspopupmenu.cpp:147 kspopupmenu.cpp:226 kspopupmenu.cpp:514
 #, kde-format
 msgctxt "Digitized Sky Survey"
 msgid "Show DSS Image"
 msgstr "Montri DSS bildon"
 
-#: kspopupmenu.cpp:217 kspopupmenu.cpp:318 kstarsinit.cpp:817
+#: kspopupmenu.cpp:217 kspopupmenu.cpp:318 kstarsinit.cpp:820
 #: kstarslite/dialogs/detaildialoglite.cpp:79 kstarsliteinit.cpp:63
 #: printing/detailstable.cpp:87 printing/pwizobjectselection.cpp:114
 #: skycomponents/starcomponent.cpp:514 skyobjects/starobject.cpp:558
@@ -18342,63 +18813,62 @@ msgstr "Aldoni Spuron"
 msgid "Simulate eyepiece view"
 msgstr "Dek (%1):"
 
-#. i18n( "Print Xplanet view" ) );
-#: kspopupmenu.cpp:403
+#: kspopupmenu.cpp:401
 #, fuzzy, kde-format
 msgid "View in XPlanet"
 msgstr "Planedoj"
 
-#: kspopupmenu.cpp:410
+#: kspopupmenu.cpp:406
 #, kde-format
 msgid "View in What's Interesting"
 msgstr ""
 
-#: kspopupmenu.cpp:424
+#: kspopupmenu.cpp:420
 #, fuzzy, kde-format
 msgid "Add flag..."
 msgstr "&Okzidento"
 
-#: kspopupmenu.cpp:430
+#: kspopupmenu.cpp:426
 #, fuzzy, kde-format
 msgid "Edit flag"
 msgstr "Bildo"
 
-#: kspopupmenu.cpp:431
+#: kspopupmenu.cpp:427
 #, fuzzy, kde-format
 msgid "Delete flag"
 msgstr "Bonvenon ĉe KStars"
 
-#: kspopupmenu.cpp:439
+#: kspopupmenu.cpp:435
 #, fuzzy, kde-format
 msgid "Edit flag..."
 msgstr "Bildo"
 
-#: kspopupmenu.cpp:440
+#: kspopupmenu.cpp:436
 #, fuzzy, kde-format
 msgid "Delete flag..."
 msgstr "Bonvenon ĉe KStars"
 
-#: kspopupmenu.cpp:497
+#: kspopupmenu.cpp:493
 #, fuzzy, kde-format
 msgid "Image Resources"
 msgstr "Kalkulu"
 
-#: kspopupmenu.cpp:512
+#: kspopupmenu.cpp:508
 #, fuzzy, kde-format
 msgid "Remove From Local Catalog"
 msgstr "Forigu propran katalogon"
 
-#: kspopupmenu.cpp:531
+#: kspopupmenu.cpp:527
 #, fuzzy, kde-format
 msgid "Information Resources"
 msgstr "Kalkulu"
 
-#: kspopupmenu.cpp:619
+#: kspopupmenu.cpp:615
 #, kde-format
 msgid "Slew && Set As Parking Position"
 msgstr ""
 
-#: kspopupmenu.cpp:629
+#: kspopupmenu.cpp:625
 #, fuzzy, kde-format
 msgid "Center Crosshair"
 msgstr "Bender Cassim"
@@ -18408,7 +18878,7 @@ msgstr "Bender Cassim"
 msgid "KStars"
 msgstr "Steloj"
 
-#: kstars.cpp:337 kstarsactions.cpp:1434 skymap.cpp:384
+#: kstars.cpp:337 kstarsactions.cpp:1434 skymap.cpp:385
 #, kde-format
 msgid "Stop &Tracking"
 msgstr ""
@@ -20897,7 +21367,7 @@ msgid "The color for solver FOV box in Ekos alignment module."
 msgstr ""
 
 #. i18n: ectx: label, entry (xplanetIsInternal), group (Xplanet)
-#: kstars.kcfg:1068 xplanet/opsxplanet.cpp:29
+#: kstars.kcfg:1068 xplanet/opsxplanet.cpp:30
 #, kde-format
 msgid "Internal or External XPlanet?"
 msgstr ""
@@ -20910,78 +21380,103 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (XplanetPath), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetPath)
-#: kstars.kcfg:1073 xplanet/opsxplanet.ui:148
+#: kstars.kcfg:1073 xplanet/opsxplanet.ui:67
 #, kde-format
 msgid "Xplanet binary path"
 msgstr ""
 
-#. i18n: ectx: label, entry (XplanetTitle), group (Xplanet)
+#. i18n: ectx: label, entry (XplanetUseFIFO), group (Xplanet)
 #: kstars.kcfg:1077
-#, kde-format
-msgid "Window title"
-msgstr "Fenestra titolo"
+#, fuzzy, kde-format
+msgid "Use FIFO file"
+msgstr "Bonvenon ĉe KStars"
 
-#. i18n: ectx: whatsthis, entry (XplanetTitle), group (Xplanet)
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetTitle)
-#: kstars.kcfg:1078 xplanet/opsxplanet.ui:53
+#. i18n: ectx: whatsthis, entry (XplanetUseFIFO), group (Xplanet)
+#: kstars.kcfg:1078
 #, kde-format
-msgid "Set the window’s title."
+msgid "Option to use a FIFO file instead of saving to the hard disk"
+msgstr ""
+
+#. i18n: ectx: label, entry (XplanetTimeout), group (Xplanet)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kstars.kcfg:1082 xplanet/opsxplanet.ui:166
+#, fuzzy, kde-format
+#| msgid "Planet Name"
+msgid "XPlanet Timeout"
+msgstr "Planeda nomo"
+
+#. i18n: ectx: whatsthis, entry (XplanetTimeout), group (Xplanet)
+#: kstars.kcfg:1083
+#, kde-format
+msgid "How long to wait for XPlanet before giving up in milliseconds"
+msgstr ""
+
+#. i18n: ectx: label, entry (XplanetAnimationDelay), group (Xplanet)
+#: kstars.kcfg:1087
+#, kde-format
+msgid "XPlanet Animation Delay"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (XplanetAnimationDelay), group (Xplanet)
+#: kstars.kcfg:1088
+#, kde-format
+msgid "How long to pause between frames in the XPlanet Animation"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetWidth), group (Xplanet)
 #. i18n: ectx: whatsthis, entry (XplanetWidth), group (Xplanet)
-#: kstars.kcfg:1082 kstars.kcfg:1083
+#: kstars.kcfg:1092 kstars.kcfg:1093
 #, kde-format
 msgid "Width of xplanet window"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetHeight), group (Xplanet)
 #. i18n: ectx: whatsthis, entry (XplanetHeight), group (Xplanet)
-#: kstars.kcfg:1087 kstars.kcfg:1088
+#: kstars.kcfg:1097 kstars.kcfg:1098
 #, kde-format
 msgid "Height of xplanet window"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLabel), group (Xplanet)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetLabel)
-#: kstars.kcfg:1092 xplanet/opsxplanet.ui:674
+#: kstars.kcfg:1102 xplanet/opsxplanet.ui:685
 #, fuzzy, kde-format
 msgid "Show label"
 msgstr "montru nomon"
 
 #. i18n: ectx: whatsthis, entry (XplanetLabel), group (Xplanet)
-#: kstars.kcfg:1093
+#: kstars.kcfg:1103
 #, kde-format
 msgid "If true, display a label in the upper right corner."
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLabelLocalTime), group (Xplanet)
 #. i18n: ectx: label, entry (XplanetLabelGMT), group (Xplanet)
-#: kstars.kcfg:1097 kstars.kcfg:1102
+#: kstars.kcfg:1107 kstars.kcfg:1112
 #, fuzzy, kde-format
 msgid "Show GMT label"
 msgstr "Montru bildon de"
 
 #. i18n: ectx: whatsthis, entry (XplanetLabelLocalTime), group (Xplanet)
-#: kstars.kcfg:1098
+#: kstars.kcfg:1108
 #, fuzzy, kde-format
 msgid "Show local time."
 msgstr "LT:"
 
 #. i18n: ectx: whatsthis, entry (XplanetLabelGMT), group (Xplanet)
-#: kstars.kcfg:1103
+#: kstars.kcfg:1113
 #, fuzzy, kde-format
 msgid "Show GMT instead of local time."
 msgstr "LT:"
 
 #. i18n: ectx: label, entry (XplanetLabelString), group (Xplanet)
-#: kstars.kcfg:1107
+#: kstars.kcfg:1117
 #, fuzzy, kde-format
 msgid "Planet string"
 msgstr "Planedoj"
 
 #. i18n: ectx: whatsthis, entry (XplanetLabelString), group (Xplanet)
-#: kstars.kcfg:1108
+#: kstars.kcfg:1118
 #, no-c-format, kde-format
 msgid ""
 "Specify the text of the first line of the label. By default, it says "
@@ -20990,40 +21485,40 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetFontSize), group (Xplanet)
-#: kstars.kcfg:1112
+#: kstars.kcfg:1122
 #, fuzzy, kde-format
 msgid "Font Size"
 msgstr "Fort Riley"
 
 #. i18n: ectx: whatsthis, entry (XplanetFontSize), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetFontSize)
-#: kstars.kcfg:1113 xplanet/opsxplanet.ui:549
+#: kstars.kcfg:1123 xplanet/opsxplanet.ui:560
 #, kde-format
 msgid "Specify the point size."
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetColor), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_XplanetColor)
-#: kstars.kcfg:1117 xplanet/opsxplanet.ui:563
+#: kstars.kcfg:1127 xplanet/opsxplanet.ui:574
 #, kde-format
 msgid "Label color"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (XplanetColor), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (KColorButton, kcfg_XplanetColor)
-#: kstars.kcfg:1118 xplanet/opsxplanet.ui:566
+#: kstars.kcfg:1128 xplanet/opsxplanet.ui:577
 #, fuzzy, kde-format
 msgid "Set the color for the label."
 msgstr "Montru planedajn bildojn"
 
 #. i18n: ectx: label, entry (XplanetDateFormat), group (Xplanet)
-#: kstars.kcfg:1122
+#: kstars.kcfg:1132
 #, fuzzy, kde-format
 msgid "Date format"
 msgstr "Elektu lokon"
 
 #. i18n: ectx: whatsthis, entry (XplanetDateFormat), group (Xplanet)
-#: kstars.kcfg:1123
+#: kstars.kcfg:1133
 #, no-c-format, kde-format
 msgid ""
 "Specify the format for the date/time label. This format string is passed to "
@@ -21033,40 +21528,40 @@ msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLabelTL), group (Xplanet)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLabelTL)
-#: kstars.kcfg:1127 xplanet/opsxplanet.ui:580
+#: kstars.kcfg:1137 xplanet/opsxplanet.ui:591
 #, kde-format
 msgid "Top left"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLabelTR), group (Xplanet)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLabelTR)
-#: kstars.kcfg:1131 xplanet/opsxplanet.ui:604
+#: kstars.kcfg:1141 xplanet/opsxplanet.ui:615
 #, fuzzy, kde-format
 msgid "Top right"
 msgstr "Torrington"
 
 #. i18n: ectx: label, entry (XplanetLabelBR), group (Xplanet)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLabelBR)
-#: kstars.kcfg:1135 xplanet/opsxplanet.ui:614
+#: kstars.kcfg:1145 xplanet/opsxplanet.ui:625
 #, fuzzy, kde-format
 msgid "Bottom right"
 msgstr "Bloomington"
 
 #. i18n: ectx: label, entry (XplanetLabelBL), group (Xplanet)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLabelBL)
-#: kstars.kcfg:1139 xplanet/opsxplanet.ui:590
+#: kstars.kcfg:1149 xplanet/opsxplanet.ui:601
 #, kde-format
 msgid "Bottom left"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetGlare), group (Xplanet)
-#: kstars.kcfg:1143
+#: kstars.kcfg:1153
 #, fuzzy, kde-format
 msgid "Sun Glare"
 msgstr "Ekvatoro"
 
 #. i18n: ectx: whatsthis, entry (XplanetGlare), group (Xplanet)
-#: kstars.kcfg:1144
+#: kstars.kcfg:1154
 #, kde-format
 msgid ""
 "Draw a glare around the sun with a radius of the specified value larger than "
@@ -21074,39 +21569,39 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetRandom), group (Xplanet)
-#: kstars.kcfg:1148
+#: kstars.kcfg:1158
 #, fuzzy, kde-format
 msgid "Random latitude and longitude"
 msgstr "Longitudo:"
 
 #. i18n: ectx: whatsthis, entry (XplanetRandom), group (Xplanet)
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetRandom)
-#: kstars.kcfg:1149 xplanet/opsxplanet.ui:832
+#: kstars.kcfg:1159 xplanet/opsxplanet.ui:843
 #, kde-format
 msgid "Place the observer above a random latitude and longitude"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLatLong), group (Xplanet)
-#: kstars.kcfg:1153
+#: kstars.kcfg:1163
 #, fuzzy, kde-format
 msgid "Latitude-Longitude"
 msgstr "Longitudo:"
 
 #. i18n: ectx: whatsthis, entry (XplanetLatLong), group (Xplanet)
-#: kstars.kcfg:1154
+#: kstars.kcfg:1164
 #, kde-format
 msgid "Place the observer above the specified longitude and latitude"
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLatitude), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetLatitude)
-#: kstars.kcfg:1158 xplanet/opsxplanet.ui:784
+#: kstars.kcfg:1168 xplanet/opsxplanet.ui:795
 #, fuzzy, kde-format
 msgid "Latitude in degrees"
 msgstr "Geografia loko"
 
 #. i18n: ectx: whatsthis, entry (XplanetLatitude), group (Xplanet)
-#: kstars.kcfg:1159
+#: kstars.kcfg:1169
 #, kde-format
 msgid ""
 "Render the target body as seen from above the specified latitude (in "
@@ -21115,13 +21610,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (XplanetLongitude), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetLongitude)
-#: kstars.kcfg:1163 xplanet/opsxplanet.ui:807
+#: kstars.kcfg:1173 xplanet/opsxplanet.ui:818
 #, fuzzy, kde-format
 msgid "Longitude in degrees"
 msgstr "Koordinatoj"
 
 #. i18n: ectx: whatsthis, entry (XplanetLongitude), group (Xplanet)
-#: kstars.kcfg:1164
+#: kstars.kcfg:1174
 #, kde-format
 msgid ""
 "Place the observer above the specified longitude (in degrees). Longitude is "
@@ -21131,44 +21626,22 @@ msgstr ""
 
 #. i18n: ectx: label, entry (XplanetProjection), group (Xplanet)
 #. i18n: ectx: attribute (title), widget (QWidget, XplanetTabProjection)
-#: kstars.kcfg:1168 xplanet/opsxplanet.ui:855
+#: kstars.kcfg:1178 xplanet/opsxplanet.ui:866
 #, fuzzy, kde-format
 msgid "Projection"
 msgstr "Kalkulu"
 
 #. i18n: ectx: whatsthis, entry (XplanetProjection), group (Xplanet)
-#: kstars.kcfg:1169
+#: kstars.kcfg:1179
 #, kde-format
 msgid ""
 "The default is no projection. Multiple bodies will not be shown if this "
 "option is specified, although shadows will still be drawn."
 msgstr ""
 
-#. i18n: ectx: label, entry (XplanetWait), group (Xplanet)
-#: kstars.kcfg:1173
-#, fuzzy, kde-format
-msgid "Update view"
-msgstr "Aldonu al listo"
-
-#. i18n: ectx: whatsthis, entry (XplanetWait), group (Xplanet)
-#: kstars.kcfg:1174
-#, fuzzy, kde-format
-msgid "If true, update view."
-msgstr "Aldonu al listo"
-
-#. i18n: ectx: label, entry (XplanetWaitValue), group (Xplanet)
-#. i18n: ectx: whatsthis, entry (XplanetWaitValue), group (Xplanet)
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetWaitValue)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetWaitValue)
-#: kstars.kcfg:1178 kstars.kcfg:1179 xplanet/opsxplanet.ui:236
-#: xplanet/opsxplanet.ui:239
-#, kde-format
-msgid "Number of seconds to wait before updating"
-msgstr ""
-
 #. i18n: ectx: label, entry (XplanetBackground), group (Xplanet)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetBackground)
-#: kstars.kcfg:1183 xplanet/opsxplanet.ui:914
+#: kstars.kcfg:1183 xplanet/opsxplanet.ui:925
 #, fuzzy, kde-format
 msgid "Use background"
 msgstr "Fono de informkesto"
@@ -21220,7 +21693,7 @@ msgstr "Ŝarĝante laktan vojon"
 
 #. i18n: ectx: label, entry (XplanetBackgroundColorValue), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_XplanetBackgroundColorValue)
-#: kstars.kcfg:1203 xplanet/opsxplanet.ui:957
+#: kstars.kcfg:1203 xplanet/opsxplanet.ui:968
 #, kde-format
 msgid "Background color"
 msgstr "Fona koloro"
@@ -21239,7 +21712,7 @@ msgstr "Magnitudo"
 
 #. i18n: ectx: whatsthis, entry (XplanetMagnitude), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetMagnitude)
-#: kstars.kcfg:1209 xplanet/opsxplanet.ui:297
+#: kstars.kcfg:1209 xplanet/opsxplanet.ui:268
 #, kde-format
 msgid ""
 "A star of the specified magnitude will have a pixel brightness of 1. The "
@@ -21267,7 +21740,7 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (XplanetArcFilePath), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetArcFilePath)
-#: kstars.kcfg:1219 xplanet/opsxplanet.ui:342
+#: kstars.kcfg:1219 xplanet/opsxplanet.ui:313
 #, kde-format
 msgid "Specify an arc file to be plotted against the background stars."
 msgstr ""
@@ -21298,14 +21771,14 @@ msgstr ""
 
 #. i18n: ectx: label, entry (XplanetFOV), group (Xplanet)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetFOV)
-#: kstars.kcfg:1233 xplanet/opsxplanet.ui:214
+#: kstars.kcfg:1233 xplanet/opsxplanet.ui:219
 #, kde-format
 msgid "Use kstars's FOV"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (XplanetFOV), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetFOV)
-#: kstars.kcfg:1234 xplanet/opsxplanet.ui:211
+#: kstars.kcfg:1234 xplanet/opsxplanet.ui:216
 #, kde-format
 msgid "If checked, use kstars's FOV."
 msgstr ""
@@ -21318,14 +21791,14 @@ msgstr "Barkerville"
 
 #. i18n: ectx: whatsthis, entry (XplanetMarkerFile), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetMarkerFile)
-#: kstars.kcfg:1239 xplanet/opsxplanet.ui:700
+#: kstars.kcfg:1239 xplanet/opsxplanet.ui:711
 #, kde-format
 msgid "If checked, use the specified marker file."
 msgstr ""
 
 #. i18n: ectx: label, entry (XplanetMarkerFilePath), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetMarkerFilePath)
-#: kstars.kcfg:1243 xplanet/opsxplanet.ui:710
+#: kstars.kcfg:1243 xplanet/opsxplanet.ui:721
 #, kde-format
 msgid "Marker file path"
 msgstr ""
@@ -21353,14 +21826,14 @@ msgstr ""
 
 #. i18n: ectx: label, entry (XplanetMarkerBoundsPath), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetMarkerBoundsPath)
-#: kstars.kcfg:1253 xplanet/opsxplanet.ui:733
+#: kstars.kcfg:1253 xplanet/opsxplanet.ui:744
 #, kde-format
 msgid "Marker bounds file path"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (XplanetMarkerBoundsPath), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetMarkerBoundsPath)
-#: kstars.kcfg:1254 xplanet/opsxplanet.ui:736
+#: kstars.kcfg:1254 xplanet/opsxplanet.ui:747
 #, kde-format
 msgid "Write coordinates of the bounding box for each marker to this file."
 msgstr ""
@@ -21373,7 +21846,7 @@ msgstr "Stela nomo"
 
 #. i18n: ectx: whatsthis, entry (XplanetStarmap), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetStarmap)
-#: kstars.kcfg:1259 xplanet/opsxplanet.ui:307
+#: kstars.kcfg:1259 xplanet/opsxplanet.ui:278
 #, kde-format
 msgid "If checked, use star map file to draw the background stars."
 msgstr ""
@@ -21382,8 +21855,8 @@ msgstr ""
 #. i18n: ectx: whatsthis, entry (XplanetStarmapPath), group (Xplanet)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetStarmapPath)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetStarmapPath)
-#: kstars.kcfg:1263 kstars.kcfg:1264 xplanet/opsxplanet.ui:323
-#: xplanet/opsxplanet.ui:326
+#: kstars.kcfg:1263 kstars.kcfg:1264 xplanet/opsxplanet.ui:294
+#: xplanet/opsxplanet.ui:297
 #, fuzzy, kde-format
 msgid "Star map file path"
 msgstr "Montru stelojn pli helajn ol"
@@ -21396,7 +21869,7 @@ msgstr "Forigu propran katalogon"
 
 #. i18n: ectx: whatsthis, entry (XplanetQuality), group (Xplanet)
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetQuality)
-#: kstars.kcfg:1269 xplanet/opsxplanet.ui:415
+#: kstars.kcfg:1269 xplanet/opsxplanet.ui:406
 #, kde-format
 msgid ""
 "This option is only used when creating JPEG images. The quality can range "
@@ -84194,14 +84667,19 @@ msgstr "Altitudo:"
 msgid "What's up Tonight"
 msgstr ""
 
+#: kstarsinit.cpp:418
+#, fuzzy, kde-format
+msgid "XPlanet Solar System Simulator"
+msgstr "Montru konstelaciajn liniojn"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, SkyCalendar)
-#: kstarsinit.cpp:417 tools/skycalendar.cpp:56 tools/skycalendar.cpp:444
+#: kstarsinit.cpp:420 tools/skycalendar.cpp:56 tools/skycalendar.cpp:444
 #: tools/skycalendar.ui:20
 #, kde-format
 msgid "Sky Calendar"
 msgstr ""
 
-#: kstarsinit.cpp:435 tools/scriptbuilder.cpp:173
+#: kstarsinit.cpp:438 tools/scriptbuilder.cpp:173
 #, fuzzy, kde-format
 msgid "Script Builder"
 msgstr "Stela nomo"
@@ -84209,62 +84687,62 @@ msgstr "Stela nomo"
 #. i18n("Jupiter's Moons")
 #. QKeySequence(Qt::CTRL+Qt::Key_J );
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowFlags)
-#: kstarsinit.cpp:446 options/opsguides.ui:287
+#: kstarsinit.cpp:449 options/opsguides.ui:287
 #, fuzzy, kde-format
 msgid "Flags"
 msgstr "Flagstaff"
 
-#: kstarsinit.cpp:449
+#: kstarsinit.cpp:452
 #, fuzzy, kde-format
 msgid "List your &Equipment..."
 msgstr "Dek"
 
-#: kstarsinit.cpp:451
+#: kstarsinit.cpp:454
 #, fuzzy, kde-format
 msgid "Manage Observer..."
 msgstr "Dyer Observatory"
 
-#: kstarsinit.cpp:455
+#: kstarsinit.cpp:458
 #, kde-format
 msgid "Artificial Horizon..."
 msgstr ""
 
-#: kstarsinit.cpp:459
+#: kstarsinit.cpp:462
 #, fuzzy, kde-format
 msgid "Execute the session Plan..."
 msgstr "Ascension Island"
 
-#: kstarsinit.cpp:463
+#: kstarsinit.cpp:466
 #, fuzzy, kde-format
 msgid "Polaris Hour Angle..."
 msgstr "&Kolorskemoj"
 
-#: kstarsinit.cpp:470
+#: kstarsinit.cpp:473
 #, fuzzy, kde-format
 msgid "Telescope Wizard..."
 msgstr "Plutono"
 
-#: kstarsinit.cpp:475
+#: kstarsinit.cpp:478
 #, fuzzy, kde-format
 msgid "Device Manager..."
 msgstr "Dek (%1):"
 
-#: kstarsinit.cpp:479
+#: kstarsinit.cpp:482
 #, fuzzy, kde-format
 msgid "Custom Drivers..."
 msgstr "Plutono"
 
-#: kstarsinit.cpp:482
+#: kstarsinit.cpp:485
 #, kde-format
 msgid "INDI Control Panel..."
 msgstr ""
 
-#: kstarsinit.cpp:494
+#: kstarsinit.cpp:497
 #, kde-format
 msgid "Displays the Tip of the Day"
 msgstr ""
 
-#: kstarsinit.cpp:502
+#: kstarsinit.cpp:505
 #, kde-format
 msgctxt "Tooltip describing the nature of the time step control"
 msgid ""
@@ -84275,336 +84753,336 @@ msgid ""
 "of 'X'."
 msgstr ""
 
-#: kstarsinit.cpp:509
+#: kstarsinit.cpp:512
 #, fuzzy, kde-format
 msgid "Time step control"
 msgstr "Montreal"
 
-#: kstarsinit.cpp:513
+#: kstarsinit.cpp:516
 #, fuzzy, kde-format
 msgctxt "Toggle Stars in the display"
 msgid "Stars"
 msgstr "Steloj"
 
-#: kstarsinit.cpp:515
+#: kstarsinit.cpp:518
 #, fuzzy, kde-format
 msgid "Toggle stars"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsinit.cpp:517
+#: kstarsinit.cpp:520
 #, fuzzy, kde-format
 msgctxt "Toggle Deep Sky Objects in the display"
 msgid "Deep Sky"
 msgstr "Trovu objekton"
 
-#: kstarsinit.cpp:519
+#: kstarsinit.cpp:522
 #, fuzzy, kde-format
 msgid "Toggle deep sky objects"
 msgstr "Montru konstelaciajn liniojn"
 
-#: kstarsinit.cpp:521
+#: kstarsinit.cpp:524
 #, fuzzy, kde-format
 msgctxt "Toggle Solar System objects in the display"
 msgid "Solar System"
 msgstr "Montru konstelaciajn liniojn"
 
-#: kstarsinit.cpp:523
+#: kstarsinit.cpp:526
 #, fuzzy, kde-format
 msgid "Toggle Solar system objects"
 msgstr "Montru konstelaciajn liniojn"
 
-#: kstarsinit.cpp:525
+#: kstarsinit.cpp:528
 #, fuzzy, kde-format
 msgctxt "Toggle Constellation Lines in the display"
 msgid "Const. Lines"
 msgstr "Konstelacia linio"
 
-#: kstarsinit.cpp:527
+#: kstarsinit.cpp:530
 #, fuzzy, kde-format
 msgid "Toggle constellation lines"
 msgstr "Montru konstelaciajn liniojn"
 
-#: kstarsinit.cpp:529
+#: kstarsinit.cpp:532
 #, fuzzy, kde-format
 msgctxt "Toggle Constellation Names in the display"
 msgid "Const. Names"
 msgstr "Konstelacia nomo"
 
-#: kstarsinit.cpp:531
+#: kstarsinit.cpp:534
 #, fuzzy, kde-format
 msgid "Toggle constellation names"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: kstarsinit.cpp:533
+#: kstarsinit.cpp:536
 #, fuzzy, kde-format
 msgctxt "Toggle Constellation Boundaries in the display"
 msgid "C. Boundaries"
 msgstr "Konstelacia nomo"
 
-#: kstarsinit.cpp:535
+#: kstarsinit.cpp:538
 #, fuzzy, kde-format
 msgid "Toggle constellation boundaries"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: kstarsinit.cpp:537
+#: kstarsinit.cpp:540
 #, kde-kuit-format
 msgctxt "Toggle Constellation Art in the display"
 msgid "C. Art (BETA)"
 msgstr ""
 
-#: kstarsinit.cpp:539
+#: kstarsinit.cpp:542
 #, fuzzy, kde-kuit-format
 msgid "Toggle constellation art (BETA)"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: kstarsinit.cpp:541
+#: kstarsinit.cpp:544
 #, fuzzy, kde-format
 msgctxt "Toggle Milky Way in the display"
 msgid "Milky Way"
 msgstr "Lakta Vojo"
 
-#: kstarsinit.cpp:543
+#: kstarsinit.cpp:546
 #, fuzzy, kde-format
 msgid "Toggle milky way"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsinit.cpp:545
+#: kstarsinit.cpp:548
 #, fuzzy, kde-format
 msgctxt "Toggle Equatorial Coordinate Grid in the display"
 msgid "Equatorial coord. grid"
 msgstr "Koordinatoj"
 
-#: kstarsinit.cpp:547
+#: kstarsinit.cpp:550
 #, fuzzy, kde-format
 msgid "Toggle equatorial coordinate grid"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: kstarsinit.cpp:549
+#: kstarsinit.cpp:552
 #, fuzzy, kde-format
 msgctxt "Toggle Horizontal Coordinate Grid in the display"
 msgid "Horizontal coord. grid"
 msgstr "originala koordinato"
 
-#: kstarsinit.cpp:551
+#: kstarsinit.cpp:554
 #, fuzzy, kde-format
 msgid "Toggle horizontal coordinate grid"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: kstarsinit.cpp:553
+#: kstarsinit.cpp:556
 #, fuzzy, kde-format
 msgctxt "Toggle the opaque fill of the ground polygon in the display"
 msgid "Ground"
 msgstr "Armour"
 
-#: kstarsinit.cpp:555
+#: kstarsinit.cpp:558
 #, fuzzy, kde-format
 msgid "Toggle opaque ground"
 msgstr "Ŝarĝante konstelaciajn nomojn"
 
-#: kstarsinit.cpp:557
+#: kstarsinit.cpp:560
 #, fuzzy, kde-format
 msgctxt "Toggle flags in the display"
 msgid "Flags"
 msgstr "Flagstaff"
 
-#: kstarsinit.cpp:559
+#: kstarsinit.cpp:562
 #, fuzzy, kde-format
 msgid "Toggle flags"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsinit.cpp:561
+#: kstarsinit.cpp:564
 #, fuzzy, kde-format
 msgctxt "Toggle satellites in the display"
 msgid "Satellites"
 msgstr "Satelita Trako"
 
-#: kstarsinit.cpp:563
+#: kstarsinit.cpp:566
 #, fuzzy, kde-format
 msgid "Toggle satellites"
 msgstr "Montru konstelaciajn liniojn"
 
-#: kstarsinit.cpp:565
+#: kstarsinit.cpp:568
 #, fuzzy, kde-format
 msgctxt "Toggle supernovae in the display"
 msgid "Supernovae"
 msgstr "Superior"
 
-#: kstarsinit.cpp:567
+#: kstarsinit.cpp:570
 #, fuzzy, kde-format
 msgid "Toggle supernovae"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsinit.cpp:569
+#: kstarsinit.cpp:572
 #, kde-format
 msgctxt "Toggle What's Interesting"
 msgid "What's Interesting"
 msgstr ""
 
-#: kstarsinit.cpp:571
+#: kstarsinit.cpp:574
 #, kde-format
 msgid "Toggle What's Interesting"
 msgstr ""
 
-#: kstarsinit.cpp:576
+#: kstarsinit.cpp:579
 #, fuzzy, kde-format
 msgctxt "Toggle Ekos in the display"
 msgid "Ekos"
 msgstr "Centrigita al: "
 
-#: kstarsinit.cpp:578
+#: kstarsinit.cpp:581
 #, fuzzy, kde-format
 msgid "Toggle Ekos"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsinit.cpp:580
+#: kstarsinit.cpp:583
 #, kde-format
 msgctxt "Toggle the INDI Control Panel in the display"
 msgid "INDI Control Panel"
 msgstr ""
 
-#: kstarsinit.cpp:582
+#: kstarsinit.cpp:585
 #, kde-format
 msgid "Toggle INDI Control Panel"
 msgstr ""
 
-#: kstarsinit.cpp:585
+#: kstarsinit.cpp:588
 #, fuzzy, kde-format
 msgctxt "Toggle the FITS Viewer in the display"
 msgid "FITS Viewer"
 msgstr "Bonvenon ĉe KStars"
 
-#: kstarsinit.cpp:587
+#: kstarsinit.cpp:590
 #, fuzzy, kde-format
 msgid "Toggle FITS Viewer"
 msgstr "Bonvenon ĉe KStars"
 
-#: kstarsinit.cpp:591
+#: kstarsinit.cpp:594
 #, fuzzy, kde-format
 msgctxt "Toggle the sensor Field of View"
 msgid "Sensor FOV"
 msgstr "Rock Hill"
 
-#: kstarsinit.cpp:593
+#: kstarsinit.cpp:596
 #, fuzzy, kde-format
 msgid "Toggle Sensor FOV"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsinit.cpp:598
+#: kstarsinit.cpp:601
 #, fuzzy, kde-format
 msgctxt "Toggle the Mount Control Panel"
 msgid "Mount Control"
 msgstr "Montreal"
 
-#: kstarsinit.cpp:600
+#: kstarsinit.cpp:603
 #, fuzzy, kde-format
 msgid "Toggle Mount Control Panel"
 msgstr "Montreal"
 
-#: kstarsinit.cpp:604
+#: kstarsinit.cpp:607
 #, fuzzy, kde-format
 msgctxt "Toggle the telescope center lock in display"
 msgid "Center Telescope"
 msgstr "Centrigu && sekvu"
 
-#: kstarsinit.cpp:606
+#: kstarsinit.cpp:609
 #, fuzzy, kde-format
 msgid "Toggle Lock Telescope Center"
 msgstr "Plutono"
 
-#: kstarsinit.cpp:610
+#: kstarsinit.cpp:613
 #, fuzzy, kde-format
 msgid "Toggle Telescope Tracking"
 msgstr "Plutono"
 
-#: kstarsinit.cpp:614
+#: kstarsinit.cpp:617
 #, fuzzy, kde-format
 msgid "Slew telescope to the focused object"
 msgstr "Elektu lokon"
 
-#: kstarsinit.cpp:618
+#: kstarsinit.cpp:621
 #, fuzzy, kde-format
 msgid "Sync telescope to the focused object"
 msgstr "Elektu lokon"
 
-#: kstarsinit.cpp:622
+#: kstarsinit.cpp:625
 #, fuzzy, kde-format
 msgid "Abort telescope motions"
 msgstr "Plutono"
 
-#: kstarsinit.cpp:627
+#: kstarsinit.cpp:630
 #, fuzzy, kde-format
 msgid "Park telescope"
 msgstr "Plutono"
 
-#: kstarsinit.cpp:631
+#: kstarsinit.cpp:634
 #, fuzzy, kde-format
 msgid "Unpark telescope"
 msgstr "Centrigu && sekvu"
 
-#: kstarsinit.cpp:637
+#: kstarsinit.cpp:640
 #, fuzzy, kde-format
 msgid "Slew the telescope to the mouse pointer position"
 msgstr "Geografia loko"
 
-#: kstarsinit.cpp:640
+#: kstarsinit.cpp:643
 #, fuzzy, kde-format
 msgid "Sync the telescope to the mouse pointer position"
 msgstr "Geografia loko"
 
-#: kstarsinit.cpp:647
+#: kstarsinit.cpp:650
 #, fuzzy, kde-format
 msgid "Park dome"
 msgstr "Dek"
 
-#: kstarsinit.cpp:651
+#: kstarsinit.cpp:654
 #, fuzzy, kde-format
 msgid "Unpark dome"
 msgstr "Parkes"
 
-#: kstarsinit.cpp:682
+#: kstarsinit.cpp:685
 #, kde-format
 msgid "Edit FOV Symbols..."
 msgstr ""
 
-#: kstarsinit.cpp:716
+#: kstarsinit.cpp:719
 #, fuzzy, kde-format
 msgid "HiPS Settings..."
 msgstr "Dek"
 
-#: kstarsinit.cpp:723
+#: kstarsinit.cpp:726
 #, kde-format
 msgid " Welcome to KStars "
 msgstr "Bonvenon ĉe KStars"
 
-#: kstarsinit.cpp:814 kstarsliteinit.cpp:60 skymap.cpp:315 skymaplite.cpp:321
+#: kstarsinit.cpp:817 kstarsliteinit.cpp:60 skymap.cpp:316 skymaplite.cpp:321
 #: widgets/infoboxwidget.cpp:119
 #, kde-format
 msgid "nothing"
 msgstr "nenio"
 
-#: kstarsinit.cpp:869 kstarsliteinit.cpp:115
+#: kstarsinit.cpp:872 kstarsliteinit.cpp:115
 #, kde-format
 msgid "Initial Position is Below Horizon"
 msgstr ""
 
-#: kstarsinit.cpp:871 kstarsliteinit.cpp:117
+#: kstarsinit.cpp:874 kstarsliteinit.cpp:117
 #, kde-format
 msgid ""
 "The initial position is below the horizon.\n"
 "Would you like to reset to the default position?"
 msgstr ""
 
-#: kstarsinit.cpp:872
+#: kstarsinit.cpp:875
 #, fuzzy, kde-format
 msgid "Reset Position"
 msgstr "Kalkulu"
 
-#: kstarsinit.cpp:873
+#: kstarsinit.cpp:876
 #, fuzzy, kde-format
 msgid "Do Not Reset"
 msgstr "Des Moines"
 
-#: kstarsinit.cpp:928
+#: kstarsinit.cpp:931
 #, kde-format
 msgid "&Themes"
 msgstr ""
@@ -85266,36 +85744,11 @@ msgstr[1] "semajno"
 msgid "month"
 msgstr "Learmonth"
 
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:202
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:203
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:204
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:205
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:206
-#, fuzzy, kde-format
-msgid "months"
-msgid_plural "mths"
-msgstr[0] "Learmonth"
-msgstr[1] "Learmonth"
-
 #: kstarslite/qml/modules/helpers/TimeSpinBox.qml:207
 #: widgets/timespinbox.cpp:166
 #, kde-format, kde-kuit-format
 msgid "year"
 msgstr "jaro"
-
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:208
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:209
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:210
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:211
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:212
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:213
-#: kstarslite/qml/modules/helpers/TimeSpinBox.qml:214
-#, fuzzy, kde-format
-#| msgid "year"
-msgid "years"
-msgid_plural "yrs"
-msgstr[0] "jaro"
-msgstr[1] "jaro"
 
 #: kstarslite/qml/modules/helpers/TopMenuButton.qml:35
 #, kde-kuit-format
@@ -85537,78 +85990,6 @@ msgstr "N"
 msgctxt "North"
 msgid "N"
 msgstr "N"
-
-#. i18n?
-#. i18n?
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowMars)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Mars)
-#: kstarslite/skyitems/skynodes/planetnode.cpp:37 options/opssolarsystem.ui:85
-#: skycomponents/skymapcomposite.cpp:646 skyglpainter.cpp:306
-#: skymapdrawabstract.cpp:187 skyobjects/ksplanet.cpp:136
-#: skyobjects/ksplanet.cpp:169 skyobjects/ksplanet.cpp:371
-#: skyobjects/ksplanet.cpp:415 skyobjects/ksplanetbase.cpp:160
-#: skyqpainter.cpp:425 tools/conjunctions.cpp:76 tools/ksconjunct.cpp:75
-#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:160
-#: tools/modcalcplanets.ui:579 tools/obslistwizard.cpp:557
-#: tools/obslistwizard.cpp:559 tools/skycalendar.ui:48
-#, kde-format, kde-kuit-format
-msgid "Mars"
-msgstr "Marso"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowJupiter)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Jupiter)
-#: kstarslite/skyitems/skynodes/planetnode.cpp:41 options/opssolarsystem.ui:172
-#: skycomponents/skymapcomposite.cpp:648 skyglpainter.cpp:310
-#: skymapdrawabstract.cpp:189 skyobjects/ksplanet.cpp:139
-#: skyobjects/ksplanet.cpp:171 skyobjects/ksplanet.cpp:375
-#: skyobjects/ksplanet.cpp:419 skyobjects/ksplanetbase.cpp:160
-#: skyqpainter.cpp:429 tools/conjunctions.cpp:77 tools/jmoontool.cpp:115
-#: tools/ksconjunct.cpp:71 tools/modcalcplanets.cpp:270
-#: tools/modcalcplanets.ui:165 tools/modcalcplanets.ui:584
-#: tools/obslistwizard.cpp:570 tools/obslistwizard.cpp:572
-#: tools/skycalendar.ui:55
-#, kde-format, kde-kuit-format
-msgid "Jupiter"
-msgstr "Jupitero"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowMercury)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Mercury)
-#: kstarslite/skyitems/skynodes/planetnode.cpp:41 options/opssolarsystem.ui:204
-#: skycomponents/skymapcomposite.cpp:640 skyglpainter.cpp:310
-#: skymapdrawabstract.cpp:181 skyobjects/ksplanet.cpp:130
-#: skyobjects/ksplanet.cpp:165 skyobjects/ksplanet.cpp:361
-#: skyobjects/ksplanet.cpp:403 skyobjects/ksplanetbase.cpp:160
-#: skyqpainter.cpp:429 tools/conjunctions.cpp:74 tools/ksconjunct.cpp:78
-#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:145
-#: tools/modcalcplanets.ui:564 tools/obslistwizard.cpp:530
-#: tools/obslistwizard.cpp:532 tools/skycalendar.ui:34
-#, kde-format, kde-kuit-format
-msgid "Mercury"
-msgstr "Merkuro"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSaturn)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Saturn)
-#: kstarslite/skyitems/skynodes/planetnode.cpp:41 options/opssolarsystem.ui:56
-#: skycomponents/skymapcomposite.cpp:650 skyglpainter.cpp:311
-#: skymapdrawabstract.cpp:191 skyobjects/ksplanet.cpp:142
-#: skyobjects/ksplanet.cpp:173 skyobjects/ksplanet.cpp:379
-#: skyobjects/ksplanet.cpp:423 skyobjects/ksplanetbase.cpp:161
-#: skyobjects/ksplanetbase.cpp:290 skyqpainter.cpp:430
-#: tools/conjunctions.cpp:78 tools/ksconjunct.cpp:71 tools/ksconjunct.cpp:72
-#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:170
-#: tools/modcalcplanets.ui:589 tools/obslistwizard.cpp:584
-#: tools/obslistwizard.cpp:586 tools/skycalendar.ui:62
-#, kde-format, kde-kuit-format
-msgid "Saturn"
-msgstr "Saturno"
 
 #: kstarssplash.cpp:29
 #, kde-format
@@ -88711,19 +89092,6 @@ msgstr "Stela nomo"
 msgid "Enter Session Details:"
 msgstr "Stela nomo"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, LocationLabel)
-#. i18n: ectx: property (text), widget (QLabel, LocationLabelBatch)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: ectx: property (text), widget (QLabel, locationLabel)
-#: oal/execute.ui:41 tools/modcalcaltaz.ui:109 tools/modcalcdaylength.ui:38
-#: tools/modcalcdaylength.ui:792 tools/modcalcsidtime.ui:130
-#: tools/modcalcsidtime.ui:222 tools/modcalcvlsr.ui:81
-#: tools/observinglist.ui:185
-#, fuzzy, kde-format
-msgid "Location:"
-msgstr "Stela nomo"
-
 #. i18n: ectx: property (text), widget (QPushButton, Location)
 #: oal/execute.ui:48
 #, fuzzy, kde-format
@@ -90227,22 +90595,6 @@ msgstr "Venuso"
 msgid "If checked, Venus will be drawn on the map."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowVenus)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Venus)
-#: options/opssolarsystem.ui:140 skycomponents/skymapcomposite.cpp:642
-#: skymapdrawabstract.cpp:183 skyobjects/ksplanet.cpp:133
-#: skyobjects/ksplanet.cpp:167 skyobjects/ksplanet.cpp:367
-#: skyobjects/ksplanet.cpp:407 skyobjects/ksplanetbase.cpp:160
-#: tools/conjunctions.cpp:75 tools/ksconjunct.cpp:78 tools/ksconjunct.cpp:79
-#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.ui:150
-#: tools/modcalcplanets.ui:569 tools/obslistwizard.cpp:544
-#: tools/obslistwizard.cpp:546 tools/skycalendar.ui:41
-#, kde-format
-msgid "Venus"
-msgstr "Venuso"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ShowSun)
 #: options/opssolarsystem.ui:150
 #, fuzzy, kde-format
@@ -90315,22 +90667,6 @@ msgstr "Neptuno"
 msgid "If checked, Neptune will be drawn on the map."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowNeptune)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Neptune)
-#: options/opssolarsystem.ui:220 skycomponents/skymapcomposite.cpp:654
-#: skymapdrawabstract.cpp:195 skyobjects/ksplanet.cpp:148
-#: skyobjects/ksplanet.cpp:177 skyobjects/ksplanet.cpp:393
-#: skyobjects/ksplanet.cpp:431 skyobjects/ksplanetbase.cpp:161
-#: tools/conjunctions.cpp:80 tools/ksconjunct.cpp:67
-#: tools/modcalcplanets.cpp:271 tools/modcalcplanets.ui:180
-#: tools/modcalcplanets.ui:599 tools/obslistwizard.cpp:612
-#: tools/obslistwizard.cpp:614 tools/skycalendar.ui:69
-#, kde-format
-msgid "Neptune"
-msgstr "Neptuno"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ShowUranus)
 #: options/opssolarsystem.ui:246
 #, fuzzy, kde-format
@@ -90342,22 +90678,6 @@ msgstr "Urano"
 #, kde-format
 msgid "If checked, Uranus will be drawn on the map."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowUranus)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_Uranus)
-#: options/opssolarsystem.ui:252 skycomponents/skymapcomposite.cpp:652
-#: skymapdrawabstract.cpp:193 skyobjects/ksplanet.cpp:145
-#: skyobjects/ksplanet.cpp:175 skyobjects/ksplanet.cpp:389
-#: skyobjects/ksplanet.cpp:427 skyobjects/ksplanetbase.cpp:161
-#: tools/conjunctions.cpp:79 tools/ksconjunct.cpp:67 tools/ksconjunct.cpp:68
-#: tools/modcalcplanets.cpp:271 tools/modcalcplanets.ui:175
-#: tools/modcalcplanets.ui:594 tools/obslistwizard.cpp:598
-#: tools/obslistwizard.cpp:600 tools/skycalendar.ui:76
-#, kde-format
-msgid "Uranus"
-msgstr "Urano"
 
 #. i18n: ectx: property (title), widget (QGroupBox, MinorBodiesBox)
 #: options/opssolarsystem.ui:283
@@ -91369,17 +91689,6 @@ msgstr "Ne eblis malfermi dosieron"
 msgid "Loading solar system"
 msgstr "Montru konstelaciajn liniojn"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, PlanetComboBoxBatch)
-#: skycomponents/solarsystemcomposite.cpp:35 skyobjects/ksplanet.cpp:411
-#: tools/ksconjunct.cpp:155 tools/modcalcplanets.cpp:77
-#: tools/modcalcplanets.cpp:270 tools/modcalcplanets.cpp:390
-#: tools/modcalcplanets.ui:155 tools/modcalcplanets.ui:574
-#: widgets/moonphasecalendarwidget.cpp:332
-#, kde-format
-msgid "Earth"
-msgstr "Tero"
-
 #: skycomponents/starcomponent.cpp:71
 #, fuzzy, kde-format
 msgid "Loading stars"
@@ -91400,41 +91709,41 @@ msgstr "Superior"
 msgid "Downloading Supernovae updates..."
 msgstr "Ŝarĝante KStars..."
 
-#: skymap.cpp:296
+#: skymap.cpp:297
 #, fuzzy, kde-format
 msgid "%1: %2<sup>m</sup>"
 msgstr "%1<sup>m</sup>, %2"
 
-#: skymap.cpp:358 skymaplite.cpp:352
+#: skymap.cpp:359 skymaplite.cpp:352
 #, kde-format
 msgid "Requested Position Below Horizon"
 msgstr ""
 
-#: skymap.cpp:359 skymaplite.cpp:353
+#: skymap.cpp:360 skymaplite.cpp:353
 #, kde-format
 msgid ""
 "The requested position is below the horizon.\n"
 "Would you like to go there anyway?"
 msgstr ""
 
-#: skymap.cpp:360
+#: skymap.cpp:361
 #, kde-format
 msgid "Go Anyway"
 msgstr ""
 
-#: skymap.cpp:361
+#: skymap.cpp:362
 #, fuzzy, kde-format
 msgid "Keep Position"
 msgstr "Kalkulu"
 
-#: skymap.cpp:451
+#: skymap.cpp:452
 #, kde-format
 msgid ""
 "Digitized Sky Survey image provided by the Space Telescope Science Institute "
 "[public domain]."
 msgstr ""
 
-#: skymap.cpp:482
+#: skymap.cpp:483
 #, kde-format
 msgctxt "Equatorial & Horizontal Coordinates"
 msgid ""
@@ -91443,62 +91752,47 @@ msgid ""
 "AzAlt:\t%5\t%6"
 msgstr ""
 
-#: skymap.cpp:526
+#: skymap.cpp:527
 #, kde-format
 msgid ""
 "Sloan Digital Sky Survey image provided by the Astrophysical Research "
 "Consortium [free for non-commercial use]."
 msgstr ""
 
-#: skymap.cpp:602
+#: skymap.cpp:603
 #, fuzzy, kde-format
 msgid "Angular distance: %1"
 msgstr "Plaisance"
 
-#: skymap.cpp:616
+#: skymap.cpp:617
 #, fuzzy, kde-format
 msgid "; Physical distance: %1 pc"
 msgstr "Plaisance"
 
-#: skymap.cpp:653
+#: skymap.cpp:654
 #, fuzzy, kde-format
 msgid "Star Hopper: Choose a field-of-view"
 msgstr "Montru planedajn bildojn"
 
-#: skymap.cpp:654
+#: skymap.cpp:655
 #, kde-format
 msgid "FOV to use for star hopping:"
 msgstr ""
 
-#: skymap.cpp:661
+#: skymap.cpp:662
 #, fuzzy, kde-format
 msgid "Star Hopper: Enter field-of-view to use"
 msgstr "Montru planedajn bildojn"
 
-#: skymap.cpp:662
+#: skymap.cpp:663
 #, kde-format
 msgid "FOV to use for star hopping (in arcminutes):"
 msgstr ""
 
-#: skymap.cpp:874
+#: skymap.cpp:875
 #, fuzzy, kde-format
 msgid "No object selected."
 msgstr "Elektita informkesto"
-
-#: skymap.cpp:1284
-#, kde-format
-msgid "Xplanet binary path is empty in config panel."
-msgstr ""
-
-#: skymap.cpp:1292
-#, kde-format
-msgid "The configured Xplanet binary does not exist or is not executable."
-msgstr ""
-
-#: skymap.cpp:1473
-#, kde-format
-msgid "XPlanet Program Error"
-msgstr ""
 
 #: skyobjects/jupitermoons.cpp:29
 #, kde-format
@@ -93962,26 +94256,6 @@ msgstr ""
 msgid "Jupiter Moons Tool"
 msgstr "Jupitero"
 
-#: tools/jmoontool.cpp:56
-#, fuzzy, kde-format
-msgid "Io"
-msgstr "Io"
-
-#: tools/jmoontool.cpp:57
-#, fuzzy, kde-format
-msgid "Europa"
-msgstr "Europa"
-
-#: tools/jmoontool.cpp:58
-#, fuzzy, kde-format
-msgid "Ganymede"
-msgstr "Gander"
-
-#: tools/jmoontool.cpp:59
-#, fuzzy, kde-format
-msgid "Callisto"
-msgstr "Cranston"
-
 #: tools/jmoontool.cpp:95
 #, kde-format
 msgid "offset from Jupiter (arcmin)"
@@ -94731,7 +95005,7 @@ msgid "Hint for writing location strings"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLabelLocalTime)
-#: tools/modcalcsidtime.cpp:156 xplanet/opsxplanet.ui:483
+#: tools/modcalcsidtime.cpp:156 xplanet/opsxplanet.ui:494
 #, fuzzy, kde-format
 msgid "local time"
 msgstr "LT:"
@@ -97616,172 +97890,171 @@ msgid ""
 "sec\""
 msgstr ""
 
-#: xplanet/opsxplanet.cpp:39
+#: xplanet/opsxplanet.cpp:40
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "No projection"
 msgstr "Kalkulu"
 
-#: xplanet/opsxplanet.cpp:40
+#: xplanet/opsxplanet.cpp:41
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Ancient"
 msgstr "Aiken"
 
-#: xplanet/opsxplanet.cpp:41
+#: xplanet/opsxplanet.cpp:42
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Azimuthal"
 msgstr "Azimuto:"
 
-#: xplanet/opsxplanet.cpp:42
+#: xplanet/opsxplanet.cpp:43
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Bonne"
 msgstr "Bonn"
 
-#: xplanet/opsxplanet.cpp:43
+#: xplanet/opsxplanet.cpp:44
 #, kde-format
 msgctxt "Map projection method"
 msgid "Gnomonic"
 msgstr ""
 
-#: xplanet/opsxplanet.cpp:44
+#: xplanet/opsxplanet.cpp:45
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Hemisphere"
 msgstr "Fisher"
 
-#: xplanet/opsxplanet.cpp:45
+#: xplanet/opsxplanet.cpp:46
 #, kde-format
 msgctxt "Map projection method"
 msgid "Lambert"
 msgstr "Lambert"
 
-#: xplanet/opsxplanet.cpp:46
+#: xplanet/opsxplanet.cpp:47
 #, kde-format
 msgctxt "Map projection method"
 msgid "Mercator"
 msgstr "Mercator"
 
-#: xplanet/opsxplanet.cpp:47
+#: xplanet/opsxplanet.cpp:48
 #, kde-format
 msgctxt "Map projection method"
 msgid "Mollweide"
 msgstr "Mollweide"
 
-#: xplanet/opsxplanet.cpp:48
+#: xplanet/opsxplanet.cpp:49
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Orthographic"
 msgstr "Geografia loko"
 
-#: xplanet/opsxplanet.cpp:49
+#: xplanet/opsxplanet.cpp:50
 #, kde-format
 msgctxt "Map projection method"
 msgid "Peters"
 msgstr "Peters"
 
-#: xplanet/opsxplanet.cpp:50
+#: xplanet/opsxplanet.cpp:51
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Polyconic"
 msgstr "Polson"
 
-#: xplanet/opsxplanet.cpp:51
+#: xplanet/opsxplanet.cpp:52
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "Rectangular"
 msgstr "Decataur"
 
-#: xplanet/opsxplanet.cpp:52
+#: xplanet/opsxplanet.cpp:53
 #, fuzzy, kde-format
 msgctxt "Map projection method"
 msgid "TSC"
 msgstr "UT:"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetTitle)
-#: xplanet/opsxplanet.ui:37
+#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetPath)
+#: xplanet/opsxplanet.ui:52
 #, fuzzy, kde-format
-msgid "Window title:"
-msgstr "Fenestra &titolo:"
+msgid "Xplanet path:"
+msgstr "planedo"
 
-#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetTitle)
-#: xplanet/opsxplanet.ui:50
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetPath)
+#: xplanet/opsxplanet.ui:70
 #, kde-format
-msgid "Title of xplanet window"
+msgid "Enter here the path of xplanet binary."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetGeometryX)
-#: xplanet/opsxplanet.ui:60
+#: xplanet/opsxplanet.ui:77
 #, kde-format
 msgid "Window size: "
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetWidth)
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetWidth)
-#: xplanet/opsxplanet.ui:84 xplanet/opsxplanet.ui:87
+#: xplanet/opsxplanet.ui:101
 #, kde-format
 msgid "Set the width of window"
 msgstr ""
 
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetWidth)
+#: xplanet/opsxplanet.ui:104
+#, fuzzy, kde-format
+msgid "Set the width of the xplanet image"
+msgstr "Fono de informkesto"
+
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetHeight)
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetHeight)
-#: xplanet/opsxplanet.ui:110 xplanet/opsxplanet.ui:113
+#: xplanet/opsxplanet.ui:127
 #, kde-format
 msgid "Set the height of window"
 msgstr ""
 
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetPath)
-#: xplanet/opsxplanet.ui:151
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetHeight)
+#: xplanet/opsxplanet.ui:130
 #, kde-format
-msgid "Enter here the path of xplanet binary."
+msgid "Set the height of the xplanet image"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, textLabelXplanetPath)
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetTimeout)
+#: xplanet/opsxplanet.ui:159
+#, kde-format
+msgid "The time KStars will wait for XPlanet to complete before giving up."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #: xplanet/opsxplanet.ui:173
-#, fuzzy, kde-format
-msgid "Xplanet path:"
-msgstr "planedo"
+#, kde-format
+msgid "Animation Delay"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetAnimationDelay)
+#: xplanet/opsxplanet.ui:180
+#, kde-format
+msgid "The delay between frames for the animation"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetFOV)
-#: xplanet/opsxplanet.ui:208
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetUseFIFO)
+#: xplanet/opsxplanet.ui:213 xplanet/opsxplanet.ui:350
 #, kde-format
 msgid "Use kstars's FOV?"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetWait)
-#: xplanet/opsxplanet.ui:221
-#, fuzzy, kde-format
-msgid "Update?"
-msgstr "Aldonu al listo"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetWait)
-#: xplanet/opsxplanet.ui:224
-#, kde-format
-msgid "If checked, update view."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetWait)
-#: xplanet/opsxplanet.ui:227
-#, fuzzy, kde-format
-msgid "Update every"
-msgstr "Aldonu al listo"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetGlare)
-#: xplanet/opsxplanet.ui:258
+#: xplanet/opsxplanet.ui:229
 #, kde-format
 msgid "Glare of Sun:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetGlare)
-#: xplanet/opsxplanet.ui:271
+#: xplanet/opsxplanet.ui:242
 #, kde-format
 msgid "Radius of the glare around the Sun."
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetGlare)
-#: xplanet/opsxplanet.ui:274
+#: xplanet/opsxplanet.ui:245
 #, kde-format
 msgid ""
 "Draw a glare around the sun with a radius of the specified value larger than "
@@ -97789,103 +98062,143 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetMagnitude)
-#: xplanet/opsxplanet.ui:281
+#: xplanet/opsxplanet.ui:252
 #, fuzzy, kde-format
 msgid "Base magnitude:"
 msgstr "Magnitudo:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetMagnitude)
-#: xplanet/opsxplanet.ui:294
+#: xplanet/opsxplanet.ui:265
 #, kde-format
 msgid "A star of the specified magnitude will have a pixel brightness of 1"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetStarmap)
-#: xplanet/opsxplanet.ui:304
+#: xplanet/opsxplanet.ui:275
 #, kde-format
 msgid "Use custom star map?"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetStarmap)
-#: xplanet/opsxplanet.ui:310
+#: xplanet/opsxplanet.ui:281
 #, fuzzy, kde-format
 msgid "Star map:"
 msgstr "Stela nomo"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetArcFilePath)
-#: xplanet/opsxplanet.ui:339
+#: xplanet/opsxplanet.ui:310
 #, fuzzy, kde-format
 msgid "Arc file path"
 msgstr "Provincfiltrilo:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetConfigFilePath)
-#: xplanet/opsxplanet.ui:355
+#: xplanet/opsxplanet.ui:326
 #, fuzzy, kde-format
 msgid "Config file path"
 msgstr "Landfiltrilo:"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetConfigFilePath)
-#: xplanet/opsxplanet.ui:358
+#: xplanet/opsxplanet.ui:329
 #, kde-format
 msgid "Use the specified configuration file"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetConfigFile)
-#: xplanet/opsxplanet.ui:365
+#: xplanet/opsxplanet.ui:336
 #, fuzzy, kde-format
 msgid "Config file:"
 msgstr "Landfiltrilo:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetArcFile)
-#: xplanet/opsxplanet.ui:372
+#: xplanet/opsxplanet.ui:343
 #, fuzzy, kde-format
 msgid "Arc file:"
 msgstr "Provincfiltrilo:"
 
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetUseFIFO)
+#: xplanet/opsxplanet.ui:353
+#, kde-format
+msgid ""
+"<html><head/><body><p>If checked, XPlanet will use a FIFO file in the /tmp "
+"directory to temporarily save the XPlanet image for KStars to load them and "
+"update the view.  If not checked, XPlanet will actually save the files to "
+"the XPlanet folder in the KStars data directory.  Using a FIFO file should "
+"save the hard disk from excessive reads/writes and may offer a performance "
+"enhancement.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetUseFIFO)
+#: xplanet/opsxplanet.ui:356
+#, fuzzy, kde-format
+msgid "Use FIFO File"
+msgstr "Bonvenon ĉe KStars"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: xplanet/opsxplanet.ui:363
+#, kde-format
+msgid "(saves to memory instead of a hard disk)"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetQuality)
-#: xplanet/opsxplanet.ui:399
+#: xplanet/opsxplanet.ui:390
 #, fuzzy, kde-format
 msgid "Output file quality:"
 msgstr "Forigu propran katalogon"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetQuality)
-#: xplanet/opsxplanet.ui:412
+#: xplanet/opsxplanet.ui:403
 #, kde-format
 msgid "JPEG Quality"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: xplanet/opsxplanet.ui:431
+#, kde-format
+msgid ""
+"XPlanet Requires Maps in order to function properly.  It does not ship with "
+"a lot of planetary maps.  You need to download some in order to get the full "
+"benefits of XPlanet.  This is a good place to start: <a href =http://xplanet."
+"sourceforge.net/maps.php>http://xplanet.sourceforge.net/maps.php</a> "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, openXPlanetMaps)
+#: xplanet/opsxplanet.ui:444
+#, fuzzy, kde-format
+msgid "XPlanet Planet Maps"
+msgstr "Planedoj"
+
 #. i18n: ectx: attribute (title), widget (QWidget, XplanetTabLabel)
-#: xplanet/opsxplanet.ui:456
+#: xplanet/opsxplanet.ui:467
 #, kde-format
 msgid "Labels and markers"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: xplanet/opsxplanet.ui:464
+#: xplanet/opsxplanet.ui:475
 #, fuzzy, kde-format
 msgid "Labels"
 msgstr "Longitudo:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLabelGMT)
-#: xplanet/opsxplanet.ui:493
+#: xplanet/opsxplanet.ui:504
 #, kde-format
 msgid "GMT"
 msgstr "GMT"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetLabelString)
-#: xplanet/opsxplanet.ui:502
+#: xplanet/opsxplanet.ui:513
 #, fuzzy, kde-format
 msgid "Label string:"
 msgstr "Lake City"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetLabelString)
-#: xplanet/opsxplanet.ui:509
+#: xplanet/opsxplanet.ui:520
 #, kde-format
 msgid "Specify the text of the first line of the label."
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetLabelString)
-#: xplanet/opsxplanet.ui:512
+#: xplanet/opsxplanet.ui:523
 #, no-c-format, kde-format
 msgid ""
 "Specify the text of the first line of the label. By default, it says "
@@ -97895,19 +98208,19 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetDateFormat)
-#: xplanet/opsxplanet.ui:519
+#: xplanet/opsxplanet.ui:530
 #, fuzzy, kde-format
 msgid "Date format:"
 msgstr "Elektu lokon"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetDateFormat)
-#: xplanet/opsxplanet.ui:526
+#: xplanet/opsxplanet.ui:537
 #, fuzzy, kde-format
 msgid "Specify the format for the date/time label."
 msgstr "Montru planedajn bildojn"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetDateFormat)
-#: xplanet/opsxplanet.ui:529
+#: xplanet/opsxplanet.ui:540
 #, no-c-format, kde-format
 msgid ""
 "Specify the format for the date/time label.  This format string is passed to "
@@ -97916,55 +98229,55 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetFontSize)
-#: xplanet/opsxplanet.ui:539
+#: xplanet/opsxplanet.ui:550
 #, fuzzy, kde-format
 msgid "Font size:"
 msgstr "Fort Riley"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_XplanetFontSize)
-#: xplanet/opsxplanet.ui:546
+#: xplanet/opsxplanet.ui:557
 #, fuzzy, kde-format
 msgid "Label font size"
 msgstr "Lake City"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelLabelPos)
-#: xplanet/opsxplanet.ui:646
+#: xplanet/opsxplanet.ui:657
 #, fuzzy, kde-format
 msgid "Label position:"
 msgstr "Kalkulu"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetLabel)
-#: xplanet/opsxplanet.ui:668
+#: xplanet/opsxplanet.ui:679
 #, fuzzy, kde-format
 msgid "Show label?"
 msgstr "montru nomon"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetLabel)
-#: xplanet/opsxplanet.ui:671
+#: xplanet/opsxplanet.ui:682
 #, kde-format
 msgid "If checked, display a label in the upper right corner."
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: xplanet/opsxplanet.ui:686
+#: xplanet/opsxplanet.ui:697
 #, fuzzy, kde-format
 msgid "Markers"
 msgstr "Merkers"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetMarkerFile)
-#: xplanet/opsxplanet.ui:697
+#: xplanet/opsxplanet.ui:708
 #, fuzzy, kde-format
 msgid "Use marker file?"
 msgstr "Barkerville"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetMarkerFile)
-#: xplanet/opsxplanet.ui:703
+#: xplanet/opsxplanet.ui:714
 #, fuzzy, kde-format
 msgid "Use marker file:"
 msgstr "Barkerville"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetMarkerFilePath)
-#: xplanet/opsxplanet.ui:713
+#: xplanet/opsxplanet.ui:724
 #, kde-format
 msgid ""
 "Specify a file containing user defined marker data to display against the "
@@ -97972,31 +98285,31 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetMarkerBounds)
-#: xplanet/opsxplanet.ui:720
+#: xplanet/opsxplanet.ui:731
 #, kde-format
 msgid "Write marker bounds in a file"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetMarkerBounds)
-#: xplanet/opsxplanet.ui:723
+#: xplanet/opsxplanet.ui:734
 #, kde-format
 msgid "Write coordinates of the bounding box for each marker in a file."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_XplanetMarkerBounds)
-#: xplanet/opsxplanet.ui:726
+#: xplanet/opsxplanet.ui:737
 #, kde-format
 msgid "Write marker bounds to:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetLatLong)
-#: xplanet/opsxplanet.ui:774
+#: xplanet/opsxplanet.ui:785
 #, kde-format
 msgid "Place the observer above latitude "
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetLatitude)
-#: xplanet/opsxplanet.ui:787
+#: xplanet/opsxplanet.ui:798
 #, kde-format
 msgid ""
 "Render the target body as seen from above the specified latitude (in "
@@ -98004,13 +98317,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetLongitude)
-#: xplanet/opsxplanet.ui:800
+#: xplanet/opsxplanet.ui:811
 #, fuzzy, kde-format
 msgid " and longitude "
 msgstr "Longitudo:"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_XplanetLongitude)
-#: xplanet/opsxplanet.ui:810
+#: xplanet/opsxplanet.ui:821
 #, kde-format
 msgid ""
 "Place the observer above the specified longitude (in degrees).  Longitude is "
@@ -98019,25 +98332,25 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: xplanet/opsxplanet.ui:823
+#: xplanet/opsxplanet.ui:834
 #, fuzzy, kde-format
 msgid "in degrees"
 msgstr "Evergreen"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabelXplanetProjection)
-#: xplanet/opsxplanet.ui:865
+#: xplanet/opsxplanet.ui:876
 #, fuzzy, kde-format
 msgid "Projection:"
 msgstr "Kalkulu"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_XplanetProjection)
-#: xplanet/opsxplanet.ui:872
+#: xplanet/opsxplanet.ui:883
 #, fuzzy, kde-format
 msgid "The projection type"
 msgstr "Objektotipo:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_XplanetProjection)
-#: xplanet/opsxplanet.ui:875
+#: xplanet/opsxplanet.ui:886
 #, kde-format
 msgid ""
 "The default is  no projection.  Multiple bodies will not be shown if this "
@@ -98045,52 +98358,75 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBoxBackground)
-#: xplanet/opsxplanet.ui:900
+#: xplanet/opsxplanet.ui:911
 #, fuzzy, kde-format
 msgid "Background"
 msgstr "Fono de informkesto"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_XplanetBackground)
-#: xplanet/opsxplanet.ui:908
+#: xplanet/opsxplanet.ui:919
 #, fuzzy, kde-format
 msgid "Use background?"
 msgstr "Fono de informkesto"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_XplanetBackground)
-#: xplanet/opsxplanet.ui:911
+#: xplanet/opsxplanet.ui:922
 #, kde-format
 msgid "If checked, use a file or a color as background."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetBackgroundImage)
-#: xplanet/opsxplanet.ui:923
+#: xplanet/opsxplanet.ui:934
 #, fuzzy, kde-format
 msgid "Background image:"
 msgstr "Fono de informkesto"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_XplanetBackgroundImagePath)
-#: xplanet/opsxplanet.ui:933
+#: xplanet/opsxplanet.ui:944
 #, fuzzy, kde-format
 msgid "Use this file as the background image"
 msgstr "Fono de informkesto"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, kcfg_XplanetBackgroundImagePath)
-#: xplanet/opsxplanet.ui:936
+#: xplanet/opsxplanet.ui:947
 #, kde-format
 msgid "Enter here the path of background image file."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_XplanetBackgroundColor)
-#: xplanet/opsxplanet.ui:947
+#: xplanet/opsxplanet.ui:958
 #, fuzzy, kde-format
 msgid "Background color:"
 msgstr "Fono de informkesto"
 
 #. i18n: ectx: property (whatsThis), widget (KColorButton, kcfg_XplanetBackgroundColorValue)
-#: xplanet/opsxplanet.ui:960
+#: xplanet/opsxplanet.ui:971
 #, fuzzy, kde-format
 msgid "Set the color for the background."
 msgstr "Ŝarĝante laktan vojon"
+
+#~ msgid "Window title"
+#~ msgstr "Fenestra titolo"
+
+#, fuzzy
+#~ msgid "Update view"
+#~ msgstr "Aldonu al listo"
+
+#, fuzzy
+#~ msgid "If true, update view."
+#~ msgstr "Aldonu al listo"
+
+#, fuzzy
+#~ msgid "Window title:"
+#~ msgstr "Fenestra &titolo:"
+
+#, fuzzy
+#~ msgid "Update?"
+#~ msgstr "Aldonu al listo"
+
+#, fuzzy
+#~ msgid "Update every"
+#~ msgstr "Aldonu al listo"
 
 #~ msgctxt "star name"
 #~ msgid "Tsih"
