@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevvalgrind\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-16 09:13+0200\n"
+"POT-Creation-Date: 2018-08-30 03:56+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,13 +16,13 @@ msgstr ""
 "X-Generator: pology\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: config/globalconfigpage.cpp:49 launchmode.cpp:46 plugin.cpp:68
-#: plugin.cpp:208 problemmodel.cpp:54
+#: config/globalconfigpage.cpp:45 launchmode.cpp:47 plugin.cpp:68
+#: plugin.cpp:213 problemmodel.cpp:54 problemmodel.cpp:67
 #, kde-format
 msgid "Valgrind"
 msgstr "Valgrind"
 
-#: config/globalconfigpage.cpp:54
+#: config/globalconfigpage.cpp:50
 #, kde-format
 msgid "Configure Valgrind Settings"
 msgstr ""
@@ -96,605 +96,84 @@ msgstr ""
 msgid "Show valgrind output during analysis"
 msgstr ""
 
-#. i18n: ectx: Menu (valgrind)
-#: kdevvalgrind.rc:6
-#, fuzzy, kde-format
-#| msgid "Valgrind"
-msgid "Run Valgrind Analysis"
-msgstr "Valgrind"
-
-#: plugin.cpp:79
+#: core/job.cpp:137
 #, kde-format
-msgid "Run %1"
+msgid "%1 Analysis (%2)"
 msgstr ""
 
-#: problemmodel.cpp:68
+#: core/job.cpp:216
+#, kde-format
+msgid "Failed to start valgrind from \"%1\"."
+msgstr ""
+
+#: core/job.cpp:223
 #, fuzzy, kde-format
 #| msgid "Valgrind Warning"
-msgctxt "@info:tooltip"
-msgid "Re-Run %1 Analysis for Current Launch Configuration"
+msgid "Valgrind crashed."
 msgstr "Fina Situo:"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, cacheSimulation)
-#: tools/cachegrind/configpage.ui:23
-#, kde-format
-msgid ""
-"<html><head/><body><p>Enables or disables collection of cache access and "
-"miss counts.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, cacheSimulation)
-#: tools/cachegrind/configpage.ui:26 tools/callgrind/configpage.ui:26
+#: core/job.cpp:228
 #, fuzzy, kde-format
-#| msgid "Full Cache Simulation"
-msgid "Cache simulation"
-msgstr "Plena simulado de kaŝmemoro"
+#| msgid "Process exited"
+msgid "Valgrind process timed out."
+msgstr "Procezo ĉesiĝis"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, branchSimulation)
-#: tools/cachegrind/configpage.ui:36
-#, no-c-format, kde-format
-msgid ""
-"<html><head/><body><p>Enables or disables collection of branch instruction "
-"and misprediction counts. By default this is disabled as it slows Cachegrind "
-"down by approximately 25%. Note that you cannot specify <span style=\" font-"
-"family:'Monospace'; font-weight:600; font-style:italic;\">--cache-sim=no</"
-"span> and <span style=\" font-family:'Monospace'; font-weight:600; font-"
-"style:italic;\">--branch-sim=no</span> together, as that would leave "
-"Cachegrind with no information to collect.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, branchSimulation)
-#: tools/cachegrind/configpage.ui:39 tools/callgrind/configpage.ui:39
+#: core/job.cpp:232
 #, fuzzy, kde-format
-#| msgid "Full Cache Simulation"
-msgid "Branch simulation"
-msgstr "Plena simulado de kaŝmemoro"
+#| msgid "make-process failed"
+msgid "Write to Valgrind process failed."
+msgstr "\"make\"-procezo malsukcesis"
 
-#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
-#: tools/cachegrind/configpage.ui:49
-#, kde-format
-msgid ""
-"You cannot disable both cache and branch simulation, as that would leave "
-"Cachegrind with no information to collect."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
-#: tools/cachegrind/configpage.ui:74 tools/callgrind/configpage.ui:58
-#: tools/drd/configpage.ui:69 tools/helgrind/configpage.ui:83
+#: core/job.cpp:236
 #, fuzzy, kde-format
-#| msgid "Extra &Parameters"
-msgid "Extra parameters:"
-msgstr "Pluaj &parametroj"
+#| msgid "make-process failed"
+msgid "Read from Valgrind process failed."
+msgstr "\"make\"-procezo malsukcesis"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/cachegrind/configpage.ui:91
+#: core/job.cpp:254 core/job.cpp:300
 #, fuzzy, kde-format
-#| msgid "Extra &Parameters"
-msgid "cg_annotate parameters:"
-msgstr "Pluaj &parametroj"
+#| msgid "Valgrind Warning"
+msgid "Please review your Valgrind launch configuration."
+msgstr "Fina Situo:"
 
-#: tools/cachegrind/model.cpp:156 tools/callgrind/model.cpp:290
-#, kde-format
-msgid "Function"
-msgstr "Funkcio"
-
-#: tools/cachegrind/tool.cpp:38
+#: core/job.cpp:256
 #, fuzzy, kde-format
-#| msgid "&Cachegrind"
-msgid "Cachegrind"
-msgstr "&Cachegrind"
+#| msgid "make-process failed"
+msgid "Unknown Valgrind process error."
+msgstr "\"make\"-procezo malsukcesis"
 
-#: tools/cachegrind/tool.cpp:39
-#, kde-format
-msgid "Cachegrind (Cache and Branch-Prediction Profiler)"
-msgstr ""
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchEdit)
-#: tools/cachegrind/view.ui:31 tools/callgrind/view.ui:40
-#, kde-format
-msgid "Search..."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, percenageValues)
-#: tools/cachegrind/view.ui:41 tools/callgrind/view.ui:53
-#, kde-format
-msgid "Percentage values"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, cacheSimulation)
-#: tools/callgrind/configpage.ui:23
-#, kde-format
-msgid ""
-"<html><head/><body><p>Specify if you want to do full cache simulation. By "
-"default, only instruction read accesses will be counted (\"Ir\"). With cache "
-"simulation, further event counters are enabled: </p><p>Cache misses on "
-"instruction reads (\"I1mr\"/\"ILmr\"), </p><p>data read accesses (\"Dr\") "
-"and related cache misses (\"D1mr\"/\"DLmr\"), </p><p>data write accesses "
-"(\"Dw\") and related cache misses (\"D1mw\"/\"DLmw\").</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, branchSimulation)
-#: tools/callgrind/configpage.ui:36
-#, kde-format
-msgid ""
-"<html><head/><body><p>Specify if you want to do branch prediction "
-"simulation. Further event counters are enabled: Number of executed "
-"conditional branches and related predictor misses (\"Bc\"/\"Bcm\"), executed "
-"indirect jumps and related misses of the jump address predictor (\"Bi\"/\"Bim"
-"\").</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/callgrind/configpage.ui:75
+#: core/job.cpp:262 core/job.cpp:302 core/private/xmlparser.cpp:262
+#: core/utils.cpp:124
 #, fuzzy, kde-format
-#| msgid "&Cachegrind"
-msgid "callgrind_annotate parameters:"
-msgstr "&Cachegrind"
+#| msgid "Valgrind Warning"
+msgid "Valgrind Error"
+msgstr "Fina Situo:"
 
-#. i18n: ectx: property (text), widget (QCheckBox, launchKCachegrind)
-#: tools/callgrind/configpage.ui:101
-#, fuzzy, kde-format
-#| msgid "&Cachegrind"
-msgid "Launch KCachegrind after analysis finish"
-msgstr "&Cachegrind"
-
-#: tools/callgrind/model.cpp:287 tools/callgrind/model.cpp:381
+#: core/job.cpp:278
 #, kde-format
-msgid "Incl."
+msgid "Executing command: "
 msgstr ""
 
-#: tools/callgrind/model.cpp:288 tools/callgrind/model.cpp:382
+#: core/job.cpp:296
 #, kde-format
-msgid "Self"
+msgid "Failed to execute the command:"
 msgstr ""
 
-#: tools/callgrind/model.cpp:289
-#, fuzzy, kde-format
-#| msgid "Ca&llgrind"
-msgid "Called"
-msgstr "Ca&llgrind"
-
-#: tools/callgrind/model.cpp:380
-#, kde-format
-msgid "Event"
-msgstr ""
-
-#: tools/callgrind/model.cpp:383
-#, kde-format
-msgid "Short"
-msgstr ""
-
-#: tools/callgrind/model.cpp:509
-#, kde-format
-msgid "%1 per call"
-msgstr ""
-
-#: tools/callgrind/model.cpp:510
-#, kde-format
-msgid "Count"
-msgstr ""
-
-#: tools/callgrind/model.cpp:513
-#, fuzzy, kde-format
-#| msgid "Ca&llgrind"
-msgid "Caller"
-msgstr "Ca&llgrind"
-
-#: tools/callgrind/model.cpp:515
-#, fuzzy, kde-format
-#| msgid "Ca&llgrind"
-msgid "Callee"
-msgstr "Ca&llgrind"
-
-#: tools/callgrind/tool.cpp:38
-#, fuzzy, kde-format
-#| msgid "Ca&llgrind"
-msgid "Callgrind"
-msgstr "Ca&llgrind"
-
-#: tools/callgrind/tool.cpp:39
-#, kde-format
-msgid "Callgrind (Call-Graph Generating Cache and Branch Prediction Profiler)"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, launchKCachegrindButton)
-#: tools/callgrind/view.ui:63
-#, fuzzy, kde-format
-#| msgid "&Cachegrind"
-msgid "Launch KCachegrind"
-msgstr "&Cachegrind"
-
-#. i18n: ectx: attribute (title), widget (QWidget, events)
-#: tools/callgrind/view.ui:91
-#, kde-format
-msgid "Events"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, callers)
-#: tools/callgrind/view.ui:117
-#, kde-format
-msgid "Direct callers"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, callees)
-#: tools/callgrind/view.ui:149
-#, kde-format
-msgid "Direct callees"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, location)
-#: tools/callgrind/view.ui:187
-#, fuzzy, kde-format
-#| msgid "Information"
-msgid "Location"
-msgstr "Informoj"
-
-#. i18n: ectx: property (text), widget (QLabel, binaryTitle)
-#: tools/callgrind/view.ui:199
-#, kde-format
-msgid "Binary file:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, sourceTitle)
-#: tools/callgrind/view.ui:232
-#, kde-format
-msgid "Source file(s):"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, joinListVolLabel)
-#: tools/drd/configpage.ui:23
-#, kde-format
-msgid "Joined threads memory access list volume:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, joinListVol)
-#: tools/drd/configpage.ui:33
-#, kde-format
-msgid ""
-"<html><head/><body><p>Data races that occur between a statement at the end "
-"of one thread and another thread can be missed if memory access information "
-"is discarded immediately after a thread has been joined. This option allows "
-"to specify for how many joined threads memory access information should be "
-"retained.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, segmentMergingIntervalLabel)
-#: tools/drd/configpage.ui:49
-#, kde-format
-msgid "Segment merging interval:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, segmentMergingInterval)
-#: tools/drd/configpage.ui:56
-#, kde-format
-msgid ""
-"<html><head/><body><p>Perform segment merging only after the specified "
-"number of new segments have been created. This is an advanced configuration "
-"option that allows to choose whether to minimize DRD's memory usage by "
-"choosing a low value or to let DRD run faster by choosing a slightly higher "
-"value. The optimal value for this parameter depends on the program being "
-"analyzed. The default value works well for most programs.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: tools/drd/configpage.ui:93
-#, kde-format
-msgid "Common options"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, checkStackVar)
-#: tools/drd/configpage.ui:99
-#, kde-format
-msgid ""
-"<html><head/><body><p>Controls whether DRD detects data races on stack "
-"variables. Verifying stack variables is disabled by default because most "
-"programs do not share stack variables over threads.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkStackVar)
-#: tools/drd/configpage.ui:102
-#, kde-format
-msgid "Detect data races on stack variables"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, firstRaceOnly)
-#: tools/drd/configpage.ui:109
-#, kde-format
-msgid ""
-"<html><head/><body><p>Whether to report only the first data race that has "
-"been detected on a memory location or all data races that have been detected "
-"on a memory location.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, firstRaceOnly)
-#: tools/drd/configpage.ui:112
-#, kde-format
-msgid "Report only the first data race"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, freeIsWrite)
-#: tools/drd/configpage.ui:122
-#, kde-format
-msgid ""
-"<html><head/><body><p>Whether to report races between accessing memory and "
-"freeing memory. Enabling this option may cause DRD to run slightly slower. "
-"Notes:</p><p>Don't enable this option when using custom memory allocators "
-"that use the <span style=\" font-family:'Monospace'; font-weight:600; font-"
-"style:italic;\">VG_USERREQ__MALLOCLIKE_BLOCK</span> and <span style=\" font-"
-"family:'Monospace'; font-weight:600; font-style:italic;"
-"\">VG_USERREQ__FREELIKE_BLOCK</span> because that would result in false "
-"positives. </p><p>Don't enable this option when using reference-counted "
-"objects because that will result in false positives, even when that code has "
-"been annotated properly with <span style=\" font-family:'Monospace'; font-"
-"weight:600; font-style:italic;\">ANNOTATE_HAPPENS_BEFORE</span> and <span "
-"style=\" font-family:'Monospace'; font-weight:600; font-style:italic;"
-"\">ANNOTATE_HAPPENS_AFTER</span>. See e.g. the output of the following "
-"command for an example: <span style=\" font-family:'Monospace'; font-"
-"weight:600; font-style:italic;\">valgrind --tool=drd --free-is-write=yes drd/"
-"tests/annotate_smart_pointer</span>.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, freeIsWrite)
-#: tools/drd/configpage.ui:125
-#, kde-format
-msgid "Report races between accessing and freeing memory"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, reportSignalUnlocked)
-#: tools/drd/configpage.ui:132
-#, kde-format
-msgid ""
-"<html><head/><body><p>Whether to report calls to <span style=\" font-"
-"family:'Monospace'; font-weight:600; font-style:italic;"
-"\">pthread_cond_signal</span> and <span style=\" font-family:'Monospace'; "
-"font-weight:600; font-style:italic;\">pthread_cond_broadcast</span> where "
-"the mutex associated with the signal through <span style=\" font-"
-"family:'Monospace'; font-weight:600; font-style:italic;\">pthread_cond_wait</"
-"span> or <span style=\" font-family:'Monospace'; font-weight:600; font-style:"
-"italic;\">pthread_cond_timed_wait</span> is not locked at the time the "
-"signal is sent. Sending a signal without holding a lock on the associated "
-"mutex is a common programming error which can cause subtle race conditions "
-"and unpredictable behavior. There exist some uncommon synchronization "
-"patterns however where it is safe to send a signal without holding a lock on "
-"the associated mutex.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, reportSignalUnlocked)
-#: tools/drd/configpage.ui:135
-#, kde-format
-msgid "Report calls to unlocked signals"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, segmentMerging)
-#: tools/drd/configpage.ui:142
-#, kde-format
-msgid ""
-"<html><head/><body><p>Controls segment merging. Segment merging is an "
-"algorithm to limit memory usage of the data race detection algorithm. "
-"Disabling segment merging may improve the accuracy of the so-called 'other "
-"segments' displayed in race reports but can also trigger an out of memory "
-"error.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, segmentMerging)
-#: tools/drd/configpage.ui:145
-#, kde-format
-msgid "Segment merging"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, showConflSeg)
-#: tools/drd/configpage.ui:152
-#, kde-format
-msgid ""
-"<html><head/><body><p>Show conflicting segments in race reports. Since this "
-"information can help to find the cause of a data race, this option is "
-"enabled by default. Disabling this option makes the output of DRD more "
-"compact.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, showConflSeg)
-#: tools/drd/configpage.ui:155
-#, kde-format
-msgid "Show conflicting segments"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, showStackUsage)
-#: tools/drd/configpage.ui:162
-#, kde-format
-msgid ""
-"<html><head/><body><p>Print stack usage at thread exit time. When a program "
-"creates a large number of threads it becomes important to limit the amount "
-"of virtual memory allocated for thread stacks. This option makes it possible "
-"to observe how much stack memory has been used by each thread of the client "
-"program.</p><p>Note: the DRD tool itself allocates some temporary data on "
-"the client thread stack. The space necessary for this temporary data must be "
-"allocated by the client program when it allocates stack memory, but is not "
-"included in stack usage reported by DRD.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, showStackUsage)
-#: tools/drd/configpage.ui:165
-#, fuzzy, kde-format
-#| msgid "Show Reachable Blocks"
-msgid "Show stack usage"
-msgstr "Montri atingeblajn blokjn"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, ignoreThreadCreation)
-#: tools/drd/configpage.ui:172
-#, kde-format
-msgid ""
-"<html><head/><body><p>Controls whether all activities during thread creation "
-"should be ignored. By default enabled only on Solaris. Solaris provides "
-"higher throughput, parallelism and scalability than other operating systems, "
-"at the cost of more fine-grained locking activity. This means for example "
-"that when a thread is created under glibc, just one big lock is used for all "
-"thread setup. Solaris libc uses several fine-grained locks and the creator "
-"thread resumes its activities as soon as possible, leaving for example stack "
-"and TLS setup sequence to the created thread. This situation confuses DRD as "
-"it assumes there is some false ordering in place between creator and created "
-"thread; and therefore many types of race conditions in the application would "
-"not be reported. To prevent such false ordering, this command line option is "
-"set to <span style=\" font-family:'Monospace';\">yes</span> by default on "
-"Solaris. All activity (loads, stores, client requests) is therefore ignored "
-"during:</p><p>* pthread_create() call in the creator thread </p><p>* thread "
-"creation phase (stack and TLS setup) in the created thread</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreThreadCreation)
-#: tools/drd/configpage.ui:175 tools/helgrind/configpage.ui:145
-#, kde-format
-msgid "Ignore thread creation"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, showInstructionPointer)
-#: tools/drd/configpage.ui:189 tools/helgrind/configpage.ui:172
-#: tools/memcheck/configpage.ui:265
-#, kde-format
-msgid "Show stack frame instruction pointer value"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tracesTab)
-#: tools/drd/configpage.ui:210
-#, kde-format
-msgid "Trace options"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceAlloc)
-#: tools/drd/configpage.ui:216
-#, kde-format
-msgid ""
-"<html><head/><body><p>Trace all memory allocations and deallocations. May "
-"produce a huge amount of output.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceAlloc)
-#: tools/drd/configpage.ui:219
-#, kde-format
-msgid "Trace memory allocations/deallocations"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceBarrier)
-#: tools/drd/configpage.ui:226
-#, kde-format
-msgid "<html><head/><body><p>Trace all barrier activity.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceBarrier)
-#: tools/drd/configpage.ui:229
-#, kde-format
-msgid "Trace barrier activity"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceCond)
-#: tools/drd/configpage.ui:236
-#, kde-format
-msgid ""
-"<html><head/><body><p>Trace all condition variable activity.</p></body></"
-"html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceCond)
-#: tools/drd/configpage.ui:239
-#, kde-format
-msgid "Trace condition variable activity"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceForkJoin)
-#: tools/drd/configpage.ui:246
-#, kde-format
-msgid ""
-"<html><head/><body><p>Trace all thread creation and all thread termination "
-"events.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceForkJoin)
-#: tools/drd/configpage.ui:249
-#, kde-format
-msgid "Trace thread creation/termination events"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceHb)
-#: tools/drd/configpage.ui:256
-#, kde-format
-msgid ""
-"<html><head/><body><p>Trace execution of the <span style=\" font-"
-"family:'Monospace'; font-weight:600; font-style:italic;"
-"\">ANNOTATE_HAPPENS_BEFORE()</span>, <span style=\" font-family:'Monospace'; "
-"font-weight:600; font-style:italic;\">ANNOTATE_HAPPENS_AFTER()</span> and "
-"<span style=\" font-family:'Monospace'; font-weight:600; font-style:italic;"
-"\">ANNOTATE_HAPPENS_DONE()</span> client requests.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceHb)
-#: tools/drd/configpage.ui:259
-#, kde-format
-msgid "Trace execution of \"ANNOTATE_HAPPENS\" requests"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceMutex)
-#: tools/drd/configpage.ui:266
-#, kde-format
-msgid "<html><head/><body><p>Trace all mutex activity.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceMutex)
-#: tools/drd/configpage.ui:269
-#, kde-format
-msgid "Trace mutex activity"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceRwlock)
-#: tools/drd/configpage.ui:276
-#, kde-format
-msgid ""
-"<html><head/><body><p>Trace all reader-writer lock activity.</p></body></"
-"html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceRwlock)
-#: tools/drd/configpage.ui:279
-#, kde-format
-msgid "Trace reader-writer lock activity"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, traceSemaphore)
-#: tools/drd/configpage.ui:286
-#, kde-format
-msgid "<html><head/><body><p>Trace all semaphore activity.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, traceSemaphore)
-#: tools/drd/configpage.ui:289
-#, kde-format
-msgid "Trace semaphore activity"
-msgstr ""
-
-#: tools/drd/tool.cpp:38
-#, kde-format
-msgid "DRD"
-msgstr ""
-
-#: tools/drd/tool.cpp:39
-#, kde-format
-msgid "DRD (Thread Error Detector)"
-msgstr ""
-
-#: tools/generic/configpage.cpp:58
+#: core/private/common_configpage.cpp:30
 #, fuzzy, kde-format
 #| msgid "Valgrind"
-msgid "Valgrind Generic Settings"
+msgid "Valgrind Common Settings"
 msgstr "Valgrind"
 
 #. i18n: ectx: property (text), widget (QLabel, numCallersLabel)
-#: tools/generic/configpage.ui:25
+#: core/private/common_configpage.ui:22
 #, fuzzy, kde-format
 #| msgid "Display stack to &depth:"
 msgid "Display stac&k to depth:"
 msgstr "Montri stakon ĝis profun&deco:"
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, numCallers)
-#: tools/generic/configpage.ui:35
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_numCallers)
+#: core/private/common_configpage.ui:32
 #, kde-format
 msgid ""
 "<html><head/><body><p>Specifies the maximum number of entries shown in stack "
@@ -708,14 +187,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, maxStackframeLabel)
-#: tools/generic/configpage.ui:48
+#: core/private/common_configpage.ui:39
 #, fuzzy, kde-format
 #| msgid "Maximum &frame stack size"
 msgid " Maximum size of a stack frame:"
 msgstr "Maksimuma &framstaka grandeco"
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, maxStackframe)
-#: tools/generic/configpage.ui:58
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maxStackframe)
+#: core/private/common_configpage.ui:49
 #, kde-format
 msgid ""
 "<html><head/><body><p>The maximum size of a stack frame. If the stack "
@@ -741,15 +220,15 @@ msgid ""
 "rather than on the stack.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: tools/generic/configpage.ui:71
+#. i18n: ectx: property (text), widget (QLabel, extraArgsLabel)
+#: core/private/common_configpage.ui:56
 #, fuzzy, kde-format
 #| msgid "Extra &Parameters"
 msgid "&Extra parameters:"
 msgstr "Pluaj &parametroj"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, limitErrors)
-#: tools/generic/configpage.ui:97
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_errorLimit)
+#: core/private/common_configpage.ui:82
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled, Valgrind stops reporting errors after "
@@ -758,230 +237,726 @@ msgid ""
 "in programs with many errors.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, limitErrors)
-#: tools/generic/configpage.ui:100
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_errorLimit)
+#: core/private/common_configpage.ui:85
 #, kde-format
 msgid "Limit errors if too many"
 msgstr ""
 
-#: tools/generic/core/ijob.cpp:141
-#, kde-format
-msgid "%1 Analysis (%2)"
-msgstr ""
-
-#: tools/generic/core/ijob.cpp:219
-#, kde-format
-msgid "Failed to start valgrind from \"%1\"."
-msgstr ""
-
-#: tools/generic/core/ijob.cpp:226
-#, fuzzy, kde-format
-#| msgid "Valgrind Warning"
-msgid "Valgrind crashed."
-msgstr "Fina Situo:"
-
-#: tools/generic/core/ijob.cpp:231
-#, fuzzy, kde-format
-#| msgid "Process exited"
-msgid "Valgrind process timed out."
-msgstr "Procezo ĉesiĝis"
-
-#: tools/generic/core/ijob.cpp:235
-#, fuzzy, kde-format
-#| msgid "make-process failed"
-msgid "Write to Valgrind process failed."
-msgstr "\"make\"-procezo malsukcesis"
-
-#: tools/generic/core/ijob.cpp:239
-#, fuzzy, kde-format
-#| msgid "make-process failed"
-msgid "Read from Valgrind process failed."
-msgstr "\"make\"-procezo malsukcesis"
-
-#: tools/generic/core/ijob.cpp:257 tools/generic/core/ijob.cpp:303
-#, fuzzy, kde-format
-#| msgid "Valgrind Warning"
-msgid "Please review your Valgrind launch configuration."
-msgstr "Fina Situo:"
-
-#: tools/generic/core/ijob.cpp:259
-#, fuzzy, kde-format
-#| msgid "make-process failed"
-msgid "Unknown Valgrind process error."
-msgstr "\"make\"-procezo malsukcesis"
-
-#: tools/generic/core/ijob.cpp:265 tools/generic/core/ijob.cpp:305
-#: tools/generic/core/utils.cpp:124 tools/generic/core/xml/parser.cpp:262
-#, fuzzy, kde-format
-#| msgid "Valgrind Warning"
-msgid "Valgrind Error"
-msgstr "Fina Situo:"
-
-#: tools/generic/core/ijob.cpp:281
-#, kde-format
-msgid "Executing command: "
-msgstr ""
-
-#: tools/generic/core/ijob.cpp:299
-#, kde-format
-msgid "Failed to execute the command:"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:46
-#, kde-format
-msgid "Instruction Fetch"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:47
-#, kde-format
-msgid "Data Read Access"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:48
-#, kde-format
-msgid "Data Write Access"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:49
-#, kde-format
-msgid "L1 Instr. Fetch Miss"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:50
-#, kde-format
-msgid "L1 Data Read Miss"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:51
-#, kde-format
-msgid "L1 Data Write Miss"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:52
-#, kde-format
-msgid "LL Instr. Fetch Miss"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:53
-#, kde-format
-msgid "LL Data Read Miss"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:54
-#, kde-format
-msgid "LL Data Write Miss"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:56
-#, kde-format
-msgid "Conditional Branch"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:57
-#, kde-format
-msgid "Mispredicted Cond. Branch"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:58
-#, kde-format
-msgid "Indirect Branch"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:59
-#, kde-format
-msgid "Mispredicted Ind. Branch"
-msgstr ""
-
-#: tools/generic/core/utils.cpp:116
-#, kde-format
-msgid "Failed to start visualizer from \"%1\"."
-msgstr ""
-
-#: tools/generic/core/utils.cpp:118
-#, kde-format
-msgid "Check your settings and install the visualizer if necessary."
-msgstr ""
-
-#: tools/generic/core/utils.cpp:120
-#, kde-format
-msgid "Error during visualizer execution:"
-msgstr ""
-
-#: tools/generic/core/xml/parser.cpp:258
+#: core/private/xmlparser.cpp:258
 #, kde-format
 msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, historyLevelLabel)
-#: tools/helgrind/configpage.ui:25
+#: core/utils.cpp:47
 #, kde-format
-msgid "History level:"
+msgid "Instruction Fetch"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QComboBox, historyLevel)
-#: tools/helgrind/configpage.ui:35
+#: core/utils.cpp:48
 #, kde-format
-msgid ""
-"<html><head/><body><p><span style=\" font-family:'Monospace'; font-"
-"weight:600; font-style:italic;\">--history-level=full</span> (the default) "
-"causes Helgrind collects enough information about \"old\" accesses that it "
-"can produce two stack traces in a race report -- both the stack trace for "
-"the current access, and the trace for the older, conflicting access. To "
-"limit memory usage, \"old\" accesses stack traces are limited to a maximum "
-"of 8 entries, even if <span style=\" font-family:'Monospace'; font-"
-"weight:600; font-style:italic;\">--num-callers</span> value is bigger.</"
-"p><p>Collecting such information is expensive in both speed and memory, "
-"particularly for programs that do many inter-thread synchronization events "
-"(locks, unlocks, etc). Without such information, it is more difficult to "
-"track down the root causes of races. Nonetheless, you may not need it in "
-"situations where you just want to check for the presence or absence of "
-"races, for example, when doing regression testing of a previously race-free "
-"program.</p><p><span style=\" font-family:'Monospace'; font-weight:600; font-"
-"style:italic;\">--history-level=none</span> is the opposite extreme. It "
-"causes Helgrind not to collect any information about previous accesses. This "
-"can be dramatically faster than <span style=\" font-family:'Monospace'; font-"
-"weight:600; font-style:italic;\">--history-level=full</span>.</p><p><span "
-"style=\" font-family:'Monospace'; font-weight:600; font-style:italic;\">--"
-"history-level=approx</span> provides a compromise between these two "
-"extremes. It causes Helgrind to show a full trace for the later access, and "
-"approximate information regarding the earlier access. This approximate "
-"information consists of two stacks, and the earlier access is guaranteed to "
-"have occurred somewhere between program points denoted by the two stacks. "
-"This is not as useful as showing the exact stack for the previous access (as "
-"<span style=\" font-family:'Monospace'; font-weight:600; font-style:italic;"
-"\">--history-level=full</span> does), but it is better than nothing, and it "
-"is almost as fast as <span style=\" font-family:'Monospace'; font-"
-"weight:600; font-style:italic;\">--history-level=none</span>.</p></body></"
-"html>"
+msgid "Data Read Access"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
-#: tools/helgrind/configpage.ui:39
+#: core/utils.cpp:49
 #, kde-format
-msgid "full"
+msgid "Data Write Access"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
-#: tools/helgrind/configpage.ui:44
+#: core/utils.cpp:50
 #, kde-format
-msgid "approx"
+msgid "L1 Instr. Fetch Miss"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, historyLevel)
-#. i18n: ectx: property (text), item, widget (QComboBox, keepStacktraces)
-#: tools/helgrind/configpage.ui:49 tools/memcheck/configpage.ui:122
+#: core/utils.cpp:51
+#, kde-format
+msgid "L1 Data Read Miss"
+msgstr ""
+
+#: core/utils.cpp:52
+#, kde-format
+msgid "L1 Data Write Miss"
+msgstr ""
+
+#: core/utils.cpp:53
+#, kde-format
+msgid "LL Instr. Fetch Miss"
+msgstr ""
+
+#: core/utils.cpp:54
+#, kde-format
+msgid "LL Data Read Miss"
+msgstr ""
+
+#: core/utils.cpp:55
+#, kde-format
+msgid "LL Data Write Miss"
+msgstr ""
+
+#: core/utils.cpp:57
+#, kde-format
+msgid "Conditional Branch"
+msgstr ""
+
+#: core/utils.cpp:58
+#, kde-format
+msgid "Mispredicted Cond. Branch"
+msgstr ""
+
+#: core/utils.cpp:59
+#, kde-format
+msgid "Indirect Branch"
+msgstr ""
+
+#: core/utils.cpp:60
+#, kde-format
+msgid "Mispredicted Ind. Branch"
+msgstr ""
+
+#: core/utils.cpp:116
+#, kde-format
+msgid "Failed to start visualizer from \"%1\"."
+msgstr ""
+
+#: core/utils.cpp:118
+#, kde-format
+msgid "Check your settings and install the visualizer if necessary."
+msgstr ""
+
+#: core/utils.cpp:120
+#, kde-format
+msgid "Error during visualizer execution:"
+msgstr ""
+
+#: core/widgets/menubutton.cpp:95 tools/memcheck/memcheck_configpage.cpp:64
 #, kde-format
 msgid "none"
 msgstr ""
 
+#: core/widgets/menubutton.cpp:98
+#, fuzzy, kde-format
+#| msgid "All"
+msgid "all"
+msgstr "Ĉiuj"
+
+#. i18n: ectx: Menu (valgrind)
+#: kdevvalgrind.rc:6
+#, fuzzy, kde-format
+#| msgid "Valgrind"
+msgid "Run Valgrind Analysis"
+msgstr "Valgrind"
+
+#: plugin.cpp:79
+#, kde-format
+msgid "Run %1"
+msgstr ""
+
+#: problemmodel.cpp:68
+#, fuzzy, kde-format
+#| msgid "Valgrind Warning"
+msgctxt "@info:tooltip"
+msgid "Re-Run %1 Analysis for Current Launch Configuration"
+msgstr "Fina Situo:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_cacheSim)
+#: tools/cachegrind/cachegrind_configpage.ui:23
+#, kde-format
+msgid ""
+"<html><head/><body><p>Enables or disables collection of cache access and "
+"miss counts.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_cacheSim)
+#: tools/cachegrind/cachegrind_configpage.ui:26
+#: tools/callgrind/callgrind_configpage.ui:26
+#, fuzzy, kde-format
+#| msgid "Full Cache Simulation"
+msgid "Cache simulation"
+msgstr "Plena simulado de kaŝmemoro"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_branchSim)
+#: tools/cachegrind/cachegrind_configpage.ui:36
+#, no-c-format, kde-format
+msgid ""
+"<html><head/><body><p>Enables or disables collection of branch instruction "
+"and misprediction counts. By default this is disabled as it slows Cachegrind "
+"down by approximately 25%. Note that you cannot specify <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;\">--cache-sim=no</"
+"span> and <span style=\" font-family:'Monospace'; font-weight:600; font-"
+"style:italic;\">--branch-sim=no</span> together, as that would leave "
+"Cachegrind with no information to collect.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_branchSim)
+#: tools/cachegrind/cachegrind_configpage.ui:39
+#: tools/callgrind/callgrind_configpage.ui:39
+#, fuzzy, kde-format
+#| msgid "Full Cache Simulation"
+msgid "Branch simulation"
+msgstr "Plena simulado de kaŝmemoro"
+
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: tools/cachegrind/cachegrind_configpage.ui:49
+#, kde-format
+msgid ""
+"You cannot disable both cache and branch simulation, as that would leave "
+"Cachegrind with no information to collect."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, extraArgsLabel)
+#: tools/cachegrind/cachegrind_configpage.ui:74
+#: tools/callgrind/callgrind_configpage.ui:58 tools/drd/drd_configpage.ui:51
+#: tools/helgrind/helgrind_configpage.ui:46
+#, fuzzy, kde-format
+#| msgid "Extra &Parameters"
+msgid "Extra parameters:"
+msgstr "Pluaj &parametroj"
+
+#. i18n: ectx: property (text), widget (QLabel, cgAnnotateArgsLabel)
+#: tools/cachegrind/cachegrind_configpage.ui:91
+#, fuzzy, kde-format
+#| msgid "Extra &Parameters"
+msgid "cg_annotate parameters:"
+msgstr "Pluaj &parametroj"
+
+#: tools/cachegrind/cachegrind_model.cpp:155
+#: tools/callgrind/callgrind_model.cpp:289
+#, kde-format
+msgid "Function"
+msgstr "Funkcio"
+
+#: tools/cachegrind/cachegrind_tool.cpp:35
+#, fuzzy, kde-format
+#| msgid "&Cachegrind"
+msgid "Cachegrind"
+msgstr "&Cachegrind"
+
+#: tools/cachegrind/cachegrind_tool.cpp:36
+#, kde-format
+msgid "Cachegrind (Cache and Branch-Prediction Profiler)"
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchEdit)
+#: tools/cachegrind/cachegrind_view.ui:31 tools/callgrind/callgrind_view.ui:40
+#, kde-format
+msgid "Search..."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, percenageValues)
+#: tools/cachegrind/cachegrind_view.ui:41 tools/callgrind/callgrind_view.ui:53
+#, kde-format
+msgid "Percentage values"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_cacheSim)
+#: tools/callgrind/callgrind_configpage.ui:23
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specify if you want to do full cache simulation. By "
+"default, only instruction read accesses will be counted (\"Ir\"). With cache "
+"simulation, further event counters are enabled: </p><p>Cache misses on "
+"instruction reads (\"I1mr\"/\"ILmr\"), </p><p>data read accesses (\"Dr\") "
+"and related cache misses (\"D1mr\"/\"DLmr\"), </p><p>data write accesses "
+"(\"Dw\") and related cache misses (\"D1mw\"/\"DLmw\").</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_branchSim)
+#: tools/callgrind/callgrind_configpage.ui:36
+#, kde-format
+msgid ""
+"<html><head/><body><p>Specify if you want to do branch prediction "
+"simulation. Further event counters are enabled: Number of executed "
+"conditional branches and related predictor misses (\"Bc\"/\"Bcm\"), executed "
+"indirect jumps and related misses of the jump address predictor (\"Bi\"/\"Bim"
+"\").</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, callgrindAnnotateArgsLabel)
+#: tools/callgrind/callgrind_configpage.ui:75
+#, fuzzy, kde-format
+#| msgid "&Cachegrind"
+msgid "callgrind_annotate parameters:"
+msgstr "&Cachegrind"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_launchKCachegrind)
+#: tools/callgrind/callgrind_configpage.ui:101
+#, fuzzy, kde-format
+#| msgid "&Cachegrind"
+msgid "Launch KCachegrind after analysis finish"
+msgstr "&Cachegrind"
+
+#: tools/callgrind/callgrind_model.cpp:286
+#: tools/callgrind/callgrind_model.cpp:375
+#, kde-format
+msgid "Incl."
+msgstr ""
+
+#: tools/callgrind/callgrind_model.cpp:287
+#: tools/callgrind/callgrind_model.cpp:376
+#, kde-format
+msgid "Self"
+msgstr ""
+
+#: tools/callgrind/callgrind_model.cpp:288
+#, fuzzy, kde-format
+#| msgid "Ca&llgrind"
+msgid "Called"
+msgstr "Ca&llgrind"
+
+#: tools/callgrind/callgrind_model.cpp:374
+#, kde-format
+msgid "Event"
+msgstr ""
+
+#: tools/callgrind/callgrind_model.cpp:377
+#, kde-format
+msgid "Short"
+msgstr ""
+
+#: tools/callgrind/callgrind_model.cpp:499
+#, kde-format
+msgid "%1 per call"
+msgstr ""
+
+#: tools/callgrind/callgrind_model.cpp:500
+#, kde-format
+msgid "Count"
+msgstr ""
+
+#: tools/callgrind/callgrind_model.cpp:503
+#, fuzzy, kde-format
+#| msgid "Ca&llgrind"
+msgid "Caller"
+msgstr "Ca&llgrind"
+
+#: tools/callgrind/callgrind_model.cpp:505
+#, fuzzy, kde-format
+#| msgid "Ca&llgrind"
+msgid "Callee"
+msgstr "Ca&llgrind"
+
+#: tools/callgrind/callgrind_tool.cpp:35
+#, fuzzy, kde-format
+#| msgid "Ca&llgrind"
+msgid "Callgrind"
+msgstr "Ca&llgrind"
+
+#: tools/callgrind/callgrind_tool.cpp:36
+#, kde-format
+msgid "Callgrind (Call-Graph Generating Cache and Branch Prediction Profiler)"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, launchKCachegrindButton)
+#: tools/callgrind/callgrind_view.ui:63
+#, fuzzy, kde-format
+#| msgid "&Cachegrind"
+msgid "Launch KCachegrind"
+msgstr "&Cachegrind"
+
+#. i18n: ectx: attribute (title), widget (QWidget, events)
+#: tools/callgrind/callgrind_view.ui:91
+#, kde-format
+msgid "Events"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, callers)
+#: tools/callgrind/callgrind_view.ui:117
+#, kde-format
+msgid "Direct callers"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, callees)
+#: tools/callgrind/callgrind_view.ui:149
+#, kde-format
+msgid "Direct callees"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, location)
+#: tools/callgrind/callgrind_view.ui:187
+#, fuzzy, kde-format
+#| msgid "Information"
+msgid "Location"
+msgstr "Informoj"
+
+#. i18n: ectx: property (text), widget (QLabel, binaryTitle)
+#: tools/callgrind/callgrind_view.ui:199
+#, kde-format
+msgid "Binary file:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, sourceTitle)
+#: tools/callgrind/callgrind_view.ui:232
+#, kde-format
+msgid "Source file(s):"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, joinListVolLabel)
+#: tools/drd/drd_configpage.ui:20
+#, kde-format
+msgid "Joined threads memory access list volume:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_joinListVol)
+#: tools/drd/drd_configpage.ui:30
+#, kde-format
+msgid ""
+"<html><head/><body><p>Data races that occur between a statement at the end "
+"of one thread and another thread can be missed if memory access information "
+"is discarded immediately after a thread has been joined. This option allows "
+"to specify for how many joined threads memory access information should be "
+"retained.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, segmentMergingIntervalLabel)
+#: tools/drd/drd_configpage.ui:37
+#, kde-format
+msgid "Segment merging interval:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_segmentMergingInterval)
+#: tools/drd/drd_configpage.ui:44
+#, kde-format
+msgid ""
+"<html><head/><body><p>Perform segment merging only after the specified "
+"number of new segments have been created. This is an advanced configuration "
+"option that allows to choose whether to minimize DRD's memory usage by "
+"choosing a low value or to let DRD run faster by choosing a slightly higher "
+"value. The optimal value for this parameter depends on the program being "
+"analyzed. The default value works well for most programs.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: tools/drd/drd_configpage.ui:75
+#, kde-format
+msgid "Common options"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_checkStackVar)
+#: tools/drd/drd_configpage.ui:81
+#, kde-format
+msgid ""
+"<html><head/><body><p>Controls whether DRD detects data races on stack "
+"variables. Verifying stack variables is disabled by default because most "
+"programs do not share stack variables over threads.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_checkStackVar)
+#: tools/drd/drd_configpage.ui:84
+#, kde-format
+msgid "Detect data races on stack variables"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_firstRaceOnly)
+#: tools/drd/drd_configpage.ui:91
+#, kde-format
+msgid ""
+"<html><head/><body><p>Whether to report only the first data race that has "
+"been detected on a memory location or all data races that have been detected "
+"on a memory location.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_firstRaceOnly)
+#: tools/drd/drd_configpage.ui:94
+#, kde-format
+msgid "Report only the first data race"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_freeIsWrite)
+#: tools/drd/drd_configpage.ui:104
+#, kde-format
+msgid ""
+"<html><head/><body><p>Whether to report races between accessing memory and "
+"freeing memory. Enabling this option may cause DRD to run slightly slower. "
+"Notes:</p><p>Don't enable this option when using custom memory allocators "
+"that use the <span style=\" font-family:'Monospace'; font-weight:600; font-"
+"style:italic;\">VG_USERREQ__MALLOCLIKE_BLOCK</span> and <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;"
+"\">VG_USERREQ__FREELIKE_BLOCK</span> because that would result in false "
+"positives. </p><p>Don't enable this option when using reference-counted "
+"objects because that will result in false positives, even when that code has "
+"been annotated properly with <span style=\" font-family:'Monospace'; font-"
+"weight:600; font-style:italic;\">ANNOTATE_HAPPENS_BEFORE</span> and <span "
+"style=\" font-family:'Monospace'; font-weight:600; font-style:italic;"
+"\">ANNOTATE_HAPPENS_AFTER</span>. See e.g. the output of the following "
+"command for an example: <span style=\" font-family:'Monospace'; font-"
+"weight:600; font-style:italic;\">valgrind --tool=drd --free-is-write=yes drd/"
+"tests/annotate_smart_pointer</span>.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_freeIsWrite)
+#: tools/drd/drd_configpage.ui:107
+#, kde-format
+msgid "Report races between accessing and freeing memory"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_reportSignalUnlocked)
+#: tools/drd/drd_configpage.ui:114
+#, kde-format
+msgid ""
+"<html><head/><body><p>Whether to report calls to <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;"
+"\">pthread_cond_signal</span> and <span style=\" font-family:'Monospace'; "
+"font-weight:600; font-style:italic;\">pthread_cond_broadcast</span> where "
+"the mutex associated with the signal through <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;\">pthread_cond_wait</"
+"span> or <span style=\" font-family:'Monospace'; font-weight:600; font-style:"
+"italic;\">pthread_cond_timed_wait</span> is not locked at the time the "
+"signal is sent. Sending a signal without holding a lock on the associated "
+"mutex is a common programming error which can cause subtle race conditions "
+"and unpredictable behavior. There exist some uncommon synchronization "
+"patterns however where it is safe to send a signal without holding a lock on "
+"the associated mutex.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_reportSignalUnlocked)
+#: tools/drd/drd_configpage.ui:117
+#, kde-format
+msgid "Report calls to unlocked signals"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_segmentMerging)
+#: tools/drd/drd_configpage.ui:124
+#, kde-format
+msgid ""
+"<html><head/><body><p>Controls segment merging. Segment merging is an "
+"algorithm to limit memory usage of the data race detection algorithm. "
+"Disabling segment merging may improve the accuracy of the so-called 'other "
+"segments' displayed in race reports but can also trigger an out of memory "
+"error.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_segmentMerging)
+#: tools/drd/drd_configpage.ui:127
+#, kde-format
+msgid "Segment merging"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showConflSeg)
+#: tools/drd/drd_configpage.ui:134
+#, kde-format
+msgid ""
+"<html><head/><body><p>Show conflicting segments in race reports. Since this "
+"information can help to find the cause of a data race, this option is "
+"enabled by default. Disabling this option makes the output of DRD more "
+"compact.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showConflSeg)
+#: tools/drd/drd_configpage.ui:137
+#, kde-format
+msgid "Show conflicting segments"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showStackUsage)
+#: tools/drd/drd_configpage.ui:144
+#, kde-format
+msgid ""
+"<html><head/><body><p>Print stack usage at thread exit time. When a program "
+"creates a large number of threads it becomes important to limit the amount "
+"of virtual memory allocated for thread stacks. This option makes it possible "
+"to observe how much stack memory has been used by each thread of the client "
+"program.</p><p>Note: the DRD tool itself allocates some temporary data on "
+"the client thread stack. The space necessary for this temporary data must be "
+"allocated by the client program when it allocates stack memory, but is not "
+"included in stack usage reported by DRD.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showStackUsage)
+#: tools/drd/drd_configpage.ui:147
+#, fuzzy, kde-format
+#| msgid "Show Reachable Blocks"
+msgid "Show stack usage"
+msgstr "Montri atingeblajn blokjn"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ignoreThreadCreation)
+#: tools/drd/drd_configpage.ui:154
+#, kde-format
+msgid ""
+"<html><head/><body><p>Controls whether all activities during thread creation "
+"should be ignored. By default enabled only on Solaris. Solaris provides "
+"higher throughput, parallelism and scalability than other operating systems, "
+"at the cost of more fine-grained locking activity. This means for example "
+"that when a thread is created under glibc, just one big lock is used for all "
+"thread setup. Solaris libc uses several fine-grained locks and the creator "
+"thread resumes its activities as soon as possible, leaving for example stack "
+"and TLS setup sequence to the created thread. This situation confuses DRD as "
+"it assumes there is some false ordering in place between creator and created "
+"thread; and therefore many types of race conditions in the application would "
+"not be reported. To prevent such false ordering, this command line option is "
+"set to <span style=\" font-family:'Monospace';\">yes</span> by default on "
+"Solaris. All activity (loads, stores, client requests) is therefore ignored "
+"during:</p><p>* pthread_create() call in the creator thread </p><p>* thread "
+"creation phase (stack and TLS setup) in the created thread</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ignoreThreadCreation)
+#: tools/drd/drd_configpage.ui:157 tools/helgrind/helgrind_configpage.ui:105
+#, kde-format
+msgid "Ignore thread creation"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showInstructionPointer)
+#: tools/drd/drd_configpage.ui:171 tools/helgrind/helgrind_configpage.ui:132
+#: tools/memcheck/memcheck_configpage.ui:210
+#, kde-format
+msgid "Show stack frame instruction pointer value"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tracesTab)
+#: tools/drd/drd_configpage.ui:192
+#, kde-format
+msgid "Trace options"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceAlloc)
+#: tools/drd/drd_configpage.ui:198
+#, kde-format
+msgid ""
+"<html><head/><body><p>Trace all memory allocations and deallocations. May "
+"produce a huge amount of output.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceAlloc)
+#: tools/drd/drd_configpage.ui:201
+#, kde-format
+msgid "Trace memory allocations/deallocations"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceBarrier)
+#: tools/drd/drd_configpage.ui:208
+#, kde-format
+msgid "<html><head/><body><p>Trace all barrier activity.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceBarrier)
+#: tools/drd/drd_configpage.ui:211
+#, kde-format
+msgid "Trace barrier activity"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceCond)
+#: tools/drd/drd_configpage.ui:218
+#, kde-format
+msgid ""
+"<html><head/><body><p>Trace all condition variable activity.</p></body></"
+"html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceCond)
+#: tools/drd/drd_configpage.ui:221
+#, kde-format
+msgid "Trace condition variable activity"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceForkJoin)
+#: tools/drd/drd_configpage.ui:228
+#, kde-format
+msgid ""
+"<html><head/><body><p>Trace all thread creation and all thread termination "
+"events.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceForkJoin)
+#: tools/drd/drd_configpage.ui:231
+#, kde-format
+msgid "Trace thread creation/termination events"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceHb)
+#: tools/drd/drd_configpage.ui:238
+#, kde-format
+msgid ""
+"<html><head/><body><p>Trace execution of the <span style=\" font-"
+"family:'Monospace'; font-weight:600; font-style:italic;"
+"\">ANNOTATE_HAPPENS_BEFORE()</span>, <span style=\" font-family:'Monospace'; "
+"font-weight:600; font-style:italic;\">ANNOTATE_HAPPENS_AFTER()</span> and "
+"<span style=\" font-family:'Monospace'; font-weight:600; font-style:italic;"
+"\">ANNOTATE_HAPPENS_DONE()</span> client requests.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceHb)
+#: tools/drd/drd_configpage.ui:241
+#, kde-format
+msgid "Trace execution of \"ANNOTATE_HAPPENS\" requests"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceMutex)
+#: tools/drd/drd_configpage.ui:248
+#, kde-format
+msgid "<html><head/><body><p>Trace all mutex activity.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceMutex)
+#: tools/drd/drd_configpage.ui:251
+#, kde-format
+msgid "Trace mutex activity"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceRwlock)
+#: tools/drd/drd_configpage.ui:258
+#, kde-format
+msgid ""
+"<html><head/><body><p>Trace all reader-writer lock activity.</p></body></"
+"html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceRwlock)
+#: tools/drd/drd_configpage.ui:261
+#, kde-format
+msgid "Trace reader-writer lock activity"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_traceSemaphore)
+#: tools/drd/drd_configpage.ui:268
+#, kde-format
+msgid "<html><head/><body><p>Trace all semaphore activity.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_traceSemaphore)
+#: tools/drd/drd_configpage.ui:271
+#, kde-format
+msgid "Trace semaphore activity"
+msgstr ""
+
+#: tools/drd/drd_tool.cpp:35
+#, kde-format
+msgid "DRD"
+msgstr ""
+
+#: tools/drd/drd_tool.cpp:36
+#, kde-format
+msgid "DRD (Thread Error Detector)"
+msgstr ""
+
+#: tools/helgrind/helgrind_configpage.cpp:36
+#, kde-format
+msgid "Full"
+msgstr "Plene"
+
+#: tools/helgrind/helgrind_configpage.cpp:37
+#, kde-format
+msgid "Approx"
+msgstr ""
+
+#: tools/helgrind/helgrind_configpage.cpp:38
+#, kde-format
+msgid "None"
+msgstr "Neniu"
+
+#. i18n: ectx: property (text), widget (QLabel, historyLevelLabel)
+#: tools/helgrind/helgrind_configpage.ui:22
+#, kde-format
+msgid "History level:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, conflictCacheSizeLabel)
-#: tools/helgrind/configpage.ui:57
+#: tools/helgrind/helgrind_configpage.ui:29
 #, kde-format
 msgid "Conflict cache size:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, conflictCacheSize)
-#: tools/helgrind/configpage.ui:67
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_conflictCacheSize)
+#: tools/helgrind/helgrind_configpage.ui:39
 #, kde-format
 msgid ""
 "<html><head/><body><p>This flag only has any effect at <span style=\" font-"
@@ -1001,8 +976,8 @@ msgid ""
 "up three extra gigabytes or so of memory.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, trackLockorders)
-#: tools/helgrind/configpage.ui:112
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_trackLockorders)
+#: tools/helgrind/helgrind_configpage.ui:78
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled (the default), Helgrind performs lock "
@@ -1012,14 +987,14 @@ msgid ""
 "order checking.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, trackLockorders)
-#: tools/helgrind/configpage.ui:115
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_trackLockorders)
+#: tools/helgrind/helgrind_configpage.ui:81
 #, kde-format
 msgid "Track lock orders"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, checkStackRefs)
-#: tools/helgrind/configpage.ui:129
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_checkStackRefs)
+#: tools/helgrind/helgrind_configpage.ui:92
 #, kde-format
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -1037,14 +1012,14 @@ msgid ""
 "</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkStackRefs)
-#: tools/helgrind/configpage.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_checkStackRefs)
+#: tools/helgrind/helgrind_configpage.ui:95
 #, kde-format
 msgid "Check stack refs"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, ignoreThreadCreation)
-#: tools/helgrind/configpage.ui:142
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ignoreThreadCreation)
+#: tools/helgrind/helgrind_configpage.ui:102
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether all activities during thread creation "
@@ -1068,8 +1043,8 @@ msgid ""
 "confuses Helgrind.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, freeIsWrite)
-#: tools/helgrind/configpage.ui:155
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_freeIsWrite)
+#: tools/helgrind/helgrind_configpage.ui:115
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled (not the default), Helgrind treats "
@@ -1082,70 +1057,53 @@ msgid ""
 "understood at present. User feedback is welcomed.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, freeIsWrite)
-#: tools/helgrind/configpage.ui:158
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_freeIsWrite)
+#: tools/helgrind/helgrind_configpage.ui:118
 #, fuzzy, kde-format
 #| msgid "Free block list size"
 msgid "Free is write (experimental)"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
-#: tools/helgrind/tool.cpp:38
+#: tools/helgrind/helgrind_tool.cpp:35
 #, fuzzy, kde-format
 #| msgid "&Helgrind"
 msgid "Helgrind"
 msgstr "&Helgrind"
 
-#: tools/helgrind/tool.cpp:39
+#: tools/helgrind/helgrind_tool.cpp:36
 #, kde-format
 msgid "Helgrind (Thread Error Detector)"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, timeUnitLabel)
-#: tools/massif/configpage.ui:25
-#, kde-format
-msgid "Time unit:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:35
-#, kde-format
-msgid ""
-"<html><head/><body><p>The time unit used for the profiling. There are three "
-"possibilities: </p><p><span style=\" font-weight:600;\">instructions</span> "
-"executed (i), which is good for most cases; </p><p>real (wallclock) time "
-"(ms, i.e. <span style=\" font-weight:600;\">milliseconds</span>), which is "
-"sometimes useful; </p><p>and <span style=\" font-weight:600;\">bytes</span> "
-"allocated/deallocated on the heap and/or stack (B), which is useful for very "
-"short-run programs, and for testing purposes, because it is the most "
-"reproducible across different machines.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:39
+#: tools/massif/massif_configpage.cpp:39
 #, kde-format
 msgid "CPU instructions"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:44
+#: tools/massif/massif_configpage.cpp:40
 #, kde-format
 msgid "Milliseconds"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, timeUnit)
-#: tools/massif/configpage.ui:49
+#: tools/massif/massif_configpage.cpp:41
 #, kde-format
 msgid "Bytes allocated"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, depthLabel)
-#: tools/massif/configpage.ui:57
+#. i18n: ectx: property (text), widget (QLabel, timeUnitLabel)
+#: tools/massif/massif_configpage.ui:25
+#, kde-format
+msgid "Time unit:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, snapshotTreeDepthLabel)
+#: tools/massif/massif_configpage.ui:32
 #, kde-format
 msgid "Snapshot tree depth:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, depth)
-#: tools/massif/configpage.ui:67
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_snapshotTreeDepth)
+#: tools/massif/massif_configpage.ui:42
 #, kde-format
 msgid ""
 "<html><head/><body><p>Maximum depth of the allocation trees recorded for "
@@ -1154,14 +1112,59 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, thresholdLabel)
-#: tools/massif/configpage.ui:80
+#: tools/massif/massif_configpage.ui:49
 #, fuzzy, kde-format
 #| msgid "Threshold:"
 msgid "Threshold:"
 msgstr "Pentrosojlo:"
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, threshold)
-#: tools/massif/configpage.ui:90
+#. i18n: ectx: property (text), widget (QLabel, peakInaccuracyLabel)
+#: tools/massif/massif_configpage.ui:59
+#, kde-format
+msgid "Peak inaccuracy:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, maximumSnapshotsLabel)
+#: tools/massif/massif_configpage.ui:69
+#, fuzzy, kde-format
+#| msgid "snapshot"
+msgid "Maximum snapshots:"
+msgstr "ekranfoto"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_maximumSnapshots)
+#: tools/massif/massif_configpage.ui:79
+#, kde-format
+msgid ""
+"<html><head/><body><p>The maximum number of snapshots recorded. If set to N, "
+"for all programs except very short-running ones, the final number of "
+"snapshots will be between N/2 and N.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, detailedSnapshotsFrequencyLabel)
+#: tools/massif/massif_configpage.ui:86
+#, kde-format
+msgid "Detailed snapshot frequency:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_detailedSnapshotsFrequency)
+#: tools/massif/massif_configpage.ui:96
+#, kde-format
+msgid ""
+"<html><head/><body><p>Frequency of detailed snapshots. With <span style=\" "
+"font-family:'Monospace'; font-weight:600; font-style:italic;\">--detailed-"
+"freq=1</span>, every snapshot is detailed.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, extraArgsLabel)
+#: tools/massif/massif_configpage.ui:103
+#: tools/memcheck/memcheck_configpage.ui:121
+#, fuzzy, kde-format
+#| msgid "Extra &Parameters"
+msgid "E&xtra parameters:"
+msgstr "Pluaj &parametroj"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_threshold)
+#: tools/massif/massif_configpage.ui:123
 #, kde-format
 msgid ""
 "<html><head/><body><p>The significance threshold for heap allocations, as a "
@@ -1170,21 +1173,8 @@ msgid ""
 "tandem with ms_print's option of the same name.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, threshold)
-#. i18n: ectx: property (suffix), widget (QSpinBox, peakInaccuracy)
-#: tools/massif/configpage.ui:93 tools/massif/configpage.ui:116
-#, no-c-format, kde-format
-msgid "%"
-msgstr "%"
-
-#. i18n: ectx: property (text), widget (QLabel, peakInaccuracyLabel)
-#: tools/massif/configpage.ui:103
-#, kde-format
-msgid "Peak inaccuracy:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, peakInaccuracy)
-#: tools/massif/configpage.ui:113
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_peakInaccuracy)
+#: tools/massif/massif_configpage.ui:136
 #, no-c-format, kde-format
 msgid ""
 "<html><head/><body><p>Massif does not necessarily record the actual global "
@@ -1197,60 +1187,22 @@ msgid ""
 "approaches zero.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, maxSnapshotsLabel)
-#: tools/massif/configpage.ui:129
-#, fuzzy, kde-format
-#| msgid "snapshot"
-msgid "Maximum snapshots:"
-msgstr "ekranfoto"
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, maxSnapshots)
-#: tools/massif/configpage.ui:139
-#, kde-format
-msgid ""
-"<html><head/><body><p>The maximum number of snapshots recorded. If set to N, "
-"for all programs except very short-running ones, the final number of "
-"snapshots will be between N/2 and N.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, snapshotFreqLabel)
-#: tools/massif/configpage.ui:152
-#, kde-format
-msgid "Detailed snapshot frequency:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QSpinBox, snapshotFreq)
-#: tools/massif/configpage.ui:162
-#, kde-format
-msgid ""
-"<html><head/><body><p>Frequency of detailed snapshots. With <span style=\" "
-"font-family:'Monospace'; font-weight:600; font-style:italic;\">--detailed-"
-"freq=1</span>, every snapshot is detailed.</p></body></html>"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, extraParametersLabel)
-#: tools/massif/configpage.ui:175 tools/memcheck/configpage.ui:176
-#, fuzzy, kde-format
-#| msgid "Extra &Parameters"
-msgid "E&xtra parameters:"
-msgstr "Pluaj &parametroj"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, profileHeap)
-#: tools/massif/configpage.ui:201
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_profileHeap)
+#: tools/massif/massif_configpage.ui:158
 #, kde-format
 msgid ""
 "<html><head/><body><p>Specifies whether heap profiling should be done.</p></"
 "body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, profileHeap)
-#: tools/massif/configpage.ui:204
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_profileHeap)
+#: tools/massif/massif_configpage.ui:161
 #, kde-format
 msgid "Profile heap"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, profileStack)
-#: tools/massif/configpage.ui:214
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_profileStack)
+#: tools/massif/massif_configpage.ui:171
 #, kde-format
 msgid ""
 "<html><head/><body><p>Specifies whether stack profiling should be done. This "
@@ -1261,106 +1213,184 @@ msgid ""
 "actually has control over.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, profileStack)
-#: tools/massif/configpage.ui:217
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_profileStack)
+#: tools/massif/massif_configpage.ui:174
 #, kde-format
 msgid "Profile stack (slows profiling down greatly)"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, pagesAsHeap)
-#: tools/massif/configpage.ui:224
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_pagesAsHeap)
+#: tools/massif/massif_configpage.ui:181
 #, kde-format
 msgid ""
 "<html><head/><body><p>Tells Massif to profile memory at the page level "
 "rather than at the malloc'd block level.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, pagesAsHeap)
-#: tools/massif/configpage.ui:227
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_pagesAsHeap)
+#: tools/massif/massif_configpage.ui:184
 #, kde-format
 msgid "Pages as heap"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
-#: tools/massif/configpage.ui:234
+#: tools/massif/massif_configpage.ui:191
 #, kde-format
 msgid ""
 "<html><head/><body><p>\"Pages as heap\" cannot be used together with "
 "\"Profile stack\".</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, launchMassifVisualizer)
-#: tools/massif/configpage.ui:257
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_launchVisualizer)
+#: tools/massif/massif_configpage.ui:214
 #, fuzzy, kde-format
 #| msgid "&Cachegrind"
 msgid "Launch Massif Visualizer after analysis finish"
 msgstr "&Cachegrind"
 
-#: tools/massif/model.cpp:129
+#: tools/massif/massif_model.cpp:126
 #, fuzzy, kde-format
 #| msgid "snapshot"
 msgid "Snapshot"
 msgstr "ekranfoto"
 
-#: tools/massif/model.cpp:132
+#: tools/massif/massif_model.cpp:129
 #, kde-format
 msgid "Time"
 msgstr ""
 
-#: tools/massif/model.cpp:135
+#: tools/massif/massif_model.cpp:132
 #, kde-format
 msgid "Heap"
 msgstr ""
 
-#: tools/massif/model.cpp:138
+#: tools/massif/massif_model.cpp:135
 #, kde-format
 msgid "Heap (extra)"
 msgstr ""
 
-#: tools/massif/model.cpp:141
+#: tools/massif/massif_model.cpp:138
 #, kde-format
 msgid "Stack"
 msgstr ""
 
-#: tools/massif/tool.cpp:38
+#: tools/massif/massif_tool.cpp:35
 #, fuzzy, kde-format
 #| msgid "Massi&f"
 msgid "Massif"
 msgstr "Massi&f"
 
-#: tools/massif/tool.cpp:39
+#: tools/massif/massif_tool.cpp:36
 #, kde-format
 msgid "Massif (Heap Profiler)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, snapshotsLabel)
-#: tools/massif/view.ui:36
+#: tools/massif/massif_view.ui:36
 #, fuzzy, kde-format
 #| msgid "snapshot"
 msgid "Snapshots"
 msgstr "ekranfoto"
 
 #. i18n: ectx: property (text), widget (QLabel, treesLabel)
-#: tools/massif/view.ui:56
+#: tools/massif/massif_view.ui:56
 #, kde-format
 msgid "Heap trees"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, launchVisualizerButton)
-#: tools/massif/view.ui:70
+#: tools/massif/massif_view.ui:70
 #, fuzzy, kde-format
 #| msgid "&Cachegrind"
 msgid "Launch visualizer"
 msgstr "&Cachegrind"
 
+#: tools/memcheck/memcheck_configpage.cpp:43
+#, kde-format
+msgid "definite"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:44
+#, kde-format
+msgid "possible"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:45
+#, kde-format
+msgid "indirect"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:46
+#, kde-format
+msgid "reachable"
+msgstr ""
+
+#. i18n text ?
+#: tools/memcheck/memcheck_configpage.cpp:50
+#, kde-format
+msgid "stdstring"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:51
+#, kde-format
+msgid "length64"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:52
+#, kde-format
+msgid "newarray"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:53
+#, kde-format
+msgid "multipleinheritance"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:56
+#, kde-format
+msgid "high"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:57
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgid "medium"
+msgstr "Ujo"
+
+#: tools/memcheck/memcheck_configpage.cpp:58
+#, fuzzy, kde-format
+#| msgid "Low"
+msgid "low"
+msgstr "Malalta"
+
+#: tools/memcheck/memcheck_configpage.cpp:60
+#, kde-format
+msgid "alloc"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:61
+#, kde-format
+msgid "free"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:62
+#, kde-format
+msgid "alloc-and-free"
+msgstr ""
+
+#: tools/memcheck/memcheck_configpage.cpp:63
+#, kde-format
+msgid "alloc-then-free"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, leakResolutionLabel)
-#: tools/memcheck/configpage.ui:25
+#: tools/memcheck/memcheck_configpage.ui:25
 #, kde-format
 msgid "Leak resolution:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QComboBox, leakResolution)
-#: tools/memcheck/configpage.ui:32
+#. i18n: ectx: property (toolTip), widget (Valgrind::ComboBox, kcfg_leakResolution)
+#: tools/memcheck/memcheck_configpage.ui:32
 #, kde-format
 msgid ""
 "<html><head/><body><p>When doing leak checking, determines how willing "
@@ -1382,25 +1412,25 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, showLeakKindsLabel)
-#: tools/memcheck/configpage.ui:54
+#: tools/memcheck/memcheck_configpage.ui:39
 #, kde-format
 msgid "Show leak kinds:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, showLeakKinds)
-#: tools/memcheck/configpage.ui:61
+#. i18n: ectx: property (toolTip), widget (MenuButton, kcfg_showLeakKinds)
+#: tools/memcheck/memcheck_configpage.ui:46
 #, kde-format
 msgid "Specifies the leak kinds to show."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, leakCheckHeuristicsLabel)
-#: tools/memcheck/configpage.ui:74
+#: tools/memcheck/memcheck_configpage.ui:59
 #, kde-format
 msgid "Used heuristics:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, leakCheckHeuristics)
-#: tools/memcheck/configpage.ui:81
+#. i18n: ectx: property (toolTip), widget (MenuButton, kcfg_leakCheckHeuristics)
+#: tools/memcheck/memcheck_configpage.ui:66
 #, kde-format
 msgid ""
 "<html><head/><body><p>Specifies the set of leak check heuristics to be used "
@@ -1409,13 +1439,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, keepStacktracesLabel)
-#: tools/memcheck/configpage.ui:91
+#: tools/memcheck/memcheck_configpage.ui:76
 #, kde-format
 msgid "Stacktraces keeping:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QComboBox, keepStacktraces)
-#: tools/memcheck/configpage.ui:98
+#. i18n: ectx: property (toolTip), widget (Valgrind::ComboBox, kcfg_keepStacktraces)
+#: tools/memcheck/memcheck_configpage.ui:83
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls which stack trace(s) to keep for malloc'd and/"
@@ -1456,39 +1486,15 @@ msgid ""
 "style:italic;\">--num-callers</span>. </p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (QComboBox, keepStacktraces)
-#: tools/memcheck/configpage.ui:102
-#, kde-format
-msgid "alloc"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, keepStacktraces)
-#: tools/memcheck/configpage.ui:107
-#, kde-format
-msgid "free"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, keepStacktraces)
-#: tools/memcheck/configpage.ui:112
-#, kde-format
-msgid "alloc-and-free"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, keepStacktraces)
-#: tools/memcheck/configpage.ui:117
-#, kde-format
-msgid "alloc-then-free"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, freelistVolLabel)
-#: tools/memcheck/configpage.ui:130
+#: tools/memcheck/memcheck_configpage.ui:90
 #, fuzzy, kde-format
 #| msgid "Free block list size"
 msgid "Freelist maximum size:"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, freelistVol)
-#: tools/memcheck/configpage.ui:140
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_freelistVol)
+#: tools/memcheck/memcheck_configpage.ui:100
 #, kde-format
 msgid ""
 "<html><head/><body><p>When the client program releases memory using <span "
@@ -1510,14 +1516,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, freelistBigBlocksLabel)
-#: tools/memcheck/configpage.ui:153
+#: tools/memcheck/memcheck_configpage.ui:107
 #, fuzzy, kde-format
 #| msgid "Free block list size"
 msgid "Freelist big-blocks:"
 msgstr "Grandeco de la listo de liberaj blokoj"
 
-#. i18n: ectx: property (toolTip), widget (QSpinBox, freelistBigBlocks)
-#: tools/memcheck/configpage.ui:160
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_freelistBigBlocks)
+#: tools/memcheck/memcheck_configpage.ui:114
 #, kde-format
 msgid ""
 "<html><head/><body><p>When making blocks from the queue of freed blocks "
@@ -1534,8 +1540,8 @@ msgid ""
 "FIFO order.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, undefValueErrors)
-#: tools/memcheck/configpage.ui:205
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_undefValueErrors)
+#: tools/memcheck/memcheck_configpage.ui:150
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether Memcheck reports uses of undefined "
@@ -1545,14 +1551,14 @@ msgid ""
 "somewhat.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, undefValueErrors)
-#: tools/memcheck/configpage.ui:208
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_undefValueErrors)
+#: tools/memcheck/memcheck_configpage.ui:153
 #, kde-format
 msgid "Show undefined values usage"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, showMismatchedFrees)
-#: tools/memcheck/configpage.ui:218
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showMismatchedFrees)
+#: tools/memcheck/memcheck_configpage.ui:163
 #, kde-format
 msgid ""
 "<html><head/><body><p>When enabled, Memcheck checks that heap blocks are "
@@ -1593,14 +1599,14 @@ msgid ""
 "body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, showMismatchedFrees)
-#: tools/memcheck/configpage.ui:221
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMismatchedFrees)
+#: tools/memcheck/memcheck_configpage.ui:166
 #, kde-format
 msgid "Show mismatched frees"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, partialLoadsOk)
-#: tools/memcheck/configpage.ui:228
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_partialLoadsOk)
+#: tools/memcheck/memcheck_configpage.ui:173
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls how Memcheck handles 32-, 64-, 128- and 256-"
@@ -1619,14 +1625,14 @@ msgid ""
 "body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, partialLoadsOk)
-#: tools/memcheck/configpage.ui:231
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_partialLoadsOk)
+#: tools/memcheck/memcheck_configpage.ui:176
 #, kde-format
 msgid "Allow partial loads"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, trackOrigins)
-#: tools/memcheck/configpage.ui:238
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_trackOrigins)
+#: tools/memcheck/memcheck_configpage.ui:183
 #, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether Memcheck tracks the origin of "
@@ -1662,14 +1668,14 @@ msgid ""
 "p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, trackOrigins)
-#: tools/memcheck/configpage.ui:241
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_trackOrigins)
+#: tools/memcheck/memcheck_configpage.ui:186
 #, kde-format
 msgid "Track origins of all uninitialised values"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, expensiveDefinednessChecks)
-#: tools/memcheck/configpage.ui:248
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_expensiveDefinednessChecks)
+#: tools/memcheck/memcheck_configpage.ui:193
 #, no-c-format, kde-format
 msgid ""
 "<html><head/><body><p>Controls whether Memcheck should employ more precise "
@@ -1683,18 +1689,18 @@ msgid ""
 "the application at hand.</p></body></html>"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, expensiveDefinednessChecks)
-#: tools/memcheck/configpage.ui:251
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_expensiveDefinednessChecks)
+#: tools/memcheck/memcheck_configpage.ui:196
 #, kde-format
 msgid "Expensive definedness checks"
 msgstr ""
 
-#: tools/memcheck/tool.cpp:38
+#: tools/memcheck/memcheck_tool.cpp:35
 #, kde-format
 msgid "Memcheck"
 msgstr ""
 
-#: tools/memcheck/tool.cpp:39
+#: tools/memcheck/memcheck_tool.cpp:36
 #, kde-format
 msgid "Memcheck (Memory Error Detector)"
 msgstr ""
@@ -1716,6 +1722,9 @@ msgid ""
 "unaddressable memory to system calls;<br/>mismatched use of malloc/new/new "
 "[] vs free/delete/delete [];<br/>some abuses of the POSIX pthread API.</p>"
 msgstr ""
+
+#~ msgid "%"
+#~ msgstr "%"
 
 #, fuzzy
 #~| msgid "Ca&llgrind"
@@ -1852,20 +1861,8 @@ msgstr ""
 #~ msgid "Leak Summary:"
 #~ msgstr "Likresumo:"
 
-#~ msgid "None"
-#~ msgstr "Neniu"
-
 #~ msgid "Summary"
 #~ msgstr "Resumo"
-
-#~ msgid "Full"
-#~ msgstr "Plene"
-
-#~ msgid "Low"
-#~ msgstr "Malalta"
-
-#~ msgid "Medium"
-#~ msgstr "Ujo"
 
 #~ msgid "High"
 #~ msgstr "Alta"
@@ -1875,6 +1872,3 @@ msgstr ""
 
 #~ msgid "Threads"
 #~ msgstr "Fadenojn"
-
-#~ msgid "All"
-#~ msgstr "Ĉiuj"
