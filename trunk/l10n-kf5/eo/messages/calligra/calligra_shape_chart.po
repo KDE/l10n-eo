@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ChartShape\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-09-05 03:42+0200\n"
+"POT-Creation-Date: 2018-09-11 03:42+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Other-side"
 msgstr ""
 
-#: AxesConfigWidget.cpp:267 AxesConfigWidget.cpp:275 ChartTool.cpp:818
+#: AxesConfigWidget.cpp:267 AxesConfigWidget.cpp:275 ChartTool.cpp:853
 #: DataSetConfigWidget.cpp:365
 #, fuzzy, kde-format
 #| msgid "Legend"
@@ -90,6 +90,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QToolButton, addDataSetBefore)
 #. i18n: ectx: property (text), widget (QToolButton, insertColumnLeft)
 #. i18n: ectx: property (text), widget (QToolButton, insertColumnRight)
+#. i18n: ectx: property (text), widget (QToolButton, lossMarker)
+#. i18n: ectx: property (text), widget (QToolButton, gainMarker)
 #. i18n: ectx: property (text), widget (QToolButton, editAxis)
 #: AxesConfigWidget.ui:69 dialogs/BubbleDataEditor.ui:42
 #: dialogs/BubbleDataEditor.ui:62 dialogs/BubbleDataEditor.ui:82
@@ -101,6 +103,9 @@ msgstr ""
 #: dialogs/ScatterDataEditor.ui:62 dialogs/ScatterDataEditor.ui:82
 #: dialogs/ScatterDataEditor.ui:102 dialogs/ScatterDataEditor.ui:122
 #: dialogs/ScatterDataEditor.ui:215 dialogs/ScatterDataEditor.ui:235
+#: dialogs/StockDataEditor.ui:42 dialogs/StockDataEditor.ui:62
+#: dialogs/StockDataEditor.ui:82 StockConfigWidget.ui:57
+#: StockConfigWidget.ui:83
 #, kde-format
 msgid "..."
 msgstr ""
@@ -266,7 +271,7 @@ msgid "Business charts"
 msgstr "Liniodiagramo"
 
 #: ChartShapeFactory.cpp:93 DataSetConfigWidget.cpp:215
-#: PlotAreaConfigWidget.cpp:246
+#: PlotAreaConfigWidget.cpp:248
 #, kde-format
 msgid "Bar Chart"
 msgstr "Bastondiagramo"
@@ -302,7 +307,7 @@ msgid "Percent bar chart"
 msgstr "Bastondiagramo"
 
 #: ChartShapeFactory.cpp:123 DataSetConfigWidget.cpp:220
-#: PlotAreaConfigWidget.cpp:252
+#: PlotAreaConfigWidget.cpp:254
 #, kde-format
 msgid "Line Chart"
 msgstr "Liniodiagramo"
@@ -338,7 +343,7 @@ msgid "Percent line chart"
 msgstr "Liniodiagramo"
 
 #: ChartShapeFactory.cpp:153 DataSetConfigWidget.cpp:225
-#: PlotAreaConfigWidget.cpp:258
+#: PlotAreaConfigWidget.cpp:260
 #, kde-format
 msgid "Area Chart"
 msgstr "Areodiagramo"
@@ -407,7 +412,7 @@ msgid "Japanese candle stick stock chart"
 msgstr ""
 
 #: ChartShapeFactory.cpp:213 DataSetConfigWidget.cpp:230
-#: PlotAreaConfigWidget.cpp:266
+#: PlotAreaConfigWidget.cpp:268
 #, kde-format
 msgid "Pie Chart"
 msgstr "Tortodiagramo"
@@ -419,7 +424,7 @@ msgid "Pie chart"
 msgstr "Tortodiagramo"
 
 #: ChartShapeFactory.cpp:223 DataSetConfigWidget.cpp:231
-#: PlotAreaConfigWidget.cpp:267
+#: PlotAreaConfigWidget.cpp:269
 #, kde-format
 msgid "Ring Chart"
 msgstr "Ringdiagramo"
@@ -431,7 +436,7 @@ msgid "Ring chart"
 msgstr "Ringdiagramo"
 
 #: ChartShapeFactory.cpp:233 DataSetConfigWidget.cpp:242
-#: PlotAreaConfigWidget.cpp:280
+#: PlotAreaConfigWidget.cpp:282
 #, kde-format
 msgid "Bubble Chart"
 msgstr "Vezikdiagramo"
@@ -443,7 +448,7 @@ msgid "Bubble chart"
 msgstr "Vezikdiagramo"
 
 #: ChartShapeFactory.cpp:243 DataSetConfigWidget.cpp:244
-#: PlotAreaConfigWidget.cpp:279
+#: PlotAreaConfigWidget.cpp:281
 #, kde-format
 msgid "Scatter Chart"
 msgstr "Dispersdiagramo"
@@ -565,14 +570,14 @@ msgstr "Legendo"
 msgid "Plot Area"
 msgstr "Datumbazo"
 
-#: ChartTool.cpp:967
+#: ChartTool.cpp:1002
 #, fuzzy
 #| msgid "Legend"
 msgctxt "(qtundo-format)"
 msgid "Show Legend"
 msgstr "Legendo"
 
-#: ChartTool.cpp:969
+#: ChartTool.cpp:1004
 #, fuzzy
 #| msgid "Legend"
 msgctxt "(qtundo-format)"
@@ -992,7 +997,7 @@ msgstr ""
 msgid "Series %1"
 msgstr ""
 
-#: DataSetConfigWidget.cpp:209 PlotAreaConfigWidget.cpp:242
+#: DataSetConfigWidget.cpp:209 PlotAreaConfigWidget.cpp:244
 #, fuzzy, kde-format
 #| msgid "ChartType tool"
 msgid "Chart Type"
@@ -1000,15 +1005,15 @@ msgstr "DiagramTip-ilo"
 
 #: DataSetConfigWidget.cpp:216 DataSetConfigWidget.cpp:221
 #: DataSetConfigWidget.cpp:226 DataSetConfigWidget.cpp:234
-#: PlotAreaConfigWidget.cpp:247 PlotAreaConfigWidget.cpp:253
-#: PlotAreaConfigWidget.cpp:259 PlotAreaConfigWidget.cpp:273
+#: PlotAreaConfigWidget.cpp:249 PlotAreaConfigWidget.cpp:255
+#: PlotAreaConfigWidget.cpp:261 PlotAreaConfigWidget.cpp:275
 #, kde-format
 msgid "Normal"
 msgstr "Normala"
 
 #: DataSetConfigWidget.cpp:217 DataSetConfigWidget.cpp:222
-#: DataSetConfigWidget.cpp:227 PlotAreaConfigWidget.cpp:248
-#: PlotAreaConfigWidget.cpp:254 PlotAreaConfigWidget.cpp:260
+#: DataSetConfigWidget.cpp:227 PlotAreaConfigWidget.cpp:250
+#: PlotAreaConfigWidget.cpp:256 PlotAreaConfigWidget.cpp:262
 #, kde-format
 msgid "Stacked"
 msgstr ""
@@ -1017,39 +1022,39 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, dataPointShowPercent)
 #: DataSetConfigWidget.cpp:218 DataSetConfigWidget.cpp:223
 #: DataSetConfigWidget.cpp:228 DataSetConfigWidget.ui:245
-#: PieConfigWidget.ui:189 PlotAreaConfigWidget.cpp:249
-#: PlotAreaConfigWidget.cpp:255 PlotAreaConfigWidget.cpp:261
+#: PieConfigWidget.ui:189 PlotAreaConfigWidget.cpp:251
+#: PlotAreaConfigWidget.cpp:257 PlotAreaConfigWidget.cpp:263
 #, kde-format
 msgid "Percent"
 msgstr "Elcento"
 
-#: DataSetConfigWidget.cpp:233 PlotAreaConfigWidget.cpp:272
+#: DataSetConfigWidget.cpp:233 PlotAreaConfigWidget.cpp:274
 #, fuzzy, kde-format
 #| msgid "Bar Chart"
 msgid "Polar Chart"
 msgstr "Bastondiagramo"
 
-#: DataSetConfigWidget.cpp:235 PlotAreaConfigWidget.cpp:274
+#: DataSetConfigWidget.cpp:235 PlotAreaConfigWidget.cpp:276
 #, kde-format
 msgid "Filled"
 msgstr ""
 
-#: DataSetConfigWidget.cpp:237 PlotAreaConfigWidget.cpp:285
+#: DataSetConfigWidget.cpp:237 PlotAreaConfigWidget.cpp:287
 #, kde-format
 msgid "Stock Chart"
 msgstr "Akciodiagramo"
 
-#: DataSetConfigWidget.cpp:238 PlotAreaConfigWidget.cpp:286
+#: DataSetConfigWidget.cpp:238 PlotAreaConfigWidget.cpp:288
 #, kde-format
 msgid "HighLowClose"
 msgstr ""
 
-#: DataSetConfigWidget.cpp:239 PlotAreaConfigWidget.cpp:288
+#: DataSetConfigWidget.cpp:239 PlotAreaConfigWidget.cpp:290
 #, kde-format
 msgid "OpenHighLowClose"
 msgstr ""
 
-#: DataSetConfigWidget.cpp:240 PlotAreaConfigWidget.cpp:290
+#: DataSetConfigWidget.cpp:240 PlotAreaConfigWidget.cpp:292
 #, kde-format
 msgid "Candlestick"
 msgstr ""
@@ -1088,8 +1093,8 @@ msgstr "Elekti"
 msgid "Auto"
 msgstr "Aŭtomata"
 
-#: DataSetConfigWidget.cpp:662 PlotAreaConfigWidget.cpp:624
-#: PlotAreaConfigWidget.cpp:675 PlotAreaConfigWidget.cpp:845
+#: DataSetConfigWidget.cpp:662 PlotAreaConfigWidget.cpp:641
+#: PlotAreaConfigWidget.cpp:692 PlotAreaConfigWidget.cpp:874
 #, fuzzy, kde-format
 #| msgid "Database"
 msgid "Data Set %1"
@@ -1214,12 +1219,14 @@ msgid "Insert Column After"
 msgstr "Enmeti kolumnojn"
 
 #: dialogs/BubbleDataEditor.cpp:125 dialogs/ScatterDataEditor.cpp:131
+#: dialogs/StockDataEditor.cpp:116
 #, fuzzy, kde-format
 #| msgid "Insert Rows"
 msgid "Insert Row Above"
 msgstr "Enmeti liniojn"
 
 #: dialogs/BubbleDataEditor.cpp:126 dialogs/ScatterDataEditor.cpp:132
+#: dialogs/StockDataEditor.cpp:117
 #, fuzzy, kde-format
 #| msgid "Insert Rows"
 msgid "Insert Row Below"
@@ -1228,6 +1235,7 @@ msgstr "Enmeti liniojn"
 #. i18n: ectx: property (text), widget (QPushButton, deleteSelection)
 #: dialogs/BubbleDataEditor.cpp:127 dialogs/PieDataEditor.cpp:75
 #: dialogs/PieDataEditor.ui:46 dialogs/ScatterDataEditor.cpp:133
+#: dialogs/StockDataEditor.cpp:118
 #, fuzzy, kde-format
 #| msgid "Delete Rows"
 msgid "Delete"
@@ -1251,14 +1259,14 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, insertRowBelow)
 #: dialogs/BubbleDataEditor.ui:59 dialogs/ChartTableEditor.ui:52
-#: dialogs/ScatterDataEditor.ui:59
+#: dialogs/ScatterDataEditor.ui:59 dialogs/StockDataEditor.ui:39
 #, kde-format
 msgid "Insert data row below selected row"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, insertRowAbove)
 #: dialogs/BubbleDataEditor.ui:79 dialogs/ChartTableEditor.ui:65
-#: dialogs/ScatterDataEditor.ui:79
+#: dialogs/ScatterDataEditor.ui:79 dialogs/StockDataEditor.ui:59
 #, kde-format
 msgid "Insert data row above selected row"
 msgstr ""
@@ -1273,7 +1281,7 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, deleteSelection)
 #: dialogs/BubbleDataEditor.ui:119 dialogs/ChartTableEditor.ui:104
-#: dialogs/ScatterDataEditor.ui:119
+#: dialogs/ScatterDataEditor.ui:119 dialogs/StockDataEditor.ui:79
 #, fuzzy, kde-format
 #| msgid "Delete Columns"
 msgid "Delete selection"
@@ -1629,6 +1637,43 @@ msgstr ""
 msgid "Scatter Data Editor"
 msgstr "Enŝovi kolumnojn"
 
+#: dialogs/StockDataEditor.cpp:56 dialogs/StockDataEditor.cpp:64
+#, kde-format
+msgctxt "info@tooltip"
+msgid "High"
+msgstr ""
+
+#: dialogs/StockDataEditor.cpp:57 dialogs/StockDataEditor.cpp:65
+#, kde-format
+msgctxt "info@tooltip"
+msgid "Low"
+msgstr ""
+
+#: dialogs/StockDataEditor.cpp:58 dialogs/StockDataEditor.cpp:66
+#, kde-format
+msgctxt "info@tooltip"
+msgid "Close"
+msgstr ""
+
+#: dialogs/StockDataEditor.cpp:59
+#, kde-format
+msgctxt "info@tooltip"
+msgid "Not used"
+msgstr ""
+
+#: dialogs/StockDataEditor.cpp:63
+#, kde-format
+msgctxt "info@tooltip"
+msgid "Open"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, StockDataEditor)
+#: dialogs/StockDataEditor.cpp:108 dialogs/StockDataEditor.ui:26
+#, fuzzy, kde-format
+#| msgid "Insert columns"
+msgid "Stock Data Editor"
+msgstr "Enŝovi kolumnojn"
+
 #: dialogs/TableEditorDialog.cpp:68
 #, fuzzy, kde-format
 #| msgid "Insert Rows"
@@ -1778,12 +1823,12 @@ msgstr "Datumbazo"
 msgid "E&xplode Factor"
 msgstr ""
 
-#: PlotAreaConfigWidget.cpp:294
+#: PlotAreaConfigWidget.cpp:296
 #, kde-format
 msgid "Surface Chart"
 msgstr "Surfacdiagramo"
 
-#: PlotAreaConfigWidget.cpp:296
+#: PlotAreaConfigWidget.cpp:298
 #, kde-format
 msgid "Gantt Chart"
 msgstr "Gantt-diagramo"
@@ -1814,7 +1859,8 @@ msgid "Edit Data..."
 msgstr "Legendo"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: PlotAreaConfigWidget.ui:98
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: PlotAreaConfigWidget.ui:98 PlotAreaConfigWidget.ui:174
 #, kde-format
 msgid "Axes"
 msgstr ""
@@ -1833,6 +1879,24 @@ msgstr "Datumbazo"
 msgid "Data Points"
 msgstr "Datumbazo"
 
+#. i18n: ectx: property (text), widget (QLabel, datasetColorLabel)
+#: StockConfigWidget.ui:27
+#, kde-format
+msgid "Gain marker"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, datasetPenLabel)
+#: StockConfigWidget.ui:47
+#, kde-format
+msgid "Range line"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, datasetColorLabel_2)
+#: StockConfigWidget.ui:73
+#, kde-format
+msgid "Loss marker"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: TitlesConfigWidget.ui:18
 #, fuzzy, kde-format
@@ -1844,6 +1908,51 @@ msgstr "Plussigno"
 #: TitlesConfigWidget.ui:28
 #, kde-format
 msgid "Resize"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:101
+#, kde-format
+msgid "Butt cap"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:108
+#, kde-format
+msgid "Round cap"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:115
+#, kde-format
+msgid "Square cap"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:126
+#, kde-format
+msgid "Miter join"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:133
+#, kde-format
+msgid "Round join"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:140
+#, kde-format
+msgid "Bevel join"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:150
+#, kde-format
+msgid "Miter limit"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:221
+#, kde-format
+msgid "Set line width of actual selection"
+msgstr ""
+
+#: widgets/StrokeConfigWidget.cpp:237
+#, kde-format
+msgid "Change the color of the line/border"
 msgstr ""
 
 #, fuzzy
