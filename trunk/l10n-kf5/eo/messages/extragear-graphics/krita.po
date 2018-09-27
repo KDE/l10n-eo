@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-09-26 03:51+0200\n"
+"POT-Creation-Date: 2018-09-27 03:40+0200\n"
 "PO-Revision-Date: 2015-03-25 21:27+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -8174,7 +8174,7 @@ msgstr "norma"
 #: plugins/paintops/spray/kis_spray_paintop_settings_widget.cpp:46
 #: plugins/paintops/tangentnormal/kis_tangent_normal_paintop_settings_widget.cpp:54
 #: plugins/python/quick_settings_docker/quick_settings_docker.py:60
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1022
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1041
 #, kde-format
 msgid "Size"
 msgstr "Grandeco"
@@ -11476,7 +11476,7 @@ msgstr "fono"
 #: plugins/tools/defaulttool/referenceimagestool/ToolReferenceImages.cpp:153
 #: plugins/tools/defaulttool/referenceimagestool/ToolReferenceImages.cpp:180
 #: plugins/tools/defaulttool/referenceimagestool/ToolReferenceImages.cpp:189
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:806
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:825
 #: plugins/tools/tool_transform2/kis_free_transform_strategy_gsl_helpers.cpp:338
 #, fuzzy, kde-format
 msgctxt "@title:window"
@@ -13302,7 +13302,7 @@ msgstr "Malfona Koloro"
 #: plugins/flake/textshape/dialogs/ChangeConfigureDialog.ui:105
 #: plugins/flake/textshape/dialogs/ChangeConfigureDialog.ui:188
 #: plugins/flake/textshape/dialogs/ChangeConfigureDialog.ui:247
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1038
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1057
 #, kde-format
 msgid "Background Color"
 msgstr "Fona Koloro"
@@ -22506,31 +22506,38 @@ msgid "Color &Model Type: "
 msgstr "Kolorspaco:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, lumaCoefficientGroupbox)
+#. i18n: ectx: property (title), widget (QGroupBox, lumaCoefficientBox)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:195
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:106
 #, kde-format
 msgid "Luma Coefficients"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, redlabel)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:218
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:241
 #, fuzzy, kde-format
 msgid "Red': "
 msgstr "Ruĝa':"
 
 #. i18n: ectx: property (text), widget (QLabel, greenlabel)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:253
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:148
 #, kde-format
 msgid "Green':"
 msgstr "Verda':"
 
 #. i18n: ectx: property (text), widget (QLabel, bluelabel)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:266
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:161
 #, kde-format
 msgid "Blue':"
 msgstr "Blua':"
 
 #. i18n: ectx: property (toolTip), widget (KisDoubleParseSpinBox, SP_Gamma)
+#. i18n: ectx: property (toolTip), widget (KisDoubleParseSpinBox, spLumaGamma)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:311
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:206
 #, kde-format
 msgid ""
 "<html><head/><body><p>This sets the gamma value that the linearised HSY "
@@ -22541,6 +22548,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, gamma_label)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:333
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:228
 #: plugins/dockers/lut/wdglut.ui:266
 #, fuzzy, kde-format
 #| msgid "Gamma"
@@ -23374,15 +23382,15 @@ msgstr "Rektangulo"
 msgid "Artistic Color Selector"
 msgstr "Simila Elekto"
 
-#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:127
-#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:128
+#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:130
+#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:131
 #, fuzzy, kde-format
 msgid "Continuous Mode"
 msgstr "Anguloj:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelMaskName)
-#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:454
-#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:467
+#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:487
+#: plugins/dockers/artisticcolorselector/artisticcolorselector_dock.cpp:500
 #: plugins/dockers/artisticcolorselector/forms/wdgArtisticColorSelector.ui:44
 #, kde-format
 msgid "Select a mask in \"Gamut Masks\" docker"
@@ -23433,45 +23441,39 @@ msgstr ""
 msgid "HS&V"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, labelValueScaleGamma)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:106
-#, kde-format
-msgid "Value Scale Gamma"
-msgstr ""
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:151
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:259
 #, kde-format
 msgid "Gamut Mask Behavior"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, enforceGamutMask)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:159
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:267
 #, kde-format
 msgid "Enforce gamut &mask"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, permissiveGamutMask)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:166
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:274
 #, fuzzy, kde-format
 msgid "&Just show the shapes"
 msgstr "Krei Formojn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showMaskPreview)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:175
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:283
 #, kde-format
 msgid "Show preview while editing a mask"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:188
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:296
 #, fuzzy, kde-format
 msgid "Default Selector Steps Settings"
 msgstr "Simila Elekto"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelHueSteps)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelDefHueSteps)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:210
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:318
 #: plugins/dockers/artisticcolorselector/forms/wdgWheelPreferencesPopup.ui:82
 #, fuzzy, kde-format
 msgid "Hue Steps"
@@ -23479,7 +23481,7 @@ msgstr "Alfo-opcioj"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSaturationSteps)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelDefSaturationSteps)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:226
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:334
 #: plugins/dockers/artisticcolorselector/forms/wdgWheelPreferencesPopup.ui:69
 #, fuzzy, kde-format
 msgid "Saturation Rings"
@@ -23487,7 +23489,7 @@ msgstr "Satureco"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelValueScaleSteps)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelDefValueScaleSteps)
-#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:262
+#: plugins/dockers/artisticcolorselector/forms/wdgARCSSettings.ui:370
 #: plugins/dockers/artisticcolorselector/forms/wdgWheelPreferencesPopup.ui:95
 #, fuzzy, kde-format
 msgid "Value Scale Steps"
@@ -29053,7 +29055,7 @@ msgstr "Dua"
 
 #: plugins/flake/textshape/dialogs/CharacterGeneral.cpp:72
 #: plugins/flake/textshape/dialogs/FormattingPreview.cpp:51
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1013
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1032
 #, kde-format
 msgid "Font"
 msgstr "Tiparo"
@@ -31204,68 +31206,68 @@ msgctxt "@title:window"
 msgid "File not found"
 msgstr "Dosiero ne trovita"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:360
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:365
 #, fuzzy, kde-format
 msgid "Could not load \"id\" of the transform mask"
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:374
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:379
 #, fuzzy, kde-format
 #| msgid "Could not create the file for saving"
 msgid "Could not create transform mask params"
 msgstr "Ne eblis krei la dosieron por savi"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:493
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:498
 #, fuzzy, kde-format
 msgid "Could not find keyframe pixel data for frame %1 in %2."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:501
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:506
 #, fuzzy, kde-format
 msgid "Could not load keyframe pixel data for frame %1 in %2."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:530
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:535
 #, fuzzy, kde-format
 msgid "Could not read pixel data: %1."
 msgstr "Anguloj:"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:537
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:542
 #, fuzzy, kde-format
 msgid "Could not load pixel data: %1."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:561
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:566
 #, fuzzy, kde-format
 msgid "Could not load profile: %1."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:585
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:590
 #, fuzzy, kde-format
 msgid "Could not filter configuration %1."
 msgstr "Anguloj:"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:614
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:619
 #, fuzzy, kde-format
 msgid "Could not load metadata for layer %1."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:636
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:641
 #, fuzzy, kde-format
 msgid "Could not load raster selection %1."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:654
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:659
 #, fuzzy, kde-format
 msgid "Could not load vector selection %1."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:681
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:686
 #, fuzzy, kde-format
 msgid "Could not load keyframes from %1."
 msgstr "Forigu elekton"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:695
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:700
 #, fuzzy, kde-format
 msgid ""
 "parsing error in the keyframe file %1 at line %2, column %3\n"
@@ -31274,7 +31276,7 @@ msgstr ""
 "Eraro dum analizado en %1 ĉe linio %2, kolumno %3\n"
 "Erarmesaĝo: %4"
 
-#: plugins/impex/libkra/kis_kra_load_visitor.cpp:708
+#: plugins/impex/libkra/kis_kra_load_visitor.cpp:713
 #, fuzzy, kde-format
 msgid "unknown keyframe channel type: %1 in %2"
 msgstr "Forigu elekton"
@@ -39665,35 +39667,35 @@ msgstr "Linio"
 msgid "Conversion failed"
 msgstr "Krei Formojn"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:331
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:350
 #, fuzzy, kde-format
 msgid "Find Text"
 msgstr "Teksto"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:335
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:376
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:354
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:395
 #, fuzzy, kde-format
 msgid "Find:"
 msgstr "Meze:"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:371
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:390
 #, kde-format
 msgid "Find and Replace all"
 msgstr ""
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:378
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:397
 #, fuzzy, kde-format
 msgid "Replace:"
 msgstr "Anstataŭigi"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:806
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:825
 #, kde-format
 msgid "You have modified the text. Discard changes?"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, richTab)
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:885
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:891
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:904
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:910
 #: plugins/tools/svgtexttool/WdgSvgTextEditor.ui:24
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
@@ -39701,19 +39703,19 @@ msgstr ""
 msgid "Rich text"
 msgstr "Kursiva"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:888
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:892
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:907
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:911
 #, fuzzy, kde-format
 #| msgid "Source"
 msgid "SVG Source"
 msgstr "Fonto"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1030
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1049
 #, fuzzy, kde-format
 msgid "Text Color"
 msgstr "Linio"
 
-#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1045
+#: plugins/tools/svgtexttool/SvgTextEditor.cpp:1064
 #, fuzzy, kde-format
 msgid "Line height"
 msgstr "Alteco:"
