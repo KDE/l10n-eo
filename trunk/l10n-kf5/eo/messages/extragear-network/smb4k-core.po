@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: smb4k\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2019-01-04 02:59+0100\n"
+"POT-Creation-Date: 2019-01-13 02:57+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1486,7 +1486,8 @@ msgid ""
 "one."
 msgstr ""
 
-#: smb4kbookmark.cpp:363 smb4kcustomoptions.cpp:410 smb4kshare.cpp:286
+#: smb4kauthinfo.cpp:349 smb4kbookmark.cpp:329 smb4kcustomoptions.cpp:370
+#: smb4kshare.cpp:227 smb4kshare.cpp:234
 #, kde-format
 msgid "%1 on %2"
 msgstr ""
@@ -1549,7 +1550,7 @@ msgstr "&Forigi"
 msgid "Login:"
 msgstr "Aliĝu"
 
-#: smb4kbookmarkhandler_p.cpp:482 smb4kclient_p.cpp:1933 smb4kmounter_p.cpp:118
+#: smb4kbookmarkhandler_p.cpp:482 smb4kclient_p.cpp:1933 smb4kmounter_p.cpp:116
 #, kde-format
 msgid "IP Address:"
 msgstr ""
@@ -1858,25 +1859,26 @@ msgstr "Surmetingo:"
 #: smb4kmounter_p.cpp:94
 #, kde-format
 msgid ""
-"Enter the location (UNC address) and optionally the IP address and workgroup "
-"to mount a share."
+"Enter the location and optionally the IP address and workgroup to mount a "
+"share."
 msgstr ""
 
-#: smb4kmounter_p.cpp:107
+#: smb4kmounter_p.cpp:106
 #, fuzzy, kde-format
-#| msgid "IP Address"
-msgid "UNC Address:"
-msgstr "IP-adreso"
+#| msgid "Actions"
+msgid "Location:"
+msgstr "Agoj"
 
-#: smb4kmounter_p.cpp:109
+#: smb4kmounter_p.cpp:108
 #, kde-format
 msgid ""
-"The Uniform Naming Convention (UNC) address describes the location of the "
-"share. It has the following syntax: //[USER@]HOST/SHARE. The username is "
-"optional."
+"The location of the share is provided by the Uniform Resource Locator (URL). "
+"It generally has the following syntax: [smb:]//[USER:PASSWORD@]HOST:PORT/"
+"SHARE. The username, password and port are optional. You should omit to "
+"enter the password here, because it is shown in cleartext."
 msgstr ""
 
-#: smb4kmounter_p.cpp:120
+#: smb4kmounter_p.cpp:118
 #, kde-format
 msgid ""
 "The Internet Protocol (IP) address identifies the host in the network and "
@@ -1885,24 +1887,24 @@ msgid ""
 "2001:0db8:85a3:08d3:1319:8a2e:0370:7334)."
 msgstr ""
 
-#: smb4kmounter_p.cpp:129
+#: smb4kmounter_p.cpp:127
 #, kde-format
 msgid "Workgroup:"
 msgstr "Laborgrupo:"
 
-#: smb4kmounter_p.cpp:131
+#: smb4kmounter_p.cpp:129
 #, kde-format
 msgid ""
 "The workgroup or domain identifies the peer-to-peer computer network the "
 "host is located in."
 msgstr ""
 
-#: smb4kmounter_p.cpp:145
+#: smb4kmounter_p.cpp:143
 #, kde-format
 msgid "Add this share to the bookmarks"
 msgstr ""
 
-#: smb4kmounter_p.cpp:146
+#: smb4kmounter_p.cpp:144
 #, kde-format
 msgid ""
 "If you tick this checkbox, the share will be bookmarked and you can access "
@@ -2886,262 +2888,262 @@ msgstr ""
 msgid "<p>The share <b>%1</b> has been mounted to <b>%2</b>.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:63
+#: smb4knotification.cpp:61
 #, kde-format
 msgid "Open"
 msgstr "Malfermi"
 
-#: smb4knotification.cpp:86
+#: smb4knotification.cpp:84
 #, kde-format
 msgid "<p>The share <b>%1</b> has been unmounted from <b>%2</b>.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:103
+#: smb4knotification.cpp:100
 #, kde-format
 msgid "<p>%1 share has been mounted.</p>"
 msgid_plural "<p>%1 shares have been mounted.</p>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: smb4knotification.cpp:114
+#: smb4knotification.cpp:111
 #, kde-format
 msgid "<p>%1 share has been unmounted.</p>"
 msgid_plural "<p>%1 shares have been unmounted.</p>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: smb4knotification.cpp:129
+#: smb4knotification.cpp:126
 #, kde-format
 msgid "<p>Opening the wallet <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:140
+#: smb4knotification.cpp:137
 #, kde-format
 msgid ""
 "<p>The credentials stored in the wallet could not be accessed. There is "
 "either no wallet available or it could not be opened.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:152
+#: smb4knotification.cpp:149
 #, kde-format
 msgid ""
 "<p>The mimetype <b>%1</b> is not supported for printing. Please convert the "
 "file to PDF or Postscript and try again.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:168
+#: smb4knotification.cpp:165
 #, kde-format
 msgid ""
 "<p>The bookmark for share <b>%1</b> already exists and will be skipped.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:189
+#: smb4knotification.cpp:186
 #, kde-format
 msgid ""
 "<p>The label <b>%1</b> of the bookmark for the share <b>%2</b> is already "
 "being used and will automatically be renamed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:207
+#: smb4knotification.cpp:204
 #, kde-format
 msgid ""
 "The configuration file for the Samba suite <b>smb.conf</b> is missing. This "
 "is not a fatal error, but you should consider creating one."
 msgstr ""
 
-#: smb4knotification.cpp:226
+#: smb4knotification.cpp:223
 #, kde-format
 msgid ""
 "<p>Retrieving the list of available domains failed:</p><p><tt>%1</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:230
+#: smb4knotification.cpp:227
 #, kde-format
 msgid "<p>Retrieving the list of available domains failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:252
+#: smb4knotification.cpp:249
 #, kde-format
 msgid ""
 "<p>Retrieving the list of hosts belonging to domain <b>%1</b> failed.</"
 "p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:256
+#: smb4knotification.cpp:253
 #, kde-format
 msgid ""
 "<p>Retrieving the list of hosts belonging to domain <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:283
+#: smb4knotification.cpp:280
 #, kde-format
 msgid ""
 "<p>Retrieving the list of shares from <b>%1</b> failed:</p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:287
+#: smb4knotification.cpp:284
 #, kde-format
 msgid "<p>Retrieving the list of shares from <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:314
+#: smb4knotification.cpp:311
 #, kde-format
 msgid "<p>Retrieving the preview of <b>%1</b> failed:</p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:318
+#: smb4knotification.cpp:315
 #, kde-format
 msgid "<p>Retrieving the preview of <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:345
+#: smb4knotification.cpp:342
 #, kde-format
 msgid "<p>Mounting the share <b>%1</b> failed:</p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:349
+#: smb4knotification.cpp:346
 #, kde-format
 msgid "<p>Mounting the share <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:376
+#: smb4knotification.cpp:373
 #, kde-format
 msgid ""
 "<p>Unmounting the share <b>%1</b> from <b>%2</b> failed:</p><p><tt>%3</tt></"
 "p>"
 msgstr ""
 
-#: smb4knotification.cpp:380
+#: smb4knotification.cpp:377
 #, kde-format
 msgid "<p>Unmounting the share <b>%1</b> from <b>%2</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:404
+#: smb4knotification.cpp:401
 #, kde-format
 msgid ""
 "<p>You are not allowed to unmount the share <b>%1</b> from <b>%2</b>. It is "
 "owned by the user <b>%3</b>.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:428
+#: smb4knotification.cpp:425
 #, kde-format
 msgid "<p>Printing on printer <b>%1</b> failed:</p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:432
+#: smb4knotification.cpp:429
 #, kde-format
 msgid "<p>Printing on printer <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:455
+#: smb4knotification.cpp:452
 #, kde-format
 msgid "<p>Synchronizing <b>%1</b> with <b>%2</b> failed:</p><p><tt>%3</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:459
+#: smb4knotification.cpp:456
 #, kde-format
 msgid "<p>Synchronizing <b>%1</b> with <b>%2</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:477
+#: smb4knotification.cpp:474
 #, kde-format
 msgid ""
 "<p>Searching the network neighborhood for the search item <b>%1</b> failed:</"
 "p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:481
+#: smb4knotification.cpp:478
 #, kde-format
 msgid ""
 "<p>Searching the network neighborhood for the search item <b>%1</b> failed.</"
 "p>"
 msgstr ""
 
-#: smb4knotification.cpp:496
+#: smb4knotification.cpp:493
 #, kde-format
 msgid ""
 "<p>The command <b>%1</b> could not be found. Please check your installation."
 "</p>"
 msgstr ""
 
-#: smb4knotification.cpp:511
+#: smb4knotification.cpp:508
 #, kde-format
 msgid "<p>The share <b>%1</b> is a printer and cannot be bookmarked.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:527
+#: smb4knotification.cpp:524
 #, kde-format
 msgid "<p>The file <b>%1</b> could not be found.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:541
+#: smb4knotification.cpp:538
 #, kde-format
 msgid "<p>Opening the file <b>%1</b> failed:</p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:545
+#: smb4knotification.cpp:542
 #, kde-format
 msgid "<p>Opening the file <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:564 smb4knotification.cpp:570
+#: smb4knotification.cpp:561 smb4knotification.cpp:567
 #, kde-format
 msgid "<p>Reading from file <b>%1</b> failed:</p><p><tt>%2</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:574
+#: smb4knotification.cpp:571
 #, kde-format
 msgid "<p>Reading from file <b>%1</b> failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:590
+#: smb4knotification.cpp:587
 #, kde-format
 msgid "<p>The following directory could not be created:</p><p><tt>%1</tt></p>"
 msgstr ""
 
-#: smb4knotification.cpp:606
+#: smb4knotification.cpp:603
 #, kde-format
 msgid "<p>The process failed to start (error code: <tt>%1</tt>).</p>"
 msgstr ""
 
-#: smb4knotification.cpp:611
+#: smb4knotification.cpp:608
 #, kde-format
 msgid "<p>The process crashed (error code: <tt>%1</tt>).</p>"
 msgstr ""
 
-#: smb4knotification.cpp:616
+#: smb4knotification.cpp:613
 #, kde-format
 msgid "<p>The process timed out (error code: <tt>%1</tt>).</p>"
 msgstr ""
 
-#: smb4knotification.cpp:621
+#: smb4knotification.cpp:618
 #, kde-format
 msgid "<p>Could not write to the process (error code: <tt>%1</tt>).</p>"
 msgstr ""
 
-#: smb4knotification.cpp:626
+#: smb4knotification.cpp:623
 #, kde-format
 msgid "<p>Could not read from the process (error code: <tt>%1</tt>).</p>"
 msgstr ""
 
-#: smb4knotification.cpp:632
+#: smb4knotification.cpp:629
 #, kde-format
 msgid "<p>The process reported an unknown error.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:705
+#: smb4knotification.cpp:702
 #, kde-format
 msgid ""
 "<p>Executing an action with root privileges failed (error code:<tt>%1</tt>)."
 "</p>"
 msgstr ""
 
-#: smb4knotification.cpp:709
+#: smb4knotification.cpp:706
 #, kde-format
 msgid "<p>Executing an action with root privileges failed.</p>"
 msgstr ""
 
-#: smb4knotification.cpp:724
+#: smb4knotification.cpp:721
 #, kde-format
 msgid "<p>The URL that was passed is invalid.</p>"
 msgstr ""
@@ -3176,17 +3178,17 @@ msgstr ""
 msgid "New Profile:"
 msgstr ""
 
-#: smb4kshare.cpp:323
+#: smb4kshare.cpp:271
 #, kde-format
 msgid "Disk"
 msgstr ""
 
-#: smb4kshare.cpp:328
+#: smb4kshare.cpp:276
 #, kde-format
 msgid "Printer"
 msgstr "Presilo"
 
-#: smb4kshare.cpp:333
+#: smb4kshare.cpp:281
 #, kde-format
 msgid "IPC"
 msgstr ""
@@ -3269,11 +3271,23 @@ msgstr ""
 msgid "<qt>Please enter a username and a password for the host <b>%1</b>.</qt>"
 msgstr ""
 
-#: smb4kwalletmanager_p.cpp:85 smb4kwalletmanager_p.cpp:89
+#: smb4kwalletmanager_p.cpp:85
 #, kde-format
 msgid ""
 "<qt>Please enter a username and a password for the share <b>%1</b>.</qt>"
 msgstr ""
+
+#: smb4kwalletmanager_p.cpp:89
+#, kde-format
+msgid ""
+"<qt>Please enter a username and a password for the share <b>%1 on %2</b>.</"
+"qt>"
+msgstr ""
+
+#, fuzzy
+#~| msgid "IP Address"
+#~ msgid "UNC Address:"
+#~ msgstr "IP-adreso"
 
 #, fuzzy
 #~| msgid "Authentication"
@@ -3486,11 +3500,6 @@ msgstr ""
 
 #~ msgid "Directories"
 #~ msgstr "Dosierujoj"
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgid "Notifications"
-#~ msgstr "Agoj"
 
 #~ msgid "Bookmarks"
 #~ msgstr "Legosignoj"
