@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2019-04-14 03:06+0200\n"
+"POT-Creation-Date: 2019-04-16 03:05+0200\n"
 "PO-Revision-Date: 2015-03-03 14:36+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -4651,7 +4651,7 @@ msgstr ""
 
 #: core/dplugins/bqm/enhance/restoration/restoration.cpp:64
 #: core/dplugins/editor/enhance/restoration/restorationtool.cpp:149
-#: core/dplugins/editor/transform/resize/resizetool.cpp:235
+#: core/dplugins/editor/transform/resize/resizetool.cpp:406
 #, kde-format
 msgid "Visit CImg library website"
 msgstr ""
@@ -4973,7 +4973,7 @@ msgid " Pixels"
 msgstr ""
 
 #: core/dplugins/bqm/transform/resize/resizeplugin.cpp:54
-#: core/dplugins/editor/transform/resize/resizetool.cpp:537
+#: core/dplugins/editor/transform/resize/resizetool.cpp:902
 #: core/libs/dimg/filters/dimgbuiltinfilter.cpp:353
 #, kde-format
 msgid "Resize"
@@ -7047,13 +7047,13 @@ msgid "This option can be used to crop automatically the image."
 msgstr ""
 
 #: core/dplugins/editor/transform/contentawareresize/contentawareresizetool.cpp:199
-#: core/dplugins/editor/transform/resize/resizetool.cpp:200
+#: core/dplugins/editor/transform/resize/resizetool.cpp:357
 #, kde-format
 msgid "Maintain aspect ratio"
 msgstr ""
 
 #: core/dplugins/editor/transform/contentawareresize/contentawareresizetool.cpp:200
-#: core/dplugins/editor/transform/resize/resizetool.cpp:201
+#: core/dplugins/editor/transform/resize/resizetool.cpp:358
 #, kde-format
 msgid "Enable this option to maintain aspect ratio with new image sizes."
 msgstr ""
@@ -7064,7 +7064,7 @@ msgid "Width (px):"
 msgstr ""
 
 #: core/dplugins/editor/transform/contentawareresize/contentawareresizetool.cpp:208
-#: core/dplugins/editor/transform/resize/resizetool.cpp:209
+#: core/dplugins/editor/transform/resize/resizetool.cpp:368
 #, kde-format
 msgid "Set here the new image width in pixels."
 msgstr ""
@@ -7080,7 +7080,7 @@ msgid "Set here the new image height in pixels."
 msgstr ""
 
 #: core/dplugins/editor/transform/contentawareresize/contentawareresizetool.cpp:217
-#: core/dplugins/editor/transform/resize/resizetool.cpp:218
+#: core/dplugins/editor/transform/resize/resizetool.cpp:379
 #: core/libs/dimg/filters/decorate/bordersettings.cpp:166
 #, kde-format
 msgid "Width (%):"
@@ -7092,7 +7092,7 @@ msgid "New image width, as a percentage (%)."
 msgstr ""
 
 #: core/dplugins/editor/transform/contentawareresize/contentawareresizetool.cpp:224
-#: core/dplugins/editor/transform/resize/resizetool.cpp:225
+#: core/dplugins/editor/transform/resize/resizetool.cpp:387
 #, kde-format
 msgid "Height (%):"
 msgstr "Alteco (%):"
@@ -7580,6 +7580,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, resolutionLabel)
 #: core/dplugins/editor/transform/ratiocrop/ratiocroptool.cpp:263
+#: core/dplugins/editor/transform/resize/resizetool.cpp:395
 #: core/dplugins/generic/tools/calendar/ui/caltemplate.ui:78
 #, kde-format
 msgid "Resolution:"
@@ -7861,76 +7862,262 @@ msgctxt "@action"
 msgid "Aspect Ratio Crop..."
 msgstr "Bilda agordo"
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:198
+#: core/dplugins/editor/transform/resize/resizetool.cpp:311
 #, kde-format
 msgid "New Size"
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:204
+#: core/dplugins/editor/transform/resize/resizetool.cpp:313
+#, fuzzy, kde-format
+#| msgid "Resolution:"
+msgid "Preset Resolutions:"
+msgstr "Distingivo:"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:315
+#, fuzzy, kde-format
+msgid "Original (size)"
+msgid_plural "Original (%1 x %2 pixels)"
+msgstr[0] "Originala"
+msgstr[1] "Originala"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:318
+#, fuzzy, kde-format
+#| msgid "File Size"
+msgid "Tiny (size)"
+msgid_plural "Tiny (%1 x %2 pixels)"
+msgstr[0] "Dosiera grandeco"
+msgstr[1] "Dosiera grandeco"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:321
+#, kde-format
+msgid "Small (size)"
+msgid_plural "Small (%1 x %2 pixels)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:324
+#, fuzzy, kde-format
+msgid "Medium (size)"
+msgid_plural "Medium (%1 x %2 pixels)"
+msgstr[0] "Grandeco:"
+msgstr[1] "Grandeco:"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:327
+#, fuzzy, kde-format
+#| msgid "File Size"
+msgid "Big (size)"
+msgid_plural "Big (%1 x %2 pixels)"
+msgstr[0] "Dosiera grandeco"
+msgstr[1] "Dosiera grandeco"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:330
+#, kde-format
+msgid "Large (size)"
+msgid_plural "Large (%1 x %2 pixels)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:333
+#, fuzzy, kde-format
+#| msgid "File Size"
+msgid "Huge (size)"
+msgid_plural "Huge (%1 x %2 pixels)"
+msgstr[0] "Dosiera grandeco"
+msgstr[1] "Dosiera grandeco"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:336
+#, kde-format
+msgid "UHD4K (size)"
+msgid_plural "UHD-4K (%1 x %2 pixels)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:339
+#, kde-format
+msgctxt "A3 (size)"
+msgid "A3 (297 x 420 mm)"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:340
+#, kde-format
+msgctxt "A4 (size)"
+msgid "A4 (210 x 297 mm)"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:341
+#, kde-format
+msgctxt "A6 (size)"
+msgid "A6 (105 x 148 mm)"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:342
+#, kde-format
+msgctxt "Letter (size)"
+msgid "Letter (8.5 x 11 in)"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:343
+#, kde-format
+msgctxt "Print (size)"
+msgid "4 x 6 in"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:344
+#, kde-format
+msgctxt "Print (size)"
+msgid "5 x 7 in"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:345
+#, kde-format
+msgctxt "Print (size)"
+msgid "8 x 10 in"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:346
+#, kde-format
+msgctxt "Print (size)"
+msgid "11 x 14 in"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:350
+#, fuzzy, kde-format
+#| msgid "Unit"
+msgid "Units:"
+msgstr "Unuoj"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:352
+#, kde-format
+msgid "Pixels (px)"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:353
+#, fuzzy, kde-format
+#| msgid "Inches"
+msgid "Inches (in)"
+msgstr "Coloj"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:354
+#, fuzzy, kde-format
+#| msgid "Centimeters"
+msgid "Centimeters (cm)"
+msgstr "Centimetroj"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:355
+#, fuzzy, kde-format
+#| msgid "Millimeters"
+msgid "Millimeters (mm)"
+msgstr "Milimetroj"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:361
 #, kde-format
 msgid "Width:"
 msgstr "Larĝeco:"
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:211
+#: core/dplugins/editor/transform/resize/resizetool.cpp:364
+#: core/dplugins/editor/transform/resize/resizetool.cpp:373
+#, fuzzy, kde-format
+#| msgctxt "Pixels"
+#| msgid "px"
+msgid "px"
+msgstr "rm"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:370
 #, kde-format
 msgid "Height:"
 msgstr "Alteco:"
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:216
+#: core/dplugins/editor/transform/resize/resizetool.cpp:377
 #, kde-format
 msgid "New image height in pixels (px)."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:223
+#: core/dplugins/editor/transform/resize/resizetool.cpp:385
 #, kde-format
 msgid "New image width in percent (%)."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:230
+#: core/dplugins/editor/transform/resize/resizetool.cpp:393
 #, kde-format
 msgid "New image height in percent (%)."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:237
+#: core/dplugins/editor/transform/resize/resizetool.cpp:399
+#, kde-format
+msgid " Pixel/Inch"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:401
+#, kde-format
+msgid "New image resolution in pixels/inch."
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:408
 #, kde-format
 msgid "Restore photograph (slow)"
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:238
+#: core/dplugins/editor/transform/resize/resizetool.cpp:409
 #, kde-format
 msgid ""
 "Enable this option to scale-up an image to a huge size. <b>Warning</b>: This "
 "process can take some time."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:241
+#: core/dplugins/editor/transform/resize/resizetool.cpp:412
 #, kde-format
 msgid ""
 "<b>Note:</b> use Restoration Mode to scale-up an image to a huge size. This "
 "process can take some time."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:561
+#: core/dplugins/editor/transform/resize/resizetool.cpp:637
+#: core/utilities/searchwindow/searchfields.cpp:230
+#: core/utilities/searchwindow/searchfields.cpp:247
+#, kde-format
+msgctxt "Pixels"
+msgid "px"
+msgstr "rm"
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:643
+#, kde-format
+msgctxt "Inches"
+msgid "in"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:649
+#, kde-format
+msgctxt "Millimeters"
+msgid "mm"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:655
+#, kde-format
+msgctxt "Centimeters"
+msgid "cm"
+msgstr ""
+
+#: core/dplugins/editor/transform/resize/resizetool.cpp:926
 #, kde-format
 msgid "Photograph Resizing Settings File to Load"
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:577
+#: core/dplugins/editor/transform/resize/resizetool.cpp:942
 #, kde-format
 msgid "\"%1\" is not a Photograph Resizing settings text file."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:586
+#: core/dplugins/editor/transform/resize/resizetool.cpp:951
 #, kde-format
 msgid "Cannot load settings from the Photograph Resizing text file."
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:594
+#: core/dplugins/editor/transform/resize/resizetool.cpp:959
 #, kde-format
 msgid "Photograph Resizing Settings File to Save"
 msgstr ""
 
-#: core/dplugins/editor/transform/resize/resizetool.cpp:612
+#: core/dplugins/editor/transform/resize/resizetool.cpp:977
 #, kde-format
 msgid "Cannot save settings to the Photograph Resizing text file."
 msgstr ""
@@ -40943,13 +41130,6 @@ msgstr ""
 msgctxt "Find items with a width between...and..."
 msgid "and"
 msgstr "kaj"
-
-#: core/utilities/searchwindow/searchfields.cpp:230
-#: core/utilities/searchwindow/searchfields.cpp:247
-#, kde-format
-msgctxt "Pixels"
-msgid "px"
-msgstr "rm"
 
 #: core/utilities/searchwindow/searchfields.cpp:245
 #, kde-format
