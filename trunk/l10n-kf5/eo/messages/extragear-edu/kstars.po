@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-09-04 02:37+0200\n"
+"POT-Creation-Date: 2019-09-05 02:32+0200\n"
 "PO-Revision-Date: 2015-03-19 04:30-0400\n"
 "Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -1803,16 +1803,18 @@ msgstr "Forigu propran katalogon"
 msgid "ID Number"
 msgstr "Nuremberg"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, raLabel)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #: dialogs/addcatdialog.cpp:62 dialogs/addcatdialog.cpp:154
-#: ekos/manager.ui:1066 ekos/mount/mount.ui:243
+#: dialogs/focusdialog.ui:104 ekos/manager.ui:1066 ekos/mount/mount.ui:243
 #, fuzzy, kde-format
 msgid "Right Ascension"
 msgstr "RA"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, decLabel)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_7)
 #: dialogs/addcatdialog.cpp:63 dialogs/addcatdialog.cpp:158
-#: ekos/manager.ui:1083 ekos/mount/mount.ui:260
+#: dialogs/focusdialog.ui:61 ekos/manager.ui:1083 ekos/mount/mount.ui:260
 #, fuzzy, kde-format
 msgid "Declination"
 msgstr "Dek"
@@ -2092,7 +2094,7 @@ msgstr ""
 #: ekos/align/align.cpp:1310 ekos/align/align.cpp:1468
 #: ekos/capture/capture.cpp:3541 ekos/capture/capture.cpp:3916
 #: ekos/guide/guide.cpp:428 ekos/scheduler/scheduler.cpp:3857
-#: ekos/scheduler/scheduler.cpp:4191 fitsviewer/fitstab.cpp:386
+#: ekos/scheduler/scheduler.cpp:4191 fitsviewer/fitstab.cpp:425
 #: tools/scriptbuilder.cpp:864 tools/scriptbuilder.cpp:962
 #, kde-format
 msgid "Invalid URL"
@@ -3230,28 +3232,28 @@ msgstr ""
 msgid "Set Coordinates Manually"
 msgstr "Mane enigu centron"
 
-#: dialogs/focusdialog.cpp:121 tools/flagmanager.cpp:191
+#: dialogs/focusdialog.cpp:141 tools/flagmanager.cpp:191
 #, kde-format
 msgid "The Right Ascension value must be between 0.0 and 24.0."
 msgstr ""
 
-#: dialogs/focusdialog.cpp:123 tools/flagmanager.cpp:193
+#: dialogs/focusdialog.cpp:143 tools/flagmanager.cpp:193
 #, kde-format
 msgid "The Declination value must be between -90.0 and 90.0."
 msgstr ""
 
-#: dialogs/focusdialog.cpp:126 dialogs/focusdialog.cpp:154
+#: dialogs/focusdialog.cpp:146 dialogs/focusdialog.cpp:178
 #: tools/flagmanager.cpp:196
 #, fuzzy, kde-format
 msgid "Invalid Coordinate Data"
 msgstr "Koordinatoj"
 
-#: dialogs/focusdialog.cpp:149
+#: dialogs/focusdialog.cpp:173
 #, kde-format
 msgid "The Azimuth value must be between 0.0 and 360.0."
 msgstr ""
 
-#: dialogs/focusdialog.cpp:151
+#: dialogs/focusdialog.cpp:175
 #, kde-format
 msgid "The Altitude value must be between -90.0 and 90.0."
 msgstr ""
@@ -3262,32 +3264,64 @@ msgstr ""
 msgid "RA/Dec"
 msgstr "Dek (%1):"
 
-#. i18n: ectx: property (text), widget (QLineEdit, epochBox)
-#. i18n: ectx: property (text), widget (QLabel, EpochTarget)
-#: dialogs/focusdialog.ui:64 tools/flagmanager.ui:77
-#: tools/modcalcapcoord.ui:230
+#. i18n: ectx: property (text), widget (QLabel, decLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: dialogs/focusdialog.ui:64 ekos/align/align.ui:217 ekos/align/align.ui:419
+#: ekos/manager.ui:1086
+#, fuzzy, kde-format
+msgid "DE:"
+msgstr "DC"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, JNowB)
+#: dialogs/focusdialog.ui:71
+#, fuzzy, kde-format
+msgid "Set Epoch to now"
+msgstr "Elektu lokon"
+
+#. i18n: ectx: property (text), widget (QPushButton, JNowB)
+#: dialogs/focusdialog.ui:74
 #, kde-format
-msgid "2000.0"
+msgid "JNow"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, J2000B)
+#: dialogs/focusdialog.ui:81
+#, kde-format
+msgid "Set Epoch to J2000"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, J2000B)
+#: dialogs/focusdialog.ui:84
+#, fuzzy, kde-format
+#| msgid "2000.0"
+msgid "J2000"
 msgstr "2000.0"
 
 #. i18n: ectx: property (text), widget (QLabel, raLabel)
-#: dialogs/focusdialog.ui:71
-#, fuzzy, kde-format
-msgid "New right ascension:"
-msgstr "RA"
-
-#. i18n: ectx: property (text), widget (QLabel, decLabel)
-#: dialogs/focusdialog.ui:78
-#, fuzzy, kde-format
-msgid "New declination:"
-msgstr "Dek"
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
+#. i18n: ectx: property (text), widget (QCheckBox, RACheckBatch)
+#: dialogs/focusdialog.ui:107 ekos/align/align.ui:261 ekos/align/align.ui:352
+#: ekos/manager.ui:1069 tools/adddeepskyobject.ui:167 tools/altvstime.ui:97
+#: tools/argsetradec.ui:37 tools/modcalcgalcoord.ui:288
+#: tools/modcalcplanets.ui:251 tools/modcalcvlsr.ui:508
+#, kde-format
+msgid "RA:"
+msgstr "RA:"
 
 #. i18n: ectx: property (text), widget (QLabel, epochLabel)
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel)
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel2)
 #. i18n: ectx: property (text), widget (QCheckBox, epochCheckBatch)
 #. i18n: ectx: property (text), widget (QCheckBox, EpochCheckBatch)
-#: dialogs/focusdialog.ui:85 tools/flagmanager.ui:64
+#: dialogs/focusdialog.ui:114 tools/flagmanager.ui:64
 #: tools/modcalcapcoord.ui:127 tools/modcalcapcoord.ui:215
 #: tools/modcalcapcoord.ui:527 tools/modcalcgalcoord.ui:214
 #: tools/modcalcvlsr.ui:521
@@ -3295,23 +3329,56 @@ msgstr "Dek"
 msgid "Epoch:"
 msgstr "Epoko:"
 
+#. i18n: ectx: property (text), widget (QLineEdit, epochBox)
+#. i18n: ectx: property (text), widget (QLabel, EpochTarget)
+#: dialogs/focusdialog.ui:121 tools/flagmanager.ui:77
+#: tools/modcalcapcoord.ui:230
+#, kde-format
+msgid "2000.0"
+msgstr "2000.0"
+
 #. i18n: ectx: attribute (title), widget (QWidget, aaTab)
-#: dialogs/focusdialog.ui:113
+#: dialogs/focusdialog.ui:136
 #, fuzzy, kde-format
 msgid "Az/Alt"
 msgstr "Alt"
 
-#. i18n: ectx: property (text), widget (QLabel, altLabel)
-#: dialogs/focusdialog.ui:134
-#, kde-format
-msgid "New altitude:"
-msgstr "Nova altitudo:"
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
+#: dialogs/focusdialog.ui:148 ekos/manager.ui:1103 ekos/mount/mount.ui:280
+#: kstarslite/qml/dialogs/DetailsDialog.qml:271
+#, fuzzy, kde-format, kde-kuit-format
+#| msgid "Azimuth:"
+msgid "Azimuth"
+msgstr "Azimuto:"
 
-#. i18n: ectx: property (text), widget (QLabel, azLabel)
-#: dialogs/focusdialog.ui:141
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: dialogs/focusdialog.ui:151 ekos/capture/calibrationoptions.ui:88
+#: tools/argsetaltaz.ui:30 tools/modcalcplanets.ui:303
 #, kde-format
-msgid "New azimuth:"
-msgstr "Nova azimuto:"
+msgid "Az:"
+msgstr "Az:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
+#. i18n: ectx: property (toolTip), widget (QLabel, label_8)
+#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
+#: dialogs/focusdialog.ui:164 ekos/manager.ui:1120 ekos/mount/mount.ui:297
+#: ekos/scheduler/scheduler.ui:707 kstarslite/qml/dialogs/DetailsDialog.qml:276
+#: tools/altvstime.cpp:108
+#, fuzzy, kde-format, kde-kuit-format
+msgid "Altitude"
+msgstr "Subirtempo:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: dialogs/focusdialog.ui:167 ekos/capture/calibrationoptions.ui:102
+#: tools/argsetaltaz.ui:37 tools/modcalcplanets.ui:296
+#, fuzzy, kde-format
+msgid "Alt:"
+msgstr "Altitudo:"
 
 #: dialogs/fovdialog.cpp:88
 #, kde-format
@@ -4692,7 +4759,7 @@ msgstr "Aldonu al listo"
 #: ekos/align/align.cpp:1467 ekos/capture/capture.cpp:3540
 #: ekos/capture/capture.cpp:3915 ekos/guide/guide.cpp:427
 #: ekos/scheduler/scheduler.cpp:3856 ekos/scheduler/scheduler.cpp:4190
-#: fitsviewer/fitstab.cpp:385 tools/scriptbuilder.cpp:864
+#: fitsviewer/fitstab.cpp:424 tools/scriptbuilder.cpp:864
 #: tools/scriptbuilder.cpp:961
 #, fuzzy, kde-format
 msgid "Invalid URL: %1"
@@ -5578,14 +5645,6 @@ msgid ""
 "below the accuracy threshold"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ekos/align/align.ui:217 ekos/align/align.ui:419 ekos/manager.ui:1086
-#, fuzzy, kde-format
-msgid "DE:"
-msgstr "DC"
-
 #. i18n: ectx: property (toolTip), widget (QLabel, label_22)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, delaySpin)
 #: ekos/align/align.ui:231 ekos/align/align.ui:248
@@ -5603,22 +5662,6 @@ msgstr ""
 #| msgid "Seattle"
 msgid "Settle"
 msgstr "Seattle"
-
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
-#. i18n: ectx: property (text), widget (QCheckBox, RACheckBatch)
-#: ekos/align/align.ui:261 ekos/align/align.ui:352 ekos/manager.ui:1069
-#: tools/adddeepskyobject.ui:167 tools/altvstime.ui:97 tools/argsetradec.ui:37
-#: tools/modcalcgalcoord.ui:288 tools/modcalcplanets.ui:251
-#: tools/modcalcvlsr.ui:508
-#, kde-format
-msgid "RA:"
-msgstr "RA:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ekos/align/align.ui:271
@@ -9004,24 +9047,6 @@ msgstr ""
 msgid "Wall"
 msgstr "Wallace"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ekos/capture/calibrationoptions.ui:88 tools/argsetaltaz.ui:30
-#: tools/modcalcplanets.ui:303
-#, kde-format
-msgid "Az:"
-msgstr "Az:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ekos/capture/calibrationoptions.ui:102 tools/argsetaltaz.ui:37
-#: tools/modcalcplanets.ui:296
-#, fuzzy, kde-format
-msgid "Alt:"
-msgstr "Altitudo:"
-
 #. i18n: ectx: property (toolTip), widget (QRadioButton, dawnDuskFlatsC)
 #: ekos/capture/calibrationoptions.ui:121
 #, fuzzy, kde-format
@@ -11263,7 +11288,8 @@ msgstr "Centrigita al: "
 msgid "Relative Profile"
 msgstr "Bildo"
 
-#: ekos/focus/focus.cpp:3266
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: ekos/focus/focus.cpp:3266 fitsviewer/statform.ui:81
 #, fuzzy, kde-format
 #| msgctxt "Half Flux Radius"
 #| msgid "HFR:"
@@ -11820,148 +11846,148 @@ msgstr "Dek"
 msgid "PHD2: Calibration Complete."
 msgstr "Caliente"
 
-#: ekos/guide/externalguide/phd2.cpp:287
+#: ekos/guide/externalguide/phd2.cpp:290
 #, fuzzy, kde-format
-msgid "PHD2: Guiding Started."
+msgid "PHD2: Waiting for guiding to settle."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:293
+#: ekos/guide/externalguide/phd2.cpp:295
 #, fuzzy, kde-format
 msgid "PHD2: Guiding Paused."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:299
+#: ekos/guide/externalguide/phd2.cpp:301
 #, fuzzy, kde-format
 msgid "PHD2: Calibration Started."
 msgstr "Caliente"
 
-#: ekos/guide/externalguide/phd2.cpp:312
+#: ekos/guide/externalguide/phd2.cpp:314
 #, fuzzy, kde-format
 msgid "PHD2: Calibration Failed (%1)."
 msgstr "Caliente"
 
-#: ekos/guide/externalguide/phd2.cpp:317
+#: ekos/guide/externalguide/phd2.cpp:319
 #, fuzzy, kde-format
 msgid "Calibration Data Flipped."
 msgstr "Caliente"
 
-#: ekos/guide/externalguide/phd2.cpp:327
+#: ekos/guide/externalguide/phd2.cpp:329
 #, kde-format
 msgid "PHD2: Looping Exposures Stopped."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:343
+#: ekos/guide/externalguide/phd2.cpp:345
 #, kde-format
 msgid "PHD2: Settling failed (%1)."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:362
+#: ekos/guide/externalguide/phd2.cpp:364
 #, kde-format
 msgid "PHD2: There was a dithering error, but continue guiding."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:371
+#: ekos/guide/externalguide/phd2.cpp:373
 #, fuzzy, kde-format
 msgid "PHD2: Settling failed, aborted."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:377
+#: ekos/guide/externalguide/phd2.cpp:379
 #, fuzzy, kde-format
 msgid "PHD2: Settling complete, Guiding Started."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:385
+#: ekos/guide/externalguide/phd2.cpp:387
 #, kde-format
 msgid "PHD2: Star Selected."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:389
+#: ekos/guide/externalguide/phd2.cpp:391
 #, fuzzy, kde-format
 msgid "PHD2: Star Lost. Trying to reacquire."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:400
+#: ekos/guide/externalguide/phd2.cpp:402
 #, fuzzy, kde-format
 msgid "PHD2: Guiding Stopped."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:405
+#: ekos/guide/externalguide/phd2.cpp:407
 #, fuzzy, kde-format
 msgid "PHD2: Guiding Resumed."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:413
+#: ekos/guide/externalguide/phd2.cpp:415
 #, fuzzy, kde-format
 msgid "PHD2: Star found, guiding resumed."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:483
+#: ekos/guide/externalguide/phd2.cpp:485
 #, kde-format
 msgid "PHD2: Lock Position Set."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:487
+#: ekos/guide/externalguide/phd2.cpp:489
 #, kde-format
 msgid "PHD2: Lock Position Lost."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:493
+#: ekos/guide/externalguide/phd2.cpp:495
 #, kde-format
 msgid "PHD2 %1: %2"
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:581
+#: ekos/guide/externalguide/phd2.cpp:583
 #, kde-format
 msgid "PHD2: DEC Guide Mode is Set to: %1"
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:591
+#: ekos/guide/externalguide/phd2.cpp:593
 #, fuzzy, kde-format
 msgid "PHD2: Exposure Time set to: "
 msgstr "Montru SEDS bildon"
 
-#: ekos/guide/externalguide/phd2.cpp:599
+#: ekos/guide/externalguide/phd2.cpp:601
 #, fuzzy, kde-format
 msgid "PHD2: Valid Exposure Times: Auto, "
 msgstr "Montru SEDS bildon"
 
-#: ekos/guide/externalguide/phd2.cpp:615
+#: ekos/guide/externalguide/phd2.cpp:617
 #, kde-format
 msgid ""
 "PHD2: Please set CCD and telescope parameters in PHD2, Pixel Scale is "
 "invalid."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:617
+#: ekos/guide/externalguide/phd2.cpp:619
 #, kde-format
 msgid "PHD2: Pixel Scale is %1 arcsec per pixel"
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:678
+#: ekos/guide/externalguide/phd2.cpp:680
 #, fuzzy, kde-format
 msgid "PHD2 Error: %1"
 msgstr "Skriba eraro"
 
-#: ekos/guide/externalguide/phd2.cpp:845 ekos/guide/externalguide/phd2.cpp:862
-#: ekos/guide/externalguide/phd2.cpp:1001
-#: ekos/guide/externalguide/phd2.cpp:1102
-#: ekos/guide/externalguide/phd2.cpp:1130
-#: ekos/guide/externalguide/phd2.cpp:1158
+#: ekos/guide/externalguide/phd2.cpp:847 ekos/guide/externalguide/phd2.cpp:864
+#: ekos/guide/externalguide/phd2.cpp:1003
+#: ekos/guide/externalguide/phd2.cpp:1104
+#: ekos/guide/externalguide/phd2.cpp:1132
+#: ekos/guide/externalguide/phd2.cpp:1160
 #, kde-format
 msgid "PHD2 Error: Equipment not connected."
 msgstr ""
 
-#: ekos/guide/externalguide/phd2.cpp:994
+#: ekos/guide/externalguide/phd2.cpp:996
 #, fuzzy, kde-format
 msgid "PHD2: Guiding is already running."
 msgstr "Trovu objekton"
 
-#: ekos/guide/externalguide/phd2.cpp:1054
+#: ekos/guide/externalguide/phd2.cpp:1056
 #, fuzzy, kde-format
 msgid "PHD2: Connecting Equipment. . ."
 msgstr "Dek"
 
-#: ekos/guide/externalguide/phd2.cpp:1056
+#: ekos/guide/externalguide/phd2.cpp:1058
 #, kde-format
 msgid "PHD2: Disconnecting Equipment. . ."
 msgstr ""
@@ -13483,7 +13509,7 @@ msgid "frames"
 msgstr "Stela nomo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: ekos/guide/opsguide.ui:329 fitsviewer/fitshistogram.cpp:386
+#: ekos/guide/opsguide.ui:329 fitsviewer/fitshistogram.cpp:385
 #, fuzzy, kde-format
 #| msgctxt "City in Iowa USA"
 #| msgid "Spencer"
@@ -13952,28 +13978,12 @@ msgstr "Centrigita al: "
 msgid "Target:"
 msgstr "Sargent"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
-#: ekos/manager.ui:1103 ekos/mount/mount.ui:280
-#: kstarslite/qml/dialogs/DetailsDialog.qml:271
-#, fuzzy, kde-format, kde-kuit-format
-#| msgid "Azimuth:"
-msgid "Azimuth"
-msgstr "Azimuto:"
-
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: ekos/manager.ui:1106
 #, fuzzy, kde-format
 #| msgid "RA:"
 msgid "AZ:"
 msgstr "RA:"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, label_8)
-#. i18n: ectx: property (text), widget (QTableWidget, queueTable)
-#: ekos/manager.ui:1120 ekos/mount/mount.ui:297 ekos/scheduler/scheduler.ui:707
-#: kstarslite/qml/dialogs/DetailsDialog.qml:276 tools/altvstime.cpp:108
-#, fuzzy, kde-format, kde-kuit-format
-msgid "Altitude"
-msgstr "Subirtempo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: ekos/manager.ui:1123
@@ -14033,7 +14043,7 @@ msgstr "Stela nomo"
 #. i18n: ectx: property (text), widget (QPushButton, clearB)
 #. i18n: ectx: property (text), widget (QPushButton, ClearButton)
 #. i18n: ectx: property (text), widget (QPushButton, Clear)
-#: ekos/manager.ui:1629 fitsviewer/fitstab.cpp:126 indi/guimanager.cpp:73
+#: ekos/manager.ui:1629 fitsviewer/fitstab.cpp:140 indi/guimanager.cpp:73
 #: tools/conjunctions.ui:205 tools/eclipsetool.ui:167 tools/modcalcgeod.ui:160
 #, kde-format
 msgid "Clear"
@@ -18201,7 +18211,7 @@ msgid "Invalid"
 msgstr "nevalida URLo"
 
 #: ekos/scheduler/schedulerjob.cpp:455 ekos/scheduler/schedulerjob.cpp:486
-#: fitsviewer/fitshistogram.cpp:736 indi/indigroup.cpp:37
+#: fitsviewer/fitshistogram.cpp:735 indi/indigroup.cpp:37
 #: skycomponents/constellationboundarylines.cpp:286
 #, kde-format
 msgid "Unknown"
@@ -18423,7 +18433,7 @@ msgid "Ready."
 msgstr "Reading"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, fitsHeaderDialog)
-#: fitsviewer/fitsheaderdialog.ui:14 fitsviewer/fitstab.cpp:118
+#: fitsviewer/fitsheaderdialog.ui:14 fitsviewer/fitstab.cpp:132
 #: fitsviewer/fitsviewer.cpp:143
 #, fuzzy, kde-format
 msgid "FITS Header"
@@ -18436,7 +18446,7 @@ msgid "Keyword"
 msgstr "Kenora"
 
 #. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
-#: fitsviewer/fitsheaderdialog.ui:53
+#: fitsviewer/fitsheaderdialog.ui:53 fitsviewer/fitstab.cpp:287
 #, fuzzy, kde-format
 msgid "Value"
 msgstr "Vale"
@@ -18447,32 +18457,32 @@ msgstr "Vale"
 msgid "Comment"
 msgstr "Kalkulu"
 
-#: fitsviewer/fitshistogram.cpp:385
+#: fitsviewer/fitshistogram.cpp:384
 #, fuzzy, kde-format
 msgid "Intensity"
 msgstr "Tera koordinatoj"
 
-#: fitsviewer/fitshistogram.cpp:722
+#: fitsviewer/fitshistogram.cpp:721
 #, fuzzy, kde-format
 msgid "Auto Scale"
 msgstr "Azimuto:"
 
-#: fitsviewer/fitshistogram.cpp:724
+#: fitsviewer/fitshistogram.cpp:723
 #, fuzzy, kde-format
 msgid "Linear Scale"
 msgstr "Linio"
 
-#: fitsviewer/fitshistogram.cpp:726
+#: fitsviewer/fitshistogram.cpp:725
 #, fuzzy, kde-format
 msgid "Logarithmic Scale"
 msgstr "Linio"
 
-#: fitsviewer/fitshistogram.cpp:728
+#: fitsviewer/fitshistogram.cpp:727
 #, fuzzy, kde-format
 msgid "Square Root Scale"
 msgstr "Ekvatoro"
 
-#: fitsviewer/fitshistogram.cpp:773
+#: fitsviewer/fitshistogram.cpp:772
 #, kde-format
 msgctxt "Histogram tooltip; %1 is intensity; %2 is frequency;"
 msgid ""
@@ -18480,7 +18490,7 @@ msgid ""
 "td><td>%2</td></tr></table>"
 msgstr ""
 
-#: fitsviewer/fitshistogram.cpp:785
+#: fitsviewer/fitshistogram.cpp:784
 #, kde-format
 msgctxt "Histogram tooltip; %1 is intensity; %2 is frequency;"
 msgid ""
@@ -18490,33 +18500,35 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, FITSHistogramUI)
-#: fitsviewer/fitshistogramui.ui:32 fitsviewer/fitstab.cpp:115
+#: fitsviewer/fitshistogramui.ui:32 fitsviewer/fitstab.cpp:129
 #: fitsviewer/fitsviewer.cpp:124
 #, kde-format
 msgid "Histogram"
 msgstr "Histogramo"
 
 #. i18n: ectx: property (text), widget (QLabel, GLabel)
-#: fitsviewer/fitshistogramui.ui:78
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/fitshistogramui.ui:78 fitsviewer/statform.ui:116
 #, kde-format
 msgid "G"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, RLabel)
-#: fitsviewer/fitshistogramui.ui:91
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/fitshistogramui.ui:91 fitsviewer/statform.ui:111
 #, fuzzy, kde-format
 msgid "R"
 msgstr "RA"
 
 #. i18n: ectx: property (text), widget (QLabel, BLabel)
-#: fitsviewer/fitshistogramui.ui:105
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/fitshistogramui.ui:105 fitsviewer/statform.ui:121
 #, kde-format
 msgid "B"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, minLabel_2)
-#. i18n: ectx: property (text), widget (QLabel, meanLabel)
-#: fitsviewer/fitshistogramui.ui:129 fitsviewer/statform.ui:146
+#: fitsviewer/fitshistogramui.ui:129
 #, fuzzy, kde-format
 msgid "Mean:"
 msgstr "Mena"
@@ -18586,34 +18598,40 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, statForm)
-#: fitsviewer/fitstab.cpp:113 fitsviewer/fitsviewer.cpp:184
+#: fitsviewer/fitstab.cpp:127 fitsviewer/fitsviewer.cpp:184
 #: fitsviewer/statform.ui:14
 #, kde-format
 msgid "Statistics"
 msgstr "Statistikoj"
 
-#: fitsviewer/fitstab.cpp:123
+#: fitsviewer/fitstab.cpp:137
 #, fuzzy, kde-format
 msgid "Recent Images"
 msgstr "Antaŭrigardo de %1"
 
-#: fitsviewer/fitstab.cpp:335
+#: fitsviewer/fitstab.cpp:296
+#, fuzzy, kde-format
+msgctxt "Red"
+msgid "R"
+msgstr "RA"
+
+#: fitsviewer/fitstab.cpp:374
 #, fuzzy, kde-format
 msgid "Save FITS"
 msgstr "Konservi"
 
-#: fitsviewer/fitstab.cpp:373
+#: fitsviewer/fitstab.cpp:412
 #, fuzzy, kde-format
 msgid "FITS file save error: %1"
 msgstr "nevalida URLo"
 
-#: fitsviewer/fitstab.cpp:373
+#: fitsviewer/fitstab.cpp:412
 #, fuzzy, kde-format
 msgid "FITS Save"
 msgstr "Azimuto:"
 
 #. i18n("File saved."), 3);
-#: fitsviewer/fitstab.cpp:379
+#: fitsviewer/fitstab.cpp:418
 #, fuzzy, kde-format
 msgid "File saved to %1"
 msgstr "nevalida URLo"
@@ -18734,8 +18752,8 @@ msgstr ""
 msgid "High Pass"
 msgstr "High Prairie"
 
-#. i18n: ectx: property (text), widget (QLabel, meanLabel_2)
-#: fitsviewer/fitsviewer.cpp:51 fitsviewer/statform.ui:160
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/fitsviewer.cpp:51 fitsviewer/statform.ui:101
 #, fuzzy, kde-format
 #| msgctxt "City in Mississippi USA"
 #| msgid "Meridian"
@@ -19102,7 +19120,8 @@ msgstr "Montru planedajn bildojn"
 msgid "Sets the Minimum Value on the graph"
 msgstr ""
 
-#: fitsviewer/starprofileviewer.cpp:92
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/starprofileviewer.cpp:92 fitsviewer/statform.ui:86
 #, fuzzy, kde-format
 msgid "Min"
 msgstr "Mainz"
@@ -19112,7 +19131,8 @@ msgstr "Mainz"
 msgid "Sets the Maximum Value on the graph"
 msgstr ""
 
-#: fitsviewer/starprofileviewer.cpp:97
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/starprofileviewer.cpp:97 fitsviewer/statform.ui:91
 #, fuzzy, kde-format
 msgid "Max"
 msgstr "Maks:"
@@ -19317,73 +19337,35 @@ msgstr "Sunsubiro:"
 msgid "Star %1"
 msgstr "Steloj"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, stdDevLabel)
-#: fitsviewer/statform.ui:35
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/statform.ui:66
 #, fuzzy, kde-format
-msgid "Standard Deviation"
-msgstr "Dek"
-
-#. i18n: ectx: property (text), widget (QLabel, stdDevLabel)
-#: fitsviewer/statform.ui:38
-#, fuzzy, kde-format
-msgid "Std. dev:"
-msgstr "Stela nomo"
-
-#. i18n: ectx: property (text), widget (QLabel, heightLabel)
-#: fitsviewer/statform.ui:45
-#, fuzzy, kde-format
-msgid "Height:"
-msgstr "Bildo"
-
-#. i18n: ectx: property (text), widget (QLabel, bitPixLabel)
-#: fitsviewer/statform.ui:52
-#, kde-format
-msgid "Bitpix:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, widthLabel)
-#: fitsviewer/statform.ui:59
-#, kde-format
-msgid "Width:"
+msgid "Width"
 msgstr "Larĝeco:"
 
-#. i18n: ectx: property (text), widget (QLabel, minLabel)
-#: fitsviewer/statform.ui:139
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/statform.ui:71
 #, fuzzy, kde-format
-msgid "Min:"
-msgstr "Mainz"
+msgid "Height"
+msgstr "Bildo"
 
-#. i18n: ectx: property (text), widget (QLabel, maxLabel)
-#: fitsviewer/statform.ui:153
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/statform.ui:76
 #, kde-format
-msgid "Max:"
-msgstr "Maks:"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, HFRLabel)
-#: fitsviewer/statform.ui:167
-#, kde-format
-msgid "Half-Flux Radius"
+msgid "Bitpix"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, HFRLabel)
-#: fitsviewer/statform.ui:170
-#, kde-format
-msgctxt "Half Flux Radius"
-msgid "HFR:"
-msgstr "HFR:"
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/statform.ui:96
+#, fuzzy, kde-format
+msgid "Mean"
+msgstr "Mena"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, HFRLabel_2)
-#: fitsviewer/statform.ui:177
-#, kde-format
-msgid "Signal to Noise Ratio"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, HFRLabel_2)
-#: fitsviewer/statform.ui:180
-#, kde-format
-msgctxt "Half Flux Radius"
-msgid "SNR:"
-msgstr ""
+#. i18n: ectx: property (text), widget (QTableWidget, statsTable)
+#: fitsviewer/statform.ui:106
+#, fuzzy, kde-format
+msgid "Std. Dev"
+msgstr "Stela nomo"
 
 #. i18n: ectx: property (title), widget (QGroupBox, displayGroup)
 #: hips/hipsmanager.cpp:96 indi/opsindi.ui:363
@@ -19642,7 +19624,7 @@ msgstr "Ne eblis malfermi dosieron"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, driverComboBox)
 #. i18n: ectx: property (text), widget (QPushButton, NoneButton)
-#: indi/drivermanager.cpp:1298 indi/indidriver.cpp:747 kstarsactions.cpp:1642
+#: indi/drivermanager.cpp:1298 indi/indidriver.cpp:747 kstarsactions.cpp:1644
 #: kstarsinit.cpp:708 kstarsinit.cpp:709 oal/equipmentwriter.ui:217
 #: oal/log.cpp:337 tools/exporteyepieceview.cpp:68 tools/eyepiecefield.cpp:113
 #: tools/obslistwizard.ui:183
@@ -20881,12 +20863,12 @@ msgstr "Steloj"
 msgid "Stop &Tracking"
 msgstr ""
 
-#: kstars.cpp:358 kstarsactions.cpp:1574 kstarsinit.cpp:260
+#: kstars.cpp:358 kstarsactions.cpp:1576 kstarsinit.cpp:260
 #, fuzzy, kde-format
 msgid "Switch to star globe view (Equatorial &Coordinates)"
 msgstr "Koordinatoj"
 
-#: kstars.cpp:359 kstarsactions.cpp:1565 kstarsinit.cpp:261
+#: kstars.cpp:359 kstarsactions.cpp:1567 kstarsinit.cpp:261
 #, fuzzy, kde-format
 msgid "Switch to horizonal view (Horizontal &Coordinates)"
 msgstr "originala koordinato"
@@ -86532,46 +86514,46 @@ msgstr "Des Moines"
 msgid "Engage &Tracking"
 msgstr ""
 
-#: kstarsactions.cpp:1515
+#: kstarsactions.cpp:1517
 #, kde-format
 msgctxt "approximate field of view"
 msgid "Approximate FOV: %1 degrees"
 msgstr ""
 
-#: kstarsactions.cpp:1519
+#: kstarsactions.cpp:1521
 #, kde-format
 msgctxt "approximate field of view"
 msgid "Approximate FOV: %1 arcminutes"
 msgstr ""
 
-#: kstarsactions.cpp:1524
+#: kstarsactions.cpp:1526
 #, kde-format
 msgctxt "approximate field of view"
 msgid "Approximate FOV: %1 arcseconds"
 msgstr ""
 
-#: kstarsactions.cpp:1541
+#: kstarsactions.cpp:1543
 #, kde-format
 msgctxt "The user should enter an angle for the field-of-view of the display"
 msgid "Enter Desired Field-of-View Angle"
 msgstr ""
 
-#: kstarsactions.cpp:1542
+#: kstarsactions.cpp:1544
 #, kde-format
 msgid "Enter a field-of-view angle in degrees: "
 msgstr ""
 
-#: kstarsactions.cpp:1710
+#: kstarsactions.cpp:1712
 #, kde-format
 msgid "Attempt to determine from image"
 msgstr ""
 
-#: kstarsactions.cpp:1711
+#: kstarsactions.cpp:1713
 #, fuzzy, kde-format
 msgid "Eyepiece View: Choose a field-of-view"
 msgstr "Montru planedajn bildojn"
 
-#: kstarsactions.cpp:1712
+#: kstarsactions.cpp:1714
 #, kde-format
 msgid "FOV to render eyepiece view for:"
 msgstr ""
@@ -100875,6 +100857,46 @@ msgid "Set the color for the background."
 msgstr "Ŝarĝante laktan vojon"
 
 #, fuzzy
+#~ msgid "New right ascension:"
+#~ msgstr "RA"
+
+#, fuzzy
+#~ msgid "New declination:"
+#~ msgstr "Dek"
+
+#~ msgid "New altitude:"
+#~ msgstr "Nova altitudo:"
+
+#~ msgid "New azimuth:"
+#~ msgstr "Nova azimuto:"
+
+#, fuzzy
+#~ msgid "PHD2: Guiding Started."
+#~ msgstr "Trovu objekton"
+
+#, fuzzy
+#~ msgid "Standard Deviation"
+#~ msgstr "Dek"
+
+#, fuzzy
+#~ msgid "Height:"
+#~ msgstr "Bildo"
+
+#~ msgid "Width:"
+#~ msgstr "Larĝeco:"
+
+#, fuzzy
+#~ msgid "Min:"
+#~ msgstr "Mainz"
+
+#~ msgid "Max:"
+#~ msgstr "Maks:"
+
+#~ msgctxt "Half Flux Radius"
+#~ msgid "HFR:"
+#~ msgstr "HFR:"
+
+#, fuzzy
 #~ msgid "Delay (se&c):"
 #~ msgstr "Rigardopcioj"
 
@@ -100977,10 +100999,6 @@ msgstr "Ŝarĝante laktan vojon"
 #, fuzzy
 #~ msgid "Intensity:"
 #~ msgstr "Tera koordinatoj"
-
-#, fuzzy
-#~ msgid "Mean"
-#~ msgstr "Mena"
 
 #, fuzzy
 #~ msgid "&Logarithmic"
