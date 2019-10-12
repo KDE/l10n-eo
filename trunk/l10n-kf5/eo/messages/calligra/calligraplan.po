@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplato\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-09-25 02:28+0200\n"
+"POT-Creation-Date: 2019-10-12 02:34+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -641,19 +641,23 @@ msgstr ""
 msgid "Path to the documentation"
 msgstr ""
 
-#. i18n: ectx: label, entry (Language), group (Documentation)
+#. i18n: ectx: label, entry (ContextPath), group (Documentation)
 #: calligraplansettings.kcfg:364
 #, kde-format
-msgid "The documentation must have been translated to the language"
+msgid "Path to the context help documentation"
+msgstr ""
+
+#. i18n: ectx: label, entry (ContextLanguage), group (Documentation)
+#: calligraplansettings.kcfg:368
+#, kde-format
+msgid ""
+"The context help documentation must have been translated to the language"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, leaderlabel)
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_DocumentationPath)
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_Manager)
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_Leader)
-#: ConfigDocumentationPanel.ui:54 ConfigDocumentationPanel.ui:91
-#: ConfigProjectPanel.ui:41 ConfigProjectPanel.ui:68
-#: kptconfigtaskpanelbase.ui:33 kptconfigtaskpanelbase.ui:65
+#: ConfigDocumentationPanel.ui:40 kptconfigtaskpanelbase.ui:33
+#: kptconfigtaskpanelbase.ui:65
 #, kde-format
 msgid ""
 "The person responsible for this task.\n"
@@ -664,15 +668,46 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, leaderlabel)
-#: ConfigDocumentationPanel.ui:57
+#: ConfigDocumentationPanel.ui:43
+#, fuzzy, kde-format
+#| msgid "Duration"
+msgid "Documentation:"
+msgstr "Daŭro"
+
+#. i18n: ectx: property (text), widget (QLabel, contextlabel)
+#: ConfigDocumentationPanel.ui:79
 #, kde-format
-msgid "Path:"
+msgid "Contex help:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ConfigDocumentationPanel.ui:73
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ConfigDocumentationPanel.ui:95
 #, kde-format
-msgid "Language:"
+msgid "Context language"
+msgstr ""
+
+#: ConfigProjectPanel.cpp:50
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The project manager of this project."
+msgstr ""
+
+#: ConfigProjectPanel.cpp:53
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Check to enable shared resources"
+msgstr ""
+
+#: ConfigProjectPanel.cpp:56
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The file where shared resources are defined"
+msgstr ""
+
+#: ConfigProjectPanel.cpp:59
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "The directory where projects sharing the resources are placed"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
@@ -682,40 +717,40 @@ msgid "General"
 msgstr "Ĝeneralo"
 
 #. i18n: ectx: property (text), widget (QLabel, leaderlabel)
-#: ConfigProjectPanel.ui:44
+#: ConfigProjectPanel.ui:42
 #, kde-format
 msgid "&Manager:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ConfigProjectPanel.ui:75
+#. i18n: ectx: property (text), widget (QLabel, usrlabel)
+#: ConfigProjectPanel.ui:71
 #, kde-format
 msgid "Use shared resources:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ConfigProjectPanel.ui:89
+#. i18n: ectx: property (text), widget (QLabel, srflabel)
+#: ConfigProjectPanel.ui:85
 #, kde-format
 msgid "Shared resource file:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, resourceFileBrowseBtn)
 #. i18n: ectx: property (text), widget (QPushButton, projectsPlaceBrowseBtn)
-#: ConfigProjectPanel.ui:101 ConfigProjectPanel.ui:126
+#: ConfigProjectPanel.ui:97 ConfigProjectPanel.ui:122
 #, fuzzy, kde-format
 #| msgid "Choose..."
 msgid "Browse..."
 msgstr "Elekti..."
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ConfigProjectPanel.ui:114
+#. i18n: ectx: property (text), widget (QLabel, spplabel)
+#: ConfigProjectPanel.ui:110
 #, kde-format
 msgid "Shared projects:"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #. i18n: ectx: attribute (title), widget (QWidget, widget)
-#: ConfigProjectPanel.ui:152 kptconfigtaskpanelbase.ui:481
+#: ConfigProjectPanel.ui:149 kptconfigtaskpanelbase.ui:481
 #, kde-format
 msgid "Description"
 msgstr "Priskribo"
@@ -1306,8 +1341,8 @@ msgid "Insert after current node"
 msgstr ""
 
 #: kptloadsharedprojectsdialog.cpp:40
-#, kde-format
-msgctxt "@title"
+#, kde-kuit-format
+msgctxt "@title:window"
 msgid "Load Resource Assignments"
 msgstr ""
 
@@ -1597,7 +1632,7 @@ msgstr "Taskoj"
 msgid "Generate reports"
 msgstr ""
 
-#: kptview.cpp:598 kptview.cpp:3303
+#: kptview.cpp:598 kptview.cpp:3304
 #, fuzzy, kde-format
 #| msgid "Tasks"
 msgid "Task Status Report"
@@ -1798,9 +1833,9 @@ msgctxt "@info:tooltip"
 msgid "Generate reports"
 msgstr ""
 
-#: kptview.cpp:732 kptview.cpp:3300 kptviewlistdialog.cpp:122
+#: kptview.cpp:732 kptview.cpp:3301 kptviewlistdialog.cpp:122
 #: kptviewlistdialog.cpp:562
-#, kde-format
+#, kde-format, kde-kuit-format
 msgid "Report"
 msgstr ""
 
@@ -1921,136 +1956,136 @@ msgstr ""
 msgid "Documentation"
 msgstr "Daŭro"
 
-#: kptview.cpp:2316
+#: kptview.cpp:2317
 #, kde-format
 msgid ""
 "A task that has been scheduled will be deleted. This will invalidate the "
 "schedule."
 msgstr ""
 
-#: kptview.cpp:2324 kptview.cpp:2328 kptview.cpp:2344 kptview.cpp:2368
+#: kptview.cpp:2325 kptview.cpp:2329 kptview.cpp:2345 kptview.cpp:2369
 msgctxt "(qtundo-format)"
 msgid "Delete task"
 msgid_plural "Delete tasks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kptview.cpp:2363
+#: kptview.cpp:2364
 #, kde-format
 msgid "This task has been scheduled. This will invalidate the schedule."
 msgstr ""
 
-#: kptview.cpp:2387
+#: kptview.cpp:2388
 msgctxt "(qtundo-format)"
 msgid "Indent task"
 msgstr ""
 
-#: kptview.cpp:2401
+#: kptview.cpp:2402
 msgctxt "(qtundo-format)"
 msgid "Unindent task"
 msgstr ""
 
-#: kptview.cpp:2423
+#: kptview.cpp:2424
 msgctxt "(qtundo-format)"
 msgid "Move task up"
 msgstr ""
 
-#: kptview.cpp:2444
+#: kptview.cpp:2445
 msgctxt "(qtundo-format)"
 msgid "Move task down"
 msgstr ""
 
-#: kptview.cpp:2480
+#: kptview.cpp:2481
 msgctxt "(qtundo-format)"
 msgid "Add task dependency"
 msgstr ""
 
-#: kptview.cpp:2541
+#: kptview.cpp:2542
 msgctxt "(qtundo-format)"
 msgid "Delete task dependency"
 msgstr ""
 
-#: kptview.cpp:2578 kptview.cpp:2639
+#: kptview.cpp:2579 kptview.cpp:2640
 msgctxt "(qtundo-format)"
 msgid "Delete resource"
 msgid_plural "Delete resources"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kptview.cpp:2583 kptview.cpp:2641
+#: kptview.cpp:2584 kptview.cpp:2642
 msgctxt "(qtundo-format)"
 msgid "Delete resourcegroup"
 msgid_plural "Delete resourcegroups"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kptview.cpp:2592 kptview.cpp:2600
+#: kptview.cpp:2593 kptview.cpp:2601
 #, kde-format
 msgid ""
 "A resource that has been scheduled will be deleted. This will invalidate the "
 "schedule."
 msgstr ""
 
-#: kptview.cpp:2637
+#: kptview.cpp:2638
 msgctxt "(qtundo-format)"
 msgid "Delete resourcegroups and resources"
 msgstr ""
 
-#: kptview.cpp:2808
+#: kptview.cpp:2809
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file:<br/><filename>%1</filename>"
 msgstr ""
 
-#: kptview.cpp:2934
+#: kptview.cpp:2935
 msgctxt "(qtundo-format)"
 msgid "Modify name"
 msgstr ""
 
-#: kptview.cpp:2936
+#: kptview.cpp:2937
 msgctxt "(qtundo-format)"
 msgid "Modify task name"
 msgstr ""
 
-#: kptview.cpp:2937
+#: kptview.cpp:2938
 msgctxt "(qtundo-format)"
 msgid "Modify milestone name"
 msgstr ""
 
-#: kptview.cpp:2938
+#: kptview.cpp:2939
 msgctxt "(qtundo-format)"
 msgid "Modify summarytask name"
 msgstr ""
 
-#: kptview.cpp:2939
+#: kptview.cpp:2940
 msgctxt "(qtundo-format)"
 msgid "Modify project name"
 msgstr ""
 
-#: kptview.cpp:3031
+#: kptview.cpp:3032
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Not scheduled"
 msgstr ""
 
-#: kptview.cpp:3073
+#: kptview.cpp:3074
 #, fuzzy, kde-format
 #| msgid "Folder to store torrent information:"
 msgid "Failed to open temporary file"
 msgstr "Dosierujo por konservi torentajn informojn:"
 
-#: kptview.cpp:3079
+#: kptview.cpp:3080
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to save to temporary file:<br/> <filename>%1</filename>"
 msgstr ""
 
-#: kptview.cpp:3087
+#: kptview.cpp:3088
 #, kde-format
 msgid "Work Package: %1"
 msgstr ""
 
-#: kptview.cpp:3088
+#: kptview.cpp:3089
 #, kde-format
 msgctxt "1=project name, 2=task name"
 msgid ""
@@ -2060,65 +2095,65 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: kptview.cpp:3118
+#: kptview.cpp:3119
 #, fuzzy, kde-format
 #| msgid "Folder to store torrent information:"
 msgid "Failed to open work package file"
 msgstr "Dosierujo por konservi torentajn informojn:"
 
-#: kptview.cpp:3125
+#: kptview.cpp:3126
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to save to temporary file:<br/><filename>%1</filename>"
 msgstr ""
 
-#: kptview.cpp:3134
+#: kptview.cpp:3135
 #, kde-format
 msgid "Work Package for project: %1"
 msgstr ""
 
-#: kptview.cpp:3199
+#: kptview.cpp:3200
 #, kde-format
 msgid "Do you want to reload task modules?"
 msgstr ""
 
-#: kptview.cpp:3199
+#: kptview.cpp:3200
 #, kde-kuit-format
 msgctxt "@title"
 msgid "Task module changed"
 msgstr ""
 
-#: kptview.cpp:3301
+#: kptview.cpp:3302
 #, kde-format
 msgctxt "Project manager"
 msgid "Manager:"
 msgstr ""
 
-#: kptview.cpp:3302
+#: kptview.cpp:3303
 #, fuzzy, kde-format
 #| msgid "Project"
 msgid "Project:"
 msgstr "Projekto"
 
-#: kptview.cpp:3304
+#: kptview.cpp:3305
 #, kde-format
 msgctxt "As in: Page 1 of 2"
 msgid "of"
 msgstr ""
 
-#: kptview.cpp:3305
+#: kptview.cpp:3306
 #, kde-format
 msgid "Page"
 msgstr ""
 
-#: kptview.cpp:3306
+#: kptview.cpp:3307
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "Task name"
 msgid "Name"
 msgstr "Nomo:"
 
-#: kptview.cpp:3307
+#: kptview.cpp:3308
 #, kde-format
 msgctxt "Task completion"
 msgid "Completion (%)"
@@ -2259,7 +2294,7 @@ msgid "Description:"
 msgstr "Priskribo"
 
 #: kptviewlistdialog.cpp:42
-#, kde-format
+#, kde-kuit-format
 msgctxt "@title:window"
 msgid "Add View"
 msgstr "Aldonu rigardon"
@@ -2340,7 +2375,7 @@ msgid "Top"
 msgstr "Supro"
 
 #: kptviewlistdialog.cpp:304
-#, fuzzy, kde-format
+#, fuzzy, kde-kuit-format
 #| msgid "Configure..."
 msgctxt "@title:window"
 msgid "Configure View"
@@ -2357,14 +2392,14 @@ msgid ""
 msgstr ""
 
 #: kptviewlistdialog.cpp:429
-#, fuzzy, kde-format
+#, fuzzy, kde-kuit-format
 #| msgid "Configure..."
 msgctxt "@title:window"
 msgid "Configure Category"
 msgstr "Agordu..."
 
 #: kptviewlistdialog.cpp:520
-#, kde-format
+#, kde-kuit-format
 msgctxt "@title:window"
 msgid "Add Report"
 msgstr ""
