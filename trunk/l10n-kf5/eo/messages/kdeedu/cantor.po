@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cantor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-02-13 03:06+0100\n"
+"POT-Creation-Date: 2020-02-14 03:06+0100\n"
 "PO-Revision-Date: 2015-03-15 08:54-0400\n"
 "Last-Translator: Eliovir <eliovir@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -373,12 +373,12 @@ msgstr ""
 #. i18n: ectx: label, entry (variableManagement), group (RBackend)
 #. i18n: ectx: label, entry (variableManagement), group (MaximaBackend)
 #. i18n: ectx: label, entry (variableManagement), group (JuliaBackend)
+#. i18n: ectx: label, entry (variableManagement), group (PythonBackend)
 #. i18n: ectx: label, entry (variableManagement), group (OctaveBackend)
-#. i18n: ectx: label, entry (variableManagement), group (Python3Backend)
 #: backends/julia/juliabackend.kcfg:16 backends/julia/settings.ui:26
 #: backends/maxima/maximabackend.kcfg:21 backends/maxima/settings.ui:55
 #: backends/octave/octavebackend.kcfg:21 backends/octave/settings.ui:55
-#: backends/python/settings.ui:55 backends/python3/python3backend.kcfg:21
+#: backends/python/pythonbackend.kcfg:21 backends/python/settings.ui:55
 #: backends/R/rserver/rserver.kcfg:16 backends/R/settings.ui:41
 #, kde-format
 msgid "Enable Variable Management"
@@ -388,12 +388,11 @@ msgstr ""
 #. i18n: ectx: label, entry (integratePlots), group (MaximaBackend)
 #. i18n: ectx: label, entry (integratePlots), group (ScilabBackend)
 #. i18n: ectx: label, entry (integratePlots), group (JuliaBackend)
+#. i18n: ectx: label, entry (integratePlots), group (PythonBackend)
 #. i18n: ectx: label, entry (integratePlots), group (OctaveBackend)
-#. i18n: ectx: label, entry (integratePlots), group (Python3Backend)
 #: backends/julia/juliabackend.kcfg:20 backends/maxima/maximabackend.kcfg:17
-#: backends/octave/octavebackend.kcfg:17
-#: backends/python3/python3backend.kcfg:17 backends/R/rserver/rserver.kcfg:12
-#: backends/scilab/scilabbackend.kcfg:14
+#: backends/octave/octavebackend.kcfg:17 backends/python/pythonbackend.kcfg:17
+#: backends/R/rserver/rserver.kcfg:12 backends/scilab/scilabbackend.kcfg:14
 #, kde-format
 msgid "Integrate Plots into the Worksheet"
 msgstr ""
@@ -462,12 +461,12 @@ msgstr "https://edu.kde.org/kalgebra/"
 #. i18n: ectx: label, entry (autorunScripts), group (SageBackend)
 #. i18n: ectx: label, entry (autorunScripts), group (ScilabBackend)
 #. i18n: ectx: label, entry (autorunScripts), group (KAlgebraBackend)
+#. i18n: ectx: label, entry (autorunScripts), group (PythonBackend)
 #. i18n: ectx: label, entry (autorunScripts), group (OctaveBackend)
-#. i18n: ectx: label, entry (autorunScripts), group (Python3Backend)
 #. i18n: ectx: label, entry (autorunScripts), group (LuaBackend)
 #: backends/kalgebra/kalgebrabackend.kcfg:9 backends/lua/luabackend.kcfg:14
 #: backends/maxima/maximabackend.kcfg:25 backends/octave/octavebackend.kcfg:25
-#: backends/python3/python3backend.kcfg:25
+#: backends/python/pythonbackend.kcfg:25
 #: backends/qalculate/qalculatebackend.kcfg:130
 #: backends/R/rserver/rserver.kcfg:20 backends/sage/sagebackend.kcfg:14
 #: backends/scilab/scilabbackend.kcfg:18
@@ -675,22 +674,48 @@ msgstr ""
 msgid "Path to Octave:"
 msgstr ""
 
+#: backends/python/pythonbackend.cpp:85
+#, kde-format
+msgctxt "The url to the documentation Python"
+msgid "https://docs.python.org/3/"
+msgstr ""
+
+#: backends/python/pythonbackend.cpp:90
+#, kde-format
+msgid ""
+"<b>Python</b> is a remarkably powerful dynamic programming language that is "
+"used in a wide variety of application domains. There are several Python "
+"packages to scientific programming."
+msgstr ""
+
+#. i18n: ectx: label, entry (pythonServerPath), group (PythonBackend)
+#: backends/python/pythonbackend.kcfg:10
+#, kde-format
+msgid "Path to Cantor python server executable"
+msgstr ""
+
+#. i18n: ectx: label, entry (localDoc), group (PythonBackend)
+#: backends/python/pythonbackend.kcfg:14
+#, kde-format
+msgid "Url to the local Python documentation"
+msgstr ""
+
 #: backends/python/pythonextensions.cpp:184
 #, kde-format
 msgid "Python script file (*.py)"
 msgstr ""
 
-#: backends/python/pythonsession.cpp:268
+#: backends/python/pythonsession.cpp:262
 #, kde-format
 msgid "Cantor Python server stopped working."
 msgstr ""
 
-#: backends/python/pythonsession.cpp:272
+#: backends/python/pythonsession.cpp:266
 #, kde-format
 msgid "Failed to start Cantor python server."
 msgstr ""
 
-#: backends/python/pythonsession.cpp:276
+#: backends/python/pythonsession.cpp:270
 #, kde-format
 msgid "Communication with Cantor python server failed for unknown reasons."
 msgstr ""
@@ -699,32 +724,6 @@ msgstr ""
 #: backends/python/settings.ui:19
 #, kde-format
 msgid "Path to Cantor Python Server:"
-msgstr ""
-
-#: backends/python3/python3backend.cpp:70
-#, kde-format
-msgctxt "The url to the documentation Python"
-msgid "https://docs.python.org/3/"
-msgstr ""
-
-#: backends/python3/python3backend.cpp:75
-#, kde-format
-msgid ""
-"<b>Python</b> is a remarkably powerful dynamic programming language that is "
-"used in a wide variety of application domains. There are several Python "
-"packages to scientific programming."
-msgstr ""
-
-#. i18n: ectx: label, entry (pythonServerPath), group (Python3Backend)
-#: backends/python3/python3backend.kcfg:10
-#, kde-format
-msgid "Path to Cantor python3 server executable"
-msgstr ""
-
-#. i18n: ectx: label, entry (localDoc), group (Python3Backend)
-#: backends/python3/python3backend.kcfg:14
-#, kde-format
-msgid "Url to the local Python documentation"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, QalculatePlotAssistantBase)
