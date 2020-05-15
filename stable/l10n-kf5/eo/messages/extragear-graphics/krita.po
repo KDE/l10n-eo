@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-13 09:22+0200\n"
+"POT-Creation-Date: 2020-05-15 09:11+0200\n"
 "PO-Revision-Date: 2015-03-25 21:27+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -11662,12 +11662,14 @@ msgstr ""
 msgid "Close"
 msgstr "Fermi"
 
+#. i18n: ectx: property (text), widget (QPushButton, btCancel)
 #. i18n: ectx: property (text), widget (QPushButton, cancelBrushNameUpdateButton)
 #. i18n: ectx: property (text), widget (QPushButton, cancelButton)
 #. i18n: ectx: property (toolTip), widget (QPushButton, bnCancelMaskEdit)
 #. i18n: ectx: property (text), widget (QPushButton, cancel_button)
 #: libs/ui/dialogs/kis_delayed_save_dialog.cpp:62
 #: libs/ui/dialogs/KisAsyncAnimationRenderDialogBase.cpp:166
+#: libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:56
 #: libs/ui/forms/wdgpaintopsettings.ui:197
 #: libs/ui/forms/wdgsavebrushpreset.ui:208
 #: libs/ui/input/kis_tool_invocation_action.cpp:60 libs/ui/kis_clipboard.cc:304
@@ -11680,8 +11682,10 @@ msgid "Cancel"
 msgstr "Nuligi"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisDelayedSaveDialog)
+#. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
-#: libs/ui/dialogs/kis_delayed_save_dialog.ui:17 libs/ui/wdgsplash.ui:305
+#: libs/ui/dialogs/kis_delayed_save_dialog.ui:17
+#: libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:17 libs/ui/wdgsplash.ui:305
 #, kde-format
 msgid "Krita"
 msgstr "Krito"
@@ -12073,18 +12077,17 @@ msgstr "fono"
 #: libs/ui/kis_node_manager.cpp:1210 libs/ui/KisApplication.cpp:864
 #: libs/ui/KisApplication.cpp:867 libs/ui/KisApplication.cpp:892
 #: libs/ui/KisApplication.cpp:924 libs/ui/KisApplication.cpp:938
-#: libs/ui/KisApplication.cpp:966 libs/ui/KisDocument.cpp:779
-#: libs/ui/KisDocument.cpp:1414 libs/ui/KisDocument.cpp:1498
-#: libs/ui/KisDocument.cpp:1541 libs/ui/KisDocument.cpp:1549
-#: libs/ui/KisMainWindow.cpp:798 libs/ui/KisMainWindow.cpp:974
-#: libs/ui/KisMainWindow.cpp:1088 libs/ui/KisMainWindow.cpp:1101
-#: libs/ui/KisMainWindow.cpp:1162 libs/ui/KisMainWindow.cpp:1928
-#: libs/ui/KisMainWindow.cpp:1957 libs/ui/KisMainWindow.cpp:2039
-#: libs/ui/KisMainWindow.cpp:2051 libs/ui/KisPart.cpp:544
-#: libs/ui/KisPart.cpp:547 libs/ui/KisReferenceImage.cpp:168
-#: libs/ui/KisRemoteFileFetcher.cpp:54 libs/ui/KisTemplateCreateDia.cpp:297
-#: libs/ui/KisTemplateCreateDia.cpp:403 libs/ui/KisView.cpp:729
-#: libs/ui/opengl/kis_opengl_canvas2.cpp:381
+#: libs/ui/KisApplication.cpp:966 libs/ui/KisDocument.cpp:780
+#: libs/ui/KisDocument.cpp:1504 libs/ui/KisDocument.cpp:1547
+#: libs/ui/KisDocument.cpp:1555 libs/ui/KisMainWindow.cpp:798
+#: libs/ui/KisMainWindow.cpp:974 libs/ui/KisMainWindow.cpp:1088
+#: libs/ui/KisMainWindow.cpp:1101 libs/ui/KisMainWindow.cpp:1162
+#: libs/ui/KisMainWindow.cpp:1928 libs/ui/KisMainWindow.cpp:1957
+#: libs/ui/KisMainWindow.cpp:2039 libs/ui/KisMainWindow.cpp:2051
+#: libs/ui/KisPart.cpp:544 libs/ui/KisPart.cpp:547
+#: libs/ui/KisReferenceImage.cpp:168 libs/ui/KisRemoteFileFetcher.cpp:54
+#: libs/ui/KisTemplateCreateDia.cpp:297 libs/ui/KisTemplateCreateDia.cpp:403
+#: libs/ui/KisView.cpp:729 libs/ui/opengl/kis_opengl_canvas2.cpp:381
 #: libs/ui/widgets/kis_custom_image_widget.cc:277
 #: plugins/assistants/Assistants/kis_assistant_tool.cc:860
 #: plugins/assistants/Assistants/kis_assistant_tool.cc:863
@@ -12679,6 +12682,34 @@ msgstr "fono"
 msgid "Row count"
 msgstr "fono"
 
+#: libs/ui/dialogs/KisRecoverNamedAutosaveDialog.cpp:44
+#, kde-format
+msgctxt ""
+"Recover an autosave for an already existing file: explanation in the "
+"recovery dialog"
+msgid ""
+"An autosave for this file exists. How do you want to proceed?\n"
+"Warning: if you discard the autosave now, it will be removed."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, rbOpenAutosave)
+#: libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:33
+#, fuzzy, kde-format
+msgid "Open the autosave file"
+msgstr "Forigi paĝon"
+
+#. i18n: ectx: property (text), widget (QRadioButton, rbDiscardAutosave)
+#: libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:40
+#, kde-format
+msgid "Discard autosave, open the main file"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, btOk)
+#: libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:49
+#, fuzzy, kde-format
+msgid "OK"
+msgstr "&Bone"
+
 #: libs/ui/dialogs/KisSessionManagerDialog.cpp:53
 #, fuzzy, kde-format
 msgid "Create session"
@@ -12829,44 +12860,44 @@ msgid "Community"
 msgstr "Komentoj"
 
 #. i18n: ectx: property (text), widget (QLabel, manualLink)
-#: libs/ui/forms/KisWelcomePage.ui:83 libs/ui/KisWelcomePageWidget.cpp:218
+#: libs/ui/forms/KisWelcomePage.ui:83 libs/ui/KisWelcomePageWidget.cpp:219
 #, fuzzy, kde-format
 msgid "User Manual"
 msgstr "violkolora"
 
 #. i18n: ectx: property (text), widget (QLabel, gettingStartedLink)
-#: libs/ui/forms/KisWelcomePage.ui:118 libs/ui/KisWelcomePageWidget.cpp:215
+#: libs/ui/forms/KisWelcomePage.ui:118 libs/ui/KisWelcomePageWidget.cpp:216
 #, fuzzy, kde-format
 msgid "Getting Started"
 msgstr "Kreu novan ebenon"
 
 #. i18n: ectx: property (text), widget (QLabel, supportKritaLink)
-#: libs/ui/forms/KisWelcomePage.ui:147 libs/ui/KisWelcomePageWidget.cpp:221
+#: libs/ui/forms/KisWelcomePage.ui:147 libs/ui/KisWelcomePageWidget.cpp:222
 #, fuzzy, kde-format
 msgid "Support Krita"
 msgstr "Krito"
 
 #. i18n: ectx: property (text), widget (QLabel, userCommunityLink)
-#: libs/ui/forms/KisWelcomePage.ui:176 libs/ui/KisWelcomePageWidget.cpp:212
+#: libs/ui/forms/KisWelcomePage.ui:176 libs/ui/KisWelcomePageWidget.cpp:213
 #, fuzzy, kde-format
 msgid "User Community"
 msgstr "Ebenonomo:"
 
 #. i18n: ectx: property (text), widget (QLabel, kritaWebsiteLink)
-#: libs/ui/forms/KisWelcomePage.ui:205 libs/ui/KisWelcomePageWidget.cpp:224
+#: libs/ui/forms/KisWelcomePage.ui:205 libs/ui/KisWelcomePageWidget.cpp:225
 #, fuzzy, kde-format
 msgid "Krita Website"
 msgstr "Ebeno-proprecoj..."
 
 #. i18n: ectx: property (text), widget (QLabel, sourceCodeLink)
-#: libs/ui/forms/KisWelcomePage.ui:240 libs/ui/KisWelcomePageWidget.cpp:227
+#: libs/ui/forms/KisWelcomePage.ui:240 libs/ui/KisWelcomePageWidget.cpp:228
 #, fuzzy, kde-format
 #| msgid "Source"
 msgid "Source Code"
 msgstr "Fonto"
 
 #. i18n: ectx: property (text), widget (QLabel, poweredByKDELink)
-#: libs/ui/forms/KisWelcomePage.ui:294 libs/ui/KisWelcomePageWidget.cpp:230
+#: libs/ui/forms/KisWelcomePage.ui:294 libs/ui/KisWelcomePageWidget.cpp:231
 #, kde-format
 msgid "Powered by KDE"
 msgstr ""
@@ -17734,28 +17765,28 @@ msgctxt "(qtundo-format)"
 msgid "Clone Document"
 msgstr "Koloralĝustigo"
 
-#: libs/ui/KisDocument.cpp:616
+#: libs/ui/KisDocument.cpp:617
 #, kde-format
 msgid "%1 cannot be written to. Please save under a different name."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:674
+#: libs/ui/KisDocument.cpp:675
 #, fuzzy, kde-format
 msgid "Exporting Document..."
 msgstr "Konservi dokumenton"
 
-#: libs/ui/KisDocument.cpp:675
+#: libs/ui/KisDocument.cpp:676
 #, fuzzy, kde-format
 msgid "Saving Document..."
 msgstr "Konservi dokumenton"
 
-#: libs/ui/KisDocument.cpp:773
+#: libs/ui/KisDocument.cpp:774
 #, kde-format
 msgctxt "%1 --- failing file name, %2 --- error message"
 msgid "Error during saving %1: %2"
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:779 plugins/extensions/imagesplit/imagesplit.cpp:88
+#: libs/ui/KisDocument.cpp:780 plugins/extensions/imagesplit/imagesplit.cpp:88
 #, kde-format
 msgid ""
 "Could not save %1\n"
@@ -17764,38 +17795,38 @@ msgstr ""
 "Ne eblis konservigi %1\n"
 "Kialo: %2"
 
-#: libs/ui/KisDocument.cpp:811
+#: libs/ui/KisDocument.cpp:812
 #, fuzzy, kde-format
 msgid "Finished saving %1"
 msgstr "&Poligonilo"
 
-#: libs/ui/KisDocument.cpp:1117
+#: libs/ui/KisDocument.cpp:1118
 #, fuzzy, kde-format
 msgid "Autosaving... %1"
 msgstr "Konservanta..."
 
-#: libs/ui/KisDocument.cpp:1125
+#: libs/ui/KisDocument.cpp:1126
 #, kde-format
 msgid "Autosaving..."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:1131
+#: libs/ui/KisDocument.cpp:1132
 #, kde-format
 msgid "Autosaving postponed: document is busy..."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:1183
+#: libs/ui/KisDocument.cpp:1184
 #, kde-format
 msgctxt "%1 --- failing file name, %2 --- error message"
 msgid "Error during autosaving %1: %2"
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:1197
+#: libs/ui/KisDocument.cpp:1198
 #, kde-format
 msgid "Finished autosaving %1"
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:1399
+#: libs/ui/KisDocument.cpp:1400
 #, kde-format
 msgid ""
 "Malformed URL\n"
@@ -17804,30 +17835,18 @@ msgstr ""
 "Ne valida ligo (URL)\n"
 "%1"
 
-#: libs/ui/KisDocument.cpp:1415
-#, fuzzy, kde-format
-#| msgid ""
-#| "An autosaved file exists for this document.\n"
-#| "Do you want to open it instead?"
-msgid ""
-"An autosaved file exists for this document.\n"
-"Do you want to open the autosaved file instead?"
-msgstr ""
-"Ekzistas jam dosiero por aŭtomata sekurigo de tiu dokumento.\n"
-"Ĉu vi volas malfermi ĝin anstataŭe?"
-
-#: libs/ui/KisDocument.cpp:1498
+#: libs/ui/KisDocument.cpp:1504
 #, kde-format
 msgid "File %1 does not exist."
 msgstr "Dosiero %1 ne ekzistas."
 
-#: libs/ui/KisDocument.cpp:1529
+#: libs/ui/KisDocument.cpp:1535
 #, fuzzy, kde-format
 #| msgid "Open Document"
 msgid "Opening document"
 msgstr "Malfermi dokumenton"
 
-#: libs/ui/KisDocument.cpp:1542
+#: libs/ui/KisDocument.cpp:1548
 #, fuzzy, kde-format
 msgid ""
 "Could not open %2.\n"
@@ -17837,18 +17856,18 @@ msgstr ""
 "%2.\n"
 "Kialo: %1"
 
-#: libs/ui/KisDocument.cpp:1550
+#: libs/ui/KisDocument.cpp:1556
 #, kde-format
 msgid "There were problems opening %1."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:1683
+#: libs/ui/KisDocument.cpp:1689
 #, fuzzy, kde-format
 #| msgid "Not Filled"
 msgid "Not Saved"
 msgstr "Malplenigita:"
 
-#: libs/ui/KisDocument.cpp:2113
+#: libs/ui/KisDocument.cpp:2119
 #, kde-format
 msgctxt ""
 "progress dialog message when the user closes the document that is being saved"
@@ -18851,12 +18870,12 @@ msgctxt "choice for author profile"
 msgid "Anonymous"
 msgstr ""
 
-#: libs/ui/KisWelcomePageWidget.cpp:359
+#: libs/ui/KisWelcomePageWidget.cpp:311
 #, kde-format
 msgid "DEV BUILD"
 msgstr ""
 
-#: libs/ui/KisWelcomePageWidget.cpp:373
+#: libs/ui/KisWelcomePageWidget.cpp:325
 #, kde-format
 msgid "New Version Available!"
 msgstr ""
@@ -43429,6 +43448,17 @@ msgid "Work Recursively"
 msgstr ""
 
 #, fuzzy
+#~| msgid ""
+#~| "An autosaved file exists for this document.\n"
+#~| "Do you want to open it instead?"
+#~ msgid ""
+#~ "An autosaved file exists for this document.\n"
+#~ "Do you want to open the autosaved file instead?"
+#~ msgstr ""
+#~ "Ekzistas jam dosiero por aŭtomata sekurigo de tiu dokumento.\n"
+#~ "Ĉu vi volas malfermi ĝin anstataŭe?"
+
+#, fuzzy
 #~ msgctxt "action"
 #~ msgid "Path editing"
 #~ msgstr "Elekto"
@@ -44022,11 +44052,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Composite mode:"
 #~ msgstr "Aldicio"
-
-#, fuzzy
-#~ msgctxt "very shortened KiB suffix (for statusbar)"
-#~ msgid "K"
-#~ msgstr "&Bone"
 
 #, fuzzy
 #~ msgctxt "very shortened MiB suffix (for statusbar)"
