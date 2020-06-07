@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-06 02:05+0200\n"
+"POT-Creation-Date: 2020-06-07 02:06+0200\n"
 "PO-Revision-Date: 2015-03-25 21:27+0100\n"
 "Last-Translator: Axel Rousseau <axel.rousseau@esperanto-france.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -8226,6 +8226,10 @@ msgstr "Grandeco"
 #: plugins/filters/blur/kis_wdg_gaussian_blur.cpp:48
 #: plugins/filters/blur/kis_wdg_gaussian_blur.cpp:56
 #: plugins/filters/blur/wdgblur.ui:42 plugins/filters/blur/wdgblur.ui:84
+#: plugins/generators/pattern/kis_wdg_pattern.cpp:45
+#: plugins/generators/pattern/kis_wdg_pattern.cpp:46
+#: plugins/generators/pattern/kis_wdg_pattern.cpp:55
+#: plugins/generators/pattern/kis_wdg_pattern.cpp:56
 #: plugins/paintops/curvebrush/kis_curve_line_option.cpp:33
 #: plugins/paintops/curvebrush/kis_curve_paintop_settings.cpp:80
 #: plugins/paintops/deform/kis_brush_size_option.cpp:50
@@ -8250,8 +8254,8 @@ msgstr "Grandeco"
 #: plugins/paintops/spray/kis_spray_shape_option.cpp:136
 #: plugins/paintops/spray/kis_sprayop_option.cpp:43
 #: plugins/tools/basictools/kis_tool_brush.cc:391
-#: plugins/tools/basictools/kis_tool_fill.cc:245
 #: plugins/tools/basictools/kis_tool_fill.cc:252
+#: plugins/tools/basictools/kis_tool_fill.cc:259
 #: plugins/tools/basictools/kis_tool_movetooloptionswidget.cpp:63
 #: plugins/tools/basictools/kis_tool_movetooloptionswidget.cpp:64
 #: plugins/tools/basictools/kis_tool_multihand.cpp:461
@@ -8757,8 +8761,10 @@ msgstr "Grandigi Elekton"
 msgid "Content"
 msgstr "Anguloj:"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tabTransform)
 #: libs/image/kis_keyframe_channel.cpp:31
 #: libs/ui/tool/kis_selection_tool_helper.cpp:382
+#: plugins/generators/pattern/wdgpatternoptions.ui:67
 #: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1684
 #, fuzzy, kde-format
 msgid "Transform"
@@ -11775,6 +11781,8 @@ msgstr "Ecoj de Ebeno"
 #. i18n: ectx: property (suffix), widget (KisSliderSpinBox, intChoke)
 #. i18n: ectx: property (suffix), widget (KisSliderSpinBox, intRange)
 #. i18n: ectx: property (suffix), widget (KisSliderSpinBox, intJitter)
+#. i18n: ectx: property (suffix), widget (KisDoubleParseSpinBox, spbScaleWidth)
+#. i18n: ectx: property (suffix), widget (KisDoubleParseSpinBox, spbScaleHeight)
 #: libs/ui/dialogs/kis_dlg_layer_properties.cc:109
 #: libs/ui/forms/wdgdisplaysettings.ui:360 libs/ui/kis_paintop_box.cc:254
 #: libs/ui/kis_paintop_box.cc:262 libs/ui/layerstyles/wdgInnerGlow.ui:216
@@ -11785,6 +11793,8 @@ msgstr "Ecoj de Ebeno"
 #: plugins/dockers/animation/onion_skins_docker.cpp:56
 #: plugins/dockers/animation/timeline_frames_view.cpp:235
 #: plugins/dockers/layerdocker/LayerBox.cpp:197
+#: plugins/generators/pattern/wdgpatternoptions.ui:132
+#: plugins/generators/pattern/wdgpatternoptions.ui:161
 #: plugins/impex/jpeg/kis_jpeg_export.cc:230
 #: plugins/impex/jpeg/kis_jpeg_export.cc:232
 #: plugins/paintops/curvebrush/kis_curve_paintop_settings.cpp:142
@@ -11996,7 +12006,7 @@ msgstr "Alfo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
 #: libs/ui/dialogs/kis_dlg_preferences.cc:149
-#: libs/ui/forms/wdggeometryoptions.ui:55
+#: libs/ui/forms/wdggeometryoptions.ui:92
 #, fuzzy, kde-format
 msgid "No Outline"
 msgstr "Penikoj"
@@ -12479,6 +12489,7 @@ msgstr ""
 #: plugins/extensions/imagesize/wdg_canvassize.ui:45
 #: plugins/extensions/imagesize/wdg_imagesize.ui:67
 #: plugins/extensions/imagesize/wdg_layersize.ui:58
+#: plugins/generators/pattern/wdgpatternoptions.ui:122
 #: plugins/impex/heightmap/kis_wdg_options_heightmap.ui:161
 #: plugins/impex/pdf/pdfimportwidgetbase.ui:163
 #: plugins/paintops/spray/wdgsprayshapeoptions.ui:94
@@ -12563,6 +12574,7 @@ msgstr "X-deŝovo:"
 #: plugins/extensions/imagesize/wdg_canvassize.ui:29
 #: plugins/extensions/imagesize/wdg_imagesize.ui:97
 #: plugins/extensions/imagesize/wdg_layersize.ui:125
+#: plugins/generators/pattern/wdgpatternoptions.ui:151
 #: plugins/impex/heightmap/kis_wdg_options_heightmap.ui:108
 #: plugins/impex/pdf/pdfimportwidgetbase.ui:195
 #: plugins/paintops/spray/wdgsprayshapeoptions.ui:129
@@ -14518,50 +14530,30 @@ msgstr "Fonto"
 msgid "Geometry Options"
 msgstr "Geometriaj opcioj"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabelOutline)
-#: libs/ui/forms/wdggeometryoptions.ui:41
-#, fuzzy, kde-format
-msgid "Outline:"
-msgstr "Penikoj"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
-#: libs/ui/forms/wdggeometryoptions.ui:60
-#: plugins/paintops/roundmarker/kis_roundmarkerop_settings_widget.cpp:41
-#, kde-format
-msgid "Brush"
-msgstr "Peniko"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
-#: libs/ui/forms/wdggeometryoptions.ui:65
-#, fuzzy, kde-format
-#| msgid "Background Color"
-msgid "Brush (Background Color)"
-msgstr "Fona Koloro"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabelFill)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: libs/ui/forms/wdggeometryoptions.ui:73
+#: libs/ui/forms/wdggeometryoptions.ui:41
 #: libs/ui/forms/wdgstrokeselectionproperties.ui:180
 #, kde-format
 msgid "Fill:"
 msgstr "Plenigi:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbFill)
-#: libs/ui/forms/wdggeometryoptions.ui:87
+#: libs/ui/forms/wdggeometryoptions.ui:55
 #, kde-format
 msgid "Not Filled"
 msgstr "Malplenigita:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbFill)
 #. i18n: ectx: property (text), widget (QRadioButton, solidColorButton)
-#: libs/ui/forms/wdggeometryoptions.ui:92
+#: libs/ui/forms/wdggeometryoptions.ui:60
 #: plugins/paintops/experiment/wdgexperimentoptions.ui:152
 #, kde-format
 msgid "Foreground Color"
 msgstr "Malfona Koloro"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbFill)
-#: libs/ui/forms/wdggeometryoptions.ui:97
+#: libs/ui/forms/wdggeometryoptions.ui:65
 #: plugins/tools/svgtexttool/SvgTextEditor.cpp:1192
 #, kde-format
 msgid "Background Color"
@@ -14572,11 +14564,13 @@ msgstr "Fona Koloro"
 #. i18n: ectx: property (text), widget (QToolButton, btnPatternFill)
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbFill)
 #. i18n: ectx: property (text), item, widget (QComboBox, editMeteringMode)
-#: libs/ui/forms/wdggeometryoptions.ui:102
-#: libs/ui/widgets/KisDitherWidget.ui:49 libs/ui/widgets/KisDitherWidget.ui:90
+#. i18n: ectx: attribute (title), widget (QWidget, tabPatterns)
+#: libs/ui/forms/wdggeometryoptions.ui:70 libs/ui/widgets/KisDitherWidget.ui:49
+#: libs/ui/widgets/KisDitherWidget.ui:90
 #: libs/ui/widgets/KoFillConfigWidget.ui:106
 #: plugins/extensions/metadataeditor/editors/exif.ui:432
 #: plugins/generators/pattern/patterngenerator.h:53
+#: plugins/generators/pattern/wdgpatternoptions.ui:21
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:80
 #: plugins/paintops/defaultpaintops/brush/kis_brushop_settings_widget.cpp:89
 #: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:53
@@ -14586,6 +14580,60 @@ msgstr "Fona Koloro"
 #, kde-format
 msgid "Pattern"
 msgstr "Ŝablono"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabelOutline)
+#: libs/ui/forms/wdggeometryoptions.ui:78
+#, fuzzy, kde-format
+msgid "Outline:"
+msgstr "Penikoj"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
+#: libs/ui/forms/wdggeometryoptions.ui:97
+#: plugins/paintops/roundmarker/kis_roundmarkerop_settings_widget.cpp:41
+#, kde-format
+msgid "Brush"
+msgstr "Peniko"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
+#: libs/ui/forms/wdggeometryoptions.ui:102
+#, fuzzy, kde-format
+#| msgid "Background Color"
+msgid "Brush (Background Color)"
+msgstr "Fona Koloro"
+
+#. i18n: ectx: property (title), widget (QGroupBox, gbPatternTransform)
+#: libs/ui/forms/wdggeometryoptions.ui:110
+#, fuzzy, kde-format
+#| msgid "Warp Transform"
+msgid "Pattern Transform"
+msgstr "Perspektivtransformo"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: libs/ui/forms/wdggeometryoptions.ui:116
+#: plugins/tools/basictools/kis_tool_fill.cc:265
+#, fuzzy, kde-format
+#| msgid "Rotate"
+msgid "Rotate:"
+msgstr "Rotaciu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, scaleLbl)
+#. i18n: ectx: property (text), widget (QLabel, lblDiameter)
+#. i18n: ectx: property (text), widget (QLabel, ScaleLbl)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: libs/ui/forms/wdggeometryoptions.ui:123
+#: plugins/generators/pattern/wdgpatternoptions.ui:116
+#: plugins/paintops/gridbrush/wdggridoptions.ui:84
+#: plugins/paintops/hairy/wdgbristleoptions.ui:130
+#: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:78
+#: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:198
+#: plugins/paintops/spray/wdgsprayoptions.ui:118
+#: plugins/tools/basictools/kis_tool_fill.cc:272
+#, fuzzy, kde-format
+msgid "Scale:"
+msgstr "&Skali"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgImageProperties)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgNewImage)
@@ -26802,10 +26850,14 @@ msgstr "Deŝovo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblXOff)
 #. i18n: ectx: property (text), widget (QLabel, xLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, ratiox_label)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/extensions/imagesize/wdg_canvassize.ui:179
 #: plugins/extensions/offsetimage/wdg_offsetimage.ui:40
+#: plugins/generators/pattern/wdgpatternoptions.ui:186
+#: plugins/generators/pattern/wdgpatternoptions.ui:215
 #: plugins/generators/simplexnoise/wdgsimplexnoiseoptions.ui:125
 #: plugins/tools/defaulttool/defaulttool/DefaultToolGeometryWidget.ui:31
 #, kde-format
@@ -26820,10 +26872,14 @@ msgstr "Ankro"
 
 #. i18n: ectx: property (text), widget (QLabel, lblYOff)
 #. i18n: ectx: property (text), widget (QLabel, yLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, ratioy_label)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/extensions/imagesize/wdg_canvassize.ui:231
 #: plugins/extensions/offsetimage/wdg_offsetimage.ui:70
+#: plugins/generators/pattern/wdgpatternoptions.ui:193
+#: plugins/generators/pattern/wdgpatternoptions.ui:222
 #: plugins/generators/simplexnoise/wdgsimplexnoiseoptions.ui:145
 #: plugins/tools/defaulttool/defaulttool/DefaultToolGeometryWidget.ui:95
 #, kde-format
@@ -28953,7 +29009,9 @@ msgid "PushButton"
 msgstr "Premo"
 
 #. i18n: ectx: property (text), widget (QLabel, lblOffset)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: plugins/filters/asccdl/wdg_asccdl.ui:31
+#: plugins/generators/pattern/wdgpatternoptions.ui:180
 #: plugins/python/documenttools/tools/canvassizetool/canvassizetool.py:48
 #, fuzzy, kde-format
 #| msgid "Offset"
@@ -29115,9 +29173,11 @@ msgstr "Radiuso"
 #. i18n: ectx: property (text), widget (QLabel, brushRotationLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (label), widget (KisIntParseSpinBox, irisRotationSlider)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (text), widget (QLabel, axisRotationLabel)
 #: plugins/filters/blur/wdg_lens_blur.ui:102
 #: plugins/filters/blur/wdg_lens_blur.ui:124
+#: plugins/generators/pattern/wdgpatternoptions.ui:252
 #: plugins/paintops/libpaintop/forms/wdgpredefinedbrushchooser.ui:174
 #: plugins/tools/basictools/wdgmultihandtool.ui:125
 #, fuzzy, kde-format
@@ -30753,23 +30813,49 @@ msgstr "&Procentoj:"
 msgid "A hexagon"
 msgstr "&Procentoj:"
 
-#: plugins/generators/pattern/patterngenerator.cpp:114
+#: plugins/generators/pattern/patterngenerator.cpp:128
 #, fuzzy, kde-format
 msgid "&Pattern..."
 msgstr "&Ŝablonoj"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPattern)
-#: plugins/generators/pattern/wdgpatternoptions.ui:31
+#: plugins/generators/pattern/wdgpatternoptions.ui:27
 #, fuzzy, kde-format
 msgid "&Pattern:"
 msgstr "&Ŝablonoj"
 
 #. i18n: ectx: property (text), widget (QLabel, lblColor)
-#: plugins/generators/pattern/wdgpatternoptions.ui:44
+#: plugins/generators/pattern/wdgpatternoptions.ui:50
 #: plugins/generators/solid/wdgcoloroptions.ui:17
 #, fuzzy, kde-format
 msgid "&Color:"
 msgstr "Koloro:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: plugins/generators/pattern/wdgpatternoptions.ui:73
+#, fuzzy, kde-format
+msgid "3d Rotation:"
+msgstr "Rotaciu je &90°"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: plugins/generators/pattern/wdgpatternoptions.ui:79
+#, fuzzy, kde-format
+msgid "X-Rotation:"
+msgstr "Rotaciu je &90°"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: plugins/generators/pattern/wdgpatternoptions.ui:86
+#, fuzzy, kde-format
+msgid "Y-Rotation:"
+msgstr "Rotaciu je &90°"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: plugins/generators/pattern/wdgpatternoptions.ui:209
+#: plugins/paintops/hairy/wdgbristleoptions.ui:114
+#, fuzzy, kde-format
+msgid "Shear:"
+msgstr "Nova bildo"
 
 #: plugins/generators/simplexnoise/simplexnoisegenerator.cpp:48
 #, fuzzy, kde-format
@@ -33692,20 +33778,6 @@ msgstr "Subdivido:"
 msgid "Division by pressure"
 msgstr "Montrado"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QLabel, scaleLbl)
-#. i18n: ectx: property (text), widget (QLabel, lblDiameter)
-#. i18n: ectx: property (text), widget (QLabel, ScaleLbl)
-#: plugins/paintops/gridbrush/wdggridoptions.ui:84
-#: plugins/paintops/hairy/wdgbristleoptions.ui:130
-#: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:78
-#: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:198
-#: plugins/paintops/spray/wdgsprayoptions.ui:118
-#, fuzzy, kde-format
-msgid "Scale:"
-msgstr "&Skali"
-
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: plugins/paintops/gridbrush/wdggridoptions.ui:97
 #, fuzzy, kde-format
@@ -33752,12 +33824,6 @@ msgstr "Malgrandigi Elekton"
 #, fuzzy, kde-format
 msgid "Random offset:"
 msgstr "Haza&rda Bruo..."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: plugins/paintops/hairy/wdgbristleoptions.ui:114
-#, fuzzy, kde-format
-msgid "Shear:"
-msgstr "Nova bildo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, density)
@@ -38415,59 +38481,59 @@ msgstr "Skizi rektangulon"
 msgid "Ellipse Tool"
 msgstr "Elipso"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:129
+#: plugins/tools/basictools/kis_tool_fill.cc:130
 #, kde-format
 msgid "You cannot use this tool with the selected layer type"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_fill.cc:172
+#: plugins/tools/basictools/kis_tool_fill.cc:173
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Flood Fill"
 msgstr "Fluplenigo"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:225
+#: plugins/tools/basictools/kis_tool_fill.cc:232
 #, fuzzy, kde-format
 msgid "Fast mode: "
 msgstr "Koloromoduso"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:228
+#: plugins/tools/basictools/kis_tool_fill.cc:235
 #, kde-format
 msgid ""
 "Fills area faster, but does not take composition mode into account. "
 "Selections and other extended features will also be disabled."
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_fill.cc:233
+#: plugins/tools/basictools/kis_tool_fill.cc:240
 #: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:661
 #, kde-format
 msgid "Threshold: "
 msgstr "Pentrosojlo:"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:240
+#: plugins/tools/basictools/kis_tool_fill.cc:247
 #, fuzzy, kde-format
 msgid "Grow selection: "
 msgstr "Grandigi elekton per"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:247
+#: plugins/tools/basictools/kis_tool_fill.cc:254
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:240
 #, fuzzy, kde-format
 msgid "Feathering radius: "
 msgstr "Elekto"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:254
+#: plugins/tools/basictools/kis_tool_fill.cc:261
 #, fuzzy, kde-format
 msgid "Use pattern:"
 msgstr "Uzi ŝablonon"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:256
+#: plugins/tools/basictools/kis_tool_fill.cc:263
 #, kde-format
 msgid ""
 "When checked do not use the foreground color, but the pattern selected to "
 "fill with"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_fill.cc:261
+#: plugins/tools/basictools/kis_tool_fill.cc:282
 #, fuzzy, kde-format
 msgctxt ""
 "This is a label before a combobox with different choices regarding which "
@@ -38478,7 +38544,7 @@ msgctxt ""
 msgid "Sample:"
 msgstr "Helevo"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:270
+#: plugins/tools/basictools/kis_tool_fill.cc:291
 #, kde-format
 msgctxt ""
 "This is a string in tool options for Fill Tool to describe a combobox about "
@@ -38487,19 +38553,19 @@ msgctxt ""
 msgid "Labels used:"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_fill.cc:274
+#: plugins/tools/basictools/kis_tool_fill.cc:295
 #, fuzzy, kde-format
 msgid "Fill entire selection:"
 msgstr "Plenigi tutan elekton"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:276
+#: plugins/tools/basictools/kis_tool_fill.cc:297
 #, kde-format
 msgid ""
 "When checked do not look at the current layer colors, but just fill all of "
 "the selected area"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_fill.cc:346
+#: plugins/tools/basictools/kis_tool_fill.cc:377
 #, fuzzy, kde-format
 #| msgid "Current Layer"
 msgctxt ""
@@ -38508,7 +38574,7 @@ msgctxt ""
 msgid "Current Layer"
 msgstr "Aktuala Ebeno"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:350
+#: plugins/tools/basictools/kis_tool_fill.cc:381
 #, fuzzy, kde-format
 msgctxt ""
 "Option in fill tool: take all layers (merged) into account when calculating "
@@ -38516,7 +38582,7 @@ msgctxt ""
 msgid "All Layers"
 msgstr "&Filtrilgalerio"
 
-#: plugins/tools/basictools/kis_tool_fill.cc:353
+#: plugins/tools/basictools/kis_tool_fill.cc:384
 #, fuzzy, kde-format
 msgctxt ""
 "Option in fill tool: take all layers that were labeled with a color label "
@@ -38525,7 +38591,7 @@ msgctxt ""
 msgid "Color Labeled Layers"
 msgstr "Kolorgamo"
 
-#: plugins/tools/basictools/kis_tool_fill.h:129
+#: plugins/tools/basictools/kis_tool_fill.h:136
 #, fuzzy, kde-format
 msgid "Fill Tool"
 msgstr "Elipso"
@@ -65029,10 +65095,6 @@ msgstr ""
 #~ msgstr "Dekstre:"
 
 #~ msgid "Perspective Transform"
-#~ msgstr "Perspektivtransformo"
-
-#~| msgid "Perspective Transform"
-#~ msgid "Warp Transform"
 #~ msgstr "Perspektivtransformo"
 
 #~| msgid "Perspective Transform"
