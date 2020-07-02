@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cantor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-30 01:57+0200\n"
+"POT-Creation-Date: 2020-07-02 01:58+0200\n"
 "PO-Revision-Date: 2015-03-15 08:54-0400\n"
 "Last-Translator: Eliovir <eliovir@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -374,7 +374,7 @@ msgstr ""
 #. i18n: ectx: label, entry (variableManagement), group (MaximaBackend)
 #. i18n: ectx: label, entry (variableManagement), group (JuliaBackend)
 #. i18n: ectx: label, entry (variableManagement), group (PythonBackend)
-#: backends/julia/juliabackend.kcfg:16 backends/julia/settings.ui:34
+#: backends/julia/juliabackend.kcfg:16 backends/julia/settings.ui:44
 #: backends/maxima/maximabackend.kcfg:21 backends/maxima/settings.ui:62
 #: backends/python/pythonbackend.kcfg:21 backends/python/settings.ui:65
 #: backends/R/rserver/rserver.kcfg:16 backends/R/settings.ui:51
@@ -394,24 +394,48 @@ msgstr ""
 msgid "Integrate Plots into the Worksheet"
 msgstr ""
 
-#: backends/julia/juliaextensions.cpp:213
+#. i18n: ectx: label, entry (plotExtenstionGraphicPackage), group (JuliaBackend)
+#. i18n: ectx: label, entry (choosenGraphicPackage), group (PythonBackend)
+#. i18n: ectx: label, entry (plotExtenstionGraphicPackage), group (PythonBackend)
+#: backends/julia/juliabackend.kcfg:37 backends/python/pythonbackend.kcfg:33
+#: backends/python/pythonbackend.kcfg:44
+#, kde-format
+msgid "Graphical package, for which will be enable support for embedding plots"
+msgstr ""
+
+#: backends/julia/juliaextensions.cpp:261
+#, kde-format
+msgid "# Sorry, but Gadfly don't support 3d plots"
+msgstr ""
+
+#: backends/julia/juliaextensions.cpp:278
 #, kde-format
 msgid "Julia script file (*.jl)"
 msgstr ""
 
-#: backends/julia/juliasession.cpp:220
+#: backends/julia/juliasession.cpp:248
 #, kde-format
 msgid "Julia process stopped working."
 msgstr ""
 
-#: backends/julia/juliasession.cpp:224
+#: backends/julia/juliasession.cpp:252
 #, kde-format
 msgid "Failed to start Julia process."
 msgstr ""
 
-#: backends/julia/juliasession.cpp:228
+#: backends/julia/juliasession.cpp:256
 #, kde-format
 msgid "Communication with Julia process failed for unknown reasons."
+msgstr ""
+
+#: backends/julia/juliasession.cpp:328
+#, kde-format
+msgid ""
+"On this moment, integrated graphic can handle only one of Julia packages - "
+"GR graphic package. And for using this feature you need to install the "
+"package first. For this, run Pkg.install(\"GR\") in Cantor or in julia REPL. "
+"Also, it is important to note, that this is a long operation and better use "
+"julia REPL, because Cantor don't show intermediate text unlike the julia."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -420,17 +444,8 @@ msgstr ""
 msgid "Path to Julia:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_variableManagement)
-#: backends/julia/settings.ui:31 backends/maxima/settings.ui:59
-#: backends/python/settings.ui:62 backends/R/settings.ui:48
-#, kde-format
-msgid ""
-"Monitor the creation and destruction of variables and show the existing "
-"variables in the variable panel."
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_integratePlots)
-#: backends/julia/settings.ui:41 backends/maxima/settings.ui:49
+#: backends/julia/settings.ui:31 backends/maxima/settings.ui:49
 #: backends/python/settings.ui:52 backends/R/settings.ui:38
 #: backends/scilab/settings.ui:31
 #, kde-format
@@ -440,14 +455,23 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_integratePlots)
-#: backends/julia/settings.ui:44 backends/maxima/settings.ui:52
+#: backends/julia/settings.ui:34 backends/maxima/settings.ui:52
 #: backends/python/settings.ui:55 backends/R/settings.ui:41
 #: backends/scilab/settings.ui:34
 #, kde-format
 msgid "Integrate Plots in Worksheet"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_variableManagement)
+#: backends/julia/settings.ui:41 backends/maxima/settings.ui:59
+#: backends/python/settings.ui:62 backends/R/settings.ui:48
+#, kde-format
+msgid ""
+"Monitor the creation and destruction of variables and show the existing "
+"variables in the variable panel."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label2)
 #: backends/julia/settings.ui:53
 #, kde-format
 msgid "Inline Plots Intermediate Format:"
@@ -457,6 +481,46 @@ msgstr ""
 #: backends/julia/settings.ui:60
 #, kde-format
 msgid "Inner format of plots, if plots embedding is enabled."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label3)
+#. i18n: ectx: property (toolTip), widget (QLabel, label4)
+#: backends/julia/settings.ui:81 backends/python/settings.ui:74
+#, kde-format
+msgid ""
+"Graphic package, which code will be used for plotting via \"Plot\" Cantor "
+"menu."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label3)
+#. i18n: ectx: property (text), widget (QLabel, label4)
+#: backends/julia/settings.ui:84 backends/python/settings.ui:77
+#, kde-format
+msgid "Preferred package for the \"Plot\" menu: "
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:98 backends/python/settings.ui:106
+#, kde-format
+msgid "GR"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:103
+#, kde-format
+msgid "Plots"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:108
+#, kde-format
+msgid "PyPlot"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:113
+#, kde-format
+msgid "Gadfly"
 msgstr ""
 
 #: backends/kalgebra/kalgebrabackend.cpp:68
@@ -707,6 +771,16 @@ msgstr ""
 msgid "Cantor"
 msgstr "Cantor"
 
+#: backends/octave/octavesession.cpp:440
+#, kde-format
+msgid ""
+"The plot integration don't work because Cantor found, that Octave can't "
+"create plots, because of not graphical backends for it: this conclusion was "
+"made on the basis of empty output from available_graphics_toolkits() "
+"function. Looks like you should install some additional OS packages, like "
+"gnuplot, fltk or qt for possibility to create plots."
+msgstr ""
+
 #: backends/python/pythonbackend.cpp:86
 #, kde-format
 msgctxt "The url to the documentation Python"
@@ -731,13 +805,6 @@ msgstr ""
 #: backends/python/pythonbackend.kcfg:14
 #, kde-format
 msgid "Url to the local Python documentation"
-msgstr ""
-
-#. i18n: ectx: label, entry (choosenGraphicPackage), group (PythonBackend)
-#. i18n: ectx: label, entry (plotExtenstionGraphicPackage), group (PythonBackend)
-#: backends/python/pythonbackend.kcfg:33 backends/python/pythonbackend.kcfg:44
-#, kde-format
-msgid "Graphical package, for which will be enable support for embedding plots"
 msgstr ""
 
 #: backends/python/pythonextensions.cpp:300
@@ -786,20 +853,6 @@ msgstr ""
 msgid "Path to Cantor Python Server:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label4)
-#: backends/python/settings.ui:74
-#, kde-format
-msgid ""
-"Graphic package, which code will be used for plotting via \"Plot\" Cantor "
-"menu."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label4)
-#: backends/python/settings.ui:77
-#, kde-format
-msgid "Preferred package for the \"Plot\" menu: "
-msgstr ""
-
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
 #: backends/python/settings.ui:91
 #, kde-format
@@ -816,12 +869,6 @@ msgstr ""
 #: backends/python/settings.ui:101
 #, kde-format
 msgid "plot.ly"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/python/settings.ui:106
-#, kde-format
-msgid "GR"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
