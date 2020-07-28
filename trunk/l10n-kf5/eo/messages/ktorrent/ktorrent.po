@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-07-22 02:21+0200\n"
+"POT-Creation-Date: 2020-07-28 02:17+0200\n"
 "PO-Revision-Date: 2009-11-17 11:13+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -469,13 +469,17 @@ msgid "Invert Selection"
 msgstr "Inversigi elekton"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_collapse_all)
+#. i18n: ectx: property (text), widget (QPushButton, btnCollapseAll)
 #: ktorrent/dialogs/fileselectdlg.ui:165
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:36
 #, kde-format
 msgid "Collapse All"
 msgstr "Maletendi ĉiujn"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_expand_all)
+#. i18n: ectx: property (text), widget (QPushButton, btnExpandAll)
 #: ktorrent/dialogs/fileselectdlg.ui:172
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:29
 #, kde-format
 msgid "Expand All"
 msgstr "Etendi ĉiujn"
@@ -494,6 +498,7 @@ msgstr ""
 #: ktorrent/dialogs/torrentcreatordlg.ui:63
 #: plugins/logviewer/logprefwidget.ui:36
 #: plugins/scanfolder/scanfolderprefpage.ui:72
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:98
 #: plugins/syndication/filtereditor.ui:242
 #, kde-format
 msgid "Options"
@@ -701,6 +706,7 @@ msgstr "Ne komenci torentojn"
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
 #. i18n: ectx: property (text), widget (QPushButton, cancel_button)
 #: ktorrent/dialogs/missingfilesdlg.ui:80 ktorrent/view/scanextender.ui:214
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:156
 #, kde-format
 msgid "Cancel"
 msgstr "Rezigni"
@@ -5460,6 +5466,7 @@ msgid "Show Filter"
 msgstr "Aldoni dosierujon"
 
 #: plugins/infowidget/fileview.cpp:338
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:188
 #, fuzzy, kde-format
 #| msgid ""
 #| "You will lose all data in this file, are you sure you want to do this ?"
@@ -6571,21 +6578,27 @@ msgstr "Uzi riĉan tekston por protokolo"
 msgid "Log widget position:"
 msgstr ""
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ScanForLostFilesWidgetPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:68
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:33
 #, fuzzy, kde-format
 #| msgid "Torrent files"
 msgid "Separate activity"
 msgstr "Torentdosieroj"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ScanForLostFilesWidgetPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:73
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:38
 #, kde-format
 msgid "Dockable widget"
 msgstr ""
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ScanForLostFilesWidgetPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:78
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:43
 #, fuzzy, kde-format
 #| msgid "Torrent files"
 msgid "Torrent activity"
@@ -7011,8 +7024,10 @@ msgstr ""
 msgid "Remove Folder"
 msgstr "Elpreni dosierujon"
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, cbShowAllFiles)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openSilently)
 #: plugins/scanfolder/scanfolderprefpage.ui:78
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:104
 #, kde-format
 msgid "Open the torrents without asking any questions."
 msgstr "Senpete malfermas torentojn."
@@ -7073,6 +7088,78 @@ msgstr ""
 #| msgid "Stop all torrents"
 msgid "Group to add torrents to."
 msgstr "Ĉesigi ĉiujn torentojn"
+
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.cpp:35
+#, kde-format
+msgctxt "plugin name"
+msgid "Scan for lost files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:19
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox"
+#| msgid "Widget type:"
+msgid "Widget position:"
+msgstr "Fenestraĵa tipo:"
+
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:44
+#, kde-format
+msgid "Scan for lost files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, btnScanFolder)
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:161
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:82
+#, kde-format
+msgid "Scan"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:17
+#, fuzzy, kde-format
+#| msgid "Select &All"
+msgid "Select folder:"
+msgstr "Elekti ĉi&ujn"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:107
+#, fuzzy, kde-format
+#| msgid "Show a file list"
+msgid "Show all files"
+msgstr "Montri dosierliston"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:121
+#, fuzzy, kde-format
+#| msgid "Open silently"
+msgid "Open file"
+msgstr "Malfermi silente"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:130
+#, fuzzy, kde-format
+#| msgid "Delete File(s)"
+msgid "Delete on disk"
+msgstr "Forigi dosiero(j)n"
+
+#. i18n: ectx: property (shortcut), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:133
+#, kde-format
+msgid "Ctrl+Del"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:142
+#, kde-format
+msgid "Copy to clipboard"
+msgstr ""
+
+#. i18n: ectx: property (shortcut), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:145
+#, kde-format
+msgid "Ctrl+C"
+msgstr ""
 
 #. i18n: ectx: ToolBar (ScriptingToolbar)
 #. i18n: ectx: Menu (ScriptingMenu)
