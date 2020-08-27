@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-08-22 02:19+0200\n"
+"POT-Creation-Date: 2020-08-27 02:23+0200\n"
 "PO-Revision-Date: 2009-12-21 12:23+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -1427,7 +1427,6 @@ msgstr ""
 #: kmymoney/plugins/views/reports/core/listtable.cpp:647
 #: kmymoney/plugins/views/reports/core/pivottable.cpp:2173
 #: kmymoney/plugins/views/reports/reporttabrowcolquery.ui:185
-#: kmymoney/views/investactivities.cpp:408
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Price"
@@ -5851,7 +5850,6 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QDialog, KSplitTransactionDlg)
 #: kmymoney/models/ledgertransaction_p.h:78 kmymoney/mymoney/splitmodel.cpp:94
 #: kmymoney/oldregister/ksplittransactiondlg.ui:14
-#: kmymoney/views/investtransactioneditor.cpp:230
 #, fuzzy, kde-format
 #| msgid "Select a year"
 msgid "Split transaction"
@@ -7850,7 +7848,7 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, m_accountTab)
 #. i18n: ectx: property (text), widget (QTreeWidget, m_scheduleTree)
-#. i18n: ectx: property (text), widget (QLabel, accountLabel)
+#. i18n: ectx: property (text), widget (QLabel, assetAccountLabel)
 #. i18n: ectx: property (text), widget (QCheckBox, m_qcheckboxAccount)
 #. i18n: ectx: property (text), widget (QCheckBox, m_checkAccount)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
@@ -7928,7 +7926,6 @@ msgstr "Adreso"
 #: kmymoney/mymoney/storage/journalmodel.cpp:120
 #: kmymoney/oldregister/investtransaction.cpp:155
 #: kmymoney/oldregister/stdtransaction.cpp:100
-#: kmymoney/views/investtransactioneditor.cpp:94
 #: kmymoney/widgets/kmymoneyactivitycombo.cpp:57
 #, kde-format
 msgid "Dividend"
@@ -7943,7 +7940,6 @@ msgstr ""
 #: kmymoney/mymoney/storage/journalmodel.cpp:124
 #: kmymoney/oldregister/investtransaction.cpp:161
 #: kmymoney/oldregister/stdtransaction.cpp:102
-#: kmymoney/views/investtransactioneditor.cpp:96
 #: kmymoney/widgets/kmymoneyactivitycombo.cpp:59
 #, fuzzy, kde-format
 #| msgid "Riel"
@@ -7962,7 +7958,6 @@ msgstr "Adreso"
 #: kmymoney/mymoney/storage/journalmodel.cpp:128
 #: kmymoney/oldregister/investtransaction.cpp:167
 #: kmymoney/oldregister/stdtransaction.cpp:104
-#: kmymoney/views/investtransactioneditor.cpp:100
 #: kmymoney/widgets/kmymoneyactivitycombo.cpp:63
 #, fuzzy, kde-format
 #| msgid "Interest rate"
@@ -8326,7 +8321,6 @@ msgstr ""
 #: kmymoney/oldregister/investactivities.cpp:282
 #: kmymoney/plugins/xml/mymoneystorageanon.cpp:170
 #: kmymoney/plugins/xml/mymoneystorageanon.cpp:171
-#: kmymoney/views/investactivities.cpp:379
 #, kde-format
 msgid "%1 (Brokerage)"
 msgstr ""
@@ -8335,7 +8329,6 @@ msgstr ""
 #: kmymoney/oldregister/investactivities.cpp:325
 #: kmymoney/oldregister/investtransaction.cpp:260
 #: kmymoney/oldregister/investtransactioneditor.cpp:479
-#: kmymoney/views/investactivities.cpp:410
 #: kmymoney/views/investtransactioneditor.ui:35
 #, kde-format
 msgid "Price/share"
@@ -8346,7 +8339,7 @@ msgstr ""
 #: kmymoney/oldregister/investactivities.cpp:327
 #: kmymoney/oldregister/investtransactioneditor.cpp:288
 #: kmymoney/oldregister/ksplittransactiondlg.ui:252
-#: kmymoney/views/investactivities.cpp:412 kmymoney/views/splitdialog.ui:555
+#: kmymoney/views/splitdialog.ui:555
 #, fuzzy, kde-format
 #| msgid "Select a year"
 msgid "Transaction amount"
@@ -8442,7 +8435,6 @@ msgid "Total"
 msgstr ""
 
 #: kmymoney/oldregister/investactivities.cpp:896
-#: kmymoney/views/investactivities.cpp:1098
 #, kde-format
 msgid "Ratio 1/"
 msgstr ""
@@ -18587,53 +18579,235 @@ msgstr "Ne eblis malfermi la dosieron '%1' por skribi"
 msgid "Unable to upload to '%1'.<br />%2"
 msgstr "Ne eblis malfermi la dosieron '%1' por skribi"
 
-#: kmymoney/views/investtransactioneditor.cpp:92
-#: kmymoney/widgets/kmymoneyactivitycombo.cpp:55
+#: kmymoney/views/investactivities.cpp:264
+#, fuzzy, kde-format
+#| msgctxt "Street address"
+#| msgid "Address"
+msgctxt "@label:textbox"
+msgid "Shares"
+msgstr "Adreso"
+
+#: kmymoney/views/investactivities.cpp:272
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@label:textbox"
+msgid "Price"
+msgstr "Antaŭrigardo"
+
+#: kmymoney/views/investactivities.cpp:274
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@label:textbox"
+msgid "Price/share"
+msgstr "Antaŭrigardo"
+
+#: kmymoney/views/investactivities.cpp:276
+#, fuzzy, kde-format
+#| msgid "Select a year"
+msgctxt "@label:textbox"
+msgid "Transaction amount"
+msgstr "Elektu jaron"
+
+#: kmymoney/views/investactivities.cpp:566
 #, kde-format
-msgid "Buy shares"
+msgctxt "@label:textbox"
+msgid "Ratio 1/"
 msgstr ""
 
-#: kmymoney/views/investtransactioneditor.cpp:93
-#: kmymoney/widgets/kmymoneyactivitycombo.cpp:56
-#, kde-format
-msgid "Sell shares"
-msgstr ""
+#: kmymoney/views/investtransactioneditor.cpp:94
+#, fuzzy, kde-format
+#| msgctxt "Street address"
+#| msgid "Address"
+msgctxt "@item:inlistbox transaction type"
+msgid "Buy shares"
+msgstr "Adreso"
 
 #: kmymoney/views/investtransactioneditor.cpp:95
-#: kmymoney/widgets/kmymoneyactivitycombo.cpp:58
+#, fuzzy, kde-format
+#| msgctxt "Street address"
+#| msgid "Address"
+msgctxt "@item:inlistbox transaction type"
+msgid "Sell shares"
+msgstr "Adreso"
+
+#: kmymoney/views/investtransactioneditor.cpp:96
 #, kde-format
-msgid "Reinvest dividend"
+msgctxt "@item:inlistbox transaction type"
+msgid "Dividend"
 msgstr ""
 
 #: kmymoney/views/investtransactioneditor.cpp:97
-#: kmymoney/widgets/kmymoneyactivitycombo.cpp:60
-#, kde-format
-msgid "Add shares"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Interest rate"
+msgctxt "@item:inlistbox transaction type"
+msgid "Reinvest dividend"
+msgstr "Interezo"
 
 #: kmymoney/views/investtransactioneditor.cpp:98
-#: kmymoney/widgets/kmymoneyactivitycombo.cpp:61
-#, kde-format
-msgid "Remove shares"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Riel"
+msgctxt "@item:inlistbox transaction type"
+msgid "Yield"
+msgstr "Riel"
 
 #: kmymoney/views/investtransactioneditor.cpp:99
-#: kmymoney/widgets/kmymoneyactivitycombo.cpp:62
-#, kde-format
-msgid "Split shares"
-msgstr ""
+#, fuzzy, kde-format
+#| msgctxt "Street address"
+#| msgid "Address"
+msgctxt "@item:inlistbox transaction type"
+msgid "Add shares"
+msgstr "Adreso"
 
-#: kmymoney/views/investtransactioneditor.cpp:284
+#: kmymoney/views/investtransactioneditor.cpp:100
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@item:inlistbox transaction type"
+msgid "Remove shares"
+msgstr "Forigi"
+
+#: kmymoney/views/investtransactioneditor.cpp:101
+#, fuzzy, kde-format
+#| msgctxt "Street address"
+#| msgid "Address"
+msgctxt "@item:inlistbox transaction type"
+msgid "Split shares"
+msgstr "Adreso"
+
+#: kmymoney/views/investtransactioneditor.cpp:102
+#, fuzzy, kde-format
+#| msgid "Interest rate"
+msgctxt "@item:inlistbox transaction type"
+msgid "Interest Income"
+msgstr "Interezo"
+
+#: kmymoney/views/investtransactioneditor.cpp:256
 #: kmymoney/views/newtransactioneditor.cpp:194
 #, kde-format
 msgid "The posting date of the transaction."
 msgstr ""
 
-#: kmymoney/views/investtransactioneditor.cpp:298
+#: kmymoney/views/investtransactioneditor.cpp:280
 #: kmymoney/views/newtransactioneditor.cpp:208
 #, kde-format
 msgid "The posting date is prior to the opening date of account <b>%1</b>."
 msgstr ""
+
+#: kmymoney/views/investtransactioneditor.cpp:355
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"The transaction commodity has been changed which will possibly make all "
+"price information invalid. Please check them."
+msgstr ""
+
+#: kmymoney/views/investtransactioneditor.cpp:522
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@info:tooltip"
+msgid "Category for fees"
+msgstr "Opcioj"
+
+#: kmymoney/views/investtransactioneditor.cpp:523
+#, fuzzy, kde-format
+#| msgid "Amount"
+msgctxt "@info:tooltip"
+msgid "Amount of fees"
+msgstr "Kvanto"
+
+#: kmymoney/views/investtransactioneditor.cpp:524
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@info:tooltip"
+msgid "Category for interest"
+msgstr "Opcioj"
+
+#: kmymoney/views/investtransactioneditor.cpp:525
+#, fuzzy, kde-format
+#| msgid "Amount"
+msgctxt "@info:tooltip"
+msgid "Amount of interest"
+msgstr "Kvanto"
+
+#: kmymoney/views/investtransactioneditor.cpp:526
+#, fuzzy, kde-format
+#| msgid "Account"
+msgctxt "@info:tooltip"
+msgid "Asset or brokerage account"
+msgstr "Konto"
+
+#: kmymoney/views/investtransactioneditor.cpp:527
+#, fuzzy, kde-format
+#| msgid "Select a year"
+msgctxt "@info:tooltip"
+msgid "Price information for this transaction"
+msgstr "Elektu jaron"
+
+#: kmymoney/views/investtransactioneditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "account"
+msgctxt "@info:tooltip"
+msgid "Number of shares"
+msgstr "Konto"
+
+#: kmymoney/views/investtransactioneditor.cpp:540
+#, fuzzy, kde-format
+#| msgid "Select a year"
+msgctxt "@info:tooltip"
+msgid "Enter number of shares for this transaction"
+msgstr "Elektu jaron"
+
+#: kmymoney/views/investtransactioneditor.cpp:545
+#, fuzzy, kde-format
+#| msgid "Select a year"
+msgctxt "@info:tooltip"
+msgid "Split ratio"
+msgstr "Elektu jaron"
+
+#: kmymoney/views/investtransactioneditor.cpp:548
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the split ratio for this transaction"
+msgstr ""
+
+#: kmymoney/views/investtransactioneditor.cpp:560
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter price information for this transaction"
+msgstr ""
+
+#: kmymoney/views/investtransactioneditor.cpp:576
+#, fuzzy, kde-format
+#| msgid "Select a year"
+msgctxt "@info:tooltip"
+msgid "Select account to balance the transaction"
+msgstr "Elektu jaron"
+
+#: kmymoney/views/investtransactioneditor.cpp:583
+#, fuzzy, kde-format
+#| msgid "Interest rate"
+msgctxt "@info:tooltip"
+msgid "Enter category for fees"
+msgstr "Interezo"
+
+#: kmymoney/views/investtransactioneditor.cpp:586
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter amout of fees"
+msgstr ""
+
+#: kmymoney/views/investtransactioneditor.cpp:592
+#, fuzzy, kde-format
+#| msgid "Interest rate"
+msgctxt "@info:tooltip"
+msgid "Enter category for interest"
+msgstr "Interezo"
+
+#: kmymoney/views/investtransactioneditor.cpp:595
+#, fuzzy, kde-format
+#| msgid "Interest rate"
+msgctxt "@info:tooltip"
+msgid "Enter amout of interest"
+msgstr "Interezo"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, statusCombo)
 #: kmymoney/views/investtransactioneditor.ui:137
@@ -20675,6 +20849,36 @@ msgstr ""
 #, kde-format
 msgid "Favorites"
 msgstr "Plej ŝatataj"
+
+#: kmymoney/widgets/kmymoneyactivitycombo.cpp:55
+#, kde-format
+msgid "Buy shares"
+msgstr ""
+
+#: kmymoney/widgets/kmymoneyactivitycombo.cpp:56
+#, kde-format
+msgid "Sell shares"
+msgstr ""
+
+#: kmymoney/widgets/kmymoneyactivitycombo.cpp:58
+#, kde-format
+msgid "Reinvest dividend"
+msgstr ""
+
+#: kmymoney/widgets/kmymoneyactivitycombo.cpp:60
+#, kde-format
+msgid "Add shares"
+msgstr ""
+
+#: kmymoney/widgets/kmymoneyactivitycombo.cpp:61
+#, kde-format
+msgid "Remove shares"
+msgstr ""
+
+#: kmymoney/widgets/kmymoneyactivitycombo.cpp:62
+#, kde-format
+msgid "Split shares"
+msgstr ""
 
 #: kmymoney/widgets/kmymoneybriefschedule.cpp:76
 #, kde-format
