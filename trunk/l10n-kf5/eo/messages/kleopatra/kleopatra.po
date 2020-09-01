@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-08-28 02:30+0200\n"
+"POT-Creation-Date: 2020-09-01 02:27+0200\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -163,8 +163,8 @@ msgid "Authenticating to the card failed: %1"
 msgstr ""
 
 #: src/commands/authenticatepivcardapplicationcommand.cpp:132
-#: src/commands/changepincommand.cpp:157 src/commands/keytocardcommand.cpp:182
-#: src/commands/keytocardcommand.cpp:207
+#: src/commands/changepincommand.cpp:157 src/commands/keytocardcommand.cpp:177
+#: src/commands/keytocardcommand.cpp:202
 #: src/commands/pivgeneratecardkeycommand.cpp:198
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:174
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:197
@@ -343,7 +343,7 @@ msgctxt "@info"
 msgid "PIN changed successfully."
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/commands/changepincommand.cpp:159 src/commands/keytocardcommand.cpp:198
+#: src/commands/changepincommand.cpp:159 src/commands/keytocardcommand.cpp:193
 #: src/commands/pivgeneratecardkeycommand.cpp:200
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:199
 #: src/view/pgpcardwidget.cpp:302 src/view/pgpcardwidget.cpp:393
@@ -1320,28 +1320,45 @@ msgid ""
 "message></para>"
 msgstr ""
 
-#: src/commands/keytocardcommand.cpp:80
+#: src/commands/keytocardcommand.cpp:85
 #, fuzzy, kde-format
 #| msgid "Good signature"
-msgid "Signature"
+msgctxt "Placeholder is the number of a slot on a smart card"
+msgid "Signature (%1)"
 msgstr "Korekta subskribo"
 
-#. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
-#: src/commands/keytocardcommand.cpp:83
-#: src/dialogs/certificatedetailswidget.cpp:402
-#: src/newcertificatewizard/advancedsettingsdialog.ui:216
-#, kde-format
-msgid "Encryption"
+#: src/commands/keytocardcommand.cpp:88
+#, fuzzy, kde-format
+#| msgid "Encryption"
+msgctxt "Placeholder is the number of a slot on a smart card"
+msgid "Encryption (%1)"
 msgstr "Ĉifrado"
 
-#. i18n: ectx: property (text), widget (QCheckBox, authenticationCB)
-#: src/commands/keytocardcommand.cpp:86
-#: src/newcertificatewizard/advancedsettingsdialog.ui:226
-#, kde-format
-msgid "Authentication"
+#: src/commands/keytocardcommand.cpp:91
+#, fuzzy, kde-format
+#| msgid "Authentication"
+msgctxt "Placeholder is the number of a slot on a smart card"
+msgid "Authentication (%1)"
 msgstr "Aŭtentigo"
 
-#: src/commands/keytocardcommand.cpp:118
+#: src/commands/keytocardcommand.cpp:95
+#, fuzzy, kde-format
+#| msgid "Select All"
+msgid "Select Slot"
+msgstr "Elekti ĉion"
+
+#: src/commands/keytocardcommand.cpp:96
+#, kde-format
+msgid "Please select the slot the key should be written to:"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:112
+#: src/commands/pivgeneratecardkeycommand.cpp:115
+#, kde-format
+msgid "Failed to find the card with the serial number: %1"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:123
 #: src/commands/pivgeneratecardkeycommand.cpp:127
 #: src/view/pgpcardwidget.cpp:311
 #, kde-format
@@ -1351,12 +1368,6 @@ msgid ""
 msgstr ""
 
 #: src/commands/keytocardcommand.cpp:130
-#: src/commands/pivgeneratecardkeycommand.cpp:115
-#, kde-format
-msgid "Failed to find the card with the serial number: %1"
-msgstr ""
-
-#: src/commands/keytocardcommand.cpp:136
 #: src/commands/pivgeneratecardkeycommand.cpp:123
 #, kde-format
 msgctxt "@info"
@@ -1366,33 +1377,43 @@ msgid ""
 "be irrecoverably lost.</p>"
 msgstr ""
 
-#: src/commands/keytocardcommand.cpp:138
+#: src/commands/keytocardcommand.cpp:132
 #, kde-format
 msgid "The existing key has the fingerprint:"
 msgstr ""
 
-#: src/commands/keytocardcommand.cpp:140
+#: src/commands/keytocardcommand.cpp:134
 #: src/commands/pivgeneratecardkeycommand.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Overwrite existing key"
 msgstr ""
 
-#: src/commands/keytocardcommand.cpp:181
+#: src/commands/keytocardcommand.cpp:176
 #, kde-format
 msgctxt "@info"
 msgid "Moving the key to the card failed: %1"
 msgstr ""
 
-#: src/commands/keytocardcommand.cpp:197
+#: src/commands/keytocardcommand.cpp:192
 #, kde-format
 msgid "Successfully copied the key to the card."
 msgstr ""
 
-#: src/commands/keytocardcommand.cpp:206
+#: src/commands/keytocardcommand.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "Failed to delete the key: %1"
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:267
+#, kde-format
+msgid "Failed to find a smart card."
+msgstr ""
+
+#: src/commands/keytocardcommand.cpp:273
+#, kde-format
+msgid "Sorry! This OpenPGP key cannot be transferred to this non-OpenPGP card."
 msgstr ""
 
 #: src/commands/learncardkeyscommand.cpp:57
@@ -4003,6 +4024,13 @@ msgstr ""
 msgid "Message count"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QCheckBox, encryptionCB)
+#: src/dialogs/certificatedetailswidget.cpp:402
+#: src/newcertificatewizard/advancedsettingsdialog.ui:216
+#, kde-format
+msgid "Encryption"
+msgstr "Ĉifrado"
+
 #: src/dialogs/certificatedetailswidget.cpp:441
 #, kde-format
 msgid "Common Name"
@@ -4235,7 +4263,7 @@ msgid "Reload"
 msgstr "Reŝargi"
 
 #: src/dialogs/certificateselectiondialog.cpp:128
-#: src/view/keylistcontroller.cpp:374 src/view/welcomewidget.cpp:64
+#: src/view/keylistcontroller.cpp:375 src/view/welcomewidget.cpp:64
 #, fuzzy, kde-format
 #| msgid "Import"
 msgid "Import..."
@@ -4816,7 +4844,7 @@ msgid "Show all test results"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsGB)
-#: src/dialogs/selftestdialog.ui:76 src/view/keylistcontroller.cpp:407
+#: src/dialogs/selftestdialog.ui:76 src/view/keylistcontroller.cpp:408
 #, kde-format
 msgid "Details"
 msgstr "Detaloj"
@@ -4904,7 +4932,7 @@ msgstr ""
 msgid "(optional) Set Initial PIN (SigG)"
 msgstr ""
 
-#: src/dialogs/subkeyswidget.cpp:78 src/view/keylistcontroller.cpp:420
+#: src/dialogs/subkeyswidget.cpp:78 src/view/keylistcontroller.cpp:421
 #, kde-format
 msgid "Change Expiry Date..."
 msgstr ""
@@ -5243,37 +5271,37 @@ msgstr "&Rigardi"
 
 #. i18n: ectx: Menu (certMenu)
 #. i18n: ectx: Menu (listview_popup)
-#: src/kleopatra.rc:40 src/kleopatra.rc:107
+#: src/kleopatra.rc:40 src/kleopatra.rc:109
 #, kde-format
 msgid "&Certificates"
 msgstr ""
 
 #. i18n: ectx: Menu (tools)
-#: src/kleopatra.rc:53
+#: src/kleopatra.rc:55
 #, kde-format
 msgid "&Tools"
 msgstr "&Iloj"
 
 #. i18n: ectx: Menu (settings)
-#: src/kleopatra.rc:71
+#: src/kleopatra.rc:73
 #, kde-format
 msgid "&Settings"
 msgstr "A&gordo"
 
 #. i18n: ectx: Menu (window)
-#: src/kleopatra.rc:75
+#: src/kleopatra.rc:77
 #, kde-format
 msgid "&Window"
 msgstr "Fe&nestro"
 
 #. i18n: ectx: Menu (help)
-#: src/kleopatra.rc:86
+#: src/kleopatra.rc:88
 #, kde-format
 msgid "&Help"
 msgstr "&Helpo"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/kleopatra.rc:93 src/kwatchgnupg/kwatchgnupgui.rc:13
+#: src/kleopatra.rc:95 src/kwatchgnupg/kwatchgnupgui.rc:13
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
@@ -5646,13 +5674,13 @@ msgstr ""
 msgid "Ongoing Background Tasks"
 msgstr ""
 
-#: src/mainwindow.cpp:623 src/view/keylistcontroller.cpp:382
+#: src/mainwindow.cpp:623 src/view/keylistcontroller.cpp:383
 #, kde-format
 msgid "Sign/Encrypt..."
 msgstr ""
 
 #: src/mainwindow.cpp:624 src/utils/clipboardmenu.cpp:38
-#: src/view/keylistcontroller.cpp:378
+#: src/view/keylistcontroller.cpp:379
 #, kde-format
 msgid "Decrypt/Verify..."
 msgstr ""
@@ -5675,7 +5703,7 @@ msgstr "Plia agordo"
 
 #. i18n: ectx: attribute (title), widget (QWidget, technicalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:21
-#: src/view/keylistcontroller.cpp:444
+#: src/view/keylistcontroller.cpp:449
 #, kde-format
 msgid "Technical Details"
 msgstr "Teĥnikaj detaloj"
@@ -5739,6 +5767,12 @@ msgstr "Valida ĝis:"
 #, kde-format
 msgid "Certification"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, authenticationCB)
+#: src/newcertificatewizard/advancedsettingsdialog.ui:226
+#, kde-format
+msgid "Authentication"
+msgstr "Aŭtentigo"
 
 #. i18n: ectx: attribute (title), widget (QWidget, personalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:250
@@ -7338,168 +7372,173 @@ msgstr ""
 msgid "Loading certificate cache..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:350 src/view/welcomewidget.cpp:60
+#: src/view/keylistcontroller.cpp:351 src/view/welcomewidget.cpp:60
 #, kde-format
 msgid "New Key Pair..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:354
+#: src/view/keylistcontroller.cpp:355
 #, fuzzy, kde-format
 #| msgid "Export"
 msgid "Export..."
 msgstr "Eksporti"
 
-#: src/view/keylistcontroller.cpp:354
+#: src/view/keylistcontroller.cpp:355
 #, kde-format
 msgid "Export the selected certificate (public key) to a file"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:358
+#: src/view/keylistcontroller.cpp:359
 #, kde-format
 msgid "Publish on Server..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:358
+#: src/view/keylistcontroller.cpp:359
 #, kde-format
 msgid "Publish the selected certificate (public key) on a public keyserver"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:362
+#: src/view/keylistcontroller.cpp:363
 #, kde-format
 msgid "Export Secret Keys..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:366
+#: src/view/keylistcontroller.cpp:367
 #, kde-format
 msgid "Print Secret Key..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:370
+#: src/view/keylistcontroller.cpp:371
 #, fuzzy, kde-format
 #| msgid "Lookup..."
 msgid "Lookup on Server..."
 msgstr "Adrestrovilo..."
 
-#: src/view/keylistcontroller.cpp:370
+#: src/view/keylistcontroller.cpp:371
 #, kde-format
 msgid "Search for certificates online using a public keyserver"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:374
+#: src/view/keylistcontroller.cpp:375
 #, kde-format
 msgid "Import a certificate from a file"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:378
+#: src/view/keylistcontroller.cpp:379
 #, kde-format
 msgid "Decrypt and/or verify files"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:382
+#: src/view/keylistcontroller.cpp:383
 #, fuzzy, kde-format
 #| msgid "Encryption"
 msgid "Encrypt and/or sign files"
 msgstr "Ĉifrado"
 
-#: src/view/keylistcontroller.cpp:386
+#: src/view/keylistcontroller.cpp:387
 #, kde-format
 msgid "Sign/Encrypt Folder..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:386
+#: src/view/keylistcontroller.cpp:387
 #, kde-format
 msgid "Encrypt and/or sign folders"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:390
+#: src/view/keylistcontroller.cpp:391
 #, kde-format
 msgid "Create Checksum Files..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:394
+#: src/view/keylistcontroller.cpp:395
 #, kde-format
 msgid "Verify Checksum Files..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:399
+#: src/view/keylistcontroller.cpp:400
 #, kde-format
 msgid "Redisplay"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:403
+#: src/view/keylistcontroller.cpp:404
 #, kde-format
 msgid "Stop Operation"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:412
+#: src/view/keylistcontroller.cpp:413
 #, kde-format
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/view/keylistcontroller.cpp:412
+#: src/view/keylistcontroller.cpp:413
 #, fuzzy, kde-format
 #| msgid "Fetch missing issuer certificates"
 msgid "Delete selected certificates"
 msgstr "Preni mankajn donatulajn atestilojn"
 
-#: src/view/keylistcontroller.cpp:416
+#: src/view/keylistcontroller.cpp:417
 #, kde-format
 msgid "Certify..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:416
+#: src/view/keylistcontroller.cpp:417
 #, fuzzy, kde-format
 #| msgid "The validity of the signature cannot be verified."
 msgid "Certify the validity of the selected certificate"
 msgstr "La valideco de la subskribo ne estis kontrolebla."
 
-#: src/view/keylistcontroller.cpp:424
+#: src/view/keylistcontroller.cpp:425
 #, kde-format
 msgid "Change Certification Trust..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:428
+#: src/view/keylistcontroller.cpp:429
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgid "Trust Root Certificate"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/view/keylistcontroller.cpp:432
+#: src/view/keylistcontroller.cpp:433
 #, kde-format
 msgid "Distrust Root Certificate"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:436
+#: src/view/keylistcontroller.cpp:437
 #, kde-format
 msgid "Change Passphrase..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:440
+#: src/view/keylistcontroller.cpp:441
 #, kde-format
 msgid "Add User-ID..."
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:449
+#: src/view/keylistcontroller.cpp:445
+#, kde-format
+msgid "Transfer to Smartcard"
+msgstr ""
+
+#: src/view/keylistcontroller.cpp:454
 #, kde-format
 msgid "Refresh X.509 Certificates"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:453
+#: src/view/keylistcontroller.cpp:458
 #, kde-format
 msgid "Refresh OpenPGP Certificates"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:457
+#: src/view/keylistcontroller.cpp:462
 #, kde-format
 msgid "Clear CRL Cache"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:461
+#: src/view/keylistcontroller.cpp:466
 #, kde-format
 msgid "Dump CRL Cache"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:465
+#: src/view/keylistcontroller.cpp:470
 #, kde-format
 msgid "Import CRL From File..."
 msgstr ""
