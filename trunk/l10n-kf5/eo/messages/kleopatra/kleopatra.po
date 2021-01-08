@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-06 02:55+0100\n"
+"POT-Creation-Date: 2021-01-08 02:53+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -172,7 +172,7 @@ msgstr ""
 #: src/commands/authenticatepivcardapplicationcommand.cpp:151
 #: src/commands/certificatetopivcardcommand.cpp:165
 #: src/commands/certificatetopivcardcommand.cpp:234
-#: src/commands/changepincommand.cpp:178
+#: src/commands/changepincommand.cpp:209
 #: src/commands/createcsrforcardkeycommand.cpp:188
 #: src/commands/createcsrforcardkeycommand.cpp:204
 #: src/commands/createopenpgpkeyfromcardkeyscommand.cpp:172
@@ -181,11 +181,10 @@ msgstr ""
 #: src/commands/pivgeneratecardkeycommand.cpp:216
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:179
 #: src/commands/setpivcardapplicationadministrationkeycommand.cpp:209
-#: src/view/nullpinwidget.cpp:105 src/view/pgpcardwidget.cpp:344
-#: src/view/pgpcardwidget.cpp:359 src/view/pgpcardwidget.cpp:423
-#: src/view/pgpcardwidget.cpp:429 src/view/pgpcardwidget.cpp:435
-#: src/view/pgpcardwidget.cpp:458 src/view/pgpcardwidget.cpp:485
-#: src/view/pgpcardwidget.cpp:505
+#: src/view/pgpcardwidget.cpp:344 src/view/pgpcardwidget.cpp:359
+#: src/view/pgpcardwidget.cpp:423 src/view/pgpcardwidget.cpp:429
+#: src/view/pgpcardwidget.cpp:435 src/view/pgpcardwidget.cpp:458
+#: src/view/pgpcardwidget.cpp:485 src/view/pgpcardwidget.cpp:505
 #, fuzzy, kde-format
 #| msgid "Error"
 msgctxt "@title"
@@ -254,7 +253,7 @@ msgid "Writing the certificate to the card succeeded."
 msgstr "Vidigi atestilon 0x%1"
 
 #: src/commands/certificatetopivcardcommand.cpp:238
-#: src/commands/changepincommand.cpp:180
+#: src/commands/changepincommand.cpp:211
 #: src/commands/createopenpgpkeyfromcardkeyscommand.cpp:175
 #: src/commands/keytocardcommand.cpp:472 src/commands/keytocardcommand.cpp:496
 #: src/commands/pivgeneratecardkeycommand.cpp:218
@@ -375,70 +374,126 @@ msgstr ""
 msgid "Passphrase Change Succeeded"
 msgstr ""
 
-#: src/commands/changepincommand.cpp:120
+#: src/commands/changepincommand.cpp:121
 #: src/commands/createcsrforcardkeycommand.cpp:137
 #: src/commands/createopenpgpkeyfromcardkeyscommand.cpp:103
-#: src/view/netkeywidget.cpp:286
+#: src/view/netkeywidget.cpp:247 src/view/netkeywidget.cpp:297
 #, kde-format
 msgid "Failed to find the smartcard with the serial number: %1"
 msgstr ""
 
-#: src/commands/changepincommand.cpp:139
+#: src/commands/changepincommand.cpp:142
 #, kde-format
 msgctxt "@info"
 msgid "Changing the PUK failed: %1"
 msgstr ""
 
-#: src/commands/changepincommand.cpp:142
+#: src/commands/changepincommand.cpp:145
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgctxt "@info"
 msgid "Unblocking the PIN failed: %1"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/commands/changepincommand.cpp:145
+#: src/commands/changepincommand.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Changing the Admin PIN failed: %1"
 msgstr ""
 
-#: src/commands/changepincommand.cpp:148
+#: src/commands/changepincommand.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid "Changing the Reset Code failed: %1"
 msgstr ""
 
-#: src/commands/changepincommand.cpp:150
+#: src/commands/changepincommand.cpp:155
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "Setting the NKS PIN failed: %1"
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:157
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "Changing the NKS PIN failed: %1"
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:162
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "Setting the SigG PIN failed: %1"
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:164
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "Changing the SigG PIN failed: %1"
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:167
 #, kde-format
 msgctxt "@info"
 msgid "Changing the PIN failed: %1"
 msgstr ""
 
-#: src/commands/changepincommand.cpp:157
+#: src/commands/changepincommand.cpp:174
 #, kde-format
 msgctxt "@info"
 msgid "PUK successfully changed."
 msgstr ""
 
-#: src/commands/changepincommand.cpp:160
+#: src/commands/changepincommand.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Unblocked and set a new PIN successfully."
 msgstr ""
 
-#: src/commands/changepincommand.cpp:163
+#: src/commands/changepincommand.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Admin PIN changed successfully."
 msgstr ""
 
-#: src/commands/changepincommand.cpp:166
+#: src/commands/changepincommand.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid "Reset Code changed successfully."
 msgstr ""
 
-#: src/commands/changepincommand.cpp:168
+#: src/commands/changepincommand.cpp:187
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "NKS PIN set successfully."
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:189
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "NKS PIN changed successfully."
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:194
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "SigG PIN set successfully."
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:196
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgctxt "@info"
+msgid "SigG PIN changed successfully."
+msgstr "Vidigi atestilon 0x%1"
+
+#: src/commands/changepincommand.cpp:199
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgctxt "@info"
@@ -1951,7 +2006,7 @@ msgid "Set Initial Pin"
 msgstr ""
 
 #: src/commands/setinitialpincommand.cpp:79
-#: src/commands/setinitialpincommand.cpp:155 src/view/nullpinwidget.cpp:86
+#: src/commands/setinitialpincommand.cpp:155
 #, kde-format
 msgid "Failed to find the NetKey card with the serial number: %1"
 msgstr ""
@@ -7969,19 +8024,19 @@ msgstr ""
 msgid "Error"
 msgstr "Eraro"
 
-#: src/view/netkeywidget.cpp:275
+#: src/view/netkeywidget.cpp:286
 #, fuzzy, kde-format
 #| msgid "Select File"
 msgid "Select Key"
 msgstr "Elekti dosieron"
 
-#: src/view/netkeywidget.cpp:276
+#: src/view/netkeywidget.cpp:287
 #, kde-format
 msgid ""
 "Please select the key you want to create a certificate signing request for:"
 msgstr ""
 
-#: src/view/netkeywidget.cpp:292
+#: src/view/netkeywidget.cpp:303
 #, kde-format
 msgid ""
 "Sorry! No keys suitable for creating a certificate signing request found on "
@@ -8029,12 +8084,6 @@ msgstr ""
 #: src/view/nullpinwidget.cpp:75
 #, kde-format
 msgid "Set initial PIN"
-msgstr ""
-
-#: src/view/nullpinwidget.cpp:104
-#, kde-format
-msgctxt "@info"
-msgid "Failed to set PIN: %1"
 msgstr ""
 
 #: src/view/padwidget.cpp:76 src/view/padwidget.cpp:462
