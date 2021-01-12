@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemlog\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-11 02:57+0100\n"
+"POT-Creation-Date: 2021-01-12 02:59+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -130,8 +130,9 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/detailDialogBase.ui:41 src/lib/logViewWidget.cpp:48
 #: src/loggerDialogBase.ui:33 src/modes/acpid/acpidAnalyzer.cpp:34
-#: src/modes/apache/apacheAnalyzer.cpp:35 src/modes/base/syslogAnalyzer.cpp:59
-#: src/modes/cups/cupsAnalyzer.cpp:39 src/modes/cups/cupsPdfAnalyzer.cpp:36
+#: src/modes/apache/apacheAnalyzer.cpp:35 src/modes/audit/auditAnalyzer.cpp:23
+#: src/modes/base/syslogAnalyzer.cpp:59 src/modes/cups/cupsAnalyzer.cpp:39
+#: src/modes/cups/cupsPdfAnalyzer.cpp:36
 #: src/modes/journald/journaldAnalyzer.cpp:38
 #: src/modes/kernel/kernelAnalyzer.cpp:35 src/modes/samba/sambaAnalyzer.cpp:38
 #: src/modes/xorg/xorgAnalyzer.cpp:42
@@ -408,22 +409,22 @@ msgid "Logs Toolbar"
 msgstr "Ĉefa ilobreto"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/ksystemlogui.rc:63
+#: src/ksystemlogui.rc:64
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
 
-#: src/lib/fileAnalyzer.cpp:119
+#: src/lib/fileAnalyzer.cpp:119 src/modes/audit/auditAnalyzer.cpp:211
 #, kde-format
 msgid "Opening '%1'..."
 msgstr ""
 
-#: src/lib/fileAnalyzer.cpp:128
+#: src/lib/fileAnalyzer.cpp:128 src/modes/audit/auditAnalyzer.cpp:220
 #, kde-format
 msgid "Log file '%1' loaded successfully."
 msgstr ""
 
-#: src/lib/fileAnalyzer.cpp:140
+#: src/lib/fileAnalyzer.cpp:140 src/modes/audit/auditAnalyzer.cpp:232
 #, kde-format
 msgid "Log file '%1' has changed."
 msgstr ""
@@ -569,6 +570,7 @@ msgstr ""
 #: src/modes/acpid/acpidItemBuilder.cpp:32
 #: src/modes/apache/apacheAccessItemBuilder.cpp:32
 #: src/modes/apache/apacheItemBuilder.cpp:32
+#: src/modes/audit/auditItemBuilder.cpp:14
 #: src/modes/cron/cronItemBuilder.cpp:32
 #: src/modes/cups/cupsAccessItemBuilder.cpp:32
 #: src/modes/cups/cupsItemBuilder.cpp:30
@@ -596,6 +598,7 @@ msgstr ""
 #: src/modes/acpid/acpidItemBuilder.cpp:33
 #: src/modes/apache/apacheAccessItemBuilder.cpp:33
 #: src/modes/apache/apacheItemBuilder.cpp:33
+#: src/modes/audit/auditItemBuilder.cpp:15
 #: src/modes/cron/cronItemBuilder.cpp:36
 #: src/modes/cups/cupsAccessItemBuilder.cpp:33
 #: src/modes/cups/cupsItemBuilder.cpp:31
@@ -721,12 +724,12 @@ msgstr ""
 msgid "All"
 msgstr "Ĉiuj"
 
-#: src/lib/logViewSearchWidget.cpp:172
+#: src/lib/logViewSearchWidget.cpp:173
 #, kde-format
 msgid "Reached end of list."
 msgstr ""
 
-#: src/lib/logViewSearchWidget.cpp:255
+#: src/lib/logViewSearchWidget.cpp:256
 #, kde-format
 msgid "Phrase not found."
 msgstr ""
@@ -754,10 +757,10 @@ msgstr ""
 #. lines in <b>bold</b> are the last added to the list.</p>"));
 #: src/lib/logViewWidget.cpp:48 src/modes/acpid/acpidAnalyzer.cpp:32
 #: src/modes/apache/apacheAccessAnalyzer.cpp:33
-#: src/modes/apache/apacheAnalyzer.cpp:33 src/modes/base/syslogAnalyzer.cpp:56
-#: src/modes/cron/cronAnalyzer.cpp:27 src/modes/cups/cupsAccessAnalyzer.cpp:35
-#: src/modes/cups/cupsAnalyzer.cpp:38 src/modes/cups/cupsPageAnalyzer.cpp:34
-#: src/modes/cups/cupsPdfAnalyzer.cpp:35
+#: src/modes/apache/apacheAnalyzer.cpp:33 src/modes/audit/auditAnalyzer.cpp:22
+#: src/modes/base/syslogAnalyzer.cpp:56 src/modes/cron/cronAnalyzer.cpp:27
+#: src/modes/cups/cupsAccessAnalyzer.cpp:35 src/modes/cups/cupsAnalyzer.cpp:38
+#: src/modes/cups/cupsPageAnalyzer.cpp:34 src/modes/cups/cupsPdfAnalyzer.cpp:35
 #: src/modes/journald/journaldAnalyzer.cpp:36
 #: src/modes/kernel/kernelAnalyzer.cpp:33 src/modes/samba/sambaAnalyzer.cpp:34
 #, kde-format
@@ -1600,6 +1603,29 @@ msgstr ""
 msgid ""
 "Displays the Apache log in the current tab. Apache is the main used Web "
 "server in the world."
+msgstr ""
+
+#: src/modes/audit/auditConfigurationWidget.cpp:14
+#: src/modes/audit/auditLogMode.cpp:18 src/modes/audit/auditLogMode.cpp:27
+#, kde-format
+msgid "Audit Log"
+msgstr ""
+
+#: src/modes/audit/auditConfigurationWidget.cpp:19
+#, kde-format
+msgid "<p>These files will be analyzed to show the <b>Audit logs</b>.</p>"
+msgstr ""
+
+#: src/modes/audit/auditLogMode.cpp:28
+#, kde-format
+msgid "Display the audit log."
+msgstr ""
+
+#: src/modes/audit/auditLogMode.cpp:30
+#, kde-format
+msgid ""
+"Displays the audit log in the current tab. This log is generally used by non-"
+"specialized processes (like \"sudo\" or \"fsck\" commands)"
 msgstr ""
 
 #: src/modes/authentication/authenticationConfigurationWidget.cpp:25
