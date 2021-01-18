@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplatolibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-14 09:04+0100\n"
+"POT-Creation-Date: 2021-01-18 09:21+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1533,7 +1533,7 @@ msgstr ""
 
 #: main/KoPrintingDialog.cpp:188 ui/kptaccountseditor.cpp:73
 #: ui/kptaccountsviewconfigdialog.cpp:89 ui/kptdependencyeditor.cpp:1999
-#: ui/kptganttview.cpp:193 ui/kptganttview.cpp:1406 ui/kptganttview.cpp:1842
+#: ui/kptganttview.cpp:185 ui/kptganttview.cpp:1403 ui/kptganttview.cpp:1838
 #: ui/kptitemviewsettup.cpp:201 ui/kptitemviewsettup.cpp:285
 #: ui/kptresourceappointmentsview.cpp:105
 #: ui/performance/ProjectStatusView.cpp:184
@@ -5616,8 +5616,8 @@ msgid "Settings"
 msgstr "Agordo"
 
 #: ui/kptaccountseditor.cpp:74 ui/kptaccountsviewconfigdialog.cpp:90
-#: ui/kptdependencyeditor.cpp:2000 ui/kptganttview.cpp:193
-#: ui/kptganttview.cpp:1406 ui/kptganttview.cpp:1842
+#: ui/kptdependencyeditor.cpp:2000 ui/kptganttview.cpp:185
+#: ui/kptganttview.cpp:1403 ui/kptganttview.cpp:1838
 #: ui/kptitemviewsettup.cpp:201 ui/kptitemviewsettup.cpp:285
 #: ui/kptresourceappointmentsview.cpp:106
 #: ui/performance/ProjectStatusView.cpp:185
@@ -5753,9 +5753,8 @@ msgstr "Daŭro"
 msgid "Start date"
 msgstr "Linikomenco:"
 
-#. i18n: ectx: property (text), widget (QRadioButton, ui_projectStartBtn)
 #. i18n: ectx: property (text), widget (QRadioButton, ui_projectstartBtn)
-#: ui/kptaccountsviewconfigurepanelbase.ui:107 ui/kptganttprintingoptions.ui:88
+#: ui/kptaccountsviewconfigurepanelbase.ui:107
 #, fuzzy, kde-format
 #| msgid "Project"
 msgid "Project start"
@@ -5787,10 +5786,8 @@ msgstr "dato"
 msgid "Current date"
 msgstr "Linikomenco:"
 
-#. i18n: ectx: property (text), widget (QRadioButton, ui_projectEndBtn)
 #. i18n: ectx: property (text), widget (QRadioButton, ui_projectendBtn)
 #: ui/kptaccountsviewconfigurepanelbase.ui:158
-#: ui/kptganttprintingoptions.ui:121
 #, fuzzy, kde-format
 #| msgid "Project"
 msgid "Project end"
@@ -6351,6 +6348,7 @@ msgstr ""
 #: ui/kptganttprintingoptions.ui:17
 #, fuzzy, kde-format
 #| msgid "Header"
+msgctxt "@title:group"
 msgid "Headers"
 msgstr "Kapo"
 
@@ -6358,37 +6356,44 @@ msgstr "Kapo"
 #: ui/kptganttprintingoptions.ui:23
 #, fuzzy, kde-format
 #| msgid "Modify Task"
+msgctxt "@option:check"
 msgid "Print task names"
 msgstr "Ŝanĝu taskon"
 
 #. i18n: ectx: property (text), widget (QCheckBox, ui_printColumnLabels)
 #: ui/kptganttprintingoptions.ui:30
-#, kde-format
-msgid "Print time scale header"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Modify Task"
+msgctxt "@option:check"
+msgid "Print time scale"
+msgstr "Ŝanĝu taskon"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ui/kptganttprintingoptions.ui:40
 #, fuzzy, kde-format
 #| msgid "Not started"
+msgctxt "@title:group"
 msgid "Scaling"
 msgstr "Ne lanĉiĝis"
 
 #. i18n: ectx: property (text), widget (QRadioButton, ui_noFitting)
 #: ui/kptganttprintingoptions.ui:46
 #, kde-format
+msgctxt "@option:radio"
 msgid "Divide chart on multiple pages"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, ui_fitVertical)
 #: ui/kptganttprintingoptions.ui:53
 #, kde-format
+msgctxt "@option:radio"
 msgid "Fit chart to page height"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, ui_fitSingle)
 #: ui/kptganttprintingoptions.ui:60
 #, kde-format
+msgctxt "@option:radio"
 msgid "Fit chart to a single page"
 msgstr ""
 
@@ -6396,16 +6401,40 @@ msgstr ""
 #: ui/kptganttprintingoptions.ui:73
 #, fuzzy, kde-format
 #| msgid "Change..."
+msgctxt "@title:group"
 msgid "Range"
 msgstr "Ŝanĝi..."
 
-#. i18n: ectx: property (text), widget (QRadioButton, ui_startTimeBtn)
-#. i18n: ectx: property (text), widget (QRadioButton, ui_endTimeBtn)
-#: ui/kptganttprintingoptions.ui:97 ui/kptganttprintingoptions.ui:130
+#. i18n: ectx: property (text), widget (QRadioButton, ui_projectStartBtn)
+#: ui/kptganttprintingoptions.ui:88
 #, fuzzy, kde-format
-#| msgid "Time"
-msgid "Time:"
-msgstr "Tempo"
+#| msgid "Not started"
+msgctxt "@option:radio"
+msgid "Chart start:"
+msgstr "Ne lanĉiĝis"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_startTimeBtn)
+#: ui/kptganttprintingoptions.ui:105
+#, fuzzy, kde-format
+#| msgid "Startup"
+msgctxt "@option:radio"
+msgid "Start:"
+msgstr "Lanĉo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_projectEndBtn)
+#: ui/kptganttprintingoptions.ui:137
+#, fuzzy, kde-format
+#| msgid "Chart"
+msgctxt "@option:radio"
+msgid "Chart end:"
+msgstr "Diagramo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_endTimeBtn)
+#: ui/kptganttprintingoptions.ui:154
+#, kde-format
+msgctxt "@option:radio"
+msgid "End:"
+msgstr ""
 
 #: ui/kptganttview.cpp:176 ui/performance/PerformanceStatusView.cpp:391
 #: ui/performance/ProjectStatusView.cpp:169
@@ -6419,13 +6448,13 @@ msgstr "Diagramo"
 msgid "Gantt Chart Settings"
 msgstr "Ĝeneralaj Agordoj"
 
-#: ui/kptganttview.cpp:277
+#: ui/kptganttview.cpp:273
 #, kde-kuit-format
 msgctxt "@title:tab"
 msgid "Chart"
 msgstr "Diagramo"
 
-#: ui/kptganttview.cpp:1027
+#: ui/kptganttview.cpp:1025
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -6437,65 +6466,65 @@ msgid ""
 "><link url='%1'>More...</link></para>"
 msgstr ""
 
-#: ui/kptganttview.cpp:1073 ui/kpttaskeditor.cpp:921 ui/kpttaskeditor.cpp:1445
+#: ui/kptganttview.cpp:1071 ui/kpttaskeditor.cpp:921 ui/kpttaskeditor.cpp:1445
 #, fuzzy, kde-format
 #| msgid "Project"
 msgid "Show Project"
 msgstr "Projekto"
 
-#: ui/kptganttview.cpp:1081
+#: ui/kptganttview.cpp:1079
 #, fuzzy, kde-format
 #| msgid "Not started"
 msgid "Show Unscheduled Tasks"
 msgstr "Ne lanĉiĝis"
 
-#: ui/kptganttview.cpp:1092 ui/kptganttview.cpp:1656 ui/kptganttview.cpp:1994
+#: ui/kptganttview.cpp:1090 ui/kptganttview.cpp:1653 ui/kptganttview.cpp:1990
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Auto"
 msgstr ""
 
-#: ui/kptganttview.cpp:1099 ui/kptganttview.cpp:1663 ui/kptganttview.cpp:2001
+#: ui/kptganttview.cpp:1097 ui/kptganttview.cpp:1660 ui/kptganttview.cpp:1997
 #, fuzzy, kde-format
 #| msgid "Month"
 msgctxt "@action:inmenu"
 msgid "Month"
 msgstr "Monato"
 
-#: ui/kptganttview.cpp:1105 ui/kptganttview.cpp:1669 ui/kptganttview.cpp:2007
+#: ui/kptganttview.cpp:1103 ui/kptganttview.cpp:1666 ui/kptganttview.cpp:2003
 #, fuzzy, kde-format
 #| msgid "Week"
 msgctxt "@action:inmenu"
 msgid "Week"
 msgstr "Semajno"
 
-#: ui/kptganttview.cpp:1111 ui/kptganttview.cpp:1675 ui/kptganttview.cpp:2013
+#: ui/kptganttview.cpp:1109 ui/kptganttview.cpp:1672 ui/kptganttview.cpp:2009
 #, fuzzy, kde-format
 #| msgid "Day"
 msgctxt "@action:inmenu"
 msgid "Day"
 msgstr "Tago"
 
-#: ui/kptganttview.cpp:1117 ui/kptganttview.cpp:1681 ui/kptganttview.cpp:2019
+#: ui/kptganttview.cpp:1115 ui/kptganttview.cpp:1678 ui/kptganttview.cpp:2015
 #, fuzzy, kde-format
 #| msgid "Hours"
 msgctxt "@action:inmenu"
 msgid "Hour"
 msgstr "Horoj"
 
-#: ui/kptganttview.cpp:1123 ui/kptganttview.cpp:1687 ui/kptganttview.cpp:2025
+#: ui/kptganttview.cpp:1121 ui/kptganttview.cpp:1684 ui/kptganttview.cpp:2021
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Zoom In"
 msgstr ""
 
-#: ui/kptganttview.cpp:1128 ui/kptganttview.cpp:1692 ui/kptganttview.cpp:2030
+#: ui/kptganttview.cpp:1126 ui/kptganttview.cpp:1689 ui/kptganttview.cpp:2026
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Zoom Out"
 msgstr ""
 
-#: ui/kptganttview.cpp:1477
+#: ui/kptganttview.cpp:1474
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -6507,7 +6536,7 @@ msgid ""
 "url='%1'>More...</link></para>"
 msgstr ""
 
-#: ui/kptganttview.cpp:1909
+#: ui/kptganttview.cpp:1905
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -9999,6 +10028,11 @@ msgstr "Distribuo"
 #, kde-format
 msgid "All supported formats"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Time"
+#~ msgid "Time:"
+#~ msgstr "Tempo"
 
 #, fuzzy
 #~| msgid "Project"
