@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kplatolibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-02-26 03:01+0100\n"
+"POT-Creation-Date: 2021-03-04 02:41+0100\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -224,8 +224,8 @@ msgstr "Ne lanĉiĝis"
 #: models/kptnodeitemmodel.cpp:451 models/kptnodeitemmodel.cpp:664
 #: models/kptnodeitemmodel.cpp:681 models/kptnodeitemmodel.cpp:699
 #: models/kptnodeitemmodel.cpp:717 models/kptnodeitemmodel.cpp:752
-#: models/kptnodeitemmodel.cpp:769 models/kptresourceallocationmodel.cpp:577
-#: models/kptresourceallocationmodel.cpp:652 models/kptschedulemodel.cpp:618
+#: models/kptnodeitemmodel.cpp:769 models/kptresourceallocationmodel.cpp:739
+#: models/kptresourceallocationmodel.cpp:814 models/kptschedulemodel.cpp:618
 #: models/kpttreecombobox.cpp:123 models/ResourceModel.cpp:200
 #: models/ResourceModel.cpp:232 models/ResourceModel.cpp:353
 #: models/ResourceModel.cpp:357 models/ResourceModel.cpp:366
@@ -1801,17 +1801,20 @@ msgid "Allocation"
 msgstr "Ne lanĉiĝis"
 
 #: models/AllocatedResourceItemModel.cpp:165
-#: models/kptresourceallocationmodel.cpp:123
-#: models/kptresourceallocationmodel.cpp:154
-#: models/kptresourceallocationmodel.cpp:510
+#: models/kptresourceallocationmodel.cpp:145
+#: models/kptresourceallocationmodel.cpp:158
+#: models/kptresourceallocationmodel.cpp:285
+#: models/kptresourceallocationmodel.cpp:316
+#: models/kptresourceallocationmodel.cpp:672
 #, no-c-format, kde-format
 msgctxt "<value>%"
 msgid "%1%"
 msgstr "%1%"
 
 #: models/AllocatedResourceItemModel.cpp:169
-#: models/kptresourceallocationmodel.cpp:130
-#: models/kptresourceallocationmodel.cpp:516
+#: models/kptresourceallocationmodel.cpp:155
+#: models/kptresourceallocationmodel.cpp:292
+#: models/kptresourceallocationmodel.cpp:678
 #, fuzzy, kde-kuit-format
 #| msgid "Not started"
 msgctxt "@info:tooltip"
@@ -1828,7 +1831,7 @@ msgstr[1] "Ŝanĝu taskon"
 
 #: models/GroupAllocationItemModel.cpp:184 models/kptaccountsmodel.cpp:125
 #: models/kptaccountsmodel.cpp:1068 models/kptdocumentmodel.cpp:200
-#: models/kptresourceallocationmodel.cpp:247
+#: models/kptresourceallocationmodel.cpp:409
 #: models/kptresourceappointmentsmodel.cpp:805
 #: models/kptresourceappointmentsmodel.cpp:820
 #: models/kptresourceappointmentsmodel.cpp:1317 models/kptschedulemodel.cpp:991
@@ -1842,7 +1845,7 @@ msgid "Name"
 msgstr "Nomo"
 
 #: models/GroupAllocationItemModel.cpp:185 models/kptdocumentmodel.cpp:201
-#: models/kptrelationmodel.cpp:138 models/kptresourceallocationmodel.cpp:248
+#: models/kptrelationmodel.cpp:138 models/kptresourceallocationmodel.cpp:410
 #: models/kptresourceappointmentsmodel.cpp:1318
 #: models/ResourceGroupModel.cpp:205 models/ResourceModel.cpp:412
 #, kde-format
@@ -1850,21 +1853,21 @@ msgid "Type"
 msgstr "Tipo"
 
 #: models/GroupAllocationItemModel.cpp:186
-#: models/kptresourceallocationmodel.cpp:249
+#: models/kptresourceallocationmodel.cpp:411
 #, fuzzy, kde-format
 #| msgid "Not started"
 msgid "Allocation"
 msgstr "Ne lanĉiĝis"
 
 #: models/GroupAllocationItemModel.cpp:187
-#: models/kptresourceallocationmodel.cpp:250
+#: models/kptresourceallocationmodel.cpp:412
 #, kde-kuit-format
 msgctxt "@title:column"
 msgid "Available"
 msgstr "Disponebla"
 
 #: models/GroupAllocationItemModel.cpp:199
-#: models/kptresourceallocationmodel.cpp:264
+#: models/kptresourceallocationmodel.cpp:426
 #, fuzzy, kde-format
 #| msgid "Modify Task"
 msgid "Resource allocation"
@@ -4518,7 +4521,7 @@ msgctxt "(qtundo-format)"
 msgid "Insert %1"
 msgstr ""
 
-#: models/kptnodeitemmodel.cpp:4136 ui/kptrequestresourcespanel.cpp:81
+#: models/kptnodeitemmodel.cpp:4136 ui/kptrequestresourcespanel.cpp:102
 #: ui/ResourceAllocationView.cpp:154
 #, fuzzy
 #| msgid "Modify Task"
@@ -4595,7 +4598,14 @@ msgctxt "(qtundo-format)"
 msgid "Modify relation time lag"
 msgstr "Ŝanĝu taskon"
 
-#: models/kptresourceallocationmodel.cpp:133
+#: models/kptresourceallocationmodel.cpp:159
+#: models/kptresourceallocationmodel.cpp:680
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "%1 allocated out of %2 available"
+msgstr ""
+
+#: models/kptresourceallocationmodel.cpp:295
 #, fuzzy, no-c-format, kde-kuit-format
 #| msgctxt "Preview available"
 #| msgid "Available"
@@ -4603,13 +4613,13 @@ msgctxt "@info:tooltip"
 msgid "Allocated units: %1%"
 msgstr "Disponebla"
 
-#: models/kptresourceallocationmodel.cpp:159
+#: models/kptresourceallocationmodel.cpp:321
 #, no-c-format, kde-format
 msgid "Maximum units available: %1%"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:182
-#: models/kptresourceallocationmodel.cpp:277
+#: models/kptresourceallocationmodel.cpp:344
+#: models/kptresourceallocationmodel.cpp:439
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -4618,8 +4628,8 @@ msgid ""
 "that the working resource depends on in order to do the work.</para>"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:216
-#: models/kptresourceallocationmodel.cpp:273
+#: models/kptresourceallocationmodel.cpp:378
+#: models/kptresourceallocationmodel.cpp:435
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -4628,68 +4638,62 @@ msgid ""
 "then select the most appropriate resource to use.</para>"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:251
+#: models/kptresourceallocationmodel.cpp:413
 #, fuzzy, kde-kuit-format
 #| msgid "Negative"
 msgctxt "@title:column"
 msgid "Alternative Resources"
 msgstr "Minussigno"
 
-#: models/kptresourceallocationmodel.cpp:252
+#: models/kptresourceallocationmodel.cpp:414
 #, fuzzy, kde-kuit-format
 #| msgid "Resource"
 msgctxt "@title:column"
 msgid "Required Resources"
 msgstr "Risurco"
 
-#: models/kptresourceallocationmodel.cpp:265
+#: models/kptresourceallocationmodel.cpp:427
 #, fuzzy, kde-kuit-format
 #| msgid "Remove Entry"
 msgctxt "@info:tooltip"
 msgid "Available resources or resource units"
 msgstr "Forigi eron"
 
-#: models/kptresourceallocationmodel.cpp:266
+#: models/kptresourceallocationmodel.cpp:428
 #, fuzzy, kde-kuit-format
 #| msgid "Not started"
 msgctxt "@info:tooltip"
 msgid "List of resources that can be used as an alternative"
 msgstr "Ne lanĉiĝis"
 
-#: models/kptresourceallocationmodel.cpp:267
+#: models/kptresourceallocationmodel.cpp:429
 #, fuzzy, kde-kuit-format
 #| msgid "Resource"
 msgctxt "@info:tooltip"
 msgid "Required material resources"
 msgstr "Risurco"
 
-#: models/kptresourceallocationmodel.cpp:518
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid "%1 allocated out of %2 available"
-msgstr ""
-
-#: models/kptresourceallocationmodel.cpp:586
+#: models/kptresourceallocationmodel.cpp:748
 #, fuzzy, kde-kuit-format
 #| msgid "Not available"
 msgctxt "@info:tooltip"
 msgid "No material resources available"
 msgstr "Ne haviĝebla"
 
-#: models/kptresourceallocationmodel.cpp:595
+#: models/kptresourceallocationmodel.cpp:757
 #, fuzzy, kde-kuit-format
 #| msgid "Resource"
 msgctxt "@info:tooltip"
 msgid "No required resources"
 msgstr "Risurco"
 
-#: models/kptresourceallocationmodel.cpp:598
+#: models/kptresourceallocationmodel.cpp:760
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Material resources cannot have required resources"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:600
+#: models/kptresourceallocationmodel.cpp:762
 #, fuzzy, kde-kuit-format
 #| msgid "Resource"
 msgctxt "@info:tooltip"
