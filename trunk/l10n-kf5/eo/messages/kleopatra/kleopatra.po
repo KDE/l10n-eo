@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-01 00:20+0000\n"
+"POT-Creation-Date: 2021-05-11 00:20+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -265,7 +265,7 @@ msgctxt "@title"
 msgid "Success"
 msgstr ""
 
-#: src/commands/certifycertificatecommand.cpp:194
+#: src/commands/certifycertificatecommand.cpp:164
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -273,36 +273,36 @@ msgid ""
 "certificate for yourself."
 msgstr ""
 
-#: src/commands/certifycertificatecommand.cpp:196
+#: src/commands/certifycertificatecommand.cpp:166
 #, kde-format
 msgid "Do you wish to create one now?"
 msgstr ""
 
-#: src/commands/certifycertificatecommand.cpp:197
+#: src/commands/certifycertificatecommand.cpp:167
 #, kde-format
 msgid "Certification Not Possible"
 msgstr ""
 
-#: src/commands/certifycertificatecommand.cpp:262
+#: src/commands/certifycertificatecommand.cpp:232
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgid "Certification successful."
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/commands/certifycertificatecommand.cpp:263
+#: src/commands/certifycertificatecommand.cpp:233
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgid "Certification Succeeded"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/commands/certifycertificatecommand.cpp:265
+#: src/commands/certifycertificatecommand.cpp:235
 #, kde-format
 msgid ""
 "<p>An error occurred while trying to certify<br/><br/><b>%1</b>:</p><p>\t%2</"
 "p>"
 msgstr ""
 
-#: src/commands/certifycertificatecommand.cpp:269
+#: src/commands/certifycertificatecommand.cpp:239
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgid "Certification Error"
@@ -2194,7 +2194,7 @@ msgstr "Teĥnikaj detaloj"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_tags)
 #: src/conf/appearanceconfigwidget.ui:175
 #: src/dialogs/certificatedetailswidget.cpp:136
-#: src/dialogs/certifywidget.cpp:255
+#: src/dialogs/certifywidget.cpp:289
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -4287,7 +4287,7 @@ msgstr ""
 msgid "Verifying checksums (%2) in %1"
 msgstr ""
 
-#: src/dialogs/addemaildialog.cpp:45 src/dialogs/certifywidget.cpp:243
+#: src/dialogs/addemaildialog.cpp:45 src/dialogs/certifywidget.cpp:263
 #, kde-format
 msgid "Advanced"
 msgstr "Plie"
@@ -4578,7 +4578,7 @@ msgstr "Preni mankajn donatulajn atestilojn"
 
 #. i18n: ectx: property (text), widget (QPushButton, certifyBtn)
 #: src/dialogs/certificatedetailswidget.ui:67
-#: src/dialogs/certifycertificatedialog.cpp:54
+#: src/dialogs/certifycertificatedialog.cpp:53
 #, kde-format
 msgid "Certify"
 msgstr ""
@@ -4779,59 +4779,76 @@ msgctxt "@title:window"
 msgid "Certificate Selection"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/dialogs/certifycertificatedialog.cpp:63
-#, kde-format
-msgid "You cannot certify using the same key."
-msgstr ""
-
-#: src/dialogs/certifycertificatedialog.cpp:64
-#, fuzzy, kde-format
-#| msgid "Selection"
-msgid "Invalid Selection"
-msgstr "Elektaĵo"
-
-#: src/dialogs/certifycertificatedialog.cpp:99
+#: src/dialogs/certifycertificatedialog.cpp:83
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgctxt "@title:window arg is name, email of certificate holder"
 msgid "Certify Certificate: %1"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/dialogs/certifywidget.cpp:223
+#: src/dialogs/certifywidget.cpp:249
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgid "Certify with:"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/dialogs/certifywidget.cpp:248
+#: src/dialogs/certifywidget.cpp:268
 #, kde-format
-msgid "Certify for everyone to see. (exportable)"
+msgid "Certify for everyone to see (exportable)"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:249
+#: src/dialogs/certifywidget.cpp:274
 #, kde-format
-msgid "Publish on keyserver afterwards."
+msgid "Publish on keyserver afterwards"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:262
+#: src/dialogs/certifywidget.cpp:290
 #, kde-format
 msgid "You can use this to add additional info to a certification."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:264
+#: src/dialogs/certifywidget.cpp:292
 #, kde-format
 msgid ""
 "Tags created by anyone with full certification trust are shown in the "
 "keylist and can be searched."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:348
+#: src/dialogs/certifywidget.cpp:296
+#, kde-format
+msgid "Tags:"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:311
+#, kde-format
+msgid "Certify as trusted introducer"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:312
+#, kde-format
+msgid "You can use this to certify a trusted introducer for a domain."
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:314
+#, kde-format
+msgid ""
+"All certificates with email addresses belonging to the domain that have been "
+"certified by the trusted introducer are treated as certified, i.e. a trusted "
+"introducer acts as a kind of intermediate CA for a domain."
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:328
+#, kde-format
+msgid "Domain"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:420
 #: src/dialogs/revokecertificationwidget.cpp:227
 #, kde-format
 msgid "Fingerprint: <b>%1</b>"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:350
+#: src/dialogs/certifywidget.cpp:422
 #: src/dialogs/revokecertificationwidget.cpp:229
 #, kde-format
 msgid "<i>Only the fingerprint clearly identifies the key and its owner.</i>"
@@ -8939,6 +8956,11 @@ msgstr ""
 #, kde-format
 msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Selection"
+#~ msgid "Invalid Selection"
+#~ msgstr "Elektaĵo"
 
 #~ msgid ""
 #~ "If this option is selected, S/MIME certificates are validated using "
