@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cantor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-30 00:13+0000\n"
+"POT-Creation-Date: 2021-06-24 00:16+0000\n"
 "PO-Revision-Date: 2015-03-15 08:54-0400\n"
 "Last-Translator: Eliovir <eliovir@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -376,7 +376,7 @@ msgstr ""
 #. i18n: ectx: label, entry (variableManagement), group (MaximaBackend)
 #: backends/julia/juliabackend.kcfg:16 backends/maxima/maximabackend.kcfg:29
 #: backends/python/pythonbackend.kcfg:17 backends/R/rserver/rserver.kcfg:16
-#: backends/R/settings.ui:61
+#: backends/R/settings.ui:71
 #, kde-format
 msgid "Enable Variable Management"
 msgstr ""
@@ -413,7 +413,7 @@ msgid "Julia script file (*.jl)"
 msgstr ""
 
 #: backends/julia/juliasession.cpp:117 backends/julia/juliasession.cpp:126
-#: backends/maxima/maximasession.cpp:274 cantor_part.cpp:992
+#: backends/maxima/maximasession.cpp:274 cantor_part.cpp:999
 #: lib/session.cpp:287 lib/session.cpp:289 worksheet.cpp:1203
 #: worksheet.cpp:1231 worksheet.cpp:1246 worksheet.cpp:1263 worksheet.cpp:1307
 #: worksheet.cpp:1319
@@ -459,92 +459,44 @@ msgid ""
 "package installation."
 msgstr ""
 
+#. i18n: ectx: attribute (title), widget (QWidget, tabGeneral)
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: backends/julia/settings.ui:21 backends/lua/settings.ui:21
+#: backends/maxima/settings.ui:21 backends/octave/settings.ui:21
+#: backends/python/settings.ui:21 backends/qalculate/settings.ui:21
+#: backends/R/settings.ui:21 backends/sage/settings.ui:21
+#: backends/scilab/settings.ui:21 cantor.cpp:614
+#, kde-format
+msgid "General"
+msgstr "Ĝeneralo"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: backends/julia/settings.ui:17
+#: backends/julia/settings.ui:27
 #, kde-format
 msgid "Path to Julia:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lPlotIntegration)
-#: backends/julia/settings.ui:24 backends/maxima/settings.ui:98
-#: backends/python/settings.ui:168 backends/R/settings.ui:34
-#: backends/scilab/settings.ui:20
+#: backends/julia/settings.ui:37 backends/maxima/settings.ui:61
+#: backends/octave/settings.ui:51 backends/python/settings.ui:44
+#: backends/R/settings.ui:44 backends/scilab/settings.ui:37
 #, kde-format
 msgid "Plot Integration:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lVariableManagement)
-#: backends/julia/settings.ui:31 backends/maxima/settings.ui:112
-#: backends/python/settings.ui:175 backends/R/settings.ui:51
-#, fuzzy, kde-format
-#| msgid "Variable:"
-msgid "Variable Management:"
-msgstr "Variablo:"
-
-#. i18n: ectx: property (text), widget (QLabel, label2)
-#: backends/julia/settings.ui:38
-#, kde-format
-msgid "Internal Plot Format:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, label3)
-#. i18n: ectx: property (toolTip), widget (QLabel, label4)
-#: backends/julia/settings.ui:45 backends/python/settings.ui:69
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_integratePlots)
+#: backends/julia/settings.ui:44 backends/maxima/settings.ui:68
+#: backends/octave/settings.ui:58 backends/python/settings.ui:51
+#: backends/R/settings.ui:51 backends/scilab/settings.ui:44
 #, kde-format
 msgid ""
-"Graphic package, which code will be used for plotting via \"Plot\" Cantor "
-"menu."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label3)
-#. i18n: ectx: property (text), widget (QLabel, label4)
-#: backends/julia/settings.ui:48 backends/python/settings.ui:72
-#, kde-format
-msgid "Graphic Package for \"Plot\"-assistant"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/julia/settings.ui:62 backends/python/settings.ui:101
-#, kde-format
-msgid "GR"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/julia/settings.ui:67
-#, kde-format
-msgid "Plots"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/julia/settings.ui:72
-#, kde-format
-msgid "PyPlot"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/julia/settings.ui:77
-#, kde-format
-msgid "Gadfly"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_inlinePlotFormat)
-#: backends/julia/settings.ui:98
-#, kde-format
-msgid "Inner format of plots, if plots embedding is enabled."
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_variableManagement)
-#: backends/julia/settings.ui:115 backends/maxima/settings.ui:85
-#: backends/python/settings.ui:34 backends/R/settings.ui:58
-#, kde-format
-msgid ""
-"Monitor the creation and destruction of variables and show the existing "
-"variables in the variable panel."
+"If enabled, plots will be shown inside of the worksheet. Otherwise, plots "
+"will be shown in an external window."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowLatex)
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_variableManagement)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_integratePlots)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_variableManagement)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_indicateInfiniteSeries)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useAllPrefixes)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_negativeExponents)
@@ -553,28 +505,122 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_coloredPlot)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_plotGrid)
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_plotBorder)
-#: backends/julia/settings.ui:118 backends/julia/settings.ui:128
-#: backends/maxima/settings.ui:20 backends/maxima/settings.ui:88
-#: backends/python/settings.ui:27 backends/python/settings.ui:37
+#: backends/julia/settings.ui:47 backends/julia/settings.ui:64
+#: backends/maxima/settings.ui:44 backends/maxima/settings.ui:71
+#: backends/octave/settings.ui:61 backends/octave/settings.ui:78
+#: backends/python/settings.ui:54 backends/python/settings.ui:71
 #: backends/qalculate/settings.ui:132 backends/qalculate/settings.ui:153
 #: backends/qalculate/settings.ui:174 backends/qalculate/settings.ui:227
 #: backends/qalculate/settings.ui:339 backends/qalculate/settings.ui:360
 #: backends/qalculate/settings.ui:381 backends/qalculate/settings.ui:402
-#: backends/sage/settings.ui:51 backends/scilab/settings.ui:30
-#: commandentry.cpp:340
+#: backends/sage/settings.ui:61 backends/scilab/settings.ui:47
+#: commandentry.cpp:345
 #, kde-format
 msgid "Enabled"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_integratePlots)
-#: backends/julia/settings.ui:125 backends/maxima/settings.ui:17
-#: backends/python/settings.ui:24 backends/R/settings.ui:41
-#: backends/scilab/settings.ui:27
+#. i18n: ectx: property (text), widget (QLabel, lVariableManagement)
+#: backends/julia/settings.ui:54 backends/maxima/settings.ui:34
+#: backends/octave/settings.ui:68 backends/python/settings.ui:61
+#: backends/R/settings.ui:61
+#, fuzzy, kde-format
+#| msgid "Variable:"
+msgid "Variable Management:"
+msgstr "Variablo:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_variableManagement)
+#: backends/julia/settings.ui:61 backends/maxima/settings.ui:41
+#: backends/octave/settings.ui:75 backends/python/settings.ui:68
+#: backends/R/settings.ui:68
 #, kde-format
 msgid ""
-"If enabled, plots will be shown inside of the worksheet. Otherwise, plots "
-"will be shown in an external window."
+"Monitor the creation and destruction of variables and show the existing "
+"variables in the variable panel."
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label2)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: backends/julia/settings.ui:71 backends/octave/settings.ui:85
+#, kde-format
+msgid "Internal Plot Format:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_inlinePlotFormat)
+#: backends/julia/settings.ui:78
+#, kde-format
+msgid "Inner format of plots, if plots embedding is enabled."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label3)
+#. i18n: ectx: property (toolTip), widget (QLabel, label4)
+#: backends/julia/settings.ui:95 backends/python/settings.ui:113
+#, kde-format
+msgid ""
+"Graphic package, which code will be used for plotting via \"Plot\" Cantor "
+"menu."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label3)
+#. i18n: ectx: property (text), widget (QLabel, label4)
+#: backends/julia/settings.ui:98 backends/python/settings.ui:116
+#, kde-format
+msgid "Graphic Package for \"Plot\"-assistant"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:112 backends/python/settings.ui:145
+#, kde-format
+msgid "GR"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:117
+#, kde-format
+msgid "Plots"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:122
+#, kde-format
+msgid "PyPlot"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/julia/settings.ui:127
+#, kde-format
+msgid "Gadfly"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabAutorun)
+#: backends/julia/settings.ui:149 backends/lua/settings.ui:51
+#: backends/maxima/settings.ui:99 backends/octave/settings.ui:128
+#: backends/python/settings.ui:172 backends/R/settings.ui:95
+#: backends/sage/settings.ui:85 backends/scilab/settings.ui:68
+#, kde-format
+msgid "Autorun"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lAutorun)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (title), widget (QGroupBox)
+#: backends/julia/settings.ui:155 backends/kalgebra/settings.ui:20
+#: backends/lua/settings.ui:57 backends/maxima/settings.ui:105
+#: backends/octave/settings.ui:134 backends/python/settings.ui:178
+#: backends/qalculate/settings.ui:183 backends/R/settings.ui:101
+#: backends/sage/settings.ui:91 backends/scilab/settings.ui:74
+#, kde-format
+msgid "Commands to autorun"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tabDocumentation)
+#: backends/julia/settings.ui:169 backends/lua/settings.ui:71
+#: backends/maxima/settings.ui:119 backends/octave/settings.ui:148
+#: backends/python/settings.ui:192 backends/R/settings.ui:115
+#: backends/sage/settings.ui:105 backends/scilab/settings.ui:88
+#, fuzzy, kde-format
+msgid "Documentation"
+msgstr "La dosiero malfermiĝi"
 
 #: backends/kalgebra/kalgebrabackend.cpp:56
 #, fuzzy, kde-format
@@ -616,21 +662,11 @@ msgid "<p><b>%1:</b> %2</p>"
 msgstr "<p><b>%1:</b> %2</p>"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
-#: backends/kalgebra/settings.ui:17 backends/lua/settings.ui:31
+#: backends/kalgebra/settings.ui:17
 #, kde-format
 msgid ""
 "This autorun commands, which will run on start new worksheet. They can be "
 "useful for loading needed modules, changing environment, etc."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#. i18n: ectx: property (title), widget (QGroupBox)
-#: backends/kalgebra/settings.ui:20 backends/lua/settings.ui:34
-#: backends/maxima/settings.ui:37 backends/python/settings.ui:133
-#: backends/qalculate/settings.ui:183 backends/R/settings.ui:87
-#: backends/sage/settings.ui:77 backends/scilab/settings.ui:56
-#, kde-format
-msgid "Commands to autorun"
 msgstr ""
 
 #: backends/lua/luabackend.cpp:50
@@ -661,9 +697,9 @@ msgid "Lua script file (*.lua)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: backends/lua/settings.ui:19
+#: backends/lua/settings.ui:27
 #, kde-format
-msgid "Path to luajit command:"
+msgid "Path to luajit:"
 msgstr ""
 
 #: backends/maxima/maximabackend.cpp:74
@@ -674,7 +710,7 @@ msgctxt ""
 msgid "http://maxima.sourceforge.net/docs/manual/en/maxima.html"
 msgstr "http://maxima.sourceforge.net/docs/manual/en/maxima.html"
 
-#: backends/maxima/maximabackend.cpp:92
+#: backends/maxima/maximabackend.cpp:89
 #, kde-format
 msgid ""
 "<b>Maxima</b> is a system for the manipulation of symbolic and numerical "
@@ -738,38 +774,30 @@ msgstr ""
 msgid "Maxima crashed twice within a short time. Stopping to try starting"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label2)
-#: backends/maxima/settings.ui:27 backends/python/settings.ui:161
-#: backends/R/settings.ui:20 backends/sage/settings.ui:27
-#, fuzzy, kde-format
-msgid "Documentation:"
-msgstr "La dosiero malfermiĝi"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox)
-#: backends/maxima/settings.ui:34 backends/python/settings.ui:130
-#: backends/R/settings.ui:84 backends/sage/settings.ui:74
-#: backends/scilab/settings.ui:53
-#, kde-format
-msgid ""
-"Commands to automatically run on start. They can be useful for loading "
-"needed modules, changing environment, etc."
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: backends/maxima/settings.ui:49 backends/sage/settings.ui:17
-#: backends/scilab/settings.ui:81
+#: backends/maxima/settings.ui:27 backends/octave/settings.ui:27
+#: backends/sage/settings.ui:27 backends/scilab/settings.ui:27
 #, kde-format
 msgid "Executable:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_localDoc)
-#: backends/maxima/settings.ui:105 backends/python/settings.ui:17
-#: backends/R/settings.ui:27 backends/sage/settings.ui:34
+#: backends/maxima/settings.ui:51 backends/octave/settings.ui:44
+#: backends/python/settings.ui:37 backends/R/settings.ui:37
+#: backends/sage/settings.ui:44
 #, kde-format
 msgid ""
 "If empty, the \"Show help\" action will show the default online "
 "documentation. Otherwise, the specified URL will be opened."
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label2)
+#: backends/maxima/settings.ui:78 backends/octave/settings.ui:37
+#: backends/python/settings.ui:30 backends/R/settings.ui:30
+#: backends/sage/settings.ui:37
+#, fuzzy, kde-format
+msgid "Documentation:"
+msgstr "La dosiero malfermiĝi"
 
 #: backends/octave/octavebackend.cpp:64
 #, kde-format
@@ -810,8 +838,8 @@ msgstr ""
 
 #: backends/octave/octavesession.cpp:436 backends/sage/sagesession.cpp:234
 #: backends/sage/sagesession.cpp:267 backends/sage/sagesession.cpp:346
-#: backends/sage/sagesession.cpp:357 cantor.cpp:217 cantor.cpp:219
-#: cantor.cpp:337 cantor.cpp:344 lib/session.cpp:358 main.cpp:60 main.cpp:124
+#: backends/sage/sagesession.cpp:357 cantor.cpp:219 cantor.cpp:221
+#: cantor.cpp:339 cantor.cpp:346 lib/session.cpp:358 main.cpp:67 main.cpp:131
 #: markdownentry.cpp:793 textentry.cpp:556 worksheet.cpp:1286
 #, kde-format
 msgid "Cantor"
@@ -828,13 +856,13 @@ msgid ""
 "plots."
 msgstr ""
 
-#: backends/python/pythonbackend.cpp:71
+#: backends/python/pythonbackend.cpp:69
 #, kde-format
 msgctxt "The url to the documentation Python"
 msgid "https://docs.python.org/3/"
 msgstr ""
 
-#: backends/python/pythonbackend.cpp:76
+#: backends/python/pythonbackend.cpp:74
 #, kde-format
 msgid ""
 "<b>Python</b> is a remarkably powerful dynamic programming language that is "
@@ -888,50 +916,8 @@ msgid ""
 "\"Static Image Export\" article in Plot.ly documentation for details."
 msgstr ""
 
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
-#: backends/python/settings.ui:51
-#, kde-format
-msgid "Matplotlib (with seaborn, ggplot support too)"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
-#: backends/python/settings.ui:56
-#, kde-format
-msgid "Plot.ly"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
-#: backends/python/settings.ui:61
-#, kde-format
-msgid "All supported"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/python/settings.ui:86
-#, kde-format
-msgid "matplotlib"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/python/settings.ui:91
-#, kde-format
-msgid "pylab"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/python/settings.ui:96
-#, kde-format
-msgid "plot.ly"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
-#: backends/python/settings.ui:106
-#, kde-format
-msgid "bokeh"
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: backends/python/settings.ui:182
+#: backends/python/settings.ui:78
 #, kde-format
 msgid ""
 "Graphic package, used for plotting. When integrated plots option is enabled, "
@@ -939,11 +925,53 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: backends/python/settings.ui:185
+#: backends/python/settings.ui:81
 #, fuzzy, kde-format
 #| msgid "Package:"
 msgid "Graphic Package: "
 msgstr "Pakon:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
+#: backends/python/settings.ui:95
+#, kde-format
+msgid "Matplotlib (with seaborn, ggplot support too)"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
+#: backends/python/settings.ui:100
+#, kde-format
+msgid "Plot.ly"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_choosenGraphicPackage)
+#: backends/python/settings.ui:105
+#, kde-format
+msgid "All supported"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/python/settings.ui:130
+#, kde-format
+msgid "matplotlib"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/python/settings.ui:135
+#, kde-format
+msgid "pylab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/python/settings.ui:140
+#, kde-format
+msgid "plot.ly"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_plotExtenstionGraphicPackage)
+#: backends/python/settings.ui:150
+#, kde-format
+msgid "bokeh"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, QalculatePlotAssistantBase)
 #: backends/qalculate/plotassistant/qalculateplotdialog.ui:14
@@ -1744,12 +1772,6 @@ msgstr ""
 msgid "file: the file to load"
 msgstr ""
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: backends/qalculate/settings.ui:21 cantor.cpp:611
-#, kde-format
-msgid "General"
-msgstr "Ĝeneralo"
-
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: backends/qalculate/settings.ui:29
 #, kde-format
@@ -1955,6 +1977,157 @@ msgstr ""
 msgid "Legend Position:"
 msgstr ""
 
+#: backends/qthelpconfig.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Modify Entry"
+msgstr ""
+
+#: backends/qthelpconfig.cpp:47
+#, fuzzy, kde-format
+#| msgid "2nd Variable"
+msgctxt "@title:window"
+msgid "Add New Entry"
+msgstr "2a variablo"
+
+#: backends/qthelpconfig.cpp:64
+#, kde-format
+msgid "Name cannot be empty."
+msgstr ""
+
+#: backends/qthelpconfig.cpp:84
+#, fuzzy, kde-format
+msgid "Add local documentation"
+msgstr "La dosiero malfermiĝi"
+
+#: backends/qthelpconfig.cpp:100
+#, fuzzy, kde-format
+msgctxt "@action:button Allow user to get some API documentation with GHNS"
+msgid "Get New Documentation"
+msgstr "La dosiero malfermiĝi"
+
+#: backends/qthelpconfig.cpp:103
+#, fuzzy, kde-format
+#| msgid "Additional options:"
+msgid "Download additional documentations"
+msgstr "Kromaj elektebloj:"
+
+#: backends/qthelpconfig.cpp:139
+#, kde-format
+msgid "Documentation provided by GHNS"
+msgstr ""
+
+#: backends/qthelpconfig.cpp:168
+#, kde-format
+msgid "Qt Compressed Help file is not valid."
+msgstr ""
+
+#: backends/qthelpconfig.cpp:177
+#, kde-format
+msgid "Documentation already imported"
+msgstr ""
+
+#: backends/qthelpconfig.cpp:266
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Modify"
+msgstr ""
+
+#: backends/qthelpconfig.cpp:271
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Delete"
+msgstr ""
+
+#: backends/qthelpconfig.cpp:279
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Please uninstall this via GHNS."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: backends/qthelpconfig.ui:20
+#, kde-format
+msgid "Install Additional Documentation Files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTreeWidget, qchTable)
+#: backends/qthelpconfig.ui:49 lib/defaultvariablemodel.cpp:67
+#, fuzzy, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Nomo"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, qchTable)
+#: backends/qthelpconfig.ui:54
+#, kde-format
+msgctxt "@title:column"
+msgid "Path"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: backends/qthelpconfig.ui:79
+#, kde-format
+msgctxt "@action:button"
+msgid "Add"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: backends/qthelpconfigeditdialog.ui:17
+#, kde-format
+msgctxt "@label:chooser"
+msgid "Icon:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, qchIcon)
+#: backends/qthelpconfigeditdialog.ui:24
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select an icon"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: backends/qthelpconfigeditdialog.ui:37
+#, fuzzy, kde-format
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Nomo"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, qchName)
+#: backends/qthelpconfigeditdialog.ui:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter a name"
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, qchName)
+#: backends/qthelpconfigeditdialog.ui:47
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Select a name..."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: backends/qthelpconfigeditdialog.ui:54
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Path:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, qchRequester)
+#: backends/qthelpconfigeditdialog.ui:67
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a Qt Help file..."
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (KUrlRequester, qchRequester)
+#: backends/qthelpconfigeditdialog.ui:73
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Select a Qt Help file..."
+msgstr ""
+
 #: backends/R/rbackend.cpp:83
 #, kde-format
 msgctxt ""
@@ -1996,23 +2169,23 @@ msgstr ""
 msgid "Url to the local R documentation"
 msgstr ""
 
-#: backends/R/rsettingswidget.cpp:18
+#: backends/R/rsettingswidget.cpp:24
 #, kde-format
 msgid "Double click to open file selection dialog"
 msgstr ""
 
-#: backends/R/rsettingswidget.cpp:38
+#: backends/R/rsettingswidget.cpp:44
 #, kde-format
 msgid "*.R *.r|R source files (*.R, *.r)"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_integratePlots)
-#: backends/R/settings.ui:44
+#: backends/R/settings.ui:54
 #, kde-format
 msgid "Integrate Plots in Worksheet"
 msgstr ""
 
-#: backends/sage/sagebackend.cpp:84
+#: backends/sage/sagebackend.cpp:81
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "the url to the documentation of Sage, please check if there is a "
@@ -2024,7 +2197,7 @@ msgctxt ""
 msgid "https://doc.sagemath.org/html/en/reference/index.html"
 msgstr "http://www.sagemath.org/doc/reference/index.html"
 
-#: backends/sage/sagebackend.cpp:89
+#: backends/sage/sagebackend.cpp:86
 #, kde-format
 msgid ""
 "<b>Sage</b> is a free open-source mathematics software system licensed under "
@@ -2108,20 +2281,20 @@ msgid "Failed to start Sage"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: backends/sage/settings.ui:41
+#: backends/sage/settings.ui:51
 #, kde-format
 msgid "LaTeX typesetting:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_allowLatex)
-#: backends/sage/settings.ui:48
+#: backends/sage/settings.ui:58
 #, kde-format
 msgid ""
 "Sage LaTeX output not always correct, so latex typesetting can be disabled "
 "for better experience"
 msgstr ""
 
-#: backends/scilab/scilabbackend.cpp:70
+#: backends/scilab/scilabbackend.cpp:67
 #, fuzzy, kde-format
 #| msgctxt "Lua official documentation"
 #| msgid "http://www.lua.org/docs.html"
@@ -2131,7 +2304,7 @@ msgctxt ""
 msgid "https://www.scilab.org/support/documentation"
 msgstr "http://www.lua.org/docs.html"
 
-#: backends/scilab/scilabbackend.cpp:75
+#: backends/scilab/scilabbackend.cpp:72
 #, kde-format
 msgid ""
 "<b>Scilab</b> is a free software, cross-platform numerical computational "
@@ -2150,45 +2323,45 @@ msgstr ""
 msgid ";;Scilab script file (*.sce);;Scilab function file (*.sci)"
 msgstr ""
 
-#: cantor.cpp:103
+#: cantor.cpp:105
 #, kde-format
 msgid "The file %1 is already opened."
 msgstr ""
 
-#: cantor.cpp:103 cantor.cpp:229
+#: cantor.cpp:105 cantor.cpp:231
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open file"
 msgstr "Malfermi"
 
-#: cantor.cpp:145
+#: cantor.cpp:147
 #, kde-format
 msgid "Download Example Worksheets"
 msgstr ""
 
-#: cantor.cpp:150
+#: cantor.cpp:152
 #, kde-format
 msgid "&Open Example"
 msgstr ""
 
-#: cantor.cpp:155
+#: cantor.cpp:157
 #, kde-format
 msgid "Go to previous worksheet"
 msgstr ""
 
-#: cantor.cpp:167
+#: cantor.cpp:169
 #, kde-format
 msgid "Go to next worksheet"
 msgstr ""
 
-#: cantor.cpp:228
+#: cantor.cpp:230
 #, kde-format
 msgid ""
 "All supported files (*.cws *ipynb);;Cantor Worksheet (*.cws);;Jupyter "
 "Notebook (*.ipynb)"
 msgstr ""
 
-#: cantor.cpp:296
+#: cantor.cpp:298
 #, kde-format
 msgid ""
 "<h1>No Backend Found</h1>\n"
@@ -2205,65 +2378,65 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: cantor.cpp:316
+#: cantor.cpp:318
 #, kde-format
 msgid "Error"
 msgstr "Eraro"
 
-#: cantor.cpp:337
+#: cantor.cpp:339
 #, kde-format
 msgid "Backend %1 is not installed"
 msgstr ""
 
-#: cantor.cpp:344
+#: cantor.cpp:346
 #, kde-format
 msgid ""
 "%1 backend installed, but inactive. Please check installation and Cantor "
 "settings"
 msgstr ""
 
-#: cantor.cpp:370
+#: cantor.cpp:373
 #, kde-format
 msgid "Session %1"
 msgstr "Seanco %1"
 
-#: cantor.cpp:388
+#: cantor.cpp:391
 #, kde-format
 msgid "Failed to find the Cantor Part with error %1"
 msgstr ""
 
-#: cantor.cpp:435 cantor_part.cpp:655
+#: cantor.cpp:438 cantor_part.cpp:662
 #, kde-format
 msgid "Calculating..."
 msgstr "Kalkulante..."
 
-#: cantor.cpp:438 cantor_part.cpp:666 cantor_part.cpp:728
+#: cantor.cpp:441 cantor_part.cpp:673 cantor_part.cpp:735
 #, kde-format
 msgid "Ready"
 msgstr "Preta"
 
-#: cantor.cpp:548
+#: cantor.cpp:551
 #, kde-format
 msgid "Multiple unsaved Worksheets are opened. Do you want to close them?"
 msgstr ""
 
-#: cantor.cpp:549
+#: cantor.cpp:552
 #, fuzzy, kde-format
 #| msgid "Cantor"
 msgid "Close Cantor"
 msgstr "Cantor"
 
-#: cantor.cpp:565
+#: cantor.cpp:568
 #, kde-format
 msgid "The current project has been modified. Do you want to save it?"
 msgstr ""
 
-#: cantor.cpp:566
+#: cantor.cpp:569
 #, kde-format
 msgid "Save Project"
 msgstr ""
 
-#: cantor.cpp:612
+#: cantor.cpp:615
 #, kde-format
 msgid "Formatting"
 msgstr ""
@@ -2476,117 +2649,117 @@ msgstr ""
 msgid "Hierarchy font bold for subparagraph"
 msgstr ""
 
-#: cantor_part.cpp:156
+#: cantor_part.cpp:158
 #, kde-format
 msgid "Save Plain Text"
 msgstr ""
 
-#: cantor_part.cpp:198 cantor_part.cpp:566
+#: cantor_part.cpp:200 cantor_part.cpp:573
 #, kde-format
 msgid "Export to LaTeX"
 msgstr ""
 
-#: cantor_part.cpp:214 cantor_part.cpp:662 worksheet.cpp:1928
+#: cantor_part.cpp:216 cantor_part.cpp:669 worksheet.cpp:1928
 #, kde-format
 msgid "Evaluate Worksheet"
 msgstr ""
 
-#: cantor_part.cpp:222
+#: cantor_part.cpp:224
 #, kde-format
 msgid "Zoom"
 msgstr ""
 
-#: cantor_part.cpp:237
+#: cantor_part.cpp:239
 #, kde-format
 msgid "Typeset using LaTeX"
 msgstr ""
 
-#: cantor_part.cpp:246
+#: cantor_part.cpp:248
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Sintaksemfazo"
 
-#: cantor_part.cpp:251
+#: cantor_part.cpp:253
 #, kde-format
 msgid "Completion"
 msgstr ""
 
-#: cantor_part.cpp:256
+#: cantor_part.cpp:258
 #, kde-format
 msgid "Line Numbers"
 msgstr ""
 
-#: cantor_part.cpp:261
+#: cantor_part.cpp:263
 #, kde-format
 msgid "Animate Worksheet"
 msgstr ""
 
-#: cantor_part.cpp:268
+#: cantor_part.cpp:270
 #, kde-format
 msgid "Embedded Math"
 msgstr ""
 
-#: cantor_part.cpp:274
+#: cantor_part.cpp:276
 #, kde-format
 msgid "Restart Backend"
 msgstr ""
 
-#: cantor_part.cpp:281 worksheetentry.cpp:833
+#: cantor_part.cpp:283 worksheetentry.cpp:833
 #, kde-format
 msgid "Evaluate Entry"
 msgstr ""
 
-#: cantor_part.cpp:287
+#: cantor_part.cpp:289
 #, kde-format
 msgid "Insert Command Entry"
 msgstr ""
 
-#: cantor_part.cpp:293
+#: cantor_part.cpp:295
 #, kde-format
 msgid "Insert Text Entry"
 msgstr ""
 
-#: cantor_part.cpp:299
+#: cantor_part.cpp:301
 #, fuzzy, kde-format
 msgid "Insert Markdown Entry"
 msgstr "Rezulto"
 
-#: cantor_part.cpp:306
+#: cantor_part.cpp:308
 #, fuzzy, kde-format
 msgid "Insert LaTeX Entry"
 msgstr "Rezulto"
 
-#: cantor_part.cpp:312
+#: cantor_part.cpp:314
 #, kde-format
 msgid "Insert Page Break"
 msgstr ""
 
-#: cantor_part.cpp:317 markdownentry.cpp:62
+#: cantor_part.cpp:319 markdownentry.cpp:62
 #, kde-format
 msgid "Insert Image"
 msgstr ""
 
-#: cantor_part.cpp:322
+#: cantor_part.cpp:324
 #, kde-format
 msgid "Collapse All Results"
 msgstr ""
 
-#: cantor_part.cpp:327
+#: cantor_part.cpp:329
 #, fuzzy, kde-format
 msgid "Expand All Results"
 msgstr "Rezulto"
 
-#: cantor_part.cpp:332
+#: cantor_part.cpp:334
 #, fuzzy, kde-format
 msgid "Remove All Results"
 msgstr "Rezulto"
 
-#: cantor_part.cpp:337
+#: cantor_part.cpp:339
 #, kde-format
 msgid "Remove current Entry"
 msgstr ""
 
-#: cantor_part.cpp:343
+#: cantor_part.cpp:346 commandentry.cpp:340
 #, fuzzy, kde-format
 msgid "Show Help"
 msgstr "Rezulto"
@@ -2596,114 +2769,114 @@ msgstr "Rezulto"
 #. collection->addAction(QLatin1String("file_publish_worksheet"), publishWorksheet);
 #. connect(publishWorksheet, &QAction::triggered, this, SLOT(publishWorksheet()));
 #.
-#: cantor_part.cpp:358
+#: cantor_part.cpp:365
 #, kde-format
 msgid "Show Script Editor"
 msgstr ""
 
-#: cantor_part.cpp:363
+#: cantor_part.cpp:370
 #, kde-format
 msgid "Show Completion"
 msgstr ""
 
-#: cantor_part.cpp:382 cantor_part.cpp:903
+#: cantor_part.cpp:389 cantor_part.cpp:910
 #, kde-format
 msgid "Show %1 Help"
 msgstr ""
 
-#: cantor_part.cpp:439
+#: cantor_part.cpp:446
 #, kde-format
 msgid "CantorPart"
 msgstr ""
 
-#: cantor_part.cpp:441
+#: cantor_part.cpp:448
 #, fuzzy, kde-format
 msgid "(C) 2009-2015 Alexander Rieder"
 msgstr "Alexander Rieder"
 
-#: cantor_part.cpp:445 main.cpp:75
+#: cantor_part.cpp:452 main.cpp:82
 #, kde-format
 msgid "Alexander Rieder"
 msgstr "Alexander Rieder"
 
-#: cantor_part.cpp:496
+#: cantor_part.cpp:503
 #, kde-format
 msgid "Cantor Worksheet (*.cws)"
 msgstr ""
 
-#: cantor_part.cpp:497
+#: cantor_part.cpp:504
 #, kde-format
 msgid "Jupyter Notebook (*.ipynb)"
 msgstr ""
 
-#: cantor_part.cpp:513
+#: cantor_part.cpp:520
 #, kde-format
 msgid "Save as"
 msgstr ""
 
-#: cantor_part.cpp:559 panelplugins/variablemgr/variablemanagerwidget.cpp:168
+#: cantor_part.cpp:566 panelplugins/variablemgr/variablemanagerwidget.cpp:168
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: cantor_part.cpp:611
+#: cantor_part.cpp:618
 #, kde-format
 msgid ""
 "All the available calculation results will be lost. Do you really want to "
 "restart %1?"
 msgstr ""
 
-#: cantor_part.cpp:612
+#: cantor_part.cpp:619
 #, kde-format
 msgid "Restart %1?"
 msgstr ""
 
-#: cantor_part.cpp:652 worksheet.cpp:1931
+#: cantor_part.cpp:659 worksheet.cpp:1931
 #, kde-format
 msgid "Interrupt"
 msgstr "Interrompoj"
 
-#: cantor_part.cpp:678
+#: cantor_part.cpp:685
 #, kde-format
 msgid "Session Error: %1"
 msgstr ""
 
-#: cantor_part.cpp:718
+#: cantor_part.cpp:725
 #, kde-format
 msgid "Initialization complete"
 msgstr ""
 
-#: cantor_part.cpp:723
+#: cantor_part.cpp:730
 #, kde-format
 msgid "Initializing..."
 msgstr ""
 
-#: cantor_part.cpp:769
+#: cantor_part.cpp:776
 #, kde-format
 msgid "[read-only]"
 msgstr ""
 
-#: cantor_part.cpp:909
+#: cantor_part.cpp:916
 #, kde-format
 msgid "Do you want to upload current Worksheet to public web server?"
 msgstr ""
 
-#: cantor_part.cpp:910
+#: cantor_part.cpp:917
 #, kde-format
 msgid "Question - Cantor"
 msgstr ""
 
-#: cantor_part.cpp:916
+#: cantor_part.cpp:923
 #, kde-format
 msgid "The Worksheet is not saved. You should save it before uploading."
 msgstr ""
 
-#: cantor_part.cpp:917
+#: cantor_part.cpp:924
 #, kde-format
 msgid "Warning - Cantor"
 msgstr ""
 
-#: cantor_part.cpp:992
+#: cantor_part.cpp:999
 #, kde-format
 msgid "This backend does not support scripts."
 msgstr ""
@@ -2824,12 +2997,12 @@ msgstr "Rezulto"
 msgid "Hide Results"
 msgstr "Rezulto"
 
-#: commandentry.cpp:347
+#: commandentry.cpp:352
 #, kde-format
 msgid "Appearance"
 msgstr ""
 
-#: commandentry.cpp:588 commandentry.cpp:982
+#: commandentry.cpp:593 commandentry.cpp:987
 #, kde-format
 msgid "Interrupted"
 msgstr ""
@@ -2854,6 +3027,7 @@ msgstr "..."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: extendedsearchbar.ui:47
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:141
 #, kde-format
 msgid "Find:"
 msgstr ""
@@ -3208,12 +3382,6 @@ msgstr ""
 msgid "Path to the dvips executable"
 msgstr ""
 
-#: lib/defaultvariablemodel.cpp:67
-#, fuzzy, kde-format
-msgctxt "@title:column"
-msgid "Name"
-msgstr "Nomo"
-
 #: lib/defaultvariablemodel.cpp:70
 #, fuzzy, kde-format
 msgctxt "@title:column"
@@ -3288,94 +3456,94 @@ msgid ""
 "will be disabled. %2"
 msgstr ""
 
-#: main.cpp:22
+#: main.cpp:23
 #, kde-format
 msgid "KDE Frontend to mathematical applications"
 msgstr ""
 
-#: main.cpp:68
+#: main.cpp:75
 #, fuzzy, kde-format
 msgid "(C) 2016 Filipe Saraiva<br/>(C) 2009-2015 Alexander Rieder"
 msgstr "Alexander Rieder"
 
-#: main.cpp:72
+#: main.cpp:79
 #, kde-format
 msgid "Filipe Saraiva"
 msgstr ""
 
-#: main.cpp:72
+#: main.cpp:79
 #, kde-format
 msgid "Maintainer<br/>Qt5/KF5 port, Scilab and Python backends"
 msgstr ""
 
-#: main.cpp:73
+#: main.cpp:80
 #, kde-format
 msgid "Nikita Sirgienko"
 msgstr ""
 
-#: main.cpp:73 main.cpp:74
+#: main.cpp:80 main.cpp:81
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr ""
 
-#: main.cpp:74
+#: main.cpp:81
 #, fuzzy, kde-format
 #| msgid "Alexander Rieder"
 msgid "Alexander Semke"
 msgstr "Alexander Rieder"
 
-#: main.cpp:75
+#: main.cpp:82
 #, kde-format
 msgid "Original author<br/>Maintainer (2009 - 2015)"
 msgstr ""
 
-#: main.cpp:76
+#: main.cpp:83
 #, kde-format
 msgid "Aleix Pol Gonzalez"
 msgstr ""
 
-#: main.cpp:76
+#: main.cpp:83
 #, kde-format
 msgid "KAlgebra backend"
 msgstr ""
 
-#: main.cpp:77
+#: main.cpp:84
 #, kde-format
 msgid "Miha Čančula"
 msgstr ""
 
-#: main.cpp:77
+#: main.cpp:84
 #, kde-format
 msgid "Octave backend"
 msgstr ""
 
-#: main.cpp:78
+#: main.cpp:85
 #, kde-format
 msgid "Martin Küttler"
 msgstr ""
 
-#: main.cpp:78
+#: main.cpp:85
 #, kde-format
 msgid "Interface"
 msgstr ""
 
-#: main.cpp:80 main.cpp:81
+#: main.cpp:87 main.cpp:88
 #, fuzzy, kde-format
 msgid "Cantor icon"
 msgstr "Cantor"
 
-#: main.cpp:86
+#: main.cpp:93
 #, kde-format
 msgid "Use  backend <backend>"
 msgstr ""
 
-#: main.cpp:89
+#: main.cpp:96
 #, fuzzy, kde-format
 msgid "Documents to open."
 msgstr "La dosiero malfermiĝi"
 
-#: main.cpp:124
+#: main.cpp:131
 #, kde-format
 msgid "Couldn't open the file %1"
 msgstr ""
@@ -3403,6 +3571,64 @@ msgstr ""
 #: pagebreakentry.cpp:28
 #, kde-format
 msgid "--- Page Break ---"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:66
+#, kde-format
+msgctxt "@button go to contents page"
+msgid "Go to the contents"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:73
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search through keywords..."
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:84
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Find in text of current documentation page"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:90
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset zoom level to 100%"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:138
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:148
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Jump to next match"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:152
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Jump to previous match"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:156
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Match case sensitively"
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:418
+#, kde-format
+msgid "The file has been downloaded successfully at Downloads."
+msgstr ""
+
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:418
+#, kde-format
+msgid "Download Successfull"
 msgstr ""
 
 #: panelplugins/filebrowserpanel/filebrowserpanelplugin.cpp:140
