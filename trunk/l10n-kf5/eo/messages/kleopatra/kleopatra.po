@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-30 00:19+0000\n"
+"POT-Creation-Date: 2021-07-01 00:16+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2192,7 +2192,7 @@ msgstr "Teĥnikaj detaloj"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_tags)
 #: src/conf/appearanceconfigwidget.ui:175
 #: src/dialogs/certificatedetailswidget.cpp:421
-#: src/dialogs/certifywidget.cpp:327
+#: src/dialogs/certifywidget.cpp:349
 #, kde-format
 msgid "Tags"
 msgstr ""
@@ -4333,7 +4333,7 @@ msgstr ""
 msgid "Verifying checksums (%2) in %1"
 msgstr ""
 
-#: src/dialogs/addemaildialog.cpp:45 src/dialogs/certifywidget.cpp:301
+#: src/dialogs/addemaildialog.cpp:45 src/dialogs/certifywidget.cpp:323
 #, kde-format
 msgid "Advanced"
 msgstr "Plie"
@@ -4795,72 +4795,86 @@ msgctxt "@title:window arg is name, email of certificate holder"
 msgid "Certify Certificate: %1"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/dialogs/certifywidget.cpp:287
+#: src/dialogs/certifywidget.cpp:297
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
 msgid "Certify with:"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/dialogs/certifywidget.cpp:306
+#: src/dialogs/certifywidget.cpp:304
 #, kde-format
-msgid "Certify for everyone to see (exportable)"
+msgctxt "@action:button"
+msgid "Set Owner Trust"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:312
+#: src/dialogs/certifywidget.cpp:307
 #, kde-format
-msgid "Publish on keyserver afterwards"
+msgctxt "@info:tooltip"
+msgid ""
+"Click to set the trust level of the selected certification key to ultimate "
+"trust. This is what you usually want to do for your own keys."
 msgstr ""
 
 #: src/dialogs/certifywidget.cpp:328
 #, kde-format
+msgid "Certify for everyone to see (exportable)"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:334
+#, kde-format
+msgid "Publish on keyserver afterwards"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:350
+#, kde-format
 msgid "You can use this to add additional info to a certification."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:330
+#: src/dialogs/certifywidget.cpp:352
 #, kde-format
 msgid ""
 "Tags created by anyone with full certification trust are shown in the "
 "keylist and can be searched."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:334
+#: src/dialogs/certifywidget.cpp:356
 #, kde-format
 msgid "Tags:"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:349
+#: src/dialogs/certifywidget.cpp:371
 #, fuzzy, kde-format
 msgid "Expiration:"
 msgstr "Stela nomo"
 
-#: src/dialogs/certifywidget.cpp:356
+#: src/dialogs/certifywidget.cpp:378
 #, kde-format
 msgid "The certification must be valid at least until tomorrow."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:357
+#: src/dialogs/certifywidget.cpp:379
 #, kde-format
 msgid "The latest allowed certification date is %1."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:360
+#: src/dialogs/certifywidget.cpp:382
 #, kde-format
 msgctxt "Date for expiration of certification"
 msgid "Two years from now"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:361
+#: src/dialogs/certifywidget.cpp:383
 #, kde-format
 msgctxt "Date for expiration of certification"
 msgid "One year from now"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:366
+#: src/dialogs/certifywidget.cpp:388
 #, kde-format
 msgid "You can use this to set an expiration date for a certification."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:368
+#: src/dialogs/certifywidget.cpp:390
 #, kde-format
 msgid ""
 "By setting an expiration date, you can limit the validity of your "
@@ -4868,17 +4882,17 @@ msgid ""
 "passed, your certification is no longer valid."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:388
+#: src/dialogs/certifywidget.cpp:410
 #, kde-format
 msgid "Certify as trusted introducer"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:389
+#: src/dialogs/certifywidget.cpp:411
 #, kde-format
 msgid "You can use this to certify a trusted introducer for a domain."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:391
+#: src/dialogs/certifywidget.cpp:413
 #, kde-format
 msgid ""
 "All certificates with email addresses belonging to the domain that have been "
@@ -4886,22 +4900,45 @@ msgid ""
 "introducer acts as a kind of intermediate CA for a domain."
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:405
+#: src/dialogs/certifywidget.cpp:427
 #, kde-format
 msgid "Domain"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:503
+#: src/dialogs/certifywidget.cpp:526
 #: src/dialogs/revokecertificationwidget.cpp:227
 #, kde-format
 msgid "Fingerprint: <b>%1</b>"
 msgstr ""
 
-#: src/dialogs/certifywidget.cpp:505
+#: src/dialogs/certifywidget.cpp:528
 #: src/dialogs/revokecertificationwidget.cpp:229
 #, kde-format
 msgid "<i>Only the fingerprint clearly identifies the key and its owner.</i>"
 msgstr ""
+
+#: src/dialogs/certifywidget.cpp:622
+#, kde-format
+msgid "Is this your own key?"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:637
+#, kde-format
+msgid ""
+"<p>Changing the certification trust of the key <b>%1</b> failed:</p><p>%2</p>"
+msgstr ""
+
+#: src/dialogs/certifywidget.cpp:640
+#, fuzzy, kde-format
+#| msgid "Categories"
+msgid "Certification Trust Change Failed"
+msgstr "Kategorioj"
+
+#: src/dialogs/certifywidget.cpp:647
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgid "Owner trust set successfully."
+msgstr "Vidigi atestilon 0x%1"
 
 #: src/dialogs/deletecertificatesdialog.cpp:91
 #, kde-format
