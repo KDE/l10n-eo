@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-26 00:28+0000\n"
+"POT-Creation-Date: 2021-11-30 00:44+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -574,8 +574,8 @@ msgstr ""
 #: src/commands/decryptverifyfilescommand.cpp:172
 #: src/commands/encryptclipboardcommand.cpp:146
 #: src/commands/encryptclipboardcommand.cpp:160
-#: src/commands/signclipboardcommand.cpp:145
-#: src/commands/signclipboardcommand.cpp:159
+#: src/commands/signclipboardcommand.cpp:155
+#: src/commands/signclipboardcommand.cpp:169
 #: src/commands/signencryptfilescommand.cpp:270
 #, kde-format
 msgid "An error occurred: %1"
@@ -2188,8 +2188,8 @@ msgctxt "@info"
 msgid "PIV Card Application Administration Key set successfully."
 msgstr ""
 
-#: src/commands/signclipboardcommand.cpp:147
-#: src/commands/signclipboardcommand.cpp:161
+#: src/commands/signclipboardcommand.cpp:157
+#: src/commands/signclipboardcommand.cpp:171
 #, kde-format
 msgid "Sign Clipboard Error"
 msgstr ""
@@ -2209,18 +2209,18 @@ msgstr ""
 msgid "Select Folder to Sign and/or Encrypt"
 msgstr ""
 
-#: src/conf/appearanceconfigwidget.cpp:125
+#: src/conf/appearanceconfigwidget.cpp:127
 #, kde-format
 msgctxt "Key filter without user-assigned name"
 msgid "<unnamed>"
 msgstr ""
 
-#: src/conf/appearanceconfigwidget.cpp:281
+#: src/conf/appearanceconfigwidget.cpp:283
 #, kde-format
 msgid "This parameter has been locked down by the system administrator."
 msgstr ""
 
-#: src/conf/appearanceconfigwidget.cpp:309
+#: src/conf/appearanceconfigwidget.cpp:311
 #, kde-format
 msgid "DN-Attribute Order"
 msgstr ""
@@ -2508,45 +2508,45 @@ msgstr ""
 msgid "Archive command to use when archiving files:"
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:153
+#: src/conf/dirservconfigpage.cpp:155
 #, fuzzy, kde-format
 #| msgid "OpenPGP"
 msgid "OpenPGP keyserver:"
 msgstr "OpenPGP"
 
-#: src/conf/dirservconfigpage.cpp:165
+#: src/conf/dirservconfigpage.cpp:167
 #, kde-format
 msgid "X.509 Directory Services"
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:178
+#: src/conf/dirservconfigpage.cpp:180
 #, kde-format
 msgid ""
 "Configuration of directory services is not possible because the used gpgme "
 "libraries are too old."
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:187
+#: src/conf/dirservconfigpage.cpp:189
 #, kde-format
 msgid "LDAP &timeout (minutes:seconds):"
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:197
+#: src/conf/dirservconfigpage.cpp:199
 #, kde-format
 msgid "&Maximum number of items returned by query:"
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:207
+#: src/conf/dirservconfigpage.cpp:209
 #, kde-format
 msgid "Automatically add &new servers discovered in CRL distribution points"
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:425
+#: src/conf/dirservconfigpage.cpp:427
 #, kde-format
 msgid "Backend error: gpgconf does not seem to know the entry for %1/%2"
 msgstr ""
 
-#: src/conf/dirservconfigpage.cpp:431
+#: src/conf/dirservconfigpage.cpp:433
 #, kde-format
 msgid "Backend error: gpgconf has wrong type for %1/%2: %3 %4"
 msgstr ""
@@ -6239,74 +6239,116 @@ msgid ""
 "the Active Directory."
 msgstr ""
 
-#. i18n: ectx: label, entry (ShowAppearanceConfiguration), group (ConfigurationDialog)
+#. i18n: ectx: label, entry (cmsEnabled), group (CMS)
 #: src/kcfg/settings.kcfg:44
+#, fuzzy, kde-format
+#| msgid "S/MIME"
+msgid "Enable S/MIME"
+msgstr "S/MIME"
+
+#. i18n: ectx: tooltip, entry (cmsEnabled), group (CMS)
+#: src/kcfg/settings.kcfg:45
+#, kde-format
+msgid "Enables support for S/MIME (CMS)."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (cmsEnabled), group (CMS)
+#: src/kcfg/settings.kcfg:46
+#, kde-format
+msgid ""
+"If false, then Kleopatra's main UI will not offer any functionality related "
+"to S/MIME (CMS)."
+msgstr ""
+
+#. i18n: ectx: label, entry (cmsCertificateCreationAllowed), group (CMS)
+#: src/kcfg/settings.kcfg:50
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgid "Allow S/MIME certificate creation"
+msgstr "Vidigi atestilon 0x%1"
+
+#. i18n: ectx: tooltip, entry (cmsCertificateCreationAllowed), group (CMS)
+#: src/kcfg/settings.kcfg:51
+#, kde-format
+msgid "Allows the creation of S/MIME certificate signing requests."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (cmsCertificateCreationAllowed), group (CMS)
+#: src/kcfg/settings.kcfg:52
+#, kde-format
+msgid ""
+"If false, then Kleopatra will not offer the creation of S/MIME certificate "
+"signing requests."
+msgstr ""
+
+#. i18n: ectx: label, entry (cmsSigningAllowed), group (CMS)
+#: src/kcfg/settings.kcfg:56
+#, fuzzy, kde-format
+#| msgid "Show certificate 0x%1"
+msgid "Allow signing with S/MIME certificates"
+msgstr "Vidigi atestilon 0x%1"
+
+#. i18n: ectx: tooltip, entry (cmsSigningAllowed), group (CMS)
+#: src/kcfg/settings.kcfg:57
+#, kde-format
+msgid "Allows signing of text or files with S/MIME certificates."
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (cmsSigningAllowed), group (CMS)
+#: src/kcfg/settings.kcfg:58
+#, kde-format
+msgid ""
+"If false, then Kleopatra will not offer functionality for creating "
+"signatures with S/MIME certificates."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowAppearanceConfiguration), group (ConfigurationDialog)
+#: src/kcfg/settings.kcfg:64
 #, kde-format
 msgid "Show appearance configuration"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShowCryptoOperationsConfiguration), group (ConfigurationDialog)
-#: src/kcfg/settings.kcfg:48
+#: src/kcfg/settings.kcfg:68
 #, kde-format
 msgid "Show crypto operations configuration"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShowDirectoryServicesConfiguration), group (ConfigurationDialog)
-#: src/kcfg/settings.kcfg:52
+#: src/kcfg/settings.kcfg:72
 #, kde-format
 msgid "Show directory services configuration"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShowGnuPGSystemConfiguration), group (ConfigurationDialog)
-#: src/kcfg/settings.kcfg:56
+#: src/kcfg/settings.kcfg:76
 #, kde-format
 msgid "Show GnuPG system configuration"
 msgstr ""
 
 #. i18n: ectx: label, entry (ShowSMimeValidationConfiguration), group (ConfigurationDialog)
-#: src/kcfg/settings.kcfg:60
+#: src/kcfg/settings.kcfg:80
 #, kde-format
 msgid "Show S/MIME validation configuration"
 msgstr ""
 
 #. i18n: ectx: label, entry (GroupsEnabled), group (Groups)
-#: src/kcfg/settings.kcfg:66
+#: src/kcfg/settings.kcfg:86
 #, fuzzy, kde-format
 #| msgid "Show alway&s"
 msgid "Enable Groups"
 msgstr "Montri ĉi&am"
 
 #. i18n: ectx: tooltip, entry (GroupsEnabled), group (Groups)
-#: src/kcfg/settings.kcfg:67
+#: src/kcfg/settings.kcfg:87
 #, kde-format
 msgid "Enable usage of groups of keys."
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (GroupsEnabled), group (Groups)
-#: src/kcfg/settings.kcfg:68
+#: src/kcfg/settings.kcfg:88
 #, kde-format
 msgid "Enable usage of groups of keys to create lists of recipients."
-msgstr ""
-
-#. i18n: ectx: label, entry (cmsEnabled), group (Protocols)
-#: src/kcfg/settings.kcfg:74
-#, fuzzy, kde-format
-#| msgid "S/MIME"
-msgid "Enable S/MIME"
-msgstr "S/MIME"
-
-#. i18n: ectx: tooltip, entry (cmsEnabled), group (Protocols)
-#: src/kcfg/settings.kcfg:75
-#, kde-format
-msgid "Enables support for S/MIME (CMS)."
-msgstr ""
-
-#. i18n: ectx: whatsthis, entry (cmsEnabled), group (Protocols)
-#: src/kcfg/settings.kcfg:76
-#, kde-format
-msgid ""
-"If false, then Kleopatra's main UI will not offer any functionality related "
-"to S/MIME (CMS)."
 msgstr ""
 
 #. i18n: ectx: label, entry (RefreshInterval), group (SMime Validation)
@@ -6819,7 +6861,7 @@ msgstr ""
 msgid "Sign/Encrypt..."
 msgstr ""
 
-#: src/mainwindow.cpp:636 src/utils/clipboardmenu.cpp:41
+#: src/mainwindow.cpp:636 src/utils/clipboardmenu.cpp:42
 #: src/view/keylistcontroller.cpp:378
 #, kde-format
 msgid "Decrypt/Verify..."
@@ -8275,12 +8317,12 @@ msgstr ""
 msgid "Encrypt..."
 msgstr ""
 
-#: src/utils/clipboardmenu.cpp:38
+#: src/utils/clipboardmenu.cpp:39
 #, kde-format
 msgid "S/MIME-Sign..."
 msgstr ""
 
-#: src/utils/clipboardmenu.cpp:40
+#: src/utils/clipboardmenu.cpp:41
 #, kde-format
 msgid "OpenPGP-Sign..."
 msgstr ""
@@ -9366,89 +9408,89 @@ msgctxt "@title:tab smartcard application - serial number of smartcard"
 msgid "%1 - %2"
 msgstr ""
 
-#: src/view/tabwidget.cpp:562
+#: src/view/tabwidget.cpp:618
 #, kde-format
 msgid "Rename Tab"
 msgstr "Renomi la langeton"
 
-#: src/view/tabwidget.cpp:562
+#: src/view/tabwidget.cpp:618
 #, kde-format
 msgid "New tab title:"
 msgstr ""
 
-#: src/view/tabwidget.cpp:772
+#: src/view/tabwidget.cpp:828
 #, kde-format
 msgid "New Tab"
 msgstr ""
 
-#: src/view/tabwidget.cpp:772
+#: src/view/tabwidget.cpp:828
 #, kde-format
 msgid "Open a new tab"
 msgstr "Malfermi novan langeton"
 
-#: src/view/tabwidget.cpp:780
+#: src/view/tabwidget.cpp:836
 #, kde-format
 msgid "Rename Tab..."
 msgstr ""
 
-#: src/view/tabwidget.cpp:780
+#: src/view/tabwidget.cpp:836
 #, kde-format
 msgid "Rename this tab"
 msgstr ""
 
-#: src/view/tabwidget.cpp:784
+#: src/view/tabwidget.cpp:840
 #, kde-format
 msgid "Duplicate Tab"
 msgstr ""
 
-#: src/view/tabwidget.cpp:784
+#: src/view/tabwidget.cpp:840
 #, kde-format
 msgid "Duplicate this tab"
 msgstr ""
 
-#: src/view/tabwidget.cpp:788
+#: src/view/tabwidget.cpp:844
 #, kde-format
 msgid "Close Tab"
 msgstr "Fermi langeton"
 
-#: src/view/tabwidget.cpp:788
+#: src/view/tabwidget.cpp:844
 #, kde-format
 msgid "Close this tab"
 msgstr ""
 
-#: src/view/tabwidget.cpp:792
+#: src/view/tabwidget.cpp:848
 #, kde-format
 msgid "Move Tab Left"
 msgstr "Movi la langeton maldekstren"
 
-#: src/view/tabwidget.cpp:792
+#: src/view/tabwidget.cpp:848
 #, fuzzy, kde-format
 #| msgid "Move Tab Left"
 msgid "Move this tab left"
 msgstr "Movi la langeton maldekstren"
 
-#: src/view/tabwidget.cpp:796
+#: src/view/tabwidget.cpp:852
 #, kde-format
 msgid "Move Tab Right"
 msgstr "Movi la langeton dekstren"
 
-#: src/view/tabwidget.cpp:796
+#: src/view/tabwidget.cpp:852
 #, fuzzy, kde-format
 #| msgid "Move Tab Right"
 msgid "Move this tab right"
 msgstr "Movi la langeton dekstren"
 
-#: src/view/tabwidget.cpp:800
+#: src/view/tabwidget.cpp:856
 #, kde-format
 msgid "Hierarchical Certificate List"
 msgstr ""
 
-#: src/view/tabwidget.cpp:804
+#: src/view/tabwidget.cpp:860
 #, kde-format
 msgid "Expand All"
 msgstr "Etendi ĉiujn"
 
-#: src/view/tabwidget.cpp:808
+#: src/view/tabwidget.cpp:864
 #, kde-format
 msgid "Collapse All"
 msgstr "Maletendi ĉiujn"
