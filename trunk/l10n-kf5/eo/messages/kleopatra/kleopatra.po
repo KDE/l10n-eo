@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-28 00:44+0000\n"
+"POT-Creation-Date: 2022-04-29 00:44+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2041,12 +2041,12 @@ msgid ""
 "output of <icode>%1</icode> for details.</para>"
 msgstr ""
 
-#: src/commands/learncardkeyscommand.cpp:94
+#: src/commands/learncardkeyscommand.cpp:98
 #, kde-format
 msgid "Loading certificates... (this can take a while)"
 msgstr ""
 
-#: src/commands/learncardkeyscommand.cpp:95
+#: src/commands/learncardkeyscommand.cpp:99
 #, fuzzy, kde-format
 #| msgid "Show alway&s"
 msgid "Show Details"
@@ -7085,8 +7085,29 @@ msgid ""
 "LDAP keyservers."
 msgstr ""
 
-#. i18n: ectx: label, entry (ProfilesDisabled), group (General)
+#. i18n: ectx: label, entry (autoLoadP15Certs), group (Smartcard)
+#: src/kcfg/settings.kcfg:158
+#, kde-format
+msgid "Try to load S/MIME certificates from PKCS#15 smartcards"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (autoLoadP15Certs), group (Smartcard)
+#: src/kcfg/settings.kcfg:159
+#, kde-format
+msgid "Automatically load S/MIME certificates from PKCS#15 (CardOS) smartcards"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (autoLoadP15Certs), group (Smartcard)
 #: src/kcfg/settings.kcfg:160
+#, kde-format
+msgid ""
+"If true, then Kleopatra will call gpgsm --learn if a PKCS#15 Smartcard is "
+"inserted with unkown certificates. This can take a while and blocks the "
+"smartcard while the command is running."
+msgstr ""
+
+#. i18n: ectx: label, entry (ProfilesDisabled), group (General)
+#: src/kcfg/settings.kcfg:166
 #, kde-format
 msgid "Disable profile settings"
 msgstr ""
@@ -7307,47 +7328,47 @@ msgstr ""
 msgid "String or Fingerprint for query and search"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:283
+#: src/kleopatraapplication.cpp:290
 #, kde-format
 msgid "Failed to execute command"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:326
+#: src/kleopatraapplication.cpp:333
 #, kde-format
 msgid "Ambiguous protocol: --openpgp and --cms"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:360
+#: src/kleopatraapplication.cpp:367
 #, kde-format
 msgid "No search string specified for --search"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:371
+#: src/kleopatraapplication.cpp:378
 #, kde-format
 msgid "No fingerprint argument specified for --query"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:411
+#: src/kleopatraapplication.cpp:418
 #, kde-format
 msgid "Ambiguous commands \"%1\" and \"%2\""
 msgstr ""
 
-#: src/kleopatraapplication.cpp:418
+#: src/kleopatraapplication.cpp:425
 #, kde-format
 msgid "No files specified for \"%1\" command"
 msgstr ""
 
-#: src/kleopatraapplication.cpp:432
+#: src/kleopatraapplication.cpp:439
 #, kde-format
 msgid "Cannot read \"%1\""
 msgstr ""
 
-#: src/kleopatraapplication.cpp:698
+#: src/kleopatraapplication.cpp:705
 #, kde-format
 msgid "Opening an external link is administratively prohibited."
 msgstr ""
 
-#: src/kleopatraapplication.cpp:699
+#: src/kleopatraapplication.cpp:706
 #, kde-format
 msgid "Prohibited"
 msgstr ""
@@ -9585,7 +9606,7 @@ msgstr "Por radikaj atestiloj:"
 msgid "List of certificates"
 msgstr "Preni mankajn donatulajn atestilojn"
 
-#: src/view/netkeywidget.cpp:80 src/view/p15cardwidget.cpp:82
+#: src/view/netkeywidget.cpp:80 src/view/p15cardwidget.cpp:81
 #: src/view/pgpcardwidget.cpp:137 src/view/pivcardwidget.cpp:110
 #, fuzzy, kde-format
 #| msgid "Real name:"
@@ -9779,58 +9800,33 @@ msgctxt "@info"
 msgid "Sorry, I cannot find the key with fingerprint %1."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:97
+#: src/view/p15cardwidget.cpp:96
 #, fuzzy, kde-format
 #| msgid "OpenPGP"
 msgid "OpenPGP keys:"
 msgstr "OpenPGP"
 
-#: src/view/p15cardwidget.cpp:110
-#, fuzzy, kde-format
-#| msgid "Show certificate 0x%1"
-msgid "Load additional certificates"
-msgstr "Vidigi atestilon 0x%1"
-
-#: src/view/p15cardwidget.cpp:111
-#, kde-format
-msgid ""
-"Search for additional certificates on the card and add them to the list. The "
-"certificates might be usable for S/MIME."
-msgstr ""
-
-#: src/view/p15cardwidget.cpp:125
-#, fuzzy, kde-format
-#| msgid "Show certificate 0x%1"
-msgid "Loading certificates..."
-msgstr "Vidigi atestilon 0x%1"
-
-#: src/view/p15cardwidget.cpp:128
-#, fuzzy, kde-format
-#| msgid "The validity of the signature cannot be verified."
-msgid "Certificates added to the certificate list."
-msgstr "La valideco de la subskribo ne estis kontrolebla."
-
-#: src/view/p15cardwidget.cpp:151
+#: src/view/p15cardwidget.cpp:117
 #, kde-format
 msgid "Searching in directory service..."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:166
+#: src/view/p15cardwidget.cpp:132
 #, kde-format
 msgid "Automatic import finished."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:171
+#: src/view/p15cardwidget.cpp:137
 #, kde-format
 msgid "Error multiple keys found on server."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:174
+#: src/view/p15cardwidget.cpp:140
 #, kde-format
 msgid "Key not found in directory service."
 msgstr ""
 
-#: src/view/p15cardwidget.cpp:183
+#: src/view/p15cardwidget.cpp:149
 #, kde-format
 msgctxt "%1 is a smartcard manufacturer"
 msgid "%1 PKCS#15 card"
@@ -10552,6 +10548,21 @@ msgstr ""
 #, kde-format
 msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgid "Load additional certificates"
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgid "Loading certificates..."
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
+#~| msgid "The validity of the signature cannot be verified."
+#~ msgid "Certificates added to the certificate list."
+#~ msgstr "La valideco de la subskribo ne estis kontrolebla."
 
 #, fuzzy
 #~| msgid "Show certificate 0x%1"
