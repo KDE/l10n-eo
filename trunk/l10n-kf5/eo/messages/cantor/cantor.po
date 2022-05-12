@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cantor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-24 00:39+0000\n"
+"POT-Creation-Date: 2022-05-12 00:39+0000\n"
 "PO-Revision-Date: 2015-03-15 08:54-0400\n"
 "Last-Translator: Eliovir <eliovir@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -461,7 +461,7 @@ msgstr ""
 #: backends/maxima/settings.ui:21 backends/octave/settings.ui:21
 #: backends/python/settings.ui:21 backends/qalculate/settings.ui:21
 #: backends/R/settings.ui:21 backends/sage/settings.ui:21
-#: backends/scilab/settings.ui:21 cantor.cpp:633
+#: backends/scilab/settings.ui:21 cantor.cpp:636
 #, kde-format
 msgid "General"
 msgstr "Ĝeneralo"
@@ -711,7 +711,45 @@ msgctxt ""
 msgid "http://maxima.sourceforge.net/docs/manual/en/maxima.html"
 msgstr "http://maxima.sourceforge.net/docs/manual/en/maxima.html"
 
-#: backends/maxima/maximabackend.cpp:87
+#: backends/maxima/maximabackend.cpp:79
+#, kde-format
+msgid ""
+"<h1>Maxima's Help System</h1><h2>Function <i>apropos</i></h2>Searches for "
+"Maxima names which have name appearing anywhere within them; <i>name</i> "
+"must be a string or symbol. Thus, <i>apropos(exp)</i> returns a list of all "
+"the flags and functions which have exp as part of their name, such as "
+"<i>expand</i>, <i>exp</i>, and <i>exponentialize</i>. So, if you can only "
+"remember part of the name of a Maxima command or variable, you can use this "
+"command to find the rest of the name. Similarly, you can type "
+"<i>apropos(tr_)</i> to find a list of many of the switches relating to the "
+"translator, most of which begin with <i>tr_</i>.<br><br><i>apropos(\"\")</i> "
+"returns a list with all Maxima names.<br><br><i>apropos</i> returns the "
+"empty list [], if no name is found.<br><br><h2>Function <i>describe</i></"
+"h2><i>describe(string)</i> is equivalent to describe(string, exact)."
+"<br><br><i>describe(string, exact)</i> finds an item with title equal (case-"
+"insensitive) to string, if there is any such item."
+"<br><br><i>describe(string, inexact)</i> finds all documented items which "
+"contain string in their titles. If there is more than one such item, Maxima "
+"asks the user to select an item or items to display.<br><br><i>? foo</i> "
+"(with a space between <i>?</i> and <i>foo</i>) is equivalent to "
+"<i>describe(\"foo\", exact)</i>, and <i>?? foo</i> is equivalent to "
+"<i>describe(\"foo\", inexact)</i>.<br><br><i>describe(, inexact)</i> yields "
+"a list of all topics documented in the on-line manual.<br><br><i>describe</"
+"i> quotes its argument. <i>describe</i> returns <i>true</i> if some "
+"documentation is found, otherwise <i>false</i>.<br><h2>Function <i>example</"
+"i></h2><i>example(topic)</i> displays some examples of <i>topic</i>, which "
+"is a symbol or a string. To get examples for operators like <i>if</i>, "
+"<i>do</i>, or <i>lambda</i> the argument must be a string, e.g. "
+"<i>example(\"do\")</i>. <i>example</i> is not case sensitive. Most topics "
+"are function names.<br><br><i>example()</i> returns the list of all "
+"recognized topics.<br><br>The name of the file containing the examples is "
+"given by the global option variable <i>manual_demo</i>, which defaults to <i>"
+"\"manual.demo\"</i>.<br><br><i>example</i> quotes its argument. <i>example</"
+"i> returns <i>done</i> unless no examples are found or there is no argument, "
+"in which case <i>example</i> returns the list of all recognized topics."
+msgstr ""
+
+#: backends/maxima/maximabackend.cpp:111
 #, kde-format
 msgid ""
 "<b>Maxima</b> is a system for the manipulation of symbolic and numerical "
@@ -2062,7 +2100,34 @@ msgctxt ""
 msgid "https://cran.r-project.org/manuals.html"
 msgstr ""
 
-#: backends/R/rbackend.cpp:86
+#: backends/R/rbackend.cpp:88
+#, kde-format
+msgid ""
+"<h1>R' Help System: <i>help()</i> and <i>?</i>:</h1><br>The <i>help()</i> "
+"function and <i>?</i> help operator in R provide access to the documentation "
+"pages for R functions, data sets, and other objects, both for packages in "
+"the standard R distribution and for contributed packages.<br><br>To access "
+"documentation for the standard <i>lm</i> (linear model) function, for "
+"example, enter the command <b><i>help(lm)</i></b> or <i>help(\"lm\")</i>, or "
+"<i>?lm</i> or <i>?\"lm\"</i> (i.e., the quotes are optional).<br><br>To "
+"access help for a function in a package that’s not currently loaded, specify "
+"in addition the name of the package: For example, to obtain documentation "
+"for the <i>rlm()</i> (robust linear model) function in the MASS package, "
+"<i>help(rlm, package=\"MASS\")</i>.<br><br>Standard names in R consist of "
+"upper- and lower-case letters, numerals (0-9), underscores (_), and periods "
+"(.), and must begin with a letter or a period. To obtain help for an object "
+"with a non-standard name (such as the help operator <i>?</i>), the name must "
+"be quoted: for example, <i>help('?')</i> or <i>?\"?\"</i>.<br><br>You may "
+"also use the <i>help()</i> function to access information about a package in "
+"your library — for example, <i>help(package=\"MASS\")</i> — which displays "
+"an index of available help pages for the package along with some other "
+"information.<br><br>Help pages for functions usually include a section with "
+"executable examples illustrating how the functions work. You can execute "
+"these examples in the current R session via the <i>example()</i> command: e."
+"g., <i>example(lm)</i>."
+msgstr ""
+
+#: backends/R/rbackend.cpp:99
 #, kde-format
 msgid ""
 "<b>R</b> is a language and environment for statistical computing and "
@@ -2314,48 +2379,48 @@ msgstr ""
 msgid "Session %1"
 msgstr "Seanco %1"
 
-#: cantor.cpp:392
+#: cantor.cpp:395
 #, kde-format
 msgid "Failed to find the Cantor Part with error %1"
 msgstr ""
 
-#: cantor.cpp:439 cantor_part.cpp:621
+#: cantor.cpp:442 cantor_part.cpp:621
 #, kde-format
 msgid "Calculating..."
 msgstr "Kalkulante..."
 
-#: cantor.cpp:442 cantor_part.cpp:632 cantor_part.cpp:695
+#: cantor.cpp:445 cantor_part.cpp:632 cantor_part.cpp:695
 #, kde-format
 msgid "Ready"
 msgstr "Preta"
 
-#: cantor.cpp:486
+#: cantor.cpp:489
 #, kde-format
 msgid "Changed"
 msgstr ""
 
-#: cantor.cpp:570
+#: cantor.cpp:573
 #, kde-format
 msgid "Multiple unsaved Worksheets are opened. Do you want to close them?"
 msgstr ""
 
-#: cantor.cpp:571
+#: cantor.cpp:574
 #, fuzzy, kde-format
 #| msgid "Cantor"
 msgid "Close Cantor"
 msgstr "Cantor"
 
-#: cantor.cpp:587
+#: cantor.cpp:590
 #, kde-format
 msgid "The current project has been modified. Do you want to save it?"
 msgstr ""
 
-#: cantor.cpp:588
+#: cantor.cpp:591
 #, kde-format
 msgid "Save Project"
 msgstr ""
 
-#: cantor.cpp:634
+#: cantor.cpp:637
 #, kde-format
 msgid "Formatting"
 msgstr ""
@@ -3246,40 +3311,40 @@ msgstr "Rezulto"
 msgid "Show LaTeX code"
 msgstr ""
 
-#: lib/backend.cpp:178
+#: lib/backend.cpp:183
 #, kde-format
 msgid ""
 "No path for the %1 executable specified. Please provide the correct path in "
 "the application settings and try again."
 msgstr ""
 
-#: lib/backend.cpp:188
+#: lib/backend.cpp:193
 #, kde-format
 msgid ""
 "The specified file '%1' for the %2 executable doesn't exist. Please provide "
 "the correct path in the application settings and try again."
 msgstr ""
 
-#: lib/backend.cpp:197
+#: lib/backend.cpp:202
 #, kde-format
 msgid ""
 "The specified file '%1' doesn't point to an executable. Please provide the "
 "correct path in the application settings and try again."
 msgstr ""
 
-#: lib/backend.cpp:216
+#: lib/backend.cpp:221
 #, kde-format
 msgid ""
 "The program %1 didn't finish the execution after %2 milliseconds during the "
 "plot integration test."
 msgstr ""
 
-#: lib/backend.cpp:225
+#: lib/backend.cpp:230
 #, kde-format
 msgid "Failed to open the file %1 during the plot integration test."
 msgstr ""
 
-#: lib/backend.cpp:233
+#: lib/backend.cpp:238
 #, kde-format
 msgid "Failed to parse the result during the plot integration test."
 msgstr ""
