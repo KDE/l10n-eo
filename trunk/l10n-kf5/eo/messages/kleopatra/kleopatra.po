@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-21 00:45+0000\n"
+"POT-Creation-Date: 2022-07-22 00:46+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1480,7 +1480,7 @@ msgid "Could not open file %1 for reading: %2"
 msgstr ""
 
 #: src/commands/importcertificatefromfilecommand.cpp:148
-#: src/commands/importcertificatescommand.cpp:286 src/view/keytreeview.cpp:347
+#: src/commands/importcertificatescommand.cpp:286 src/view/keytreeview.cpp:365
 #, kde-format
 msgid "Certificates"
 msgstr ""
@@ -2954,26 +2954,26 @@ msgstr ""
 msgid "Backend error: gpgconf has wrong type for %1/%2: %3 %4"
 msgstr ""
 
-#: src/conf/groupsconfigdialog.cpp:71
+#: src/conf/groupsconfigdialog.cpp:90
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure Groups"
 msgstr "Agordi"
 
-#: src/conf/groupsconfigdialog.cpp:74
+#: src/conf/groupsconfigdialog.cpp:93
 #, fuzzy, kde-format
 #| msgid "Show alway&s"
 msgid "Groups"
 msgstr "Montri ĉi&am"
 
-#: src/conf/groupsconfigdialog.cpp:88
+#: src/conf/groupsconfigdialog.cpp:107
 #, fuzzy, kde-format
 #| msgid "&Help"
 msgid "Help"
 msgstr "&Helpo"
 
-#: src/conf/groupsconfigdialog.cpp:90
+#: src/conf/groupsconfigdialog.cpp:109
 #, kde-format
 msgctxt ""
 "Only available in German and English. Leave to English for other languages."
@@ -3006,53 +3006,82 @@ msgctxt "@title::window"
 msgid "Save changes?"
 msgstr "Konservi kiel"
 
-#: src/conf/groupsconfigwidget.cpp:96
+#: src/conf/groupsconfigwidget.cpp:134 src/dialogs/editgroupdialog.cpp:99
+#: src/dialogs/editgroupdialog.cpp:155
 #, fuzzy, kde-format
-#| msgid "Search"
-msgctxt "@info::placeholder"
-msgid "Search..."
-msgstr "Serĉi"
+#| msgid "&Search:"
+msgctxt "@label"
+msgid "Search:"
+msgstr "&Serĉi:"
 
-#: src/conf/groupsconfigwidget.cpp:116
+#: src/conf/groupsconfigwidget.cpp:135
+#, fuzzy, kde-format
+#| msgid "Fetch missing issuer certificates"
+msgctxt "@label"
+msgid "Search groups"
+msgstr "Preni mankajn donatulajn atestilojn"
+
+#: src/conf/groupsconfigwidget.cpp:136 src/conf/groupsconfigwidget.cpp:141
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Search the list for groups matching the search term."
+msgstr ""
+
+#: src/conf/groupsconfigwidget.cpp:142 src/dialogs/editgroupdialog.cpp:107
+#: src/dialogs/editgroupdialog.cpp:163
+#, fuzzy, kde-format
+#| msgid "Real name:"
+msgctxt "@info::placeholder"
+msgid "Enter search term"
+msgstr "Reala nomo:"
+
+#: src/conf/groupsconfigwidget.cpp:158
+#, fuzzy, kde-format
+#| msgid "Show alway&s"
+msgctxt "groups of keys"
+msgid "groups"
+msgstr "Montri ĉi&am"
+
+#: src/conf/groupsconfigwidget.cpp:167
 #, fuzzy, kde-format
 #| msgid "New..."
 msgctxt "@action::button"
 msgid "New"
 msgstr "Nova..."
 
-#: src/conf/groupsconfigwidget.cpp:119
+#: src/conf/groupsconfigwidget.cpp:170
 #, kde-format
 msgctxt "@action::button"
 msgid "Edit"
 msgstr ""
 
-#: src/conf/groupsconfigwidget.cpp:123
+#: src/conf/groupsconfigwidget.cpp:174
 #, fuzzy, kde-format
 #| msgid "Delete"
 msgctxt "@action::button"
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/conf/groupsconfigwidget.cpp:127
+#: src/conf/groupsconfigwidget.cpp:178
 #, fuzzy, kde-format
 #| msgid "Export"
 msgctxt "@action::button"
 msgid "Export"
 msgstr "Eksporti"
 
-#: src/conf/groupsconfigwidget.cpp:236
+#: src/conf/groupsconfigwidget.cpp:287
 #, kde-format
 msgctxt "default name for new group of keys"
 msgid "New Group"
 msgstr ""
 
-#: src/conf/groupsconfigwidget.cpp:240
+#: src/conf/groupsconfigwidget.cpp:291
 #, kde-format
 msgctxt "@title:window a group of keys"
 msgid "New Group"
 msgstr ""
 
-#: src/conf/groupsconfigwidget.cpp:278
+#: src/conf/groupsconfigwidget.cpp:329
 #, kde-format
 msgctxt "@title:window a group of keys"
 msgid "Edit Group"
@@ -5993,56 +6022,87 @@ msgstr[1] ""
 msgid "Secret Key Deletion"
 msgstr ""
 
-#: src/dialogs/editgroupdialog.cpp:78
+#: src/dialogs/editgroupdialog.cpp:81
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "Name of a group of keys"
 msgid "Name:"
 msgstr "Nomo"
 
-#: src/dialogs/editgroupdialog.cpp:88
+#: src/dialogs/editgroupdialog.cpp:93
 #, kde-format
-msgid "Available keys:"
+msgctxt "@title"
+msgid "Available Keys"
 msgstr ""
 
-#: src/dialogs/editgroupdialog.cpp:92 src/dialogs/editgroupdialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Search"
-msgctxt "Placeholder text"
-msgid "Search..."
-msgstr "Serĉi"
+#: src/dialogs/editgroupdialog.cpp:100 src/dialogs/editgroupdialog.cpp:106
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Search the list of available keys for keys matching the search term."
+msgstr ""
 
-#: src/dialogs/editgroupdialog.cpp:113
+#: src/dialogs/editgroupdialog.cpp:105
+#, kde-format
+msgctxt "@label"
+msgid "Search available keys"
+msgstr ""
+
+#: src/dialogs/editgroupdialog.cpp:117
+#, kde-format
+msgid "available keys"
+msgstr ""
+
+#: src/dialogs/editgroupdialog.cpp:133
 #, fuzzy, kde-format
 #| msgid "Select File"
 msgctxt "@action:button"
 msgid "Add Selected Keys"
 msgstr "Elekti dosieron"
 
-#: src/dialogs/editgroupdialog.cpp:114
+#: src/dialogs/editgroupdialog.cpp:134
 #, kde-format
 msgid "Add the selected keys to the group"
 msgstr ""
 
-#: src/dialogs/editgroupdialog.cpp:120
+#: src/dialogs/editgroupdialog.cpp:140
 #, fuzzy, kde-format
 #| msgid "Select File"
 msgctxt "@action:button"
 msgid "Remove Selected Keys"
 msgstr "Elekti dosieron"
 
-#: src/dialogs/editgroupdialog.cpp:121
+#: src/dialogs/editgroupdialog.cpp:141
 #, kde-format
 msgid "Remove the selected keys from the group"
 msgstr ""
 
-#: src/dialogs/editgroupdialog.cpp:130
+#: src/dialogs/editgroupdialog.cpp:149
 #, fuzzy, kde-format
 #| msgid "Show alway&s"
-msgid "Group keys:"
+msgctxt "@title"
+msgid "Group Keys"
 msgstr "Montri ĉi&am"
 
-#: src/dialogs/editgroupdialog.cpp:265
+#: src/dialogs/editgroupdialog.cpp:156 src/dialogs/editgroupdialog.cpp:162
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Search the list of group keys for keys matching the search term."
+msgstr ""
+
+#: src/dialogs/editgroupdialog.cpp:161
+#, fuzzy, kde-format
+#| msgid "Show alway&s"
+msgctxt "@label"
+msgid "Search group keys"
+msgstr "Montri ĉi&am"
+
+#: src/dialogs/editgroupdialog.cpp:172
+#, fuzzy, kde-format
+#| msgid "Show alway&s"
+msgid "group keys"
+msgstr "Montri ĉi&am"
+
+#: src/dialogs/editgroupdialog.cpp:302
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Group"
@@ -10027,13 +10087,13 @@ msgstr ""
 msgid "View Columns"
 msgstr ""
 
-#: src/view/keytreeview.cpp:348 src/view/keytreeview.cpp:687
+#: src/view/keytreeview.cpp:366 src/view/keytreeview.cpp:705
 #, fuzzy, kde-format
 #| msgid "Ignore service URL of certificates"
 msgid "Hierarchical list of certificates"
 msgstr "Por radikaj atestiloj:"
 
-#: src/view/keytreeview.cpp:348 src/view/keytreeview.cpp:687
+#: src/view/keytreeview.cpp:366 src/view/keytreeview.cpp:705
 #, fuzzy, kde-format
 #| msgid "Fetch missing issuer certificates"
 msgid "List of certificates"
@@ -10991,6 +11051,18 @@ msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
 
 #, fuzzy
+#~| msgid "Search"
+#~ msgctxt "@info::placeholder"
+#~ msgid "Search..."
+#~ msgstr "Serĉi"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "Placeholder text"
+#~ msgid "Search..."
+#~ msgstr "Serĉi"
+
+#, fuzzy
 #~| msgid "Show certificate 0x%1"
 #~ msgctxt "@title:window"
 #~ msgid "Certificate Details"
@@ -11277,9 +11349,6 @@ msgstr ""
 
 #~ msgid "&Browse..."
 #~ msgstr "E&lektu..."
-
-#~ msgid "&Search:"
-#~ msgstr "&Serĉi:"
 
 #~ msgid "Search interactively for icon names (e.g. folder)."
 #~ msgstr "Interage serĉi nomojn de piktogramoj (ekz. dosierujo)."
