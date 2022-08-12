@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-10 00:46+0000\n"
+"POT-Creation-Date: 2022-08-12 00:46+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -2432,44 +2432,100 @@ msgctxt "@info"
 msgid "X.509 certificates refreshed successfully."
 msgstr ""
 
-#: src/commands/revokecertificationcommand.cpp:133
-#, kde-format
+#: src/commands/revokecertificationcommand.cpp:78
+#, kde-kuit-format
+msgctxt "@info"
 msgid ""
-"<p>An error occurred while trying to revoke the certification of<br/><br/><b>"
-"%1</b>:</p><p>\t%2</p>"
+"<para>You are about to revoke the certification of user ID<nl/>%1<nl/>made "
+"with the key<nl/>%2.</para>"
 msgstr ""
 
-#: src/commands/revokecertificationcommand.cpp:137
+#: src/commands/revokecertificationcommand.cpp:83
+#: src/commands/revokecertificationcommand.cpp:97
+#: src/dialogs/certificatedetailswidget.cpp:749
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Revocation"
+msgstr ""
+
+#: src/commands/revokecertificationcommand.cpp:84
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
-msgid "Revocation Error"
+msgid "Revoke Certification"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/commands/revokecertificationcommand.cpp:139
+#: src/commands/revokecertificationcommand.cpp:89
+#, kde-format
+msgid "User ID '%1' certified with key %2"
+msgstr ""
+
+#: src/commands/revokecertificationcommand.cpp:91
+#, kde-format
+msgid "You are about to revoke the following certification:"
+msgid_plural "You are about to revoke the following %1 certifications:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/commands/revokecertificationcommand.cpp:98
 #, fuzzy, kde-format
 #| msgid "Show certificate 0x%1"
-msgid "Revocation successful."
+msgid "Revoke Certifications"
 msgstr "Vidigi atestilon 0x%1"
 
-#: src/commands/revokecertificationcommand.cpp:140
+#: src/commands/revokecertificationcommand.cpp:202
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>The certification has been revoked successfully.</para><para>Do you "
+"want to publish the revocation?</para>"
+msgid_plural ""
+"<para>%1 certifications have been revoked successfully.</para><para>Do you "
+"want to publish the revocations?</para>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/commands/revokecertificationcommand.cpp:207
 #, fuzzy, kde-format
-#| msgid "Show certificate 0x%1"
-msgid "Revocation Succeeded"
-msgstr "Vidigi atestilon 0x%1"
+#| msgid "Fetch missing issuer certificates"
+msgctxt "@action:button"
+msgid "Publish Revocation"
+msgid_plural "Publish Revocations"
+msgstr[0] "Preni mankajn donatulajn atestilojn"
+msgstr[1] "Preni mankajn donatulajn atestilojn"
 
-#: src/commands/revokecertificationcommand.cpp:253
+#: src/commands/revokecertificationcommand.cpp:211
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Publication"
+msgstr ""
+
+#: src/commands/revokecertificationcommand.cpp:234
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>The revocation of the certification of user ID<nl/>%1<nl/>made with "
+"key<nl/>%2<nl/>failed:</para><para><message>%3</message></para>"
+msgstr ""
+
+#: src/commands/revokecertificationcommand.cpp:325
 #, fuzzy, kde-format
 #| msgid "The validity of the signature cannot be verified."
 msgid "You cannot revoke any certifications of this key."
 msgstr "La valideco de la subskribo ne estis kontrolebla."
 
-#: src/commands/revokecertificationcommand.cpp:254
+#: src/commands/revokecertificationcommand.cpp:328
 #, fuzzy, kde-format
 #| msgid "The validity of the signature cannot be verified."
 msgid "You cannot revoke any certifications of this user ID."
 msgid_plural "You cannot revoke any certifications of these user IDs."
 msgstr[0] "La valideco de la subskribo ne estis kontrolebla."
 msgstr[1] "La valideco de la subskribo ne estis kontrolebla."
+
+#: src/commands/revokecertificationcommand.cpp:333
+#, fuzzy, kde-format
+#| msgid "The validity of the signature cannot be verified."
+msgid "You cannot revoke this certification."
+msgstr "La valideco de la subskribo ne estis kontrolebla."
 
 #: src/commands/revokekeycommand.cpp:109
 #, kde-format
@@ -5565,12 +5621,6 @@ msgid ""
 "</para>"
 msgstr ""
 
-#: src/dialogs/certificatedetailswidget.cpp:749
-#, kde-format
-msgctxt "@title:window"
-msgid "Confirm Revocation"
-msgstr ""
-
 #: src/dialogs/certificatedetailswidget.cpp:935
 #, kde-format
 msgctxt "@action:inmenu"
@@ -5958,13 +6008,11 @@ msgid "Domain"
 msgstr ""
 
 #: src/dialogs/certifywidget.cpp:506
-#: src/dialogs/revokecertificationwidget.cpp:228
 #, kde-format
 msgid "Fingerprint: <b>%1</b>"
 msgstr ""
 
 #: src/dialogs/certifywidget.cpp:508
-#: src/dialogs/revokecertificationwidget.cpp:230
 #, kde-format
 msgid "<i>Only the fingerprint clearly identifies the key and its owner.</i>"
 msgstr ""
@@ -6563,35 +6611,6 @@ msgid ""
 "certificate, you might need to adjust the trust level yourself."
 "<br>Certificates will become valid with just a single certification at this "
 "trust level.</font>"
-msgstr ""
-
-#: src/dialogs/revokecertificationdialog.cpp:102
-#, fuzzy, kde-format
-#| msgid "Show certificate 0x%1"
-msgid "Revoke Certification"
-msgstr "Vidigi atestilon 0x%1"
-
-#: src/dialogs/revokecertificationdialog.cpp:129
-#, fuzzy, kde-format
-#| msgid "Show certificate 0x%1"
-msgctxt "@title:window arg is name, email of certificate holder"
-msgid "Revoke Certification: %1"
-msgstr "Vidigi atestilon 0x%1"
-
-#: src/dialogs/revokecertificationwidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Show certificate 0x%1"
-msgid "Certification key:"
-msgstr "Vidigi atestilon 0x%1"
-
-#: src/dialogs/revokecertificationwidget.cpp:163
-#, kde-format
-msgid "The key whose certifications shall be revoke"
-msgstr ""
-
-#: src/dialogs/revokecertificationwidget.cpp:180
-#, kde-format
-msgid "Publish revocations on keyserver"
 msgstr ""
 
 #: src/dialogs/revokekeydialog.cpp:96
@@ -8037,21 +8056,26 @@ msgctxt "@title"
 msgid "Running as Administrator"
 msgstr ""
 
-#: src/main.cpp:230
+#: src/main.cpp:232
 #, kde-format
 msgid "GPG UI Server Error"
 msgstr ""
 
-#: src/main.cpp:231
+#: src/main.cpp:236
 #, kde-format
+msgctxt ""
+"This error message is only shown on Windows when the socket to communicate "
+"with Windows Explorer could not be created. This often times means that the "
+"whole installation is buggy. e.g. GnuPG is not installed at all."
 msgid ""
-"<qt>The Kleopatra GPG UI Server Module could not be initialized.<br/>The "
-"error given was: <b>%1</b><br/>You can use Kleopatra as a certificate "
-"manager, but cryptographic plugins that rely on a GPG UI Server being "
-"present might not work correctly, or at all.</qt>"
+"<qt>The Kleopatra Windows Explorer Module could not be initialized.<br/>The "
+"error given was: <b>%1</b><br/>This likely means that there is a problem "
+"with your installation. Try reinstalling or contact your Administrator for "
+"support.<br/>You can try to continue to use Kleopatra but there might be "
+"other problems.</qt>"
 msgstr ""
 
-#: src/main.cpp:257
+#: src/main.cpp:265
 #, kde-format
 msgid "Invalid arguments: %1"
 msgstr ""
@@ -11150,6 +11174,32 @@ msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
 
 #, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgid "Revocation Error"
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgid "Revocation successful."
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgid "Revocation Succeeded"
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgctxt "@title:window arg is name, email of certificate holder"
+#~ msgid "Revoke Certification: %1"
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
+#~| msgid "Show certificate 0x%1"
+#~ msgid "Certification key:"
+#~ msgstr "Vidigi atestilon 0x%1"
+
+#, fuzzy
 #~ msgctxt "@action:button"
 #~ msgid "Change expiration"
 #~ msgstr "Stela nomo"
@@ -11198,12 +11248,6 @@ msgstr ""
 #~ msgctxt "@action:button"
 #~ msgid "Certifications..."
 #~ msgstr "Vidigi atestilon 0x%1"
-
-#, fuzzy
-#~| msgid "Fetch missing issuer certificates"
-#~ msgctxt "@action:button"
-#~ msgid "Publish Certificate"
-#~ msgstr "Preni mankajn donatulajn atestilojn"
 
 #~ msgid "&Update"
 #~ msgstr "Ĝis&datigo"
