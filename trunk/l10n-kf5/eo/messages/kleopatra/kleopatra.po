@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kleopatra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-30 00:47+0000\n"
+"POT-Creation-Date: 2022-09-06 00:46+0000\n"
 "PO-Revision-Date: 2009-11-15 12:06+0100\n"
 "Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1421,8 +1421,8 @@ msgstr ""
 #: src/commands/importcertificatefromfilecommand.cpp:134
 #: src/commands/importcertificatescommand.cpp:493
 #: src/commands/importcertificatescommand.cpp:501
-#: src/commands/importcertificatescommand.cpp:834
-#: src/commands/importcertificatescommand.cpp:885
+#: src/commands/importcertificatescommand.cpp:836
+#: src/commands/importcertificatescommand.cpp:887
 #, kde-format
 msgid "Certificate Import Failed"
 msgstr ""
@@ -1708,13 +1708,21 @@ msgid ""
 "%2</b></p></qt>"
 msgstr ""
 
-#: src/commands/importcertificatescommand.cpp:569
+#. i18n(" ") as initializer because initializing with empty string leads to
+#. (I18N_EMPTY_MESSAGE)
+#: src/commands/importcertificatescommand.cpp:570
+#, fuzzy, kde-format
+#| msgid ", "
+msgid " "
+msgstr ", "
+
+#: src/commands/importcertificatescommand.cpp:571
 #, kde-kuit-format
 msgctxt "@info"
 msgid "%1<item>%2</item>"
 msgstr ""
 
-#: src/commands/importcertificatescommand.cpp:573
+#: src/commands/importcertificatescommand.cpp:575
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1723,21 +1731,21 @@ msgid ""
 "%2</list></para>Is this your own key? (Set trust level to ultimate)"
 msgstr ""
 
-#: src/commands/importcertificatescommand.cpp:585
+#: src/commands/importcertificatescommand.cpp:587
 #, kde-format
 msgctxt "@title:window"
 msgid "Secret key imported"
 msgstr ""
 
-#: src/commands/importcertificatescommand.cpp:797
+#: src/commands/importcertificatescommand.cpp:799
 #, kde-format
 msgid "Fetching 1 signer key... (this can take a while)"
 msgid_plural "Fetching %1 signer keys... (this can take a while)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/commands/importcertificatescommand.cpp:832
-#: src/commands/importcertificatescommand.cpp:883
+#: src/commands/importcertificatescommand.cpp:834
+#: src/commands/importcertificatescommand.cpp:885
 #, kde-format
 msgid ""
 "The type of this certificate (%1) is not supported by this Kleopatra "
@@ -3606,7 +3614,7 @@ msgid ""
 msgstr ""
 
 #: src/crypto/createchecksumscontroller.cpp:293
-#: src/dialogs/updatenotification.cpp:74 src/mainwindow.cpp:771
+#: src/dialogs/updatenotification.cpp:74 src/mainwindow.cpp:777
 #, kde-format
 msgid "Cancel"
 msgstr "Rezigni"
@@ -7752,7 +7760,7 @@ msgstr "&Rigardi"
 
 #. i18n: ectx: Menu (certMenu)
 #. i18n: ectx: Menu (listview_popup)
-#: src/kleopatra.rc:44 src/kleopatra.rc:119
+#: src/kleopatra.rc:44 src/kleopatra.rc:120
 #, kde-format
 msgid "&Certificates"
 msgstr ""
@@ -7782,7 +7790,7 @@ msgid "&Help"
 msgstr "&Helpo"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/kleopatra.rc:104 src/kwatchgnupg/kwatchgnupgui.rc:13
+#: src/kleopatra.rc:105 src/kwatchgnupg/kwatchgnupgui.rc:13
 #, kde-format
 msgid "Main Toolbar"
 msgstr "Ĉefa ilobreto"
@@ -8245,40 +8253,52 @@ msgctxt ""
 msgid "BSI-VSA-10584-ENG_secops-20220207.pdf"
 msgstr ""
 
-#: src/mainwindow.cpp:620
+#: src/mainwindow.cpp:620 src/view/smartcardwidget.cpp:119
+#, kde-format
+msgid "Smartcard Management"
+msgstr ""
+
+#: src/mainwindow.cpp:622
+#, kde-format
+msgctxt ""
+"Only available in German and English. Leave to English for other languages."
+msgid "smartcard_howto_de.pdf"
+msgstr ""
+
+#: src/mainwindow.cpp:626
 #, kde-format
 msgid "GnuPG Manual"
 msgstr ""
 
-#: src/mainwindow.cpp:644
+#: src/mainwindow.cpp:650
 #, kde-format
 msgid ""
 "There are still some background operations ongoing. These will be terminated "
 "when closing the window. Proceed?"
 msgstr ""
 
-#: src/mainwindow.cpp:647
+#: src/mainwindow.cpp:653
 #, kde-format
 msgid "Ongoing Background Tasks"
 msgstr ""
 
-#: src/mainwindow.cpp:755 src/view/keylistcontroller.cpp:398
+#: src/mainwindow.cpp:761 src/view/keylistcontroller.cpp:398
 #, kde-format
 msgid "Sign/Encrypt..."
 msgstr ""
 
-#: src/mainwindow.cpp:756 src/utils/clipboardmenu.cpp:47
+#: src/mainwindow.cpp:762 src/utils/clipboardmenu.cpp:47
 #: src/view/keylistcontroller.cpp:394
 #, kde-format
 msgid "Decrypt/Verify..."
 msgstr ""
 
-#: src/mainwindow.cpp:761
+#: src/mainwindow.cpp:767
 #, kde-format
 msgid "Import Certificates"
 msgstr ""
 
-#: src/mainwindow.cpp:762
+#: src/mainwindow.cpp:768
 #, kde-format
 msgid "Import CRLs"
 msgstr ""
@@ -9697,7 +9717,7 @@ msgid ""
 "bug."
 msgstr ""
 
-#: src/utils/accessibility.cpp:71
+#: src/utils/accessibility.cpp:94
 #, fuzzy, kde-format
 #| msgid "Selection"
 msgctxt ""
@@ -9706,7 +9726,7 @@ msgctxt ""
 msgid "invalid entry"
 msgstr "Elektaĵo"
 
-#: src/utils/accessibility.cpp:78
+#: src/utils/accessibility.cpp:101
 #, kde-format
 msgctxt ""
 "text for screen readers to indicate that the associated object, such as a "
@@ -10971,11 +10991,6 @@ msgstr "Preni mankajn donatulajn atestilojn"
 msgid "Kleopatra currently supports the following card types:"
 msgstr ""
 
-#: src/view/smartcardwidget.cpp:119
-#, kde-format
-msgid "Smartcard Management"
-msgstr ""
-
 #: src/view/smartcardwidget.cpp:161
 #, fuzzy, kde-format
 #| msgctxt "name, email, key id"
@@ -11553,9 +11568,6 @@ msgstr ""
 
 #~ msgid "Search Toolbar"
 #~ msgstr "Serĉa ilobreto"
-
-#~ msgid ", "
-#~ msgstr ", "
 
 #, fuzzy
 #~| msgid "&Tools"
