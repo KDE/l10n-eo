@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kate-editor-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-29 00:45+0000\n"
+"POT-Creation-Date: 2023-10-19 00:45+0000\n"
 "PO-Revision-Date: 2023-10-09 18:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -29,10 +29,6 @@ msgstr ""
 "Kate estas moderna tekstredaktilo konstruita sur la KDE Frameworks kaj Qt."
 
 #: config.yaml:0
-msgid "Build It"
-msgstr "Konstruu Ĝin"
-
-#: config.yaml:0
 msgid "Blog"
 msgstr "Blogo"
 
@@ -41,44 +37,12 @@ msgid "Posts"
 msgstr "Afiŝoj"
 
 #: config.yaml:0
-msgid "Categories"
-msgstr "Kategorioj"
-
-#: config.yaml:0
-msgid "Tags"
-msgstr "Etikedoj"
-
-#: config.yaml:0
 msgid "More"
 msgstr "Pli"
 
 #: config.yaml:0
-msgid "Get Help"
-msgstr "Akiru Helpon"
-
-#: config.yaml:0
-msgid "Join Us"
-msgstr "Aliĝu al Ni"
-
-#: config.yaml:0
-msgid "VI Mode"
-msgstr "VI-Reĝimo"
-
-#: config.yaml:0
-msgid "The Team"
-msgstr "La Teamo"
-
-#: config.yaml:0
 msgid "Merge Requests"
 msgstr "Kunfandopetoj"
-
-#: config.yaml:0 content/about-kate.md:40
-msgid "Syntax Highlighting"
-msgstr "Sintaksmarkigo"
-
-#: config.yaml:0
-msgid "Color Themes"
-msgstr "Koloraj Etosoj"
 
 #: content/_index.md:0
 msgid "Kate - Get an Edge in Editing"
@@ -92,7 +56,9 @@ msgstr "Ekhavu Avantaĝon en Redaktado"
 msgid "Features"
 msgstr "Trajtoj"
 
-#: content/about-kate.md:0 content/get-it.md:0 content/mascot.md:0
+#: content/about-kate.md:0 content/build-it.md:0 content/get-it.md:0
+#: content/join-us.md:0 content/mascot.md:0 content/support.md:0
+#: content/syntax.md:0 content/the-team.md:0 content/themes.md:0
 msgid "Christoph Cullmann"
 msgstr "Christoph Cullmann"
 
@@ -197,6 +163,10 @@ msgstr "Linia nombroj"
 #: content/about-kate.md:38
 msgid "Code folding"
 msgstr "Kodo faldebla"
+
+#: content/about-kate.md:40 content/syntax.md:0
+msgid "Syntax Highlighting"
+msgstr "Sintaksmarkigo"
 
 #: content/about-kate.md:42
 msgid ""
@@ -321,6 +291,355 @@ msgstr "Interŝanĝu dosierojn por reakiri datumojn pri sistema paneo"
 #: content/about-kate.md:81
 msgid "Undo / redo system"
 msgstr "Malfara/refara sistemo"
+
+#: content/build-it.md:0
+msgid "Build It"
+msgstr "Konstruu Ĝin"
+
+#: content/build-it.md:11
+msgid "Building Kate from Sources on Linux "
+msgstr ""
+
+#: content/build-it.md:13
+msgid ""
+"Right now, Kate's source code is located on the [invent.kde.org](https://"
+"invent.kde.org/utilities/kate) GitLab instance. This tutorial explains how "
+"to build Kate without touching your global installation."
+msgstr ""
+
+#: content/build-it.md:16
+msgid ""
+"All stuff will happen inside an extra development directory. This avoids the "
+"need for administrator rights and allows always to fallback to use the "
+"global installed Kate if the currently build version is broken."
+msgstr ""
+
+#: content/build-it.md:19
+msgid ""
+"As this tutorial will introduce a setup that allows to develop other parts "
+"of the KDE software stack, too, we will talk in the following about setting "
+"up a KDE development environment. Required KDE Frameworks will be compiled "
+"in addition to the Kate application parts. This eases contributions to all "
+"levels of the KDE software stack."
+msgstr ""
+
+#: content/build-it.md:23
+msgid "Choose your Kate & KDE development directory"
+msgstr ""
+
+#: content/build-it.md:25
+msgid ""
+"Choose yourself some path where all Kate & KDE development things should end "
+"up. Beside user local configuration files, nothing outside of this directory "
+"will be polluted. You can re-use this for development on any part of the KDE "
+"software stack."
+msgstr ""
+
+#: content/build-it.md:29
+msgid "For the remaining parts of this description we use"
+msgstr ""
+
+#: content/build-it.md:35
+msgid "Feel free to customize this."
+msgstr ""
+
+#: content/build-it.md:37
+msgid "Install kdesrc-build"
+msgstr ""
+
+#: content/build-it.md:39
+msgid "Installing is more or less just cloning the current version"
+msgstr ""
+
+#: content/build-it.md:47
+msgid ""
+"For later ease of use, best symlink the kdesrc-build script to some folder "
+"inside your path, e.g. if you have some user local bin:"
+msgstr ""
+
+#: content/build-it.md:53
+msgid "Configuring kdesrc-build"
+msgstr ""
+
+#: content/build-it.md:55
+msgid ""
+"kdesrc-build has some setup pass that can configure stuff for you, see [this "
+"introduction](https://community.kde.org/Get_Involved/"
+"development#Set_up_kdesrc-build)."
+msgstr ""
+
+#: content/build-it.md:57
+msgid ""
+"Here we just show a **~/.config/kdesrc-buildrc** that is good enough for "
+"Kate development needs."
+msgstr ""
+
+#: content/build-it.md:59
+msgid ""
+"You can just copy and paste the below variant into your home directory as "
+"**~/.config/kdesrc-buildrc** and adapt the paths to your needs. If you stick "
+"with the **~/projects/kde** path we did choose above, this should be usable "
+"1:1."
+msgstr ""
+
+#: content/build-it.md:91
+msgid ""
+"The important lines to have a good experience developing Kate (or other KDE "
+"stuff) with Kate are described below in detail."
+msgstr ""
+
+#: content/build-it.md:93
+msgid "Create .kateproject files"
+msgstr ""
+
+#: content/build-it.md:100
+msgid ""
+"This ensures you get not only Ninja build files (nifty as this will e.g. "
+"automatically use multiple cores for compiles) but in addition .kateproject "
+"files inside the build directories for later use, too. With this files, the "
+"project plugin of Kate will know what to do, e.g. where the source directory "
+"for the compile is and which build commands it should use for the build "
+"plugin."
+msgstr ""
+
+#: content/build-it.md:103
+msgid "Ensure LSP integration works"
+msgstr ""
+
+#: content/build-it.md:111
+msgid ""
+"This ensures CMake will generate the **compile_commands.json** files that "
+"are required for clangd based LSP integration. Beside just generating them "
+"inside the build directory the linking option will symlink them back to your "
+"source directories. This allows zero-configuration usage of the LSP plugin "
+"inside Kate (and other editors)."
+msgstr ""
+
+#: content/build-it.md:115
+msgid "Install needed dependencies (optional)"
+msgstr ""
+
+#: content/build-it.md:117
+msgid ""
+"**kdesrc-build** provides some initial setup mode to install the needed "
+"packages for several common distributions to start developing. This is "
+"helpful if you are not sure if all needed development packages are installed "
+"on your system and you don't want to take care of this yourself manually. "
+"**As this will try to install packages for your distribution, this step will "
+"require administrator rights for the package installation.** To do that, "
+"just trigger:"
+msgstr ""
+
+#: content/build-it.md:126
+msgid ""
+"We already created a **.config/kdesrc-buildrc**, that will be left "
+"untouched. For the further usage you don't need to modify your shell "
+"settings either."
+msgstr ""
+
+#: content/build-it.md:129
+msgid "Build Kate & dependencies"
+msgstr ""
+
+#: content/build-it.md:131
+msgid ""
+"To trigger a compile of Kate and all needed KDE dependencies now just type:"
+msgstr ""
+
+#: content/build-it.md:137
+msgid ""
+"For me, this did now compile 76 modules ;) That takes a few minutes on a "
+"recent machine. Time to grab some coffee or think about what you actually "
+"want to implement."
+msgstr ""
+
+#: content/build-it.md:141
+msgid ""
+"If you only want to build Kate without the dependencies because you are sure "
+"you have recent enough stuff on your system, you can try:"
+msgstr ""
+
+#: content/build-it.md:147
+msgid ""
+"But given that on modern machines, the compile times are low, it is more "
+"convenient to just build all stuff, that ensures you have e.g. the latest "
+"and best KSyntaxHighlighting and KTextEditor frameworks around, too!"
+msgstr ""
+
+#: content/build-it.md:149
+msgid ""
+"Given this setup, you are free to build all KDE software parts with a simple:"
+msgstr ""
+
+#: content/build-it.md:155
+msgid "Keep in mind: that will take some time (and disk space)."
+msgstr ""
+
+#: content/build-it.md:157
+msgid ""
+"If during the build you see any failures displayed with a red font, follow "
+"this guide - [How to solve build problems](https://community.kde.org/"
+"Get_Involved/development#How_to_solve_build_problems)"
+msgstr ""
+
+#: content/build-it.md:159
+msgid "How to use the build stuff?"
+msgstr ""
+
+#: content/build-it.md:161
+msgid ""
+"To launch you local Kate version, you need to setup the environment first "
+"properly to ensure the right plugins and stuff is loaded. Fortunately this "
+"is very simple:"
+msgstr ""
+
+#: content/build-it.md:169
+msgid ""
+"A nifty way to wrap this is to e.g. create yourself a small wrapper script "
+"to start your master branch version of Kate inside your local bin directory:"
+msgstr ""
+
+#: content/build-it.md:177
+msgid "Keep your stuff up-to-date"
+msgstr ""
+
+#: content/build-it.md:179
+msgid ""
+"To keep your local version up-to-date, you can just use the above commands "
+"again. They will take care of pulling new changes from the KDE repositories "
+"and building/installing them into your local prefix."
+msgstr ""
+
+#: content/build-it.md:182
+msgid "Develop!"
+msgstr ""
+
+#: content/build-it.md:184
+msgid "Now, the remaining question is: How to develop best?"
+msgstr ""
+
+#: content/build-it.md:186
+msgid ""
+"Naturally, if you want to hack on Kate, it might make sense to use Kate for "
+"that."
+msgstr ""
+
+#: content/build-it.md:188
+msgid ""
+"Given the above preparations, that is easy to do, just start your new master "
+"version of Kate and pass it the build directory:"
+msgstr ""
+
+#: content/build-it.md:194
+msgid ""
+"Alternatively, you can navigate there in your terminal and startup Kate from "
+"there, it will auto-open it:"
+msgstr ""
+
+#: content/build-it.md:201
+msgid ""
+"To have the best experience with this, ensure you have at least project & "
+"LSP plugin enabled. If you like to have some GUI build integration, activate "
+"the build plugin, too."
+msgstr ""
+
+#: content/build-it.md:204
+msgid "You will end up with a new Kate windows like shown below."
+msgstr ""
+
+#: content/build-it.md:206
+msgid ""
+"![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-startup."
+"png)"
+msgstr ""
+
+#: content/build-it.md:208
+msgid ""
+"In the lower \"Current Project\" tool view you have per default two "
+"terminals. The first terminal is inside your build directory, here you can e."
+"g. run your **ninja** and **ninja install** commands and such. The second "
+"terminal is inside your source directory, perfect for e.g. git command line "
+"calls."
+msgstr ""
+
+#: content/build-it.md:212
+msgid ""
+"Given the above setup, the LSP plugin (if you have **clangd** installed) "
+"should work out of the box."
+msgstr ""
+
+#: content/build-it.md:214
+msgid ""
+"![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-lsp.png)"
+msgstr ""
+
+#: content/build-it.md:216
+msgid ""
+"Other nifty stuff like project wide quick open, search & replace and correct "
+"build targets should be setup, too."
+msgstr ""
+
+#: content/build-it.md:218
+msgid ""
+"![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-search."
+"png)"
+msgstr ""
+
+#: content/build-it.md:220
+msgid ""
+"![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-build."
+"png)"
+msgstr ""
+
+#: content/build-it.md:223
+msgid "Contribute back!"
+msgstr ""
+
+#: content/build-it.md:225
+msgid ""
+"Feel free to create a merge request at [invent.kde.org](https://invent.kde."
+"org/utilities/kate/merge_requests). For more information see [Join Us](/join-"
+"us/)."
+msgstr ""
+
+#: content/build-it.md:228
+msgid "Get Support?"
+msgstr ""
+
+#: content/build-it.md:230
+msgid ""
+"If you have questions you can ask them on our mailing list [kwrite-devel@kde."
+"org](mailto:kwrite-devel@kde.org) and/or join #kate on irc.libera.chat."
+msgstr ""
+
+#: content/build-it.md:232
+msgid "For more information see [Get Help](/support/)."
+msgstr ""
+
+#: content/build-it.md:234
+msgid "Building Kate from Sources on Windows "
+msgstr ""
+
+#: content/build-it.md:236
+msgid ""
+"To build the KF5 based Kate/KWrite you can follow the guide on [KDE on "
+"Windows](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/"
+"Windows)."
+msgstr ""
+
+#: content/build-it.md:238
+msgid "Building Kate from Sources on macOS "
+msgstr ""
+
+#: content/build-it.md:240
+msgid ""
+"To build the KF5 based Kate/KWrite you can follow the guide on [KDE on macOS]"
+"(https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
+msgstr ""
+
+#: content/categories/_index.md:0
+msgid "Categories"
+msgstr "Kategorioj"
 
 #: content/get-it.md:0
 msgid "Get Kate"
@@ -468,6 +787,1812 @@ msgid ""
 msgstr ""
 "\\*\\*\\* La Chocolatey-pakaĵoj estas disvolvitaj sendepende de KDE. Ĝi "
 "povas aŭ ne esti ĝisdatigita."
+
+#: content/join-us.md:0
+msgid "Join Us"
+msgstr "Aliĝu al Ni"
+
+#: content/join-us.md:12
+msgid "How to help with Kate development"
+msgstr ""
+
+#: content/join-us.md:14
+msgid ""
+"If you want to help us develop Kate, KWrite or KatePart, you should <a title="
+"\"Kate/KWrite mailing list\" href=\"https://mail.kde.org/mailman/listinfo/"
+"kwrite-devel\" target=\"_blank\">join our mailing list</a>. Contacting us at "
+"<a title=\"Kate IRC Channel\" href=\"irc://irc.libera.chat/kate\" target="
+"\"_blank\">#kate on irc.libera.chat</a> is also a good idea, we are always "
+"happy to help you get started."
+msgstr ""
+
+#: content/join-us.md:16
+msgid "How to Build Kate"
+msgstr ""
+
+#: content/join-us.md:18
+msgid ""
+"Kate can easily be build on a current Linux distribution, we provide a "
+"[tutorial about building Kate and the needed dependencies](/build-it/) for "
+"this. For other operating systems, the [same page](/build-it/) page provides "
+"extra links with information."
+msgstr ""
+
+#: content/join-us.md:21
+msgid "Contributing code"
+msgstr ""
+
+#: content/join-us.md:23
+msgid ""
+"For contributions, the best way to hand them in is via our GitLab instance "
+"[invent.kde.org](https://invent.kde.org/utilities/kate)."
+msgstr ""
+
+#: content/join-us.md:25
+msgid ""
+"How to set it up and use it is documented in the [invent.kde.org "
+"documentation](https://community.kde.org/Infrastructure/GitLab)."
+msgstr ""
+
+#: content/join-us.md:27
+msgid ""
+"Just open a new [merge request](https://invent.kde.org/utilities/kate/"
+"merge_requests) there for Kate. For more details about this, refer to [this "
+"blog post](/post/2020/2020-07-18-contributing-via-gitlab-merge-requests/)."
+msgstr ""
+
+#: content/join-us.md:30
+msgid ""
+"If you want to get an overview about already accepted patches to get a feel "
+"how the process works, take a look at our [merge requests](/merge-requests/) "
+"page. Visiting some of these accepted requests might help to have a better "
+"grasp of project's workings."
+msgstr ""
+
+#: content/join-us.md:33
+msgid "Areas of work"
+msgstr ""
+
+#: content/join-us.md:35
+msgid ""
+"The main work area is the programming, but if you are not a programmer you "
+"can help in many other areas:"
+msgstr ""
+
+#: content/join-us.md:37
+#, fuzzy
+#| msgid "Scriptable auto indentation"
+msgid "Write and maintain documentation."
+msgstr "Skribebla aŭtomata indentaĵo"
+
+#: content/join-us.md:38
+msgid "Write and maintain syntax highlight files."
+msgstr ""
+
+#: content/join-us.md:39
+msgid "Write and maintain scripts."
+msgstr ""
+
+#: content/join-us.md:40
+msgid "Maintain bug reports."
+msgstr ""
+
+#: content/join-us.md:41
+msgid "Provide us with useful feedback."
+msgstr ""
+
+#: content/join-us.md:42
+msgid ""
+"Help us by helping <a href=\"http://www.kde.org\" target=\"_blank\">KDE</a>. "
+"As a part of KDE, Kate benefits from the KDE as a whole, apart from the "
+"excellent integration provided by KDE the help from the <a href=\"http://"
+"i18n.kde.org\" target=\"_blank\">KDE translation team</a> is invaluable."
+msgstr ""
+
+#: content/join-us.md:44
+msgid "C/C++ Coding Standards"
+msgstr ""
+
+#: content/join-us.md:46
+msgid ""
+"The code in our repositories shall follow the style described for <a href="
+"\"https://community.kde.org/Policies/Frameworks_Coding_Style\" target="
+"\"_blank\">KDE Frameworks</a>."
+msgstr ""
+
+#: content/join-us.md:48
+msgid ""
+"The CMake tooling we use will setup appropriate pre-commit hooks to ensure "
+"this style using **clang-format**."
+msgstr ""
+
+#: content/join-us.md:50
+msgid "Documenting your code"
+msgstr ""
+
+#: content/join-us.md:52
+msgid ""
+"We use Doxygen syntax to document code, and it&#8217;s nice to document "
+"everything, even private code, since other people than you might get to work "
+"on it or just try to understand it."
+msgstr ""
+
+#: content/join-us.md:54
+msgid ""
+"For comments inside of functions, C++ single-line comments are preferred "
+"over multi-line C comments."
+msgstr ""
+
+#: content/join-us.md:57
+msgid "Good starting points"
+msgstr ""
+
+#: content/join-us.md:59
+msgid ""
+"You can take a look at our current list of issues, perhaps you are "
+"interested in taking care of one."
+msgstr ""
+
+#: content/join-us.md:61
+msgid ""
+"<a title=\"Bug Charts for KSyntaxHighlighting\" href=\"https://bugs.kde.org/"
+"reports.cgi?product_id=754&#038;datasets=UNCONFIRMED&#038;"
+"datasets=CONFIRMED&#038;datasets=ASSIGNED&#038;datasets=REOPENED\" target="
+"\"_blank\">Bug Charts for KSyntaxHighlighting</a>"
+msgstr ""
+
+#: content/join-us.md:62
+msgid ""
+"<a title=\"Bug Charts for KTextEditor\" href=\"https://bugs.kde.org/reports."
+"cgi?product_id=623&#038;datasets=UNCONFIRMED&#038;datasets=CONFIRMED&#038;"
+"datasets=ASSIGNED&#038;datasets=REOPENED\" target=\"_blank\">Bug Charts for "
+"KTextEditor</a>"
+msgstr ""
+
+#: content/join-us.md:63
+msgid ""
+"<a title=\"Bug Charts for Kate and KWrite\" href=\"https://bugs.kde.org/"
+"reports.cgi?product_id=39&#038;datasets=UNCONFIRMED&#038;"
+"datasets=CONFIRMED&#038;datasets=ASSIGNED&#038;datasets=REOPENED\" target="
+"\"_blank\">Bug Charts for Kate/KWrite</a>"
+msgstr ""
+
+#: content/join-us.md:64
+msgid ""
+"<a title=\"KSyntaxHighlighting Bug Tracker\" href=\"http://bugs.kde.org/"
+"buglist.cgi?product=frameworks-syntax-"
+"highlighting&bug_status=UNCONFIRMED&bug_status=CONFIRMED&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=critical&bug_severity=grave&bug_severity=major&bug_severity=crash&bug_severity=normal&bug_severity=minor"
+"\">KSyntaxHighlighting Bug Tracker</a>"
+msgstr ""
+
+#: content/join-us.md:65
+msgid ""
+"<a title=\"Kate/KWrite Bug Tracker\" href=\"http://bugs.kde.org/buglist.cgi?"
+"product=frameworks-"
+"ktexteditor&product=kate&bug_status=UNCONFIRMED&bug_status=CONFIRMED&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=critical&bug_severity=grave&bug_severity=major&bug_severity=crash&bug_severity=normal&bug_severity=minor"
+"\">Kate and KWrite Bug Tracker</a>"
+msgstr ""
+
+#: content/join-us.md:66
+msgid ""
+"<a title=\"Kate/KWrite Wishlist\" href=\"http://bugs.kde.org/buglist.cgi?"
+"product=frameworks-"
+"ktexteditor&product=kate&bug_status=UNCONFIRMED&bug_status=CONFIRMED&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=wishlist"
+"\">Feature Wishlist for Kate and KWrite</a>"
+msgstr ""
+
+#: content/join-us.md:67
+msgid ""
+"<a title=\"Weekly Summary for Kate/KWrite\" href=\"http://bugs.kde.org/"
+"weekly-bug-summary.cgi\">Weekly Summary for KDE Bugs</a>"
+msgstr ""
+
+#: content/kate-vi-mode.md:0
+msgid "VI Mode"
+msgstr "VI-Reĝimo"
+
+#: content/kate-vi-mode.md:0
+msgid "Erlend Hamberg"
+msgstr ""
+
+#: content/kate-vi-mode.md:12
+msgid "Introduction"
+msgstr ""
+
+#: content/kate-vi-mode.md:14
+msgid "![Vim Logo](/wp-content/uploads/2010/08/vim.png)"
+msgstr ""
+
+#: content/kate-vi-mode.md:16
+msgid ""
+"Kate's VI mode is a project to bring Vim-like, modal editing to the [Kate "
+"text editor][1] and by extension to other KDE programs who share the same "
+"editor component. The project started as a Google Summer of Code project in "
+"2008 – where all the basic functionality was written. I have continued to "
+"maintain and further develop this code and the number of missing features "
+"from Vim are slowly decreasing. Most Vim users will already be productive in "
+"Kate's VI mode. A list of what's missing is found at the bottom of the page."
+msgstr ""
+
+#: content/kate-vi-mode.md:18
+msgid "This page is meant to be an updated overview of this work."
+msgstr ""
+
+#: content/kate-vi-mode.md:20
+msgid ""
+"<div style=\"border: 1px solid black; margin: 0px auto -1px; padding: 1em; "
+"width: 75%; background-color: #eeeeee; text-align: left;\">\n"
+"  To enable the VI input mode, go to<br />\n"
+"  <strong>Settings → Configure Kate… → Editing → VI Input Mode</strong>.<br /"
+">\n"
+"  It can also be toggled with the \"VI Input Mode\" setting in the \"Edit\" "
+"menu. (The default shortcut key is Meta+Ctrl+V – where Meta usually is the "
+"Windows key).\n"
+"</div>\n"
+msgstr ""
+
+#: content/kate-vi-mode.md:26
+msgid "Goals"
+msgstr ""
+
+#: content/kate-vi-mode.md:28
+msgid ""
+"The goal of the VI mode is _not_ to be a complete replacement for Vim and "
+"support _all_ Vim's features. Its aim is to make the \"Vim way\" of text "
+"editing – and the Vim habits learned – available for programs using the Kate "
+"text editor as their internal editor. These programs include"
+msgstr ""
+
+#: content/kate-vi-mode.md:30
+msgid "The Kate Text editor"
+msgstr ""
+
+#: content/kate-vi-mode.md:31
+msgid "KWrite – KDE's simple text editor"
+msgstr ""
+
+#: content/kate-vi-mode.md:32
+msgid "KDevelop – An advanced IDE for many programming languages"
+msgstr ""
+
+#: content/kate-vi-mode.md:33
+msgid "Kile – A LaTeX editor"
+msgstr ""
+
+#: content/kate-vi-mode.md:35
+msgid ""
+"The VI mode aims integrate nicely with the programs and deviate from Vim's "
+"behaviour where it makes sense. For example, `:w` will open a save dialogue "
+"in Kate's VI mode."
+msgstr ""
+
+#: content/kate-vi-mode.md:37
+msgid "Incompatibilities with Vim"
+msgstr ""
+
+#: content/kate-vi-mode.md:39
+msgid ""
+"There are only a few features of Kate's VI mode which are incompatible with "
+"Vim (not counting things missing). They are listed below together with the "
+"respective reasons."
+msgstr ""
+
+#: content/kate-vi-mode.md:41
+msgid ""
+"**Kate:** `U` and `Ctrl+r` is redo<br> **Vim:** `Ctrl+r` is normal redo, `U` "
+"is used to undo all latest changes on one line<br> The reason for having `U` "
+"act as redo in Kate's VI mode is that the shortcut `ctrl+r` by default is "
+"taken by Kate's replace function (search and replace). By default, the VI "
+"mode won't override Kate's shortcuts (this can be configured in Settings → "
+"Configure Kate… → Editing → Vi Input Mode), therefore a redo-action needs to "
+"be available as a “regular” key press, too. Besides, the behaviour of the U "
+"command in Vim doesn't map well to Kate's internal undo system, so it would "
+"be non-trivial to support anyway."
+msgstr ""
+
+#: content/kate-vi-mode.md:44
+msgid ""
+"**Kate:** `:print` shows the \"print\" dialogue<br> **Vim:** `:print` prints "
+"the lines of the given range like its grandfather ed Commands like :print "
+"are available not only in the VI mode but for users using “regular” Kate, "
+"too – I have therefore chosen to let the `:print` command open the print "
+"dialogue – following the principle of least surprise instead of mimicking "
+"Vim's behaviour."
+msgstr ""
+
+#: content/kate-vi-mode.md:47
+msgid ""
+"**Kate:** `Y` yanks to end of line.<br> **Vim:** `Y` yanks whole line, just "
+"like `yy`. VI's behaviour for the `Y` command is in practice a bug; For both "
+"change and delete commands, `cc`/`dd` will do its action on the current line "
+"and `C`/`D` will work from the cursor column to the end of the line. "
+"However, both `yy` and `Y` yanks the current line.In Kate's VI Mode `Y` will "
+"yank to the end of the line. This is described as \"more logical\" [in the "
+"Vim documentation][2]."
+msgstr ""
+
+#: content/kate-vi-mode.md:50
+msgid ""
+"**Kate:** `:map` alters the selected lines of the document using the "
+"provided JavaScript expression.<br> **Vim:** `:map` adds the provided "
+"mapping to Normal and Visual modes. The \"map\" command was already reserved "
+"by Kate; in 4.12+, you can use a combination of `:nmap` and `:vmap` to "
+"replace it."
+msgstr ""
+
+#: content/kate-vi-mode.md:54
+msgid "Supported Commands"
+msgstr ""
+
+#: content/kate-vi-mode.md:56
+msgid "Supported normal/visual mode commands"
+msgstr ""
+
+#: content/kate-vi-mode.md:58 content/kate-vi-mode.md:145
+#: content/kate-vi-mode.md:200 content/kate-vi-mode.md:237
+#: content/kate-vi-mode.md:263
+msgid "Key"
+msgstr ""
+
+#: content/kate-vi-mode.md:58 content/kate-vi-mode.md:145
+#: content/kate-vi-mode.md:200 content/kate-vi-mode.md:237
+#: content/kate-vi-mode.md:263
+msgid "Description"
+msgstr ""
+
+#: content/kate-vi-mode.md:60
+msgid "a"
+msgstr ""
+
+#: content/kate-vi-mode.md:60
+msgid "Enter Insert Mode and append"
+msgstr ""
+
+#: content/kate-vi-mode.md:61
+msgid "A"
+msgstr ""
+
+#: content/kate-vi-mode.md:61
+msgid "Enter Insert Mode and append to EOL"
+msgstr ""
+
+#: content/kate-vi-mode.md:62
+msgid "i"
+msgstr ""
+
+#: content/kate-vi-mode.md:62
+msgid "Enter Insert Mode"
+msgstr ""
+
+#: content/kate-vi-mode.md:63
+msgid "I"
+msgstr ""
+
+#: content/kate-vi-mode.md:63
+msgid "Insert before first non-blank char in line"
+msgstr ""
+
+#: content/kate-vi-mode.md:64
+msgid "v"
+msgstr ""
+
+#: content/kate-vi-mode.md:64
+msgid "Enter Visual Mode"
+msgstr ""
+
+#: content/kate-vi-mode.md:65
+msgid "V"
+msgstr ""
+
+#: content/kate-vi-mode.md:65
+msgid "Enter Visual Line Mode"
+msgstr ""
+
+#: content/kate-vi-mode.md:66
+msgid "\\<c-v>"
+msgstr ""
+
+#: content/kate-vi-mode.md:66
+msgid "Enter Visual Block Mode"
+msgstr ""
+
+#: content/kate-vi-mode.md:67
+msgid "gv"
+msgstr ""
+
+#: content/kate-vi-mode.md:67
+msgid "Re-select Visual"
+msgstr ""
+
+#: content/kate-vi-mode.md:68
+msgid "o"
+msgstr ""
+
+#: content/kate-vi-mode.md:68
+msgid "Open new line under"
+msgstr ""
+
+#: content/kate-vi-mode.md:69
+msgid "O"
+msgstr ""
+
+#: content/kate-vi-mode.md:69
+msgid "Open new line over"
+msgstr ""
+
+#: content/kate-vi-mode.md:70
+msgid "J"
+msgstr ""
+
+#: content/kate-vi-mode.md:70
+#, fuzzy
+#| msgid "Join Us"
+msgid "Join lines"
+msgstr "Aliĝu al Ni"
+
+#: content/kate-vi-mode.md:71
+msgid "c"
+msgstr ""
+
+#: content/kate-vi-mode.md:71
+msgid "Change"
+msgstr ""
+
+#: content/kate-vi-mode.md:72
+msgid "C"
+msgstr ""
+
+#: content/kate-vi-mode.md:72
+msgid "Change to EOL"
+msgstr ""
+
+#: content/kate-vi-mode.md:73
+msgid "cc"
+msgstr ""
+
+#: content/kate-vi-mode.md:73
+msgid "Change line"
+msgstr ""
+
+#: content/kate-vi-mode.md:74
+msgid "s"
+msgstr ""
+
+#: content/kate-vi-mode.md:74
+msgid "Substitute char"
+msgstr ""
+
+#: content/kate-vi-mode.md:75
+msgid "S"
+msgstr ""
+
+#: content/kate-vi-mode.md:75
+msgid "Substitute line"
+msgstr ""
+
+#: content/kate-vi-mode.md:76
+msgid "dd"
+msgstr ""
+
+#: content/kate-vi-mode.md:76
+msgid "Delete line"
+msgstr ""
+
+#: content/kate-vi-mode.md:77
+msgid "d"
+msgstr ""
+
+#: content/kate-vi-mode.md:77
+msgid "Delete"
+msgstr ""
+
+#: content/kate-vi-mode.md:78
+msgid "D"
+msgstr ""
+
+#: content/kate-vi-mode.md:78
+msgid "Delete to EOL"
+msgstr ""
+
+#: content/kate-vi-mode.md:79
+msgid "x"
+msgstr ""
+
+#: content/kate-vi-mode.md:79
+msgid "Delete char"
+msgstr ""
+
+#: content/kate-vi-mode.md:80
+msgid "X"
+msgstr ""
+
+#: content/kate-vi-mode.md:80
+msgid "Delete char backward"
+msgstr ""
+
+#: content/kate-vi-mode.md:81
+msgid "gu"
+msgstr ""
+
+#: content/kate-vi-mode.md:81
+msgid "Make lowercase"
+msgstr ""
+
+#: content/kate-vi-mode.md:82
+msgid "guu"
+msgstr ""
+
+#: content/kate-vi-mode.md:82
+msgid "Make lowercase line"
+msgstr ""
+
+#: content/kate-vi-mode.md:83
+msgid "gU"
+msgstr ""
+
+#: content/kate-vi-mode.md:83
+msgid "Make uppercase"
+msgstr ""
+
+#: content/kate-vi-mode.md:84
+msgid "gUU"
+msgstr ""
+
+#: content/kate-vi-mode.md:84
+msgid "Make uppercase line"
+msgstr ""
+
+#: content/kate-vi-mode.md:85
+msgid "y"
+msgstr ""
+
+#: content/kate-vi-mode.md:85
+msgid "Yank"
+msgstr ""
+
+#: content/kate-vi-mode.md:86
+msgid "yy"
+msgstr ""
+
+#: content/kate-vi-mode.md:86
+msgid "Yank line"
+msgstr ""
+
+#: content/kate-vi-mode.md:87
+msgid "Y"
+msgstr ""
+
+#: content/kate-vi-mode.md:87
+msgid "Yank to EOL"
+msgstr ""
+
+#: content/kate-vi-mode.md:88
+msgid "p"
+msgstr ""
+
+#: content/kate-vi-mode.md:88
+msgid "Paste"
+msgstr ""
+
+#: content/kate-vi-mode.md:89
+msgid "P"
+msgstr ""
+
+#: content/kate-vi-mode.md:89
+msgid "Paste before"
+msgstr ""
+
+#: content/kate-vi-mode.md:90
+msgid "r."
+msgstr ""
+
+#: content/kate-vi-mode.md:90
+msgid "Replace character"
+msgstr ""
+
+#: content/kate-vi-mode.md:91
+msgid "R"
+msgstr ""
+
+#: content/kate-vi-mode.md:91
+msgid "Enter replace mode"
+msgstr ""
+
+#: content/kate-vi-mode.md:92
+msgid ":"
+msgstr ""
+
+#: content/kate-vi-mode.md:92
+msgid "Switch to command line"
+msgstr ""
+
+#: content/kate-vi-mode.md:93
+msgid "/"
+msgstr ""
+
+#: content/kate-vi-mode.md:93
+msgid "Search"
+msgstr ""
+
+#: content/kate-vi-mode.md:94
+msgid "u"
+msgstr ""
+
+#: content/kate-vi-mode.md:94
+msgid "Undo"
+msgstr ""
+
+#: content/kate-vi-mode.md:95
+msgid "\\<c-r>"
+msgstr ""
+
+#: content/kate-vi-mode.md:95 content/kate-vi-mode.md:96
+msgid "Redo"
+msgstr ""
+
+#: content/kate-vi-mode.md:96
+msgid "U"
+msgstr ""
+
+#: content/kate-vi-mode.md:97
+msgid "m."
+msgstr ""
+
+#: content/kate-vi-mode.md:97
+msgid "Set mark"
+msgstr ""
+
+#: content/kate-vi-mode.md:98
+msgid ">>"
+msgstr ""
+
+#: content/kate-vi-mode.md:98
+msgid "Indent line"
+msgstr ""
+
+#: content/kate-vi-mode.md:99
+msgid "<<"
+msgstr ""
+
+#: content/kate-vi-mode.md:99
+msgid "Unindent line"
+msgstr ""
+
+#: content/kate-vi-mode.md:100
+msgid ">"
+msgstr ""
+
+#: content/kate-vi-mode.md:100
+msgid "Indent lines"
+msgstr ""
+
+#: content/kate-vi-mode.md:101
+msgid "<"
+msgstr ""
+
+#: content/kate-vi-mode.md:101
+msgid "Unindent lines"
+msgstr ""
+
+#: content/kate-vi-mode.md:102 content/kate-vi-mode.md:271
+msgid "\\<c-f>"
+msgstr ""
+
+#: content/kate-vi-mode.md:102 content/kate-vi-mode.md:103
+msgid "Scroll page down"
+msgstr ""
+
+#: content/kate-vi-mode.md:103
+msgid "\\<pagedown>"
+msgstr ""
+
+#: content/kate-vi-mode.md:104
+msgid "\\<c-b>"
+msgstr ""
+
+#: content/kate-vi-mode.md:104 content/kate-vi-mode.md:105
+#, fuzzy
+#| msgid "Scroll bar marks"
+msgid "Scroll page up"
+msgstr "Rulumbaraj markoj"
+
+#: content/kate-vi-mode.md:105
+msgid "\\<pageup>"
+msgstr ""
+
+#: content/kate-vi-mode.md:106
+msgid "\\<c-u>"
+msgstr ""
+
+#: content/kate-vi-mode.md:106
+msgid "Scroll half page up"
+msgstr ""
+
+#: content/kate-vi-mode.md:107 content/kate-vi-mode.md:239
+#: content/kate-vi-mode.md:270
+msgid "\\<c-d>"
+msgstr ""
+
+#: content/kate-vi-mode.md:107
+msgid "Scroll half page down"
+msgstr ""
+
+#: content/kate-vi-mode.md:108
+msgid "zz"
+msgstr ""
+
+#: content/kate-vi-mode.md:108
+msgid "Centre view on cursor"
+msgstr ""
+
+#: content/kate-vi-mode.md:109
+msgid "ga"
+msgstr ""
+
+#: content/kate-vi-mode.md:109
+msgid "Print character code"
+msgstr ""
+
+#: content/kate-vi-mode.md:110
+msgid "."
+msgstr ""
+
+#: content/kate-vi-mode.md:110
+msgid "Repeat last change"
+msgstr ""
+
+#: content/kate-vi-mode.md:111
+msgid "=="
+msgstr ""
+
+#: content/kate-vi-mode.md:111
+msgid "Align line"
+msgstr ""
+
+#: content/kate-vi-mode.md:112
+msgid "="
+msgstr ""
+
+#: content/kate-vi-mode.md:112
+msgid "Align lines"
+msgstr ""
+
+#: content/kate-vi-mode.md:113
+msgid "~"
+msgstr ""
+
+#: content/kate-vi-mode.md:113
+msgid "Change case"
+msgstr ""
+
+#: content/kate-vi-mode.md:114 content/kate-vi-mode.md:246
+msgid "\\<c-a>"
+msgstr ""
+
+#: content/kate-vi-mode.md:114
+msgid "Add to number"
+msgstr ""
+
+#: content/kate-vi-mode.md:115 content/kate-vi-mode.md:247
+msgid "\\<c-x>"
+msgstr ""
+
+#: content/kate-vi-mode.md:115
+msgid "Subtract from number"
+msgstr ""
+
+#: content/kate-vi-mode.md:116 content/kate-vi-mode.md:245
+msgid "\\<c-o>"
+msgstr ""
+
+#: content/kate-vi-mode.md:116
+msgid "Go to prev jump"
+msgstr ""
+
+#: content/kate-vi-mode.md:117
+msgid "\\<c-i>"
+msgstr ""
+
+#: content/kate-vi-mode.md:117
+msgid "Go to next jump"
+msgstr ""
+
+#: content/kate-vi-mode.md:118
+msgid "\\<c-w>h"
+msgstr ""
+
+#: content/kate-vi-mode.md:118 content/kate-vi-mode.md:119
+#: content/kate-vi-mode.md:120
+msgid "Switch to left view"
+msgstr ""
+
+#: content/kate-vi-mode.md:119
+msgid "\\<c-w>\\<c-h>"
+msgstr ""
+
+#: content/kate-vi-mode.md:120
+msgid "\\<c-w>\\<left>"
+msgstr ""
+
+#: content/kate-vi-mode.md:121
+msgid "\\<c-w>j"
+msgstr ""
+
+#: content/kate-vi-mode.md:121 content/kate-vi-mode.md:122
+#: content/kate-vi-mode.md:123
+msgid "Switch to down view"
+msgstr ""
+
+#: content/kate-vi-mode.md:122
+msgid "\\<c-w>\\<c-j>"
+msgstr ""
+
+#: content/kate-vi-mode.md:123
+msgid "\\<c-w>\\<down>"
+msgstr ""
+
+#: content/kate-vi-mode.md:124
+msgid "\\<c-w>k"
+msgstr ""
+
+#: content/kate-vi-mode.md:124 content/kate-vi-mode.md:125
+#: content/kate-vi-mode.md:126
+msgid "Switch to up view"
+msgstr ""
+
+#: content/kate-vi-mode.md:125
+msgid "\\<c-w>\\<c-k>"
+msgstr ""
+
+#: content/kate-vi-mode.md:126
+msgid "\\<c-w>\\<up>"
+msgstr ""
+
+#: content/kate-vi-mode.md:127
+msgid "\\<c-w>l"
+msgstr ""
+
+#: content/kate-vi-mode.md:127 content/kate-vi-mode.md:128
+#: content/kate-vi-mode.md:129
+msgid "Switch to right view"
+msgstr ""
+
+#: content/kate-vi-mode.md:128
+msgid "\\<c-w>\\<c-l>"
+msgstr ""
+
+#: content/kate-vi-mode.md:129
+msgid "\\<c-w>\\<right>"
+msgstr ""
+
+#: content/kate-vi-mode.md:130
+msgid "\\<c-w>w"
+msgstr ""
+
+#: content/kate-vi-mode.md:130 content/kate-vi-mode.md:131
+msgid "Switch to next view"
+msgstr ""
+
+#: content/kate-vi-mode.md:131
+msgid "\\<c-w>\\<c-w>"
+msgstr ""
+
+#: content/kate-vi-mode.md:132
+msgid "\\<c-w>s"
+msgstr ""
+
+#: content/kate-vi-mode.md:132 content/kate-vi-mode.md:133
+#: content/kate-vi-mode.md:134
+msgid "Split horizontally"
+msgstr ""
+
+#: content/kate-vi-mode.md:133
+msgid "\\<c-w>S"
+msgstr ""
+
+#: content/kate-vi-mode.md:134
+msgid "\\<c-w>\\<c-s>"
+msgstr ""
+
+#: content/kate-vi-mode.md:135
+msgid "\\<c-w>v"
+msgstr ""
+
+#: content/kate-vi-mode.md:135 content/kate-vi-mode.md:136
+msgid "Split vertically"
+msgstr ""
+
+#: content/kate-vi-mode.md:136
+msgid "\\<c-w>\\<c-v>"
+msgstr ""
+
+#: content/kate-vi-mode.md:137
+msgid "gt"
+msgstr ""
+
+#: content/kate-vi-mode.md:137
+msgid "Switch to next tab"
+msgstr ""
+
+#: content/kate-vi-mode.md:138
+msgid "gT"
+msgstr ""
+
+#: content/kate-vi-mode.md:138
+msgid "Switch to prev tab"
+msgstr ""
+
+#: content/kate-vi-mode.md:139
+msgid "gqq"
+msgstr ""
+
+#: content/kate-vi-mode.md:139
+msgid "Format line"
+msgstr ""
+
+#: content/kate-vi-mode.md:140
+msgid "gq"
+msgstr ""
+
+#: content/kate-vi-mode.md:140
+msgid "Format lines"
+msgstr ""
+
+#: content/kate-vi-mode.md:141
+msgid "q. / q"
+msgstr ""
+
+#: content/kate-vi-mode.md:141
+msgid "Begin/ finish recording macro using the named macro register."
+msgstr ""
+
+#: content/kate-vi-mode.md:143
+msgid "Supported motions"
+msgstr ""
+
+#: content/kate-vi-mode.md:147
+msgid "h"
+msgstr ""
+
+#: content/kate-vi-mode.md:147 content/kate-vi-mode.md:148
+#: content/kate-vi-mode.md:149
+msgid "Left"
+msgstr ""
+
+#: content/kate-vi-mode.md:148
+msgid "\\<left>"
+msgstr ""
+
+#: content/kate-vi-mode.md:149
+msgid "\\<backspace>"
+msgstr ""
+
+#: content/kate-vi-mode.md:150
+msgid "j"
+msgstr ""
+
+#: content/kate-vi-mode.md:150 content/kate-vi-mode.md:151
+msgid "Down"
+msgstr ""
+
+#: content/kate-vi-mode.md:151
+msgid "\\<down>"
+msgstr ""
+
+#: content/kate-vi-mode.md:152
+msgid "\\<enter>"
+msgstr ""
+
+#: content/kate-vi-mode.md:152
+msgid "Down to first non blank"
+msgstr ""
+
+#: content/kate-vi-mode.md:153
+msgid "k"
+msgstr ""
+
+#: content/kate-vi-mode.md:153 content/kate-vi-mode.md:154
+msgid "Up"
+msgstr ""
+
+#: content/kate-vi-mode.md:154
+msgid "\\<up>"
+msgstr ""
+
+#: content/kate-vi-mode.md:155
+msgid "–"
+msgstr ""
+
+#: content/kate-vi-mode.md:155
+msgid "Up to first non blank"
+msgstr ""
+
+#: content/kate-vi-mode.md:156
+msgid "l"
+msgstr ""
+
+#: content/kate-vi-mode.md:156 content/kate-vi-mode.md:157
+#: content/kate-vi-mode.md:158
+msgid "Right"
+msgstr ""
+
+#: content/kate-vi-mode.md:157
+msgid "\\<right>"
+msgstr ""
+
+#: content/kate-vi-mode.md:158
+msgid "\\<space>"
+msgstr ""
+
+#: content/kate-vi-mode.md:159
+msgid "$"
+msgstr ""
+
+#: content/kate-vi-mode.md:159 content/kate-vi-mode.md:160
+msgid "To EOL"
+msgstr ""
+
+#: content/kate-vi-mode.md:160
+msgid "\\<end>"
+msgstr ""
+
+#: content/kate-vi-mode.md:161 content/kate-vi-mode.md:162
+msgid "To 0 column"
+msgstr ""
+
+#: content/kate-vi-mode.md:162
+msgid "\\<home>"
+msgstr ""
+
+#: content/kate-vi-mode.md:163
+msgid "^"
+msgstr ""
+
+#: content/kate-vi-mode.md:163
+msgid "To first character of line"
+msgstr ""
+
+#: content/kate-vi-mode.md:164
+msgid "f."
+msgstr ""
+
+#: content/kate-vi-mode.md:164
+msgid "Find char"
+msgstr ""
+
+#: content/kate-vi-mode.md:165
+msgid "F."
+msgstr ""
+
+#: content/kate-vi-mode.md:165
+msgid "Find char backward"
+msgstr ""
+
+#: content/kate-vi-mode.md:166
+msgid "t."
+msgstr ""
+
+#: content/kate-vi-mode.md:166
+msgid "To char"
+msgstr ""
+
+#: content/kate-vi-mode.md:167
+msgid "T."
+msgstr ""
+
+#: content/kate-vi-mode.md:167
+msgid "To char backward"
+msgstr ""
+
+#: content/kate-vi-mode.md:168
+msgid ";"
+msgstr ""
+
+#: content/kate-vi-mode.md:168 content/kate-vi-mode.md:169
+msgid "Repeat last t. or f. command"
+msgstr ""
+
+#: content/kate-vi-mode.md:169
+msgid ","
+msgstr ""
+
+#: content/kate-vi-mode.md:170
+msgid "n"
+msgstr ""
+
+#: content/kate-vi-mode.md:170
+msgid "Find next"
+msgstr ""
+
+#: content/kate-vi-mode.md:171
+msgid "N"
+msgstr ""
+
+#: content/kate-vi-mode.md:171
+msgid "Find prev"
+msgstr ""
+
+#: content/kate-vi-mode.md:172
+msgid "gg"
+msgstr ""
+
+#: content/kate-vi-mode.md:172
+msgid "To first line"
+msgstr ""
+
+#: content/kate-vi-mode.md:173
+msgid "G"
+msgstr ""
+
+#: content/kate-vi-mode.md:173
+msgid "To last line"
+msgstr ""
+
+#: content/kate-vi-mode.md:174
+msgid "w"
+msgstr ""
+
+#: content/kate-vi-mode.md:174
+msgid "Word forward"
+msgstr ""
+
+#: content/kate-vi-mode.md:175
+msgid "W"
+msgstr ""
+
+#: content/kate-vi-mode.md:175
+msgid "WORD forward"
+msgstr ""
+
+#: content/kate-vi-mode.md:176
+msgid "b"
+msgstr ""
+
+#: content/kate-vi-mode.md:176
+msgid "Word backward"
+msgstr ""
+
+#: content/kate-vi-mode.md:177
+msgid "B"
+msgstr ""
+
+#: content/kate-vi-mode.md:177
+msgid "WORD backward"
+msgstr ""
+
+#: content/kate-vi-mode.md:178
+msgid "e"
+msgstr ""
+
+#: content/kate-vi-mode.md:178
+msgid "To end of word"
+msgstr ""
+
+#: content/kate-vi-mode.md:179
+msgid "E"
+msgstr ""
+
+#: content/kate-vi-mode.md:179
+msgid "To end of WORD"
+msgstr ""
+
+#: content/kate-vi-mode.md:180
+msgid "ge"
+msgstr ""
+
+#: content/kate-vi-mode.md:180
+msgid "To end of prev word"
+msgstr ""
+
+#: content/kate-vi-mode.md:181
+msgid "gE"
+msgstr ""
+
+#: content/kate-vi-mode.md:181
+msgid "To end of prev WORD"
+msgstr ""
+
+#: content/kate-vi-mode.md:183
+msgid "%"
+msgstr ""
+
+#: content/kate-vi-mode.md:183
+msgid "To matching item"
+msgstr ""
+
+#: content/kate-vi-mode.md:184
+msgid "\\`[a-zA-Z>\\<]"
+msgstr ""
+
+#: content/kate-vi-mode.md:184
+msgid "To mark"
+msgstr ""
+
+#: content/kate-vi-mode.md:185
+msgid "'[a-zA-Z>\\<]"
+msgstr ""
+
+#: content/kate-vi-mode.md:185
+msgid "To mark line"
+msgstr ""
+
+#: content/kate-vi-mode.md:186
+msgid "[["
+msgstr ""
+
+#: content/kate-vi-mode.md:186
+msgid "To previous brace block start"
+msgstr ""
+
+#: content/kate-vi-mode.md:187
+msgid "]]"
+msgstr ""
+
+#: content/kate-vi-mode.md:187
+msgid "To next brace block start"
+msgstr ""
+
+#: content/kate-vi-mode.md:188
+msgid "[]"
+msgstr ""
+
+#: content/kate-vi-mode.md:188
+msgid "To previous brace block end"
+msgstr ""
+
+#: content/kate-vi-mode.md:189
+msgid "]["
+msgstr ""
+
+#: content/kate-vi-mode.md:189
+msgid "To next brace block end"
+msgstr ""
+
+#: content/kate-vi-mode.md:190
+msgid "*"
+msgstr ""
+
+#: content/kate-vi-mode.md:190
+msgid "To next occurrence of word under cursor"
+msgstr ""
+
+#: content/kate-vi-mode.md:191
+msgid "#"
+msgstr ""
+
+#: content/kate-vi-mode.md:191
+msgid "To prev occurrence of word under cursor"
+msgstr ""
+
+#: content/kate-vi-mode.md:192
+msgid "H"
+msgstr ""
+
+#: content/kate-vi-mode.md:192
+msgid "To first line of window"
+msgstr ""
+
+#: content/kate-vi-mode.md:193
+msgid "M"
+msgstr ""
+
+#: content/kate-vi-mode.md:193
+msgid "To middle line of window"
+msgstr ""
+
+#: content/kate-vi-mode.md:194
+msgid "L"
+msgstr ""
+
+#: content/kate-vi-mode.md:194
+msgid "To last line of window"
+msgstr ""
+
+#: content/kate-vi-mode.md:195
+msgid "gj"
+msgstr ""
+
+#: content/kate-vi-mode.md:195
+msgid "To next visual line"
+msgstr ""
+
+#: content/kate-vi-mode.md:196
+msgid "gk"
+msgstr ""
+
+#: content/kate-vi-mode.md:196
+msgid "To prev visual line"
+msgstr ""
+
+#: content/kate-vi-mode.md:198
+msgid "Supported text objects"
+msgstr ""
+
+#: content/kate-vi-mode.md:202
+msgid "iw"
+msgstr ""
+
+#: content/kate-vi-mode.md:202
+msgid "Inner word"
+msgstr ""
+
+#: content/kate-vi-mode.md:203
+msgid "aw"
+msgstr ""
+
+#: content/kate-vi-mode.md:203
+msgid "A word"
+msgstr ""
+
+#: content/kate-vi-mode.md:204
+msgid "iW"
+msgstr ""
+
+#: content/kate-vi-mode.md:204
+msgid "Inner WORD"
+msgstr ""
+
+#: content/kate-vi-mode.md:205
+msgid "aW"
+msgstr ""
+
+#: content/kate-vi-mode.md:205
+msgid "A WORD"
+msgstr ""
+
+#: content/kate-vi-mode.md:206
+msgid "i\""
+msgstr ""
+
+#: content/kate-vi-mode.md:206
+msgid "Inner double quote"
+msgstr ""
+
+#: content/kate-vi-mode.md:207
+msgid "a\""
+msgstr ""
+
+#: content/kate-vi-mode.md:207
+msgid "A double quote"
+msgstr ""
+
+#: content/kate-vi-mode.md:208
+msgid "i’"
+msgstr ""
+
+#: content/kate-vi-mode.md:208
+msgid "Inner single quote"
+msgstr ""
+
+#: content/kate-vi-mode.md:209
+msgid "a’"
+msgstr ""
+
+#: content/kate-vi-mode.md:209
+msgid "A single quote"
+msgstr ""
+
+#: content/kate-vi-mode.md:210
+msgid "i\\`"
+msgstr ""
+
+#: content/kate-vi-mode.md:210
+msgid "Inner back quote"
+msgstr ""
+
+#: content/kate-vi-mode.md:211
+msgid "a\\`"
+msgstr ""
+
+#: content/kate-vi-mode.md:211
+msgid "A back quote"
+msgstr ""
+
+#: content/kate-vi-mode.md:212
+msgid "ib"
+msgstr ""
+
+#: content/kate-vi-mode.md:212 content/kate-vi-mode.md:213
+#: content/kate-vi-mode.md:214
+msgid "Inner paren"
+msgstr ""
+
+#: content/kate-vi-mode.md:213
+msgid "i)"
+msgstr ""
+
+#: content/kate-vi-mode.md:214
+msgid "i("
+msgstr ""
+
+#: content/kate-vi-mode.md:215
+msgid "ab"
+msgstr ""
+
+#: content/kate-vi-mode.md:215 content/kate-vi-mode.md:216
+#: content/kate-vi-mode.md:217
+msgid "A paren"
+msgstr ""
+
+#: content/kate-vi-mode.md:216
+msgid "a)"
+msgstr ""
+
+#: content/kate-vi-mode.md:217
+msgid "a("
+msgstr ""
+
+#: content/kate-vi-mode.md:218
+msgid "iB"
+msgstr ""
+
+#: content/kate-vi-mode.md:218 content/kate-vi-mode.md:219
+#: content/kate-vi-mode.md:220
+msgid "Inner curly bracket"
+msgstr ""
+
+#: content/kate-vi-mode.md:219
+msgid "o}"
+msgstr ""
+
+#: content/kate-vi-mode.md:220
+msgid "i{"
+msgstr ""
+
+#: content/kate-vi-mode.md:221
+msgid "aB"
+msgstr ""
+
+#: content/kate-vi-mode.md:221 content/kate-vi-mode.md:222
+#: content/kate-vi-mode.md:223
+msgid "A curly bracket"
+msgstr ""
+
+#: content/kate-vi-mode.md:222
+msgid "a}"
+msgstr ""
+
+#: content/kate-vi-mode.md:223
+msgid "a{"
+msgstr ""
+
+#: content/kate-vi-mode.md:224
+msgid "i\\<"
+msgstr ""
+
+#: content/kate-vi-mode.md:224 content/kate-vi-mode.md:225
+msgid "Inner inequality sign"
+msgstr ""
+
+#: content/kate-vi-mode.md:225
+msgid "i>"
+msgstr ""
+
+#: content/kate-vi-mode.md:226
+msgid "a\\<"
+msgstr ""
+
+#: content/kate-vi-mode.md:226 content/kate-vi-mode.md:227
+msgid "A inequality sign"
+msgstr ""
+
+#: content/kate-vi-mode.md:227
+msgid "a>"
+msgstr ""
+
+#: content/kate-vi-mode.md:228
+msgid "i["
+msgstr ""
+
+#: content/kate-vi-mode.md:228 content/kate-vi-mode.md:229
+msgid "Inner bracket"
+msgstr ""
+
+#: content/kate-vi-mode.md:229
+msgid "I]"
+msgstr ""
+
+#: content/kate-vi-mode.md:230
+msgid "a["
+msgstr ""
+
+#: content/kate-vi-mode.md:230 content/kate-vi-mode.md:231
+msgid "A bracket"
+msgstr ""
+
+#: content/kate-vi-mode.md:231
+msgid "a]"
+msgstr ""
+
+#: content/kate-vi-mode.md:232
+msgid "i,"
+msgstr ""
+
+#: content/kate-vi-mode.md:232
+msgid "Inner comma"
+msgstr ""
+
+#: content/kate-vi-mode.md:233
+msgid "a,"
+msgstr ""
+
+#: content/kate-vi-mode.md:233
+msgid "A comma"
+msgstr ""
+
+#: content/kate-vi-mode.md:235
+msgid "Supported insert mode commands"
+msgstr ""
+
+#: content/kate-vi-mode.md:239
+msgid "Unindent"
+msgstr ""
+
+#: content/kate-vi-mode.md:240
+msgid "\\<c-t>"
+msgstr ""
+
+#: content/kate-vi-mode.md:240
+msgid "Indent"
+msgstr ""
+
+#: content/kate-vi-mode.md:241
+msgid "\\<c-e>"
+msgstr ""
+
+#: content/kate-vi-mode.md:241
+msgid "Insert from below"
+msgstr ""
+
+#: content/kate-vi-mode.md:242
+msgid "\\<c-y>"
+msgstr ""
+
+#: content/kate-vi-mode.md:242
+msgid "Insert from above"
+msgstr ""
+
+#: content/kate-vi-mode.md:243
+msgid "\\<c-w>"
+msgstr ""
+
+#: content/kate-vi-mode.md:243
+msgid "Delete word"
+msgstr ""
+
+#: content/kate-vi-mode.md:244 content/kate-vi-mode.md:265
+msgid "\\<c-r>."
+msgstr ""
+
+#: content/kate-vi-mode.md:244
+msgid "Insert content of register"
+msgstr ""
+
+#: content/kate-vi-mode.md:245
+msgid "Switch to normal mode for one command"
+msgstr ""
+
+#: content/kate-vi-mode.md:246
+msgid "Increase number under cursor"
+msgstr ""
+
+#: content/kate-vi-mode.md:247
+msgid "Decrease number under cursor"
+msgstr ""
+
+#: content/kate-vi-mode.md:249
+msgid "The *Comma* Text Object"
+msgstr ""
+
+#: content/kate-vi-mode.md:251
+msgid ""
+"This is something that I have been missing in Vim. The _comma_ text object "
+"makes it easy to modify parameter lists in C-like languages and other comma "
+"separated lists. It is basically the area between two commas or between a "
+"comma and a bracket. In the line shown in the illustration to the right, the "
+"three ranges this text object can span are highlighted in red."
+msgstr ""
+
+#: content/kate-vi-mode.md:253
+msgid "![comma to](/wp-content/uploads/2012/06/comma_to.png)"
+msgstr ""
+
+#: content/kate-vi-mode.md:255
+msgid ""
+"Comma text object ranges. If the cursor is over, say, “arg2”, pressing c i , "
+"(“change inner comma”) would delete “double arg2” and place the cursor "
+"between the two commas in insert mode. A very convenient way to change a "
+"function's parameters."
+msgstr ""
+
+#: content/kate-vi-mode.md:257
+msgid "Emulated Vim Command Bar"
+msgstr ""
+
+#: content/kate-vi-mode.md:259
+msgid ""
+"Kate 4.11 introduced a hidden config option that make `/`, `?` and `:` bring "
+"up a new search/ command in place of the usual Kate Find / Replace / Command-"
+"line bar. The bar is intended to replicate many of the features of Vim's "
+"command bar, and also to fix many of the issues with Kate Vim mode's "
+"interaction with Kate's Find/Replace bar (interactive replace not working; "
+"incremental search not positioning the cursor correctly; not usable in "
+"mappings/macros; etc)."
+msgstr ""
+
+#: content/kate-vi-mode.md:261
+msgid ""
+"The following shortcuts are provided by the emulated command bar; as with "
+"Vim, these can be remapped with cmap, cnoremap, etc:"
+msgstr ""
+
+#: content/kate-vi-mode.md:265
+msgid "insert contents of register."
+msgstr ""
+
+#: content/kate-vi-mode.md:266
+msgid "\\<c-r>\\<c-w>"
+msgstr ""
+
+#: content/kate-vi-mode.md:266
+msgid "Insert word under the (document) cursor."
+msgstr ""
+
+#: content/kate-vi-mode.md:267 content/kate-vi-mode.md:268
+msgid "\\<c-p>"
+msgstr ""
+
+#: content/kate-vi-mode.md:267
+msgid ""
+"Invoke context-specific completion (see below) <br> move back/ up in the "
+"completion list."
+msgstr ""
+
+#: content/kate-vi-mode.md:268
+msgid "Move forward/ down in the completion list."
+msgstr ""
+
+#: content/kate-vi-mode.md:269
+msgid "\\<c-space>"
+msgstr ""
+
+#: content/kate-vi-mode.md:269
+msgid "Kate Vim Extension. <br> Auto-complete word from document."
+msgstr ""
+
+#: content/kate-vi-mode.md:270
+msgid ""
+"Kate Vim Extension. <br> In a sed-replace expression *(i.e. s/find/replace/"
+"[g][c][i])*, <br> clear the \"find\" term and place the cursor there."
+msgstr ""
+
+#: content/kate-vi-mode.md:271
+msgid ""
+"Kate Vim Extension. <br> In a sed-replace expression *(i.e. s/find/replace/"
+"[g][c][i])*, <br> clear the “replace” term and place the cursor there."
+msgstr ""
+
+#: content/kate-vi-mode.md:272
+msgid "\\<c-g>."
+msgstr ""
+
+#: content/kate-vi-mode.md:272
+msgid ""
+"Kate Vim Extension. <br> As with ., insert the content of the named "
+"register, <br> but escape it in such a way that when used with a search, "
+"<br> we search for the literal content of the register;<br> not the content "
+"of the register interpreted as a regex."
+msgstr ""
+
+#: content/kate-vi-mode.md:275
+msgid "The \"context-specific completion\" is decided as follows:"
+msgstr ""
+
+#: content/kate-vi-mode.md:277
+msgid ""
+"In a search bar (`/` or `?`), auto-complete from search history (which "
+"includes searches initiated via `*`; and `#`; searches done in sed-replace "
+"expressions; etc.)"
+msgstr ""
+
+#: content/kate-vi-mode.md:278
+msgid ""
+"In an empty command bar (`:`), auto-complete from command history (NB: auto-"
+"completion of command names is invoked automatically when you begin typing)."
+msgstr ""
+
+#: content/kate-vi-mode.md:279
+msgid ""
+"In a command-bar containing a sed-replace expression (e.g. `:s/find/replace/"
+"gc`), if the cursor is positioned over \"find\", auto-complete from the "
+"\"search\" history; if over the \"replace\", auto-complete from the history "
+"of \"replace\" terms."
+msgstr ""
+
+#: content/kate-vi-mode.md:281
+msgid ""
+"When executing a sed-replace expression in the command bar with the \"c\" "
+"flag (e.g. `s/find/replace/gc`), a Vim-style interactive search/replace "
+"expression will be initiated."
+msgstr ""
+
+#: content/kate-vi-mode.md:283
+msgid ""
+"Some example usages of the emulated command bar, with GIF animations, are "
+"given in this [blog][3]. In 4.11, the emulated command bar can be enabled by "
+"setting the hidden config option \"Vi Input Mode Emulate Command Bar\" to "
+"`true` in your katerc/kwriterc/kdeveloprc."
+msgstr ""
+
+#: content/kate-vi-mode.md:285
+#, fuzzy
+#| msgid "Programming Features"
+msgid "Missing Features"
+msgstr "Programaj Trajtoj"
+
+#: content/kate-vi-mode.md:287
+msgid ""
+"As stated earlier, the goal of Kate's VI Mode is not to support 100% of "
+"Vim's features, however, there are some features which are sorely missed"
+msgstr ""
+
+#: content/kate-vi-mode.md:289
+msgid ""
+"Visual block mode – especially the ability to prepend/append text to the "
+"visual block selection."
+msgstr ""
+
+#: content/kate-vi-mode.md:290
+msgid ""
+"Having ex commands available in other programs than the Kate application."
+msgstr ""
+
+#: content/kate-vi-mode.md:291
+msgid ""
+"The search code needs improvement and the * and # commands should just be "
+"regular searches."
+msgstr ""
+
+#: content/kate-vi-mode.md:293
+msgid ""
+"If you miss other features or want to help on the ones mentioned above, feel "
+"free to contact me or send patches! :-)"
+msgstr ""
+
+#: content/kate-vi-mode.md:295
+msgid "Change Log"
+msgstr ""
+
+#: content/kate-vi-mode.md:297
+msgid ""
+"**2010-05-16:**<br /> Initial version. Collected the information from blog "
+"entries and README files to make a single source of current information."
+msgstr ""
+
+#: content/kate-vi-mode.md:299
+msgid ""
+"**2010-05-17:**<br /> `Ctrl+A` and `Ctrl+X` added (increment/decrement "
+"number under cursor)."
+msgstr ""
+
+#: content/kate-vi-mode.md:301
+msgid "**2010-08-30:**<br /> Moved page to kate-editor.org."
+msgstr ""
+
+#: content/kate-vi-mode.md:303
+msgid ""
+"**2010-09-10:**<br /> Fixed the text on the comma text object and made some "
+"formatting fixes"
+msgstr ""
+
+#: content/kate-vi-mode.md:305
+msgid ""
+"**2021-02-03:**<br /> Converted key-binding tables to markdown for hugo."
+msgstr ""
+
+#: content/kate-vi-mode.md:310
+msgid "Vimdoc: Y"
+msgstr ""
 
 #: content/mascot.md:0
 msgid "Kate's Mascot"
@@ -700,6 +2825,177 @@ msgstr ""
 "nekonfuzeble avangarda kaj artefarita, sed ankaŭ nekonfuzeble plena de vivo "
 "kaj homaro."
 
+#: content/support.md:0
+msgid "Get Help"
+msgstr "Akiru Helpon"
+
+#: content/support.md:12
+msgid ""
+"Before looking for support, be sure to read the available documentation, "
+"whether that is the <a title=\"Kate Handbook\" href=\"http://docs.kde.org/"
+"stable/en/applications/kate/index.html\" target=\"_blank\">application "
+"handbook</a>, developer documentation or other documentation."
+msgstr ""
+
+#: content/support.md:14
+#, fuzzy
+#| msgid "Get it"
+msgid "Get in touch"
+msgstr "Ekpreni ĝin"
+
+#: content/support.md:16
+msgid ""
+"When in need for help, you have the following options to get in touch with "
+"Kate developers and users:"
+msgstr ""
+
+#: content/support.md:18
+msgid ""
+"Use our mailing list, <kwrite-devel@kde.org>. The mailing list is open, that "
+"is you do not need to be subscribed to contact us. Do not forget to ask to "
+"be CC&#8217;d in answers in that case. To subscribe, visit the <a title="
+"\"Kate and KWrite Mailing List\" href=\"http://mail.kde.org/mailman/listinfo/"
+"kwrite-devel\" target=\"_blank\">kwrite-devel mailing list</a>. For "
+"archives, go <a title=\"Kate and Kwrite Mailing List Archive\" href=\"http://"
+"lists.kde.org/?l=kwrite-devel&r=1&w=2\" target=\"_blank\">here</a>. Mark "
+"Mail has a <a title=\"Mark Mail kwrite-devel list\" href=\"http://markmail."
+"org/search/?q=kwrite-devel#query:kwrite-devel%20list%3Aorg.kde.kwrite-devel"
+"%20order%3Adate-backward+page:1+state:facets\" target=\"_blank\">great "
+"overview</a> of our list, too."
+msgstr ""
+
+#: content/support.md:20
+msgid ""
+"Visit our IRC channel <a title=\"Kate IRC Channel\" href=\"irc://irc.libera."
+"chat/kate\" target=\"_blank\">#kate at irc.libera.chat</a>. You can often "
+"meet Kate developers there, and we are usually willing to help with user "
+"support requests as well as development questions. Alternatively, try <a "
+"title=\"KDE IRC Channel\" href=\"irc://irc.libera.chat/kde\" target=\"_blank"
+"\">#kde</a> for user support and <a title=\"IRC Channel for KDE Development"
+"\" href=\"irc://irc.libera.chat/kde-devel\" target=\"_blank\">#kde-devel</a> "
+"for development help."
+msgstr ""
+
+#: content/support.md:23
+msgid ""
+"Many of the bigger applications using Kate Part such as KDevelop or Kile "
+"have their own support channels, mailing lists, IRC channels and web forums. "
+"If you have a problem with one of these applications and you are not sure if "
+"this is a bug of the Kate Part then please first report it to them. Please "
+"prefer these public channels over contacting the authors in private."
+msgstr ""
+
+#: content/support.md:25
+msgid "Using the KDE bug system"
+msgstr ""
+
+#: content/support.md:27
+msgid ""
+"The KDE bug tracking system at <a title=\"KDE Bug Tracking System\" href="
+"\"http://bugs.kde.org\" target=\"_blank\">http://bugs.kde.org</a> is used "
+"for managing all bugs related to Kate. You can use the _Help->Report Bug_ "
+"menu item found in most KDE applications to report bugs or wishes. It will "
+"start the bug report wizard and fill in some information for you."
+msgstr ""
+
+#: content/support.md:29
+msgid ""
+"Be sure to include as much information as possible when reporting bugs, the "
+"better the report the better the chances we can fix the reported problem."
+msgstr ""
+
+#: content/tags/_index.md:0
+msgid "Tags"
+msgstr "Etikedoj"
+
+#: content/the-team.md:0
+msgid "The Team"
+msgstr "La Teamo"
+
+#: content/the-team.md:12
+msgid "Who are the Kate & KWrite contributors?"
+msgstr ""
+
+#: content/the-team.md:14
+msgid ""
+"[Kate & KWrite](https://invent.kde.org/utilities/kate) and the underlying "
+"[KTextEditor](https://invent.kde.org/frameworks/ktexteditor) & "
+"[KSyntaxHighlighting](https://invent.kde.org/frameworks/syntax-highlighting) "
+"frameworks are created by a group of volunteers around the world. The same "
+"is true for [this website](https://invent.kde.org/websites/kate-editor-org)."
+msgstr ""
+
+#: content/the-team.md:17
+msgid ""
+"Below is a periodically updated list of the contributors to the Git "
+"repositories containing the above named software components & website. As "
+"this list is purely based on the Git history of our repositories, it will be "
+"incomplete for otherwise submitted patches, etc."
+msgstr ""
+
+#: content/the-team.md:20
+msgid ""
+"The list is sorted by number of commits done by the individual contributors. "
+"This is by no means the best measure of the impact of their contributions, "
+"but gives some rough estimation about their level of involvement."
+msgstr ""
+
+#: content/the-team.md:23
+msgid "Don't forget the KDE Community!"
+msgstr ""
+
+#: content/the-team.md:25
+msgid ""
+"Beside these explicitly named contributors to our text editor related "
+"components, a large portion of work is done by other members of the much "
+"broader [KDE community](https://kde.org/)."
+msgstr ""
+
+#: content/the-team.md:27
+msgid "This includes crucial work like:"
+msgstr ""
+
+#: content/the-team.md:29
+msgid "developing the foundations we use, like KDE Frameworks"
+msgstr ""
+
+#: content/the-team.md:30
+msgid "doing all internationalization and translation work for our projects"
+msgstr ""
+
+#: content/the-team.md:31
+msgid "releasing our stuff"
+msgstr ""
+
+#: content/the-team.md:32
+msgid "maintaining our infrastructure (GitLab, CI, ...)"
+msgstr ""
+
+#: content/the-team.md:33
+msgid "supporting developer sprints"
+msgstr ""
+
+#: content/the-team.md:35
+msgid ""
+"If you are not interested in [joining our text editor related team](/join-"
+"us/), please take a look if you want to [contribute to KDE](https://"
+"community.kde.org/Get_Involved). The KDE community is a very welcoming bunch "
+"of people."
+msgstr ""
+
+#: content/the-team.md:38
+msgid ""
+"If you are not able to contribute, you might be interested to [donate]"
+"(https://kde.org/donations). Whereas these donations are not directly "
+"targeted at specific development, they help to keep the overall KDE "
+"community going. For example some Kate related coding sprints were funded by "
+"the [KDE e.V.](https://ev.kde.org) based on these donations."
+msgstr ""
+
+#: content/themes.md:0
+msgid "Color Themes"
+msgstr "Koloraj Etosoj"
+
 #: i18n/en.yaml:0
 msgid "Also available in:"
 msgstr "Ankaŭ havebla en:"
@@ -888,3 +3184,82 @@ msgstr "Instalu KWrite sur"
 #: i18n/en.yaml:0
 msgid "[Download the release Kate 64-bit installer](%1) *"
 msgstr "[Elŝutu la eldonan Kate 64-bitan instalilon](%1) *"
+
+#. %1 a number
+#: i18n/en.yaml:0
+msgid ""
+"Kate's highlighting is powered by the [KSyntaxHighlighting](https://api.kde."
+"org/frameworks/syntax-highlighting/html/) framework and supports %1 "
+"different languages."
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid ""
+"Below you can find a list of all supported languages together with example "
+"renderings of the highlighting both as light and dark theme HTML pages."
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid ""
+"Submissions of new language definitions & examples are very welcome, head "
+"over to the [KSyntaxHighlighting repository README](https://invent.kde.org/"
+"frameworks/syntax-highlighting#introduction) for details."
+msgstr ""
+
+#: i18n/en.yaml:0
+#, fuzzy
+#| msgid "Categories"
+msgid "Category"
+msgstr "Kategorioj"
+
+#: i18n/en.yaml:0
+msgid "Language"
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid "Light & Dark Theme Examples"
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid "Light Theme"
+msgstr ""
+
+#: i18n/en.yaml:0
+#, fuzzy
+#| msgid "Color Themes"
+msgid "Dark Theme"
+msgstr "Koloraj Etosoj"
+
+#: i18n/en.yaml:0
+msgid "Submit Example"
+msgstr ""
+
+#. %1 a number
+#: i18n/en.yaml:0
+msgid ""
+"Kate's highlighting is powered by the [KSyntaxHighlighting](https://api.kde."
+"org/frameworks/syntax-highlighting/html/) framework that contains %1 bundled "
+"color themes. Below you can find a list of all bundled themes together with "
+"an example rendering."
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid "Contributors during the last year"
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid ""
+"**%1 people** contributed during the last year. New contributors of that "
+"year are highlighted in the table below. Thanks to all new people for "
+"joining our team!"
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid "Contributors during the project lifetime"
+msgstr ""
+
+#: i18n/en.yaml:0
+msgid ""
+"During the full project lifetime **%1 people** contributed. Thanks for "
+"making Kate possible!"
+msgstr ""
