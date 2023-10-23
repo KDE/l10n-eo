@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmatube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-22 02:05+0000\n"
+"POT-Creation-Date: 2023-10-23 01:40+0000\n"
 "PO-Revision-Date: 2023-10-22 07:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -18,17 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: api/invidious/invidiousapi.cpp:65 api/peertube/peertubeapi.cpp:47
-#: controllers/logincontroller.cpp:42
+#: api/piped/pipedapi.cpp:60 controllers/logincontroller.cpp:42
 #, kde-format
 msgid "Username or password is wrong."
 msgstr "Uzantnomo aŭ pasvorto estas malĝusta."
 
 #: api/invidious/invidiousapi.cpp:306 api/peertube/peertubeapi.cpp:221
+#: api/piped/pipedapi.cpp:261
 #, kde-format
 msgid "Server returned no valid JSON."
 msgstr "Servilo ne liveris validan JSON."
 
 #: api/invidious/invidiousapi.cpp:315 api/peertube/peertubeapi.cpp:230
+#: api/piped/pipedapi.cpp:270
 #, kde-format
 msgid "Server returned the status code %1"
 msgstr "Servilo liveris la statuskodon %1"
@@ -131,8 +133,21 @@ msgstr "Historio"
 msgid "Search results for \"%1\""
 msgstr "Serĉrezultoj por \"%1\""
 
-#: ui/ChannelPage.qml:176 ui/FeedPage.qml:96 ui/Main.qml:95
-#: ui/PlaylistPage.qml:88 ui/SearchPage.qml:209
+#: ui/ChannelPage.qml:44 ui/FeedPage.qml:46 ui/PlaylistPage.qml:39
+#: ui/SearchPage.qml:157 ui/settings/NetworkProxyPage.qml:45
+#, kde-format
+msgid "Proxy Settings"
+msgstr "Prokuril-Agordoj"
+
+#: ui/ChannelPage.qml:162 ui/FeedPage.qml:68 ui/PlaylistPage.qml:68
+#: ui/SearchPage.qml:190
+#, kde-format
+msgctxt "@info:status Network status"
+msgid "Failed to contact server: %1. Please check your proxy settings."
+msgstr ""
+
+#: ui/ChannelPage.qml:191 ui/FeedPage.qml:112 ui/Main.qml:95
+#: ui/PlaylistPage.qml:104 ui/SearchPage.qml:225
 #, kde-format
 msgctxt "@info:status"
 msgid "Loading…"
@@ -143,9 +158,9 @@ msgstr "Ŝargante…"
 msgid "Videos"
 msgstr "Videoj"
 
-#: ui/components/BottomNavBar.qml:82 ui/loginflow/AddInvidiousPage.qml:30
-#: ui/loginflow/AddPeerTubePage.qml:30 ui/SearchPage.qml:17
-#: ui/SearchPage.qml:203
+#: ui/components/BottomNavBar.qml:82 ui/loginflow/AddInvidiousPage.qml:34
+#: ui/loginflow/AddPeerTubePage.qml:34 ui/loginflow/AddPipedPage.qml:34
+#: ui/SearchPage.qml:18 ui/SearchPage.qml:219
 #, kde-format
 msgid "Search"
 msgstr "Serĉi"
@@ -210,17 +225,22 @@ msgstr "Invidious"
 msgid "PeerTube"
 msgstr "PeerTube"
 
-#: ui/components/SourceSwitcher.qml:53
+#: ui/components/SourceSwitcher.qml:46 ui/settings/SettingsPage.qml:55
+#, kde-format
+msgid "Piped"
+msgstr ""
+
+#: ui/components/SourceSwitcher.qml:55
 #, kde-format
 msgid "Switch Source"
 msgstr "Ŝalti Fonton"
 
-#: ui/components/SourceSwitcher.qml:87 ui/settings/SettingsPage.qml:81
+#: ui/components/SourceSwitcher.qml:89 ui/settings/SettingsPage.qml:86
 #, kde-format
 msgid "Add Source"
 msgstr "Aldoni Fonton"
 
-#: ui/components/SourceSwitcher.qml:91
+#: ui/components/SourceSwitcher.qml:93
 #, kde-format
 msgid "Add a new video source"
 msgstr "Aldoni novan filmetofonton"
@@ -285,47 +305,66 @@ msgstr "Aldoni al Ludlisto…"
 msgid "Remove from Playlist"
 msgstr "Forigi el Ludlisto"
 
-#: ui/FeedPage.qml:101
+#: ui/FeedPage.qml:117
 #, kde-format
 msgid "No videos"
 msgstr "Neniuj filmetoj"
 
-#: ui/FeedPage.qml:127
+#: ui/FeedPage.qml:143
 #, kde-format
 msgid "Add to playlist"
 msgstr "Aldoni al ludlisto"
 
-#: ui/loginflow/AddInvidiousPage.qml:17
+#: ui/loginflow/AddInvidiousPage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Invidious Source"
 msgstr "Aldoni Invidious-fonton"
 
-#: ui/loginflow/AddInvidiousPage.qml:24 ui/loginflow/AddPeerTubePage.qml:24
+#: ui/loginflow/AddInvidiousPage.qml:28 ui/loginflow/AddPeerTubePage.qml:28
+#: ui/loginflow/AddPipedPage.qml:28
 #, kde-format
 msgid "Select a instance"
 msgstr ""
 
-#: ui/loginflow/AddInvidiousPage.qml:31
+#: ui/loginflow/AddInvidiousPage.qml:35
 #, kde-format
 msgid "invidious.io"
 msgstr "invidious.io"
 
-#: ui/loginflow/AddInvidiousPage.qml:62 ui/loginflow/AddPeerTubePage.qml:59
+#: ui/loginflow/AddInvidiousPage.qml:66 ui/loginflow/AddPeerTubePage.qml:63
 #, kde-format
 msgid "No public instances found."
 msgstr "Trovis neniujn publikajn instancojn."
 
-#: ui/loginflow/AddPeerTubePage.qml:17
+#: ui/loginflow/AddPeerTubePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Add PeerTube Source"
 msgstr "Aldoni PeerTube-fonton"
 
-#: ui/loginflow/AddPeerTubePage.qml:31
+#: ui/loginflow/AddPeerTubePage.qml:35
 #, kde-format
 msgid "joinpeertube.org"
 msgstr "joinpeertube.org"
+
+#: ui/loginflow/AddPipedPage.qml:18
+#, fuzzy, kde-format
+#| msgid "Add Source"
+msgctxt "@title:window"
+msgid "Add Piped Source"
+msgstr "Aldoni Fonton"
+
+#: ui/loginflow/AddPipedPage.qml:35
+#, kde-format
+msgid "pipedapi.kavin.rocks"
+msgstr ""
+
+#: ui/loginflow/AddPipedPage.qml:41
+#, kde-format
+msgctxt "Add instance"
+msgid "Add %1"
+msgstr ""
 
 #: ui/loginflow/WelcomePage.qml:15
 #, kde-format
@@ -353,73 +392,80 @@ msgstr "Aldoni Invidious-fonton"
 msgid "Add PeerTube Source"
 msgstr "Aldoni PeerTube-fonton"
 
-#: ui/LoginPage.qml:20
+#: ui/loginflow/WelcomePage.qml:66
+#, fuzzy, kde-format
+#| msgid "Add Source"
+msgid "Add Piped Source"
+msgstr "Aldoni Fonton"
+
+#: ui/LoginPage.qml:21
 #, kde-format
 msgid "Sign in"
 msgstr "Ensaluti"
 
-#: ui/LoginPage.qml:29
+#: ui/LoginPage.qml:30
 #, kde-format
 msgid "Successfully logged in!"
 msgstr "Sukcese ensalutinta!"
 
-#: ui/LoginPage.qml:47 ui/LoginPage.qml:85
+#: ui/LoginPage.qml:48 ui/LoginPage.qml:86
 #: ui/settings/InvidiousSourcePage.qml:129
 #, kde-format
 msgid "Log in"
 msgstr "Ensaluti"
 
-#: ui/LoginPage.qml:56
+#: ui/LoginPage.qml:57
 #, kde-format
 msgid "Username"
 msgstr "Uzantnomo"
 
-#: ui/LoginPage.qml:70 ui/settings/NetworkProxyPage.qml:89
+#: ui/LoginPage.qml:71 ui/settings/NetworkProxyPage.qml:89
 #, kde-format
 msgid "Password"
 msgstr "Pasvorto"
 
-#: ui/LoginPage.qml:92
+#: ui/LoginPage.qml:93
 #, kde-format
 msgid "Username must not be empty!"
 msgstr "Uzantnomo ne devas esti malplena!"
 
-#: ui/LoginPage.qml:97
+#: ui/LoginPage.qml:98
 #, kde-format
 msgid "Password must not be empty!"
 msgstr "Pasvorto ne devas esti malplena!"
 
-#: ui/SearchPage.qml:89
+#: ui/SearchPage.qml:90
 #, kde-format
 msgid "Sort By:"
 msgstr "Ordigi laŭ:"
 
-#: ui/SearchPage.qml:93
+#: ui/SearchPage.qml:94
 #, kde-format
 msgid "Rating"
 msgstr "Taksado"
 
-#: ui/SearchPage.qml:104
+#: ui/SearchPage.qml:105
 #, kde-format
 msgid "Relevance"
 msgstr "Rilateco"
 
-#: ui/SearchPage.qml:116
+#: ui/SearchPage.qml:117
 #, kde-format
 msgid "Upload Date"
 msgstr "Dato de Alŝuto"
 
-#: ui/SearchPage.qml:127
+#: ui/SearchPage.qml:128
 #, kde-format
 msgid "View Count"
 msgstr "Nombro de Vidoj"
 
-#: ui/SearchPage.qml:203
+#: ui/SearchPage.qml:219
 #, kde-format
 msgid "No results"
 msgstr "Neniuj rezultoj"
 
 #: ui/settings/InvidiousSourcePage.qml:18 ui/settings/PeerTubeSourcePage.qml:18
+#: ui/settings/PipedSourcePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Source"
@@ -451,26 +497,26 @@ msgid "Log out"
 msgstr "Elsaluti"
 
 #: ui/settings/InvidiousSourcePage.qml:146
-#: ui/settings/PeerTubeSourcePage.qml:25
+#: ui/settings/PeerTubeSourcePage.qml:25 ui/settings/PipedSourcePage.qml:25
 #, kde-format
 msgid "Remove Source"
 msgstr "Forigi Fonton"
 
 #: ui/settings/InvidiousSourcePage.qml:147
-#: ui/settings/PeerTubeSourcePage.qml:26
+#: ui/settings/PeerTubeSourcePage.qml:26 ui/settings/PipedSourcePage.qml:26
 #, kde-format
 msgid "Cannot remove the only source."
 msgstr "Ne eblas forigi la ununuran fonnton."
 
 #: ui/settings/InvidiousSourcePage.qml:154
-#: ui/settings/PeerTubeSourcePage.qml:33
+#: ui/settings/PeerTubeSourcePage.qml:33 ui/settings/PipedSourcePage.qml:33
 #, kde-format
 msgctxt "@title"
 msgid "Remove Source"
 msgstr "Forigi Fonton"
 
 #: ui/settings/InvidiousSourcePage.qml:155
-#: ui/settings/PeerTubeSourcePage.qml:34
+#: ui/settings/PeerTubeSourcePage.qml:34 ui/settings/PipedSourcePage.qml:34
 #, kde-format
 msgctxt "@label"
 msgid "Are you sure you want to remove this source?"
@@ -491,11 +537,6 @@ msgstr "Sistema Defaŭlto"
 #, kde-format
 msgid "HTTP"
 msgstr "HTTP"
-
-#: ui/settings/NetworkProxyPage.qml:45
-#, kde-format
-msgid "Proxy Settings"
-msgstr "Prokuril-Agordoj"
 
 #: ui/settings/NetworkProxyPage.qml:51
 #, kde-format
@@ -522,17 +563,17 @@ msgstr "Apliki"
 msgid "Sources"
 msgstr "Fontoj"
 
-#: ui/settings/SettingsPage.qml:90
+#: ui/settings/SettingsPage.qml:95
 #, kde-format
 msgid "Network Proxy"
 msgstr "Reta Prokurilo"
 
-#: ui/settings/SettingsPage.qml:99
+#: ui/settings/SettingsPage.qml:104
 #, kde-format
 msgid "About PlasmaTube"
 msgstr "Pri PlasmaTube"
 
-#: ui/settings/SettingsPage.qml:114
+#: ui/settings/SettingsPage.qml:119
 #, kde-format
 msgid "About KDE"
 msgstr "Pri KDE"
