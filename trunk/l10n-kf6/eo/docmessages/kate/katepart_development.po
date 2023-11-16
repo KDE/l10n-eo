@@ -535,7 +535,7 @@ msgstr ""
 "loko estas malsama por ĉiu aplikaĵo. En aplikaĵo de Flatpak, la loko de "
 "propra &XML; dosieroj estas kutime <filename class=\"directory\"><envar>"
 "$HOME</envar>/.var/app/<replaceable>flatpak-package-name</replaceable>/data/"
-"org.kde.syntax-highlighting /syntax/</filename> kaj en Snap-aplikaĵo tiu "
+"org.kde.syntax-highlighting/syntax/</filename> kaj en Snap-aplikaĵo tiu "
 "loko estas <filename class=\"directory\"><envar>$HOME</envar>/snap/"
 "<replaceable>snap-package-name</replaceable>/ current/.local/share/org.kde."
 "syntax-highlighting/syntax/</filename>."
@@ -650,7 +650,7 @@ msgstr ""
 #: development.docbook:282
 #, no-c-format
 msgid "Main sections of &kappname; Highlight Definition files"
-msgstr "Ĉefaj sekcioj de &kappname; Emfazu Difindosierojn"
+msgstr "Ĉefaj sekcioj de &kappname; Emfazaj Difindosierojn"
 
 #. Tag: term
 #: development.docbook:285
@@ -1011,9 +1011,9 @@ msgid ""
 msgstr ""
 "La sekcio <userinput>komento</userinput> difinas per kia ĉeno unulinia "
 "komento estas enkondukita. Vi ankaŭ povas difini plurlinian komenton uzante "
-"<emphasis>multilinio</emphasis> kun la kroma atributo <emphasis>fino</"
+"<emphasis>multiLine</emphasis> kun la kroma atributo <emphasis>end</"
 "emphasis>. Ĉi tio estas uzata se la uzanto premas la respondan ŝparvojon por "
-"<emphasis>komenti/malkomenti</emphasis>."
+"<emphasis>comment/uncomment</emphasis>."
 
 #. Tag: para
 #: development.docbook:362
@@ -1022,8 +1022,8 @@ msgid ""
 "The <userinput>keywords</userinput> section defines whether keyword lists "
 "are case sensitive or not. Other attributes will be explained later."
 msgstr ""
-"La sekcio <userinput>ŝlosilvortoj</userinput> difinas ĉu ŝlosillistoj "
-"distingas minusklecon aŭ ne. Aliaj atributoj estos klarigitaj poste."
+"La sekcio <userinput>keywords</userinput> difinas ĉu ŝlosilvortlistoj "
+"distingas usklecon aŭ ne. Aliaj atributoj estos klarigitaj poste."
 
 #. Tag: para
 #: development.docbook:365
@@ -1033,9 +1033,9 @@ msgid ""
 "userinput> and <userinput>spellchecking</userinput>, are usually not "
 "necessary and are explained later."
 msgstr ""
-"La aliaj sekcioj, <userinput>faldado</userinput>, <userinput>malplenaj "
-"Linioj</userinput> kaj <userinput>ortkontrolo</userinput>, kutime ne necesas "
-"kaj estas klarigitaj poste."
+"La aliaj sekcioj, <userinput>folding</userinput>, <userinput>emptyLines</"
+"userinput> kaj <userinput>spellchecking</userinput>, kutime ne necesas kaj "
+"estas klarigitaj poste."
 
 #. Tag: programlisting
 #: development.docbook:368
@@ -1104,8 +1104,8 @@ msgid ""
 "rules such as what should happen if the highlight system reaches the end of "
 "a line. Available attributes are:"
 msgstr ""
-"La elemento <userinput>kunteksto</userinput> apartenas al la grupo "
-"<userinput>kuntekstoj</userinput>. Kunteksto mem difinas kunteksto-specifajn "
+"La elemento <userinput>context</userinput> apartenas al la grupo "
+"<userinput>contexts</userinput>. Kunteksto mem difinas kunteksto-specifajn "
 "regulojn kiel ekzemple kio devus okazi se la elstara sistemo atingas la "
 "finon de linio. Disponeblaj atributoj estas:"
 
@@ -1116,7 +1116,7 @@ msgid ""
 "<userinput>name</userinput> states the context name. Rules will use this "
 "name to specify the context to switch to if the rule matches."
 msgstr ""
-"<userinput>nomo</userinput> deklaras la kuntekstan nomon. Reguloj uzos ĉi "
+"<userinput>name</userinput> deklaras la kuntekstan nomon. Reguloj uzos ĉi "
 "tiun nomon por specifi la kuntekston por ŝanĝi, se la regulo kongruas."
 
 #. Tag: para
@@ -1128,10 +1128,10 @@ msgid ""
 "latter case, <emphasis>attribute</emphasis> of the context specified in the "
 "rule's <emphasis>context</emphasis> will be used."
 msgstr ""
-"<userinput>atributo</userinput> identigas la stilon por uzi por signo kiam "
+"<userinput>attribute</userinput> identigas la stilon por uzi por signo kiam "
 "neniu regulo kongruas aŭ kiam regulo ne specifas atributon. En ĉi-lasta "
-"kazo, estos uzata <emphasis>atributo</emphasis> de la kunteksto specifita en "
-"la <emphasis>kunteksto</emphasis> de la regulo."
+"kazo, estos uzata <emphasis>attribute</emphasis> de la kunteksto specifita en "
+"la <emphasis>context</emphasis> de la regulo."
 
 #. Tag: para
 #: development.docbook:399
@@ -1153,7 +1153,7 @@ msgid ""
 msgstr ""
 "<userinput>lineEndContext</userinput> difinas la kuntekston, al kiu la "
 "emfazsistemo ŝanĝas se ĝi atingas la finon de linio. Ĉi tio povas aŭ esti "
-"nomo de alia kunteksto, <userinput>#resti</userinput> por ne ŝanĝi la "
+"nomo de alia kunteksto, <userinput>#stay</userinput> por ne ŝanĝi la "
 "kuntekston (&eg;. fari nenion) aŭ <userinput>#pop</userinput> kiu igos ĝin "
 "forlasi ĉi tiun kuntekston. Eblas uzi ekzemple <userinput>#pop#pop#pop</"
 "userinput> por krevi trifoje, aŭ eĉ <userinput>#pop#pop!OtherContext</"
@@ -1162,7 +1162,7 @@ msgstr ""
 "lingvodifino, same kiel en la reguloj <userinput>Inkluzi Reguloj</"
 "userinput>, &eg;, <userinput>IuKunteksto##JavaScript</userinput>. "
 "Kuntekstŝaltiloj ankaŭ estas priskribitaj en <xref linkend=\"kate-highlight-"
-"rules-detailled\"/>. Defaŭlte: #resti."
+"rules-detailled\"/>. Defaŭlte: #stay."
 
 #. Tag: para
 #: development.docbook:411
@@ -1175,7 +1175,7 @@ msgstr ""
 "<userinput>lineEmptyContext</userinput> difinas la kuntekston se malplena "
 "linio estas renkontita. La nomenklaturo de kuntekstŝaltiloj estas la sama "
 "kiel antaŭe priskribita en <emphasis>lineEndContext</emphasis>. Defaŭlte: "
-"#resti."
+"#stay."
 
 #. Tag: para
 #: development.docbook:414
@@ -1189,7 +1189,7 @@ msgstr ""
 "<userinput>fallthroughContext</userinput> specifas la sekvan kuntekston por "
 "ŝanĝi se neniu regulo kongruas. La nomenklaturo de kuntekstŝaltiloj estas la "
 "sama kiel antaŭe priskribita en <emphasis>lineEndContext</emphasis>. "
-"Defaŭlte: #resti."
+"Defaŭlte: #stay."
 
 #. Tag: para
 #: development.docbook:418
@@ -1203,7 +1203,7 @@ msgid ""
 "implicitly understood that the value of <userinput>fallthrough</userinput> "
 "is <emphasis>true</emphasis>. Default: <emphasis>false</emphasis>."
 msgstr ""
-"<userinput>falthrough</userinput> difinas ĉu la emfazsistemo ŝanĝas al la "
+"<userinput>fallthrough</userinput> difinas ĉu la emfazsistemo ŝanĝas al la "
 "kunteksto specifita en <userinput>fallthroughContext</userinput> se neniu "
 "regulo kongruas. Notu ke ekde &kde; &frameworks; 5.62 ĉi tiu atributo estas "
 "malrekomendita favore al <userinput>fallthroughContext</userinput>, ĉar se "
@@ -1224,7 +1224,7 @@ msgstr ""
 "<userinput>noIndentationBasedFolding</userinput> malŝaltas indent-bazitan "
 "faldadon en la kunteksto. Se indent-bazita faldado ne estas aktivigita, ĉi "
 "tiu atributo estas senutila. Ĉi tio estas difinita en la elemento "
-"<emphasis>faldado</emphasis> de la grupo <emphasis>ĝenerala</emphasis>. "
+"<emphasis>folding</emphasis> de la grupo <emphasis>general</emphasis>. "
 "Defaŭlte: <emphasis>false</emphasis>."
 
 #. Tag: term
@@ -1257,8 +1257,8 @@ msgid ""
 "rules will use this name in their attribute <emphasis>attribute</emphasis> "
 "to reference an itemData."
 msgstr ""
-"<userinput>nomo</userinput> fiksas la nomon de la itemDatumo. Kuntekstoj kaj "
-"reguloj uzos ĉi tiun nomon en sia atributo <emphasis>atributo</emphasis> por "
+"<userinput>name</userinput> fiksas la nomon de la itemData. Kuntekstoj kaj "
+"reguloj uzos ĉi tiun nomon en sia atributo <emphasis>attribute</emphasis> por "
 "referenci elementon."
 
 #. Tag: para
@@ -1278,7 +1278,7 @@ msgid ""
 "<userinput>color</userinput> defines a color. Valid formats are '#rrggbb' or "
 "'#rgb'."
 msgstr ""
-"<userinput>koloro</userinput> difinas koloron. Validaj formatoj estas "
+"<userinput>color</userinput> difinas koloron. Validaj formatoj estas "
 "'#rrggbb' aŭ '#rgb'."
 
 #. Tag: para
@@ -1294,7 +1294,7 @@ msgid ""
 "<userinput>italic</userinput> if <emphasis>true</emphasis>, the text will be "
 "italic."
 msgstr ""
-"<userinput>kursiva</userinput> se <emphasis>true</emphasis>, la teksto estos "
+"<userinput>italic</userinput> se <emphasis>true</emphasis>, la teksto estos "
 "kursiva."
 
 #. Tag: para
@@ -1304,7 +1304,7 @@ msgid ""
 "<userinput>bold</userinput> if <emphasis>true</emphasis>, the text will be "
 "bold."
 msgstr ""
-"<userinput>grasa</userinput> se <emphasis>true</emphasis>, la teksto estos "
+"<userinput>bold</userinput> se <emphasis>true</emphasis>, la teksto estos "
 "grasa."
 
 #. Tag: para
@@ -1314,7 +1314,7 @@ msgid ""
 "<userinput>underline</userinput> if <emphasis>true</emphasis>, the text will "
 "be underlined."
 msgstr ""
-"<userinput>substreki</userinput> se <emphasis>true</emphasis>, la teksto "
+"<userinput>underline</userinput> se <emphasis>true</emphasis>, la teksto "
 "estos substrekita."
 
 #. Tag: para
@@ -1324,7 +1324,7 @@ msgid ""
 "<userinput>strikeout</userinput> if <emphasis>true</emphasis>, the text will "
 "be struck out."
 msgstr ""
-"<userinput>forstreko</userinput> se <emphasis>true</emphasis>, la teksto "
+"<userinput>strikeout</userinput> se <emphasis>true</emphasis>, la teksto "
 "estos forstrekita."
 
 #. Tag: para
@@ -1334,7 +1334,7 @@ msgid ""
 "<userinput>spellChecking</userinput> if <emphasis>true</emphasis>, the text "
 "will be spellchecked."
 msgstr ""
-"<userinput>ortografio</userinput> se <emphasis>true</emphasis>, la teksto "
+"<userinput>spellChecking</userinput> se <emphasis>true</emphasis>, la teksto "
 "estos literumkontrolita."
 
 #. Tag: term
@@ -1344,8 +1344,8 @@ msgid ""
 "The element <userinput>keywords</userinput> in the group <userinput>general</"
 "userinput> defines keyword properties. Available attributes are:"
 msgstr ""
-"La elemento <userinput>ŝlosilvortoj</userinput> en la grupo "
-"<userinput>ĝenerala</userinput> difinas ŝlosilvortojn. Disponeblaj atributoj "
+"La elemento <userinput>keywords</userinput> en la grupo "
+"<userinput>general</userinput> difinas ŝlosilvortojn. Disponeblaj atributoj "
 "estas:"
 
 #. Tag: para
@@ -1356,7 +1356,7 @@ msgid ""
 "<emphasis>false</emphasis>. If <emphasis>true</emphasis>, all keywords are "
 "matched case sensitively."
 msgstr ""
-"<userinput>majusklesentema</userinput> povas esti <emphasis>true</emphasis> "
+"<userinput>casesensitive</userinput> povas esti <emphasis>true</emphasis> "
 "aŭ <emphasis>false</emphasis>. Se <emphasis>true</emphasis>, ĉiuj "
 "ŝlosilvortoj estas kongruaj majuskle."
 
@@ -1402,7 +1402,7 @@ msgid ""
 "userinput>) and tabulator (<userinput>'\\t'</userinput>)."
 msgstr ""
 "Defaŭltaj limigiloj kaj vortvolvaĵlimigiloj estas la signoj <userinput>.():!"
-"+,-&lt;=&gt;%&amp;*/;?[]^{|}~\\</userinput>, spaco (<userinput>' '</"
+"+,-&lt;=&gt;%&amp;*/;?[]^{|}~\\</userinput>, spaceto (<userinput>' '</"
 "userinput>) kaj tabeligilo (<userinput>'\\t'</userinput>)."
 
 #. Tag: term
@@ -1501,13 +1501,13 @@ msgid ""
 "<emphasis>afterwhitespace</emphasis>. This is only available for type "
 "<emphasis>singleLine</emphasis>."
 msgstr ""
-"<userinput>pozicio</userinput> difinas kie la unulinia komento estas "
+"<userinput>position</userinput> difinas kie la unulinia komento estas "
 "enmetita. Defaŭlte, la unulinia komento estas metita komence de la linio ĉe "
 "kolumno 0, sed se vi uzas <emphasis>position=\"afterwhitespace\"</emphasis> "
 "la komento estas enmetita post gvidado de blankspacoj dekstre, antaŭ la unua "
 "ne-blankspaca signo. Ĉi tio estas utila por meti komentojn ĝuste en lingvoj "
 "kie deŝoviĝo estas grava, kiel Python aŭ YAML. Ĉi tiu atributo estas "
-"nedeviga kaj la nura ebla valoro estas <emphasis>postblankspaco</emphasis>. "
+"nedeviga kaj la nura ebla valoro estas <emphasis>afterwhitespace</emphasis>. "
 "Ĉi tio disponeblas nur por tipo <emphasis>singleLine</emphasis>."
 
 #. Tag: term
@@ -1517,7 +1517,7 @@ msgid ""
 "The element <userinput>folding</userinput> in the group <userinput>general</"
 "userinput> defines code folding properties. Available attributes are:"
 msgstr ""
-"La elemento <userinput>faldado</userinput> en la grupo <userinput>ĝenerala</"
+"La elemento <userinput>folding</userinput> en la grupo <userinput>general</"
 "userinput> difinas kodfaldajn ecojn. Disponeblaj atributoj estas:"
 
 #. Tag: para
@@ -1547,7 +1547,7 @@ msgstr ""
 "La elemento <userinput>emptyLine</userinput> en la grupo "
 "<userinput>emptyLines</userinput> difinas kiuj linioj estu traktataj kiel "
 "malplenaj linioj. Ĉi tio permesas modifi la konduton de la atributo "
-"<emphasis>lineEmptyContext</emphasis> en la elementoj <userinput>kunteksto</"
+"<emphasis>lineEmptyContext</emphasis> en la elementoj <userinput>context</"
 "userinput>. Disponeblaj atributoj estas:"
 
 #. Tag: para
@@ -1574,9 +1574,9 @@ msgid ""
 "<userinput>spellchecking</userinput> defines a character encoding for spell "
 "checking. Available attributes:"
 msgstr ""
-"La elemento <userinput>kodigo</userinput> en la grupo <userinput>ortografia "
-"kontrolo</userinput> difinas signan kodigon por literumkontrolo. Disponeblaj "
-"atributoj:"
+"La elemento <userinput>encoding</userinput> en la grupo <userinput>"
+"spellchecking</userinput> difinas signan kodigon por literumkontrolo. "
+"Disponeblaj atributoj:"
 
 #. Tag: para
 #: development.docbook:555
@@ -1742,7 +1742,7 @@ msgid ""
 "<userinput>dsVerbatimString</userinput>, verbatim or raw strings like 'raw "
 "\\backlash' in Perl, CoffeeScript, and shells, as well as r'\\raw' in Python."
 msgstr ""
-"<userinput>Laŭvorta Ĉeno</userinput>, laŭvorte aŭ krudaj ĉenoj kiel 'raw "
+"<userinput>dsVerbatimString</userinput>, laŭvortaj aŭ krudaj ĉenoj kiel 'raw "
 "\\backslash' en Perl, CoffeeScript, kaj ŝeloj, same kiel r'\\raw' en Python."
 
 #. Tag: para
@@ -1900,13 +1900,13 @@ msgstr "<userinput>dsOthers</userinput>, kiam nenio alia taŭgas."
 #: development.docbook:641
 #, no-c-format
 msgid "Highlight Detection Rules"
-msgstr "Emfazu Detektajn Regulojn"
+msgstr "Emfazodetektaj Reguloj"
 
 #. Tag: para
 #: development.docbook:643
 #, no-c-format
 msgid "This section describes the syntax detection rules."
-msgstr "Ĉi tiu sekcio priskribas la sintaksajn detektajn regulojn."
+msgstr "Ĉi tiu sekcio priskribas la sintaksdetektajn regulojn."
 
 #. Tag: para
 #: development.docbook:645
@@ -1919,7 +1919,7 @@ msgid ""
 msgstr ""
 "Ĉiu regulo povas kongrui kun nul aŭ pli da signoj ĉe la komenco de la ĉeno "
 "kontraŭ kiu ili estas testitaj. Se la regulo kongruas, la kongruaj signoj "
-"ricevas la stilon aŭ <emphasis>atributon</emphasis> difinitan de la regulo, "
+"ricevas la stilon aŭ <emphasis>attribute</emphasis> difinitan de la regulo, "
 "kaj regulo povas peti ke la nuna kunteksto estas ŝanĝita."
 
 #. Tag: para
@@ -1935,7 +1935,7 @@ msgid ""
 "&lt;RuleName attribute=&quot;(identifier)&quot; context=&quot;"
 "(identifier)&quot; [rule specific attributes] /&gt;"
 msgstr ""
-"&lt;RuleName attribute=&quot;(identigilo)&quot; context=&quot;"
+"&lt;RegulNomo attribute=&quot;(identigilo)&quot; context=&quot;"
 "(identigilo)&quot; [specifaj atributoj de la regulo] /&gt;"
 
 #. Tag: para
@@ -1946,15 +1946,15 @@ msgid ""
 "characters by name, and the <emphasis>context</emphasis> identifies the "
 "context to use from here."
 msgstr ""
-"La <emphasis>atributo</emphasis> identigas la stilon uzi por kongruaj signoj "
-"laŭ nomo, kaj la <emphasis>kunteksto</emphasis> identigas la kuntekston uzi "
+"La <emphasis>attribute</emphasis> identigas la stilon uzi por kongruaj signoj "
+"laŭ nomo, kaj la <emphasis>context</emphasis> identigas la kuntekston uzi "
 "de ĉi tie."
 
 #. Tag: para
 #: development.docbook:659
 #, no-c-format
 msgid "The <emphasis>context</emphasis> can be identified by:"
-msgstr "La <emphasis>kunteksto</emphasis> povas esti identigita per:"
+msgstr "La <emphasis>context</emphasis> povas esti identigita per:"
 
 #. Tag: para
 #: development.docbook:663
@@ -1973,10 +1973,10 @@ msgid ""
 "used in the string (<userinput>#pop</userinput>). An empty or absent context "
 "is equivalent to <userinput>#stay</userinput>."
 msgstr ""
-"<emphasis>ordo</emphasis> ordonanta al la motoro resti en la nuna kunteksto "
-"(<userinput>#restado</userinput>), aŭ reiri al antaŭa kunteksto uzata en la "
+"<emphasis>order</emphasis> ordonanta al la motoro resti en la nuna kunteksto "
+"(<userinput>#stay</userinput>), aŭ reiri al antaŭa kunteksto uzata en la "
 "ĉeno (<userinput>#pop</userinput>). Malplena aŭ forestanta kunteksto "
-"ekvivalentas al <userinput>#restado</userinput>."
+"ekvivalentas al <userinput>#stay</userinput>."
 
 #. Tag: para
 #: development.docbook:671
@@ -2000,7 +2000,7 @@ msgstr ""
 "<emphasis>ordo</emphasis> sekvata de ekkria signo (<emphasis>!</emphasis>) "
 "kaj <emphasis>identigilo</emphasis>, kiuj igos la motoron unue sekvi la "
 "ordon kaj poste ŝanĝi al la alia kunteksto, &eg; <userinput>#pop#pop!"
-"OtherContext</userinput>."
+"AliaKunteksto</userinput>."
 
 #. Tag: para
 #: development.docbook:681
@@ -2014,7 +2014,7 @@ msgid ""
 "definition, e.g. <userinput>SomeContext##JavaScript</userinput>."
 msgstr ""
 "<emphasis>identigilo</emphasis>, kiu estas kunteksta nomo, sekvata de du "
-"haŝoj (<userinput>##</userinput>) kaj alia <emphasis>identigilo</emphasis>, "
+"kradoj (<userinput>##</userinput>) kaj alia <emphasis>identigilo</emphasis>, "
 "kiu estas la nomo de lingvodifino . Ĉi tiu nomado estas simila al tiu uzata "
 "en reguloj de <userinput>Inkluzi Reguloj</userinput> kaj ebligas al vi ŝanĝi "
 "al kunteksto apartenanta al alia sintaksa emfaza difino, ekz. "
@@ -2044,7 +2044,7 @@ msgid ""
 "optional."
 msgstr ""
 "Ĉiuj reguloj havas la jenajn atributojn komunaj kaj disponeblas kiam ajn "
-"<userinput>(komunaj atributoj)</userinput> aperas. Ĉiuj atributoj estas "
+"<userinput>(common attributes)</userinput> aperas. Ĉiuj atributoj estas "
 "laŭvolaj."
 
 #. Tag: para
@@ -2055,9 +2055,9 @@ msgid ""
 "<emphasis>itemData</emphasis>. Default: <emphasis>attribute</emphasis> from "
 "the context specified in <emphasis>context</emphasis> attribute."
 msgstr ""
-"<emphasis>atributo</emphasis>: Atributo mapas al difinita "
-"<emphasis>itemData</emphasis>. Defaŭlte: <emphasis>atributo</emphasis> el la "
-"kunteksto specifita en <emphasis>kunteksto</emphasis> atributo."
+"<emphasis>attribute</emphasis>: Atributo mapiĝas al difinita <emphasis>"
+"itemData</emphasis>. Defaŭlte: <emphasis>attribute</emphasis> el la "
+"kunteksto specifita en <emphasis>context</emphasis> atributo."
 
 #. Tag: para
 #: development.docbook:705
@@ -2066,8 +2066,8 @@ msgid ""
 "<emphasis>context</emphasis>: Specify the context to which the highlighting "
 "system switches if the rule matches. Default: #stay."
 msgstr ""
-"<emphasis>kunteksto</emphasis>: Specifu la kuntekston, al kiu la reliefiga "
-"sistemo ŝanĝas se la regulo kongruas. Defaŭlte: #resti."
+"<emphasis>context</emphasis>: Specifu la kuntekston, al kiu la reliefiga "
+"sistemo ŝanĝas se la regulo kongruas. Defaŭlto: #stay."
 
 #. Tag: para
 #: development.docbook:708
@@ -2075,7 +2075,7 @@ msgstr ""
 msgid ""
 "<emphasis>beginRegion</emphasis>: Start a code folding block. Default: unset."
 msgstr ""
-"<emphasis>beginRegion</emphasis>: Komencu kodan faldblokon. Defaŭlte: "
+"<emphasis>beginRegion</emphasis>: Komenci kodan faldblokon. Defaŭlto: "
 "malŝaltita."
 
 #. Tag: para
@@ -2084,7 +2084,7 @@ msgstr ""
 msgid ""
 "<emphasis>endRegion</emphasis>: Close a code folding block. Default: unset."
 msgstr ""
-"<emphasis>endRegion</emphasis>: Fermu kodan faldblokon. Defaŭlte: malŝaltita."
+"<emphasis>endRegion</emphasis>: Fermi kodan faldblokon. Defaŭlte: malŝaltita."
 
 #. Tag: para
 #: development.docbook:714
@@ -2115,7 +2115,7 @@ msgid ""
 "<emphasis>column</emphasis>: Match only, if the column matches. Default: "
 "unset."
 msgstr ""
-"<emphasis>kolumno</emphasis>: Kongruas nur, se la kolumno kongruas. "
+"<emphasis>column</emphasis>: Kongruas nur, se la kolumno kongruas. "
 "Defaŭlte: malŝaltita."
 
 #. Tag: title
@@ -2142,26 +2142,26 @@ msgid ""
 "<replaceable>N</replaceable> from the calling regular expression. Whenever a "
 "rule allows this attribute it will contain a <emphasis>(dynamic)</emphasis>."
 msgstr ""
-"Iuj reguloj permesas la laŭvolan atributon <userinput>dinamika</userinput> "
-"de tipo bulea kiu defaŭlte estas <emphasis>false</emphasis>. Se dinamiko "
+"Iuj reguloj permesas la laŭvolan atributon <userinput>dynamic</userinput> "
+"de tipo bulea kiu defaŭlte estas <emphasis>false</emphasis>. Se dynamic "
 "estas <emphasis>true</emphasis>, regulo povas uzi anstataŭaĵojn "
-"reprezentantajn la tekston kongruan per regulo <emphasis>regula esprimo</"
-"emphasis> kiu ŝanĝis al la nuna kunteksto en sia <userinput>ĉeno</userinput> "
-"aŭ <userinput>char</userinput> atributoj. En <userinput>ĉeno</userinput>, la "
+"reprezentantajn la tekston kongruan per <emphasis>regula esprimo</emphasis> "
+"kiu ŝanĝis al la nuna kunteksto en sia <userinput>string</userinput> aŭ "
+"<userinput>char</userinput> atributoj. En <userinput>string</userinput>, la "
 "lokokupilo <replaceable>%N</replaceable> (kie N estas nombro) estos "
 "anstataŭigita per la responda kapto <replaceable>N</replaceable> de la voka "
 "regula esprimo, komencante de 1. En <userinput>char</userinput> la "
 "lokokupilo devas esti nombro <replaceable>N</replaceable> kaj ĝi estos "
 "anstataŭigita per la unua signo de la responda kapto <replaceable>N</"
 "replaceable> de la voka regula esprimo. Kiam ajn regulo permesas ĉi tiun "
-"atributon ĝi enhavos <emphasis>(dinamikan)</emphasis>."
+"atributon ĝi enhavos <emphasis>(dynamic)</emphasis>."
 
 #. Tag: para
 #: development.docbook:745
 #, no-c-format
 msgid "<emphasis>dynamic</emphasis>: may be <emphasis>(true|false)</emphasis>."
 msgstr ""
-"<emphasis>dinamika</emphasis>: povas esti <emphasis>(true|false)</emphasis>."
+"<emphasis>dynamic</emphasis>: povas esti <emphasis>(true|false)</emphasis>."
 
 #. Tag: userinput
 #: development.docbook:749
@@ -2183,10 +2183,10 @@ msgid ""
 msgstr ""
 "En la <link linkend=\"regular-expressions\">regulaj esprimoj</link> de la "
 "reguloj <userinput>RegExpr</userinput>, ĉio teksto ene de simplaj kurbaj "
-"krampoj <userinput>(PATTERN)</userinput> estas kaptita kaj rememoris. Tiuj "
+"krampoj <userinput>(PATTERN)</userinput> estas kaptita kaj memorita. Tiuj "
 "ĉi kaptoj povas esti uzataj en la kunteksto al kiu ĝi estas ŝanĝita, en la "
-"reguloj kun la atributo <userinput>dinamika</userinput> <emphasis>true</"
-"emphasis>, per <replaceable>%N</replaceable> (en <emphasis>Ĉeno</emphasis>) "
+"reguloj kun la atributo <userinput>dynamic</userinput> <emphasis>true</"
+"emphasis>, per <replaceable>%N</replaceable> (en <emphasis>String</emphasis>) "
 "aŭ <replaceable>N</replaceable> (en <emphasis>char</emphasis>)."
 
 #. Tag: para
@@ -2199,7 +2199,7 @@ msgid ""
 msgstr ""
 "Gravas mencii, ke teksto kaptita en regulo <userinput>RegEx</userinput> "
 "estas nur konservita por la ŝanĝita kunteksto, specifita en ĝia "
-"<userinput>kunteksto</userinput> atributo."
+"<userinput>context</userinput>-atributo."
 
 #. Tag: para
 #: development.docbook:766
@@ -2334,7 +2334,7 @@ msgid ""
 "<emphasis>SomeContext</emphasis>."
 msgstr ""
 "Tiuj ĉi kaptoj ne estos disponeblaj en aliaj kuntekstoj, kiel "
-"<emphasis>AliaKunteksto</emphasis>, <emphasis>Trovi Eskapojn</emphasis> aŭ "
+"<emphasis>AliaKunteksto</emphasis>, <emphasis>FindEscapes</emphasis> aŭ "
 "<emphasis>IuKunteksto</emphasis>."
 
 #. Tag: programlisting
@@ -2558,7 +2558,7 @@ msgstr "AnyChar"
 #: development.docbook:861
 #, no-c-format
 msgid "Detect one character of a set of specified characters."
-msgstr "Detektu unu signon de aro de specifitaj signoj."
+msgstr "Detekti unu signon de aro de specifitaj signoj."
 
 #. Tag: programlisting
 #: development.docbook:862
@@ -2583,7 +2583,7 @@ msgstr "StringDetect"
 #: development.docbook:871
 #, no-c-format
 msgid "Detect an exact string."
-msgstr "Detektu precizan ĉenon."
+msgstr "Detekti precizan ĉenon."
 
 #. Tag: programlisting
 #: development.docbook:872
@@ -2605,9 +2605,9 @@ msgid ""
 "<emphasis>true</emphasis> insensitive comparing is used."
 msgstr ""
 "La atributo <userinput>String</userinput> difinas la ĉenon kongruan. La "
-"atributo <userinput>senentema</userinput> defaŭlte estas <emphasis>false</"
+"atributo <userinput>insensitive</userinput> defaŭlte estas <emphasis>false</"
 "emphasis> kaj estas transdonita al la ĉena kompara funkcio. Se la valoro "
-"estas <emphasis>true</emphasis> nesentema komparo estas uzata."
+"estas <emphasis>true</emphasis> ne-usklecdistinga komparo estas uzata."
 
 #. Tag: term
 #: development.docbook:882
@@ -2665,8 +2665,8 @@ msgid ""
 "&lt;RegExpr String=&quot;(string)&quot; [insensitive=&quot;true|false&quot;] "
 "[minimal=&quot;true|false&quot;] (common attributes) (dynamic) /&gt;"
 msgstr ""
-"&lt;RegExpr String = &quot;(ĉeno)&quot; [insensitive=&quot;true|false&quot;] "
-"[minimal=&quot;true|false&quot;] (oftaj atributoj) (dinamika) /&gt;"
+"&lt;RegExpr String=&quot;(ĉeno)&quot; [insensitive=&quot;true|false&quot;] "
+"[minimal=&quot;true|false&quot;] (oftaj atributoj) (dynamic) /&gt;"
 
 #. Tag: para
 #: development.docbook:903
@@ -2682,7 +2682,7 @@ msgid ""
 "<userinput>insensitive</userinput> defaults to <emphasis>false</emphasis> "
 "and is passed to the regular expression engine."
 msgstr ""
-"<userinput>nesentema</userinput> defaŭlte al <emphasis>false</emphasis> kaj "
+"<userinput>insensitive</userinput> defaŭlte al <emphasis>false</emphasis> kaj "
 "estas transdonita al la regula esprimo-motoro."
 
 #. Tag: para
@@ -3067,7 +3067,7 @@ msgid ""
 "The <userinput>context</userinput> attribute defines which context to "
 "include."
 msgstr ""
-"La atributo <userinput>kunteksto</userinput> difinas kiun kuntekston "
+"La atributo <userinput>context</userinput> difinas kiun kuntekston "
 "inkluzivi."
 
 #. Tag: para
@@ -3225,8 +3225,8 @@ msgstr ""
 "linio. Solvo bazita en regula esprimo aspektus jene: <programlisting>&lt;"
 "RegExpr attribute=&quot;Macro&quot; context=&quot;macro&quot; String=&quot;^"
 "\\s*#&quot; /&gt;</programlisting> Vi povas atingi la samon multe pli rapide "
-"uzante : <programlisting>&lt;DetectChar attribute=&quot;Makro&quot; "
-"context=&quot;makro&quot; char=&quot;#&quot; firstNonSpace=&quot;true&quot; /"
+"uzante : <programlisting>&lt;DetectChar attribute=&quot;Macro&quot; "
+"context=&quot;macro&quot; char=&quot;#&quot; firstNonSpace=&quot;true&quot; /"
 "&gt;</programlisting> Se vi volas kongrui kun la regula esprimo "
 "<userinput>'^#'</userinput> vi ankoraŭ povas uzi <userinput>DetectChar</"
 "userinput> kun la atributo <userinput>column=&quot;0&quot;</userinput>. La "
@@ -3336,10 +3336,10 @@ msgid ""
 "\"https://commits.kde.org/syntax-highlighting?path=data/schema\">Syntax "
 "Highlighting repository</ulink>."
 msgstr ""
-"Vi povas validigi ĉiun &XML; dosiero per la komando <command>validatehl.sh "
+"Vi povas validigi ĉiun &XML;-dosieron per la komando <command>validatehl.sh "
 "mySyntax.xml</command>. La dosiero <filename>validatehl.sh</filename> uzas "
 "<filename>language.xsd</filename> kiuj ambaŭ estas disponeblaj en <ulink url="
-"\"https://commits.kde.org/syntax-highlighting?path= data/schema\">Deponejo "
+"\"https://commits.kde.org/syntax-highlighting?path=data/schema\">Deponejo "
 "pri sintaksa reliefigo</ulink>."
 
 #. Tag: para
@@ -3350,7 +3350,7 @@ msgid ""
 "<emphasis>ENTITIES</emphasis>. Example:"
 msgstr ""
 "Se vi ripetas kompleksan regulan esprimon tre ofte, vi povas uzi "
-"<emphasis>ENTOJ</emphasis>. Ekzemplo:"
+"<emphasis>ENTOJN</emphasis>. Ekzemplo:"
 
 #. Tag: programlisting
 #: development.docbook:1164
@@ -3434,7 +3434,7 @@ msgstr "Uzu <command>ksyntaxhighlighter6 -h</command> por pliaj opcioj."
 #: development.docbook:1196
 #, no-c-format
 msgid "Working with Color Themes"
-msgstr "Laborante kun Koloraj Temoj"
+msgstr "Laborante kun Koloraj Etosoj"
 
 #. Tag: para
 #: development.docbook:1202
@@ -3444,9 +3444,9 @@ msgid ""
 "editing area</link> and the <link linkend=\"highlight\">syntax highlighting</"
 "link>. A color theme encompasses the following:"
 msgstr ""
-"Kolortemoj difinas la kolorojn de la <link linkend=\"kate-part\">teksta "
-"redakta areo</link> kaj la <link linkend=\"highlight\">sintakso reliefigo</"
-"link>. Kolora temo ampleksas la jenon:"
+"Koloretosoj difinas la kolorojn de la <link linkend=\"kate-part\">"
+"tekstredakta areo</link> kaj la <link linkend=\"highlight\">sintaksreliefigo</"
+"link>. Koloretoso ampleksas la jenon:"
 
 #. Tag: para
 #: development.docbook:1207
@@ -3540,7 +3540,7 @@ msgid ""
 "themes with the <quote>C++</quote> syntax highlighting.</phrase>"
 msgstr ""
 "<phrase><quote>Breeze Light</quote> kaj <quote>Breeze Dark</quote> "
-"kolortemoj kun la sintaksa reliefigo de <quote>C++</quote>.</phrase>"
+"koloretosoj kun la sintaksa reliefigo de <quote>C++</quote>.</phrase>"
 
 #. Tag: para
 #: development.docbook:1239
@@ -3549,14 +3549,14 @@ msgid ""
 "<para><quote>Breeze Light</quote> and <quote>Breeze Dark</quote> color "
 "themes with the <quote>C++</quote> syntax highlighting.</para>"
 msgstr ""
-"<para><quote>Breeze Light</quote> kaj <quote>Breeze Dark</quote> kolortemoj "
+"<para><quote>Breeze Light</quote> kaj <quote>Breeze Dark</quote> koloretosoj "
 "kun la sintaksa reliefigo de <quote>C++</quote>.</para>"
 
 #. Tag: title
 #: development.docbook:1248
 #, no-c-format
 msgid "The KSyntaxHighlighting Color Themes"
-msgstr "La KSyntaxHighlighting Koloraj Temoj"
+msgstr "La KSyntaxHighlighting Koloraj Etosoj"
 
 #. Tag: para
 #: development.docbook:1250
@@ -3575,7 +3575,7 @@ msgstr ""
 "La <ulink url=\"https://api.kde.org/frameworks/syntax-highlighting/html/"
 "\">KSyntaxHighlighting</ulink> kadro, kiu estas la <link linkend=\"highlight"
 "\">sintakso reliefigo </link> motoro, estas la biblioteko kiu <userinput> "
-"provizas kaj administras la kolortemojn</userinput>. Ĉi tio estas parto de "
+"provizas kaj administras la koloretosojn</userinput>. Ĉi tio estas parto de "
 "&kde; &frameworks; kaj estas uzata en &kde; tekstredaktiloj kiel <ulink url="
 "\"https://apps.kde.org/en/kate\">&kate;</ulink>, <ulink url=\"https://apps."
 "kde.org/en /kwrite\">&kwrite;</ulink>, <ulink url=\"https://apps.kde.org/en/"
@@ -3602,9 +3602,9 @@ msgid ""
 "displayed on the <ulink url=\"https://kate-editor.org/themes/\"><quote>Color "
 "Themes</quote> page of the Kate editor website</ulink>."
 msgstr ""
-"KSyntaxHighlighting inkluzivas diversajn enkonstruitajn temojn kiuj estas "
+"KSyntaxHighlighting inkluzivas diversajn enkonstruitajn etosojn kiuj estas "
 "montritaj sur la paĝo <ulink url=\"https://kate-editor.org/themes/"
-"\"><quote>Koloraj Temoj</quote> de la retejo de Kate-redaktilo. </ulink>."
+"\"><quote>Koloraj Etosoj</quote> de la retejo de Kate-redaktilo. </ulink>."
 
 #. Tag: para
 #: development.docbook:1271
@@ -3620,8 +3620,8 @@ msgid ""
 msgstr ""
 "La kadro <ulink url=\"https://api.kde.org/frameworks/ktexteditor/html/"
 "\">KTextEditor</ulink>, kiu estas la tekstoredaktadmotoro, disponigas "
-"uzantinterfacon por krei kaj redakti kolortemojn , inkluzive de ilo por "
-"importi kaj eksporti temojn. Ĉi tio estas la plej simpla maniero krei kaj "
+"uzantinterfacon por krei kaj redakti koloretosojn , inkluzive de ilo por "
+"importi kaj eksporti etosojn. Ĉi tio estas la plej simpla maniero krei kaj "
 "redakti ilin, vi povas aliri ĝin de la <link linkend=\"config-dialog"
 "\"><quote>Agordi</quote> dialogo</link> de la tekstredaktilo. Pliaj detaloj "
 "en <xref linkend=\"color-themes-gui\"/>."
@@ -3631,14 +3631,14 @@ msgstr ""
 #, no-c-format
 msgid "<phrase>The &GUI; to manage color themes in &kate;'s settings.</phrase>"
 msgstr ""
-"<phrase>La &GUI; por administri kolortemojn en la agordoj de &kate;.</phrase>"
+"<phrase>La &GUI; por administri koloretosojn en la agordoj de &kate;.</phrase>"
 
 #. Tag: para
 #: development.docbook:1281
 #, no-c-format
 msgid "<para>The &GUI; to manage color themes in &kate;'s settings.</para>"
 msgstr ""
-"<para>La &GUI; por administri kolorajn temojn en la agordoj de &kate;.</para>"
+"<para>La &GUI; por administri kolorajn etosojn en la agordoj de &kate;.</para>"
 
 #. Tag: para
 #: development.docbook:1285
@@ -3657,12 +3657,12 @@ msgid ""
 "schema-converter/</userinput> utility for that purpose."
 msgstr ""
 "Estas grave mencii ke, en la &kde; tekstredaktiloj kiel &kate; aŭ "
-"&kdevelop;, la kolortemoj de KSyntaxHighlighting estas uzataj <ulink url="
+"&kdevelop;, la koloretosoj de KSyntaxHighlighting estas uzataj <ulink url="
 "\"https://kate-editor.org/post/2020/2020-09-13-kate-color-themes-5.75/"
 "\">ekde &kde; &frameworks; 5.75</ulink>, publikigita la 10-an de oktobro "
 "2020. Antaŭe, la kolorskemoj de &kate; (skem-agordo bazita en KConfig) estis "
 "uzataj kaj nun estas malrekomenditaj. Tamen, eblas konverti la malnovan "
-"&kate; skemoj al la kolortemoj de KSyntaxHighlighting. La <ulink url="
+"&kate; skemoj al la koloretosoj de KSyntaxHighlighting. La <ulink url="
 "\"https://invent.kde.org/frameworks/syntax-highlighting"
 "\">KSyntaxHighlighting-deponejo</ulink> inkluzivas la <userinput>utils/"
 "kateschema_to_theme_converter.py</userinput> skripton kaj la "
@@ -3672,7 +3672,7 @@ msgstr ""
 #: development.docbook:1300
 #, no-c-format
 msgid "The Color Themes &JSON; Format"
-msgstr "La Koloraj Temoj &JSON; Formato"
+msgstr "La Koloraj Etosoj &JSON; Formato"
 
 #. Tag: para
 #: development.docbook:1306
@@ -3681,7 +3681,7 @@ msgid ""
 "Color themes are stored in &JSON; format files, with the <userinput>.theme</"
 "userinput> extension."
 msgstr ""
-"Koloraj temoj estas konservitaj en JSON; formataj dosieroj, kun la etendo "
+"Koloraj etosoj estas konservitaj en JSON; formataj dosieroj, kun la etendo "
 "<userinput>.theme</userinput>."
 
 #. Tag: para
@@ -3698,11 +3698,11 @@ msgid ""
 msgstr ""
 "En la <ulink url=\"https://invent.kde.org/frameworks/syntax-highlighting\"> "
 "KSyntaxHighlighting fontkodo</ulink>, la &JSON; dosieroj de enkonstruitaj "
-"temoj troviĝas en la dosierujo <userinput>data/themes/</userinput>. Notu, ke "
-"en tekstredaktiloj, la enkonstruitaj temoj estas kompilitaj en la "
+"etosoj troviĝas en la dosierujo <userinput>data/themes/</userinput>. Notu, ke "
+"en tekstredaktiloj, la enkonstruitaj etosoj estas kompilitaj en la "
 "bibliotekon KSyntaxHighlighting, tial la maniero aliri ilin estas per la "
 "fontkodo aŭ per <link linkend=\"color-themes-gui-import-export\"> "
-"eksportante ilin el la &GUI; por administri temojn de KTextEditor</link>."
+"eksportante ilin el la &GUI; por administri etosojn de KTextEditor</link>."
 
 #. Tag: para
 #: development.docbook:1317
@@ -3717,7 +3717,7 @@ msgid ""
 "$HOME</envar>/.local/share/</filename> and <filename class=\"directory\">/"
 "usr/share/</filename>."
 msgstr ""
-"Ankaŭ eblas facile aldoni pliajn aŭ proprajn temojn, kiuj estas ŝargitaj de "
+"Ankaŭ eblas facile aldoni pliajn aŭ proprajn etosojn, kiuj estas ŝargitaj de "
 "la dosiersistemo. Uzant-personigitaj etosdosieroj troviĝas en la dosierujo "
 "<filename class=\"directory\">org.kde.syntax-highlighting/themes/</filename> "
 "en via uzantdosierujo, kiun vi povas trovi per la komando "
@@ -3769,7 +3769,7 @@ msgid ""
 "In summary, for most configurations the custom themes directory is as "
 "follows:"
 msgstr ""
-"Resume, por la plej multaj agordoj la propraj temoj dosierujo estas jena:"
+"Resume, por la plej multaj agordoj la propraj etosoj dosierujo estas jena:"
 
 #. Tag: filename
 #: development.docbook:1346
@@ -3818,7 +3818,7 @@ msgid ""
 "If multiple theme files exist with the same name, the file with the highest "
 "<userinput>revision</userinput> will be loaded."
 msgstr ""
-"Se ekzistas pluraj temodosieroj kun la sama nomo, la dosiero kun la plej "
+"Se ekzistas pluraj etosodosieroj kun la sama nomo, la dosiero kun la plej "
 "alta <userinput>revizio</userinput> estos ŝargita."
 
 #. Tag: title
@@ -3875,7 +3875,7 @@ msgstr ""
 #: development.docbook:1396
 #, no-c-format
 msgid "Main Sections of the &JSON; Color Theme Files"
-msgstr "Ĉefaj Sekcioj de la &JSON; Koloraj Temoj Dosieroj"
+msgstr "Ĉefaj Sekcioj de la &JSON; Koloraj Etosoj Dosieroj"
 
 #. Tag: para
 #: development.docbook:1398
@@ -3884,7 +3884,7 @@ msgid ""
 "The root object of the color theme &JSON; file contains the following schema "
 "keys:"
 msgstr ""
-"La radika objekto de la kolortemo &JSON; dosiero enhavas la sekvajn skemajn "
+"La radika objekto de la koloretoso &JSON; dosiero enhavas la sekvajn skemajn "
 "ŝlosilojn:"
 
 #. Tag: para
@@ -3895,7 +3895,7 @@ msgid ""
 "with the theme's metadata, such as name, revision and license."
 msgstr ""
 "<userinput>metadatenoj</userinput>: Ĝi estas deviga. La valoro estas objekto "
-"kun la metadatenoj de la temo, kiel nomo, revizio kaj permesilo."
+"kun la metadatenoj de la etoso, kiel nomo, revizio kaj permesilo."
 
 #. Tag: para
 #: development.docbook:1404
@@ -3981,7 +3981,7 @@ msgid ""
 msgstr ""
 "La &JSON; lingvo ne subtenas komentojn. Tamen, vi povas uzi la laŭvolan "
 "klavon <userinput>_comments</userinput> en la radika objekto por skribi "
-"komentojn, ekzemple, se vi adaptas ekzistantan temon vi povas meti la URL de "
+"komentojn, ekzemple, se vi adaptas ekzistantan etoson vi povas meti la URL de "
 "la originala deponejo. La plej praktika maniero estas uzi tabelon de ĉenoj."
 
 #. Tag: para
@@ -3996,7 +3996,7 @@ msgid ""
 "themes/breeze-light.theme\"> the <quote>Breeze Light</quote> theme in the "
 "KSyntaxHighlighting repository</ulink>."
 msgstr ""
-"Malsupre estas ekzempla dosiero por la temo <quote>Breeze Light</quote>. Vi "
+"Malsupre estas ekzempla dosiero por la etoso <quote>Breeze Light</quote>. Vi "
 "povas rimarki ke, por eviti ke la ekzemplo estu tro granda, la objektoj "
 "<userinput>editor-colors</userinput> kaj <userinput>text-stiloj</userinput> "
 "ne enhavas ĉiujn postulatajn ŝlosilojn. Vi povas vidi la plenan arkivon de "
@@ -4085,7 +4085,7 @@ msgstr ""
 "{\n"
 "    \"_comments\": [\n"
 "        \"Ĉi tio estas komento.\",\n"
-"        \"Se ĉi tiu temo estas adapto de alia, metu la ligilon al la origina "
+"        \"Se ĉi tiu etoso estas adapto de alia, metu la ligilon al la origina "
 "deponejo.\"\n"
 "    ],\n"
 "    \"metadata\": {\n"
@@ -4170,7 +4170,7 @@ msgid ""
 "relevant information on the theme. This object has the following keys:"
 msgstr ""
 "La &JSON; objekto de la ŝlosilo <userinput>metadatumoj</userinput> enhavas "
-"koncernajn informojn pri la temo. Ĉi tiu objekto havas la sekvajn ŝlosilojn:"
+"koncernajn informojn pri la etoso. Ĉi tiu objekto havas la sekvajn ŝlosilojn:"
 
 #. Tag: para
 #: development.docbook:1458
@@ -4194,8 +4194,8 @@ msgid ""
 "mandatory."
 msgstr ""
 "<userinput>revizio</userinput>: Ĝi estas <emphasis>entjera</emphasis> nombro "
-"kiu specifas la nunan revizion de la temodosiero. Kiam ajn vi ĝisdatigas "
-"kolorteman dosieron, certigu pliigi ĉi tiun nombron. Ĝi estas deviga."
+"kiu specifas la nunan revizion de la etosodosiero. Kiam ajn vi ĝisdatigas "
+"koloretosan dosieron, certigu pliigi ĉi tiun nombron. Ĝi estas deviga."
 
 #. Tag: para
 #: development.docbook:1467
@@ -4207,7 +4207,7 @@ msgid ""
 "dev/\">SPDX license communication format</ulink>. It is optional."
 msgstr ""
 "<userinput>licenco</userinput>: Ĝi estas <emphasis>ĉeno</emphasis> kiu "
-"difinas la permesilon de la temo, uzante la identigilon <userinput>SPDX-"
+"difinas la permesilon de la etoso, uzante la identigilon <userinput>SPDX-"
 "License-Identifier</userinput> el la norma <ulink url= \"https://spdx.dev/"
 "\">SPDX-licenca komunikformato</ulink>. Ĝi estas laŭvola."
 
@@ -4232,7 +4232,7 @@ msgid ""
 "ulink>. It is optional."
 msgstr ""
 "<userinput>kopirajto</userinput>: Ĝi estas <emphasis>tabelo</emphasis> de "
-"<emphasis>ĉenoj</emphasis> kiu specifas la aŭtorojn de la temo, uzante la "
+"<emphasis>ĉenoj</emphasis> kiu specifas la aŭtorojn de la etoso, uzante la "
 "identigilon <userinput>SPDX-FileCopyrightText</userinput> de la norma <ulink "
 "url=\"https://spdx.dev/\">SPDX-licenca komunika formato</ulink>. Ĝi estas "
 "laŭvola."
@@ -4308,7 +4308,7 @@ msgid ""
 "userinput>, their values are <userinput>strings</userinput> with hexadecimal "
 "color codes, like <quote>#00B5CF</quote>."
 msgstr ""
-"En la <link linkend=\"color-themes-json\">&JSON; temodosiero</link>, la "
+"En la <link linkend=\"color-themes-json\">&JSON; etosodosiero</link>, la "
 "respektiva klavo <userinput>editor-colors</userinput> havas kiel valoron "
 "<emphasis>objekton</emphasis> kie ĉiu ŝlosilo referencas al atributokoloro "
 "de la tekstredaktilo. Ĉi tie, <userinput>ĉiuj disponeblaj ŝlosiloj estas "
@@ -4323,7 +4323,7 @@ msgid ""
 "KTextEditor</link>, these attributes can be modified in the "
 "<userinput><guilabel>Colors</guilabel></userinput> tab."
 msgstr ""
-"En <link linkend=\"color-themes-gui\">la &GUI; por administri temojn de "
+"En <link linkend=\"color-themes-gui\">la &GUI; por administri etosojn de "
 "KTextEditor</link>, ĉi tiuj atributoj povas esti modifitaj en la langeto "
 "<userinput><guilabel>Koloroj</guilabel></userinput>."
 
@@ -5168,7 +5168,7 @@ msgid ""
 "lets you select common attributes as well as foreground and background "
 "colors. To unset a background color, right-click to use the context menu."
 msgstr ""
-"En <link linkend=\"color-themes-gui\">la &GUI; por administri kolortemojn de "
+"En <link linkend=\"color-themes-gui\">la &GUI; por administri koloretosojn de "
 "KTextEditor</link>, ĉi tiuj atributoj povas esti modifitaj en la langeto "
 "<userinput><guilabel>Defaŭltaj Tekstaj Stiloj</guilabel></userinput>. La "
 "nomo en la listo de stiloj uzas la stilon agordita por la ero, provizante al "
@@ -5612,7 +5612,7 @@ msgid ""
 "are not present, the style set in <userinput>text-styles</userinput> is "
 "considered."
 msgstr ""
-"En la <link linkend=\"color-themes-json\">&JSON; temodosiero</link>, ĉi tio "
+"En la <link linkend=\"color-themes-json\">&JSON; etosodosiero</link>, ĉi tio "
 "respondas al la ŝlosilo <userinput>personaj stiloj</userinput>, kies valoro "
 "estas <emphasis>objekto</emphasis> kie ĉiu subskema ŝlosilo respondas al la "
 "<userinput>nomo de sintaksa reliefigo-difino</userinput>. Ĝia valoro estas "
@@ -5692,7 +5692,7 @@ msgstr ""
 "Vi devus konsideri, ke ĉi tiuj tekstaj stiloj estas asociitaj kun la "
 "atributaj nomoj difinitaj en la sintaksa reliefigo &XML; dosierojn. Se XML-"
 "dosiero estas ĝisdatigita kaj iuj atributoj estas renomitaj aŭ forigitaj, la "
-"propra stilo difinita en la temo ne plu aplikiĝos."
+"propra stilo difinita en la etoso ne plu aplikiĝos."
 
 #. Tag: para
 #: development.docbook:2129
@@ -5719,7 +5719,7 @@ msgid ""
 "<quote>Alert</quote> highlight, and many source code formats import the "
 "<quote>Doxygen</quote> highlight."
 msgstr ""
-"En <link linkend=\"color-themes-gui\">la &GUI; por administri temojn de "
+"En <link linkend=\"color-themes-gui\">la &GUI; por administri etosojn de "
 "KTextEditor</link>, ĉi tiuj atributoj povas esti modifitaj en la langeto "
 "<userinput><guilabel>Elstarigado de Tekstaj Stiloj</guilabel></userinput>. "
 "Defaŭlte, la redaktilo antaŭelektas la reliefigon de la nuna dokumento. Vi "
@@ -5732,7 +5732,7 @@ msgstr ""
 #: development.docbook:2152
 #, no-c-format
 msgid "The Color Themes &GUI;"
-msgstr "La Koloraj Temoj &GUI;"
+msgstr "La Koloraj Etosoj &GUI;"
 
 #. Tag: para
 #: development.docbook:2154
@@ -5747,14 +5747,14 @@ msgid ""
 "up the <guilabel>Configure</guilabel> dialog box, there select "
 "<guilabel>Color Themes</guilabel> in the side panel."
 msgstr ""
-"La plej simpla maniero krei kaj redakti kolorajn temojn estas per la &GUI; "
+"La plej simpla maniero krei kaj redakti kolorajn etosojn estas per la &GUI; "
 "ene de la dialogo <link linkend=\"config-dialog\"><quote>Agordu</quote></"
 "link> provizita de <ulink url=\"https://api.kde.org/frameworks/ktexteditor/"
 "html /\">KTekstRedaktilo</ulink>. Por aliri ĝin, elektu "
 "<menuchoice><guimenu>Agordoj</guimenu> <guimenuitem>Agordu "
 "<replaceable>Apliko</replaceable>...</guimenuitem></menuchoice> el la "
 "menubreto en via tekstredaktilo. Ĉi tio aperigas la dialogujon "
-"<guilabel>Agordu</guilabel>, tie elektu <guilabel>Koloraj Temoj</guilabel> "
+"<guilabel>Agordu</guilabel>, tie elektu <guilabel>Koloraj Etosoj</guilabel> "
 "en la flanka panelo."
 
 #. Tag: phrase
@@ -5773,7 +5773,7 @@ msgstr ""
 msgid ""
 "<para>&kate;'s settings dialog box with the color theme management.</para>"
 msgstr ""
-"<para>La agorda dialogujo de &kate; kun la kolortemo-administrado.</para>"
+"<para>La agorda dialogujo de &kate; kun la koloretoso-administrado.</para>"
 
 #. Tag: para
 #: development.docbook:2170
@@ -5787,10 +5787,10 @@ msgid ""
 "and styles."
 msgstr ""
 "En ĉi tiu <link linkend=\"config-dialog\">dialogo</link> vi povas agordi "
-"ĉiujn kolorojn en iu ajn temo, kiun vi havas, kaj ankaŭ krei/kopii novajn "
-"temojn, forigi ilin, eksporti ilin al <userinput> .theme</userinput> dosiero "
+"ĉiujn kolorojn en iu ajn etoso, kiun vi havas, kaj ankaŭ krei/kopii novajn "
+"etosojn, forigi ilin, eksporti ilin al <userinput> .theme</userinput> dosiero "
 "kun <link linkend=\"color-themes-json\">&JSON; formati</link> aŭ importi "
-"ilin el eksteraj <userinput>.theme</userinput> dosieroj. Ĉiu temo havas "
+"ilin el eksteraj <userinput>.theme</userinput> dosieroj. Ĉiu etoso havas "
 "agordojn por tekstaj koloroj kaj stiloj."
 
 #. Tag: para
@@ -5800,7 +5800,7 @@ msgid ""
 "The built-in themes cannot be modified by default. To do this, you need to "
 "copy them and give them a new name."
 msgstr ""
-"La enkonstruitaj temoj ne povas esti modifitaj defaŭlte. Por fari tion, vi "
+"La enkonstruitaj etosoj ne povas esti modifitaj defaŭlte. Por fari tion, vi "
 "devas kopii ilin kaj doni al ili novan nomon."
 
 #. Tag: para
@@ -5817,12 +5817,12 @@ msgid ""
 "application; it usually chooses between <quote>Breeze Light</quote> and "
 "<quote>Breeze Dark</quote> if the scheme is light or dark, respectively."
 msgstr ""
-"Por uzi temon konstante en via tekstredaktilo, vi devas elekti ĝin en la "
-"kombinujo etikedita <guilabel>Defaŭlta temo por <replaceable>Apliko</"
+"Por uzi etoson konstante en via tekstredaktilo, vi devas elekti ĝin en la "
+"kombinujo etikedita <guilabel>Defaŭlta etoso por <replaceable>Apliko</"
 "replaceable></guilabel> ĉe la malsupro de la dialogo kaj premu "
 "<guibutton>Apliki</guibutton> aŭ <guibutton>Bone</guibutton>. Defaŭlte estas "
 "aktiva la opcio <userinput><guilabel>Aŭtomata Elekto</guilabel></userinput>, "
-"kiu elektas pli taŭgan kolortemon laŭ la <emphasis>&kde; &plasma; "
+"kiu elektas pli taŭgan koloretoson laŭ la <emphasis>&kde; &plasma; "
 "kolorskemo</emphasis> uzata en la tekstredakta aplikaĵo; ĝi kutime elektas "
 "inter <quote>Breeze Light</quote> kaj <quote>Breeze Dark</quote> se la skemo "
 "estas hela aŭ malhela, respektive."
@@ -5847,7 +5847,7 @@ msgstr ""
 #: development.docbook:2201
 #, no-c-format
 msgid "Create a new theme"
-msgstr "Kreu novan temon"
+msgstr "Krei novan etoson"
 
 #. Tag: para
 #: development.docbook:2203
@@ -5858,10 +5858,10 @@ msgid ""
 "Light</quote> or <quote>Breeze Dark</quote>, and click <guibutton>Copy</"
 "guibutton>. Then write a name for the new theme."
 msgstr ""
-"Por krei novan temon, unue necesas kopii ekzistantan. Elektu ekzistantan "
-"temon, kiun vi volas uzi kiel bazon, kiel <quote>Breeze Light</quote> aŭ "
+"Por krei novan etoson, unue necesas kopii ekzistantan. Elektu ekzistantan "
+"etoson, kiun vi volas uzi kiel bazon, kiel <quote>Breeze Light</quote> aŭ "
 "<quote>Breeze Dark</quote>, kaj alklaku <guibutton>Kopii</guibutton>. Poste "
-"skribu nomon por la nova temo."
+"skribu nomon por la nova etoso."
 
 #. Tag: para
 #: development.docbook:2208
@@ -5870,14 +5870,14 @@ msgid ""
 "If you want to modify a built-in or read-only theme, you must first copy it "
 "under a different name."
 msgstr ""
-"Se vi volas modifi enkonstruitan aŭ nurlegeblan temon, vi unue devas kopii "
+"Se vi volas modifi enkonstruitan aŭ nurlegeblan etoson, vi unue devas kopii "
 "ĝin sub malsama nomo."
 
 #. Tag: title
 #: development.docbook:2214
 #, no-c-format
 msgid "Import or export &JSON; theme files"
-msgstr "Importi aŭ eksporti &JSON; temodosieroj"
+msgstr "Importi aŭ eksporti &JSON; etosodosieroj"
 
 #. Tag: para
 #: development.docbook:2216
@@ -5891,10 +5891,10 @@ msgid ""
 "guibutton> button and select the <userinput>.theme</userinput> file from the "
 "dialog."
 msgstr ""
-"Vi povas eksporti elektitan temon (inkluzive de enkonstruitaj) al <link "
+"Vi povas eksporti elektitan etoson (inkluzive de enkonstruitaj) al <link "
 "linkend=\"color-themes-json\">&JSON; dosiero</link> kun etendo <userinput>."
 "theme</userinput>, per la butono <guibutton>Eksporti</guibutton>. Ĉi tio "
-"malfermos dialogon por konservi la dosieron. Por aldoni kolortemon de "
+"malfermos dialogon por konservi la dosieron. Por aldoni koloretoson de "
 "ekstera <link linkend=\"color-themes-json\">&JSON; dosiero</link>, simple "
 "premu la butonon <guibutton>Importi</guibutton> kaj elektu la dosieron "
 "<userinput>.theme</userinput> el la dialogo."
@@ -5914,10 +5914,10 @@ msgstr ""
 "Kiel <link linkend=\"color-themes-json-overview\">menciite supre</link>, "
 "uzant-personigitaj etosdosieroj estas konservitaj en la <filename class="
 "\"directory\">org.kde.syntax-highlighting /themes/</filename> dosierujo. "
-"Kiam vi kopias aŭ kreas temon, ĝi aŭtomate aperos tie. Ankaŭ, importi aŭ "
-"aldoni temon estas ekvivalenta al kopiado de ekstera <userinput>.theme</"
+"Kiam vi kopias aŭ kreas etoson, ĝi aŭtomate aperos tie. Ankaŭ, importi aŭ "
+"aldoni etoson estas ekvivalenta al kopiado de ekstera <userinput>.theme</"
 "userinput> dosiero en ĉi tiun dosierujon. KSyntaxHighlighting aŭtomate "
-"prenas kolortemajn dosierojn el ĉi tiu dosierujo."
+"prenas koloretosajn dosierojn el ĉi tiu dosierujo."
 
 #. Tag: para
 #: development.docbook:2237
@@ -5928,7 +5928,7 @@ msgid ""
 "<link linkend=\"color-themes-json\">&JSON; file</link>, adding the "
 "respective license and checking the revision number."
 msgstr ""
-"Se vi volas publikigi temon kreitan de vi, estas nepre kontroli la objekton "
+"Se vi volas publikigi etoson kreitan de vi, estas nepre kontroli la objekton "
 "<link linkend=\"color-themes-json-metadata\">metadata</link> de la <link "
 "linkend=\"color-themes-json\">&JSON; dosiero</link>, aldonante la "
 "respektivan permesilon kaj kontrolante la revizian numeron."
@@ -5937,7 +5937,7 @@ msgstr ""
 #: development.docbook:2250
 #, no-c-format
 msgid "Editing color themes"
-msgstr "Redaktado de koloraj temoj"
+msgstr "Redaktado de koloraj etosoj"
 
 #. Tag: title
 #: development.docbook:2254
@@ -6051,7 +6051,7 @@ msgid ""
 "contrast that makes it easier to read, especially in combination with the "
 "background."
 msgstr ""
-"Grava aspekto kiam oni laboras kun kolortemoj estas elekti tekstan "
+"Grava aspekto kiam oni laboras kun koloretosoj estas elekti tekstan "
 "kontraston, kiu faciligas la legadon, precipe en kombinaĵo kun la fono."
 
 #. Tag: para
@@ -6065,7 +6065,7 @@ msgid ""
 msgstr ""
 "La aplikaĵo <userinput>Kontrast</userinput> estas kolorkontrastokontrolilo. "
 "Ĝi diras al vi, ke la tekstkoloro kaj fonkoloro-kombinaĵoj estas legeblaj "
-"kaj alireblaj, do ĉi tio estas bonega ilo por helpi vin krei kolorajn temojn."
+"kaj alireblaj, do ĉi tio estas bonega ilo por helpi vin krei kolorajn etosojn."
 
 #. Tag: para
 #: development.docbook:2324
@@ -6112,8 +6112,8 @@ msgid ""
 msgstr ""
 "KSyntaxHighlighting inkluzivas <ulink url=\"https://kate-editor.org/syntax/"
 "\">pli ol 300 sintaksajn difinojn</ulink>, tial estas ideale, ke vi certigu, "
-"ke via nova temo aspektas bone en ĉiuj sintakso. reliefigante difinojn. La "
-"enkonstruitaj kolortemoj havas la jenajn similecojn, kiujn rekomendas (sed "
+"ke via nova etoso aspektas bone en ĉiuj sintakso. reliefigante difinojn. La "
+"enkonstruitaj koloretosoj havas la jenajn similecojn, kiujn rekomendas (sed "
 "ne devige) sekvi por atingi ĝustan montradon de ĉiuj sintaksaj emfazaj "
 "difinoj:"
 
@@ -6152,7 +6152,7 @@ msgid ""
 "<quote>Function</quote>."
 msgstr ""
 "Plej multaj el la sintaksaj lumigiloj intencas aspekti bone en la defaŭltaj "
-"temoj <quote>Breeze Light</quote> kaj <quote>Breeze Dark</quote>, do alia "
+"etosoj <quote>Breeze Light</quote> kaj <quote>Breeze Dark</quote>, do alia "
 "maniero konservi konsistencon estas uzi similajn kolorojn en la <link "
 "linkend=\"color-themes-text-styles\">tekstaj stiloj</link>, kiel "
 "<emphasis>verda</emphasis> por <quote>Antaŭprocesoro</quote> kaj "
@@ -6168,7 +6168,7 @@ msgid ""
 "publishing a theme."
 msgstr ""
 "Notu, ke ĉi tiuj rekomendoj ne estas devigaj dum kreado kaj publikigado de "
-"temo."
+"etoso."
 
 #. Tag: title
 #: development.docbook:2374
@@ -7875,8 +7875,8 @@ msgid ""
 "<parameter>int <replaceable>number</replaceable></parameter>, "
 "<replaceable>arg1</replaceable>, ...);"
 msgstr ""
-"void i18ncp(<parameter>Ĉeno <replaceable>kunteksto</replaceable> </"
-"parameter>, <parameter>Ĉeno <replaceable>unuopa</replaceable></parameter>, "
+"void i18ncp(<parameter>String <replaceable>kunteksto</replaceable> </"
+"parameter>, <parameter>String <replaceable>unuopa</replaceable></parameter>, "
 "<parameter>String <replaceable>pluralo</replaceable></parameter>, "
 "<parameter>int <replaceable>nombro</replaceable></parameter>, "
 "<replaceable>arg1</replaceable>, ...);"
