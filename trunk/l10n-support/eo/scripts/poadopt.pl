@@ -32,7 +32,7 @@ sub printLines;
 
 binmode (STDOUT, ":utf8");
 
-my $Version = "20231127";
+my $Version = "20231216";
 my $verbose = 0;
 
 while (@ARGV && $ARGV[0] =~ /^-/) {
@@ -97,23 +97,21 @@ foreach my $e2 (@$parsed2) {
   my $msgid = $e2->{msgid};
   if (exists $ID{$msgid}) {
     my $e = $ID{$msgid};
-    if ($e->{'msgstr'} ne $e2->{'msgstr'}) {
+    if ($e->{'msgstr'} ne "" && $e->{'msgstr'} ne $e2->{'msgstr'}) {
       warn("$file2 : $msgid existing : " . $e->{'msgstr'} . " ; new : " .
-           $e2->{'msgstr'} . " ; sticking with existing value\n"); 
+           $e2->{'msgstr'} . " ; adopting new value\n"); 
     }
-  } else {
-    $ID{$msgid} = $e2;
   }
+  $ID{$msgid} = $e2;
   my $msgid_plural = $e2->{msgid_plural};
   if (exists $ID{$msgid_plural}) {
     my $e = $ID{$msgid_plural};
-    if ($e->{'msgstr[1]'} ne $e2->{'msgstr[1]'}) {
+    if ($e->{'msgstr[1]'} ne "" && $e->{'msgstr[1]'} ne $e2->{'msgstr[1]'}) {
       warn("$file2 : $msgid_plural existing : " . $e->{'msgstr[1]'} . " ; new : " .
-           $e2->{'msgstr[1]'} . " ; sticking with existing value\n"); 
+           $e2->{'msgstr[1]'} . " ; adopting new value\n"); 
     }
-  } else {
-    $ID{$msgid_plural} = $e2;
   }
+  $ID{$msgid_plural} = $e2;
 }
 
 for (my $i = 0; $i < scalar(@$parsed1); ++$i) {
