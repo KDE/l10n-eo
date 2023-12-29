@@ -7,6 +7,7 @@
 # -----+----------+------------------------------------------------------------
 # 1.00  2023/03/15  * Initial version
 # 1.01  2023/11/27  * Added optional $multiline_join_char (see documentation)
+# 1.02  2023/12/29  * Added filter -2 for fuzzies, fixed handling of msgstr "0"
 #
 
 package Text::PO::SimpleParser;
@@ -28,11 +29,11 @@ Text::PO::SimpleParser - Parser for GNU gettext PO files
 
 =head1 VERSION
 
-Version 1.00
+Version 1.02
 
 =cut
 
-our $VERSION = '1.00';
+our $VERSION = '1.02';
 
 our $preserve_string_escapes = 1;
 our $expect_header = 1;
@@ -46,6 +47,7 @@ It takes a PO file name as the input parameter and parses that file,
 constructing an array which is returned by reference.
 In case of errors during parsing, Parse_File returns undef.
 The subroutine also takes an optional argument ($filter).
+If it is -2 then only the fuzzy entries are returned.
 If it is -1 then only the untranslated entries are returned.
 If it is  1 then only the translated entries are returned.
 If it is not provided or is provided as 0 then all entries are returned.
@@ -121,6 +123,7 @@ In all cases, the delimiting quotation marks are not forwarded to the hash value
 =cut
 
 # filter ==  0 : return all messages
+# filter == -2 : return only fuzzy messages
 # filter == -1 : return only untranslated messages
 # filter ==  1 : return only translated messages
 sub Parse {
@@ -200,9 +203,28 @@ sub Parse {
     } elsif ($line) {
       warn "TODO: $line\n";
     } elsif (%$entry) {
-      if ($filter == 0 || ($filter == 1 && $entry->{msgstr}) ||
-                          ($filter == -1 && !$entry->{msgstr})) {
+      if ($filter == 0) {
         push @output, $entry;
+      } elsif ($filter == -2) {
+        if (exists($entry->{fuzzy})) {
+          push @output, $entry;
+        }
+      } elsif (!defined($entry->{msgstr})) {
+        my $context = "";
+        unless (ref $entry->{msgid}) {
+          $context = "at or near msgid " . $entry->{msgid};
+        }
+        warn("$file line " . ($i + 1) . ": no msgstr $context\n");
+      } else {
+        my $str = $entry->{msgstr};
+        unless (ref $str) {
+          if ($filter == 1 && $str ne "" or
+              $filter == -1 && $str eq "") {
+            push @output, $entry;
+          }
+        } elsif ($filter == 1) {
+          push @output, $entry;
+        }
       }
       $entry = {};
     }
