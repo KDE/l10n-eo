@@ -4,6 +4,10 @@
 # Is expected to be called from within the "templates" directory.
 # Argument shall include the "messages" subdir, e.g. messages/kpat/kpat.pot
 # Will make an svn copy of the potfile to the ../eo/messages location as po file.
+# Uses script initpo.pl for filling PO header and pre-translating common strings.
+#
+# Copyright (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Distributed under the MIT license (https://opensource.org/license/mit/)
 #
 # set -x
 if [ -f $1 ]; then
@@ -28,6 +32,7 @@ if [ -n "$pot" ]; then
   if [ ! -e $po ]; then
     svn copy $potdir/$pot $po || break
     svn propset svn:mime-type "text/plain; charset=UTF-8" $po
+    initpo.pl $potdir/$pot > $po || break
   fi
   exit
 fi
@@ -37,6 +42,7 @@ do
   if [ ! -e $po ]; then
     svn copy $pot $po || break
     svn propset svn:mime-type "text/plain; charset=UTF-8" $po
+    initpo.pl $pot > $po || break
   fi
 done
 # set +x
