@@ -28,11 +28,12 @@ use FindBin;
 use lib $FindBin::Bin;
 require Text::PO::SimpleParser;
 
+sub printLine;
 sub printLines;
 
 binmode (STDOUT, ":utf8");
 
-my $Version = "20231216";
+my $Version = "20240112";
 my $verbose = 0;
 
 while (@ARGV && $ARGV[0] =~ /^-/) {
@@ -148,7 +149,7 @@ for (my $i = 0; $i < scalar(@$parsed1); ++$i) {
     print "msgid \"\"\n";
     printLines($msgid);
   } else {
-    print "msgid \"$msgid\"\n";
+    printLine("msgid \"$msgid\"");
   }
   if ($isFuzzy) {
     $e1->{$msKey} = "";
@@ -159,7 +160,7 @@ for (my $i = 0; $i < scalar(@$parsed1); ++$i) {
       print "msgid_plural \"\"\n";
       printLines($msgid_plural);
     } else {
-      print "msgid_plural \"$msgid_plural\"\n";
+      printLine("msgid_plural \"$msgid_plural\"");
     }
   }
 
@@ -178,7 +179,7 @@ for (my $i = 0; $i < scalar(@$parsed1); ++$i) {
     print "$msKey \"\"\n";
     printLines($msgstr);
   } else {
-    print "$msKey \"$msgstr\"\n";
+    printLine("$msKey \"$msgstr\"");
   }
 
   if ($msgid_plural ne "") {
@@ -197,12 +198,26 @@ for (my $i = 0; $i < scalar(@$parsed1); ++$i) {
       print "msgstr\[1\] \"\"\n";
       printLines($msgstrP);
     } else {
-      print "msgstr\[1\] \"$msgstrP\"\n";
+      printLine("msgstr\[1\] \"$msgstrP\"");
     }
   }
 
   if ($i < scalar(@$parsed1) - 1) {
     print "\n";
+  }
+}
+
+sub printLine {
+  my $line = shift;
+  if (length($line) > 80) {
+    my $keyword = $line;
+    $keyword =~ s/ .*$//;
+    my $content = $line;
+    $content =~ s/^[^ ]+ //;
+    print "$keyword \"\"\n";
+    print "$content\n";
+  } else {
+    print "$line\n";
   }
 }
 
