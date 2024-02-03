@@ -33,8 +33,8 @@ for arg in $*; do
       echo "unknown argument $arg : expecting file extension .pot"
       exit 1
     fi
-    po=$(basename ${pot/.pot/.po})
-    ln -sv $pot ./$po || exit 1
+    po=$(basename ${arg/.pot/.po})
+    ln -sv $arg ./$po || exit 1
   fi
 done
 
