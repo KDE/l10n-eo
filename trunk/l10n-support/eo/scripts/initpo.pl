@@ -142,9 +142,9 @@ unless ($pot_creation_date) {
 # Print the target header
 
 print "# translation of $filename to Esperanto\n";
-print "# Copyright (C) 2023 Free Software Foundation, Inc.\n";
+print "# Copyright (C) 2024 Free Software Foundation, Inc.\n";
 print "# This file is distributed under the same license as the $project package.\n";
-print "# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.\n";
+print "# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.\n";
 print "#\n";
 print "msgid \"\"\n";
 print "msgstr \"\"\n";
