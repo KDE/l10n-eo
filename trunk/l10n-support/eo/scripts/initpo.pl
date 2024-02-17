@@ -4,14 +4,17 @@
 # Initialize PO translated file from POT file using
 # PO translation database created by mkpoxldb.pl
 #              (created from kde/trunk/l10n-kf[56]/eo/messages/*/*.po)
-# Option:
-# -db <dbfile>   Use <dbfile> as the translation database file.
+# Options:
+# -db <dbfile>
+#     Use <dbfile> as the translation database file.
 #     If this is not given then the program will interrogate the
 #     environment variable PO_TRANSLATION_DATABASE for the dbfile.
 #     If the env var is not set then the program will look for a file
 #     $SCRIPT_DIR/po_db.txt where $SCRIPT_DIR is the directory in which
 #     this script resides.
 #     If none of these files exist then the program exits with an error.
+# -ph 
+#     Preserve header. By default, the header comments will be regenerated.
 #
 # Copyright (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
 # This progam is distributed under the same terms as perl itself, see
@@ -21,10 +24,24 @@ use utf8;
 
 @ARGV or die "provide POT file as argument\n";
 
-if ($ARGV[0] eq "-db") {
-  shift @ARGV;
-  $dbfile = shift @ARGV;
-} else {
+my $dbfile;
+my $preserve_header = 0;
+my $potfile;
+
+while (@ARGV) {
+  my $arg = shift @ARGV;
+  if ($arg eq "-db") {
+    $dbfile = shift @ARGV;
+  } elsif ($arg eq "-ph") {
+    $preserve_header = 1;
+  } elsif ($arg =~ /^-/) {
+    die "unknown option: $_\n";
+  } else {
+    $potfile = $arg;
+  }
+}
+
+unless ($dbfile) {
   $dbfile = $ENV{"PO_TRANSLATION_DATABASE"};
   unless ($dbfile) {
     $dbfile = "po_db.txt";
@@ -37,8 +54,6 @@ if ($ARGV[0] eq "-db") {
 }
 
 -e "$dbfile" or die "Translation database not found: $dbfile\n";
-
-my $potfile = $ARGV[0];
 
 -e "$potfile" or die "File not found: $potfile\n";
 
@@ -115,7 +130,9 @@ while (<POT>) {
   my $l = $_;
   chomp $l;
   $l or last;
-  if ($l =~ /"Project-Id-Version: (.+?)\\n"/) {
+  if ($preserve_header) {
+    print "$l\n";
+  } elsif ($l =~ /"Project-Id-Version: (.+?)\\n"/) {
     unless ($1 eq "PACKAGE VERSION") {
       $project_id_version = $1;
     }
@@ -126,41 +143,46 @@ while (<POT>) {
   }
 }
 
-unless ($pot_creation_date) {
-  if (open(SVNLOG, "svn log -r1:HEAD --limit 1 $potfile |")) {
-    while (<SVNLOG>) {
-      if (/ (20\d\d-\d\d-\d\d \d\d:\d\d):\d\d (.\d\d\d\d)/) {
-        $pot_creation_date = $1 . $2;
+if ($preserve_header) { 
+  print "\n";
+} else {
+  unless ($pot_creation_date) {
+    if (open(SVNLOG, "svn log -r1:HEAD --limit 1 $potfile |")) {
+      while (<SVNLOG>) {
+        if (/ (20\d\d-\d\d-\d\d \d\d:\d\d):\d\d (.\d\d\d\d)/) {
+          $pot_creation_date = $1 . $2;
+        }
       }
+      close (SVNLOG);
+    } else {
+      warn "Cannot run svn log for extracting creation date of $potfile\n";
     }
-    close (SVNLOG);
-  } else {
-    warn "Cannot run svn log for extracting creation date of $potfile\n";
   }
+  # Print the target header
+  print "# translation of $filename to Esperanto\n";
+  print "# Copyright (C) 2024 Free Software Foundation, Inc.\n";
+  print "# This file is distributed under the same license as the $project package.\n";
+  print "# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.\n";
+  print "#\n";
+  print "msgid \"\"\n";
+  print "msgstr \"\"\n";
+  print "\"Project-Id-Version: $project_id_version\\n\"\n";
+  print "\"Report-Msgid-Bugs-To: https://bugs.kde.org\\n\"\n";
+  print "\"POT-Creation-Date: $pot_creation_date\\n\"\n";
+  print "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
+  print "\"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\\n\"\n";
+  print "\"Language-Team: Esperanto <kde-i18n-eo@kde.org>\\n\"\n";
+  print "\"Language: eo\\n\"\n";
+  print "\"MIME-Version: 1.0\\n\"\n";
+  print "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
+  print "\"Content-Transfer-Encoding: 8bit\\n\"\n";
+  while (@extensions) {
+    print "$_\n";
+  }
+  print "\"X-Generator: translate-po (https://github.com/zcribe/translate-po)\\n\"\n";
+  print "\"Plural-Forms: nplurals=2; plural=n != 1;\\n\"\n";
+  print "\n";
 }
-
-# Print the target header
-
-print "# translation of $filename to Esperanto\n";
-print "# Copyright (C) 2024 Free Software Foundation, Inc.\n";
-print "# This file is distributed under the same license as the $project package.\n";
-print "# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.\n";
-print "#\n";
-print "msgid \"\"\n";
-print "msgstr \"\"\n";
-print "\"Project-Id-Version: $project_id_version\\n\"\n";
-print "\"Report-Msgid-Bugs-To: https://bugs.kde.org\\n\"\n";
-print "\"POT-Creation-Date: $pot_creation_date\\n\"\n";
-print "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
-print "\"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\\n\"\n";
-print "\"Language-Team: Esperanto <kde-i18n-eo@kde.org>\\n\"\n";
-print "\"Language: eo\\n\"\n";
-print "\"MIME-Version: 1.0\\n\"\n";
-print "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
-print "\"Content-Transfer-Encoding: 8bit\\n\"\n";
-print "\"X-Generator: translate-po (https://github.com/zcribe/translate-po)\\n\"\n";
-print "\"Plural-Forms: nplurals=2; plural=n != 1;\\n\"\n";
-print "\n";
 
 # Process the content following after header
 
@@ -182,7 +204,10 @@ while (<POT>) {
       }
     }
     print "$l\n";
-  } elsif ($l =~ /^msgstr /) {
+  } elsif ($l =~ /^msgstr "(.*?)"$/) {
+    if ($1 ne "") {
+      $msgstr = $1;
+    }
     print "msgstr \"$msgstr\"\n";
   } else {
     print "$l\n";
