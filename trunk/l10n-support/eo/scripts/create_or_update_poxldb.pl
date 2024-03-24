@@ -3,21 +3,32 @@
 # create_or_update_poxldb.pl
 # Make PO translation database from kde/trunk/l10n-kf[56]/eo/messages/*/*.po
 #
-# Copyright (C) 2024, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
 # This progam is distributed under the same terms as perl itself, see
 #                          https://dev.perl.org/licenses/artistic.html
 #
 use utf8;
 
-if (@ARGV) {
-  $file = $ARGV[0];
-} else {
-  $file = "po_db.txt";
-}
-
 $KDESVN_TRUNK = $ENV{KDESVN_TRUNK_CHECKOUT};
 unless ($KDESVN_TRUNK) {
   $KDESVN_TRUNK = $ENV{HOME} . "/info/kde/trunk";
+}
+
+my $dbfile = "${KDESVN_TRUNK}/po_db.txt";
+
+my @po_inputfiles;
+
+while (@ARGV) {
+  my $arg = shift @ARGV;
+  if ($arg eq "-dbfile") {
+    $dbfile = shift @ARGV;
+  } else {
+    push @po_inputfiles, $arg;
+  }
+}
+
+unless (@po_inputfiles) {
+  @po_inputfiles = glob "${KDESVN_TRUNK}/l10n-kf[56]/eo/messages/*/*.po";
 }
 
 my $sep = '¦';   # msgid/msgstr separator char in output file (broken bar, octal 246)
@@ -28,9 +39,9 @@ my %db = ();
 
 binmode (STDOUT, ":utf8");
 
-if (-e "$file") {
-  open(DB, "<:utf8", $file) or die "Error: cannot open $file for reading\n";
-  print "Reading file $file\n";
+if (-e "$dbfile") {
+  open(DB, "<:utf8", $dbfile) or die "Error: cannot open $dbfile for reading\n";
+  print "Reading file $dbfile\n";
   while (<DB>) {
     chomp;
     my $line = $_;
@@ -38,13 +49,13 @@ if (-e "$file") {
       my ($id, $str) = split($sep, $_);
       $db{$id} = $str;
     } else {
-      print "ignoring line in $file: $line\n";
+      print "ignoring line in $dbfile: $line\n";
     }
   }
   close(DB);
 }
 
-foreach my $po (glob "${KDESVN_TRUNK}/l10n-kf[56]/eo/messages/*/*.po") {
+foreach my $po (@po_inputfiles) {
   open(PO, "<:utf8", $po) or die "Error: cannot open file $po\n";
   while (<PO>) {
     chomp;
@@ -63,9 +74,9 @@ foreach my $po (glob "${KDESVN_TRUNK}/l10n-kf[56]/eo/messages/*/*.po") {
   close(PO);
 }
 
-open(DB, ">:utf8", $file) or die "Error: cannot open $file for writing\n";
+open(DB, ">:utf8", $dbfile) or die "Error: cannot open $dbfile for writing\n";
 
-print "Writing file $file\n";
+print "Writing file $dbfile\n";
 
 foreach my $k (sort keys %db) {
   next if ($k =~ /^Your (names|emails)$/);

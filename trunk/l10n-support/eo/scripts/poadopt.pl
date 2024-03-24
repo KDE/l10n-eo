@@ -17,6 +17,7 @@
 #          Resulting output is written to stdout.
 #
 # Options: must precede the file name arguments.
+#     -ph  Preserve header of the first file.
 #      -v  Show progress message on parsing.
 #
 # Copyright  (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
@@ -35,13 +36,17 @@ binmode (STDOUT, ":utf8");
 
 my $Version = "20240112";
 my $verbose = 0;
+my $preserve_header = 0;
 
 while (@ARGV && $ARGV[0] =~ /^-/) {
-  if ($ARGV[0] eq "-v") {
+  my $arg = $ARGV[0];
+  if ($arg eq "-v") {
     $verbose = 1;
     warn "poadopt.pl version $Version\n\n";
+  } elsif ($arg eq "-ph") {
+    $preserve_header = 1;
   } else {
-    warn("Ignoring unknown option " . $ARGV[0] . "\n");
+    warn("Ignoring unknown option $arg\n");
   }
   shift @ARGV;
 }
@@ -71,24 +76,27 @@ exists($hdr1->{HEADER}) or die "poadopt($file1) : SimpleParser::Parse did not re
 my $hdr2 = shift @$parsed2;
 exists($hdr2->{HEADER}) or die "poadopt($file2) : SimpleParser::Parse did not return header\n";
 
-foreach my $c (@{$hdr2->{comment}}) {
+my $header = ($preserve_header ? $hdr1 : $hdr2);
+foreach my $c (@{$header->{comment}}) {
   print "#$c\n";
 }
 
 print "msgid \"\"\n";
 print "msgstr \"\"\n";
 
-# POT-Creation-Date: 2021-11-21 01:50+0000\n
-my $potCreationDate1 = $hdr1->{msgstr};
-   $potCreationDate1 =~ s/^.*?POT-Creation-Date: //;
-   $potCreationDate1 =~ s/\\n.*$//;
-my $potCreationDate2 = $hdr2->{msgstr};
-   $potCreationDate2 =~ s/^.*?POT-Creation-Date: //;
-   $potCreationDate2 =~ s/\\n.*$//;
-#  $potCreationDate2 is used as regex thus we must deal with the '+' of the timezone
-   $potCreationDate2 =~ s/\+/./;  # . = any character
-$hdr2->{msgstr} =~ s/$potCreationDate2/$potCreationDate1/;
-printLines($hdr2->{msgstr});
+unless ($preserve_header) {
+  # POT-Creation-Date: 2021-11-21 01:50+0000\n
+  my $potCreationDate1 = $hdr1->{msgstr};
+     $potCreationDate1 =~ s/^.*?POT-Creation-Date: //;
+     $potCreationDate1 =~ s/\\n.*$//;
+  my $potCreationDate2 = $hdr2->{msgstr};
+     $potCreationDate2 =~ s/^.*?POT-Creation-Date: //;
+     $potCreationDate2 =~ s/\\n.*$//;
+  #  $potCreationDate2 is used as regex thus we must deal with the '+' of the timezone
+     $potCreationDate2 =~ s/\+/./;  # . = any character
+  $hdr2->{msgstr} =~ s/$potCreationDate2/$potCreationDate1/;
+}
+printLines($header->{msgstr});
 print "\n";
 
 my %ID;   # indexed by msgid of @$parsed2
