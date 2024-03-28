@@ -10,5 +10,6 @@
 #                  >Blab</
 #                  a>
 
-sed '1,$a |' $1 | tr -d '\n' | sed 's/|$/\n/'
+# sed '1,$a ¦' $1 | tr -d '\n' | sed 's/¦/\n/g'
+cat $1 | tr -d '\n'
 
