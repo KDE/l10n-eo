@@ -1,11 +1,12 @@
 #!/usr/bin/perl
 #
-# defuzz_same.pl - remove fuzzy attribute and fuzzy content of comment in po
-#                  file when msgid has in fact not changed, i.e. remove fuzzy
-#                  comment on such entries.
-#                  The program accounts for differences in formatting between
-#                  the fuzzy comment and the msgid (lines may be wrapped
-#                  differently but such differences need to be ignored).
+# defuzzify_same.pl
+# Purpose: Remove fuzzy attribute and fuzzy content of comment in po
+#          file when msgid has in fact not changed, i.e. remove fuzzy
+#          comment on such entries.
+#          The program accounts for differences in formatting between
+#          the fuzzy comment and the msgid (lines may be wrapped
+#          differently but such differences need to be ignored).
 #
 # Copyright (C) 2024, Oliver Kellogg <okellogg@users.sourceforge.net>
 # This program is distributed under the same terms as perl itself.
@@ -27,18 +28,18 @@ if (@ARGV && $ARGV[0] eq "-v") {
   $verbose = 1;
   shift @ARGV;
 }
-@ARGV or die "defuzz_same : require filename\n";
+@ARGV or die "defuzzify_same : require filename\n";
 my $file = $ARGV[0];
--e "$file" or die "defuzz_same : no such file $file\n";
+-e "$file" or die "defuzzify_same : no such file $file\n";
 
 my %xlatns;  # keyed by msgid
 
 $verbose and print "Parse($_)\n";
 my $parsed = Text::PO::SimpleParser::Parse($file);  # filter=0
-$parsed or die "defuzz_same : error on parsing file $file\n";
+$parsed or die "defuzzify_same : error on parsing file $file\n";
 
 my $hdr = shift @$parsed;
-exists($hdr->{HEADER}) or die "defuzz_same : SimpleParser::Parse did not return header\n";
+exists($hdr->{HEADER}) or die "defuzzify_same : SimpleParser::Parse did not return header\n";
 foreach my $c (@{$hdr->{comment}}) {
   print "#$c\n";
 }
