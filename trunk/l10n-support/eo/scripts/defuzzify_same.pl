@@ -141,18 +141,18 @@ for (my $loop = 0; $loop < scalar(@$parsed); ++$loop) {
   }
 }
 
-# Clean implementation for array string equality test.
-# We don't use this because PO file generation may break long strings
-# differently between fuzzy comment and actual msgid which gives
-# inequality although the strings may in fact be equivalent.
-sub arraysEqual {
-  my($arrayRef0, $arrayRef1) = @_;
-  scalar(@$arrayRef0) == scalar(@$arrayRef1) or return 0;
-  for (my $i = 0; $i < scalar(@$arrayRef0); ++$i) {
-    $arrayRef0->[$i] eq $arrayRef1->[$i] or return 0;
-  }
-  return 1;
-}
+#  Clean implementation for array string equality test.
+#  We don't use this because PO file generation may break long strings
+#  differently between fuzzy comment and actual msgid which gives
+#  inequality although the strings may in fact be equivalent.
+#sub arraysEqual {
+#  my($arrayRef0, $arrayRef1) = @_;
+#  scalar(@$arrayRef0) == scalar(@$arrayRef1) or return 0;
+#  for (my $i = 0; $i < scalar(@$arrayRef0); ++$i) {
+#    $arrayRef0->[$i] eq $arrayRef1->[$i] or return 0;
+##  }
+#  return 1;
+#}
 
 # Version of arraysEqual used here discards possible line-break differences,
 # i.e. the array elements are joined into one string before comparing.
