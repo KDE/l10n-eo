@@ -3,7 +3,7 @@
 # mkpoxldb.pl
 # Make PO translation database from kde/trunk/l10n-kf[56]/eo/messages/*/*.po
 #
-# Copyright (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2023, Oliver Kellogg <olivermkellogg@gmail.com>
 # This progam is distributed under the same terms as perl itself, see
 #                          https://dev.perl.org/licenses/artistic.html
 #

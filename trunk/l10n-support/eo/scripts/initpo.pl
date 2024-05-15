@@ -16,7 +16,7 @@
 # -ph 
 #     Preserve header. By default, the header comments will be regenerated.
 #
-# Copyright (C) 2023-2024, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2023-2024, Oliver Kellogg <olivermkellogg@gmail.com>
 # This progam is distributed under the same terms as perl itself, see
 #                          https://dev.perl.org/licenses/artistic.html
 #
@@ -162,7 +162,7 @@ if ($preserve_header) {
   print "# translation of $filename to Esperanto\n";
   print "# Copyright (C) 2024 Free Software Foundation, Inc.\n";
   print "# This file is distributed under the same license as the $project package.\n";
-  print "# Oliver Kellogg <okellogg\@users.sourceforge.net>, 2024.\n";
+  print "# Oliver Kellogg <olivermkellogg\@gmail.com>, 2024.\n";
   print "#\n";
   print "msgid \"\"\n";
   print "msgstr \"\"\n";
@@ -170,8 +170,8 @@ if ($preserve_header) {
   print "\"Report-Msgid-Bugs-To: https://bugs.kde.org\\n\"\n";
   print "\"POT-Creation-Date: $pot_creation_date\\n\"\n";
   # print "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
-  print "\"PO-Revision-Date: 2024-02-25 21:21+0100\\n\"\n";
-  print "\"Last-Translator: Oliver Kellogg <okellogg\@users.sourceforge.net>\\n\"\n";
+  print "\"PO-Revision-Date: 2024-05-15 18:25+0100\\n\"\n";
+  print "\"Last-Translator: Oliver Kellogg <olivermkellogg\@gmail.com>\\n\"\n";
   print "\"Language-Team: Esperanto <kde-i18n-eo@kde.org>\\n\"\n";
   print "\"Language: eo\\n\"\n";
   print "\"MIME-Version: 1.0\\n\"\n";

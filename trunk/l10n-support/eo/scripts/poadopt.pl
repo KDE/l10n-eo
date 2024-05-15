@@ -20,8 +20,8 @@
 #     -ph  Preserve header of the first file.
 #      -v  Show progress message on parsing.
 #
-# Copyright  (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
-# This module is distributed under the same terms as Perl itself.
+# Copyright  (C) 2023, Oliver Kellogg <olivermkellogg@gmail.com>
+# This script is distributed under the same terms as Perl itself.
 #
 
 use utf8;

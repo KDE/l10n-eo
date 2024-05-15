@@ -7,7 +7,7 @@
 # Copy/paste the text following ", fuzzy" or following msgid ""
 # to a separate file and provide this file as argument.
 #
-# Copyright (C) 2023 Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2023 Oliver Kellogg <olivermkellogg@gmail.com>
 # Distributable under the MIT license https://opensource.org/license/mit/
 #
 

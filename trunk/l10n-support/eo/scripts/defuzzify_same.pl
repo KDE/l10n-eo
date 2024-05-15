@@ -8,7 +8,7 @@
 #          the fuzzy comment and the msgid (lines may be wrapped
 #          differently but such differences need to be ignored).
 #
-# Copyright (C) 2024, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2024, Oliver Kellogg <olivermkellogg@gmail.com>
 # This program is distributed under the same terms as perl itself.
 #
 

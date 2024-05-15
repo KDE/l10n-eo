@@ -15,7 +15,7 @@
 #              file are carried forward.)
 #          -v  Show progress message on parsing.
 #
-# Copyright  (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright  (C) 2023, Oliver Kellogg <olivermkellogg@gmail.com>
 # This module is distributed under the same terms as Perl itself.
 #
 

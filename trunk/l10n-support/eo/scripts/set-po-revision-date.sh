@@ -12,7 +12,7 @@
 #
 # Example: "2024-03-28 06:34+0100"
 #
-# Copyright (C) 2024, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2024, Oliver Kellogg <olivermkellogg@gmail.com>
 # Distributed under the MIT license, https://opensource.org/license/mit
 #
 if [ $# -eq 0 ]; then

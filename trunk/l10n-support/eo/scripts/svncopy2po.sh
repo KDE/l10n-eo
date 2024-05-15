@@ -6,7 +6,7 @@
 # Will make an svn copy of the potfile to the ../eo/messages location as po file.
 # Uses script initpo.pl for filling PO header and pre-translating common strings.
 #
-# Copyright (C) 2023, Oliver Kellogg <okellogg@users.sourceforge.net>
+# Copyright (C) 2023, Oliver Kellogg <olivermkellogg@gmail.com>
 # Distributed under the MIT license (https://opensource.org/license/mit/)
 #
 # set -x
