@@ -4,6 +4,7 @@
 # Initialize PO translated file from POT file using
 # PO translation database created by mkpoxldb.pl
 #              (created from kde/trunk/l10n-kf[56]/eo/messages/*/*.po)
+# Output goes to stdout.
 # Options:
 # -db <dbfile>
 #     Use <dbfile> as the translation database file.
@@ -172,7 +173,7 @@ if ($preserve_header) {
   # print "\"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n\"\n";
   print "\"PO-Revision-Date: 2024-05-15 18:25+0100\\n\"\n";
   print "\"Last-Translator: Oliver Kellogg <olivermkellogg\@gmail.com>\\n\"\n";
-  print "\"Language-Team: Esperanto <kde-i18n-eo@kde.org>\\n\"\n";
+  print "\"Language-Team: Esperanto <kde-i18n-doc\@kde.org>\\n\"\n";
   print "\"Language: eo\\n\"\n";
   print "\"MIME-Version: 1.0\\n\"\n";
   print "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
