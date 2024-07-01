@@ -8,6 +8,8 @@
 #          the fuzzy comment and the msgid (lines may be wrapped
 #          differently but such differences need to be ignored).
 #
+# Version 2024.07.01
+#
 # Copyright (C) 2024, Oliver Kellogg <olivermkellogg@gmail.com>
 # This program is distributed under the same terms as perl itself.
 #
@@ -58,6 +60,7 @@ for (my $loop = 0; $loop < scalar(@$parsed); ++$loop) {
   my @cleanComment;
   my @fuzzyId;
   my $isSame = 0;
+  my $ellipsis = 0;  # True when only difference is ending "..." vs "…"
   if (exists $e->{'fuzzy'}) {
     foreach (@{$e->{comment}}) {
       my $c = $_;
@@ -88,6 +91,13 @@ for (my $loop = 0; $loop < scalar(@$parsed); ++$loop) {
         $isSame = $msgid_plural eq $fuzzyId[0];
       } else {
         $isSame = $msgid eq $fuzzyId[0];
+        my $fuzzyLen = length($fuzzyId[0]);
+        my $msgidLen = length($msgid);
+        if (substr($fuzzyId[0], $fuzzyLen - 3) eq "..." &&
+            substr($msgid, $msgidLen - 1) eq "…") {
+          $isSame = substr($fuzzyId[0], 0, $fuzzyLen - 4) eq substr($msgid, 0, $msgidLen - 2);
+          $ellipsis = 1;
+        }
       }
     }
   }
@@ -125,6 +135,9 @@ for (my $loop = 0; $loop < scalar(@$parsed); ++$loop) {
     print "$msKey \"\"\n";
     map { print "\"$_\"\n" } @$msgstr;
   } else {
+    if ($ellipsis) {
+      $msgstr =~ s/\.\.\.$/…/;
+    }
     print "$msKey \"$msgstr\"\n";
   }
   if ($msgid_plural) {
