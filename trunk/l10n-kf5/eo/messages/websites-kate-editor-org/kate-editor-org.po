@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kate-editor-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-01 01:46+0000\n"
+"POT-Creation-Date: 2024-07-22 01:50+0000\n"
 "PO-Revision-Date: 2024-07-06 16:50+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -412,14 +412,18 @@ msgid "use the latest KF6 and Qt6-based software."
 msgstr "uzu la plej novajn programojn bazitajn sur KF6 kaj Qt6."
 
 #: content/build-it.md:67
+#, fuzzy
+#| msgid ""
+#| "we want .kateproject files with ninja, turn off some Qt 5 things to have "
+#| "less dependencies"
 msgid ""
-"we want .kateproject files with ninja, turn off some Qt 5 things to have "
-"less dependencies"
+"use ninja for faster incremental rebuilding, turn off some Qt 5 things to "
+"have less dependencies"
 msgstr ""
 "ni volas dosierojn .kateproject kun ninja, malŝaltu iujn Qt-5 aferojn por "
 "havi malpli da dependecoj"
 
-#: content/build-it.md:70 content/build-it.md:106
+#: content/build-it.md:70 content/build-it.md:96
 msgid "clangd tooling"
 msgstr "clangd ilaro"
 
@@ -451,34 +455,10 @@ msgstr ""
 "aĵojn) kun Kate estas priskribitaj sube detale."
 
 #: content/build-it.md:93
-msgid ".kateproject files creation"
-msgstr "kreado de dosieroj .kateproject"
-
-#: content/build-it.md:96
-msgid "we want .kateproject files with ninja"
-msgstr "ni volas dosierojn .kateproject kun ninja"
-
-#: content/build-it.md:100
-msgid ""
-"These lines in the configuration above ensure you get not only Ninja build "
-"files (nifty as this will e.g. automatically use multiple cores for "
-"compiles), but in addition .kateproject files inside the build directories "
-"for later use, too. With these files, the project plugin of Kate will know "
-"what to do, e.g. where the source directory for the compile is and which "
-"build commands it should use for the build plugin."
-msgstr ""
-"Ĉi tiuj linioj en la agordo supra certigas, ke vi ricevos ne nur Ninja-"
-"konstrudosierojn (mojosa ĉar tio ekz. aŭtomate uzos plurajn kernojn por "
-"kompiloj) sed krome .kateproject-dosierojn ene de la konstruaj dosierujoj "
-"por pli posta uzo, ankaŭ. Kun ĉi tiuj dosieroj, la projekta kromaĵo de Kate "
-"scios kion fari, ekz. kie estas la fonta dosierujo por la kompilo kaj kiujn "
-"konstrukomandojn ĝi devus uzi por la konstrukromaĵo."
-
-#: content/build-it.md:103
 msgid "LSP integration"
 msgstr "LSP-integriĝo"
 
-#: content/build-it.md:111
+#: content/build-it.md:101
 msgid ""
 "These lines ensure CMake will generate the **compile_commands.json** files "
 "that are required for clangd based LSP integration. Besides just generating "
@@ -492,11 +472,11 @@ msgstr ""
 "reen al viaj fontaj dosierujoj. Ĉi tio permesas nul-agordan uzadon de la LSP-"
 "kromprogramo ene de Kate (kaj aliaj redaktiloj)."
 
-#: content/build-it.md:115
+#: content/build-it.md:105
 msgid "Install needed dependencies (optional)"
 msgstr "Instalu bezonatajn dependecojn (laŭvola)"
 
-#: content/build-it.md:117
+#: content/build-it.md:107
 msgid ""
 "**kdesrc-build** provides some initial setup mode to install the needed "
 "packages for several common distributions to start developing. This is "
@@ -513,7 +493,7 @@ msgstr ""
 "provos instali pakaĵojn por via distribuo, ĉi tiu paŝo postulos "
 "administrantajn rajtojn por la paka instalado.** Por fari tion, simple lanĉu:"
 
-#: content/build-it.md:126
+#: content/build-it.md:116
 msgid ""
 "We already created a **.config/kdesrc-buildrc**, that will be left "
 "untouched. For the further usage you don't need to modify your shell "
@@ -522,18 +502,18 @@ msgstr ""
 "Ni jam kreis **.config/kdesrc-buildrc**, kiu restos netuŝita. Por la plua "
 "uzado vi ankaŭ ne bezonas modifi viajn ŝelajn agordojn."
 
-#: content/build-it.md:129
+#: content/build-it.md:119
 msgid "Build Kate & dependencies"
 msgstr "Konstruu Kate kaj dependecojn"
 
-#: content/build-it.md:131
+#: content/build-it.md:121
 msgid ""
 "To trigger a compile of Kate and all needed KDE dependencies now just type:"
 msgstr ""
 "Por ekigi kompilon de Kate kaj ĉiuj bezonataj KDE-dependecoj nun simple "
 "tajpu:"
 
-#: content/build-it.md:137
+#: content/build-it.md:127
 msgid ""
 "That takes a few minutes on a recent machine. Time to grab some coffee or "
 "think about what you actually want to implement."
@@ -541,7 +521,7 @@ msgstr ""
 "Tio daŭras kelkajn minutojn en lastatempa maŝino. Tempo por preni iom da "
 "kafo aŭ pensi pri tio, kion vi vere volas efektivigi."
 
-#: content/build-it.md:140
+#: content/build-it.md:130
 msgid ""
 "As long as the KF 6 version of our dependencies is not bundled with your "
 "distribution, it might make sense to build some more parts to have better "
@@ -551,7 +531,7 @@ msgstr ""
 "distribuo, povus havi sencon konstrui kelkajn pliajn partojn por havi pli "
 "bonan stiladon kaj terminalan integriĝon:"
 
-#: content/build-it.md:146
+#: content/build-it.md:136
 msgid ""
 "If you only want to build Kate without the dependencies because you are sure "
 "you have recent enough stuff on your system, you can try:"
@@ -559,7 +539,7 @@ msgstr ""
 "Se vi nur volas konstrui Kate sen la dependecoj ĉar vi certas, ke vi havas "
 "sufiĉe lastatempajn aĵojn en via sistemo, vi povas provi:"
 
-#: content/build-it.md:152
+#: content/build-it.md:142
 msgid ""
 "But given that on modern machines, the compile times are low, it is more "
 "convenient to just build all stuff, that ensures you have e.g. the latest "
@@ -570,18 +550,18 @@ msgstr ""
 "plej novaj kaj plej bonaj kadroj KSyntaxHighlighting kaj KTextEditor ĉirkaŭe "
 "ankaŭ!"
 
-#: content/build-it.md:154
+#: content/build-it.md:144
 msgid ""
 "Given this setup, you are free to build all KDE software parts with a simple:"
 msgstr ""
 "Konsiderante ĉi tiun aranĝon, vi rajtas konstrui ĉiujn KDE-programarajn "
 "partojn per simpla:"
 
-#: content/build-it.md:160
+#: content/build-it.md:150
 msgid "Keep in mind: that will take some time (and disk space)."
 msgstr "Memoru: tio daŭros iom da tempo (kaj diskospaco)."
 
-#: content/build-it.md:162
+#: content/build-it.md:152
 msgid ""
 "If during the build you see any failures displayed with a red font, follow "
 "this guide - [How to solve build problems](https://community.kde.org/"
@@ -591,11 +571,11 @@ msgstr ""
 "sekvu ĉi tiun gvidilon - [Kiel solvi konstruproblemojn](https://community."
 "kde.org/Get_Involved/development#How_to_solve_build_problems)"
 
-#: content/build-it.md:164
+#: content/build-it.md:154
 msgid "How to use the build stuff?"
 msgstr "Kiel uzi la konstruaĵojn?"
 
-#: content/build-it.md:166
+#: content/build-it.md:156
 msgid ""
 "To launch you local Kate version, you need to setup the environment first "
 "properly to ensure the right plugins and stuff is loaded. Fortunately this "
@@ -605,7 +585,7 @@ msgstr ""
 "certigi, ke la ĝustaj kromprogramoj kaj aĵoj estas ŝarĝitaj. Feliĉe ĉi tio "
 "estas tre simpla:"
 
-#: content/build-it.md:174
+#: content/build-it.md:164
 msgid ""
 "A nifty way to wrap this is to e.g. create yourself a small wrapper script "
 "to start your master branch version of Kate inside your local bin directory:"
@@ -614,11 +594,11 @@ msgstr ""
 "skripton por komenci vian ĉefbranĉan version de Kate ene de via loka bin-"
 "dosierujo:"
 
-#: content/build-it.md:182
+#: content/build-it.md:172
 msgid "Keep your stuff up-to-date"
 msgstr "Tenu viajn aĵojn ĝisdatigitaj"
 
-#: content/build-it.md:184
+#: content/build-it.md:174
 msgid ""
 "To keep your local version up-to-date, you can just use the above commands "
 "again. They will take care of pulling new changes from the KDE repositories "
@@ -628,22 +608,22 @@ msgstr ""
 "komandojn denove. Ili zorgos pri eltiri novajn ŝanĝojn el la KDE-deponejoj "
 "kaj konstrui/instali ilin en vian lokan prefikson."
 
-#: content/build-it.md:187
+#: content/build-it.md:177
 msgid "Develop!"
 msgstr "Evoluigu!"
 
-#: content/build-it.md:189
+#: content/build-it.md:179
 msgid "Now, the remaining question is: How to develop best?"
 msgstr "Nun, la restanta demando estas: Kiel disvolvi plej bone?"
 
-#: content/build-it.md:191
+#: content/build-it.md:181
 msgid ""
 "Naturally, if you want to hack on Kate, it might make sense to use Kate for "
 "that."
 msgstr ""
 "Kompreneble, se vi volas haki Kate, povus havi sencon uzi Kate por tio."
 
-#: content/build-it.md:193
+#: content/build-it.md:183
 msgid ""
 "Given the above preparations, that is easy to do, just start your new master "
 "version of Kate and pass it the build directory:"
@@ -652,7 +632,7 @@ msgstr ""
 "vian novan majstran version de Kate kaj transdonu al ĝi la konstruan "
 "dosierujon:"
 
-#: content/build-it.md:199
+#: content/build-it.md:189
 msgid ""
 "Alternatively, you can navigate there in your terminal and startup Kate from "
 "there, it will auto-open it:"
@@ -660,7 +640,7 @@ msgstr ""
 "Alternative, vi povas navigi tie en via terminalo kaj lanĉi Kate de tie, ĝi "
 "aŭtomate malfermos ĝin:"
 
-#: content/build-it.md:206
+#: content/build-it.md:196
 msgid ""
 "To have the best experience with this, ensure you have at least project & "
 "LSP plugin enabled. If you like to have some GUI build integration, activate "
@@ -670,11 +650,11 @@ msgstr ""
 "projektan kaj LSP-kromaĵon ebligita. Se vi ŝatas havi iom da GUI-konstrua "
 "integriĝo, ankaŭ aktivigu la konstruan kromaĵon."
 
-#: content/build-it.md:209
+#: content/build-it.md:199
 msgid "You will end up with a new Kate windows like shown below."
 msgstr "Vi finiĝos kun novaj Kate-fenestroj kiel montrite sube."
 
-#: content/build-it.md:211
+#: content/build-it.md:201
 msgid ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-startup."
 "png)"
@@ -682,7 +662,7 @@ msgstr ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-startup."
 "png)"
 
-#: content/build-it.md:213
+#: content/build-it.md:203
 msgid ""
 "In the lower \"Current Project\" tool view you have per default two "
 "terminals. The first terminal is inside your build directory, here you can e."
@@ -696,7 +676,7 @@ msgstr ""
 "terminalo estas ene de via fonta dosierujo, perfekta por ekz. git "
 "komandliniaj vokoj."
 
-#: content/build-it.md:217
+#: content/build-it.md:207
 msgid ""
 "Given the above setup, the LSP plugin (if you have **clangd** installed) "
 "should work out of the box."
@@ -704,13 +684,13 @@ msgstr ""
 "Konsiderante la ĉi-supran aranĝon, la LSP-kromaĵo (se vi havas **clangd** "
 "instalitan) devus funkcii el la skatolo."
 
-#: content/build-it.md:219
+#: content/build-it.md:209
 msgid ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-lsp.png)"
 msgstr ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-lsp.png)"
 
-#: content/build-it.md:221
+#: content/build-it.md:211
 msgid ""
 "Other nifty stuff like project wide quick open, search & replace and correct "
 "build targets should be setup, too."
@@ -718,7 +698,7 @@ msgstr ""
 "Ankaŭ aliaj agrablaj aferoj kiel projekto larĝe malfermita, serĉi kaj "
 "anstataŭigi kaj ĝustajn konstruajn celojn devus esti aranĝitaj."
 
-#: content/build-it.md:223
+#: content/build-it.md:213
 msgid ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-search."
 "png)"
@@ -726,7 +706,7 @@ msgstr ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-search."
 "png)"
 
-#: content/build-it.md:225
+#: content/build-it.md:215
 msgid ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-build."
 "png)"
@@ -734,11 +714,11 @@ msgstr ""
 "![](/post/2021/2021-02-07-kdesrc-build-and-kate/images/kate-project-build."
 "png)"
 
-#: content/build-it.md:228
+#: content/build-it.md:217
 msgid "Contribute back!"
 msgstr "Kontribuu reen!"
 
-#: content/build-it.md:230
+#: content/build-it.md:219
 msgid ""
 "Feel free to create a merge request at [invent.kde.org](https://invent.kde."
 "org/utilities/kate/merge_requests). For more information see [Join Us](/join-"
@@ -748,11 +728,11 @@ msgstr ""
 "utilities/kate/merge_requests). Por pliaj informoj vidu [Aliĝi al ni](/join-"
 "us/)."
 
-#: content/build-it.md:233
+#: content/build-it.md:222
 msgid "Get Support?"
 msgstr "Ĉu akiri Subtenon?"
 
-#: content/build-it.md:235
+#: content/build-it.md:224
 msgid ""
 "If you have questions you can ask them on our mailing list [kwrite-devel@kde."
 "org](mailto:kwrite-devel@kde.org) and/or join #kate on irc.libera.chat."
@@ -761,15 +741,15 @@ msgstr ""
 "devel@kde.org](mailto:kwrite-devel@kde.org) kaj/aŭ aliĝi al #kate ĉe irc."
 "libera.chat."
 
-#: content/build-it.md:237
+#: content/build-it.md:226
 msgid "For more information see [Get Help](/support/)."
 msgstr "Por pliaj informoj vidu [Akiri Helpon](/support/)."
 
-#: content/build-it.md:239
+#: content/build-it.md:228
 msgid "Building Kate from Sources on Windows"
 msgstr "Konstruante Kate el Fontoj sur Vindozo"
 
-#: content/build-it.md:241
+#: content/build-it.md:230
 msgid ""
 "To build the KF5 based Kate/KWrite you can follow the guide on [KDE on "
 "Windows](https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/"
@@ -779,11 +759,11 @@ msgstr ""
 "[KDE en Vindozo](https://community.kde.org/Guidelines_and_HOWTOs/"
 "Build_from_source/Windows)."
 
-#: content/build-it.md:243
+#: content/build-it.md:232
 msgid "Building Kate from Sources on macOS"
 msgstr "Konstruante Kate de Fontoj sur macOS"
 
-#: content/build-it.md:245
+#: content/build-it.md:234
 msgid ""
 "To build the KF5 based Kate/KWrite you can follow the guide on [KDE on macOS]"
 "(https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source/Mac)."
@@ -3648,3 +3628,24 @@ msgid ""
 msgstr ""
 "Dum la plena vivdaŭro de la projekto **%1 homoj** kontribuis. Dankon por "
 "ebligi Kate!"
+
+#~ msgid ".kateproject files creation"
+#~ msgstr "kreado de dosieroj .kateproject"
+
+#~ msgid "we want .kateproject files with ninja"
+#~ msgstr "ni volas dosierojn .kateproject kun ninja"
+
+#~ msgid ""
+#~ "These lines in the configuration above ensure you get not only Ninja "
+#~ "build files (nifty as this will e.g. automatically use multiple cores for "
+#~ "compiles), but in addition .kateproject files inside the build "
+#~ "directories for later use, too. With these files, the project plugin of "
+#~ "Kate will know what to do, e.g. where the source directory for the "
+#~ "compile is and which build commands it should use for the build plugin."
+#~ msgstr ""
+#~ "Ĉi tiuj linioj en la agordo supra certigas, ke vi ricevos ne nur Ninja-"
+#~ "konstrudosierojn (mojosa ĉar tio ekz. aŭtomate uzos plurajn kernojn por "
+#~ "kompiloj) sed krome .kateproject-dosierojn ene de la konstruaj dosierujoj "
+#~ "por pli posta uzo, ankaŭ. Kun ĉi tiuj dosieroj, la projekta kromaĵo de "
+#~ "Kate scios kion fari, ekz. kie estas la fonta dosierujo por la kompilo "
+#~ "kaj kiujn konstrukomandojn ĝi devus uzi por la konstrukromaĵo."
