@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-krita-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-20 01:59+0000\n"
+"POT-Creation-Date: 2024-12-21 02:16+0000\n"
 "PO-Revision-Date: 2024-07-16 21:47+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -3426,6 +3426,715 @@ msgid ""
 "\" release track. Note, however, that we still recommend treating Krita on "
 "Android as a beta release that might have bugs that impair your work, as "
 "well as a user interface that is not optimized for touch devices."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:0
+msgid "Digging into the Fast Sketch Cleanup Plugin for Krita"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:7
+msgid "Fast Sketch Cleanup plugin"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:9
+msgid "Introduction"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:11
+msgid ""
+"We started this project with the intent of providing users a tool helpful in "
+"inking sketches. It is based on a [research article by Simo & Sierra "
+"published in 2016](https://esslab.jp/~ess/publications/SimoSerraSIGGRAPH2016."
+"pdf), and it uses neural networks (now commonly called simply AI) to work. "
+"The tool has been developed in partnership with Intel and it’s still "
+"considered experimental, but you can already use it and see the results."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:13
+msgid ""
+"In the section below there are some real life examples of use cases and the "
+"results from the plugin. The results vary, but it can be used for extracting "
+"faint pencil sketches from photos, cleaning up lines, and comic book inking."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:15
+msgid ""
+"Regarding the model used in the tool, we trained it ourselves. All the data "
+"in the dataset is donated from people who sent their pictures to us "
+"themselves and agreed on this specific use case. We haven’t used any other "
+"data. Moreover, when you use the plugin, it processes locally on your "
+"machine, it doesn’t require any internet connection, doesn’t connect to any "
+"server, and no account is required either. Currently it works only on "
+"Windows and Linux, but we’ll work on making it available on MacOS as well."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:17
+msgid "Use cases"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:19
+msgid ""
+"It averages the lines into one line and creates strong black lines, but the "
+"end result can be blurry or uneven. In many cases however it still works "
+"better than just using a Levels filter (for example in extracting the pencil "
+"sketch). it might be a good idea to use Levels filter after using the plugin "
+"to reduce the blurriness. Since the plugin works best with white canvas and "
+"grey-black lines, in case of photographed pencil sketches or very light "
+"sketch lines, it might be a good idea to use Levels also before using the "
+"plugin."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:21
+msgid "Extracting photographed pencil sketch"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:23
+msgid ""
+"This is the result of the standard procedure of using Levels filter on a "
+"sketch to extract the lines (which results in a part of the image getting "
+"the shadow):"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:25
+msgid ""
+"![sketch\\_girl\\_original\\_procedure\\_comparison\\_small](images/"
+"posts/2024/fast_sketch/image7.jpg)<br />[sketch\\_girl\\_original\\_procedure"
+"\\_comparison\\_small1843×1209 165 KB](https://krita-artists.org/uploads/"
+"default/original/3X/3/c/3c3051ece5186f1144d2125e846591384c2a2818.jpeg)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:28
+msgid ""
+"The sketch was drawn by [Tiar (link to KA profile)](https://krita-artists."
+"org/u/tiar/summary)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:30
+msgid ""
+"This is the procedure using the plugin with SketchyModel (Levels → plugin → "
+"Levels):"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:32
+msgid ""
+"![sketch\\_girl\\_new\\_procedure\\_comparison\\_small](images/posts/2024/"
+"fast_sketch/image13.jpg)<br />[sketch\\_girl\\_new\\_procedure\\_comparison"
+"\\_small1843×2419 267 KB](https://krita-artists.org/uploads/default/"
+"original/3X/c/3/c3af9cfebf67622ab0e3e7a92b631b4c607219ad.jpeg)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:35
+msgid "Comparison (for black lines):"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:37
+msgid ""
+"![sketch\\_girl\\_procedures\\_comparison\\_small](images/posts/2024/"
+"fast_sketch/image12.jpg)<br />[sketch\\_girl\\_procedures\\_comparison"
+"\\_small1920×1260 215 KB](https://krita-artists.org/uploads/default/"
+"original/3X/1/1/11352978af549b02cee7a4be49b097c5a4e2d505.jpeg)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:40
+msgid ""
+"Another possible result is to just stop at the plugin without forcing black "
+"lines using Levels, which results in a nicer, more pencil-y look while "
+"keeping the lower part of the page still blank:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:42
+msgid ""
+"![sketch\\_girl\\_after\\_plugin\\_small](images/posts/2024/fast_sketch/"
+"image14.jpg)<br />[sketch\\_girl\\_after\\_plugin\\_small1536×2016 161 KB]"
+"(https://krita-artists.org/uploads/default/original/3X/c/e/"
+"ce7c77da7bd349228ddf7638d26fcc5b315a0ecd.jpeg)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:47
+msgid "Comic book-like inking"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:49
+msgid ""
+"![](images/posts/2024/fast_sketch/image9.png)<br />Picture of a man made by "
+"[BeARToys](https://krita-artists.org/t/fast-sketch-cleanup-plugin-first-"
+"public-testing/109066/8)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:52
+#, fuzzy
+#| msgid "![](images/posts/2023/image.png)"
+msgid "![](images/posts/2024/fast_sketch/image10.png)"
+msgstr "![](bildoj/afiŝoj/2023/bildo.png)"
+
+#: content/en/posts/2024/fast_sketch_background.md:54
+#, fuzzy
+#| msgid "![](images/posts/2023/image.png)"
+msgid "![](images/posts/2024/fast_sketch/image11.png)"
+msgstr "![](bildoj/afiŝoj/2023/bildo.png)"
+
+#: content/en/posts/2024/fast_sketch_background.md:56
+msgid ""
+"Here in the pictures above you can see the comic book style inking. The "
+"result, which is a bit blurry compared to the original, can be further "
+"enhanced by using a Sharpen filter. The dragon was sketched by [David Revoy]"
+"(https://www.davidrevoy.com/) (CC-BY 4.0)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:58
+msgid "Cleaning up lines"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:60
+msgid ""
+"Examples of sketches I made and the result of the plugin, showing the strong "
+"and weak points of the plugin. All of the pictures below were made using the "
+"SketchyModel."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:62
+msgid ""
+"![flower\\_001](images/posts/2024/fast_sketch/image5.png)<br />[flower"
+"\\_0011209×739 46.5 KB](https://krita-artists.org/uploads/default/"
+"original/3X/e/1/e1dee4edb1dd5fde7581f4bf06ff64da78e9c7a2.png)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:65
+msgid ""
+"![flower\\_001\\_detail](images/posts/2024/fast_sketch/image4.png)<br /"
+">[flower\\_001\\_detail681×456 22.1 KB](https://krita-artists.org/uploads/"
+"default/original/3X/8/6/869766da8cc8bba553c4715751eef9a90ace3bbb.png)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:68
+msgid ""
+"![portrait\\_man\\_portrait\\_2\\_comparison\\_2\\_small](images/posts/2024/"
+"fast_sketch/image6.png)<br />[portrait\\_man\\_portrait\\_2\\_comparison"
+"\\_2\\_small1305×505 139 KB](https://krita-artists.org/uploads/default/"
+"original/3X/0/f/0fc59855356394db3789dc60ee32915c2658a997.png)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:71
+msgid ""
+"![portrait\\_man\\_portrait\\_2\\_detail](images/posts/2024/fast_sketch/"
+"image2.png)<br />[portrait\\_man\\_portrait\\_2\\_detail646×1023 26.6 KB]"
+"(https://krita-artists.org/uploads/default/"
+"original/3X/9/1/9112c84b6df82dcff42d83427395bc7f8145920f.png)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:74
+msgid ""
+"All of the pictures above painted by [Tiar (link to KA profile)](https://"
+"krita-artists.org/u/tiar/summary)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:76
+msgid ""
+"On the pictures below, on the scales of the fish, you can see how the model "
+"discriminates lighter lines and enhances the stronger lines, making the "
+"scales more pronounced. In theory you could do that using the Levels filter, "
+"but in practice the results would be worse, because the model takes into "
+"account local strength of the line."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:78
+msgid ""
+"![](images/posts/2024/fast_sketch/image1.png)<br />[fish\\_square\\_sketchy"
+"\\_comparison\\_small1920×968 156 KB](https://krita-artists.org/uploads/"
+"default/original/3X/a/d/ad35d5927bb68bf539e19b4e94ca84143c061ffc.jpeg)<br />!"
+"[](images/posts/2024/fast_sketch/image3.png)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:82
+msgid ""
+"Picture of the fish made by [Christine Garner (link to portfolio)](https://"
+"thimblefolio.com/)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:84
+msgid "How to use it in Krita"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:86
+msgid "To use the Fast Sketch Cleanup plugin in Krita, do the following:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:88
+msgid "Prepare Krita:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:90
+#, fuzzy
+#| msgid "Windows"
+msgid "On Windows:"
+msgstr "Vindozo"
+
+#: content/en/posts/2024/fast_sketch_background.md:92
+msgid ""
+"Either in one package: download Krita 5.3.0-prealpha with Fast Sketch "
+"Cleanup plugin already included: [https://download.kde.org/unstable/"
+"krita/5.3.0-prealpha-fast-sketch/krita-x64-5.3.0-prealpha-cdac9c31.zip]"
+"(https://files.kde.org/krita/testing/testing-ai-sketch-plugin/krita-"
+"x64-5.3.0-prealpha-ae1a4b69.zip)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:94
+msgid "Or separately:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:96
+msgid ""
+"Download portable version of Krita 5.2.6 (or similar version \\- should "
+"still work)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:97
+msgid ""
+"Download separately the Fast Sketch Cleanup plugin here: https://download."
+"kde.org/stable/krita/FastSketchPlugin-1.0.2/FastSketchPlugin1.0.2.zip"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:98
+msgid "Unzip the file into krita-5.2.6/ folder (keeping the folder structure)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:99
+msgid ""
+"Then go to Settings → Configure Krita → Python Plugin Manager, enable Fast "
+"Sketch Cleanup plugin, and restart Krita."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:100
+#, fuzzy
+#| msgid "Linux"
+msgid "On Linux:"
+msgstr "Linukso"
+
+#: content/en/posts/2024/fast_sketch_background.md:102
+#, fuzzy
+#| msgid ""
+#| "64 bits Linux: [krita-5.2.0-rc1-x86\\_64.appimage](https://download.kde."
+#| "org/unstable/krita/5.2.0-rc1/krita-5.2.0-rc1-x86_64.appimage)"
+msgid ""
+"Download the appimage: https://download.kde.org/unstable/krita/5.3.0-"
+"prealpha-fast-sketch/krita-5.3.0-prealpha-cdac9c31c9-x86\\_64.AppImage"
+msgstr ""
+"64-bita Linukso: [krita-5.2.0-rc1-x86\\_64.appimage](https://download.kde."
+"org/unstable/krita/5.2.0-rc1/krita-5.2.0-rc1-x86_64.appimage)"
+
+#: content/en/posts/2024/fast_sketch_background.md:103
+msgid ""
+"(Optional) Install NPU drivers if you have NPU on your device (practically "
+"only necessary on Linux, if you have a very new Intel CPU): [Configurations "
+"for Intel® NPU with OpenVINO™ — OpenVINO™ documentation](https://docs."
+"openvino.ai/2024/get-started/configurations/configurations-intel-npu.html) "
+"(note: you can still run the plugin on CPU or GPU, it doesn’t require NPU)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:105
+msgid "Run the plugin:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:107
+msgid ""
+"Open or create a white canvas with grey-white strokes (note that the plugin "
+"will take the current projection of the canvas, not the current layer)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:108
+msgid "Go to Tools → Fast Sketch Cleanup"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:109
+msgid ""
+"Select the model. Advanced Options will be automatically selected for you."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:110
+msgid ""
+"Wait until it finishes processing (the dialog will close automatically then)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:111
+msgid "See that it created a new layer with the result."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:113
+msgid "Advice for processing"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:115
+msgid ""
+"Currently it’s better to just use the SketchyModel.xml, in most cases it "
+"works significantly better than the SmoothModel.xml."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:117
+msgid ""
+"You need to make sure the background is pretty bright, and the lines you "
+"want to keep in the result are relatively dark (either somewhat dark grey or "
+"black; light grey might result in many missed lines). It might be a good "
+"idea to use a filter like Levels beforehand."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:119
+msgid ""
+"After processing, you might want to enhance the results with either Levels "
+"filter or Sharpen filter, depending on your results."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:121
+msgid "Technology & Science behind it"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:123
+msgid "Unique requirements"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:125
+msgid ""
+"First unique requirement was that it had to work on canvases of all sizes. "
+"That meant that the network couldn’t have any dense/fully or densely "
+"connected linear layers that are very common in most of the image processing "
+"neural networks (which require input of a specific size and will produce "
+"different results for the same pixel depending on its location), only "
+"convolutions or pooling or similar layers that were producing the same "
+"results for every pixel of the canvas, no matter the location. Fortunately, "
+"the [Simo & Sierra paper published in 2016](https://esslab.jp/~ess/"
+"publications/SimoSerraSIGGRAPH2016.pdf) described a network just like that."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:127
+msgid ""
+"Another challenge was that we couldn’t really use the model they created, "
+"since it wasn’t compatible with Krita’s license, and we couldn’t even really "
+"use the exact model type they described, because one of those model files "
+"would be nearly as big as Krita, and the training would take a really long "
+"time. We needed something that would work just as well if not better, but "
+"small enough that it can be added to Krita without making it twice as big. "
+"(In theory, we could do like some other companies and make the processing "
+"happen on some kind of a server, but that wasn’t what we wanted. And even if "
+"it resolved some of our issues, it would provide plenty of its own major "
+"challenges. Also, we wanted for our users to be able to use it locally "
+"without a reliance on our servers and the internet). Moreover, the model had "
+"to be reasonably fast and also modest in regards to RAM/VRAM consumption."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:129
+msgid ""
+"Moreover, we didn’t have any dataset we could use. Simo & Sierra used a "
+"dataset, where the expected images were all drawn using a constant line "
+"width and transparency, which meant that the results of the training had "
+"those qualities too. We wanted something that looked a bit more hand-drawn, "
+"with varying line-width or semi-transparent ends of the lines, so our "
+"dataset had to contain those kinds of images. Since we haven’t been aware of "
+"any datasets that would match our requirements regarding the license and the "
+"data gathering process, we asked our own community for help, here you can "
+"read the Krita Artists thread about it: [https://krita-artists.org/t/call-"
+"for-donation-of-artworks-for-the-fast-line-art-project/96401](https://krita-"
+"artists.org/t/call-for-donation-of-artworks-for-the-fast-line-art-"
+"project/96401) ."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:131
+msgid "The link to our full dataset can be found below in the Dataset section."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:133
+msgid "Model architecture"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:135
+msgid ""
+"All main layers are either convolutional or deconvolutional (at the end of "
+"the model). After every (de)convolutional layer except for the last one "
+"there is a ReLu activation layer, and after the last convolution there is a "
+"sigmoid activation layer."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:137
+msgid "Python packages used: Pillow, Numpy, PyTorch and Openvino"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:139
+msgid ""
+"Numpy is a standard library for all kinds of arrays and advanced array "
+"operations and we used Pillow for reading images and converting them into "
+"numpy arrays and back. For training, we used PyTorch, while in the Krita "
+"plugin we used Openvino for inference (processing through the network)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:141
+msgid "Using NPU for inference"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:143
+msgid ""
+"![](images/posts/2024/fast_sketch/image8.png)<br />This table shows the "
+"result of benchmark\\_app, which is a tool that’s provided with Intel’s "
+"python package openvino. It tests the model in isolation on random data. As "
+"you can see, the NPU was several times faster than the CPU on the same "
+"machine."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:146
+msgid ""
+"On the other hand, introducing NPU added a challenge: the only models that "
+"can run on NPU are static models, meaning the input size is known at the "
+"time of saving the model to file. To solve this, the plugin first cuts the "
+"canvas into smaller parts of a specified size (which depends on the model "
+"file), and then proceeds to process all of them and finally stitch the "
+"results together. To avoid artifacts on the areas next to the stitching, all "
+"of the parts are cut with a little bit of a margin and the margin is later "
+"cut off."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:148
+msgid "How to train your own model"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:150
+msgid ""
+"To train your own model, you’ll need some technical skills, pairs of "
+"pictures (input and the expected output) and a powerful computer. You might "
+"also need quite a lot of space on your hard drive, though you can just "
+"remove unnecessary older models if you start having issues with lack of "
+"space."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:152
+msgid "Drivers & preparation"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:154
+msgid ""
+"You’ll need to install Python3 and the following packages: Pillow, openvino, "
+"numpy, torch. For quantization of the model you will also need nncf and "
+"sklearn. If I missed anything, it will complain, so just install those "
+"packages it mentions too."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:156
+msgid ""
+"If you’re on Windows, you probably have drivers for NPU and dedicated GPU. "
+"On Linux, you might need to install NPU drivers before you’ll be able to use "
+"it: [https://docs.openvino.ai/2024/get-started/configurations/configurations-"
+"intel-npu.html](https://docs.openvino.ai/2024/get-started/configurations/"
+"configurations-intel-npu.html) ."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:158
+msgid ""
+"Moreover if you want to use iGPU for training (which might still be "
+"significantly faster than on CPU), you’ll probably need to use something "
+"like IPEX which allows PyTorch to use an “XPU” device, which is just your "
+"iGPU. It’s not tested or recommended since I personally haven’t been able to "
+"use it because my Python version was higher than the instruction expects, "
+"but the instruction is here: [https://pytorch-extension.intel.com/"
+"installation?platform=gpu\\&version=v2.5.10%2Bxpu](https://pytorch-extension."
+"intel.com/installation?platform=gpu&version=v2.5.10%2Bxpu) .<br />The sanity "
+"check for the installation is as follows:<br />python3 \\-c \"import torch; "
+"import intel\\_extension\\_for\\_pytorch as ipex; print(f'Packages "
+"versions:'); print(f'Torch version: {torch.\\_\\_version\\_\\_}'); "
+"print(f'IPEX version: {ipex.\\_\\_version\\_\\_}'); print(f'Devices:'); "
+"print(f'Torch XPU device count: {torch.xpu.device\\_count()}'); "
+"\\[print(f'\\[Device {i}\\]: {torch.xpu.get\\_device\\_properties(i)}') for "
+"i in range(torch.xpu.device\\_count())\\];\"<br />It should show more than 0 "
+"devices with some basic properties."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:163
+msgid ""
+"If you manage to get XPU device working on your machine, you’ll still need "
+"to edit the training scripts so they’ll able to use it: [https://intel."
+"github.io/intel-extension-for-pytorch/xpu/latest/tutorials/getting\\_started."
+"html](https://intel.github.io/intel-extension-for-pytorch/xpu/latest/"
+"tutorials/getting_started.html) (most probably you’ll just need to add this "
+"line:<br />import intel\\_extension\\_for\\_pytorch as ipex<br />to the "
+"script on the very top, just underneath “import torch”, and use “xpu” as the "
+"device name when invoking the script, and it should work. But as I said, the "
+"scripts hasn’t been tested for that."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:167
+msgid "Dataset"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:169
+msgid ""
+"You’ll need some pictures to be able to train your model. The pictures must "
+"be in pairs, every pair must contain a sketch (input) and a lineart picture "
+"(expected output). The better quality of the dataset, the better the results."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:171
+msgid ""
+"Before training, it’s best if you augment the data: that means the pictures "
+"are rotated, scaled up or down, and mirrored. Currently the data "
+"augmentation script also performs an inversion with the assumption that "
+"training on inverted pictures would bring the results faster (considering "
+"that black means zero means no signal, and we’d like that to be the "
+"background, so the models learn the lines, not the background around lines)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:173
+msgid ""
+"How to use the data augmentation script is explained below in the detailed "
+"instruction for the training part."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:175
+msgid ""
+"Here’s the dataset that we used (please read the license carefully if you "
+"want to use it): [**https://files.kde.org/krita/extras/"
+"FastSketchCleanupPluginKritaDataset.zip**](https://files.kde.org/krita/"
+"extras/FastSketchCleanupPluginKritaDataset.zip)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:177
+msgid "Choice of model and other parameters"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:179
+msgid ""
+"For quick results, use tooSmallConv; if you have more time and resources, "
+"typicalDeep might be a better idea. If you have access to a powerful GPU "
+"machine, you might try original or originalSmaller, which represent the "
+"original description of the model from [the SIGGRAPH article by Simo-Sierra "
+"2016](https://esslab.jp/~ess/publications/SimoSerraSIGGRAPH2016.pdf), and a "
+"smaller version of it."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:181
+msgid "Use adadelta as the optimizer."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:183
+msgid ""
+"You can use either blackWhite or mse as the loss function; mse is classic, "
+"but blackWhite might lead to faster results since it lowers the relative "
+"error on the fully white or fully black areas (based on the expected output "
+"picture)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:185
+msgid "Training"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:187
+msgid ""
+"Clone the repository at [https://invent.kde.org/tymond/fast-line-art]"
+"(https://invent.kde.org/tymond/fast-line-art) (at 33869b6)<br />git clone "
+"https://invent.kde.org/tymond/fast-line-art.git"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:189
+msgid "Then, prepare the folder:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:191
+#, fuzzy
+#| msgid "Create a new user interface for handling palettes"
+msgid "Create a new folder for the training."
+msgstr "Kreu novan uzantinterfacon por manipuli paletojn"
+
+#: content/en/posts/2024/fast_sketch_background.md:192
+msgid ""
+"In the folder, run:<br />python3 \\[repository folder\\]/spawnExperiment.py "
+"\\--path \\[path to new folder, either relative or absolute\\] \\--note "
+"\"\\[your personal note about the experiment\\]\""
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:194
+msgid "Prepare data:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:195
+msgid ""
+"If you have existing augmented dataset, put it all in data/training/ and "
+"data/verify/, keeping in mind that paired pictures in ink/ and sketch/ "
+"subfolders must have the exact same names (for example if you have sketch."
+"png and ink.png as data, you need to put one in sketch/ as picture.png and "
+"another in ink/ as picture.png to be paired)."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:196
+msgid "If you don't have existing augmented dataset:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:197
+msgid ""
+"Put all your raw data in data/raw/, keeping in mind that paired pictures "
+"should have the exact same names with added prefix either ink\\_ or sketch"
+"\\_ (for example if you have picture\\_1.png being the sketch picture and "
+"picture\\_2.png being the ink picture, you need to name them sketch"
+"\\_picture.png and ink\\_picture.png respectively.)"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:198
+msgid ""
+"Run the data preparer script:<br />python3 \\[repository folder\\]/"
+"dataPreparer.py \\-t taskfile.yml<br />That will augment the data in the raw "
+"directory in order for the training to be more successful."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:201
+msgid ""
+"Edit the taskfile.yml file to your liking. The most important parts you want "
+"to change are:"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:202
+msgid ""
+"model type \\- code name for the model type, use tinyTinier, tooSmallConv, "
+"typicalDeep or tinyNarrowerShallow"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:203
+msgid "optimizer \\- type of optimizer, use adadelta or sgd"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:204
+msgid "learning rate \\- learning rate for sgd if in use"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:205
+msgid ""
+"loss function \\- code name for loss function, use mse for mean squared "
+"error or blackWhite for a custom loss function based on mse, but a bit "
+"smaller for pixels where the target image pixel value is close to 0.5"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:206
+msgid ""
+"Run the training code:<br />python3 \\[repository folder\\]/train.py \\-t "
+"taskfile.yml \\-d \"cpu\""
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:209
+msgid ""
+"On Linux, if you want it to run in a background, add “&” at the end. If it "
+"runs in a foreground, you can pause the training just by pressing ctrl+C, "
+"and if it runs in a background, find a process id (using either “jobs \\-l” "
+"command or “ps aux | grep train.py” command, the first number would be the "
+"process id) and kill it using “kill \\[process id\\]” command. Your results "
+"will still be in the folder, and you’ll be able to resume the training using "
+"the same command."
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:210
+msgid ""
+"Convert the model to an openvino model:<br />python3 \\[repository folder\\]/"
+"modelConverter.py \\-s \\[size of the input, recommended 256\\] \\-t "
+"\\[input model name, from pytorch\\] \\-o \\[openvino model name, must end "
+"with .xml\\]"
+msgstr ""
+
+#: content/en/posts/2024/fast_sketch_background.md:212
+msgid ""
+"Place both the .xml and .bin model files in your Krita resource folder "
+"(inside pykrita/fast\\_sketch\\_cleanup subfolder) alongside other models to "
+"use them in the plugin."
 msgstr ""
 
 #: content/en/posts/2024/fast_sketch_plugin.md:0
