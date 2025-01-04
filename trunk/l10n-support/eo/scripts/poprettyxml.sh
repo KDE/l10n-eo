@@ -7,6 +7,7 @@
 # Copy/paste the text following ", fuzzy" or following msgid ""
 # to a separate file and provide this file as argument.
 #
+# Version 2025.01.04
 # Copyright (C) 2023 Oliver Kellogg <olivermkellogg@gmail.com>
 # Distributable under the MIT license https://opensource.org/license/mit/
 #
@@ -14,13 +15,14 @@
 pofrag=$1
 tmpfile=pretty.tmp
 
-sed 's/^#*|* *"//; s/"$//; s/\\"/"/g' $pofrag | tr -d '\n' > $tmpfile
+echo '<?xml version="1.0" encoding="UTF-8"?>' > $tmpfile
+sed 's/^#*|* *"//; s/"$//; s/\\"/"/g' $pofrag | tr -d '\n' >> $tmpfile
 echo >> $tmpfile
 haveHtmlDecl=$(grep '<html>' $tmpfile)
 if [ -z "$haveHtmlDecl" ]; then
   sed -e '1i <html><body>' -e '$a </body></html>' -i $tmpfile
 fi
-cat $tmpfile | xmllint --html --format -
+xmllint --html --format --encode utf8 $tmpfile
 
 if [ $? -eq 0 ]; then
   rm $tmpfile
