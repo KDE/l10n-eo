@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-krita-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 02:08+0000\n"
+"POT-Creation-Date: 2026-03-14 02:07+0000\n"
 "PO-Revision-Date: 2025-01-12 18:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -21187,7 +21187,7 @@ msgstr ""
 msgid "2026 Krita Roadmap"
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:7
+#: content/en/posts/2026/roadmap-2026.md:6
 msgid ""
 "In two sessions, the Krita developers discussed what they want to work on in "
 "2026, after Krita 5.3 and Krita 6.0 are released. That is, actually, one "
@@ -21195,11 +21195,11 @@ msgid ""
 "planned for next month."
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:9
+#: content/en/posts/2026/roadmap-2026.md:8
 msgid "Krita Sketch User Interface"
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:11
+#: content/en/posts/2026/roadmap-2026.md:10
 msgid ""
 "Last year, Timothe&eacute; created a [prototype for a mobile user interface "
 "for Krita](https://invent.kde.org/graphics/krita/-/merge_requests/2417) "
@@ -21208,13 +21208,13 @@ msgid ""
 "the QML and QtQuick features of Qt to implement the user interface."
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:13
+#: content/en/posts/2026/roadmap-2026.md:12
 msgid ""
 "This year, we intend to work on replacing the tool option dockers with QML "
 "so we can use those both in the mobile and in the desktop version of Krita."
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:15
+#: content/en/posts/2026/roadmap-2026.md:14
 msgid ""
 "Alvin Wong experimented in 2025 with embedding an OpenGL based canvas inside "
 "a QML application. Dmitry and Carsten will continue that work and see "
@@ -21222,14 +21222,111 @@ msgid ""
 "prototype."
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:17
+#: content/en/posts/2026/roadmap-2026.md:16
 msgid ""
 "Agata has already started work to make the current user interface more "
 "suitable for tablet use."
 msgstr ""
 
-#: content/en/posts/2026/roadmap-2026.md:19
+#: content/en/posts/2026/roadmap-2026.md:18
 msgid "Working with Files"
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:20
+msgid ""
+"There are a couple of plans we have with regards to file handling. On "
+"Android, working with the file sandboxing is seriously complicated, and "
+"we're looking into a solution for that."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:22
+msgid ""
+"The Krita .kra file format is pretty old by now (not 25 years, since it came "
+"into being a few years after Krita started being developed). It can, "
+"obviously, load and save everything Krita can handle, but it is not a "
+"particular fast file format. Carsten proposed to look into an SQLlite based "
+"file format. This could potentially mean that we could save the image after "
+"every change without the user noticing, making saving completely transparent."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:24
+msgid ""
+"Agata is already working on improving the autosave dialog. There is already "
+"[a mockup for this](https://krita-artists.org/t/unnamed-autosave-dialog-gets-"
+"a-glow-up-mockup-for-new-gui-inside/127551)."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:26
+msgid ""
+"Ivan is looking into sharing settings and resources across a user's devices, "
+"ideally in a cross-platform way."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:28
+#, fuzzy
+#| msgid "Project Asset Management"
+msgid "Color Management"
+msgstr "Projekta Aktiva Administrado"
+
+#: content/en/posts/2026/roadmap-2026.md:30
+msgid ""
+"While Krita supports HDR displays, there are issues with the user interface. "
+"Wolthera wants to start improving there."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:32
+msgid ""
+"Now that Qt 6 includes support for color management, CMYK and higher-bit "
+"depth images, it should be possible to add color management to Krita's "
+"vector layers, and that's something we are eager to implement."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:34
+msgid ""
+"We also discussed Wayland. We now support color management on Wayland on "
+"Linux, but there are plenty of problems there. We decided to only support "
+"the [KWin Wayland](https://kde.org/plasma-desktop/) compositor that comes "
+"with KDE Plasma for now."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:36
+msgid "Performance"
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:38
+msgid ""
+"Dmitry wants to work on \"region based updates\", and [has already started "
+"on that](https://invent.kde.org/graphics/krita/-/merge_requests/2578): this "
+"will make working with large images faster."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:40
+msgid ""
+"Ivan and Wolthera are interested in using vectorization in filters, possibly "
+"replacing the use of LittleCMS for color transformations."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:42
+#, fuzzy
+#| msgid "Cloud Integration"
+msgid "Continuous integration"
+msgstr "Nuba Integriĝo"
+
+#: content/en/posts/2026/roadmap-2026.md:44
+msgid ""
+"Continuous integration is how we build Krita: after changes, Krita is built "
+"automatically for every platform. Now that we've access to Windows ARM "
+"hardware, we need to find a way to extend our builds to Windows ARM, but the "
+"CI factory doesn't have an ARM builder, so we'd need to cross build."
+msgstr ""
+
+#: content/en/posts/2026/roadmap-2026.md:46
+msgid ""
+"We also intend to update all Krita's dependencies to the latest version, but "
+"only after we release Krita 5.3 and Krita 6.0. And of course, we intend to "
+"keep releasing bugfix and feature releases this year! For now, Krita 5.3 is "
+"the standard release, and 6.0 is considered experimental, but that should "
+"have changed by the end of the year."
 msgstr ""
 
 #, fuzzy
