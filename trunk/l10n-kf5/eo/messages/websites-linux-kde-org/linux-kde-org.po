@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-26 02:10+0000\n"
+"POT-Creation-Date: 2026-06-27 02:11+0000\n"
 "PO-Revision-Date: 2025-02-15 14:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1261,7 +1261,7 @@ msgstr ""
 
 #: content/docs/char-input.md:19
 msgid ""
-"The [*KCharSelect*](https://apps.kde.org/kcharselect/) app lets you visually "
+"The [*KCharSelect*](appstream://org.kde.kcharselect) app lets you visually "
 "search and browse through the entire catalog of characters available across "
 "all languages — including emojis. Once you’ve found the appropriate "
 "character, you can copy it to the clipboard for pasting elsewhere."
@@ -1828,56 +1828,62 @@ msgstr ""
 #: content/docs/install-vm.md:13
 msgid ""
 "KDE Linux ships a regular bootable `.iso` image, so you can install it in a "
-"virtual machine the same way as any other Linux distribution — create a VM, "
-"attach the ISO, boot, run the installer, then reboot from the installed disk."
+"virtual machine in largely the same way as any other Linux distribution — "
+"create a VM, attach the ISO, boot, run the installer, then reboot from the "
+"installed disk. There is only one requirement specific to KDE-Linux:"
 msgstr ""
 
 #: content/docs/install-vm.md:15
 msgid ""
-"The only KDE-Linux-specific requirement is **UEFI firmware**: the VM must be "
-"set to UEFI rather than legacy BIOS, or the image will not boot. If it still "
-"refuses to boot, disable Secure Boot."
+"{{< section class=\"text-center warning-bubble\" >}} **The VM must be set to "
+"use UEFI firmware rather than legacy BIOS.** {{< /section >}}"
 msgstr ""
 
-#: content/docs/install-vm.md:17
+#: content/docs/install-vm.md:19
 msgid ""
-"Each VM app puts the UEFI setting in a different place — here's where to "
+"Otherwise, the image will not boot. If it still refuses to boot, disable "
+"Secure Boot."
+msgstr ""
+
+#: content/docs/install-vm.md:21
+msgid ""
+"Each VM app puts the UEFI setting in a different place — here’s where to "
 "find it:"
 msgstr ""
 
-#: content/docs/install-vm.md:20
+#: content/docs/install-vm.md:24
 msgid "Oracle VirtualBox"
 msgstr ""
 
-#: content/docs/install-vm.md:22
+#: content/docs/install-vm.md:25
 msgid ""
-"In the wizard check the checkbox labeled *Enable EFI* when setting up the VM "
-"Hardware. (Or, from a terminal after the fact, run: `VBoxManage modifyvm "
-"\"<vm-name>\" --firmware efi`.)"
+"In the wizard, check the checkbox labeled *Enable EFI* when setting up the "
+"VM Hardware (Or, from a terminal after the fact, run: `VBoxManage modifyvm "
+"\"<vm-name>\" --firmware efi`)."
 msgstr ""
 
-#: content/docs/install-vm.md:25
+#: content/docs/install-vm.md:28
 msgid "Virtual Machine Manager (virt-manager)"
 msgstr ""
 
-#: content/docs/install-vm.md:27
+#: content/docs/install-vm.md:29
 msgid ""
 "On the last page of the wizard, check the checkbox labeled *Customize "
 "configuration before install*, then set *Overview > Firmware* to *UEFI* "
 "before clicking *Begin Installation*."
 msgstr ""
 
-#: content/docs/install-vm.md:30
+#: content/docs/install-vm.md:32
 msgid "QEMU"
 msgstr ""
 
-#: content/docs/install-vm.md:32
+#: content/docs/install-vm.md:33
 msgid ""
 "There is no wizard; you enable UEFI by pointing QEMU at OVMF firmware. Make "
 "a writable copy of the variables store and pass both pflash drives:"
 msgstr ""
 
-#: content/docs/install-vm.md:34
+#: content/docs/install-vm.md:35
 msgid ""
 "<pre>\n"
 "cp /usr/share/edk2/x64/OVMF_VARS.4m.fd ./OVMF_VARS.4m.fd\n"
@@ -1892,20 +1898,20 @@ msgid ""
 "</pre>\n"
 msgstr ""
 
-#: content/docs/install-vm.md:45
+#: content/docs/install-vm.md:46
 msgid ""
 "Drop the `-cdrom` line once the install is finished to boot from the disk. "
-"The OVMF path differs by host distro: Arch's `edk2-ovmf` package puts the "
+"The OVMF path differs by host distro: Arch’s `edk2-ovmf` package puts the "
 "files in `/usr/share/edk2/x64/`, while Debian/Ubuntu use `/usr/share/OVMF/`."
 msgstr ""
 
-#: content/docs/install-vm.md:48
+#: content/docs/install-vm.md:49
 msgid "XCP-ng"
 msgstr ""
 
 #: content/docs/install-vm.md:50
 msgid ""
-"Set the VM *Template* to *Generic Linux UEFI* when creating it. That is the "
+"Set the VM template to *Generic Linux UEFI* when creating it; that’s the "
 "UEFI toggle."
 msgstr ""
 
@@ -1913,12 +1919,12 @@ msgstr ""
 msgid "UTM (macOS)"
 msgstr ""
 
-#: content/docs/install-vm.md:55
+#: content/docs/install-vm.md:54
 msgid ""
-"Choose *Emulate*, **not** *Virtualize* — Apple's Virtualization framework is "
-"incompatible with the KDE Linux image. UTM's emulated Linux profile boots "
+"Choose *Emulate*, **not** *Virtualize* — Apple’s Virtualization framework is "
+"incompatible with the KDE Linux image. UTM’s emulated Linux profile boots "
 "via UEFI by default; if it does not boot, check that *UEFI Boot* is enabled "
-"in the VM's QEMU settings."
+"in the VM’s QEMU settings."
 msgstr ""
 
 #: content/docs/install.md:0
@@ -1939,50 +1945,46 @@ msgid ""
 msgstr ""
 
 #: content/docs/install.md:21
-msgid "&nbsp;"
-msgstr ""
-
-#: content/docs/install.md:23
 msgid ""
 "Looking for instructions for installing KDE Linux in a virtual machine? "
 "[Find them here.](install-vm)"
 msgstr ""
 
-#: content/docs/install.md:26
+#: content/docs/install.md:24
 msgid "Requirements"
 msgstr ""
 
-#: content/docs/install.md:27
+#: content/docs/install.md:25
 msgid "KDE Linux supports almost all PC desktops and laptops with:"
 msgstr ""
 
-#: content/docs/install.md:28
+#: content/docs/install.md:26
 msgid "UEFI firmware (this includes most sold in the last 15 years)"
 msgstr ""
 
-#: content/docs/install.md:29
+#: content/docs/install.md:27
 msgid "An AMD or Intel CPU"
 msgstr ""
 
-#: content/docs/install.md:30
+#: content/docs/install.md:28
 msgid "2 GB of memory"
 msgstr ""
 
-#: content/docs/install.md:31
+#: content/docs/install.md:29
 msgid "15 GB of storage space"
 msgstr ""
 
-#: content/docs/install.md:34
+#: content/docs/install.md:32
 msgid "Known hardware limitations"
 msgstr ""
 
-#: content/docs/install.md:35
+#: content/docs/install.md:33
 msgid ""
 "**ARM-based CPUs:** e.g. Apple “M”-series CPUs and Qualcomm Snapdragon CPUs: "
 "not supported yet."
 msgstr ""
 
-#: content/docs/install.md:36
+#: content/docs/install.md:34
 msgid ""
 "**NVIDIA graphics cards**: cards from the “Turing” series or later (e.g. GTX "
 "1630 or newer) work out of the box. Older cards are limited to the “Nouveau” "
@@ -1990,18 +1992,18 @@ msgid ""
 "nvidia))."
 msgstr ""
 
-#: content/docs/install.md:37
+#: content/docs/install.md:35
 msgid ""
 "**Broadcom wireless cards**: [cards listed here](https://wireless.docs."
 "kernel.org/en/latest/en/users/drivers/brcm80211.html#supported-chips) are "
 "supported out of the box. Other cards are not supported."
 msgstr ""
 
-#: content/docs/install.md:38
+#: content/docs/install.md:36
 msgid "**DisplayLink screens:** not supported. Display*Port* works fine."
 msgstr ""
 
-#: content/docs/install.md:39
+#: content/docs/install.md:37
 msgid ""
 "**Printers:** Most modern “driverless” and wireless printers made in the "
 "last 10 years or so — including [all listed here](https://openprinting."
@@ -2012,11 +2014,11 @@ msgid ""
 "%20compatibility&label_name[]=Printers%20🔨)."
 msgstr ""
 
-#: content/docs/install.md:42
+#: content/docs/install.md:40
 msgid "Known software issues"
 msgstr ""
 
-#: content/docs/install.md:43
+#: content/docs/install.md:41
 msgid ""
 "See the items on the [list of significant limitations and known issues]"
 "(https://invent.kde.org/groups/kde-linux/-/issues?"
@@ -2025,24 +2027,24 @@ msgid ""
 "%20compatibility&first_page_size=100)."
 msgstr ""
 
-#: content/docs/install.md:45
+#: content/docs/install.md:43
 msgid ""
 "Ultimately the best way to determine KDE Linux’s suitability for your needs "
 "and hardware is to create a live USB drive and preview it on your own "
 "computer, with no risk to what’s already on it."
 msgstr ""
 
-#: content/docs/install.md:48
+#: content/docs/install.md:46
 msgid "1. Create a live USB drive"
 msgstr ""
 
-#: content/docs/install.md:49
+#: content/docs/install.md:47
 msgid ""
 "Download the latest `.iso` image from [here](https://files.kde.org/kde-"
 "linux/?C=M;O=D)."
 msgstr ""
 
-#: content/docs/install.md:50
+#: content/docs/install.md:48
 msgid ""
 "Verify that the `.iso` file is genuine: visit https://files.kde.org/kde-"
 "linux/?C=M;O=D and click *Details* for the .iso file you downloaded. Copy "
@@ -2055,105 +2057,105 @@ msgid ""
 "download again."
 msgstr ""
 
-#: content/docs/install.md:51
+#: content/docs/install.md:49
 #, fuzzy
 #| msgid ""
 #| "You can install any of these Linux distributions by using [KDE ISO Image "
 #| "Writer](https://apps.kde.org/isoimagewriter/)."
 msgid ""
-"If the file is genuine, install [ISO Image Writer](https://apps.kde.org/"
-"isoimagewriter/) and launch it."
+"If the file is genuine, install [*ISO Image Writer*](appstream://org.kde."
+"isoimagewriter.desktop) and launch it."
 msgstr ""
 "Vi povas instali iajn el tiuj Linuks-eldonoj uzante [KDE ISO Image Writer "
 "Writer](https://apps.kde.org/isoimagewriter/)."
 
-#: content/docs/install.md:52
+#: content/docs/install.md:50
 msgid "Click “Path to ISO Image…” and locate the `.iso` file you downloaded."
 msgstr ""
 
-#: content/docs/install.md:53
+#: content/docs/install.md:51
 msgid ""
 "Plug in the USB flash drive and ensure it appears in the “To this USB Drive” "
 "area."
 msgstr ""
 
-#: content/docs/install.md:54
+#: content/docs/install.md:52
 msgid "Click “Create”."
 msgstr ""
 
-#: content/docs/install.md:57
+#: content/docs/install.md:55
 msgid "2. Prepare the target computer"
 msgstr ""
 
-#: content/docs/install.md:58
+#: content/docs/install.md:56
 msgid ""
 "Ensure that Secure Boot is disabled. If it isn’t, or you don’t know whether "
 "it is or not, enter the computer’s UEFI interface and disable it. Here’s how:"
 msgstr ""
 
-#: content/docs/install.md:60
+#: content/docs/install.md:58
 msgid ""
 "First, consult [the table here](https://forums.malwarebytes.com/topic/319165-"
 "pc-common-boot-menu-and-bios-setting-hotkeys/) and find the correct keyboard "
 "key under the “BIOS/UEFI Key” column for your brand of computer."
 msgstr ""
 
-#: content/docs/install.md:61
+#: content/docs/install.md:59
 msgid ""
 "To enter the UEFI interface, reboot the computer and repeatedly press that "
 "key while it starts up."
 msgstr ""
 
-#: content/docs/install.md:62
+#: content/docs/install.md:60
 msgid ""
 "Once you’re in the UEFI interface (you’ll know because it looks very ugly), "
 "find where it lets you turn off Secure Boot and turn it off. This is "
 "different for every UEFI implementation, so you may need to dig around a bit."
 msgstr ""
 
-#: content/docs/install.md:63
+#: content/docs/install.md:61
 msgid ""
 "Once you’ve turned off Secure Boot, find the “Exit and save changes” option, "
 "and use it."
 msgstr ""
 
-#: content/docs/install.md:65
+#: content/docs/install.md:63
 msgid ""
 "This requirement will go away in the future once [KDE Linux supports Secure "
 "Boot](https://invent.kde.org/kde-linux/kde-linux/-/issues/3)."
 msgstr ""
 
-#: content/docs/install.md:68
+#: content/docs/install.md:66
 msgid "3. Boot into the live USB drive"
 msgstr ""
 
-#: content/docs/install.md:69
+#: content/docs/install.md:67
 msgid "Plug in the USB drive."
 msgstr ""
 
-#: content/docs/install.md:70
+#: content/docs/install.md:68
 msgid ""
 "Consult [the table here](https://forums.malwarebytes.com/topic/319165-pc-"
 "common-boot-menu-and-bios-setting-hotkeys/) and note down the keyboard key "
 "under the “Boot Menu Key” column for your brand of computer."
 msgstr ""
 
-#: content/docs/install.md:71
+#: content/docs/install.md:69
 msgid "Reboot the computer and repeatedly press that key while it starts up."
 msgstr ""
 
-#: content/docs/install.md:72
+#: content/docs/install.md:70
 msgid ""
 "When the boot menu appears, use the Up or Down arrow keys to select the "
 "entry that looks like it describes your USB flash drive, and then press "
 "Enter."
 msgstr ""
 
-#: content/docs/install.md:75
+#: content/docs/install.md:73
 msgid "4. Explore the live session and install KDE Linux"
 msgstr ""
 
-#: content/docs/install.md:76
+#: content/docs/install.md:74
 msgid ""
 "Now you’re in the “Live Session” of KDE Linux! This lets you see what it "
 "will be like if you choose to install it. Go through the welcome wizard and "
@@ -2161,7 +2163,7 @@ msgid ""
 "typically-used devices and make sure they function properly."
 msgstr ""
 
-#: content/docs/install.md:78
+#: content/docs/install.md:76
 msgid ""
 "Once you’re ready to install, double-click on the “Install KDE Linux” icon "
 "on the desktop and go through the installer. Installing KDE Linux to the "
@@ -2172,18 +2174,18 @@ msgid ""
 "recommended**."
 msgstr ""
 
-#: content/docs/install.md:80
+#: content/docs/install.md:78
 msgid ""
 "WARNING: if you choose to erase the computer’s hard disk, all of the files "
 "and data on it will be erased too. Make sure anything you care about is "
 "backed up somewhere!"
 msgstr ""
 
-#: content/docs/install.md:83
+#: content/docs/install.md:81
 msgid "5. Enjoy KDE Linux"
 msgstr ""
 
-#: content/docs/install.md:84
+#: content/docs/install.md:82
 msgid "We hope you love it!"
 msgstr ""
 
@@ -2676,20 +2678,16 @@ msgid ""
 msgstr ""
 
 #: content/docs/kernel-cmdline.md:19
-msgid "<br/>\n"
-msgstr ""
-
-#: content/docs/kernel-cmdline.md:21
 msgid "If you’d like to proceed, here’s how:"
 msgstr ""
 
-#: content/docs/kernel-cmdline.md:23
+#: content/docs/kernel-cmdline.md:21
 msgid ""
 "Create the folder <tt>/boot/loader/addons/</tt> (only needs to be done once "
 "per system):<br/> <code>run0 mkdir -p /boot/loader/addons/</code>"
 msgstr ""
 
-#: content/docs/kernel-cmdline.md:26
+#: content/docs/kernel-cmdline.md:24
 msgid ""
 "Create a kernel add-on containing the desired command-line arguments:<br/> "
 "<code>run0 ukify build --cmdline '[arguments go here]' --output /boot/loader/"
@@ -2698,21 +2696,21 @@ msgid ""
 "<code>debug_objects</code>"
 msgstr ""
 
-#: content/docs/kernel-cmdline.md:30
+#: content/docs/kernel-cmdline.md:28
 msgid ""
 "This add-on will then apply the additional kernel arguments for every boot, "
 "irrespective of which OS version the system is booted into."
 msgstr ""
 
-#: content/docs/kernel-cmdline.md:32
+#: content/docs/kernel-cmdline.md:30
 msgid "If the add-on causes problems or is no longer needed, simply delete it:"
 msgstr ""
 
-#: content/docs/kernel-cmdline.md:34
+#: content/docs/kernel-cmdline.md:32
 msgid "<code>run0 rm /boot/loader/addons/extra_args.addon.efi</code>"
 msgstr ""
 
-#: content/docs/kernel-cmdline.md:38
+#: content/docs/kernel-cmdline.md:36
 msgid ""
 "A full list of supported command-line options [can be found here](https://"
 "www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html)."
@@ -4297,8 +4295,8 @@ msgstr ""
 msgid ""
 "From another system on the same network, install an RDP client app. To fine "
 "some, search for “RDP client” in the other system’s app store/software "
-"manager. [KDE makes one called *KRDC*](https://apps.kde.org/krdc/), but "
-"others should work as well."
+"manager. [KDE makes one called *KRDC*](appstream://org.kde.krdc.desktop), "
+"but others should work as well."
 msgstr ""
 
 #: content/docs/remote-login.md:30
@@ -4526,7 +4524,7 @@ msgstr ""
 msgid ""
 "Discover will notify you when updates are available; just click the "
 "notification to launch Discover and see what’s available. On Discover’s "
-"Updates page, click “Update All” when you’re ready to update."
+"Updates page, click *Update All* when you’re ready to update."
 msgstr ""
 
 #: content/docs/updates.md:19
@@ -4568,10 +4566,24 @@ msgstr ""
 
 #: content/docs/updates.md:33
 msgid ""
-"If updates fail between 30% and 40% with “Input/output error”, wait an hour "
-"or two and try again. This is likely to be a [known issue](https://invent."
-"kde.org/kde-linux/kde-linux/-/issues/304) related to updates being "
-"advertised as available before all update servers have fully synced."
+"If updates fail between 30% and 40% with “Input/output error” or “Invalid "
+"argument”, this is likely to be a [known issue](https://invent.kde.org/kde-"
+"linux/kde-linux/-/issues/304) related to updates being advertised as "
+"available before all update servers have fully synced."
+msgstr ""
+
+#: content/docs/updates.md:35
+msgid "Options for working around the issue include:"
+msgstr ""
+
+#: content/docs/updates.md:36
+msgid "Wait an hour or two."
+msgstr ""
+
+#: content/docs/updates.md:37
+msgid ""
+"Set `KDE_LINUX_SYSUPDATED_ENABLE_STORE=1` somewhere in the environment (for "
+"example in the `/etc/environment` file), and then restart."
 msgstr ""
 
 #: content/docs/ventoy.md:0
