@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 02:08+0000\n"
+"POT-Creation-Date: 2026-07-26 02:08+0000\n"
 "PO-Revision-Date: 2025-02-15 14:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -764,46 +764,50 @@ msgid "[Develop KDE Linux](kde-linux-dev)"
 msgstr ""
 
 #: content/docs.md:67
+msgid "[Test changes to KDE Linux with openQA](openqa)"
+msgstr ""
+
+#: content/docs.md:68
 msgid ""
 "<!-- * Develop general-purpose GPU software using OpenCL/CUDA/etc. (coming "
 "soon) -->\n"
 msgstr ""
 
-#: content/docs.md:70
+#: content/docs.md:71
 msgid "Troubleshooting & debugging"
 msgstr ""
 
-#: content/docs.md:71
+#: content/docs.md:72
 msgid "[Recover from a failure to start up properly](boot-failure-recovery)"
 msgstr ""
 
-#: content/docs.md:72
+#: content/docs.md:73
 msgid "[Set additional kernel command-line arguments](kernel-cmdline)"
 msgstr ""
 
-#: content/docs.md:73
+#: content/docs.md:74
 msgid "[Debug crashes in Flatpak apps](flatpak-crashes)"
 msgstr ""
 
-#: content/docs.md:74
+#: content/docs.md:75
 msgid "[Migrate older installations](migrate-older)"
 msgstr ""
 
-#: content/docs.md:77
+#: content/docs.md:78
 #, fuzzy
 #| msgid "Installation Instructions"
 msgid "Learn about KDE Linux"
 msgstr "Instrukcioj pri Instalado"
 
-#: content/docs.md:78
+#: content/docs.md:79
 msgid "[History & architecture](background)"
 msgstr ""
 
-#: content/docs.md:79
+#: content/docs.md:80
 msgid "[Governance](governance)"
 msgstr ""
 
-#: content/docs.md:80
+#: content/docs.md:81
 msgid "[Roadmap & lifecycle](roadmap)"
 msgstr ""
 
@@ -819,7 +823,8 @@ msgid ""
 "center app, or using the <code>flatpak</code> command-line tool."
 msgstr ""
 
-#: content/docs/apps-and-games.md:14 content/docs/updates.md:14
+#: content/docs/apps-and-games.md:14 content/docs/cjkv-input.md:52
+#: content/docs/updates.md:14
 msgid "Graphical"
 msgstr ""
 
@@ -840,7 +845,8 @@ msgid ""
 "a>, which can be used to get even more games."
 msgstr ""
 
-#: content/docs/apps-and-games.md:20 content/docs/updates.md:22
+#: content/docs/apps-and-games.md:20 content/docs/cjkv-input.md:69
+#: content/docs/updates.md:22
 msgid "Command-line"
 msgstr ""
 
@@ -1596,6 +1602,110 @@ msgid ""
 "<kbd>Ctrl</kbd>+<kbd>Space</kbd> while a text field is focused, or click the "
 "symbol for the active input method in the *System Tray*. Do the same thing a "
 "second time to return to using the input method."
+msgstr ""
+
+#: content/docs/cjkv-input.md:47
+msgid "Fixing compatibility issues"
+msgstr ""
+
+#: content/docs/cjkv-input.md:48
+msgid ""
+"Fcitx 5 works with almost all applications. However, manual steps may be "
+"needed to make it work with older software using the XWayland compatibility "
+"layer, such as Steam, Krita, and JetBrains IDEs."
+msgstr ""
+
+#: content/docs/cjkv-input.md:50
+msgid ""
+"Such apps need special *environment variables* set in order to use Fcitx. "
+"Here’s how to do this for an app in which Fcitx 5 isn’t working:"
+msgstr ""
+
+#: content/docs/cjkv-input.md:53
+#, fuzzy
+#| msgid "System Settings"
+msgid "Launch *System Settings*."
+msgstr "Sistemaj Agordoj"
+
+#: content/docs/cjkv-input.md:54
+msgid ""
+"In the sidebar on the left, scroll down and navigate to *Application "
+"Permissions*."
+msgstr ""
+
+#: content/docs/cjkv-input.md:55
+msgid "Select the app for which Fcitx 5 isn’t working."
+msgstr ""
+
+#: content/docs/cjkv-input.md:56
+msgid "Click “Flatpak Settings” in the top-right corner."
+msgstr ""
+
+#: content/docs/cjkv-input.md:57
+msgid ""
+"Scroll down and click the arrow next to the section header text “Advanced "
+"Permissions”."
+msgstr ""
+
+#: content/docs/cjkv-input.md:58
+msgid "Scroll down to the “Environment” group."
+msgstr ""
+
+#: content/docs/cjkv-input.md:59
+msgid "Click the “Add New…” button."
+msgstr ""
+
+#: content/docs/cjkv-input.md:60
+msgid "In the “Name” field, enter `XMODIFIERS`."
+msgstr ""
+
+#: content/docs/cjkv-input.md:61
+msgid "In the “Value” field, enter `@im=fcitx`."
+msgstr ""
+
+#: content/docs/cjkv-input.md:63
+msgid ""
+"Now repeat steps 7-9 for the following additional environment variables:"
+msgstr ""
+
+#: content/docs/cjkv-input.md:64
+msgid "name: `GTK_IM_MODULE`; value: `xim`"
+msgstr ""
+
+#: content/docs/cjkv-input.md:65
+msgid "name: `QT_IM_MODULE`; value: `xim`"
+msgstr ""
+
+#: content/docs/cjkv-input.md:66
+msgid "name: `QT_IM_MODULES`; value: `wayland;fcitx;ibus`"
+msgstr ""
+
+#: content/docs/cjkv-input.md:70
+msgid ""
+"Find the ID of the app you want to add environment variables to using "
+"<code>flatpak list</code> or *System Settings* > *Application Permissions* > "
+"[the app] > *Flatpak Settings* in the top-right corner > [In the right-most "
+"column, find the ID under its name]."
+msgstr ""
+
+#: content/docs/cjkv-input.md:72
+msgid "Then apply the necessary overrides:"
+msgstr ""
+
+#: content/docs/cjkv-input.md:74
+msgid ""
+"<pre>\n"
+"flatpak override --env=XMODIFIERS=@im=fcitx [app id]\n"
+"flatpak override --env=GTK_IM_MODULE=xim [app id]\n"
+"flatpak override --env=QT_IM_MODULE=xim [app id]\n"
+"flatpak override --env=QT_IM_MODULES='wayland;fcitx;ibus' [app id]\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/cjkv-input.md:81
+msgid ""
+"(replace `[app id]` with the actual ID of the app, e.g. `com.valvesoftware."
+"Steam`)"
 msgstr ""
 
 #: content/docs/dev.md:0
@@ -2708,6 +2818,28 @@ msgid ""
 "For a more permanent setup or instructions on using other virtualization "
 "tools like VirtualBox or UTM, refer to the [Installing in a Virtual Machine]"
 "(./install-vm.md) guide."
+msgstr ""
+
+#: content/docs/kde-linux-dev.md:91
+msgid "Testing Changes with openQA"
+msgstr ""
+
+#: content/docs/kde-linux-dev.md:93
+msgid ""
+"KDE Linux uses an automated openQA test suite to test system images before "
+"they are published. The suite boots images in virtual machines and exercises "
+"essential workflows, including installing a new system, upgrading an "
+"existing one, and testing the functionality of the installed system. This "
+"helps catch regressions that may not be apparent when testing a local build "
+"manually."
+msgstr ""
+
+#: content/docs/kde-linux-dev.md:95
+msgid ""
+"If your change affects image building, installation, updates, system "
+"services, or the desktop environment, consider whether the automated tests "
+"need to cover it. See [openQA for Developers](./openqa.md) to learn how to "
+"write tests for it."
 msgstr ""
 
 #: content/docs/kernel-cmdline.md:0
@@ -4027,6 +4159,415 @@ msgstr ""
 
 #: content/docs/nix.md:154
 msgid "[Nix forums](https://discourse.nixos.org)"
+msgstr ""
+
+#: content/docs/openqa.md:0
+msgid "openQA for Developers and Maintainers"
+msgstr ""
+
+#: content/docs/openqa.md:11
+msgid ""
+"KDE Linux uses [openQA](https://open.qa/) to automatically test every system "
+"image before it is published. openQA boots each image in a virtual machine "
+"and checks that it can be installed, upgraded, and used successfully."
+msgstr ""
+
+#: content/docs/openqa.md:13
+msgid ""
+"openQA has some specific terminology: a *job* is one execution of a test "
+"suite against an image, while a *worker* is the machine or container that "
+"runs the job. The [openQA documentation](https://open.qa/docs/) explains "
+"these and other concepts, including test modules, job groups, assets, and "
+"the web UI."
+msgstr ""
+
+#: content/docs/openqa.md:15
+msgid "How the tests work"
+msgstr ""
+
+#: content/docs/openqa.md:17
+msgid ""
+"The test worker runs alongside the CI pipeline, so it can use the images and "
+"virtual disks produced by the build without uploading those large files "
+"elsewhere. Tests are supplied to the virtual machine through a system "
+"extension and communicate with it over SSH."
+msgstr ""
+
+#: content/docs/openqa.md:19
+msgid ""
+"Desktop tests use the accessibility API through `selenium-webdriver-at-spi`, "
+"allowing them to interact with applications and check their state without "
+"relying solely on screenshot matching. The suite also checks for failed "
+"system services, crashed desktop processes, networking problems, and "
+"regressions in KDE Linux commands."
+msgstr ""
+
+#: content/docs/openqa.md:21
+msgid "CI pipeline and maintainer workflow"
+msgstr ""
+
+#: content/docs/openqa.md:23
+msgid ""
+"On the protected default branch of the upstream [KDE Linux repository]"
+"(https://invent.kde.org/kde-linux/kde-linux), the pipeline works as follows:"
+msgstr ""
+
+#: content/docs/openqa.md:25
+msgid ""
+"The *imaging* job builds, signs, and stages the image and its sysupdate "
+"channel on `storage.kde.org`."
+msgstr ""
+
+#: content/docs/openqa.md:26
+msgid ""
+"The *trigger-openqa* job starts the pipeline in [os-autoinst-distri-kdelinux]"
+"(https://invent.kde.org/kde-linux/os-autoinst-distri-kdelinux), passing the "
+"staged image URL and sysupdate channel URL to it."
+msgstr ""
+
+#: content/docs/openqa.md:27
+msgid ""
+"The downstream pipeline runs the normal install-and-sanity flow and the "
+"upgrade flow."
+msgstr ""
+
+#: content/docs/openqa.md:28
+msgid ""
+"The upstream *publish* job runs only after the openQA pipeline has "
+"succeeded. It promotes the already-staged image for public consumption."
+msgstr ""
+
+#: content/docs/openqa.md:30
+msgid ""
+"This makes an openQA failure a gate for image publish. Start by opening the "
+"downstream pipeline from the `trigger-openqa` job, then open the failing "
+"openQA job from its CI log. The job page shows the test modules in order and "
+"lets you identify whether the failure is in installation, the installed-"
+"system sanity tests, or the upgrade path."
+msgstr ""
+
+#: content/docs/openqa.md:32
+msgid "Download a staged image"
+msgstr ""
+
+#: content/docs/openqa.md:34
+msgid ""
+"The link provided after the log message *“In case of failure, you can "
+"inspect and download the .iso image and sysupdate tree at…”* opens a storage "
+"browser for the build under test. Download the <code>.iso</code> there to "
+"boot it manually or give it to a local openQA stack. The <code>sysupdate</"
+"code> tree contains the staged update artifacts used by the upgrade test."
+msgstr ""
+
+#: content/docs/openqa.md:36
+msgid "Investigate a failed job"
+msgstr ""
+
+#: content/docs/openqa.md:38
+msgid ""
+"Open the job in the openQA web UI and select the failed module first. The "
+"link to the web UI will appear after the *“<name> test job is now running.”* "
+"log message. Its details include the module result, screenshots or video "
+"where applicable, and diagnostic output. In the *Logs & Assets* tab, "
+"download or view `autoinst-log.txt` for the openQA worker and test-engine "
+"log. This is the primary log for the job itself."
+msgstr ""
+
+#: content/docs/openqa.md:40
+msgid ""
+"For tests that execute commands on the system under test, KDE Linux runs "
+"them in transient systemd services and records the service journal as "
+"diagnostic output in the test result. Inspect `autoinst-log.txt` for the "
+"command output and journal. You can also download the <code>*kde-linux-"
+"collected-logs.tar.zst</code> file for logs captured by the <code>collect-"
+"logs</code> tool."
+msgstr ""
+
+#: content/docs/openqa.md:42
+msgid "Run tests locally"
+msgstr ""
+
+#: content/docs/openqa.md:44
+msgid ""
+"You can use openQA to test a locally built image before submitting a change. "
+"This is required when working from a fork outside `kde-linux/kde-linux` - "
+"its CI pipeline builds a test image, but does not trigger the openQA "
+"pipeline. It is also useful while developing tests for your own changes."
+msgstr ""
+
+#: content/docs/openqa.md:46
+msgid ""
+"The [KDE Linux openQA test repository](https://invent.kde.org/kde-linux/os-"
+"autoinst-distri-kdelinux) includes a local stack containing both an openQA "
+"web UI and a worker. It requires Podman and `podman-compose`, which are "
+"included in KDE Linux."
+msgstr ""
+
+#: content/docs/openqa.md:48
+msgid ""
+"Clone the test repository, then place the KDE Linux <code>.iso</code> image "
+"you want to test in its root directory. If no image is present, the test "
+"runner downloads the latest publicly available image instead."
+msgstr ""
+
+#: content/docs/openqa.md:50
+msgid "Start the local stack."
+msgstr ""
+
+#: content/docs/openqa.md:52
+msgid ""
+"<pre>\n"
+"./mock.sh up\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:56
+msgid ""
+"Once it is ready, open <code>http://localhost:1080</code> to inspect the "
+"openQA web UI. Jobs are not submitted automatically, so, open a shell in the "
+"container and submit the normal install and sanity-test flow."
+msgstr ""
+
+#: content/docs/openqa.md:58
+msgid ""
+"<pre>\n"
+"podman exec -it openqa-single-instance bash\n"
+"bash utils/jobs.sh\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:63
+msgid "To run the upgrade flow instead, add <code>--upgrade</code>:"
+msgstr ""
+
+#: content/docs/openqa.md:65
+msgid ""
+"<pre>\n"
+"bash utils/jobs.sh --upgrade\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:69
+msgid ""
+"To run the disk-encryption install-test flow, add <code>--encrypt</code>:"
+msgstr ""
+
+#: content/docs/openqa.md:71
+msgid ""
+"<pre>\n"
+"bash utils/jobs.sh --encrypt\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:75
+msgid ""
+"You can also combine <code>--upgrade</code> and <code>--encrypt</code> "
+"options:"
+msgstr ""
+
+#: content/docs/openqa.md:77
+msgid ""
+"<pre>\n"
+"bash utils/jobs.sh --upgrade --encrypt\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:81
+msgid ""
+"The `sanity-test` job needs the `install-system` job to run first because it "
+"uses the virtual disk created by the installation. To concentrate on a "
+"particular test, adjust the submitted jobs in <code>utils/jobs.sh</code> "
+"while keeping that dependency in mind."
+msgstr ""
+
+#: content/docs/openqa.md:83
+msgid "When you are finished, stop the stack and remove its local volumes."
+msgstr ""
+
+#: content/docs/openqa.md:85
+msgid ""
+"<pre>\n"
+"./mock.sh down -v\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:89
+#, fuzzy
+#| msgid "Minetest"
+msgid "Write a test"
+msgstr "Minetest"
+
+#: content/docs/openqa.md:91
+msgid ""
+"The test definitions and the test code live in [os-autoinst-distri-kdelinux]"
+"(https://invent.kde.org/kde-linux/os-autoinst-distri-kdelinux). Add the test "
+"to the appropriate flow in `main.pm` - the live-install flow, installed-"
+"system sanity flow, or upgrade flow. Tests are generally composed of a small "
+"openQA wrapper in `tests/` and a Python test that runs on the system under "
+"test from `extensions/openqa/usr/lib/kde-linux-openqa/tests/`."
+msgstr ""
+
+#: content/docs/openqa.md:93
+msgid "Choose the test type based on what you are checking:"
+msgstr ""
+
+#: content/docs/openqa.md:95
+msgid ""
+"Use a normal Python `unittest` for command-line tools, services, filesystem "
+"state, or other non-graphical behaviour."
+msgstr ""
+
+#: content/docs/openqa.md:96
+msgid ""
+"Use Selenium through `selenium-webdriver-at-spi` when the behaviour requires "
+"interacting with a graphical application."
+msgstr ""
+
+#: content/docs/openqa.md:98
+msgid "Normal Python tests"
+msgstr ""
+
+#: content/docs/openqa.md:100
+msgid ""
+"Create a `unittest` in the aforementioned system extension test directory. "
+"It should make assertions about the system under test and write its results "
+"to a JUnit XML file, which will be automatically collected as an openQA "
+"asset and a GitLab CI report."
+msgstr ""
+
+#: content/docs/openqa.md:102
+msgid ""
+"<pre>\n"
+"import unittest\n"
+"from lib.sut import openqa_junit_xml\n"
+"\n"
+"class ExampleTests(unittest.TestCase):\n"
+"    def test_expected_behaviour(self):\n"
+"        self.assertTrue(True)\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    openqa_junit_xml.run(ExampleTests, \"example\")\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:114
+msgid ""
+"Create a matching wrapper under `tests/` that gets openQA to execute the "
+"test on the host."
+msgstr ""
+
+#: content/docs/openqa.md:116
+msgid ""
+"<pre>\n"
+"from testapi import *\n"
+"from lib.openqa import cli_test\n"
+"\n"
+"def run(self):\n"
+"    cli_test.CliTest(\"example\").run_python()\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:124
+msgid ""
+"Finally, register the wrapper in the relevant flow in `main.pm`. The wrapper "
+"collects the JUnit result and command output so that failures appear in the "
+"openQA job and CI artifacts."
+msgstr ""
+
+#: content/docs/openqa.md:126
+msgid "Graphical tests with Selenium"
+msgstr ""
+
+#: content/docs/openqa.md:128
+msgid ""
+"Graphical tests are also Python `unittest` classes, but use the Appium/"
+"Selenium driver to find and interact with accessible UI elements. The "
+"Selenium runner enables the accessibility infrastructure and starts the "
+"driver for you."
+msgstr ""
+
+#: content/docs/openqa.md:130
+msgid ""
+"For example, a graphical test creates a driver for its application, "
+"interacts with accessible elements, and closes the driver afterwards:"
+msgstr ""
+
+#: content/docs/openqa.md:132
+msgid ""
+"<pre>\n"
+"import unittest\n"
+"from appium import webdriver\n"
+"from appium.options.common.base import AppiumOptions\n"
+"from appium.webdriver.common.appiumby import AppiumBy\n"
+"from lib.sut import openqa_junit_xml\n"
+"\n"
+"class ExampleTests(unittest.TestCase):\n"
+"    @classmethod\n"
+"    def setUpClass(cls):\n"
+"        options = AppiumOptions()\n"
+"        options.set_capability(\"app\", \"org.kde.example.desktop\")\n"
+"        cls.driver = webdriver.Remote(\"http://127.0.0.1:4723\", "
+"options=options)\n"
+"\n"
+"    @classmethod\n"
+"    def tearDownClass(cls):\n"
+"        cls.driver.quit()\n"
+"\n"
+"    def test_expected_behaviour(self):\n"
+"        self.driver.find_element(AppiumBy.ACCESSIBILITY_ID, \"example-control"
+"\").click()\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    openqa_junit_xml.run(ExampleTests, \"example\")\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:157
+msgid ""
+"Run the matching wrapper with `run_selenium()` instead of `run_python()`. "
+"Pass the installed test user for desktop applications:"
+msgstr ""
+
+#: content/docs/openqa.md:159
+msgid ""
+"<pre>\n"
+"from testapi import *\n"
+"from lib.openqa import cli_test\n"
+"from lib import user_manager\n"
+"\n"
+"def run(self):\n"
+"    cli_test.CliTest(\"example\").run_selenium(user=user_manager."
+"installed())\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:168
+msgid ""
+"Similarly to normal Python tests, add its wrapper to `main.pm`, run it "
+"locally while developing it, and include it in the test flow that exercises "
+"the feature."
+msgstr ""
+
+#: content/docs/openqa.md:170
+msgid ""
+"For more information on writing Selenium tests, see [Appium automation "
+"testing](https://develop.kde.org/docs/apps/tests/appium/) and [GUI Testing "
+"with selenium-webdriver-at-spi](https://community.kde.org/Selenium)."
+msgstr ""
+
+#: content/docs/openqa.md:172
+#, fuzzy
+#| msgid "Learn More"
+msgid "Learn more"
+msgstr "Lerni pli"
+
+#: content/docs/openqa.md:174
+msgid ""
+"For a more detailed explanation of the test flow and its implementation, see "
+"[openQA Testing in KDE Linux](https://blogs.kde.org/2026/07/13/openqa-"
+"testing-in-kde-linux/). The test infrastructure is developed in the [os-"
+"autoinst-distri-kdelinux repository](https://invent.kde.org/kde-linux/os-"
+"autoinst-distri-kdelinux)."
 msgstr ""
 
 #: content/docs/override-usr.md:0
@@ -7346,9 +7887,6 @@ msgstr ""
 #~ msgid "From $895"
 #~ msgstr "De $1895"
 
-#~ msgid "Learn More"
-#~ msgstr "Lerni pli"
-
 #~ msgid "TUXEDO Computers"
 #~ msgstr "TUXEDO Komputiloj"
 
@@ -8677,6 +9215,3 @@ msgstr ""
 
 #~ msgid "1.86 kg"
 #~ msgstr "1.86 kg"
-
-#~ msgid "Minetest"
-#~ msgstr "Minetest"
