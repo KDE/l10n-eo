@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 02:12+0000\n"
+"POT-Creation-Date: 2026-08-08 02:09+0000\n"
 "PO-Revision-Date: 2025-02-15 14:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -940,11 +940,13 @@ msgstr ""
 
 #: content/docs/background.md:14
 msgid ""
-"Veteran KDE developer Harald Sitter began working on KDE Linux in early "
-"2023, and revealed its working prototype at Akademy 2024 ([slides](https://"
-"conf.kde.org/event/6/contributions/202/attachments/135/171/The%20Operating"
-"%20System.pdf), [recording](http://www.youtube.com/live/gTxRaBEUe-I?"
-"t=25936))."
+"KDE Linux was conceived by a cabal of core KDE contributors in the offices "
+"of [Tuxedo Computers](https://www.tuxedocomputers.com) during the early 2023 "
+"Plasma sprint in Augsburg, Germany. One of them — veteran KDE developer "
+"Harald Sitter — built and began refining a prototype, revealing it publicly "
+"during Akademy 2024 ([slides](https://conf.kde.org/event/6/contributions/202/"
+"attachments/135/171/The%20Operating%20System.pdf), [recording](http://www."
+"youtube.com/live/gTxRaBEUe-I?t=25936))."
 msgstr ""
 
 #: content/docs/background.md:16
@@ -960,14 +962,18 @@ msgid "Architecture"
 msgstr ""
 
 #: content/docs/background.md:20
+msgid "Design"
+msgstr ""
+
+#: content/docs/background.md:21
 msgid ""
 "KDE Linux incorporates lessons learned from the earlier [KDE neon](https://"
-"neon.kde.org/) project, and focuses on resilience, modern technical "
-"infrastructure, and low maintenance needs. KDE Linux’s design is heavily "
-"inspired by systemd creator Lennart Poettering’s thoughts on [operating "
-"system (OS) design](https://0pointer.net/blog/fitting-everything-together."
-"html) and [system extensions](https://0pointer.net/blog/testing-my-system-"
-"code-in-usr-without-modifying-usr.html)."
+"neon.kde.org/) project, and focuses on resilience, recoverability, user-"
+"friendliness, and low maintenance needs. The design is heavily inspired by "
+"systemd creator Lennart Poettering’s thoughts on [operating system (OS) "
+"design](https://0pointer.net/blog/fitting-everything-together.html) and "
+"[system extensions](https://0pointer.net/blog/testing-my-system-code-in-usr-"
+"without-modifying-usr.html)."
 msgstr ""
 
 #: content/docs/background.md:23
@@ -981,9 +987,53 @@ msgstr ""
 msgid ""
 "Sometimes this model is called “immutable” because the base OS cannot be "
 "modified in the same way a traditional OS made of packages could. However, "
-"this terminology can be misleading; in KDE Linux, only `/usr` is provided in "
-"the form of a read-only image, and everything else on the system is "
-"modifiable like on any other Linux-based OS."
+"this terminology can be misleading; in KDE Linux, only <tt>/usr</tt> is "
+"provided in the form of a read-only image, and everything else on the system "
+"is modifiable like on any other Linux-based OS. And [<tt>/usr</tt> is "
+"modifiable through the use of systemd extensions](override-usr)."
+msgstr ""
+
+#: content/docs/background.md:28
+msgid "High-level implementation"
+msgstr ""
+
+#: content/docs/background.md:29
+msgid ""
+"The bootable image is an ISO-compatible <code>.raw</code> disk image built "
+"using <code>mkosi</code>. The base system comes from Arch Linux packages, "
+"with most KDE content built using <code>kde-builder</code>. Some KDE apps "
+"and 3rd-party apps are pre-installed Flatpaks."
+msgstr ""
+
+#: content/docs/background.md:31
+msgid ""
+"The OS is image-based, with <tt>/usr</tt> being a mounted EROFS image/"
+"filesystem. Updating the system entails downloading a new one of these and "
+"its companion unified kernel image."
+msgstr ""
+
+#: content/docs/background.md:33
+msgid ""
+"Everything else on <tt>/</tt> is writable. A small helper program updates "
+"<tt>/etc</tt> from the content in <tt>/usr/share/factory/etc</tt> in the "
+"active OS image for anything you haven’t changed yourself. Btrfs snapshots "
+"of <tt>/etc</tt> are generated automatically."
+msgstr ""
+
+#: content/docs/background.md:35
+msgid "<tt>/home</tt> is a btrfs subvolume."
+msgstr ""
+
+#: content/docs/background.md:37
+msgid ""
+"User-facing apps shown in Discover come from [Flathub](https://flathub.org)."
+msgstr ""
+
+#: content/docs/background.md:39
+msgid ""
+"[Multiple methods](more-software) can be used to install software that’s not "
+"available as a Flatpak app. This is an evolving topic that’s likely to "
+"change over time."
 msgstr ""
 
 #: content/docs/backup.md:0
