@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-24 02:08+0000\n"
+"POT-Creation-Date: 2026-08-25 02:19+0000\n"
 "PO-Revision-Date: 2025-02-15 14:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -400,7 +400,7 @@ msgid ""
 "      <li>Potentially more limited support for arbitrary hardware</li>\n"
 "      <li>No included CLI package manager</li>\n"
 "    </ul>\n"
-"    {{< alert color=\"success\" icon=\"tip\" >}}\n"
+"    {{< alert color=\"info\" icon=\"tip\" >}}\n"
 "KDE Linux is an opinionated image-based operating system. If you know what "
 "these terms mean and they aren’t your cup of tea, you can find plenty of "
 "user-friendly KDE-focused operating systems with traditional package "
@@ -1217,12 +1217,12 @@ msgid "To do this:"
 msgstr ""
 
 #: content/docs/boot-failure-recovery.md:18
-#: content/docs/boot-failure-recovery.md:35
+#: content/docs/boot-failure-recovery.md:34
 msgid "Power on or restart the machine."
 msgstr ""
 
 #: content/docs/boot-failure-recovery.md:19
-#: content/docs/boot-failure-recovery.md:36
+#: content/docs/boot-failure-recovery.md:35
 msgid ""
 "Hold down <kbd>Space</kbd> until the OS version chooser appears (in white "
 "text in the center of the screen, against a black background)."
@@ -1245,49 +1245,50 @@ msgid ""
 "--boot -1 --no-pager</code> in a terminal window."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:26
-msgid "Boot the system in a different way by changing the kernel command line"
+#: content/docs/boot-failure-recovery.md:25
+msgid ""
+"If it does not fix the issue, you can change how the system boots by "
+"altering the kernel command line parameters to achieve various debugging "
+"approaches:"
 msgstr ""
 
 #: content/docs/boot-failure-recovery.md:27
-msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} Be careful with the "
-"options presented here! If you are not a technical expert and don’t know "
-"what you’re doing, using these tools can easily make the problem even worse. "
-"{{< /section >}}"
+msgid "Boot the system in a different way by changing the kernel command line"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:31
+#: content/docs/boot-failure-recovery.md:28
 msgid ""
-"If that does not work, you can change how the system boots by altering the "
-"kernel command line parameters to achieve various debugging approaches."
+"{{< alert color=\"danger\" title=\"This process is dangerous!\" >}} Be "
+"careful with the options presented here. If you are not a technical expert "
+"and don’t know what you’re doing, using these tools can easily make the "
+"problem even worse. {{< /alert >}}"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:33
+#: content/docs/boot-failure-recovery.md:32
 msgid "To edit the kernel command line:"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:37
+#: content/docs/boot-failure-recovery.md:36
 msgid "Press the <kbd>e</kbd> key."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:38
+#: content/docs/boot-failure-recovery.md:37
 msgid ""
 "A text field with very long text in it will appear; this is the kernel "
 "command line."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:41
+#: content/docs/boot-failure-recovery.md:40
 msgid "Disable systemd extensions"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:42
+#: content/docs/boot-failure-recovery.md:41
 msgid ""
 "Add <code>systemd.mask=systemd-sysext.service</code>to the kernel command "
 "line and then press <kbd>Enter</kbd>."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:44
+#: content/docs/boot-failure-recovery.md:43
 msgid ""
 "This is useful if you have any systemd extensions active, and the boot "
 "failure started happening after you updated the content in any of them; this "
@@ -1295,117 +1296,121 @@ msgid ""
 "issue until you can debug what’s wrong with it."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:47
+#: content/docs/boot-failure-recovery.md:46
 msgid ""
 "If this works, after logging in, debug what’s wrong with the extension and "
 "fix it. If you are unable to, disable it."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:50
+#: content/docs/boot-failure-recovery.md:49
 msgid "Bypass issues with the login screen or Plasma"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:51
+#: content/docs/boot-failure-recovery.md:50
 msgid ""
 "Add <code>systemd.unit=multi-user.target</code> to the kernel command line "
 "and then press <kbd>Enter</kbd>."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:53
+#: content/docs/boot-failure-recovery.md:52
 msgid ""
 "This is useful if the login screen or plasma are failing to start or "
 "crashing in a loop; you can boot into a command-line environment that will "
 "bypass both of them, within which debugging is possible."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:55
-#: content/docs/boot-failure-recovery.md:65
+#: content/docs/boot-failure-recovery.md:54
+#: content/docs/boot-failure-recovery.md:68
 msgid ""
 "If debugging and troubleshooting determines that the problem was not caused "
 "by your own actions, [open a bug report for the KDE Linux team](https://"
 "invent.kde.org/kde-linux/kde-linux/-/issues/) to investigate."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:58
+#: content/docs/boot-failure-recovery.md:57
 msgid "Enter the emergency root shell"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:59
+#: content/docs/boot-failure-recovery.md:58
 msgid ""
 "Add <code>systemd.debug_shell=on SYSTEMD_SULOGIN_FORCE=1</code> to the "
 "kernel command line and press <kbd>Enter</kbd>."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:60
+#: content/docs/boot-failure-recovery.md:59
 msgid "Wait for the screen to turn black and stay that way for a few seconds."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:61
+#: content/docs/boot-failure-recovery.md:60
 msgid ""
 "Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F9</kbd> (note: on a laptop, you "
 "may also have to hold down <kbd>Fn</kbd>)."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:63
-msgid ""
-"You are now in the *emergency root shell*. Every command you run will be "
-"executed as root, so be careful."
+#: content/docs/boot-failure-recovery.md:62
+msgid "You are now in the *emergency root shell*."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:68
+#: content/docs/boot-failure-recovery.md:64
+msgid ""
+"{{< alert color=\"danger\" >}} Every command you run in the emergency root "
+"shell will be executed as root, so be careful. {{< /alert >}}"
+msgstr ""
+
+#: content/docs/boot-failure-recovery.md:71
 msgid "Roll back `/etc`"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:69
+#: content/docs/boot-failure-recovery.md:72
 msgid ""
 "It’s possible for `/etc` to be modified when booted into a particular build "
 "in a way that makes it incompatible with older builds."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:71
+#: content/docs/boot-failure-recovery.md:74
 msgid ""
 "This can manifest as bizarre issues after rolling back the OS, such as black "
 "screens or login passwords not being accepted."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:73
+#: content/docs/boot-failure-recovery.md:76
 msgid ""
 "To recover, replace the broken `/etc` with an older, working one as follows:"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:75
+#: content/docs/boot-failure-recovery.md:78
 msgid ""
 "Get a shell via either of the above methods and run the following commands:"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:76
+#: content/docs/boot-failure-recovery.md:79
 msgid "<code>run0 mv /etc /etc.broken</code>"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:77
+#: content/docs/boot-failure-recovery.md:80
 msgid ""
 "<code>run0 btrfs subvolume snapshot $(ls -d -1 /.etc.* | tail -2 | head -1) /"
 "etc</code>"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:78
+#: content/docs/boot-failure-recovery.md:81
 msgid "<code>systemctl reboot</code>"
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:80
+#: content/docs/boot-failure-recovery.md:83
 msgid ""
 "These manual steps should become unnecessary once https://invent.kde.org/kde-"
 "linux/kde-linux/-/issues/505 is implemented."
 msgstr ""
 
-#: content/docs/boot-failure-recovery.md:83 content/docs/dev.md:23
+#: content/docs/boot-failure-recovery.md:86 content/docs/dev.md:23
 #: content/docs/flatpak-crashes.md:26 content/docs/flatpak-dev.md:51
 #, fuzzy
 #| msgid "General Information"
 msgid "Further information"
 msgstr "Ĝenerala Informo"
 
-#: content/docs/boot-failure-recovery.md:84
+#: content/docs/boot-failure-recovery.md:87
 msgid ""
 "See https://systemd.io/DEBUGGING for more debugging options. KDE Linux uses "
 "systemd exclusively, so everything on that page is relevant."
@@ -1914,13 +1919,13 @@ msgstr ""
 
 #: content/docs/dual-boot.md:15
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} This page does **not** "
-"explain how to install two operating systems side by side. It assumes you "
-"already have both installed and working, both installed in UEFI mode, and "
-"sharing the same EFI System Partition (ESP). Note that [installing KDE Linux "
-"to anything other than an entire disk](install/#4-explore-the-live-session-"
-"and-install-kde-linux) is known to fail under certain circumstances and is "
-"not a formally supported configuration yet. {{< /section >}}"
+"{{< alert color=\"warning\" >}} This page does **not** explain how to "
+"install two operating systems side by side. It assumes you already have both "
+"installed and working, both installed in UEFI mode, and sharing the same EFI "
+"System Partition (ESP). Note that [installing KDE Linux to anything other "
+"than an entire disk](install/#4-explore-the-live-session-and-install-kde-"
+"linux) is known to fail under certain circumstances and is not a formally "
+"supported configuration yet. {{< /alert >}}"
 msgstr ""
 
 #: content/docs/dual-boot.md:20
@@ -2479,19 +2484,19 @@ msgid ""
 "KDE Linux ships a regular bootable `.iso` image, so you can install it in a "
 "virtual machine in largely the same way as any other Linux distribution — "
 "create a VM, attach the ISO, boot, run the installer, then reboot from the "
-"installed disk. There is only one requirement specific to KDE-Linux:"
+"installed disk. There is only one requirement specific to KDE Linux:"
 msgstr ""
 
 #: content/docs/install-vm.md:15
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} **The VM must be set to "
-"use UEFI firmware rather than legacy BIOS.** {{< /section >}}"
+"{{< alert color=\"warning\" >}} The VM **must** be set to use UEFI firmware "
+"rather than legacy BIOS. {{< /alert >}}"
 msgstr ""
 
 #: content/docs/install-vm.md:19
 msgid ""
-"Otherwise, the image will not boot. If it still refuses to boot, disable "
-"Secure Boot."
+"Otherwise, the image will not boot. If it still refuses to boot, also "
+"disable Secure Boot in the VM’s UEFI settings."
 msgstr ""
 
 #: content/docs/install-vm.md:21
@@ -2584,46 +2589,65 @@ msgstr "Instrukcioj pri Instalado"
 
 #: content/docs/install.md:13
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} Currently the Testing "
-"edition is available, showcasing the latest and greatest in-development "
-"versions of KDE’s [Plasma desktop environment](https://kde.org/plasma-"
-"desktop) and [apps](https://apps.kde.org). <br/><br/> Expect frequent "
-"changes and regressions, and use it in a production environment at your own "
-"risk! <br/><br/> Other editions suitable for the general public are in "
-"progress. {{< /section >}}"
+"Currently the Testing edition is available, showcasing the latest and "
+"greatest in-development versions of KDE’s [Plasma desktop environment]"
+"(https://kde.org/plasma-desktop) and [apps](https://apps.kde.org)."
+msgstr ""
+
+#: content/docs/install.md:15
+msgid ""
+"{{< alert color=\"danger\" >}} Expect frequent changes and regressions. Use "
+"KDE Linux’s testing in a production environment at your own risk! {{< /alert "
+">}}"
+msgstr ""
+
+#: content/docs/install.md:19
+msgid "Other editions suitable for the general public are in progress."
 msgstr ""
 
 #: content/docs/install.md:21
+msgid "How do you want to install KDE Linux?"
+msgstr ""
+
+#: content/docs/install.md:22
 msgid ""
-"Looking for instructions for installing KDE Linux in a virtual machine? "
-"[Find them here.](install-vm)"
+"In a **virtual machine**? It must use UEFI firmware, not BIOS. [Learn more "
+"here](install-vm)."
+msgstr ""
+
+#: content/docs/install.md:23
+msgid "Using **Ventoy**? Don’t; it’s not supported. [Learn more here](ventoy)."
 msgstr ""
 
 #: content/docs/install.md:24
-msgid "Requirements"
-msgstr ""
-
-#: content/docs/install.md:25
-msgid "KDE Linux supports almost all PC desktops and laptops with:"
-msgstr ""
-
-#: content/docs/install.md:26
-msgid "UEFI firmware (this includes most sold in the last 15 years)"
+msgid "On **physical hardware using a USB flash drive**? Read on:"
 msgstr ""
 
 #: content/docs/install.md:27
-msgid "An AMD or Intel CPU"
+msgid "Requirements"
 msgstr ""
 
 #: content/docs/install.md:28
-msgid "2 GB of memory"
+msgid "KDE Linux supports almost all PC desktops and laptops with:"
 msgstr ""
 
 #: content/docs/install.md:29
-msgid "15 GB of storage space"
+msgid "UEFI firmware (this includes most sold in the last 15 years)"
 msgstr ""
 
 #: content/docs/install.md:30
+msgid "An AMD or Intel CPU"
+msgstr ""
+
+#: content/docs/install.md:31
+msgid "2 GB of memory"
+msgstr ""
+
+#: content/docs/install.md:32
+msgid "15 GB of storage space"
+msgstr ""
+
+#: content/docs/install.md:33
 msgid ""
 "A whole disk to dedicate to KDE Linux - complex partition setups are [not "
 "yet supported](https://invent.kde.org/groups/kde-linux/-/work_items?"
@@ -2631,22 +2655,22 @@ msgid ""
 "%2Finstaller&first_page_size=100)"
 msgstr ""
 
-#: content/docs/install.md:31
+#: content/docs/install.md:34
 msgid ""
 "No other OS on the same device - [dual-boot at your own risk!](dual-boot)"
 msgstr ""
 
-#: content/docs/install.md:34
+#: content/docs/install.md:37
 msgid "Known hardware limitations"
 msgstr ""
 
-#: content/docs/install.md:35
+#: content/docs/install.md:38
 msgid ""
 "**ARM-based CPUs:** e.g. Apple “M”-series CPUs and Qualcomm Snapdragon CPUs: "
 "not supported yet."
 msgstr ""
 
-#: content/docs/install.md:36
+#: content/docs/install.md:39
 msgid ""
 "**NVIDIA graphics cards**: cards from the “Turing” series or later (e.g. GTX "
 "1630 or newer) work out of the box. Older cards are limited to the “Nouveau” "
@@ -2654,18 +2678,18 @@ msgid ""
 "nvidia))."
 msgstr ""
 
-#: content/docs/install.md:37
+#: content/docs/install.md:40
 msgid ""
 "**Broadcom wireless cards**: [cards listed here](https://wireless.docs."
 "kernel.org/en/latest/en/users/drivers/brcm80211.html#supported-chips) are "
 "supported out of the box. Other cards are not supported."
 msgstr ""
 
-#: content/docs/install.md:38
+#: content/docs/install.md:41
 msgid "**DisplayLink screens:** not supported. Display*Port* works fine."
 msgstr ""
 
-#: content/docs/install.md:39
+#: content/docs/install.md:42
 msgid ""
 "**Printers:** Most modern “driverless” and wireless printers made in the "
 "last 10 years or so — including [all listed here](https://openprinting."
@@ -2676,48 +2700,48 @@ msgid ""
 "%20compatibility&label_name[]=Printers%20🔨)."
 msgstr ""
 
-#: content/docs/install.md:42
+#: content/docs/install.md:45
 msgid "Known significant software issues"
 msgstr ""
 
-#: content/docs/install.md:43
+#: content/docs/install.md:46
 msgid ""
 "[Many apps exhibit papercuts](https://invent.kde.org/kde-linux/kde-linux/-/"
 "issues/71) as a result of them being packaged as Flatpaks"
 msgstr ""
 
-#: content/docs/install.md:44
+#: content/docs/install.md:47
 msgid ""
 "[Only zram-based swap is supported](https://invent.kde.org/kde-linux/kde-"
 "linux/-/work_items/552), so the system can run out of memory with heavy "
 "workloads when there’s not a lot of physical RAM"
 msgstr ""
 
-#: content/docs/install.md:45
+#: content/docs/install.md:48
 msgid ""
 "[Hostname is set incorrectly](https://invent.kde.org/kde-linux/kde-linux/-/"
 "work_items/599), so file sharing and RDP don’t work unless <code>avahi-"
 "daemon.service</code> is manually restarted"
 msgstr ""
 
-#: content/docs/install.md:47
+#: content/docs/install.md:50
 msgid ""
 "Ultimately the best way to determine KDE Linux’s suitability for your needs "
 "and hardware is to create a live USB drive and preview it on your own "
 "computer, with no risk to what’s already on it."
 msgstr ""
 
-#: content/docs/install.md:50
+#: content/docs/install.md:53
 msgid "1. Create a live USB drive"
 msgstr ""
 
-#: content/docs/install.md:51
+#: content/docs/install.md:54
 msgid ""
 "Download the latest `.iso` image from [here](https://files.kde.org/kde-"
 "linux/?C=M;O=D)."
 msgstr ""
 
-#: content/docs/install.md:52
+#: content/docs/install.md:55
 msgid ""
 "Verify that the `.iso` file is genuine: visit https://files.kde.org/kde-"
 "linux/?C=M;O=D and click *Details* for the .iso file you downloaded. Copy "
@@ -2730,7 +2754,7 @@ msgid ""
 "download again."
 msgstr ""
 
-#: content/docs/install.md:53
+#: content/docs/install.md:56
 #, fuzzy
 #| msgid ""
 #| "You can install any of these Linux distributions by using [KDE ISO Image "
@@ -2742,93 +2766,93 @@ msgstr ""
 "Vi povas instali iajn el tiuj Linuks-eldonoj uzante [KDE ISO Image Writer "
 "Writer](https://apps.kde.org/isoimagewriter/)."
 
-#: content/docs/install.md:54
+#: content/docs/install.md:57
 msgid "Click “Path to ISO Image…” and locate the `.iso` file you downloaded."
 msgstr ""
 
-#: content/docs/install.md:55
+#: content/docs/install.md:58
 msgid ""
 "Plug in the USB flash drive and ensure it appears in the “To this USB Drive” "
 "area."
 msgstr ""
 
-#: content/docs/install.md:56
+#: content/docs/install.md:59
 msgid "Click “Create”."
 msgstr ""
 
-#: content/docs/install.md:59
+#: content/docs/install.md:62
 msgid "2. Prepare the target computer"
 msgstr ""
 
-#: content/docs/install.md:60
+#: content/docs/install.md:63
 msgid ""
 "Ensure that Secure Boot is disabled. If it isn’t, or you don’t know whether "
 "it is or not, enter the computer’s UEFI interface and disable it. Here’s how:"
 msgstr ""
 
-#: content/docs/install.md:62
+#: content/docs/install.md:65
 msgid ""
 "First, consult [the table here](https://forums.malwarebytes.com/topic/319165-"
 "pc-common-boot-menu-and-bios-setting-hotkeys/) and find the correct keyboard "
 "key under the “BIOS/UEFI Key” column for your brand of computer."
 msgstr ""
 
-#: content/docs/install.md:63
+#: content/docs/install.md:66
 msgid ""
 "To enter the UEFI interface, reboot the computer and repeatedly press that "
 "key while it starts up."
 msgstr ""
 
-#: content/docs/install.md:64
+#: content/docs/install.md:67
 msgid ""
 "Once you’re in the UEFI interface (you’ll know because it looks very ugly), "
 "find where it lets you turn off Secure Boot and turn it off. This is "
 "different for every UEFI implementation, so you may need to dig around a bit."
 msgstr ""
 
-#: content/docs/install.md:65
+#: content/docs/install.md:68
 msgid ""
 "Once you’ve turned off Secure Boot, find the “Exit and save changes” option, "
 "and use it."
 msgstr ""
 
-#: content/docs/install.md:67
+#: content/docs/install.md:70
 msgid ""
 "This requirement will go away in the future once [KDE Linux supports Secure "
 "Boot](https://invent.kde.org/kde-linux/kde-linux/-/issues/3)."
 msgstr ""
 
-#: content/docs/install.md:70
+#: content/docs/install.md:73
 msgid "3. Boot into the live USB drive"
 msgstr ""
 
-#: content/docs/install.md:71
+#: content/docs/install.md:74
 msgid "Plug in the USB drive."
 msgstr ""
 
-#: content/docs/install.md:72
+#: content/docs/install.md:75
 msgid ""
 "Consult [the table here](https://forums.malwarebytes.com/topic/319165-pc-"
 "common-boot-menu-and-bios-setting-hotkeys/) and note down the keyboard key "
 "under the “Boot Menu Key” column for your brand of computer."
 msgstr ""
 
-#: content/docs/install.md:73
+#: content/docs/install.md:76
 msgid "Reboot the computer and repeatedly press that key while it starts up."
 msgstr ""
 
-#: content/docs/install.md:74
+#: content/docs/install.md:77
 msgid ""
 "When the boot menu appears, use the Up or Down arrow keys to select the "
 "entry that looks like it describes your USB flash drive, and then press "
 "Enter."
 msgstr ""
 
-#: content/docs/install.md:77
+#: content/docs/install.md:80
 msgid "4. Explore the live session"
 msgstr ""
 
-#: content/docs/install.md:78
+#: content/docs/install.md:81
 msgid ""
 "Now you’re in the “Live Session” of KDE Linux! This lets you see what it "
 "will be like if you choose to install it. Go through the welcome wizard and "
@@ -2836,21 +2860,20 @@ msgid ""
 "typically-used devices and make sure they function properly."
 msgstr ""
 
-#: content/docs/install.md:81
+#: content/docs/install.md:84
 #, fuzzy
 #| msgid "Installation Instructions"
 msgid "5. Install KDE Linux"
 msgstr "Instrukcioj pri Instalado"
 
-#: content/docs/install.md:82
+#: content/docs/install.md:85
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} If you choose to erase "
-"the computer’s hard disk, all of the files and data on it will be erased "
-"too. Make sure anything you care about is backed up somewhere! {{< /section "
-">}}"
+"{{< alert color=\"danger\" >}} If you choose to erase the computer’s hard "
+"disk, all of the files and data on it will be erased too. Make sure anything "
+"you care about is backed up somewhere! {{< /alert >}}"
 msgstr ""
 
-#: content/docs/install.md:86
+#: content/docs/install.md:89
 msgid ""
 "Once you’re ready to install, double-click on the “Install KDE Linux” icon "
 "on the desktop and go through the installer. Installing KDE Linux to the "
@@ -2861,23 +2884,23 @@ msgid ""
 "recommended**."
 msgstr ""
 
-#: content/docs/install.md:89
+#: content/docs/install.md:92
 #, fuzzy
 #| msgid "Installation Instructions"
 msgid "6. Enjoy KDE Linux"
 msgstr "Instrukcioj pri Instalado"
 
-#: content/docs/install.md:90
+#: content/docs/install.md:93
 msgid "We hope you love it!"
 msgstr ""
 
-#: content/docs/install.md:93
+#: content/docs/install.md:96
 #, fuzzy
 #| msgid "Learn More"
 msgid "7. Learn more"
 msgstr "Lerni pli"
 
-#: content/docs/install.md:94
+#: content/docs/install.md:97
 msgid ""
 "Read [the documentation](docs) to find out how to use KDE Linux, and check "
 "out the [KDE Linux news feed](https://blogs.kde.org/categories/kde-linux) to "
@@ -3225,16 +3248,16 @@ msgstr ""
 
 #: content/docs/kernel-cmdline.md:13
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} <strong>Warning: this "
-"process is dangerous</strong>. Setting inappropriate kernel command-line "
-"arguments can reduce performance, increase energy usage, damage hardware "
-"components, or prevent the system from starting up."
+"{{< alert color=\"danger\" title=\"This process is dangerous!\">}} Setting "
+"inappropriate kernel command-line arguments can reduce performance, increase "
+"energy usage, damage hardware components, or prevent the system from "
+"starting up."
 msgstr ""
 
 #: content/docs/kernel-cmdline.md:16
 msgid ""
 "Only proceed if you accept these risks, [have a backup](backup), and possess "
-"the technical ability to reverse any mistakes. {{< /section >}}"
+"the technical ability to reverse any mistakes. {{< /alert >}}"
 msgstr ""
 
 #: content/docs/kernel-cmdline.md:19
@@ -3819,8 +3842,8 @@ msgstr ""
 
 #: content/docs/more-software.md:86
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} Kapsule is in early "
-"development: features, design, and scope may change. {{< /section >}}"
+"{{< alert color=\"warning\" >}} Kapsule is in early development: features, "
+"design, and scope may change. {{< /alert >}}"
 msgstr ""
 
 #: content/docs/more-software.md:90
@@ -4442,8 +4465,8 @@ msgstr ""
 
 #: content/docs/nix.md:112
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} Warning: this will "
-"forget any previously-installed packages! {{< /section >}}"
+"{{< alert color=\"warning\" >}} This will forget any previously-installed "
+"packages! {{< /alert >}}"
 msgstr ""
 
 #: content/docs/nix.md:116
@@ -5195,10 +5218,10 @@ msgstr ""
 
 #: content/docs/python-dev.md:36
 msgid ""
-"{{< section class=\"text-center warning-bubble\" >}} It’s recommended to "
-"avoid installing Python using Homebrew, as this will [break kde-builder]"
-"(https://invent.kde.org/kde-linux/kde-linux/-/issues/278) and potentially "
-"any other Python-based software shipped on the system. {{< /section >}}"
+"{{< alert color=\"warning\" >}} It’s recommended to avoid installing Python "
+"using Homebrew, as this will [break kde-builder](https://invent.kde.org/kde-"
+"linux/kde-linux/-/issues/278) and potentially any other Python-based "
+"software shipped on the system. {{< /alert >}}"
 msgstr ""
 
 #: content/docs/remote-login.md:0
@@ -5714,8 +5737,8 @@ msgstr ""
 
 #: content/help.md:15
 msgid ""
-"{{< alert color=\"success\" icon=\"tip\" >}} Before trying anything "
-"recommended on this page, do the following two things first:"
+"{{< alert color=\"info\" icon=\"tip\" >}} Before trying anything recommended "
+"on this page, do the following two things first:"
 msgstr ""
 
 #: content/help.md:17
@@ -5769,8 +5792,8 @@ msgstr ""
 
 #: content/help.md:40
 msgid ""
-"{{< alert color=\"success\" icon=\"tip\" >}} Run the <code>collect-logs</"
-"code> tool and attach its output to every bug report you open. {{< /alert >}}"
+"{{< alert color=\"info\" icon=\"tip\" >}} Run the <code>collect-logs</code> "
+"tool and attach its output to every bug report you open. {{< /alert >}}"
 msgstr ""
 
 #: content/help.md:44
