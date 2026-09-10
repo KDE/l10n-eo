@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: print-manager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-07 02:49+0000\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
 "PO-Revision-Date: 2024-05-26 22:24+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/configure-printer/ConfigureDialog.cpp:93
-#: src/configure-printer/ConfigureDialog.cpp:94
+#: src/configure-printer/ConfigureDialog.cpp:96
+#: src/configure-printer/ConfigureDialog.cpp:97
 #, kde-format
 msgid "Media Settings"
 msgstr "Media Agordoj"
 
-#: src/configure-printer/ConfigureDialog.cpp:101
-#: src/configure-printer/ConfigureDialog.cpp:102
+#: src/configure-printer/ConfigureDialog.cpp:104
+#: src/configure-printer/ConfigureDialog.cpp:105
 #, kde-format
 msgid "Banners, Policies and Allowed Users"
 msgstr "Standardoj, Politikoj kaj Permesitaj Uzantoj"
 
-#: src/configure-printer/ConfigureDialog.cpp:171
+#: src/configure-printer/ConfigureDialog.cpp:182
 #, kde-format
 msgid ""
 "The current page has changes.\n"
@@ -39,7 +39,7 @@ msgstr ""
 "La nuna paĝo havas ŝanĝojn.\n"
 "Ĉu vi volas konservi ilin?"
 
-#: src/configure-printer/ConfigureDialog.cpp:173
+#: src/configure-printer/ConfigureDialog.cpp:184
 #, kde-format
 msgid "Save"
 msgstr "Konservi"
@@ -268,28 +268,22 @@ msgstr ""
 "Instal-Eraro (pako: %1)\n"
 "Kontrolu aŭtentigajn akreditaĵojn kaj certigu ke PackageKit estas instalita"
 
-#: src/kded/MarkerLevelChecker.cpp:194
+#: src/kded/CupsWatcher.cpp:55
 #, kde-format
-msgctxt "@info:usagetip The name and type of the ink cartridge"
-msgid "%1 (%2) appears to be empty."
+msgctxt "@info:status %1 is the reason message for the status"
+msgid ""
+"%1\n"
+"The print job will complete when the printer becomes available."
 msgstr ""
 
-#: src/kded/MarkerLevelChecker.cpp:197
-#, kde-format
-msgctxt ""
-"@info:usagetip The name and type of the ink cartridge and percent ink "
-"remaining"
-msgid "%1 (%2) appears to be low (%3% remaining)."
-msgstr ""
+#: src/kded/CupsWatcher.cpp:59
+#, fuzzy, kde-format
+#| msgid "Resume Printer"
+msgctxt "@action:button Prompt to resume printer"
+msgid "Resume Printer"
+msgstr "Rekomenci Presilon"
 
-#: src/kded/MarkerLevelChecker.cpp:204
-#, kde-format
-msgctxt ""
-"@info:usagetip The name, type, and percentage full of the waste receptacle"
-msgid "%1 (%2) is almost full (%3%)"
-msgstr ""
-
-#: src/kded/MarkerLevelChecker.cpp:219
+#: src/kded/CupsWatcher.cpp:79
 #, kde-format
 msgctxt "@action:button check printer ink levels"
 msgid "Check Levels…"
@@ -696,15 +690,42 @@ msgstr "Abortita"
 msgid "A CUPS connection requires authentication: \"%1\""
 msgstr "CUPS-konekto postulas aŭtentikigon: \"%1\""
 
-#: src/libkcups/KCupsPasswordDialog.cpp:22
+#: src/libkcups/KCupsPasswordDialog.cpp:21
 #, kde-format
 msgid "Enter an username and a password to complete the task"
 msgstr "Enigi uzantnomon kaj pasvorton por plenumi la taskon"
 
-#: src/libkcups/KCupsPasswordDialog.cpp:44
+#: src/libkcups/KCupsPasswordDialog.cpp:43
 #, kde-format
 msgid "Wrong username or password"
 msgstr "Malĝusta uzantnomo aŭ pasvorto"
+
+#: src/libkcups/KCupsPrinter.cpp:147
+#, kde-format
+msgctxt "@info:usagetip The name and type of the ink cartridge"
+msgid "%1 (%2) appears to be empty."
+msgstr ""
+
+#: src/libkcups/KCupsPrinter.cpp:150
+#, kde-format
+msgctxt ""
+"@info:usagetip The name and type of the ink cartridge and percent ink "
+"remaining"
+msgid "%1 (%2) appears to be low (%3% remaining)."
+msgstr ""
+
+#: src/libkcups/KCupsPrinter.cpp:157
+#, kde-format
+msgctxt ""
+"@info:usagetip The name, type, and percentage full of the waste receptacle"
+msgid "%1 (%2) is almost full (%3%)"
+msgstr ""
+
+#: src/libkcups/KCupsPrinter.cpp:309
+#, kde-format
+msgctxt "@info:status"
+msgid "The printer is paused or stopped."
+msgstr ""
 
 #: src/libkcups/KCupsRequest.cpp:31
 #, kde-format
@@ -736,120 +757,120 @@ msgstr "Malsukcesis alvoki metodon: %1"
 msgid "Empty ppd model"
 msgstr "Malplena ppd-modelo"
 
-#: src/libkcups/PrinterModel.cpp:196
+#: src/libkcups/PrinterModel.cpp:192
 #, kde-format
 msgid "Printers"
 msgstr "Presiloj"
 
-#: src/libkcups/PrinterModel.cpp:384
+#: src/libkcups/PrinterModel.cpp:390
 #, kde-format
 msgid "Idle"
 msgstr "Senlabore"
 
-#: src/libkcups/PrinterModel.cpp:384
+#: src/libkcups/PrinterModel.cpp:390
 #, kde-format
 msgid "Idle, rejecting jobs"
 msgstr "Senlabore, malakceptante labortaskojn"
 
-#: src/libkcups/PrinterModel.cpp:386
+#: src/libkcups/PrinterModel.cpp:392
 #, kde-format
 msgid "Idle - '%1'"
 msgstr "Neaktiva - '%1'"
 
-#: src/libkcups/PrinterModel.cpp:386
+#: src/libkcups/PrinterModel.cpp:392
 #, kde-format
 msgid "Idle, rejecting jobs - '%1'"
 msgstr "Neaktiva, malakceptante laborojn - '%1'"
 
-#: src/libkcups/PrinterModel.cpp:390
+#: src/libkcups/PrinterModel.cpp:396
 #, kde-format
 msgid "In use"
 msgstr "En uzo"
 
-#: src/libkcups/PrinterModel.cpp:392
+#: src/libkcups/PrinterModel.cpp:398
 #, kde-format
 msgid "In use - '%1'"
 msgstr "En uzo - '%1'"
 
-#: src/libkcups/PrinterModel.cpp:396
+#: src/libkcups/PrinterModel.cpp:402
 #, kde-format
 msgid "Paused"
 msgstr "Paŭzita"
 
-#: src/libkcups/PrinterModel.cpp:396
+#: src/libkcups/PrinterModel.cpp:402
 #, kde-format
 msgid "Paused, rejecting jobs"
 msgstr "Paŭzite, malakceptante laborojn"
 
-#: src/libkcups/PrinterModel.cpp:398
+#: src/libkcups/PrinterModel.cpp:404
 #, kde-format
 msgid "Paused - '%1'"
 msgstr "Paŭzita - '%1'"
 
-#: src/libkcups/PrinterModel.cpp:398
+#: src/libkcups/PrinterModel.cpp:404
 #, kde-format
 msgid "Paused, rejecting jobs - '%1'"
 msgstr "Paŭzita, malakceptante laborojn - '%1'"
 
-#: src/libkcups/PrinterModel.cpp:402
+#: src/libkcups/PrinterModel.cpp:408
 #, kde-format
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: src/libkcups/PrinterModel.cpp:404
+#: src/libkcups/PrinterModel.cpp:410
 #, kde-format
 msgid "Unknown - '%1'"
 msgstr "Nekonata - '%1'"
 
-#: src/print-queue/main.cpp:38
+#: src/print-queue/main.cpp:39
 #, kde-format
 msgctxt "@info:credit"
 msgid "Plasma Print Queue Manager"
 msgstr ""
 
-#: src/print-queue/main.cpp:40
+#: src/print-queue/main.cpp:41
 #, fuzzy, kde-format
 #| msgid "Show printer queue(s)"
 msgctxt "@info:credit"
 msgid "Manage printer job queues"
 msgstr "Montri presila(j)n atendovico(j)n"
 
-#: src/print-queue/main.cpp:42
+#: src/print-queue/main.cpp:43
 #, kde-format
 msgid "© KDE Community"
 msgstr ""
 
-#: src/print-queue/main.cpp:47
+#: src/print-queue/main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Mike Noe"
 msgstr ""
 
-#: src/print-queue/main.cpp:47
+#: src/print-queue/main.cpp:48
 #, kde-format
 msgctxt "@info:credit"
 msgid "Developer"
 msgstr ""
 
-#: src/print-queue/main.cpp:48
+#: src/print-queue/main.cpp:49
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Oliver Kellogg"
 
-#: src/print-queue/main.cpp:48
+#: src/print-queue/main.cpp:49
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
-#: src/print-queue/main.cpp:58
+#: src/print-queue/main.cpp:62
 #, fuzzy, kde-format
 #| msgid "Show printer queue(s)"
 msgid "Show printer queue"
 msgstr "Montri presila(j)n atendovico(j)n"
 
-#: src/print-queue/PrintQueue.cpp:82
+#: src/print-queue/PrintQueue.cpp:88
 #, kde-format
 msgid "Enter credentials to print from <b>%1</b>"
 msgstr "Enigi akreditaĵojn por presi de <b>%1</b>"
@@ -891,9 +912,6 @@ msgstr "Enigi akreditaĵojn por presi de <b>%1</b>"
 
 #~ msgid "Printer paused"
 #~ msgstr "Presilo paŭzis"
-
-#~ msgid "Resume Printer"
-#~ msgstr "Rekomenci Presilon"
 
 #~ msgid "Printer state unknown"
 #~ msgstr "Presilo stato nekonata"
