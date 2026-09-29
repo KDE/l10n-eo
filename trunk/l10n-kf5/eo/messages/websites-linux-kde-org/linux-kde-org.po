@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kde-org 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 02:11+0000\n"
+"POT-Creation-Date: 2026-09-29 02:21+0000\n"
 "PO-Revision-Date: 2025-02-15 14:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -4882,8 +4882,8 @@ msgstr ""
 
 #: content/docs/openqa.md:27
 msgid ""
-"The downstream pipeline runs the normal install-and-sanity flow and the "
-"upgrade flow."
+"The downstream pipeline runs the `install` and `upgrade` flows declared in "
+"`tests/tests.toml`, each with plain and encrypted installations."
 msgstr ""
 
 #: content/docs/openqa.md:28
@@ -4907,11 +4907,11 @@ msgstr ""
 
 #: content/docs/openqa.md:34
 msgid ""
-"The link provided after the log message *“In case of failure, you can "
-"inspect and download the .iso image and sysupdate tree at…”* opens a storage "
-"browser for the build under test. Download the `.iso` there to boot it "
-"manually or give it to a local openQA stack. The `sysupdate` tree contains "
-"the staged update artifacts used by the upgrade test."
+"The link provided after the log message *“In case of failure, inspect and "
+"download the image and sysupdate tree at…”* opens a storage browser for the "
+"build under test. Download the `.iso` there to boot it manually or give it "
+"to a local openQA stack. The `sysupdate` tree contains the staged update "
+"artifacts used by the upgrade test."
 msgstr ""
 
 #: content/docs/openqa.md:36
@@ -4953,8 +4953,8 @@ msgstr ""
 msgid ""
 "The [KDE Linux openQA test repository](https://invent.kde.org/kde-linux/os-"
 "autoinst-distri-kdelinux) includes a local stack containing both an openQA "
-"web UI and a worker. It requires Podman and `podman-compose`, which are "
-"included in KDE Linux."
+"web UI and a worker. It requires Python 3.14, Podman, and `podman-compose`, "
+"which are included in KDE Linux."
 msgstr ""
 
 #: content/docs/openqa.md:48
@@ -4965,152 +4965,286 @@ msgid ""
 msgstr ""
 
 #: content/docs/openqa.md:50
-msgid "Start the local stack."
+msgid "Start the local stack from the repository root:"
 msgstr ""
 
 #: content/docs/openqa.md:52
 msgid ""
 "<pre>\n"
-"./mock.sh up\n"
+"./qa-mock up\n"
 "</pre>\n"
 msgstr ""
 
 #: content/docs/openqa.md:56
 msgid ""
 "Once it is ready, open `http://localhost:1080` to inspect the openQA web UI. "
-"Jobs are not submitted automatically, so, open a shell in the container and "
-"submit the normal install and sanity-test flow."
+"Jobs are not submitted automatically, so open a shell in the container and "
+"submit the `install` flow. Run `flow`, `job`, and `build-sysext` commands "
+"inside this container."
 msgstr ""
 
 #: content/docs/openqa.md:58
 msgid ""
 "<pre>\n"
-"podman exec -it openqa-single-instance bash\n"
-"./qa flow\n"
+"./qa-mock enter\n"
+"./qa flow install\n"
 "</pre>\n"
 msgstr ""
 
 #: content/docs/openqa.md:63
-msgid "To run the upgrade flow instead, add <code>--upgrade</code>:"
+msgid "To run the `upgrade` flow instead:"
 msgstr ""
 
 #: content/docs/openqa.md:65
 msgid ""
 "<pre>\n"
-"./qa flow --upgrade\n"
+"./qa flow upgrade\n"
 "</pre>\n"
 msgstr ""
 
 #: content/docs/openqa.md:69
 msgid ""
-"To run the disk-encryption install-test flow, add <code>--encrypt</code>:"
+"For an encrypted installation, pass `FDE_INSTALL=1` as an openQA setting. "
+"The flavor suffix distinguishes encrypted jobs in the web UI:"
 msgstr ""
 
 #: content/docs/openqa.md:71
 msgid ""
 "<pre>\n"
-"./qa flow --encrypt\n"
+"./qa flow install --var FDE_INSTALL=1 --flavor-suffix=-encrypted\n"
+"./qa flow upgrade --var FDE_INSTALL=1 --flavor-suffix=-encrypted\n"
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:75
+#: content/docs/openqa.md:76
 msgid ""
-"You can also combine <code>--upgrade</code> and <code>--encrypt</code> "
-"options:"
+"`--var NAME=VALUE` can be repeated, but each variable must be declared in "
+"the selected flow's `variables` list in `tests/tests.toml`."
 msgstr ""
 
-#: content/docs/openqa.md:77
+#: content/docs/openqa.md:78
+msgid ""
+"The `sanity-test` suite uses the virtual disk created by `install-system`. "
+"To concentrate on particular tests, edit the suite's `tests` list in `tests/"
+"tests.toml`, or declare another suite and flow there. You can also run an "
+"individual suite with `./qa job --name <suite>` while keeping its disk "
+"dependencies in mind. The `flow`, `job`, and `build-sysext` commands accept "
+"`--manifest-path <path>` to use a manifest other than `tests/tests.toml`. "
+"Test paths within the manifest are relative to that manifest's directory. "
+"Run `./qa job --help` for its required options."
+msgstr ""
+
+#: content/docs/openqa.md:80
+msgid ""
+"For example, build the system extension and run an `install-system` job with "
+"an `.iso` in the repository directory. Replace the build ID and variant with "
+"those of your image:"
+msgstr ""
+
+#: content/docs/openqa.md:82
 msgid ""
 "<pre>\n"
-"./qa flow --upgrade --encrypt\n"
-"</pre>\n"
-msgstr ""
-
-#: content/docs/openqa.md:81
-msgid ""
-"The `sanity-test` job needs the `install-system` job to run first because it "
-"uses the virtual disk created by the installation. To concentrate on a "
-"particular test, adjust the submitted jobs in `lib/worker/job_flow.py` or "
-"run an individual job with <code>./qa job</code> while keeping that "
-"dependency in mind. Run <code>./qa job --help</code> to see the options it "
-"requires."
-msgstr ""
-
-#: content/docs/openqa.md:83
-msgid ""
-"For example, to run an `install-system` job where you have an `.iso` "
-"downloaded to the directory of the repository:"
-msgstr ""
-
-#: content/docs/openqa.md:85
-msgid ""
-"<pre>\n"
+"./qa build-sysext\n"
 "./qa job \\\n"
 "    --live ./kde-linux_&lt;build-id&gt;.iso \\\n"
 "    --hdd kde-linux_&lt;build-id&gt;.qcow2 \\\n"
 "    --sysext ./openqa-sysext.img \\\n"
 "    --build &lt;build-id&gt; \\\n"
+"    --variant &lt;variant&gt; \\\n"
 "    --name install-system \\\n"
 "    --flavor live\n"
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:95
-msgid "When you are finished, stop the stack and remove its local volumes."
+#: content/docs/openqa.md:94
+msgid ""
+"When you are finished, exit the container shell, then stop the stack and "
+"remove its local volumes from the host."
 msgstr ""
 
-#: content/docs/openqa.md:97
+#: content/docs/openqa.md:96
 msgid ""
 "<pre>\n"
-"./mock.sh down -v\n"
+"./qa-mock down -v\n"
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:101
+#: content/docs/openqa.md:100
+msgid ""
+"`./qa-mock` passes through arguments to `podman-compose`. For example, use "
+"`./qa-mock up -d` to start the stack in the background."
+msgstr ""
+
+#: content/docs/openqa.md:102
+msgid "Test upgrades between local builds"
+msgstr ""
+
+#: content/docs/openqa.md:104
+msgid ""
+"Place the base ISO in the test repository root. When starting the stack from "
+"the host, set `KDE_LINUX_OUTPUT` to the `mkosi.output` directory containing "
+"the build you want to upgrade to:"
+msgstr ""
+
+#: content/docs/openqa.md:106
+msgid ""
+"<pre>\n"
+"KDE_LINUX_OUTPUT=~/Repositories/kde-linux/mkosi.output ./qa-mock up\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:110
+msgid ""
+"Enter the container and run the upgrade flow, replacing `&lt;build-id&gt;` "
+"with the build ID of your base ISO:"
+msgstr ""
+
+#: content/docs/openqa.md:112
+msgid ""
+"<pre>\n"
+"./qa-mock enter\n"
+"./qa flow upgrade \\\n"
+"    --upgrade-from /casedir/kde-linux_&lt;build-id&gt;.iso \\\n"
+"    --upgrade-to /kde-linux-output\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:119
+msgid ""
+"Both options must be supplied together. The repository is mounted at `/"
+"casedir`, and the selected `mkosi.output` directory is mounted read-only at "
+"`/kde-linux-output`. The newest build in that directory is served to the "
+"virtual machine as a temporary sysupdate source and must be newer than the "
+"base ISO. Add `--var FDE_INSTALL=1 --flavor-suffix=-encrypted` to test an "
+"encrypted installation."
+msgstr ""
+
+#: content/docs/openqa.md:121
+msgid "Declare suites and flows"
+msgstr ""
+
+#: content/docs/openqa.md:123
+msgid ""
+"`tests/tests.toml` defines the distribution (`name` and `distri`), suites, "
+"and flows. A suite is an ordered list of tests run in one openQA job. Its "
+"`action` determines how the job uses the virtual disk:"
+msgstr ""
+
+#: content/docs/openqa.md:125
+msgid "`install` boots the live image and creates the installed disk."
+msgstr ""
+
+#: content/docs/openqa.md:126
+msgid ""
+"`upgrade` boots the installed disk and sets `DO_UPGRADE` for tests that "
+"perform the upgrade."
+msgstr ""
+
+#: content/docs/openqa.md:127
+msgid "`test` boots the installed disk for validation."
+msgstr ""
+
+#: content/docs/openqa.md:129
+msgid ""
+"A flow runs suites in the declared order, passing the installed disk between "
+"jobs. KDE Linux defines these flows:"
+msgstr ""
+
+#: content/docs/openqa.md:131
+msgid ""
+"<pre>\n"
+"[flows.install]\n"
+"suites = [\"install-system\", \"sanity-test\"]\n"
+"variables = [\"FDE_INSTALL\"]\n"
+"\n"
+"[flows.upgrade]\n"
+"suites = [\"install-system\", \"upgrade-system\", \"sanity-test\"]\n"
+"variables = [\"FDE_INSTALL\"]\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:141
+msgid ""
+"The `install` flow installs and checks the build under test. The `upgrade` "
+"flow first installs an older image, upgrades it to the build under test, and "
+"then runs sanity tests. For a staged CI build, the base is the latest "
+"published image. Without `--upgrade-from` and `--upgrade-to`, a local "
+"upgrade run will default to the latest public build as its target, using an "
+"older local ISO if one is available or downloading the previous image."
+msgstr ""
+
+#: content/docs/openqa.md:143
+msgid ""
+"Before each job, the worker generates a temporary test directory (`CASEDIR`) "
+"with a `main.pm` schedule for the selected suite. Tests run in manifest "
+"order, including repeated entries. Edit the manifest to change the schedule."
+msgstr ""
+
+#: content/docs/openqa.md:145
 #, fuzzy
 #| msgid "Minetest"
 msgid "Write a test"
 msgstr "Minetest"
 
-#: content/docs/openqa.md:103
+#: content/docs/openqa.md:147
 msgid ""
-"The test definitions and the test code live in [os-autoinst-distri-kdelinux]"
-"(https://invent.kde.org/kde-linux/os-autoinst-distri-kdelinux). Add the test "
-"to the appropriate flow in `main.pm` - the live-install flow, installed-"
-"system sanity flow, or upgrade flow. Tests are generally composed of a small "
-"openQA wrapper in `tests/` and a Python test that runs on the system under "
-"test from `extensions/openqa/usr/lib/kde-linux-openqa/tests/`."
+"The test definitions and code live in [os-autoinst-distri-kdelinux](https://"
+"invent.kde.org/kde-linux/os-autoinst-distri-kdelinux). Add test scripts "
+"under `tests/`, alongside related tests, and register them in the "
+"appropriate suite's `tests` array in `tests/tests.toml`. For example:"
 msgstr ""
 
-#: content/docs/openqa.md:105
+#: content/docs/openqa.md:149
+msgid ""
+"<pre>\n"
+"[suites.example]\n"
+"action = \"test\"\n"
+"tests = [\n"
+"    { path = \"common/bootup.py\", type = \"openqa\" },\n"
+"    { path = \"common/basic_test.py\", type = \"python\" },\n"
+"    { path = \"kdelinux/app/firefox.py\", type = \"selenium\", user = "
+"\"installed\", timeout = 180 },\n"
+"]\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:159
+msgid ""
+"`openqa` tests execute on the worker and use openQA APIs directly. `python` "
+"and `selenium` tests execute on the system under test, the system extension "
+"packages their scripts automatically, and the worker generates the openQA "
+"test wrappers invoking them."
+msgstr ""
+
+#: content/docs/openqa.md:161
 msgid "Choose the test type based on what you are checking:"
 msgstr ""
 
-#: content/docs/openqa.md:107
+#: content/docs/openqa.md:163
 msgid ""
 "Use a normal Python <code>unittest</code> for command-line tools, services, "
 "filesystem state, or other non-graphical behaviour."
 msgstr ""
 
-#: content/docs/openqa.md:108
+#: content/docs/openqa.md:164
 msgid ""
 "Use Selenium through `selenium-webdriver-at-spi` when the behaviour requires "
 "interacting with a graphical application."
 msgstr ""
 
-#: content/docs/openqa.md:110
+#: content/docs/openqa.md:166
 msgid "Normal Python tests"
 msgstr ""
 
-#: content/docs/openqa.md:112
+#: content/docs/openqa.md:168
 msgid ""
-"Create a <code>unittest</code> in the aforementioned system extension test "
-"directory. It should make assertions about the system under test and write "
-"its results to a JUnit XML file, which will be automatically collected as an "
-"openQA asset and a GitLab CI report."
+"Create a <code>unittest</code> under `tests/`, for example `tests/kdelinux/"
+"system/example.py`. It should make assertions about the system under test "
+"and write its results to a JUnit XML file, which will be automatically "
+"collected as an openQA asset and a GitLab CI report."
 msgstr ""
 
-#: content/docs/openqa.md:114
+#: content/docs/openqa.md:170
 msgid ""
 "<pre>\n"
 "import unittest\n"
@@ -5125,35 +5259,28 @@ msgid ""
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:126
-msgid ""
-"Create a matching wrapper under `tests/` that gets openQA to execute the "
-"test on the host."
+#: content/docs/openqa.md:182
+msgid "Add an entry to the relevant suite's `tests` array:"
 msgstr ""
 
-#: content/docs/openqa.md:128
+#: content/docs/openqa.md:184
 msgid ""
 "<pre>\n"
-"from testapi import *\n"
-"from lib.test import cli_test\n"
-"\n"
-"def run(self):\n"
-"    cli_test.CliTest(\"example\").run_python()\n"
+"{ path = \"kdelinux/system/example.py\", type = \"python\" },\n"
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:136
+#: content/docs/openqa.md:188
 msgid ""
-"Finally, register the wrapper in the relevant flow in `main.pm`. The wrapper "
-"collects the JUnit result and command output so that failures appear in the "
-"openQA job and CI artifacts."
+"The generated wrapper collects the JUnit result and command output so that "
+"failures appear in the openQA job and CI artifacts."
 msgstr ""
 
-#: content/docs/openqa.md:138
+#: content/docs/openqa.md:190
 msgid "Graphical tests with Selenium"
 msgstr ""
 
-#: content/docs/openqa.md:140
+#: content/docs/openqa.md:192
 msgid ""
 "Graphical tests are also Python <code>unittest</code> classes, but use the "
 "Appium/Selenium driver to find and interact with accessible UI elements. The "
@@ -5161,20 +5288,20 @@ msgid ""
 "driver for you."
 msgstr ""
 
-#: content/docs/openqa.md:142
+#: content/docs/openqa.md:194
 msgid ""
 "For example, a graphical test creates a driver for its application, "
 "interacts with accessible elements, and closes the driver afterwards:"
 msgstr ""
 
-#: content/docs/openqa.md:144
+#: content/docs/openqa.md:196
 msgid ""
 "<pre>\n"
 "import unittest\n"
 "from appium import webdriver\n"
 "from appium.options.common.base import AppiumOptions\n"
 "from appium.webdriver.common.appiumby import AppiumBy\n"
-"from lib.test import openqa_junit_xml\n"
+"from lib.sut import openqa_junit_xml\n"
 "\n"
 "class ExampleTests(unittest.TestCase):\n"
 "    @classmethod\n"
@@ -5197,47 +5324,74 @@ msgid ""
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:169
+#: content/docs/openqa.md:221
 msgid ""
-"Run the matching wrapper with <code>run_selenium()</code> instead of "
-"<code>run_python()</code>. Pass the installed test user for desktop "
-"applications:"
+"Save the script as, for example, `tests/kdelinux/app/example.py`, and add it "
+"to the relevant suite with `type = \"selenium\"`. Select the installed test "
+"user for desktop applications:"
 msgstr ""
 
-#: content/docs/openqa.md:171
+#: content/docs/openqa.md:223
 msgid ""
 "<pre>\n"
-"from testapi import *\n"
-"from lib.test import cli_test\n"
-"from lib.common import user_manager\n"
-"\n"
-"def run(self):\n"
-"    cli_test.CliTest(\"example\").run_selenium(user=user_manager."
-"installed())\n"
+"{ path = \"kdelinux/app/example.py\", type = \"selenium\", user = \"installed"
+"\", timeout = 180 },\n"
 "</pre>\n"
 msgstr ""
 
-#: content/docs/openqa.md:180
-msgid ""
-"Similarly to normal Python tests, add its wrapper to `main.pm`, run it "
-"locally while developing it, and include it in the test flow that exercises "
-"the feature."
+#: content/docs/openqa.md:227
+msgid "Run the flow containing your suite locally while developing it."
 msgstr ""
 
-#: content/docs/openqa.md:182
+#: content/docs/openqa.md:229
+msgid "Test options and custom wrappers"
+msgstr ""
+
+#: content/docs/openqa.md:231
+msgid ""
+"For generated SUT wrappers, manifest entries can set `user` (`root`, `live`, "
+"`installed`, or `plasma_setup`), `timeout` in seconds (defaults to 90), "
+"`artifacts` as a list of paths to collect, and the openQA flags `fatal = "
+"true` or `always_run = true`. Set `enabled = false` to leave a test declared "
+"while excluding it from the schedule."
+msgstr ""
+
+#: content/docs/openqa.md:233
+msgid ""
+"When a test needs some form of custom orchestration to run, put a wrapper "
+"beside its SUT script and point to it with `override`:"
+msgstr ""
+
+#: content/docs/openqa.md:235
+msgid ""
+"<pre>\n"
+"{ path = \"kdelinux/system/collect_logs.py\", type = \"selenium\", override "
+"= \"kdelinux/system/collect_logs.openqa.py\" },\n"
+"</pre>\n"
+msgstr ""
+
+#: content/docs/openqa.md:239
+msgid ""
+"This custom wrapper is responsible for its flags, user, timeout, and "
+"artifact collection, and must pass the SUT script's relative path to "
+"`CliTest.run_python()` or `CliTest.run_selenium()`. See the existing "
+"`collect_logs.openqa.py` for an example."
+msgstr ""
+
+#: content/docs/openqa.md:241
 msgid ""
 "For more information on writing Selenium tests, see [Appium automation "
 "testing](https://develop.kde.org/docs/apps/tests/appium/) and [GUI Testing "
 "with selenium-webdriver-at-spi](https://community.kde.org/Selenium)."
 msgstr ""
 
-#: content/docs/openqa.md:184
+#: content/docs/openqa.md:243
 #, fuzzy
 #| msgid "Learn More"
 msgid "Learn more"
 msgstr "Lerni pli"
 
-#: content/docs/openqa.md:186
+#: content/docs/openqa.md:245
 msgid ""
 "For a more detailed explanation of the test flow and its implementation, see "
 "[openQA Testing in KDE Linux](https://blogs.kde.org/2026/07/13/openqa-"
