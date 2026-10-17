@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: websites-kde-org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-15 02:22+0000\n"
+"POT-Creation-Date: 2026-10-17 02:29+0000\n"
 "PO-Revision-Date: 2025-02-22 16:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -12281,10 +12281,10 @@ msgstr ""
 "funkciado sur Wayland, kiu estas planita por venonta eldono."
 
 #: content/announcements/plasma/5/5.0.md:61
-#: content/announcements/plasma/6/6.8.0.md:79
-#: content/announcements/plasma/6/6.8.0.md:90
-#: content/announcements/plasma/6/6.8.0.md:99
-#: content/announcements/plasma/6/6.8.0.md:163
+#: content/announcements/plasma/6/6.8.0.md:73
+#: content/announcements/plasma/6/6.8.0.md:84
+#: content/announcements/plasma/6/6.8.0.md:93
+#: content/announcements/plasma/6/6.8.0.md:157
 #: content/fundraisers/yearend2026.md:67
 msgid "<br/>\n"
 msgstr "<br/>\n"
@@ -12606,7 +12606,7 @@ msgstr ""
 #: content/announcements/plasma/5/5.27.0.md:134
 #: content/announcements/plasma/5/5.8.95.md:68
 #: content/announcements/plasma/5/5.9.0.md:70
-#: content/announcements/plasma/6/6.8.0.md:183
+#: content/announcements/plasma/6/6.8.0.md:177
 msgid "Wayland"
 msgstr "Wayland"
 
@@ -36563,6 +36563,15 @@ msgstr ""
 msgid "Björn, you are sorely missed and this release is dedicated to you."
 msgstr ""
 
+#: content/announcements/plasma/6/6.6.7.md:10
+msgid ""
+"KDE today announces the release of Plasma 6.6.7: the first bugfix release in "
+"the Plasma 6.6 Long-Term Support (LTS) series, which will still receive "
+"bugfixes and backports for a period of 3 years. Plasma 6.6.7 includes "
+"numerous bug fixes, improvements, and backports, addressing issues reported "
+"by users and developers, improving the overall quality of the desktop."
+msgstr ""
+
 #: content/announcements/plasma/6/6.6.90.md:11
 #: content/announcements/plasma/6/6.6.91.md:11
 #, fuzzy
@@ -37009,7 +37018,7 @@ msgid ""
 msgstr ""
 
 #: content/announcements/plasma/6/6.7.0.md:204
-#: content/announcements/plasma/6/6.8.0.md:201
+#: content/announcements/plasma/6/6.8.0.md:195
 msgid "But that’s not all…"
 msgstr ""
 
@@ -37232,105 +37241,36 @@ msgstr ""
 msgid "Amharic on-screen keyboard"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:27
-msgid ""
-"<!--\n"
-"IMPORTANT: As agreed with translators in Promo chat, this document should "
-"not be modified within three days before or after the publishing date. This "
-"allows translators time to finalise their work, and for their work to not "
-"break during this critical period.\n"
-"\n"
-"Do not modify the text within this document from October 11th to October "
-"17th (inclusive).\n"
-"-->\n"
-msgstr ""
-
-#: content/announcements/plasma/6/6.8.0.md:33
-msgid ""
-"<!--\n"
-"Having trouble building the website? Hugo 0.150.0 is currently used by the "
-"pipeline, and you may also need to specify '--buildDrafts --buildFuture'.\n"
-"\n"
-"If you'd like to test changes to hugo-kde in concert, add the following to "
-"go.mod:\n"
-"    replace invent.kde.org/websites/hugo-kde => ../hugo-kde\n"
-"\n"
-"Please note that the 'images' metadata is used for OpenGraph embeds (e.g. in "
-"Twitter) and each image would be shown as a preview for the page. "
-"fullscreen_with_apps does nicely.\n"
-"\n"
-"How to prepare static image assets:\n"
-"\n"
-"blur_light_1920x1080.png is prepared by taking the 16:9 version of the "
-"wallpaper from the Breeze repostory and performing the following alterations "
-"in Pinta:\n"
-" - Image > Resize Image…, resize to 1920x1080 with Bilinear filtering\n"
-" - Adjustments > Brightness / Contrast…, with brightness -20\n"
-" - Effects > Blurs > Gaussian Blur… with radius 32\n"
-" \n"
-"home-blur.jpg in the hugo-kde template is the same image, and should be kept "
-"in sync by saving as a 95% quality .jpg.\n"
-"\n"
-"fullscreen_with_apps.png should be a 2880x1620 screenshot with 175% scaling "
-"of a standard Plasma desktop. This image is used in other parts of the "
-"website (e.g. 'Products') and must be present and must not be renamed.\n"
-"\n"
-"In order to produce screenshots that look good on the page, they are "
-"generally taken from a 175% scale 2880x1620 desktop, as window screenshots "
-"with titlebar, borders and shadows present. These can be composited together "
-"or alone on a 2880x1620 desktop in Inkscape, and exported. Using the same "
-"2880x1620 size results in all screenshots having a consistent scale.\n"
-"\n"
-"All png images should be processed with:\n"
-"    oxipng *.png\n"
-"\n"
-"To produce final webp versions of other assets (don't convert "
-"blur_light_1920x1080 or fullscreen_with_apps) from png originals, use the "
-"command:\n"
-"    for f in *.png; do magick \"$f\" -quality 95 \"${f%.png}.webp\"; done\n"
-"which preserves the original files and produces new ones for each png with "
-"the webp extension. A quality of 95 is almost indistinguishable and provides "
-"massive savings even over files processed with oxipng. These should be "
-"linked to instead of the pngs, which we'll keep for posterity (and someone "
-"clever can rewrite the url to get them if they really want them).\n"
-"\n"
-"In future releases I (olib) will see how we can replace blur_light and "
-"fullscreen_with_apps with webp. blur_light will probably want to be blurred "
-"in CSS instead, and fullscreen_with_apps needs fixing up in pages that also "
-"use it.\n"
-"-->\n"
-msgstr ""
-
-#: content/announcements/plasma/6/6.8.0.md:68
+#: content/announcements/plasma/6/6.8.0.md:62
 msgid "Celebrating thirty years of KDE"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:69
+#: content/announcements/plasma/6/6.8.0.md:63
 msgid ""
 "Plasma 6.8 is released on a very special day: KDE’s 30th birthday. Today we "
 "celebrate three decades of the KDE community providing the world’s greatest "
 "free and open-source software."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:73
+#: content/announcements/plasma/6/6.8.0.md:67
 msgid ""
 "Plasma 6.8 is no exception, offering enhancements across much of the user "
 "experience and beneath the surface."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:75
+#: content/announcements/plasma/6/6.8.0.md:69
 msgid ""
 "6.8 is all about launching Plasma into the future: adding changes you’ll "
 "notice right away, combined with major but subtle improvements designed to "
 "set the stage for decades of service to come."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:77
+#: content/announcements/plasma/6/6.8.0.md:71
 msgid ""
 "Dive in and find out what the desktop environment of tomorrow looks like!"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:81
+#: content/announcements/plasma/6/6.8.0.md:75
 msgid ""
 "<div class=\"card bg-warning-subtle mx-auto max-width-800\">\n"
 "  <div class=\"card-body\">\n"
@@ -37346,23 +37286,23 @@ msgid ""
 "</div>\n"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:92
+#: content/announcements/plasma/6/6.8.0.md:86
 msgid "{{< announcements/donorbox_olib >}} {{< /container >}}"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:97
+#: content/announcements/plasma/6/6.8.0.md:91
 #, fuzzy
 #| msgid "Improvements in User Interface"
 msgid "Improvements you can use today"
 msgstr "Pliboniĝoj en Uzantinterfaco"
 
-#: content/announcements/plasma/6/6.8.0.md:101
+#: content/announcements/plasma/6/6.8.0.md:95
 #, fuzzy
 #| msgid "Accessibility"
 msgid "Better accessibility"
 msgstr "Alirebleco"
 
-#: content/announcements/plasma/6/6.8.0.md:103
+#: content/announcements/plasma/6/6.8.0.md:97
 msgid ""
 "Part of our continued effort to bring digital control to everyone, a new "
 "“dwell clicker” feature can send a mouse click when the pointer stops "
@@ -37371,11 +37311,11 @@ msgid ""
 "in!"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:108
+#: content/announcements/plasma/6/6.8.0.md:102
 msgid "Serving more users worldwide"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:109
+#: content/announcements/plasma/6/6.8.0.md:103
 msgid ""
 "Plasma 6.8 gains support for the [Bikram Sambat](https://en.wikipedia.org/"
 "wiki/Vikram_Samvat) calendar in the Digital Clock, and the [Amharic](https://"
@@ -37384,13 +37324,13 @@ msgid ""
 "versions in our effort to make Plasma a truly universal desktop."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:114
+#: content/announcements/plasma/6/6.8.0.md:108
 #, fuzzy
 #| msgid "System Monitor"
 msgid "System monitoring"
 msgstr "Sistema Monitoro"
 
-#: content/announcements/plasma/6/6.8.0.md:116
+#: content/announcements/plasma/6/6.8.0.md:110
 msgid ""
 "Gain an extreme level of control over your system with Plasma’s System "
 "Monitor. In Plasma 6.8, you can assign compute-intensive tasks to only the "
@@ -37398,75 +37338,75 @@ msgid ""
 "machine running smoothly."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:118
+#: content/announcements/plasma/6/6.8.0.md:112
 msgid ""
 "System Monitor app offering the possibility to change the CPU affinity for "
 "the plasmashell process"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:120
+#: content/announcements/plasma/6/6.8.0.md:114
 msgid ""
 "You can also monitor your VRAM more easily, as it now shows the load as an "
 "easy-to-read percentage."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:123
+#: content/announcements/plasma/6/6.8.0.md:117
 #, fuzzy
 #| msgid "Access Remote Plasma Desktops"
 msgid "Remote desktop"
 msgstr "Aliru Forajn Plasma-Labortablojn"
 
-#: content/announcements/plasma/6/6.8.0.md:124
+#: content/announcements/plasma/6/6.8.0.md:118
 msgid ""
 "We’ve invested a great deal of time into polishing the experience provided "
 "by Plasma’s built-in remote desktop server. In Plasma 6.8, you’ll be able to "
 "enjoy the following improvements — with more in the pipeline:"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:126
+#: content/announcements/plasma/6/6.8.0.md:120
 msgid ""
 "**Much better performance and quality** that prioritizes latency and "
 "responsiveness by adapting to slow networks and rapidly-updating screen "
 "content."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:127
+#: content/announcements/plasma/6/6.8.0.md:121
 msgid ""
 "**Exclusive mode** optionally locks the server’s screen and provides the "
 "client with a virtual screen that exactly matches its window size."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:128
+#: content/announcements/plasma/6/6.8.0.md:122
 msgid ""
 "**Bi-directional clipboard synchronization** makes it easier to exchange "
 "content between the server and client."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:130
+#: content/announcements/plasma/6/6.8.0.md:124
 msgid ""
 "{{< alert color=\"success\" icon=\"tip\" >}} These features will only take "
 "effect in remote desktop client apps that support them. {{< /alert >}}"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:134
+#: content/announcements/plasma/6/6.8.0.md:128
 #: content/fundraisers/yearend2026.md:56
 msgid "Plasma’s Remote Desktop settings and the KRDC application in use"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:137
+#: content/announcements/plasma/6/6.8.0.md:131
 #, fuzzy
 #| msgid "Screencasting is now supported"
 msgid "Screen casting and recording"
 msgstr "Ekrankando nun estas subtenata"
 
-#: content/announcements/plasma/6/6.8.0.md:138
+#: content/announcements/plasma/6/6.8.0.md:132
 msgid ""
 "Spectacle can now optionally include both system audio and microphone input "
 "in its screen recordings, making it possible to narrate a recording or "
 "accurately record everything that’s going on."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:140
+#: content/announcements/plasma/6/6.8.0.md:134
 msgid ""
 "Plasma’s screen sharing portal dialog lets you create a virtual screen to "
 "share, instead of an existing display. In Plasma 6.8, you can now specify "
@@ -37474,23 +37414,23 @@ msgid ""
 "1920&#x202F;×&#x202F;1080."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:142
+#: content/announcements/plasma/6/6.8.0.md:136
 msgid ""
 "The screen sharing portal window showing the ability to select a custom "
 "resolution for the virtual display"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:144
+#: content/announcements/plasma/6/6.8.0.md:138
 msgid ""
 "In addition, the quality of screen recordings and screencasts has been "
 "improved."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:147
+#: content/announcements/plasma/6/6.8.0.md:141
 msgid "Nicer-looking third-party app windows"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:148
+#: content/announcements/plasma/6/6.8.0.md:142
 msgid ""
 "We’ve added support for window rules that add desktop shadows, outlines, and "
 "rounded corners to client-side-decorated windows that can’t provide these "
@@ -37498,7 +37438,7 @@ msgid ""
 "making it feel more at home in Plasma."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:150
+#: content/announcements/plasma/6/6.8.0.md:144
 msgid ""
 "<div style=\"--bs-body-bg: #d3f2e0; /*FIXME*/\">\n"
 "{{< img-comparison-slider before=\"/announcements/plasma/6/6.8.0/30-steam-"
@@ -37507,13 +37447,13 @@ msgid ""
 "</div>\n"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:155
+#: content/announcements/plasma/6/6.8.0.md:149
 #, fuzzy
 #| msgid "Window Management"
 msgid "Window management"
 msgstr "Fenestra Administrado"
 
-#: content/announcements/plasma/6/6.8.0.md:156
+#: content/announcements/plasma/6/6.8.0.md:150
 msgid ""
 "We’ve added new global shortcuts to help power users manage their open "
 "windows with the Task Manager widget. By pressing <kbd>Meta</kbd> + "
@@ -37523,21 +37463,21 @@ msgid ""
 ">}}"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:161
+#: content/announcements/plasma/6/6.8.0.md:155
 msgid "Setting the stage for decades to come"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:165
+#: content/announcements/plasma/6/6.8.0.md:159
 msgid "Theming"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:166
+#: content/announcements/plasma/6/6.8.0.md:160
 msgid ""
 "Four months ago, Plasma 6.7 included an alpha release of the new Union "
 "theming system, demonstrating its ability to style Qt Quick applications."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:168
+#: content/announcements/plasma/6/6.8.0.md:162
 msgid ""
 "Plasma 6.8 builds on this with a beta release of Union, including not only "
 "refinements for Qt Quick theming, but also the ability to style Qt Widgets "
@@ -37545,11 +37485,11 @@ msgid ""
 "such as Dolphin, Kate, and Konsole."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:170
+#: content/announcements/plasma/6/6.8.0.md:164
 msgid "Dolphin themed with Union’s Breeze style. Can you tell the difference?"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:172
+#: content/announcements/plasma/6/6.8.0.md:166
 msgid ""
 "While Union is not quite ready to be used by default, Plasma 6.8 brings it "
 "ever closer to being a single source of truth for styling all of KDE’s "
@@ -37559,7 +37499,7 @@ msgid ""
 "qtwidgets/)."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:174
+#: content/announcements/plasma/6/6.8.0.md:168
 msgid ""
 "{{< alert color=\"success\" icon=\"tip\" >}} To try Union, ensure the "
 "`union` package is installed (name may differ depending on your "
@@ -37567,21 +37507,21 @@ msgid ""
 "Themes* → *Application Style*, then restart your apps or the system."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:177
+#: content/announcements/plasma/6/6.8.0.md:171
 msgid ""
 "Apps are expected to look nearly identical to how they do with the "
 "traditional Breeze theme. If you’ve found a Union-specific issue, [please "
 "report it](https://bugs.kde.org/enter_bug.cgi?product=Union)."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:179
+#: content/announcements/plasma/6/6.8.0.md:173
 msgid ""
 "If you’re interested in experimenting with creating your own Union style, "
 "you can find out more [in Union’s documentation](https://api.kde.org/working-"
 "with-styles.html). {{< /alert >}}"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:184
+#: content/announcements/plasma/6/6.8.0.md:178
 msgid ""
 "30 years is an impressive milestone for a community like KDE. But even older "
 "is the venerable [X Window System](https://en.wikipedia.org/wiki/"
@@ -37591,35 +37531,35 @@ msgid ""
 "wikipedia.org/wiki/Wayland_(protocol)) system."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:186
+#: content/announcements/plasma/6/6.8.0.md:180
 msgid ""
 "Compared to X11, Wayland offers better support for modern screens and "
 "graphics cards, and is actively developed."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:188
+#: content/announcements/plasma/6/6.8.0.md:182
 msgid ""
 "The small number of individual apps that still require X11 will continue to "
 "work via the “XWayland” compatibility layer."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:190
+#: content/announcements/plasma/6/6.8.0.md:184
 msgid ""
 "KDE applications will continue to support X11 for the foreseeable future."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:193
+#: content/announcements/plasma/6/6.8.0.md:187
 msgid "Performance, colors, and graphics"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:194
+#: content/announcements/plasma/6/6.8.0.md:188
 msgid ""
 "As part of the backend improvements included in Plasma 6.8, we’ve made "
 "changes to help Plasma load faster and use less memory. Discover’s update "
 "notifier now uses less memory, too."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:196
+#: content/announcements/plasma/6/6.8.0.md:190
 msgid ""
 "With KWin, NVIDIA GPUs now use triple buffering by default, and all users "
 "will have better-looking HDR when using an ICC color profile. We’ve also "
@@ -37628,65 +37568,65 @@ msgid ""
 "expected. {{< /diagonal-box >}}"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:202
+#: content/announcements/plasma/6/6.8.0.md:196
 msgid "Plasma 6.8 is chock-full of smaller changes, including:"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:204
+#: content/announcements/plasma/6/6.8.0.md:198
 msgid ""
 "A new `kscreenctl` tool makes managing displays from the command-line easier "
 "and also offers the potential for scripting and automation."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:205
+#: content/announcements/plasma/6/6.8.0.md:199
 msgid ""
 "Kup, the KDE backup tool, has been polished up and is now released as a part "
 "of Plasma."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:206
+#: content/announcements/plasma/6/6.8.0.md:200
 msgid "We have added EAP-TTLS authentication support for StrongSwan VPNs."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:207
+#: content/announcements/plasma/6/6.8.0.md:201
 msgid ""
 "You can enable and disable auto-starting apps without having to delete and "
 "recreate their entries."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:208
+#: content/announcements/plasma/6/6.8.0.md:202
 msgid ""
 "Use the arrow keys to move screens pixel-by-pixel in *Display Configuration*."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:209
+#: content/announcements/plasma/6/6.8.0.md:203
 msgid ""
 "The system shows a warning notification when trying to print using an "
 "unavailable printer."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:210
+#: content/announcements/plasma/6/6.8.0.md:204
 msgid ""
 "Copying secrets such as passwords to the clipboard now clarifies why they "
 "are not included in history."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:211
+#: content/announcements/plasma/6/6.8.0.md:205
 msgid "Emojis in the *Emoji Selector* can now be shown at different sizes."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:212
+#: content/announcements/plasma/6/6.8.0.md:206
 msgid ""
 "…and countless bug fixes and small tweaks to make Plasma better than ever!"
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:214
+#: content/announcements/plasma/6/6.8.0.md:208
 msgid ""
 "To see a high-level overview of all user-facing changes, [see the Plasma 6.8 "
 "wiki page](https://community.kde.org/Plasma/Plasma_6#Plasma_6.8)."
 msgstr ""
 
-#: content/announcements/plasma/6/6.8.0.md:216
+#: content/announcements/plasma/6/6.8.0.md:210
 #, fuzzy
 #| msgid ""
 #| "…and there’s much more. To see the full list of changes, check out the "
